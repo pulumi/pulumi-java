@@ -8,7 +8,7 @@ import io.pulumi.Config;
 import io.pulumi.Stack;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
+import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.container.ClusterArgs;
 import io.pulumi.gcp.container.GetEngineVersions;
@@ -82,8 +82,7 @@ public final class MyStack extends Stack {
             .setInitialNodeCount(1)
             .setRemoveDefaultNodePool(true)
             .setMinMasterVersion(masterVersion)
-            .build(),
-            CustomResourceOptions.Empty
+            .build()
         );
 
         final var nodePool = new NodePool("primary-node-pool",
