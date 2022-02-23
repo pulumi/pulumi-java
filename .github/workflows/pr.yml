@@ -52,11 +52,13 @@ jobs:
       - name: Build Pulumi JVM Language Provider and Codegen
         run: make build_go
   test_go:
+    runs-on: ubuntu-latest
     needs: build-base-java-sdk
     steps:
       - name: Test Pulumi JVM Language Provider and Codegen
         run: make test_go
   provider-random:
+    runs-on: ubuntu-latest
     needs: build-base-java-sdk
     steps:
       - name: Build pulumi-random JVM SDK
@@ -64,6 +66,7 @@ jobs:
       - name: Install pulumi-random JVM SDK to a local Maven repo
         run: make provider.random.install
   provider-azure-native:
+    runs-on: ubuntu-latest
     needs: build-base-java-sdk
     steps:
       - name: Build pulumi-azure-native JVM SDK
@@ -71,6 +74,7 @@ jobs:
       - name: Install pulumi-azure-native JVM SDK to a local Maven repo
         run: make provider.azure-native.install
   provider-google-native:
+    runs-on: ubuntu-latest
     needs: build-base-java-sdk
     steps:
       - name: Build pulumi-google-native JVM SDK
@@ -78,6 +82,7 @@ jobs:
       - name: Install pulumi-google-native JVM SDK to a local Maven repo
         run: make provider.google-native.install
   provider-aws:
+    runs-on: ubuntu-latest
     needs: build-base-java-sdk
     steps:
       - name: Build pulumi-aws JVM SDK
@@ -85,6 +90,7 @@ jobs:
       - name: Install pulumi-aws JVM SDK to a local Maven repo
         run: make provider.aws.install
   provider-aws-native:
+    runs-on: ubuntu-latest
     needs: build-base-java-sdk
     steps:
       - name: Build pulumi-aws-native JVM SDK
@@ -92,6 +98,7 @@ jobs:
       - name: Install pulumi-aws-native JVM SDK to a local Maven repo
         run: make provider.aws-native.install
   provider-kubernetes:
+    runs-on: ubuntu-latest
     needs: build-base-java-sdk
     steps:
       - name: Build pulumi-kubernetes JVM SDK
@@ -99,6 +106,7 @@ jobs:
       - name: Install pulumi-kubernetes JVM SDK to a local Maven repo
         run: make provider.kubernetes.install
   integration-tests:
+    runs-on: ubuntu-latest
     steps:
       - name: Integration tests
         run: make integration_tests
