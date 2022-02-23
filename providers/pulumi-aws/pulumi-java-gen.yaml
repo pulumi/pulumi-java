@@ -1,4 +1,4 @@
 version: 4.37.3
 schema: https://raw.githubusercontent.com/pulumi/pulumi-aws/v4.37.3/provider/cmd/pulumi-resource-aws/schema.json
 out: sdk/java
-# versionFile: io/pulumi/aws-native/version.txt
+versionFile: src/main/resources/io/pulumi/aws/version.txt
