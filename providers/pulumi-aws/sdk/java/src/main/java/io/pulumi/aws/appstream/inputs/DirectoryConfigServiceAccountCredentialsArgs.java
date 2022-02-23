@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DirectoryConfigServiceAccountCredentialsArgs extends io.pulum
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -29,7 +29,7 @@ public final class DirectoryConfigServiceAccountCredentialsArgs extends io.pulum
      * 
      */
     @InputImport(name="accountPassword", required=true)
-    private final Input<String> accountPassword;
+      private final Input<String> accountPassword;
 
     public Input<String> getAccountPassword() {
         return this.accountPassword;

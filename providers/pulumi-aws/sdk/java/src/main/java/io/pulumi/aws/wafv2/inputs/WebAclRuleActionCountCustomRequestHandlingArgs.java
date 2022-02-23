@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionCountCustomRequestHandlingInsertHeaderArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class WebAclRuleActionCountCustomRequestHandlingArgs extends io.pul
      * 
      */
     @InputImport(name="insertHeaders", required=true)
-    private final Input<List<WebAclRuleActionCountCustomRequestHandlingInsertHeaderArgs>> insertHeaders;
+      private final Input<List<WebAclRuleActionCountCustomRequestHandlingInsertHeaderArgs>> insertHeaders;
 
     public Input<List<WebAclRuleActionCountCustomRequestHandlingInsertHeaderArgs>> getInsertHeaders() {
         return this.insertHeaders;

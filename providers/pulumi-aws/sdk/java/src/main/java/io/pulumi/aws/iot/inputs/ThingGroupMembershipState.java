@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="overrideDynamicGroup")
-    private final @Nullable Input<Boolean> overrideDynamicGroup;
+      private final @Nullable Input<Boolean> overrideDynamicGroup;
 
     public Input<Boolean> getOverrideDynamicGroup() {
         return this.overrideDynamicGroup == null ? Input.empty() : this.overrideDynamicGroup;
@@ -31,7 +31,7 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="thingGroupName")
-    private final @Nullable Input<String> thingGroupName;
+      private final @Nullable Input<String> thingGroupName;
 
     public Input<String> getThingGroupName() {
         return this.thingGroupName == null ? Input.empty() : this.thingGroupName;
@@ -42,7 +42,7 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="thingName")
-    private final @Nullable Input<String> thingName;
+      private final @Nullable Input<String> thingName;
 
     public Input<String> getThingName() {
         return this.thingName == null ? Input.empty() : this.thingName;

@@ -10,8 +10,8 @@ import io.pulumi.aws.ec2.outputs.TrafficMirrorFilterRuleDestinationPortRange;
 import io.pulumi.aws.ec2.outputs.TrafficMirrorFilterRuleSourcePortRange;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -188,6 +188,21 @@ public class TrafficMirrorFilterRule extends io.pulumi.resources.CustomResource 
         return this.trafficMirrorFilterId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TrafficMirrorFilterRule(String name) {
+        this(name, TrafficMirrorFilterRuleArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TrafficMirrorFilterRule(String name, TrafficMirrorFilterRuleArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

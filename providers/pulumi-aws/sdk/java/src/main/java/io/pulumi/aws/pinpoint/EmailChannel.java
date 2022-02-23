@@ -8,8 +8,8 @@ import io.pulumi.aws.pinpoint.EmailChannelArgs;
 import io.pulumi.aws.pinpoint.inputs.EmailChannelState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -130,6 +130,21 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
         return this.roleArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EmailChannel(String name) {
+        this(name, EmailChannelArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EmailChannel(String name, EmailChannelArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="configuration", required=true)
-    private final Input<String> configuration;
+      private final Input<String> configuration;
 
     public Input<String> getConfiguration() {
         return this.configuration;
@@ -30,7 +30,7 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;

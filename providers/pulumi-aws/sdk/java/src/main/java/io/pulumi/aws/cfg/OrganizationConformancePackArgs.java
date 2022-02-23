@@ -5,7 +5,7 @@ package io.pulumi.aws.cfg;
 
 import io.pulumi.aws.cfg.inputs.OrganizationConformancePackInputParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deliveryS3Bucket")
-    private final @Nullable Input<String> deliveryS3Bucket;
+      private final @Nullable Input<String> deliveryS3Bucket;
 
     public Input<String> getDeliveryS3Bucket() {
         return this.deliveryS3Bucket == null ? Input.empty() : this.deliveryS3Bucket;
@@ -32,7 +32,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deliveryS3KeyPrefix")
-    private final @Nullable Input<String> deliveryS3KeyPrefix;
+      private final @Nullable Input<String> deliveryS3KeyPrefix;
 
     public Input<String> getDeliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix == null ? Input.empty() : this.deliveryS3KeyPrefix;
@@ -43,7 +43,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="excludedAccounts")
-    private final @Nullable Input<List<String>> excludedAccounts;
+      private final @Nullable Input<List<String>> excludedAccounts;
 
     public Input<List<String>> getExcludedAccounts() {
         return this.excludedAccounts == null ? Input.empty() : this.excludedAccounts;
@@ -54,7 +54,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="inputParameters")
-    private final @Nullable Input<List<OrganizationConformancePackInputParameterArgs>> inputParameters;
+      private final @Nullable Input<List<OrganizationConformancePackInputParameterArgs>> inputParameters;
 
     public Input<List<OrganizationConformancePackInputParameterArgs>> getInputParameters() {
         return this.inputParameters == null ? Input.empty() : this.inputParameters;
@@ -65,7 +65,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -76,7 +76,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="templateBody")
-    private final @Nullable Input<String> templateBody;
+      private final @Nullable Input<String> templateBody;
 
     public Input<String> getTemplateBody() {
         return this.templateBody == null ? Input.empty() : this.templateBody;
@@ -87,7 +87,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="templateS3Uri")
-    private final @Nullable Input<String> templateS3Uri;
+      private final @Nullable Input<String> templateS3Uri;
 
     public Input<String> getTemplateS3Uri() {
         return this.templateS3Uri == null ? Input.empty() : this.templateS3Uri;

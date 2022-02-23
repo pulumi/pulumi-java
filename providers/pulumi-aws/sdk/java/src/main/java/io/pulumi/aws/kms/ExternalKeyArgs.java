@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ExternalKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bypassPolicyLockoutSafetyCheck")
-    private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
+      private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Input<Boolean> getBypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck == null ? Input.empty() : this.bypassPolicyLockoutSafetyCheck;
@@ -33,7 +33,7 @@ public final class ExternalKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionWindowInDays")
-    private final @Nullable Input<Integer> deletionWindowInDays;
+      private final @Nullable Input<Integer> deletionWindowInDays;
 
     public Input<Integer> getDeletionWindowInDays() {
         return this.deletionWindowInDays == null ? Input.empty() : this.deletionWindowInDays;
@@ -44,7 +44,7 @@ public final class ExternalKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class ExternalKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -66,7 +66,7 @@ public final class ExternalKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyMaterialBase64")
-    private final @Nullable Input<String> keyMaterialBase64;
+      private final @Nullable Input<String> keyMaterialBase64;
 
     public Input<String> getKeyMaterialBase64() {
         return this.keyMaterialBase64 == null ? Input.empty() : this.keyMaterialBase64;
@@ -77,7 +77,7 @@ public final class ExternalKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiRegion")
-    private final @Nullable Input<Boolean> multiRegion;
+      private final @Nullable Input<Boolean> multiRegion;
 
     public Input<Boolean> getMultiRegion() {
         return this.multiRegion == null ? Input.empty() : this.multiRegion;
@@ -88,7 +88,7 @@ public final class ExternalKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -99,7 +99,7 @@ public final class ExternalKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -110,7 +110,7 @@ public final class ExternalKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validTo")
-    private final @Nullable Input<String> validTo;
+      private final @Nullable Input<String> validTo;
 
     public Input<String> getValidTo() {
         return this.validTo == null ? Input.empty() : this.validTo;

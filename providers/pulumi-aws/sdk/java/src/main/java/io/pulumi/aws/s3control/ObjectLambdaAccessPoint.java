@@ -9,8 +9,8 @@ import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointState;
 import io.pulumi.aws.s3control.outputs.ObjectLambdaAccessPointConfiguration;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -80,6 +80,21 @@ public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource 
         return this.name;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ObjectLambdaAccessPoint(String name) {
+        this(name, ObjectLambdaAccessPointArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ObjectLambdaAccessPoint(String name, ObjectLambdaAccessPointArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

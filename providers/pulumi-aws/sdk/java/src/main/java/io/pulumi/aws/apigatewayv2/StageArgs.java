@@ -7,7 +7,7 @@ import io.pulumi.aws.apigatewayv2.inputs.StageAccessLogSettingsArgs;
 import io.pulumi.aws.apigatewayv2.inputs.StageDefaultRouteSettingsArgs;
 import io.pulumi.aws.apigatewayv2.inputs.StageRouteSettingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessLogSettings")
-    private final @Nullable Input<StageAccessLogSettingsArgs> accessLogSettings;
+      private final @Nullable Input<StageAccessLogSettingsArgs> accessLogSettings;
 
     public Input<StageAccessLogSettingsArgs> getAccessLogSettings() {
         return this.accessLogSettings == null ? Input.empty() : this.accessLogSettings;
@@ -37,7 +37,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -48,7 +48,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoDeploy")
-    private final @Nullable Input<Boolean> autoDeploy;
+      private final @Nullable Input<Boolean> autoDeploy;
 
     public Input<Boolean> getAutoDeploy() {
         return this.autoDeploy == null ? Input.empty() : this.autoDeploy;
@@ -60,7 +60,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificateId")
-    private final @Nullable Input<String> clientCertificateId;
+      private final @Nullable Input<String> clientCertificateId;
 
     public Input<String> getClientCertificateId() {
         return this.clientCertificateId == null ? Input.empty() : this.clientCertificateId;
@@ -71,7 +71,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRouteSettings")
-    private final @Nullable Input<StageDefaultRouteSettingsArgs> defaultRouteSettings;
+      private final @Nullable Input<StageDefaultRouteSettingsArgs> defaultRouteSettings;
 
     public Input<StageDefaultRouteSettingsArgs> getDefaultRouteSettings() {
         return this.defaultRouteSettings == null ? Input.empty() : this.defaultRouteSettings;
@@ -82,7 +82,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentId")
-    private final @Nullable Input<String> deploymentId;
+      private final @Nullable Input<String> deploymentId;
 
     public Input<String> getDeploymentId() {
         return this.deploymentId == null ? Input.empty() : this.deploymentId;
@@ -93,7 +93,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -104,7 +104,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -115,7 +115,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeSettings")
-    private final @Nullable Input<List<StageRouteSettingArgs>> routeSettings;
+      private final @Nullable Input<List<StageRouteSettingArgs>> routeSettings;
 
     public Input<List<StageRouteSettingArgs>> getRouteSettings() {
         return this.routeSettings == null ? Input.empty() : this.routeSettings;
@@ -126,7 +126,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageVariables")
-    private final @Nullable Input<Map<String,String>> stageVariables;
+      private final @Nullable Input<Map<String,String>> stageVariables;
 
     public Input<Map<String,String>> getStageVariables() {
         return this.stageVariables == null ? Input.empty() : this.stageVariables;
@@ -137,7 +137,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

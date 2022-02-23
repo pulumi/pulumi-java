@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudsearch.inputs.DomainEndpointOptionsArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainIndexFieldArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainScalingParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointOptions")
-    private final @Nullable Input<DomainEndpointOptionsArgs> endpointOptions;
+      private final @Nullable Input<DomainEndpointOptionsArgs> endpointOptions;
 
     public Input<DomainEndpointOptionsArgs> getEndpointOptions() {
         return this.endpointOptions == null ? Input.empty() : this.endpointOptions;
@@ -35,7 +35,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="indexFields")
-    private final @Nullable Input<List<DomainIndexFieldArgs>> indexFields;
+      private final @Nullable Input<List<DomainIndexFieldArgs>> indexFields;
 
     public Input<List<DomainIndexFieldArgs>> getIndexFields() {
         return this.indexFields == null ? Input.empty() : this.indexFields;
@@ -46,7 +46,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiAz")
-    private final @Nullable Input<Boolean> multiAz;
+      private final @Nullable Input<Boolean> multiAz;
 
     public Input<Boolean> getMultiAz() {
         return this.multiAz == null ? Input.empty() : this.multiAz;
@@ -57,7 +57,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -68,7 +68,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingParameters")
-    private final @Nullable Input<DomainScalingParametersArgs> scalingParameters;
+      private final @Nullable Input<DomainScalingParametersArgs> scalingParameters;
 
     public Input<DomainScalingParametersArgs> getScalingParameters() {
         return this.scalingParameters == null ? Input.empty() : this.scalingParameters;

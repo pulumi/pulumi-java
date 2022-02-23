@@ -12,7 +12,7 @@ import io.pulumi.aws.cloudfront.inputs.DistributionOriginGroupArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionRestrictionsArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionViewerCertificateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliases")
-    private final @Nullable Input<List<String>> aliases;
+      private final @Nullable Input<List<String>> aliases;
 
     public Input<List<String>> getAliases() {
         return this.aliases == null ? Input.empty() : this.aliases;
@@ -43,7 +43,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -54,7 +54,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customErrorResponses")
-    private final @Nullable Input<List<DistributionCustomErrorResponseArgs>> customErrorResponses;
+      private final @Nullable Input<List<DistributionCustomErrorResponseArgs>> customErrorResponses;
 
     public Input<List<DistributionCustomErrorResponseArgs>> getCustomErrorResponses() {
         return this.customErrorResponses == null ? Input.empty() : this.customErrorResponses;
@@ -66,7 +66,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultCacheBehavior", required=true)
-    private final Input<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior;
+      private final Input<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior;
 
     public Input<DistributionDefaultCacheBehaviorArgs> getDefaultCacheBehavior() {
         return this.defaultCacheBehavior;
@@ -78,7 +78,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRootObject")
-    private final @Nullable Input<String> defaultRootObject;
+      private final @Nullable Input<String> defaultRootObject;
 
     public Input<String> getDefaultRootObject() {
         return this.defaultRootObject == null ? Input.empty() : this.defaultRootObject;
@@ -89,7 +89,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -102,7 +102,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpVersion")
-    private final @Nullable Input<String> httpVersion;
+      private final @Nullable Input<String> httpVersion;
 
     public Input<String> getHttpVersion() {
         return this.httpVersion == null ? Input.empty() : this.httpVersion;
@@ -113,7 +113,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isIpv6Enabled")
-    private final @Nullable Input<Boolean> isIpv6Enabled;
+      private final @Nullable Input<Boolean> isIpv6Enabled;
 
     public Input<Boolean> getIsIpv6Enabled() {
         return this.isIpv6Enabled == null ? Input.empty() : this.isIpv6Enabled;
@@ -126,7 +126,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfig")
-    private final @Nullable Input<DistributionLoggingConfigArgs> loggingConfig;
+      private final @Nullable Input<DistributionLoggingConfigArgs> loggingConfig;
 
     public Input<DistributionLoggingConfigArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -139,7 +139,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orderedCacheBehaviors")
-    private final @Nullable Input<List<DistributionOrderedCacheBehaviorArgs>> orderedCacheBehaviors;
+      private final @Nullable Input<List<DistributionOrderedCacheBehaviorArgs>> orderedCacheBehaviors;
 
     public Input<List<DistributionOrderedCacheBehaviorArgs>> getOrderedCacheBehaviors() {
         return this.orderedCacheBehaviors == null ? Input.empty() : this.orderedCacheBehaviors;
@@ -151,7 +151,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originGroups")
-    private final @Nullable Input<List<DistributionOriginGroupArgs>> originGroups;
+      private final @Nullable Input<List<DistributionOriginGroupArgs>> originGroups;
 
     public Input<List<DistributionOriginGroupArgs>> getOriginGroups() {
         return this.originGroups == null ? Input.empty() : this.originGroups;
@@ -163,7 +163,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origins", required=true)
-    private final Input<List<DistributionOriginArgs>> origins;
+      private final Input<List<DistributionOriginArgs>> origins;
 
     public Input<List<DistributionOriginArgs>> getOrigins() {
         return this.origins;
@@ -175,7 +175,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priceClass")
-    private final @Nullable Input<String> priceClass;
+      private final @Nullable Input<String> priceClass;
 
     public Input<String> getPriceClass() {
         return this.priceClass == null ? Input.empty() : this.priceClass;
@@ -187,7 +187,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restrictions", required=true)
-    private final Input<DistributionRestrictionsArgs> restrictions;
+      private final Input<DistributionRestrictionsArgs> restrictions;
 
     public Input<DistributionRestrictionsArgs> getRestrictions() {
         return this.restrictions;
@@ -200,7 +200,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retainOnDelete")
-    private final @Nullable Input<Boolean> retainOnDelete;
+      private final @Nullable Input<Boolean> retainOnDelete;
 
     public Input<Boolean> getRetainOnDelete() {
         return this.retainOnDelete == null ? Input.empty() : this.retainOnDelete;
@@ -211,7 +211,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -224,7 +224,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="viewerCertificate", required=true)
-    private final Input<DistributionViewerCertificateArgs> viewerCertificate;
+      private final Input<DistributionViewerCertificateArgs> viewerCertificate;
 
     public Input<DistributionViewerCertificateArgs> getViewerCertificate() {
         return this.viewerCertificate;
@@ -237,7 +237,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForDeployment")
-    private final @Nullable Input<Boolean> waitForDeployment;
+      private final @Nullable Input<Boolean> waitForDeployment;
 
     public Input<Boolean> getWaitForDeployment() {
         return this.waitForDeployment == null ? Input.empty() : this.waitForDeployment;
@@ -254,7 +254,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webAclId")
-    private final @Nullable Input<String> webAclId;
+      private final @Nullable Input<String> webAclId;
 
     public Input<String> getWebAclId() {
         return this.webAclId == null ? Input.empty() : this.webAclId;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+      private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -30,7 +30,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyType")
-    private final @Nullable Input<String> keyType;
+      private final @Nullable Input<String> keyType;
 
     public Input<String> getKeyType() {
         return this.keyType == null ? Input.empty() : this.keyType;
@@ -41,7 +41,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -52,7 +52,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usagePlanId")
-    private final @Nullable Input<String> usagePlanId;
+      private final @Nullable Input<String> usagePlanId;
 
     public Input<String> getUsagePlanId() {
         return this.usagePlanId == null ? Input.empty() : this.usagePlanId;
@@ -63,7 +63,7 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class GetTableServerSideEncryption extends io.pulumi.resources.Invo
     public static final GetTableServerSideEncryption Empty = new GetTableServerSideEncryption();
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
     @InputImport(name="kmsKeyArn", required=true)
-    private final String kmsKeyArn;
+      private final String kmsKeyArn;
 
     public String getKmsKeyArn() {
         return this.kmsKeyArn;

@@ -8,8 +8,8 @@ import io.pulumi.aws.route53.HostedZoneDnsSecArgs;
 import io.pulumi.aws.route53.inputs.HostedZoneDnsSecState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -60,6 +60,21 @@ public class HostedZoneDnsSec extends io.pulumi.resources.CustomResource {
         return this.signingStatus;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public HostedZoneDnsSec(String name) {
+        this(name, HostedZoneDnsSecArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public HostedZoneDnsSec(String name, HostedZoneDnsSecArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

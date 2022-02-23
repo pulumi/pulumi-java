@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker;
 import io.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamNotificationConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+      private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -34,7 +34,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memberDefinitions", required=true)
-    private final Input<List<WorkteamMemberDefinitionArgs>> memberDefinitions;
+      private final Input<List<WorkteamMemberDefinitionArgs>> memberDefinitions;
 
     public Input<List<WorkteamMemberDefinitionArgs>> getMemberDefinitions() {
         return this.memberDefinitions;
@@ -45,7 +45,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfiguration")
-    private final @Nullable Input<WorkteamNotificationConfigurationArgs> notificationConfiguration;
+      private final @Nullable Input<WorkteamNotificationConfigurationArgs> notificationConfiguration;
 
     public Input<WorkteamNotificationConfigurationArgs> getNotificationConfiguration() {
         return this.notificationConfiguration == null ? Input.empty() : this.notificationConfiguration;
@@ -56,7 +56,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -67,7 +67,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workforceName", required=true)
-    private final Input<String> workforceName;
+      private final Input<String> workforceName;
 
     public Input<String> getWorkforceName() {
         return this.workforceName;
@@ -78,7 +78,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workteamName", required=true)
-    private final Input<String> workteamName;
+      private final Input<String> workteamName;
 
     public Input<String> getWorkteamName() {
         return this.workteamName;

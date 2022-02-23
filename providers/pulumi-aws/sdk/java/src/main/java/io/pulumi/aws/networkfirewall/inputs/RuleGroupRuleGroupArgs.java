@@ -7,7 +7,7 @@ import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupStatefulRuleOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class RuleGroupRuleGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ruleVariables")
-    private final @Nullable Input<RuleGroupRuleGroupRuleVariablesArgs> ruleVariables;
+      private final @Nullable Input<RuleGroupRuleGroupRuleVariablesArgs> ruleVariables;
 
     public Input<RuleGroupRuleGroupRuleVariablesArgs> getRuleVariables() {
         return this.ruleVariables == null ? Input.empty() : this.ruleVariables;
@@ -32,7 +32,7 @@ public final class RuleGroupRuleGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rulesSource", required=true)
-    private final Input<RuleGroupRuleGroupRulesSourceArgs> rulesSource;
+      private final Input<RuleGroupRuleGroupRulesSourceArgs> rulesSource;
 
     public Input<RuleGroupRuleGroupRulesSourceArgs> getRulesSource() {
         return this.rulesSource;
@@ -43,7 +43,7 @@ public final class RuleGroupRuleGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="statefulRuleOptions")
-    private final @Nullable Input<RuleGroupRuleGroupStatefulRuleOptionsArgs> statefulRuleOptions;
+      private final @Nullable Input<RuleGroupRuleGroupStatefulRuleOptionsArgs> statefulRuleOptions;
 
     public Input<RuleGroupRuleGroupStatefulRuleOptionsArgs> getStatefulRuleOptions() {
         return this.statefulRuleOptions == null ? Input.empty() : this.statefulRuleOptions;

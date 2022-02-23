@@ -4,7 +4,7 @@
 package io.pulumi.aws.pricing.inputs;
 
 import io.pulumi.aws.pricing.inputs.GetProductFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters", required=true)
-    private final List<GetProductFilter> filters;
+      private final List<GetProductFilter> filters;
 
     public List<GetProductFilter> getFilters() {
         return this.filters;
@@ -30,7 +30,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceCode", required=true)
-    private final String serviceCode;
+      private final String serviceCode;
 
     public String getServiceCode() {
         return this.serviceCode;

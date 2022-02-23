@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final Input<String> applicationId;
+      private final Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId;
@@ -30,7 +30,7 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="configurationProfileId", required=true)
-    private final Input<String> configurationProfileId;
+      private final Input<String> configurationProfileId;
 
     public Input<String> getConfigurationProfileId() {
         return this.configurationProfileId;
@@ -41,7 +41,7 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="content", required=true)
-    private final Input<String> content;
+      private final Input<String> content;
 
     public Input<String> getContent() {
         return this.content;
@@ -52,7 +52,7 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final Input<String> contentType;
+      private final Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType;
@@ -63,7 +63,7 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;

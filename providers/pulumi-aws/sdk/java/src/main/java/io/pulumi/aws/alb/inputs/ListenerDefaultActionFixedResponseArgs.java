@@ -4,7 +4,7 @@
 package io.pulumi.aws.alb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ListenerDefaultActionFixedResponseArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final Input<String> contentType;
+      private final Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType;
@@ -30,7 +30,7 @@ public final class ListenerDefaultActionFixedResponseArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="messageBody")
-    private final @Nullable Input<String> messageBody;
+      private final @Nullable Input<String> messageBody;
 
     public Input<String> getMessageBody() {
         return this.messageBody == null ? Input.empty() : this.messageBody;
@@ -41,7 +41,7 @@ public final class ListenerDefaultActionFixedResponseArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="statusCode")
-    private final @Nullable Input<String> statusCode;
+      private final @Nullable Input<String> statusCode;
 
     public Input<String> getStatusCode() {
         return this.statusCode == null ? Input.empty() : this.statusCode;

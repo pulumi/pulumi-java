@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder;
 
 import io.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceProfileName", required=true)
-    private final Input<String> instanceProfileName;
+      private final Input<String> instanceProfileName;
 
     public Input<String> getInstanceProfileName() {
         return this.instanceProfileName;
@@ -45,7 +45,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceTypes")
-    private final @Nullable Input<List<String>> instanceTypes;
+      private final @Nullable Input<List<String>> instanceTypes;
 
     public Input<List<String>> getInstanceTypes() {
         return this.instanceTypes == null ? Input.empty() : this.instanceTypes;
@@ -56,7 +56,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="keyPair")
-    private final @Nullable Input<String> keyPair;
+      private final @Nullable Input<String> keyPair;
 
     public Input<String> getKeyPair() {
         return this.keyPair == null ? Input.empty() : this.keyPair;
@@ -67,7 +67,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="logging")
-    private final @Nullable Input<InfrastructureConfigurationLoggingArgs> logging;
+      private final @Nullable Input<InfrastructureConfigurationLoggingArgs> logging;
 
     public Input<InfrastructureConfigurationLoggingArgs> getLogging() {
         return this.logging == null ? Input.empty() : this.logging;
@@ -78,7 +78,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceTags")
-    private final @Nullable Input<Map<String,String>> resourceTags;
+      private final @Nullable Input<Map<String,String>> resourceTags;
 
     public Input<Map<String,String>> getResourceTags() {
         return this.resourceTags == null ? Input.empty() : this.resourceTags;
@@ -100,7 +100,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -111,7 +111,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="snsTopicArn")
-    private final @Nullable Input<String> snsTopicArn;
+      private final @Nullable Input<String> snsTopicArn;
 
     public Input<String> getSnsTopicArn() {
         return this.snsTopicArn == null ? Input.empty() : this.snsTopicArn;
@@ -122,7 +122,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -133,7 +133,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -144,7 +144,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="terminateInstanceOnFailure")
-    private final @Nullable Input<Boolean> terminateInstanceOnFailure;
+      private final @Nullable Input<Boolean> terminateInstanceOnFailure;
 
     public Input<Boolean> getTerminateInstanceOnFailure() {
         return this.terminateInstanceOnFailure == null ? Input.empty() : this.terminateInstanceOnFailure;

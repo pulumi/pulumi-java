@@ -10,8 +10,8 @@ import io.pulumi.aws.codedeploy.outputs.DeploymentConfigMinimumHealthyHosts;
 import io.pulumi.aws.codedeploy.outputs.DeploymentConfigTrafficRoutingConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -102,6 +102,21 @@ public class DeploymentConfig extends io.pulumi.resources.CustomResource {
         return this.trafficRoutingConfig;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DeploymentConfig(String name) {
+        this(name, DeploymentConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DeploymentConfig(String name, DeploymentConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

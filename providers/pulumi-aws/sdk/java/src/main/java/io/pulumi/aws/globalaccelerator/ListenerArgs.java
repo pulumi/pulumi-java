@@ -5,7 +5,7 @@ package io.pulumi.aws.globalaccelerator;
 
 import io.pulumi.aws.globalaccelerator.inputs.ListenerPortRangeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorArn", required=true)
-    private final Input<String> acceleratorArn;
+      private final Input<String> acceleratorArn;
 
     public Input<String> getAcceleratorArn() {
         return this.acceleratorArn;
@@ -32,7 +32,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientAffinity")
-    private final @Nullable Input<String> clientAffinity;
+      private final @Nullable Input<String> clientAffinity;
 
     public Input<String> getClientAffinity() {
         return this.clientAffinity == null ? Input.empty() : this.clientAffinity;
@@ -43,7 +43,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portRanges", required=true)
-    private final Input<List<ListenerPortRangeArgs>> portRanges;
+      private final Input<List<ListenerPortRangeArgs>> portRanges;
 
     public Input<List<ListenerPortRangeArgs>> getPortRanges() {
         return this.portRanges;
@@ -54,7 +54,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<String> protocol;
+      private final Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol;

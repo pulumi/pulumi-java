@@ -5,7 +5,7 @@ package io.pulumi.aws.waf;
 
 import io.pulumi.aws.waf.inputs.SqlInjectionMatchSetSqlInjectionMatchTupleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SqlInjectionMatchSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class SqlInjectionMatchSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sqlInjectionMatchTuples")
-    private final @Nullable Input<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples;
+      private final @Nullable Input<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> sqlInjectionMatchTuples;
 
     public Input<List<SqlInjectionMatchSetSqlInjectionMatchTupleArgs>> getSqlInjectionMatchTuples() {
         return this.sqlInjectionMatchTuples == null ? Input.empty() : this.sqlInjectionMatchTuples;

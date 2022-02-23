@@ -4,7 +4,7 @@
 package io.pulumi.aws.codeartifact.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RepositoryUpstreamGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="repositoryName", required=true)
-    private final Input<String> repositoryName;
+      private final Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName;

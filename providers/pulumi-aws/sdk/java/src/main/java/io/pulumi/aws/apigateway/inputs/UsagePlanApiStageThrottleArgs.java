@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class UsagePlanApiStageThrottleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="burstLimit")
-    private final @Nullable Input<Integer> burstLimit;
+      private final @Nullable Input<Integer> burstLimit;
 
     public Input<Integer> getBurstLimit() {
         return this.burstLimit == null ? Input.empty() : this.burstLimit;
@@ -32,7 +32,7 @@ public final class UsagePlanApiStageThrottleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -43,7 +43,7 @@ public final class UsagePlanApiStageThrottleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rateLimit")
-    private final @Nullable Input<Double> rateLimit;
+      private final @Nullable Input<Double> rateLimit;
 
     public Input<Double> getRateLimit() {
         return this.rateLimit == null ? Input.empty() : this.rateLimit;

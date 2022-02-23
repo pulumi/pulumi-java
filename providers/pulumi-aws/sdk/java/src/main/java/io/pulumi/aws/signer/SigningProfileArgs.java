@@ -5,7 +5,7 @@ package io.pulumi.aws.signer;
 
 import io.pulumi.aws.signer.inputs.SigningProfileSignatureValidityPeriodArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -43,7 +43,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformId", required=true)
-    private final Input<String> platformId;
+      private final Input<String> platformId;
 
     public Input<String> getPlatformId() {
         return this.platformId;
@@ -54,7 +54,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signatureValidityPeriod")
-    private final @Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
+      private final @Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
 
     public Input<SigningProfileSignatureValidityPeriodArgs> getSignatureValidityPeriod() {
         return this.signatureValidityPeriod == null ? Input.empty() : this.signatureValidityPeriod;
@@ -65,7 +65,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

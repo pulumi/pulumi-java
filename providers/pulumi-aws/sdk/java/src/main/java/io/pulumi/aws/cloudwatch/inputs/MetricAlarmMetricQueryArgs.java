@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.MetricAlarmMetricQueryMetricArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -32,7 +32,7 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="expression")
-    private final @Nullable Input<String> expression;
+      private final @Nullable Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression == null ? Input.empty() : this.expression;
@@ -43,7 +43,7 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -54,7 +54,7 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -65,7 +65,7 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="metric")
-    private final @Nullable Input<MetricAlarmMetricQueryMetricArgs> metric;
+      private final @Nullable Input<MetricAlarmMetricQueryMetricArgs> metric;
 
     public Input<MetricAlarmMetricQueryMetricArgs> getMetric() {
         return this.metric == null ? Input.empty() : this.metric;
@@ -76,7 +76,7 @@ public final class MetricAlarmMetricQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="returnData")
-    private final @Nullable Input<Boolean> returnData;
+      private final @Nullable Input<Boolean> returnData;
 
     public Input<Boolean> getReturnData() {
         return this.returnData == null ? Input.empty() : this.returnData;

@@ -9,8 +9,8 @@ import io.pulumi.aws.apigateway.inputs.DocumentationPartState;
 import io.pulumi.aws.apigateway.outputs.DocumentationPartLocation;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -73,6 +73,21 @@ public class DocumentationPart extends io.pulumi.resources.CustomResource {
         return this.restApiId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DocumentationPart(String name) {
+        this(name, DocumentationPartArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DocumentationPart(String name, DocumentationPartArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

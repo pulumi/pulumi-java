@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PartitionStorageDescriptorSortColumnGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="column", required=true)
-    private final Input<String> column;
+      private final Input<String> column;
 
     public Input<String> getColumn() {
         return this.column;
@@ -30,7 +30,7 @@ public final class PartitionStorageDescriptorSortColumnGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="sortOrder", required=true)
-    private final Input<Integer> sortOrder;
+      private final Input<Integer> sortOrder;
 
     public Input<Integer> getSortOrder() {
         return this.sortOrder;

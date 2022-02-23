@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dbClusterIdentifier", required=true)
-    private final Input<String> dbClusterIdentifier;
+      private final Input<String> dbClusterIdentifier;
 
     public Input<String> getDbClusterIdentifier() {
         return this.dbClusterIdentifier;
@@ -31,7 +31,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dbClusterSnapshotIdentifier", required=true)
-    private final Input<String> dbClusterSnapshotIdentifier;
+      private final Input<String> dbClusterSnapshotIdentifier;
 
     public Input<String> getDbClusterSnapshotIdentifier() {
         return this.dbClusterSnapshotIdentifier;
@@ -42,7 +42,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

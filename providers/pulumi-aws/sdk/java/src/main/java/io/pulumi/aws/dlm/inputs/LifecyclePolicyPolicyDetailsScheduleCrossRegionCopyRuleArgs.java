@@ -6,7 +6,7 @@ package io.pulumi.aws.dlm.inputs;
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs;
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * 
      */
     @InputImport(name="cmkArn")
-    private final @Nullable Input<String> cmkArn;
+      private final @Nullable Input<String> cmkArn;
 
     public Input<String> getCmkArn() {
         return this.cmkArn == null ? Input.empty() : this.cmkArn;
@@ -33,7 +33,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * 
      */
     @InputImport(name="copyTags")
-    private final @Nullable Input<Boolean> copyTags;
+      private final @Nullable Input<Boolean> copyTags;
 
     public Input<Boolean> getCopyTags() {
         return this.copyTags == null ? Input.empty() : this.copyTags;
@@ -44,7 +44,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * 
      */
     @InputImport(name="deprecateRule")
-    private final @Nullable Input<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule;
+      private final @Nullable Input<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule;
 
     public Input<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> getDeprecateRule() {
         return this.deprecateRule == null ? Input.empty() : this.deprecateRule;
@@ -55,7 +55,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * 
      */
     @InputImport(name="encrypted", required=true)
-    private final Input<Boolean> encrypted;
+      private final Input<Boolean> encrypted;
 
     public Input<Boolean> getEncrypted() {
         return this.encrypted;
@@ -66,7 +66,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * 
      */
     @InputImport(name="retainRule")
-    private final @Nullable Input<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule;
+      private final @Nullable Input<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule;
 
     public Input<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> getRetainRule() {
         return this.retainRule == null ? Input.empty() : this.retainRule;
@@ -77,7 +77,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<String> target;
+      private final Input<String> target;
 
     public Input<String> getTarget() {
         return this.target;

@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs;
 import io.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchTemplateConfigOverrideGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class SpotFleetRequestLaunchTemplateConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="launchTemplateSpecification", required=true)
-    private final Input<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
+      private final Input<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
 
     public Input<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> getLaunchTemplateSpecification() {
         return this.launchTemplateSpecification;
@@ -32,7 +32,7 @@ public final class SpotFleetRequestLaunchTemplateConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="overrides")
-    private final @Nullable Input<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides;
+      private final @Nullable Input<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides;
 
     public Input<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> getOverrides() {
         return this.overrides == null ? Input.empty() : this.overrides;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -32,7 +32,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-    private final Input<String> email;
+      private final Input<String> email;
 
     public Input<String> getEmail() {
         return this.email;
@@ -43,7 +43,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invitationDisableEmailNotification")
-    private final @Nullable Input<String> invitationDisableEmailNotification;
+      private final @Nullable Input<String> invitationDisableEmailNotification;
 
     public Input<String> getInvitationDisableEmailNotification() {
         return this.invitationDisableEmailNotification == null ? Input.empty() : this.invitationDisableEmailNotification;
@@ -54,7 +54,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invitationMessage")
-    private final @Nullable Input<String> invitationMessage;
+      private final @Nullable Input<String> invitationMessage;
 
     public Input<String> getInvitationMessage() {
         return this.invitationMessage == null ? Input.empty() : this.invitationMessage;
@@ -65,7 +65,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invite")
-    private final @Nullable Input<Boolean> invite;
+      private final @Nullable Input<Boolean> invite;
 
     public Input<Boolean> getInvite() {
         return this.invite == null ? Input.empty() : this.invite;
@@ -76,7 +76,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -87,7 +87,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

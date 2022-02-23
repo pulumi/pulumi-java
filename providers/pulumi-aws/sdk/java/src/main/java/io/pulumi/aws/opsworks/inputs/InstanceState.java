@@ -7,7 +7,7 @@ import io.pulumi.aws.opsworks.inputs.InstanceEbsBlockDeviceGetArgs;
 import io.pulumi.aws.opsworks.inputs.InstanceEphemeralBlockDeviceGetArgs;
 import io.pulumi.aws.opsworks.inputs.InstanceRootBlockDeviceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentVersion")
-    private final @Nullable Input<String> agentVersion;
+      private final @Nullable Input<String> agentVersion;
 
     public Input<String> getAgentVersion() {
         return this.agentVersion == null ? Input.empty() : this.agentVersion;
@@ -35,7 +35,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amiId")
-    private final @Nullable Input<String> amiId;
+      private final @Nullable Input<String> amiId;
 
     public Input<String> getAmiId() {
         return this.amiId == null ? Input.empty() : this.amiId;
@@ -46,7 +46,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="architecture")
-    private final @Nullable Input<String> architecture;
+      private final @Nullable Input<String> architecture;
 
     public Input<String> getArchitecture() {
         return this.architecture == null ? Input.empty() : this.architecture;
@@ -57,7 +57,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoScalingType")
-    private final @Nullable Input<String> autoScalingType;
+      private final @Nullable Input<String> autoScalingType;
 
     public Input<String> getAutoScalingType() {
         return this.autoScalingType == null ? Input.empty() : this.autoScalingType;
@@ -69,28 +69,28 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
     }
 
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
     }
 
     @InputImport(name="deleteEbs")
-    private final @Nullable Input<Boolean> deleteEbs;
+      private final @Nullable Input<Boolean> deleteEbs;
 
     public Input<Boolean> getDeleteEbs() {
         return this.deleteEbs == null ? Input.empty() : this.deleteEbs;
     }
 
     @InputImport(name="deleteEip")
-    private final @Nullable Input<Boolean> deleteEip;
+      private final @Nullable Input<Boolean> deleteEip;
 
     public Input<Boolean> getDeleteEip() {
         return this.deleteEip == null ? Input.empty() : this.deleteEip;
@@ -102,7 +102,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsBlockDevices")
-    private final @Nullable Input<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices;
+      private final @Nullable Input<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
     public Input<List<InstanceEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
         return this.ebsBlockDevices == null ? Input.empty() : this.ebsBlockDevices;
@@ -113,7 +113,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsOptimized")
-    private final @Nullable Input<Boolean> ebsOptimized;
+      private final @Nullable Input<Boolean> ebsOptimized;
 
     public Input<Boolean> getEbsOptimized() {
         return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
@@ -124,21 +124,21 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ec2InstanceId")
-    private final @Nullable Input<String> ec2InstanceId;
+      private final @Nullable Input<String> ec2InstanceId;
 
     public Input<String> getEc2InstanceId() {
         return this.ec2InstanceId == null ? Input.empty() : this.ec2InstanceId;
     }
 
     @InputImport(name="ecsClusterArn")
-    private final @Nullable Input<String> ecsClusterArn;
+      private final @Nullable Input<String> ecsClusterArn;
 
     public Input<String> getEcsClusterArn() {
         return this.ecsClusterArn == null ? Input.empty() : this.ecsClusterArn;
     }
 
     @InputImport(name="elasticIp")
-    private final @Nullable Input<String> elasticIp;
+      private final @Nullable Input<String> elasticIp;
 
     public Input<String> getElasticIp() {
         return this.elasticIp == null ? Input.empty() : this.elasticIp;
@@ -150,7 +150,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralBlockDevices")
-    private final @Nullable Input<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
+      private final @Nullable Input<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
     public Input<List<InstanceEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Input.empty() : this.ephemeralBlockDevices;
@@ -161,14 +161,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostname")
-    private final @Nullable Input<String> hostname;
+      private final @Nullable Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname == null ? Input.empty() : this.hostname;
     }
 
     @InputImport(name="infrastructureClass")
-    private final @Nullable Input<String> infrastructureClass;
+      private final @Nullable Input<String> infrastructureClass;
 
     public Input<String> getInfrastructureClass() {
         return this.infrastructureClass == null ? Input.empty() : this.infrastructureClass;
@@ -179,14 +179,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="installUpdatesOnBoot")
-    private final @Nullable Input<Boolean> installUpdatesOnBoot;
+      private final @Nullable Input<Boolean> installUpdatesOnBoot;
 
     public Input<Boolean> getInstallUpdatesOnBoot() {
         return this.installUpdatesOnBoot == null ? Input.empty() : this.installUpdatesOnBoot;
     }
 
     @InputImport(name="instanceProfileArn")
-    private final @Nullable Input<String> instanceProfileArn;
+      private final @Nullable Input<String> instanceProfileArn;
 
     public Input<String> getInstanceProfileArn() {
         return this.instanceProfileArn == null ? Input.empty() : this.instanceProfileArn;
@@ -197,14 +197,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
     @InputImport(name="lastServiceErrorId")
-    private final @Nullable Input<String> lastServiceErrorId;
+      private final @Nullable Input<String> lastServiceErrorId;
 
     public Input<String> getLastServiceErrorId() {
         return this.lastServiceErrorId == null ? Input.empty() : this.lastServiceErrorId;
@@ -215,7 +215,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="layerIds")
-    private final @Nullable Input<List<String>> layerIds;
+      private final @Nullable Input<List<String>> layerIds;
 
     public Input<List<String>> getLayerIds() {
         return this.layerIds == null ? Input.empty() : this.layerIds;
@@ -226,14 +226,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="os")
-    private final @Nullable Input<String> os;
+      private final @Nullable Input<String> os;
 
     public Input<String> getOs() {
         return this.os == null ? Input.empty() : this.os;
     }
 
     @InputImport(name="platform")
-    private final @Nullable Input<String> platform;
+      private final @Nullable Input<String> platform;
 
     public Input<String> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -246,7 +246,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateDns")
-    private final @Nullable Input<String> privateDns;
+      private final @Nullable Input<String> privateDns;
 
     public Input<String> getPrivateDns() {
         return this.privateDns == null ? Input.empty() : this.privateDns;
@@ -257,7 +257,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIp")
-    private final @Nullable Input<String> privateIp;
+      private final @Nullable Input<String> privateIp;
 
     public Input<String> getPrivateIp() {
         return this.privateIp == null ? Input.empty() : this.privateIp;
@@ -269,7 +269,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicDns")
-    private final @Nullable Input<String> publicDns;
+      private final @Nullable Input<String> publicDns;
 
     public Input<String> getPublicDns() {
         return this.publicDns == null ? Input.empty() : this.publicDns;
@@ -280,42 +280,42 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIp")
-    private final @Nullable Input<String> publicIp;
+      private final @Nullable Input<String> publicIp;
 
     public Input<String> getPublicIp() {
         return this.publicIp == null ? Input.empty() : this.publicIp;
     }
 
     @InputImport(name="registeredBy")
-    private final @Nullable Input<String> registeredBy;
+      private final @Nullable Input<String> registeredBy;
 
     public Input<String> getRegisteredBy() {
         return this.registeredBy == null ? Input.empty() : this.registeredBy;
     }
 
     @InputImport(name="reportedAgentVersion")
-    private final @Nullable Input<String> reportedAgentVersion;
+      private final @Nullable Input<String> reportedAgentVersion;
 
     public Input<String> getReportedAgentVersion() {
         return this.reportedAgentVersion == null ? Input.empty() : this.reportedAgentVersion;
     }
 
     @InputImport(name="reportedOsFamily")
-    private final @Nullable Input<String> reportedOsFamily;
+      private final @Nullable Input<String> reportedOsFamily;
 
     public Input<String> getReportedOsFamily() {
         return this.reportedOsFamily == null ? Input.empty() : this.reportedOsFamily;
     }
 
     @InputImport(name="reportedOsName")
-    private final @Nullable Input<String> reportedOsName;
+      private final @Nullable Input<String> reportedOsName;
 
     public Input<String> getReportedOsName() {
         return this.reportedOsName == null ? Input.empty() : this.reportedOsName;
     }
 
     @InputImport(name="reportedOsVersion")
-    private final @Nullable Input<String> reportedOsVersion;
+      private final @Nullable Input<String> reportedOsVersion;
 
     public Input<String> getReportedOsVersion() {
         return this.reportedOsVersion == null ? Input.empty() : this.reportedOsVersion;
@@ -327,7 +327,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootBlockDevices")
-    private final @Nullable Input<List<InstanceRootBlockDeviceGetArgs>> rootBlockDevices;
+      private final @Nullable Input<List<InstanceRootBlockDeviceGetArgs>> rootBlockDevices;
 
     public Input<List<InstanceRootBlockDeviceGetArgs>> getRootBlockDevices() {
         return this.rootBlockDevices == null ? Input.empty() : this.rootBlockDevices;
@@ -338,14 +338,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootDeviceType")
-    private final @Nullable Input<String> rootDeviceType;
+      private final @Nullable Input<String> rootDeviceType;
 
     public Input<String> getRootDeviceType() {
         return this.rootDeviceType == null ? Input.empty() : this.rootDeviceType;
     }
 
     @InputImport(name="rootDeviceVolumeId")
-    private final @Nullable Input<String> rootDeviceVolumeId;
+      private final @Nullable Input<String> rootDeviceVolumeId;
 
     public Input<String> getRootDeviceVolumeId() {
         return this.rootDeviceVolumeId == null ? Input.empty() : this.rootDeviceVolumeId;
@@ -356,21 +356,21 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
     }
 
     @InputImport(name="sshHostDsaKeyFingerprint")
-    private final @Nullable Input<String> sshHostDsaKeyFingerprint;
+      private final @Nullable Input<String> sshHostDsaKeyFingerprint;
 
     public Input<String> getSshHostDsaKeyFingerprint() {
         return this.sshHostDsaKeyFingerprint == null ? Input.empty() : this.sshHostDsaKeyFingerprint;
     }
 
     @InputImport(name="sshHostRsaKeyFingerprint")
-    private final @Nullable Input<String> sshHostRsaKeyFingerprint;
+      private final @Nullable Input<String> sshHostRsaKeyFingerprint;
 
     public Input<String> getSshHostRsaKeyFingerprint() {
         return this.sshHostRsaKeyFingerprint == null ? Input.empty() : this.sshHostRsaKeyFingerprint;
@@ -381,7 +381,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshKeyName")
-    private final @Nullable Input<String> sshKeyName;
+      private final @Nullable Input<String> sshKeyName;
 
     public Input<String> getSshKeyName() {
         return this.sshKeyName == null ? Input.empty() : this.sshKeyName;
@@ -392,7 +392,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackId")
-    private final @Nullable Input<String> stackId;
+      private final @Nullable Input<String> stackId;
 
     public Input<String> getStackId() {
         return this.stackId == null ? Input.empty() : this.stackId;
@@ -403,14 +403,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -421,7 +421,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -432,7 +432,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenancy")
-    private final @Nullable Input<String> tenancy;
+      private final @Nullable Input<String> tenancy;
 
     public Input<String> getTenancy() {
         return this.tenancy == null ? Input.empty() : this.tenancy;
@@ -444,7 +444,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualizationType")
-    private final @Nullable Input<String> virtualizationType;
+      private final @Nullable Input<String> virtualizationType;
 
     public Input<String> getVirtualizationType() {
         return this.virtualizationType == null ? Input.empty() : this.virtualizationType;

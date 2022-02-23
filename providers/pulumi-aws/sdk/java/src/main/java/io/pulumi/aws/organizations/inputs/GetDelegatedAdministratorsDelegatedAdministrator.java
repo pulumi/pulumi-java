@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * 
      */
     @InputImport(name="arn", required=true)
-    private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -28,7 +28,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * 
      */
     @InputImport(name="delegationEnabledDate", required=true)
-    private final String delegationEnabledDate;
+      private final String delegationEnabledDate;
 
     public String getDelegationEnabledDate() {
         return this.delegationEnabledDate;
@@ -39,7 +39,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -50,7 +50,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -61,7 +61,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * 
      */
     @InputImport(name="joinedMethod", required=true)
-    private final String joinedMethod;
+      private final String joinedMethod;
 
     public String getJoinedMethod() {
         return this.joinedMethod;
@@ -72,7 +72,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * 
      */
     @InputImport(name="joinedTimestamp", required=true)
-    private final String joinedTimestamp;
+      private final String joinedTimestamp;
 
     public String getJoinedTimestamp() {
         return this.joinedTimestamp;
@@ -83,7 +83,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -94,7 +94,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;

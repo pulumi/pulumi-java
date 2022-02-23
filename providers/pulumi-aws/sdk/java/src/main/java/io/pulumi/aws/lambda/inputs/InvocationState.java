@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionName")
-    private final @Nullable Input<String> functionName;
+      private final @Nullable Input<String> functionName;
 
     public Input<String> getFunctionName() {
         return this.functionName == null ? Input.empty() : this.functionName;
@@ -31,7 +31,7 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<String> input;
+      private final @Nullable Input<String> input;
 
     public Input<String> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -42,7 +42,7 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qualifier")
-    private final @Nullable Input<String> qualifier;
+      private final @Nullable Input<String> qualifier;
 
     public Input<String> getQualifier() {
         return this.qualifier == null ? Input.empty() : this.qualifier;
@@ -53,14 +53,14 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="result")
-    private final @Nullable Input<String> result;
+      private final @Nullable Input<String> result;
 
     public Input<String> getResult() {
         return this.result == null ? Input.empty() : this.result;
     }
 
     @InputImport(name="triggers")
-    private final @Nullable Input<Map<String,String>> triggers;
+      private final @Nullable Input<Map<String,String>> triggers;
 
     public Input<Map<String,String>> getTriggers() {
         return this.triggers == null ? Input.empty() : this.triggers;

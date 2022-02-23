@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,21 +21,21 @@ public final class DefaultVpcDhcpOptionsState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
     }
 
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
     @InputImport(name="domainNameServers")
-    private final @Nullable Input<String> domainNameServers;
+      private final @Nullable Input<String> domainNameServers;
 
     public Input<String> getDomainNameServers() {
         return this.domainNameServers == null ? Input.empty() : this.domainNameServers;
@@ -46,7 +46,7 @@ public final class DefaultVpcDhcpOptionsState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="netbiosNameServers")
-    private final @Nullable Input<List<String>> netbiosNameServers;
+      private final @Nullable Input<List<String>> netbiosNameServers;
 
     public Input<List<String>> getNetbiosNameServers() {
         return this.netbiosNameServers == null ? Input.empty() : this.netbiosNameServers;
@@ -57,14 +57,14 @@ public final class DefaultVpcDhcpOptionsState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="netbiosNodeType")
-    private final @Nullable Input<String> netbiosNodeType;
+      private final @Nullable Input<String> netbiosNodeType;
 
     public Input<String> getNetbiosNodeType() {
         return this.netbiosNodeType == null ? Input.empty() : this.netbiosNodeType;
     }
 
     @InputImport(name="ntpServers")
-    private final @Nullable Input<String> ntpServers;
+      private final @Nullable Input<String> ntpServers;
 
     public Input<String> getNtpServers() {
         return this.ntpServers == null ? Input.empty() : this.ntpServers;
@@ -75,7 +75,7 @@ public final class DefaultVpcDhcpOptionsState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -86,14 +86,14 @@ public final class DefaultVpcDhcpOptionsState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

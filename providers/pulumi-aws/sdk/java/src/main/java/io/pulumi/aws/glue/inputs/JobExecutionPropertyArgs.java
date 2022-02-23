@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class JobExecutionPropertyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxConcurrentRuns")
-    private final @Nullable Input<Integer> maxConcurrentRuns;
+      private final @Nullable Input<Integer> maxConcurrentRuns;
 
     public Input<Integer> getMaxConcurrentRuns() {
         return this.maxConcurrentRuns == null ? Input.empty() : this.maxConcurrentRuns;

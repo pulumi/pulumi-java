@@ -4,7 +4,7 @@
 package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeAndroid")
-    private final @Nullable Input<String> deviceTypeAndroid;
+      private final @Nullable Input<String> deviceTypeAndroid;
 
     public Input<String> getDeviceTypeAndroid() {
         return this.deviceTypeAndroid == null ? Input.empty() : this.deviceTypeAndroid;
@@ -30,7 +30,7 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeChromeos")
-    private final @Nullable Input<String> deviceTypeChromeos;
+      private final @Nullable Input<String> deviceTypeChromeos;
 
     public Input<String> getDeviceTypeChromeos() {
         return this.deviceTypeChromeos == null ? Input.empty() : this.deviceTypeChromeos;
@@ -41,7 +41,7 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeIos")
-    private final @Nullable Input<String> deviceTypeIos;
+      private final @Nullable Input<String> deviceTypeIos;
 
     public Input<String> getDeviceTypeIos() {
         return this.deviceTypeIos == null ? Input.empty() : this.deviceTypeIos;
@@ -52,7 +52,7 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeLinux")
-    private final @Nullable Input<String> deviceTypeLinux;
+      private final @Nullable Input<String> deviceTypeLinux;
 
     public Input<String> getDeviceTypeLinux() {
         return this.deviceTypeLinux == null ? Input.empty() : this.deviceTypeLinux;
@@ -63,7 +63,7 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeOsx")
-    private final @Nullable Input<String> deviceTypeOsx;
+      private final @Nullable Input<String> deviceTypeOsx;
 
     public Input<String> getDeviceTypeOsx() {
         return this.deviceTypeOsx == null ? Input.empty() : this.deviceTypeOsx;
@@ -74,7 +74,7 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeWeb")
-    private final @Nullable Input<String> deviceTypeWeb;
+      private final @Nullable Input<String> deviceTypeWeb;
 
     public Input<String> getDeviceTypeWeb() {
         return this.deviceTypeWeb == null ? Input.empty() : this.deviceTypeWeb;
@@ -85,7 +85,7 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeWindows")
-    private final @Nullable Input<String> deviceTypeWindows;
+      private final @Nullable Input<String> deviceTypeWindows;
 
     public Input<String> getDeviceTypeWindows() {
         return this.deviceTypeWindows == null ? Input.empty() : this.deviceTypeWindows;
@@ -96,7 +96,7 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeZeroclient")
-    private final @Nullable Input<String> deviceTypeZeroclient;
+      private final @Nullable Input<String> deviceTypeZeroclient;
 
     public Input<String> getDeviceTypeZeroclient() {
         return this.deviceTypeZeroclient == null ? Input.empty() : this.deviceTypeZeroclient;

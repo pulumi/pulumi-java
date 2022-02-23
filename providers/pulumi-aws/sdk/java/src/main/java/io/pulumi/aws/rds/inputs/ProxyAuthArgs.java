@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authScheme")
-    private final @Nullable Input<String> authScheme;
+      private final @Nullable Input<String> authScheme;
 
     public Input<String> getAuthScheme() {
         return this.authScheme == null ? Input.empty() : this.authScheme;
@@ -30,7 +30,7 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamAuth")
-    private final @Nullable Input<String> iamAuth;
+      private final @Nullable Input<String> iamAuth;
 
     public Input<String> getIamAuth() {
         return this.iamAuth == null ? Input.empty() : this.iamAuth;
@@ -52,7 +52,7 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretArn")
-    private final @Nullable Input<String> secretArn;
+      private final @Nullable Input<String> secretArn;
 
     public Input<String> getSecretArn() {
         return this.secretArn == null ? Input.empty() : this.secretArn;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="passwordLength")
-    private final @Nullable Input<Integer> passwordLength;
+      private final @Nullable Input<Integer> passwordLength;
 
     public Input<Integer> getPasswordLength() {
         return this.passwordLength == null ? Input.empty() : this.passwordLength;
@@ -32,7 +32,7 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="passwordResetRequired")
-    private final @Nullable Input<Boolean> passwordResetRequired;
+      private final @Nullable Input<Boolean> passwordResetRequired;
 
     public Input<Boolean> getPasswordResetRequired() {
         return this.passwordResetRequired == null ? Input.empty() : this.passwordResetRequired;
@@ -43,7 +43,7 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pgpKey", required=true)
-    private final Input<String> pgpKey;
+      private final Input<String> pgpKey;
 
     public Input<String> getPgpKey() {
         return this.pgpKey;
@@ -54,7 +54,7 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="user", required=true)
-    private final Input<String> user;
+      private final Input<String> user;
 
     public Input<String> getUser() {
         return this.user;

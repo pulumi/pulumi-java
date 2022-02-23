@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="applicationArn")
-    private final @Nullable Input<String> applicationArn;
+      private final @Nullable Input<String> applicationArn;
 
     public Input<String> getApplicationArn() {
         return this.applicationArn == null ? Input.empty() : this.applicationArn;
@@ -31,7 +31,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -42,7 +42,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="externalId")
-    private final @Nullable Input<String> externalId;
+      private final @Nullable Input<String> externalId;
 
     public Input<String> getExternalId() {
         return this.externalId == null ? Input.empty() : this.externalId;
@@ -53,7 +53,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -64,7 +64,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="userDataShared")
-    private final @Nullable Input<Boolean> userDataShared;
+      private final @Nullable Input<Boolean> userDataShared;
 
     public Input<Boolean> getUserDataShared() {
         return this.userDataShared == null ? Input.empty() : this.userDataShared;

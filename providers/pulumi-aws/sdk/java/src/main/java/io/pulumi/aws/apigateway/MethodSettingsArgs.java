@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.aws.apigateway.inputs.MethodSettingsSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methodPath", required=true)
-    private final Input<String> methodPath;
+      private final Input<String> methodPath;
 
     public Input<String> getMethodPath() {
         return this.methodPath;
@@ -30,7 +30,7 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi", required=true)
-    private final Input<String> restApi;
+      private final Input<String> restApi;
 
     public Input<String> getRestApi() {
         return this.restApi;
@@ -41,7 +41,7 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settings", required=true)
-    private final Input<MethodSettingsSettingsArgs> settings;
+      private final Input<MethodSettingsSettingsArgs> settings;
 
     public Input<MethodSettingsSettingsArgs> getSettings() {
         return this.settings;
@@ -52,7 +52,7 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName", required=true)
-    private final Input<String> stageName;
+      private final Input<String> stageName;
 
     public Input<String> getStageName() {
         return this.stageName;

@@ -7,7 +7,7 @@ import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineEndpointIscse;
 import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineEndpointManagement;
 import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineEndpointNf;
 import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineEndpointSmb;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

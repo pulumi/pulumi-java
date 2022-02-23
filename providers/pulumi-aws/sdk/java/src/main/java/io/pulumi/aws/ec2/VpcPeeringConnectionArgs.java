@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterArgs;
 import io.pulumi.aws.ec2.inputs.VpcPeeringConnectionRequesterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accepter")
-    private final @Nullable Input<VpcPeeringConnectionAccepterArgs> accepter;
+      private final @Nullable Input<VpcPeeringConnectionAccepterArgs> accepter;
 
     public Input<VpcPeeringConnectionAccepterArgs> getAccepter() {
         return this.accepter == null ? Input.empty() : this.accepter;
@@ -35,7 +35,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="autoAccept")
-    private final @Nullable Input<Boolean> autoAccept;
+      private final @Nullable Input<Boolean> autoAccept;
 
     public Input<Boolean> getAutoAccept() {
         return this.autoAccept == null ? Input.empty() : this.autoAccept;
@@ -47,7 +47,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="peerOwnerId")
-    private final @Nullable Input<String> peerOwnerId;
+      private final @Nullable Input<String> peerOwnerId;
 
     public Input<String> getPeerOwnerId() {
         return this.peerOwnerId == null ? Input.empty() : this.peerOwnerId;
@@ -59,7 +59,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="peerRegion")
-    private final @Nullable Input<String> peerRegion;
+      private final @Nullable Input<String> peerRegion;
 
     public Input<String> getPeerRegion() {
         return this.peerRegion == null ? Input.empty() : this.peerRegion;
@@ -70,7 +70,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="peerVpcId", required=true)
-    private final Input<String> peerVpcId;
+      private final Input<String> peerVpcId;
 
     public Input<String> getPeerVpcId() {
         return this.peerVpcId;
@@ -82,7 +82,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="requester")
-    private final @Nullable Input<VpcPeeringConnectionRequesterArgs> requester;
+      private final @Nullable Input<VpcPeeringConnectionRequesterArgs> requester;
 
     public Input<VpcPeeringConnectionRequesterArgs> getRequester() {
         return this.requester == null ? Input.empty() : this.requester;
@@ -93,7 +93,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -104,7 +104,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;

@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appImageConfigName", required=true)
-    private final Input<String> appImageConfigName;
+      private final Input<String> appImageConfigName;
 
     public Input<String> getAppImageConfigName() {
         return this.appImageConfigName;
@@ -32,7 +32,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kernelGatewayImageConfig")
-    private final @Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
+      private final @Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
 
     public Input<AppImageConfigKernelGatewayImageConfigArgs> getKernelGatewayImageConfig() {
         return this.kernelGatewayImageConfig == null ? Input.empty() : this.kernelGatewayImageConfig;
@@ -43,7 +43,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

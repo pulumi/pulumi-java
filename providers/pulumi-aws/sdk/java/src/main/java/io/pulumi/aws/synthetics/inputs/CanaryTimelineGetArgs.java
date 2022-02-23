@@ -4,7 +4,7 @@
 package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="created")
-    private final @Nullable Input<String> created;
+      private final @Nullable Input<String> created;
 
     public Input<String> getCreated() {
         return this.created == null ? Input.empty() : this.created;
@@ -30,7 +30,7 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="lastModified")
-    private final @Nullable Input<String> lastModified;
+      private final @Nullable Input<String> lastModified;
 
     public Input<String> getLastModified() {
         return this.lastModified == null ? Input.empty() : this.lastModified;
@@ -41,7 +41,7 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="lastStarted")
-    private final @Nullable Input<String> lastStarted;
+      private final @Nullable Input<String> lastStarted;
 
     public Input<String> getLastStarted() {
         return this.lastStarted == null ? Input.empty() : this.lastStarted;
@@ -52,7 +52,7 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="lastStopped")
-    private final @Nullable Input<String> lastStopped;
+      private final @Nullable Input<String> lastStopped;
 
     public Input<String> getLastStopped() {
         return this.lastStopped == null ? Input.empty() : this.lastStopped;

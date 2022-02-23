@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync;
 
 import io.pulumi.aws.appsync.inputs.FunctionSyncConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -32,7 +32,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSource", required=true)
-    private final Input<String> dataSource;
+      private final Input<String> dataSource;
 
     public Input<String> getDataSource() {
         return this.dataSource;
@@ -43,7 +43,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -54,7 +54,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionVersion")
-    private final @Nullable Input<String> functionVersion;
+      private final @Nullable Input<String> functionVersion;
 
     public Input<String> getFunctionVersion() {
         return this.functionVersion == null ? Input.empty() : this.functionVersion;
@@ -65,7 +65,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxBatchSize")
-    private final @Nullable Input<Integer> maxBatchSize;
+      private final @Nullable Input<Integer> maxBatchSize;
 
     public Input<Integer> getMaxBatchSize() {
         return this.maxBatchSize == null ? Input.empty() : this.maxBatchSize;
@@ -76,7 +76,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestMappingTemplate", required=true)
-    private final Input<String> requestMappingTemplate;
+      private final Input<String> requestMappingTemplate;
 
     public Input<String> getRequestMappingTemplate() {
         return this.requestMappingTemplate;
@@ -98,7 +98,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseMappingTemplate", required=true)
-    private final Input<String> responseMappingTemplate;
+      private final Input<String> responseMappingTemplate;
 
     public Input<String> getResponseMappingTemplate() {
         return this.responseMappingTemplate;
@@ -109,7 +109,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncConfig")
-    private final @Nullable Input<FunctionSyncConfigArgs> syncConfig;
+      private final @Nullable Input<FunctionSyncConfigArgs> syncConfig;
 
     public Input<FunctionSyncConfigArgs> getSyncConfig() {
         return this.syncConfig == null ? Input.empty() : this.syncConfig;

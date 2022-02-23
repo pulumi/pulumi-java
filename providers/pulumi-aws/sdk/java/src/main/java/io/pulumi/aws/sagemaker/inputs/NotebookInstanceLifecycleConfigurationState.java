@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -30,7 +30,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,7 +41,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
      * 
      */
     @InputImport(name="onCreate")
-    private final @Nullable Input<String> onCreate;
+      private final @Nullable Input<String> onCreate;
 
     public Input<String> getOnCreate() {
         return this.onCreate == null ? Input.empty() : this.onCreate;
@@ -52,7 +52,7 @@ public final class NotebookInstanceLifecycleConfigurationState extends io.pulumi
      * 
      */
     @InputImport(name="onStart")
-    private final @Nullable Input<String> onStart;
+      private final @Nullable Input<String> onStart;
 
     public Input<String> getOnStart() {
         return this.onStart == null ? Input.empty() : this.onStart;

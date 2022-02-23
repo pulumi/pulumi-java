@@ -5,7 +5,7 @@ package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.aws.servicediscovery.inputs.ServiceDnsConfigDnsRecordGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dnsRecords", required=true)
-    private final Input<List<ServiceDnsConfigDnsRecordGetArgs>> dnsRecords;
+      private final Input<List<ServiceDnsConfigDnsRecordGetArgs>> dnsRecords;
 
     public Input<List<ServiceDnsConfigDnsRecordGetArgs>> getDnsRecords() {
         return this.dnsRecords;
@@ -32,7 +32,7 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="namespaceId", required=true)
-    private final Input<String> namespaceId;
+      private final Input<String> namespaceId;
 
     public Input<String> getNamespaceId() {
         return this.namespaceId;
@@ -43,7 +43,7 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="routingPolicy")
-    private final @Nullable Input<String> routingPolicy;
+      private final @Nullable Input<String> routingPolicy;
 
     public Input<String> getRoutingPolicy() {
         return this.routingPolicy == null ? Input.empty() : this.routingPolicy;

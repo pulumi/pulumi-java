@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-    private final @Nullable Input<String> apiId;
+      private final @Nullable Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId == null ? Input.empty() : this.apiId;
@@ -31,7 +31,7 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modelSelectionExpression")
-    private final @Nullable Input<String> modelSelectionExpression;
+      private final @Nullable Input<String> modelSelectionExpression;
 
     public Input<String> getModelSelectionExpression() {
         return this.modelSelectionExpression == null ? Input.empty() : this.modelSelectionExpression;
@@ -42,7 +42,7 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseModels")
-    private final @Nullable Input<Map<String,String>> responseModels;
+      private final @Nullable Input<Map<String,String>> responseModels;
 
     public Input<Map<String,String>> getResponseModels() {
         return this.responseModels == null ? Input.empty() : this.responseModels;
@@ -53,7 +53,7 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeId")
-    private final @Nullable Input<String> routeId;
+      private final @Nullable Input<String> routeId;
 
     public Input<String> getRouteId() {
         return this.routeId == null ? Input.empty() : this.routeId;
@@ -64,7 +64,7 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeResponseKey")
-    private final @Nullable Input<String> routeResponseKey;
+      private final @Nullable Input<String> routeResponseKey;
 
     public Input<String> getRouteResponseKey() {
         return this.routeResponseKey == null ? Input.empty() : this.routeResponseKey;

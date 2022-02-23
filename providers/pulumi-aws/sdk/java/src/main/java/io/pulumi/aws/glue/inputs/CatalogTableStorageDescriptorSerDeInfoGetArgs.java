@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CatalogTableStorageDescriptorSerDeInfoGetArgs extends io.pulu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class CatalogTableStorageDescriptorSerDeInfoGetArgs extends io.pulu
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -42,7 +42,7 @@ public final class CatalogTableStorageDescriptorSerDeInfoGetArgs extends io.pulu
      * 
      */
     @InputImport(name="serializationLibrary")
-    private final @Nullable Input<String> serializationLibrary;
+      private final @Nullable Input<String> serializationLibrary;
 
     public Input<String> getSerializationLibrary() {
         return this.serializationLibrary == null ? Input.empty() : this.serializationLibrary;

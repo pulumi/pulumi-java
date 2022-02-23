@@ -8,8 +8,8 @@ import io.pulumi.aws.dms.ReplicationTaskArgs;
 import io.pulumi.aws.dms.inputs.ReplicationTaskState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -199,6 +199,21 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
         return this.targetEndpointArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ReplicationTask(String name) {
+        this(name, ReplicationTaskArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ReplicationTask(String name, ReplicationTaskArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

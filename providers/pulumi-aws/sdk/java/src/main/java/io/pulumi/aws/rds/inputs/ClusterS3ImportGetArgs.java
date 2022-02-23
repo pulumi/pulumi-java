@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -30,7 +30,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucketPrefix")
-    private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Input<String> bucketPrefix;
 
     public Input<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
@@ -41,7 +41,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ingestionRole", required=true)
-    private final Input<String> ingestionRole;
+      private final Input<String> ingestionRole;
 
     public Input<String> getIngestionRole() {
         return this.ingestionRole;
@@ -52,7 +52,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceEngine", required=true)
-    private final Input<String> sourceEngine;
+      private final Input<String> sourceEngine;
 
     public Input<String> getSourceEngine() {
         return this.sourceEngine;
@@ -63,7 +63,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceEngineVersion", required=true)
-    private final Input<String> sourceEngineVersion;
+      private final Input<String> sourceEngineVersion;
 
     public Input<String> getSourceEngineVersion() {
         return this.sourceEngineVersion;

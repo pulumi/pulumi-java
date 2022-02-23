@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CrawlerRecrawlPolicyGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="recrawlBehavior")
-    private final @Nullable Input<String> recrawlBehavior;
+      private final @Nullable Input<String> recrawlBehavior;
 
     public Input<String> getRecrawlBehavior() {
         return this.recrawlBehavior == null ? Input.empty() : this.recrawlBehavior;

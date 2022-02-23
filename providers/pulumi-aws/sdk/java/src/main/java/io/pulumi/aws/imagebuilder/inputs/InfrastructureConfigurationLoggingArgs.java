@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingS3LogsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class InfrastructureConfigurationLoggingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="s3Logs", required=true)
-    private final Input<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs;
+      private final Input<InfrastructureConfigurationLoggingS3LogsArgs> s3Logs;
 
     public Input<InfrastructureConfigurationLoggingS3LogsArgs> getS3Logs() {
         return this.s3Logs;

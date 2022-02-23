@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WindowsFileSystemAuditLogConfigurationGetArgs extends io.pulu
      * 
      */
     @InputImport(name="auditLogDestination")
-    private final @Nullable Input<String> auditLogDestination;
+      private final @Nullable Input<String> auditLogDestination;
 
     public Input<String> getAuditLogDestination() {
         return this.auditLogDestination == null ? Input.empty() : this.auditLogDestination;
@@ -30,7 +30,7 @@ public final class WindowsFileSystemAuditLogConfigurationGetArgs extends io.pulu
      * 
      */
     @InputImport(name="fileAccessAuditLogLevel")
-    private final @Nullable Input<String> fileAccessAuditLogLevel;
+      private final @Nullable Input<String> fileAccessAuditLogLevel;
 
     public Input<String> getFileAccessAuditLogLevel() {
         return this.fileAccessAuditLogLevel == null ? Input.empty() : this.fileAccessAuditLogLevel;
@@ -41,7 +41,7 @@ public final class WindowsFileSystemAuditLogConfigurationGetArgs extends io.pulu
      * 
      */
     @InputImport(name="fileShareAccessAuditLogLevel")
-    private final @Nullable Input<String> fileShareAccessAuditLogLevel;
+      private final @Nullable Input<String> fileShareAccessAuditLogLevel;
 
     public Input<String> getFileShareAccessAuditLogLevel() {
         return this.fileShareAccessAuditLogLevel == null ? Input.empty() : this.fileShareAccessAuditLogLevel;

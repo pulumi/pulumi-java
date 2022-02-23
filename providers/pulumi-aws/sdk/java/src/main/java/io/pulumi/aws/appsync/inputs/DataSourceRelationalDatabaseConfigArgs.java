@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DataSourceRelationalDatabaseConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpEndpointConfig")
-    private final @Nullable Input<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> httpEndpointConfig;
+      private final @Nullable Input<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> httpEndpointConfig;
 
     public Input<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> getHttpEndpointConfig() {
         return this.httpEndpointConfig == null ? Input.empty() : this.httpEndpointConfig;
@@ -31,7 +31,7 @@ public final class DataSourceRelationalDatabaseConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="sourceType")
-    private final @Nullable Input<String> sourceType;
+      private final @Nullable Input<String> sourceType;
 
     public Input<String> getSourceType() {
         return this.sourceType == null ? Input.empty() : this.sourceType;

@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.AmiCopyEbsBlockDeviceArgs;
 import io.pulumi.aws.ec2.inputs.AmiCopyEphemeralBlockDeviceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationOutpostArn")
-    private final @Nullable Input<String> destinationOutpostArn;
+      private final @Nullable Input<String> destinationOutpostArn;
 
     public Input<String> getDestinationOutpostArn() {
         return this.destinationOutpostArn == null ? Input.empty() : this.destinationOutpostArn;
@@ -48,7 +48,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsBlockDevices")
-    private final @Nullable Input<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices;
+      private final @Nullable Input<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices;
 
     public Input<List<AmiCopyEbsBlockDeviceArgs>> getEbsBlockDevices() {
         return this.ebsBlockDevices == null ? Input.empty() : this.ebsBlockDevices;
@@ -59,7 +59,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encrypted")
-    private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Input<Boolean> encrypted;
 
     public Input<Boolean> getEncrypted() {
         return this.encrypted == null ? Input.empty() : this.encrypted;
@@ -71,7 +71,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralBlockDevices")
-    private final @Nullable Input<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+      private final @Nullable Input<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     public Input<List<AmiCopyEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Input.empty() : this.ephemeralBlockDevices;
@@ -84,7 +84,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -95,7 +95,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -107,7 +107,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAmiId", required=true)
-    private final Input<String> sourceAmiId;
+      private final Input<String> sourceAmiId;
 
     public Input<String> getSourceAmiId() {
         return this.sourceAmiId;
@@ -119,7 +119,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAmiRegion", required=true)
-    private final Input<String> sourceAmiRegion;
+      private final Input<String> sourceAmiRegion;
 
     public Input<String> getSourceAmiRegion() {
         return this.sourceAmiRegion;
@@ -130,7 +130,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

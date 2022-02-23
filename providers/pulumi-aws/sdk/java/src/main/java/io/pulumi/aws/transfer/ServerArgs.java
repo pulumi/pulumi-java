@@ -5,7 +5,7 @@ package io.pulumi.aws.transfer;
 
 import io.pulumi.aws.transfer.inputs.ServerEndpointDetailsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -34,7 +34,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryId")
-    private final @Nullable Input<String> directoryId;
+      private final @Nullable Input<String> directoryId;
 
     public Input<String> getDirectoryId() {
         return this.directoryId == null ? Input.empty() : this.directoryId;
@@ -45,7 +45,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -56,7 +56,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointDetails")
-    private final @Nullable Input<ServerEndpointDetailsArgs> endpointDetails;
+      private final @Nullable Input<ServerEndpointDetailsArgs> endpointDetails;
 
     public Input<ServerEndpointDetailsArgs> getEndpointDetails() {
         return this.endpointDetails == null ? Input.empty() : this.endpointDetails;
@@ -67,7 +67,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointType")
-    private final @Nullable Input<String> endpointType;
+      private final @Nullable Input<String> endpointType;
 
     public Input<String> getEndpointType() {
         return this.endpointType == null ? Input.empty() : this.endpointType;
@@ -78,7 +78,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-    private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Input<Boolean> forceDestroy;
 
     public Input<Boolean> getForceDestroy() {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
@@ -89,7 +89,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="function")
-    private final @Nullable Input<String> function;
+      private final @Nullable Input<String> function;
 
     public Input<String> getFunction() {
         return this.function == null ? Input.empty() : this.function;
@@ -100,7 +100,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostKey")
-    private final @Nullable Input<String> hostKey;
+      private final @Nullable Input<String> hostKey;
 
     public Input<String> getHostKey() {
         return this.hostKey == null ? Input.empty() : this.hostKey;
@@ -111,7 +111,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityProviderType")
-    private final @Nullable Input<String> identityProviderType;
+      private final @Nullable Input<String> identityProviderType;
 
     public Input<String> getIdentityProviderType() {
         return this.identityProviderType == null ? Input.empty() : this.identityProviderType;
@@ -122,7 +122,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invocationRole")
-    private final @Nullable Input<String> invocationRole;
+      private final @Nullable Input<String> invocationRole;
 
     public Input<String> getInvocationRole() {
         return this.invocationRole == null ? Input.empty() : this.invocationRole;
@@ -133,7 +133,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingRole")
-    private final @Nullable Input<String> loggingRole;
+      private final @Nullable Input<String> loggingRole;
 
     public Input<String> getLoggingRole() {
         return this.loggingRole == null ? Input.empty() : this.loggingRole;
@@ -147,7 +147,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocols")
-    private final @Nullable Input<List<String>> protocols;
+      private final @Nullable Input<List<String>> protocols;
 
     public Input<List<String>> getProtocols() {
         return this.protocols == null ? Input.empty() : this.protocols;
@@ -158,7 +158,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityPolicyName")
-    private final @Nullable Input<String> securityPolicyName;
+      private final @Nullable Input<String> securityPolicyName;
 
     public Input<String> getSecurityPolicyName() {
         return this.securityPolicyName == null ? Input.empty() : this.securityPolicyName;
@@ -169,7 +169,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -180,7 +180,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.resourcegroupstaggingapi.inputs;
 
 import io.pulumi.aws.resourcegroupstaggingapi.inputs.GetResourcesTagFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GetResourcesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="excludeCompliantResources")
-    private final @Nullable Boolean excludeCompliantResources;
+      private final @Nullable Boolean excludeCompliantResources;
 
     public Optional<Boolean> getExcludeCompliantResources() {
         return this.excludeCompliantResources == null ? Optional.empty() : Optional.ofNullable(this.excludeCompliantResources);
@@ -33,7 +33,7 @@ public final class GetResourcesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="includeComplianceDetails")
-    private final @Nullable Boolean includeComplianceDetails;
+      private final @Nullable Boolean includeComplianceDetails;
 
     public Optional<Boolean> getIncludeComplianceDetails() {
         return this.includeComplianceDetails == null ? Optional.empty() : Optional.ofNullable(this.includeComplianceDetails);
@@ -44,7 +44,7 @@ public final class GetResourcesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceArnLists")
-    private final @Nullable List<String> resourceArnLists;
+      private final @Nullable List<String> resourceArnLists;
 
     public List<String> getResourceArnLists() {
         return this.resourceArnLists == null ? List.of() : this.resourceArnLists;
@@ -55,7 +55,7 @@ public final class GetResourcesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceTypeFilters")
-    private final @Nullable List<String> resourceTypeFilters;
+      private final @Nullable List<String> resourceTypeFilters;
 
     public List<String> getResourceTypeFilters() {
         return this.resourceTypeFilters == null ? List.of() : this.resourceTypeFilters;
@@ -66,7 +66,7 @@ public final class GetResourcesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tagFilters")
-    private final @Nullable List<GetResourcesTagFilter> tagFilters;
+      private final @Nullable List<GetResourcesTagFilter> tagFilters;
 
     public List<GetResourcesTagFilter> getTagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.neptune.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="customerAwsId")
-    private final @Nullable Input<String> customerAwsId;
+      private final @Nullable Input<String> customerAwsId;
 
     public Input<String> getCustomerAwsId() {
         return this.customerAwsId == null ? Input.empty() : this.customerAwsId;
@@ -44,7 +44,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -55,7 +55,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eventCategories")
-    private final @Nullable Input<List<String>> eventCategories;
+      private final @Nullable Input<List<String>> eventCategories;
 
     public Input<List<String>> getEventCategories() {
         return this.eventCategories == null ? Input.empty() : this.eventCategories;
@@ -66,7 +66,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -88,7 +88,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="snsTopicArn")
-    private final @Nullable Input<String> snsTopicArn;
+      private final @Nullable Input<String> snsTopicArn;
 
     public Input<String> getSnsTopicArn() {
         return this.snsTopicArn == null ? Input.empty() : this.snsTopicArn;
@@ -99,7 +99,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceIds")
-    private final @Nullable Input<List<String>> sourceIds;
+      private final @Nullable Input<List<String>> sourceIds;
 
     public Input<List<String>> getSourceIds() {
         return this.sourceIds == null ? Input.empty() : this.sourceIds;
@@ -110,7 +110,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceType")
-    private final @Nullable Input<String> sourceType;
+      private final @Nullable Input<String> sourceType;
 
     public Input<String> getSourceType() {
         return this.sourceType == null ? Input.empty() : this.sourceType;
@@ -121,7 +121,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -132,7 +132,7 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

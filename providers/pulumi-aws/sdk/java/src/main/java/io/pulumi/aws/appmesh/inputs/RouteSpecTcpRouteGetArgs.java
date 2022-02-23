@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteActionGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteTimeoutGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class RouteSpecTcpRouteGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<RouteSpecTcpRouteActionGetArgs> action;
+      private final Input<RouteSpecTcpRouteActionGetArgs> action;
 
     public Input<RouteSpecTcpRouteActionGetArgs> getAction() {
         return this.action;
@@ -31,7 +31,7 @@ public final class RouteSpecTcpRouteGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<RouteSpecTcpRouteTimeoutGetArgs> timeout;
+      private final @Nullable Input<RouteSpecTcpRouteTimeoutGetArgs> timeout;
 
     public Input<RouteSpecTcpRouteTimeoutGetArgs> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;

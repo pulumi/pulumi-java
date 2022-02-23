@@ -5,7 +5,7 @@ package io.pulumi.aws.athena.inputs;
 
 import io.pulumi.aws.athena.inputs.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="encryptionConfiguration")
-    private final @Nullable Input<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
+      private final @Nullable Input<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Input<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
@@ -31,7 +31,7 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="outputLocation")
-    private final @Nullable Input<String> outputLocation;
+      private final @Nullable Input<String> outputLocation;
 
     public Input<String> getOutputLocation() {
         return this.outputLocation == null ? Input.empty() : this.outputLocation;

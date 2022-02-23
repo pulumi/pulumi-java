@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetBucket", required=true)
-    private final Input<String> targetBucket;
+      private final Input<String> targetBucket;
 
     public Input<String> getTargetBucket() {
         return this.targetBucket;
@@ -30,7 +30,7 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetPrefix")
-    private final @Nullable Input<String> targetPrefix;
+      private final @Nullable Input<String> targetPrefix;
 
     public Input<String> getTargetPrefix() {
         return this.targetPrefix == null ? Input.empty() : this.targetPrefix;

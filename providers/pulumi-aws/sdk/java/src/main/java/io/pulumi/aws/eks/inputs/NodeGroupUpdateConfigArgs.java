@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NodeGroupUpdateConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxUnavailable")
-    private final @Nullable Input<Integer> maxUnavailable;
+      private final @Nullable Input<Integer> maxUnavailable;
 
     public Input<Integer> getMaxUnavailable() {
         return this.maxUnavailable == null ? Input.empty() : this.maxUnavailable;
@@ -30,7 +30,7 @@ public final class NodeGroupUpdateConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxUnavailablePercentage")
-    private final @Nullable Input<Integer> maxUnavailablePercentage;
+      private final @Nullable Input<Integer> maxUnavailablePercentage;
 
     public Input<Integer> getMaxUnavailablePercentage() {
         return this.maxUnavailablePercentage == null ? Input.empty() : this.maxUnavailablePercentage;

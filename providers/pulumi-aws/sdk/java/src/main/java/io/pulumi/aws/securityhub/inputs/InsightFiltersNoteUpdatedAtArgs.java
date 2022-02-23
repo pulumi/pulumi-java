@@ -5,7 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.aws.securityhub.inputs.InsightFiltersNoteUpdatedAtDateRangeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class InsightFiltersNoteUpdatedAtArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dateRange")
-    private final @Nullable Input<InsightFiltersNoteUpdatedAtDateRangeArgs> dateRange;
+      private final @Nullable Input<InsightFiltersNoteUpdatedAtDateRangeArgs> dateRange;
 
     public Input<InsightFiltersNoteUpdatedAtDateRangeArgs> getDateRange() {
         return this.dateRange == null ? Input.empty() : this.dateRange;
@@ -31,7 +31,7 @@ public final class InsightFiltersNoteUpdatedAtArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="end")
-    private final @Nullable Input<String> end;
+      private final @Nullable Input<String> end;
 
     public Input<String> getEnd() {
         return this.end == null ? Input.empty() : this.end;
@@ -42,7 +42,7 @@ public final class InsightFiltersNoteUpdatedAtArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="start")
-    private final @Nullable Input<String> start;
+      private final @Nullable Input<String> start;
 
     public Input<String> getStart() {
         return this.start == null ? Input.empty() : this.start;

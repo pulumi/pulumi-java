@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable Input<String> authenticationType;
+      private final @Nullable Input<String> authenticationType;
 
     public Input<String> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -42,7 +42,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+      private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
@@ -53,7 +53,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -64,7 +64,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstName")
-    private final @Nullable Input<String> firstName;
+      private final @Nullable Input<String> firstName;
 
     public Input<String> getFirstName() {
         return this.firstName == null ? Input.empty() : this.firstName;
@@ -75,7 +75,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastName")
-    private final @Nullable Input<String> lastName;
+      private final @Nullable Input<String> lastName;
 
     public Input<String> getLastName() {
         return this.lastName == null ? Input.empty() : this.lastName;
@@ -86,7 +86,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendEmailNotification")
-    private final @Nullable Input<Boolean> sendEmailNotification;
+      private final @Nullable Input<Boolean> sendEmailNotification;
 
     public Input<Boolean> getSendEmailNotification() {
         return this.sendEmailNotification == null ? Input.empty() : this.sendEmailNotification;
@@ -97,7 +97,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;

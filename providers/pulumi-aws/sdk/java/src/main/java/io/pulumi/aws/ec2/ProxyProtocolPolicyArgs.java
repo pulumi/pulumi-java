@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProxyProtocolPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instancePorts", required=true)
-    private final Input<List<String>> instancePorts;
+      private final Input<List<String>> instancePorts;
 
     public Input<List<String>> getInstancePorts() {
         return this.instancePorts;
@@ -32,7 +32,7 @@ public final class ProxyProtocolPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="loadBalancer", required=true)
-    private final Input<String> loadBalancer;
+      private final Input<String> loadBalancer;
 
     public Input<String> getLoadBalancer() {
         return this.loadBalancer;

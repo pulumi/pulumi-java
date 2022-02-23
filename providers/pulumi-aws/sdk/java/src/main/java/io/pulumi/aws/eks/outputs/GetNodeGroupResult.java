@@ -6,7 +6,7 @@ package io.pulumi.aws.eks.outputs;
 import io.pulumi.aws.eks.outputs.GetNodeGroupRemoteAccess;
 import io.pulumi.aws.eks.outputs.GetNodeGroupResource;
 import io.pulumi.aws.eks.outputs.GetNodeGroupScalingConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="host", required=true)
-    private final Input<String> host;
+      private final Input<String> host;
 
     public Input<String> getHost() {
         return this.host;
@@ -31,7 +31,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -42,7 +42,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -53,7 +53,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<String> protocol;
+      private final Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol;
@@ -64,7 +64,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="weight", required=true)
-    private final Input<Integer> weight;
+      private final Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cdcStartPosition")
-    private final @Nullable Input<String> cdcStartPosition;
+      private final @Nullable Input<String> cdcStartPosition;
 
     public Input<String> getCdcStartPosition() {
         return this.cdcStartPosition == null ? Input.empty() : this.cdcStartPosition;
@@ -31,7 +31,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cdcStartTime")
-    private final @Nullable Input<String> cdcStartTime;
+      private final @Nullable Input<String> cdcStartTime;
 
     public Input<String> getCdcStartTime() {
         return this.cdcStartTime == null ? Input.empty() : this.cdcStartTime;
@@ -42,7 +42,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="migrationType")
-    private final @Nullable Input<String> migrationType;
+      private final @Nullable Input<String> migrationType;
 
     public Input<String> getMigrationType() {
         return this.migrationType == null ? Input.empty() : this.migrationType;
@@ -53,7 +53,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicationInstanceArn")
-    private final @Nullable Input<String> replicationInstanceArn;
+      private final @Nullable Input<String> replicationInstanceArn;
 
     public Input<String> getReplicationInstanceArn() {
         return this.replicationInstanceArn == null ? Input.empty() : this.replicationInstanceArn;
@@ -64,7 +64,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicationTaskArn")
-    private final @Nullable Input<String> replicationTaskArn;
+      private final @Nullable Input<String> replicationTaskArn;
 
     public Input<String> getReplicationTaskArn() {
         return this.replicationTaskArn == null ? Input.empty() : this.replicationTaskArn;
@@ -75,7 +75,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicationTaskId")
-    private final @Nullable Input<String> replicationTaskId;
+      private final @Nullable Input<String> replicationTaskId;
 
     public Input<String> getReplicationTaskId() {
         return this.replicationTaskId == null ? Input.empty() : this.replicationTaskId;
@@ -86,7 +86,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicationTaskSettings")
-    private final @Nullable Input<String> replicationTaskSettings;
+      private final @Nullable Input<String> replicationTaskSettings;
 
     public Input<String> getReplicationTaskSettings() {
         return this.replicationTaskSettings == null ? Input.empty() : this.replicationTaskSettings;
@@ -97,7 +97,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceEndpointArn")
-    private final @Nullable Input<String> sourceEndpointArn;
+      private final @Nullable Input<String> sourceEndpointArn;
 
     public Input<String> getSourceEndpointArn() {
         return this.sourceEndpointArn == null ? Input.empty() : this.sourceEndpointArn;
@@ -108,7 +108,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tableMappings")
-    private final @Nullable Input<String> tableMappings;
+      private final @Nullable Input<String> tableMappings;
 
     public Input<String> getTableMappings() {
         return this.tableMappings == null ? Input.empty() : this.tableMappings;
@@ -119,7 +119,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -130,7 +130,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -141,7 +141,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetEndpointArn")
-    private final @Nullable Input<String> targetEndpointArn;
+      private final @Nullable Input<String> targetEndpointArn;
 
     public Input<String> getTargetEndpointArn() {
         return this.targetEndpointArn == null ? Input.empty() : this.targetEndpointArn;

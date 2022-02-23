@@ -8,8 +8,8 @@ import io.pulumi.aws.appsync.DomainNameArgs;
 import io.pulumi.aws.appsync.inputs.DomainNameState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -100,6 +100,21 @@ public class DomainName extends io.pulumi.resources.CustomResource {
         return this.hostedZoneId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DomainName(String name) {
+        this(name, DomainNameArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DomainName(String name, DomainNameArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -8,8 +8,8 @@ import io.pulumi.aws.waf.RegexPatternSetArgs;
 import io.pulumi.aws.waf.inputs.RegexPatternSetState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -73,6 +73,21 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
         return this.regexPatternStrings;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RegexPatternSet(String name) {
+        this(name, RegexPatternSetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RegexPatternSet(String name, @Nullable RegexPatternSetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

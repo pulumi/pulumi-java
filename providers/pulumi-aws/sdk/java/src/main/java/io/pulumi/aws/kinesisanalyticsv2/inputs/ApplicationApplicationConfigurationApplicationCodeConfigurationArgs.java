@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @InputImport(name="codeContent")
-    private final @Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent;
+      private final @Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent;
 
     public Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> getCodeContent() {
         return this.codeContent == null ? Input.empty() : this.codeContent;
@@ -31,7 +31,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @InputImport(name="codeContentType", required=true)
-    private final Input<String> codeContentType;
+      private final Input<String> codeContentType;
 
     public Input<String> getCodeContentType() {
         return this.codeContentType;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.shield;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ProtectionHealthCheckAssociationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="healthCheckArn", required=true)
-    private final Input<String> healthCheckArn;
+      private final Input<String> healthCheckArn;
 
     public Input<String> getHealthCheckArn() {
         return this.healthCheckArn;
@@ -29,7 +29,7 @@ public final class ProtectionHealthCheckAssociationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="shieldProtectionId", required=true)
-    private final Input<String> shieldProtectionId;
+      private final Input<String> shieldProtectionId;
 
     public Input<String> getShieldProtectionId() {
         return this.shieldProtectionId;

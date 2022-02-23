@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cidrBlock")
-    private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
@@ -30,7 +30,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -52,7 +52,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="reservationType")
-    private final @Nullable Input<String> reservationType;
+      private final @Nullable Input<String> reservationType;
 
     public Input<String> getReservationType() {
         return this.reservationType == null ? Input.empty() : this.reservationType;
@@ -63,7 +63,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;

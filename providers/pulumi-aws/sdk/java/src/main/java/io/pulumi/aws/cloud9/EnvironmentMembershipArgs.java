@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloud9;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -29,7 +29,7 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final Input<String> permissions;
+      private final Input<String> permissions;
 
     public Input<String> getPermissions() {
         return this.permissions;
@@ -40,7 +40,7 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="userArn", required=true)
-    private final Input<String> userArn;
+      private final Input<String> userArn;
 
     public Input<String> getUserArn() {
         return this.userArn;

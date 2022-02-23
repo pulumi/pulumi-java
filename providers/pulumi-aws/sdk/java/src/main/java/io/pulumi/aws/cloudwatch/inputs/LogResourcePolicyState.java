@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyDocument")
-    private final @Nullable Input<String> policyDocument;
+      private final @Nullable Input<String> policyDocument;
 
     public Input<String> getPolicyDocument() {
         return this.policyDocument == null ? Input.empty() : this.policyDocument;
@@ -30,7 +30,7 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable Input<String> policyName;
+      private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;

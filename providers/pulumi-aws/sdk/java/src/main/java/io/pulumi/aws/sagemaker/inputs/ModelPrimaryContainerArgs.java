@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.ModelPrimaryContainerImageConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="containerHostname")
-    private final @Nullable Input<String> containerHostname;
+      private final @Nullable Input<String> containerHostname;
 
     public Input<String> getContainerHostname() {
         return this.containerHostname == null ? Input.empty() : this.containerHostname;
@@ -33,7 +33,7 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<Map<String,String>> environment;
+      private final @Nullable Input<Map<String,String>> environment;
 
     public Input<Map<String,String>> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -44,7 +44,7 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="image", required=true)
-    private final Input<String> image;
+      private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
@@ -55,7 +55,7 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="imageConfig")
-    private final @Nullable Input<ModelPrimaryContainerImageConfigArgs> imageConfig;
+      private final @Nullable Input<ModelPrimaryContainerImageConfigArgs> imageConfig;
 
     public Input<ModelPrimaryContainerImageConfigArgs> getImageConfig() {
         return this.imageConfig == null ? Input.empty() : this.imageConfig;
@@ -66,7 +66,7 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -77,7 +77,7 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="modelDataUrl")
-    private final @Nullable Input<String> modelDataUrl;
+      private final @Nullable Input<String> modelDataUrl;
 
     public Input<String> getModelDataUrl() {
         return this.modelDataUrl == null ? Input.empty() : this.modelDataUrl;

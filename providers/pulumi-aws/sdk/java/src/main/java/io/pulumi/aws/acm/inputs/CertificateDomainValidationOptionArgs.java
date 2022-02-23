@@ -4,7 +4,7 @@
 package io.pulumi.aws.acm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -30,7 +30,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceRecordName")
-    private final @Nullable Input<String> resourceRecordName;
+      private final @Nullable Input<String> resourceRecordName;
 
     public Input<String> getResourceRecordName() {
         return this.resourceRecordName == null ? Input.empty() : this.resourceRecordName;
@@ -41,7 +41,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceRecordType")
-    private final @Nullable Input<String> resourceRecordType;
+      private final @Nullable Input<String> resourceRecordType;
 
     public Input<String> getResourceRecordType() {
         return this.resourceRecordType == null ? Input.empty() : this.resourceRecordType;
@@ -52,7 +52,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceRecordValue")
-    private final @Nullable Input<String> resourceRecordValue;
+      private final @Nullable Input<String> resourceRecordValue;
 
     public Input<String> getResourceRecordValue() {
         return this.resourceRecordValue == null ? Input.empty() : this.resourceRecordValue;

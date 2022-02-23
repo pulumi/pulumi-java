@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="html")
-    private final @Nullable Input<String> html;
+      private final @Nullable Input<String> html;
 
     public Input<String> getHtml() {
         return this.html == null ? Input.empty() : this.html;
@@ -30,7 +30,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,7 +41,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subject")
-    private final @Nullable Input<String> subject;
+      private final @Nullable Input<String> subject;
 
     public Input<String> getSubject() {
         return this.subject == null ? Input.empty() : this.subject;
@@ -52,7 +52,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<String> text;
+      private final @Nullable Input<String> text;
 
     public Input<String> getText() {
         return this.text == null ? Input.empty() : this.text;

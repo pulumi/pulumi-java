@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="clientConfig")
-    private final @Nullable Input<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> clientConfig;
+      private final @Nullable Input<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> clientConfig;
 
     public Input<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> getClientConfig() {
         return this.clientConfig == null ? Input.empty() : this.clientConfig;
@@ -31,7 +31,7 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends io.p
      * 
      */
     @InputImport(name="outputConfig", required=true)
-    private final Input<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig;
+      private final Input<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig;
 
     public Input<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> getOutputConfig() {
         return this.outputConfig;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ResolverFirewallDomainListArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="domains")
-    private final @Nullable Input<List<String>> domains;
+      private final @Nullable Input<List<String>> domains;
 
     public Input<List<String>> getDomains() {
         return this.domains == null ? Input.empty() : this.domains;
@@ -32,7 +32,7 @@ public final class ResolverFirewallDomainListArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class ResolverFirewallDomainListArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

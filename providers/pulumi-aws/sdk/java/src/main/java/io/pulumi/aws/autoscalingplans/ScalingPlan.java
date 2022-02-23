@@ -10,8 +10,8 @@ import io.pulumi.aws.autoscalingplans.outputs.ScalingPlanApplicationSource;
 import io.pulumi.aws.autoscalingplans.outputs.ScalingPlanScalingInstruction;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -95,6 +95,21 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
         return this.scalingPlanVersion;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ScalingPlan(String name) {
+        this(name, ScalingPlanArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ScalingPlan(String name, ScalingPlanArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

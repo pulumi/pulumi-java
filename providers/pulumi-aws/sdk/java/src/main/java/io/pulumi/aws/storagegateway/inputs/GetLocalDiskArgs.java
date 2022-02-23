@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.storagegateway.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetLocalDiskArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskNode")
-    private final @Nullable String diskNode;
+      private final @Nullable String diskNode;
 
     public Optional<String> getDiskNode() {
         return this.diskNode == null ? Optional.empty() : Optional.ofNullable(this.diskNode);
@@ -30,7 +30,7 @@ public final class GetLocalDiskArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskPath")
-    private final @Nullable String diskPath;
+      private final @Nullable String diskPath;
 
     public Optional<String> getDiskPath() {
         return this.diskPath == null ? Optional.empty() : Optional.ofNullable(this.diskPath);
@@ -41,7 +41,7 @@ public final class GetLocalDiskArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gatewayArn", required=true)
-    private final String gatewayArn;
+      private final String gatewayArn;
 
     public String getGatewayArn() {
         return this.gatewayArn;

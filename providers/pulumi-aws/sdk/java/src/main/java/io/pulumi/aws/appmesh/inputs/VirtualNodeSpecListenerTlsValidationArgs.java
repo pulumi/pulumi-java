@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationTrustArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualNodeSpecListenerTlsValidationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="subjectAlternativeNames")
-    private final @Nullable Input<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs> subjectAlternativeNames;
+      private final @Nullable Input<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs> subjectAlternativeNames;
 
     public Input<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesArgs> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
@@ -31,7 +31,7 @@ public final class VirtualNodeSpecListenerTlsValidationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="trust", required=true)
-    private final Input<VirtualNodeSpecListenerTlsValidationTrustArgs> trust;
+      private final Input<VirtualNodeSpecListenerTlsValidationTrustArgs> trust;
 
     public Input<VirtualNodeSpecListenerTlsValidationTrustArgs> getTrust() {
         return this.trust;

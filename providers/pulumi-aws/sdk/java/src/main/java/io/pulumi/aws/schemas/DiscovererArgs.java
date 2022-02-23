@@ -4,7 +4,7 @@
 package io.pulumi.aws.schemas;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DiscovererArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class DiscovererArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceArn", required=true)
-    private final Input<String> sourceArn;
+      private final Input<String> sourceArn;
 
     public Input<String> getSourceArn() {
         return this.sourceArn;
@@ -42,7 +42,7 @@ public final class DiscovererArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

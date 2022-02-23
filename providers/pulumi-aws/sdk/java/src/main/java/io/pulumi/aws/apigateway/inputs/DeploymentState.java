@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdDate")
-    private final @Nullable Input<String> createdDate;
+      private final @Nullable Input<String> createdDate;
 
     public Input<String> getCreatedDate() {
         return this.createdDate == null ? Input.empty() : this.createdDate;
@@ -31,7 +31,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionArn")
-    private final @Nullable Input<String> executionArn;
+      private final @Nullable Input<String> executionArn;
 
     public Input<String> getExecutionArn() {
         return this.executionArn == null ? Input.empty() : this.executionArn;
@@ -56,7 +56,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invokeUrl")
-    private final @Nullable Input<String> invokeUrl;
+      private final @Nullable Input<String> invokeUrl;
 
     public Input<String> getInvokeUrl() {
         return this.invokeUrl == null ? Input.empty() : this.invokeUrl;
@@ -67,7 +67,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi")
-    private final @Nullable Input<String> restApi;
+      private final @Nullable Input<String> restApi;
 
     public Input<String> getRestApi() {
         return this.restApi == null ? Input.empty() : this.restApi;
@@ -78,7 +78,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageDescription")
-    private final @Nullable Input<String> stageDescription;
+      private final @Nullable Input<String> stageDescription;
 
     public Input<String> getStageDescription() {
         return this.stageDescription == null ? Input.empty() : this.stageDescription;
@@ -89,7 +89,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName")
-    private final @Nullable Input<String> stageName;
+      private final @Nullable Input<String> stageName;
 
     public Input<String> getStageName() {
         return this.stageName == null ? Input.empty() : this.stageName;
@@ -100,7 +100,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggers")
-    private final @Nullable Input<Map<String,String>> triggers;
+      private final @Nullable Input<Map<String,String>> triggers;
 
     public Input<Map<String,String>> getTriggers() {
         return this.triggers == null ? Input.empty() : this.triggers;
@@ -111,7 +111,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variables")
-    private final @Nullable Input<Map<String,String>> variables;
+      private final @Nullable Input<Map<String,String>> variables;
 
     public Input<Map<String,String>> getVariables() {
         return this.variables == null ? Input.empty() : this.variables;

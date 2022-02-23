@@ -6,7 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesIpSetGetArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesPortSetGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RuleGroupRuleGroupRuleVariablesGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ipSets")
-    private final @Nullable Input<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>> ipSets;
+      private final @Nullable Input<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>> ipSets;
 
     public Input<List<RuleGroupRuleGroupRuleVariablesIpSetGetArgs>> getIpSets() {
         return this.ipSets == null ? Input.empty() : this.ipSets;
@@ -32,7 +32,7 @@ public final class RuleGroupRuleGroupRuleVariablesGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="portSets")
-    private final @Nullable Input<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>> portSets;
+      private final @Nullable Input<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>> portSets;
 
     public Input<List<RuleGroupRuleGroupRuleVariablesPortSetGetArgs>> getPortSets() {
         return this.portSets == null ? Input.empty() : this.portSets;

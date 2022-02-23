@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class CrawlerDynamodbTargetGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -32,7 +32,7 @@ public final class CrawlerDynamodbTargetGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="scanAll")
-    private final @Nullable Input<Boolean> scanAll;
+      private final @Nullable Input<Boolean> scanAll;
 
     public Input<Boolean> getScanAll() {
         return this.scanAll == null ? Input.empty() : this.scanAll;
@@ -43,7 +43,7 @@ public final class CrawlerDynamodbTargetGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="scanRate")
-    private final @Nullable Input<Double> scanRate;
+      private final @Nullable Input<Double> scanRate;
 
     public Input<Double> getScanRate() {
         return this.scanRate == null ? Input.empty() : this.scanRate;

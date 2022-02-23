@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -30,7 +30,7 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pythonVersion")
-    private final @Nullable Input<String> pythonVersion;
+      private final @Nullable Input<String> pythonVersion;
 
     public Input<String> getPythonVersion() {
         return this.pythonVersion == null ? Input.empty() : this.pythonVersion;
@@ -41,7 +41,7 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptLocation", required=true)
-    private final Input<String> scriptLocation;
+      private final Input<String> scriptLocation;
 
     public Input<String> getScriptLocation() {
         return this.scriptLocation;

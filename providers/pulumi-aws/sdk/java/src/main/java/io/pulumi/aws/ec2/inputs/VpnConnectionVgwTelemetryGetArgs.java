@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="acceptedRouteCount")
-    private final @Nullable Input<Integer> acceptedRouteCount;
+      private final @Nullable Input<Integer> acceptedRouteCount;
 
     public Input<Integer> getAcceptedRouteCount() {
         return this.acceptedRouteCount == null ? Input.empty() : this.acceptedRouteCount;
@@ -31,7 +31,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
@@ -42,7 +42,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastStatusChange")
-    private final @Nullable Input<String> lastStatusChange;
+      private final @Nullable Input<String> lastStatusChange;
 
     public Input<String> getLastStatusChange() {
         return this.lastStatusChange == null ? Input.empty() : this.lastStatusChange;
@@ -53,7 +53,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="outsideIpAddress")
-    private final @Nullable Input<String> outsideIpAddress;
+      private final @Nullable Input<String> outsideIpAddress;
 
     public Input<String> getOutsideIpAddress() {
         return this.outsideIpAddress == null ? Input.empty() : this.outsideIpAddress;
@@ -64,7 +64,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -75,7 +75,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="statusMessage")
-    private final @Nullable Input<String> statusMessage;
+      private final @Nullable Input<String> statusMessage;
 
     public Input<String> getStatusMessage() {
         return this.statusMessage == null ? Input.empty() : this.statusMessage;

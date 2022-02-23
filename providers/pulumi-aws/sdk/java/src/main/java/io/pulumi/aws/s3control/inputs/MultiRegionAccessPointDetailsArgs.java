@@ -6,7 +6,7 @@ package io.pulumi.aws.s3control.inputs;
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsPublicAccessBlockArgs;
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsRegionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MultiRegionAccessPointDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class MultiRegionAccessPointDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicAccessBlock")
-    private final @Nullable Input<MultiRegionAccessPointDetailsPublicAccessBlockArgs> publicAccessBlock;
+      private final @Nullable Input<MultiRegionAccessPointDetailsPublicAccessBlockArgs> publicAccessBlock;
 
     public Input<MultiRegionAccessPointDetailsPublicAccessBlockArgs> getPublicAccessBlock() {
         return this.publicAccessBlock == null ? Input.empty() : this.publicAccessBlock;
@@ -44,7 +44,7 @@ public final class MultiRegionAccessPointDetailsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="regions", required=true)
-    private final Input<List<MultiRegionAccessPointDetailsRegionArgs>> regions;
+      private final Input<List<MultiRegionAccessPointDetailsRegionArgs>> regions;
 
     public Input<List<MultiRegionAccessPointDetailsRegionArgs>> getRegions() {
         return this.regions;

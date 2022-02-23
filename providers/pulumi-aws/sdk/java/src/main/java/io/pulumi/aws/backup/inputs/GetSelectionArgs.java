@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.backup.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSelectionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="planId", required=true)
-    private final String planId;
+      private final String planId;
 
     public String getPlanId() {
         return this.planId;
@@ -28,7 +28,7 @@ public final class GetSelectionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="selectionId", required=true)
-    private final String selectionId;
+      private final String selectionId;
 
     public String getSelectionId() {
         return this.selectionId;

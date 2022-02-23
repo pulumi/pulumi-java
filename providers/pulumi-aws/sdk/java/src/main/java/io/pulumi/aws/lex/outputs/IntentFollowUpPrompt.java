@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.outputs;
 
 import io.pulumi.aws.lex.outputs.IntentFollowUpPromptPrompt;
 import io.pulumi.aws.lex.outputs.IntentFollowUpPromptRejectionStatement;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

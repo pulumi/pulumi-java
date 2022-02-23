@@ -5,7 +5,7 @@ package io.pulumi.aws.elb.inputs;
 
 import io.pulumi.aws.elb.inputs.LoadBalancerPolicyPolicyAttributeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="loadBalancerName")
-    private final @Nullable Input<String> loadBalancerName;
+      private final @Nullable Input<String> loadBalancerName;
 
     public Input<String> getLoadBalancerName() {
         return this.loadBalancerName == null ? Input.empty() : this.loadBalancerName;
@@ -32,7 +32,7 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyAttributes")
-    private final @Nullable Input<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
+      private final @Nullable Input<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
 
     public Input<List<LoadBalancerPolicyPolicyAttributeGetArgs>> getPolicyAttributes() {
         return this.policyAttributes == null ? Input.empty() : this.policyAttributes;
@@ -43,7 +43,7 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable Input<String> policyName;
+      private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
@@ -54,7 +54,7 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyTypeName")
-    private final @Nullable Input<String> policyTypeName;
+      private final @Nullable Input<String> policyTypeName;
 
     public Input<String> getPolicyTypeName() {
         return this.policyTypeName == null ? Input.empty() : this.policyTypeName;

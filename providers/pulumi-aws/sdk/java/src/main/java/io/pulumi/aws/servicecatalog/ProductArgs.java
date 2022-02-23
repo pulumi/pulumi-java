@@ -5,7 +5,7 @@ package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.aws.servicecatalog.inputs.ProductProvisioningArtifactParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Input<String> acceptLanguage;
 
     public Input<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
@@ -32,7 +32,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributor")
-    private final @Nullable Input<String> distributor;
+      private final @Nullable Input<String> distributor;
 
     public Input<String> getDistributor() {
         return this.distributor == null ? Input.empty() : this.distributor;
@@ -54,7 +54,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner", required=true)
-    private final Input<String> owner;
+      private final Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner;
@@ -76,7 +76,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningArtifactParameters", required=true)
-    private final Input<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters;
+      private final Input<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters;
 
     public Input<ProductProvisioningArtifactParametersArgs> getProvisioningArtifactParameters() {
         return this.provisioningArtifactParameters;
@@ -87,7 +87,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportDescription")
-    private final @Nullable Input<String> supportDescription;
+      private final @Nullable Input<String> supportDescription;
 
     public Input<String> getSupportDescription() {
         return this.supportDescription == null ? Input.empty() : this.supportDescription;
@@ -98,7 +98,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportEmail")
-    private final @Nullable Input<String> supportEmail;
+      private final @Nullable Input<String> supportEmail;
 
     public Input<String> getSupportEmail() {
         return this.supportEmail == null ? Input.empty() : this.supportEmail;
@@ -109,7 +109,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportUrl")
-    private final @Nullable Input<String> supportUrl;
+      private final @Nullable Input<String> supportUrl;
 
     public Input<String> getSupportUrl() {
         return this.supportUrl == null ? Input.empty() : this.supportUrl;
@@ -120,7 +120,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -131,7 +131,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

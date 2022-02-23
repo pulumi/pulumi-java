@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GatewayGatewayNetworkInterfaceGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="ipv4Address")
-    private final @Nullable Input<String> ipv4Address;
+      private final @Nullable Input<String> ipv4Address;
 
     public Input<String> getIpv4Address() {
         return this.ipv4Address == null ? Input.empty() : this.ipv4Address;

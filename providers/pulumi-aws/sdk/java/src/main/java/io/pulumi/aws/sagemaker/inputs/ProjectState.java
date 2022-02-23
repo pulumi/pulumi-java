@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.ProjectServiceCatalogProvisioningDetailsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectDescription")
-    private final @Nullable Input<String> projectDescription;
+      private final @Nullable Input<String> projectDescription;
 
     public Input<String> getProjectDescription() {
         return this.projectDescription == null ? Input.empty() : this.projectDescription;
@@ -43,7 +43,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+      private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -54,7 +54,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName")
-    private final @Nullable Input<String> projectName;
+      private final @Nullable Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName == null ? Input.empty() : this.projectName;
@@ -65,7 +65,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceCatalogProvisioningDetails")
-    private final @Nullable Input<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails;
+      private final @Nullable Input<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails;
 
     public Input<ProjectServiceCatalogProvisioningDetailsGetArgs> getServiceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails == null ? Input.empty() : this.serviceCatalogProvisioningDetails;
@@ -76,7 +76,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

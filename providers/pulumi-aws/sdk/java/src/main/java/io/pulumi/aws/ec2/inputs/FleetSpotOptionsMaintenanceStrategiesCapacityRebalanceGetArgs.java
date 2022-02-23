@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs
      * 
      */
     @InputImport(name="replacementStrategy")
-    private final @Nullable Input<String> replacementStrategy;
+      private final @Nullable Input<String> replacementStrategy;
 
     public Input<String> getReplacementStrategy() {
         return this.replacementStrategy == null ? Input.empty() : this.replacementStrategy;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Input<String> acceptLanguage;
 
     public Input<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
@@ -31,7 +31,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portfolioId", required=true)
-    private final Input<String> portfolioId;
+      private final Input<String> portfolioId;
 
     public Input<String> getPortfolioId() {
         return this.portfolioId;
@@ -42,7 +42,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final Input<String> principalId;
+      private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -53,7 +53,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareTagOptions")
-    private final @Nullable Input<Boolean> shareTagOptions;
+      private final @Nullable Input<Boolean> shareTagOptions;
 
     public Input<Boolean> getShareTagOptions() {
         return this.shareTagOptions == null ? Input.empty() : this.shareTagOptions;
@@ -64,7 +64,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -75,7 +75,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForAcceptance")
-    private final @Nullable Input<Boolean> waitForAcceptance;
+      private final @Nullable Input<Boolean> waitForAcceptance;
 
     public Input<Boolean> getWaitForAcceptance() {
         return this.waitForAcceptance == null ? Input.empty() : this.waitForAcceptance;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConnectionConfirmationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectionId")
-    private final @Nullable Input<String> connectionId;
+      private final @Nullable Input<String> connectionId;
 
     public Input<String> getConnectionId() {
         return this.connectionId == null ? Input.empty() : this.connectionId;

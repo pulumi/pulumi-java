@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ResolverRuleTargetIpGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ip", required=true)
-    private final Input<String> ip;
+      private final Input<String> ip;
 
     public Input<String> getIp() {
         return this.ip;
@@ -31,7 +31,7 @@ public final class ResolverRuleTargetIpGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;

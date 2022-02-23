@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="arraySize")
-    private final @Nullable Input<Integer> arraySize;
+      private final @Nullable Input<Integer> arraySize;
 
     public Input<Integer> getArraySize() {
         return this.arraySize == null ? Input.empty() : this.arraySize;
@@ -31,7 +31,7 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="jobAttempts")
-    private final @Nullable Input<Integer> jobAttempts;
+      private final @Nullable Input<Integer> jobAttempts;
 
     public Input<Integer> getJobAttempts() {
         return this.jobAttempts == null ? Input.empty() : this.jobAttempts;
@@ -42,7 +42,7 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="jobDefinition", required=true)
-    private final Input<String> jobDefinition;
+      private final Input<String> jobDefinition;
 
     public Input<String> getJobDefinition() {
         return this.jobDefinition;
@@ -53,7 +53,7 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="jobName", required=true)
-    private final Input<String> jobName;
+      private final Input<String> jobName;
 
     public Input<String> getJobName() {
         return this.jobName;

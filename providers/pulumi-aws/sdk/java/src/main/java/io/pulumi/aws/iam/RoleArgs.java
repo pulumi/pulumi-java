@@ -5,7 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.aws.iam.inputs.RoleInlinePolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assumeRolePolicy", required=true)
-    private final Input<String> assumeRolePolicy;
+      private final Input<String> assumeRolePolicy;
 
     public Input<String> getAssumeRolePolicy() {
         return this.assumeRolePolicy;
@@ -35,7 +35,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDetachPolicies")
-    private final @Nullable Input<Boolean> forceDetachPolicies;
+      private final @Nullable Input<Boolean> forceDetachPolicies;
 
     public Input<Boolean> getForceDetachPolicies() {
         return this.forceDetachPolicies == null ? Input.empty() : this.forceDetachPolicies;
@@ -57,7 +57,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inlinePolicies")
-    private final @Nullable Input<List<RoleInlinePolicyArgs>> inlinePolicies;
+      private final @Nullable Input<List<RoleInlinePolicyArgs>> inlinePolicies;
 
     public Input<List<RoleInlinePolicyArgs>> getInlinePolicies() {
         return this.inlinePolicies == null ? Input.empty() : this.inlinePolicies;
@@ -68,7 +68,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedPolicyArns")
-    private final @Nullable Input<List<String>> managedPolicyArns;
+      private final @Nullable Input<List<String>> managedPolicyArns;
 
     public Input<List<String>> getManagedPolicyArns() {
         return this.managedPolicyArns == null ? Input.empty() : this.managedPolicyArns;
@@ -79,7 +79,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSessionDuration")
-    private final @Nullable Input<Integer> maxSessionDuration;
+      private final @Nullable Input<Integer> maxSessionDuration;
 
     public Input<Integer> getMaxSessionDuration() {
         return this.maxSessionDuration == null ? Input.empty() : this.maxSessionDuration;
@@ -90,7 +90,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -112,7 +112,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -123,7 +123,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionsBoundary")
-    private final @Nullable Input<String> permissionsBoundary;
+      private final @Nullable Input<String> permissionsBoundary;
 
     public Input<String> getPermissionsBoundary() {
         return this.permissionsBoundary == null ? Input.empty() : this.permissionsBoundary;
@@ -134,7 +134,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

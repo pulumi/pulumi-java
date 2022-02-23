@@ -8,8 +8,8 @@ import io.pulumi.aws.apigatewayv2.VpcLinkArgs;
 import io.pulumi.aws.apigatewayv2.inputs.VpcLinkState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -119,6 +119,21 @@ public class VpcLink extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VpcLink(String name) {
+        this(name, VpcLinkArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VpcLink(String name, VpcLinkArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

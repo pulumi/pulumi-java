@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationC
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-    private final @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
+      private final @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
     public Input<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
@@ -34,7 +34,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="clusterJdbcurl", required=true)
-    private final Input<String> clusterJdbcurl;
+      private final Input<String> clusterJdbcurl;
 
     public Input<String> getClusterJdbcurl() {
         return this.clusterJdbcurl;
@@ -45,7 +45,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="copyOptions")
-    private final @Nullable Input<String> copyOptions;
+      private final @Nullable Input<String> copyOptions;
 
     public Input<String> getCopyOptions() {
         return this.copyOptions == null ? Input.empty() : this.copyOptions;
@@ -56,7 +56,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="dataTableColumns")
-    private final @Nullable Input<String> dataTableColumns;
+      private final @Nullable Input<String> dataTableColumns;
 
     public Input<String> getDataTableColumns() {
         return this.dataTableColumns == null ? Input.empty() : this.dataTableColumns;
@@ -67,7 +67,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="dataTableName", required=true)
-    private final Input<String> dataTableName;
+      private final Input<String> dataTableName;
 
     public Input<String> getDataTableName() {
         return this.dataTableName;
@@ -78,7 +78,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -89,7 +89,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="processingConfiguration")
-    private final @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationGetArgs> processingConfiguration;
+      private final @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationGetArgs> processingConfiguration;
 
     public Input<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationGetArgs> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
@@ -100,7 +100,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="retryDuration")
-    private final @Nullable Input<Integer> retryDuration;
+      private final @Nullable Input<Integer> retryDuration;
 
     public Input<Integer> getRetryDuration() {
         return this.retryDuration == null ? Input.empty() : this.retryDuration;
@@ -111,7 +111,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -122,7 +122,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="s3BackupConfiguration")
-    private final @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationGetArgs> s3BackupConfiguration;
+      private final @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationGetArgs> s3BackupConfiguration;
 
     public Input<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationGetArgs> getS3BackupConfiguration() {
         return this.s3BackupConfiguration == null ? Input.empty() : this.s3BackupConfiguration;
@@ -133,7 +133,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="s3BackupMode")
-    private final @Nullable Input<String> s3BackupMode;
+      private final @Nullable Input<String> s3BackupMode;
 
     public Input<String> getS3BackupMode() {
         return this.s3BackupMode == null ? Input.empty() : this.s3BackupMode;
@@ -144,7 +144,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;

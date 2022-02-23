@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class GetLaunchTemplateTagSpecification extends io.pulumi.resources
     public static final GetLaunchTemplateTagSpecification Empty = new GetLaunchTemplateTagSpecification();
 
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -25,7 +25,7 @@ public final class GetLaunchTemplateTagSpecification extends io.pulumi.resources
      * 
      */
     @InputImport(name="tags", required=true)
-    private final Map<String,String> tags;
+      private final Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags;

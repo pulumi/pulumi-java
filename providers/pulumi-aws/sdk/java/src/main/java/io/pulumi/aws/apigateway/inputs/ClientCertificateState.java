@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="createdDate")
-    private final @Nullable Input<String> createdDate;
+      private final @Nullable Input<String> createdDate;
 
     public Input<String> getCreatedDate() {
         return this.createdDate == null ? Input.empty() : this.createdDate;
@@ -42,7 +42,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -53,7 +53,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="expirationDate")
-    private final @Nullable Input<String> expirationDate;
+      private final @Nullable Input<String> expirationDate;
 
     public Input<String> getExpirationDate() {
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
@@ -64,7 +64,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pemEncodedCertificate")
-    private final @Nullable Input<String> pemEncodedCertificate;
+      private final @Nullable Input<String> pemEncodedCertificate;
 
     public Input<String> getPemEncodedCertificate() {
         return this.pemEncodedCertificate == null ? Input.empty() : this.pemEncodedCertificate;
@@ -75,7 +75,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -86,7 +86,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

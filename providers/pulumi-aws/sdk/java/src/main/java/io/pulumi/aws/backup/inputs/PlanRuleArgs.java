@@ -6,7 +6,7 @@ package io.pulumi.aws.backup.inputs;
 import io.pulumi.aws.backup.inputs.PlanRuleCopyActionArgs;
 import io.pulumi.aws.backup.inputs.PlanRuleLifecycleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class PlanRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completionWindow")
-    private final @Nullable Input<Integer> completionWindow;
+      private final @Nullable Input<Integer> completionWindow;
 
     public Input<Integer> getCompletionWindow() {
         return this.completionWindow == null ? Input.empty() : this.completionWindow;
@@ -36,7 +36,7 @@ public final class PlanRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyActions")
-    private final @Nullable Input<List<PlanRuleCopyActionArgs>> copyActions;
+      private final @Nullable Input<List<PlanRuleCopyActionArgs>> copyActions;
 
     public Input<List<PlanRuleCopyActionArgs>> getCopyActions() {
         return this.copyActions == null ? Input.empty() : this.copyActions;
@@ -47,7 +47,7 @@ public final class PlanRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableContinuousBackup")
-    private final @Nullable Input<Boolean> enableContinuousBackup;
+      private final @Nullable Input<Boolean> enableContinuousBackup;
 
     public Input<Boolean> getEnableContinuousBackup() {
         return this.enableContinuousBackup == null ? Input.empty() : this.enableContinuousBackup;
@@ -58,7 +58,7 @@ public final class PlanRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecycle")
-    private final @Nullable Input<PlanRuleLifecycleArgs> lifecycle;
+      private final @Nullable Input<PlanRuleLifecycleArgs> lifecycle;
 
     public Input<PlanRuleLifecycleArgs> getLifecycle() {
         return this.lifecycle == null ? Input.empty() : this.lifecycle;
@@ -69,7 +69,7 @@ public final class PlanRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recoveryPointTags")
-    private final @Nullable Input<Map<String,String>> recoveryPointTags;
+      private final @Nullable Input<Map<String,String>> recoveryPointTags;
 
     public Input<Map<String,String>> getRecoveryPointTags() {
         return this.recoveryPointTags == null ? Input.empty() : this.recoveryPointTags;
@@ -80,7 +80,7 @@ public final class PlanRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName", required=true)
-    private final Input<String> ruleName;
+      private final Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName;
@@ -91,7 +91,7 @@ public final class PlanRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<String> schedule;
+      private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -102,7 +102,7 @@ public final class PlanRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startWindow")
-    private final @Nullable Input<Integer> startWindow;
+      private final @Nullable Input<Integer> startWindow;
 
     public Input<Integer> getStartWindow() {
         return this.startWindow == null ? Input.empty() : this.startWindow;
@@ -113,7 +113,7 @@ public final class PlanRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetVaultName", required=true)
-    private final Input<String> targetVaultName;
+      private final Input<String> targetVaultName;
 
     public Input<String> getTargetVaultName() {
         return this.targetVaultName;

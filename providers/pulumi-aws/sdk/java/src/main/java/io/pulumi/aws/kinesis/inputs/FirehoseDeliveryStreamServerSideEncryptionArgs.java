@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FirehoseDeliveryStreamServerSideEncryptionArgs extends io.pul
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -31,7 +31,7 @@ public final class FirehoseDeliveryStreamServerSideEncryptionArgs extends io.pul
      * 
      */
     @InputImport(name="keyArn")
-    private final @Nullable Input<String> keyArn;
+      private final @Nullable Input<String> keyArn;
 
     public Input<String> getKeyArn() {
         return this.keyArn == null ? Input.empty() : this.keyArn;
@@ -42,7 +42,7 @@ public final class FirehoseDeliveryStreamServerSideEncryptionArgs extends io.pul
      * 
      */
     @InputImport(name="keyType")
-    private final @Nullable Input<String> keyType;
+      private final @Nullable Input<String> keyType;
 
     public Input<String> getKeyType() {
         return this.keyType == null ? Input.empty() : this.keyType;

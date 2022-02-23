@@ -7,7 +7,7 @@ import io.pulumi.aws.ecs.inputs.ClusterConfigurationGetArgs;
 import io.pulumi.aws.ecs.inputs.ClusterDefaultCapacityProviderStrategyGetArgs;
 import io.pulumi.aws.ecs.inputs.ClusterSettingGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityProviders")
-    private final @Nullable Input<List<String>> capacityProviders;
+      private final @Nullable Input<List<String>> capacityProviders;
 
     public Input<List<String>> getCapacityProviders() {
         return this.capacityProviders == null ? Input.empty() : this.capacityProviders;
@@ -46,7 +46,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<ClusterConfigurationGetArgs> configuration;
+      private final @Nullable Input<ClusterConfigurationGetArgs> configuration;
 
     public Input<ClusterConfigurationGetArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -57,7 +57,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultCapacityProviderStrategies")
-    private final @Nullable Input<List<ClusterDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies;
+      private final @Nullable Input<List<ClusterDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies;
 
     public Input<List<ClusterDefaultCapacityProviderStrategyGetArgs>> getDefaultCapacityProviderStrategies() {
         return this.defaultCapacityProviderStrategies == null ? Input.empty() : this.defaultCapacityProviderStrategies;
@@ -68,7 +68,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,7 +79,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<List<ClusterSettingGetArgs>> settings;
+      private final @Nullable Input<List<ClusterSettingGetArgs>> settings;
 
     public Input<List<ClusterSettingGetArgs>> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -90,14 +90,14 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

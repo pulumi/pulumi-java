@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IdentityNotificationTopicState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<String> identity;
+      private final @Nullable Input<String> identity;
 
     public Input<String> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -31,7 +31,7 @@ public final class IdentityNotificationTopicState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="includeOriginalHeaders")
-    private final @Nullable Input<Boolean> includeOriginalHeaders;
+      private final @Nullable Input<Boolean> includeOriginalHeaders;
 
     public Input<Boolean> getIncludeOriginalHeaders() {
         return this.includeOriginalHeaders == null ? Input.empty() : this.includeOriginalHeaders;
@@ -42,7 +42,7 @@ public final class IdentityNotificationTopicState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="notificationType")
-    private final @Nullable Input<String> notificationType;
+      private final @Nullable Input<String> notificationType;
 
     public Input<String> getNotificationType() {
         return this.notificationType == null ? Input.empty() : this.notificationType;
@@ -53,7 +53,7 @@ public final class IdentityNotificationTopicState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="topicArn")
-    private final @Nullable Input<String> topicArn;
+      private final @Nullable Input<String> topicArn;
 
     public Input<String> getTopicArn() {
         return this.topicArn == null ? Input.empty() : this.topicArn;

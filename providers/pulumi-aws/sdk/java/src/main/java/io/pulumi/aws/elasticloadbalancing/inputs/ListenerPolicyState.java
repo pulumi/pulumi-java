@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticloadbalancing.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="loadBalancerName")
-    private final @Nullable Input<String> loadBalancerName;
+      private final @Nullable Input<String> loadBalancerName;
 
     public Input<String> getLoadBalancerName() {
         return this.loadBalancerName == null ? Input.empty() : this.loadBalancerName;
@@ -32,7 +32,7 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="loadBalancerPort")
-    private final @Nullable Input<Integer> loadBalancerPort;
+      private final @Nullable Input<Integer> loadBalancerPort;
 
     public Input<Integer> getLoadBalancerPort() {
         return this.loadBalancerPort == null ? Input.empty() : this.loadBalancerPort;
@@ -43,7 +43,7 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyNames")
-    private final @Nullable Input<List<String>> policyNames;
+      private final @Nullable Input<List<String>> policyNames;
 
     public Input<List<String>> getPolicyNames() {
         return this.policyNames == null ? Input.empty() : this.policyNames;

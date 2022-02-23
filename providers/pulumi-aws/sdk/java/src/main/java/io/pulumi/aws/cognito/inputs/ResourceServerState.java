@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.aws.cognito.inputs.ResourceServerScopeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identifier")
-    private final @Nullable Input<String> identifier;
+      private final @Nullable Input<String> identifier;
 
     public Input<String> getIdentifier() {
         return this.identifier == null ? Input.empty() : this.identifier;
@@ -32,7 +32,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scopeIdentifiers")
-    private final @Nullable Input<List<String>> scopeIdentifiers;
+      private final @Nullable Input<List<String>> scopeIdentifiers;
 
     public Input<List<String>> getScopeIdentifiers() {
         return this.scopeIdentifiers == null ? Input.empty() : this.scopeIdentifiers;
@@ -54,14 +54,14 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scopes")
-    private final @Nullable Input<List<ResourceServerScopeGetArgs>> scopes;
+      private final @Nullable Input<List<ResourceServerScopeGetArgs>> scopes;
 
     public Input<List<ResourceServerScopeGetArgs>> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;
     }
 
     @InputImport(name="userPoolId")
-    private final @Nullable Input<String> userPoolId;
+      private final @Nullable Input<String> userPoolId;
 
     public Input<String> getUserPoolId() {
         return this.userPoolId == null ? Input.empty() : this.userPoolId;

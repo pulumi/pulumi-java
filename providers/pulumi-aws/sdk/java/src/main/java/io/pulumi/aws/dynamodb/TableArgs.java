@@ -11,7 +11,7 @@ import io.pulumi.aws.dynamodb.inputs.TableReplicaArgs;
 import io.pulumi.aws.dynamodb.inputs.TableServerSideEncryptionArgs;
 import io.pulumi.aws.dynamodb.inputs.TableTtlArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<List<TableAttributeArgs>> attributes;
+      private final @Nullable Input<List<TableAttributeArgs>> attributes;
 
     public Input<List<TableAttributeArgs>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -41,7 +41,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingMode")
-    private final @Nullable Input<String> billingMode;
+      private final @Nullable Input<String> billingMode;
 
     public Input<String> getBillingMode() {
         return this.billingMode == null ? Input.empty() : this.billingMode;
@@ -54,7 +54,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalSecondaryIndexes")
-    private final @Nullable Input<List<TableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
+      private final @Nullable Input<List<TableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
 
     public Input<List<TableGlobalSecondaryIndexArgs>> getGlobalSecondaryIndexes() {
         return this.globalSecondaryIndexes == null ? Input.empty() : this.globalSecondaryIndexes;
@@ -66,7 +66,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hashKey")
-    private final @Nullable Input<String> hashKey;
+      private final @Nullable Input<String> hashKey;
 
     public Input<String> getHashKey() {
         return this.hashKey == null ? Input.empty() : this.hashKey;
@@ -79,7 +79,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localSecondaryIndexes")
-    private final @Nullable Input<List<TableLocalSecondaryIndexArgs>> localSecondaryIndexes;
+      private final @Nullable Input<List<TableLocalSecondaryIndexArgs>> localSecondaryIndexes;
 
     public Input<List<TableLocalSecondaryIndexArgs>> getLocalSecondaryIndexes() {
         return this.localSecondaryIndexes == null ? Input.empty() : this.localSecondaryIndexes;
@@ -90,7 +90,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pointInTimeRecovery")
-    private final @Nullable Input<TablePointInTimeRecoveryArgs> pointInTimeRecovery;
+      private final @Nullable Input<TablePointInTimeRecoveryArgs> pointInTimeRecovery;
 
     public Input<TablePointInTimeRecoveryArgs> getPointInTimeRecovery() {
         return this.pointInTimeRecovery == null ? Input.empty() : this.pointInTimeRecovery;
@@ -112,7 +112,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rangeKey")
-    private final @Nullable Input<String> rangeKey;
+      private final @Nullable Input<String> rangeKey;
 
     public Input<String> getRangeKey() {
         return this.rangeKey == null ? Input.empty() : this.rangeKey;
@@ -123,7 +123,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readCapacity")
-    private final @Nullable Input<Integer> readCapacity;
+      private final @Nullable Input<Integer> readCapacity;
 
     public Input<Integer> getReadCapacity() {
         return this.readCapacity == null ? Input.empty() : this.readCapacity;
@@ -134,7 +134,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicas")
-    private final @Nullable Input<List<TableReplicaArgs>> replicas;
+      private final @Nullable Input<List<TableReplicaArgs>> replicas;
 
     public Input<List<TableReplicaArgs>> getReplicas() {
         return this.replicas == null ? Input.empty() : this.replicas;
@@ -145,7 +145,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restoreDateTime")
-    private final @Nullable Input<String> restoreDateTime;
+      private final @Nullable Input<String> restoreDateTime;
 
     public Input<String> getRestoreDateTime() {
         return this.restoreDateTime == null ? Input.empty() : this.restoreDateTime;
@@ -156,7 +156,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restoreSourceName")
-    private final @Nullable Input<String> restoreSourceName;
+      private final @Nullable Input<String> restoreSourceName;
 
     public Input<String> getRestoreSourceName() {
         return this.restoreSourceName == null ? Input.empty() : this.restoreSourceName;
@@ -167,7 +167,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restoreToLatestTime")
-    private final @Nullable Input<Boolean> restoreToLatestTime;
+      private final @Nullable Input<Boolean> restoreToLatestTime;
 
     public Input<Boolean> getRestoreToLatestTime() {
         return this.restoreToLatestTime == null ? Input.empty() : this.restoreToLatestTime;
@@ -178,7 +178,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverSideEncryption")
-    private final @Nullable Input<TableServerSideEncryptionArgs> serverSideEncryption;
+      private final @Nullable Input<TableServerSideEncryptionArgs> serverSideEncryption;
 
     public Input<TableServerSideEncryptionArgs> getServerSideEncryption() {
         return this.serverSideEncryption == null ? Input.empty() : this.serverSideEncryption;
@@ -189,7 +189,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamEnabled")
-    private final @Nullable Input<Boolean> streamEnabled;
+      private final @Nullable Input<Boolean> streamEnabled;
 
     public Input<Boolean> getStreamEnabled() {
         return this.streamEnabled == null ? Input.empty() : this.streamEnabled;
@@ -200,7 +200,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamViewType")
-    private final @Nullable Input<String> streamViewType;
+      private final @Nullable Input<String> streamViewType;
 
     public Input<String> getStreamViewType() {
         return this.streamViewType == null ? Input.empty() : this.streamViewType;
@@ -211,7 +211,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableClass")
-    private final @Nullable Input<String> tableClass;
+      private final @Nullable Input<String> tableClass;
 
     public Input<String> getTableClass() {
         return this.tableClass == null ? Input.empty() : this.tableClass;
@@ -222,7 +222,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -233,7 +233,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<TableTtlArgs> ttl;
+      private final @Nullable Input<TableTtlArgs> ttl;
 
     public Input<TableTtlArgs> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -244,7 +244,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeCapacity")
-    private final @Nullable Input<Integer> writeCapacity;
+      private final @Nullable Input<Integer> writeCapacity;
 
     public Input<Integer> getWriteCapacity() {
         return this.writeCapacity == null ? Input.empty() : this.writeCapacity;

@@ -5,7 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoBrokerLogsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class ClusterLoggingInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="brokerLogs", required=true)
-    private final Input<ClusterLoggingInfoBrokerLogsArgs> brokerLogs;
+      private final Input<ClusterLoggingInfoBrokerLogsArgs> brokerLogs;
 
     public Input<ClusterLoggingInfoBrokerLogsArgs> getBrokerLogs() {
         return this.brokerLogs;

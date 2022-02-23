@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * 
      */
     @InputImport(name="deleteOnTermination", required=true)
-    private final Boolean deleteOnTermination;
+      private final Boolean deleteOnTermination;
 
     public Boolean getDeleteOnTermination() {
         return this.deleteOnTermination;
@@ -30,7 +30,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * 
      */
     @InputImport(name="encrypted", required=true)
-    private final Boolean encrypted;
+      private final Boolean encrypted;
 
     public Boolean getEncrypted() {
         return this.encrypted;
@@ -41,7 +41,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * 
      */
     @InputImport(name="iops", required=true)
-    private final Integer iops;
+      private final Integer iops;
 
     public Integer getIops() {
         return this.iops;
@@ -52,7 +52,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * 
      */
     @InputImport(name="kmsKeyId", required=true)
-    private final String kmsKeyId;
+      private final String kmsKeyId;
 
     public String getKmsKeyId() {
         return this.kmsKeyId;
@@ -63,7 +63,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * 
      */
     @InputImport(name="snapshotId", required=true)
-    private final String snapshotId;
+      private final String snapshotId;
 
     public String getSnapshotId() {
         return this.snapshotId;
@@ -74,7 +74,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumeSize", required=true)
-    private final Integer volumeSize;
+      private final Integer volumeSize;
 
     public Integer getVolumeSize() {
         return this.volumeSize;
@@ -85,7 +85,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumeType", required=true)
-    private final String volumeType;
+      private final String volumeType;
 
     public String getVolumeType() {
         return this.volumeType;

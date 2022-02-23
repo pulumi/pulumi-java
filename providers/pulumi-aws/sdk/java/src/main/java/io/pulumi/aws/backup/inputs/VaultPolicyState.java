@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupVaultArn")
-    private final @Nullable Input<String> backupVaultArn;
+      private final @Nullable Input<String> backupVaultArn;
 
     public Input<String> getBackupVaultArn() {
         return this.backupVaultArn == null ? Input.empty() : this.backupVaultArn;
@@ -30,7 +30,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupVaultName")
-    private final @Nullable Input<String> backupVaultName;
+      private final @Nullable Input<String> backupVaultName;
 
     public Input<String> getBackupVaultName() {
         return this.backupVaultName == null ? Input.empty() : this.backupVaultName;
@@ -41,7 +41,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;

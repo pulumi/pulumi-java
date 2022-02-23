@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FileSystemSizeInByteGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<Integer> value;
+      private final @Nullable Input<Integer> value;
 
     public Input<Integer> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -30,7 +30,7 @@ public final class FileSystemSizeInByteGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="valueInIa")
-    private final @Nullable Input<Integer> valueInIa;
+      private final @Nullable Input<Integer> valueInIa;
 
     public Input<Integer> getValueInIa() {
         return this.valueInIa == null ? Input.empty() : this.valueInIa;
@@ -41,7 +41,7 @@ public final class FileSystemSizeInByteGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="valueInStandard")
-    private final @Nullable Input<Integer> valueInStandard;
+      private final @Nullable Input<Integer> valueInStandard;
 
     public Input<Integer> getValueInStandard() {
         return this.valueInStandard == null ? Input.empty() : this.valueInStandard;

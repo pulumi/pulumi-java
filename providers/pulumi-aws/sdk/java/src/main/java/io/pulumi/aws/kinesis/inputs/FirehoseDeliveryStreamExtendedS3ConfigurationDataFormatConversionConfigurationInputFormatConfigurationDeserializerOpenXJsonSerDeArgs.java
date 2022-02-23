@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="caseInsensitive")
-    private final @Nullable Input<Boolean> caseInsensitive;
+      private final @Nullable Input<Boolean> caseInsensitive;
 
     public Input<Boolean> getCaseInsensitive() {
         return this.caseInsensitive == null ? Input.empty() : this.caseInsensitive;
@@ -32,7 +32,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="columnToJsonKeyMappings")
-    private final @Nullable Input<Map<String,String>> columnToJsonKeyMappings;
+      private final @Nullable Input<Map<String,String>> columnToJsonKeyMappings;
 
     public Input<Map<String,String>> getColumnToJsonKeyMappings() {
         return this.columnToJsonKeyMappings == null ? Input.empty() : this.columnToJsonKeyMappings;
@@ -43,7 +43,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="convertDotsInJsonKeysToUnderscores")
-    private final @Nullable Input<Boolean> convertDotsInJsonKeysToUnderscores;
+      private final @Nullable Input<Boolean> convertDotsInJsonKeysToUnderscores;
 
     public Input<Boolean> getConvertDotsInJsonKeysToUnderscores() {
         return this.convertDotsInJsonKeysToUnderscores == null ? Input.empty() : this.convertDotsInJsonKeysToUnderscores;

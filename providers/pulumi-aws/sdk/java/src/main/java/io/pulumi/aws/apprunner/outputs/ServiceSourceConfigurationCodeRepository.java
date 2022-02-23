@@ -5,7 +5,7 @@ package io.pulumi.aws.apprunner.outputs;
 
 import io.pulumi.aws.apprunner.outputs.ServiceSourceConfigurationCodeRepositoryCodeConfiguration;
 import io.pulumi.aws.apprunner.outputs.ServiceSourceConfigurationCodeRepositorySourceCodeVersion;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

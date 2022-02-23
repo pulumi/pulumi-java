@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceRestoreToPointInTimeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="restoreTime")
-    private final @Nullable Input<String> restoreTime;
+      private final @Nullable Input<String> restoreTime;
 
     public Input<String> getRestoreTime() {
         return this.restoreTime == null ? Input.empty() : this.restoreTime;
@@ -31,7 +31,7 @@ public final class InstanceRestoreToPointInTimeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceDbInstanceIdentifier")
-    private final @Nullable Input<String> sourceDbInstanceIdentifier;
+      private final @Nullable Input<String> sourceDbInstanceIdentifier;
 
     public Input<String> getSourceDbInstanceIdentifier() {
         return this.sourceDbInstanceIdentifier == null ? Input.empty() : this.sourceDbInstanceIdentifier;
@@ -42,7 +42,7 @@ public final class InstanceRestoreToPointInTimeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceDbiResourceId")
-    private final @Nullable Input<String> sourceDbiResourceId;
+      private final @Nullable Input<String> sourceDbiResourceId;
 
     public Input<String> getSourceDbiResourceId() {
         return this.sourceDbiResourceId == null ? Input.empty() : this.sourceDbiResourceId;
@@ -53,7 +53,7 @@ public final class InstanceRestoreToPointInTimeArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="useLatestRestorableTime")
-    private final @Nullable Input<Boolean> useLatestRestorableTime;
+      private final @Nullable Input<Boolean> useLatestRestorableTime;
 
     public Input<Boolean> getUseLatestRestorableTime() {
         return this.useLatestRestorableTime == null ? Input.empty() : this.useLatestRestorableTime;

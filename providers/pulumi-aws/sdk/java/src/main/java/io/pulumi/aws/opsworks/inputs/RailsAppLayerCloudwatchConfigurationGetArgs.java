@@ -5,7 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.aws.opsworks.inputs.RailsAppLayerCloudwatchConfigurationLogStreamGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class RailsAppLayerCloudwatchConfigurationGetArgs extends io.pulumi
     public static final RailsAppLayerCloudwatchConfigurationGetArgs Empty = new RailsAppLayerCloudwatchConfigurationGetArgs();
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="logStreams")
-    private final @Nullable Input<List<RailsAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
+      private final @Nullable Input<List<RailsAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
     public Input<List<RailsAppLayerCloudwatchConfigurationLogStreamGetArgs>> getLogStreams() {
         return this.logStreams == null ? Input.empty() : this.logStreams;

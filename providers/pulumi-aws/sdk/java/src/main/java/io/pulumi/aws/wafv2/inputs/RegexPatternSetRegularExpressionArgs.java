@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RegexPatternSetRegularExpressionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="regexString", required=true)
-    private final Input<String> regexString;
+      private final Input<String> regexString;
 
     public Input<String> getRegexString() {
         return this.regexString;

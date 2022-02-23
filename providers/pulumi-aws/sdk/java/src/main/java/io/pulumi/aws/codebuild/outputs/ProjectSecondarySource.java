@@ -6,7 +6,7 @@ package io.pulumi.aws.codebuild.outputs;
 import io.pulumi.aws.codebuild.outputs.ProjectSecondarySourceAuth;
 import io.pulumi.aws.codebuild.outputs.ProjectSecondarySourceBuildStatusConfig;
 import io.pulumi.aws.codebuild.outputs.ProjectSecondarySourceGitSubmodulesConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

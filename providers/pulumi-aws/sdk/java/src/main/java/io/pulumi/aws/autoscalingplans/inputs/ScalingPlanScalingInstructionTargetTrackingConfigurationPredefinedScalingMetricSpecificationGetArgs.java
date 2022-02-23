@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscalingplans.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
      * 
      */
     @InputImport(name="predefinedScalingMetricType", required=true)
-    private final Input<String> predefinedScalingMetricType;
+      private final Input<String> predefinedScalingMetricType;
 
     public Input<String> getPredefinedScalingMetricType() {
         return this.predefinedScalingMetricType;
@@ -30,7 +30,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
      * 
      */
     @InputImport(name="resourceLabel")
-    private final @Nullable Input<String> resourceLabel;
+      private final @Nullable Input<String> resourceLabel;
 
     public Input<String> getResourceLabel() {
         return this.resourceLabel == null ? Input.empty() : this.resourceLabel;

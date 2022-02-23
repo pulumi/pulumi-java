@@ -9,8 +9,8 @@ import io.pulumi.aws.elasticbeanstalk.inputs.ConfigurationTemplateState;
 import io.pulumi.aws.elasticbeanstalk.outputs.ConfigurationTemplateSetting;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -124,6 +124,21 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
         return this.solutionStackName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ConfigurationTemplate(String name) {
+        this(name, ConfigurationTemplateArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ConfigurationTemplate(String name, ConfigurationTemplateArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

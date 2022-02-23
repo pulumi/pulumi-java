@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
      * 
      */
     @InputImport(name="allowNonRestoredState")
-    private final @Nullable Input<Boolean> allowNonRestoredState;
+      private final @Nullable Input<Boolean> allowNonRestoredState;
 
     public Input<Boolean> getAllowNonRestoredState() {
         return this.allowNonRestoredState == null ? Input.empty() : this.allowNonRestoredState;

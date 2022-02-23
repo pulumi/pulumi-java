@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VpcIpv4CidrBlockAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cidrBlock")
-    private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
@@ -31,7 +31,7 @@ public final class VpcIpv4CidrBlockAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ipv4IpamPoolId")
-    private final @Nullable Input<String> ipv4IpamPoolId;
+      private final @Nullable Input<String> ipv4IpamPoolId;
 
     public Input<String> getIpv4IpamPoolId() {
         return this.ipv4IpamPoolId == null ? Input.empty() : this.ipv4IpamPoolId;
@@ -42,7 +42,7 @@ public final class VpcIpv4CidrBlockAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ipv4NetmaskLength")
-    private final @Nullable Input<Integer> ipv4NetmaskLength;
+      private final @Nullable Input<Integer> ipv4NetmaskLength;
 
     public Input<Integer> getIpv4NetmaskLength() {
         return this.ipv4NetmaskLength == null ? Input.empty() : this.ipv4NetmaskLength;
@@ -53,7 +53,7 @@ public final class VpcIpv4CidrBlockAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

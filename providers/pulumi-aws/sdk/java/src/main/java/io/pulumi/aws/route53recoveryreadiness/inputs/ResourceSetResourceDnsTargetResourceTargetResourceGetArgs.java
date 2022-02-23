@@ -6,7 +6,7 @@ package io.pulumi.aws.route53recoveryreadiness.inputs;
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs;
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
      * 
      */
     @InputImport(name="nlbResource")
-    private final @Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs> nlbResource;
+      private final @Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs> nlbResource;
 
     public Input<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs> getNlbResource() {
         return this.nlbResource == null ? Input.empty() : this.nlbResource;
@@ -31,7 +31,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
      * 
      */
     @InputImport(name="r53Resource")
-    private final @Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> r53Resource;
+      private final @Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> r53Resource;
 
     public Input<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> getR53Resource() {
         return this.r53Resource == null ? Input.empty() : this.r53Resource;

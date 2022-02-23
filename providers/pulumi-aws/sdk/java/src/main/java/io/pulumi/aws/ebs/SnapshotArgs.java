@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostArn")
-    private final @Nullable Input<String> outpostArn;
+      private final @Nullable Input<String> outpostArn;
 
     public Input<String> getOutpostArn() {
         return this.outpostArn == null ? Input.empty() : this.outpostArn;
@@ -44,7 +44,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permanentRestore")
-    private final @Nullable Input<Boolean> permanentRestore;
+      private final @Nullable Input<Boolean> permanentRestore;
 
     public Input<Boolean> getPermanentRestore() {
         return this.permanentRestore == null ? Input.empty() : this.permanentRestore;
@@ -55,7 +55,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageTier")
-    private final @Nullable Input<String> storageTier;
+      private final @Nullable Input<String> storageTier;
 
     public Input<String> getStorageTier() {
         return this.storageTier == null ? Input.empty() : this.storageTier;
@@ -66,7 +66,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="temporaryRestoreDays")
-    private final @Nullable Input<Integer> temporaryRestoreDays;
+      private final @Nullable Input<Integer> temporaryRestoreDays;
 
     public Input<Integer> getTemporaryRestoreDays() {
         return this.temporaryRestoreDays == null ? Input.empty() : this.temporaryRestoreDays;
@@ -88,7 +88,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeId", required=true)
-    private final Input<String> volumeId;
+      private final Input<String> volumeId;
 
     public Input<String> getVolumeId() {
         return this.volumeId;

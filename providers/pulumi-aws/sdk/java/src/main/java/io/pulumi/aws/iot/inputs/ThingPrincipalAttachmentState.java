@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="principal")
-    private final @Nullable Input<String> principal;
+      private final @Nullable Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal == null ? Input.empty() : this.principal;
@@ -30,7 +30,7 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="thing")
-    private final @Nullable Input<String> thing;
+      private final @Nullable Input<String> thing;
 
     public Input<String> getThing() {
         return this.thing == null ? Input.empty() : this.thing;

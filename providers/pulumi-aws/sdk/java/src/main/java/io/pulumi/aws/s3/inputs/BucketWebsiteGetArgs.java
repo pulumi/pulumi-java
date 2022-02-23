@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="errorDocument")
-    private final @Nullable Input<String> errorDocument;
+      private final @Nullable Input<String> errorDocument;
 
     public Input<String> getErrorDocument() {
         return this.errorDocument == null ? Input.empty() : this.errorDocument;
@@ -32,7 +32,7 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="indexDocument")
-    private final @Nullable Input<String> indexDocument;
+      private final @Nullable Input<String> indexDocument;
 
     public Input<String> getIndexDocument() {
         return this.indexDocument == null ? Input.empty() : this.indexDocument;
@@ -43,7 +43,7 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="redirectAllRequestsTo")
-    private final @Nullable Input<String> redirectAllRequestsTo;
+      private final @Nullable Input<String> redirectAllRequestsTo;
 
     public Input<String> getRedirectAllRequestsTo() {
         return this.redirectAllRequestsTo == null ? Input.empty() : this.redirectAllRequestsTo;
@@ -55,7 +55,7 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="routingRules")
-    private final @Nullable Input<Either<String,List<String>>> routingRules;
+      private final @Nullable Input<Either<String,List<String>>> routingRules;
 
     public Input<Either<String,List<String>>> getRoutingRules() {
         return this.routingRules == null ? Input.empty() : this.routingRules;

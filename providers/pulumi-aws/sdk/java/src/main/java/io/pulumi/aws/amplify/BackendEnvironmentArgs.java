@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+      private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -30,7 +30,7 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="deploymentArtifacts")
-    private final @Nullable Input<String> deploymentArtifacts;
+      private final @Nullable Input<String> deploymentArtifacts;
 
     public Input<String> getDeploymentArtifacts() {
         return this.deploymentArtifacts == null ? Input.empty() : this.deploymentArtifacts;
@@ -41,7 +41,7 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="environmentName", required=true)
-    private final Input<String> environmentName;
+      private final Input<String> environmentName;
 
     public Input<String> getEnvironmentName() {
         return this.environmentName;
@@ -52,7 +52,7 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stackName")
-    private final @Nullable Input<String> stackName;
+      private final @Nullable Input<String> stackName;
 
     public Input<String> getStackName() {
         return this.stackName == null ? Input.empty() : this.stackName;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GcmChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiKey")
-    private final @Nullable Input<String> apiKey;
+      private final @Nullable Input<String> apiKey;
 
     public Input<String> getApiKey() {
         return this.apiKey == null ? Input.empty() : this.apiKey;
@@ -31,7 +31,7 @@ public final class GcmChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -42,7 +42,7 @@ public final class GcmChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;

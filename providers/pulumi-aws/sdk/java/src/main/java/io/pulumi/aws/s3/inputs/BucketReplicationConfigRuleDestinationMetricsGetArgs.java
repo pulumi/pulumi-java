@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
      * 
      */
     @InputImport(name="eventThreshold")
-    private final @Nullable Input<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold;
+      private final @Nullable Input<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold;
 
     public Input<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> getEventThreshold() {
         return this.eventThreshold == null ? Input.empty() : this.eventThreshold;
@@ -31,7 +31,7 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<String> status;
+      private final Input<String> status;
 
     public Input<String> getStatus() {
         return this.status;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressFamily", required=true)
-    private final Input<String> addressFamily;
+      private final Input<String> addressFamily;
 
     public Input<String> getAddressFamily() {
         return this.addressFamily;
@@ -33,7 +33,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationDefaultNetmaskLength")
-    private final @Nullable Input<Integer> allocationDefaultNetmaskLength;
+      private final @Nullable Input<Integer> allocationDefaultNetmaskLength;
 
     public Input<Integer> getAllocationDefaultNetmaskLength() {
         return this.allocationDefaultNetmaskLength == null ? Input.empty() : this.allocationDefaultNetmaskLength;
@@ -44,7 +44,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationMaxNetmaskLength")
-    private final @Nullable Input<Integer> allocationMaxNetmaskLength;
+      private final @Nullable Input<Integer> allocationMaxNetmaskLength;
 
     public Input<Integer> getAllocationMaxNetmaskLength() {
         return this.allocationMaxNetmaskLength == null ? Input.empty() : this.allocationMaxNetmaskLength;
@@ -55,7 +55,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationMinNetmaskLength")
-    private final @Nullable Input<Integer> allocationMinNetmaskLength;
+      private final @Nullable Input<Integer> allocationMinNetmaskLength;
 
     public Input<Integer> getAllocationMinNetmaskLength() {
         return this.allocationMinNetmaskLength == null ? Input.empty() : this.allocationMinNetmaskLength;
@@ -66,7 +66,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationResourceTags")
-    private final @Nullable Input<Map<String,String>> allocationResourceTags;
+      private final @Nullable Input<Map<String,String>> allocationResourceTags;
 
     public Input<Map<String,String>> getAllocationResourceTags() {
         return this.allocationResourceTags == null ? Input.empty() : this.allocationResourceTags;
@@ -78,7 +78,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoImport")
-    private final @Nullable Input<Boolean> autoImport;
+      private final @Nullable Input<Boolean> autoImport;
 
     public Input<Boolean> getAutoImport() {
         return this.autoImport == null ? Input.empty() : this.autoImport;
@@ -89,7 +89,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsService")
-    private final @Nullable Input<String> awsService;
+      private final @Nullable Input<String> awsService;
 
     public Input<String> getAwsService() {
         return this.awsService == null ? Input.empty() : this.awsService;
@@ -100,7 +100,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -111,7 +111,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipamScopeId", required=true)
-    private final Input<String> ipamScopeId;
+      private final Input<String> ipamScopeId;
 
     public Input<String> getIpamScopeId() {
         return this.ipamScopeId;
@@ -122,7 +122,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locale")
-    private final @Nullable Input<String> locale;
+      private final @Nullable Input<String> locale;
 
     public Input<String> getLocale() {
         return this.locale == null ? Input.empty() : this.locale;
@@ -133,7 +133,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publiclyAdvertisable")
-    private final @Nullable Input<Boolean> publiclyAdvertisable;
+      private final @Nullable Input<Boolean> publiclyAdvertisable;
 
     public Input<Boolean> getPubliclyAdvertisable() {
         return this.publiclyAdvertisable == null ? Input.empty() : this.publiclyAdvertisable;
@@ -144,7 +144,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceIpamPoolId")
-    private final @Nullable Input<String> sourceIpamPoolId;
+      private final @Nullable Input<String> sourceIpamPoolId;
 
     public Input<String> getSourceIpamPoolId() {
         return this.sourceIpamPoolId == null ? Input.empty() : this.sourceIpamPoolId;
@@ -155,7 +155,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConfigurationSetDeliveryOptionsGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tlsPolicy")
-    private final @Nullable Input<String> tlsPolicy;
+      private final @Nullable Input<String> tlsPolicy;
 
     public Input<String> getTlsPolicy() {
         return this.tlsPolicy == null ? Input.empty() : this.tlsPolicy;

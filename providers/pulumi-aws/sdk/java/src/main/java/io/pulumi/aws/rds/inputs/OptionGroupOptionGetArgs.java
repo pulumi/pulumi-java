@@ -5,7 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.aws.rds.inputs.OptionGroupOptionOptionSettingGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class OptionGroupOptionGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dbSecurityGroupMemberships")
-    private final @Nullable Input<List<String>> dbSecurityGroupMemberships;
+      private final @Nullable Input<List<String>> dbSecurityGroupMemberships;
 
     public Input<List<String>> getDbSecurityGroupMemberships() {
         return this.dbSecurityGroupMemberships == null ? Input.empty() : this.dbSecurityGroupMemberships;
@@ -33,7 +33,7 @@ public final class OptionGroupOptionGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="optionName", required=true)
-    private final Input<String> optionName;
+      private final Input<String> optionName;
 
     public Input<String> getOptionName() {
         return this.optionName;
@@ -44,7 +44,7 @@ public final class OptionGroupOptionGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="optionSettings")
-    private final @Nullable Input<List<OptionGroupOptionOptionSettingGetArgs>> optionSettings;
+      private final @Nullable Input<List<OptionGroupOptionOptionSettingGetArgs>> optionSettings;
 
     public Input<List<OptionGroupOptionOptionSettingGetArgs>> getOptionSettings() {
         return this.optionSettings == null ? Input.empty() : this.optionSettings;
@@ -55,7 +55,7 @@ public final class OptionGroupOptionGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -66,7 +66,7 @@ public final class OptionGroupOptionGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -77,7 +77,7 @@ public final class OptionGroupOptionGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vpcSecurityGroupMemberships")
-    private final @Nullable Input<List<String>> vpcSecurityGroupMemberships;
+      private final @Nullable Input<List<String>> vpcSecurityGroupMemberships;
 
     public Input<List<String>> getVpcSecurityGroupMemberships() {
         return this.vpcSecurityGroupMemberships == null ? Input.empty() : this.vpcSecurityGroupMemberships;

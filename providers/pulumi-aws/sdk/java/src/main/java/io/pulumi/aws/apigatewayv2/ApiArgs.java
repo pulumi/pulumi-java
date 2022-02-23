@@ -5,7 +5,7 @@ package io.pulumi.aws.apigatewayv2;
 
 import io.pulumi.aws.apigatewayv2.inputs.ApiCorsConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiKeySelectionExpression")
-    private final @Nullable Input<String> apiKeySelectionExpression;
+      private final @Nullable Input<String> apiKeySelectionExpression;
 
     public Input<String> getApiKeySelectionExpression() {
         return this.apiKeySelectionExpression == null ? Input.empty() : this.apiKeySelectionExpression;
@@ -35,7 +35,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -46,7 +46,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="corsConfiguration")
-    private final @Nullable Input<ApiCorsConfigurationArgs> corsConfiguration;
+      private final @Nullable Input<ApiCorsConfigurationArgs> corsConfiguration;
 
     public Input<ApiCorsConfigurationArgs> getCorsConfiguration() {
         return this.corsConfiguration == null ? Input.empty() : this.corsConfiguration;
@@ -57,7 +57,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentialsArn")
-    private final @Nullable Input<String> credentialsArn;
+      private final @Nullable Input<String> credentialsArn;
 
     public Input<String> getCredentialsArn() {
         return this.credentialsArn == null ? Input.empty() : this.credentialsArn;
@@ -68,7 +68,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -81,7 +81,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableExecuteApiEndpoint")
-    private final @Nullable Input<Boolean> disableExecuteApiEndpoint;
+      private final @Nullable Input<Boolean> disableExecuteApiEndpoint;
 
     public Input<Boolean> getDisableExecuteApiEndpoint() {
         return this.disableExecuteApiEndpoint == null ? Input.empty() : this.disableExecuteApiEndpoint;
@@ -92,7 +92,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failOnWarnings")
-    private final @Nullable Input<Boolean> failOnWarnings;
+      private final @Nullable Input<Boolean> failOnWarnings;
 
     public Input<Boolean> getFailOnWarnings() {
         return this.failOnWarnings == null ? Input.empty() : this.failOnWarnings;
@@ -103,7 +103,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -114,7 +114,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocolType", required=true)
-    private final Input<String> protocolType;
+      private final Input<String> protocolType;
 
     public Input<String> getProtocolType() {
         return this.protocolType;
@@ -125,7 +125,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeKey")
-    private final @Nullable Input<String> routeKey;
+      private final @Nullable Input<String> routeKey;
 
     public Input<String> getRouteKey() {
         return this.routeKey == null ? Input.empty() : this.routeKey;
@@ -137,7 +137,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeSelectionExpression")
-    private final @Nullable Input<String> routeSelectionExpression;
+      private final @Nullable Input<String> routeSelectionExpression;
 
     public Input<String> getRouteSelectionExpression() {
         return this.routeSelectionExpression == null ? Input.empty() : this.routeSelectionExpression;
@@ -148,7 +148,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -161,7 +161,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -172,7 +172,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

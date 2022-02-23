@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="activeDirectoryId")
-    private final @Nullable Input<String> activeDirectoryId;
+      private final @Nullable Input<String> activeDirectoryId;
 
     public Input<String> getActiveDirectoryId() {
         return this.activeDirectoryId == null ? Input.empty() : this.activeDirectoryId;
@@ -30,7 +30,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rootCertificateChainArn")
-    private final @Nullable Input<String> rootCertificateChainArn;
+      private final @Nullable Input<String> rootCertificateChainArn;
 
     public Input<String> getRootCertificateChainArn() {
         return this.rootCertificateChainArn == null ? Input.empty() : this.rootCertificateChainArn;
@@ -41,7 +41,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="samlProviderArn")
-    private final @Nullable Input<String> samlProviderArn;
+      private final @Nullable Input<String> samlProviderArn;
 
     public Input<String> getSamlProviderArn() {
         return this.samlProviderArn == null ? Input.empty() : this.samlProviderArn;
@@ -52,7 +52,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="selfServiceSamlProviderArn")
-    private final @Nullable Input<String> selfServiceSamlProviderArn;
+      private final @Nullable Input<String> selfServiceSamlProviderArn;
 
     public Input<String> getSelfServiceSamlProviderArn() {
         return this.selfServiceSamlProviderArn == null ? Input.empty() : this.selfServiceSamlProviderArn;
@@ -63,7 +63,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

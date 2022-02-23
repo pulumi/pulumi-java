@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetImagePipelineImageTestsConfiguration extends io.pulumi.res
      * 
      */
     @InputImport(name="imageTestsEnabled", required=true)
-    private final Boolean imageTestsEnabled;
+      private final Boolean imageTestsEnabled;
 
     public Boolean getImageTestsEnabled() {
         return this.imageTestsEnabled;
@@ -29,7 +29,7 @@ public final class GetImagePipelineImageTestsConfiguration extends io.pulumi.res
      * 
      */
     @InputImport(name="timeoutMinutes", required=true)
-    private final Integer timeoutMinutes;
+      private final Integer timeoutMinutes;
 
     public Integer getTimeoutMinutes() {
         return this.timeoutMinutes;

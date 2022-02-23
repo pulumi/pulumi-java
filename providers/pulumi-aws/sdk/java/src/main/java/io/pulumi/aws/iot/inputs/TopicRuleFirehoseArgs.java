@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TopicRuleFirehoseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deliveryStreamName", required=true)
-    private final Input<String> deliveryStreamName;
+      private final Input<String> deliveryStreamName;
 
     public Input<String> getDeliveryStreamName() {
         return this.deliveryStreamName;
@@ -30,7 +30,7 @@ public final class TopicRuleFirehoseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -41,7 +41,7 @@ public final class TopicRuleFirehoseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="separator")
-    private final @Nullable Input<String> separator;
+      private final @Nullable Input<String> separator;
 
     public Input<String> getSeparator() {
         return this.separator == null ? Input.empty() : this.separator;

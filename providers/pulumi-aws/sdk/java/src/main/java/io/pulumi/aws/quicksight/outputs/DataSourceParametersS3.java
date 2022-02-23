@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.outputs;
 
 import io.pulumi.aws.quicksight.outputs.DataSourceParametersS3ManifestFileLocation;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

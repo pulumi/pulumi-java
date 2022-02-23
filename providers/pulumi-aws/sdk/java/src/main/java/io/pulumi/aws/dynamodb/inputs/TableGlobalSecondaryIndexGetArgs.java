@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hashKey", required=true)
-    private final Input<String> hashKey;
+      private final Input<String> hashKey;
 
     public Input<String> getHashKey() {
         return this.hashKey;
@@ -33,7 +33,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="nonKeyAttributes")
-    private final @Nullable Input<List<String>> nonKeyAttributes;
+      private final @Nullable Input<List<String>> nonKeyAttributes;
 
     public Input<List<String>> getNonKeyAttributes() {
         return this.nonKeyAttributes == null ? Input.empty() : this.nonKeyAttributes;
@@ -61,7 +61,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="projectionType", required=true)
-    private final Input<String> projectionType;
+      private final Input<String> projectionType;
 
     public Input<String> getProjectionType() {
         return this.projectionType;
@@ -72,7 +72,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rangeKey")
-    private final @Nullable Input<String> rangeKey;
+      private final @Nullable Input<String> rangeKey;
 
     public Input<String> getRangeKey() {
         return this.rangeKey == null ? Input.empty() : this.rangeKey;
@@ -83,7 +83,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="readCapacity")
-    private final @Nullable Input<Integer> readCapacity;
+      private final @Nullable Input<Integer> readCapacity;
 
     public Input<Integer> getReadCapacity() {
         return this.readCapacity == null ? Input.empty() : this.readCapacity;
@@ -94,7 +94,7 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="writeCapacity")
-    private final @Nullable Input<Integer> writeCapacity;
+      private final @Nullable Input<Integer> writeCapacity;
 
     public Input<Integer> getWriteCapacity() {
         return this.writeCapacity == null ? Input.empty() : this.writeCapacity;

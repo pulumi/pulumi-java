@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyCookiesConfigGetArgs;
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyHeadersConfigGetArgs;
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OriginRequestPolicyState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -33,7 +33,7 @@ public final class OriginRequestPolicyState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cookiesConfig")
-    private final @Nullable Input<OriginRequestPolicyCookiesConfigGetArgs> cookiesConfig;
+      private final @Nullable Input<OriginRequestPolicyCookiesConfigGetArgs> cookiesConfig;
 
     public Input<OriginRequestPolicyCookiesConfigGetArgs> getCookiesConfig() {
         return this.cookiesConfig == null ? Input.empty() : this.cookiesConfig;
@@ -44,7 +44,7 @@ public final class OriginRequestPolicyState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -55,7 +55,7 @@ public final class OriginRequestPolicyState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="headersConfig")
-    private final @Nullable Input<OriginRequestPolicyHeadersConfigGetArgs> headersConfig;
+      private final @Nullable Input<OriginRequestPolicyHeadersConfigGetArgs> headersConfig;
 
     public Input<OriginRequestPolicyHeadersConfigGetArgs> getHeadersConfig() {
         return this.headersConfig == null ? Input.empty() : this.headersConfig;
@@ -66,7 +66,7 @@ public final class OriginRequestPolicyState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class OriginRequestPolicyState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queryStringsConfig")
-    private final @Nullable Input<OriginRequestPolicyQueryStringsConfigGetArgs> queryStringsConfig;
+      private final @Nullable Input<OriginRequestPolicyQueryStringsConfigGetArgs> queryStringsConfig;
 
     public Input<OriginRequestPolicyQueryStringsConfigGetArgs> getQueryStringsConfig() {
         return this.queryStringsConfig == null ? Input.empty() : this.queryStringsConfig;

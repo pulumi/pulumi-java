@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticbeanstalk.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetSolutionStackArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mostRecent")
-    private final @Nullable Boolean mostRecent;
+      private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
@@ -34,7 +34,7 @@ public final class GetSolutionStackArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nameRegex", required=true)
-    private final String nameRegex;
+      private final String nameRegex;
 
     public String getNameRegex() {
         return this.nameRegex;

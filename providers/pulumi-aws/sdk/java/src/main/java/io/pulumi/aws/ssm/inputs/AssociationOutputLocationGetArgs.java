@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AssociationOutputLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="s3BucketName", required=true)
-    private final Input<String> s3BucketName;
+      private final Input<String> s3BucketName;
 
     public Input<String> getS3BucketName() {
         return this.s3BucketName;
@@ -30,7 +30,7 @@ public final class AssociationOutputLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="s3KeyPrefix")
-    private final @Nullable Input<String> s3KeyPrefix;
+      private final @Nullable Input<String> s3KeyPrefix;
 
     public Input<String> getS3KeyPrefix() {
         return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;
@@ -41,7 +41,7 @@ public final class AssociationOutputLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="s3Region")
-    private final @Nullable Input<String> s3Region;
+      private final @Nullable Input<String> s3Region;
 
     public Input<String> getS3Region() {
         return this.s3Region == null ? Input.empty() : this.s3Region;

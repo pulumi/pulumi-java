@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable String domainName;
+      private final @Nullable String domainName;
 
     public Optional<String> getDomainName() {
         return this.domainName == null ? Optional.empty() : Optional.ofNullable(this.domainName);
@@ -31,7 +31,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -42,7 +42,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resolverEndpointId")
-    private final @Nullable String resolverEndpointId;
+      private final @Nullable String resolverEndpointId;
 
     public Optional<String> getResolverEndpointId() {
         return this.resolverEndpointId == null ? Optional.empty() : Optional.ofNullable(this.resolverEndpointId);
@@ -53,7 +53,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resolverRuleId")
-    private final @Nullable String resolverRuleId;
+      private final @Nullable String resolverRuleId;
 
     public Optional<String> getResolverRuleId() {
         return this.resolverRuleId == null ? Optional.empty() : Optional.ofNullable(this.resolverRuleId);
@@ -64,7 +64,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleType")
-    private final @Nullable String ruleType;
+      private final @Nullable String ruleType;
 
     public Optional<String> getRuleType() {
         return this.ruleType == null ? Optional.empty() : Optional.ofNullable(this.ruleType);
@@ -75,7 +75,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

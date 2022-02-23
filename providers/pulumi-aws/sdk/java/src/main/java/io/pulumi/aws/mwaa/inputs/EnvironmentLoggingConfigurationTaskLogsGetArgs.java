@@ -4,7 +4,7 @@
 package io.pulumi.aws.mwaa.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class EnvironmentLoggingConfigurationTaskLogsGetArgs extends io.pul
     public static final EnvironmentLoggingConfigurationTaskLogsGetArgs Empty = new EnvironmentLoggingConfigurationTaskLogsGetArgs();
 
     @InputImport(name="cloudWatchLogGroupArn")
-    private final @Nullable Input<String> cloudWatchLogGroupArn;
+      private final @Nullable Input<String> cloudWatchLogGroupArn;
 
     public Input<String> getCloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn == null ? Input.empty() : this.cloudWatchLogGroupArn;
@@ -27,7 +27,7 @@ public final class EnvironmentLoggingConfigurationTaskLogsGetArgs extends io.pul
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -38,7 +38,7 @@ public final class EnvironmentLoggingConfigurationTaskLogsGetArgs extends io.pul
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable Input<String> logLevel;
+      private final @Nullable Input<String> logLevel;
 
     public Input<String> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;

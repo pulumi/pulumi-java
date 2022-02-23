@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GraphQLApiOpenidConnectConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="authTtl")
-    private final @Nullable Input<Integer> authTtl;
+      private final @Nullable Input<Integer> authTtl;
 
     public Input<Integer> getAuthTtl() {
         return this.authTtl == null ? Input.empty() : this.authTtl;
@@ -31,7 +31,7 @@ public final class GraphQLApiOpenidConnectConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -42,7 +42,7 @@ public final class GraphQLApiOpenidConnectConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="iatTtl")
-    private final @Nullable Input<Integer> iatTtl;
+      private final @Nullable Input<Integer> iatTtl;
 
     public Input<Integer> getIatTtl() {
         return this.iatTtl == null ? Input.empty() : this.iatTtl;
@@ -53,7 +53,7 @@ public final class GraphQLApiOpenidConnectConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final Input<String> issuer;
+      private final Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer;

@@ -8,8 +8,8 @@ import io.pulumi.aws.redshift.SnapshotScheduleAssociationArgs;
 import io.pulumi.aws.redshift.inputs.SnapshotScheduleAssociationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -56,6 +56,21 @@ public class SnapshotScheduleAssociation extends io.pulumi.resources.CustomResou
         return this.scheduleIdentifier;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SnapshotScheduleAssociation(String name) {
+        this(name, SnapshotScheduleAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SnapshotScheduleAssociation(String name, SnapshotScheduleAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

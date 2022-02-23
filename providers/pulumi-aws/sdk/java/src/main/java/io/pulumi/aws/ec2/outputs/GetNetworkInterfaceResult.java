@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.outputs;
 import io.pulumi.aws.ec2.outputs.GetNetworkInterfaceAssociation;
 import io.pulumi.aws.ec2.outputs.GetNetworkInterfaceAttachment;
 import io.pulumi.aws.ec2.outputs.GetNetworkInterfaceFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

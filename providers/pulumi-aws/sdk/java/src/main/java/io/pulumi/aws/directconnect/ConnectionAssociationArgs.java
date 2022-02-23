@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionId", required=true)
-    private final Input<String> connectionId;
+      private final Input<String> connectionId;
 
     public Input<String> getConnectionId() {
         return this.connectionId;
@@ -29,7 +29,7 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lagId", required=true)
-    private final Input<String> lagId;
+      private final Input<String> lagId;
 
     public Input<String> getLagId() {
         return this.lagId;

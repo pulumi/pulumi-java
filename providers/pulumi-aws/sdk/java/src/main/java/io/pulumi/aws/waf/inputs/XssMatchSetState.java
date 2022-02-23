@@ -5,7 +5,7 @@ package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.aws.waf.inputs.XssMatchSetXssMatchTupleGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class XssMatchSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xssMatchTuples")
-    private final @Nullable Input<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples;
+      private final @Nullable Input<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples;
 
     public Input<List<XssMatchSetXssMatchTupleGetArgs>> getXssMatchTuples() {
         return this.xssMatchTuples == null ? Input.empty() : this.xssMatchTuples;

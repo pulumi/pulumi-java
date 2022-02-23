@@ -5,7 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.aws.rds.inputs.ProxyDefaultTargetGroupConnectionPoolConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="connectionPoolConfig")
-    private final @Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig;
+      private final @Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig;
 
     public Input<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> getConnectionPoolConfig() {
         return this.connectionPoolConfig == null ? Input.empty() : this.connectionPoolConfig;
@@ -42,7 +42,7 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dbProxyName")
-    private final @Nullable Input<String> dbProxyName;
+      private final @Nullable Input<String> dbProxyName;
 
     public Input<String> getDbProxyName() {
         return this.dbProxyName == null ? Input.empty() : this.dbProxyName;
@@ -53,7 +53,7 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

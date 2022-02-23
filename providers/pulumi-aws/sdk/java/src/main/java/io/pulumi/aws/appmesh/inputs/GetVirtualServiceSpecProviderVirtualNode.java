@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVirtualServiceSpecProviderVirtualNode extends io.pulumi.re
      * 
      */
     @InputImport(name="virtualNodeName", required=true)
-    private final String virtualNodeName;
+      private final String virtualNodeName;
 
     public String getVirtualNodeName() {
         return this.virtualNodeName;

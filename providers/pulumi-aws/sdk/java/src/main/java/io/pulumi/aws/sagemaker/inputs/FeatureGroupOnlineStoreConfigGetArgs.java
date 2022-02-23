@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupOnlineStoreConfigSecurityConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FeatureGroupOnlineStoreConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="enableOnlineStore")
-    private final @Nullable Input<Boolean> enableOnlineStore;
+      private final @Nullable Input<Boolean> enableOnlineStore;
 
     public Input<Boolean> getEnableOnlineStore() {
         return this.enableOnlineStore == null ? Input.empty() : this.enableOnlineStore;
@@ -31,7 +31,7 @@ public final class FeatureGroupOnlineStoreConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="securityConfig")
-    private final @Nullable Input<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig;
+      private final @Nullable Input<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig;
 
     public Input<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> getSecurityConfig() {
         return this.securityConfig == null ? Input.empty() : this.securityConfig;

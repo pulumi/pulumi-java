@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="attachedEniId", required=true)
-    private final String attachedEniId;
+      private final String attachedEniId;
 
     public String getAttachedEniId() {
         return this.attachedEniId;
@@ -30,7 +30,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="brokerId", required=true)
-    private final Double brokerId;
+      private final Double brokerId;
 
     public Double getBrokerId() {
         return this.brokerId;
@@ -41,7 +41,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="clientSubnet", required=true)
-    private final String clientSubnet;
+      private final String clientSubnet;
 
     public String getClientSubnet() {
         return this.clientSubnet;
@@ -52,7 +52,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="clientVpcIpAddress", required=true)
-    private final String clientVpcIpAddress;
+      private final String clientVpcIpAddress;
 
     public String getClientVpcIpAddress() {
         return this.clientVpcIpAddress;
@@ -63,7 +63,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="endpoints", required=true)
-    private final List<String> endpoints;
+      private final List<String> endpoints;
 
     public List<String> getEndpoints() {
         return this.endpoints;
@@ -74,7 +74,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="nodeArn", required=true)
-    private final String nodeArn;
+      private final String nodeArn;
 
     public String getNodeArn() {
         return this.nodeArn;

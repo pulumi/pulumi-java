@@ -5,7 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.aws.emr.inputs.ClusterCoreInstanceGroupEbsConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="autoscalingPolicy")
-    private final @Nullable Input<String> autoscalingPolicy;
+      private final @Nullable Input<String> autoscalingPolicy;
 
     public Input<String> getAutoscalingPolicy() {
         return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
@@ -33,7 +33,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="bidPrice")
-    private final @Nullable Input<String> bidPrice;
+      private final @Nullable Input<String> bidPrice;
 
     public Input<String> getBidPrice() {
         return this.bidPrice == null ? Input.empty() : this.bidPrice;
@@ -44,7 +44,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ebsConfigs")
-    private final @Nullable Input<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs;
+      private final @Nullable Input<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs;
 
     public Input<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> getEbsConfigs() {
         return this.ebsConfigs == null ? Input.empty() : this.ebsConfigs;
@@ -55,7 +55,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -66,7 +66,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceCount")
-    private final @Nullable Input<Integer> instanceCount;
+      private final @Nullable Input<Integer> instanceCount;
 
     public Input<Integer> getInstanceCount() {
         return this.instanceCount == null ? Input.empty() : this.instanceCount;
@@ -77,7 +77,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+      private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -88,7 +88,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

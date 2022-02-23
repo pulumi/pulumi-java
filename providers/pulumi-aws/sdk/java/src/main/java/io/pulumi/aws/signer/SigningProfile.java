@@ -10,8 +10,8 @@ import io.pulumi.aws.signer.outputs.SigningProfileRevocationRecord;
 import io.pulumi.aws.signer.outputs.SigningProfileSignatureValidityPeriod;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -202,6 +202,21 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
         return this.versionArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SigningProfile(String name) {
+        this(name, SigningProfileArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SigningProfile(String name, SigningProfileArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

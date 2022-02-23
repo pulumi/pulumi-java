@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class GetInstanceEbsBlockDevice extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="deleteOnTermination", required=true)
-    private final Boolean deleteOnTermination;
+      private final Boolean deleteOnTermination;
 
     public Boolean getDeleteOnTermination() {
         return this.deleteOnTermination;
@@ -31,7 +31,7 @@ public final class GetInstanceEbsBlockDevice extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+      private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -42,7 +42,7 @@ public final class GetInstanceEbsBlockDevice extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="encrypted", required=true)
-    private final Boolean encrypted;
+      private final Boolean encrypted;
 
     public Boolean getEncrypted() {
         return this.encrypted;
@@ -53,14 +53,14 @@ public final class GetInstanceEbsBlockDevice extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="iops", required=true)
-    private final Integer iops;
+      private final Integer iops;
 
     public Integer getIops() {
         return this.iops;
     }
 
     @InputImport(name="kmsKeyId", required=true)
-    private final String kmsKeyId;
+      private final String kmsKeyId;
 
     public String getKmsKeyId() {
         return this.kmsKeyId;
@@ -71,7 +71,7 @@ public final class GetInstanceEbsBlockDevice extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="snapshotId", required=true)
-    private final String snapshotId;
+      private final String snapshotId;
 
     public String getSnapshotId() {
         return this.snapshotId;
@@ -82,7 +82,7 @@ public final class GetInstanceEbsBlockDevice extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="tags", required=true)
-    private final Map<String,String> tags;
+      private final Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags;
@@ -93,14 +93,14 @@ public final class GetInstanceEbsBlockDevice extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="throughput", required=true)
-    private final Integer throughput;
+      private final Integer throughput;
 
     public Integer getThroughput() {
         return this.throughput;
     }
 
     @InputImport(name="volumeId", required=true)
-    private final String volumeId;
+      private final String volumeId;
 
     public String getVolumeId() {
         return this.volumeId;
@@ -111,7 +111,7 @@ public final class GetInstanceEbsBlockDevice extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="volumeSize", required=true)
-    private final Integer volumeSize;
+      private final Integer volumeSize;
 
     public Integer getVolumeSize() {
         return this.volumeSize;
@@ -122,7 +122,7 @@ public final class GetInstanceEbsBlockDevice extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="volumeType", required=true)
-    private final String volumeType;
+      private final String volumeType;
 
     public String getVolumeType() {
         return this.volumeType;

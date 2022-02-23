@@ -4,7 +4,7 @@
 package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="category", required=true)
-    private final Input<String> category;
+      private final Input<String> category;
 
     public Input<String> getCategory() {
         return this.category;
@@ -33,7 +33,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<Map<String,String>> configuration;
+      private final @Nullable Input<Map<String,String>> configuration;
 
     public Input<Map<String,String>> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -44,7 +44,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inputArtifacts")
-    private final @Nullable Input<List<String>> inputArtifacts;
+      private final @Nullable Input<List<String>> inputArtifacts;
 
     public Input<List<String>> getInputArtifacts() {
         return this.inputArtifacts == null ? Input.empty() : this.inputArtifacts;
@@ -55,7 +55,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -66,7 +66,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -77,7 +77,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="outputArtifacts")
-    private final @Nullable Input<List<String>> outputArtifacts;
+      private final @Nullable Input<List<String>> outputArtifacts;
 
     public Input<List<String>> getOutputArtifacts() {
         return this.outputArtifacts == null ? Input.empty() : this.outputArtifacts;
@@ -88,7 +88,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="owner", required=true)
-    private final Input<String> owner;
+      private final Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner;
@@ -99,7 +99,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="provider", required=true)
-    private final Input<String> provider;
+      private final Input<String> provider;
 
     public Input<String> getProvider() {
         return this.provider;
@@ -110,7 +110,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -121,7 +121,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -132,7 +132,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="runOrder")
-    private final @Nullable Input<Integer> runOrder;
+      private final @Nullable Input<Integer> runOrder;
 
     public Input<Integer> getRunOrder() {
         return this.runOrder == null ? Input.empty() : this.runOrder;
@@ -143,7 +143,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;

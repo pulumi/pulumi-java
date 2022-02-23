@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.aws.apigateway.inputs.MethodSettingsSettingsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="methodPath")
-    private final @Nullable Input<String> methodPath;
+      private final @Nullable Input<String> methodPath;
 
     public Input<String> getMethodPath() {
         return this.methodPath == null ? Input.empty() : this.methodPath;
@@ -31,7 +31,7 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restApi")
-    private final @Nullable Input<String> restApi;
+      private final @Nullable Input<String> restApi;
 
     public Input<String> getRestApi() {
         return this.restApi == null ? Input.empty() : this.restApi;
@@ -42,7 +42,7 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<MethodSettingsSettingsGetArgs> settings;
+      private final @Nullable Input<MethodSettingsSettingsGetArgs> settings;
 
     public Input<MethodSettingsSettingsGetArgs> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -53,7 +53,7 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="stageName")
-    private final @Nullable Input<String> stageName;
+      private final @Nullable Input<String> stageName;
 
     public Input<String> getStageName() {
         return this.stageName == null ? Input.empty() : this.stageName;

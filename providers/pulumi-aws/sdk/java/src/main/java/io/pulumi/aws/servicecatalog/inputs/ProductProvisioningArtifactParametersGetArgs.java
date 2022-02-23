@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
      * 
      */
     @InputImport(name="disableTemplateValidation")
-    private final @Nullable Input<Boolean> disableTemplateValidation;
+      private final @Nullable Input<Boolean> disableTemplateValidation;
 
     public Input<Boolean> getDisableTemplateValidation() {
         return this.disableTemplateValidation == null ? Input.empty() : this.disableTemplateValidation;
@@ -42,7 +42,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
      * 
      */
     @InputImport(name="templatePhysicalId")
-    private final @Nullable Input<String> templatePhysicalId;
+      private final @Nullable Input<String> templatePhysicalId;
 
     public Input<String> getTemplatePhysicalId() {
         return this.templatePhysicalId == null ? Input.empty() : this.templatePhysicalId;
@@ -64,7 +64,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
      * 
      */
     @InputImport(name="templateUrl")
-    private final @Nullable Input<String> templateUrl;
+      private final @Nullable Input<String> templateUrl;
 
     public Input<String> getTemplateUrl() {
         return this.templateUrl == null ? Input.empty() : this.templateUrl;
@@ -75,7 +75,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

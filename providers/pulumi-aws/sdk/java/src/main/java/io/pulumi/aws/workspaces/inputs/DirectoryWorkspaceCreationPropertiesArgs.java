@@ -4,7 +4,7 @@
 package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="customSecurityGroupId")
-    private final @Nullable Input<String> customSecurityGroupId;
+      private final @Nullable Input<String> customSecurityGroupId;
 
     public Input<String> getCustomSecurityGroupId() {
         return this.customSecurityGroupId == null ? Input.empty() : this.customSecurityGroupId;
@@ -31,7 +31,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="defaultOu")
-    private final @Nullable Input<String> defaultOu;
+      private final @Nullable Input<String> defaultOu;
 
     public Input<String> getDefaultOu() {
         return this.defaultOu == null ? Input.empty() : this.defaultOu;
@@ -42,7 +42,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="enableInternetAccess")
-    private final @Nullable Input<Boolean> enableInternetAccess;
+      private final @Nullable Input<Boolean> enableInternetAccess;
 
     public Input<Boolean> getEnableInternetAccess() {
         return this.enableInternetAccess == null ? Input.empty() : this.enableInternetAccess;
@@ -53,7 +53,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="enableMaintenanceMode")
-    private final @Nullable Input<Boolean> enableMaintenanceMode;
+      private final @Nullable Input<Boolean> enableMaintenanceMode;
 
     public Input<Boolean> getEnableMaintenanceMode() {
         return this.enableMaintenanceMode == null ? Input.empty() : this.enableMaintenanceMode;
@@ -64,7 +64,7 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="userEnabledAsLocalAdministrator")
-    private final @Nullable Input<Boolean> userEnabledAsLocalAdministrator;
+      private final @Nullable Input<Boolean> userEnabledAsLocalAdministrator;
 
     public Input<Boolean> getUserEnabledAsLocalAdministrator() {
         return this.userEnabledAsLocalAdministrator == null ? Input.empty() : this.userEnabledAsLocalAdministrator;

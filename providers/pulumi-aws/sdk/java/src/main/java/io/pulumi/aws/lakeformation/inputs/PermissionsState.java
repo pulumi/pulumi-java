@@ -8,7 +8,7 @@ import io.pulumi.aws.lakeformation.inputs.PermissionsDatabaseGetArgs;
 import io.pulumi.aws.lakeformation.inputs.PermissionsTableGetArgs;
 import io.pulumi.aws.lakeformation.inputs.PermissionsTableWithColumnsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class PermissionsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -36,7 +36,7 @@ public final class PermissionsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogResource")
-    private final @Nullable Input<Boolean> catalogResource;
+      private final @Nullable Input<Boolean> catalogResource;
 
     public Input<Boolean> getCatalogResource() {
         return this.catalogResource == null ? Input.empty() : this.catalogResource;
@@ -47,7 +47,7 @@ public final class PermissionsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataLocation")
-    private final @Nullable Input<PermissionsDataLocationGetArgs> dataLocation;
+      private final @Nullable Input<PermissionsDataLocationGetArgs> dataLocation;
 
     public Input<PermissionsDataLocationGetArgs> getDataLocation() {
         return this.dataLocation == null ? Input.empty() : this.dataLocation;
@@ -58,7 +58,7 @@ public final class PermissionsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<PermissionsDatabaseGetArgs> database;
+      private final @Nullable Input<PermissionsDatabaseGetArgs> database;
 
     public Input<PermissionsDatabaseGetArgs> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -69,7 +69,7 @@ public final class PermissionsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<List<String>> permissions;
+      private final @Nullable Input<List<String>> permissions;
 
     public Input<List<String>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -80,7 +80,7 @@ public final class PermissionsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionsWithGrantOptions")
-    private final @Nullable Input<List<String>> permissionsWithGrantOptions;
+      private final @Nullable Input<List<String>> permissionsWithGrantOptions;
 
     public Input<List<String>> getPermissionsWithGrantOptions() {
         return this.permissionsWithGrantOptions == null ? Input.empty() : this.permissionsWithGrantOptions;
@@ -91,7 +91,7 @@ public final class PermissionsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principal")
-    private final @Nullable Input<String> principal;
+      private final @Nullable Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal == null ? Input.empty() : this.principal;
@@ -102,7 +102,7 @@ public final class PermissionsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="table")
-    private final @Nullable Input<PermissionsTableGetArgs> table;
+      private final @Nullable Input<PermissionsTableGetArgs> table;
 
     public Input<PermissionsTableGetArgs> getTable() {
         return this.table == null ? Input.empty() : this.table;
@@ -113,7 +113,7 @@ public final class PermissionsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableWithColumns")
-    private final @Nullable Input<PermissionsTableWithColumnsGetArgs> tableWithColumns;
+      private final @Nullable Input<PermissionsTableWithColumnsGetArgs> tableWithColumns;
 
     public Input<PermissionsTableWithColumnsGetArgs> getTableWithColumns() {
         return this.tableWithColumns == null ? Input.empty() : this.tableWithColumns;

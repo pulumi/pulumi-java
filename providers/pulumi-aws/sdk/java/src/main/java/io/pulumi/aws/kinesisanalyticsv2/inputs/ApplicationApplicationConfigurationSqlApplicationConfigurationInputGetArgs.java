@@ -10,7 +10,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,14 +22,14 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     public static final ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs Empty = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs();
 
     @InputImport(name="inAppStreamNames")
-    private final @Nullable Input<List<String>> inAppStreamNames;
+      private final @Nullable Input<List<String>> inAppStreamNames;
 
     public Input<List<String>> getInAppStreamNames() {
         return this.inAppStreamNames == null ? Input.empty() : this.inAppStreamNames;
     }
 
     @InputImport(name="inputId")
-    private final @Nullable Input<String> inputId;
+      private final @Nullable Input<String> inputId;
 
     public Input<String> getInputId() {
         return this.inputId == null ? Input.empty() : this.inputId;
@@ -40,7 +40,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="inputParallelism")
-    private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs> inputParallelism;
+      private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs> inputParallelism;
 
     public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs> getInputParallelism() {
         return this.inputParallelism == null ? Input.empty() : this.inputParallelism;
@@ -52,7 +52,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="inputProcessingConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs> inputProcessingConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs> inputProcessingConfiguration;
 
     public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs> getInputProcessingConfiguration() {
         return this.inputProcessingConfiguration == null ? Input.empty() : this.inputProcessingConfiguration;
@@ -63,7 +63,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="inputSchema", required=true)
-    private final Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaGetArgs> inputSchema;
+      private final Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaGetArgs> inputSchema;
 
     public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaGetArgs> getInputSchema() {
         return this.inputSchema;
@@ -74,7 +74,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="inputStartingPositionConfigurations")
-    private final @Nullable Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs>> inputStartingPositionConfigurations;
+      private final @Nullable Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs>> inputStartingPositionConfigurations;
 
     public Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs>> getInputStartingPositionConfigurations() {
         return this.inputStartingPositionConfigurations == null ? Input.empty() : this.inputStartingPositionConfigurations;
@@ -85,7 +85,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="kinesisFirehoseInput")
-    private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputGetArgs> kinesisFirehoseInput;
+      private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputGetArgs> kinesisFirehoseInput;
 
     public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputGetArgs> getKinesisFirehoseInput() {
         return this.kinesisFirehoseInput == null ? Input.empty() : this.kinesisFirehoseInput;
@@ -96,7 +96,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="kinesisStreamsInput")
-    private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputGetArgs> kinesisStreamsInput;
+      private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputGetArgs> kinesisStreamsInput;
 
     public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputGetArgs> getKinesisStreamsInput() {
         return this.kinesisStreamsInput == null ? Input.empty() : this.kinesisStreamsInput;
@@ -107,7 +107,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="namePrefix", required=true)
-    private final Input<String> namePrefix;
+      private final Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix;

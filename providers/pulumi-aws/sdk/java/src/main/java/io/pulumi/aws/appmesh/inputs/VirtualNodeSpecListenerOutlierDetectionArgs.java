@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerOutlierDetectionIntervalArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends io.pulumi
      * 
      */
     @InputImport(name="baseEjectionDuration", required=true)
-    private final Input<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> baseEjectionDuration;
+      private final Input<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> baseEjectionDuration;
 
     public Input<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> getBaseEjectionDuration() {
         return this.baseEjectionDuration;
@@ -31,7 +31,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends io.pulumi
      * 
      */
     @InputImport(name="interval", required=true)
-    private final Input<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> interval;
+      private final Input<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> interval;
 
     public Input<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> getInterval() {
         return this.interval;
@@ -43,7 +43,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends io.pulumi
      * 
      */
     @InputImport(name="maxEjectionPercent", required=true)
-    private final Input<Integer> maxEjectionPercent;
+      private final Input<Integer> maxEjectionPercent;
 
     public Input<Integer> getMaxEjectionPercent() {
         return this.maxEjectionPercent;
@@ -54,7 +54,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends io.pulumi
      * 
      */
     @InputImport(name="maxServerErrors", required=true)
-    private final Input<Integer> maxServerErrors;
+      private final Input<Integer> maxServerErrors;
 
     public Input<Integer> getMaxServerErrors() {
         return this.maxServerErrors;

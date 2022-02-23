@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="completed")
-    private final @Nullable Input<String> completed;
+      private final @Nullable Input<String> completed;
 
     public Input<String> getCompleted() {
         return this.completed == null ? Input.empty() : this.completed;
@@ -30,7 +30,7 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="error")
-    private final @Nullable Input<String> error;
+      private final @Nullable Input<String> error;
 
     public Input<String> getError() {
         return this.error == null ? Input.empty() : this.error;
@@ -41,7 +41,7 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="progressing")
-    private final @Nullable Input<String> progressing;
+      private final @Nullable Input<String> progressing;
 
     public Input<String> getProgressing() {
         return this.progressing == null ? Input.empty() : this.progressing;
@@ -52,7 +52,7 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="warning")
-    private final @Nullable Input<String> warning;
+      private final @Nullable Input<String> warning;
 
     public Input<String> getWarning() {
         return this.warning == null ? Input.empty() : this.warning;

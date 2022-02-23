@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.aws.ebs.inputs.GetSnapshotFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetSnapshotFilter> filters;
+      private final @Nullable List<GetSnapshotFilter> filters;
 
     public List<GetSnapshotFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -36,7 +36,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mostRecent")
-    private final @Nullable Boolean mostRecent;
+      private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
@@ -47,7 +47,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="owners")
-    private final @Nullable List<String> owners;
+      private final @Nullable List<String> owners;
 
     public List<String> getOwners() {
         return this.owners == null ? List.of() : this.owners;
@@ -58,7 +58,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restorableByUserIds")
-    private final @Nullable List<String> restorableByUserIds;
+      private final @Nullable List<String> restorableByUserIds;
 
     public List<String> getRestorableByUserIds() {
         return this.restorableByUserIds == null ? List.of() : this.restorableByUserIds;
@@ -69,7 +69,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="snapshotIds")
-    private final @Nullable List<String> snapshotIds;
+      private final @Nullable List<String> snapshotIds;
 
     public List<String> getSnapshotIds() {
         return this.snapshotIds == null ? List.of() : this.snapshotIds;
@@ -80,7 +80,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

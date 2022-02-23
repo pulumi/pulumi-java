@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="contactFlowModuleId")
-    private final @Nullable String contactFlowModuleId;
+      private final @Nullable String contactFlowModuleId;
 
     public Optional<String> getContactFlowModuleId() {
         return this.contactFlowModuleId == null ? Optional.empty() : Optional.ofNullable(this.contactFlowModuleId);
@@ -31,7 +31,7 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
@@ -42,7 +42,7 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -53,7 +53,7 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

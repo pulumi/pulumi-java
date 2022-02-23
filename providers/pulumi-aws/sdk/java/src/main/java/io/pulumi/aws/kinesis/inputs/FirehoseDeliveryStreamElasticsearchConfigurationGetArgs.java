@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigura
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="bufferingInterval")
-    private final @Nullable Input<Integer> bufferingInterval;
+      private final @Nullable Input<Integer> bufferingInterval;
 
     public Input<Integer> getBufferingInterval() {
         return this.bufferingInterval == null ? Input.empty() : this.bufferingInterval;
@@ -34,7 +34,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="bufferingSize")
-    private final @Nullable Input<Integer> bufferingSize;
+      private final @Nullable Input<Integer> bufferingSize;
 
     public Input<Integer> getBufferingSize() {
         return this.bufferingSize == null ? Input.empty() : this.bufferingSize;
@@ -45,7 +45,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-    private final @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
+      private final @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
     public Input<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
@@ -56,7 +56,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="clusterEndpoint")
-    private final @Nullable Input<String> clusterEndpoint;
+      private final @Nullable Input<String> clusterEndpoint;
 
     public Input<String> getClusterEndpoint() {
         return this.clusterEndpoint == null ? Input.empty() : this.clusterEndpoint;
@@ -67,7 +67,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="domainArn")
-    private final @Nullable Input<String> domainArn;
+      private final @Nullable Input<String> domainArn;
 
     public Input<String> getDomainArn() {
         return this.domainArn == null ? Input.empty() : this.domainArn;
@@ -78,7 +78,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="indexName", required=true)
-    private final Input<String> indexName;
+      private final Input<String> indexName;
 
     public Input<String> getIndexName() {
         return this.indexName;
@@ -89,7 +89,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="indexRotationPeriod")
-    private final @Nullable Input<String> indexRotationPeriod;
+      private final @Nullable Input<String> indexRotationPeriod;
 
     public Input<String> getIndexRotationPeriod() {
         return this.indexRotationPeriod == null ? Input.empty() : this.indexRotationPeriod;
@@ -100,7 +100,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="processingConfiguration")
-    private final @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationGetArgs> processingConfiguration;
+      private final @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationGetArgs> processingConfiguration;
 
     public Input<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationGetArgs> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
@@ -111,7 +111,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="retryDuration")
-    private final @Nullable Input<Integer> retryDuration;
+      private final @Nullable Input<Integer> retryDuration;
 
     public Input<Integer> getRetryDuration() {
         return this.retryDuration == null ? Input.empty() : this.retryDuration;
@@ -122,7 +122,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -133,7 +133,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="s3BackupMode")
-    private final @Nullable Input<String> s3BackupMode;
+      private final @Nullable Input<String> s3BackupMode;
 
     public Input<String> getS3BackupMode() {
         return this.s3BackupMode == null ? Input.empty() : this.s3BackupMode;
@@ -144,7 +144,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="typeName")
-    private final @Nullable Input<String> typeName;
+      private final @Nullable Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName == null ? Input.empty() : this.typeName;
@@ -155,7 +155,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * 
      */
     @InputImport(name="vpcConfig")
-    private final @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs> vpcConfig;
+      private final @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs> vpcConfig;
 
     public Input<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs> getVpcConfig() {
         return this.vpcConfig == null ? Input.empty() : this.vpcConfig;

@@ -5,7 +5,7 @@ package io.pulumi.aws.s3outposts.inputs;
 
 import io.pulumi.aws.s3outposts.inputs.EndpointNetworkInterfaceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-    private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
@@ -43,7 +43,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-    private final @Nullable Input<String> creationTime;
+      private final @Nullable Input<String> creationTime;
 
     public Input<String> getCreationTime() {
         return this.creationTime == null ? Input.empty() : this.creationTime;
@@ -54,7 +54,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable Input<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
+      private final @Nullable Input<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
 
     public Input<List<EndpointNetworkInterfaceGetArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -65,7 +65,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostId")
-    private final @Nullable Input<String> outpostId;
+      private final @Nullable Input<String> outpostId;
 
     public Input<String> getOutpostId() {
         return this.outpostId == null ? Input.empty() : this.outpostId;
@@ -76,7 +76,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupId")
-    private final @Nullable Input<String> securityGroupId;
+      private final @Nullable Input<String> securityGroupId;
 
     public Input<String> getSecurityGroupId() {
         return this.securityGroupId == null ? Input.empty() : this.securityGroupId;
@@ -87,7 +87,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;

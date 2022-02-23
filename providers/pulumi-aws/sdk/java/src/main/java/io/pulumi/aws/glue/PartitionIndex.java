@@ -9,8 +9,8 @@ import io.pulumi.aws.glue.inputs.PartitionIndexState;
 import io.pulumi.aws.glue.outputs.PartitionIndexPartitionIndex;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -85,6 +85,21 @@ public class PartitionIndex extends io.pulumi.resources.CustomResource {
         return this.tableName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PartitionIndex(String name) {
+        this(name, PartitionIndexArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PartitionIndex(String name, PartitionIndexArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

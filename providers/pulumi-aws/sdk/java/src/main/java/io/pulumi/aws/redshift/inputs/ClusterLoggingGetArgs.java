@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterLoggingGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bucketName")
-    private final @Nullable Input<String> bucketName;
+      private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
@@ -32,7 +32,7 @@ public final class ClusterLoggingGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enable", required=true)
-    private final Input<Boolean> enable;
+      private final Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable;
@@ -43,7 +43,7 @@ public final class ClusterLoggingGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="s3KeyPrefix")
-    private final @Nullable Input<String> s3KeyPrefix;
+      private final @Nullable Input<String> s3KeyPrefix;
 
     public Input<String> getS3KeyPrefix() {
         return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;

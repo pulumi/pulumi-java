@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EventSourceMappingSelfManagedEventSourceGetArgs extends io.pu
      * 
      */
     @InputImport(name="endpoints", required=true)
-    private final Input<Map<String,String>> endpoints;
+      private final Input<Map<String,String>> endpoints;
 
     public Input<Map<String,String>> getEndpoints() {
         return this.endpoints;

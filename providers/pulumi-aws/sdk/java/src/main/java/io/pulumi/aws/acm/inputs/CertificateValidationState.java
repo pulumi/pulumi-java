@@ -4,7 +4,7 @@
 package io.pulumi.aws.acm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
@@ -31,7 +31,7 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="validationRecordFqdns")
-    private final @Nullable Input<List<String>> validationRecordFqdns;
+      private final @Nullable Input<List<String>> validationRecordFqdns;
 
     public Input<List<String>> getValidationRecordFqdns() {
         return this.validationRecordFqdns == null ? Input.empty() : this.validationRecordFqdns;

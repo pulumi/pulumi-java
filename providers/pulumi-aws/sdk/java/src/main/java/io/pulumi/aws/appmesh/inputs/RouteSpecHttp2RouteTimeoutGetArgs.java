@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteTimeoutIdleGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteTimeoutPerRequestGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="idle")
-    private final @Nullable Input<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle;
+      private final @Nullable Input<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle;
 
     public Input<RouteSpecHttp2RouteTimeoutIdleGetArgs> getIdle() {
         return this.idle == null ? Input.empty() : this.idle;
@@ -31,7 +31,7 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="perRequest")
-    private final @Nullable Input<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest;
+      private final @Nullable Input<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest;
 
     public Input<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> getPerRequest() {
         return this.perRequest == null ? Input.empty() : this.perRequest;

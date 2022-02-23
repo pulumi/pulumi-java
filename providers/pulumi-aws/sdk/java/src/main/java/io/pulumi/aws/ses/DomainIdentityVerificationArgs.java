@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DomainIdentityVerificationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<String> domain;
+      private final Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain;

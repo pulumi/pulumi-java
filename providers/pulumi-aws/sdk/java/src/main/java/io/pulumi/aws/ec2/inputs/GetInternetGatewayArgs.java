@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetInternetGatewayFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GetInternetGatewayArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetInternetGatewayFilter> filters;
+      private final @Nullable List<GetInternetGatewayFilter> filters;
 
     public List<GetInternetGatewayFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -33,7 +33,7 @@ public final class GetInternetGatewayArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="internetGatewayId")
-    private final @Nullable String internetGatewayId;
+      private final @Nullable String internetGatewayId;
 
     public Optional<String> getInternetGatewayId() {
         return this.internetGatewayId == null ? Optional.empty() : Optional.ofNullable(this.internetGatewayId);
@@ -45,7 +45,7 @@ public final class GetInternetGatewayArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

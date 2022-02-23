@@ -6,7 +6,7 @@ package io.pulumi.aws.s3;
 import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationFilterArgs;
 import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationTieringArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -33,7 +33,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<BucketIntelligentTieringConfigurationFilterArgs> filter;
+      private final @Nullable Input<BucketIntelligentTieringConfigurationFilterArgs> filter;
 
     public Input<BucketIntelligentTieringConfigurationFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -44,7 +44,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -66,7 +66,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="tierings", required=true)
-    private final Input<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings;
+      private final Input<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings;
 
     public Input<List<BucketIntelligentTieringConfigurationTieringArgs>> getTierings() {
         return this.tierings;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TopicRuleRepublishArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="qos")
-    private final @Nullable Input<Integer> qos;
+      private final @Nullable Input<Integer> qos;
 
     public Input<Integer> getQos() {
         return this.qos == null ? Input.empty() : this.qos;
@@ -31,7 +31,7 @@ public final class TopicRuleRepublishArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -42,7 +42,7 @@ public final class TopicRuleRepublishArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="topic", required=true)
-    private final Input<String> topic;
+      private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;

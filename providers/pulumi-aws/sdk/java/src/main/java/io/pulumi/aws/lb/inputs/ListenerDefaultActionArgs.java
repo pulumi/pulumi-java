@@ -9,7 +9,7 @@ import io.pulumi.aws.lb.inputs.ListenerDefaultActionFixedResponseArgs;
 import io.pulumi.aws.lb.inputs.ListenerDefaultActionForwardArgs;
 import io.pulumi.aws.lb.inputs.ListenerDefaultActionRedirectArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ListenerDefaultActionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="authenticateCognito")
-    private final @Nullable Input<ListenerDefaultActionAuthenticateCognitoArgs> authenticateCognito;
+      private final @Nullable Input<ListenerDefaultActionAuthenticateCognitoArgs> authenticateCognito;
 
     public Input<ListenerDefaultActionAuthenticateCognitoArgs> getAuthenticateCognito() {
         return this.authenticateCognito == null ? Input.empty() : this.authenticateCognito;
@@ -36,7 +36,7 @@ public final class ListenerDefaultActionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="authenticateOidc")
-    private final @Nullable Input<ListenerDefaultActionAuthenticateOidcArgs> authenticateOidc;
+      private final @Nullable Input<ListenerDefaultActionAuthenticateOidcArgs> authenticateOidc;
 
     public Input<ListenerDefaultActionAuthenticateOidcArgs> getAuthenticateOidc() {
         return this.authenticateOidc == null ? Input.empty() : this.authenticateOidc;
@@ -47,7 +47,7 @@ public final class ListenerDefaultActionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fixedResponse")
-    private final @Nullable Input<ListenerDefaultActionFixedResponseArgs> fixedResponse;
+      private final @Nullable Input<ListenerDefaultActionFixedResponseArgs> fixedResponse;
 
     public Input<ListenerDefaultActionFixedResponseArgs> getFixedResponse() {
         return this.fixedResponse == null ? Input.empty() : this.fixedResponse;
@@ -58,7 +58,7 @@ public final class ListenerDefaultActionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="forward")
-    private final @Nullable Input<ListenerDefaultActionForwardArgs> forward;
+      private final @Nullable Input<ListenerDefaultActionForwardArgs> forward;
 
     public Input<ListenerDefaultActionForwardArgs> getForward() {
         return this.forward == null ? Input.empty() : this.forward;
@@ -69,7 +69,7 @@ public final class ListenerDefaultActionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="order")
-    private final @Nullable Input<Integer> order;
+      private final @Nullable Input<Integer> order;
 
     public Input<Integer> getOrder() {
         return this.order == null ? Input.empty() : this.order;
@@ -80,7 +80,7 @@ public final class ListenerDefaultActionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="redirect")
-    private final @Nullable Input<ListenerDefaultActionRedirectArgs> redirect;
+      private final @Nullable Input<ListenerDefaultActionRedirectArgs> redirect;
 
     public Input<ListenerDefaultActionRedirectArgs> getRedirect() {
         return this.redirect == null ? Input.empty() : this.redirect;
@@ -91,7 +91,7 @@ public final class ListenerDefaultActionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetGroupArn")
-    private final @Nullable Input<String> targetGroupArn;
+      private final @Nullable Input<String> targetGroupArn;
 
     public Input<String> getTargetGroupArn() {
         return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;
@@ -102,7 +102,7 @@ public final class ListenerDefaultActionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

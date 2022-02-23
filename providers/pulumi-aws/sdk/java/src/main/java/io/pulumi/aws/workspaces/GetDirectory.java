@@ -6,7 +6,7 @@ package io.pulumi.aws.workspaces;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.workspaces.inputs.GetDirectoryArgs;
 import io.pulumi.aws.workspaces.outputs.GetDirectoryResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

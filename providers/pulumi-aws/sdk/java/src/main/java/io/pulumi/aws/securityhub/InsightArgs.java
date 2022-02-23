@@ -5,7 +5,7 @@ package io.pulumi.aws.securityhub;
 
 import io.pulumi.aws.securityhub.inputs.InsightFiltersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filters", required=true)
-    private final Input<InsightFiltersArgs> filters;
+      private final Input<InsightFiltersArgs> filters;
 
     public Input<InsightFiltersArgs> getFilters() {
         return this.filters;
@@ -31,7 +31,7 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupByAttribute", required=true)
-    private final Input<String> groupByAttribute;
+      private final Input<String> groupByAttribute;
 
     public Input<String> getGroupByAttribute() {
         return this.groupByAttribute;
@@ -42,7 +42,7 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

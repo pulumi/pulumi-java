@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
      * 
      */
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
@@ -29,7 +29,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
      * 
      */
     @InputImport(name="registryId", required=true)
-    private final Input<String> registryId;
+      private final Input<String> registryId;
 
     public Input<String> getRegistryId() {
         return this.registryId;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -30,7 +30,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterArn")
-    private final @Nullable Input<String> clusterArn;
+      private final @Nullable Input<String> clusterArn;
 
     public Input<String> getClusterArn() {
         return this.clusterArn == null ? Input.empty() : this.clusterArn;
@@ -41,7 +41,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="controlPanelArn")
-    private final @Nullable Input<String> controlPanelArn;
+      private final @Nullable Input<String> controlPanelArn;
 
     public Input<String> getControlPanelArn() {
         return this.controlPanelArn == null ? Input.empty() : this.controlPanelArn;
@@ -52,7 +52,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -63,7 +63,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="encryptionConfiguration")
-    private final @Nullable Input<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
+      private final @Nullable Input<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
 
     public Input<SecurityConfigurationEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
@@ -31,7 +31,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

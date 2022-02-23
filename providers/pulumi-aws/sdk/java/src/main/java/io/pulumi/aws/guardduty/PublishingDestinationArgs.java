@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="destinationArn", required=true)
-    private final Input<String> destinationArn;
+      private final Input<String> destinationArn;
 
     public Input<String> getDestinationArn() {
         return this.destinationArn;
@@ -30,7 +30,7 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="destinationType")
-    private final @Nullable Input<String> destinationType;
+      private final @Nullable Input<String> destinationType;
 
     public Input<String> getDestinationType() {
         return this.destinationType == null ? Input.empty() : this.destinationType;
@@ -41,7 +41,7 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="detectorId", required=true)
-    private final Input<String> detectorId;
+      private final Input<String> detectorId;
 
     public Input<String> getDetectorId() {
         return this.detectorId;
@@ -52,7 +52,7 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kmsKeyArn", required=true)
-    private final Input<String> kmsKeyArn;
+      private final Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn;

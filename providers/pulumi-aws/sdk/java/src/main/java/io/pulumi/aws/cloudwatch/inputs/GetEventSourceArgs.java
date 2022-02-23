@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetEventSourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable String namePrefix;
+      private final @Nullable String namePrefix;
 
     public Optional<String> getNamePrefix() {
         return this.namePrefix == null ? Optional.empty() : Optional.ofNullable(this.namePrefix);

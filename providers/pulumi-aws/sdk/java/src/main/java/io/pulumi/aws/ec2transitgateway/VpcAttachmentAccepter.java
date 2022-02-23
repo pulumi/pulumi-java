@@ -8,8 +8,8 @@ import io.pulumi.aws.ec2transitgateway.VpcAttachmentAccepterArgs;
 import io.pulumi.aws.ec2transitgateway.inputs.VpcAttachmentAccepterState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -207,6 +207,21 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
         return this.vpcOwnerId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VpcAttachmentAccepter(String name) {
+        this(name, VpcAttachmentAccepterArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VpcAttachmentAccepter(String name, VpcAttachmentAccepterArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

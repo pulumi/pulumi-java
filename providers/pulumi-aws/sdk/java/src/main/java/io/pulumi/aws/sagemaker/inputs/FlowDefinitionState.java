@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopRequestSourceGetArgs;
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionOutputConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="flowDefinitionName")
-    private final @Nullable Input<String> flowDefinitionName;
+      private final @Nullable Input<String> flowDefinitionName;
 
     public Input<String> getFlowDefinitionName() {
         return this.flowDefinitionName == null ? Input.empty() : this.flowDefinitionName;
@@ -46,7 +46,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="humanLoopActivationConfig")
-    private final @Nullable Input<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig;
+      private final @Nullable Input<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig;
 
     public Input<FlowDefinitionHumanLoopActivationConfigGetArgs> getHumanLoopActivationConfig() {
         return this.humanLoopActivationConfig == null ? Input.empty() : this.humanLoopActivationConfig;
@@ -57,7 +57,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="humanLoopConfig")
-    private final @Nullable Input<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig;
+      private final @Nullable Input<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig;
 
     public Input<FlowDefinitionHumanLoopConfigGetArgs> getHumanLoopConfig() {
         return this.humanLoopConfig == null ? Input.empty() : this.humanLoopConfig;
@@ -68,7 +68,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="humanLoopRequestSource")
-    private final @Nullable Input<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource;
+      private final @Nullable Input<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource;
 
     public Input<FlowDefinitionHumanLoopRequestSourceGetArgs> getHumanLoopRequestSource() {
         return this.humanLoopRequestSource == null ? Input.empty() : this.humanLoopRequestSource;
@@ -79,7 +79,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="outputConfig")
-    private final @Nullable Input<FlowDefinitionOutputConfigGetArgs> outputConfig;
+      private final @Nullable Input<FlowDefinitionOutputConfigGetArgs> outputConfig;
 
     public Input<FlowDefinitionOutputConfigGetArgs> getOutputConfig() {
         return this.outputConfig == null ? Input.empty() : this.outputConfig;
@@ -90,7 +90,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -101,7 +101,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

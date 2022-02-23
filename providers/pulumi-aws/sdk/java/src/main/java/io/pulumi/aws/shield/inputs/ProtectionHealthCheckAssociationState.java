@@ -4,7 +4,7 @@
 package io.pulumi.aws.shield.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
      * 
      */
     @InputImport(name="healthCheckArn")
-    private final @Nullable Input<String> healthCheckArn;
+      private final @Nullable Input<String> healthCheckArn;
 
     public Input<String> getHealthCheckArn() {
         return this.healthCheckArn == null ? Input.empty() : this.healthCheckArn;
@@ -30,7 +30,7 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
      * 
      */
     @InputImport(name="shieldProtectionId")
-    private final @Nullable Input<String> shieldProtectionId;
+      private final @Nullable Input<String> shieldProtectionId;
 
     public Input<String> getShieldProtectionId() {
         return this.shieldProtectionId == null ? Input.empty() : this.shieldProtectionId;

@@ -11,8 +11,8 @@ import io.pulumi.aws.macie2.outputs.ClassificationJobScheduleFrequency;
 import io.pulumi.aws.macie2.outputs.ClassificationJobUserPausedDetail;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -229,6 +229,21 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
         return this.userPausedDetails;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ClassificationJob(String name) {
+        this(name, ClassificationJobArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ClassificationJob(String name, ClassificationJobArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

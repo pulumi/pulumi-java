@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GrantConstraintGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="encryptionContextEquals")
-    private final @Nullable Input<Map<String,String>> encryptionContextEquals;
+      private final @Nullable Input<Map<String,String>> encryptionContextEquals;
 
     public Input<Map<String,String>> getEncryptionContextEquals() {
         return this.encryptionContextEquals == null ? Input.empty() : this.encryptionContextEquals;
@@ -31,7 +31,7 @@ public final class GrantConstraintGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="encryptionContextSubset")
-    private final @Nullable Input<Map<String,String>> encryptionContextSubset;
+      private final @Nullable Input<Map<String,String>> encryptionContextSubset;
 
     public Input<Map<String,String>> getEncryptionContextSubset() {
         return this.encryptionContextSubset == null ? Input.empty() : this.encryptionContextSubset;

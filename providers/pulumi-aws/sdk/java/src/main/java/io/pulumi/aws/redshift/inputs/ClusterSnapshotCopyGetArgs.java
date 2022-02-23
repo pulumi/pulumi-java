@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="destinationRegion", required=true)
-    private final Input<String> destinationRegion;
+      private final Input<String> destinationRegion;
 
     public Input<String> getDestinationRegion() {
         return this.destinationRegion;
@@ -31,7 +31,7 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="grantName")
-    private final @Nullable Input<String> grantName;
+      private final @Nullable Input<String> grantName;
 
     public Input<String> getGrantName() {
         return this.grantName == null ? Input.empty() : this.grantName;
@@ -42,7 +42,7 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="retentionPeriod")
-    private final @Nullable Input<Integer> retentionPeriod;
+      private final @Nullable Input<Integer> retentionPeriod;
 
     public Input<Integer> getRetentionPeriod() {
         return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;

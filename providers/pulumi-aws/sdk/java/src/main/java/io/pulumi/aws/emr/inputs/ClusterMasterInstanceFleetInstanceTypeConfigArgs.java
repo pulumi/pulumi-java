@@ -6,7 +6,7 @@ package io.pulumi.aws.emr.inputs;
 import io.pulumi.aws.emr.inputs.ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs;
 import io.pulumi.aws.emr.inputs.ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
      * 
      */
     @InputImport(name="bidPrice")
-    private final @Nullable Input<String> bidPrice;
+      private final @Nullable Input<String> bidPrice;
 
     public Input<String> getBidPrice() {
         return this.bidPrice == null ? Input.empty() : this.bidPrice;
@@ -35,7 +35,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
      * 
      */
     @InputImport(name="bidPriceAsPercentageOfOnDemandPrice")
-    private final @Nullable Input<Double> bidPriceAsPercentageOfOnDemandPrice;
+      private final @Nullable Input<Double> bidPriceAsPercentageOfOnDemandPrice;
 
     public Input<Double> getBidPriceAsPercentageOfOnDemandPrice() {
         return this.bidPriceAsPercentageOfOnDemandPrice == null ? Input.empty() : this.bidPriceAsPercentageOfOnDemandPrice;
@@ -46,7 +46,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
      * 
      */
     @InputImport(name="configurations")
-    private final @Nullable Input<List<ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations;
+      private final @Nullable Input<List<ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations;
 
     public Input<List<ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs>> getConfigurations() {
         return this.configurations == null ? Input.empty() : this.configurations;
@@ -57,7 +57,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
      * 
      */
     @InputImport(name="ebsConfigs")
-    private final @Nullable Input<List<ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs;
+      private final @Nullable Input<List<ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs;
 
     public Input<List<ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs>> getEbsConfigs() {
         return this.ebsConfigs == null ? Input.empty() : this.ebsConfigs;
@@ -68,7 +68,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+      private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -79,7 +79,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigArgs extends io.p
      * 
      */
     @InputImport(name="weightedCapacity")
-    private final @Nullable Input<Integer> weightedCapacity;
+      private final @Nullable Input<Integer> weightedCapacity;
 
     public Input<Integer> getWeightedCapacity() {
         return this.weightedCapacity == null ? Input.empty() : this.weightedCapacity;

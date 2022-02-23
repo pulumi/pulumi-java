@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ParameterGroupParameterGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="applyMethod")
-    private final @Nullable Input<String> applyMethod;
+      private final @Nullable Input<String> applyMethod;
 
     public Input<String> getApplyMethod() {
         return this.applyMethod == null ? Input.empty() : this.applyMethod;
@@ -32,7 +32,7 @@ public final class ParameterGroupParameterGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class ParameterGroupParameterGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

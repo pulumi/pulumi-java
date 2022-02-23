@@ -6,7 +6,7 @@ package io.pulumi.aws.apprunner.inputs;
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs;
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
      * 
      */
     @InputImport(name="codeConfiguration")
-    private final @Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration;
+      private final @Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration;
 
     public Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> getCodeConfiguration() {
         return this.codeConfiguration == null ? Input.empty() : this.codeConfiguration;
@@ -32,7 +32,7 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
      * 
      */
     @InputImport(name="repositoryUrl", required=true)
-    private final Input<String> repositoryUrl;
+      private final Input<String> repositoryUrl;
 
     public Input<String> getRepositoryUrl() {
         return this.repositoryUrl;
@@ -43,7 +43,7 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
      * 
      */
     @InputImport(name="sourceCodeVersion", required=true)
-    private final Input<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion;
+      private final Input<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion;
 
     public Input<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> getSourceCodeVersion() {
         return this.sourceCodeVersion;

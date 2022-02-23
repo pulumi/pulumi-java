@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.alb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class GetListenerDefaultActionForwardStickiness extends io.pulumi.r
     public static final GetListenerDefaultActionForwardStickiness Empty = new GetListenerDefaultActionForwardStickiness();
 
     @InputImport(name="duration", required=true)
-    private final Integer duration;
+      private final Integer duration;
 
     public Integer getDuration() {
         return this.duration;
     }
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;

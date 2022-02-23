@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignGeneratedIpv6CidrBlock")
-    private final @Nullable Input<Boolean> assignGeneratedIpv6CidrBlock;
+      private final @Nullable Input<Boolean> assignGeneratedIpv6CidrBlock;
 
     public Input<Boolean> getAssignGeneratedIpv6CidrBlock() {
         return this.assignGeneratedIpv6CidrBlock == null ? Input.empty() : this.assignGeneratedIpv6CidrBlock;
@@ -44,7 +44,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-    private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
@@ -55,7 +55,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultNetworkAclId")
-    private final @Nullable Input<String> defaultNetworkAclId;
+      private final @Nullable Input<String> defaultNetworkAclId;
 
     public Input<String> getDefaultNetworkAclId() {
         return this.defaultNetworkAclId == null ? Input.empty() : this.defaultNetworkAclId;
@@ -66,7 +66,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRouteTableId")
-    private final @Nullable Input<String> defaultRouteTableId;
+      private final @Nullable Input<String> defaultRouteTableId;
 
     public Input<String> getDefaultRouteTableId() {
         return this.defaultRouteTableId == null ? Input.empty() : this.defaultRouteTableId;
@@ -77,14 +77,14 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultSecurityGroupId")
-    private final @Nullable Input<String> defaultSecurityGroupId;
+      private final @Nullable Input<String> defaultSecurityGroupId;
 
     public Input<String> getDefaultSecurityGroupId() {
         return this.defaultSecurityGroupId == null ? Input.empty() : this.defaultSecurityGroupId;
     }
 
     @InputImport(name="dhcpOptionsId")
-    private final @Nullable Input<String> dhcpOptionsId;
+      private final @Nullable Input<String> dhcpOptionsId;
 
     public Input<String> getDhcpOptionsId() {
         return this.dhcpOptionsId == null ? Input.empty() : this.dhcpOptionsId;
@@ -97,7 +97,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableClassiclink")
-    private final @Nullable Input<Boolean> enableClassiclink;
+      private final @Nullable Input<Boolean> enableClassiclink;
 
     public Input<Boolean> getEnableClassiclink() {
         return this.enableClassiclink == null ? Input.empty() : this.enableClassiclink;
@@ -109,7 +109,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableClassiclinkDnsSupport")
-    private final @Nullable Input<Boolean> enableClassiclinkDnsSupport;
+      private final @Nullable Input<Boolean> enableClassiclinkDnsSupport;
 
     public Input<Boolean> getEnableClassiclinkDnsSupport() {
         return this.enableClassiclinkDnsSupport == null ? Input.empty() : this.enableClassiclinkDnsSupport;
@@ -120,7 +120,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDnsHostnames")
-    private final @Nullable Input<Boolean> enableDnsHostnames;
+      private final @Nullable Input<Boolean> enableDnsHostnames;
 
     public Input<Boolean> getEnableDnsHostnames() {
         return this.enableDnsHostnames == null ? Input.empty() : this.enableDnsHostnames;
@@ -131,7 +131,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDnsSupport")
-    private final @Nullable Input<Boolean> enableDnsSupport;
+      private final @Nullable Input<Boolean> enableDnsSupport;
 
     public Input<Boolean> getEnableDnsSupport() {
         return this.enableDnsSupport == null ? Input.empty() : this.enableDnsSupport;
@@ -142,7 +142,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceTenancy")
-    private final @Nullable Input<String> instanceTenancy;
+      private final @Nullable Input<String> instanceTenancy;
 
     public Input<String> getInstanceTenancy() {
         return this.instanceTenancy == null ? Input.empty() : this.instanceTenancy;
@@ -153,7 +153,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv4IpamPoolId")
-    private final @Nullable Input<String> ipv4IpamPoolId;
+      private final @Nullable Input<String> ipv4IpamPoolId;
 
     public Input<String> getIpv4IpamPoolId() {
         return this.ipv4IpamPoolId == null ? Input.empty() : this.ipv4IpamPoolId;
@@ -164,7 +164,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv4NetmaskLength")
-    private final @Nullable Input<Integer> ipv4NetmaskLength;
+      private final @Nullable Input<Integer> ipv4NetmaskLength;
 
     public Input<Integer> getIpv4NetmaskLength() {
         return this.ipv4NetmaskLength == null ? Input.empty() : this.ipv4NetmaskLength;
@@ -176,7 +176,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6AssociationId")
-    private final @Nullable Input<String> ipv6AssociationId;
+      private final @Nullable Input<String> ipv6AssociationId;
 
     public Input<String> getIpv6AssociationId() {
         return this.ipv6AssociationId == null ? Input.empty() : this.ipv6AssociationId;
@@ -187,7 +187,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6CidrBlock")
-    private final @Nullable Input<String> ipv6CidrBlock;
+      private final @Nullable Input<String> ipv6CidrBlock;
 
     public Input<String> getIpv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Input.empty() : this.ipv6CidrBlock;
@@ -198,7 +198,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6CidrBlockNetworkBorderGroup")
-    private final @Nullable Input<String> ipv6CidrBlockNetworkBorderGroup;
+      private final @Nullable Input<String> ipv6CidrBlockNetworkBorderGroup;
 
     public Input<String> getIpv6CidrBlockNetworkBorderGroup() {
         return this.ipv6CidrBlockNetworkBorderGroup == null ? Input.empty() : this.ipv6CidrBlockNetworkBorderGroup;
@@ -209,7 +209,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6IpamPoolId")
-    private final @Nullable Input<String> ipv6IpamPoolId;
+      private final @Nullable Input<String> ipv6IpamPoolId;
 
     public Input<String> getIpv6IpamPoolId() {
         return this.ipv6IpamPoolId == null ? Input.empty() : this.ipv6IpamPoolId;
@@ -220,7 +220,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6NetmaskLength")
-    private final @Nullable Input<Integer> ipv6NetmaskLength;
+      private final @Nullable Input<Integer> ipv6NetmaskLength;
 
     public Input<Integer> getIpv6NetmaskLength() {
         return this.ipv6NetmaskLength == null ? Input.empty() : this.ipv6NetmaskLength;
@@ -233,7 +233,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mainRouteTableId")
-    private final @Nullable Input<String> mainRouteTableId;
+      private final @Nullable Input<String> mainRouteTableId;
 
     public Input<String> getMainRouteTableId() {
         return this.mainRouteTableId == null ? Input.empty() : this.mainRouteTableId;
@@ -244,7 +244,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -255,7 +255,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -266,7 +266,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

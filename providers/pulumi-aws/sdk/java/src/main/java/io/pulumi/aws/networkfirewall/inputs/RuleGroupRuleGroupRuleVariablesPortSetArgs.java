@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -30,7 +30,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="portSet", required=true)
-    private final Input<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> portSet;
+      private final Input<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> portSet;
 
     public Input<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> getPortSet() {
         return this.portSet;

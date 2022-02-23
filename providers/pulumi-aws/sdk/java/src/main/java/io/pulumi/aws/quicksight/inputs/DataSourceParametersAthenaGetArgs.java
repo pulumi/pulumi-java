@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DataSourceParametersAthenaGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="workGroup")
-    private final @Nullable Input<String> workGroup;
+      private final @Nullable Input<String> workGroup;
 
     public Input<String> getWorkGroup() {
         return this.workGroup == null ? Input.empty() : this.workGroup;

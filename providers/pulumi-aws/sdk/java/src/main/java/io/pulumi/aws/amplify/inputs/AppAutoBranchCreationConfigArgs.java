@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="basicAuthCredentials")
-    private final @Nullable Input<String> basicAuthCredentials;
+      private final @Nullable Input<String> basicAuthCredentials;
 
     public Input<String> getBasicAuthCredentials() {
         return this.basicAuthCredentials == null ? Input.empty() : this.basicAuthCredentials;
@@ -32,7 +32,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="buildSpec")
-    private final @Nullable Input<String> buildSpec;
+      private final @Nullable Input<String> buildSpec;
 
     public Input<String> getBuildSpec() {
         return this.buildSpec == null ? Input.empty() : this.buildSpec;
@@ -43,7 +43,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enableAutoBuild")
-    private final @Nullable Input<Boolean> enableAutoBuild;
+      private final @Nullable Input<Boolean> enableAutoBuild;
 
     public Input<Boolean> getEnableAutoBuild() {
         return this.enableAutoBuild == null ? Input.empty() : this.enableAutoBuild;
@@ -54,7 +54,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enableBasicAuth")
-    private final @Nullable Input<Boolean> enableBasicAuth;
+      private final @Nullable Input<Boolean> enableBasicAuth;
 
     public Input<Boolean> getEnableBasicAuth() {
         return this.enableBasicAuth == null ? Input.empty() : this.enableBasicAuth;
@@ -65,7 +65,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enablePerformanceMode")
-    private final @Nullable Input<Boolean> enablePerformanceMode;
+      private final @Nullable Input<Boolean> enablePerformanceMode;
 
     public Input<Boolean> getEnablePerformanceMode() {
         return this.enablePerformanceMode == null ? Input.empty() : this.enablePerformanceMode;
@@ -76,7 +76,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enablePullRequestPreview")
-    private final @Nullable Input<Boolean> enablePullRequestPreview;
+      private final @Nullable Input<Boolean> enablePullRequestPreview;
 
     public Input<Boolean> getEnablePullRequestPreview() {
         return this.enablePullRequestPreview == null ? Input.empty() : this.enablePullRequestPreview;
@@ -87,7 +87,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<Map<String,String>> environmentVariables;
+      private final @Nullable Input<Map<String,String>> environmentVariables;
 
     public Input<Map<String,String>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -98,7 +98,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="framework")
-    private final @Nullable Input<String> framework;
+      private final @Nullable Input<String> framework;
 
     public Input<String> getFramework() {
         return this.framework == null ? Input.empty() : this.framework;
@@ -109,7 +109,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="pullRequestEnvironmentName")
-    private final @Nullable Input<String> pullRequestEnvironmentName;
+      private final @Nullable Input<String> pullRequestEnvironmentName;
 
     public Input<String> getPullRequestEnvironmentName() {
         return this.pullRequestEnvironmentName == null ? Input.empty() : this.pullRequestEnvironmentName;
@@ -120,7 +120,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="stage")
-    private final @Nullable Input<String> stage;
+      private final @Nullable Input<String> stage;
 
     public Input<String> getStage() {
         return this.stage == null ? Input.empty() : this.stage;

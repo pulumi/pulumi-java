@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudformation;
 
 import io.pulumi.aws.cloudformation.inputs.CloudFormationTypeLoggingConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="executionRoleArn")
-    private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
@@ -31,7 +31,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="loggingConfig")
-    private final @Nullable Input<CloudFormationTypeLoggingConfigArgs> loggingConfig;
+      private final @Nullable Input<CloudFormationTypeLoggingConfigArgs> loggingConfig;
 
     public Input<CloudFormationTypeLoggingConfigArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -42,7 +42,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="schemaHandlerPackage", required=true)
-    private final Input<String> schemaHandlerPackage;
+      private final Input<String> schemaHandlerPackage;
 
     public Input<String> getSchemaHandlerPackage() {
         return this.schemaHandlerPackage;
@@ -53,7 +53,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -64,7 +64,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="typeName", required=true)
-    private final Input<String> typeName;
+      private final Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName;

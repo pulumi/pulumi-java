@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.GetOriginRequestPolicyHeadersConfigHeader;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class GetOriginRequestPolicyHeadersConfig extends io.pulumi.resourc
     public static final GetOriginRequestPolicyHeadersConfig Empty = new GetOriginRequestPolicyHeadersConfig();
 
     @InputImport(name="headerBehavior", required=true)
-    private final String headerBehavior;
+      private final String headerBehavior;
 
     public String getHeaderBehavior() {
         return this.headerBehavior;
     }
 
     @InputImport(name="headers", required=true)
-    private final List<GetOriginRequestPolicyHeadersConfigHeader> headers;
+      private final List<GetOriginRequestPolicyHeadersConfigHeader> headers;
 
     public List<GetOriginRequestPolicyHeadersConfigHeader> getHeaders() {
         return this.headers;

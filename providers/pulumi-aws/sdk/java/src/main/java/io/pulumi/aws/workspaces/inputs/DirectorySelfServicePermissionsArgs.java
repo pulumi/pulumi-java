@@ -4,7 +4,7 @@
 package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DirectorySelfServicePermissionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="changeComputeType")
-    private final @Nullable Input<Boolean> changeComputeType;
+      private final @Nullable Input<Boolean> changeComputeType;
 
     public Input<Boolean> getChangeComputeType() {
         return this.changeComputeType == null ? Input.empty() : this.changeComputeType;
@@ -30,7 +30,7 @@ public final class DirectorySelfServicePermissionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="increaseVolumeSize")
-    private final @Nullable Input<Boolean> increaseVolumeSize;
+      private final @Nullable Input<Boolean> increaseVolumeSize;
 
     public Input<Boolean> getIncreaseVolumeSize() {
         return this.increaseVolumeSize == null ? Input.empty() : this.increaseVolumeSize;
@@ -41,7 +41,7 @@ public final class DirectorySelfServicePermissionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="rebuildWorkspace")
-    private final @Nullable Input<Boolean> rebuildWorkspace;
+      private final @Nullable Input<Boolean> rebuildWorkspace;
 
     public Input<Boolean> getRebuildWorkspace() {
         return this.rebuildWorkspace == null ? Input.empty() : this.rebuildWorkspace;
@@ -52,7 +52,7 @@ public final class DirectorySelfServicePermissionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="restartWorkspace")
-    private final @Nullable Input<Boolean> restartWorkspace;
+      private final @Nullable Input<Boolean> restartWorkspace;
 
     public Input<Boolean> getRestartWorkspace() {
         return this.restartWorkspace == null ? Input.empty() : this.restartWorkspace;
@@ -63,7 +63,7 @@ public final class DirectorySelfServicePermissionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="switchRunningMode")
-    private final @Nullable Input<Boolean> switchRunningMode;
+      private final @Nullable Input<Boolean> switchRunningMode;
 
     public Input<Boolean> getSwitchRunningMode() {
         return this.switchRunningMode == null ? Input.empty() : this.switchRunningMode;

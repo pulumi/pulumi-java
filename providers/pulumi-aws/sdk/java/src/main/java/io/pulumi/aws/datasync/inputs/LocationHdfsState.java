@@ -6,7 +6,7 @@ package io.pulumi.aws.datasync.inputs;
 import io.pulumi.aws.datasync.inputs.LocationHdfsNameNodeGetArgs;
 import io.pulumi.aws.datasync.inputs.LocationHdfsQopConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentArns")
-    private final @Nullable Input<List<String>> agentArns;
+      private final @Nullable Input<List<String>> agentArns;
 
     public Input<List<String>> getAgentArns() {
         return this.agentArns == null ? Input.empty() : this.agentArns;
@@ -35,7 +35,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -46,7 +46,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable Input<String> authenticationType;
+      private final @Nullable Input<String> authenticationType;
 
     public Input<String> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -57,7 +57,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockSize")
-    private final @Nullable Input<Integer> blockSize;
+      private final @Nullable Input<Integer> blockSize;
 
     public Input<Integer> getBlockSize() {
         return this.blockSize == null ? Input.empty() : this.blockSize;
@@ -68,7 +68,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosKeytab")
-    private final @Nullable Input<String> kerberosKeytab;
+      private final @Nullable Input<String> kerberosKeytab;
 
     public Input<String> getKerberosKeytab() {
         return this.kerberosKeytab == null ? Input.empty() : this.kerberosKeytab;
@@ -79,7 +79,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosKrb5Conf")
-    private final @Nullable Input<String> kerberosKrb5Conf;
+      private final @Nullable Input<String> kerberosKrb5Conf;
 
     public Input<String> getKerberosKrb5Conf() {
         return this.kerberosKrb5Conf == null ? Input.empty() : this.kerberosKrb5Conf;
@@ -90,7 +90,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosPrincipal")
-    private final @Nullable Input<String> kerberosPrincipal;
+      private final @Nullable Input<String> kerberosPrincipal;
 
     public Input<String> getKerberosPrincipal() {
         return this.kerberosPrincipal == null ? Input.empty() : this.kerberosPrincipal;
@@ -101,7 +101,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyProviderUri")
-    private final @Nullable Input<String> kmsKeyProviderUri;
+      private final @Nullable Input<String> kmsKeyProviderUri;
 
     public Input<String> getKmsKeyProviderUri() {
         return this.kmsKeyProviderUri == null ? Input.empty() : this.kmsKeyProviderUri;
@@ -112,7 +112,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameNodes")
-    private final @Nullable Input<List<LocationHdfsNameNodeGetArgs>> nameNodes;
+      private final @Nullable Input<List<LocationHdfsNameNodeGetArgs>> nameNodes;
 
     public Input<List<LocationHdfsNameNodeGetArgs>> getNameNodes() {
         return this.nameNodes == null ? Input.empty() : this.nameNodes;
@@ -123,7 +123,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qopConfiguration")
-    private final @Nullable Input<LocationHdfsQopConfigurationGetArgs> qopConfiguration;
+      private final @Nullable Input<LocationHdfsQopConfigurationGetArgs> qopConfiguration;
 
     public Input<LocationHdfsQopConfigurationGetArgs> getQopConfiguration() {
         return this.qopConfiguration == null ? Input.empty() : this.qopConfiguration;
@@ -134,7 +134,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicationFactor")
-    private final @Nullable Input<Integer> replicationFactor;
+      private final @Nullable Input<Integer> replicationFactor;
 
     public Input<Integer> getReplicationFactor() {
         return this.replicationFactor == null ? Input.empty() : this.replicationFactor;
@@ -145,7 +145,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="simpleUser")
-    private final @Nullable Input<String> simpleUser;
+      private final @Nullable Input<String> simpleUser;
 
     public Input<String> getSimpleUser() {
         return this.simpleUser == null ? Input.empty() : this.simpleUser;
@@ -156,7 +156,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdirectory")
-    private final @Nullable Input<String> subdirectory;
+      private final @Nullable Input<String> subdirectory;
 
     public Input<String> getSubdirectory() {
         return this.subdirectory == null ? Input.empty() : this.subdirectory;
@@ -167,7 +167,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -178,14 +178,14 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
     }
 
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;

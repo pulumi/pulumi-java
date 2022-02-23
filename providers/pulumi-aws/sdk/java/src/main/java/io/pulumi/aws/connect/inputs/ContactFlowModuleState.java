@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="contactFlowModuleId")
-    private final @Nullable Input<String> contactFlowModuleId;
+      private final @Nullable Input<String> contactFlowModuleId;
 
     public Input<String> getContactFlowModuleId() {
         return this.contactFlowModuleId == null ? Input.empty() : this.contactFlowModuleId;
@@ -42,14 +42,14 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
     }
 
     @InputImport(name="contentHash")
-    private final @Nullable Input<String> contentHash;
+      private final @Nullable Input<String> contentHash;
 
     public Input<String> getContentHash() {
         return this.contentHash == null ? Input.empty() : this.contentHash;
@@ -60,7 +60,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -71,7 +71,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filename")
-    private final @Nullable Input<String> filename;
+      private final @Nullable Input<String> filename;
 
     public Input<String> getFilename() {
         return this.filename == null ? Input.empty() : this.filename;
@@ -82,7 +82,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -93,7 +93,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -104,7 +104,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -115,7 +115,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

@@ -7,7 +7,7 @@ import io.pulumi.aws.glue.inputs.MLTransformInputRecordTableGetArgs;
 import io.pulumi.aws.glue.inputs.MLTransformParametersGetArgs;
 import io.pulumi.aws.glue.inputs.MLTransformSchemaGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -37,7 +37,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="glueVersion")
-    private final @Nullable Input<String> glueVersion;
+      private final @Nullable Input<String> glueVersion;
 
     public Input<String> getGlueVersion() {
         return this.glueVersion == null ? Input.empty() : this.glueVersion;
@@ -59,7 +59,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputRecordTables")
-    private final @Nullable Input<List<MLTransformInputRecordTableGetArgs>> inputRecordTables;
+      private final @Nullable Input<List<MLTransformInputRecordTableGetArgs>> inputRecordTables;
 
     public Input<List<MLTransformInputRecordTableGetArgs>> getInputRecordTables() {
         return this.inputRecordTables == null ? Input.empty() : this.inputRecordTables;
@@ -70,7 +70,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelCount")
-    private final @Nullable Input<Integer> labelCount;
+      private final @Nullable Input<Integer> labelCount;
 
     public Input<Integer> getLabelCount() {
         return this.labelCount == null ? Input.empty() : this.labelCount;
@@ -81,7 +81,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxCapacity")
-    private final @Nullable Input<Double> maxCapacity;
+      private final @Nullable Input<Double> maxCapacity;
 
     public Input<Double> getMaxCapacity() {
         return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
@@ -92,7 +92,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRetries")
-    private final @Nullable Input<Integer> maxRetries;
+      private final @Nullable Input<Integer> maxRetries;
 
     public Input<Integer> getMaxRetries() {
         return this.maxRetries == null ? Input.empty() : this.maxRetries;
@@ -103,7 +103,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -114,7 +114,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfWorkers")
-    private final @Nullable Input<Integer> numberOfWorkers;
+      private final @Nullable Input<Integer> numberOfWorkers;
 
     public Input<Integer> getNumberOfWorkers() {
         return this.numberOfWorkers == null ? Input.empty() : this.numberOfWorkers;
@@ -125,7 +125,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<MLTransformParametersGetArgs> parameters;
+      private final @Nullable Input<MLTransformParametersGetArgs> parameters;
 
     public Input<MLTransformParametersGetArgs> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -136,7 +136,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -147,7 +147,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemas")
-    private final @Nullable Input<List<MLTransformSchemaGetArgs>> schemas;
+      private final @Nullable Input<List<MLTransformSchemaGetArgs>> schemas;
 
     public Input<List<MLTransformSchemaGetArgs>> getSchemas() {
         return this.schemas == null ? Input.empty() : this.schemas;
@@ -158,7 +158,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -169,7 +169,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -180,7 +180,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Integer> timeout;
+      private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -191,7 +191,7 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerType")
-    private final @Nullable Input<String> workerType;
+      private final @Nullable Input<String> workerType;
 
     public Input<String> getWorkerType() {
         return this.workerType == null ? Input.empty() : this.workerType;

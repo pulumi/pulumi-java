@@ -4,7 +4,7 @@
 package io.pulumi.aws.secretsmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockPublicPolicy")
-    private final @Nullable Input<Boolean> blockPublicPolicy;
+      private final @Nullable Input<Boolean> blockPublicPolicy;
 
     public Input<Boolean> getBlockPublicPolicy() {
         return this.blockPublicPolicy == null ? Input.empty() : this.blockPublicPolicy;
@@ -31,7 +31,7 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -42,7 +42,7 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretArn")
-    private final @Nullable Input<String> secretArn;
+      private final @Nullable Input<String> secretArn;
 
     public Input<String> getSecretArn() {
         return this.secretArn == null ? Input.empty() : this.secretArn;

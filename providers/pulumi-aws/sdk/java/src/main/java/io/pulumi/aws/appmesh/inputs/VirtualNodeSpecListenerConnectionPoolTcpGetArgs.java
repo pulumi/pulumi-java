@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class VirtualNodeSpecListenerConnectionPoolTcpGetArgs extends io.pu
      * 
      */
     @InputImport(name="maxConnections", required=true)
-    private final Input<Integer> maxConnections;
+      private final Input<Integer> maxConnections;
 
     public Input<Integer> getMaxConnections() {
         return this.maxConnections;

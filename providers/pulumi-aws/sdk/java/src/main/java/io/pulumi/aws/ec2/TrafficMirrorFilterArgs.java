@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="networkServices")
-    private final @Nullable Input<List<String>> networkServices;
+      private final @Nullable Input<List<String>> networkServices;
 
     public Input<List<String>> getNetworkServices() {
         return this.networkServices == null ? Input.empty() : this.networkServices;
@@ -43,7 +43,7 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

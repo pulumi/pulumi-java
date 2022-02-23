@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentId", required=true)
-    private final Input<String> parentId;
+      private final Input<String> parentId;
 
     public Input<String> getParentId() {
         return this.parentId;
@@ -29,7 +29,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathPart", required=true)
-    private final Input<String> pathPart;
+      private final Input<String> pathPart;
 
     public Input<String> getPathPart() {
         return this.pathPart;
@@ -40,7 +40,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi", required=true)
-    private final Input<String> restApi;
+      private final Input<String> restApi;
 
     public Input<String> getRestApi() {
         return this.restApi;

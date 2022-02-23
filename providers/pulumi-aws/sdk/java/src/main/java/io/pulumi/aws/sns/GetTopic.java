@@ -6,7 +6,7 @@ package io.pulumi.aws.sns;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sns.inputs.GetTopicArgs;
 import io.pulumi.aws.sns.outputs.GetTopicResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

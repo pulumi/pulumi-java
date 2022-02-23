@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RemediationConfigurationExecutionControlsSsmControlsArgs exte
      * 
      */
     @InputImport(name="concurrentExecutionRatePercentage")
-    private final @Nullable Input<Integer> concurrentExecutionRatePercentage;
+      private final @Nullable Input<Integer> concurrentExecutionRatePercentage;
 
     public Input<Integer> getConcurrentExecutionRatePercentage() {
         return this.concurrentExecutionRatePercentage == null ? Input.empty() : this.concurrentExecutionRatePercentage;
@@ -30,7 +30,7 @@ public final class RemediationConfigurationExecutionControlsSsmControlsArgs exte
      * 
      */
     @InputImport(name="errorPercentage")
-    private final @Nullable Input<Integer> errorPercentage;
+      private final @Nullable Input<Integer> errorPercentage;
 
     public Input<Integer> getErrorPercentage() {
         return this.errorPercentage == null ? Input.empty() : this.errorPercentage;

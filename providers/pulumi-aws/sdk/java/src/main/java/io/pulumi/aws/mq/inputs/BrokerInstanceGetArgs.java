@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class BrokerInstanceGetArgs extends io.pulumi.resources.ResourceArg
     public static final BrokerInstanceGetArgs Empty = new BrokerInstanceGetArgs();
 
     @InputImport(name="consoleUrl")
-    private final @Nullable Input<String> consoleUrl;
+      private final @Nullable Input<String> consoleUrl;
 
     public Input<String> getConsoleUrl() {
         return this.consoleUrl == null ? Input.empty() : this.consoleUrl;
     }
 
     @InputImport(name="endpoints")
-    private final @Nullable Input<List<String>> endpoints;
+      private final @Nullable Input<List<String>> endpoints;
 
     public Input<List<String>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
     }
 
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;

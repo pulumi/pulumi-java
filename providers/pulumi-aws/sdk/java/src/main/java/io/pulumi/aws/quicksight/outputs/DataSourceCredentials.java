@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.outputs;
 
 import io.pulumi.aws.quicksight.outputs.DataSourceCredentialsCredentialPair;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

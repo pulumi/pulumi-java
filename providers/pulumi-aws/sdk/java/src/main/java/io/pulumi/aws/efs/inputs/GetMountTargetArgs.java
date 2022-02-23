@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetMountTargetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accessPointId")
-    private final @Nullable String accessPointId;
+      private final @Nullable String accessPointId;
 
     public Optional<String> getAccessPointId() {
         return this.accessPointId == null ? Optional.empty() : Optional.ofNullable(this.accessPointId);
@@ -30,7 +30,7 @@ public final class GetMountTargetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileSystemId")
-    private final @Nullable String fileSystemId;
+      private final @Nullable String fileSystemId;
 
     public Optional<String> getFileSystemId() {
         return this.fileSystemId == null ? Optional.empty() : Optional.ofNullable(this.fileSystemId);
@@ -41,7 +41,7 @@ public final class GetMountTargetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mountTargetId")
-    private final @Nullable String mountTargetId;
+      private final @Nullable String mountTargetId;
 
     public Optional<String> getMountTargetId() {
         return this.mountTargetId == null ? Optional.empty() : Optional.ofNullable(this.mountTargetId);

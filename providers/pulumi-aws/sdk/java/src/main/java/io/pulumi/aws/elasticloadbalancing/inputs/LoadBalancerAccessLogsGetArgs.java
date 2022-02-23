@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticloadbalancing.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -32,7 +32,7 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bucketPrefix")
-    private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Input<String> bucketPrefix;
 
     public Input<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
@@ -43,7 +43,7 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -54,7 +54,7 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<Integer> interval;
+      private final @Nullable Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;

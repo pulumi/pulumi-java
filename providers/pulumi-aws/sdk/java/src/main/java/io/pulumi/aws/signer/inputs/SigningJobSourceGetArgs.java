@@ -5,7 +5,7 @@ package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.aws.signer.inputs.SigningJobSourceS3GetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class SigningJobSourceGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="s3", required=true)
-    private final Input<SigningJobSourceS3GetArgs> s3;
+      private final Input<SigningJobSourceS3GetArgs> s3;
 
     public Input<SigningJobSourceS3GetArgs> getS3() {
         return this.s3;

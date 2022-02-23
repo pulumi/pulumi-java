@@ -5,7 +5,7 @@ package io.pulumi.aws.macie;
 
 import io.pulumi.aws.macie.inputs.S3BucketAssociationClassificationTypeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -31,7 +31,7 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="classificationType")
-    private final @Nullable Input<S3BucketAssociationClassificationTypeArgs> classificationType;
+      private final @Nullable Input<S3BucketAssociationClassificationTypeArgs> classificationType;
 
     public Input<S3BucketAssociationClassificationTypeArgs> getClassificationType() {
         return this.classificationType == null ? Input.empty() : this.classificationType;
@@ -42,7 +42,7 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="memberAccountId")
-    private final @Nullable Input<String> memberAccountId;
+      private final @Nullable Input<String> memberAccountId;
 
     public Input<String> getMemberAccountId() {
         return this.memberAccountId == null ? Input.empty() : this.memberAccountId;
@@ -53,7 +53,7 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;

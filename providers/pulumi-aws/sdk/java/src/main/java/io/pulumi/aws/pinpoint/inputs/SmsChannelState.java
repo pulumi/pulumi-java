@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -32,7 +32,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -43,7 +43,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="promotionalMessagesPerSecond")
-    private final @Nullable Input<Integer> promotionalMessagesPerSecond;
+      private final @Nullable Input<Integer> promotionalMessagesPerSecond;
 
     public Input<Integer> getPromotionalMessagesPerSecond() {
         return this.promotionalMessagesPerSecond == null ? Input.empty() : this.promotionalMessagesPerSecond;
@@ -54,7 +54,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="senderId")
-    private final @Nullable Input<String> senderId;
+      private final @Nullable Input<String> senderId;
 
     public Input<String> getSenderId() {
         return this.senderId == null ? Input.empty() : this.senderId;
@@ -65,7 +65,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortCode")
-    private final @Nullable Input<String> shortCode;
+      private final @Nullable Input<String> shortCode;
 
     public Input<String> getShortCode() {
         return this.shortCode == null ? Input.empty() : this.shortCode;
@@ -76,7 +76,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transactionalMessagesPerSecond")
-    private final @Nullable Input<Integer> transactionalMessagesPerSecond;
+      private final @Nullable Input<Integer> transactionalMessagesPerSecond;
 
     public Input<Integer> getTransactionalMessagesPerSecond() {
         return this.transactionalMessagesPerSecond == null ? Input.empty() : this.transactionalMessagesPerSecond;

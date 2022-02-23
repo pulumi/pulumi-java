@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.aws.apigateway.inputs.RestApiEndpointConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiKeySource")
-    private final @Nullable Input<String> apiKeySource;
+      private final @Nullable Input<String> apiKeySource;
 
     public Input<String> getApiKeySource() {
         return this.apiKeySource == null ? Input.empty() : this.apiKeySource;
@@ -35,7 +35,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="binaryMediaTypes")
-    private final @Nullable Input<List<String>> binaryMediaTypes;
+      private final @Nullable Input<List<String>> binaryMediaTypes;
 
     public Input<List<String>> getBinaryMediaTypes() {
         return this.binaryMediaTypes == null ? Input.empty() : this.binaryMediaTypes;
@@ -46,7 +46,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -57,7 +57,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -68,7 +68,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableExecuteApiEndpoint")
-    private final @Nullable Input<Boolean> disableExecuteApiEndpoint;
+      private final @Nullable Input<Boolean> disableExecuteApiEndpoint;
 
     public Input<Boolean> getDisableExecuteApiEndpoint() {
         return this.disableExecuteApiEndpoint == null ? Input.empty() : this.disableExecuteApiEndpoint;
@@ -79,7 +79,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointConfiguration")
-    private final @Nullable Input<RestApiEndpointConfigurationArgs> endpointConfiguration;
+      private final @Nullable Input<RestApiEndpointConfigurationArgs> endpointConfiguration;
 
     public Input<RestApiEndpointConfigurationArgs> getEndpointConfiguration() {
         return this.endpointConfiguration == null ? Input.empty() : this.endpointConfiguration;
@@ -90,7 +90,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumCompressionSize")
-    private final @Nullable Input<Integer> minimumCompressionSize;
+      private final @Nullable Input<Integer> minimumCompressionSize;
 
     public Input<Integer> getMinimumCompressionSize() {
         return this.minimumCompressionSize == null ? Input.empty() : this.minimumCompressionSize;
@@ -101,7 +101,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,7 +112,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -123,7 +123,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -134,7 +134,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

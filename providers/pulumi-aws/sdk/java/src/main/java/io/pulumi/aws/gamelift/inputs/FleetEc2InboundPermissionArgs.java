@@ -4,7 +4,7 @@
 package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FleetEc2InboundPermissionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fromPort", required=true)
-    private final Input<Integer> fromPort;
+      private final Input<Integer> fromPort;
 
     public Input<Integer> getFromPort() {
         return this.fromPort;
@@ -30,7 +30,7 @@ public final class FleetEc2InboundPermissionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ipRange", required=true)
-    private final Input<String> ipRange;
+      private final Input<String> ipRange;
 
     public Input<String> getIpRange() {
         return this.ipRange;
@@ -41,7 +41,7 @@ public final class FleetEc2InboundPermissionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<String> protocol;
+      private final Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol;
@@ -52,7 +52,7 @@ public final class FleetEc2InboundPermissionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="toPort", required=true)
-    private final Input<Integer> toPort;
+      private final Input<Integer> toPort;
 
     public Input<Integer> getToPort() {
         return this.toPort;

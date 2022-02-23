@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocatedStorage")
-    private final @Nullable Input<Integer> allocatedStorage;
+      private final @Nullable Input<Integer> allocatedStorage;
 
     public Input<Integer> getAllocatedStorage() {
         return this.allocatedStorage == null ? Input.empty() : this.allocatedStorage;
@@ -33,7 +33,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -44,7 +44,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbInstanceIdentifier")
-    private final @Nullable Input<String> dbInstanceIdentifier;
+      private final @Nullable Input<String> dbInstanceIdentifier;
 
     public Input<String> getDbInstanceIdentifier() {
         return this.dbInstanceIdentifier == null ? Input.empty() : this.dbInstanceIdentifier;
@@ -55,7 +55,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbSnapshotArn")
-    private final @Nullable Input<String> dbSnapshotArn;
+      private final @Nullable Input<String> dbSnapshotArn;
 
     public Input<String> getDbSnapshotArn() {
         return this.dbSnapshotArn == null ? Input.empty() : this.dbSnapshotArn;
@@ -66,7 +66,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbSnapshotIdentifier")
-    private final @Nullable Input<String> dbSnapshotIdentifier;
+      private final @Nullable Input<String> dbSnapshotIdentifier;
 
     public Input<String> getDbSnapshotIdentifier() {
         return this.dbSnapshotIdentifier == null ? Input.empty() : this.dbSnapshotIdentifier;
@@ -77,7 +77,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encrypted")
-    private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Input<Boolean> encrypted;
 
     public Input<Boolean> getEncrypted() {
         return this.encrypted == null ? Input.empty() : this.encrypted;
@@ -88,7 +88,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine")
-    private final @Nullable Input<String> engine;
+      private final @Nullable Input<String> engine;
 
     public Input<String> getEngine() {
         return this.engine == null ? Input.empty() : this.engine;
@@ -99,7 +99,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion")
-    private final @Nullable Input<String> engineVersion;
+      private final @Nullable Input<String> engineVersion;
 
     public Input<String> getEngineVersion() {
         return this.engineVersion == null ? Input.empty() : this.engineVersion;
@@ -110,7 +110,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iops")
-    private final @Nullable Input<Integer> iops;
+      private final @Nullable Input<Integer> iops;
 
     public Input<Integer> getIops() {
         return this.iops == null ? Input.empty() : this.iops;
@@ -121,7 +121,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -132,7 +132,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseModel")
-    private final @Nullable Input<String> licenseModel;
+      private final @Nullable Input<String> licenseModel;
 
     public Input<String> getLicenseModel() {
         return this.licenseModel == null ? Input.empty() : this.licenseModel;
@@ -143,21 +143,21 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optionGroupName")
-    private final @Nullable Input<String> optionGroupName;
+      private final @Nullable Input<String> optionGroupName;
 
     public Input<String> getOptionGroupName() {
         return this.optionGroupName == null ? Input.empty() : this.optionGroupName;
     }
 
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
     }
 
     @InputImport(name="snapshotType")
-    private final @Nullable Input<String> snapshotType;
+      private final @Nullable Input<String> snapshotType;
 
     public Input<String> getSnapshotType() {
         return this.snapshotType == null ? Input.empty() : this.snapshotType;
@@ -168,7 +168,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDbSnapshotIdentifier")
-    private final @Nullable Input<String> sourceDbSnapshotIdentifier;
+      private final @Nullable Input<String> sourceDbSnapshotIdentifier;
 
     public Input<String> getSourceDbSnapshotIdentifier() {
         return this.sourceDbSnapshotIdentifier == null ? Input.empty() : this.sourceDbSnapshotIdentifier;
@@ -179,7 +179,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRegion")
-    private final @Nullable Input<String> sourceRegion;
+      private final @Nullable Input<String> sourceRegion;
 
     public Input<String> getSourceRegion() {
         return this.sourceRegion == null ? Input.empty() : this.sourceRegion;
@@ -190,7 +190,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -201,7 +201,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageType")
-    private final @Nullable Input<String> storageType;
+      private final @Nullable Input<String> storageType;
 
     public Input<String> getStorageType() {
         return this.storageType == null ? Input.empty() : this.storageType;
@@ -212,7 +212,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -223,7 +223,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -234,7 +234,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

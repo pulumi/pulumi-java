@@ -14,7 +14,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventTargetRetryPolicyArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventTargetRunCommandTargetArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventTargetSqsTargetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
@@ -41,7 +41,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="batchTarget")
-    private final @Nullable Input<EventTargetBatchTargetArgs> batchTarget;
+      private final @Nullable Input<EventTargetBatchTargetArgs> batchTarget;
 
     public Input<EventTargetBatchTargetArgs> getBatchTarget() {
         return this.batchTarget == null ? Input.empty() : this.batchTarget;
@@ -52,7 +52,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterConfig")
-    private final @Nullable Input<EventTargetDeadLetterConfigArgs> deadLetterConfig;
+      private final @Nullable Input<EventTargetDeadLetterConfigArgs> deadLetterConfig;
 
     public Input<EventTargetDeadLetterConfigArgs> getDeadLetterConfig() {
         return this.deadLetterConfig == null ? Input.empty() : this.deadLetterConfig;
@@ -63,7 +63,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ecsTarget")
-    private final @Nullable Input<EventTargetEcsTargetArgs> ecsTarget;
+      private final @Nullable Input<EventTargetEcsTargetArgs> ecsTarget;
 
     public Input<EventTargetEcsTargetArgs> getEcsTarget() {
         return this.ecsTarget == null ? Input.empty() : this.ecsTarget;
@@ -74,7 +74,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventBusName")
-    private final @Nullable Input<String> eventBusName;
+      private final @Nullable Input<String> eventBusName;
 
     public Input<String> getEventBusName() {
         return this.eventBusName == null ? Input.empty() : this.eventBusName;
@@ -85,7 +85,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpTarget")
-    private final @Nullable Input<EventTargetHttpTargetArgs> httpTarget;
+      private final @Nullable Input<EventTargetHttpTargetArgs> httpTarget;
 
     public Input<EventTargetHttpTargetArgs> getHttpTarget() {
         return this.httpTarget == null ? Input.empty() : this.httpTarget;
@@ -96,7 +96,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<String> input;
+      private final @Nullable Input<String> input;
 
     public Input<String> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -107,7 +107,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputPath")
-    private final @Nullable Input<String> inputPath;
+      private final @Nullable Input<String> inputPath;
 
     public Input<String> getInputPath() {
         return this.inputPath == null ? Input.empty() : this.inputPath;
@@ -118,7 +118,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputTransformer")
-    private final @Nullable Input<EventTargetInputTransformerArgs> inputTransformer;
+      private final @Nullable Input<EventTargetInputTransformerArgs> inputTransformer;
 
     public Input<EventTargetInputTransformerArgs> getInputTransformer() {
         return this.inputTransformer == null ? Input.empty() : this.inputTransformer;
@@ -129,7 +129,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kinesisTarget")
-    private final @Nullable Input<EventTargetKinesisTargetArgs> kinesisTarget;
+      private final @Nullable Input<EventTargetKinesisTargetArgs> kinesisTarget;
 
     public Input<EventTargetKinesisTargetArgs> getKinesisTarget() {
         return this.kinesisTarget == null ? Input.empty() : this.kinesisTarget;
@@ -140,7 +140,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redshiftTarget")
-    private final @Nullable Input<EventTargetRedshiftTargetArgs> redshiftTarget;
+      private final @Nullable Input<EventTargetRedshiftTargetArgs> redshiftTarget;
 
     public Input<EventTargetRedshiftTargetArgs> getRedshiftTarget() {
         return this.redshiftTarget == null ? Input.empty() : this.redshiftTarget;
@@ -151,7 +151,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<EventTargetRetryPolicyArgs> retryPolicy;
+      private final @Nullable Input<EventTargetRetryPolicyArgs> retryPolicy;
 
     public Input<EventTargetRetryPolicyArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -162,7 +162,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -173,7 +173,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rule", required=true)
-    private final Input<String> rule;
+      private final Input<String> rule;
 
     public Input<String> getRule() {
         return this.rule;
@@ -184,7 +184,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runCommandTargets")
-    private final @Nullable Input<List<EventTargetRunCommandTargetArgs>> runCommandTargets;
+      private final @Nullable Input<List<EventTargetRunCommandTargetArgs>> runCommandTargets;
 
     public Input<List<EventTargetRunCommandTargetArgs>> getRunCommandTargets() {
         return this.runCommandTargets == null ? Input.empty() : this.runCommandTargets;
@@ -195,7 +195,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqsTarget")
-    private final @Nullable Input<EventTargetSqsTargetArgs> sqsTarget;
+      private final @Nullable Input<EventTargetSqsTargetArgs> sqsTarget;
 
     public Input<EventTargetSqsTargetArgs> getSqsTarget() {
         return this.sqsTarget == null ? Input.empty() : this.sqsTarget;
@@ -206,7 +206,7 @@ public final class EventTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetId")
-    private final @Nullable Input<String> targetId;
+      private final @Nullable Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId == null ? Input.empty() : this.targetId;

@@ -5,7 +5,7 @@ package io.pulumi.aws.route53recoveryreadiness.inputs;
 
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceTargetResourceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -31,7 +31,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="hostedZoneArn")
-    private final @Nullable Input<String> hostedZoneArn;
+      private final @Nullable Input<String> hostedZoneArn;
 
     public Input<String> getHostedZoneArn() {
         return this.hostedZoneArn == null ? Input.empty() : this.hostedZoneArn;
@@ -42,7 +42,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="recordSetId")
-    private final @Nullable Input<String> recordSetId;
+      private final @Nullable Input<String> recordSetId;
 
     public Input<String> getRecordSetId() {
         return this.recordSetId == null ? Input.empty() : this.recordSetId;
@@ -53,7 +53,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="recordType")
-    private final @Nullable Input<String> recordType;
+      private final @Nullable Input<String> recordType;
 
     public Input<String> getRecordType() {
         return this.recordType == null ? Input.empty() : this.recordType;
@@ -64,7 +64,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetResource")
-    private final @Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceGetArgs> targetResource;
+      private final @Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceGetArgs> targetResource;
 
     public Input<ResourceSetResourceDnsTargetResourceTargetResourceGetArgs> getTargetResource() {
         return this.targetResource == null ? Input.empty() : this.targetResource;

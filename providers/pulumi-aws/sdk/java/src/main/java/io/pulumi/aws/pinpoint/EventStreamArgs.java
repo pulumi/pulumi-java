@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class EventStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final Input<String> applicationId;
+      private final Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId;
@@ -29,7 +29,7 @@ public final class EventStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationStreamArn", required=true)
-    private final Input<String> destinationStreamArn;
+      private final Input<String> destinationStreamArn;
 
     public Input<String> getDestinationStreamArn() {
         return this.destinationStreamArn;
@@ -40,7 +40,7 @@ public final class EventStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

@@ -8,8 +8,8 @@ import io.pulumi.aws.dms.ReplicationInstanceArgs;
 import io.pulumi.aws.dms.inputs.ReplicationInstanceState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -300,6 +300,21 @@ public class ReplicationInstance extends io.pulumi.resources.CustomResource {
         return this.vpcSecurityGroupIds;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ReplicationInstance(String name) {
+        this(name, ReplicationInstanceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ReplicationInstance(String name, ReplicationInstanceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
      * 
      */
     @InputImport(name="queryStringBehavior", required=true)
-    private final String queryStringBehavior;
+      private final String queryStringBehavior;
 
     public String getQueryStringBehavior() {
         return this.queryStringBehavior;
@@ -30,7 +30,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
      * 
      */
     @InputImport(name="queryStrings", required=true)
-    private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings;
+      private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings;
 
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> getQueryStrings() {
         return this.queryStrings;

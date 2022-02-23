@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class BudgetActionSubscriberGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="address", required=true)
-    private final Input<String> address;
+      private final Input<String> address;
 
     public Input<String> getAddress() {
         return this.address;
@@ -29,7 +29,7 @@ public final class BudgetActionSubscriberGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscriptionType", required=true)
-    private final Input<String> subscriptionType;
+      private final Input<String> subscriptionType;
 
     public Input<String> getSubscriptionType() {
         return this.subscriptionType;

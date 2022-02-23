@@ -5,7 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.NodeGroupResourceAutoscalingGroupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="autoscalingGroups")
-    private final @Nullable Input<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups;
+      private final @Nullable Input<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups;
 
     public Input<List<NodeGroupResourceAutoscalingGroupArgs>> getAutoscalingGroups() {
         return this.autoscalingGroups == null ? Input.empty() : this.autoscalingGroups;
@@ -32,7 +32,7 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="remoteAccessSecurityGroupId")
-    private final @Nullable Input<String> remoteAccessSecurityGroupId;
+      private final @Nullable Input<String> remoteAccessSecurityGroupId;
 
     public Input<String> getRemoteAccessSecurityGroupId() {
         return this.remoteAccessSecurityGroupId == null ? Input.empty() : this.remoteAccessSecurityGroupId;

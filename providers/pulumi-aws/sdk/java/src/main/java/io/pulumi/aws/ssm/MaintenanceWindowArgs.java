@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowUnassociatedTargets")
-    private final @Nullable Input<Boolean> allowUnassociatedTargets;
+      private final @Nullable Input<Boolean> allowUnassociatedTargets;
 
     public Input<Boolean> getAllowUnassociatedTargets() {
         return this.allowUnassociatedTargets == null ? Input.empty() : this.allowUnassociatedTargets;
@@ -33,7 +33,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cutoff", required=true)
-    private final Input<Integer> cutoff;
+      private final Input<Integer> cutoff;
 
     public Input<Integer> getCutoff() {
         return this.cutoff;
@@ -44,7 +44,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="duration", required=true)
-    private final Input<Integer> duration;
+      private final Input<Integer> duration;
 
     public Input<Integer> getDuration() {
         return this.duration;
@@ -66,7 +66,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -77,7 +77,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endDate")
-    private final @Nullable Input<String> endDate;
+      private final @Nullable Input<String> endDate;
 
     public Input<String> getEndDate() {
         return this.endDate == null ? Input.empty() : this.endDate;
@@ -88,7 +88,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -99,7 +99,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final Input<String> schedule;
+      private final Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule;
@@ -110,7 +110,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scheduleOffset")
-    private final @Nullable Input<Integer> scheduleOffset;
+      private final @Nullable Input<Integer> scheduleOffset;
 
     public Input<Integer> getScheduleOffset() {
         return this.scheduleOffset == null ? Input.empty() : this.scheduleOffset;
@@ -121,7 +121,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scheduleTimezone")
-    private final @Nullable Input<String> scheduleTimezone;
+      private final @Nullable Input<String> scheduleTimezone;
 
     public Input<String> getScheduleTimezone() {
         return this.scheduleTimezone == null ? Input.empty() : this.scheduleTimezone;
@@ -132,7 +132,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="startDate")
-    private final @Nullable Input<String> startDate;
+      private final @Nullable Input<String> startDate;
 
     public Input<String> getStartDate() {
         return this.startDate == null ? Input.empty() : this.startDate;
@@ -143,7 +143,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

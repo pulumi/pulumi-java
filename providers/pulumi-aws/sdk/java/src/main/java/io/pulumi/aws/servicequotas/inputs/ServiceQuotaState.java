@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicequotas.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adjustable")
-    private final @Nullable Input<Boolean> adjustable;
+      private final @Nullable Input<Boolean> adjustable;
 
     public Input<Boolean> getAdjustable() {
         return this.adjustable == null ? Input.empty() : this.adjustable;
@@ -32,7 +32,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -43,7 +43,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<Double> defaultValue;
+      private final @Nullable Input<Double> defaultValue;
 
     public Input<Double> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -54,7 +54,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quotaCode")
-    private final @Nullable Input<String> quotaCode;
+      private final @Nullable Input<String> quotaCode;
 
     public Input<String> getQuotaCode() {
         return this.quotaCode == null ? Input.empty() : this.quotaCode;
@@ -65,21 +65,21 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quotaName")
-    private final @Nullable Input<String> quotaName;
+      private final @Nullable Input<String> quotaName;
 
     public Input<String> getQuotaName() {
         return this.quotaName == null ? Input.empty() : this.quotaName;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="requestStatus")
-    private final @Nullable Input<String> requestStatus;
+      private final @Nullable Input<String> requestStatus;
 
     public Input<String> getRequestStatus() {
         return this.requestStatus == null ? Input.empty() : this.requestStatus;
@@ -90,7 +90,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceCode")
-    private final @Nullable Input<String> serviceCode;
+      private final @Nullable Input<String> serviceCode;
 
     public Input<String> getServiceCode() {
         return this.serviceCode == null ? Input.empty() : this.serviceCode;
@@ -101,7 +101,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -112,7 +112,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<Double> value;
+      private final @Nullable Input<Double> value;
 
     public Input<Double> getValue() {
         return this.value == null ? Input.empty() : this.value;

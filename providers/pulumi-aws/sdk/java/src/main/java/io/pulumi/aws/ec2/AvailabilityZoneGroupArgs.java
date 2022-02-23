@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AvailabilityZoneGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="groupName", required=true)
-    private final Input<String> groupName;
+      private final Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName;
@@ -29,7 +29,7 @@ public final class AvailabilityZoneGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="optInStatus", required=true)
-    private final Input<String> optInStatus;
+      private final Input<String> optInStatus;
 
     public Input<String> getOptInStatus() {
         return this.optInStatus;

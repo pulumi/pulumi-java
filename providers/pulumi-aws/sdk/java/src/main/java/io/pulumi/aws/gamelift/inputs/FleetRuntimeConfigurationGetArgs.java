@@ -5,7 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.aws.gamelift.inputs.FleetRuntimeConfigurationServerProcessGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FleetRuntimeConfigurationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="gameSessionActivationTimeoutSeconds")
-    private final @Nullable Input<Integer> gameSessionActivationTimeoutSeconds;
+      private final @Nullable Input<Integer> gameSessionActivationTimeoutSeconds;
 
     public Input<Integer> getGameSessionActivationTimeoutSeconds() {
         return this.gameSessionActivationTimeoutSeconds == null ? Input.empty() : this.gameSessionActivationTimeoutSeconds;
@@ -32,7 +32,7 @@ public final class FleetRuntimeConfigurationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maxConcurrentGameSessionActivations")
-    private final @Nullable Input<Integer> maxConcurrentGameSessionActivations;
+      private final @Nullable Input<Integer> maxConcurrentGameSessionActivations;
 
     public Input<Integer> getMaxConcurrentGameSessionActivations() {
         return this.maxConcurrentGameSessionActivations == null ? Input.empty() : this.maxConcurrentGameSessionActivations;
@@ -43,7 +43,7 @@ public final class FleetRuntimeConfigurationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serverProcesses")
-    private final @Nullable Input<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses;
+      private final @Nullable Input<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses;
 
     public Input<List<FleetRuntimeConfigurationServerProcessGetArgs>> getServerProcesses() {
         return this.serverProcesses == null ? Input.empty() : this.serverProcesses;

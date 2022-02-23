@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.WebAclLoggingConfigurationRedactedFieldsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="logDestination", required=true)
-    private final Input<String> logDestination;
+      private final Input<String> logDestination;
 
     public Input<String> getLogDestination() {
         return this.logDestination;
@@ -31,7 +31,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="redactedFields")
-    private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldsArgs> redactedFields;
+      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldsArgs> redactedFields;
 
     public Input<WebAclLoggingConfigurationRedactedFieldsArgs> getRedactedFields() {
         return this.redactedFields == null ? Input.empty() : this.redactedFields;

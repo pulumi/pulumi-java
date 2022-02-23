@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.aws.apigateway.inputs.StageAccessLogSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessLogSettings")
-    private final @Nullable Input<StageAccessLogSettingsArgs> accessLogSettings;
+      private final @Nullable Input<StageAccessLogSettingsArgs> accessLogSettings;
 
     public Input<StageAccessLogSettingsArgs> getAccessLogSettings() {
         return this.accessLogSettings == null ? Input.empty() : this.accessLogSettings;
@@ -33,7 +33,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheClusterEnabled")
-    private final @Nullable Input<Boolean> cacheClusterEnabled;
+      private final @Nullable Input<Boolean> cacheClusterEnabled;
 
     public Input<Boolean> getCacheClusterEnabled() {
         return this.cacheClusterEnabled == null ? Input.empty() : this.cacheClusterEnabled;
@@ -44,7 +44,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheClusterSize")
-    private final @Nullable Input<String> cacheClusterSize;
+      private final @Nullable Input<String> cacheClusterSize;
 
     public Input<String> getCacheClusterSize() {
         return this.cacheClusterSize == null ? Input.empty() : this.cacheClusterSize;
@@ -55,7 +55,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificateId")
-    private final @Nullable Input<String> clientCertificateId;
+      private final @Nullable Input<String> clientCertificateId;
 
     public Input<String> getClientCertificateId() {
         return this.clientCertificateId == null ? Input.empty() : this.clientCertificateId;
@@ -66,7 +66,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deployment", required=true)
-    private final Input<String> deployment;
+      private final Input<String> deployment;
 
     public Input<String> getDeployment() {
         return this.deployment;
@@ -77,7 +77,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -88,7 +88,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentationVersion")
-    private final @Nullable Input<String> documentationVersion;
+      private final @Nullable Input<String> documentationVersion;
 
     public Input<String> getDocumentationVersion() {
         return this.documentationVersion == null ? Input.empty() : this.documentationVersion;
@@ -99,7 +99,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi", required=true)
-    private final Input<String> restApi;
+      private final Input<String> restApi;
 
     public Input<String> getRestApi() {
         return this.restApi;
@@ -110,7 +110,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName", required=true)
-    private final Input<String> stageName;
+      private final Input<String> stageName;
 
     public Input<String> getStageName() {
         return this.stageName;
@@ -121,7 +121,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -132,7 +132,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variables")
-    private final @Nullable Input<Map<String,String>> variables;
+      private final @Nullable Input<Map<String,String>> variables;
 
     public Input<Map<String,String>> getVariables() {
         return this.variables == null ? Input.empty() : this.variables;
@@ -143,7 +143,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xrayTracingEnabled")
-    private final @Nullable Input<Boolean> xrayTracingEnabled;
+      private final @Nullable Input<Boolean> xrayTracingEnabled;
 
     public Input<Boolean> getXrayTracingEnabled() {
         return this.xrayTracingEnabled == null ? Input.empty() : this.xrayTracingEnabled;

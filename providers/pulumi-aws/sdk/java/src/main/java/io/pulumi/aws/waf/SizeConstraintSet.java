@@ -9,8 +9,8 @@ import io.pulumi.aws.waf.inputs.SizeConstraintSetState;
 import io.pulumi.aws.waf.outputs.SizeConstraintSetSizeConstraint;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -74,6 +74,21 @@ public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
         return this.sizeConstraints;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SizeConstraintSet(String name) {
+        this(name, SizeConstraintSetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SizeConstraintSet(String name, @Nullable SizeConstraintSetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

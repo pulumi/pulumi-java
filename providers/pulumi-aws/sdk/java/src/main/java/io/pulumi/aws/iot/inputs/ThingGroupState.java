@@ -6,7 +6,7 @@ package io.pulumi.aws.iot.inputs;
 import io.pulumi.aws.iot.inputs.ThingGroupMetadataGetArgs;
 import io.pulumi.aws.iot.inputs.ThingGroupPropertiesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,14 +24,14 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
     }
 
     @InputImport(name="metadatas")
-    private final @Nullable Input<List<ThingGroupMetadataGetArgs>> metadatas;
+      private final @Nullable Input<List<ThingGroupMetadataGetArgs>> metadatas;
 
     public Input<List<ThingGroupMetadataGetArgs>> getMetadatas() {
         return this.metadatas == null ? Input.empty() : this.metadatas;
@@ -42,7 +42,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentGroupName")
-    private final @Nullable Input<String> parentGroupName;
+      private final @Nullable Input<String> parentGroupName;
 
     public Input<String> getParentGroupName() {
         return this.parentGroupName == null ? Input.empty() : this.parentGroupName;
@@ -64,7 +64,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<ThingGroupPropertiesGetArgs> properties;
+      private final @Nullable Input<ThingGroupPropertiesGetArgs> properties;
 
     public Input<ThingGroupPropertiesGetArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -75,14 +75,14 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -93,7 +93,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;

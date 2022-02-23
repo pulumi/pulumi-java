@@ -6,7 +6,7 @@ package io.pulumi.aws.secretsmanager;
 import io.pulumi.aws.secretsmanager.inputs.SecretReplicaArgs;
 import io.pulumi.aws.secretsmanager.inputs.SecretRotationRulesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceOverwriteReplicaSecret")
-    private final @Nullable Input<Boolean> forceOverwriteReplicaSecret;
+      private final @Nullable Input<Boolean> forceOverwriteReplicaSecret;
 
     public Input<Boolean> getForceOverwriteReplicaSecret() {
         return this.forceOverwriteReplicaSecret == null ? Input.empty() : this.forceOverwriteReplicaSecret;
@@ -47,7 +47,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -58,7 +58,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -69,7 +69,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -80,7 +80,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -91,7 +91,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recoveryWindowInDays")
-    private final @Nullable Input<Integer> recoveryWindowInDays;
+      private final @Nullable Input<Integer> recoveryWindowInDays;
 
     public Input<Integer> getRecoveryWindowInDays() {
         return this.recoveryWindowInDays == null ? Input.empty() : this.recoveryWindowInDays;
@@ -102,7 +102,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicas")
-    private final @Nullable Input<List<SecretReplicaArgs>> replicas;
+      private final @Nullable Input<List<SecretReplicaArgs>> replicas;
 
     public Input<List<SecretReplicaArgs>> getReplicas() {
         return this.replicas == null ? Input.empty() : this.replicas;
@@ -117,7 +117,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
     @InputImport(name="rotationLambdaArn")
-    private final @Nullable Input<String> rotationLambdaArn;
+      private final @Nullable Input<String> rotationLambdaArn;
 
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
     public Input<String> getRotationLambdaArn() {
@@ -133,7 +133,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
     @InputImport(name="rotationRules")
-    private final @Nullable Input<SecretRotationRulesArgs> rotationRules;
+      private final @Nullable Input<SecretRotationRulesArgs> rotationRules;
 
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
     public Input<SecretRotationRulesArgs> getRotationRules() {
@@ -145,7 +145,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -5,7 +5,7 @@ package io.pulumi.aws.codecommit;
 
 import io.pulumi.aws.codecommit.inputs.TriggerTriggerArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryName", required=true)
-    private final Input<String> repositoryName;
+      private final Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName;
     }
 
     @InputImport(name="triggers", required=true)
-    private final Input<List<TriggerTriggerArgs>> triggers;
+      private final Input<List<TriggerTriggerArgs>> triggers;
 
     public Input<List<TriggerTriggerArgs>> getTriggers() {
         return this.triggers;

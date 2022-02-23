@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTl
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
      * 
      */
     @InputImport(name="acm")
-    private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm;
+      private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm;
 
     public Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> getAcm() {
         return this.acm == null ? Input.empty() : this.acm;
@@ -32,7 +32,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file;
+      private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file;
 
     public Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -43,7 +43,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
      * 
      */
     @InputImport(name="sds")
-    private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds;
+      private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds;
 
     public Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> getSds() {
         return this.sds == null ? Input.empty() : this.sds;

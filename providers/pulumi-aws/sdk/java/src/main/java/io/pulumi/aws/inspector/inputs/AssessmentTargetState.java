@@ -4,7 +4,7 @@
 package io.pulumi.aws.inspector.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AssessmentTargetState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -30,7 +30,7 @@ public final class AssessmentTargetState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,7 +41,7 @@ public final class AssessmentTargetState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupArn")
-    private final @Nullable Input<String> resourceGroupArn;
+      private final @Nullable Input<String> resourceGroupArn;
 
     public Input<String> getResourceGroupArn() {
         return this.resourceGroupArn == null ? Input.empty() : this.resourceGroupArn;

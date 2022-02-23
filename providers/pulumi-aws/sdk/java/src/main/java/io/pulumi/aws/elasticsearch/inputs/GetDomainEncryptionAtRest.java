@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetDomainEncryptionAtRest extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -29,7 +29,7 @@ public final class GetDomainEncryptionAtRest extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="kmsKeyId", required=true)
-    private final String kmsKeyId;
+      private final String kmsKeyId;
 
     public String getKmsKeyId() {
         return this.kmsKeyId;

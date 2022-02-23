@@ -4,7 +4,7 @@
 package io.pulumi.aws.transfer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -30,7 +30,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverId")
-    private final @Nullable Input<String> serverId;
+      private final @Nullable Input<String> serverId;
 
     public Input<String> getServerId() {
         return this.serverId == null ? Input.empty() : this.serverId;
@@ -41,7 +41,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ram.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="invitationArn")
-    private final @Nullable Input<String> invitationArn;
+      private final @Nullable Input<String> invitationArn;
 
     public Input<String> getInvitationArn() {
         return this.invitationArn == null ? Input.empty() : this.invitationArn;
@@ -31,7 +31,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="receiverAccountId")
-    private final @Nullable Input<String> receiverAccountId;
+      private final @Nullable Input<String> receiverAccountId;
 
     public Input<String> getReceiverAccountId() {
         return this.receiverAccountId == null ? Input.empty() : this.receiverAccountId;
@@ -42,7 +42,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<List<String>> resources;
+      private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -53,7 +53,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="senderAccountId")
-    private final @Nullable Input<String> senderAccountId;
+      private final @Nullable Input<String> senderAccountId;
 
     public Input<String> getSenderAccountId() {
         return this.senderAccountId == null ? Input.empty() : this.senderAccountId;
@@ -64,7 +64,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="shareArn")
-    private final @Nullable Input<String> shareArn;
+      private final @Nullable Input<String> shareArn;
 
     public Input<String> getShareArn() {
         return this.shareArn == null ? Input.empty() : this.shareArn;
@@ -75,7 +75,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="shareId")
-    private final @Nullable Input<String> shareId;
+      private final @Nullable Input<String> shareId;
 
     public Input<String> getShareId() {
         return this.shareId == null ? Input.empty() : this.shareId;
@@ -86,7 +86,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="shareName")
-    private final @Nullable Input<String> shareName;
+      private final @Nullable Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName == null ? Input.empty() : this.shareName;
@@ -97,7 +97,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

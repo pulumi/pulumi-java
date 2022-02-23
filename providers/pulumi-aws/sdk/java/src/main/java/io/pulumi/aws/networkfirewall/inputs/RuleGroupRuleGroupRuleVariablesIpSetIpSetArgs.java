@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs extends io.pulu
      * 
      */
     @InputImport(name="definitions", required=true)
-    private final Input<List<String>> definitions;
+      private final Input<List<String>> definitions;
 
     public Input<List<String>> getDefinitions() {
         return this.definitions;

@@ -6,7 +6,7 @@ package io.pulumi.aws.codepipeline;
 import io.pulumi.aws.codepipeline.inputs.WebhookAuthenticationConfigurationArgs;
 import io.pulumi.aws.codepipeline.inputs.WebhookFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication", required=true)
-    private final Input<String> authentication;
+      private final Input<String> authentication;
 
     public Input<String> getAuthentication() {
         return this.authentication;
@@ -34,7 +34,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationConfiguration")
-    private final @Nullable Input<WebhookAuthenticationConfigurationArgs> authenticationConfiguration;
+      private final @Nullable Input<WebhookAuthenticationConfigurationArgs> authenticationConfiguration;
 
     public Input<WebhookAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
         return this.authenticationConfiguration == null ? Input.empty() : this.authenticationConfiguration;
@@ -45,7 +45,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filters", required=true)
-    private final Input<List<WebhookFilterArgs>> filters;
+      private final Input<List<WebhookFilterArgs>> filters;
 
     public Input<List<WebhookFilterArgs>> getFilters() {
         return this.filters;
@@ -56,7 +56,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -78,7 +78,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetAction", required=true)
-    private final Input<String> targetAction;
+      private final Input<String> targetAction;
 
     public Input<String> getTargetAction() {
         return this.targetAction;
@@ -89,7 +89,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetPipeline", required=true)
-    private final Input<String> targetPipeline;
+      private final Input<String> targetPipeline;
 
     public Input<String> getTargetPipeline() {
         return this.targetPipeline;

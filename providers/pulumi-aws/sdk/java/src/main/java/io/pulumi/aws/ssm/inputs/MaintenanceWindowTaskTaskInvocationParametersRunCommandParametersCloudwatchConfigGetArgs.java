@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="cloudwatchLogGroupName")
-    private final @Nullable Input<String> cloudwatchLogGroupName;
+      private final @Nullable Input<String> cloudwatchLogGroupName;
 
     public Input<String> getCloudwatchLogGroupName() {
         return this.cloudwatchLogGroupName == null ? Input.empty() : this.cloudwatchLogGroupName;
@@ -31,7 +31,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="cloudwatchOutputEnabled")
-    private final @Nullable Input<Boolean> cloudwatchOutputEnabled;
+      private final @Nullable Input<Boolean> cloudwatchOutputEnabled;
 
     public Input<Boolean> getCloudwatchOutputEnabled() {
         return this.cloudwatchOutputEnabled == null ? Input.empty() : this.cloudwatchOutputEnabled;

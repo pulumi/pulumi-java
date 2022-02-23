@@ -4,7 +4,7 @@
 package io.pulumi.aws.ram.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PrincipalAssociationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="principal")
-    private final @Nullable Input<String> principal;
+      private final @Nullable Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal == null ? Input.empty() : this.principal;
@@ -30,7 +30,7 @@ public final class PrincipalAssociationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceShareArn")
-    private final @Nullable Input<String> resourceShareArn;
+      private final @Nullable Input<String> resourceShareArn;
 
     public Input<String> getResourceShareArn() {
         return this.resourceShareArn == null ? Input.empty() : this.resourceShareArn;

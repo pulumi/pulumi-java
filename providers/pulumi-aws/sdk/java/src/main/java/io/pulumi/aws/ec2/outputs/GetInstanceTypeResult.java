@@ -7,7 +7,7 @@ import io.pulumi.aws.ec2.outputs.GetInstanceTypeFpga;
 import io.pulumi.aws.ec2.outputs.GetInstanceTypeGpus;
 import io.pulumi.aws.ec2.outputs.GetInstanceTypeInferenceAccelerator;
 import io.pulumi.aws.ec2.outputs.GetInstanceTypeInstanceDisk;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;

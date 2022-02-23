@@ -5,7 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.FargateProfileSelectorGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+      private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -44,7 +44,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fargateProfileName")
-    private final @Nullable Input<String> fargateProfileName;
+      private final @Nullable Input<String> fargateProfileName;
 
     public Input<String> getFargateProfileName() {
         return this.fargateProfileName == null ? Input.empty() : this.fargateProfileName;
@@ -55,7 +55,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="podExecutionRoleArn")
-    private final @Nullable Input<String> podExecutionRoleArn;
+      private final @Nullable Input<String> podExecutionRoleArn;
 
     public Input<String> getPodExecutionRoleArn() {
         return this.podExecutionRoleArn == null ? Input.empty() : this.podExecutionRoleArn;
@@ -66,7 +66,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selectors")
-    private final @Nullable Input<List<FargateProfileSelectorGetArgs>> selectors;
+      private final @Nullable Input<List<FargateProfileSelectorGetArgs>> selectors;
 
     public Input<List<FargateProfileSelectorGetArgs>> getSelectors() {
         return this.selectors == null ? Input.empty() : this.selectors;
@@ -77,7 +77,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -88,7 +88,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -99,7 +99,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -110,7 +110,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class LaunchTemplateHibernationOptionsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="configured", required=true)
-    private final Input<Boolean> configured;
+      private final Input<Boolean> configured;
 
     public Input<Boolean> getConfigured() {
         return this.configured;

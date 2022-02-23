@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterAccepterArgs;
 import io.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterRequesterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class VpcPeeringConnectionAccepterArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="accepter")
-    private final @Nullable Input<VpcPeeringConnectionAccepterAccepterArgs> accepter;
+      private final @Nullable Input<VpcPeeringConnectionAccepterAccepterArgs> accepter;
 
     public Input<VpcPeeringConnectionAccepterAccepterArgs> getAccepter() {
         return this.accepter == null ? Input.empty() : this.accepter;
@@ -35,7 +35,7 @@ public final class VpcPeeringConnectionAccepterArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="autoAccept")
-    private final @Nullable Input<Boolean> autoAccept;
+      private final @Nullable Input<Boolean> autoAccept;
 
     public Input<Boolean> getAutoAccept() {
         return this.autoAccept == null ? Input.empty() : this.autoAccept;
@@ -47,7 +47,7 @@ public final class VpcPeeringConnectionAccepterArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="requester")
-    private final @Nullable Input<VpcPeeringConnectionAccepterRequesterArgs> requester;
+      private final @Nullable Input<VpcPeeringConnectionAccepterRequesterArgs> requester;
 
     public Input<VpcPeeringConnectionAccepterRequesterArgs> getRequester() {
         return this.requester == null ? Input.empty() : this.requester;
@@ -58,7 +58,7 @@ public final class VpcPeeringConnectionAccepterArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -69,7 +69,7 @@ public final class VpcPeeringConnectionAccepterArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vpcPeeringConnectionId", required=true)
-    private final Input<String> vpcPeeringConnectionId;
+      private final Input<String> vpcPeeringConnectionId;
 
     public Input<String> getVpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;

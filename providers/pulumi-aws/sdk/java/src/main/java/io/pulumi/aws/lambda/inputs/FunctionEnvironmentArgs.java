@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="variables")
-    private final @Nullable Input<Map<String,String>> variables;
+      private final @Nullable Input<Map<String,String>> variables;
 
     public Input<Map<String,String>> getVariables() {
         return this.variables == null ? Input.empty() : this.variables;

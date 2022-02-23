@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyGetArgs extends io.
      * 
      */
     @InputImport(name="tls")
-    private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsGetArgs> tls;
+      private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsGetArgs> tls;
 
     public Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsGetArgs> getTls() {
         return this.tls == null ? Input.empty() : this.tls;

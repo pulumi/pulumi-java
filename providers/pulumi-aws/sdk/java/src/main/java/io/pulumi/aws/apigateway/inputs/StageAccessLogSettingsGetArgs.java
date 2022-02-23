@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class StageAccessLogSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="destinationArn", required=true)
-    private final Input<String> destinationArn;
+      private final Input<String> destinationArn;
 
     public Input<String> getDestinationArn() {
         return this.destinationArn;
@@ -30,7 +30,7 @@ public final class StageAccessLogSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="format", required=true)
-    private final Input<String> format;
+      private final Input<String> format;
 
     public Input<String> getFormat() {
         return this.format;

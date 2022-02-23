@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class VirtualNodeSpecServiceDiscoveryDnsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="hostname", required=true)
-    private final Input<String> hostname;
+      private final Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname;

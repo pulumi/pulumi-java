@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -30,7 +30,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -41,7 +41,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -52,7 +52,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validationStatus")
-    private final @Nullable Input<String> validationStatus;
+      private final @Nullable Input<String> validationStatus;
 
     public Input<String> getValidationStatus() {
         return this.validationStatus == null ? Input.empty() : this.validationStatus;

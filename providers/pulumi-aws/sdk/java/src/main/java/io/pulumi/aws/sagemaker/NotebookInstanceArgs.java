@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="additionalCodeRepositories")
-    private final @Nullable Input<List<String>> additionalCodeRepositories;
+      private final @Nullable Input<List<String>> additionalCodeRepositories;
 
     public Input<List<String>> getAdditionalCodeRepositories() {
         return this.additionalCodeRepositories == null ? Input.empty() : this.additionalCodeRepositories;
@@ -34,7 +34,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="defaultCodeRepository")
-    private final @Nullable Input<String> defaultCodeRepository;
+      private final @Nullable Input<String> defaultCodeRepository;
 
     public Input<String> getDefaultCodeRepository() {
         return this.defaultCodeRepository == null ? Input.empty() : this.defaultCodeRepository;
@@ -45,7 +45,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="directInternetAccess")
-    private final @Nullable Input<String> directInternetAccess;
+      private final @Nullable Input<String> directInternetAccess;
 
     public Input<String> getDirectInternetAccess() {
         return this.directInternetAccess == null ? Input.empty() : this.directInternetAccess;
@@ -56,7 +56,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+      private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -67,7 +67,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -78,7 +78,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lifecycleConfigName")
-    private final @Nullable Input<String> lifecycleConfigName;
+      private final @Nullable Input<String> lifecycleConfigName;
 
     public Input<String> getLifecycleConfigName() {
         return this.lifecycleConfigName == null ? Input.empty() : this.lifecycleConfigName;
@@ -89,7 +89,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -100,7 +100,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="platformIdentifier")
-    private final @Nullable Input<String> platformIdentifier;
+      private final @Nullable Input<String> platformIdentifier;
 
     public Input<String> getPlatformIdentifier() {
         return this.platformIdentifier == null ? Input.empty() : this.platformIdentifier;
@@ -111,7 +111,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -122,7 +122,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rootAccess")
-    private final @Nullable Input<String> rootAccess;
+      private final @Nullable Input<String> rootAccess;
 
     public Input<String> getRootAccess() {
         return this.rootAccess == null ? Input.empty() : this.rootAccess;
@@ -133,7 +133,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -144,7 +144,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -155,7 +155,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -166,7 +166,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="volumeSize")
-    private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Input<Integer> volumeSize;
 
     public Input<Integer> getVolumeSize() {
         return this.volumeSize == null ? Input.empty() : this.volumeSize;

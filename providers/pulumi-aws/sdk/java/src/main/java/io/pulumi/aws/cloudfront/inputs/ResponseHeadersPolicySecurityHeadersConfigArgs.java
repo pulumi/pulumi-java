@@ -10,7 +10,7 @@ import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfi
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigXssProtectionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
      * 
      */
     @InputImport(name="contentSecurityPolicy")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyArgs> contentSecurityPolicy;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyArgs> contentSecurityPolicy;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyArgs> getContentSecurityPolicy() {
         return this.contentSecurityPolicy == null ? Input.empty() : this.contentSecurityPolicy;
@@ -35,7 +35,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
      * 
      */
     @InputImport(name="contentTypeOptions")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs> contentTypeOptions;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs> contentTypeOptions;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs> getContentTypeOptions() {
         return this.contentTypeOptions == null ? Input.empty() : this.contentTypeOptions;
@@ -46,7 +46,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
      * 
      */
     @InputImport(name="frameOptions")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs> frameOptions;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs> frameOptions;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs> getFrameOptions() {
         return this.frameOptions == null ? Input.empty() : this.frameOptions;
@@ -57,7 +57,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
      * 
      */
     @InputImport(name="referrerPolicy")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs> referrerPolicy;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs> referrerPolicy;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs> getReferrerPolicy() {
         return this.referrerPolicy == null ? Input.empty() : this.referrerPolicy;
@@ -68,7 +68,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
      * 
      */
     @InputImport(name="strictTransportSecurity")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityArgs> strictTransportSecurity;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityArgs> strictTransportSecurity;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityArgs> getStrictTransportSecurity() {
         return this.strictTransportSecurity == null ? Input.empty() : this.strictTransportSecurity;
@@ -79,7 +79,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
      * 
      */
     @InputImport(name="xssProtection")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionArgs> xssProtection;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionArgs> xssProtection;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionArgs> getXssProtection() {
         return this.xssProtection == null ? Input.empty() : this.xssProtection;

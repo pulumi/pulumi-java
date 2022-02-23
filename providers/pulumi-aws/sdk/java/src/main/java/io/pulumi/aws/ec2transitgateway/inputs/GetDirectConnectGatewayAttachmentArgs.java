@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.aws.ec2transitgateway.inputs.GetDirectConnectGatewayAttachmentFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="dxGatewayId")
-    private final @Nullable String dxGatewayId;
+      private final @Nullable String dxGatewayId;
 
     public Optional<String> getDxGatewayId() {
         return this.dxGatewayId == null ? Optional.empty() : Optional.ofNullable(this.dxGatewayId);
@@ -33,7 +33,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters;
+      private final @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters;
 
     public List<GetDirectConnectGatewayAttachmentFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -44,7 +44,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -55,7 +55,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="transitGatewayId")
-    private final @Nullable String transitGatewayId;
+      private final @Nullable String transitGatewayId;
 
     public Optional<String> getTransitGatewayId() {
         return this.transitGatewayId == null ? Optional.empty() : Optional.ofNullable(this.transitGatewayId);

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="group")
-    private final @Nullable Input<String> group;
+      private final @Nullable Input<String> group;
 
     public Input<String> getGroup() {
         return this.group == null ? Input.empty() : this.group;
@@ -30,7 +30,7 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="policyArn")
-    private final @Nullable Input<String> policyArn;
+      private final @Nullable Input<String> policyArn;
 
     public Input<String> getPolicyArn() {
         return this.policyArn == null ? Input.empty() : this.policyArn;

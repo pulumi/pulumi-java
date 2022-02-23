@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientVpnEndpointId")
-    private final @Nullable Input<String> clientVpnEndpointId;
+      private final @Nullable Input<String> clientVpnEndpointId;
 
     public Input<String> getClientVpnEndpointId() {
         return this.clientVpnEndpointId == null ? Input.empty() : this.clientVpnEndpointId;
@@ -30,7 +30,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationCidrBlock")
-    private final @Nullable Input<String> destinationCidrBlock;
+      private final @Nullable Input<String> destinationCidrBlock;
 
     public Input<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock == null ? Input.empty() : this.destinationCidrBlock;
@@ -52,7 +52,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origin")
-    private final @Nullable Input<String> origin;
+      private final @Nullable Input<String> origin;
 
     public Input<String> getOrigin() {
         return this.origin == null ? Input.empty() : this.origin;
@@ -63,7 +63,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetVpcSubnetId")
-    private final @Nullable Input<String> targetVpcSubnetId;
+      private final @Nullable Input<String> targetVpcSubnetId;
 
     public Input<String> getTargetVpcSubnetId() {
         return this.targetVpcSubnetId == null ? Input.empty() : this.targetVpcSubnetId;
@@ -74,7 +74,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

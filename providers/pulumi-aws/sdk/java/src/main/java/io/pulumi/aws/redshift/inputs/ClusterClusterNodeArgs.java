@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterClusterNodeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="nodeRole")
-    private final @Nullable Input<String> nodeRole;
+      private final @Nullable Input<String> nodeRole;
 
     public Input<String> getNodeRole() {
         return this.nodeRole == null ? Input.empty() : this.nodeRole;
@@ -30,7 +30,7 @@ public final class ClusterClusterNodeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Input<String> privateIpAddress;
 
     public Input<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
@@ -41,7 +41,7 @@ public final class ClusterClusterNodeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publicIpAddress")
-    private final @Nullable Input<String> publicIpAddress;
+      private final @Nullable Input<String> publicIpAddress;
 
     public Input<String> getPublicIpAddress() {
         return this.publicIpAddress == null ? Input.empty() : this.publicIpAddress;

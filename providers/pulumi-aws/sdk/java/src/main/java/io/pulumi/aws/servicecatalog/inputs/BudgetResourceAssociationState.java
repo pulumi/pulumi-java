@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BudgetResourceAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="budgetName")
-    private final @Nullable Input<String> budgetName;
+      private final @Nullable Input<String> budgetName;
 
     public Input<String> getBudgetName() {
         return this.budgetName == null ? Input.empty() : this.budgetName;
@@ -30,7 +30,7 @@ public final class BudgetResourceAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;

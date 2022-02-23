@@ -10,7 +10,7 @@ import io.pulumi.aws.msk.inputs.ClusterEncryptionInfoArgs;
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoArgs;
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brokerNodeGroupInfo", required=true)
-    private final Input<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo;
+      private final Input<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo;
 
     public Input<ClusterBrokerNodeGroupInfoArgs> getBrokerNodeGroupInfo() {
         return this.brokerNodeGroupInfo;
@@ -38,7 +38,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientAuthentication")
-    private final @Nullable Input<ClusterClientAuthenticationArgs> clientAuthentication;
+      private final @Nullable Input<ClusterClientAuthenticationArgs> clientAuthentication;
 
     public Input<ClusterClientAuthenticationArgs> getClientAuthentication() {
         return this.clientAuthentication == null ? Input.empty() : this.clientAuthentication;
@@ -49,7 +49,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+      private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -60,7 +60,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationInfo")
-    private final @Nullable Input<ClusterConfigurationInfoArgs> configurationInfo;
+      private final @Nullable Input<ClusterConfigurationInfoArgs> configurationInfo;
 
     public Input<ClusterConfigurationInfoArgs> getConfigurationInfo() {
         return this.configurationInfo == null ? Input.empty() : this.configurationInfo;
@@ -71,7 +71,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionInfo")
-    private final @Nullable Input<ClusterEncryptionInfoArgs> encryptionInfo;
+      private final @Nullable Input<ClusterEncryptionInfoArgs> encryptionInfo;
 
     public Input<ClusterEncryptionInfoArgs> getEncryptionInfo() {
         return this.encryptionInfo == null ? Input.empty() : this.encryptionInfo;
@@ -82,7 +82,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enhancedMonitoring")
-    private final @Nullable Input<String> enhancedMonitoring;
+      private final @Nullable Input<String> enhancedMonitoring;
 
     public Input<String> getEnhancedMonitoring() {
         return this.enhancedMonitoring == null ? Input.empty() : this.enhancedMonitoring;
@@ -93,7 +93,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kafkaVersion", required=true)
-    private final Input<String> kafkaVersion;
+      private final Input<String> kafkaVersion;
 
     public Input<String> getKafkaVersion() {
         return this.kafkaVersion;
@@ -104,7 +104,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingInfo")
-    private final @Nullable Input<ClusterLoggingInfoArgs> loggingInfo;
+      private final @Nullable Input<ClusterLoggingInfoArgs> loggingInfo;
 
     public Input<ClusterLoggingInfoArgs> getLoggingInfo() {
         return this.loggingInfo == null ? Input.empty() : this.loggingInfo;
@@ -115,7 +115,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfBrokerNodes", required=true)
-    private final Input<Integer> numberOfBrokerNodes;
+      private final Input<Integer> numberOfBrokerNodes;
 
     public Input<Integer> getNumberOfBrokerNodes() {
         return this.numberOfBrokerNodes;
@@ -126,7 +126,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openMonitoring")
-    private final @Nullable Input<ClusterOpenMonitoringArgs> openMonitoring;
+      private final @Nullable Input<ClusterOpenMonitoringArgs> openMonitoring;
 
     public Input<ClusterOpenMonitoringArgs> getOpenMonitoring() {
         return this.openMonitoring == null ? Input.empty() : this.openMonitoring;
@@ -137,7 +137,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

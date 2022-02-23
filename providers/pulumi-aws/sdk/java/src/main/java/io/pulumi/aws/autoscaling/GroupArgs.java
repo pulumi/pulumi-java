@@ -12,7 +12,7 @@ import io.pulumi.aws.autoscaling.inputs.GroupTagArgs;
 import io.pulumi.aws.autoscaling.inputs.GroupWarmPoolArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZones")
-    private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Input<List<String>> availabilityZones;
 
     public Input<List<String>> getAvailabilityZones() {
         return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
@@ -42,7 +42,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityRebalance")
-    private final @Nullable Input<Boolean> capacityRebalance;
+      private final @Nullable Input<Boolean> capacityRebalance;
 
     public Input<Boolean> getCapacityRebalance() {
         return this.capacityRebalance == null ? Input.empty() : this.capacityRebalance;
@@ -53,7 +53,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultCooldown")
-    private final @Nullable Input<Integer> defaultCooldown;
+      private final @Nullable Input<Integer> defaultCooldown;
 
     public Input<Integer> getDefaultCooldown() {
         return this.defaultCooldown == null ? Input.empty() : this.defaultCooldown;
@@ -66,7 +66,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desiredCapacity")
-    private final @Nullable Input<Integer> desiredCapacity;
+      private final @Nullable Input<Integer> desiredCapacity;
 
     public Input<Integer> getDesiredCapacity() {
         return this.desiredCapacity == null ? Input.empty() : this.desiredCapacity;
@@ -77,7 +77,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledMetrics")
-    private final @Nullable Input<List<String>> enabledMetrics;
+      private final @Nullable Input<List<String>> enabledMetrics;
 
     public Input<List<String>> getEnabledMetrics() {
         return this.enabledMetrics == null ? Input.empty() : this.enabledMetrics;
@@ -92,14 +92,14 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDelete")
-    private final @Nullable Input<Boolean> forceDelete;
+      private final @Nullable Input<Boolean> forceDelete;
 
     public Input<Boolean> getForceDelete() {
         return this.forceDelete == null ? Input.empty() : this.forceDelete;
     }
 
     @InputImport(name="forceDeleteWarmPool")
-    private final @Nullable Input<Boolean> forceDeleteWarmPool;
+      private final @Nullable Input<Boolean> forceDeleteWarmPool;
 
     public Input<Boolean> getForceDeleteWarmPool() {
         return this.forceDeleteWarmPool == null ? Input.empty() : this.forceDeleteWarmPool;
@@ -110,7 +110,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckGracePeriod")
-    private final @Nullable Input<Integer> healthCheckGracePeriod;
+      private final @Nullable Input<Integer> healthCheckGracePeriod;
 
     public Input<Integer> getHealthCheckGracePeriod() {
         return this.healthCheckGracePeriod == null ? Input.empty() : this.healthCheckGracePeriod;
@@ -121,7 +121,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckType")
-    private final @Nullable Input<String> healthCheckType;
+      private final @Nullable Input<String> healthCheckType;
 
     public Input<String> getHealthCheckType() {
         return this.healthCheckType == null ? Input.empty() : this.healthCheckType;
@@ -138,7 +138,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialLifecycleHooks")
-    private final @Nullable Input<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks;
+      private final @Nullable Input<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks;
 
     public Input<List<GroupInitialLifecycleHookArgs>> getInitialLifecycleHooks() {
         return this.initialLifecycleHooks == null ? Input.empty() : this.initialLifecycleHooks;
@@ -151,7 +151,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceRefresh")
-    private final @Nullable Input<GroupInstanceRefreshArgs> instanceRefresh;
+      private final @Nullable Input<GroupInstanceRefreshArgs> instanceRefresh;
 
     public Input<GroupInstanceRefreshArgs> getInstanceRefresh() {
         return this.instanceRefresh == null ? Input.empty() : this.instanceRefresh;
@@ -162,7 +162,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchConfiguration")
-    private final @Nullable Input<String> launchConfiguration;
+      private final @Nullable Input<String> launchConfiguration;
 
     public Input<String> getLaunchConfiguration() {
         return this.launchConfiguration == null ? Input.empty() : this.launchConfiguration;
@@ -173,7 +173,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchTemplate")
-    private final @Nullable Input<GroupLaunchTemplateArgs> launchTemplate;
+      private final @Nullable Input<GroupLaunchTemplateArgs> launchTemplate;
 
     public Input<GroupLaunchTemplateArgs> getLaunchTemplate() {
         return this.launchTemplate == null ? Input.empty() : this.launchTemplate;
@@ -185,7 +185,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancers")
-    private final @Nullable Input<List<String>> loadBalancers;
+      private final @Nullable Input<List<String>> loadBalancers;
 
     public Input<List<String>> getLoadBalancers() {
         return this.loadBalancers == null ? Input.empty() : this.loadBalancers;
@@ -196,7 +196,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxInstanceLifetime")
-    private final @Nullable Input<Integer> maxInstanceLifetime;
+      private final @Nullable Input<Integer> maxInstanceLifetime;
 
     public Input<Integer> getMaxInstanceLifetime() {
         return this.maxInstanceLifetime == null ? Input.empty() : this.maxInstanceLifetime;
@@ -207,7 +207,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSize", required=true)
-    private final Input<Integer> maxSize;
+      private final Input<Integer> maxSize;
 
     public Input<Integer> getMaxSize() {
         return this.maxSize;
@@ -218,7 +218,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricsGranularity")
-    private final @Nullable Input<Either<String,MetricsGranularity>> metricsGranularity;
+      private final @Nullable Input<Either<String,MetricsGranularity>> metricsGranularity;
 
     public Input<Either<String,MetricsGranularity>> getMetricsGranularity() {
         return this.metricsGranularity == null ? Input.empty() : this.metricsGranularity;
@@ -232,7 +232,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minElbCapacity")
-    private final @Nullable Input<Integer> minElbCapacity;
+      private final @Nullable Input<Integer> minElbCapacity;
 
     public Input<Integer> getMinElbCapacity() {
         return this.minElbCapacity == null ? Input.empty() : this.minElbCapacity;
@@ -243,7 +243,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minSize", required=true)
-    private final Input<Integer> minSize;
+      private final Input<Integer> minSize;
 
     public Input<Integer> getMinSize() {
         return this.minSize;
@@ -254,7 +254,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mixedInstancesPolicy")
-    private final @Nullable Input<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy;
+      private final @Nullable Input<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy;
 
     public Input<GroupMixedInstancesPolicyArgs> getMixedInstancesPolicy() {
         return this.mixedInstancesPolicy == null ? Input.empty() : this.mixedInstancesPolicy;
@@ -265,7 +265,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -277,7 +277,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -288,7 +288,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placementGroup")
-    private final @Nullable Input<String> placementGroup;
+      private final @Nullable Input<String> placementGroup;
 
     public Input<String> getPlacementGroup() {
         return this.placementGroup == null ? Input.empty() : this.placementGroup;
@@ -301,7 +301,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectFromScaleIn")
-    private final @Nullable Input<Boolean> protectFromScaleIn;
+      private final @Nullable Input<Boolean> protectFromScaleIn;
 
     public Input<Boolean> getProtectFromScaleIn() {
         return this.protectFromScaleIn == null ? Input.empty() : this.protectFromScaleIn;
@@ -312,7 +312,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceLinkedRoleArn")
-    private final @Nullable Input<String> serviceLinkedRoleArn;
+      private final @Nullable Input<String> serviceLinkedRoleArn;
 
     public Input<String> getServiceLinkedRoleArn() {
         return this.serviceLinkedRoleArn == null ? Input.empty() : this.serviceLinkedRoleArn;
@@ -324,7 +324,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suspendedProcesses")
-    private final @Nullable Input<List<String>> suspendedProcesses;
+      private final @Nullable Input<List<String>> suspendedProcesses;
 
     public Input<List<String>> getSuspendedProcesses() {
         return this.suspendedProcesses == null ? Input.empty() : this.suspendedProcesses;
@@ -335,7 +335,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<GroupTagArgs>> tags;
+      private final @Nullable Input<List<GroupTagArgs>> tags;
 
     public Input<List<GroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -346,7 +346,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsCollection")
-    private final @Nullable Input<List<Map<String,String>>> tagsCollection;
+      private final @Nullable Input<List<Map<String,String>>> tagsCollection;
 
     public Input<List<Map<String,String>>> getTagsCollection() {
         return this.tagsCollection == null ? Input.empty() : this.tagsCollection;
@@ -357,7 +357,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetGroupArns")
-    private final @Nullable Input<List<String>> targetGroupArns;
+      private final @Nullable Input<List<String>> targetGroupArns;
 
     public Input<List<String>> getTargetGroupArns() {
         return this.targetGroupArns == null ? Input.empty() : this.targetGroupArns;
@@ -368,7 +368,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminationPolicies")
-    private final @Nullable Input<List<String>> terminationPolicies;
+      private final @Nullable Input<List<String>> terminationPolicies;
 
     public Input<List<String>> getTerminationPolicies() {
         return this.terminationPolicies == null ? Input.empty() : this.terminationPolicies;
@@ -379,7 +379,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcZoneIdentifiers")
-    private final @Nullable Input<List<String>> vpcZoneIdentifiers;
+      private final @Nullable Input<List<String>> vpcZoneIdentifiers;
 
     public Input<List<String>> getVpcZoneIdentifiers() {
         return this.vpcZoneIdentifiers == null ? Input.empty() : this.vpcZoneIdentifiers;
@@ -394,7 +394,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForCapacityTimeout")
-    private final @Nullable Input<String> waitForCapacityTimeout;
+      private final @Nullable Input<String> waitForCapacityTimeout;
 
     public Input<String> getWaitForCapacityTimeout() {
         return this.waitForCapacityTimeout == null ? Input.empty() : this.waitForCapacityTimeout;
@@ -409,7 +409,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForElbCapacity")
-    private final @Nullable Input<Integer> waitForElbCapacity;
+      private final @Nullable Input<Integer> waitForElbCapacity;
 
     public Input<Integer> getWaitForElbCapacity() {
         return this.waitForElbCapacity == null ? Input.empty() : this.waitForElbCapacity;
@@ -421,7 +421,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="warmPool")
-    private final @Nullable Input<GroupWarmPoolArgs> warmPool;
+      private final @Nullable Input<GroupWarmPoolArgs> warmPool;
 
     public Input<GroupWarmPoolArgs> getWarmPool() {
         return this.warmPool == null ? Input.empty() : this.warmPool;

@@ -5,7 +5,7 @@ package io.pulumi.aws.gamelift;
 
 import io.pulumi.aws.gamelift.inputs.BuildStorageLocationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatingSystem", required=true)
-    private final Input<String> operatingSystem;
+      private final Input<String> operatingSystem;
 
     public Input<String> getOperatingSystem() {
         return this.operatingSystem;
@@ -43,7 +43,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageLocation", required=true)
-    private final Input<BuildStorageLocationArgs> storageLocation;
+      private final Input<BuildStorageLocationArgs> storageLocation;
 
     public Input<BuildStorageLocationArgs> getStorageLocation() {
         return this.storageLocation;
@@ -54,7 +54,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -65,7 +65,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

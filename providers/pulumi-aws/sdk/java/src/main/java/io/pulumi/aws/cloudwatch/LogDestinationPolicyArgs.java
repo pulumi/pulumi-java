@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LogDestinationPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accessPolicy", required=true)
-    private final Input<String> accessPolicy;
+      private final Input<String> accessPolicy;
 
     public Input<String> getAccessPolicy() {
         return this.accessPolicy;
@@ -31,7 +31,7 @@ public final class LogDestinationPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="destinationName", required=true)
-    private final Input<String> destinationName;
+      private final Input<String> destinationName;
 
     public Input<String> getDestinationName() {
         return this.destinationName;
@@ -42,7 +42,7 @@ public final class LogDestinationPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="forceUpdate")
-    private final @Nullable Input<Boolean> forceUpdate;
+      private final @Nullable Input<Boolean> forceUpdate;
 
     public Input<Boolean> getForceUpdate() {
         return this.forceUpdate == null ? Input.empty() : this.forceUpdate;

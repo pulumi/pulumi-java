@@ -5,7 +5,7 @@ package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.aws.signer.inputs.SigningJobSignedObjectS3Args;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SigningJobSignedObjectArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="s3s")
-    private final @Nullable Input<List<SigningJobSignedObjectS3Args>> s3s;
+      private final @Nullable Input<List<SigningJobSignedObjectS3Args>> s3s;
 
     public Input<List<SigningJobSignedObjectS3Args>> getS3s() {
         return this.s3s == null ? Input.empty() : this.s3s;

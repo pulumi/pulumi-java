@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="branch")
-    private final @Nullable Input<String> branch;
+      private final @Nullable Input<String> branch;
 
     public Input<String> getBranch() {
         return this.branch == null ? Input.empty() : this.branch;
@@ -30,7 +30,7 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="repositoryUrl", required=true)
-    private final Input<String> repositoryUrl;
+      private final Input<String> repositoryUrl;
 
     public Input<String> getRepositoryUrl() {
         return this.repositoryUrl;
@@ -41,7 +41,7 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="secretArn")
-    private final @Nullable Input<String> secretArn;
+      private final @Nullable Input<String> secretArn;
 
     public Input<String> getSecretArn() {
         return this.secretArn == null ? Input.empty() : this.secretArn;

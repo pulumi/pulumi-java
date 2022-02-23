@@ -6,7 +6,7 @@ package io.pulumi.aws.cur;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cur.inputs.GetReportDefinitionArgs;
 import io.pulumi.aws.cur.outputs.GetReportDefinitionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

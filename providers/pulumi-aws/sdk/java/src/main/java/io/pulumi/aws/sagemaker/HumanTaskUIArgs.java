@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.HumanTaskUIUiTemplateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="humanTaskUiName", required=true)
-    private final Input<String> humanTaskUiName;
+      private final Input<String> humanTaskUiName;
 
     public Input<String> getHumanTaskUiName() {
         return this.humanTaskUiName;
@@ -32,7 +32,7 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -43,7 +43,7 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uiTemplate", required=true)
-    private final Input<HumanTaskUIUiTemplateArgs> uiTemplate;
+      private final Input<HumanTaskUIUiTemplateArgs> uiTemplate;
 
     public Input<HumanTaskUIUiTemplateArgs> getUiTemplate() {
         return this.uiTemplate;

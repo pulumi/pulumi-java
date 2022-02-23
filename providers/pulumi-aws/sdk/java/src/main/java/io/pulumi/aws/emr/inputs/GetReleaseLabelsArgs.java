@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.aws.emr.inputs.GetReleaseLabelsFilters;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GetReleaseLabelsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable GetReleaseLabelsFilters filters;
+      private final @Nullable GetReleaseLabelsFilters filters;
 
     public Optional<GetReleaseLabelsFilters> getFilters() {
         return this.filters == null ? Optional.empty() : Optional.ofNullable(this.filters);

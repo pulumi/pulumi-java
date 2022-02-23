@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteMatchArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteRetryPolicyArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteTimeoutArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class RouteSpecGrpcRouteArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<RouteSpecGrpcRouteActionArgs> action;
+      private final Input<RouteSpecGrpcRouteActionArgs> action;
 
     public Input<RouteSpecGrpcRouteActionArgs> getAction() {
         return this.action;
@@ -33,7 +33,7 @@ public final class RouteSpecGrpcRouteArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="match")
-    private final @Nullable Input<RouteSpecGrpcRouteMatchArgs> match;
+      private final @Nullable Input<RouteSpecGrpcRouteMatchArgs> match;
 
     public Input<RouteSpecGrpcRouteMatchArgs> getMatch() {
         return this.match == null ? Input.empty() : this.match;
@@ -44,7 +44,7 @@ public final class RouteSpecGrpcRouteArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<RouteSpecGrpcRouteRetryPolicyArgs> retryPolicy;
+      private final @Nullable Input<RouteSpecGrpcRouteRetryPolicyArgs> retryPolicy;
 
     public Input<RouteSpecGrpcRouteRetryPolicyArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -55,7 +55,7 @@ public final class RouteSpecGrpcRouteArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<RouteSpecGrpcRouteTimeoutArgs> timeout;
+      private final @Nullable Input<RouteSpecGrpcRouteTimeoutArgs> timeout;
 
     public Input<RouteSpecGrpcRouteTimeoutArgs> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;

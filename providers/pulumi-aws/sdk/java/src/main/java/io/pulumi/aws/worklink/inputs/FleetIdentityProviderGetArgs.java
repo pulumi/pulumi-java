@@ -4,7 +4,7 @@
 package io.pulumi.aws.worklink.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class FleetIdentityProviderGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="samlMetadata", required=true)
-    private final Input<String> samlMetadata;
+      private final Input<String> samlMetadata;
 
     public Input<String> getSamlMetadata() {
         return this.samlMetadata;
@@ -29,7 +29,7 @@ public final class FleetIdentityProviderGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

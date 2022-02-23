@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -22,7 +22,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cacheDataEncrypted")
-    private final @Nullable Input<Boolean> cacheDataEncrypted;
+      private final @Nullable Input<Boolean> cacheDataEncrypted;
 
     public Input<Boolean> getCacheDataEncrypted() {
         return this.cacheDataEncrypted == null ? Input.empty() : this.cacheDataEncrypted;
@@ -33,7 +33,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cacheTtlInSeconds")
-    private final @Nullable Input<Integer> cacheTtlInSeconds;
+      private final @Nullable Input<Integer> cacheTtlInSeconds;
 
     public Input<Integer> getCacheTtlInSeconds() {
         return this.cacheTtlInSeconds == null ? Input.empty() : this.cacheTtlInSeconds;
@@ -44,7 +44,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cachingEnabled")
-    private final @Nullable Input<Boolean> cachingEnabled;
+      private final @Nullable Input<Boolean> cachingEnabled;
 
     public Input<Boolean> getCachingEnabled() {
         return this.cachingEnabled == null ? Input.empty() : this.cachingEnabled;
@@ -55,7 +55,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataTraceEnabled")
-    private final @Nullable Input<Boolean> dataTraceEnabled;
+      private final @Nullable Input<Boolean> dataTraceEnabled;
 
     public Input<Boolean> getDataTraceEnabled() {
         return this.dataTraceEnabled == null ? Input.empty() : this.dataTraceEnabled;
@@ -66,7 +66,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="loggingLevel")
-    private final @Nullable Input<String> loggingLevel;
+      private final @Nullable Input<String> loggingLevel;
 
     public Input<String> getLoggingLevel() {
         return this.loggingLevel == null ? Input.empty() : this.loggingLevel;
@@ -77,7 +77,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="metricsEnabled")
-    private final @Nullable Input<Boolean> metricsEnabled;
+      private final @Nullable Input<Boolean> metricsEnabled;
 
     public Input<Boolean> getMetricsEnabled() {
         return this.metricsEnabled == null ? Input.empty() : this.metricsEnabled;
@@ -88,7 +88,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="requireAuthorizationForCacheControl")
-    private final @Nullable Input<Boolean> requireAuthorizationForCacheControl;
+      private final @Nullable Input<Boolean> requireAuthorizationForCacheControl;
 
     public Input<Boolean> getRequireAuthorizationForCacheControl() {
         return this.requireAuthorizationForCacheControl == null ? Input.empty() : this.requireAuthorizationForCacheControl;
@@ -99,7 +99,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="throttlingBurstLimit")
-    private final @Nullable Input<Integer> throttlingBurstLimit;
+      private final @Nullable Input<Integer> throttlingBurstLimit;
 
     public Input<Integer> getThrottlingBurstLimit() {
         return this.throttlingBurstLimit == null ? Input.empty() : this.throttlingBurstLimit;
@@ -110,7 +110,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="throttlingRateLimit")
-    private final @Nullable Input<Double> throttlingRateLimit;
+      private final @Nullable Input<Double> throttlingRateLimit;
 
     public Input<Double> getThrottlingRateLimit() {
         return this.throttlingRateLimit == null ? Input.empty() : this.throttlingRateLimit;
@@ -121,7 +121,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="unauthorizedCacheControlHeaderStrategy")
-    private final @Nullable Input<String> unauthorizedCacheControlHeaderStrategy;
+      private final @Nullable Input<String> unauthorizedCacheControlHeaderStrategy;
 
     public Input<String> getUnauthorizedCacheControlHeaderStrategy() {
         return this.unauthorizedCacheControlHeaderStrategy == null ? Input.empty() : this.unauthorizedCacheControlHeaderStrategy;

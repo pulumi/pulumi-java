@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.enums.PlacementStrategy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="partitionCount")
-    private final @Nullable Input<Integer> partitionCount;
+      private final @Nullable Input<Integer> partitionCount;
 
     public Input<Integer> getPartitionCount() {
         return this.partitionCount == null ? Input.empty() : this.partitionCount;
@@ -58,7 +58,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="placementGroupId")
-    private final @Nullable Input<String> placementGroupId;
+      private final @Nullable Input<String> placementGroupId;
 
     public Input<String> getPlacementGroupId() {
         return this.placementGroupId == null ? Input.empty() : this.placementGroupId;
@@ -69,7 +69,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="strategy")
-    private final @Nullable Input<Either<String,PlacementStrategy>> strategy;
+      private final @Nullable Input<Either<String,PlacementStrategy>> strategy;
 
     public Input<Either<String,PlacementStrategy>> getStrategy() {
         return this.strategy == null ? Input.empty() : this.strategy;
@@ -80,7 +80,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -91,7 +91,7 @@ public final class PlacementGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

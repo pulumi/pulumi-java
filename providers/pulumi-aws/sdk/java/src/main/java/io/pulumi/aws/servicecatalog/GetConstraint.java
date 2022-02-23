@@ -6,7 +6,7 @@ package io.pulumi.aws.servicecatalog;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.inputs.GetConstraintArgs;
 import io.pulumi.aws.servicecatalog.outputs.GetConstraintResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

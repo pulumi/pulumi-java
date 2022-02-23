@@ -18,8 +18,8 @@ import io.pulumi.aws.cloudfront.outputs.DistributionTrustedSigner;
 import io.pulumi.aws.cloudfront.outputs.DistributionViewerCertificate;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -546,6 +546,21 @@ public class Distribution extends io.pulumi.resources.CustomResource {
         return this.webAclId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Distribution(String name) {
+        this(name, DistributionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Distribution(String name, DistributionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

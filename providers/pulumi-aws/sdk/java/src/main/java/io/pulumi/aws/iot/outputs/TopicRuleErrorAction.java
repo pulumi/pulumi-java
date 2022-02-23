@@ -18,7 +18,7 @@ import io.pulumi.aws.iot.outputs.TopicRuleErrorActionS3;
 import io.pulumi.aws.iot.outputs.TopicRuleErrorActionSns;
 import io.pulumi.aws.iot.outputs.TopicRuleErrorActionSqs;
 import io.pulumi.aws.iot.outputs.TopicRuleErrorActionStepFunctions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

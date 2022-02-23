@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.enums.ProtocolType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cidrBlocks")
-    private final @Nullable Input<List<String>> cidrBlocks;
+      private final @Nullable Input<List<String>> cidrBlocks;
 
     public Input<List<String>> getCidrBlocks() {
         return this.cidrBlocks == null ? Input.empty() : this.cidrBlocks;
@@ -35,7 +35,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fromPort")
-    private final @Nullable Input<Integer> fromPort;
+      private final @Nullable Input<Integer> fromPort;
 
     public Input<Integer> getFromPort() {
         return this.fromPort == null ? Input.empty() : this.fromPort;
@@ -57,7 +57,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ipv6CidrBlocks")
-    private final @Nullable Input<List<String>> ipv6CidrBlocks;
+      private final @Nullable Input<List<String>> ipv6CidrBlocks;
 
     public Input<List<String>> getIpv6CidrBlocks() {
         return this.ipv6CidrBlocks == null ? Input.empty() : this.ipv6CidrBlocks;
@@ -68,7 +68,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="prefixListIds")
-    private final @Nullable Input<List<String>> prefixListIds;
+      private final @Nullable Input<List<String>> prefixListIds;
 
     public Input<List<String>> getPrefixListIds() {
         return this.prefixListIds == null ? Input.empty() : this.prefixListIds;
@@ -79,7 +79,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<Either<String,ProtocolType>> protocol;
+      private final @Nullable Input<Either<String,ProtocolType>> protocol;
 
     public Input<Either<String,ProtocolType>> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -90,7 +90,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="securityGroupId")
-    private final @Nullable Input<String> securityGroupId;
+      private final @Nullable Input<String> securityGroupId;
 
     public Input<String> getSecurityGroupId() {
         return this.securityGroupId == null ? Input.empty() : this.securityGroupId;
@@ -101,7 +101,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="self")
-    private final @Nullable Input<Boolean> self;
+      private final @Nullable Input<Boolean> self;
 
     public Input<Boolean> getSelf() {
         return this.self == null ? Input.empty() : this.self;
@@ -112,7 +112,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceSecurityGroupId")
-    private final @Nullable Input<String> sourceSecurityGroupId;
+      private final @Nullable Input<String> sourceSecurityGroupId;
 
     public Input<String> getSourceSecurityGroupId() {
         return this.sourceSecurityGroupId == null ? Input.empty() : this.sourceSecurityGroupId;
@@ -123,7 +123,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="toPort")
-    private final @Nullable Input<Integer> toPort;
+      private final @Nullable Input<Integer> toPort;
 
     public Input<Integer> getToPort() {
         return this.toPort == null ? Input.empty() : this.toPort;
@@ -135,7 +135,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

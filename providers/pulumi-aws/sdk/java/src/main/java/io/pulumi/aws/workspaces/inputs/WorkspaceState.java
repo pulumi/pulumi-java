@@ -5,7 +5,7 @@ package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.aws.workspaces.inputs.WorkspaceWorkspacePropertiesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId")
-    private final @Nullable Input<String> bundleId;
+      private final @Nullable Input<String> bundleId;
 
     public Input<String> getBundleId() {
         return this.bundleId == null ? Input.empty() : this.bundleId;
@@ -33,7 +33,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computerName")
-    private final @Nullable Input<String> computerName;
+      private final @Nullable Input<String> computerName;
 
     public Input<String> getComputerName() {
         return this.computerName == null ? Input.empty() : this.computerName;
@@ -44,7 +44,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryId")
-    private final @Nullable Input<String> directoryId;
+      private final @Nullable Input<String> directoryId;
 
     public Input<String> getDirectoryId() {
         return this.directoryId == null ? Input.empty() : this.directoryId;
@@ -55,7 +55,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -66,7 +66,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootVolumeEncryptionEnabled")
-    private final @Nullable Input<Boolean> rootVolumeEncryptionEnabled;
+      private final @Nullable Input<Boolean> rootVolumeEncryptionEnabled;
 
     public Input<Boolean> getRootVolumeEncryptionEnabled() {
         return this.rootVolumeEncryptionEnabled == null ? Input.empty() : this.rootVolumeEncryptionEnabled;
@@ -77,7 +77,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -88,7 +88,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -99,7 +99,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -110,7 +110,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -121,7 +121,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userVolumeEncryptionEnabled")
-    private final @Nullable Input<Boolean> userVolumeEncryptionEnabled;
+      private final @Nullable Input<Boolean> userVolumeEncryptionEnabled;
 
     public Input<Boolean> getUserVolumeEncryptionEnabled() {
         return this.userVolumeEncryptionEnabled == null ? Input.empty() : this.userVolumeEncryptionEnabled;
@@ -132,7 +132,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeEncryptionKey")
-    private final @Nullable Input<String> volumeEncryptionKey;
+      private final @Nullable Input<String> volumeEncryptionKey;
 
     public Input<String> getVolumeEncryptionKey() {
         return this.volumeEncryptionKey == null ? Input.empty() : this.volumeEncryptionKey;
@@ -143,7 +143,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceProperties")
-    private final @Nullable Input<WorkspaceWorkspacePropertiesGetArgs> workspaceProperties;
+      private final @Nullable Input<WorkspaceWorkspacePropertiesGetArgs> workspaceProperties;
 
     public Input<WorkspaceWorkspacePropertiesGetArgs> getWorkspaceProperties() {
         return this.workspaceProperties == null ? Input.empty() : this.workspaceProperties;

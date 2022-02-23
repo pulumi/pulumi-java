@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UploadBufferState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskId")
-    private final @Nullable Input<String> diskId;
+      private final @Nullable Input<String> diskId;
 
     public Input<String> getDiskId() {
         return this.diskId == null ? Input.empty() : this.diskId;
@@ -30,7 +30,7 @@ public final class UploadBufferState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskPath")
-    private final @Nullable Input<String> diskPath;
+      private final @Nullable Input<String> diskPath;
 
     public Input<String> getDiskPath() {
         return this.diskPath == null ? Input.empty() : this.diskPath;
@@ -41,7 +41,7 @@ public final class UploadBufferState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayArn")
-    private final @Nullable Input<String> gatewayArn;
+      private final @Nullable Input<String> gatewayArn;
 
     public Input<String> getGatewayArn() {
         return this.gatewayArn == null ? Input.empty() : this.gatewayArn;

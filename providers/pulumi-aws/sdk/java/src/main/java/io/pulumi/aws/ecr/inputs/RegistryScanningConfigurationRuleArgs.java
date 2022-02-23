@@ -5,7 +5,7 @@ package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleRepositoryFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RegistryScanningConfigurationRuleArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="repositoryFilters", required=true)
-    private final Input<List<RegistryScanningConfigurationRuleRepositoryFilterArgs>> repositoryFilters;
+      private final Input<List<RegistryScanningConfigurationRuleRepositoryFilterArgs>> repositoryFilters;
 
     public Input<List<RegistryScanningConfigurationRuleRepositoryFilterArgs>> getRepositoryFilters() {
         return this.repositoryFilters;
@@ -31,7 +31,7 @@ public final class RegistryScanningConfigurationRuleArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="scanFrequency", required=true)
-    private final Input<String> scanFrequency;
+      private final Input<String> scanFrequency;
 
     public Input<String> getScanFrequency() {
         return this.scanFrequency;

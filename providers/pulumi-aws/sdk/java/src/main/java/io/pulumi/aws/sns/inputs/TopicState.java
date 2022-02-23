@@ -4,7 +4,7 @@
 package io.pulumi.aws.sns.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationFailureFeedbackRoleArn")
-    private final @Nullable Input<String> applicationFailureFeedbackRoleArn;
+      private final @Nullable Input<String> applicationFailureFeedbackRoleArn;
 
     public Input<String> getApplicationFailureFeedbackRoleArn() {
         return this.applicationFailureFeedbackRoleArn == null ? Input.empty() : this.applicationFailureFeedbackRoleArn;
@@ -33,7 +33,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationSuccessFeedbackRoleArn")
-    private final @Nullable Input<String> applicationSuccessFeedbackRoleArn;
+      private final @Nullable Input<String> applicationSuccessFeedbackRoleArn;
 
     public Input<String> getApplicationSuccessFeedbackRoleArn() {
         return this.applicationSuccessFeedbackRoleArn == null ? Input.empty() : this.applicationSuccessFeedbackRoleArn;
@@ -44,7 +44,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationSuccessFeedbackSampleRate")
-    private final @Nullable Input<Integer> applicationSuccessFeedbackSampleRate;
+      private final @Nullable Input<Integer> applicationSuccessFeedbackSampleRate;
 
     public Input<Integer> getApplicationSuccessFeedbackSampleRate() {
         return this.applicationSuccessFeedbackSampleRate == null ? Input.empty() : this.applicationSuccessFeedbackSampleRate;
@@ -55,7 +55,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -66,7 +66,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentBasedDeduplication")
-    private final @Nullable Input<Boolean> contentBasedDeduplication;
+      private final @Nullable Input<Boolean> contentBasedDeduplication;
 
     public Input<Boolean> getContentBasedDeduplication() {
         return this.contentBasedDeduplication == null ? Input.empty() : this.contentBasedDeduplication;
@@ -77,7 +77,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryPolicy")
-    private final @Nullable Input<String> deliveryPolicy;
+      private final @Nullable Input<String> deliveryPolicy;
 
     public Input<String> getDeliveryPolicy() {
         return this.deliveryPolicy == null ? Input.empty() : this.deliveryPolicy;
@@ -88,7 +88,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -99,7 +99,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fifoTopic")
-    private final @Nullable Input<Boolean> fifoTopic;
+      private final @Nullable Input<Boolean> fifoTopic;
 
     public Input<Boolean> getFifoTopic() {
         return this.fifoTopic == null ? Input.empty() : this.fifoTopic;
@@ -110,7 +110,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firehoseFailureFeedbackRoleArn")
-    private final @Nullable Input<String> firehoseFailureFeedbackRoleArn;
+      private final @Nullable Input<String> firehoseFailureFeedbackRoleArn;
 
     public Input<String> getFirehoseFailureFeedbackRoleArn() {
         return this.firehoseFailureFeedbackRoleArn == null ? Input.empty() : this.firehoseFailureFeedbackRoleArn;
@@ -121,7 +121,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firehoseSuccessFeedbackRoleArn")
-    private final @Nullable Input<String> firehoseSuccessFeedbackRoleArn;
+      private final @Nullable Input<String> firehoseSuccessFeedbackRoleArn;
 
     public Input<String> getFirehoseSuccessFeedbackRoleArn() {
         return this.firehoseSuccessFeedbackRoleArn == null ? Input.empty() : this.firehoseSuccessFeedbackRoleArn;
@@ -132,7 +132,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firehoseSuccessFeedbackSampleRate")
-    private final @Nullable Input<Integer> firehoseSuccessFeedbackSampleRate;
+      private final @Nullable Input<Integer> firehoseSuccessFeedbackSampleRate;
 
     public Input<Integer> getFirehoseSuccessFeedbackSampleRate() {
         return this.firehoseSuccessFeedbackSampleRate == null ? Input.empty() : this.firehoseSuccessFeedbackSampleRate;
@@ -143,7 +143,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpFailureFeedbackRoleArn")
-    private final @Nullable Input<String> httpFailureFeedbackRoleArn;
+      private final @Nullable Input<String> httpFailureFeedbackRoleArn;
 
     public Input<String> getHttpFailureFeedbackRoleArn() {
         return this.httpFailureFeedbackRoleArn == null ? Input.empty() : this.httpFailureFeedbackRoleArn;
@@ -154,7 +154,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpSuccessFeedbackRoleArn")
-    private final @Nullable Input<String> httpSuccessFeedbackRoleArn;
+      private final @Nullable Input<String> httpSuccessFeedbackRoleArn;
 
     public Input<String> getHttpSuccessFeedbackRoleArn() {
         return this.httpSuccessFeedbackRoleArn == null ? Input.empty() : this.httpSuccessFeedbackRoleArn;
@@ -165,7 +165,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpSuccessFeedbackSampleRate")
-    private final @Nullable Input<Integer> httpSuccessFeedbackSampleRate;
+      private final @Nullable Input<Integer> httpSuccessFeedbackSampleRate;
 
     public Input<Integer> getHttpSuccessFeedbackSampleRate() {
         return this.httpSuccessFeedbackSampleRate == null ? Input.empty() : this.httpSuccessFeedbackSampleRate;
@@ -176,7 +176,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsMasterKeyId")
-    private final @Nullable Input<String> kmsMasterKeyId;
+      private final @Nullable Input<String> kmsMasterKeyId;
 
     public Input<String> getKmsMasterKeyId() {
         return this.kmsMasterKeyId == null ? Input.empty() : this.kmsMasterKeyId;
@@ -187,7 +187,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lambdaFailureFeedbackRoleArn")
-    private final @Nullable Input<String> lambdaFailureFeedbackRoleArn;
+      private final @Nullable Input<String> lambdaFailureFeedbackRoleArn;
 
     public Input<String> getLambdaFailureFeedbackRoleArn() {
         return this.lambdaFailureFeedbackRoleArn == null ? Input.empty() : this.lambdaFailureFeedbackRoleArn;
@@ -198,7 +198,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lambdaSuccessFeedbackRoleArn")
-    private final @Nullable Input<String> lambdaSuccessFeedbackRoleArn;
+      private final @Nullable Input<String> lambdaSuccessFeedbackRoleArn;
 
     public Input<String> getLambdaSuccessFeedbackRoleArn() {
         return this.lambdaSuccessFeedbackRoleArn == null ? Input.empty() : this.lambdaSuccessFeedbackRoleArn;
@@ -209,7 +209,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lambdaSuccessFeedbackSampleRate")
-    private final @Nullable Input<Integer> lambdaSuccessFeedbackSampleRate;
+      private final @Nullable Input<Integer> lambdaSuccessFeedbackSampleRate;
 
     public Input<Integer> getLambdaSuccessFeedbackSampleRate() {
         return this.lambdaSuccessFeedbackSampleRate == null ? Input.empty() : this.lambdaSuccessFeedbackSampleRate;
@@ -220,7 +220,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -231,7 +231,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -242,7 +242,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable Input<String> owner;
+      private final @Nullable Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -253,7 +253,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -264,7 +264,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqsFailureFeedbackRoleArn")
-    private final @Nullable Input<String> sqsFailureFeedbackRoleArn;
+      private final @Nullable Input<String> sqsFailureFeedbackRoleArn;
 
     public Input<String> getSqsFailureFeedbackRoleArn() {
         return this.sqsFailureFeedbackRoleArn == null ? Input.empty() : this.sqsFailureFeedbackRoleArn;
@@ -275,7 +275,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqsSuccessFeedbackRoleArn")
-    private final @Nullable Input<String> sqsSuccessFeedbackRoleArn;
+      private final @Nullable Input<String> sqsSuccessFeedbackRoleArn;
 
     public Input<String> getSqsSuccessFeedbackRoleArn() {
         return this.sqsSuccessFeedbackRoleArn == null ? Input.empty() : this.sqsSuccessFeedbackRoleArn;
@@ -286,7 +286,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqsSuccessFeedbackSampleRate")
-    private final @Nullable Input<Integer> sqsSuccessFeedbackSampleRate;
+      private final @Nullable Input<Integer> sqsSuccessFeedbackSampleRate;
 
     public Input<Integer> getSqsSuccessFeedbackSampleRate() {
         return this.sqsSuccessFeedbackSampleRate == null ? Input.empty() : this.sqsSuccessFeedbackSampleRate;
@@ -297,7 +297,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -308,7 +308,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

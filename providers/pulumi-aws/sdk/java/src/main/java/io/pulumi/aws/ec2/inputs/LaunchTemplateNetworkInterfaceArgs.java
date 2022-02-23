@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="associateCarrierIpAddress")
-    private final @Nullable Input<String> associateCarrierIpAddress;
+      private final @Nullable Input<String> associateCarrierIpAddress;
 
     public Input<String> getAssociateCarrierIpAddress() {
         return this.associateCarrierIpAddress == null ? Input.empty() : this.associateCarrierIpAddress;
@@ -32,7 +32,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="associatePublicIpAddress")
-    private final @Nullable Input<String> associatePublicIpAddress;
+      private final @Nullable Input<String> associatePublicIpAddress;
 
     public Input<String> getAssociatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Input.empty() : this.associatePublicIpAddress;
@@ -43,7 +43,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="deleteOnTermination")
-    private final @Nullable Input<String> deleteOnTermination;
+      private final @Nullable Input<String> deleteOnTermination;
 
     public Input<String> getDeleteOnTermination() {
         return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
@@ -54,7 +54,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -65,7 +65,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="deviceIndex")
-    private final @Nullable Input<Integer> deviceIndex;
+      private final @Nullable Input<Integer> deviceIndex;
 
     public Input<Integer> getDeviceIndex() {
         return this.deviceIndex == null ? Input.empty() : this.deviceIndex;
@@ -76,7 +76,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="interfaceType")
-    private final @Nullable Input<String> interfaceType;
+      private final @Nullable Input<String> interfaceType;
 
     public Input<String> getInterfaceType() {
         return this.interfaceType == null ? Input.empty() : this.interfaceType;
@@ -87,7 +87,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipv4AddressCount")
-    private final @Nullable Input<Integer> ipv4AddressCount;
+      private final @Nullable Input<Integer> ipv4AddressCount;
 
     public Input<Integer> getIpv4AddressCount() {
         return this.ipv4AddressCount == null ? Input.empty() : this.ipv4AddressCount;
@@ -98,7 +98,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipv4Addresses")
-    private final @Nullable Input<List<String>> ipv4Addresses;
+      private final @Nullable Input<List<String>> ipv4Addresses;
 
     public Input<List<String>> getIpv4Addresses() {
         return this.ipv4Addresses == null ? Input.empty() : this.ipv4Addresses;
@@ -109,7 +109,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipv6AddressCount")
-    private final @Nullable Input<Integer> ipv6AddressCount;
+      private final @Nullable Input<Integer> ipv6AddressCount;
 
     public Input<Integer> getIpv6AddressCount() {
         return this.ipv6AddressCount == null ? Input.empty() : this.ipv6AddressCount;
@@ -120,7 +120,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipv6Addresses")
-    private final @Nullable Input<List<String>> ipv6Addresses;
+      private final @Nullable Input<List<String>> ipv6Addresses;
 
     public Input<List<String>> getIpv6Addresses() {
         return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
@@ -131,7 +131,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="networkCardIndex")
-    private final @Nullable Input<Integer> networkCardIndex;
+      private final @Nullable Input<Integer> networkCardIndex;
 
     public Input<Integer> getNetworkCardIndex() {
         return this.networkCardIndex == null ? Input.empty() : this.networkCardIndex;
@@ -142,7 +142,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="networkInterfaceId")
-    private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
@@ -153,7 +153,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Input<String> privateIpAddress;
 
     public Input<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
@@ -164,7 +164,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -175,7 +175,7 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;

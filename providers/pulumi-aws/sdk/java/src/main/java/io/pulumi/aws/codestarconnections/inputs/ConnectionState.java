@@ -4,7 +4,7 @@
 package io.pulumi.aws.codestarconnections.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionStatus")
-    private final @Nullable Input<String> connectionStatus;
+      private final @Nullable Input<String> connectionStatus;
 
     public Input<String> getConnectionStatus() {
         return this.connectionStatus == null ? Input.empty() : this.connectionStatus;
@@ -42,7 +42,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostArn")
-    private final @Nullable Input<String> hostArn;
+      private final @Nullable Input<String> hostArn;
 
     public Input<String> getHostArn() {
         return this.hostArn == null ? Input.empty() : this.hostArn;
@@ -53,7 +53,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -64,7 +64,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerType")
-    private final @Nullable Input<String> providerType;
+      private final @Nullable Input<String> providerType;
 
     public Input<String> getProviderType() {
         return this.providerType == null ? Input.empty() : this.providerType;
@@ -75,7 +75,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -86,7 +86,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

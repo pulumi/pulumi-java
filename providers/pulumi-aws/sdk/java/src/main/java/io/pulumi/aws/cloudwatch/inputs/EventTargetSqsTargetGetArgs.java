@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EventTargetSqsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageGroupId")
-    private final @Nullable Input<String> messageGroupId;
+      private final @Nullable Input<String> messageGroupId;
 
     public Input<String> getMessageGroupId() {
         return this.messageGroupId == null ? Input.empty() : this.messageGroupId;

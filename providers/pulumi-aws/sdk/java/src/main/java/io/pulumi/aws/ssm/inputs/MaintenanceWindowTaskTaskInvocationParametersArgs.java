@@ -8,7 +8,7 @@ import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersLam
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersArgs extends io.
      * 
      */
     @InputImport(name="automationParameters")
-    private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs> automationParameters;
+      private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs> automationParameters;
 
     public Input<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs> getAutomationParameters() {
         return this.automationParameters == null ? Input.empty() : this.automationParameters;
@@ -33,7 +33,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersArgs extends io.
      * 
      */
     @InputImport(name="lambdaParameters")
-    private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs> lambdaParameters;
+      private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs> lambdaParameters;
 
     public Input<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersArgs> getLambdaParameters() {
         return this.lambdaParameters == null ? Input.empty() : this.lambdaParameters;
@@ -44,7 +44,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersArgs extends io.
      * 
      */
     @InputImport(name="runCommandParameters")
-    private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs> runCommandParameters;
+      private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs> runCommandParameters;
 
     public Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs> getRunCommandParameters() {
         return this.runCommandParameters == null ? Input.empty() : this.runCommandParameters;
@@ -55,7 +55,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersArgs extends io.
      * 
      */
     @InputImport(name="stepFunctionsParameters")
-    private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs> stepFunctionsParameters;
+      private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs> stepFunctionsParameters;
 
     public Input<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs> getStepFunctionsParameters() {
         return this.stepFunctionsParameters == null ? Input.empty() : this.stepFunctionsParameters;

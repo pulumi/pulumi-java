@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkInterfaceId", required=true)
-    private final Input<String> networkInterfaceId;
+      private final Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;
@@ -43,7 +43,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="packetLength")
-    private final @Nullable Input<Integer> packetLength;
+      private final @Nullable Input<Integer> packetLength;
 
     public Input<Integer> getPacketLength() {
         return this.packetLength == null ? Input.empty() : this.packetLength;
@@ -54,7 +54,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sessionNumber", required=true)
-    private final Input<Integer> sessionNumber;
+      private final Input<Integer> sessionNumber;
 
     public Input<Integer> getSessionNumber() {
         return this.sessionNumber;
@@ -65,7 +65,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -76,7 +76,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="trafficMirrorFilterId", required=true)
-    private final Input<String> trafficMirrorFilterId;
+      private final Input<String> trafficMirrorFilterId;
 
     public Input<String> getTrafficMirrorFilterId() {
         return this.trafficMirrorFilterId;
@@ -87,7 +87,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="trafficMirrorTargetId", required=true)
-    private final Input<String> trafficMirrorTargetId;
+      private final Input<String> trafficMirrorTargetId;
 
     public Input<String> getTrafficMirrorTargetId() {
         return this.trafficMirrorTargetId;
@@ -98,7 +98,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="virtualNetworkId")
-    private final @Nullable Input<Integer> virtualNetworkId;
+      private final @Nullable Input<Integer> virtualNetworkId;
 
     public Input<Integer> getVirtualNetworkId() {
         return this.virtualNetworkId == null ? Input.empty() : this.virtualNetworkId;

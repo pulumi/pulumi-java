@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -31,7 +31,7 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="identityPoolId", required=true)
-    private final Input<String> identityPoolId;
+      private final Input<String> identityPoolId;
 
     public Input<String> getIdentityPoolId() {
         return this.identityPoolId;
@@ -42,7 +42,7 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -53,7 +53,7 @@ public final class DomainCognitoOptionsGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userPoolId", required=true)
-    private final Input<String> userPoolId;
+      private final Input<String> userPoolId;
 
     public Input<String> getUserPoolId() {
         return this.userPoolId;

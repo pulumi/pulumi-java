@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BrokerConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -31,7 +31,7 @@ public final class BrokerConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<Integer> revision;
+      private final @Nullable Input<Integer> revision;
 
     public Input<Integer> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;

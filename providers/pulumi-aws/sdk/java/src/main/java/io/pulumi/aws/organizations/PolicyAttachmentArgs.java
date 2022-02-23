@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyId", required=true)
-    private final Input<String> policyId;
+      private final Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId;
@@ -29,7 +29,7 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetId", required=true)
-    private final Input<String> targetId;
+      private final Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationDistributionAmiDistributionConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetDistributionConfigurationDistribution extends io.pulumi.re
      * 
      */
     @InputImport(name="amiDistributionConfigurations", required=true)
-    private final List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations;
+      private final List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations;
 
     public List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> getAmiDistributionConfigurations() {
         return this.amiDistributionConfigurations;
@@ -30,7 +30,7 @@ public final class GetDistributionConfigurationDistribution extends io.pulumi.re
      * 
      */
     @InputImport(name="licenseConfigurationArns", required=true)
-    private final List<String> licenseConfigurationArns;
+      private final List<String> licenseConfigurationArns;
 
     public List<String> getLicenseConfigurationArns() {
         return this.licenseConfigurationArns;
@@ -41,7 +41,7 @@ public final class GetDistributionConfigurationDistribution extends io.pulumi.re
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;

@@ -10,8 +10,8 @@ import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurat
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationCloudwatchLoggingOptions;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -248,6 +248,21 @@ public class Application extends io.pulumi.resources.CustomResource {
         return this.versionId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Application(String name) {
+        this(name, ApplicationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Application(String name, ApplicationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

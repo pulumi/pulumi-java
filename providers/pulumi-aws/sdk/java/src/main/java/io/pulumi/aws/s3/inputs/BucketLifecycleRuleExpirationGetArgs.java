@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class BucketLifecycleRuleExpirationGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="date")
-    private final @Nullable Input<String> date;
+      private final @Nullable Input<String> date;
 
     public Input<String> getDate() {
         return this.date == null ? Input.empty() : this.date;
@@ -32,7 +32,7 @@ public final class BucketLifecycleRuleExpirationGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="days")
-    private final @Nullable Input<Integer> days;
+      private final @Nullable Input<Integer> days;
 
     public Input<Integer> getDays() {
         return this.days == null ? Input.empty() : this.days;
@@ -43,7 +43,7 @@ public final class BucketLifecycleRuleExpirationGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="expiredObjectDeleteMarker")
-    private final @Nullable Input<Boolean> expiredObjectDeleteMarker;
+      private final @Nullable Input<Boolean> expiredObjectDeleteMarker;
 
     public Input<Boolean> getExpiredObjectDeleteMarker() {
         return this.expiredObjectDeleteMarker == null ? Input.empty() : this.expiredObjectDeleteMarker;

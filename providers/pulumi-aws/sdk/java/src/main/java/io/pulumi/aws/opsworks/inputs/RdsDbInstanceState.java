@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbPassword")
-    private final @Nullable Input<String> dbPassword;
+      private final @Nullable Input<String> dbPassword;
 
     public Input<String> getDbPassword() {
         return this.dbPassword == null ? Input.empty() : this.dbPassword;
@@ -30,7 +30,7 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbUser")
-    private final @Nullable Input<String> dbUser;
+      private final @Nullable Input<String> dbUser;
 
     public Input<String> getDbUser() {
         return this.dbUser == null ? Input.empty() : this.dbUser;
@@ -41,7 +41,7 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rdsDbInstanceArn")
-    private final @Nullable Input<String> rdsDbInstanceArn;
+      private final @Nullable Input<String> rdsDbInstanceArn;
 
     public Input<String> getRdsDbInstanceArn() {
         return this.rdsDbInstanceArn == null ? Input.empty() : this.rdsDbInstanceArn;
@@ -52,7 +52,7 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackId")
-    private final @Nullable Input<String> stackId;
+      private final @Nullable Input<String> stackId;
 
     public Input<String> getStackId() {
         return this.stackId == null ? Input.empty() : this.stackId;

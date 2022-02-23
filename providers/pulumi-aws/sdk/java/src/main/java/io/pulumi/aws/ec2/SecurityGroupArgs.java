@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.SecurityGroupEgressArgs;
 import io.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egress")
-    private final @Nullable Input<List<SecurityGroupEgressArgs>> egress;
+      private final @Nullable Input<List<SecurityGroupEgressArgs>> egress;
 
     public Input<List<SecurityGroupEgressArgs>> getEgress() {
         return this.egress == null ? Input.empty() : this.egress;
@@ -46,7 +46,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingress")
-    private final @Nullable Input<List<SecurityGroupIngressArgs>> ingress;
+      private final @Nullable Input<List<SecurityGroupIngressArgs>> ingress;
 
     public Input<List<SecurityGroupIngressArgs>> getIngress() {
         return this.ingress == null ? Input.empty() : this.ingress;
@@ -57,7 +57,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -68,7 +68,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -79,7 +79,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revokeRulesOnDelete")
-    private final @Nullable Input<Boolean> revokeRulesOnDelete;
+      private final @Nullable Input<Boolean> revokeRulesOnDelete;
 
     public Input<Boolean> getRevokeRulesOnDelete() {
         return this.revokeRulesOnDelete == null ? Input.empty() : this.revokeRulesOnDelete;
@@ -90,7 +90,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -101,7 +101,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

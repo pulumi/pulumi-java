@@ -7,7 +7,7 @@ import io.pulumi.aws.codebuild.inputs.ProjectSourceAuthArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectSourceBuildStatusConfigArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectSourceGitSubmodulesConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @InputImport(name="auth")
-    private final @Nullable Input<ProjectSourceAuthArgs> auth;
+      private final @Nullable Input<ProjectSourceAuthArgs> auth;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Input<ProjectSourceAuthArgs> getAuth() {
@@ -40,7 +40,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildStatusConfig")
-    private final @Nullable Input<ProjectSourceBuildStatusConfigArgs> buildStatusConfig;
+      private final @Nullable Input<ProjectSourceBuildStatusConfigArgs> buildStatusConfig;
 
     public Input<ProjectSourceBuildStatusConfigArgs> getBuildStatusConfig() {
         return this.buildStatusConfig == null ? Input.empty() : this.buildStatusConfig;
@@ -51,7 +51,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildspec")
-    private final @Nullable Input<String> buildspec;
+      private final @Nullable Input<String> buildspec;
 
     public Input<String> getBuildspec() {
         return this.buildspec == null ? Input.empty() : this.buildspec;
@@ -62,7 +62,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gitCloneDepth")
-    private final @Nullable Input<Integer> gitCloneDepth;
+      private final @Nullable Input<Integer> gitCloneDepth;
 
     public Input<Integer> getGitCloneDepth() {
         return this.gitCloneDepth == null ? Input.empty() : this.gitCloneDepth;
@@ -73,7 +73,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gitSubmodulesConfig")
-    private final @Nullable Input<ProjectSourceGitSubmodulesConfigArgs> gitSubmodulesConfig;
+      private final @Nullable Input<ProjectSourceGitSubmodulesConfigArgs> gitSubmodulesConfig;
 
     public Input<ProjectSourceGitSubmodulesConfigArgs> getGitSubmodulesConfig() {
         return this.gitSubmodulesConfig == null ? Input.empty() : this.gitSubmodulesConfig;
@@ -84,7 +84,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insecureSsl")
-    private final @Nullable Input<Boolean> insecureSsl;
+      private final @Nullable Input<Boolean> insecureSsl;
 
     public Input<Boolean> getInsecureSsl() {
         return this.insecureSsl == null ? Input.empty() : this.insecureSsl;
@@ -95,7 +95,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -106,7 +106,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportBuildStatus")
-    private final @Nullable Input<Boolean> reportBuildStatus;
+      private final @Nullable Input<Boolean> reportBuildStatus;
 
     public Input<Boolean> getReportBuildStatus() {
         return this.reportBuildStatus == null ? Input.empty() : this.reportBuildStatus;
@@ -117,7 +117,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

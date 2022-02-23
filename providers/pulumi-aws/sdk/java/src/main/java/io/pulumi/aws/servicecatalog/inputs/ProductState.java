@@ -5,7 +5,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.aws.servicecatalog.inputs.ProductProvisioningArtifactParametersGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Input<String> acceptLanguage;
 
     public Input<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
@@ -33,7 +33,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -44,7 +44,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+      private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
@@ -55,7 +55,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -66,7 +66,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributor")
-    private final @Nullable Input<String> distributor;
+      private final @Nullable Input<String> distributor;
 
     public Input<String> getDistributor() {
         return this.distributor == null ? Input.empty() : this.distributor;
@@ -77,7 +77,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasDefaultPath")
-    private final @Nullable Input<Boolean> hasDefaultPath;
+      private final @Nullable Input<Boolean> hasDefaultPath;
 
     public Input<Boolean> getHasDefaultPath() {
         return this.hasDefaultPath == null ? Input.empty() : this.hasDefaultPath;
@@ -88,7 +88,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -99,7 +99,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable Input<String> owner;
+      private final @Nullable Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -110,7 +110,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningArtifactParameters")
-    private final @Nullable Input<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
+      private final @Nullable Input<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
 
     public Input<ProductProvisioningArtifactParametersGetArgs> getProvisioningArtifactParameters() {
         return this.provisioningArtifactParameters == null ? Input.empty() : this.provisioningArtifactParameters;
@@ -121,7 +121,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -132,7 +132,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportDescription")
-    private final @Nullable Input<String> supportDescription;
+      private final @Nullable Input<String> supportDescription;
 
     public Input<String> getSupportDescription() {
         return this.supportDescription == null ? Input.empty() : this.supportDescription;
@@ -143,7 +143,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportEmail")
-    private final @Nullable Input<String> supportEmail;
+      private final @Nullable Input<String> supportEmail;
 
     public Input<String> getSupportEmail() {
         return this.supportEmail == null ? Input.empty() : this.supportEmail;
@@ -154,7 +154,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportUrl")
-    private final @Nullable Input<String> supportUrl;
+      private final @Nullable Input<String> supportUrl;
 
     public Input<String> getSupportUrl() {
         return this.supportUrl == null ? Input.empty() : this.supportUrl;
@@ -165,7 +165,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -176,7 +176,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -187,7 +187,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

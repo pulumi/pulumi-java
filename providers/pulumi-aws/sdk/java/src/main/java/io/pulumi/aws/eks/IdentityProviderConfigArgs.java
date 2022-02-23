@@ -5,7 +5,7 @@ package io.pulumi.aws.eks;
 
 import io.pulumi.aws.eks.inputs.IdentityProviderConfigOidcArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -32,7 +32,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="oidc", required=true)
-    private final Input<IdentityProviderConfigOidcArgs> oidc;
+      private final Input<IdentityProviderConfigOidcArgs> oidc;
 
     public Input<IdentityProviderConfigOidcArgs> getOidc() {
         return this.oidc;
@@ -43,7 +43,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

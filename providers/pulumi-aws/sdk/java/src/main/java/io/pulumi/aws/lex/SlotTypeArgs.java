@@ -5,7 +5,7 @@ package io.pulumi.aws.lex;
 
 import io.pulumi.aws.lex.inputs.SlotTypeEnumerationValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createVersion")
-    private final @Nullable Input<Boolean> createVersion;
+      private final @Nullable Input<Boolean> createVersion;
 
     public Input<Boolean> getCreateVersion() {
         return this.createVersion == null ? Input.empty() : this.createVersion;
@@ -34,7 +34,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enumerationValues", required=true)
-    private final Input<List<SlotTypeEnumerationValueArgs>> enumerationValues;
+      private final Input<List<SlotTypeEnumerationValueArgs>> enumerationValues;
 
     public Input<List<SlotTypeEnumerationValueArgs>> getEnumerationValues() {
         return this.enumerationValues;
@@ -59,7 +59,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -73,7 +73,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="valueSelectionStrategy")
-    private final @Nullable Input<String> valueSelectionStrategy;
+      private final @Nullable Input<String> valueSelectionStrategy;
 
     public Input<String> getValueSelectionStrategy() {
         return this.valueSelectionStrategy == null ? Input.empty() : this.valueSelectionStrategy;

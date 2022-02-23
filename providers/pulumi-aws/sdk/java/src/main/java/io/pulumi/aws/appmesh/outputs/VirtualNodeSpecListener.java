@@ -9,7 +9,7 @@ import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerOutlierDetection;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerPortMapping;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeout;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTls;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

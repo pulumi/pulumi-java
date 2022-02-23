@@ -6,7 +6,7 @@ package io.pulumi.aws.apigateway;
 import io.pulumi.aws.apigateway.inputs.DomainNameEndpointConfigurationArgs;
 import io.pulumi.aws.apigateway.inputs.DomainNameMutualTlsAuthenticationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
@@ -35,7 +35,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateBody")
-    private final @Nullable Input<String> certificateBody;
+      private final @Nullable Input<String> certificateBody;
 
     public Input<String> getCertificateBody() {
         return this.certificateBody == null ? Input.empty() : this.certificateBody;
@@ -49,7 +49,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateChain")
-    private final @Nullable Input<String> certificateChain;
+      private final @Nullable Input<String> certificateChain;
 
     public Input<String> getCertificateChain() {
         return this.certificateChain == null ? Input.empty() : this.certificateChain;
@@ -62,7 +62,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateName")
-    private final @Nullable Input<String> certificateName;
+      private final @Nullable Input<String> certificateName;
 
     public Input<String> getCertificateName() {
         return this.certificateName == null ? Input.empty() : this.certificateName;
@@ -74,7 +74,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificatePrivateKey")
-    private final @Nullable Input<String> certificatePrivateKey;
+      private final @Nullable Input<String> certificatePrivateKey;
 
     public Input<String> getCertificatePrivateKey() {
         return this.certificatePrivateKey == null ? Input.empty() : this.certificatePrivateKey;
@@ -85,7 +85,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -96,7 +96,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointConfiguration")
-    private final @Nullable Input<DomainNameEndpointConfigurationArgs> endpointConfiguration;
+      private final @Nullable Input<DomainNameEndpointConfigurationArgs> endpointConfiguration;
 
     public Input<DomainNameEndpointConfigurationArgs> getEndpointConfiguration() {
         return this.endpointConfiguration == null ? Input.empty() : this.endpointConfiguration;
@@ -107,7 +107,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mutualTlsAuthentication")
-    private final @Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
+      private final @Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
     public Input<DomainNameMutualTlsAuthenticationArgs> getMutualTlsAuthentication() {
         return this.mutualTlsAuthentication == null ? Input.empty() : this.mutualTlsAuthentication;
@@ -118,7 +118,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regionalCertificateArn")
-    private final @Nullable Input<String> regionalCertificateArn;
+      private final @Nullable Input<String> regionalCertificateArn;
 
     public Input<String> getRegionalCertificateArn() {
         return this.regionalCertificateArn == null ? Input.empty() : this.regionalCertificateArn;
@@ -130,7 +130,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regionalCertificateName")
-    private final @Nullable Input<String> regionalCertificateName;
+      private final @Nullable Input<String> regionalCertificateName;
 
     public Input<String> getRegionalCertificateName() {
         return this.regionalCertificateName == null ? Input.empty() : this.regionalCertificateName;
@@ -141,7 +141,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityPolicy")
-    private final @Nullable Input<String> securityPolicy;
+      private final @Nullable Input<String> securityPolicy;
 
     public Input<String> getSecurityPolicy() {
         return this.securityPolicy == null ? Input.empty() : this.securityPolicy;
@@ -152,7 +152,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

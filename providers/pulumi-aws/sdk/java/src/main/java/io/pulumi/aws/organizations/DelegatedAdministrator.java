@@ -8,8 +8,8 @@ import io.pulumi.aws.organizations.DelegatedAdministratorArgs;
 import io.pulumi.aws.organizations.inputs.DelegatedAdministratorState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -156,6 +156,21 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DelegatedAdministrator(String name) {
+        this(name, DelegatedAdministratorArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DelegatedAdministrator(String name, DelegatedAdministratorArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoResolveBestVoicesEnabled")
-    private final @Nullable Input<Boolean> autoResolveBestVoicesEnabled;
+      private final @Nullable Input<Boolean> autoResolveBestVoicesEnabled;
 
     public Input<Boolean> getAutoResolveBestVoicesEnabled() {
         return this.autoResolveBestVoicesEnabled == null ? Input.empty() : this.autoResolveBestVoicesEnabled;
@@ -42,7 +42,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactFlowLogsEnabled")
-    private final @Nullable Input<Boolean> contactFlowLogsEnabled;
+      private final @Nullable Input<Boolean> contactFlowLogsEnabled;
 
     public Input<Boolean> getContactFlowLogsEnabled() {
         return this.contactFlowLogsEnabled == null ? Input.empty() : this.contactFlowLogsEnabled;
@@ -53,7 +53,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactLensEnabled")
-    private final @Nullable Input<Boolean> contactLensEnabled;
+      private final @Nullable Input<Boolean> contactLensEnabled;
 
     public Input<Boolean> getContactLensEnabled() {
         return this.contactLensEnabled == null ? Input.empty() : this.contactLensEnabled;
@@ -64,7 +64,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+      private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
@@ -75,7 +75,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryId")
-    private final @Nullable Input<String> directoryId;
+      private final @Nullable Input<String> directoryId;
 
     public Input<String> getDirectoryId() {
         return this.directoryId == null ? Input.empty() : this.directoryId;
@@ -86,7 +86,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="earlyMediaEnabled")
-    private final @Nullable Input<Boolean> earlyMediaEnabled;
+      private final @Nullable Input<Boolean> earlyMediaEnabled;
 
     public Input<Boolean> getEarlyMediaEnabled() {
         return this.earlyMediaEnabled == null ? Input.empty() : this.earlyMediaEnabled;
@@ -97,7 +97,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityManagementType")
-    private final @Nullable Input<String> identityManagementType;
+      private final @Nullable Input<String> identityManagementType;
 
     public Input<String> getIdentityManagementType() {
         return this.identityManagementType == null ? Input.empty() : this.identityManagementType;
@@ -108,7 +108,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inboundCallsEnabled")
-    private final @Nullable Input<Boolean> inboundCallsEnabled;
+      private final @Nullable Input<Boolean> inboundCallsEnabled;
 
     public Input<Boolean> getInboundCallsEnabled() {
         return this.inboundCallsEnabled == null ? Input.empty() : this.inboundCallsEnabled;
@@ -119,7 +119,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceAlias")
-    private final @Nullable Input<String> instanceAlias;
+      private final @Nullable Input<String> instanceAlias;
 
     public Input<String> getInstanceAlias() {
         return this.instanceAlias == null ? Input.empty() : this.instanceAlias;
@@ -131,7 +131,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outboundCallsEnabled")
-    private final @Nullable Input<Boolean> outboundCallsEnabled;
+      private final @Nullable Input<Boolean> outboundCallsEnabled;
 
     public Input<Boolean> getOutboundCallsEnabled() {
         return this.outboundCallsEnabled == null ? Input.empty() : this.outboundCallsEnabled;
@@ -142,7 +142,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRole")
-    private final @Nullable Input<String> serviceRole;
+      private final @Nullable Input<String> serviceRole;
 
     public Input<String> getServiceRole() {
         return this.serviceRole == null ? Input.empty() : this.serviceRole;
@@ -153,7 +153,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

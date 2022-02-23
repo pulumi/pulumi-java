@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PolicyPredictiveScalingConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="maxCapacityBreachBehavior")
-    private final @Nullable Input<String> maxCapacityBreachBehavior;
+      private final @Nullable Input<String> maxCapacityBreachBehavior;
 
     public Input<String> getMaxCapacityBreachBehavior() {
         return this.maxCapacityBreachBehavior == null ? Input.empty() : this.maxCapacityBreachBehavior;
@@ -31,7 +31,7 @@ public final class PolicyPredictiveScalingConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="maxCapacityBuffer")
-    private final @Nullable Input<String> maxCapacityBuffer;
+      private final @Nullable Input<String> maxCapacityBuffer;
 
     public Input<String> getMaxCapacityBuffer() {
         return this.maxCapacityBuffer == null ? Input.empty() : this.maxCapacityBuffer;
@@ -42,7 +42,7 @@ public final class PolicyPredictiveScalingConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="metricSpecification", required=true)
-    private final Input<PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs> metricSpecification;
+      private final Input<PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs> metricSpecification;
 
     public Input<PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs> getMetricSpecification() {
         return this.metricSpecification;
@@ -53,7 +53,7 @@ public final class PolicyPredictiveScalingConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -64,7 +64,7 @@ public final class PolicyPredictiveScalingConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="schedulingBufferTime")
-    private final @Nullable Input<String> schedulingBufferTime;
+      private final @Nullable Input<String> schedulingBufferTime;
 
     public Input<String> getSchedulingBufferTime() {
         return this.schedulingBufferTime == null ? Input.empty() : this.schedulingBufferTime;

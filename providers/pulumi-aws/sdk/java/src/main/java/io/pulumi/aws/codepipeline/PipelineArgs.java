@@ -6,7 +6,7 @@ package io.pulumi.aws.codepipeline;
 import io.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreArgs;
 import io.pulumi.aws.codepipeline.inputs.PipelineStageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactStore", required=true)
-    private final Input<PipelineArtifactStoreArgs> artifactStore;
+      private final Input<PipelineArtifactStoreArgs> artifactStore;
 
     public Input<PipelineArtifactStoreArgs> getArtifactStore() {
         return this.artifactStore;
@@ -34,7 +34,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -56,7 +56,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stages", required=true)
-    private final Input<List<PipelineStageArgs>> stages;
+      private final Input<List<PipelineStageArgs>> stages;
 
     public Input<List<PipelineStageArgs>> getStages() {
         return this.stages;
@@ -67,7 +67,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

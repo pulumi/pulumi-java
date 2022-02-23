@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     public static final GroupMembershipState Empty = new GroupMembershipState();
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -26,7 +26,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="awsAccountId")
-    private final @Nullable Input<String> awsAccountId;
+      private final @Nullable Input<String> awsAccountId;
 
     public Input<String> getAwsAccountId() {
         return this.awsAccountId == null ? Input.empty() : this.awsAccountId;
@@ -37,7 +37,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="groupName")
-    private final @Nullable Input<String> groupName;
+      private final @Nullable Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName == null ? Input.empty() : this.groupName;
@@ -48,7 +48,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="memberName")
-    private final @Nullable Input<String> memberName;
+      private final @Nullable Input<String> memberName;
 
     public Input<String> getMemberName() {
         return this.memberName == null ? Input.empty() : this.memberName;
@@ -59,7 +59,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;

@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.aws.cognito.inputs.IdentityPoolCognitoIdentityProviderGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowClassicFlow")
-    private final @Nullable Input<Boolean> allowClassicFlow;
+      private final @Nullable Input<Boolean> allowClassicFlow;
 
     public Input<Boolean> getAllowClassicFlow() {
         return this.allowClassicFlow == null ? Input.empty() : this.allowClassicFlow;
@@ -34,7 +34,7 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowUnauthenticatedIdentities")
-    private final @Nullable Input<Boolean> allowUnauthenticatedIdentities;
+      private final @Nullable Input<Boolean> allowUnauthenticatedIdentities;
 
     public Input<Boolean> getAllowUnauthenticatedIdentities() {
         return this.allowUnauthenticatedIdentities == null ? Input.empty() : this.allowUnauthenticatedIdentities;
@@ -45,7 +45,7 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -56,7 +56,7 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cognitoIdentityProviders")
-    private final @Nullable Input<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders;
+      private final @Nullable Input<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders;
 
     public Input<List<IdentityPoolCognitoIdentityProviderGetArgs>> getCognitoIdentityProviders() {
         return this.cognitoIdentityProviders == null ? Input.empty() : this.cognitoIdentityProviders;
@@ -68,7 +68,7 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerProviderName")
-    private final @Nullable Input<String> developerProviderName;
+      private final @Nullable Input<String> developerProviderName;
 
     public Input<String> getDeveloperProviderName() {
         return this.developerProviderName == null ? Input.empty() : this.developerProviderName;
@@ -79,7 +79,7 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityPoolName")
-    private final @Nullable Input<String> identityPoolName;
+      private final @Nullable Input<String> identityPoolName;
 
     public Input<String> getIdentityPoolName() {
         return this.identityPoolName == null ? Input.empty() : this.identityPoolName;
@@ -90,7 +90,7 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openidConnectProviderArns")
-    private final @Nullable Input<List<String>> openidConnectProviderArns;
+      private final @Nullable Input<List<String>> openidConnectProviderArns;
 
     public Input<List<String>> getOpenidConnectProviderArns() {
         return this.openidConnectProviderArns == null ? Input.empty() : this.openidConnectProviderArns;
@@ -101,7 +101,7 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="samlProviderArns")
-    private final @Nullable Input<List<String>> samlProviderArns;
+      private final @Nullable Input<List<String>> samlProviderArns;
 
     public Input<List<String>> getSamlProviderArns() {
         return this.samlProviderArns == null ? Input.empty() : this.samlProviderArns;
@@ -112,7 +112,7 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportedLoginProviders")
-    private final @Nullable Input<Map<String,String>> supportedLoginProviders;
+      private final @Nullable Input<Map<String,String>> supportedLoginProviders;
 
     public Input<Map<String,String>> getSupportedLoginProviders() {
         return this.supportedLoginProviders == null ? Input.empty() : this.supportedLoginProviders;
@@ -123,7 +123,7 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -134,7 +134,7 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApprovalRuleTemplateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="content", required=true)
-    private final Input<String> content;
+      private final Input<String> content;
 
     public Input<String> getContent() {
         return this.content;
@@ -30,7 +30,7 @@ public final class ApprovalRuleTemplateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class ApprovalRuleTemplateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2clientvpn.inputs;
 import io.pulumi.aws.ec2clientvpn.inputs.EndpointAuthenticationOptionGetArgs;
 import io.pulumi.aws.ec2clientvpn.inputs.EndpointConnectionLogOptionsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationOptions")
-    private final @Nullable Input<List<EndpointAuthenticationOptionGetArgs>> authenticationOptions;
+      private final @Nullable Input<List<EndpointAuthenticationOptionGetArgs>> authenticationOptions;
 
     public Input<List<EndpointAuthenticationOptionGetArgs>> getAuthenticationOptions() {
         return this.authenticationOptions == null ? Input.empty() : this.authenticationOptions;
@@ -46,7 +46,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCidrBlock")
-    private final @Nullable Input<String> clientCidrBlock;
+      private final @Nullable Input<String> clientCidrBlock;
 
     public Input<String> getClientCidrBlock() {
         return this.clientCidrBlock == null ? Input.empty() : this.clientCidrBlock;
@@ -57,7 +57,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionLogOptions")
-    private final @Nullable Input<EndpointConnectionLogOptionsGetArgs> connectionLogOptions;
+      private final @Nullable Input<EndpointConnectionLogOptionsGetArgs> connectionLogOptions;
 
     public Input<EndpointConnectionLogOptionsGetArgs> getConnectionLogOptions() {
         return this.connectionLogOptions == null ? Input.empty() : this.connectionLogOptions;
@@ -68,7 +68,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -79,7 +79,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName")
-    private final @Nullable Input<String> dnsName;
+      private final @Nullable Input<String> dnsName;
 
     public Input<String> getDnsName() {
         return this.dnsName == null ? Input.empty() : this.dnsName;
@@ -90,7 +90,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Input<List<String>> dnsServers;
 
     public Input<List<String>> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -101,7 +101,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfServicePortal")
-    private final @Nullable Input<String> selfServicePortal;
+      private final @Nullable Input<String> selfServicePortal;
 
     public Input<String> getSelfServicePortal() {
         return this.selfServicePortal == null ? Input.empty() : this.selfServicePortal;
@@ -112,7 +112,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverCertificateArn")
-    private final @Nullable Input<String> serverCertificateArn;
+      private final @Nullable Input<String> serverCertificateArn;
 
     public Input<String> getServerCertificateArn() {
         return this.serverCertificateArn == null ? Input.empty() : this.serverCertificateArn;
@@ -123,7 +123,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="splitTunnel")
-    private final @Nullable Input<Boolean> splitTunnel;
+      private final @Nullable Input<Boolean> splitTunnel;
 
     public Input<Boolean> getSplitTunnel() {
         return this.splitTunnel == null ? Input.empty() : this.splitTunnel;
@@ -134,7 +134,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -145,7 +145,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -156,7 +156,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -167,7 +167,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transportProtocol")
-    private final @Nullable Input<String> transportProtocol;
+      private final @Nullable Input<String> transportProtocol;
 
     public Input<String> getTransportProtocol() {
         return this.transportProtocol == null ? Input.empty() : this.transportProtocol;

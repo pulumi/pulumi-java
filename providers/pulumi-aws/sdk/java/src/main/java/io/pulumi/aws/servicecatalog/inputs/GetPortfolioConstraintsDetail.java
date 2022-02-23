@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPortfolioConstraintsDetail extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="constraintId", required=true)
-    private final String constraintId;
+      private final String constraintId;
 
     public String getConstraintId() {
         return this.constraintId;
@@ -28,14 +28,14 @@ public final class GetPortfolioConstraintsDetail extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
     @InputImport(name="owner", required=true)
-    private final String owner;
+      private final String owner;
 
     public String getOwner() {
         return this.owner;
@@ -46,7 +46,7 @@ public final class GetPortfolioConstraintsDetail extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="portfolioId", required=true)
-    private final String portfolioId;
+      private final String portfolioId;
 
     public String getPortfolioId() {
         return this.portfolioId;
@@ -57,7 +57,7 @@ public final class GetPortfolioConstraintsDetail extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="productId", required=true)
-    private final String productId;
+      private final String productId;
 
     public String getProductId() {
         return this.productId;
@@ -68,7 +68,7 @@ public final class GetPortfolioConstraintsDetail extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

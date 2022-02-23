@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudtrail.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TrailInsightSelectorGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="insightType", required=true)
-    private final Input<String> insightType;
+      private final Input<String> insightType;
 
     public Input<String> getInsightType() {
         return this.insightType;

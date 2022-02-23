@@ -4,7 +4,7 @@
 package io.pulumi.aws.glacier;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completeLock", required=true)
-    private final Input<Boolean> completeLock;
+      private final Input<Boolean> completeLock;
 
     public Input<Boolean> getCompleteLock() {
         return this.completeLock;
@@ -31,7 +31,7 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreDeletionError")
-    private final @Nullable Input<Boolean> ignoreDeletionError;
+      private final @Nullable Input<Boolean> ignoreDeletionError;
 
     public Input<Boolean> getIgnoreDeletionError() {
         return this.ignoreDeletionError == null ? Input.empty() : this.ignoreDeletionError;
@@ -42,7 +42,7 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-    private final Input<String> policy;
+      private final Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy;
@@ -53,7 +53,7 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final Input<String> vaultName;
+      private final Input<String> vaultName;
 
     public Input<String> getVaultName() {
         return this.vaultName;

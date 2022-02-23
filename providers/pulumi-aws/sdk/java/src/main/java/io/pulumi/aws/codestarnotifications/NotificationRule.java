@@ -9,8 +9,8 @@ import io.pulumi.aws.codestarnotifications.inputs.NotificationRuleState;
 import io.pulumi.aws.codestarnotifications.outputs.NotificationRuleTarget;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -161,6 +161,21 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
         return this.targets;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public NotificationRule(String name) {
+        this(name, NotificationRuleArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NotificationRule(String name, NotificationRuleArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

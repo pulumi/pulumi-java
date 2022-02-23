@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="administratorAccountId")
-    private final @Nullable Input<String> administratorAccountId;
+      private final @Nullable Input<String> administratorAccountId;
 
     public Input<String> getAdministratorAccountId() {
         return this.administratorAccountId == null ? Input.empty() : this.administratorAccountId;
@@ -30,7 +30,7 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="invitationId")
-    private final @Nullable Input<String> invitationId;
+      private final @Nullable Input<String> invitationId;
 
     public Input<String> getInvitationId() {
         return this.invitationId == null ? Input.empty() : this.invitationId;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceArn")
-    private final @Nullable Input<String> resourceArn;
+      private final @Nullable Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn == null ? Input.empty() : this.resourceArn;
@@ -30,7 +30,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceCreatedTime")
-    private final @Nullable Input<String> resourceCreatedTime;
+      private final @Nullable Input<String> resourceCreatedTime;
 
     public Input<String> getResourceCreatedTime() {
         return this.resourceCreatedTime == null ? Input.empty() : this.resourceCreatedTime;
@@ -41,7 +41,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceDescription")
-    private final @Nullable Input<String> resourceDescription;
+      private final @Nullable Input<String> resourceDescription;
 
     public Input<String> getResourceDescription() {
         return this.resourceDescription == null ? Input.empty() : this.resourceDescription;
@@ -52,7 +52,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -63,7 +63,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -74,7 +74,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
      * 
      */
     @InputImport(name="tagOptionId")
-    private final @Nullable Input<String> tagOptionId;
+      private final @Nullable Input<String> tagOptionId;
 
     public Input<String> getTagOptionId() {
         return this.tagOptionId == null ? Input.empty() : this.tagOptionId;

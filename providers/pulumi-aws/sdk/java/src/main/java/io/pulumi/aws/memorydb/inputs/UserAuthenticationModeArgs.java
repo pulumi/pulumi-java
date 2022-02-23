@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="passwordCount")
-    private final @Nullable Input<Integer> passwordCount;
+      private final @Nullable Input<Integer> passwordCount;
 
     public Input<Integer> getPasswordCount() {
         return this.passwordCount == null ? Input.empty() : this.passwordCount;
@@ -32,7 +32,7 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="passwords", required=true)
-    private final Input<List<String>> passwords;
+      private final Input<List<String>> passwords;
 
     public Input<List<String>> getPasswords() {
         return this.passwords;
@@ -43,7 +43,7 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

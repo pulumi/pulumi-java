@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final Input<String> applicationId;
+      private final Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId;
@@ -31,7 +31,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationSet")
-    private final @Nullable Input<String> configurationSet;
+      private final @Nullable Input<String> configurationSet;
 
     public Input<String> getConfigurationSet() {
         return this.configurationSet == null ? Input.empty() : this.configurationSet;
@@ -42,7 +42,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -53,7 +53,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fromAddress", required=true)
-    private final Input<String> fromAddress;
+      private final Input<String> fromAddress;
 
     public Input<String> getFromAddress() {
         return this.fromAddress;
@@ -64,7 +64,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity", required=true)
-    private final Input<String> identity;
+      private final Input<String> identity;
 
     public Input<String> getIdentity() {
         return this.identity;
@@ -75,7 +75,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;

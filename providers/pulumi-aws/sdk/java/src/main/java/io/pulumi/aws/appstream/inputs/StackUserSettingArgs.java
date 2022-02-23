@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class StackUserSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<String> action;
+      private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
@@ -29,7 +29,7 @@ public final class StackUserSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="permission", required=true)
-    private final Input<String> permission;
+      private final Input<String> permission;
 
     public Input<String> getPermission() {
         return this.permission;

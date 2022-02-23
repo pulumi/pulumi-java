@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class ThingGroupMetadataRootToParentGroupArgs extends io.pulumi.res
     public static final ThingGroupMetadataRootToParentGroupArgs Empty = new ThingGroupMetadataRootToParentGroupArgs();
 
     @InputImport(name="groupArn")
-    private final @Nullable Input<String> groupArn;
+      private final @Nullable Input<String> groupArn;
 
     public Input<String> getGroupArn() {
         return this.groupArn == null ? Input.empty() : this.groupArn;
     }
 
     @InputImport(name="groupName")
-    private final @Nullable Input<String> groupName;
+      private final @Nullable Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName == null ? Input.empty() : this.groupName;

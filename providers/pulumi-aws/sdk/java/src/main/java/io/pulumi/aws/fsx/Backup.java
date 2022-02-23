@@ -8,8 +8,8 @@ import io.pulumi.aws.fsx.BackupArgs;
 import io.pulumi.aws.fsx.inputs.BackupState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -149,6 +149,21 @@ public class Backup extends io.pulumi.resources.CustomResource {
         return this.volumeId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Backup(String name) {
+        this(name, BackupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Backup(String name, @Nullable BackupArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

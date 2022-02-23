@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class GatewayRouteSpecHttpRouteMatchArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="prefix", required=true)
-    private final Input<String> prefix;
+      private final Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix;

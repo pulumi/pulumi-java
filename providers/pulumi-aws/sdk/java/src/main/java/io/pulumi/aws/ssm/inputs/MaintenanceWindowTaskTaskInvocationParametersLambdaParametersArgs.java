@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
      * 
      */
     @InputImport(name="clientContext")
-    private final @Nullable Input<String> clientContext;
+      private final @Nullable Input<String> clientContext;
 
     public Input<String> getClientContext() {
         return this.clientContext == null ? Input.empty() : this.clientContext;
@@ -30,7 +30,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
      * 
      */
     @InputImport(name="payload")
-    private final @Nullable Input<String> payload;
+      private final @Nullable Input<String> payload;
 
     public Input<String> getPayload() {
         return this.payload == null ? Input.empty() : this.payload;
@@ -41,7 +41,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
      * 
      */
     @InputImport(name="qualifier")
-    private final @Nullable Input<String> qualifier;
+      private final @Nullable Input<String> qualifier;
 
     public Input<String> getQualifier() {
         return this.qualifier == null ? Input.empty() : this.qualifier;

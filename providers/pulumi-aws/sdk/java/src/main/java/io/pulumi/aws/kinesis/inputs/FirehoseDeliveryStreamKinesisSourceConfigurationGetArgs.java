@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs exten
      * 
      */
     @InputImport(name="kinesisStreamArn", required=true)
-    private final Input<String> kinesisStreamArn;
+      private final Input<String> kinesisStreamArn;
 
     public Input<String> getKinesisStreamArn() {
         return this.kinesisStreamArn;
@@ -29,7 +29,7 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs exten
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

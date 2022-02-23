@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deleteOnTermination")
-    private final @Nullable Input<Boolean> deleteOnTermination;
+      private final @Nullable Input<Boolean> deleteOnTermination;
 
     public Input<Boolean> getDeleteOnTermination() {
         return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
@@ -32,7 +32,7 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deviceIndex", required=true)
-    private final Input<Integer> deviceIndex;
+      private final Input<Integer> deviceIndex;
 
     public Input<Integer> getDeviceIndex() {
         return this.deviceIndex;
@@ -43,7 +43,7 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkInterfaceId", required=true)
-    private final Input<String> networkInterfaceId;
+      private final Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;

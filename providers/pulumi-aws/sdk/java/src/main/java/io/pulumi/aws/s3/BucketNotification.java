@@ -11,8 +11,8 @@ import io.pulumi.aws.s3.outputs.BucketNotificationQueue;
 import io.pulumi.aws.s3.outputs.BucketNotificationTopic;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -107,6 +107,21 @@ public class BucketNotification extends io.pulumi.resources.CustomResource {
         return this.topics;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BucketNotification(String name) {
+        this(name, BucketNotificationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BucketNotification(String name, BucketNotificationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

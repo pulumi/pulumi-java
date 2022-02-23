@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class OrganizationConfigurationDatasourcesS3LogsGetArgs extends io.
      * 
      */
     @InputImport(name="autoEnable", required=true)
-    private final Input<Boolean> autoEnable;
+      private final Input<Boolean> autoEnable;
 
     public Input<Boolean> getAutoEnable() {
         return this.autoEnable;

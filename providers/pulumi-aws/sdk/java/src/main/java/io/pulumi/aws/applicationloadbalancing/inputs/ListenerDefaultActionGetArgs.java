@@ -9,7 +9,7 @@ import io.pulumi.aws.applicationloadbalancing.inputs.ListenerDefaultActionFixedR
 import io.pulumi.aws.applicationloadbalancing.inputs.ListenerDefaultActionForwardGetArgs;
 import io.pulumi.aws.applicationloadbalancing.inputs.ListenerDefaultActionRedirectGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="authenticateCognito")
-    private final @Nullable Input<ListenerDefaultActionAuthenticateCognitoGetArgs> authenticateCognito;
+      private final @Nullable Input<ListenerDefaultActionAuthenticateCognitoGetArgs> authenticateCognito;
 
     public Input<ListenerDefaultActionAuthenticateCognitoGetArgs> getAuthenticateCognito() {
         return this.authenticateCognito == null ? Input.empty() : this.authenticateCognito;
@@ -36,7 +36,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="authenticateOidc")
-    private final @Nullable Input<ListenerDefaultActionAuthenticateOidcGetArgs> authenticateOidc;
+      private final @Nullable Input<ListenerDefaultActionAuthenticateOidcGetArgs> authenticateOidc;
 
     public Input<ListenerDefaultActionAuthenticateOidcGetArgs> getAuthenticateOidc() {
         return this.authenticateOidc == null ? Input.empty() : this.authenticateOidc;
@@ -47,7 +47,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="fixedResponse")
-    private final @Nullable Input<ListenerDefaultActionFixedResponseGetArgs> fixedResponse;
+      private final @Nullable Input<ListenerDefaultActionFixedResponseGetArgs> fixedResponse;
 
     public Input<ListenerDefaultActionFixedResponseGetArgs> getFixedResponse() {
         return this.fixedResponse == null ? Input.empty() : this.fixedResponse;
@@ -58,7 +58,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="forward")
-    private final @Nullable Input<ListenerDefaultActionForwardGetArgs> forward;
+      private final @Nullable Input<ListenerDefaultActionForwardGetArgs> forward;
 
     public Input<ListenerDefaultActionForwardGetArgs> getForward() {
         return this.forward == null ? Input.empty() : this.forward;
@@ -69,7 +69,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="order")
-    private final @Nullable Input<Integer> order;
+      private final @Nullable Input<Integer> order;
 
     public Input<Integer> getOrder() {
         return this.order == null ? Input.empty() : this.order;
@@ -80,7 +80,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="redirect")
-    private final @Nullable Input<ListenerDefaultActionRedirectGetArgs> redirect;
+      private final @Nullable Input<ListenerDefaultActionRedirectGetArgs> redirect;
 
     public Input<ListenerDefaultActionRedirectGetArgs> getRedirect() {
         return this.redirect == null ? Input.empty() : this.redirect;
@@ -91,7 +91,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetGroupArn")
-    private final @Nullable Input<String> targetGroupArn;
+      private final @Nullable Input<String> targetGroupArn;
 
     public Input<String> getTargetGroupArn() {
         return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;
@@ -102,7 +102,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

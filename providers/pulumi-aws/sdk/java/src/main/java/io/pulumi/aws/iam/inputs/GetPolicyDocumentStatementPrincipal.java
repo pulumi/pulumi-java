@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetPolicyDocumentStatementPrincipal extends io.pulumi.resourc
      * 
      */
     @InputImport(name="identifiers", required=true)
-    private final List<String> identifiers;
+      private final List<String> identifiers;
 
     public List<String> getIdentifiers() {
         return this.identifiers;
@@ -29,7 +29,7 @@ public final class GetPolicyDocumentStatementPrincipal extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

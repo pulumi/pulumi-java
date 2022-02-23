@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BrokerLogsGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audit")
-    private final @Nullable Input<Boolean> audit;
+      private final @Nullable Input<Boolean> audit;
 
     public Input<Boolean> getAudit() {
         return this.audit == null ? Input.empty() : this.audit;
@@ -30,7 +30,7 @@ public final class BrokerLogsGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="general")
-    private final @Nullable Input<Boolean> general;
+      private final @Nullable Input<Boolean> general;
 
     public Input<Boolean> getGeneral() {
         return this.general == null ? Input.empty() : this.general;

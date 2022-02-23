@@ -8,7 +8,7 @@ import io.pulumi.aws.lambda.inputs.EventSourceMappingFilterCriteriaArgs;
 import io.pulumi.aws.lambda.inputs.EventSourceMappingSelfManagedEventSourceArgs;
 import io.pulumi.aws.lambda.inputs.EventSourceMappingSourceAccessConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,21 +28,21 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="batchSize")
-    private final @Nullable Input<Integer> batchSize;
+      private final @Nullable Input<Integer> batchSize;
 
     public Input<Integer> getBatchSize() {
         return this.batchSize == null ? Input.empty() : this.batchSize;
     }
 
     @InputImport(name="bisectBatchOnFunctionError")
-    private final @Nullable Input<Boolean> bisectBatchOnFunctionError;
+      private final @Nullable Input<Boolean> bisectBatchOnFunctionError;
 
     public Input<Boolean> getBisectBatchOnFunctionError() {
         return this.bisectBatchOnFunctionError == null ? Input.empty() : this.bisectBatchOnFunctionError;
     }
 
     @InputImport(name="destinationConfig")
-    private final @Nullable Input<EventSourceMappingDestinationConfigArgs> destinationConfig;
+      private final @Nullable Input<EventSourceMappingDestinationConfigArgs> destinationConfig;
 
     public Input<EventSourceMappingDestinationConfigArgs> getDestinationConfig() {
         return this.destinationConfig == null ? Input.empty() : this.destinationConfig;
@@ -53,7 +53,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -64,7 +64,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eventSourceArn")
-    private final @Nullable Input<String> eventSourceArn;
+      private final @Nullable Input<String> eventSourceArn;
 
     public Input<String> getEventSourceArn() {
         return this.eventSourceArn == null ? Input.empty() : this.eventSourceArn;
@@ -75,7 +75,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filterCriteria")
-    private final @Nullable Input<EventSourceMappingFilterCriteriaArgs> filterCriteria;
+      private final @Nullable Input<EventSourceMappingFilterCriteriaArgs> filterCriteria;
 
     public Input<EventSourceMappingFilterCriteriaArgs> getFilterCriteria() {
         return this.filterCriteria == null ? Input.empty() : this.filterCriteria;
@@ -86,7 +86,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="functionName", required=true)
-    private final Input<String> functionName;
+      private final Input<String> functionName;
 
     public Input<String> getFunctionName() {
         return this.functionName;
@@ -97,7 +97,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="functionResponseTypes")
-    private final @Nullable Input<List<String>> functionResponseTypes;
+      private final @Nullable Input<List<String>> functionResponseTypes;
 
     public Input<List<String>> getFunctionResponseTypes() {
         return this.functionResponseTypes == null ? Input.empty() : this.functionResponseTypes;
@@ -111,28 +111,28 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maximumBatchingWindowInSeconds")
-    private final @Nullable Input<Integer> maximumBatchingWindowInSeconds;
+      private final @Nullable Input<Integer> maximumBatchingWindowInSeconds;
 
     public Input<Integer> getMaximumBatchingWindowInSeconds() {
         return this.maximumBatchingWindowInSeconds == null ? Input.empty() : this.maximumBatchingWindowInSeconds;
     }
 
     @InputImport(name="maximumRecordAgeInSeconds")
-    private final @Nullable Input<Integer> maximumRecordAgeInSeconds;
+      private final @Nullable Input<Integer> maximumRecordAgeInSeconds;
 
     public Input<Integer> getMaximumRecordAgeInSeconds() {
         return this.maximumRecordAgeInSeconds == null ? Input.empty() : this.maximumRecordAgeInSeconds;
     }
 
     @InputImport(name="maximumRetryAttempts")
-    private final @Nullable Input<Integer> maximumRetryAttempts;
+      private final @Nullable Input<Integer> maximumRetryAttempts;
 
     public Input<Integer> getMaximumRetryAttempts() {
         return this.maximumRetryAttempts == null ? Input.empty() : this.maximumRetryAttempts;
     }
 
     @InputImport(name="parallelizationFactor")
-    private final @Nullable Input<Integer> parallelizationFactor;
+      private final @Nullable Input<Integer> parallelizationFactor;
 
     public Input<Integer> getParallelizationFactor() {
         return this.parallelizationFactor == null ? Input.empty() : this.parallelizationFactor;
@@ -145,21 +145,21 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="queues")
-    private final @Nullable Input<List<String>> queues;
+      private final @Nullable Input<List<String>> queues;
 
     public Input<List<String>> getQueues() {
         return this.queues == null ? Input.empty() : this.queues;
     }
 
     @InputImport(name="selfManagedEventSource")
-    private final @Nullable Input<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource;
+      private final @Nullable Input<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource;
 
     public Input<EventSourceMappingSelfManagedEventSourceArgs> getSelfManagedEventSource() {
         return this.selfManagedEventSource == null ? Input.empty() : this.selfManagedEventSource;
     }
 
     @InputImport(name="sourceAccessConfigurations")
-    private final @Nullable Input<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations;
+      private final @Nullable Input<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations;
 
     public Input<List<EventSourceMappingSourceAccessConfigurationArgs>> getSourceAccessConfigurations() {
         return this.sourceAccessConfigurations == null ? Input.empty() : this.sourceAccessConfigurations;
@@ -170,7 +170,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="startingPosition")
-    private final @Nullable Input<String> startingPosition;
+      private final @Nullable Input<String> startingPosition;
 
     public Input<String> getStartingPosition() {
         return this.startingPosition == null ? Input.empty() : this.startingPosition;
@@ -181,7 +181,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="startingPositionTimestamp")
-    private final @Nullable Input<String> startingPositionTimestamp;
+      private final @Nullable Input<String> startingPositionTimestamp;
 
     public Input<String> getStartingPositionTimestamp() {
         return this.startingPositionTimestamp == null ? Input.empty() : this.startingPositionTimestamp;
@@ -192,7 +192,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="topics")
-    private final @Nullable Input<List<String>> topics;
+      private final @Nullable Input<List<String>> topics;
 
     public Input<List<String>> getTopics() {
         return this.topics == null ? Input.empty() : this.topics;
@@ -203,7 +203,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tumblingWindowInSeconds")
-    private final @Nullable Input<Integer> tumblingWindowInSeconds;
+      private final @Nullable Input<Integer> tumblingWindowInSeconds;
 
     public Input<Integer> getTumblingWindowInSeconds() {
         return this.tumblingWindowInSeconds == null ? Input.empty() : this.tumblingWindowInSeconds;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterConfigurationInfoGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
@@ -30,7 +30,7 @@ public final class ClusterConfigurationInfoGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="revision", required=true)
-    private final Input<Integer> revision;
+      private final Input<Integer> revision;
 
     public Input<Integer> getRevision() {
         return this.revision;

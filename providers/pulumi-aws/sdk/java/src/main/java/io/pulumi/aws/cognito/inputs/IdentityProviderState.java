@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="attributeMapping")
-    private final @Nullable Input<Map<String,String>> attributeMapping;
+      private final @Nullable Input<Map<String,String>> attributeMapping;
 
     public Input<Map<String,String>> getAttributeMapping() {
         return this.attributeMapping == null ? Input.empty() : this.attributeMapping;
@@ -32,7 +32,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="idpIdentifiers")
-    private final @Nullable Input<List<String>> idpIdentifiers;
+      private final @Nullable Input<List<String>> idpIdentifiers;
 
     public Input<List<String>> getIdpIdentifiers() {
         return this.idpIdentifiers == null ? Input.empty() : this.idpIdentifiers;
@@ -43,7 +43,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="providerDetails")
-    private final @Nullable Input<Map<String,String>> providerDetails;
+      private final @Nullable Input<Map<String,String>> providerDetails;
 
     public Input<Map<String,String>> getProviderDetails() {
         return this.providerDetails == null ? Input.empty() : this.providerDetails;
@@ -54,7 +54,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="providerName")
-    private final @Nullable Input<String> providerName;
+      private final @Nullable Input<String> providerName;
 
     public Input<String> getProviderName() {
         return this.providerName == null ? Input.empty() : this.providerName;
@@ -65,7 +65,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="providerType")
-    private final @Nullable Input<String> providerType;
+      private final @Nullable Input<String> providerType;
 
     public Input<String> getProviderType() {
         return this.providerType == null ? Input.empty() : this.providerType;
@@ -76,7 +76,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userPoolId")
-    private final @Nullable Input<String> userPoolId;
+      private final @Nullable Input<String> userPoolId;
 
     public Input<String> getUserPoolId() {
         return this.userPoolId == null ? Input.empty() : this.userPoolId;

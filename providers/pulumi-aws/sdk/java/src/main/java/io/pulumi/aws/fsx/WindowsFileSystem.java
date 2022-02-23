@@ -10,8 +10,8 @@ import io.pulumi.aws.fsx.outputs.WindowsFileSystemAuditLogConfiguration;
 import io.pulumi.aws.fsx.outputs.WindowsFileSystemSelfManagedActiveDirectory;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -430,6 +430,21 @@ public class WindowsFileSystem extends io.pulumi.resources.CustomResource {
         return this.weeklyMaintenanceStartTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WindowsFileSystem(String name) {
+        this(name, WindowsFileSystemArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WindowsFileSystem(String name, WindowsFileSystemArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

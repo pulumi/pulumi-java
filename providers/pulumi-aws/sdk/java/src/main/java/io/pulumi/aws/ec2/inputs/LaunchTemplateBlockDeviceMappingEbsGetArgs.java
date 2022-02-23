@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="deleteOnTermination")
-    private final @Nullable Input<String> deleteOnTermination;
+      private final @Nullable Input<String> deleteOnTermination;
 
     public Input<String> getDeleteOnTermination() {
         return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
@@ -32,7 +32,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="encrypted")
-    private final @Nullable Input<String> encrypted;
+      private final @Nullable Input<String> encrypted;
 
     public Input<String> getEncrypted() {
         return this.encrypted == null ? Input.empty() : this.encrypted;
@@ -45,7 +45,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="iops")
-    private final @Nullable Input<Integer> iops;
+      private final @Nullable Input<Integer> iops;
 
     public Input<Integer> getIops() {
         return this.iops == null ? Input.empty() : this.iops;
@@ -57,7 +57,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -68,7 +68,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="snapshotId")
-    private final @Nullable Input<String> snapshotId;
+      private final @Nullable Input<String> snapshotId;
 
     public Input<String> getSnapshotId() {
         return this.snapshotId == null ? Input.empty() : this.snapshotId;
@@ -79,7 +79,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="throughput")
-    private final @Nullable Input<Integer> throughput;
+      private final @Nullable Input<Integer> throughput;
 
     public Input<Integer> getThroughput() {
         return this.throughput == null ? Input.empty() : this.throughput;
@@ -90,7 +90,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="volumeSize")
-    private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Input<Integer> volumeSize;
 
     public Input<Integer> getVolumeSize() {
         return this.volumeSize == null ? Input.empty() : this.volumeSize;
@@ -101,7 +101,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="volumeType")
-    private final @Nullable Input<String> volumeType;
+      private final @Nullable Input<String> volumeType;
 
     public Input<String> getVolumeType() {
         return this.volumeType == null ? Input.empty() : this.volumeType;

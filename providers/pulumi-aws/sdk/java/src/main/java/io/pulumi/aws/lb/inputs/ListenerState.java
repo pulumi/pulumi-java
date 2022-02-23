@@ -5,7 +5,7 @@ package io.pulumi.aws.lb.inputs;
 
 import io.pulumi.aws.lb.inputs.ListenerDefaultActionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alpnPolicy")
-    private final @Nullable Input<String> alpnPolicy;
+      private final @Nullable Input<String> alpnPolicy;
 
     public Input<String> getAlpnPolicy() {
         return this.alpnPolicy == null ? Input.empty() : this.alpnPolicy;
@@ -34,7 +34,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -45,7 +45,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
@@ -56,7 +56,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultActions")
-    private final @Nullable Input<List<ListenerDefaultActionGetArgs>> defaultActions;
+      private final @Nullable Input<List<ListenerDefaultActionGetArgs>> defaultActions;
 
     public Input<List<ListenerDefaultActionGetArgs>> getDefaultActions() {
         return this.defaultActions == null ? Input.empty() : this.defaultActions;
@@ -67,7 +67,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerArn")
-    private final @Nullable Input<String> loadBalancerArn;
+      private final @Nullable Input<String> loadBalancerArn;
 
     public Input<String> getLoadBalancerArn() {
         return this.loadBalancerArn == null ? Input.empty() : this.loadBalancerArn;
@@ -78,7 +78,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -89,7 +89,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -100,7 +100,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslPolicy")
-    private final @Nullable Input<String> sslPolicy;
+      private final @Nullable Input<String> sslPolicy;
 
     public Input<String> getSslPolicy() {
         return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
@@ -111,7 +111,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -122,7 +122,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

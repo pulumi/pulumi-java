@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetEventCategoriesArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="sourceType")
-    private final @Nullable String sourceType;
+      private final @Nullable String sourceType;
 
     public Optional<String> getSourceType() {
         return this.sourceType == null ? Optional.empty() : Optional.ofNullable(this.sourceType);

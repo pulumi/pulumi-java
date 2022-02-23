@@ -10,7 +10,7 @@ import io.pulumi.aws.ec2.outputs.GetInstanceEphemeralBlockDevice;
 import io.pulumi.aws.ec2.outputs.GetInstanceFilter;
 import io.pulumi.aws.ec2.outputs.GetInstanceMetadataOption;
 import io.pulumi.aws.ec2.outputs.GetInstanceRootBlockDevice;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

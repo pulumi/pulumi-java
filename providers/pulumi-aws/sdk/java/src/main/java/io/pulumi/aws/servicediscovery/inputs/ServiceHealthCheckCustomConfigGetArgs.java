@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServiceHealthCheckCustomConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="failureThreshold")
-    private final @Nullable Input<Integer> failureThreshold;
+      private final @Nullable Input<Integer> failureThreshold;
 
     public Input<Integer> getFailureThreshold() {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;

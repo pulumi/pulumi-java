@@ -5,7 +5,7 @@ package io.pulumi.aws.codedeploy.outputs;
 
 import io.pulumi.aws.codedeploy.outputs.DeploymentConfigTrafficRoutingConfigTimeBasedCanary;
 import io.pulumi.aws.codedeploy.outputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinear;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

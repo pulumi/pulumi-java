@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="firewallPolicy")
-    private final @Nullable Input<FirewallPolicyFirewallPolicyGetArgs> firewallPolicy;
+      private final @Nullable Input<FirewallPolicyFirewallPolicyGetArgs> firewallPolicy;
 
     public Input<FirewallPolicyFirewallPolicyGetArgs> getFirewallPolicy() {
         return this.firewallPolicy == null ? Input.empty() : this.firewallPolicy;
@@ -54,7 +54,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -76,7 +76,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -87,7 +87,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="updateToken")
-    private final @Nullable Input<String> updateToken;
+      private final @Nullable Input<String> updateToken;
 
     public Input<String> getUpdateToken() {
         return this.updateToken == null ? Input.empty() : this.updateToken;

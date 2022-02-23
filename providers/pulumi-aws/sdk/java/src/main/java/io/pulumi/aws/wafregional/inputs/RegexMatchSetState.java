@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.RegexMatchSetRegexMatchTupleGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RegexMatchSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class RegexMatchSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regexMatchTuples")
-    private final @Nullable Input<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples;
+      private final @Nullable Input<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples;
 
     public Input<List<RegexMatchSetRegexMatchTupleGetArgs>> getRegexMatchTuples() {
         return this.regexMatchTuples == null ? Input.empty() : this.regexMatchTuples;

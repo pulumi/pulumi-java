@@ -4,7 +4,7 @@
 package io.pulumi.aws.datapipeline.inputs;
 
 import io.pulumi.aws.datapipeline.inputs.GetPipelineDefinitionParameterValue;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetPipelineDefinitionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="parameterValues")
-    private final @Nullable List<GetPipelineDefinitionParameterValue> parameterValues;
+      private final @Nullable List<GetPipelineDefinitionParameterValue> parameterValues;
 
     public List<GetPipelineDefinitionParameterValue> getParameterValues() {
         return this.parameterValues == null ? List.of() : this.parameterValues;
@@ -32,7 +32,7 @@ public final class GetPipelineDefinitionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="pipelineId", required=true)
-    private final String pipelineId;
+      private final String pipelineId;
 
     public String getPipelineId() {
         return this.pipelineId;

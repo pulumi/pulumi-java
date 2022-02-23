@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class ResolverEndpointIpAddressGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable Input<String> ip;
+      private final @Nullable Input<String> ip;
 
     public Input<String> getIp() {
         return this.ip == null ? Input.empty() : this.ip;
     }
 
     @InputImport(name="ipId")
-    private final @Nullable Input<String> ipId;
+      private final @Nullable Input<String> ipId;
 
     public Input<String> getIpId() {
         return this.ipId == null ? Input.empty() : this.ipId;
@@ -37,7 +37,7 @@ public final class ResolverEndpointIpAddressGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;

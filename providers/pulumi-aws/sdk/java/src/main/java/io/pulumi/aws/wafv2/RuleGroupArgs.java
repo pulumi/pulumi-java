@@ -7,7 +7,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupCustomResponseBodyArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupVisibilityConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity", required=true)
-    private final Input<Integer> capacity;
+      private final Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity;
@@ -36,7 +36,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customResponseBodies")
-    private final @Nullable Input<List<RuleGroupCustomResponseBodyArgs>> customResponseBodies;
+      private final @Nullable Input<List<RuleGroupCustomResponseBodyArgs>> customResponseBodies;
 
     public Input<List<RuleGroupCustomResponseBodyArgs>> getCustomResponseBodies() {
         return this.customResponseBodies == null ? Input.empty() : this.customResponseBodies;
@@ -47,7 +47,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -58,7 +58,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -69,7 +69,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<RuleGroupRuleArgs>> rules;
+      private final @Nullable Input<List<RuleGroupRuleArgs>> rules;
 
     public Input<List<RuleGroupRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -80,7 +80,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+      private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -91,7 +91,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -102,7 +102,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -113,7 +113,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="visibilityConfig", required=true)
-    private final Input<RuleGroupVisibilityConfigArgs> visibilityConfig;
+      private final Input<RuleGroupVisibilityConfigArgs> visibilityConfig;
 
     public Input<RuleGroupVisibilityConfigArgs> getVisibilityConfig() {
         return this.visibilityConfig;

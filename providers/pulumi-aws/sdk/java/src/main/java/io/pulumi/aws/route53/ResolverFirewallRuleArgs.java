@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<String> action;
+      private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
@@ -31,7 +31,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="blockOverrideDnsType")
-    private final @Nullable Input<String> blockOverrideDnsType;
+      private final @Nullable Input<String> blockOverrideDnsType;
 
     public Input<String> getBlockOverrideDnsType() {
         return this.blockOverrideDnsType == null ? Input.empty() : this.blockOverrideDnsType;
@@ -42,7 +42,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="blockOverrideDomain")
-    private final @Nullable Input<String> blockOverrideDomain;
+      private final @Nullable Input<String> blockOverrideDomain;
 
     public Input<String> getBlockOverrideDomain() {
         return this.blockOverrideDomain == null ? Input.empty() : this.blockOverrideDomain;
@@ -53,7 +53,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="blockOverrideTtl")
-    private final @Nullable Input<Integer> blockOverrideTtl;
+      private final @Nullable Input<Integer> blockOverrideTtl;
 
     public Input<Integer> getBlockOverrideTtl() {
         return this.blockOverrideTtl == null ? Input.empty() : this.blockOverrideTtl;
@@ -64,7 +64,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="blockResponse")
-    private final @Nullable Input<String> blockResponse;
+      private final @Nullable Input<String> blockResponse;
 
     public Input<String> getBlockResponse() {
         return this.blockResponse == null ? Input.empty() : this.blockResponse;
@@ -75,7 +75,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="firewallDomainListId", required=true)
-    private final Input<String> firewallDomainListId;
+      private final Input<String> firewallDomainListId;
 
     public Input<String> getFirewallDomainListId() {
         return this.firewallDomainListId;
@@ -86,7 +86,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="firewallRuleGroupId", required=true)
-    private final Input<String> firewallRuleGroupId;
+      private final Input<String> firewallRuleGroupId;
 
     public Input<String> getFirewallRuleGroupId() {
         return this.firewallRuleGroupId;
@@ -97,7 +97,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -108,7 +108,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -32,7 +32,7 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transitGatewayAttachmentId", required=true)
-    private final Input<String> transitGatewayAttachmentId;
+      private final Input<String> transitGatewayAttachmentId;
 
     public Input<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
@@ -43,7 +43,7 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transitGatewayDefaultRouteTableAssociation")
-    private final @Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation;
+      private final @Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation;
 
     public Input<Boolean> getTransitGatewayDefaultRouteTableAssociation() {
         return this.transitGatewayDefaultRouteTableAssociation == null ? Input.empty() : this.transitGatewayDefaultRouteTableAssociation;
@@ -54,7 +54,7 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transitGatewayDefaultRouteTablePropagation")
-    private final @Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation;
+      private final @Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation;
 
     public Input<Boolean> getTransitGatewayDefaultRouteTablePropagation() {
         return this.transitGatewayDefaultRouteTablePropagation == null ? Input.empty() : this.transitGatewayDefaultRouteTablePropagation;

@@ -5,7 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.aws.route53.inputs.ResolverEndpointIpAddressGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="direction")
-    private final @Nullable Input<String> direction;
+      private final @Nullable Input<String> direction;
 
     public Input<String> getDirection() {
         return this.direction == null ? Input.empty() : this.direction;
@@ -46,7 +46,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hostVpcId")
-    private final @Nullable Input<String> hostVpcId;
+      private final @Nullable Input<String> hostVpcId;
 
     public Input<String> getHostVpcId() {
         return this.hostVpcId == null ? Input.empty() : this.hostVpcId;
@@ -58,7 +58,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipAddresses")
-    private final @Nullable Input<List<ResolverEndpointIpAddressGetArgs>> ipAddresses;
+      private final @Nullable Input<List<ResolverEndpointIpAddressGetArgs>> ipAddresses;
 
     public Input<List<ResolverEndpointIpAddressGetArgs>> getIpAddresses() {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
@@ -69,7 +69,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -80,7 +80,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -91,7 +91,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -102,7 +102,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

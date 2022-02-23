@@ -8,8 +8,8 @@ import io.pulumi.aws.dynamodb.KinesisStreamingDestinationArgs;
 import io.pulumi.aws.dynamodb.inputs.KinesisStreamingDestinationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -60,6 +60,21 @@ public class KinesisStreamingDestination extends io.pulumi.resources.CustomResou
         return this.tableName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public KinesisStreamingDestination(String name) {
+        this(name, KinesisStreamingDestinationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public KinesisStreamingDestination(String name, KinesisStreamingDestinationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

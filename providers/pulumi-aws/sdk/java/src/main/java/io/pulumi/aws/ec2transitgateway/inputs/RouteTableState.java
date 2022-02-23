@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAssociationRouteTable")
-    private final @Nullable Input<Boolean> defaultAssociationRouteTable;
+      private final @Nullable Input<Boolean> defaultAssociationRouteTable;
 
     public Input<Boolean> getDefaultAssociationRouteTable() {
         return this.defaultAssociationRouteTable == null ? Input.empty() : this.defaultAssociationRouteTable;
@@ -43,7 +43,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultPropagationRouteTable")
-    private final @Nullable Input<Boolean> defaultPropagationRouteTable;
+      private final @Nullable Input<Boolean> defaultPropagationRouteTable;
 
     public Input<Boolean> getDefaultPropagationRouteTable() {
         return this.defaultPropagationRouteTable == null ? Input.empty() : this.defaultPropagationRouteTable;
@@ -54,7 +54,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -65,7 +65,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -76,7 +76,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitGatewayId")
-    private final @Nullable Input<String> transitGatewayId;
+      private final @Nullable Input<String> transitGatewayId;
 
     public Input<String> getTransitGatewayId() {
         return this.transitGatewayId == null ? Input.empty() : this.transitGatewayId;

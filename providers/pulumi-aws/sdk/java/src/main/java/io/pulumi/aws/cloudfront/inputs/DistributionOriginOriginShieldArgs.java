@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DistributionOriginOriginShieldArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -30,7 +30,7 @@ public final class DistributionOriginOriginShieldArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="originShieldRegion", required=true)
-    private final Input<String> originShieldRegion;
+      private final Input<String> originShieldRegion;
 
     public Input<String> getOriginShieldRegion() {
         return this.originShieldRegion;

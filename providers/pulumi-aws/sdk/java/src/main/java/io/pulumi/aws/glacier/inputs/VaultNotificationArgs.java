@@ -4,7 +4,7 @@
 package io.pulumi.aws.glacier.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VaultNotificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="events", required=true)
-    private final Input<List<String>> events;
+      private final Input<List<String>> events;
 
     public Input<List<String>> getEvents() {
         return this.events;
@@ -30,7 +30,7 @@ public final class VaultNotificationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snsTopic", required=true)
-    private final Input<String> snsTopic;
+      private final Input<String> snsTopic;
 
     public Input<String> getSnsTopic() {
         return this.snsTopic;

@@ -6,7 +6,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 import io.pulumi.aws.imagebuilder.inputs.ImagePipelineImageTestsConfigurationGetArgs;
 import io.pulumi.aws.imagebuilder.inputs.ImagePipelineScheduleGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dateCreated")
-    private final @Nullable Input<String> dateCreated;
+      private final @Nullable Input<String> dateCreated;
 
     public Input<String> getDateCreated() {
         return this.dateCreated == null ? Input.empty() : this.dateCreated;
@@ -45,7 +45,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dateLastRun")
-    private final @Nullable Input<String> dateLastRun;
+      private final @Nullable Input<String> dateLastRun;
 
     public Input<String> getDateLastRun() {
         return this.dateLastRun == null ? Input.empty() : this.dateLastRun;
@@ -56,7 +56,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dateNextRun")
-    private final @Nullable Input<String> dateNextRun;
+      private final @Nullable Input<String> dateNextRun;
 
     public Input<String> getDateNextRun() {
         return this.dateNextRun == null ? Input.empty() : this.dateNextRun;
@@ -67,7 +67,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dateUpdated")
-    private final @Nullable Input<String> dateUpdated;
+      private final @Nullable Input<String> dateUpdated;
 
     public Input<String> getDateUpdated() {
         return this.dateUpdated == null ? Input.empty() : this.dateUpdated;
@@ -78,7 +78,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -89,7 +89,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributionConfigurationArn")
-    private final @Nullable Input<String> distributionConfigurationArn;
+      private final @Nullable Input<String> distributionConfigurationArn;
 
     public Input<String> getDistributionConfigurationArn() {
         return this.distributionConfigurationArn == null ? Input.empty() : this.distributionConfigurationArn;
@@ -100,7 +100,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enhancedImageMetadataEnabled")
-    private final @Nullable Input<Boolean> enhancedImageMetadataEnabled;
+      private final @Nullable Input<Boolean> enhancedImageMetadataEnabled;
 
     public Input<Boolean> getEnhancedImageMetadataEnabled() {
         return this.enhancedImageMetadataEnabled == null ? Input.empty() : this.enhancedImageMetadataEnabled;
@@ -111,7 +111,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageRecipeArn")
-    private final @Nullable Input<String> imageRecipeArn;
+      private final @Nullable Input<String> imageRecipeArn;
 
     public Input<String> getImageRecipeArn() {
         return this.imageRecipeArn == null ? Input.empty() : this.imageRecipeArn;
@@ -122,7 +122,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageTestsConfiguration")
-    private final @Nullable Input<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration;
+      private final @Nullable Input<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration;
 
     public Input<ImagePipelineImageTestsConfigurationGetArgs> getImageTestsConfiguration() {
         return this.imageTestsConfiguration == null ? Input.empty() : this.imageTestsConfiguration;
@@ -133,7 +133,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="infrastructureConfigurationArn")
-    private final @Nullable Input<String> infrastructureConfigurationArn;
+      private final @Nullable Input<String> infrastructureConfigurationArn;
 
     public Input<String> getInfrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn == null ? Input.empty() : this.infrastructureConfigurationArn;
@@ -144,7 +144,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -155,7 +155,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<String> platform;
+      private final @Nullable Input<String> platform;
 
     public Input<String> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -166,7 +166,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<ImagePipelineScheduleGetArgs> schedule;
+      private final @Nullable Input<ImagePipelineScheduleGetArgs> schedule;
 
     public Input<ImagePipelineScheduleGetArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -177,7 +177,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -188,7 +188,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -199,7 +199,7 @@ public final class ImagePipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticloadbalancing;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elb", required=true)
-    private final Input<String> elb;
+      private final Input<String> elb;
 
     public Input<String> getElb() {
         return this.elb;
@@ -29,7 +29,7 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-    private final Input<String> instance;
+      private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;

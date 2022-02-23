@@ -5,7 +5,7 @@ package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.aws.kms.inputs.GrantConstraintGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="constraints")
-    private final @Nullable Input<List<GrantConstraintGetArgs>> constraints;
+      private final @Nullable Input<List<GrantConstraintGetArgs>> constraints;
 
     public Input<List<GrantConstraintGetArgs>> getConstraints() {
         return this.constraints == null ? Input.empty() : this.constraints;
@@ -33,7 +33,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grantCreationTokens")
-    private final @Nullable Input<List<String>> grantCreationTokens;
+      private final @Nullable Input<List<String>> grantCreationTokens;
 
     public Input<List<String>> getGrantCreationTokens() {
         return this.grantCreationTokens == null ? Input.empty() : this.grantCreationTokens;
@@ -44,7 +44,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grantId")
-    private final @Nullable Input<String> grantId;
+      private final @Nullable Input<String> grantId;
 
     public Input<String> getGrantId() {
         return this.grantId == null ? Input.empty() : this.grantId;
@@ -55,7 +55,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grantToken")
-    private final @Nullable Input<String> grantToken;
+      private final @Nullable Input<String> grantToken;
 
     public Input<String> getGrantToken() {
         return this.grantToken == null ? Input.empty() : this.grantToken;
@@ -66,7 +66,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="granteePrincipal")
-    private final @Nullable Input<String> granteePrincipal;
+      private final @Nullable Input<String> granteePrincipal;
 
     public Input<String> getGranteePrincipal() {
         return this.granteePrincipal == null ? Input.empty() : this.granteePrincipal;
@@ -77,7 +77,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+      private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -88,7 +88,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -99,7 +99,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operations")
-    private final @Nullable Input<List<String>> operations;
+      private final @Nullable Input<List<String>> operations;
 
     public Input<List<String>> getOperations() {
         return this.operations == null ? Input.empty() : this.operations;
@@ -111,7 +111,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retireOnDelete")
-    private final @Nullable Input<Boolean> retireOnDelete;
+      private final @Nullable Input<Boolean> retireOnDelete;
 
     public Input<Boolean> getRetireOnDelete() {
         return this.retireOnDelete == null ? Input.empty() : this.retireOnDelete;
@@ -122,7 +122,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retiringPrincipal")
-    private final @Nullable Input<String> retiringPrincipal;
+      private final @Nullable Input<String> retiringPrincipal;
 
     public Input<String> getRetiringPrincipal() {
         return this.retiringPrincipal == null ? Input.empty() : this.retiringPrincipal;

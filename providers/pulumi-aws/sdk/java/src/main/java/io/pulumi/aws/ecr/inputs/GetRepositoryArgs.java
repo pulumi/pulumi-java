@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -31,7 +31,7 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="registryId")
-    private final @Nullable String registryId;
+      private final @Nullable String registryId;
 
     public Optional<String> getRegistryId() {
         return this.registryId == null ? Optional.empty() : Optional.ofNullable(this.registryId);
@@ -42,7 +42,7 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

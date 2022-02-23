@@ -9,8 +9,8 @@ import io.pulumi.aws.elasticloadbalancing.inputs.SslNegotiationPolicyState;
 import io.pulumi.aws.elasticloadbalancing.outputs.SslNegotiationPolicyAttribute;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -91,6 +91,21 @@ public class SslNegotiationPolicy extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SslNegotiationPolicy(String name) {
+        this(name, SslNegotiationPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SslNegotiationPolicy(String name, SslNegotiationPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

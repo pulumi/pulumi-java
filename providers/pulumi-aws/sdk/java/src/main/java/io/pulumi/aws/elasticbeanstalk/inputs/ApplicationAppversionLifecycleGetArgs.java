@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticbeanstalk.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ApplicationAppversionLifecycleGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="deleteSourceFromS3")
-    private final @Nullable Input<Boolean> deleteSourceFromS3;
+      private final @Nullable Input<Boolean> deleteSourceFromS3;
 
     public Input<Boolean> getDeleteSourceFromS3() {
         return this.deleteSourceFromS3 == null ? Input.empty() : this.deleteSourceFromS3;
@@ -32,7 +32,7 @@ public final class ApplicationAppversionLifecycleGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="maxAgeInDays")
-    private final @Nullable Input<Integer> maxAgeInDays;
+      private final @Nullable Input<Integer> maxAgeInDays;
 
     public Input<Integer> getMaxAgeInDays() {
         return this.maxAgeInDays == null ? Input.empty() : this.maxAgeInDays;
@@ -43,7 +43,7 @@ public final class ApplicationAppversionLifecycleGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="maxCount")
-    private final @Nullable Input<Integer> maxCount;
+      private final @Nullable Input<Integer> maxCount;
 
     public Input<Integer> getMaxCount() {
         return this.maxCount == null ? Input.empty() : this.maxCount;
@@ -54,7 +54,7 @@ public final class ApplicationAppversionLifecycleGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="serviceRole", required=true)
-    private final Input<String> serviceRole;
+      private final Input<String> serviceRole;
 
     public Input<String> getServiceRole() {
         return this.serviceRole;

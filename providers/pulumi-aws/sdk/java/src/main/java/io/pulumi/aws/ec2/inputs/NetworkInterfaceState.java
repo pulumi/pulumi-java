@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.NetworkInterfaceAttachmentGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="attachments")
-    private final @Nullable Input<List<NetworkInterfaceAttachmentGetArgs>> attachments;
+      private final @Nullable Input<List<NetworkInterfaceAttachmentGetArgs>> attachments;
 
     public Input<List<NetworkInterfaceAttachmentGetArgs>> getAttachments() {
         return this.attachments == null ? Input.empty() : this.attachments;
@@ -46,7 +46,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="interfaceType")
-    private final @Nullable Input<String> interfaceType;
+      private final @Nullable Input<String> interfaceType;
 
     public Input<String> getInterfaceType() {
         return this.interfaceType == null ? Input.empty() : this.interfaceType;
@@ -68,7 +68,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipv4PrefixCount")
-    private final @Nullable Input<Integer> ipv4PrefixCount;
+      private final @Nullable Input<Integer> ipv4PrefixCount;
 
     public Input<Integer> getIpv4PrefixCount() {
         return this.ipv4PrefixCount == null ? Input.empty() : this.ipv4PrefixCount;
@@ -79,7 +79,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipv4Prefixes")
-    private final @Nullable Input<List<String>> ipv4Prefixes;
+      private final @Nullable Input<List<String>> ipv4Prefixes;
 
     public Input<List<String>> getIpv4Prefixes() {
         return this.ipv4Prefixes == null ? Input.empty() : this.ipv4Prefixes;
@@ -90,14 +90,14 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipv6AddressCount")
-    private final @Nullable Input<Integer> ipv6AddressCount;
+      private final @Nullable Input<Integer> ipv6AddressCount;
 
     public Input<Integer> getIpv6AddressCount() {
         return this.ipv6AddressCount == null ? Input.empty() : this.ipv6AddressCount;
     }
 
     @InputImport(name="ipv6AddressListEnabled")
-    private final @Nullable Input<Boolean> ipv6AddressListEnabled;
+      private final @Nullable Input<Boolean> ipv6AddressListEnabled;
 
     public Input<Boolean> getIpv6AddressListEnabled() {
         return this.ipv6AddressListEnabled == null ? Input.empty() : this.ipv6AddressListEnabled;
@@ -108,7 +108,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipv6AddressLists")
-    private final @Nullable Input<List<String>> ipv6AddressLists;
+      private final @Nullable Input<List<String>> ipv6AddressLists;
 
     public Input<List<String>> getIpv6AddressLists() {
         return this.ipv6AddressLists == null ? Input.empty() : this.ipv6AddressLists;
@@ -119,7 +119,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipv6Addresses")
-    private final @Nullable Input<List<String>> ipv6Addresses;
+      private final @Nullable Input<List<String>> ipv6Addresses;
 
     public Input<List<String>> getIpv6Addresses() {
         return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
@@ -130,7 +130,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipv6PrefixCount")
-    private final @Nullable Input<Integer> ipv6PrefixCount;
+      private final @Nullable Input<Integer> ipv6PrefixCount;
 
     public Input<Integer> getIpv6PrefixCount() {
         return this.ipv6PrefixCount == null ? Input.empty() : this.ipv6PrefixCount;
@@ -141,7 +141,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipv6Prefixes")
-    private final @Nullable Input<List<String>> ipv6Prefixes;
+      private final @Nullable Input<List<String>> ipv6Prefixes;
 
     public Input<List<String>> getIpv6Prefixes() {
         return this.ipv6Prefixes == null ? Input.empty() : this.ipv6Prefixes;
@@ -152,14 +152,14 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="macAddress")
-    private final @Nullable Input<String> macAddress;
+      private final @Nullable Input<String> macAddress;
 
     public Input<String> getMacAddress() {
         return this.macAddress == null ? Input.empty() : this.macAddress;
     }
 
     @InputImport(name="outpostArn")
-    private final @Nullable Input<String> outpostArn;
+      private final @Nullable Input<String> outpostArn;
 
     public Input<String> getOutpostArn() {
         return this.outpostArn == null ? Input.empty() : this.outpostArn;
@@ -170,7 +170,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -181,21 +181,21 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateDnsName")
-    private final @Nullable Input<String> privateDnsName;
+      private final @Nullable Input<String> privateDnsName;
 
     public Input<String> getPrivateDnsName() {
         return this.privateDnsName == null ? Input.empty() : this.privateDnsName;
     }
 
     @InputImport(name="privateIp")
-    private final @Nullable Input<String> privateIp;
+      private final @Nullable Input<String> privateIp;
 
     public Input<String> getPrivateIp() {
         return this.privateIp == null ? Input.empty() : this.privateIp;
     }
 
     @InputImport(name="privateIpListEnabled")
-    private final @Nullable Input<Boolean> privateIpListEnabled;
+      private final @Nullable Input<Boolean> privateIpListEnabled;
 
     public Input<Boolean> getPrivateIpListEnabled() {
         return this.privateIpListEnabled == null ? Input.empty() : this.privateIpListEnabled;
@@ -206,7 +206,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateIpLists")
-    private final @Nullable Input<List<String>> privateIpLists;
+      private final @Nullable Input<List<String>> privateIpLists;
 
     public Input<List<String>> getPrivateIpLists() {
         return this.privateIpLists == null ? Input.empty() : this.privateIpLists;
@@ -217,7 +217,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateIps")
-    private final @Nullable Input<List<String>> privateIps;
+      private final @Nullable Input<List<String>> privateIps;
 
     public Input<List<String>> getPrivateIps() {
         return this.privateIps == null ? Input.empty() : this.privateIps;
@@ -228,7 +228,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateIpsCount")
-    private final @Nullable Input<Integer> privateIpsCount;
+      private final @Nullable Input<Integer> privateIpsCount;
 
     public Input<Integer> getPrivateIpsCount() {
         return this.privateIpsCount == null ? Input.empty() : this.privateIpsCount;
@@ -239,7 +239,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -250,7 +250,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceDestCheck")
-    private final @Nullable Input<Boolean> sourceDestCheck;
+      private final @Nullable Input<Boolean> sourceDestCheck;
 
     public Input<Boolean> getSourceDestCheck() {
         return this.sourceDestCheck == null ? Input.empty() : this.sourceDestCheck;
@@ -261,7 +261,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -272,7 +272,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -283,7 +283,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

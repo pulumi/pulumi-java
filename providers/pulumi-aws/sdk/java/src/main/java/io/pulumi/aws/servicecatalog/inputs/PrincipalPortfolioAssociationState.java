@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Input<String> acceptLanguage;
 
     public Input<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
@@ -30,7 +30,7 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
      * 
      */
     @InputImport(name="portfolioId")
-    private final @Nullable Input<String> portfolioId;
+      private final @Nullable Input<String> portfolioId;
 
     public Input<String> getPortfolioId() {
         return this.portfolioId == null ? Input.empty() : this.portfolioId;
@@ -41,7 +41,7 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
      * 
      */
     @InputImport(name="principalArn")
-    private final @Nullable Input<String> principalArn;
+      private final @Nullable Input<String> principalArn;
 
     public Input<String> getPrincipalArn() {
         return this.principalArn == null ? Input.empty() : this.principalArn;
@@ -52,7 +52,7 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
      * 
      */
     @InputImport(name="principalType")
-    private final @Nullable Input<String> principalType;
+      private final @Nullable Input<String> principalType;
 
     public Input<String> getPrincipalType() {
         return this.principalType == null ? Input.empty() : this.principalType;

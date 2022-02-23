@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.aws.inputs.GetAvailabilityZonesFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="allAvailabilityZones")
-    private final @Nullable Boolean allAvailabilityZones;
+      private final @Nullable Boolean allAvailabilityZones;
 
     public Optional<Boolean> getAllAvailabilityZones() {
         return this.allAvailabilityZones == null ? Optional.empty() : Optional.ofNullable(this.allAvailabilityZones);
@@ -33,7 +33,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="excludeNames")
-    private final @Nullable List<String> excludeNames;
+      private final @Nullable List<String> excludeNames;
 
     public List<String> getExcludeNames() {
         return this.excludeNames == null ? List.of() : this.excludeNames;
@@ -44,7 +44,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="excludeZoneIds")
-    private final @Nullable List<String> excludeZoneIds;
+      private final @Nullable List<String> excludeZoneIds;
 
     public List<String> getExcludeZoneIds() {
         return this.excludeZoneIds == null ? List.of() : this.excludeZoneIds;
@@ -55,7 +55,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetAvailabilityZonesFilter> filters;
+      private final @Nullable List<GetAvailabilityZonesFilter> filters;
 
     public List<GetAvailabilityZonesFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -69,7 +69,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);

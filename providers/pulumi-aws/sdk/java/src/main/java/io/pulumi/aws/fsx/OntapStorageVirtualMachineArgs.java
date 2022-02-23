@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx;
 
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineActiveDirectoryConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class OntapStorageVirtualMachineArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="activeDirectoryConfiguration")
-    private final @Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
+      private final @Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
 
     public Input<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs> getActiveDirectoryConfiguration() {
         return this.activeDirectoryConfiguration == null ? Input.empty() : this.activeDirectoryConfiguration;
@@ -32,7 +32,7 @@ public final class OntapStorageVirtualMachineArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fileSystemId", required=true)
-    private final Input<String> fileSystemId;
+      private final Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId;
@@ -43,7 +43,7 @@ public final class OntapStorageVirtualMachineArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,14 +54,14 @@ public final class OntapStorageVirtualMachineArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rootVolumeSecurityStyle")
-    private final @Nullable Input<String> rootVolumeSecurityStyle;
+      private final @Nullable Input<String> rootVolumeSecurityStyle;
 
     public Input<String> getRootVolumeSecurityStyle() {
         return this.rootVolumeSecurityStyle == null ? Input.empty() : this.rootVolumeSecurityStyle;
     }
 
     @InputImport(name="svmAdminPassword")
-    private final @Nullable Input<String> svmAdminPassword;
+      private final @Nullable Input<String> svmAdminPassword;
 
     public Input<String> getSvmAdminPassword() {
         return this.svmAdminPassword == null ? Input.empty() : this.svmAdminPassword;
@@ -72,7 +72,7 @@ public final class OntapStorageVirtualMachineArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -6,7 +6,7 @@ package io.pulumi.aws.cognito.inputs;
 import io.pulumi.aws.cognito.inputs.UserPoolSchemaNumberAttributeConstraintsArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolSchemaStringAttributeConstraintsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributeDataType", required=true)
-    private final Input<String> attributeDataType;
+      private final Input<String> attributeDataType;
 
     public Input<String> getAttributeDataType() {
         return this.attributeDataType;
@@ -33,7 +33,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerOnlyAttribute")
-    private final @Nullable Input<Boolean> developerOnlyAttribute;
+      private final @Nullable Input<Boolean> developerOnlyAttribute;
 
     public Input<Boolean> getDeveloperOnlyAttribute() {
         return this.developerOnlyAttribute == null ? Input.empty() : this.developerOnlyAttribute;
@@ -44,7 +44,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mutable")
-    private final @Nullable Input<Boolean> mutable;
+      private final @Nullable Input<Boolean> mutable;
 
     public Input<Boolean> getMutable() {
         return this.mutable == null ? Input.empty() : this.mutable;
@@ -55,7 +55,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -66,7 +66,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberAttributeConstraints")
-    private final @Nullable Input<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints;
+      private final @Nullable Input<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints;
 
     public Input<UserPoolSchemaNumberAttributeConstraintsArgs> getNumberAttributeConstraints() {
         return this.numberAttributeConstraints == null ? Input.empty() : this.numberAttributeConstraints;
@@ -77,7 +77,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="required")
-    private final @Nullable Input<Boolean> required;
+      private final @Nullable Input<Boolean> required;
 
     public Input<Boolean> getRequired() {
         return this.required == null ? Input.empty() : this.required;
@@ -88,7 +88,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stringAttributeConstraints")
-    private final @Nullable Input<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints;
+      private final @Nullable Input<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints;
 
     public Input<UserPoolSchemaStringAttributeConstraintsArgs> getStringAttributeConstraints() {
         return this.stringAttributeConstraints == null ? Input.empty() : this.stringAttributeConstraints;

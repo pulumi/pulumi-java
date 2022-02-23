@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.pricing.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetProductFilter extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="field", required=true)
-    private final String field;
+      private final String field;
 
     public String getField() {
         return this.field;
@@ -28,7 +28,7 @@ public final class GetProductFilter extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserPoolClientTokenValidityUnitsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="accessToken")
-    private final @Nullable Input<String> accessToken;
+      private final @Nullable Input<String> accessToken;
 
     public Input<String> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -30,7 +30,7 @@ public final class UserPoolClientTokenValidityUnitsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="idToken")
-    private final @Nullable Input<String> idToken;
+      private final @Nullable Input<String> idToken;
 
     public Input<String> getIdToken() {
         return this.idToken == null ? Input.empty() : this.idToken;
@@ -41,7 +41,7 @@ public final class UserPoolClientTokenValidityUnitsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="refreshToken")
-    private final @Nullable Input<String> refreshToken;
+      private final @Nullable Input<String> refreshToken;
 
     public Input<String> getRefreshToken() {
         return this.refreshToken == null ? Input.empty() : this.refreshToken;

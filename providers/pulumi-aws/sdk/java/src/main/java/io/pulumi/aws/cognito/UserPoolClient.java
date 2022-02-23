@@ -10,8 +10,8 @@ import io.pulumi.aws.cognito.outputs.UserPoolClientAnalyticsConfiguration;
 import io.pulumi.aws.cognito.outputs.UserPoolClientTokenValidityUnits;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -329,6 +329,21 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
         return this.writeAttributes;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public UserPoolClient(String name) {
+        this(name, UserPoolClientArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public UserPoolClient(String name, UserPoolClientArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -6,7 +6,7 @@ package io.pulumi.aws.backup.inputs;
 import io.pulumi.aws.backup.inputs.PlanAdvancedBackupSettingGetArgs;
 import io.pulumi.aws.backup.inputs.PlanRuleGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advancedBackupSettings")
-    private final @Nullable Input<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings;
+      private final @Nullable Input<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings;
 
     public Input<List<PlanAdvancedBackupSettingGetArgs>> getAdvancedBackupSettings() {
         return this.advancedBackupSettings == null ? Input.empty() : this.advancedBackupSettings;
@@ -34,7 +34,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -45,7 +45,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<PlanRuleGetArgs>> rules;
+      private final @Nullable Input<List<PlanRuleGetArgs>> rules;
 
     public Input<List<PlanRuleGetArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -67,7 +67,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -78,7 +78,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -89,7 +89,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

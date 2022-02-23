@@ -5,7 +5,7 @@ package io.pulumi.aws.appconfig;
 
 import io.pulumi.aws.appconfig.inputs.ConfigurationProfileValidatorArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final Input<String> applicationId;
+      private final Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId;
@@ -33,7 +33,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="locationUri", required=true)
-    private final Input<String> locationUri;
+      private final Input<String> locationUri;
 
     public Input<String> getLocationUri() {
         return this.locationUri;
@@ -55,7 +55,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="retrievalRoleArn")
-    private final @Nullable Input<String> retrievalRoleArn;
+      private final @Nullable Input<String> retrievalRoleArn;
 
     public Input<String> getRetrievalRoleArn() {
         return this.retrievalRoleArn == null ? Input.empty() : this.retrievalRoleArn;
@@ -77,7 +77,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -88,7 +88,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="validators")
-    private final @Nullable Input<List<ConfigurationProfileValidatorArgs>> validators;
+      private final @Nullable Input<List<ConfigurationProfileValidatorArgs>> validators;
 
     public Input<List<ConfigurationProfileValidatorArgs>> getValidators() {
         return this.validators == null ? Input.empty() : this.validators;

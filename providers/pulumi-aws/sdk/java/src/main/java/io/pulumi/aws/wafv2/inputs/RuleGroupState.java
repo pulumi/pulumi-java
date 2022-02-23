@@ -7,7 +7,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupCustomResponseBodyGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupVisibilityConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -36,7 +36,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Integer> capacity;
+      private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -47,7 +47,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customResponseBodies")
-    private final @Nullable Input<List<RuleGroupCustomResponseBodyGetArgs>> customResponseBodies;
+      private final @Nullable Input<List<RuleGroupCustomResponseBodyGetArgs>> customResponseBodies;
 
     public Input<List<RuleGroupCustomResponseBodyGetArgs>> getCustomResponseBodies() {
         return this.customResponseBodies == null ? Input.empty() : this.customResponseBodies;
@@ -58,14 +58,14 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="lockToken")
-    private final @Nullable Input<String> lockToken;
+      private final @Nullable Input<String> lockToken;
 
     public Input<String> getLockToken() {
         return this.lockToken == null ? Input.empty() : this.lockToken;
@@ -76,7 +76,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<RuleGroupRuleGetArgs>> rules;
+      private final @Nullable Input<List<RuleGroupRuleGetArgs>> rules;
 
     public Input<List<RuleGroupRuleGetArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -98,7 +98,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -109,7 +109,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -120,7 +120,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -131,7 +131,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="visibilityConfig")
-    private final @Nullable Input<RuleGroupVisibilityConfigGetArgs> visibilityConfig;
+      private final @Nullable Input<RuleGroupVisibilityConfigGetArgs> visibilityConfig;
 
     public Input<RuleGroupVisibilityConfigGetArgs> getVisibilityConfig() {
         return this.visibilityConfig == null ? Input.empty() : this.visibilityConfig;

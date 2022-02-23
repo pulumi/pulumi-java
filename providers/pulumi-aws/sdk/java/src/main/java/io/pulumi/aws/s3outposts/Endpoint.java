@@ -9,8 +9,8 @@ import io.pulumi.aws.s3outposts.inputs.EndpointState;
 import io.pulumi.aws.s3outposts.outputs.EndpointNetworkInterface;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -130,6 +130,21 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
         return this.subnetId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Endpoint(String name) {
+        this(name, EndpointArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Endpoint(String name, EndpointArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

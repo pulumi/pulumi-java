@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class EventDestinationSnsDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="topicArn", required=true)
-    private final Input<String> topicArn;
+      private final Input<String> topicArn;
 
     public Input<String> getTopicArn() {
         return this.topicArn;

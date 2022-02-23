@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class S3BucketAssociationClassificationTypeArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="continuous")
-    private final @Nullable Input<String> continuous;
+      private final @Nullable Input<String> continuous;
 
     public Input<String> getContinuous() {
         return this.continuous == null ? Input.empty() : this.continuous;
@@ -32,7 +32,7 @@ public final class S3BucketAssociationClassificationTypeArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="oneTime")
-    private final @Nullable Input<String> oneTime;
+      private final @Nullable Input<String> oneTime;
 
     public Input<String> getOneTime() {
         return this.oneTime == null ? Input.empty() : this.oneTime;

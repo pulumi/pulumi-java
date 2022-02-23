@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -42,7 +42,7 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventPattern")
-    private final @Nullable Input<String> eventPattern;
+      private final @Nullable Input<String> eventPattern;
 
     public Input<String> getEventPattern() {
         return this.eventPattern == null ? Input.empty() : this.eventPattern;
@@ -53,7 +53,7 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventSourceArn")
-    private final @Nullable Input<String> eventSourceArn;
+      private final @Nullable Input<String> eventSourceArn;
 
     public Input<String> getEventSourceArn() {
         return this.eventSourceArn == null ? Input.empty() : this.eventSourceArn;
@@ -64,7 +64,7 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionDays")
-    private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;

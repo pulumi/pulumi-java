@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class VirtualGatewaySpecBackendDefaultsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="clientPolicy")
-    private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
+      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
 
     public Input<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> getClientPolicy() {
         return this.clientPolicy == null ? Input.empty() : this.clientPolicy;

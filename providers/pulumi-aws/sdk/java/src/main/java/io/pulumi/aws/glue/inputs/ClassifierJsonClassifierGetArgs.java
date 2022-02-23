@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ClassifierJsonClassifierGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="jsonPath", required=true)
-    private final Input<String> jsonPath;
+      private final Input<String> jsonPath;
 
     public Input<String> getJsonPath() {
         return this.jsonPath;

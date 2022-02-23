@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CrawlerMongodbTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectionName", required=true)
-    private final Input<String> connectionName;
+      private final Input<String> connectionName;
 
     public Input<String> getConnectionName() {
         return this.connectionName;
@@ -31,7 +31,7 @@ public final class CrawlerMongodbTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -42,7 +42,7 @@ public final class CrawlerMongodbTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="scanAll")
-    private final @Nullable Input<Boolean> scanAll;
+      private final @Nullable Input<Boolean> scanAll;
 
     public Input<Boolean> getScanAll() {
         return this.scanAll == null ? Input.empty() : this.scanAll;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudformation;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capabilities")
-    private final @Nullable Input<List<String>> capabilities;
+      private final @Nullable Input<List<String>> capabilities;
 
     public Input<List<String>> getCapabilities() {
         return this.capabilities == null ? Input.empty() : this.capabilities;
@@ -36,7 +36,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableRollback")
-    private final @Nullable Input<Boolean> disableRollback;
+      private final @Nullable Input<Boolean> disableRollback;
 
     public Input<Boolean> getDisableRollback() {
         return this.disableRollback == null ? Input.empty() : this.disableRollback;
@@ -47,7 +47,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoleArn")
-    private final @Nullable Input<String> iamRoleArn;
+      private final @Nullable Input<String> iamRoleArn;
 
     public Input<String> getIamRoleArn() {
         return this.iamRoleArn == null ? Input.empty() : this.iamRoleArn;
@@ -58,7 +58,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -69,7 +69,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationArns")
-    private final @Nullable Input<List<String>> notificationArns;
+      private final @Nullable Input<List<String>> notificationArns;
 
     public Input<List<String>> getNotificationArns() {
         return this.notificationArns == null ? Input.empty() : this.notificationArns;
@@ -81,7 +81,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onFailure")
-    private final @Nullable Input<String> onFailure;
+      private final @Nullable Input<String> onFailure;
 
     public Input<String> getOnFailure() {
         return this.onFailure == null ? Input.empty() : this.onFailure;
@@ -92,7 +92,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -104,7 +104,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyBody")
-    private final @Nullable Input<String> policyBody;
+      private final @Nullable Input<String> policyBody;
 
     public Input<String> getPolicyBody() {
         return this.policyBody == null ? Input.empty() : this.policyBody;
@@ -116,7 +116,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyUrl")
-    private final @Nullable Input<String> policyUrl;
+      private final @Nullable Input<String> policyUrl;
 
     public Input<String> getPolicyUrl() {
         return this.policyUrl == null ? Input.empty() : this.policyUrl;
@@ -127,7 +127,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -138,7 +138,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateBody")
-    private final @Nullable Input<String> templateBody;
+      private final @Nullable Input<String> templateBody;
 
     public Input<String> getTemplateBody() {
         return this.templateBody == null ? Input.empty() : this.templateBody;
@@ -149,7 +149,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateUrl")
-    private final @Nullable Input<String> templateUrl;
+      private final @Nullable Input<String> templateUrl;
 
     public Input<String> getTemplateUrl() {
         return this.templateUrl == null ? Input.empty() : this.templateUrl;
@@ -160,7 +160,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutInMinutes")
-    private final @Nullable Input<Integer> timeoutInMinutes;
+      private final @Nullable Input<Integer> timeoutInMinutes;
 
     public Input<Integer> getTimeoutInMinutes() {
         return this.timeoutInMinutes == null ? Input.empty() : this.timeoutInMinutes;

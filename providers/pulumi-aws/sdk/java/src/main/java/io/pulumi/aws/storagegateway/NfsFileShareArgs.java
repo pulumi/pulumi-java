@@ -6,7 +6,7 @@ package io.pulumi.aws.storagegateway;
 import io.pulumi.aws.storagegateway.inputs.NfsFileShareCacheAttributesArgs;
 import io.pulumi.aws.storagegateway.inputs.NfsFileShareNfsFileShareDefaultsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditDestinationArn")
-    private final @Nullable Input<String> auditDestinationArn;
+      private final @Nullable Input<String> auditDestinationArn;
 
     public Input<String> getAuditDestinationArn() {
         return this.auditDestinationArn == null ? Input.empty() : this.auditDestinationArn;
@@ -35,7 +35,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheAttributes")
-    private final @Nullable Input<NfsFileShareCacheAttributesArgs> cacheAttributes;
+      private final @Nullable Input<NfsFileShareCacheAttributesArgs> cacheAttributes;
 
     public Input<NfsFileShareCacheAttributesArgs> getCacheAttributes() {
         return this.cacheAttributes == null ? Input.empty() : this.cacheAttributes;
@@ -46,7 +46,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientLists", required=true)
-    private final Input<List<String>> clientLists;
+      private final Input<List<String>> clientLists;
 
     public Input<List<String>> getClientLists() {
         return this.clientLists;
@@ -57,7 +57,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultStorageClass")
-    private final @Nullable Input<String> defaultStorageClass;
+      private final @Nullable Input<String> defaultStorageClass;
 
     public Input<String> getDefaultStorageClass() {
         return this.defaultStorageClass == null ? Input.empty() : this.defaultStorageClass;
@@ -68,7 +68,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileShareName")
-    private final @Nullable Input<String> fileShareName;
+      private final @Nullable Input<String> fileShareName;
 
     public Input<String> getFileShareName() {
         return this.fileShareName == null ? Input.empty() : this.fileShareName;
@@ -79,7 +79,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayArn", required=true)
-    private final Input<String> gatewayArn;
+      private final Input<String> gatewayArn;
 
     public Input<String> getGatewayArn() {
         return this.gatewayArn;
@@ -90,7 +90,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="guessMimeTypeEnabled")
-    private final @Nullable Input<Boolean> guessMimeTypeEnabled;
+      private final @Nullable Input<Boolean> guessMimeTypeEnabled;
 
     public Input<Boolean> getGuessMimeTypeEnabled() {
         return this.guessMimeTypeEnabled == null ? Input.empty() : this.guessMimeTypeEnabled;
@@ -101,7 +101,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsEncrypted")
-    private final @Nullable Input<Boolean> kmsEncrypted;
+      private final @Nullable Input<Boolean> kmsEncrypted;
 
     public Input<Boolean> getKmsEncrypted() {
         return this.kmsEncrypted == null ? Input.empty() : this.kmsEncrypted;
@@ -112,7 +112,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -123,7 +123,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationArn", required=true)
-    private final Input<String> locationArn;
+      private final Input<String> locationArn;
 
     public Input<String> getLocationArn() {
         return this.locationArn;
@@ -134,7 +134,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nfsFileShareDefaults")
-    private final @Nullable Input<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults;
+      private final @Nullable Input<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults;
 
     public Input<NfsFileShareNfsFileShareDefaultsArgs> getNfsFileShareDefaults() {
         return this.nfsFileShareDefaults == null ? Input.empty() : this.nfsFileShareDefaults;
@@ -145,7 +145,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationPolicy")
-    private final @Nullable Input<String> notificationPolicy;
+      private final @Nullable Input<String> notificationPolicy;
 
     public Input<String> getNotificationPolicy() {
         return this.notificationPolicy == null ? Input.empty() : this.notificationPolicy;
@@ -156,7 +156,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectAcl")
-    private final @Nullable Input<String> objectAcl;
+      private final @Nullable Input<String> objectAcl;
 
     public Input<String> getObjectAcl() {
         return this.objectAcl == null ? Input.empty() : this.objectAcl;
@@ -167,7 +167,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -178,7 +178,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requesterPays")
-    private final @Nullable Input<Boolean> requesterPays;
+      private final @Nullable Input<Boolean> requesterPays;
 
     public Input<Boolean> getRequesterPays() {
         return this.requesterPays == null ? Input.empty() : this.requesterPays;
@@ -189,7 +189,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -200,7 +200,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="squash")
-    private final @Nullable Input<String> squash;
+      private final @Nullable Input<String> squash;
 
     public Input<String> getSquash() {
         return this.squash == null ? Input.empty() : this.squash;
@@ -211,7 +211,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

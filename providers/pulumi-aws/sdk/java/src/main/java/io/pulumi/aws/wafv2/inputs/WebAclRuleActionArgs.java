@@ -7,7 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleActionAllowArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionBlockArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionCountArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class WebAclRuleActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="allow")
-    private final @Nullable Input<WebAclRuleActionAllowArgs> allow;
+      private final @Nullable Input<WebAclRuleActionAllowArgs> allow;
 
     public Input<WebAclRuleActionAllowArgs> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
@@ -32,7 +32,7 @@ public final class WebAclRuleActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="block")
-    private final @Nullable Input<WebAclRuleActionBlockArgs> block;
+      private final @Nullable Input<WebAclRuleActionBlockArgs> block;
 
     public Input<WebAclRuleActionBlockArgs> getBlock() {
         return this.block == null ? Input.empty() : this.block;
@@ -43,7 +43,7 @@ public final class WebAclRuleActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<WebAclRuleActionCountArgs> count;
+      private final @Nullable Input<WebAclRuleActionCountArgs> count;
 
     public Input<WebAclRuleActionCountArgs> getCount() {
         return this.count == null ? Input.empty() : this.count;

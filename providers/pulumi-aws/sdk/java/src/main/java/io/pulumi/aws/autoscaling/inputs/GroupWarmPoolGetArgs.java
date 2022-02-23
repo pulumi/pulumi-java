@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxGroupPreparedCapacity")
-    private final @Nullable Input<Integer> maxGroupPreparedCapacity;
+      private final @Nullable Input<Integer> maxGroupPreparedCapacity;
 
     public Input<Integer> getMaxGroupPreparedCapacity() {
         return this.maxGroupPreparedCapacity == null ? Input.empty() : this.maxGroupPreparedCapacity;
@@ -31,7 +31,7 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minSize")
-    private final @Nullable Input<Integer> minSize;
+      private final @Nullable Input<Integer> minSize;
 
     public Input<Integer> getMinSize() {
         return this.minSize == null ? Input.empty() : this.minSize;
@@ -42,7 +42,7 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="poolState")
-    private final @Nullable Input<String> poolState;
+      private final @Nullable Input<String> poolState;
 
     public Input<String> getPoolState() {
         return this.poolState == null ? Input.empty() : this.poolState;

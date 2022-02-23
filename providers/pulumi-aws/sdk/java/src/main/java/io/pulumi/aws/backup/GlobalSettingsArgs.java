@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GlobalSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalSettings", required=true)
-    private final Input<Map<String,String>> globalSettings;
+      private final Input<Map<String,String>> globalSettings;
 
     public Input<Map<String,String>> getGlobalSettings() {
         return this.globalSettings;

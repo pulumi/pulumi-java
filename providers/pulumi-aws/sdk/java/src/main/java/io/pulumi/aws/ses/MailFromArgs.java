@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="behaviorOnMxFailure")
-    private final @Nullable Input<String> behaviorOnMxFailure;
+      private final @Nullable Input<String> behaviorOnMxFailure;
 
     public Input<String> getBehaviorOnMxFailure() {
         return this.behaviorOnMxFailure == null ? Input.empty() : this.behaviorOnMxFailure;
@@ -30,7 +30,7 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<String> domain;
+      private final Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain;
@@ -41,7 +41,7 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mailFromDomain", required=true)
-    private final Input<String> mailFromDomain;
+      private final Input<String> mailFromDomain;
 
     public Input<String> getMailFromDomain() {
         return this.mailFromDomain;

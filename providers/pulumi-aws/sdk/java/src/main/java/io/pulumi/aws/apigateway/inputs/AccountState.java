@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.aws.apigateway.inputs.AccountThrottleSettingsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchRoleArn")
-    private final @Nullable Input<String> cloudwatchRoleArn;
+      private final @Nullable Input<String> cloudwatchRoleArn;
 
     public Input<String> getCloudwatchRoleArn() {
         return this.cloudwatchRoleArn == null ? Input.empty() : this.cloudwatchRoleArn;
@@ -31,7 +31,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="throttleSettings")
-    private final @Nullable Input<AccountThrottleSettingsGetArgs> throttleSettings;
+      private final @Nullable Input<AccountThrottleSettingsGetArgs> throttleSettings;
 
     public Input<AccountThrottleSettingsGetArgs> getThrottleSettings() {
         return this.throttleSettings == null ? Input.empty() : this.throttleSettings;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateId", required=true)
-    private final Input<String> certificateId;
+      private final Input<String> certificateId;
 
     public Input<String> getCertificateId() {
         return this.certificateId;
@@ -31,7 +31,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificatePem")
-    private final @Nullable Input<String> certificatePem;
+      private final @Nullable Input<String> certificatePem;
 
     public Input<String> getCertificatePem() {
         return this.certificatePem == null ? Input.empty() : this.certificatePem;
@@ -42,7 +42,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateWallet")
-    private final @Nullable Input<String> certificateWallet;
+      private final @Nullable Input<String> certificateWallet;
 
     public Input<String> getCertificateWallet() {
         return this.certificateWallet == null ? Input.empty() : this.certificateWallet;
@@ -53,7 +53,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

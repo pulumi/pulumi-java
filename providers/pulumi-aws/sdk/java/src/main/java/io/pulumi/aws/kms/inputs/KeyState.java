@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -36,7 +36,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bypassPolicyLockoutSafetyCheck")
-    private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
+      private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Input<Boolean> getBypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck == null ? Input.empty() : this.bypassPolicyLockoutSafetyCheck;
@@ -48,7 +48,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerMasterKeySpec")
-    private final @Nullable Input<String> customerMasterKeySpec;
+      private final @Nullable Input<String> customerMasterKeySpec;
 
     public Input<String> getCustomerMasterKeySpec() {
         return this.customerMasterKeySpec == null ? Input.empty() : this.customerMasterKeySpec;
@@ -61,7 +61,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionWindowInDays")
-    private final @Nullable Input<Integer> deletionWindowInDays;
+      private final @Nullable Input<Integer> deletionWindowInDays;
 
     public Input<Integer> getDeletionWindowInDays() {
         return this.deletionWindowInDays == null ? Input.empty() : this.deletionWindowInDays;
@@ -72,7 +72,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -83,7 +83,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableKeyRotation")
-    private final @Nullable Input<Boolean> enableKeyRotation;
+      private final @Nullable Input<Boolean> enableKeyRotation;
 
     public Input<Boolean> getEnableKeyRotation() {
         return this.enableKeyRotation == null ? Input.empty() : this.enableKeyRotation;
@@ -94,7 +94,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
@@ -105,7 +105,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+      private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -117,7 +117,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyUsage")
-    private final @Nullable Input<String> keyUsage;
+      private final @Nullable Input<String> keyUsage;
 
     public Input<String> getKeyUsage() {
         return this.keyUsage == null ? Input.empty() : this.keyUsage;
@@ -128,7 +128,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiRegion")
-    private final @Nullable Input<Boolean> multiRegion;
+      private final @Nullable Input<Boolean> multiRegion;
 
     public Input<Boolean> getMultiRegion() {
         return this.multiRegion == null ? Input.empty() : this.multiRegion;
@@ -139,7 +139,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -150,7 +150,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -161,7 +161,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

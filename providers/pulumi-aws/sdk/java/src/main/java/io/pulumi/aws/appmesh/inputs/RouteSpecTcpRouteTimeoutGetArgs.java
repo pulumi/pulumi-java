@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteTimeoutIdleGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class RouteSpecTcpRouteTimeoutGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="idle")
-    private final @Nullable Input<RouteSpecTcpRouteTimeoutIdleGetArgs> idle;
+      private final @Nullable Input<RouteSpecTcpRouteTimeoutIdleGetArgs> idle;
 
     public Input<RouteSpecTcpRouteTimeoutIdleGetArgs> getIdle() {
         return this.idle == null ? Input.empty() : this.idle;

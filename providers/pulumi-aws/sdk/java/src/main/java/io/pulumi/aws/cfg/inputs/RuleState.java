@@ -6,7 +6,7 @@ package io.pulumi.aws.cfg.inputs;
 import io.pulumi.aws.cfg.inputs.RuleScopeGetArgs;
 import io.pulumi.aws.cfg.inputs.RuleSourceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputParameters")
-    private final @Nullable Input<String> inputParameters;
+      private final @Nullable Input<String> inputParameters;
 
     public Input<String> getInputParameters() {
         return this.inputParameters == null ? Input.empty() : this.inputParameters;
@@ -55,7 +55,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumExecutionFrequency")
-    private final @Nullable Input<String> maximumExecutionFrequency;
+      private final @Nullable Input<String> maximumExecutionFrequency;
 
     public Input<String> getMaximumExecutionFrequency() {
         return this.maximumExecutionFrequency == null ? Input.empty() : this.maximumExecutionFrequency;
@@ -66,7 +66,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleId")
-    private final @Nullable Input<String> ruleId;
+      private final @Nullable Input<String> ruleId;
 
     public Input<String> getRuleId() {
         return this.ruleId == null ? Input.empty() : this.ruleId;
@@ -88,7 +88,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<RuleScopeGetArgs> scope;
+      private final @Nullable Input<RuleScopeGetArgs> scope;
 
     public Input<RuleScopeGetArgs> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -99,7 +99,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<RuleSourceGetArgs> source;
+      private final @Nullable Input<RuleSourceGetArgs> source;
 
     public Input<RuleSourceGetArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -110,7 +110,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -121,7 +121,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

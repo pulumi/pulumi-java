@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cur.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetReportDefinitionArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="reportName", required=true)
-    private final String reportName;
+      private final String reportName;
 
     public String getReportName() {
         return this.reportName;

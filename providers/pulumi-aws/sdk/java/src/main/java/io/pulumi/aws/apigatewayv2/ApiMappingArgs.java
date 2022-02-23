@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -30,7 +30,7 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiMappingKey")
-    private final @Nullable Input<String> apiMappingKey;
+      private final @Nullable Input<String> apiMappingKey;
 
     public Input<String> getApiMappingKey() {
         return this.apiMappingKey == null ? Input.empty() : this.apiMappingKey;
@@ -41,7 +41,7 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -52,7 +52,7 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stage", required=true)
-    private final Input<String> stage;
+      private final Input<String> stage;
 
     public Input<String> getStage() {
         return this.stage;

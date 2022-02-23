@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonName")
-    private final @Nullable Input<String> addonName;
+      private final @Nullable Input<String> addonName;
 
     public Input<String> getAddonName() {
         return this.addonName == null ? Input.empty() : this.addonName;
@@ -33,7 +33,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonVersion")
-    private final @Nullable Input<String> addonVersion;
+      private final @Nullable Input<String> addonVersion;
 
     public Input<String> getAddonVersion() {
         return this.addonVersion == null ? Input.empty() : this.addonVersion;
@@ -44,7 +44,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -55,7 +55,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+      private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -66,7 +66,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -77,7 +77,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modifiedAt")
-    private final @Nullable Input<String> modifiedAt;
+      private final @Nullable Input<String> modifiedAt;
 
     public Input<String> getModifiedAt() {
         return this.modifiedAt == null ? Input.empty() : this.modifiedAt;
@@ -90,7 +90,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resolveConflicts")
-    private final @Nullable Input<String> resolveConflicts;
+      private final @Nullable Input<String> resolveConflicts;
 
     public Input<String> getResolveConflicts() {
         return this.resolveConflicts == null ? Input.empty() : this.resolveConflicts;
@@ -106,7 +106,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountRoleArn")
-    private final @Nullable Input<String> serviceAccountRoleArn;
+      private final @Nullable Input<String> serviceAccountRoleArn;
 
     public Input<String> getServiceAccountRoleArn() {
         return this.serviceAccountRoleArn == null ? Input.empty() : this.serviceAccountRoleArn;
@@ -117,7 +117,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -128,7 +128,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

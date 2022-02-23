@@ -5,7 +5,7 @@ package io.pulumi.aws.alb.inputs;
 
 import io.pulumi.aws.alb.inputs.GetListenerDefaultActionForwardStickiness;
 import io.pulumi.aws.alb.inputs.GetListenerDefaultActionForwardTargetGroup;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,14 +15,14 @@ public final class GetListenerDefaultActionForward extends io.pulumi.resources.I
     public static final GetListenerDefaultActionForward Empty = new GetListenerDefaultActionForward();
 
     @InputImport(name="stickinesses", required=true)
-    private final List<GetListenerDefaultActionForwardStickiness> stickinesses;
+      private final List<GetListenerDefaultActionForwardStickiness> stickinesses;
 
     public List<GetListenerDefaultActionForwardStickiness> getStickinesses() {
         return this.stickinesses;
     }
 
     @InputImport(name="targetGroups", required=true)
-    private final List<GetListenerDefaultActionForwardTargetGroup> targetGroups;
+      private final List<GetListenerDefaultActionForwardTargetGroup> targetGroups;
 
     public List<GetListenerDefaultActionForwardTargetGroup> getTargetGroups() {
         return this.targetGroups;

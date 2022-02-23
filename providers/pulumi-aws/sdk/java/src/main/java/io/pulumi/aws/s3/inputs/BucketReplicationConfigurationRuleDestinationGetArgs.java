@@ -7,7 +7,7 @@ import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleDestinationAcce
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleDestinationMetricsGetArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
      * 
      */
     @InputImport(name="accessControlTranslation")
-    private final @Nullable Input<BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation;
+      private final @Nullable Input<BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation;
 
     public Input<BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs> getAccessControlTranslation() {
         return this.accessControlTranslation == null ? Input.empty() : this.accessControlTranslation;
@@ -33,7 +33,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -44,7 +44,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -55,7 +55,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
      * 
      */
     @InputImport(name="metrics")
-    private final @Nullable Input<BucketReplicationConfigurationRuleDestinationMetricsGetArgs> metrics;
+      private final @Nullable Input<BucketReplicationConfigurationRuleDestinationMetricsGetArgs> metrics;
 
     public Input<BucketReplicationConfigurationRuleDestinationMetricsGetArgs> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
@@ -67,7 +67,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
      * 
      */
     @InputImport(name="replicaKmsKeyId")
-    private final @Nullable Input<String> replicaKmsKeyId;
+      private final @Nullable Input<String> replicaKmsKeyId;
 
     public Input<String> getReplicaKmsKeyId() {
         return this.replicaKmsKeyId == null ? Input.empty() : this.replicaKmsKeyId;
@@ -78,7 +78,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
      * 
      */
     @InputImport(name="replicationTime")
-    private final @Nullable Input<BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs> replicationTime;
+      private final @Nullable Input<BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs> replicationTime;
 
     public Input<BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs> getReplicationTime() {
         return this.replicationTime == null ? Input.empty() : this.replicationTime;
@@ -89,7 +89,7 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
      * 
      */
     @InputImport(name="storageClass")
-    private final @Nullable Input<String> storageClass;
+      private final @Nullable Input<String> storageClass;
 
     public Input<String> getStorageClass() {
         return this.storageClass == null ? Input.empty() : this.storageClass;

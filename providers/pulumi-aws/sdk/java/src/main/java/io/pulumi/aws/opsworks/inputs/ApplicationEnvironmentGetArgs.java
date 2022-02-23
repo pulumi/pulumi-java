@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ApplicationEnvironmentGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -31,7 +31,7 @@ public final class ApplicationEnvironmentGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="secure")
-    private final @Nullable Input<Boolean> secure;
+      private final @Nullable Input<Boolean> secure;
 
     public Input<Boolean> getSecure() {
         return this.secure == null ? Input.empty() : this.secure;
@@ -42,7 +42,7 @@ public final class ApplicationEnvironmentGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

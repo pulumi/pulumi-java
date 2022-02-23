@@ -6,7 +6,7 @@ package io.pulumi.aws.codedeploy;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigMinimumHealthyHostsArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="computePlatform")
-    private final @Nullable Input<String> computePlatform;
+      private final @Nullable Input<String> computePlatform;
 
     public Input<String> getComputePlatform() {
         return this.computePlatform == null ? Input.empty() : this.computePlatform;
@@ -32,7 +32,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deploymentConfigName", required=true)
-    private final Input<String> deploymentConfigName;
+      private final Input<String> deploymentConfigName;
 
     public Input<String> getDeploymentConfigName() {
         return this.deploymentConfigName;
@@ -43,7 +43,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minimumHealthyHosts")
-    private final @Nullable Input<DeploymentConfigMinimumHealthyHostsArgs> minimumHealthyHosts;
+      private final @Nullable Input<DeploymentConfigMinimumHealthyHostsArgs> minimumHealthyHosts;
 
     public Input<DeploymentConfigMinimumHealthyHostsArgs> getMinimumHealthyHosts() {
         return this.minimumHealthyHosts == null ? Input.empty() : this.minimumHealthyHosts;
@@ -54,7 +54,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="trafficRoutingConfig")
-    private final @Nullable Input<DeploymentConfigTrafficRoutingConfigArgs> trafficRoutingConfig;
+      private final @Nullable Input<DeploymentConfigTrafficRoutingConfigArgs> trafficRoutingConfig;
 
     public Input<DeploymentConfigTrafficRoutingConfigArgs> getTrafficRoutingConfig() {
         return this.trafficRoutingConfig == null ? Input.empty() : this.trafficRoutingConfig;

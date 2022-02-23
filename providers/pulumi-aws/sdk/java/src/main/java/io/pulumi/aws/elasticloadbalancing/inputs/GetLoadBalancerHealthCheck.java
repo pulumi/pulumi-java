@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancing.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,35 +14,35 @@ public final class GetLoadBalancerHealthCheck extends io.pulumi.resources.Invoke
     public static final GetLoadBalancerHealthCheck Empty = new GetLoadBalancerHealthCheck();
 
     @InputImport(name="healthyThreshold", required=true)
-    private final Integer healthyThreshold;
+      private final Integer healthyThreshold;
 
     public Integer getHealthyThreshold() {
         return this.healthyThreshold;
     }
 
     @InputImport(name="interval", required=true)
-    private final Integer interval;
+      private final Integer interval;
 
     public Integer getInterval() {
         return this.interval;
     }
 
     @InputImport(name="target", required=true)
-    private final String target;
+      private final String target;
 
     public String getTarget() {
         return this.target;
     }
 
     @InputImport(name="timeout", required=true)
-    private final Integer timeout;
+      private final Integer timeout;
 
     public Integer getTimeout() {
         return this.timeout;
     }
 
     @InputImport(name="unhealthyThreshold", required=true)
-    private final Integer unhealthyThreshold;
+      private final Integer unhealthyThreshold;
 
     public Integer getUnhealthyThreshold() {
         return this.unhealthyThreshold;

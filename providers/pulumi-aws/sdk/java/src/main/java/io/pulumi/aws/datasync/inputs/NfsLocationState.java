@@ -6,7 +6,7 @@ package io.pulumi.aws.datasync.inputs;
 import io.pulumi.aws.datasync.inputs.NfsLocationMountOptionsGetArgs;
 import io.pulumi.aws.datasync.inputs.NfsLocationOnPremConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class NfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountOptions")
-    private final @Nullable Input<NfsLocationMountOptionsGetArgs> mountOptions;
+      private final @Nullable Input<NfsLocationMountOptionsGetArgs> mountOptions;
 
     public Input<NfsLocationMountOptionsGetArgs> getMountOptions() {
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
@@ -44,7 +44,7 @@ public final class NfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onPremConfig")
-    private final @Nullable Input<NfsLocationOnPremConfigGetArgs> onPremConfig;
+      private final @Nullable Input<NfsLocationOnPremConfigGetArgs> onPremConfig;
 
     public Input<NfsLocationOnPremConfigGetArgs> getOnPremConfig() {
         return this.onPremConfig == null ? Input.empty() : this.onPremConfig;
@@ -55,7 +55,7 @@ public final class NfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverHostname")
-    private final @Nullable Input<String> serverHostname;
+      private final @Nullable Input<String> serverHostname;
 
     public Input<String> getServerHostname() {
         return this.serverHostname == null ? Input.empty() : this.serverHostname;
@@ -66,7 +66,7 @@ public final class NfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdirectory")
-    private final @Nullable Input<String> subdirectory;
+      private final @Nullable Input<String> subdirectory;
 
     public Input<String> getSubdirectory() {
         return this.subdirectory == null ? Input.empty() : this.subdirectory;
@@ -77,7 +77,7 @@ public final class NfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -88,14 +88,14 @@ public final class NfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
     }
 
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;

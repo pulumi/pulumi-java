@@ -4,7 +4,7 @@
 package io.pulumi.aws.codestarnotifications.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NotificationRuleTargetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="address", required=true)
-    private final Input<String> address;
+      private final Input<String> address;
 
     public Input<String> getAddress() {
         return this.address;
@@ -30,7 +30,7 @@ public final class NotificationRuleTargetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -41,7 +41,7 @@ public final class NotificationRuleTargetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

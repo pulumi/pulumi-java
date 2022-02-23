@@ -6,7 +6,7 @@ package io.pulumi.aws.signer.inputs;
 import io.pulumi.aws.signer.inputs.SigningProfileRevocationRecordGetArgs;
 import io.pulumi.aws.signer.inputs.SigningProfileSignatureValidityPeriodGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -56,7 +56,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="platformDisplayName")
-    private final @Nullable Input<String> platformDisplayName;
+      private final @Nullable Input<String> platformDisplayName;
 
     public Input<String> getPlatformDisplayName() {
         return this.platformDisplayName == null ? Input.empty() : this.platformDisplayName;
@@ -67,7 +67,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="platformId")
-    private final @Nullable Input<String> platformId;
+      private final @Nullable Input<String> platformId;
 
     public Input<String> getPlatformId() {
         return this.platformId == null ? Input.empty() : this.platformId;
@@ -78,7 +78,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="revocationRecords")
-    private final @Nullable Input<List<SigningProfileRevocationRecordGetArgs>> revocationRecords;
+      private final @Nullable Input<List<SigningProfileRevocationRecordGetArgs>> revocationRecords;
 
     public Input<List<SigningProfileRevocationRecordGetArgs>> getRevocationRecords() {
         return this.revocationRecords == null ? Input.empty() : this.revocationRecords;
@@ -89,7 +89,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="signatureValidityPeriod")
-    private final @Nullable Input<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod;
+      private final @Nullable Input<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod;
 
     public Input<SigningProfileSignatureValidityPeriodGetArgs> getSignatureValidityPeriod() {
         return this.signatureValidityPeriod == null ? Input.empty() : this.signatureValidityPeriod;
@@ -100,7 +100,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -111,7 +111,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -122,7 +122,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -133,7 +133,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -144,7 +144,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="versionArn")
-    private final @Nullable Input<String> versionArn;
+      private final @Nullable Input<String> versionArn;
 
     public Input<String> getVersionArn() {
         return this.versionArn == null ? Input.empty() : this.versionArn;

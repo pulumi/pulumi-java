@@ -10,7 +10,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerPortMappingGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="connectionPool")
-    private final @Nullable Input<VirtualNodeSpecListenerConnectionPoolGetArgs> connectionPool;
+      private final @Nullable Input<VirtualNodeSpecListenerConnectionPoolGetArgs> connectionPool;
 
     public Input<VirtualNodeSpecListenerConnectionPoolGetArgs> getConnectionPool() {
         return this.connectionPool == null ? Input.empty() : this.connectionPool;
@@ -35,7 +35,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="healthCheck")
-    private final @Nullable Input<VirtualNodeSpecListenerHealthCheckGetArgs> healthCheck;
+      private final @Nullable Input<VirtualNodeSpecListenerHealthCheckGetArgs> healthCheck;
 
     public Input<VirtualNodeSpecListenerHealthCheckGetArgs> getHealthCheck() {
         return this.healthCheck == null ? Input.empty() : this.healthCheck;
@@ -46,7 +46,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="outlierDetection")
-    private final @Nullable Input<VirtualNodeSpecListenerOutlierDetectionGetArgs> outlierDetection;
+      private final @Nullable Input<VirtualNodeSpecListenerOutlierDetectionGetArgs> outlierDetection;
 
     public Input<VirtualNodeSpecListenerOutlierDetectionGetArgs> getOutlierDetection() {
         return this.outlierDetection == null ? Input.empty() : this.outlierDetection;
@@ -57,7 +57,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="portMapping", required=true)
-    private final Input<VirtualNodeSpecListenerPortMappingGetArgs> portMapping;
+      private final Input<VirtualNodeSpecListenerPortMappingGetArgs> portMapping;
 
     public Input<VirtualNodeSpecListenerPortMappingGetArgs> getPortMapping() {
         return this.portMapping;
@@ -68,7 +68,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<VirtualNodeSpecListenerTimeoutGetArgs> timeout;
+      private final @Nullable Input<VirtualNodeSpecListenerTimeoutGetArgs> timeout;
 
     public Input<VirtualNodeSpecListenerTimeoutGetArgs> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -79,7 +79,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tls")
-    private final @Nullable Input<VirtualNodeSpecListenerTlsGetArgs> tls;
+      private final @Nullable Input<VirtualNodeSpecListenerTlsGetArgs> tls;
 
     public Input<VirtualNodeSpecListenerTlsGetArgs> getTls() {
         return this.tls == null ? Input.empty() : this.tls;

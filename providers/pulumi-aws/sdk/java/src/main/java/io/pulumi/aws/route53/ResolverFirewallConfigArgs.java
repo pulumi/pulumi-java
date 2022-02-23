@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResolverFirewallConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="firewallFailOpen")
-    private final @Nullable Input<String> firewallFailOpen;
+      private final @Nullable Input<String> firewallFailOpen;
 
     public Input<String> getFirewallFailOpen() {
         return this.firewallFailOpen == null ? Input.empty() : this.firewallFailOpen;
@@ -30,7 +30,7 @@ public final class ResolverFirewallConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;

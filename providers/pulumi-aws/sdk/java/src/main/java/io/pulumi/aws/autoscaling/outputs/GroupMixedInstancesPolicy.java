@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscaling.outputs;
 
 import io.pulumi.aws.autoscaling.outputs.GroupMixedInstancesPolicyInstancesDistribution;
 import io.pulumi.aws.autoscaling.outputs.GroupMixedInstancesPolicyLaunchTemplate;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

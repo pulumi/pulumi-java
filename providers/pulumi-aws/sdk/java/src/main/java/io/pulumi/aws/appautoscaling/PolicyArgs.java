@@ -6,7 +6,7 @@ package io.pulumi.aws.appautoscaling;
 import io.pulumi.aws.appautoscaling.inputs.PolicyStepScalingPolicyConfigurationArgs;
 import io.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyType")
-    private final @Nullable Input<String> policyType;
+      private final @Nullable Input<String> policyType;
 
     public Input<String> getPolicyType() {
         return this.policyType == null ? Input.empty() : this.policyType;
@@ -43,7 +43,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -54,7 +54,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalableDimension", required=true)
-    private final Input<String> scalableDimension;
+      private final Input<String> scalableDimension;
 
     public Input<String> getScalableDimension() {
         return this.scalableDimension;
@@ -65,7 +65,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceNamespace", required=true)
-    private final Input<String> serviceNamespace;
+      private final Input<String> serviceNamespace;
 
     public Input<String> getServiceNamespace() {
         return this.serviceNamespace;
@@ -76,7 +76,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepScalingPolicyConfiguration")
-    private final @Nullable Input<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration;
+      private final @Nullable Input<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration;
 
     public Input<PolicyStepScalingPolicyConfigurationArgs> getStepScalingPolicyConfiguration() {
         return this.stepScalingPolicyConfiguration == null ? Input.empty() : this.stepScalingPolicyConfiguration;
@@ -87,7 +87,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetTrackingScalingPolicyConfiguration")
-    private final @Nullable Input<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
+      private final @Nullable Input<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
 
     public Input<PolicyTargetTrackingScalingPolicyConfigurationArgs> getTargetTrackingScalingPolicyConfiguration() {
         return this.targetTrackingScalingPolicyConfiguration == null ? Input.empty() : this.targetTrackingScalingPolicyConfiguration;

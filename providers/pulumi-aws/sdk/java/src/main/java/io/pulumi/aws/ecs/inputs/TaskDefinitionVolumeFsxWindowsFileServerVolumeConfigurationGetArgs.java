@@ -5,7 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGe
      * 
      */
     @InputImport(name="authorizationConfig", required=true)
-    private final Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs> authorizationConfig;
+      private final Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs> authorizationConfig;
 
     public Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs> getAuthorizationConfig() {
         return this.authorizationConfig;
@@ -30,7 +30,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGe
      * 
      */
     @InputImport(name="fileSystemId", required=true)
-    private final Input<String> fileSystemId;
+      private final Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId;
@@ -41,7 +41,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGe
      * 
      */
     @InputImport(name="rootDirectory", required=true)
-    private final Input<String> rootDirectory;
+      private final Input<String> rootDirectory;
 
     public Input<String> getRootDirectory() {
         return this.rootDirectory;

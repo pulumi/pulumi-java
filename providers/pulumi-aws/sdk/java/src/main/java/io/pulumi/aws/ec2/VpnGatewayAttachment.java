@@ -8,8 +8,8 @@ import io.pulumi.aws.ec2.VpnGatewayAttachmentArgs;
 import io.pulumi.aws.ec2.inputs.VpnGatewayAttachmentState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -59,6 +59,21 @@ public class VpnGatewayAttachment extends io.pulumi.resources.CustomResource {
         return this.vpnGatewayId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VpnGatewayAttachment(String name) {
+        this(name, VpnGatewayAttachmentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VpnGatewayAttachment(String name, VpnGatewayAttachmentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

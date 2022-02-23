@@ -5,7 +5,7 @@ package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.aws.connect.inputs.HoursOfOperationConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="configs")
-    private final @Nullable Input<List<HoursOfOperationConfigGetArgs>> configs;
+      private final @Nullable Input<List<HoursOfOperationConfigGetArgs>> configs;
 
     public Input<List<HoursOfOperationConfigGetArgs>> getConfigs() {
         return this.configs == null ? Input.empty() : this.configs;
@@ -33,7 +33,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hoursOfOperationArn")
-    private final @Nullable Input<String> hoursOfOperationArn;
+      private final @Nullable Input<String> hoursOfOperationArn;
 
     public Input<String> getHoursOfOperationArn() {
         return this.hoursOfOperationArn == null ? Input.empty() : this.hoursOfOperationArn;
@@ -55,7 +55,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hoursOfOperationId")
-    private final @Nullable Input<String> hoursOfOperationId;
+      private final @Nullable Input<String> hoursOfOperationId;
 
     public Input<String> getHoursOfOperationId() {
         return this.hoursOfOperationId == null ? Input.empty() : this.hoursOfOperationId;
@@ -66,7 +66,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -77,7 +77,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,7 +88,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -99,7 +99,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -110,7 +110,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;

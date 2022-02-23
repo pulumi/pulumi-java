@@ -8,8 +8,8 @@ import io.pulumi.aws.iam.UserPolicyAttachmentArgs;
 import io.pulumi.aws.iam.inputs.UserPolicyAttachmentState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -60,6 +60,21 @@ public class UserPolicyAttachment extends io.pulumi.resources.CustomResource {
         return this.user;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public UserPolicyAttachment(String name) {
+        this(name, UserPolicyAttachmentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public UserPolicyAttachment(String name, UserPolicyAttachmentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

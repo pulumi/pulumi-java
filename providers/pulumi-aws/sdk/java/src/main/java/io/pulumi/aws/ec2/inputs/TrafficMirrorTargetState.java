@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -42,7 +42,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkInterfaceId")
-    private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
@@ -53,7 +53,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkLoadBalancerArn")
-    private final @Nullable Input<String> networkLoadBalancerArn;
+      private final @Nullable Input<String> networkLoadBalancerArn;
 
     public Input<String> getNetworkLoadBalancerArn() {
         return this.networkLoadBalancerArn == null ? Input.empty() : this.networkLoadBalancerArn;
@@ -64,7 +64,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -75,7 +75,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -86,7 +86,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

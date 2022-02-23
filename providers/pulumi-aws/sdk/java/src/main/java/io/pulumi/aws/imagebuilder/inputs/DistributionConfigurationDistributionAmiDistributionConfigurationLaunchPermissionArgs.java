@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="userGroups")
-    private final @Nullable Input<List<String>> userGroups;
+      private final @Nullable Input<List<String>> userGroups;
 
     public Input<List<String>> getUserGroups() {
         return this.userGroups == null ? Input.empty() : this.userGroups;
@@ -31,7 +31,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="userIds")
-    private final @Nullable Input<List<String>> userIds;
+      private final @Nullable Input<List<String>> userIds;
 
     public Input<List<String>> getUserIds() {
         return this.userIds == null ? Input.empty() : this.userIds;

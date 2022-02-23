@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerFunctionArn")
-    private final @Nullable Input<String> authorizerFunctionArn;
+      private final @Nullable Input<String> authorizerFunctionArn;
 
     public Input<String> getAuthorizerFunctionArn() {
         return this.authorizerFunctionArn == null ? Input.empty() : this.authorizerFunctionArn;
@@ -43,7 +43,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signingDisabled")
-    private final @Nullable Input<Boolean> signingDisabled;
+      private final @Nullable Input<Boolean> signingDisabled;
 
     public Input<Boolean> getSigningDisabled() {
         return this.signingDisabled == null ? Input.empty() : this.signingDisabled;
@@ -65,7 +65,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -76,7 +76,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenKeyName")
-    private final @Nullable Input<String> tokenKeyName;
+      private final @Nullable Input<String> tokenKeyName;
 
     public Input<String> getTokenKeyName() {
         return this.tokenKeyName == null ? Input.empty() : this.tokenKeyName;
@@ -87,7 +87,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenSigningPublicKeys")
-    private final @Nullable Input<Map<String,String>> tokenSigningPublicKeys;
+      private final @Nullable Input<Map<String,String>> tokenSigningPublicKeys;
 
     public Input<Map<String,String>> getTokenSigningPublicKeys() {
         return this.tokenSigningPublicKeys == null ? Input.empty() : this.tokenSigningPublicKeys;

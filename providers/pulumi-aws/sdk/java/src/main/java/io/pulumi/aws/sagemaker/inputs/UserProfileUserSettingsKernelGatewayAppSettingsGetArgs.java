@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs;
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
      * 
      */
     @InputImport(name="customImages")
-    private final @Nullable Input<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages;
+      private final @Nullable Input<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages;
 
     public Input<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> getCustomImages() {
         return this.customImages == null ? Input.empty() : this.customImages;
@@ -33,7 +33,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
      * 
      */
     @InputImport(name="defaultResourceSpec", required=true)
-    private final Input<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
+      private final Input<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
     public Input<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
         return this.defaultResourceSpec;
@@ -44,7 +44,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
      * 
      */
     @InputImport(name="lifecycleConfigArns")
-    private final @Nullable Input<List<String>> lifecycleConfigArns;
+      private final @Nullable Input<List<String>> lifecycleConfigArns;
 
     public Input<List<String>> getLifecycleConfigArns() {
         return this.lifecycleConfigArns == null ? Input.empty() : this.lifecycleConfigArns;

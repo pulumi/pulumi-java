@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationOutputKinesisFirehose;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationOutputKinesisStream;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationOutputLambda;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationOutputSchema;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

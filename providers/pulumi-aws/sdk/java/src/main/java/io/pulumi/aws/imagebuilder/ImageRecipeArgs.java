@@ -6,7 +6,7 @@ package io.pulumi.aws.imagebuilder;
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingArgs;
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeComponentArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockDeviceMappings")
-    private final @Nullable Input<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
+      private final @Nullable Input<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
 
     public Input<List<ImageRecipeBlockDeviceMappingArgs>> getBlockDeviceMappings() {
         return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
@@ -34,7 +34,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="components", required=true)
-    private final Input<List<ImageRecipeComponentArgs>> components;
+      private final Input<List<ImageRecipeComponentArgs>> components;
 
     public Input<List<ImageRecipeComponentArgs>> getComponents() {
         return this.components;
@@ -45,7 +45,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -56,7 +56,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentImage", required=true)
-    private final Input<String> parentImage;
+      private final Input<String> parentImage;
 
     public Input<String> getParentImage() {
         return this.parentImage;
@@ -78,7 +78,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -89,7 +89,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userDataBase64")
-    private final @Nullable Input<String> userDataBase64;
+      private final @Nullable Input<String> userDataBase64;
 
     public Input<String> getUserDataBase64() {
         return this.userDataBase64 == null ? Input.empty() : this.userDataBase64;
@@ -100,7 +100,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -111,7 +111,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workingDirectory")
-    private final @Nullable Input<String> workingDirectory;
+      private final @Nullable Input<String> workingDirectory;
 
     public Input<String> getWorkingDirectory() {
         return this.workingDirectory == null ? Input.empty() : this.workingDirectory;

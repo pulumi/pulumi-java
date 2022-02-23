@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.outputs;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerConnectionPoolGrpc;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerConnectionPoolHttp2;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerConnectionPoolHttp;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

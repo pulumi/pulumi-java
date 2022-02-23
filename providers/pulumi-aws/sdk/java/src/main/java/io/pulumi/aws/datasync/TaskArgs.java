@@ -7,7 +7,7 @@ import io.pulumi.aws.datasync.inputs.TaskExcludesArgs;
 import io.pulumi.aws.datasync.inputs.TaskOptionsArgs;
 import io.pulumi.aws.datasync.inputs.TaskScheduleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchLogGroupArn")
-    private final @Nullable Input<String> cloudwatchLogGroupArn;
+      private final @Nullable Input<String> cloudwatchLogGroupArn;
 
     public Input<String> getCloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn == null ? Input.empty() : this.cloudwatchLogGroupArn;
@@ -34,7 +34,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationLocationArn", required=true)
-    private final Input<String> destinationLocationArn;
+      private final Input<String> destinationLocationArn;
 
     public Input<String> getDestinationLocationArn() {
         return this.destinationLocationArn;
@@ -45,7 +45,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludes")
-    private final @Nullable Input<TaskExcludesArgs> excludes;
+      private final @Nullable Input<TaskExcludesArgs> excludes;
 
     public Input<TaskExcludesArgs> getExcludes() {
         return this.excludes == null ? Input.empty() : this.excludes;
@@ -56,7 +56,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<TaskOptionsArgs> options;
+      private final @Nullable Input<TaskOptionsArgs> options;
 
     public Input<TaskOptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -78,7 +78,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<TaskScheduleArgs> schedule;
+      private final @Nullable Input<TaskScheduleArgs> schedule;
 
     public Input<TaskScheduleArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -89,7 +89,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceLocationArn", required=true)
-    private final Input<String> sourceLocationArn;
+      private final Input<String> sourceLocationArn;
 
     public Input<String> getSourceLocationArn() {
         return this.sourceLocationArn;
@@ -100,7 +100,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

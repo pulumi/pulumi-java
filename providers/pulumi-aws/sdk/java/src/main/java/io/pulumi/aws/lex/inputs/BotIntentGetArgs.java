@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class BotIntentGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intentName", required=true)
-    private final Input<String> intentName;
+      private final Input<String> intentName;
 
     public Input<String> getIntentName() {
         return this.intentName;
@@ -29,7 +29,7 @@ public final class BotIntentGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intentVersion", required=true)
-    private final Input<String> intentVersion;
+      private final Input<String> intentVersion;
 
     public Input<String> getIntentVersion() {
         return this.intentVersion;

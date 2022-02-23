@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetLaunchTemplateInstanceMarketOptionSpotOption;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class GetLaunchTemplateInstanceMarketOption extends io.pulumi.resou
     public static final GetLaunchTemplateInstanceMarketOption Empty = new GetLaunchTemplateInstanceMarketOption();
 
     @InputImport(name="marketType", required=true)
-    private final String marketType;
+      private final String marketType;
 
     public String getMarketType() {
         return this.marketType;
     }
 
     @InputImport(name="spotOptions", required=true)
-    private final List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions;
+      private final List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions;
 
     public List<GetLaunchTemplateInstanceMarketOptionSpotOption> getSpotOptions() {
         return this.spotOptions;

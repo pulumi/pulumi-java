@@ -11,7 +11,7 @@ import io.pulumi.aws.ses.inputs.ReceiptRuleSnsActionGetArgs;
 import io.pulumi.aws.ses.inputs.ReceiptRuleStopActionGetArgs;
 import io.pulumi.aws.ses.inputs.ReceiptRuleWorkmailActionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addHeaderActions")
-    private final @Nullable Input<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions;
+      private final @Nullable Input<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions;
 
     public Input<List<ReceiptRuleAddHeaderActionGetArgs>> getAddHeaderActions() {
         return this.addHeaderActions == null ? Input.empty() : this.addHeaderActions;
@@ -39,7 +39,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="after")
-    private final @Nullable Input<String> after;
+      private final @Nullable Input<String> after;
 
     public Input<String> getAfter() {
         return this.after == null ? Input.empty() : this.after;
@@ -50,7 +50,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -61,7 +61,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bounceActions")
-    private final @Nullable Input<List<ReceiptRuleBounceActionGetArgs>> bounceActions;
+      private final @Nullable Input<List<ReceiptRuleBounceActionGetArgs>> bounceActions;
 
     public Input<List<ReceiptRuleBounceActionGetArgs>> getBounceActions() {
         return this.bounceActions == null ? Input.empty() : this.bounceActions;
@@ -72,7 +72,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -83,7 +83,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lambdaActions")
-    private final @Nullable Input<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions;
+      private final @Nullable Input<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions;
 
     public Input<List<ReceiptRuleLambdaActionGetArgs>> getLambdaActions() {
         return this.lambdaActions == null ? Input.empty() : this.lambdaActions;
@@ -94,7 +94,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -105,7 +105,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recipients")
-    private final @Nullable Input<List<String>> recipients;
+      private final @Nullable Input<List<String>> recipients;
 
     public Input<List<String>> getRecipients() {
         return this.recipients == null ? Input.empty() : this.recipients;
@@ -116,7 +116,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleSetName")
-    private final @Nullable Input<String> ruleSetName;
+      private final @Nullable Input<String> ruleSetName;
 
     public Input<String> getRuleSetName() {
         return this.ruleSetName == null ? Input.empty() : this.ruleSetName;
@@ -127,7 +127,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Actions")
-    private final @Nullable Input<List<ReceiptRuleS3ActionGetArgs>> s3Actions;
+      private final @Nullable Input<List<ReceiptRuleS3ActionGetArgs>> s3Actions;
 
     public Input<List<ReceiptRuleS3ActionGetArgs>> getS3Actions() {
         return this.s3Actions == null ? Input.empty() : this.s3Actions;
@@ -138,7 +138,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scanEnabled")
-    private final @Nullable Input<Boolean> scanEnabled;
+      private final @Nullable Input<Boolean> scanEnabled;
 
     public Input<Boolean> getScanEnabled() {
         return this.scanEnabled == null ? Input.empty() : this.scanEnabled;
@@ -149,7 +149,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snsActions")
-    private final @Nullable Input<List<ReceiptRuleSnsActionGetArgs>> snsActions;
+      private final @Nullable Input<List<ReceiptRuleSnsActionGetArgs>> snsActions;
 
     public Input<List<ReceiptRuleSnsActionGetArgs>> getSnsActions() {
         return this.snsActions == null ? Input.empty() : this.snsActions;
@@ -160,7 +160,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stopActions")
-    private final @Nullable Input<List<ReceiptRuleStopActionGetArgs>> stopActions;
+      private final @Nullable Input<List<ReceiptRuleStopActionGetArgs>> stopActions;
 
     public Input<List<ReceiptRuleStopActionGetArgs>> getStopActions() {
         return this.stopActions == null ? Input.empty() : this.stopActions;
@@ -171,7 +171,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tlsPolicy")
-    private final @Nullable Input<String> tlsPolicy;
+      private final @Nullable Input<String> tlsPolicy;
 
     public Input<String> getTlsPolicy() {
         return this.tlsPolicy == null ? Input.empty() : this.tlsPolicy;
@@ -182,7 +182,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workmailActions")
-    private final @Nullable Input<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions;
+      private final @Nullable Input<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions;
 
     public Input<List<ReceiptRuleWorkmailActionGetArgs>> getWorkmailActions() {
         return this.workmailActions == null ? Input.empty() : this.workmailActions;

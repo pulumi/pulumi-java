@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetDataLakeSettingsCreateDatabaseDefaultPermission extends io
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final List<String> permissions;
+      private final List<String> permissions;
 
     public List<String> getPermissions() {
         return this.permissions;
@@ -29,7 +29,7 @@ public final class GetDataLakeSettingsCreateDatabaseDefaultPermission extends io
      * 
      */
     @InputImport(name="principal", required=true)
-    private final String principal;
+      private final String principal;
 
     public String getPrincipal() {
         return this.principal;

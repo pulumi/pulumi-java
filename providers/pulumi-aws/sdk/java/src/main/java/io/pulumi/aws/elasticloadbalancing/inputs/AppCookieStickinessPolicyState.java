@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticloadbalancing.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cookieName")
-    private final @Nullable Input<String> cookieName;
+      private final @Nullable Input<String> cookieName;
 
     public Input<String> getCookieName() {
         return this.cookieName == null ? Input.empty() : this.cookieName;
@@ -33,7 +33,7 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="lbPort")
-    private final @Nullable Input<Integer> lbPort;
+      private final @Nullable Input<Integer> lbPort;
 
     public Input<Integer> getLbPort() {
         return this.lbPort == null ? Input.empty() : this.lbPort;
@@ -45,7 +45,7 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="loadBalancer")
-    private final @Nullable Input<String> loadBalancer;
+      private final @Nullable Input<String> loadBalancer;
 
     public Input<String> getLoadBalancer() {
         return this.loadBalancer == null ? Input.empty() : this.loadBalancer;
@@ -56,7 +56,7 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

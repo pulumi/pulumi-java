@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionBlockCustomResponseArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class WebAclDefaultActionBlockArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="customResponse")
-    private final @Nullable Input<WebAclDefaultActionBlockCustomResponseArgs> customResponse;
+      private final @Nullable Input<WebAclDefaultActionBlockCustomResponseArgs> customResponse;
 
     public Input<WebAclDefaultActionBlockCustomResponseArgs> getCustomResponse() {
         return this.customResponse == null ? Input.empty() : this.customResponse;

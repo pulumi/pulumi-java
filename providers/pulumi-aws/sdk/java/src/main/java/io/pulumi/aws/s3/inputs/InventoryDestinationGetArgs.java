@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class InventoryDestinationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<InventoryDestinationBucketGetArgs> bucket;
+      private final Input<InventoryDestinationBucketGetArgs> bucket;
 
     public Input<InventoryDestinationBucketGetArgs> getBucket() {
         return this.bucket;

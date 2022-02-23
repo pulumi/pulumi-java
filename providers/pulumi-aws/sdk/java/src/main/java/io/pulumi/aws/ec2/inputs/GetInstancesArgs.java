@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetInstancesFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class GetInstancesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetInstancesFilter> filters;
+      private final @Nullable List<GetInstancesFilter> filters;
 
     public List<GetInstancesFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -35,7 +35,7 @@ public final class GetInstancesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceStateNames")
-    private final @Nullable List<String> instanceStateNames;
+      private final @Nullable List<String> instanceStateNames;
 
     public List<String> getInstanceStateNames() {
         return this.instanceStateNames == null ? List.of() : this.instanceStateNames;
@@ -47,7 +47,7 @@ public final class GetInstancesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceTags")
-    private final @Nullable Map<String,String> instanceTags;
+      private final @Nullable Map<String,String> instanceTags;
 
     public Map<String,String> getInstanceTags() {
         return this.instanceTags == null ? Map.of() : this.instanceTags;

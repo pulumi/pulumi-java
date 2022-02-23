@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.MeshSpecGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdDate")
-    private final @Nullable Input<String> createdDate;
+      private final @Nullable Input<String> createdDate;
 
     public Input<String> getCreatedDate() {
         return this.createdDate == null ? Input.empty() : this.createdDate;
@@ -43,7 +43,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdatedDate")
-    private final @Nullable Input<String> lastUpdatedDate;
+      private final @Nullable Input<String> lastUpdatedDate;
 
     public Input<String> getLastUpdatedDate() {
         return this.lastUpdatedDate == null ? Input.empty() : this.lastUpdatedDate;
@@ -54,7 +54,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="meshOwner")
-    private final @Nullable Input<String> meshOwner;
+      private final @Nullable Input<String> meshOwner;
 
     public Input<String> getMeshOwner() {
         return this.meshOwner == null ? Input.empty() : this.meshOwner;
@@ -65,7 +65,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -76,7 +76,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceOwner")
-    private final @Nullable Input<String> resourceOwner;
+      private final @Nullable Input<String> resourceOwner;
 
     public Input<String> getResourceOwner() {
         return this.resourceOwner == null ? Input.empty() : this.resourceOwner;
@@ -87,7 +87,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<MeshSpecGetArgs> spec;
+      private final @Nullable Input<MeshSpecGetArgs> spec;
 
     public Input<MeshSpecGetArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -98,7 +98,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -109,7 +109,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

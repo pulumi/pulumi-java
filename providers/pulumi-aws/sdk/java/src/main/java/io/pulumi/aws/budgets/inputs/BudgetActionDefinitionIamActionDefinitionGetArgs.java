@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
      * 
      */
     @InputImport(name="groups")
-    private final @Nullable Input<List<String>> groups;
+      private final @Nullable Input<List<String>> groups;
 
     public Input<List<String>> getGroups() {
         return this.groups == null ? Input.empty() : this.groups;
@@ -31,7 +31,7 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
      * 
      */
     @InputImport(name="policyArn", required=true)
-    private final Input<String> policyArn;
+      private final Input<String> policyArn;
 
     public Input<String> getPolicyArn() {
         return this.policyArn;
@@ -42,7 +42,7 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable Input<List<String>> roles;
+      private final @Nullable Input<List<String>> roles;
 
     public Input<List<String>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;
@@ -53,7 +53,7 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
      * 
      */
     @InputImport(name="users")
-    private final @Nullable Input<List<String>> users;
+      private final @Nullable Input<List<String>> users;
 
     public Input<List<String>> getUsers() {
         return this.users == null ? Input.empty() : this.users;

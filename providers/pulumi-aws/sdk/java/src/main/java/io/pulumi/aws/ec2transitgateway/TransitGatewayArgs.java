@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amazonSideAsn")
-    private final @Nullable Input<Integer> amazonSideAsn;
+      private final @Nullable Input<Integer> amazonSideAsn;
 
     public Input<Integer> getAmazonSideAsn() {
         return this.amazonSideAsn == null ? Input.empty() : this.amazonSideAsn;
@@ -32,7 +32,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoAcceptSharedAttachments")
-    private final @Nullable Input<String> autoAcceptSharedAttachments;
+      private final @Nullable Input<String> autoAcceptSharedAttachments;
 
     public Input<String> getAutoAcceptSharedAttachments() {
         return this.autoAcceptSharedAttachments == null ? Input.empty() : this.autoAcceptSharedAttachments;
@@ -43,7 +43,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRouteTableAssociation")
-    private final @Nullable Input<String> defaultRouteTableAssociation;
+      private final @Nullable Input<String> defaultRouteTableAssociation;
 
     public Input<String> getDefaultRouteTableAssociation() {
         return this.defaultRouteTableAssociation == null ? Input.empty() : this.defaultRouteTableAssociation;
@@ -54,7 +54,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRouteTablePropagation")
-    private final @Nullable Input<String> defaultRouteTablePropagation;
+      private final @Nullable Input<String> defaultRouteTablePropagation;
 
     public Input<String> getDefaultRouteTablePropagation() {
         return this.defaultRouteTablePropagation == null ? Input.empty() : this.defaultRouteTablePropagation;
@@ -65,7 +65,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -76,7 +76,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsSupport")
-    private final @Nullable Input<String> dnsSupport;
+      private final @Nullable Input<String> dnsSupport;
 
     public Input<String> getDnsSupport() {
         return this.dnsSupport == null ? Input.empty() : this.dnsSupport;
@@ -87,7 +87,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -98,7 +98,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnEcmpSupport")
-    private final @Nullable Input<String> vpnEcmpSupport;
+      private final @Nullable Input<String> vpnEcmpSupport;
 
     public Input<String> getVpnEcmpSupport() {
         return this.vpnEcmpSupport == null ? Input.empty() : this.vpnEcmpSupport;

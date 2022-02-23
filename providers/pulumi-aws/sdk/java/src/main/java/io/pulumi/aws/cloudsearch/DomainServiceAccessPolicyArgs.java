@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudsearch;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DomainServiceAccessPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accessPolicy", required=true)
-    private final Input<String> accessPolicy;
+      private final Input<String> accessPolicy;
 
     public Input<String> getAccessPolicy() {
         return this.accessPolicy;
@@ -29,7 +29,7 @@ public final class DomainServiceAccessPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;

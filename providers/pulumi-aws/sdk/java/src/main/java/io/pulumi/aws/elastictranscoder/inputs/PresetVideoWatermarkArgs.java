@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="horizontalAlign")
-    private final @Nullable Input<String> horizontalAlign;
+      private final @Nullable Input<String> horizontalAlign;
 
     public Input<String> getHorizontalAlign() {
         return this.horizontalAlign == null ? Input.empty() : this.horizontalAlign;
@@ -30,7 +30,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="horizontalOffset")
-    private final @Nullable Input<String> horizontalOffset;
+      private final @Nullable Input<String> horizontalOffset;
 
     public Input<String> getHorizontalOffset() {
         return this.horizontalOffset == null ? Input.empty() : this.horizontalOffset;
@@ -41,7 +41,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -52,7 +52,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxHeight")
-    private final @Nullable Input<String> maxHeight;
+      private final @Nullable Input<String> maxHeight;
 
     public Input<String> getMaxHeight() {
         return this.maxHeight == null ? Input.empty() : this.maxHeight;
@@ -63,7 +63,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxWidth")
-    private final @Nullable Input<String> maxWidth;
+      private final @Nullable Input<String> maxWidth;
 
     public Input<String> getMaxWidth() {
         return this.maxWidth == null ? Input.empty() : this.maxWidth;
@@ -74,7 +74,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="opacity")
-    private final @Nullable Input<String> opacity;
+      private final @Nullable Input<String> opacity;
 
     public Input<String> getOpacity() {
         return this.opacity == null ? Input.empty() : this.opacity;
@@ -85,7 +85,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sizingPolicy")
-    private final @Nullable Input<String> sizingPolicy;
+      private final @Nullable Input<String> sizingPolicy;
 
     public Input<String> getSizingPolicy() {
         return this.sizingPolicy == null ? Input.empty() : this.sizingPolicy;
@@ -96,7 +96,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -107,7 +107,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="verticalAlign")
-    private final @Nullable Input<String> verticalAlign;
+      private final @Nullable Input<String> verticalAlign;
 
     public Input<String> getVerticalAlign() {
         return this.verticalAlign == null ? Input.empty() : this.verticalAlign;
@@ -118,7 +118,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="verticalOffset")
-    private final @Nullable Input<String> verticalOffset;
+      private final @Nullable Input<String> verticalOffset;
 
     public Input<String> getVerticalOffset() {
         return this.verticalOffset == null ? Input.empty() : this.verticalOffset;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.dlm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetain
      * 
      */
     @InputImport(name="interval", required=true)
-    private final Input<Integer> interval;
+      private final Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval;
@@ -30,7 +30,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetain
      * 
      */
     @InputImport(name="intervalUnit", required=true)
-    private final Input<String> intervalUnit;
+      private final Input<String> intervalUnit;
 
     public Input<String> getIntervalUnit() {
         return this.intervalUnit;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IntegrationResponseParameterGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="mappings", required=true)
-    private final Input<Map<String,String>> mappings;
+      private final Input<Map<String,String>> mappings;
 
     public Input<Map<String,String>> getMappings() {
         return this.mappings;
@@ -31,7 +31,7 @@ public final class IntegrationResponseParameterGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="statusCode", required=true)
-    private final Input<String> statusCode;
+      private final Input<String> statusCode;
 
     public Input<String> getStatusCode() {
         return this.statusCode;

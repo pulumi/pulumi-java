@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticbeanstalk;
 
 import io.pulumi.aws.elasticbeanstalk.inputs.ApplicationAppversionLifecycleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
     @InputImport(name="appversionLifecycle")
-    private final @Nullable Input<ApplicationAppversionLifecycleArgs> appversionLifecycle;
+      private final @Nullable Input<ApplicationAppversionLifecycleArgs> appversionLifecycle;
 
     public Input<ApplicationAppversionLifecycleArgs> getAppversionLifecycle() {
         return this.appversionLifecycle == null ? Input.empty() : this.appversionLifecycle;
@@ -28,7 +28,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -39,7 +39,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -50,7 +50,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

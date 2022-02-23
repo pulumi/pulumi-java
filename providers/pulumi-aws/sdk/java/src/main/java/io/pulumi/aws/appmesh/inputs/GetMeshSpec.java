@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.GetMeshSpecEgressFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class GetMeshSpec extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="egressFilters", required=true)
-    private final List<GetMeshSpecEgressFilter> egressFilters;
+      private final List<GetMeshSpecEgressFilter> egressFilters;
 
     public List<GetMeshSpecEgressFilter> getEgressFilters() {
         return this.egressFilters;

@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs;
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsArgs extends
      * 
      */
     @InputImport(name="customImages")
-    private final @Nullable Input<List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages;
+      private final @Nullable Input<List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages;
 
     public Input<List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs>> getCustomImages() {
         return this.customImages == null ? Input.empty() : this.customImages;
@@ -33,7 +33,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsArgs extends
      * 
      */
     @InputImport(name="defaultResourceSpec")
-    private final @Nullable Input<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
+      private final @Nullable Input<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
     public Input<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs> getDefaultResourceSpec() {
         return this.defaultResourceSpec == null ? Input.empty() : this.defaultResourceSpec;
@@ -44,7 +44,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsArgs extends
      * 
      */
     @InputImport(name="lifecycleConfigArns")
-    private final @Nullable Input<List<String>> lifecycleConfigArns;
+      private final @Nullable Input<List<String>> lifecycleConfigArns;
 
     public Input<List<String>> getLifecycleConfigArns() {
         return this.lifecycleConfigArns == null ? Input.empty() : this.lifecycleConfigArns;

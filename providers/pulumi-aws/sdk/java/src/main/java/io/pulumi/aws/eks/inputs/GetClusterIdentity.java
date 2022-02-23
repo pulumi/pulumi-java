@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.GetClusterIdentityOidc;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class GetClusterIdentity extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oidcs", required=true)
-    private final List<GetClusterIdentityOidc> oidcs;
+      private final List<GetClusterIdentityOidc> oidcs;
 
     public List<GetClusterIdentityOidc> getOidcs() {
         return this.oidcs;

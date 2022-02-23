@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -32,7 +32,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultTtl")
-    private final @Nullable Input<Integer> defaultTtl;
+      private final @Nullable Input<Integer> defaultTtl;
 
     public Input<Integer> getDefaultTtl() {
         return this.defaultTtl == null ? Input.empty() : this.defaultTtl;
@@ -43,7 +43,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -54,7 +54,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxTtl")
-    private final @Nullable Input<Integer> maxTtl;
+      private final @Nullable Input<Integer> maxTtl;
 
     public Input<Integer> getMaxTtl() {
         return this.maxTtl == null ? Input.empty() : this.maxTtl;
@@ -65,7 +65,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minTtl")
-    private final @Nullable Input<Integer> minTtl;
+      private final @Nullable Input<Integer> minTtl;
 
     public Input<Integer> getMinTtl() {
         return this.minTtl == null ? Input.empty() : this.minTtl;
@@ -76,7 +76,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parametersInCacheKeyAndForwardedToOrigin")
-    private final @Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin;
+      private final @Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin;
 
     public Input<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> getParametersInCacheKeyAndForwardedToOrigin() {
         return this.parametersInCacheKeyAndForwardedToOrigin == null ? Input.empty() : this.parametersInCacheKeyAndForwardedToOrigin;

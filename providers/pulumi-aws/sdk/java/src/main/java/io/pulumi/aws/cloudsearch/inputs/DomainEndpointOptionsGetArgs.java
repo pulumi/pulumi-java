@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudsearch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DomainEndpointOptionsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enforceHttps")
-    private final @Nullable Input<Boolean> enforceHttps;
+      private final @Nullable Input<Boolean> enforceHttps;
 
     public Input<Boolean> getEnforceHttps() {
         return this.enforceHttps == null ? Input.empty() : this.enforceHttps;
@@ -31,7 +31,7 @@ public final class DomainEndpointOptionsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tlsSecurityPolicy")
-    private final @Nullable Input<String> tlsSecurityPolicy;
+      private final @Nullable Input<String> tlsSecurityPolicy;
 
     public Input<String> getTlsSecurityPolicy() {
         return this.tlsSecurityPolicy == null ? Input.empty() : this.tlsSecurityPolicy;

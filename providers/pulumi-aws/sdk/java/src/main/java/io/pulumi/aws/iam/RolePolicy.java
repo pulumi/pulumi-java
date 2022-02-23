@@ -8,8 +8,8 @@ import io.pulumi.aws.iam.RolePolicyArgs;
 import io.pulumi.aws.iam.inputs.RolePolicyState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -92,6 +92,21 @@ public class RolePolicy extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RolePolicy(String name) {
+        this(name, RolePolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RolePolicy(String name, RolePolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

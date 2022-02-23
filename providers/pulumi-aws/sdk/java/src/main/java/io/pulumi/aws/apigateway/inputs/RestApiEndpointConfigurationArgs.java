@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RestApiEndpointConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="types", required=true)
-    private final Input<String> types;
+      private final Input<String> types;
 
     public Input<String> getTypes() {
         return this.types;
@@ -31,7 +31,7 @@ public final class RestApiEndpointConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vpcEndpointIds")
-    private final @Nullable Input<List<String>> vpcEndpointIds;
+      private final @Nullable Input<List<String>> vpcEndpointIds;
 
     public Input<List<String>> getVpcEndpointIds() {
         return this.vpcEndpointIds == null ? Input.empty() : this.vpcEndpointIds;

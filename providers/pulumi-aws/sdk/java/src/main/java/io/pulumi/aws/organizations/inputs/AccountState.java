@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -42,21 +42,21 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamUserAccessToBilling")
-    private final @Nullable Input<String> iamUserAccessToBilling;
+      private final @Nullable Input<String> iamUserAccessToBilling;
 
     public Input<String> getIamUserAccessToBilling() {
         return this.iamUserAccessToBilling == null ? Input.empty() : this.iamUserAccessToBilling;
     }
 
     @InputImport(name="joinedMethod")
-    private final @Nullable Input<String> joinedMethod;
+      private final @Nullable Input<String> joinedMethod;
 
     public Input<String> getJoinedMethod() {
         return this.joinedMethod == null ? Input.empty() : this.joinedMethod;
     }
 
     @InputImport(name="joinedTimestamp")
-    private final @Nullable Input<String> joinedTimestamp;
+      private final @Nullable Input<String> joinedTimestamp;
 
     public Input<String> getJoinedTimestamp() {
         return this.joinedTimestamp == null ? Input.empty() : this.joinedTimestamp;
@@ -67,7 +67,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentId")
-    private final @Nullable Input<String> parentId;
+      private final @Nullable Input<String> parentId;
 
     public Input<String> getParentId() {
         return this.parentId == null ? Input.empty() : this.parentId;
@@ -89,14 +89,14 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleName")
-    private final @Nullable Input<String> roleName;
+      private final @Nullable Input<String> roleName;
 
     public Input<String> getRoleName() {
         return this.roleName == null ? Input.empty() : this.roleName;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -107,7 +107,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -118,7 +118,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

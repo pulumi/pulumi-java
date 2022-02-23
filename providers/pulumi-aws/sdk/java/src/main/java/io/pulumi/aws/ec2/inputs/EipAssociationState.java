@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="allocationId")
-    private final @Nullable Input<String> allocationId;
+      private final @Nullable Input<String> allocationId;
 
     public Input<String> getAllocationId() {
         return this.allocationId == null ? Input.empty() : this.allocationId;
@@ -32,7 +32,7 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="allowReassociation")
-    private final @Nullable Input<Boolean> allowReassociation;
+      private final @Nullable Input<Boolean> allowReassociation;
 
     public Input<Boolean> getAllowReassociation() {
         return this.allowReassociation == null ? Input.empty() : this.allowReassociation;
@@ -46,7 +46,7 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -59,7 +59,7 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkInterfaceId")
-    private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
@@ -73,7 +73,7 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Input<String> privateIpAddress;
 
     public Input<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
@@ -84,7 +84,7 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicIp")
-    private final @Nullable Input<String> publicIp;
+      private final @Nullable Input<String> publicIp;
 
     public Input<String> getPublicIp() {
         return this.publicIp == null ? Input.empty() : this.publicIp;

@@ -8,7 +8,7 @@ import io.pulumi.aws.wafv2.outputs.WebAclRuleOverrideAction;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleRuleLabel;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatement;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleVisibilityConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

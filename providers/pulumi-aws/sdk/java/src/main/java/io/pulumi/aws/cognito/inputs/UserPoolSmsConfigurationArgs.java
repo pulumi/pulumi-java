@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class UserPoolSmsConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="externalId", required=true)
-    private final Input<String> externalId;
+      private final Input<String> externalId;
 
     public Input<String> getExternalId() {
         return this.externalId;
@@ -29,7 +29,7 @@ public final class UserPoolSmsConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="snsCallerArn", required=true)
-    private final Input<String> snsCallerArn;
+      private final Input<String> snsCallerArn;
 
     public Input<String> getSnsCallerArn() {
         return this.snsCallerArn;

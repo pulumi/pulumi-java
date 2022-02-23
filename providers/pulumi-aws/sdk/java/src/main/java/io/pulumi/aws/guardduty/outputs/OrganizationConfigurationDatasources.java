@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.outputs;
 
 import io.pulumi.aws.guardduty.outputs.OrganizationConfigurationDatasourcesS3Logs;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

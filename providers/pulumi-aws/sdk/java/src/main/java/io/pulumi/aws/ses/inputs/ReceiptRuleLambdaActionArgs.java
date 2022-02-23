@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="functionArn", required=true)
-    private final Input<String> functionArn;
+      private final Input<String> functionArn;
 
     public Input<String> getFunctionArn() {
         return this.functionArn;
@@ -31,7 +31,7 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="invocationType")
-    private final @Nullable Input<String> invocationType;
+      private final @Nullable Input<String> invocationType;
 
     public Input<String> getInvocationType() {
         return this.invocationType == null ? Input.empty() : this.invocationType;
@@ -42,7 +42,7 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="position", required=true)
-    private final Input<Integer> position;
+      private final Input<Integer> position;
 
     public Input<Integer> getPosition() {
         return this.position;
@@ -53,7 +53,7 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="topicArn")
-    private final @Nullable Input<String> topicArn;
+      private final @Nullable Input<String> topicArn;
 
     public Input<String> getTopicArn() {
         return this.topicArn == null ? Input.empty() : this.topicArn;

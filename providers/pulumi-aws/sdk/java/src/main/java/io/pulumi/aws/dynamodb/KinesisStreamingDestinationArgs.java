@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class KinesisStreamingDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="streamArn", required=true)
-    private final Input<String> streamArn;
+      private final Input<String> streamArn;
 
     public Input<String> getStreamArn() {
         return this.streamArn;
@@ -30,7 +30,7 @@ public final class KinesisStreamingDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;

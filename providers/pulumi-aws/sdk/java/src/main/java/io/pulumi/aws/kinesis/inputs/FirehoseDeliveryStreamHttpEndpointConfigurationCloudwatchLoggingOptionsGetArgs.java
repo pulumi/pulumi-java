@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLogg
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -31,7 +31,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLogg
      * 
      */
     @InputImport(name="logGroupName")
-    private final @Nullable Input<String> logGroupName;
+      private final @Nullable Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
@@ -42,7 +42,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLogg
      * 
      */
     @InputImport(name="logStreamName")
-    private final @Nullable Input<String> logStreamName;
+      private final @Nullable Input<String> logStreamName;
 
     public Input<String> getLogStreamName() {
         return this.logStreamName == null ? Input.empty() : this.logStreamName;

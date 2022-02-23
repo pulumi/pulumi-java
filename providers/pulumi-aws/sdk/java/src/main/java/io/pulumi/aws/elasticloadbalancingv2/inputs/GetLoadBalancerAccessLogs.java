@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,21 +14,21 @@ public final class GetLoadBalancerAccessLogs extends io.pulumi.resources.InvokeA
     public static final GetLoadBalancerAccessLogs Empty = new GetLoadBalancerAccessLogs();
 
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
     @InputImport(name="prefix", required=true)
-    private final String prefix;
+      private final String prefix;
 
     public String getPrefix() {
         return this.prefix;

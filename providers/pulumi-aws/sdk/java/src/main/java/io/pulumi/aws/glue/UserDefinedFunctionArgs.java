@@ -5,7 +5,7 @@ package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.UserDefinedFunctionResourceUriArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -32,7 +32,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="className", required=true)
-    private final Input<String> className;
+      private final Input<String> className;
 
     public Input<String> getClassName() {
         return this.className;
@@ -43,7 +43,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -54,7 +54,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ownerName", required=true)
-    private final Input<String> ownerName;
+      private final Input<String> ownerName;
 
     public Input<String> getOwnerName() {
         return this.ownerName;
@@ -76,7 +76,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ownerType", required=true)
-    private final Input<String> ownerType;
+      private final Input<String> ownerType;
 
     public Input<String> getOwnerType() {
         return this.ownerType;
@@ -87,7 +87,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceUris")
-    private final @Nullable Input<List<UserDefinedFunctionResourceUriArgs>> resourceUris;
+      private final @Nullable Input<List<UserDefinedFunctionResourceUriArgs>> resourceUris;
 
     public Input<List<UserDefinedFunctionResourceUriArgs>> getResourceUris() {
         return this.resourceUris == null ? Input.empty() : this.resourceUris;

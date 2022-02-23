@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
      * 
      */
     @InputImport(name="commonAttributes")
-    private final @Nullable Input<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>> commonAttributes;
+      private final @Nullable Input<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>> commonAttributes;
 
     public Input<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeArgs>> getCommonAttributes() {
         return this.commonAttributes == null ? Input.empty() : this.commonAttributes;
@@ -32,7 +32,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
      * 
      */
     @InputImport(name="contentEncoding")
-    private final @Nullable Input<String> contentEncoding;
+      private final @Nullable Input<String> contentEncoding;
 
     public Input<String> getContentEncoding() {
         return this.contentEncoding == null ? Input.empty() : this.contentEncoding;

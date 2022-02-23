@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DeploymentGroupAlarmConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="alarms")
-    private final @Nullable Input<List<String>> alarms;
+      private final @Nullable Input<List<String>> alarms;
 
     public Input<List<String>> getAlarms() {
         return this.alarms == null ? Input.empty() : this.alarms;
@@ -32,7 +32,7 @@ public final class DeploymentGroupAlarmConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -45,7 +45,7 @@ public final class DeploymentGroupAlarmConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="ignorePollAlarmFailure")
-    private final @Nullable Input<Boolean> ignorePollAlarmFailure;
+      private final @Nullable Input<Boolean> ignorePollAlarmFailure;
 
     public Input<Boolean> getIgnorePollAlarmFailure() {
         return this.ignorePollAlarmFailure == null ? Input.empty() : this.ignorePollAlarmFailure;

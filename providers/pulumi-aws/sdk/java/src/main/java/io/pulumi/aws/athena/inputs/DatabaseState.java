@@ -5,7 +5,7 @@ package io.pulumi.aws.athena.inputs;
 
 import io.pulumi.aws.athena.inputs.DatabaseEncryptionConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -32,7 +32,7 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfiguration")
-    private final @Nullable Input<DatabaseEncryptionConfigurationGetArgs> encryptionConfiguration;
+      private final @Nullable Input<DatabaseEncryptionConfigurationGetArgs> encryptionConfiguration;
 
     public Input<DatabaseEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
@@ -43,7 +43,7 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-    private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Input<Boolean> forceDestroy;
 
     public Input<Boolean> getForceDestroy() {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
@@ -54,7 +54,7 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

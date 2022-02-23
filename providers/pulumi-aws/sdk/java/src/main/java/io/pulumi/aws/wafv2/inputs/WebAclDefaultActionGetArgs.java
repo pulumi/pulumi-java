@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionAllowGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionBlockGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class WebAclDefaultActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allow")
-    private final @Nullable Input<WebAclDefaultActionAllowGetArgs> allow;
+      private final @Nullable Input<WebAclDefaultActionAllowGetArgs> allow;
 
     public Input<WebAclDefaultActionAllowGetArgs> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
@@ -31,7 +31,7 @@ public final class WebAclDefaultActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="block")
-    private final @Nullable Input<WebAclDefaultActionBlockGetArgs> block;
+      private final @Nullable Input<WebAclDefaultActionBlockGetArgs> block;
 
     public Input<WebAclDefaultActionBlockGetArgs> getBlock() {
         return this.block == null ? Input.empty() : this.block;

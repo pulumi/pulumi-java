@@ -4,7 +4,7 @@
 package io.pulumi.aws.appautoscaling.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxCapacity")
-    private final @Nullable Input<Integer> maxCapacity;
+      private final @Nullable Input<Integer> maxCapacity;
 
     public Input<Integer> getMaxCapacity() {
         return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
@@ -31,7 +31,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minCapacity")
-    private final @Nullable Input<Integer> minCapacity;
+      private final @Nullable Input<Integer> minCapacity;
 
     public Input<Integer> getMinCapacity() {
         return this.minCapacity == null ? Input.empty() : this.minCapacity;
@@ -42,7 +42,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -53,7 +53,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -64,7 +64,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalableDimension")
-    private final @Nullable Input<String> scalableDimension;
+      private final @Nullable Input<String> scalableDimension;
 
     public Input<String> getScalableDimension() {
         return this.scalableDimension == null ? Input.empty() : this.scalableDimension;
@@ -75,7 +75,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceNamespace")
-    private final @Nullable Input<String> serviceNamespace;
+      private final @Nullable Input<String> serviceNamespace;
 
     public Input<String> getServiceNamespace() {
         return this.serviceNamespace == null ? Input.empty() : this.serviceNamespace;

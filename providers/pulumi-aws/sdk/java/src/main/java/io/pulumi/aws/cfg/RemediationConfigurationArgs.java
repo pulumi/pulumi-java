@@ -6,7 +6,7 @@ package io.pulumi.aws.cfg;
 import io.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsArgs;
 import io.pulumi.aws.cfg.inputs.RemediationConfigurationParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="automatic")
-    private final @Nullable Input<Boolean> automatic;
+      private final @Nullable Input<Boolean> automatic;
 
     public Input<Boolean> getAutomatic() {
         return this.automatic == null ? Input.empty() : this.automatic;
@@ -35,7 +35,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="configRuleName", required=true)
-    private final Input<String> configRuleName;
+      private final Input<String> configRuleName;
 
     public Input<String> getConfigRuleName() {
         return this.configRuleName;
@@ -46,7 +46,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="executionControls")
-    private final @Nullable Input<RemediationConfigurationExecutionControlsArgs> executionControls;
+      private final @Nullable Input<RemediationConfigurationExecutionControlsArgs> executionControls;
 
     public Input<RemediationConfigurationExecutionControlsArgs> getExecutionControls() {
         return this.executionControls == null ? Input.empty() : this.executionControls;
@@ -57,7 +57,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maximumAutomaticAttempts")
-    private final @Nullable Input<Integer> maximumAutomaticAttempts;
+      private final @Nullable Input<Integer> maximumAutomaticAttempts;
 
     public Input<Integer> getMaximumAutomaticAttempts() {
         return this.maximumAutomaticAttempts == null ? Input.empty() : this.maximumAutomaticAttempts;
@@ -68,7 +68,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<RemediationConfigurationParameterArgs>> parameters;
+      private final @Nullable Input<List<RemediationConfigurationParameterArgs>> parameters;
 
     public Input<List<RemediationConfigurationParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -79,7 +79,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+      private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -90,7 +90,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retryAttemptSeconds")
-    private final @Nullable Input<Integer> retryAttemptSeconds;
+      private final @Nullable Input<Integer> retryAttemptSeconds;
 
     public Input<Integer> getRetryAttemptSeconds() {
         return this.retryAttemptSeconds == null ? Input.empty() : this.retryAttemptSeconds;
@@ -101,7 +101,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetId", required=true)
-    private final Input<String> targetId;
+      private final Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId;
@@ -112,7 +112,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetType", required=true)
-    private final Input<String> targetType;
+      private final Input<String> targetType;
 
     public Input<String> getTargetType() {
         return this.targetType;
@@ -123,7 +123,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetVersion")
-    private final @Nullable Input<String> targetVersion;
+      private final @Nullable Input<String> targetVersion;
 
     public Input<String> getTargetVersion() {
         return this.targetVersion == null ? Input.empty() : this.targetVersion;

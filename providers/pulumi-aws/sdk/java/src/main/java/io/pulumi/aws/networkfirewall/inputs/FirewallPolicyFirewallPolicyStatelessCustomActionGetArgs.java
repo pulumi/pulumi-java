@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs exte
      * 
      */
     @InputImport(name="actionDefinition", required=true)
-    private final Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs> actionDefinition;
+      private final Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs> actionDefinition;
 
     public Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs> getActionDefinition() {
         return this.actionDefinition;
@@ -30,7 +30,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs exte
      * 
      */
     @InputImport(name="actionName", required=true)
-    private final Input<String> actionName;
+      private final Input<String> actionName;
 
     public Input<String> getActionName() {
         return this.actionName;

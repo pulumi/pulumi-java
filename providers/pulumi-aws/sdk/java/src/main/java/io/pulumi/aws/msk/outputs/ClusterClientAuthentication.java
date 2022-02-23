@@ -5,7 +5,7 @@ package io.pulumi.aws.msk.outputs;
 
 import io.pulumi.aws.msk.outputs.ClusterClientAuthenticationSasl;
 import io.pulumi.aws.msk.outputs.ClusterClientAuthenticationTls;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

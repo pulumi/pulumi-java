@@ -4,7 +4,7 @@
 package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationArgs extend
      * 
      */
     @InputImport(name="imageIdOverride")
-    private final @Nullable Input<String> imageIdOverride;
+      private final @Nullable Input<String> imageIdOverride;
 
     public Input<String> getImageIdOverride() {
         return this.imageIdOverride == null ? Input.empty() : this.imageIdOverride;
@@ -30,7 +30,7 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationArgs extend
      * 
      */
     @InputImport(name="imageType")
-    private final @Nullable Input<String> imageType;
+      private final @Nullable Input<String> imageType;
 
     public Input<String> getImageType() {
         return this.imageType == null ? Input.empty() : this.imageType;

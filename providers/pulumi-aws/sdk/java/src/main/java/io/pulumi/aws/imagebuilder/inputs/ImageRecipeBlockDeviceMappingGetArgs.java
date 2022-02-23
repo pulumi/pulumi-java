@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingEbsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -32,7 +32,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ebs")
-    private final @Nullable Input<ImageRecipeBlockDeviceMappingEbsGetArgs> ebs;
+      private final @Nullable Input<ImageRecipeBlockDeviceMappingEbsGetArgs> ebs;
 
     public Input<ImageRecipeBlockDeviceMappingEbsGetArgs> getEbs() {
         return this.ebs == null ? Input.empty() : this.ebs;
@@ -43,7 +43,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="noDevice")
-    private final @Nullable Input<Boolean> noDevice;
+      private final @Nullable Input<Boolean> noDevice;
 
     public Input<Boolean> getNoDevice() {
         return this.noDevice == null ? Input.empty() : this.noDevice;
@@ -54,7 +54,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="virtualName")
-    private final @Nullable Input<String> virtualName;
+      private final @Nullable Input<String> virtualName;
 
     public Input<String> getVirtualName() {
         return this.virtualName == null ? Input.empty() : this.virtualName;

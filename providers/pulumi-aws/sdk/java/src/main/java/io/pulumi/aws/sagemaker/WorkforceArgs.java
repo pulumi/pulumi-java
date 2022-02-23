@@ -7,7 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.WorkforceCognitoConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkforceOidcConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkforceSourceIpConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cognitoConfig")
-    private final @Nullable Input<WorkforceCognitoConfigArgs> cognitoConfig;
+      private final @Nullable Input<WorkforceCognitoConfigArgs> cognitoConfig;
 
     public Input<WorkforceCognitoConfigArgs> getCognitoConfig() {
         return this.cognitoConfig == null ? Input.empty() : this.cognitoConfig;
@@ -33,7 +33,7 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oidcConfig")
-    private final @Nullable Input<WorkforceOidcConfigArgs> oidcConfig;
+      private final @Nullable Input<WorkforceOidcConfigArgs> oidcConfig;
 
     public Input<WorkforceOidcConfigArgs> getOidcConfig() {
         return this.oidcConfig == null ? Input.empty() : this.oidcConfig;
@@ -44,7 +44,7 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceIpConfig")
-    private final @Nullable Input<WorkforceSourceIpConfigArgs> sourceIpConfig;
+      private final @Nullable Input<WorkforceSourceIpConfigArgs> sourceIpConfig;
 
     public Input<WorkforceSourceIpConfigArgs> getSourceIpConfig() {
         return this.sourceIpConfig == null ? Input.empty() : this.sourceIpConfig;
@@ -55,7 +55,7 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workforceName", required=true)
-    private final Input<String> workforceName;
+      private final Input<String> workforceName;
 
     public Input<String> getWorkforceName() {
         return this.workforceName;

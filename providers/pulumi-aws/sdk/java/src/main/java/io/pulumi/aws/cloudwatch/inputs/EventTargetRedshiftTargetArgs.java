@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="database", required=true)
-    private final Input<String> database;
+      private final Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database;
@@ -31,7 +31,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dbUser")
-    private final @Nullable Input<String> dbUser;
+      private final @Nullable Input<String> dbUser;
 
     public Input<String> getDbUser() {
         return this.dbUser == null ? Input.empty() : this.dbUser;
@@ -42,7 +42,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="secretsManagerArn")
-    private final @Nullable Input<String> secretsManagerArn;
+      private final @Nullable Input<String> secretsManagerArn;
 
     public Input<String> getSecretsManagerArn() {
         return this.secretsManagerArn == null ? Input.empty() : this.secretsManagerArn;
@@ -53,7 +53,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sql")
-    private final @Nullable Input<String> sql;
+      private final @Nullable Input<String> sql;
 
     public Input<String> getSql() {
         return this.sql == null ? Input.empty() : this.sql;
@@ -64,7 +64,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="statementName")
-    private final @Nullable Input<String> statementName;
+      private final @Nullable Input<String> statementName;
 
     public Input<String> getStatementName() {
         return this.statementName == null ? Input.empty() : this.statementName;
@@ -75,7 +75,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="withEvent")
-    private final @Nullable Input<Boolean> withEvent;
+      private final @Nullable Input<Boolean> withEvent;
 
     public Input<Boolean> getWithEvent() {
         return this.withEvent == null ? Input.empty() : this.withEvent;

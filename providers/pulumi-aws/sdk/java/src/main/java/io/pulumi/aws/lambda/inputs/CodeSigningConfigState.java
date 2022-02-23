@@ -6,7 +6,7 @@ package io.pulumi.aws.lambda.inputs;
 import io.pulumi.aws.lambda.inputs.CodeSigningConfigAllowedPublishersGetArgs;
 import io.pulumi.aws.lambda.inputs.CodeSigningConfigPoliciesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allowedPublishers")
-    private final @Nullable Input<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers;
+      private final @Nullable Input<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers;
 
     public Input<CodeSigningConfigAllowedPublishersGetArgs> getAllowedPublishers() {
         return this.allowedPublishers == null ? Input.empty() : this.allowedPublishers;
@@ -32,7 +32,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -43,7 +43,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configId")
-    private final @Nullable Input<String> configId;
+      private final @Nullable Input<String> configId;
 
     public Input<String> getConfigId() {
         return this.configId == null ? Input.empty() : this.configId;
@@ -54,7 +54,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -65,7 +65,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lastModified")
-    private final @Nullable Input<String> lastModified;
+      private final @Nullable Input<String> lastModified;
 
     public Input<String> getLastModified() {
         return this.lastModified == null ? Input.empty() : this.lastModified;
@@ -76,7 +76,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policies")
-    private final @Nullable Input<CodeSigningConfigPoliciesGetArgs> policies;
+      private final @Nullable Input<CodeSigningConfigPoliciesGetArgs> policies;
 
     public Input<CodeSigningConfigPoliciesGetArgs> getPolicies() {
         return this.policies == null ? Input.empty() : this.policies;

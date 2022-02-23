@@ -7,7 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigG
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationProductionVariantGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="asyncInferenceConfig")
-    private final @Nullable Input<EndpointConfigurationAsyncInferenceConfigGetArgs> asyncInferenceConfig;
+      private final @Nullable Input<EndpointConfigurationAsyncInferenceConfigGetArgs> asyncInferenceConfig;
 
     public Input<EndpointConfigurationAsyncInferenceConfigGetArgs> getAsyncInferenceConfig() {
         return this.asyncInferenceConfig == null ? Input.empty() : this.asyncInferenceConfig;
@@ -46,7 +46,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataCaptureConfig")
-    private final @Nullable Input<EndpointConfigurationDataCaptureConfigGetArgs> dataCaptureConfig;
+      private final @Nullable Input<EndpointConfigurationDataCaptureConfigGetArgs> dataCaptureConfig;
 
     public Input<EndpointConfigurationDataCaptureConfigGetArgs> getDataCaptureConfig() {
         return this.dataCaptureConfig == null ? Input.empty() : this.dataCaptureConfig;
@@ -57,7 +57,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -68,7 +68,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,7 +79,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="productionVariants")
-    private final @Nullable Input<List<EndpointConfigurationProductionVariantGetArgs>> productionVariants;
+      private final @Nullable Input<List<EndpointConfigurationProductionVariantGetArgs>> productionVariants;
 
     public Input<List<EndpointConfigurationProductionVariantGetArgs>> getProductionVariants() {
         return this.productionVariants == null ? Input.empty() : this.productionVariants;
@@ -90,7 +90,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -101,7 +101,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

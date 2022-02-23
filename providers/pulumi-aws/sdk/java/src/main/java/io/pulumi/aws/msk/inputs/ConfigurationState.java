@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kafkaVersions")
-    private final @Nullable Input<List<String>> kafkaVersions;
+      private final @Nullable Input<List<String>> kafkaVersions;
 
     public Input<List<String>> getKafkaVersions() {
         return this.kafkaVersions == null ? Input.empty() : this.kafkaVersions;
@@ -54,7 +54,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestRevision")
-    private final @Nullable Input<Integer> latestRevision;
+      private final @Nullable Input<Integer> latestRevision;
 
     public Input<Integer> getLatestRevision() {
         return this.latestRevision == null ? Input.empty() : this.latestRevision;
@@ -65,7 +65,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -76,7 +76,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverProperties")
-    private final @Nullable Input<String> serverProperties;
+      private final @Nullable Input<String> serverProperties;
 
     public Input<String> getServerProperties() {
         return this.serverProperties == null ? Input.empty() : this.serverProperties;

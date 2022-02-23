@@ -5,7 +5,7 @@ package io.pulumi.aws.datapipeline.inputs;
 
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterObjectAttributeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class PipelineDefinitionParameterObjectGetArgs extends io.pulumi.re
     public static final PipelineDefinitionParameterObjectGetArgs Empty = new PipelineDefinitionParameterObjectGetArgs();
 
     @InputImport(name="attributes")
-    private final @Nullable Input<List<PipelineDefinitionParameterObjectAttributeGetArgs>> attributes;
+      private final @Nullable Input<List<PipelineDefinitionParameterObjectAttributeGetArgs>> attributes;
 
     public Input<List<PipelineDefinitionParameterObjectAttributeGetArgs>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -28,7 +28,7 @@ public final class PipelineDefinitionParameterObjectGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;

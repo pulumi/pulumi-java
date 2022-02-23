@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApplicationAppSourceGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -30,7 +30,7 @@ public final class ApplicationAppSourceGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<String> revision;
+      private final @Nullable Input<String> revision;
 
     public Input<String> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -41,7 +41,7 @@ public final class ApplicationAppSourceGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sshKey")
-    private final @Nullable Input<String> sshKey;
+      private final @Nullable Input<String> sshKey;
 
     public Input<String> getSshKey() {
         return this.sshKey == null ? Input.empty() : this.sshKey;
@@ -52,7 +52,7 @@ public final class ApplicationAppSourceGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -63,7 +63,7 @@ public final class ApplicationAppSourceGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -74,7 +74,7 @@ public final class ApplicationAppSourceGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;

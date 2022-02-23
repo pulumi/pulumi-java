@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allocatedStorage")
-    private final @Nullable Input<Integer> allocatedStorage;
+      private final @Nullable Input<Integer> allocatedStorage;
 
     public Input<Integer> getAllocatedStorage() {
         return this.allocatedStorage == null ? Input.empty() : this.allocatedStorage;
@@ -34,7 +34,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowMajorVersionUpgrade")
-    private final @Nullable Input<Boolean> allowMajorVersionUpgrade;
+      private final @Nullable Input<Boolean> allowMajorVersionUpgrade;
 
     public Input<Boolean> getAllowMajorVersionUpgrade() {
         return this.allowMajorVersionUpgrade == null ? Input.empty() : this.allowMajorVersionUpgrade;
@@ -45,7 +45,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="applyImmediately")
-    private final @Nullable Input<Boolean> applyImmediately;
+      private final @Nullable Input<Boolean> applyImmediately;
 
     public Input<Boolean> getApplyImmediately() {
         return this.applyImmediately == null ? Input.empty() : this.applyImmediately;
@@ -56,7 +56,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="autoMinorVersionUpgrade")
-    private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
+      private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
 
     public Input<Boolean> getAutoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade == null ? Input.empty() : this.autoMinorVersionUpgrade;
@@ -67,7 +67,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -78,7 +78,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="engineVersion")
-    private final @Nullable Input<String> engineVersion;
+      private final @Nullable Input<String> engineVersion;
 
     public Input<String> getEngineVersion() {
         return this.engineVersion == null ? Input.empty() : this.engineVersion;
@@ -89,7 +89,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -100,7 +100,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="multiAz")
-    private final @Nullable Input<Boolean> multiAz;
+      private final @Nullable Input<Boolean> multiAz;
 
     public Input<Boolean> getMultiAz() {
         return this.multiAz == null ? Input.empty() : this.multiAz;
@@ -111,7 +111,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="preferredMaintenanceWindow")
-    private final @Nullable Input<String> preferredMaintenanceWindow;
+      private final @Nullable Input<String> preferredMaintenanceWindow;
 
     public Input<String> getPreferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
@@ -122,7 +122,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publiclyAccessible")
-    private final @Nullable Input<Boolean> publiclyAccessible;
+      private final @Nullable Input<Boolean> publiclyAccessible;
 
     public Input<Boolean> getPubliclyAccessible() {
         return this.publiclyAccessible == null ? Input.empty() : this.publiclyAccessible;
@@ -133,7 +133,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="replicationInstanceArn")
-    private final @Nullable Input<String> replicationInstanceArn;
+      private final @Nullable Input<String> replicationInstanceArn;
 
     public Input<String> getReplicationInstanceArn() {
         return this.replicationInstanceArn == null ? Input.empty() : this.replicationInstanceArn;
@@ -144,7 +144,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="replicationInstanceClass")
-    private final @Nullable Input<String> replicationInstanceClass;
+      private final @Nullable Input<String> replicationInstanceClass;
 
     public Input<String> getReplicationInstanceClass() {
         return this.replicationInstanceClass == null ? Input.empty() : this.replicationInstanceClass;
@@ -155,7 +155,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="replicationInstanceId")
-    private final @Nullable Input<String> replicationInstanceId;
+      private final @Nullable Input<String> replicationInstanceId;
 
     public Input<String> getReplicationInstanceId() {
         return this.replicationInstanceId == null ? Input.empty() : this.replicationInstanceId;
@@ -166,7 +166,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="replicationInstancePrivateIps")
-    private final @Nullable Input<List<String>> replicationInstancePrivateIps;
+      private final @Nullable Input<List<String>> replicationInstancePrivateIps;
 
     public Input<List<String>> getReplicationInstancePrivateIps() {
         return this.replicationInstancePrivateIps == null ? Input.empty() : this.replicationInstancePrivateIps;
@@ -177,7 +177,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="replicationInstancePublicIps")
-    private final @Nullable Input<List<String>> replicationInstancePublicIps;
+      private final @Nullable Input<List<String>> replicationInstancePublicIps;
 
     public Input<List<String>> getReplicationInstancePublicIps() {
         return this.replicationInstancePublicIps == null ? Input.empty() : this.replicationInstancePublicIps;
@@ -188,7 +188,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="replicationSubnetGroupId")
-    private final @Nullable Input<String> replicationSubnetGroupId;
+      private final @Nullable Input<String> replicationSubnetGroupId;
 
     public Input<String> getReplicationSubnetGroupId() {
         return this.replicationSubnetGroupId == null ? Input.empty() : this.replicationSubnetGroupId;
@@ -199,7 +199,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -210,7 +210,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -221,7 +221,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-    private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
 
     public Input<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;

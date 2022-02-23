@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecGrpcRouteArgs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttp2RouteArgs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class GatewayRouteSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="grpcRoute")
-    private final @Nullable Input<GatewayRouteSpecGrpcRouteArgs> grpcRoute;
+      private final @Nullable Input<GatewayRouteSpecGrpcRouteArgs> grpcRoute;
 
     public Input<GatewayRouteSpecGrpcRouteArgs> getGrpcRoute() {
         return this.grpcRoute == null ? Input.empty() : this.grpcRoute;
@@ -32,7 +32,7 @@ public final class GatewayRouteSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="http2Route")
-    private final @Nullable Input<GatewayRouteSpecHttp2RouteArgs> http2Route;
+      private final @Nullable Input<GatewayRouteSpecHttp2RouteArgs> http2Route;
 
     public Input<GatewayRouteSpecHttp2RouteArgs> getHttp2Route() {
         return this.http2Route == null ? Input.empty() : this.http2Route;
@@ -43,7 +43,7 @@ public final class GatewayRouteSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="httpRoute")
-    private final @Nullable Input<GatewayRouteSpecHttpRouteArgs> httpRoute;
+      private final @Nullable Input<GatewayRouteSpecHttpRouteArgs> httpRoute;
 
     public Input<GatewayRouteSpecHttpRouteArgs> getHttpRoute() {
         return this.httpRoute == null ? Input.empty() : this.httpRoute;

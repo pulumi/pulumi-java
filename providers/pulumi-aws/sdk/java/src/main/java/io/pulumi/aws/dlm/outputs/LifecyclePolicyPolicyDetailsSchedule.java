@@ -6,7 +6,7 @@ package io.pulumi.aws.dlm.outputs;
 import io.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleCreateRule;
 import io.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule;
 import io.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleRetainRule;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

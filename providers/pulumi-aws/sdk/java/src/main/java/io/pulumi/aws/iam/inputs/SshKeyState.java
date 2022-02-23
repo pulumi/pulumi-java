@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<String> encoding;
+      private final @Nullable Input<String> encoding;
 
     public Input<String> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -30,7 +30,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint")
-    private final @Nullable Input<String> fingerprint;
+      private final @Nullable Input<String> fingerprint;
 
     public Input<String> getFingerprint() {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
@@ -41,7 +41,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<String> publicKey;
+      private final @Nullable Input<String> publicKey;
 
     public Input<String> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;
@@ -52,7 +52,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshPublicKeyId")
-    private final @Nullable Input<String> sshPublicKeyId;
+      private final @Nullable Input<String> sshPublicKeyId;
 
     public Input<String> getSshPublicKeyId() {
         return this.sshPublicKeyId == null ? Input.empty() : this.sshPublicKeyId;
@@ -63,7 +63,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -74,7 +74,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;

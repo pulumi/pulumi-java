@@ -6,7 +6,7 @@ package io.pulumi.aws.codeartifact;
 import io.pulumi.aws.codeartifact.inputs.RepositoryExternalConnectionsArgs;
 import io.pulumi.aws.codeartifact.inputs.RepositoryUpstreamArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<String> domain;
+      private final Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain;
@@ -45,7 +45,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainOwner")
-    private final @Nullable Input<String> domainOwner;
+      private final @Nullable Input<String> domainOwner;
 
     public Input<String> getDomainOwner() {
         return this.domainOwner == null ? Input.empty() : this.domainOwner;
@@ -56,7 +56,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalConnections")
-    private final @Nullable Input<RepositoryExternalConnectionsArgs> externalConnections;
+      private final @Nullable Input<RepositoryExternalConnectionsArgs> externalConnections;
 
     public Input<RepositoryExternalConnectionsArgs> getExternalConnections() {
         return this.externalConnections == null ? Input.empty() : this.externalConnections;
@@ -67,7 +67,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository", required=true)
-    private final Input<String> repository;
+      private final Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository;
@@ -78,7 +78,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -89,7 +89,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upstreams")
-    private final @Nullable Input<List<RepositoryUpstreamArgs>> upstreams;
+      private final @Nullable Input<List<RepositoryUpstreamArgs>> upstreams;
 
     public Input<List<RepositoryUpstreamArgs>> getUpstreams() {
         return this.upstreams == null ? Input.empty() : this.upstreams;

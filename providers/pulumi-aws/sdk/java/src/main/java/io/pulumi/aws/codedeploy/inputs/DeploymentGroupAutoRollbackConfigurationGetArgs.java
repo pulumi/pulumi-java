@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DeploymentGroupAutoRollbackConfigurationGetArgs extends io.pu
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -32,7 +32,7 @@ public final class DeploymentGroupAutoRollbackConfigurationGetArgs extends io.pu
      * 
      */
     @InputImport(name="events")
-    private final @Nullable Input<List<String>> events;
+      private final @Nullable Input<List<String>> events;
 
     public Input<List<String>> getEvents() {
         return this.events == null ? Input.empty() : this.events;

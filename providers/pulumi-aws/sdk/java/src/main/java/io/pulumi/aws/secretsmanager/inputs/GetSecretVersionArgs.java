@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.secretsmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretId", required=true)
-    private final String secretId;
+      private final String secretId;
 
     public String getSecretId() {
         return this.secretId;
@@ -30,7 +30,7 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable String versionId;
+      private final @Nullable String versionId;
 
     public Optional<String> getVersionId() {
         return this.versionId == null ? Optional.empty() : Optional.ofNullable(this.versionId);
@@ -41,7 +41,7 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="versionStage")
-    private final @Nullable String versionStage;
+      private final @Nullable String versionStage;
 
     public Optional<String> getVersionStage() {
         return this.versionStage == null ? Optional.empty() : Optional.ofNullable(this.versionStage);

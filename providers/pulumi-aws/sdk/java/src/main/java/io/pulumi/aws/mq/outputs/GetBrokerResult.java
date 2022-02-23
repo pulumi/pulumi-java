@@ -10,7 +10,7 @@ import io.pulumi.aws.mq.outputs.GetBrokerLdapServerMetadata;
 import io.pulumi.aws.mq.outputs.GetBrokerLogs;
 import io.pulumi.aws.mq.outputs.GetBrokerMaintenanceWindowStartTime;
 import io.pulumi.aws.mq.outputs.GetBrokerUser;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

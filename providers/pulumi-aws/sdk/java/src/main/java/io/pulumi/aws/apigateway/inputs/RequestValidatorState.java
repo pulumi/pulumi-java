@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="restApi")
-    private final @Nullable Input<String> restApi;
+      private final @Nullable Input<String> restApi;
 
     public Input<String> getRestApi() {
         return this.restApi == null ? Input.empty() : this.restApi;
@@ -42,7 +42,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="validateRequestBody")
-    private final @Nullable Input<Boolean> validateRequestBody;
+      private final @Nullable Input<Boolean> validateRequestBody;
 
     public Input<Boolean> getValidateRequestBody() {
         return this.validateRequestBody == null ? Input.empty() : this.validateRequestBody;
@@ -53,7 +53,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="validateRequestParameters")
-    private final @Nullable Input<Boolean> validateRequestParameters;
+      private final @Nullable Input<Boolean> validateRequestParameters;
 
     public Input<Boolean> getValidateRequestParameters() {
         return this.validateRequestParameters == null ? Input.empty() : this.validateRequestParameters;

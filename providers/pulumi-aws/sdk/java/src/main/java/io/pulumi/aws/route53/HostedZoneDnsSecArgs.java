@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class HostedZoneDnsSecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hostedZoneId", required=true)
-    private final Input<String> hostedZoneId;
+      private final Input<String> hostedZoneId;
 
     public Input<String> getHostedZoneId() {
         return this.hostedZoneId;
@@ -30,7 +30,7 @@ public final class HostedZoneDnsSecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="signingStatus")
-    private final @Nullable Input<String> signingStatus;
+      private final @Nullable Input<String> signingStatus;
 
     public Input<String> getSigningStatus() {
         return this.signingStatus == null ? Input.empty() : this.signingStatus;

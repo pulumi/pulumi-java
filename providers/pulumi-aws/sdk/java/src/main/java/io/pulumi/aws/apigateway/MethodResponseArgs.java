@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpMethod", required=true)
-    private final Input<String> httpMethod;
+      private final Input<String> httpMethod;
 
     public Input<String> getHttpMethod() {
         return this.httpMethod;
@@ -32,7 +32,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -43,7 +43,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseModels")
-    private final @Nullable Input<Map<String,String>> responseModels;
+      private final @Nullable Input<Map<String,String>> responseModels;
 
     public Input<Map<String,String>> getResponseModels() {
         return this.responseModels == null ? Input.empty() : this.responseModels;
@@ -56,7 +56,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseParameters")
-    private final @Nullable Input<Map<String,Boolean>> responseParameters;
+      private final @Nullable Input<Map<String,Boolean>> responseParameters;
 
     public Input<Map<String,Boolean>> getResponseParameters() {
         return this.responseParameters == null ? Input.empty() : this.responseParameters;
@@ -67,7 +67,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi", required=true)
-    private final Input<String> restApi;
+      private final Input<String> restApi;
 
     public Input<String> getRestApi() {
         return this.restApi;
@@ -78,7 +78,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statusCode", required=true)
-    private final Input<String> statusCode;
+      private final Input<String> statusCode;
 
     public Input<String> getStatusCode() {
         return this.statusCode;

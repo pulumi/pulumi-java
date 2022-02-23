@@ -6,7 +6,7 @@ package io.pulumi.aws.appautoscaling.inputs;
 import io.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs;
 import io.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
      * 
      */
     @InputImport(name="customizedMetricSpecification")
-    private final @Nullable Input<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification;
+      private final @Nullable Input<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification;
 
     public Input<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs> getCustomizedMetricSpecification() {
         return this.customizedMetricSpecification == null ? Input.empty() : this.customizedMetricSpecification;
@@ -34,7 +34,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
      * 
      */
     @InputImport(name="disableScaleIn")
-    private final @Nullable Input<Boolean> disableScaleIn;
+      private final @Nullable Input<Boolean> disableScaleIn;
 
     public Input<Boolean> getDisableScaleIn() {
         return this.disableScaleIn == null ? Input.empty() : this.disableScaleIn;
@@ -45,7 +45,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
      * 
      */
     @InputImport(name="predefinedMetricSpecification")
-    private final @Nullable Input<PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification;
+      private final @Nullable Input<PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification;
 
     public Input<PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs> getPredefinedMetricSpecification() {
         return this.predefinedMetricSpecification == null ? Input.empty() : this.predefinedMetricSpecification;
@@ -56,7 +56,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
      * 
      */
     @InputImport(name="scaleInCooldown")
-    private final @Nullable Input<Integer> scaleInCooldown;
+      private final @Nullable Input<Integer> scaleInCooldown;
 
     public Input<Integer> getScaleInCooldown() {
         return this.scaleInCooldown == null ? Input.empty() : this.scaleInCooldown;
@@ -67,7 +67,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
      * 
      */
     @InputImport(name="scaleOutCooldown")
-    private final @Nullable Input<Integer> scaleOutCooldown;
+      private final @Nullable Input<Integer> scaleOutCooldown;
 
     public Input<Integer> getScaleOutCooldown() {
         return this.scaleOutCooldown == null ? Input.empty() : this.scaleOutCooldown;
@@ -78,7 +78,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
      * 
      */
     @InputImport(name="targetValue", required=true)
-    private final Input<Double> targetValue;
+      private final Input<Double> targetValue;
 
     public Input<Double> getTargetValue() {
         return this.targetValue;

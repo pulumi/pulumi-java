@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final Input<String> keyId;
+      private final Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId;
@@ -29,7 +29,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyType", required=true)
-    private final Input<String> keyType;
+      private final Input<String> keyType;
 
     public Input<String> getKeyType() {
         return this.keyType;
@@ -40,7 +40,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usagePlanId", required=true)
-    private final Input<String> usagePlanId;
+      private final Input<String> usagePlanId;
 
     public Input<String> getUsagePlanId() {
         return this.usagePlanId;

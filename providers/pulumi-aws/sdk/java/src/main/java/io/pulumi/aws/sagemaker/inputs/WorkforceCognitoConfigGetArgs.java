@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class WorkforceCognitoConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final Input<String> clientId;
+      private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -29,7 +29,7 @@ public final class WorkforceCognitoConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="userPool", required=true)
-    private final Input<String> userPool;
+      private final Input<String> userPool;
 
     public Input<String> getUserPool() {
         return this.userPool;

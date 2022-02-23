@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class IPSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activate")
-    private final @Nullable Input<Boolean> activate;
+      private final @Nullable Input<Boolean> activate;
 
     public Input<Boolean> getActivate() {
         return this.activate == null ? Input.empty() : this.activate;
@@ -32,7 +32,7 @@ public final class IPSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -43,7 +43,7 @@ public final class IPSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detectorId")
-    private final @Nullable Input<String> detectorId;
+      private final @Nullable Input<String> detectorId;
 
     public Input<String> getDetectorId() {
         return this.detectorId == null ? Input.empty() : this.detectorId;
@@ -54,7 +54,7 @@ public final class IPSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<String> format;
+      private final @Nullable Input<String> format;
 
     public Input<String> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -65,7 +65,7 @@ public final class IPSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -76,7 +76,7 @@ public final class IPSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class IPSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -98,7 +98,7 @@ public final class IPSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

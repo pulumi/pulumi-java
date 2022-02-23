@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Input<String> acceptLanguage;
 
     public Input<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
@@ -30,7 +30,7 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="portfolioId", required=true)
-    private final Input<String> portfolioId;
+      private final Input<String> portfolioId;
 
     public Input<String> getPortfolioId() {
         return this.portfolioId;
@@ -41,7 +41,7 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="productId", required=true)
-    private final Input<String> productId;
+      private final Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId;
@@ -52,7 +52,7 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sourcePortfolioId")
-    private final @Nullable Input<String> sourcePortfolioId;
+      private final @Nullable Input<String> sourcePortfolioId;
 
     public Input<String> getSourcePortfolioId() {
         return this.sourcePortfolioId == null ? Input.empty() : this.sourcePortfolioId;

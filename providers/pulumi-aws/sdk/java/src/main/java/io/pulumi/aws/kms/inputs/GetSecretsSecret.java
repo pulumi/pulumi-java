@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="context")
-    private final @Nullable Map<String,String> context;
+      private final @Nullable Map<String,String> context;
 
     public Map<String,String> getContext() {
         return this.context == null ? Map.of() : this.context;
@@ -32,7 +32,7 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="grantTokens")
-    private final @Nullable List<String> grantTokens;
+      private final @Nullable List<String> grantTokens;
 
     public List<String> getGrantTokens() {
         return this.grantTokens == null ? List.of() : this.grantTokens;
@@ -43,7 +43,7 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -54,7 +54,7 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="payload", required=true)
-    private final String payload;
+      private final String payload;
 
     public String getPayload() {
         return this.payload;

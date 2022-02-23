@@ -9,7 +9,7 @@ import io.pulumi.aws.lb.inputs.ListenerRuleActionFixedResponseGetArgs;
 import io.pulumi.aws.lb.inputs.ListenerRuleActionForwardGetArgs;
 import io.pulumi.aws.lb.inputs.ListenerRuleActionRedirectGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ListenerRuleActionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="authenticateCognito")
-    private final @Nullable Input<ListenerRuleActionAuthenticateCognitoGetArgs> authenticateCognito;
+      private final @Nullable Input<ListenerRuleActionAuthenticateCognitoGetArgs> authenticateCognito;
 
     public Input<ListenerRuleActionAuthenticateCognitoGetArgs> getAuthenticateCognito() {
         return this.authenticateCognito == null ? Input.empty() : this.authenticateCognito;
@@ -36,7 +36,7 @@ public final class ListenerRuleActionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="authenticateOidc")
-    private final @Nullable Input<ListenerRuleActionAuthenticateOidcGetArgs> authenticateOidc;
+      private final @Nullable Input<ListenerRuleActionAuthenticateOidcGetArgs> authenticateOidc;
 
     public Input<ListenerRuleActionAuthenticateOidcGetArgs> getAuthenticateOidc() {
         return this.authenticateOidc == null ? Input.empty() : this.authenticateOidc;
@@ -47,7 +47,7 @@ public final class ListenerRuleActionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fixedResponse")
-    private final @Nullable Input<ListenerRuleActionFixedResponseGetArgs> fixedResponse;
+      private final @Nullable Input<ListenerRuleActionFixedResponseGetArgs> fixedResponse;
 
     public Input<ListenerRuleActionFixedResponseGetArgs> getFixedResponse() {
         return this.fixedResponse == null ? Input.empty() : this.fixedResponse;
@@ -58,14 +58,14 @@ public final class ListenerRuleActionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="forward")
-    private final @Nullable Input<ListenerRuleActionForwardGetArgs> forward;
+      private final @Nullable Input<ListenerRuleActionForwardGetArgs> forward;
 
     public Input<ListenerRuleActionForwardGetArgs> getForward() {
         return this.forward == null ? Input.empty() : this.forward;
     }
 
     @InputImport(name="order")
-    private final @Nullable Input<Integer> order;
+      private final @Nullable Input<Integer> order;
 
     public Input<Integer> getOrder() {
         return this.order == null ? Input.empty() : this.order;
@@ -76,7 +76,7 @@ public final class ListenerRuleActionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="redirect")
-    private final @Nullable Input<ListenerRuleActionRedirectGetArgs> redirect;
+      private final @Nullable Input<ListenerRuleActionRedirectGetArgs> redirect;
 
     public Input<ListenerRuleActionRedirectGetArgs> getRedirect() {
         return this.redirect == null ? Input.empty() : this.redirect;
@@ -87,7 +87,7 @@ public final class ListenerRuleActionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetGroupArn")
-    private final @Nullable Input<String> targetGroupArn;
+      private final @Nullable Input<String> targetGroupArn;
 
     public Input<String> getTargetGroupArn() {
         return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;
@@ -98,7 +98,7 @@ public final class ListenerRuleActionGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

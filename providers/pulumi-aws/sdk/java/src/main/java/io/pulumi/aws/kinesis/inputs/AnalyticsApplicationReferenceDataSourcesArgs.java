@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesS3Args;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -32,7 +32,7 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
      * 
      */
     @InputImport(name="s3", required=true)
-    private final Input<AnalyticsApplicationReferenceDataSourcesS3Args> s3;
+      private final Input<AnalyticsApplicationReferenceDataSourcesS3Args> s3;
 
     public Input<AnalyticsApplicationReferenceDataSourcesS3Args> getS3() {
         return this.s3;
@@ -43,7 +43,7 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
      * 
      */
     @InputImport(name="schema", required=true)
-    private final Input<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema;
+      private final Input<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema;
 
     public Input<AnalyticsApplicationReferenceDataSourcesSchemaArgs> getSchema() {
         return this.schema;
@@ -54,7 +54,7 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;

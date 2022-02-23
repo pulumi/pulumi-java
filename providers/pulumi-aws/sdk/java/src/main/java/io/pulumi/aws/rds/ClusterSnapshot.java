@@ -8,8 +8,8 @@ import io.pulumi.aws.rds.ClusterSnapshotArgs;
 import io.pulumi.aws.rds.inputs.ClusterSnapshotState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -256,6 +256,21 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
         return this.vpcId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ClusterSnapshot(String name) {
+        this(name, ClusterSnapshotArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ClusterSnapshot(String name, ClusterSnapshotArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

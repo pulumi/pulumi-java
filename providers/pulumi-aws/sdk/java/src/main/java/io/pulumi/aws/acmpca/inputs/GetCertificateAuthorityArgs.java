@@ -4,7 +4,7 @@
 package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.aws.acmpca.inputs.GetCertificateAuthorityRevocationConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="arn", required=true)
-    private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -39,7 +39,7 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="revocationConfigurations")
-    private final @Nullable List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations;
+      private final @Nullable List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations;
 
     public List<GetCertificateAuthorityRevocationConfiguration> getRevocationConfigurations() {
         return this.revocationConfigurations == null ? List.of() : this.revocationConfigurations;
@@ -50,7 +50,7 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SnapshotScheduleAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clusterIdentifier")
-    private final @Nullable Input<String> clusterIdentifier;
+      private final @Nullable Input<String> clusterIdentifier;
 
     public Input<String> getClusterIdentifier() {
         return this.clusterIdentifier == null ? Input.empty() : this.clusterIdentifier;
@@ -30,7 +30,7 @@ public final class SnapshotScheduleAssociationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scheduleIdentifier")
-    private final @Nullable Input<String> scheduleIdentifier;
+      private final @Nullable Input<String> scheduleIdentifier;
 
     public Input<String> getScheduleIdentifier() {
         return this.scheduleIdentifier == null ? Input.empty() : this.scheduleIdentifier;

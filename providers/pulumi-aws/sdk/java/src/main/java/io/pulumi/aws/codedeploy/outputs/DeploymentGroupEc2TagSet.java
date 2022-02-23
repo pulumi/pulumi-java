@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.outputs;
 
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupEc2TagSetEc2TagFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

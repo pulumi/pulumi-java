@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
      * 
      */
     @InputImport(name="addressFamily")
-    private final @Nullable Input<String> addressFamily;
+      private final @Nullable Input<String> addressFamily;
 
     public Input<String> getAddressFamily() {
         return this.addressFamily == null ? Input.empty() : this.addressFamily;
@@ -32,14 +32,14 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
      * 
      */
     @InputImport(name="amazonAddress")
-    private final @Nullable Input<String> amazonAddress;
+      private final @Nullable Input<String> amazonAddress;
 
     public Input<String> getAmazonAddress() {
         return this.amazonAddress == null ? Input.empty() : this.amazonAddress;
     }
 
     @InputImport(name="amazonSideAsn")
-    private final @Nullable Input<String> amazonSideAsn;
+      private final @Nullable Input<String> amazonSideAsn;
 
     public Input<String> getAmazonSideAsn() {
         return this.amazonSideAsn == null ? Input.empty() : this.amazonSideAsn;
@@ -50,7 +50,7 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -61,7 +61,7 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
      * 
      */
     @InputImport(name="awsDevice")
-    private final @Nullable Input<String> awsDevice;
+      private final @Nullable Input<String> awsDevice;
 
     public Input<String> getAwsDevice() {
         return this.awsDevice == null ? Input.empty() : this.awsDevice;
@@ -72,7 +72,7 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
      * 
      */
     @InputImport(name="bgpAsn")
-    private final @Nullable Input<Integer> bgpAsn;
+      private final @Nullable Input<Integer> bgpAsn;
 
     public Input<Integer> getBgpAsn() {
         return this.bgpAsn == null ? Input.empty() : this.bgpAsn;
@@ -83,7 +83,7 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
      * 
      */
     @InputImport(name="bgpAuthKey")
-    private final @Nullable Input<String> bgpAuthKey;
+      private final @Nullable Input<String> bgpAuthKey;
 
     public Input<String> getBgpAuthKey() {
         return this.bgpAuthKey == null ? Input.empty() : this.bgpAuthKey;
@@ -94,7 +94,7 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectionId")
-    private final @Nullable Input<String> connectionId;
+      private final @Nullable Input<String> connectionId;
 
     public Input<String> getConnectionId() {
         return this.connectionId == null ? Input.empty() : this.connectionId;
@@ -105,7 +105,7 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
      * 
      */
     @InputImport(name="customerAddress")
-    private final @Nullable Input<String> customerAddress;
+      private final @Nullable Input<String> customerAddress;
 
     public Input<String> getCustomerAddress() {
         return this.customerAddress == null ? Input.empty() : this.customerAddress;
@@ -116,7 +116,7 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -127,7 +127,7 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
      * 
      */
     @InputImport(name="ownerAccountId")
-    private final @Nullable Input<String> ownerAccountId;
+      private final @Nullable Input<String> ownerAccountId;
 
     public Input<String> getOwnerAccountId() {
         return this.ownerAccountId == null ? Input.empty() : this.ownerAccountId;
@@ -138,7 +138,7 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
      * 
      */
     @InputImport(name="routeFilterPrefixes")
-    private final @Nullable Input<List<String>> routeFilterPrefixes;
+      private final @Nullable Input<List<String>> routeFilterPrefixes;
 
     public Input<List<String>> getRouteFilterPrefixes() {
         return this.routeFilterPrefixes == null ? Input.empty() : this.routeFilterPrefixes;
@@ -149,7 +149,7 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
      * 
      */
     @InputImport(name="vlan")
-    private final @Nullable Input<Integer> vlan;
+      private final @Nullable Input<Integer> vlan;
 
     public Input<Integer> getVlan() {
         return this.vlan == null ? Input.empty() : this.vlan;

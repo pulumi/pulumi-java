@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.outputs;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigurationRuleDestination;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigurationRuleFilter;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigurationRuleSourceSelectionCriteria;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

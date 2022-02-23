@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="connectionEvents", required=true)
-    private final Input<List<String>> connectionEvents;
+      private final Input<List<String>> connectionEvents;
 
     public Input<List<String>> getConnectionEvents() {
         return this.connectionEvents;
@@ -31,7 +31,7 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="connectionNotificationArn", required=true)
-    private final Input<String> connectionNotificationArn;
+      private final Input<String> connectionNotificationArn;
 
     public Input<String> getConnectionNotificationArn() {
         return this.connectionNotificationArn;
@@ -42,7 +42,7 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="vpcEndpointId")
-    private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Input<String> vpcEndpointId;
 
     public Input<String> getVpcEndpointId() {
         return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;
@@ -53,7 +53,7 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="vpcEndpointServiceId")
-    private final @Nullable Input<String> vpcEndpointServiceId;
+      private final @Nullable Input<String> vpcEndpointServiceId;
 
     public Input<String> getVpcEndpointServiceId() {
         return this.vpcEndpointServiceId == null ? Input.empty() : this.vpcEndpointServiceId;

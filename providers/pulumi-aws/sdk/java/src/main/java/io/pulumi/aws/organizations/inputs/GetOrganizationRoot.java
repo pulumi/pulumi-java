@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.aws.organizations.inputs.GetOrganizationRootPolicyType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetOrganizationRoot extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="arn", required=true)
-    private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -30,7 +30,7 @@ public final class GetOrganizationRoot extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -41,7 +41,7 @@ public final class GetOrganizationRoot extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -52,7 +52,7 @@ public final class GetOrganizationRoot extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policyTypes", required=true)
-    private final List<GetOrganizationRootPolicyType> policyTypes;
+      private final List<GetOrganizationRootPolicyType> policyTypes;
 
     public List<GetOrganizationRootPolicyType> getPolicyTypes() {
         return this.policyTypes;

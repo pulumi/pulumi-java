@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class S3LocationS3ConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucketAccessRoleArn", required=true)
-    private final Input<String> bucketAccessRoleArn;
+      private final Input<String> bucketAccessRoleArn;
 
     public Input<String> getBucketAccessRoleArn() {
         return this.bucketAccessRoleArn;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="allocationId", required=true)
-    private final String allocationId;
+      private final String allocationId;
 
     public String getAllocationId() {
         return this.allocationId;
@@ -28,7 +28,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="associationId", required=true)
-    private final String associationId;
+      private final String associationId;
 
     public String getAssociationId() {
         return this.associationId;
@@ -39,7 +39,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="carrierIp", required=true)
-    private final String carrierIp;
+      private final String carrierIp;
 
     public String getCarrierIp() {
         return this.carrierIp;
@@ -50,7 +50,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="customerOwnedIp", required=true)
-    private final String customerOwnedIp;
+      private final String customerOwnedIp;
 
     public String getCustomerOwnedIp() {
         return this.customerOwnedIp;
@@ -61,7 +61,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="ipOwnerId", required=true)
-    private final String ipOwnerId;
+      private final String ipOwnerId;
 
     public String getIpOwnerId() {
         return this.ipOwnerId;
@@ -72,7 +72,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="publicDnsName", required=true)
-    private final String publicDnsName;
+      private final String publicDnsName;
 
     public String getPublicDnsName() {
         return this.publicDnsName;
@@ -83,7 +83,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="publicIp", required=true)
-    private final String publicIp;
+      private final String publicIp;
 
     public String getPublicIp() {
         return this.publicIp;

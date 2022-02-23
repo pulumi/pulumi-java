@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="homeEfsFileSystem")
-    private final @Nullable Input<String> homeEfsFileSystem;
+      private final @Nullable Input<String> homeEfsFileSystem;
 
     public Input<String> getHomeEfsFileSystem() {
         return this.homeEfsFileSystem == null ? Input.empty() : this.homeEfsFileSystem;

@@ -7,7 +7,7 @@ import io.pulumi.aws.datasync.inputs.TaskExcludesGetArgs;
 import io.pulumi.aws.datasync.inputs.TaskOptionsGetArgs;
 import io.pulumi.aws.datasync.inputs.TaskScheduleGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchLogGroupArn")
-    private final @Nullable Input<String> cloudwatchLogGroupArn;
+      private final @Nullable Input<String> cloudwatchLogGroupArn;
 
     public Input<String> getCloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn == null ? Input.empty() : this.cloudwatchLogGroupArn;
@@ -45,7 +45,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationLocationArn")
-    private final @Nullable Input<String> destinationLocationArn;
+      private final @Nullable Input<String> destinationLocationArn;
 
     public Input<String> getDestinationLocationArn() {
         return this.destinationLocationArn == null ? Input.empty() : this.destinationLocationArn;
@@ -56,7 +56,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludes")
-    private final @Nullable Input<TaskExcludesGetArgs> excludes;
+      private final @Nullable Input<TaskExcludesGetArgs> excludes;
 
     public Input<TaskExcludesGetArgs> getExcludes() {
         return this.excludes == null ? Input.empty() : this.excludes;
@@ -67,7 +67,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<TaskOptionsGetArgs> options;
+      private final @Nullable Input<TaskOptionsGetArgs> options;
 
     public Input<TaskOptionsGetArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -89,7 +89,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<TaskScheduleGetArgs> schedule;
+      private final @Nullable Input<TaskScheduleGetArgs> schedule;
 
     public Input<TaskScheduleGetArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -100,7 +100,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceLocationArn")
-    private final @Nullable Input<String> sourceLocationArn;
+      private final @Nullable Input<String> sourceLocationArn;
 
     public Input<String> getSourceLocationArn() {
         return this.sourceLocationArn == null ? Input.empty() : this.sourceLocationArn;
@@ -111,7 +111,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -122,7 +122,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

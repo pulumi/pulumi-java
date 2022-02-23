@@ -7,7 +7,7 @@ import io.pulumi.aws.waf.inputs.WebAclDefaultActionArgs;
 import io.pulumi.aws.waf.inputs.WebAclLoggingConfigurationArgs;
 import io.pulumi.aws.waf.inputs.WebAclRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAction", required=true)
-    private final Input<WebAclDefaultActionArgs> defaultAction;
+      private final Input<WebAclDefaultActionArgs> defaultAction;
 
     public Input<WebAclDefaultActionArgs> getDefaultAction() {
         return this.defaultAction;
@@ -35,7 +35,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfiguration")
-    private final @Nullable Input<WebAclLoggingConfigurationArgs> loggingConfiguration;
+      private final @Nullable Input<WebAclLoggingConfigurationArgs> loggingConfiguration;
 
     public Input<WebAclLoggingConfigurationArgs> getLoggingConfiguration() {
         return this.loggingConfiguration == null ? Input.empty() : this.loggingConfiguration;
@@ -46,7 +46,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+      private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -57,7 +57,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -68,7 +68,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<WebAclRuleArgs>> rules;
+      private final @Nullable Input<List<WebAclRuleArgs>> rules;
 
     public Input<List<WebAclRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -79,7 +79,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

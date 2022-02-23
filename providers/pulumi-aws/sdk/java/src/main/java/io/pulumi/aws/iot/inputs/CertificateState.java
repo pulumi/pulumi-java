@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="active")
-    private final @Nullable Input<Boolean> active;
+      private final @Nullable Input<Boolean> active;
 
     public Input<Boolean> getActive() {
         return this.active == null ? Input.empty() : this.active;
@@ -31,7 +31,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -42,7 +42,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificatePem")
-    private final @Nullable Input<String> certificatePem;
+      private final @Nullable Input<String> certificatePem;
 
     public Input<String> getCertificatePem() {
         return this.certificatePem == null ? Input.empty() : this.certificatePem;
@@ -57,7 +57,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="csr")
-    private final @Nullable Input<String> csr;
+      private final @Nullable Input<String> csr;
 
     public Input<String> getCsr() {
         return this.csr == null ? Input.empty() : this.csr;
@@ -68,7 +68,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -79,7 +79,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<String> publicKey;
+      private final @Nullable Input<String> publicKey;
 
     public Input<String> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ImagePipelineScheduleGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="pipelineExecutionStartCondition")
-    private final @Nullable Input<String> pipelineExecutionStartCondition;
+      private final @Nullable Input<String> pipelineExecutionStartCondition;
 
     public Input<String> getPipelineExecutionStartCondition() {
         return this.pipelineExecutionStartCondition == null ? Input.empty() : this.pipelineExecutionStartCondition;
@@ -30,7 +30,7 @@ public final class ImagePipelineScheduleGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="scheduleExpression", required=true)
-    private final Input<String> scheduleExpression;
+      private final Input<String> scheduleExpression;
 
     public Input<String> getScheduleExpression() {
         return this.scheduleExpression;

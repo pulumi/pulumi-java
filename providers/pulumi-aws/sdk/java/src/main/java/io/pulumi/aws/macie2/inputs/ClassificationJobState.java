@@ -7,7 +7,7 @@ import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionGetArgs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobScheduleFrequencyGetArgs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobUserPausedDetailGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -37,7 +37,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="customDataIdentifierIds")
-    private final @Nullable Input<List<String>> customDataIdentifierIds;
+      private final @Nullable Input<List<String>> customDataIdentifierIds;
 
     public Input<List<String>> getCustomDataIdentifierIds() {
         return this.customDataIdentifierIds == null ? Input.empty() : this.customDataIdentifierIds;
@@ -48,7 +48,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -59,21 +59,21 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="initialRun")
-    private final @Nullable Input<Boolean> initialRun;
+      private final @Nullable Input<Boolean> initialRun;
 
     public Input<Boolean> getInitialRun() {
         return this.initialRun == null ? Input.empty() : this.initialRun;
     }
 
     @InputImport(name="jobArn")
-    private final @Nullable Input<String> jobArn;
+      private final @Nullable Input<String> jobArn;
 
     public Input<String> getJobArn() {
         return this.jobArn == null ? Input.empty() : this.jobArn;
     }
 
     @InputImport(name="jobId")
-    private final @Nullable Input<String> jobId;
+      private final @Nullable Input<String> jobId;
 
     public Input<String> getJobId() {
         return this.jobId == null ? Input.empty() : this.jobId;
@@ -84,7 +84,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="jobStatus")
-    private final @Nullable Input<String> jobStatus;
+      private final @Nullable Input<String> jobStatus;
 
     public Input<String> getJobStatus() {
         return this.jobStatus == null ? Input.empty() : this.jobStatus;
@@ -95,14 +95,14 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="jobType")
-    private final @Nullable Input<String> jobType;
+      private final @Nullable Input<String> jobType;
 
     public Input<String> getJobType() {
         return this.jobType == null ? Input.empty() : this.jobType;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -113,7 +113,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -124,7 +124,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="s3JobDefinition")
-    private final @Nullable Input<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition;
+      private final @Nullable Input<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition;
 
     public Input<ClassificationJobS3JobDefinitionGetArgs> getS3JobDefinition() {
         return this.s3JobDefinition == null ? Input.empty() : this.s3JobDefinition;
@@ -135,7 +135,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="samplingPercentage")
-    private final @Nullable Input<Integer> samplingPercentage;
+      private final @Nullable Input<Integer> samplingPercentage;
 
     public Input<Integer> getSamplingPercentage() {
         return this.samplingPercentage == null ? Input.empty() : this.samplingPercentage;
@@ -146,7 +146,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="scheduleFrequency")
-    private final @Nullable Input<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency;
+      private final @Nullable Input<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency;
 
     public Input<ClassificationJobScheduleFrequencyGetArgs> getScheduleFrequency() {
         return this.scheduleFrequency == null ? Input.empty() : this.scheduleFrequency;
@@ -157,14 +157,14 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -175,7 +175,7 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="userPausedDetails")
-    private final @Nullable Input<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails;
+      private final @Nullable Input<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails;
 
     public Input<List<ClassificationJobUserPausedDetailGetArgs>> getUserPausedDetails() {
         return this.userPausedDetails == null ? Input.empty() : this.userPausedDetails;

@@ -8,8 +8,8 @@ import io.pulumi.aws.iam.SamlProviderArgs;
 import io.pulumi.aws.iam.inputs.SamlProviderState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -115,6 +115,21 @@ public class SamlProvider extends io.pulumi.resources.CustomResource {
         return this.validUntil;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SamlProvider(String name) {
+        this(name, SamlProviderArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SamlProvider(String name, SamlProviderArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

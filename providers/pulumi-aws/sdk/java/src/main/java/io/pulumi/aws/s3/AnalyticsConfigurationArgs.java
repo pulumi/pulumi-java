@@ -6,7 +6,7 @@ package io.pulumi.aws.s3;
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationFilterArgs;
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -32,7 +32,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<AnalyticsConfigurationFilterArgs> filter;
+      private final @Nullable Input<AnalyticsConfigurationFilterArgs> filter;
 
     public Input<AnalyticsConfigurationFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -43,7 +43,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="storageClassAnalysis")
-    private final @Nullable Input<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis;
+      private final @Nullable Input<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis;
 
     public Input<AnalyticsConfigurationStorageClassAnalysisArgs> getStorageClassAnalysis() {
         return this.storageClassAnalysis == null ? Input.empty() : this.storageClassAnalysis;

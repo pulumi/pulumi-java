@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationGetArgs ex
      * 
      */
     @InputImport(name="capacityReservationPreference")
-    private final @Nullable Input<String> capacityReservationPreference;
+      private final @Nullable Input<String> capacityReservationPreference;
 
     public Input<String> getCapacityReservationPreference() {
         return this.capacityReservationPreference == null ? Input.empty() : this.capacityReservationPreference;
@@ -31,7 +31,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationGetArgs ex
      * 
      */
     @InputImport(name="capacityReservationTarget")
-    private final @Nullable Input<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget;
+      private final @Nullable Input<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget;
 
     public Input<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> getCapacityReservationTarget() {
         return this.capacityReservationTarget == null ? Input.empty() : this.capacityReservationTarget;

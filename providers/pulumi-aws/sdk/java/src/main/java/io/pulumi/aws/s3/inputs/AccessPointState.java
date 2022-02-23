@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.AccessPointPublicAccessBlockConfigurationGetArgs;
 import io.pulumi.aws.s3.inputs.AccessPointVpcConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -34,7 +34,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-    private final @Nullable Input<String> alias;
+      private final @Nullable Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias == null ? Input.empty() : this.alias;
@@ -45,7 +45,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -56,7 +56,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -68,7 +68,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -79,7 +79,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoints")
-    private final @Nullable Input<Map<String,String>> endpoints;
+      private final @Nullable Input<Map<String,String>> endpoints;
 
     public Input<Map<String,String>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
@@ -90,7 +90,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasPublicAccessPolicy")
-    private final @Nullable Input<Boolean> hasPublicAccessPolicy;
+      private final @Nullable Input<Boolean> hasPublicAccessPolicy;
 
     public Input<Boolean> getHasPublicAccessPolicy() {
         return this.hasPublicAccessPolicy == null ? Input.empty() : this.hasPublicAccessPolicy;
@@ -101,7 +101,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,7 +112,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkOrigin")
-    private final @Nullable Input<String> networkOrigin;
+      private final @Nullable Input<String> networkOrigin;
 
     public Input<String> getNetworkOrigin() {
         return this.networkOrigin == null ? Input.empty() : this.networkOrigin;
@@ -123,7 +123,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -134,7 +134,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicAccessBlockConfiguration")
-    private final @Nullable Input<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration;
+      private final @Nullable Input<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration;
 
     public Input<AccessPointPublicAccessBlockConfigurationGetArgs> getPublicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration == null ? Input.empty() : this.publicAccessBlockConfiguration;
@@ -145,7 +145,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfiguration")
-    private final @Nullable Input<AccessPointVpcConfigurationGetArgs> vpcConfiguration;
+      private final @Nullable Input<AccessPointVpcConfigurationGetArgs> vpcConfiguration;
 
     public Input<AccessPointVpcConfigurationGetArgs> getVpcConfiguration() {
         return this.vpcConfiguration == null ? Input.empty() : this.vpcConfiguration;

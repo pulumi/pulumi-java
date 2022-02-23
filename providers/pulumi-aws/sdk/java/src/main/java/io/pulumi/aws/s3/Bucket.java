@@ -17,8 +17,8 @@ import io.pulumi.aws.s3.outputs.BucketVersioning;
 import io.pulumi.aws.s3.outputs.BucketWebsite;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -402,6 +402,21 @@ public class Bucket extends io.pulumi.resources.CustomResource {
         return this.websiteEndpoint;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Bucket(String name) {
+        this(name, BucketArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Bucket(String name, @Nullable BucketArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

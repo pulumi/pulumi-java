@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.acm.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-    private final String domain;
+      private final String domain;
 
     public String getDomain() {
         return this.domain;
@@ -33,7 +33,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyTypes")
-    private final @Nullable List<String> keyTypes;
+      private final @Nullable List<String> keyTypes;
 
     public List<String> getKeyTypes() {
         return this.keyTypes == null ? List.of() : this.keyTypes;
@@ -44,7 +44,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mostRecent")
-    private final @Nullable Boolean mostRecent;
+      private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
@@ -57,7 +57,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable List<String> statuses;
+      private final @Nullable List<String> statuses;
 
     public List<String> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
@@ -68,7 +68,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -79,7 +79,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="types")
-    private final @Nullable List<String> types;
+      private final @Nullable List<String> types;
 
     public List<String> getTypes() {
         return this.types == null ? List.of() : this.types;

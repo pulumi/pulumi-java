@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UserPoolPasswordPolicyGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="minimumLength")
-    private final @Nullable Input<Integer> minimumLength;
+      private final @Nullable Input<Integer> minimumLength;
 
     public Input<Integer> getMinimumLength() {
         return this.minimumLength == null ? Input.empty() : this.minimumLength;
@@ -31,7 +31,7 @@ public final class UserPoolPasswordPolicyGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="requireLowercase")
-    private final @Nullable Input<Boolean> requireLowercase;
+      private final @Nullable Input<Boolean> requireLowercase;
 
     public Input<Boolean> getRequireLowercase() {
         return this.requireLowercase == null ? Input.empty() : this.requireLowercase;
@@ -42,7 +42,7 @@ public final class UserPoolPasswordPolicyGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="requireNumbers")
-    private final @Nullable Input<Boolean> requireNumbers;
+      private final @Nullable Input<Boolean> requireNumbers;
 
     public Input<Boolean> getRequireNumbers() {
         return this.requireNumbers == null ? Input.empty() : this.requireNumbers;
@@ -53,7 +53,7 @@ public final class UserPoolPasswordPolicyGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="requireSymbols")
-    private final @Nullable Input<Boolean> requireSymbols;
+      private final @Nullable Input<Boolean> requireSymbols;
 
     public Input<Boolean> getRequireSymbols() {
         return this.requireSymbols == null ? Input.empty() : this.requireSymbols;
@@ -64,7 +64,7 @@ public final class UserPoolPasswordPolicyGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="requireUppercase")
-    private final @Nullable Input<Boolean> requireUppercase;
+      private final @Nullable Input<Boolean> requireUppercase;
 
     public Input<Boolean> getRequireUppercase() {
         return this.requireUppercase == null ? Input.empty() : this.requireUppercase;
@@ -75,7 +75,7 @@ public final class UserPoolPasswordPolicyGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="temporaryPasswordValidityDays")
-    private final @Nullable Input<Integer> temporaryPasswordValidityDays;
+      private final @Nullable Input<Integer> temporaryPasswordValidityDays;
 
     public Input<Integer> getTemporaryPasswordValidityDays() {
         return this.temporaryPasswordValidityDays == null ? Input.empty() : this.temporaryPasswordValidityDays;

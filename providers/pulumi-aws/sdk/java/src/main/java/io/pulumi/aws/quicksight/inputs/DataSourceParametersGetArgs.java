@@ -24,7 +24,7 @@ import io.pulumi.aws.quicksight.inputs.DataSourceParametersSqlServerGetArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceParametersTeradataGetArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceParametersTwitterGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -38,7 +38,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="amazonElasticsearch")
-    private final @Nullable Input<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch;
+      private final @Nullable Input<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch;
 
     public Input<DataSourceParametersAmazonElasticsearchGetArgs> getAmazonElasticsearch() {
         return this.amazonElasticsearch == null ? Input.empty() : this.amazonElasticsearch;
@@ -49,7 +49,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="athena")
-    private final @Nullable Input<DataSourceParametersAthenaGetArgs> athena;
+      private final @Nullable Input<DataSourceParametersAthenaGetArgs> athena;
 
     public Input<DataSourceParametersAthenaGetArgs> getAthena() {
         return this.athena == null ? Input.empty() : this.athena;
@@ -60,7 +60,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="aurora")
-    private final @Nullable Input<DataSourceParametersAuroraGetArgs> aurora;
+      private final @Nullable Input<DataSourceParametersAuroraGetArgs> aurora;
 
     public Input<DataSourceParametersAuroraGetArgs> getAurora() {
         return this.aurora == null ? Input.empty() : this.aurora;
@@ -71,7 +71,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="auroraPostgresql")
-    private final @Nullable Input<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql;
+      private final @Nullable Input<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql;
 
     public Input<DataSourceParametersAuroraPostgresqlGetArgs> getAuroraPostgresql() {
         return this.auroraPostgresql == null ? Input.empty() : this.auroraPostgresql;
@@ -82,7 +82,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="awsIotAnalytics")
-    private final @Nullable Input<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics;
+      private final @Nullable Input<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics;
 
     public Input<DataSourceParametersAwsIotAnalyticsGetArgs> getAwsIotAnalytics() {
         return this.awsIotAnalytics == null ? Input.empty() : this.awsIotAnalytics;
@@ -93,7 +93,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="jira")
-    private final @Nullable Input<DataSourceParametersJiraGetArgs> jira;
+      private final @Nullable Input<DataSourceParametersJiraGetArgs> jira;
 
     public Input<DataSourceParametersJiraGetArgs> getJira() {
         return this.jira == null ? Input.empty() : this.jira;
@@ -104,7 +104,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="mariaDb")
-    private final @Nullable Input<DataSourceParametersMariaDbGetArgs> mariaDb;
+      private final @Nullable Input<DataSourceParametersMariaDbGetArgs> mariaDb;
 
     public Input<DataSourceParametersMariaDbGetArgs> getMariaDb() {
         return this.mariaDb == null ? Input.empty() : this.mariaDb;
@@ -115,7 +115,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="mysql")
-    private final @Nullable Input<DataSourceParametersMysqlGetArgs> mysql;
+      private final @Nullable Input<DataSourceParametersMysqlGetArgs> mysql;
 
     public Input<DataSourceParametersMysqlGetArgs> getMysql() {
         return this.mysql == null ? Input.empty() : this.mysql;
@@ -126,7 +126,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="oracle")
-    private final @Nullable Input<DataSourceParametersOracleGetArgs> oracle;
+      private final @Nullable Input<DataSourceParametersOracleGetArgs> oracle;
 
     public Input<DataSourceParametersOracleGetArgs> getOracle() {
         return this.oracle == null ? Input.empty() : this.oracle;
@@ -137,7 +137,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="postgresql")
-    private final @Nullable Input<DataSourceParametersPostgresqlGetArgs> postgresql;
+      private final @Nullable Input<DataSourceParametersPostgresqlGetArgs> postgresql;
 
     public Input<DataSourceParametersPostgresqlGetArgs> getPostgresql() {
         return this.postgresql == null ? Input.empty() : this.postgresql;
@@ -148,7 +148,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="presto")
-    private final @Nullable Input<DataSourceParametersPrestoGetArgs> presto;
+      private final @Nullable Input<DataSourceParametersPrestoGetArgs> presto;
 
     public Input<DataSourceParametersPrestoGetArgs> getPresto() {
         return this.presto == null ? Input.empty() : this.presto;
@@ -159,7 +159,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="rds")
-    private final @Nullable Input<DataSourceParametersRdsGetArgs> rds;
+      private final @Nullable Input<DataSourceParametersRdsGetArgs> rds;
 
     public Input<DataSourceParametersRdsGetArgs> getRds() {
         return this.rds == null ? Input.empty() : this.rds;
@@ -170,7 +170,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="redshift")
-    private final @Nullable Input<DataSourceParametersRedshiftGetArgs> redshift;
+      private final @Nullable Input<DataSourceParametersRedshiftGetArgs> redshift;
 
     public Input<DataSourceParametersRedshiftGetArgs> getRedshift() {
         return this.redshift == null ? Input.empty() : this.redshift;
@@ -181,7 +181,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="s3")
-    private final @Nullable Input<DataSourceParametersS3GetArgs> s3;
+      private final @Nullable Input<DataSourceParametersS3GetArgs> s3;
 
     public Input<DataSourceParametersS3GetArgs> getS3() {
         return this.s3 == null ? Input.empty() : this.s3;
@@ -192,7 +192,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceNow")
-    private final @Nullable Input<DataSourceParametersServiceNowGetArgs> serviceNow;
+      private final @Nullable Input<DataSourceParametersServiceNowGetArgs> serviceNow;
 
     public Input<DataSourceParametersServiceNowGetArgs> getServiceNow() {
         return this.serviceNow == null ? Input.empty() : this.serviceNow;
@@ -203,7 +203,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="snowflake")
-    private final @Nullable Input<DataSourceParametersSnowflakeGetArgs> snowflake;
+      private final @Nullable Input<DataSourceParametersSnowflakeGetArgs> snowflake;
 
     public Input<DataSourceParametersSnowflakeGetArgs> getSnowflake() {
         return this.snowflake == null ? Input.empty() : this.snowflake;
@@ -214,7 +214,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="spark")
-    private final @Nullable Input<DataSourceParametersSparkGetArgs> spark;
+      private final @Nullable Input<DataSourceParametersSparkGetArgs> spark;
 
     public Input<DataSourceParametersSparkGetArgs> getSpark() {
         return this.spark == null ? Input.empty() : this.spark;
@@ -225,7 +225,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sqlServer")
-    private final @Nullable Input<DataSourceParametersSqlServerGetArgs> sqlServer;
+      private final @Nullable Input<DataSourceParametersSqlServerGetArgs> sqlServer;
 
     public Input<DataSourceParametersSqlServerGetArgs> getSqlServer() {
         return this.sqlServer == null ? Input.empty() : this.sqlServer;
@@ -236,7 +236,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="teradata")
-    private final @Nullable Input<DataSourceParametersTeradataGetArgs> teradata;
+      private final @Nullable Input<DataSourceParametersTeradataGetArgs> teradata;
 
     public Input<DataSourceParametersTeradataGetArgs> getTeradata() {
         return this.teradata == null ? Input.empty() : this.teradata;
@@ -247,7 +247,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="twitter")
-    private final @Nullable Input<DataSourceParametersTwitterGetArgs> twitter;
+      private final @Nullable Input<DataSourceParametersTwitterGetArgs> twitter;
 
     public Input<DataSourceParametersTwitterGetArgs> getTwitter() {
         return this.twitter == null ? Input.empty() : this.twitter;

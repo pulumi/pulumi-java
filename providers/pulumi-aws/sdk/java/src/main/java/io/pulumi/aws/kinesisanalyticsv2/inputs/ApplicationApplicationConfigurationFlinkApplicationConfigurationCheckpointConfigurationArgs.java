@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="checkpointInterval")
-    private final @Nullable Input<Integer> checkpointInterval;
+      private final @Nullable Input<Integer> checkpointInterval;
 
     public Input<Integer> getCheckpointInterval() {
         return this.checkpointInterval == null ? Input.empty() : this.checkpointInterval;
@@ -32,7 +32,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="checkpointingEnabled")
-    private final @Nullable Input<Boolean> checkpointingEnabled;
+      private final @Nullable Input<Boolean> checkpointingEnabled;
 
     public Input<Boolean> getCheckpointingEnabled() {
         return this.checkpointingEnabled == null ? Input.empty() : this.checkpointingEnabled;
@@ -46,7 +46,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="configurationType", required=true)
-    private final Input<String> configurationType;
+      private final Input<String> configurationType;
 
     public Input<String> getConfigurationType() {
         return this.configurationType;
@@ -57,7 +57,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="minPauseBetweenCheckpoints")
-    private final @Nullable Input<Integer> minPauseBetweenCheckpoints;
+      private final @Nullable Input<Integer> minPauseBetweenCheckpoints;
 
     public Input<Integer> getMinPauseBetweenCheckpoints() {
         return this.minPauseBetweenCheckpoints == null ? Input.empty() : this.minPauseBetweenCheckpoints;

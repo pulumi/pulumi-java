@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EnvironmentMonitorGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="alarmArn", required=true)
-    private final Input<String> alarmArn;
+      private final Input<String> alarmArn;
 
     public Input<String> getAlarmArn() {
         return this.alarmArn;
@@ -30,7 +30,7 @@ public final class EnvironmentMonitorGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="alarmRoleArn")
-    private final @Nullable Input<String> alarmRoleArn;
+      private final @Nullable Input<String> alarmRoleArn;
 
     public Input<String> getAlarmRoleArn() {
         return this.alarmRoleArn == null ? Input.empty() : this.alarmRoleArn;

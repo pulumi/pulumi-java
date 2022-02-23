@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -32,7 +32,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="encryptionDisabled")
-    private final @Nullable Input<Boolean> encryptionDisabled;
+      private final @Nullable Input<Boolean> encryptionDisabled;
 
     public Input<Boolean> getEncryptionDisabled() {
         return this.encryptionDisabled == null ? Input.empty() : this.encryptionDisabled;
@@ -43,7 +43,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="encryptionKey", required=true)
-    private final Input<String> encryptionKey;
+      private final Input<String> encryptionKey;
 
     public Input<String> getEncryptionKey() {
         return this.encryptionKey;
@@ -54,7 +54,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="packaging")
-    private final @Nullable Input<String> packaging;
+      private final @Nullable Input<String> packaging;
 
     public Input<String> getPackaging() {
         return this.packaging == null ? Input.empty() : this.packaging;
@@ -65,7 +65,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;

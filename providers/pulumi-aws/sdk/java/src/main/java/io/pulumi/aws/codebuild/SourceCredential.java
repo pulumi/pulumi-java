@@ -8,8 +8,8 @@ import io.pulumi.aws.codebuild.SourceCredentialArgs;
 import io.pulumi.aws.codebuild.inputs.SourceCredentialState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -103,6 +103,21 @@ public class SourceCredential extends io.pulumi.resources.CustomResource {
         return this.userName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SourceCredential(String name) {
+        this(name, SourceCredentialArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SourceCredential(String name, SourceCredentialArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

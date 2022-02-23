@@ -8,8 +8,8 @@ import io.pulumi.aws.directconnect.HostedPublicVirtualInterfaceArgs;
 import io.pulumi.aws.directconnect.inputs.HostedPublicVirtualInterfaceState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -207,6 +207,21 @@ public class HostedPublicVirtualInterface extends io.pulumi.resources.CustomReso
         return this.vlan;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public HostedPublicVirtualInterface(String name) {
+        this(name, HostedPublicVirtualInterfaceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public HostedPublicVirtualInterface(String name, HostedPublicVirtualInterfaceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

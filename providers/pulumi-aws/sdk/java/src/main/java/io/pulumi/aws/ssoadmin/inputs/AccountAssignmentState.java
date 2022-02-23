@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssoadmin.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceArn")
-    private final @Nullable Input<String> instanceArn;
+      private final @Nullable Input<String> instanceArn;
 
     public Input<String> getInstanceArn() {
         return this.instanceArn == null ? Input.empty() : this.instanceArn;
@@ -30,7 +30,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="permissionSetArn")
-    private final @Nullable Input<String> permissionSetArn;
+      private final @Nullable Input<String> permissionSetArn;
 
     public Input<String> getPermissionSetArn() {
         return this.permissionSetArn == null ? Input.empty() : this.permissionSetArn;
@@ -41,7 +41,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable Input<String> principalId;
+      private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;
@@ -52,7 +52,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="principalType")
-    private final @Nullable Input<String> principalType;
+      private final @Nullable Input<String> principalType;
 
     public Input<String> getPrincipalType() {
         return this.principalType == null ? Input.empty() : this.principalType;
@@ -63,7 +63,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetId")
-    private final @Nullable Input<String> targetId;
+      private final @Nullable Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId == null ? Input.empty() : this.targetId;
@@ -74,7 +74,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetType")
-    private final @Nullable Input<String> targetType;
+      private final @Nullable Input<String> targetType;
 
     public Input<String> getTargetType() {
         return this.targetType == null ? Input.empty() : this.targetType;

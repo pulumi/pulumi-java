@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigAutoRollbackConfigurationGetArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class EndpointDeploymentConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="autoRollbackConfiguration")
-    private final @Nullable Input<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> autoRollbackConfiguration;
+      private final @Nullable Input<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> autoRollbackConfiguration;
 
     public Input<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> getAutoRollbackConfiguration() {
         return this.autoRollbackConfiguration == null ? Input.empty() : this.autoRollbackConfiguration;
@@ -31,7 +31,7 @@ public final class EndpointDeploymentConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="blueGreenUpdatePolicy", required=true)
-    private final Input<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> blueGreenUpdatePolicy;
+      private final Input<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> blueGreenUpdatePolicy;
 
     public Input<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> getBlueGreenUpdatePolicy() {
         return this.blueGreenUpdatePolicy;

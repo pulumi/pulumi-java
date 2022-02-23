@@ -6,7 +6,7 @@ package io.pulumi.aws.codedeploy.inputs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DeploymentConfigTrafficRoutingConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="timeBasedCanary")
-    private final @Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs> timeBasedCanary;
+      private final @Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs> timeBasedCanary;
 
     public Input<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs> getTimeBasedCanary() {
         return this.timeBasedCanary == null ? Input.empty() : this.timeBasedCanary;
@@ -32,7 +32,7 @@ public final class DeploymentConfigTrafficRoutingConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="timeBasedLinear")
-    private final @Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs> timeBasedLinear;
+      private final @Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs> timeBasedLinear;
 
     public Input<DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs> getTimeBasedLinear() {
         return this.timeBasedLinear == null ? Input.empty() : this.timeBasedLinear;
@@ -43,7 +43,7 @@ public final class DeploymentConfigTrafficRoutingConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkteamNotificationConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="notificationTopicArn")
-    private final @Nullable Input<String> notificationTopicArn;
+      private final @Nullable Input<String> notificationTopicArn;
 
     public Input<String> getNotificationTopicArn() {
         return this.notificationTopicArn == null ? Input.empty() : this.notificationTopicArn;

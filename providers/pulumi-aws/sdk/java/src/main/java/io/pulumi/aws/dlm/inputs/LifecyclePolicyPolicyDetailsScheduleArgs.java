@@ -7,7 +7,7 @@ import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCreateRuleAr
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs;
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="copyTags")
-    private final @Nullable Input<Boolean> copyTags;
+      private final @Nullable Input<Boolean> copyTags;
 
     public Input<Boolean> getCopyTags() {
         return this.copyTags == null ? Input.empty() : this.copyTags;
@@ -36,7 +36,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="createRule", required=true)
-    private final Input<LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs> createRule;
+      private final Input<LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs> createRule;
 
     public Input<LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs> getCreateRule() {
         return this.createRule;
@@ -47,7 +47,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="crossRegionCopyRules")
-    private final @Nullable Input<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs>> crossRegionCopyRules;
+      private final @Nullable Input<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs>> crossRegionCopyRules;
 
     public Input<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs>> getCrossRegionCopyRules() {
         return this.crossRegionCopyRules == null ? Input.empty() : this.crossRegionCopyRules;
@@ -58,7 +58,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -69,7 +69,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="retainRule", required=true)
-    private final Input<LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs> retainRule;
+      private final Input<LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs> retainRule;
 
     public Input<LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs> getRetainRule() {
         return this.retainRule;
@@ -80,7 +80,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tagsToAdd")
-    private final @Nullable Input<Map<String,String>> tagsToAdd;
+      private final @Nullable Input<Map<String,String>> tagsToAdd;
 
     public Input<Map<String,String>> getTagsToAdd() {
         return this.tagsToAdd == null ? Input.empty() : this.tagsToAdd;

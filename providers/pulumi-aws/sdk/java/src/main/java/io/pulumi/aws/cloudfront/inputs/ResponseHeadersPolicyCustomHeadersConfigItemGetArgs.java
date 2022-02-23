@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends i
      * 
      */
     @InputImport(name="header", required=true)
-    private final Input<String> header;
+      private final Input<String> header;
 
     public Input<String> getHeader() {
         return this.header;
@@ -30,7 +30,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends i
      * 
      */
     @InputImport(name="override", required=true)
-    private final Input<Boolean> override;
+      private final Input<Boolean> override;
 
     public Input<Boolean> getOverride() {
         return this.override;
@@ -41,7 +41,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends i
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

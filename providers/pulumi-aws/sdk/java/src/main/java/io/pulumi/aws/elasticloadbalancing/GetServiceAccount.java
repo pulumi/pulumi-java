@@ -6,7 +6,7 @@ package io.pulumi.aws.elasticloadbalancing;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.elasticloadbalancing.inputs.GetServiceAccountArgs;
 import io.pulumi.aws.elasticloadbalancing.outputs.GetServiceAccountResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

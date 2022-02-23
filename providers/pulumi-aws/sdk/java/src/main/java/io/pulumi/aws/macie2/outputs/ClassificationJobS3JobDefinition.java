@@ -5,7 +5,7 @@ package io.pulumi.aws.macie2.outputs;
 
 import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinitionBucketDefinition;
 import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinitionScoping;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

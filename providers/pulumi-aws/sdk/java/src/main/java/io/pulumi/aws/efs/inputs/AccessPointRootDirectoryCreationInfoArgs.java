@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="ownerGid", required=true)
-    private final Input<Integer> ownerGid;
+      private final Input<Integer> ownerGid;
 
     public Input<Integer> getOwnerGid() {
         return this.ownerGid;
@@ -30,7 +30,7 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="ownerUid", required=true)
-    private final Input<Integer> ownerUid;
+      private final Input<Integer> ownerUid;
 
     public Input<Integer> getOwnerUid() {
         return this.ownerUid;
@@ -41,7 +41,7 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final Input<String> permissions;
+      private final Input<String> permissions;
 
     public Input<String> getPermissions() {
         return this.permissions;

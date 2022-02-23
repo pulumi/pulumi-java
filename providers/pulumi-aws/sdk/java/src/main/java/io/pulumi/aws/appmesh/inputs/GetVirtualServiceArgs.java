@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="meshName", required=true)
-    private final String meshName;
+      private final String meshName;
 
     public String getMeshName() {
         return this.meshName;
@@ -31,7 +31,7 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="meshOwner")
-    private final @Nullable String meshOwner;
+      private final @Nullable String meshOwner;
 
     public Optional<String> getMeshOwner() {
         return this.meshOwner == null ? Optional.empty() : Optional.ofNullable(this.meshOwner);
@@ -42,7 +42,7 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -53,7 +53,7 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

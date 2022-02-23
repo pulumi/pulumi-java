@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthClientParametersArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthOauthHttpParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="authorizationEndpoint", required=true)
-    private final Input<String> authorizationEndpoint;
+      private final Input<String> authorizationEndpoint;
 
     public Input<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
@@ -32,7 +32,7 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="clientParameters")
-    private final @Nullable Input<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters;
+      private final @Nullable Input<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters;
 
     public Input<EventConnectionAuthParametersOauthClientParametersArgs> getClientParameters() {
         return this.clientParameters == null ? Input.empty() : this.clientParameters;
@@ -43,7 +43,7 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpMethod", required=true)
-    private final Input<String> httpMethod;
+      private final Input<String> httpMethod;
 
     public Input<String> getHttpMethod() {
         return this.httpMethod;
@@ -54,7 +54,7 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="oauthHttpParameters", required=true)
-    private final Input<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters;
+      private final Input<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters;
 
     public Input<EventConnectionAuthParametersOauthOauthHttpParametersArgs> getOauthHttpParameters() {
         return this.oauthHttpParameters;

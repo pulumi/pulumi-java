@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VpnConnectionRouteState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="destinationCidrBlock")
-    private final @Nullable Input<String> destinationCidrBlock;
+      private final @Nullable Input<String> destinationCidrBlock;
 
     public Input<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock == null ? Input.empty() : this.destinationCidrBlock;
@@ -30,7 +30,7 @@ public final class VpnConnectionRouteState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="vpnConnectionId")
-    private final @Nullable Input<String> vpnConnectionId;
+      private final @Nullable Input<String> vpnConnectionId;
 
     public Input<String> getVpnConnectionId() {
         return this.vpnConnectionId == null ? Input.empty() : this.vpnConnectionId;

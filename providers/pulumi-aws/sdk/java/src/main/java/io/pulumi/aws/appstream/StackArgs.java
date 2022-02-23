@@ -8,7 +8,7 @@ import io.pulumi.aws.appstream.inputs.StackApplicationSettingsArgs;
 import io.pulumi.aws.appstream.inputs.StackStorageConnectorArgs;
 import io.pulumi.aws.appstream.inputs.StackUserSettingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     public static final StackArgs Empty = new StackArgs();
 
     @InputImport(name="accessEndpoints")
-    private final @Nullable Input<List<StackAccessEndpointArgs>> accessEndpoints;
+      private final @Nullable Input<List<StackAccessEndpointArgs>> accessEndpoints;
 
     public Input<List<StackAccessEndpointArgs>> getAccessEndpoints() {
         return this.accessEndpoints == null ? Input.empty() : this.accessEndpoints;
@@ -32,7 +32,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationSettings")
-    private final @Nullable Input<StackApplicationSettingsArgs> applicationSettings;
+      private final @Nullable Input<StackApplicationSettingsArgs> applicationSettings;
 
     public Input<StackApplicationSettingsArgs> getApplicationSettings() {
         return this.applicationSettings == null ? Input.empty() : this.applicationSettings;
@@ -43,7 +43,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -54,7 +54,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -65,7 +65,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="embedHostDomains")
-    private final @Nullable Input<List<String>> embedHostDomains;
+      private final @Nullable Input<List<String>> embedHostDomains;
 
     public Input<List<String>> getEmbedHostDomains() {
         return this.embedHostDomains == null ? Input.empty() : this.embedHostDomains;
@@ -76,7 +76,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="feedbackUrl")
-    private final @Nullable Input<String> feedbackUrl;
+      private final @Nullable Input<String> feedbackUrl;
 
     public Input<String> getFeedbackUrl() {
         return this.feedbackUrl == null ? Input.empty() : this.feedbackUrl;
@@ -87,7 +87,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -98,7 +98,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redirectUrl")
-    private final @Nullable Input<String> redirectUrl;
+      private final @Nullable Input<String> redirectUrl;
 
     public Input<String> getRedirectUrl() {
         return this.redirectUrl == null ? Input.empty() : this.redirectUrl;
@@ -109,14 +109,14 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageConnectors")
-    private final @Nullable Input<List<StackStorageConnectorArgs>> storageConnectors;
+      private final @Nullable Input<List<StackStorageConnectorArgs>> storageConnectors;
 
     public Input<List<StackStorageConnectorArgs>> getStorageConnectors() {
         return this.storageConnectors == null ? Input.empty() : this.storageConnectors;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -127,7 +127,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSettings")
-    private final @Nullable Input<List<StackUserSettingArgs>> userSettings;
+      private final @Nullable Input<List<StackUserSettingArgs>> userSettings;
 
     public Input<List<StackUserSettingArgs>> getUserSettings() {
         return this.userSettings == null ? Input.empty() : this.userSettings;

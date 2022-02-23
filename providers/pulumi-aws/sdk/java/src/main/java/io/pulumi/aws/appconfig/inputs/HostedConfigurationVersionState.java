@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -31,7 +31,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -42,7 +42,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="configurationProfileId")
-    private final @Nullable Input<String> configurationProfileId;
+      private final @Nullable Input<String> configurationProfileId;
 
     public Input<String> getConfigurationProfileId() {
         return this.configurationProfileId == null ? Input.empty() : this.configurationProfileId;
@@ -53,7 +53,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -64,7 +64,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -75,7 +75,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -86,7 +86,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="versionNumber")
-    private final @Nullable Input<Integer> versionNumber;
+      private final @Nullable Input<Integer> versionNumber;
 
     public Input<Integer> getVersionNumber() {
         return this.versionNumber == null ? Input.empty() : this.versionNumber;

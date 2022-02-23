@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterArn")
-    private final @Nullable Input<String> clusterArn;
+      private final @Nullable Input<String> clusterArn;
 
     public Input<String> getClusterArn() {
         return this.clusterArn == null ? Input.empty() : this.clusterArn;
@@ -43,7 +43,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultControlPanel")
-    private final @Nullable Input<Boolean> defaultControlPanel;
+      private final @Nullable Input<Boolean> defaultControlPanel;
 
     public Input<Boolean> getDefaultControlPanel() {
         return this.defaultControlPanel == null ? Input.empty() : this.defaultControlPanel;
@@ -54,7 +54,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingControlCount")
-    private final @Nullable Input<Integer> routingControlCount;
+      private final @Nullable Input<Integer> routingControlCount;
 
     public Input<Integer> getRoutingControlCount() {
         return this.routingControlCount == null ? Input.empty() : this.routingControlCount;
@@ -76,7 +76,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

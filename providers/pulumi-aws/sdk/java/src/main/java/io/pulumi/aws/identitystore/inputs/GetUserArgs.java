@@ -4,7 +4,7 @@
 package io.pulumi.aws.identitystore.inputs;
 
 import io.pulumi.aws.identitystore.inputs.GetUserFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters", required=true)
-    private final List<GetUserFilter> filters;
+      private final List<GetUserFilter> filters;
 
     public List<GetUserFilter> getFilters() {
         return this.filters;
@@ -32,7 +32,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identityStoreId", required=true)
-    private final String identityStoreId;
+      private final String identityStoreId;
 
     public String getIdentityStoreId() {
         return this.identityStoreId;
@@ -43,7 +43,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userId")
-    private final @Nullable String userId;
+      private final @Nullable String userId;
 
     public Optional<String> getUserId() {
         return this.userId == null ? Optional.empty() : Optional.ofNullable(this.userId);

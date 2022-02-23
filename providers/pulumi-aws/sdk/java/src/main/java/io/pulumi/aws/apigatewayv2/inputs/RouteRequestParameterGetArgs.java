@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RouteRequestParameterGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="requestParameterKey", required=true)
-    private final Input<String> requestParameterKey;
+      private final Input<String> requestParameterKey;
 
     public Input<String> getRequestParameterKey() {
         return this.requestParameterKey;
@@ -30,7 +30,7 @@ public final class RouteRequestParameterGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="required", required=true)
-    private final Input<Boolean> required;
+      private final Input<Boolean> required;
 
     public Input<Boolean> getRequired() {
         return this.required;

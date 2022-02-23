@@ -6,7 +6,7 @@ package io.pulumi.aws.transfer;
 import io.pulumi.aws.transfer.inputs.UserHomeDirectoryMappingArgs;
 import io.pulumi.aws.transfer.inputs.UserPosixProfileArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectory")
-    private final @Nullable Input<String> homeDirectory;
+      private final @Nullable Input<String> homeDirectory;
 
     public Input<String> getHomeDirectory() {
         return this.homeDirectory == null ? Input.empty() : this.homeDirectory;
@@ -34,7 +34,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectoryMappings")
-    private final @Nullable Input<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings;
+      private final @Nullable Input<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings;
 
     public Input<List<UserHomeDirectoryMappingArgs>> getHomeDirectoryMappings() {
         return this.homeDirectoryMappings == null ? Input.empty() : this.homeDirectoryMappings;
@@ -45,7 +45,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectoryType")
-    private final @Nullable Input<String> homeDirectoryType;
+      private final @Nullable Input<String> homeDirectoryType;
 
     public Input<String> getHomeDirectoryType() {
         return this.homeDirectoryType == null ? Input.empty() : this.homeDirectoryType;
@@ -56,7 +56,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -67,7 +67,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="posixProfile")
-    private final @Nullable Input<UserPosixProfileArgs> posixProfile;
+      private final @Nullable Input<UserPosixProfileArgs> posixProfile;
 
     public Input<UserPosixProfileArgs> getPosixProfile() {
         return this.posixProfile == null ? Input.empty() : this.posixProfile;
@@ -78,7 +78,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -89,7 +89,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverId", required=true)
-    private final Input<String> serverId;
+      private final Input<String> serverId;
 
     public Input<String> getServerId() {
         return this.serverId;
@@ -100,7 +100,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -111,7 +111,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Input<String> userName;
+      private final Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WorkspaceWorkspacePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="computeTypeName")
-    private final @Nullable Input<String> computeTypeName;
+      private final @Nullable Input<String> computeTypeName;
 
     public Input<String> getComputeTypeName() {
         return this.computeTypeName == null ? Input.empty() : this.computeTypeName;
@@ -31,7 +31,7 @@ public final class WorkspaceWorkspacePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rootVolumeSizeGib")
-    private final @Nullable Input<Integer> rootVolumeSizeGib;
+      private final @Nullable Input<Integer> rootVolumeSizeGib;
 
     public Input<Integer> getRootVolumeSizeGib() {
         return this.rootVolumeSizeGib == null ? Input.empty() : this.rootVolumeSizeGib;
@@ -42,7 +42,7 @@ public final class WorkspaceWorkspacePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="runningMode")
-    private final @Nullable Input<String> runningMode;
+      private final @Nullable Input<String> runningMode;
 
     public Input<String> getRunningMode() {
         return this.runningMode == null ? Input.empty() : this.runningMode;
@@ -53,7 +53,7 @@ public final class WorkspaceWorkspacePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="runningModeAutoStopTimeoutInMinutes")
-    private final @Nullable Input<Integer> runningModeAutoStopTimeoutInMinutes;
+      private final @Nullable Input<Integer> runningModeAutoStopTimeoutInMinutes;
 
     public Input<Integer> getRunningModeAutoStopTimeoutInMinutes() {
         return this.runningModeAutoStopTimeoutInMinutes == null ? Input.empty() : this.runningModeAutoStopTimeoutInMinutes;
@@ -64,7 +64,7 @@ public final class WorkspaceWorkspacePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="userVolumeSizeGib")
-    private final @Nullable Input<Integer> userVolumeSizeGib;
+      private final @Nullable Input<Integer> userVolumeSizeGib;
 
     public Input<Integer> getUserVolumeSizeGib() {
         return this.userVolumeSizeGib == null ? Input.empty() : this.userVolumeSizeGib;

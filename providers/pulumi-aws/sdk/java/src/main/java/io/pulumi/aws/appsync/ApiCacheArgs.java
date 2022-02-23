@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiCachingBehavior", required=true)
-    private final Input<String> apiCachingBehavior;
+      private final Input<String> apiCachingBehavior;
 
     public Input<String> getApiCachingBehavior() {
         return this.apiCachingBehavior;
@@ -32,7 +32,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -43,7 +43,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="atRestEncryptionEnabled")
-    private final @Nullable Input<Boolean> atRestEncryptionEnabled;
+      private final @Nullable Input<Boolean> atRestEncryptionEnabled;
 
     public Input<Boolean> getAtRestEncryptionEnabled() {
         return this.atRestEncryptionEnabled == null ? Input.empty() : this.atRestEncryptionEnabled;
@@ -54,7 +54,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitEncryptionEnabled")
-    private final @Nullable Input<Boolean> transitEncryptionEnabled;
+      private final @Nullable Input<Boolean> transitEncryptionEnabled;
 
     public Input<Boolean> getTransitEncryptionEnabled() {
         return this.transitEncryptionEnabled == null ? Input.empty() : this.transitEncryptionEnabled;
@@ -65,7 +65,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl", required=true)
-    private final Input<Integer> ttl;
+      private final Input<Integer> ttl;
 
     public Input<Integer> getTtl() {
         return this.ttl;
@@ -76,7 +76,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

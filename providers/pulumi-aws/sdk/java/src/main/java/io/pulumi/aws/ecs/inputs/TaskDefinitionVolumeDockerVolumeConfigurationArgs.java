@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends io.
      * 
      */
     @InputImport(name="autoprovision")
-    private final @Nullable Input<Boolean> autoprovision;
+      private final @Nullable Input<Boolean> autoprovision;
 
     public Input<Boolean> getAutoprovision() {
         return this.autoprovision == null ? Input.empty() : this.autoprovision;
@@ -32,7 +32,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends io.
      * 
      */
     @InputImport(name="driver")
-    private final @Nullable Input<String> driver;
+      private final @Nullable Input<String> driver;
 
     public Input<String> getDriver() {
         return this.driver == null ? Input.empty() : this.driver;
@@ -43,7 +43,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends io.
      * 
      */
     @InputImport(name="driverOpts")
-    private final @Nullable Input<Map<String,String>> driverOpts;
+      private final @Nullable Input<Map<String,String>> driverOpts;
 
     public Input<Map<String,String>> getDriverOpts() {
         return this.driverOpts == null ? Input.empty() : this.driverOpts;
@@ -54,7 +54,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends io.
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -65,7 +65,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends io.
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;

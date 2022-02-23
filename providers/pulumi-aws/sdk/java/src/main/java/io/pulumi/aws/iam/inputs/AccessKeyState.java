@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +19,21 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createDate")
-    private final @Nullable Input<String> createDate;
+      private final @Nullable Input<String> createDate;
 
     public Input<String> getCreateDate() {
         return this.createDate == null ? Input.empty() : this.createDate;
     }
 
     @InputImport(name="encryptedSecret")
-    private final @Nullable Input<String> encryptedSecret;
+      private final @Nullable Input<String> encryptedSecret;
 
     public Input<String> getEncryptedSecret() {
         return this.encryptedSecret == null ? Input.empty() : this.encryptedSecret;
     }
 
     @InputImport(name="encryptedSesSmtpPasswordV4")
-    private final @Nullable Input<String> encryptedSesSmtpPasswordV4;
+      private final @Nullable Input<String> encryptedSesSmtpPasswordV4;
 
     public Input<String> getEncryptedSesSmtpPasswordV4() {
         return this.encryptedSesSmtpPasswordV4 == null ? Input.empty() : this.encryptedSesSmtpPasswordV4;
@@ -44,7 +44,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyFingerprint")
-    private final @Nullable Input<String> keyFingerprint;
+      private final @Nullable Input<String> keyFingerprint;
 
     public Input<String> getKeyFingerprint() {
         return this.keyFingerprint == null ? Input.empty() : this.keyFingerprint;
@@ -55,7 +55,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pgpKey")
-    private final @Nullable Input<String> pgpKey;
+      private final @Nullable Input<String> pgpKey;
 
     public Input<String> getPgpKey() {
         return this.pgpKey == null ? Input.empty() : this.pgpKey;
@@ -66,7 +66,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<String> secret;
+      private final @Nullable Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -77,7 +77,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sesSmtpPasswordV4")
-    private final @Nullable Input<String> sesSmtpPasswordV4;
+      private final @Nullable Input<String> sesSmtpPasswordV4;
 
     public Input<String> getSesSmtpPasswordV4() {
         return this.sesSmtpPasswordV4 == null ? Input.empty() : this.sesSmtpPasswordV4;
@@ -88,7 +88,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -99,7 +99,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="user")
-    private final @Nullable Input<String> user;
+      private final @Nullable Input<String> user;
 
     public Input<String> getUser() {
         return this.user == null ? Input.empty() : this.user;

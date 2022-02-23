@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EndpointMongodbSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="authMechanism")
-    private final @Nullable Input<String> authMechanism;
+      private final @Nullable Input<String> authMechanism;
 
     public Input<String> getAuthMechanism() {
         return this.authMechanism == null ? Input.empty() : this.authMechanism;
@@ -30,7 +30,7 @@ public final class EndpointMongodbSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="authSource")
-    private final @Nullable Input<String> authSource;
+      private final @Nullable Input<String> authSource;
 
     public Input<String> getAuthSource() {
         return this.authSource == null ? Input.empty() : this.authSource;
@@ -41,7 +41,7 @@ public final class EndpointMongodbSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="authType")
-    private final @Nullable Input<String> authType;
+      private final @Nullable Input<String> authType;
 
     public Input<String> getAuthType() {
         return this.authType == null ? Input.empty() : this.authType;
@@ -52,7 +52,7 @@ public final class EndpointMongodbSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="docsToInvestigate")
-    private final @Nullable Input<String> docsToInvestigate;
+      private final @Nullable Input<String> docsToInvestigate;
 
     public Input<String> getDocsToInvestigate() {
         return this.docsToInvestigate == null ? Input.empty() : this.docsToInvestigate;
@@ -63,7 +63,7 @@ public final class EndpointMongodbSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="extractDocId")
-    private final @Nullable Input<String> extractDocId;
+      private final @Nullable Input<String> extractDocId;
 
     public Input<String> getExtractDocId() {
         return this.extractDocId == null ? Input.empty() : this.extractDocId;
@@ -74,7 +74,7 @@ public final class EndpointMongodbSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="nestingLevel")
-    private final @Nullable Input<String> nestingLevel;
+      private final @Nullable Input<String> nestingLevel;
 
     public Input<String> getNestingLevel() {
         return this.nestingLevel == null ? Input.empty() : this.nestingLevel;

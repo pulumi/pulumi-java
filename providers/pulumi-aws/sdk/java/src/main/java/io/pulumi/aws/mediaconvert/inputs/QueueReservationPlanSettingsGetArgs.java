@@ -4,7 +4,7 @@
 package io.pulumi.aws.mediaconvert.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="commitment", required=true)
-    private final Input<String> commitment;
+      private final Input<String> commitment;
 
     public Input<String> getCommitment() {
         return this.commitment;
@@ -30,7 +30,7 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="renewalType", required=true)
-    private final Input<String> renewalType;
+      private final Input<String> renewalType;
 
     public Input<String> getRenewalType() {
         return this.renewalType;
@@ -41,7 +41,7 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="reservedSlots", required=true)
-    private final Input<Integer> reservedSlots;
+      private final Input<Integer> reservedSlots;
 
     public Input<Integer> getReservedSlots() {
         return this.reservedSlots;
