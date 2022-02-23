@@ -13,7 +13,7 @@ public final class GetSpotFleetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSpotFleetArgs Empty = new GetSpotFleetArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

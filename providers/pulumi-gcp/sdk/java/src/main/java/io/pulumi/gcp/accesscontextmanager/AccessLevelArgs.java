@@ -22,7 +22,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basic")
-        private final @Nullable Input<AccessLevelBasicArgs> basic;
+      private final @Nullable Input<AccessLevelBasicArgs> basic;
 
     public Input<AccessLevelBasicArgs> getBasic() {
         return this.basic == null ? Input.empty() : this.basic;
@@ -35,7 +35,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="custom")
-        private final @Nullable Input<AccessLevelCustomArgs> custom;
+      private final @Nullable Input<AccessLevelCustomArgs> custom;
 
     public Input<AccessLevelCustomArgs> getCustom() {
         return this.custom == null ? Input.empty() : this.custom;
@@ -46,7 +46,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -59,7 +59,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -71,7 +71,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-        private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -82,7 +82,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-        private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;

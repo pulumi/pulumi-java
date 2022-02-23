@@ -27,7 +27,7 @@ public final class ThresholdRuleConditionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="dataSource")
-        private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
+      private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
 
     public Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> getDataSource() {
         return this.dataSource == null ? null : this.dataSource;
@@ -39,7 +39,7 @@ public final class ThresholdRuleConditionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -50,7 +50,7 @@ public final class ThresholdRuleConditionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="operator", required=true)
-        private final String operator;
+      private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -61,7 +61,7 @@ public final class ThresholdRuleConditionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="threshold", required=true)
-        private final Double threshold;
+      private final Double threshold;
 
     public Double getThreshold() {
         return this.threshold;
@@ -72,7 +72,7 @@ public final class ThresholdRuleConditionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="timeAggregation")
-        private final @Nullable String timeAggregation;
+      private final @Nullable String timeAggregation;
 
     public Optional<String> getTimeAggregation() {
         return this.timeAggregation == null ? Optional.empty() : Optional.ofNullable(this.timeAggregation);
@@ -83,7 +83,7 @@ public final class ThresholdRuleConditionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="windowSize")
-        private final @Nullable String windowSize;
+      private final @Nullable String windowSize;
 
     public Optional<String> getWindowSize() {
         return this.windowSize == null ? Optional.empty() : Optional.ofNullable(this.windowSize);

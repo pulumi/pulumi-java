@@ -19,7 +19,7 @@ public final class CertificateConfigSubjectConfigSubjectArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="commonName", required=true)
-        private final Input<String> commonName;
+      private final Input<String> commonName;
 
     public Input<String> getCommonName() {
         return this.commonName;
@@ -30,7 +30,7 @@ public final class CertificateConfigSubjectConfigSubjectArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="countryCode")
-        private final @Nullable Input<String> countryCode;
+      private final @Nullable Input<String> countryCode;
 
     public Input<String> getCountryCode() {
         return this.countryCode == null ? Input.empty() : this.countryCode;
@@ -41,7 +41,7 @@ public final class CertificateConfigSubjectConfigSubjectArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="locality")
-        private final @Nullable Input<String> locality;
+      private final @Nullable Input<String> locality;
 
     public Input<String> getLocality() {
         return this.locality == null ? Input.empty() : this.locality;
@@ -52,7 +52,7 @@ public final class CertificateConfigSubjectConfigSubjectArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="organization", required=true)
-        private final Input<String> organization;
+      private final Input<String> organization;
 
     public Input<String> getOrganization() {
         return this.organization;
@@ -63,7 +63,7 @@ public final class CertificateConfigSubjectConfigSubjectArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="organizationalUnit")
-        private final @Nullable Input<String> organizationalUnit;
+      private final @Nullable Input<String> organizationalUnit;
 
     public Input<String> getOrganizationalUnit() {
         return this.organizationalUnit == null ? Input.empty() : this.organizationalUnit;
@@ -74,7 +74,7 @@ public final class CertificateConfigSubjectConfigSubjectArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="postalCode")
-        private final @Nullable Input<String> postalCode;
+      private final @Nullable Input<String> postalCode;
 
     public Input<String> getPostalCode() {
         return this.postalCode == null ? Input.empty() : this.postalCode;
@@ -85,7 +85,7 @@ public final class CertificateConfigSubjectConfigSubjectArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="province")
-        private final @Nullable Input<String> province;
+      private final @Nullable Input<String> province;
 
     public Input<String> getProvince() {
         return this.province == null ? Input.empty() : this.province;
@@ -96,7 +96,7 @@ public final class CertificateConfigSubjectConfigSubjectArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="streetAddress")
-        private final @Nullable Input<String> streetAddress;
+      private final @Nullable Input<String> streetAddress;
 
     public Input<String> getStreetAddress() {
         return this.streetAddress == null ? Input.empty() : this.streetAddress;

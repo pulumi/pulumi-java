@@ -19,7 +19,7 @@ public final class ApplicationFeatureSettingsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="splitHealthChecks", required=true)
-        private final Input<Boolean> splitHealthChecks;
+      private final Input<Boolean> splitHealthChecks;
 
     public Input<Boolean> getSplitHealthChecks() {
         return this.splitHealthChecks;

@@ -22,7 +22,7 @@ public final class ManagementPolicySchemaResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="rules", required=true)
-        private final List<ManagementPolicyRuleResponse> rules;
+      private final List<ManagementPolicyRuleResponse> rules;
 
     public List<ManagementPolicyRuleResponse> getRules() {
         return this.rules;

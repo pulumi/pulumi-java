@@ -22,7 +22,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="allowedTenants")
-        private final @Nullable Input<List<String>> allowedTenants;
+      private final @Nullable Input<List<String>> allowedTenants;
 
     public Input<List<String>> getAllowedTenants() {
         return this.allowedTenants == null ? Input.empty() : this.allowedTenants;
@@ -33,7 +33,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authority")
-        private final @Nullable Input<String> authority;
+      private final @Nullable Input<String> authority;
 
     public Input<String> getAuthority() {
         return this.authority == null ? Input.empty() : this.authority;
@@ -44,7 +44,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clientId", required=true)
-        private final Input<String> clientId;
+      private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -55,7 +55,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clientSecret", required=true)
-        private final Input<String> clientSecret;
+      private final Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret;
@@ -66,7 +66,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identityProviderName")
-        private final @Nullable Input<String> identityProviderName;
+      private final @Nullable Input<String> identityProviderName;
 
     public Input<String> getIdentityProviderName() {
         return this.identityProviderName == null ? Input.empty() : this.identityProviderName;
@@ -77,7 +77,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="passwordResetPolicyName")
-        private final @Nullable Input<String> passwordResetPolicyName;
+      private final @Nullable Input<String> passwordResetPolicyName;
 
     public Input<String> getPasswordResetPolicyName() {
         return this.passwordResetPolicyName == null ? Input.empty() : this.passwordResetPolicyName;
@@ -88,7 +88,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="profileEditingPolicyName")
-        private final @Nullable Input<String> profileEditingPolicyName;
+      private final @Nullable Input<String> profileEditingPolicyName;
 
     public Input<String> getProfileEditingPolicyName() {
         return this.profileEditingPolicyName == null ? Input.empty() : this.profileEditingPolicyName;
@@ -99,7 +99,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -110,7 +110,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -121,7 +121,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="signinPolicyName")
-        private final @Nullable Input<String> signinPolicyName;
+      private final @Nullable Input<String> signinPolicyName;
 
     public Input<String> getSigninPolicyName() {
         return this.signinPolicyName == null ? Input.empty() : this.signinPolicyName;
@@ -132,7 +132,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="signinTenant")
-        private final @Nullable Input<String> signinTenant;
+      private final @Nullable Input<String> signinTenant;
 
     public Input<String> getSigninTenant() {
         return this.signinTenant == null ? Input.empty() : this.signinTenant;
@@ -143,7 +143,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="signupPolicyName")
-        private final @Nullable Input<String> signupPolicyName;
+      private final @Nullable Input<String> signupPolicyName;
 
     public Input<String> getSignupPolicyName() {
         return this.signupPolicyName == null ? Input.empty() : this.signupPolicyName;
@@ -154,7 +154,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,IdentityProviderType>> type;
+      private final @Nullable Input<Either<String,IdentityProviderType>> type;
 
     public Input<Either<String,IdentityProviderType>> getType() {
         return this.type == null ? Input.empty() : this.type;

@@ -23,14 +23,14 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataLocationConstraint")
-        private final @Nullable Input<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
+      private final @Nullable Input<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
 
     public Input<ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
         return this.dataLocationConstraint == null ? Input.empty() : this.dataLocationConstraint;
     }
 
     @InputImport(name="policy", required=true)
-        private final Input<ResiliencyPolicyPolicyMapArgs> policy;
+      private final Input<ResiliencyPolicyPolicyMapArgs> policy;
 
     public Input<ResiliencyPolicyPolicyMapArgs> getPolicy() {
         return this.policy;
@@ -41,7 +41,7 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyDescription")
-        private final @Nullable Input<String> policyDescription;
+      private final @Nullable Input<String> policyDescription;
 
     public Input<String> getPolicyDescription() {
         return this.policyDescription == null ? Input.empty() : this.policyDescription;
@@ -52,14 +52,14 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyName", required=true)
-        private final Input<String> policyName;
+      private final Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<ResiliencyPolicyTagMapArgs> tags;
+      private final @Nullable Input<ResiliencyPolicyTagMapArgs> tags;
 
     public Input<ResiliencyPolicyTagMapArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -70,7 +70,7 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tier", required=true)
-        private final Input<ResiliencyPolicyTier> tier;
+      private final Input<ResiliencyPolicyTier> tier;
 
     public Input<ResiliencyPolicyTier> getTier() {
         return this.tier;

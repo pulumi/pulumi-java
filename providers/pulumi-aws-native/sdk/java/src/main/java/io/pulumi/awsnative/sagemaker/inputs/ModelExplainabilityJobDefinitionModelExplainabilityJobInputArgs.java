@@ -18,7 +18,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInputAr
     public static final ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs Empty = new ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs();
 
     @InputImport(name="endpointInput", required=true)
-        private final Input<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput;
+      private final Input<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput;
 
     public Input<ModelExplainabilityJobDefinitionEndpointInputArgs> getEndpointInput() {
         return this.endpointInput;

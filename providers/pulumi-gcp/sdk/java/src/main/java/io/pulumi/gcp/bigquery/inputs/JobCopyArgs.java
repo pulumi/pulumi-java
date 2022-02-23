@@ -28,7 +28,7 @@ public final class JobCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createDisposition")
-        private final @Nullable Input<String> createDisposition;
+      private final @Nullable Input<String> createDisposition;
 
     public Input<String> getCreateDisposition() {
         return this.createDisposition == null ? Input.empty() : this.createDisposition;
@@ -40,7 +40,7 @@ public final class JobCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationEncryptionConfiguration")
-        private final @Nullable Input<JobCopyDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration;
+      private final @Nullable Input<JobCopyDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration;
 
     public Input<JobCopyDestinationEncryptionConfigurationArgs> getDestinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration == null ? Input.empty() : this.destinationEncryptionConfiguration;
@@ -52,7 +52,7 @@ public final class JobCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationTable")
-        private final @Nullable Input<JobCopyDestinationTableArgs> destinationTable;
+      private final @Nullable Input<JobCopyDestinationTableArgs> destinationTable;
 
     public Input<JobCopyDestinationTableArgs> getDestinationTable() {
         return this.destinationTable == null ? Input.empty() : this.destinationTable;
@@ -64,7 +64,7 @@ public final class JobCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceTables", required=true)
-        private final Input<List<JobCopySourceTableArgs>> sourceTables;
+      private final Input<List<JobCopySourceTableArgs>> sourceTables;
 
     public Input<List<JobCopySourceTableArgs>> getSourceTables() {
         return this.sourceTables;
@@ -82,7 +82,7 @@ public final class JobCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeDisposition")
-        private final @Nullable Input<String> writeDisposition;
+      private final @Nullable Input<String> writeDisposition;
 
     public Input<String> getWriteDisposition() {
         return this.writeDisposition == null ? Input.empty() : this.writeDisposition;

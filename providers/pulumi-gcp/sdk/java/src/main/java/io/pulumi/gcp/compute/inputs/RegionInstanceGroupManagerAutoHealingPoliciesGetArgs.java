@@ -19,7 +19,7 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesGetArgs extends 
      * 
      */
     @InputImport(name="healthCheck", required=true)
-        private final Input<String> healthCheck;
+      private final Input<String> healthCheck;
 
     public Input<String> getHealthCheck() {
         return this.healthCheck;
@@ -31,7 +31,7 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesGetArgs extends 
      * 
      */
     @InputImport(name="initialDelaySec", required=true)
-        private final Input<Integer> initialDelaySec;
+      private final Input<Integer> initialDelaySec;
 
     public Input<Integer> getInitialDelaySec() {
         return this.initialDelaySec;

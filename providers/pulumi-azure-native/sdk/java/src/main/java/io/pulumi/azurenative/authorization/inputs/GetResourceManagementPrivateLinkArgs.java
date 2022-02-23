@@ -17,7 +17,7 @@ public final class GetResourceManagementPrivateLinkArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetResourceManagementPrivateLinkArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="rmplName", required=true)
-        private final String rmplName;
+      private final String rmplName;
 
     public String getRmplName() {
         return this.rmplName;

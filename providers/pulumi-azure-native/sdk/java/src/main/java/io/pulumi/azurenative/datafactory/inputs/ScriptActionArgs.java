@@ -24,7 +24,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<String> parameters;
+      private final @Nullable Input<String> parameters;
 
     public Input<String> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -46,7 +46,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles", required=true)
-        private final Input<Object> roles;
+      private final Input<Object> roles;
 
     public Input<Object> getRoles() {
         return this.roles;
@@ -57,7 +57,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-        private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;

@@ -15,7 +15,7 @@ public final class DeliveryStreamOutputFormatConfigurationArgs extends io.pulumi
     public static final DeliveryStreamOutputFormatConfigurationArgs Empty = new DeliveryStreamOutputFormatConfigurationArgs();
 
     @InputImport(name="serializer")
-        private final @Nullable Input<DeliveryStreamSerializerArgs> serializer;
+      private final @Nullable Input<DeliveryStreamSerializerArgs> serializer;
 
     public Input<DeliveryStreamSerializerArgs> getSerializer() {
         return this.serializer == null ? Input.empty() : this.serializer;

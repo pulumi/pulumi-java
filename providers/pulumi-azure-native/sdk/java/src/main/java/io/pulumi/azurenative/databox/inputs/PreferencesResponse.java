@@ -26,7 +26,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encryptionPreferences")
-        private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
+      private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
 
     public Optional<EncryptionPreferencesResponse> getEncryptionPreferences() {
         return this.encryptionPreferences == null ? Optional.empty() : Optional.ofNullable(this.encryptionPreferences);
@@ -37,7 +37,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="preferredDataCenterRegion")
-        private final @Nullable List<String> preferredDataCenterRegion;
+      private final @Nullable List<String> preferredDataCenterRegion;
 
     public List<String> getPreferredDataCenterRegion() {
         return this.preferredDataCenterRegion == null ? List.of() : this.preferredDataCenterRegion;
@@ -48,7 +48,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transportPreferences")
-        private final @Nullable TransportPreferencesResponse transportPreferences;
+      private final @Nullable TransportPreferencesResponse transportPreferences;
 
     public Optional<TransportPreferencesResponse> getTransportPreferences() {
         return this.transportPreferences == null ? Optional.empty() : Optional.ofNullable(this.transportPreferences);

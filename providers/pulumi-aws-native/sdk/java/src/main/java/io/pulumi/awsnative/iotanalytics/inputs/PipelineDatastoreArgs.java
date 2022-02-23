@@ -14,14 +14,14 @@ public final class PipelineDatastoreArgs extends io.pulumi.resources.ResourceArg
     public static final PipelineDatastoreArgs Empty = new PipelineDatastoreArgs();
 
     @InputImport(name="datastoreName", required=true)
-        private final Input<String> datastoreName;
+      private final Input<String> datastoreName;
 
     public Input<String> getDatastoreName() {
         return this.datastoreName;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

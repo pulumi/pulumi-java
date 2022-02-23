@@ -22,7 +22,7 @@ public final class ReservationShareSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="projectMaps")
-        private final @Nullable Input<List<ReservationShareSettingsProjectMapArgs>> projectMaps;
+      private final @Nullable Input<List<ReservationShareSettingsProjectMapArgs>> projectMaps;
 
     public Input<List<ReservationShareSettingsProjectMapArgs>> getProjectMaps() {
         return this.projectMaps == null ? Input.empty() : this.projectMaps;
@@ -34,7 +34,7 @@ public final class ReservationShareSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="shareType")
-        private final @Nullable Input<String> shareType;
+      private final @Nullable Input<String> shareType;
 
     public Input<String> getShareType() {
         return this.shareType == null ? Input.empty() : this.shareType;

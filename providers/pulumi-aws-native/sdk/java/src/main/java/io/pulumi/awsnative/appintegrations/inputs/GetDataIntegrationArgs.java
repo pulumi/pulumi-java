@@ -17,7 +17,7 @@ public final class GetDataIntegrationArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

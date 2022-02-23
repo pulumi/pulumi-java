@@ -22,7 +22,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-        private final Input<String> automationAccountName;
+      private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -33,7 +33,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiryTime")
-        private final @Nullable Input<String> expiryTime;
+      private final @Nullable Input<String> expiryTime;
 
     public Input<String> getExpiryTime() {
         return this.expiryTime == null ? Input.empty() : this.expiryTime;
@@ -44,7 +44,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled")
-        private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
@@ -55,7 +55,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -66,7 +66,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -77,7 +77,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runOn")
-        private final @Nullable Input<String> runOn;
+      private final @Nullable Input<String> runOn;
 
     public Input<String> getRunOn() {
         return this.runOn == null ? Input.empty() : this.runOn;
@@ -99,7 +99,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runbook")
-        private final @Nullable Input<RunbookAssociationPropertyArgs> runbook;
+      private final @Nullable Input<RunbookAssociationPropertyArgs> runbook;
 
     public Input<RunbookAssociationPropertyArgs> getRunbook() {
         return this.runbook == null ? Input.empty() : this.runbook;
@@ -110,7 +110,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-        private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -121,7 +121,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookName")
-        private final @Nullable Input<String> webhookName;
+      private final @Nullable Input<String> webhookName;
 
     public Input<String> getWebhookName() {
         return this.webhookName == null ? Input.empty() : this.webhookName;

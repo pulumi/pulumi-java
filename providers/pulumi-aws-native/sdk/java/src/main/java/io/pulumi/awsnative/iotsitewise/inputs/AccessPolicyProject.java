@@ -23,7 +23,7 @@ public final class AccessPolicyProject extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);

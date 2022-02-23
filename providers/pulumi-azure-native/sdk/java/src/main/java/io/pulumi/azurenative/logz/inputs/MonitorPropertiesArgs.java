@@ -25,7 +25,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     public static final MonitorPropertiesArgs Empty = new MonitorPropertiesArgs();
 
     @InputImport(name="logzOrganizationProperties")
-        private final @Nullable Input<LogzOrganizationPropertiesArgs> logzOrganizationProperties;
+      private final @Nullable Input<LogzOrganizationPropertiesArgs> logzOrganizationProperties;
 
     public Input<LogzOrganizationPropertiesArgs> getLogzOrganizationProperties() {
         return this.logzOrganizationProperties == null ? Input.empty() : this.logzOrganizationProperties;
@@ -36,7 +36,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="marketplaceSubscriptionStatus")
-        private final @Nullable Input<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
+      private final @Nullable Input<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
 
     public Input<Either<String,MarketplaceSubscriptionStatus>> getMarketplaceSubscriptionStatus() {
         return this.marketplaceSubscriptionStatus == null ? Input.empty() : this.marketplaceSubscriptionStatus;
@@ -47,21 +47,21 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="monitoringStatus")
-        private final @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
+      private final @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
 
     public Input<Either<String,MonitoringStatus>> getMonitoringStatus() {
         return this.monitoringStatus == null ? Input.empty() : this.monitoringStatus;
     }
 
     @InputImport(name="planData")
-        private final @Nullable Input<PlanDataArgs> planData;
+      private final @Nullable Input<PlanDataArgs> planData;
 
     public Input<PlanDataArgs> getPlanData() {
         return this.planData == null ? Input.empty() : this.planData;
     }
 
     @InputImport(name="userInfo")
-        private final @Nullable Input<UserInfoArgs> userInfo;
+      private final @Nullable Input<UserInfoArgs> userInfo;
 
     public Input<UserInfoArgs> getUserInfo() {
         return this.userInfo == null ? Input.empty() : this.userInfo;

@@ -23,7 +23,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultGameServerConfig")
-        private final @Nullable Input<String> defaultGameServerConfig;
+      private final @Nullable Input<String> defaultGameServerConfig;
 
     public Input<String> getDefaultGameServerConfig() {
         return this.defaultGameServerConfig == null ? Input.empty() : this.defaultGameServerConfig;
@@ -34,7 +34,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deploymentId")
-        private final @Nullable Input<String> deploymentId;
+      private final @Nullable Input<String> deploymentId;
 
     public Input<String> getDeploymentId() {
         return this.deploymentId == null ? Input.empty() : this.deploymentId;
@@ -49,7 +49,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="gameServerConfigOverrides")
-        private final @Nullable Input<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> gameServerConfigOverrides;
+      private final @Nullable Input<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> gameServerConfigOverrides;
 
     public Input<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> getGameServerConfigOverrides() {
         return this.gameServerConfigOverrides == null ? Input.empty() : this.gameServerConfigOverrides;
@@ -61,7 +61,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -73,7 +73,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

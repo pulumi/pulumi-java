@@ -25,7 +25,7 @@ public final class SyncGroupSchemaResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="masterSyncMemberName")
-        private final @Nullable String masterSyncMemberName;
+      private final @Nullable String masterSyncMemberName;
 
     public Optional<String> getMasterSyncMemberName() {
         return this.masterSyncMemberName == null ? Optional.empty() : Optional.ofNullable(this.masterSyncMemberName);
@@ -36,7 +36,7 @@ public final class SyncGroupSchemaResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tables")
-        private final @Nullable List<SyncGroupSchemaTableResponse> tables;
+      private final @Nullable List<SyncGroupSchemaTableResponse> tables;
 
     public List<SyncGroupSchemaTableResponse> getTables() {
         return this.tables == null ? List.of() : this.tables;

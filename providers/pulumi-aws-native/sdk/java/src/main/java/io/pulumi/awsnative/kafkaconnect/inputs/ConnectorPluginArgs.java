@@ -18,7 +18,7 @@ public final class ConnectorPluginArgs extends io.pulumi.resources.ResourceArgs 
     public static final ConnectorPluginArgs Empty = new ConnectorPluginArgs();
 
     @InputImport(name="customPlugin", required=true)
-        private final Input<ConnectorCustomPluginArgs> customPlugin;
+      private final Input<ConnectorCustomPluginArgs> customPlugin;
 
     public Input<ConnectorCustomPluginArgs> getCustomPlugin() {
         return this.customPlugin;

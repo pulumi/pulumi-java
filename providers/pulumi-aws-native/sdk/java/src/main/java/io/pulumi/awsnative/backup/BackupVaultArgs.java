@@ -18,42 +18,42 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
     public static final BackupVaultArgs Empty = new BackupVaultArgs();
 
     @InputImport(name="accessPolicy")
-        private final @Nullable Input<Object> accessPolicy;
+      private final @Nullable Input<Object> accessPolicy;
 
     public Input<Object> getAccessPolicy() {
         return this.accessPolicy == null ? Input.empty() : this.accessPolicy;
     }
 
     @InputImport(name="backupVaultName")
-        private final @Nullable Input<String> backupVaultName;
+      private final @Nullable Input<String> backupVaultName;
 
     public Input<String> getBackupVaultName() {
         return this.backupVaultName == null ? Input.empty() : this.backupVaultName;
     }
 
     @InputImport(name="backupVaultTags")
-        private final @Nullable Input<Object> backupVaultTags;
+      private final @Nullable Input<Object> backupVaultTags;
 
     public Input<Object> getBackupVaultTags() {
         return this.backupVaultTags == null ? Input.empty() : this.backupVaultTags;
     }
 
     @InputImport(name="encryptionKeyArn")
-        private final @Nullable Input<String> encryptionKeyArn;
+      private final @Nullable Input<String> encryptionKeyArn;
 
     public Input<String> getEncryptionKeyArn() {
         return this.encryptionKeyArn == null ? Input.empty() : this.encryptionKeyArn;
     }
 
     @InputImport(name="lockConfiguration")
-        private final @Nullable Input<BackupVaultLockConfigurationTypeArgs> lockConfiguration;
+      private final @Nullable Input<BackupVaultLockConfigurationTypeArgs> lockConfiguration;
 
     public Input<BackupVaultLockConfigurationTypeArgs> getLockConfiguration() {
         return this.lockConfiguration == null ? Input.empty() : this.lockConfiguration;
     }
 
     @InputImport(name="notifications")
-        private final @Nullable Input<BackupVaultNotificationObjectTypeArgs> notifications;
+      private final @Nullable Input<BackupVaultNotificationObjectTypeArgs> notifications;
 
     public Input<BackupVaultNotificationObjectTypeArgs> getNotifications() {
         return this.notifications == null ? Input.empty() : this.notifications;

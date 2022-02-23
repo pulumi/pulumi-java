@@ -21,7 +21,7 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deliveryConfig")
-        private final @Nullable Input<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig;
+      private final @Nullable Input<LiteSubscriptionDeliveryConfigGetArgs> deliveryConfig;
 
     public Input<LiteSubscriptionDeliveryConfigGetArgs> getDeliveryConfig() {
         return this.deliveryConfig == null ? Input.empty() : this.deliveryConfig;
@@ -32,7 +32,7 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -55,7 +55,7 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -66,7 +66,7 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="topic")
-        private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -77,7 +77,7 @@ public final class LiteSubscriptionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="zone")
-        private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;

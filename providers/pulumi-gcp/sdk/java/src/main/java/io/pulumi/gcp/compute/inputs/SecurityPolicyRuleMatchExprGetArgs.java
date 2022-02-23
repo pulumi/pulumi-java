@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleMatchExprGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="expression", required=true)
-        private final Input<String> expression;
+      private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;

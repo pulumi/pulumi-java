@@ -23,7 +23,7 @@ public final class RelationshipTypeMappingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="fieldMappings", required=true)
-        private final Input<List<RelationshipTypeFieldMappingArgs>> fieldMappings;
+      private final Input<List<RelationshipTypeFieldMappingArgs>> fieldMappings;
 
     public Input<List<RelationshipTypeFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings;

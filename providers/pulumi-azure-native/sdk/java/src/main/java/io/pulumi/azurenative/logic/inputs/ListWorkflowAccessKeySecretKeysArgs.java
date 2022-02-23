@@ -17,7 +17,7 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accessKeyName", required=true)
-        private final String accessKeyName;
+      private final String accessKeyName;
 
     public String getAccessKeyName() {
         return this.accessKeyName;
@@ -28,7 +28,7 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workflowName", required=true)
-        private final String workflowName;
+      private final String workflowName;
 
     public String getWorkflowName() {
         return this.workflowName;

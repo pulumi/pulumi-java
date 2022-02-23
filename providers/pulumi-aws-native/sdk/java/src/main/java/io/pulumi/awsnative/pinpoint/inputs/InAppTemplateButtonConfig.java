@@ -16,28 +16,28 @@ public final class InAppTemplateButtonConfig extends io.pulumi.resources.InvokeA
     public static final InAppTemplateButtonConfig Empty = new InAppTemplateButtonConfig();
 
     @InputImport(name="android")
-        private final @Nullable InAppTemplateOverrideButtonConfiguration android;
+      private final @Nullable InAppTemplateOverrideButtonConfiguration android;
 
     public Optional<InAppTemplateOverrideButtonConfiguration> getAndroid() {
         return this.android == null ? Optional.empty() : Optional.ofNullable(this.android);
     }
 
     @InputImport(name="defaultConfig")
-        private final @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig;
+      private final @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig;
 
     public Optional<InAppTemplateDefaultButtonConfiguration> getDefaultConfig() {
         return this.defaultConfig == null ? Optional.empty() : Optional.ofNullable(this.defaultConfig);
     }
 
     @InputImport(name="iOS")
-        private final @Nullable InAppTemplateOverrideButtonConfiguration iOS;
+      private final @Nullable InAppTemplateOverrideButtonConfiguration iOS;
 
     public Optional<InAppTemplateOverrideButtonConfiguration> getIOS() {
         return this.iOS == null ? Optional.empty() : Optional.ofNullable(this.iOS);
     }
 
     @InputImport(name="web")
-        private final @Nullable InAppTemplateOverrideButtonConfiguration web;
+      private final @Nullable InAppTemplateOverrideButtonConfiguration web;
 
     public Optional<InAppTemplateOverrideButtonConfiguration> getWeb() {
         return this.web == null ? Optional.empty() : Optional.ofNullable(this.web);

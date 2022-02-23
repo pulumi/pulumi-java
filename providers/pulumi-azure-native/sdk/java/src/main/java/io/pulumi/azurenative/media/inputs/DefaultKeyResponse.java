@@ -23,7 +23,7 @@ public final class DefaultKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="label")
-        private final @Nullable String label;
+      private final @Nullable String label;
 
     public Optional<String> getLabel() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
@@ -34,7 +34,7 @@ public final class DefaultKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policyName")
-        private final @Nullable String policyName;
+      private final @Nullable String policyName;
 
     public Optional<String> getPolicyName() {
         return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);

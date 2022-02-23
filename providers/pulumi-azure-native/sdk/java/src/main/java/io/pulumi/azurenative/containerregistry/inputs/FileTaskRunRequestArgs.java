@@ -30,7 +30,7 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="agentConfiguration")
-        private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
+      private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
 
     public Input<AgentPropertiesArgs> getAgentConfiguration() {
         return this.agentConfiguration == null ? Input.empty() : this.agentConfiguration;
@@ -41,7 +41,7 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="agentPoolName")
-        private final @Nullable Input<String> agentPoolName;
+      private final @Nullable Input<String> agentPoolName;
 
     public Input<String> getAgentPoolName() {
         return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
@@ -52,7 +52,7 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="credentials")
-        private final @Nullable Input<CredentialsArgs> credentials;
+      private final @Nullable Input<CredentialsArgs> credentials;
 
     public Input<CredentialsArgs> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -63,7 +63,7 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isArchiveEnabled")
-        private final @Nullable Input<Boolean> isArchiveEnabled;
+      private final @Nullable Input<Boolean> isArchiveEnabled;
 
     public Input<Boolean> getIsArchiveEnabled() {
         return this.isArchiveEnabled == null ? Input.empty() : this.isArchiveEnabled;
@@ -74,7 +74,7 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logTemplate")
-        private final @Nullable Input<String> logTemplate;
+      private final @Nullable Input<String> logTemplate;
 
     public Input<String> getLogTemplate() {
         return this.logTemplate == null ? Input.empty() : this.logTemplate;
@@ -85,7 +85,7 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="platform", required=true)
-        private final Input<PlatformPropertiesArgs> platform;
+      private final Input<PlatformPropertiesArgs> platform;
 
     public Input<PlatformPropertiesArgs> getPlatform() {
         return this.platform;
@@ -97,7 +97,7 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceLocation")
-        private final @Nullable Input<String> sourceLocation;
+      private final @Nullable Input<String> sourceLocation;
 
     public Input<String> getSourceLocation() {
         return this.sourceLocation == null ? Input.empty() : this.sourceLocation;
@@ -108,7 +108,7 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="taskFilePath", required=true)
-        private final Input<String> taskFilePath;
+      private final Input<String> taskFilePath;
 
     public Input<String> getTaskFilePath() {
         return this.taskFilePath;
@@ -119,7 +119,7 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable Input<Integer> timeout;
+      private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -131,7 +131,7 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -142,7 +142,7 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="values")
-        private final @Nullable Input<List<SetValueArgs>> values;
+      private final @Nullable Input<List<SetValueArgs>> values;
 
     public Input<List<SetValueArgs>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -153,7 +153,7 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="valuesFilePath")
-        private final @Nullable Input<String> valuesFilePath;
+      private final @Nullable Input<String> valuesFilePath;
 
     public Input<String> getValuesFilePath() {
         return this.valuesFilePath == null ? Input.empty() : this.valuesFilePath;

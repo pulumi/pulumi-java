@@ -22,7 +22,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketName")
-        private final @Nullable Input<String> bucketName;
+      private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
@@ -34,7 +34,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cdnPolicy")
-        private final @Nullable Input<BackendBucketCdnPolicyGetArgs> cdnPolicy;
+      private final @Nullable Input<BackendBucketCdnPolicyGetArgs> cdnPolicy;
 
     public Input<BackendBucketCdnPolicyGetArgs> getCdnPolicy() {
         return this.cdnPolicy == null ? Input.empty() : this.cdnPolicy;
@@ -45,7 +45,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-        private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -56,7 +56,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customResponseHeaders")
-        private final @Nullable Input<List<String>> customResponseHeaders;
+      private final @Nullable Input<List<String>> customResponseHeaders;
 
     public Input<List<String>> getCustomResponseHeaders() {
         return this.customResponseHeaders == null ? Input.empty() : this.customResponseHeaders;
@@ -68,7 +68,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -79,7 +79,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableCdn")
-        private final @Nullable Input<Boolean> enableCdn;
+      private final @Nullable Input<Boolean> enableCdn;
 
     public Input<Boolean> getEnableCdn() {
         return this.enableCdn == null ? Input.empty() : this.enableCdn;
@@ -96,7 +96,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -108,7 +108,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -119,7 +119,7 @@ public final class BackendBucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;

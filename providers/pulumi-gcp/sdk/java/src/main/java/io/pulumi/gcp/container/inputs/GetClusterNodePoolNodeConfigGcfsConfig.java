@@ -13,7 +13,7 @@ public final class GetClusterNodePoolNodeConfigGcfsConfig extends io.pulumi.reso
     public static final GetClusterNodePoolNodeConfigGcfsConfig Empty = new GetClusterNodePoolNodeConfigGcfsConfig();
 
     @InputImport(name="enabled", required=true)
-        private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;

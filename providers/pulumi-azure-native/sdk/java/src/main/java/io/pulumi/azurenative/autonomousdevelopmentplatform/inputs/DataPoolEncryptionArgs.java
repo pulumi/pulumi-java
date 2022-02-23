@@ -23,7 +23,7 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyName", required=true)
-        private final Input<String> keyName;
+      private final Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName;
@@ -34,7 +34,7 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyVaultUri", required=true)
-        private final Input<String> keyVaultUri;
+      private final Input<String> keyVaultUri;
 
     public Input<String> getKeyVaultUri() {
         return this.keyVaultUri;
@@ -45,7 +45,7 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyVersion")
-        private final @Nullable Input<String> keyVersion;
+      private final @Nullable Input<String> keyVersion;
 
     public Input<String> getKeyVersion() {
         return this.keyVersion == null ? Input.empty() : this.keyVersion;
@@ -56,7 +56,7 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="userAssignedIdentity", required=true)
-        private final Input<String> userAssignedIdentity;
+      private final Input<String> userAssignedIdentity;
 
     public Input<String> getUserAssignedIdentity() {
         return this.userAssignedIdentity;

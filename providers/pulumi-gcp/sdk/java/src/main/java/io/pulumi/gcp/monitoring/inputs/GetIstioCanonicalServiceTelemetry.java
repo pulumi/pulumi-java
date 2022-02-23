@@ -13,7 +13,7 @@ public final class GetIstioCanonicalServiceTelemetry extends io.pulumi.resources
     public static final GetIstioCanonicalServiceTelemetry Empty = new GetIstioCanonicalServiceTelemetry();
 
     @InputImport(name="resourceName", required=true)
-        private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;

@@ -25,7 +25,7 @@ public final class ApiManagementServiceSkuPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="capacity", required=true)
-        private final Input<Integer> capacity;
+      private final Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity;
@@ -36,7 +36,7 @@ public final class ApiManagementServiceSkuPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<Either<String,SkuType>> name;
+      private final Input<Either<String,SkuType>> name;
 
     public Input<Either<String,SkuType>> getName() {
         return this.name;

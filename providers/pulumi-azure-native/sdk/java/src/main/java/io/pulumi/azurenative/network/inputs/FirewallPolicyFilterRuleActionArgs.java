@@ -25,7 +25,7 @@ public final class FirewallPolicyFilterRuleActionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,FirewallPolicyFilterRuleActionType>> type;
+      private final @Nullable Input<Either<String,FirewallPolicyFilterRuleActionType>> type;
 
     public Input<Either<String,FirewallPolicyFilterRuleActionType>> getType() {
         return this.type == null ? Input.empty() : this.type;

@@ -17,7 +17,7 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-        private final String operationalInsightsResourceProvider;
+      private final String operationalInsightsResourceProvider;
 
     public String getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -39,7 +39,7 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;

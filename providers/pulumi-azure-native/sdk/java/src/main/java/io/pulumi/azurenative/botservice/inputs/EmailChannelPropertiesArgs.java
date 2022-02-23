@@ -24,7 +24,7 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="emailAddress", required=true)
-        private final Input<String> emailAddress;
+      private final Input<String> emailAddress;
 
     public Input<String> getEmailAddress() {
         return this.emailAddress;
@@ -35,7 +35,7 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isEnabled", required=true)
-        private final Input<Boolean> isEnabled;
+      private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -46,7 +46,7 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;

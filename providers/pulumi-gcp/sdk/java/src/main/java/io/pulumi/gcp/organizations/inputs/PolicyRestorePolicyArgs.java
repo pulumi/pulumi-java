@@ -18,7 +18,7 @@ public final class PolicyRestorePolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="default", required=true)
-        private final Input<Boolean> $default;
+      private final Input<Boolean> $default;
 
     public Input<Boolean> get$default() {
         return this.$default;

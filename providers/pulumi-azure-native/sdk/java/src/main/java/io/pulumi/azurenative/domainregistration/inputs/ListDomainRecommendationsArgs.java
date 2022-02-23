@@ -20,7 +20,7 @@ public final class ListDomainRecommendationsArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="keywords")
-        private final @Nullable String keywords;
+      private final @Nullable String keywords;
 
     public Optional<String> getKeywords() {
         return this.keywords == null ? Optional.empty() : Optional.ofNullable(this.keywords);
@@ -31,7 +31,7 @@ public final class ListDomainRecommendationsArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="maxDomainRecommendations")
-        private final @Nullable Integer maxDomainRecommendations;
+      private final @Nullable Integer maxDomainRecommendations;
 
     public Optional<Integer> getMaxDomainRecommendations() {
         return this.maxDomainRecommendations == null ? Optional.empty() : Optional.ofNullable(this.maxDomainRecommendations);

@@ -22,7 +22,7 @@ public final class ThemeResourcePermission extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="actions", required=true)
-        private final List<String> actions;
+      private final List<String> actions;
 
     public List<String> getActions() {
         return this.actions;
@@ -47,7 +47,7 @@ public final class ThemeResourcePermission extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="principal", required=true)
-        private final String principal;
+      private final String principal;
 
     public String getPrincipal() {
         return this.principal;

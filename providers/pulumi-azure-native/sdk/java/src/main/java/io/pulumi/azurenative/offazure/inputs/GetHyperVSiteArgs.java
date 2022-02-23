@@ -17,7 +17,7 @@ public final class GetHyperVSiteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetHyperVSiteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="siteName", required=true)
-        private final String siteName;
+      private final String siteName;
 
     public String getSiteName() {
         return this.siteName;

@@ -22,7 +22,7 @@ public final class CryptoKeyIAMBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="condition")
-        private final @Nullable Input<CryptoKeyIAMBindingConditionArgs> condition;
+      private final @Nullable Input<CryptoKeyIAMBindingConditionArgs> condition;
 
     public Input<CryptoKeyIAMBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -36,14 +36,14 @@ public final class CryptoKeyIAMBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cryptoKeyId", required=true)
-        private final Input<String> cryptoKeyId;
+      private final Input<String> cryptoKeyId;
 
     public Input<String> getCryptoKeyId() {
         return this.cryptoKeyId;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -55,7 +55,7 @@ public final class CryptoKeyIAMBindingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

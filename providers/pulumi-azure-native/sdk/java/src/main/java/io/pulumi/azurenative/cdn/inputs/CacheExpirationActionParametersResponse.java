@@ -23,7 +23,7 @@ public final class CacheExpirationActionParametersResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="cacheBehavior", required=true)
-        private final String cacheBehavior;
+      private final String cacheBehavior;
 
     public String getCacheBehavior() {
         return this.cacheBehavior;
@@ -34,7 +34,7 @@ public final class CacheExpirationActionParametersResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="cacheDuration")
-        private final @Nullable String cacheDuration;
+      private final @Nullable String cacheDuration;
 
     public Optional<String> getCacheDuration() {
         return this.cacheDuration == null ? Optional.empty() : Optional.ofNullable(this.cacheDuration);
@@ -45,14 +45,14 @@ public final class CacheExpirationActionParametersResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="cacheType", required=true)
-        private final String cacheType;
+      private final String cacheType;
 
     public String getCacheType() {
         return this.cacheType;
     }
 
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;

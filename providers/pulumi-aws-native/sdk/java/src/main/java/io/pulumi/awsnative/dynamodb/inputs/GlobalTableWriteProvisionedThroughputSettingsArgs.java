@@ -15,7 +15,7 @@ public final class GlobalTableWriteProvisionedThroughputSettingsArgs extends io.
     public static final GlobalTableWriteProvisionedThroughputSettingsArgs Empty = new GlobalTableWriteProvisionedThroughputSettingsArgs();
 
     @InputImport(name="writeCapacityAutoScalingSettings")
-        private final @Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings;
+      private final @Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings;
 
     public Input<GlobalTableCapacityAutoScalingSettingsArgs> getWriteCapacityAutoScalingSettings() {
         return this.writeCapacityAutoScalingSettings == null ? Input.empty() : this.writeCapacityAutoScalingSettings;

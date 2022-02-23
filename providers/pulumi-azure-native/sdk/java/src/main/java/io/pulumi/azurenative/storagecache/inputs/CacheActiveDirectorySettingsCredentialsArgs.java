@@ -22,7 +22,7 @@ public final class CacheActiveDirectorySettingsCredentialsArgs extends io.pulumi
      * 
      */
     @InputImport(name="password", required=true)
-        private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -33,7 +33,7 @@ public final class CacheActiveDirectorySettingsCredentialsArgs extends io.pulumi
      * 
      */
     @InputImport(name="username", required=true)
-        private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;

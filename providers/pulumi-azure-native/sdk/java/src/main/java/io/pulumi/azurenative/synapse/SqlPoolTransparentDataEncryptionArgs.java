@@ -21,7 +21,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -32,7 +32,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sqlPoolName", required=true)
-        private final Input<String> sqlPoolName;
+      private final Input<String> sqlPoolName;
 
     public Input<String> getSqlPoolName() {
         return this.sqlPoolName;
@@ -43,7 +43,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<Either<String,TransparentDataEncryptionStatus>> status;
+      private final @Nullable Input<Either<String,TransparentDataEncryptionStatus>> status;
 
     public Input<Either<String,TransparentDataEncryptionStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -54,7 +54,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="transparentDataEncryptionName")
-        private final @Nullable Input<String> transparentDataEncryptionName;
+      private final @Nullable Input<String> transparentDataEncryptionName;
 
     public Input<String> getTransparentDataEncryptionName() {
         return this.transparentDataEncryptionName == null ? Input.empty() : this.transparentDataEncryptionName;
@@ -65,7 +65,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

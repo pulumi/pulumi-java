@@ -19,7 +19,7 @@ public final class BotMultipleValuesSettingArgs extends io.pulumi.resources.Reso
     public static final BotMultipleValuesSettingArgs Empty = new BotMultipleValuesSettingArgs();
 
     @InputImport(name="allowMultipleValues")
-        private final @Nullable Input<Boolean> allowMultipleValues;
+      private final @Nullable Input<Boolean> allowMultipleValues;
 
     public Input<Boolean> getAllowMultipleValues() {
         return this.allowMultipleValues == null ? Input.empty() : this.allowMultipleValues;

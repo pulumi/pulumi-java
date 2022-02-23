@@ -20,7 +20,7 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="buildServiceName", required=true)
-        private final Input<String> buildServiceName;
+      private final Input<String> buildServiceName;
 
     public Input<String> getBuildServiceName() {
         return this.buildServiceName;
@@ -31,7 +31,7 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="builderName", required=true)
-        private final Input<String> builderName;
+      private final Input<String> builderName;
 
     public Input<String> getBuilderName() {
         return this.builderName;
@@ -42,7 +42,7 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="buildpackBindingName")
-        private final @Nullable Input<String> buildpackBindingName;
+      private final @Nullable Input<String> buildpackBindingName;
 
     public Input<String> getBuildpackBindingName() {
         return this.buildpackBindingName == null ? Input.empty() : this.buildpackBindingName;
@@ -53,7 +53,7 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<BuildpackBindingPropertiesArgs> properties;
+      private final @Nullable Input<BuildpackBindingPropertiesArgs> properties;
 
     public Input<BuildpackBindingPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -64,7 +64,7 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;

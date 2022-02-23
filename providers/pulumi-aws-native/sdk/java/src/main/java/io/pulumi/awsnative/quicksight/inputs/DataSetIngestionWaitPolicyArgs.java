@@ -25,7 +25,7 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ingestionWaitTimeInHours")
-        private final @Nullable Input<Double> ingestionWaitTimeInHours;
+      private final @Nullable Input<Double> ingestionWaitTimeInHours;
 
     public Input<Double> getIngestionWaitTimeInHours() {
         return this.ingestionWaitTimeInHours == null ? Input.empty() : this.ingestionWaitTimeInHours;
@@ -37,7 +37,7 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="waitForSpiceIngestion")
-        private final @Nullable Input<Boolean> waitForSpiceIngestion;
+      private final @Nullable Input<Boolean> waitForSpiceIngestion;
 
     public Input<Boolean> getWaitForSpiceIngestion() {
         return this.waitForSpiceIngestion == null ? Input.empty() : this.waitForSpiceIngestion;

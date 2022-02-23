@@ -23,7 +23,7 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="burst")
-        private final @Nullable Input<Integer> burst;
+      private final @Nullable Input<Integer> burst;
 
     public Input<Integer> getBurst() {
         return this.burst == null ? Input.empty() : this.burst;
@@ -34,7 +34,7 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="qps")
-        private final @Nullable Input<Integer> qps;
+      private final @Nullable Input<Integer> qps;
 
     public Input<Integer> getQps() {
         return this.qps == null ? Input.empty() : this.qps;

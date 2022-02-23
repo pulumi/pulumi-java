@@ -27,7 +27,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHandler")
-        private final @Nullable Input<EventHandlerSettingsArgs> eventHandler;
+      private final @Nullable Input<EventHandlerSettingsArgs> eventHandler;
 
     public Input<EventHandlerSettingsArgs> getEventHandler() {
         return this.eventHandler == null ? Input.empty() : this.eventHandler;
@@ -43,7 +43,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="features")
-        private final @Nullable Input<List<WebPubSubFeatureArgs>> features;
+      private final @Nullable Input<List<WebPubSubFeatureArgs>> features;
 
     public Input<List<WebPubSubFeatureArgs>> getFeatures() {
         return this.features == null ? Input.empty() : this.features;
@@ -54,7 +54,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<ManagedIdentityArgs> identity;
+      private final @Nullable Input<ManagedIdentityArgs> identity;
 
     public Input<ManagedIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -65,7 +65,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -76,7 +76,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkACLs")
-        private final @Nullable Input<WebPubSubNetworkACLsArgs> networkACLs;
+      private final @Nullable Input<WebPubSubNetworkACLsArgs> networkACLs;
 
     public Input<WebPubSubNetworkACLsArgs> getNetworkACLs() {
         return this.networkACLs == null ? Input.empty() : this.networkACLs;
@@ -89,7 +89,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-        private final @Nullable Input<String> publicNetworkAccess;
+      private final @Nullable Input<String> publicNetworkAccess;
 
     public Input<String> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -100,7 +100,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-        private final @Nullable Input<String> resourceName;
+      private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -122,7 +122,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable Input<ResourceSkuArgs> sku;
+      private final @Nullable Input<ResourceSkuArgs> sku;
 
     public Input<ResourceSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -133,7 +133,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -144,7 +144,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tls")
-        private final @Nullable Input<WebPubSubTlsSettingsArgs> tls;
+      private final @Nullable Input<WebPubSubTlsSettingsArgs> tls;
 
     public Input<WebPubSubTlsSettingsArgs> getTls() {
         return this.tls == null ? Input.empty() : this.tls;

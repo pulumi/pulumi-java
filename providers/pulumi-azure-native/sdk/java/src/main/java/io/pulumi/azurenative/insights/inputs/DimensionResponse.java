@@ -22,7 +22,7 @@ public final class DimensionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class DimensionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="operator", required=true)
-        private final String operator;
+      private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -44,7 +44,7 @@ public final class DimensionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="values", required=true)
-        private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;

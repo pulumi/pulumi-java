@@ -23,7 +23,7 @@ public final class GatewayApiMetadataPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -34,7 +34,7 @@ public final class GatewayApiMetadataPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="documentation")
-        private final @Nullable String documentation;
+      private final @Nullable String documentation;
 
     public Optional<String> getDocumentation() {
         return this.documentation == null ? Optional.empty() : Optional.ofNullable(this.documentation);
@@ -45,7 +45,7 @@ public final class GatewayApiMetadataPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="serverUrl")
-        private final @Nullable String serverUrl;
+      private final @Nullable String serverUrl;
 
     public Optional<String> getServerUrl() {
         return this.serverUrl == null ? Optional.empty() : Optional.ofNullable(this.serverUrl);
@@ -56,7 +56,7 @@ public final class GatewayApiMetadataPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="title")
-        private final @Nullable String title;
+      private final @Nullable String title;
 
     public Optional<String> getTitle() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
@@ -67,7 +67,7 @@ public final class GatewayApiMetadataPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="version")
-        private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);

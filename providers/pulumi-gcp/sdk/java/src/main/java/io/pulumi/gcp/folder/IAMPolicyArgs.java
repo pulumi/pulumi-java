@@ -14,14 +14,14 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final IAMPolicyArgs Empty = new IAMPolicyArgs();
 
     @InputImport(name="folder", required=true)
-        private final Input<String> folder;
+      private final Input<String> folder;
 
     public Input<String> getFolder() {
         return this.folder;
     }
 
     @InputImport(name="policyData", required=true)
-        private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;

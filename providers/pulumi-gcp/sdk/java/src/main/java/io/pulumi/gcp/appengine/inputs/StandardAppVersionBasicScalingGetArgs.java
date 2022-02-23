@@ -21,7 +21,7 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="idleTimeout")
-        private final @Nullable Input<String> idleTimeout;
+      private final @Nullable Input<String> idleTimeout;
 
     public Input<String> getIdleTimeout() {
         return this.idleTimeout == null ? Input.empty() : this.idleTimeout;
@@ -32,7 +32,7 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="maxInstances", required=true)
-        private final Input<Integer> maxInstances;
+      private final Input<Integer> maxInstances;
 
     public Input<Integer> getMaxInstances() {
         return this.maxInstances;

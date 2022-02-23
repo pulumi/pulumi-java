@@ -26,7 +26,7 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskConfigurationType")
-        private final @Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType;
+      private final @Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType;
 
     public Input<Either<String,DiskConfigurationType>> getDiskConfigurationType() {
         return this.diskConfigurationType == null ? Input.empty() : this.diskConfigurationType;
@@ -37,7 +37,7 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskCount")
-        private final @Nullable Input<Integer> diskCount;
+      private final @Nullable Input<Integer> diskCount;
 
     public Input<Integer> getDiskCount() {
         return this.diskCount == null ? Input.empty() : this.diskCount;
@@ -48,7 +48,7 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="startingDeviceId")
-        private final @Nullable Input<Integer> startingDeviceId;
+      private final @Nullable Input<Integer> startingDeviceId;
 
     public Input<Integer> getStartingDeviceId() {
         return this.startingDeviceId == null ? Input.empty() : this.startingDeviceId;

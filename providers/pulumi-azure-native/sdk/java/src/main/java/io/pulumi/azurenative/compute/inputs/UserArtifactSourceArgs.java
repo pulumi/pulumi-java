@@ -23,7 +23,7 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultConfigurationLink")
-        private final @Nullable Input<String> defaultConfigurationLink;
+      private final @Nullable Input<String> defaultConfigurationLink;
 
     public Input<String> getDefaultConfigurationLink() {
         return this.defaultConfigurationLink == null ? Input.empty() : this.defaultConfigurationLink;
@@ -34,7 +34,7 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="mediaLink", required=true)
-        private final Input<String> mediaLink;
+      private final Input<String> mediaLink;
 
     public Input<String> getMediaLink() {
         return this.mediaLink;

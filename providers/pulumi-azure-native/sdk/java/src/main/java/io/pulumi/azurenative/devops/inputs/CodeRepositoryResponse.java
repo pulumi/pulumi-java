@@ -25,7 +25,7 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="authorization")
-        private final @Nullable AuthorizationResponse authorization;
+      private final @Nullable AuthorizationResponse authorization;
 
     public Optional<AuthorizationResponse> getAuthorization() {
         return this.authorization == null ? Optional.empty() : Optional.ofNullable(this.authorization);
@@ -36,7 +36,7 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="defaultBranch", required=true)
-        private final String defaultBranch;
+      private final String defaultBranch;
 
     public String getDefaultBranch() {
         return this.defaultBranch;
@@ -47,7 +47,7 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -58,7 +58,7 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Map<String,String> properties;
+      private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -69,7 +69,7 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="repositoryType", required=true)
-        private final String repositoryType;
+      private final String repositoryType;
 
     public String getRepositoryType() {
         return this.repositoryType;

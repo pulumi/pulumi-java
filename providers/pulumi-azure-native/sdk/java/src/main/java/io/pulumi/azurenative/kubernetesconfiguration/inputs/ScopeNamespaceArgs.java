@@ -23,7 +23,7 @@ public final class ScopeNamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetNamespace")
-        private final @Nullable Input<String> targetNamespace;
+      private final @Nullable Input<String> targetNamespace;
 
     public Input<String> getTargetNamespace() {
         return this.targetNamespace == null ? Input.empty() : this.targetNamespace;

@@ -24,7 +24,7 @@ public final class AppImageConfigFileSystemConfig extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="defaultGid")
-        private final @Nullable Integer defaultGid;
+      private final @Nullable Integer defaultGid;
 
     public Optional<Integer> getDefaultGid() {
         return this.defaultGid == null ? Optional.empty() : Optional.ofNullable(this.defaultGid);
@@ -35,7 +35,7 @@ public final class AppImageConfigFileSystemConfig extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="defaultUid")
-        private final @Nullable Integer defaultUid;
+      private final @Nullable Integer defaultUid;
 
     public Optional<Integer> getDefaultUid() {
         return this.defaultUid == null ? Optional.empty() : Optional.ofNullable(this.defaultUid);
@@ -46,7 +46,7 @@ public final class AppImageConfigFileSystemConfig extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="mountPath")
-        private final @Nullable String mountPath;
+      private final @Nullable String mountPath;
 
     public Optional<String> getMountPath() {
         return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);

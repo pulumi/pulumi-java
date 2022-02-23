@@ -24,7 +24,7 @@ public final class FunctionInputResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dataType")
-        private final @Nullable String dataType;
+      private final @Nullable String dataType;
 
     public Optional<String> getDataType() {
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
@@ -35,7 +35,7 @@ public final class FunctionInputResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="isConfigurationParameter")
-        private final @Nullable Boolean isConfigurationParameter;
+      private final @Nullable Boolean isConfigurationParameter;
 
     public Optional<Boolean> getIsConfigurationParameter() {
         return this.isConfigurationParameter == null ? Optional.empty() : Optional.ofNullable(this.isConfigurationParameter);

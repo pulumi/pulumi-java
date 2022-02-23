@@ -16,14 +16,14 @@ public final class ServiceIamMemberArgs extends io.pulumi.resources.ResourceArgs
     public static final ServiceIamMemberArgs Empty = new ServiceIamMemberArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<ServiceIamMemberConditionArgs> condition;
+      private final @Nullable Input<ServiceIamMemberConditionArgs> condition;
 
     public Input<ServiceIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-        private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -34,7 +34,7 @@ public final class ServiceIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class ServiceIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

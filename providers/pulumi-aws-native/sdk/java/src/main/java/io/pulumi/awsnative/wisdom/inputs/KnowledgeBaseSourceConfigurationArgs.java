@@ -15,7 +15,7 @@ public final class KnowledgeBaseSourceConfigurationArgs extends io.pulumi.resour
     public static final KnowledgeBaseSourceConfigurationArgs Empty = new KnowledgeBaseSourceConfigurationArgs();
 
     @InputImport(name="appIntegrations")
-        private final @Nullable Input<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
+      private final @Nullable Input<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
 
     public Input<KnowledgeBaseAppIntegrationsConfigurationArgs> getAppIntegrations() {
         return this.appIntegrations == null ? Input.empty() : this.appIntegrations;

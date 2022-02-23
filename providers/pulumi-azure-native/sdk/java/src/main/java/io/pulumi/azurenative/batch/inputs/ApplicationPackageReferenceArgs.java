@@ -15,7 +15,7 @@ public final class ApplicationPackageReferenceArgs extends io.pulumi.resources.R
     public static final ApplicationPackageReferenceArgs Empty = new ApplicationPackageReferenceArgs();
 
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -26,7 +26,7 @@ public final class ApplicationPackageReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

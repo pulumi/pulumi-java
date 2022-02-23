@@ -21,7 +21,7 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="clientId", required=true)
-        private final String clientId;
+      private final String clientId;
 
     public String getClientId() {
         return this.clientId;
@@ -32,7 +32,7 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="secret", required=true)
-        private final String secret;
+      private final String secret;
 
     public String getSecret() {
         return this.secret;

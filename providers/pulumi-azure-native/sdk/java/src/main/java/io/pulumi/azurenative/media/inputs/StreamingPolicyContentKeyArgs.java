@@ -25,7 +25,7 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="label")
-        private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -36,7 +36,7 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyName")
-        private final @Nullable Input<String> policyName;
+      private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
@@ -47,7 +47,7 @@ public final class StreamingPolicyContentKeyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tracks")
-        private final @Nullable Input<List<TrackSelectionArgs>> tracks;
+      private final @Nullable Input<List<TrackSelectionArgs>> tracks;
 
     public Input<List<TrackSelectionArgs>> getTracks() {
         return this.tracks == null ? Input.empty() : this.tracks;

@@ -23,7 +23,7 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<IdentityForCmkArgs> identity;
+      private final @Nullable Input<IdentityForCmkArgs> identity;
 
     public Input<IdentityForCmkArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -34,7 +34,7 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyVaultProperties", required=true)
-        private final Input<KeyVaultPropertiesArgs> keyVaultProperties;
+      private final Input<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
         return this.keyVaultProperties;
@@ -45,7 +45,7 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="status", required=true)
-        private final Input<Either<String,EncryptionStatus>> status;
+      private final Input<Either<String,EncryptionStatus>> status;
 
     public Input<Either<String,EncryptionStatus>> getStatus() {
         return this.status;

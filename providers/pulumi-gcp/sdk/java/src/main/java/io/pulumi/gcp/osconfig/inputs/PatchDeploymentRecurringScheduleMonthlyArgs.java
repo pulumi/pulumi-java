@@ -22,7 +22,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyArgs extends io.pulumi
      * 
      */
     @InputImport(name="monthDay")
-        private final @Nullable Input<Integer> monthDay;
+      private final @Nullable Input<Integer> monthDay;
 
     public Input<Integer> getMonthDay() {
         return this.monthDay == null ? Input.empty() : this.monthDay;
@@ -34,7 +34,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyArgs extends io.pulumi
      * 
      */
     @InputImport(name="weekDayOfMonth")
-        private final @Nullable Input<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth;
+      private final @Nullable Input<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth;
 
     public Input<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> getWeekDayOfMonth() {
         return this.weekDayOfMonth == null ? Input.empty() : this.weekDayOfMonth;

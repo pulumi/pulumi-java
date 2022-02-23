@@ -23,7 +23,7 @@ public final class MetadataSourceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="kind", required=true)
-        private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -34,7 +34,7 @@ public final class MetadataSourceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -45,7 +45,7 @@ public final class MetadataSourceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="sourceId")
-        private final @Nullable String sourceId;
+      private final @Nullable String sourceId;
 
     public Optional<String> getSourceId() {
         return this.sourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceId);

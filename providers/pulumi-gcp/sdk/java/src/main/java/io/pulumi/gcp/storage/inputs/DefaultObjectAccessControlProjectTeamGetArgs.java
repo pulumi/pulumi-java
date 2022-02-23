@@ -15,14 +15,14 @@ public final class DefaultObjectAccessControlProjectTeamGetArgs extends io.pulum
     public static final DefaultObjectAccessControlProjectTeamGetArgs Empty = new DefaultObjectAccessControlProjectTeamGetArgs();
 
     @InputImport(name="projectNumber")
-        private final @Nullable Input<String> projectNumber;
+      private final @Nullable Input<String> projectNumber;
 
     public Input<String> getProjectNumber() {
         return this.projectNumber == null ? Input.empty() : this.projectNumber;
     }
 
     @InputImport(name="team")
-        private final @Nullable Input<String> team;
+      private final @Nullable Input<String> team;
 
     public Input<String> getTeam() {
         return this.team == null ? Input.empty() : this.team;

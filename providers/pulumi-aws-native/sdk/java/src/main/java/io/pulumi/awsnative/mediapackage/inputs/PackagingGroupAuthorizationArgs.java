@@ -18,7 +18,7 @@ public final class PackagingGroupAuthorizationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cdnIdentifierSecret", required=true)
-        private final Input<String> cdnIdentifierSecret;
+      private final Input<String> cdnIdentifierSecret;
 
     public Input<String> getCdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
@@ -29,7 +29,7 @@ public final class PackagingGroupAuthorizationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="secretsRoleArn", required=true)
-        private final Input<String> secretsRoleArn;
+      private final Input<String> secretsRoleArn;
 
     public Input<String> getSecretsRoleArn() {
         return this.secretsRoleArn;

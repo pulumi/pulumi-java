@@ -22,7 +22,7 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="default", required=true)
-        private final Input<String> $default;
+      private final Input<String> $default;
 
     public Input<String> get$default() {
         return this.$default;
@@ -33,7 +33,7 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximum", required=true)
-        private final Input<String> maximum;
+      private final Input<String> maximum;
 
     public Input<String> getMaximum() {
         return this.maximum;
@@ -44,7 +44,7 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimum", required=true)
-        private final Input<String> minimum;
+      private final Input<String> minimum;
 
     public Input<String> getMinimum() {
         return this.minimum;

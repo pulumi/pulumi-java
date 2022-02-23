@@ -18,35 +18,35 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOrigin extends i
     public static final CachePolicyParametersInCacheKeyAndForwardedToOrigin Empty = new CachePolicyParametersInCacheKeyAndForwardedToOrigin();
 
     @InputImport(name="cookiesConfig", required=true)
-        private final CachePolicyCookiesConfig cookiesConfig;
+      private final CachePolicyCookiesConfig cookiesConfig;
 
     public CachePolicyCookiesConfig getCookiesConfig() {
         return this.cookiesConfig;
     }
 
     @InputImport(name="enableAcceptEncodingBrotli")
-        private final @Nullable Boolean enableAcceptEncodingBrotli;
+      private final @Nullable Boolean enableAcceptEncodingBrotli;
 
     public Optional<Boolean> getEnableAcceptEncodingBrotli() {
         return this.enableAcceptEncodingBrotli == null ? Optional.empty() : Optional.ofNullable(this.enableAcceptEncodingBrotli);
     }
 
     @InputImport(name="enableAcceptEncodingGzip", required=true)
-        private final Boolean enableAcceptEncodingGzip;
+      private final Boolean enableAcceptEncodingGzip;
 
     public Boolean getEnableAcceptEncodingGzip() {
         return this.enableAcceptEncodingGzip;
     }
 
     @InputImport(name="headersConfig", required=true)
-        private final CachePolicyHeadersConfig headersConfig;
+      private final CachePolicyHeadersConfig headersConfig;
 
     public CachePolicyHeadersConfig getHeadersConfig() {
         return this.headersConfig;
     }
 
     @InputImport(name="queryStringsConfig", required=true)
-        private final CachePolicyQueryStringsConfig queryStringsConfig;
+      private final CachePolicyQueryStringsConfig queryStringsConfig;
 
     public CachePolicyQueryStringsConfig getQueryStringsConfig() {
         return this.queryStringsConfig;

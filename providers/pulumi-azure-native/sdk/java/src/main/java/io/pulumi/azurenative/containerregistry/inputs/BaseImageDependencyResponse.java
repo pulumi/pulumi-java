@@ -23,7 +23,7 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="digest")
-        private final @Nullable String digest;
+      private final @Nullable String digest;
 
     public Optional<String> getDigest() {
         return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
@@ -34,7 +34,7 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="registry")
-        private final @Nullable String registry;
+      private final @Nullable String registry;
 
     public Optional<String> getRegistry() {
         return this.registry == null ? Optional.empty() : Optional.ofNullable(this.registry);
@@ -45,7 +45,7 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="repository")
-        private final @Nullable String repository;
+      private final @Nullable String repository;
 
     public Optional<String> getRepository() {
         return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
@@ -56,7 +56,7 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="tag")
-        private final @Nullable String tag;
+      private final @Nullable String tag;
 
     public Optional<String> getTag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
@@ -67,7 +67,7 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

@@ -18,7 +18,7 @@ public final class AzureClusterControlPlaneProxyConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupId", required=true)
-        private final Input<String> resourceGroupId;
+      private final Input<String> resourceGroupId;
 
     public Input<String> getResourceGroupId() {
         return this.resourceGroupId;
@@ -29,7 +29,7 @@ public final class AzureClusterControlPlaneProxyConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="secretId", required=true)
-        private final Input<String> secretId;
+      private final Input<String> secretId;
 
     public Input<String> getSecretId() {
         return this.secretId;

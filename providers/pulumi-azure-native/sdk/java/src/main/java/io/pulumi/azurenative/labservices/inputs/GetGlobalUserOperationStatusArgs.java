@@ -17,7 +17,7 @@ public final class GetGlobalUserOperationStatusArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="operationUrl", required=true)
-        private final String operationUrl;
+      private final String operationUrl;
 
     public String getOperationUrl() {
         return this.operationUrl;
@@ -28,7 +28,7 @@ public final class GetGlobalUserOperationStatusArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="userName", required=true)
-        private final String userName;
+      private final String userName;
 
     public String getUserName() {
         return this.userName;

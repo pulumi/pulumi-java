@@ -23,7 +23,7 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersRe
      * 
      */
     @InputImport(name="contentLinkDefinition")
-        private final @Nullable ContentLinkResponse contentLinkDefinition;
+      private final @Nullable ContentLinkResponse contentLinkDefinition;
 
     public Optional<ContentLinkResponse> getContentLinkDefinition() {
         return this.contentLinkDefinition == null ? Optional.empty() : Optional.ofNullable(this.contentLinkDefinition);

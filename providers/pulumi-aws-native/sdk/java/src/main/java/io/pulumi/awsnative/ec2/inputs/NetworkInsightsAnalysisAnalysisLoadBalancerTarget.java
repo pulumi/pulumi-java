@@ -17,28 +17,28 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerTarget extends io.
     public static final NetworkInsightsAnalysisAnalysisLoadBalancerTarget Empty = new NetworkInsightsAnalysisAnalysisLoadBalancerTarget();
 
     @InputImport(name="address")
-        private final @Nullable String address;
+      private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
     @InputImport(name="availabilityZone")
-        private final @Nullable String availabilityZone;
+      private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
     }
 
     @InputImport(name="instance")
-        private final @Nullable NetworkInsightsAnalysisAnalysisComponent instance;
+      private final @Nullable NetworkInsightsAnalysisAnalysisComponent instance;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getInstance() {
         return this.instance == null ? Optional.empty() : Optional.ofNullable(this.instance);
     }
 
     @InputImport(name="port")
-        private final @Nullable Integer port;
+      private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);

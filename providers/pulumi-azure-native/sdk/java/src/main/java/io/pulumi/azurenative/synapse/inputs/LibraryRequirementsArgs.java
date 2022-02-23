@@ -23,7 +23,7 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="content")
-        private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -34,7 +34,7 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="filename")
-        private final @Nullable Input<String> filename;
+      private final @Nullable Input<String> filename;
 
     public Input<String> getFilename() {
         return this.filename == null ? Input.empty() : this.filename;

@@ -19,7 +19,7 @@ public final class WebTypeAppEngingIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appId", required=true)
-        private final Input<String> appId;
+      private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -31,7 +31,7 @@ public final class WebTypeAppEngingIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyData", required=true)
-        private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -43,7 +43,7 @@ public final class WebTypeAppEngingIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

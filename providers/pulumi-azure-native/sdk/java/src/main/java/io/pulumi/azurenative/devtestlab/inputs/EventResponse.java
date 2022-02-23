@@ -23,7 +23,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="eventName")
-        private final @Nullable String eventName;
+      private final @Nullable String eventName;
 
     public Optional<String> getEventName() {
         return this.eventName == null ? Optional.empty() : Optional.ofNullable(this.eventName);

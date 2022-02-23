@@ -20,7 +20,7 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends io.p
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -31,7 +31,7 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends io.p
      * 
      */
     @InputImport(name="roleArn")
-        private final @Nullable String roleArn;
+      private final @Nullable String roleArn;
 
     public Optional<String> getRoleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
@@ -42,7 +42,7 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends io.p
      * 
      */
     @InputImport(name="targetArn")
-        private final @Nullable String targetArn;
+      private final @Nullable String targetArn;
 
     public Optional<String> getTargetArn() {
         return this.targetArn == null ? Optional.empty() : Optional.ofNullable(this.targetArn);

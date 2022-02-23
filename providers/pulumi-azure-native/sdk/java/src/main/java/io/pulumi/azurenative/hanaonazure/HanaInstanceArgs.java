@@ -23,7 +23,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hanaInstanceName")
-        private final @Nullable Input<String> hanaInstanceName;
+      private final @Nullable Input<String> hanaInstanceName;
 
     public Input<String> getHanaInstanceName() {
         return this.hanaInstanceName == null ? Input.empty() : this.hanaInstanceName;
@@ -34,7 +34,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -45,7 +45,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfile")
-        private final @Nullable Input<NetworkProfileArgs> networkProfile;
+      private final @Nullable Input<NetworkProfileArgs> networkProfile;
 
     public Input<NetworkProfileArgs> getNetworkProfile() {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
@@ -56,7 +56,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osProfile")
-        private final @Nullable Input<OSProfileArgs> osProfile;
+      private final @Nullable Input<OSProfileArgs> osProfile;
 
     public Input<OSProfileArgs> getOsProfile() {
         return this.osProfile == null ? Input.empty() : this.osProfile;
@@ -67,7 +67,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerNodeId")
-        private final @Nullable Input<String> partnerNodeId;
+      private final @Nullable Input<String> partnerNodeId;
 
     public Input<String> getPartnerNodeId() {
         return this.partnerNodeId == null ? Input.empty() : this.partnerNodeId;
@@ -78,7 +78,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageProfile")
-        private final @Nullable Input<StorageProfileArgs> storageProfile;
+      private final @Nullable Input<StorageProfileArgs> storageProfile;
 
     public Input<StorageProfileArgs> getStorageProfile() {
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
@@ -100,7 +100,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

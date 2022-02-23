@@ -23,7 +23,7 @@ public final class BucketReplicationConfiguration extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="role", required=true)
-        private final String role;
+      private final String role;
 
     public String getRole() {
         return this.role;
@@ -34,7 +34,7 @@ public final class BucketReplicationConfiguration extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="rules", required=true)
-        private final List<BucketReplicationRule> rules;
+      private final List<BucketReplicationRule> rules;
 
     public List<BucketReplicationRule> getRules() {
         return this.rules;

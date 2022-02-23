@@ -24,7 +24,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="hostname")
-        private final @Nullable Input<String> hostname;
+      private final @Nullable Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname == null ? Input.empty() : this.hostname;
@@ -35,7 +35,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ip", required=true)
-        private final Input<String> ip;
+      private final Input<String> ip;
 
     public Input<String> getIp() {
         return this.ip;
@@ -46,7 +46,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="nodeName")
-        private final @Nullable Input<String> nodeName;
+      private final @Nullable Input<String> nodeName;
 
     public Input<String> getNodeName() {
         return this.nodeName == null ? Input.empty() : this.nodeName;
@@ -57,7 +57,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetRef")
-        private final @Nullable Input<ObjectReferenceArgs> targetRef;
+      private final @Nullable Input<ObjectReferenceArgs> targetRef;
 
     public Input<ObjectReferenceArgs> getTargetRef() {
         return this.targetRef == null ? Input.empty() : this.targetRef;

@@ -21,7 +21,7 @@ public final class BucketVersioningConfiguration extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="status", required=true)
-        private final BucketVersioningConfigurationStatus status;
+      private final BucketVersioningConfigurationStatus status;
 
     public BucketVersioningConfigurationStatus getStatus() {
         return this.status;

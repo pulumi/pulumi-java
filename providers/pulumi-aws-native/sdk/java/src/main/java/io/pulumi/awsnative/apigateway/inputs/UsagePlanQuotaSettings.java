@@ -20,7 +20,7 @@ public final class UsagePlanQuotaSettings extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="limit")
-        private final @Nullable Integer limit;
+      private final @Nullable Integer limit;
 
     public Optional<Integer> getLimit() {
         return this.limit == null ? Optional.empty() : Optional.ofNullable(this.limit);
@@ -31,7 +31,7 @@ public final class UsagePlanQuotaSettings extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="offset")
-        private final @Nullable Integer offset;
+      private final @Nullable Integer offset;
 
     public Optional<Integer> getOffset() {
         return this.offset == null ? Optional.empty() : Optional.ofNullable(this.offset);
@@ -42,7 +42,7 @@ public final class UsagePlanQuotaSettings extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="period")
-        private final @Nullable String period;
+      private final @Nullable String period;
 
     public Optional<String> getPeriod() {
         return this.period == null ? Optional.empty() : Optional.ofNullable(this.period);

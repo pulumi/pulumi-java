@@ -31,7 +31,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -42,7 +42,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -53,7 +53,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionProperties")
-        private final @Nullable Input<Object> connectionProperties;
+      private final @Nullable Input<Object> connectionProperties;
 
     public Input<Object> getConnectionProperties() {
         return this.connectionProperties == null ? Input.empty() : this.connectionProperties;
@@ -64,7 +64,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="consumerKey")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getConsumerKey() {
         return this.consumerKey == null ? Input.empty() : this.consumerKey;
@@ -75,7 +75,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -86,7 +86,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -97,7 +97,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="host")
-        private final @Nullable Input<Object> host;
+      private final @Nullable Input<Object> host;
 
     public Input<Object> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -108,7 +108,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -120,7 +120,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateKey")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -132,7 +132,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -143,7 +143,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-        private final @Nullable Input<Object> useEncryptedEndpoints;
+      private final @Nullable Input<Object> useEncryptedEndpoints;
 
     public Input<Object> getUseEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Input.empty() : this.useEncryptedEndpoints;
@@ -154,7 +154,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="useHostVerification")
-        private final @Nullable Input<Object> useHostVerification;
+      private final @Nullable Input<Object> useHostVerification;
 
     public Input<Object> getUseHostVerification() {
         return this.useHostVerification == null ? Input.empty() : this.useHostVerification;
@@ -165,7 +165,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="usePeerVerification")
-        private final @Nullable Input<Object> usePeerVerification;
+      private final @Nullable Input<Object> usePeerVerification;
 
     public Input<Object> getUsePeerVerification() {
         return this.usePeerVerification == null ? Input.empty() : this.usePeerVerification;

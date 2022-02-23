@@ -26,7 +26,7 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,SecretObjectType>> type;
+      private final @Nullable Input<Either<String,SecretObjectType>> type;
 
     public Input<Either<String,SecretObjectType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -39,7 +39,7 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

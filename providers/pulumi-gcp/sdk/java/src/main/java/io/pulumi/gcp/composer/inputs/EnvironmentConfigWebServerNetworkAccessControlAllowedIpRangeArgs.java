@@ -15,14 +15,14 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeA
     public static final EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs Empty = new EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs();
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

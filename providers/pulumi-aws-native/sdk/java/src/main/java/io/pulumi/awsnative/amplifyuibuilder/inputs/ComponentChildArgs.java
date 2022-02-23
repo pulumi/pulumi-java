@@ -17,28 +17,28 @@ public final class ComponentChildArgs extends io.pulumi.resources.ResourceArgs {
     public static final ComponentChildArgs Empty = new ComponentChildArgs();
 
     @InputImport(name="children")
-        private final @Nullable Input<List<ComponentChildArgs>> children;
+      private final @Nullable Input<List<ComponentChildArgs>> children;
 
     public Input<List<ComponentChildArgs>> getChildren() {
         return this.children == null ? Input.empty() : this.children;
     }
 
     @InputImport(name="componentType", required=true)
-        private final Input<String> componentType;
+      private final Input<String> componentType;
 
     public Input<String> getComponentType() {
         return this.componentType;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="properties", required=true)
-        private final Input<ComponentPropertiesArgs> properties;
+      private final Input<ComponentPropertiesArgs> properties;
 
     public Input<ComponentPropertiesArgs> getProperties() {
         return this.properties;

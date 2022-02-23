@@ -24,7 +24,7 @@ public final class DetectorModelIotSiteWise extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="assetId")
-        private final @Nullable String assetId;
+      private final @Nullable String assetId;
 
     public Optional<String> getAssetId() {
         return this.assetId == null ? Optional.empty() : Optional.ofNullable(this.assetId);
@@ -35,7 +35,7 @@ public final class DetectorModelIotSiteWise extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="entryId")
-        private final @Nullable String entryId;
+      private final @Nullable String entryId;
 
     public Optional<String> getEntryId() {
         return this.entryId == null ? Optional.empty() : Optional.ofNullable(this.entryId);
@@ -46,7 +46,7 @@ public final class DetectorModelIotSiteWise extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="propertyAlias")
-        private final @Nullable String propertyAlias;
+      private final @Nullable String propertyAlias;
 
     public Optional<String> getPropertyAlias() {
         return this.propertyAlias == null ? Optional.empty() : Optional.ofNullable(this.propertyAlias);
@@ -57,14 +57,14 @@ public final class DetectorModelIotSiteWise extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="propertyId")
-        private final @Nullable String propertyId;
+      private final @Nullable String propertyId;
 
     public Optional<String> getPropertyId() {
         return this.propertyId == null ? Optional.empty() : Optional.ofNullable(this.propertyId);
     }
 
     @InputImport(name="propertyValue", required=true)
-        private final DetectorModelAssetPropertyValue propertyValue;
+      private final DetectorModelAssetPropertyValue propertyValue;
 
     public DetectorModelAssetPropertyValue getPropertyValue() {
         return this.propertyValue;

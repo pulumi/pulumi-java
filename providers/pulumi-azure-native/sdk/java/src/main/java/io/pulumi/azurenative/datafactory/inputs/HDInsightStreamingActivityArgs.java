@@ -32,7 +32,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="arguments")
-        private final @Nullable Input<List<Object>> arguments;
+      private final @Nullable Input<List<Object>> arguments;
 
     public Input<List<Object>> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -43,7 +43,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="combiner")
-        private final @Nullable Input<Object> combiner;
+      private final @Nullable Input<Object> combiner;
 
     public Input<Object> getCombiner() {
         return this.combiner == null ? Input.empty() : this.combiner;
@@ -54,7 +54,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="commandEnvironment")
-        private final @Nullable Input<List<Object>> commandEnvironment;
+      private final @Nullable Input<List<Object>> commandEnvironment;
 
     public Input<List<Object>> getCommandEnvironment() {
         return this.commandEnvironment == null ? Input.empty() : this.commandEnvironment;
@@ -65,7 +65,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="defines")
-        private final @Nullable Input<Map<String,Object>> defines;
+      private final @Nullable Input<Map<String,Object>> defines;
 
     public Input<Map<String,Object>> getDefines() {
         return this.defines == null ? Input.empty() : this.defines;
@@ -76,7 +76,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dependsOn")
-        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -87,7 +87,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -98,7 +98,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fileLinkedService")
-        private final @Nullable Input<LinkedServiceReferenceArgs> fileLinkedService;
+      private final @Nullable Input<LinkedServiceReferenceArgs> fileLinkedService;
 
     public Input<LinkedServiceReferenceArgs> getFileLinkedService() {
         return this.fileLinkedService == null ? Input.empty() : this.fileLinkedService;
@@ -109,7 +109,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="filePaths", required=true)
-        private final Input<List<Object>> filePaths;
+      private final Input<List<Object>> filePaths;
 
     public Input<List<Object>> getFilePaths() {
         return this.filePaths;
@@ -120,7 +120,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="getDebugInfo")
-        private final @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
+      private final @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
     public Input<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
         return this.getDebugInfo == null ? Input.empty() : this.getDebugInfo;
@@ -131,7 +131,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="input", required=true)
-        private final Input<Object> input;
+      private final Input<Object> input;
 
     public Input<Object> getInput() {
         return this.input;
@@ -142,7 +142,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="linkedServiceName")
-        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -153,7 +153,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="mapper", required=true)
-        private final Input<Object> mapper;
+      private final Input<Object> mapper;
 
     public Input<Object> getMapper() {
         return this.mapper;
@@ -164,7 +164,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -175,7 +175,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="output", required=true)
-        private final Input<Object> output;
+      private final Input<Object> output;
 
     public Input<Object> getOutput() {
         return this.output;
@@ -186,7 +186,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="policy")
-        private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -197,7 +197,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="reducer", required=true)
-        private final Input<Object> reducer;
+      private final Input<Object> reducer;
 
     public Input<Object> getReducer() {
         return this.reducer;
@@ -208,7 +208,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="storageLinkedServices")
-        private final @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices;
+      private final @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
     public Input<List<LinkedServiceReferenceArgs>> getStorageLinkedServices() {
         return this.storageLinkedServices == null ? Input.empty() : this.storageLinkedServices;
@@ -220,7 +220,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -231,7 +231,7 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="userProperties")
-        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;

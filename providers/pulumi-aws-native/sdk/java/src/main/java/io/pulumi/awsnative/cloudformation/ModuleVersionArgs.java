@@ -20,7 +20,7 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moduleName", required=true)
-        private final Input<String> moduleName;
+      private final Input<String> moduleName;
 
     public Input<String> getModuleName() {
         return this.moduleName;
@@ -31,7 +31,7 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modulePackage", required=true)
-        private final Input<String> modulePackage;
+      private final Input<String> modulePackage;
 
     public Input<String> getModulePackage() {
         return this.modulePackage;

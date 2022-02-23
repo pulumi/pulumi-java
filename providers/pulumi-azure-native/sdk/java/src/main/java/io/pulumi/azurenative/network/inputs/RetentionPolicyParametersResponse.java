@@ -24,7 +24,7 @@ public final class RetentionPolicyParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="days")
-        private final @Nullable Integer days;
+      private final @Nullable Integer days;
 
     public Optional<Integer> getDays() {
         return this.days == null ? Optional.empty() : Optional.ofNullable(this.days);
@@ -35,7 +35,7 @@ public final class RetentionPolicyParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);

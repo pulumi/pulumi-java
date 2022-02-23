@@ -17,21 +17,21 @@ public final class BudgetsActionDefinitionArgs extends io.pulumi.resources.Resou
     public static final BudgetsActionDefinitionArgs Empty = new BudgetsActionDefinitionArgs();
 
     @InputImport(name="iamActionDefinition")
-        private final @Nullable Input<BudgetsActionIamActionDefinitionArgs> iamActionDefinition;
+      private final @Nullable Input<BudgetsActionIamActionDefinitionArgs> iamActionDefinition;
 
     public Input<BudgetsActionIamActionDefinitionArgs> getIamActionDefinition() {
         return this.iamActionDefinition == null ? Input.empty() : this.iamActionDefinition;
     }
 
     @InputImport(name="scpActionDefinition")
-        private final @Nullable Input<BudgetsActionScpActionDefinitionArgs> scpActionDefinition;
+      private final @Nullable Input<BudgetsActionScpActionDefinitionArgs> scpActionDefinition;
 
     public Input<BudgetsActionScpActionDefinitionArgs> getScpActionDefinition() {
         return this.scpActionDefinition == null ? Input.empty() : this.scpActionDefinition;
     }
 
     @InputImport(name="ssmActionDefinition")
-        private final @Nullable Input<BudgetsActionSsmActionDefinitionArgs> ssmActionDefinition;
+      private final @Nullable Input<BudgetsActionSsmActionDefinitionArgs> ssmActionDefinition;
 
     public Input<BudgetsActionSsmActionDefinitionArgs> getSsmActionDefinition() {
         return this.ssmActionDefinition == null ? Input.empty() : this.ssmActionDefinition;

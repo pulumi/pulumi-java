@@ -25,7 +25,7 @@ public final class TargetEligibilityResultResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="eligibilityStatus")
-        private final @Nullable String eligibilityStatus;
+      private final @Nullable String eligibilityStatus;
 
     public Optional<String> getEligibilityStatus() {
         return this.eligibilityStatus == null ? Optional.empty() : Optional.ofNullable(this.eligibilityStatus);
@@ -36,7 +36,7 @@ public final class TargetEligibilityResultResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="messages")
-        private final @Nullable List<TargetEligibilityErrorMessageResponse> messages;
+      private final @Nullable List<TargetEligibilityErrorMessageResponse> messages;
 
     public List<TargetEligibilityErrorMessageResponse> getMessages() {
         return this.messages == null ? List.of() : this.messages;

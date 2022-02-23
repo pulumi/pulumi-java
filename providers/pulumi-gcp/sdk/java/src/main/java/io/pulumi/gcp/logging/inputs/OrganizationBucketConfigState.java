@@ -20,7 +20,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bucketId")
-        private final @Nullable Input<String> bucketId;
+      private final @Nullable Input<String> bucketId;
 
     public Input<String> getBucketId() {
         return this.bucketId == null ? Input.empty() : this.bucketId;
@@ -31,7 +31,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -42,7 +42,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="lifecycleState")
-        private final @Nullable Input<String> lifecycleState;
+      private final @Nullable Input<String> lifecycleState;
 
     public Input<String> getLifecycleState() {
         return this.lifecycleState == null ? Input.empty() : this.lifecycleState;
@@ -53,7 +53,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -64,7 +64,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="organization")
-        private final @Nullable Input<String> organization;
+      private final @Nullable Input<String> organization;
 
     public Input<String> getOrganization() {
         return this.organization == null ? Input.empty() : this.organization;
@@ -86,7 +86,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="retentionDays")
-        private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;

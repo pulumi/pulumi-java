@@ -24,7 +24,7 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends io.pulumi
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends io.pulumi
      * 
      */
     @InputImport(name="provider")
-        private final @Nullable Input<OpenShiftManagedClusterAADIdentityProviderArgs> provider;
+      private final @Nullable Input<OpenShiftManagedClusterAADIdentityProviderArgs> provider;
 
     public Input<OpenShiftManagedClusterAADIdentityProviderArgs> getProvider() {
         return this.provider == null ? Input.empty() : this.provider;

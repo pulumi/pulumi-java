@@ -122,6 +122,21 @@ public class PrivateEndpointConnectionsForMIPPolicySync extends io.pulumi.resour
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public PrivateEndpointConnectionsForMIPPolicySync(String name) {
+        this(name, PrivateEndpointConnectionsForMIPPolicySyncArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PrivateEndpointConnectionsForMIPPolicySync(String name, PrivateEndpointConnectionsForMIPPolicySyncArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

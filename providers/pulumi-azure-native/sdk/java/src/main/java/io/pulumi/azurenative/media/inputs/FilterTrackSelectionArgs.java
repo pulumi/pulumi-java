@@ -23,7 +23,7 @@ public final class FilterTrackSelectionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="trackSelections", required=true)
-        private final Input<List<FilterTrackPropertyConditionArgs>> trackSelections;
+      private final Input<List<FilterTrackPropertyConditionArgs>> trackSelections;
 
     public Input<List<FilterTrackPropertyConditionArgs>> getTrackSelections() {
         return this.trackSelections;

@@ -23,7 +23,7 @@ public final class PartnerContentResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="b2b")
-        private final @Nullable B2BPartnerContentResponse b2b;
+      private final @Nullable B2BPartnerContentResponse b2b;
 
     public Optional<B2BPartnerContentResponse> getB2b() {
         return this.b2b == null ? Optional.empty() : Optional.ofNullable(this.b2b);

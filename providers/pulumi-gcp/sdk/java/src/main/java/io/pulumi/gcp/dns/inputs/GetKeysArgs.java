@@ -19,7 +19,7 @@ public final class GetKeysArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="managedZone", required=true)
-        private final String managedZone;
+      private final String managedZone;
 
     public String getManagedZone() {
         return this.managedZone;
@@ -30,7 +30,7 @@ public final class GetKeysArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);

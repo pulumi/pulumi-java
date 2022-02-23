@@ -165,6 +165,21 @@ public class PrivateLinkServicesForSCCPowershell extends io.pulumi.resources.Cus
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public PrivateLinkServicesForSCCPowershell(String name) {
+        this(name, PrivateLinkServicesForSCCPowershellArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PrivateLinkServicesForSCCPowershell(String name, PrivateLinkServicesForSCCPowershellArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

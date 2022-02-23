@@ -21,7 +21,7 @@ public final class AutoscalingPolicySecondaryWorkerConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="maxInstances")
-        private final @Nullable Input<Integer> maxInstances;
+      private final @Nullable Input<Integer> maxInstances;
 
     public Input<Integer> getMaxInstances() {
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
@@ -32,7 +32,7 @@ public final class AutoscalingPolicySecondaryWorkerConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="minInstances")
-        private final @Nullable Input<Integer> minInstances;
+      private final @Nullable Input<Integer> minInstances;
 
     public Input<Integer> getMinInstances() {
         return this.minInstances == null ? Input.empty() : this.minInstances;
@@ -54,7 +54,7 @@ public final class AutoscalingPolicySecondaryWorkerConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="weight")
-        private final @Nullable Input<Integer> weight;
+      private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;

@@ -23,7 +23,7 @@ public final class QuarantinePolicyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="status")
-        private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);

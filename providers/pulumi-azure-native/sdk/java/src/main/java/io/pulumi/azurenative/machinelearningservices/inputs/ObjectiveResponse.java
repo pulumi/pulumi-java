@@ -21,7 +21,7 @@ public final class ObjectiveResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="goal", required=true)
-        private final String goal;
+      private final String goal;
 
     public String getGoal() {
         return this.goal;
@@ -32,7 +32,7 @@ public final class ObjectiveResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="primaryMetric", required=true)
-        private final String primaryMetric;
+      private final String primaryMetric;
 
     public String getPrimaryMetric() {
         return this.primaryMetric;

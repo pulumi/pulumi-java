@@ -17,7 +17,7 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
     public static final IPAMScopeArgs Empty = new IPAMScopeArgs();
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -28,7 +28,7 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipamId", required=true)
-        private final Input<String> ipamId;
+      private final Input<String> ipamId;
 
     public Input<String> getIpamId() {
         return this.ipamId;
@@ -39,7 +39,7 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<IPAMScopeTagArgs>> tags;
+      private final @Nullable Input<List<IPAMScopeTagArgs>> tags;
 
     public Input<List<IPAMScopeTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

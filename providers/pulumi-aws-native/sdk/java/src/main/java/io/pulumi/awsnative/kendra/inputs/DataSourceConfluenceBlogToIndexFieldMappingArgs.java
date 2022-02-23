@@ -16,21 +16,21 @@ public final class DataSourceConfluenceBlogToIndexFieldMappingArgs extends io.pu
     public static final DataSourceConfluenceBlogToIndexFieldMappingArgs Empty = new DataSourceConfluenceBlogToIndexFieldMappingArgs();
 
     @InputImport(name="dataSourceFieldName", required=true)
-        private final Input<DataSourceConfluenceBlogFieldName> dataSourceFieldName;
+      private final Input<DataSourceConfluenceBlogFieldName> dataSourceFieldName;
 
     public Input<DataSourceConfluenceBlogFieldName> getDataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @InputImport(name="dateFieldFormat")
-        private final @Nullable Input<String> dateFieldFormat;
+      private final @Nullable Input<String> dateFieldFormat;
 
     public Input<String> getDateFieldFormat() {
         return this.dateFieldFormat == null ? Input.empty() : this.dateFieldFormat;
     }
 
     @InputImport(name="indexFieldName", required=true)
-        private final Input<String> indexFieldName;
+      private final Input<String> indexFieldName;
 
     public Input<String> getIndexFieldName() {
         return this.indexFieldName;

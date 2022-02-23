@@ -15,14 +15,14 @@ public final class ContainerPortInfoArgs extends io.pulumi.resources.ResourceArg
     public static final ContainerPortInfoArgs Empty = new ContainerPortInfoArgs();
 
     @InputImport(name="port")
-        private final @Nullable Input<String> port;
+      private final @Nullable Input<String> port;
 
     public Input<String> getPort() {
         return this.port == null ? Input.empty() : this.port;
     }
 
     @InputImport(name="protocol")
-        private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;

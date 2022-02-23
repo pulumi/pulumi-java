@@ -13,7 +13,7 @@ public final class GetCollectionArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCollectionArgs Empty = new GetCollectionArgs();
 
     @InputImport(name="collectionId", required=true)
-        private final String collectionId;
+      private final String collectionId;
 
     public String getCollectionId() {
         return this.collectionId;

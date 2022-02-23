@@ -18,14 +18,14 @@ public final class CertificateAuthorityOtherNameArgs extends io.pulumi.resources
     public static final CertificateAuthorityOtherNameArgs Empty = new CertificateAuthorityOtherNameArgs();
 
     @InputImport(name="typeId", required=true)
-        private final Input<String> typeId;
+      private final Input<String> typeId;
 
     public Input<String> getTypeId() {
         return this.typeId;
     }
 
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

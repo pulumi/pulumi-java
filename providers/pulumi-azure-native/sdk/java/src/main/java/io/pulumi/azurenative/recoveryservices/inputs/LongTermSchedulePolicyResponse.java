@@ -22,7 +22,7 @@ public final class LongTermSchedulePolicyResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="schedulePolicyType", required=true)
-        private final String schedulePolicyType;
+      private final String schedulePolicyType;
 
     public String getSchedulePolicyType() {
         return this.schedulePolicyType;

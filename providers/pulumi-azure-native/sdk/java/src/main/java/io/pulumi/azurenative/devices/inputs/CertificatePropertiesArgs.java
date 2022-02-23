@@ -23,7 +23,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificate")
-        private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;

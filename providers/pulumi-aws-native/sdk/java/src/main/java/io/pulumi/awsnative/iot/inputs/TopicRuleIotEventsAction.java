@@ -16,28 +16,28 @@ public final class TopicRuleIotEventsAction extends io.pulumi.resources.InvokeAr
     public static final TopicRuleIotEventsAction Empty = new TopicRuleIotEventsAction();
 
     @InputImport(name="batchMode")
-        private final @Nullable Boolean batchMode;
+      private final @Nullable Boolean batchMode;
 
     public Optional<Boolean> getBatchMode() {
         return this.batchMode == null ? Optional.empty() : Optional.ofNullable(this.batchMode);
     }
 
     @InputImport(name="inputName", required=true)
-        private final String inputName;
+      private final String inputName;
 
     public String getInputName() {
         return this.inputName;
     }
 
     @InputImport(name="messageId")
-        private final @Nullable String messageId;
+      private final @Nullable String messageId;
 
     public Optional<String> getMessageId() {
         return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
     }
 
     @InputImport(name="roleArn", required=true)
-        private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;

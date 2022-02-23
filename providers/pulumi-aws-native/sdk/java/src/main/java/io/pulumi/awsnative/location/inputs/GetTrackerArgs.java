@@ -13,7 +13,7 @@ public final class GetTrackerArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTrackerArgs Empty = new GetTrackerArgs();
 
     @InputImport(name="trackerName", required=true)
-        private final String trackerName;
+      private final String trackerName;
 
     public String getTrackerName() {
         return this.trackerName;

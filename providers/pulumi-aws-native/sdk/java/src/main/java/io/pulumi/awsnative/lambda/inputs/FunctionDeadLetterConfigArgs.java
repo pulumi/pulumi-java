@@ -23,7 +23,7 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetArn")
-        private final @Nullable Input<String> targetArn;
+      private final @Nullable Input<String> targetArn;
 
     public Input<String> getTargetArn() {
         return this.targetArn == null ? Input.empty() : this.targetArn;

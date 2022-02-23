@@ -22,7 +22,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends i
      * 
      */
     @InputImport(name="maxFindingsPerInfoTypes")
-        private final @Nullable Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs>> maxFindingsPerInfoTypes;
+      private final @Nullable Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs>> maxFindingsPerInfoTypes;
 
     public Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs>> getMaxFindingsPerInfoTypes() {
         return this.maxFindingsPerInfoTypes == null ? Input.empty() : this.maxFindingsPerInfoTypes;
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends i
      * 
      */
     @InputImport(name="maxFindingsPerItem", required=true)
-        private final Input<Integer> maxFindingsPerItem;
+      private final Input<Integer> maxFindingsPerItem;
 
     public Input<Integer> getMaxFindingsPerItem() {
         return this.maxFindingsPerItem;
@@ -44,7 +44,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends i
      * 
      */
     @InputImport(name="maxFindingsPerRequest", required=true)
-        private final Input<Integer> maxFindingsPerRequest;
+      private final Input<Integer> maxFindingsPerRequest;
 
     public Input<Integer> getMaxFindingsPerRequest() {
         return this.maxFindingsPerRequest;

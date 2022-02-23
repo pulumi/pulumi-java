@@ -14,7 +14,7 @@ public final class IntegrationMarketoSourcePropertiesArgs extends io.pulumi.reso
     public static final IntegrationMarketoSourcePropertiesArgs Empty = new IntegrationMarketoSourcePropertiesArgs();
 
     @InputImport(name="object", required=true)
-        private final Input<String> object;
+      private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;

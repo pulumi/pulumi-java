@@ -19,7 +19,7 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="install", required=true)
-        private final Input<String> install;
+      private final Input<String> install;
 
     public Input<String> getInstall() {
         return this.install;
@@ -30,7 +30,7 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="remove", required=true)
-        private final Input<String> remove;
+      private final Input<String> remove;
 
     public Input<String> getRemove() {
         return this.remove;
@@ -41,7 +41,7 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="update")
-        private final @Nullable Input<String> update;
+      private final @Nullable Input<String> update;
 
     public Input<String> getUpdate() {
         return this.update == null ? Input.empty() : this.update;

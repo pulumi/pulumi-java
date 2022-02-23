@@ -17,7 +17,7 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="associationId", required=true)
-        private final String associationId;
+      private final String associationId;
 
     public String getAssociationId() {
         return this.associationId;

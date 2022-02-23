@@ -16,7 +16,7 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
     public static final DomainNameEndpointConfigurationArgs Empty = new DomainNameEndpointConfigurationArgs();
 
     @InputImport(name="types")
-        private final @Nullable Input<List<String>> types;
+      private final @Nullable Input<List<String>> types;
 
     public Input<List<String>> getTypes() {
         return this.types == null ? Input.empty() : this.types;

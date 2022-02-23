@@ -23,7 +23,7 @@ public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="certificateData")
-        private final @Nullable String certificateData;
+      private final @Nullable String certificateData;
 
     public Optional<String> getCertificateData() {
         return this.certificateData == null ? Optional.empty() : Optional.ofNullable(this.certificateData);

@@ -16,14 +16,14 @@ public final class AutoScaleRunResponse extends io.pulumi.resources.InvokeArgs {
     public static final AutoScaleRunResponse Empty = new AutoScaleRunResponse();
 
     @InputImport(name="error")
-        private final @Nullable AutoScaleRunErrorResponse error;
+      private final @Nullable AutoScaleRunErrorResponse error;
 
     public Optional<AutoScaleRunErrorResponse> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
     @InputImport(name="evaluationTime", required=true)
-        private final String evaluationTime;
+      private final String evaluationTime;
 
     public String getEvaluationTime() {
         return this.evaluationTime;
@@ -34,7 +34,7 @@ public final class AutoScaleRunResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="results")
-        private final @Nullable String results;
+      private final @Nullable String results;
 
     public Optional<String> getResults() {
         return this.results == null ? Optional.empty() : Optional.ofNullable(this.results);

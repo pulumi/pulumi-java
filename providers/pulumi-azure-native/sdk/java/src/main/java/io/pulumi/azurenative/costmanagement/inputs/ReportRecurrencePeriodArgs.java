@@ -23,7 +23,7 @@ public final class ReportRecurrencePeriodArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="from", required=true)
-        private final Input<String> from;
+      private final Input<String> from;
 
     public Input<String> getFrom() {
         return this.from;
@@ -34,7 +34,7 @@ public final class ReportRecurrencePeriodArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="to")
-        private final @Nullable Input<String> to;
+      private final @Nullable Input<String> to;
 
     public Input<String> getTo() {
         return this.to == null ? Input.empty() : this.to;

@@ -18,7 +18,7 @@ public final class TableColumnFamilyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="family", required=true)
-        private final Input<String> family;
+      private final Input<String> family;
 
     public Input<String> getFamily() {
         return this.family;

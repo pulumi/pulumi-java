@@ -25,7 +25,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -36,7 +36,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="ipConfigurations")
-        private final @Nullable Input<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> ipConfigurations;
+      private final @Nullable Input<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> ipConfigurations;
 
     public Input<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> getIpConfigurations() {
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
@@ -47,7 +47,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

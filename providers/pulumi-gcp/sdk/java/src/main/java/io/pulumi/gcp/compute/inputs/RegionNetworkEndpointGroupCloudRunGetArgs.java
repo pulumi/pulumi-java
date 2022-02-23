@@ -21,7 +21,7 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="service")
-        private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -35,7 +35,7 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="tag")
-        private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -51,7 +51,7 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="urlMask")
-        private final @Nullable Input<String> urlMask;
+      private final @Nullable Input<String> urlMask;
 
     public Input<String> getUrlMask() {
         return this.urlMask == null ? Input.empty() : this.urlMask;

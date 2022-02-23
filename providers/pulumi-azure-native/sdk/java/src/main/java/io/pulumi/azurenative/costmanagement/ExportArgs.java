@@ -24,7 +24,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definition", required=true)
-        private final Input<ExportDefinitionArgs> definition;
+      private final Input<ExportDefinitionArgs> definition;
 
     public Input<ExportDefinitionArgs> getDefinition() {
         return this.definition;
@@ -35,7 +35,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryInfo", required=true)
-        private final Input<ExportDeliveryInfoArgs> deliveryInfo;
+      private final Input<ExportDeliveryInfoArgs> deliveryInfo;
 
     public Input<ExportDeliveryInfoArgs> getDeliveryInfo() {
         return this.deliveryInfo;
@@ -46,7 +46,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-        private final @Nullable Input<String> eTag;
+      private final @Nullable Input<String> eTag;
 
     public Input<String> getETag() {
         return this.eTag == null ? Input.empty() : this.eTag;
@@ -57,7 +57,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exportName")
-        private final @Nullable Input<String> exportName;
+      private final @Nullable Input<String> exportName;
 
     public Input<String> getExportName() {
         return this.exportName == null ? Input.empty() : this.exportName;
@@ -68,7 +68,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-        private final @Nullable Input<Either<String,FormatType>> format;
+      private final @Nullable Input<Either<String,FormatType>> format;
 
     public Input<Either<String,FormatType>> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -79,7 +79,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-        private final @Nullable Input<ExportScheduleArgs> schedule;
+      private final @Nullable Input<ExportScheduleArgs> schedule;
 
     public Input<ExportScheduleArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -90,7 +90,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-        private final Input<String> scope;
+      private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;

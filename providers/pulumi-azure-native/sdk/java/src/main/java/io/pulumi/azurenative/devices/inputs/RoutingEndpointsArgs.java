@@ -27,7 +27,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eventHubs")
-        private final @Nullable Input<List<RoutingEventHubPropertiesArgs>> eventHubs;
+      private final @Nullable Input<List<RoutingEventHubPropertiesArgs>> eventHubs;
 
     public Input<List<RoutingEventHubPropertiesArgs>> getEventHubs() {
         return this.eventHubs == null ? Input.empty() : this.eventHubs;
@@ -38,7 +38,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceBusQueues")
-        private final @Nullable Input<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues;
+      private final @Nullable Input<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues;
 
     public Input<List<RoutingServiceBusQueueEndpointPropertiesArgs>> getServiceBusQueues() {
         return this.serviceBusQueues == null ? Input.empty() : this.serviceBusQueues;
@@ -49,7 +49,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceBusTopics")
-        private final @Nullable Input<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics;
+      private final @Nullable Input<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics;
 
     public Input<List<RoutingServiceBusTopicEndpointPropertiesArgs>> getServiceBusTopics() {
         return this.serviceBusTopics == null ? Input.empty() : this.serviceBusTopics;
@@ -60,7 +60,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="storageContainers")
-        private final @Nullable Input<List<RoutingStorageContainerPropertiesArgs>> storageContainers;
+      private final @Nullable Input<List<RoutingStorageContainerPropertiesArgs>> storageContainers;
 
     public Input<List<RoutingStorageContainerPropertiesArgs>> getStorageContainers() {
         return this.storageContainers == null ? Input.empty() : this.storageContainers;

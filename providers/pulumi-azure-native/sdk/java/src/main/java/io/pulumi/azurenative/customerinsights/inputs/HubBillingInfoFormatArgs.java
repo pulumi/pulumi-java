@@ -24,7 +24,7 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxUnits")
-        private final @Nullable Input<Integer> maxUnits;
+      private final @Nullable Input<Integer> maxUnits;
 
     public Input<Integer> getMaxUnits() {
         return this.maxUnits == null ? Input.empty() : this.maxUnits;
@@ -35,7 +35,7 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="minUnits")
-        private final @Nullable Input<Integer> minUnits;
+      private final @Nullable Input<Integer> minUnits;
 
     public Input<Integer> getMinUnits() {
         return this.minUnits == null ? Input.empty() : this.minUnits;
@@ -46,7 +46,7 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="skuName")
-        private final @Nullable Input<String> skuName;
+      private final @Nullable Input<String> skuName;
 
     public Input<String> getSkuName() {
         return this.skuName == null ? Input.empty() : this.skuName;

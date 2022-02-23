@@ -15,14 +15,14 @@ public final class DeviceStateGetArgs extends io.pulumi.resources.ResourceArgs {
     public static final DeviceStateGetArgs Empty = new DeviceStateGetArgs();
 
     @InputImport(name="binaryData")
-        private final @Nullable Input<String> binaryData;
+      private final @Nullable Input<String> binaryData;
 
     public Input<String> getBinaryData() {
         return this.binaryData == null ? Input.empty() : this.binaryData;
     }
 
     @InputImport(name="updateTime")
-        private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;

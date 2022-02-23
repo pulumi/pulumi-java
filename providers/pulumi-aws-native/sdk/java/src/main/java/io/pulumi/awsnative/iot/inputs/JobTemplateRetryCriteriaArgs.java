@@ -20,14 +20,14 @@ public final class JobTemplateRetryCriteriaArgs extends io.pulumi.resources.Reso
     public static final JobTemplateRetryCriteriaArgs Empty = new JobTemplateRetryCriteriaArgs();
 
     @InputImport(name="failureType")
-        private final @Nullable Input<JobTemplateJobRetryFailureType> failureType;
+      private final @Nullable Input<JobTemplateJobRetryFailureType> failureType;
 
     public Input<JobTemplateJobRetryFailureType> getFailureType() {
         return this.failureType == null ? Input.empty() : this.failureType;
     }
 
     @InputImport(name="numberOfRetries")
-        private final @Nullable Input<Integer> numberOfRetries;
+      private final @Nullable Input<Integer> numberOfRetries;
 
     public Input<Integer> getNumberOfRetries() {
         return this.numberOfRetries == null ? Input.empty() : this.numberOfRetries;

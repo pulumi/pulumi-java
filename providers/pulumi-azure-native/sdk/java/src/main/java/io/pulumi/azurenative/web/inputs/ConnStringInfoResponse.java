@@ -23,7 +23,7 @@ public final class ConnStringInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="connectionString")
-        private final @Nullable String connectionString;
+      private final @Nullable String connectionString;
 
     public Optional<String> getConnectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
@@ -34,7 +34,7 @@ public final class ConnStringInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -45,7 +45,7 @@ public final class ConnStringInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

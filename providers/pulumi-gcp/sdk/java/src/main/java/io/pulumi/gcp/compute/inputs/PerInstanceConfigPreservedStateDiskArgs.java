@@ -25,7 +25,7 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="deleteRule")
-        private final @Nullable Input<String> deleteRule;
+      private final @Nullable Input<String> deleteRule;
 
     public Input<String> getDeleteRule() {
         return this.deleteRule == null ? Input.empty() : this.deleteRule;
@@ -36,7 +36,7 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="deviceName", required=true)
-        private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -49,7 +49,7 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -61,7 +61,7 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="source", required=true)
-        private final Input<String> source;
+      private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;

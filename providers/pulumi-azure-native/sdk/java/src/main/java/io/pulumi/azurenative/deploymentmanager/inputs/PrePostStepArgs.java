@@ -22,7 +22,7 @@ public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepId", required=true)
-        private final Input<String> stepId;
+      private final Input<String> stepId;
 
     public Input<String> getStepId() {
         return this.stepId;

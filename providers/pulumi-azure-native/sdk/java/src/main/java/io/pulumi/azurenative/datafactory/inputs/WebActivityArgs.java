@@ -34,7 +34,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-        private final @Nullable Input<WebActivityAuthenticationArgs> authentication;
+      private final @Nullable Input<WebActivityAuthenticationArgs> authentication;
 
     public Input<WebActivityAuthenticationArgs> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -45,7 +45,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-        private final @Nullable Input<Object> body;
+      private final @Nullable Input<Object> body;
 
     public Input<Object> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -56,7 +56,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -67,7 +67,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasets")
-        private final @Nullable Input<List<DatasetReferenceArgs>> datasets;
+      private final @Nullable Input<List<DatasetReferenceArgs>> datasets;
 
     public Input<List<DatasetReferenceArgs>> getDatasets() {
         return this.datasets == null ? Input.empty() : this.datasets;
@@ -78,7 +78,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -89,7 +89,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -100,7 +100,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-        private final @Nullable Input<Object> headers;
+      private final @Nullable Input<Object> headers;
 
     public Input<Object> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -111,7 +111,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName")
-        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -122,7 +122,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServices")
-        private final @Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices;
+      private final @Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices;
 
     public Input<List<LinkedServiceReferenceArgs>> getLinkedServices() {
         return this.linkedServices == null ? Input.empty() : this.linkedServices;
@@ -133,7 +133,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="method", required=true)
-        private final Input<Either<String,WebActivityMethod>> method;
+      private final Input<Either<String,WebActivityMethod>> method;
 
     public Input<Either<String,WebActivityMethod>> getMethod() {
         return this.method;
@@ -144,7 +144,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -155,7 +155,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-        private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -167,7 +167,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -178,7 +178,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url", required=true)
-        private final Input<Object> url;
+      private final Input<Object> url;
 
     public Input<Object> getUrl() {
         return this.url;
@@ -189,7 +189,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;

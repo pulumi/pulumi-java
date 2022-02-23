@@ -17,7 +17,7 @@ public final class GetBlueprintArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="blueprintName", required=true)
-        private final String blueprintName;
+      private final String blueprintName;
 
     public String getBlueprintName() {
         return this.blueprintName;
@@ -28,7 +28,7 @@ public final class GetBlueprintArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceScope", required=true)
-        private final String resourceScope;
+      private final String resourceScope;
 
     public String getResourceScope() {
         return this.resourceScope;

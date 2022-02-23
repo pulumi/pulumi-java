@@ -15,14 +15,14 @@ public final class DistributionFunctionAssociationArgs extends io.pulumi.resourc
     public static final DistributionFunctionAssociationArgs Empty = new DistributionFunctionAssociationArgs();
 
     @InputImport(name="eventType")
-        private final @Nullable Input<String> eventType;
+      private final @Nullable Input<String> eventType;
 
     public Input<String> getEventType() {
         return this.eventType == null ? Input.empty() : this.eventType;
     }
 
     @InputImport(name="functionARN")
-        private final @Nullable Input<String> functionARN;
+      private final @Nullable Input<String> functionARN;
 
     public Input<String> getFunctionARN() {
         return this.functionARN == null ? Input.empty() : this.functionARN;

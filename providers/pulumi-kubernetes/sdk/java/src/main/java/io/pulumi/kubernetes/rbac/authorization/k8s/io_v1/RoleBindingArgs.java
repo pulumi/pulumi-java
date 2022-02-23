@@ -23,7 +23,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -34,7 +34,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -45,7 +45,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -56,7 +56,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleRef", required=true)
-        private final Input<RoleRefArgs> roleRef;
+      private final Input<RoleRefArgs> roleRef;
 
     public Input<RoleRefArgs> getRoleRef() {
         return this.roleRef;
@@ -67,7 +67,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subjects")
-        private final @Nullable Input<List<SubjectArgs>> subjects;
+      private final @Nullable Input<List<SubjectArgs>> subjects;
 
     public Input<List<SubjectArgs>> getSubjects() {
         return this.subjects == null ? Input.empty() : this.subjects;

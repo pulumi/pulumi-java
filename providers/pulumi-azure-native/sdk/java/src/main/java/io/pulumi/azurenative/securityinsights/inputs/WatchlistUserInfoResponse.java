@@ -23,7 +23,7 @@ public final class WatchlistUserInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="email", required=true)
-        private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -34,7 +34,7 @@ public final class WatchlistUserInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class WatchlistUserInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="objectId")
-        private final @Nullable String objectId;
+      private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);

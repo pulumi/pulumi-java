@@ -20,7 +20,7 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
     public static final BotMessageGroupArgs Empty = new BotMessageGroupArgs();
 
     @InputImport(name="message", required=true)
-        private final Input<BotMessageArgs> message;
+      private final Input<BotMessageArgs> message;
 
     public Input<BotMessageArgs> getMessage() {
         return this.message;
@@ -31,7 +31,7 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="variations")
-        private final @Nullable Input<List<BotMessageArgs>> variations;
+      private final @Nullable Input<List<BotMessageArgs>> variations;
 
     public Input<List<BotMessageArgs>> getVariations() {
         return this.variations == null ? Input.empty() : this.variations;

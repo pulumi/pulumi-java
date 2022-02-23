@@ -30,7 +30,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="delegationServiceAccountEmail")
-        private final @Nullable Input<String> delegationServiceAccountEmail;
+      private final @Nullable Input<String> delegationServiceAccountEmail;
 
     public Input<String> getDelegationServiceAccountEmail() {
         return this.delegationServiceAccountEmail == null ? Input.empty() : this.delegationServiceAccountEmail;
@@ -47,7 +47,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="noteReference", required=true)
-        private final Input<String> noteReference;
+      private final Input<String> noteReference;
 
     public Input<String> getNoteReference() {
         return this.noteReference;
@@ -65,7 +65,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="publicKeys")
-        private final @Nullable Input<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys;
+      private final @Nullable Input<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys;
 
     public Input<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> getPublicKeys() {
         return this.publicKeys == null ? Input.empty() : this.publicKeys;

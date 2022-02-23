@@ -17,7 +17,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends io.pulum
      * 
      */
     @InputImport(name="peer", required=true)
-        private final String peer;
+      private final String peer;
 
     public String getPeer() {
         return this.peer;
@@ -28,7 +28,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends io.pulum
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends io.pulum
      * 
      */
     @InputImport(name="virtualNetworkGatewayName", required=true)
-        private final String virtualNetworkGatewayName;
+      private final String virtualNetworkGatewayName;
 
     public String getVirtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;

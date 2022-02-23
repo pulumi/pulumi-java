@@ -20,7 +20,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="certificateOrderName", required=true)
-        private final Input<String> certificateOrderName;
+      private final Input<String> certificateOrderName;
 
     public Input<String> getCertificateOrderName() {
         return this.certificateOrderName;
@@ -31,7 +31,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="keyVaultId")
-        private final @Nullable Input<String> keyVaultId;
+      private final @Nullable Input<String> keyVaultId;
 
     public Input<String> getKeyVaultId() {
         return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
@@ -42,7 +42,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="keyVaultSecretName")
-        private final @Nullable Input<String> keyVaultSecretName;
+      private final @Nullable Input<String> keyVaultSecretName;
 
     public Input<String> getKeyVaultSecretName() {
         return this.keyVaultSecretName == null ? Input.empty() : this.keyVaultSecretName;
@@ -53,7 +53,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -64,7 +64,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -75,7 +75,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -86,7 +86,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -97,7 +97,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

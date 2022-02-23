@@ -24,7 +24,7 @@ public final class PortResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backendPort")
-        private final @Nullable Integer backendPort;
+      private final @Nullable Integer backendPort;
 
     public Optional<Integer> getBackendPort() {
         return this.backendPort == null ? Optional.empty() : Optional.ofNullable(this.backendPort);
@@ -35,7 +35,7 @@ public final class PortResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transportProtocol")
-        private final @Nullable String transportProtocol;
+      private final @Nullable String transportProtocol;
 
     public Optional<String> getTransportProtocol() {
         return this.transportProtocol == null ? Optional.empty() : Optional.ofNullable(this.transportProtocol);

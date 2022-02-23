@@ -26,7 +26,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectivityType")
-        private final @Nullable Input<Either<String,ConnectivityType>> connectivityType;
+      private final @Nullable Input<Either<String,ConnectivityType>> connectivityType;
 
     public Input<Either<String,ConnectivityType>> getConnectivityType() {
         return this.connectivityType == null ? Input.empty() : this.connectivityType;
@@ -37,7 +37,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -48,7 +48,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sqlAuthUpdatePassword")
-        private final @Nullable Input<String> sqlAuthUpdatePassword;
+      private final @Nullable Input<String> sqlAuthUpdatePassword;
 
     public Input<String> getSqlAuthUpdatePassword() {
         return this.sqlAuthUpdatePassword == null ? Input.empty() : this.sqlAuthUpdatePassword;
@@ -59,7 +59,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sqlAuthUpdateUserName")
-        private final @Nullable Input<String> sqlAuthUpdateUserName;
+      private final @Nullable Input<String> sqlAuthUpdateUserName;
 
     public Input<String> getSqlAuthUpdateUserName() {
         return this.sqlAuthUpdateUserName == null ? Input.empty() : this.sqlAuthUpdateUserName;

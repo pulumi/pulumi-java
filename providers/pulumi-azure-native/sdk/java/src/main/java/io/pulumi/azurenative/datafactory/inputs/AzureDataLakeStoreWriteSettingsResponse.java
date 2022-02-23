@@ -24,7 +24,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="copyBehavior")
-        private final @Nullable Object copyBehavior;
+      private final @Nullable Object copyBehavior;
 
     public Optional<Object> getCopyBehavior() {
         return this.copyBehavior == null ? Optional.empty() : Optional.ofNullable(this.copyBehavior);
@@ -35,7 +35,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Object disableMetricsCollection;
+      private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -46,7 +46,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="expiryDateTime")
-        private final @Nullable Object expiryDateTime;
+      private final @Nullable Object expiryDateTime;
 
     public Optional<Object> getExpiryDateTime() {
         return this.expiryDateTime == null ? Optional.empty() : Optional.ofNullable(this.expiryDateTime);
@@ -57,7 +57,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Object maxConcurrentConnections;
+      private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -69,7 +69,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

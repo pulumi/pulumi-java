@@ -23,7 +23,7 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="collection")
-        private final @Nullable Input<String> collection;
+      private final @Nullable Input<String> collection;
 
     public Input<String> getCollection() {
         return this.collection == null ? Input.empty() : this.collection;
@@ -34,7 +34,7 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="db")
-        private final @Nullable Input<String> db;
+      private final @Nullable Input<String> db;
 
     public Input<String> getDb() {
         return this.db == null ? Input.empty() : this.db;

@@ -19,7 +19,7 @@ public final class RuleGroupRuleActionCountPropertiesArgs extends io.pulumi.reso
     public static final RuleGroupRuleActionCountPropertiesArgs Empty = new RuleGroupRuleActionCountPropertiesArgs();
 
     @InputImport(name="customRequestHandling")
-        private final @Nullable Input<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
+      private final @Nullable Input<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
 
     public Input<RuleGroupCustomRequestHandlingArgs> getCustomRequestHandling() {
         return this.customRequestHandling == null ? Input.empty() : this.customRequestHandling;

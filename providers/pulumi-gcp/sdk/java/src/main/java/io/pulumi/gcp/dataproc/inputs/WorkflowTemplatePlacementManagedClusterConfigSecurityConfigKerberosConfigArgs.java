@@ -21,7 +21,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="crossRealmTrustAdminServer")
-        private final @Nullable Input<String> crossRealmTrustAdminServer;
+      private final @Nullable Input<String> crossRealmTrustAdminServer;
 
     public Input<String> getCrossRealmTrustAdminServer() {
         return this.crossRealmTrustAdminServer == null ? Input.empty() : this.crossRealmTrustAdminServer;
@@ -32,7 +32,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="crossRealmTrustKdc")
-        private final @Nullable Input<String> crossRealmTrustKdc;
+      private final @Nullable Input<String> crossRealmTrustKdc;
 
     public Input<String> getCrossRealmTrustKdc() {
         return this.crossRealmTrustKdc == null ? Input.empty() : this.crossRealmTrustKdc;
@@ -43,7 +43,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="crossRealmTrustRealm")
-        private final @Nullable Input<String> crossRealmTrustRealm;
+      private final @Nullable Input<String> crossRealmTrustRealm;
 
     public Input<String> getCrossRealmTrustRealm() {
         return this.crossRealmTrustRealm == null ? Input.empty() : this.crossRealmTrustRealm;
@@ -54,7 +54,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="crossRealmTrustSharedPassword")
-        private final @Nullable Input<String> crossRealmTrustSharedPassword;
+      private final @Nullable Input<String> crossRealmTrustSharedPassword;
 
     public Input<String> getCrossRealmTrustSharedPassword() {
         return this.crossRealmTrustSharedPassword == null ? Input.empty() : this.crossRealmTrustSharedPassword;
@@ -65,7 +65,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="enableKerberos")
-        private final @Nullable Input<Boolean> enableKerberos;
+      private final @Nullable Input<Boolean> enableKerberos;
 
     public Input<Boolean> getEnableKerberos() {
         return this.enableKerberos == null ? Input.empty() : this.enableKerberos;
@@ -76,7 +76,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="kdcDbKey")
-        private final @Nullable Input<String> kdcDbKey;
+      private final @Nullable Input<String> kdcDbKey;
 
     public Input<String> getKdcDbKey() {
         return this.kdcDbKey == null ? Input.empty() : this.kdcDbKey;
@@ -87,7 +87,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="keyPassword")
-        private final @Nullable Input<String> keyPassword;
+      private final @Nullable Input<String> keyPassword;
 
     public Input<String> getKeyPassword() {
         return this.keyPassword == null ? Input.empty() : this.keyPassword;
@@ -98,7 +98,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="keystore")
-        private final @Nullable Input<String> keystore;
+      private final @Nullable Input<String> keystore;
 
     public Input<String> getKeystore() {
         return this.keystore == null ? Input.empty() : this.keystore;
@@ -109,7 +109,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="keystorePassword")
-        private final @Nullable Input<String> keystorePassword;
+      private final @Nullable Input<String> keystorePassword;
 
     public Input<String> getKeystorePassword() {
         return this.keystorePassword == null ? Input.empty() : this.keystorePassword;
@@ -120,7 +120,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="kmsKey")
-        private final @Nullable Input<String> kmsKey;
+      private final @Nullable Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;
@@ -131,7 +131,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="realm")
-        private final @Nullable Input<String> realm;
+      private final @Nullable Input<String> realm;
 
     public Input<String> getRealm() {
         return this.realm == null ? Input.empty() : this.realm;
@@ -142,7 +142,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="rootPrincipalPassword")
-        private final @Nullable Input<String> rootPrincipalPassword;
+      private final @Nullable Input<String> rootPrincipalPassword;
 
     public Input<String> getRootPrincipalPassword() {
         return this.rootPrincipalPassword == null ? Input.empty() : this.rootPrincipalPassword;
@@ -153,7 +153,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="tgtLifetimeHours")
-        private final @Nullable Input<Integer> tgtLifetimeHours;
+      private final @Nullable Input<Integer> tgtLifetimeHours;
 
     public Input<Integer> getTgtLifetimeHours() {
         return this.tgtLifetimeHours == null ? Input.empty() : this.tgtLifetimeHours;
@@ -164,7 +164,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="truststore")
-        private final @Nullable Input<String> truststore;
+      private final @Nullable Input<String> truststore;
 
     public Input<String> getTruststore() {
         return this.truststore == null ? Input.empty() : this.truststore;
@@ -175,7 +175,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      * 
      */
     @InputImport(name="truststorePassword")
-        private final @Nullable Input<String> truststorePassword;
+      private final @Nullable Input<String> truststorePassword;
 
     public Input<String> getTruststorePassword() {
         return this.truststorePassword == null ? Input.empty() : this.truststorePassword;

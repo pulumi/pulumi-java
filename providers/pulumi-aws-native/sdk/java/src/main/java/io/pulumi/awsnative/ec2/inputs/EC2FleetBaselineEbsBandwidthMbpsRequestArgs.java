@@ -15,14 +15,14 @@ public final class EC2FleetBaselineEbsBandwidthMbpsRequestArgs extends io.pulumi
     public static final EC2FleetBaselineEbsBandwidthMbpsRequestArgs Empty = new EC2FleetBaselineEbsBandwidthMbpsRequestArgs();
 
     @InputImport(name="max")
-        private final @Nullable Input<Integer> max;
+      private final @Nullable Input<Integer> max;
 
     public Input<Integer> getMax() {
         return this.max == null ? Input.empty() : this.max;
     }
 
     @InputImport(name="min")
-        private final @Nullable Input<Integer> min;
+      private final @Nullable Input<Integer> min;
 
     public Input<Integer> getMin() {
         return this.min == null ? Input.empty() : this.min;

@@ -22,7 +22,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="byteLength", required=true)
-        private final Input<Integer> byteLength;
+      private final Input<Integer> byteLength;
 
     public Input<Integer> getByteLength() {
         return this.byteLength;
@@ -33,7 +33,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-        private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Input<Map<String,Object>> keepers;
 
     public Input<Map<String,Object>> getKeepers() {
         return this.keepers == null ? Input.empty() : this.keepers;
@@ -44,7 +44,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-        private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;

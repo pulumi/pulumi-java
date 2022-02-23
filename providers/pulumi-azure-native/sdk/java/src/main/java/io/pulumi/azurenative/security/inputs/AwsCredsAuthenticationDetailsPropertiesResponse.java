@@ -22,7 +22,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="accountId", required=true)
-        private final String accountId;
+      private final String accountId;
 
     public String getAccountId() {
         return this.accountId;
@@ -33,7 +33,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="authenticationProvisioningState", required=true)
-        private final String authenticationProvisioningState;
+      private final String authenticationProvisioningState;
 
     public String getAuthenticationProvisioningState() {
         return this.authenticationProvisioningState;
@@ -45,7 +45,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="authenticationType", required=true)
-        private final String authenticationType;
+      private final String authenticationType;
 
     public String getAuthenticationType() {
         return this.authenticationType;
@@ -56,7 +56,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="awsAccessKeyId", required=true)
-        private final String awsAccessKeyId;
+      private final String awsAccessKeyId;
 
     public String getAwsAccessKeyId() {
         return this.awsAccessKeyId;
@@ -67,7 +67,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="awsSecretAccessKey", required=true)
-        private final String awsSecretAccessKey;
+      private final String awsSecretAccessKey;
 
     public String getAwsSecretAccessKey() {
         return this.awsSecretAccessKey;
@@ -78,7 +78,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="grantedPermissions", required=true)
-        private final List<String> grantedPermissions;
+      private final List<String> grantedPermissions;
 
     public List<String> getGrantedPermissions() {
         return this.grantedPermissions;

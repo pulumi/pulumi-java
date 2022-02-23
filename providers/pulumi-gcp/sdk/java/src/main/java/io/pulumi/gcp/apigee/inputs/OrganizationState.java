@@ -19,7 +19,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyticsRegion")
-        private final @Nullable Input<String> analyticsRegion;
+      private final @Nullable Input<String> analyticsRegion;
 
     public Input<String> getAnalyticsRegion() {
         return this.analyticsRegion == null ? Input.empty() : this.analyticsRegion;
@@ -32,7 +32,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-        private final @Nullable Input<String> authorizedNetwork;
+      private final @Nullable Input<String> authorizedNetwork;
 
     public Input<String> getAuthorizedNetwork() {
         return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
@@ -44,7 +44,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caCertificate")
-        private final @Nullable Input<String> caCertificate;
+      private final @Nullable Input<String> caCertificate;
 
     public Input<String> getCaCertificate() {
         return this.caCertificate == null ? Input.empty() : this.caCertificate;
@@ -55,7 +55,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -66,7 +66,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -77,7 +77,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,7 +88,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectId")
-        private final @Nullable Input<String> projectId;
+      private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -102,7 +102,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeDatabaseEncryptionKeyName")
-        private final @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
+      private final @Nullable Input<String> runtimeDatabaseEncryptionKeyName;
 
     public Input<String> getRuntimeDatabaseEncryptionKeyName() {
         return this.runtimeDatabaseEncryptionKeyName == null ? Input.empty() : this.runtimeDatabaseEncryptionKeyName;
@@ -115,7 +115,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeType")
-        private final @Nullable Input<String> runtimeType;
+      private final @Nullable Input<String> runtimeType;
 
     public Input<String> getRuntimeType() {
         return this.runtimeType == null ? Input.empty() : this.runtimeType;
@@ -127,7 +127,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionType")
-        private final @Nullable Input<String> subscriptionType;
+      private final @Nullable Input<String> subscriptionType;
 
     public Input<String> getSubscriptionType() {
         return this.subscriptionType == null ? Input.empty() : this.subscriptionType;

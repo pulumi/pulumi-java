@@ -24,7 +24,7 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultVersion")
-        private final @Nullable Input<EngineModelDefaultVersionGetArgs> defaultVersion;
+      private final @Nullable Input<EngineModelDefaultVersionGetArgs> defaultVersion;
 
     public Input<EngineModelDefaultVersionGetArgs> getDefaultVersion() {
         return this.defaultVersion == null ? Input.empty() : this.defaultVersion;
@@ -35,7 +35,7 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -57,7 +57,7 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -68,7 +68,7 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlinePredictionConsoleLogging")
-        private final @Nullable Input<Boolean> onlinePredictionConsoleLogging;
+      private final @Nullable Input<Boolean> onlinePredictionConsoleLogging;
 
     public Input<Boolean> getOnlinePredictionConsoleLogging() {
         return this.onlinePredictionConsoleLogging == null ? Input.empty() : this.onlinePredictionConsoleLogging;
@@ -79,7 +79,7 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlinePredictionLogging")
-        private final @Nullable Input<Boolean> onlinePredictionLogging;
+      private final @Nullable Input<Boolean> onlinePredictionLogging;
 
     public Input<Boolean> getOnlinePredictionLogging() {
         return this.onlinePredictionLogging == null ? Input.empty() : this.onlinePredictionLogging;
@@ -91,7 +91,7 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -103,7 +103,7 @@ public final class EngineModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regions")
-        private final @Nullable Input<String> regions;
+      private final @Nullable Input<String> regions;
 
     public Input<String> getRegions() {
         return this.regions == null ? Input.empty() : this.regions;

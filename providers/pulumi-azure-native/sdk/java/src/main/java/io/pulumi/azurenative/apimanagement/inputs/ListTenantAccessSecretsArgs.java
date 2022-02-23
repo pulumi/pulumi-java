@@ -17,7 +17,7 @@ public final class ListTenantAccessSecretsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="accessName", required=true)
-        private final String accessName;
+      private final String accessName;
 
     public String getAccessName() {
         return this.accessName;
@@ -28,7 +28,7 @@ public final class ListTenantAccessSecretsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListTenantAccessSecretsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;

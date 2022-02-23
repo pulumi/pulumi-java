@@ -13,7 +13,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetImageArgs Empty = new GetImageArgs();
 
     @InputImport(name="imageArn", required=true)
-        private final String imageArn;
+      private final String imageArn;
 
     public String getImageArn() {
         return this.imageArn;

@@ -27,7 +27,7 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="compressionProperties")
-        private final @Nullable Object compressionProperties;
+      private final @Nullable Object compressionProperties;
 
     public Object getCompressionProperties() {
         return this.compressionProperties == null ? null : this.compressionProperties;
@@ -38,7 +38,7 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="detectDataType")
-        private final @Nullable Object detectDataType;
+      private final @Nullable Object detectDataType;
 
     public Optional<Object> getDetectDataType() {
         return this.detectDataType == null ? Optional.empty() : Optional.ofNullable(this.detectDataType);
@@ -49,7 +49,7 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="namespacePrefixes")
-        private final @Nullable Object namespacePrefixes;
+      private final @Nullable Object namespacePrefixes;
 
     public Optional<Object> getNamespacePrefixes() {
         return this.namespacePrefixes == null ? Optional.empty() : Optional.ofNullable(this.namespacePrefixes);
@@ -60,7 +60,7 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="namespaces")
-        private final @Nullable Object namespaces;
+      private final @Nullable Object namespaces;
 
     public Optional<Object> getNamespaces() {
         return this.namespaces == null ? Optional.empty() : Optional.ofNullable(this.namespaces);
@@ -72,7 +72,7 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -83,7 +83,7 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="validationMode")
-        private final @Nullable Object validationMode;
+      private final @Nullable Object validationMode;
 
     public Optional<Object> getValidationMode() {
         return this.validationMode == null ? Optional.empty() : Optional.ofNullable(this.validationMode);

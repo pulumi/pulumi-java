@@ -17,7 +17,7 @@ public final class GetRoleDefinitionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-        private final String roleDefinitionId;
+      private final String roleDefinitionId;
 
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
@@ -28,7 +28,7 @@ public final class GetRoleDefinitionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="scope", required=true)
-        private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;

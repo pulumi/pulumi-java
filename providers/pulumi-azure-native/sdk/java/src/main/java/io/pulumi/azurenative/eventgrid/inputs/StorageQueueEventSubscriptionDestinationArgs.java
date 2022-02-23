@@ -24,7 +24,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
      * 
      */
     @InputImport(name="endpointType", required=true)
-        private final Input<String> endpointType;
+      private final Input<String> endpointType;
 
     public Input<String> getEndpointType() {
         return this.endpointType;
@@ -35,7 +35,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
      * 
      */
     @InputImport(name="queueName")
-        private final @Nullable Input<String> queueName;
+      private final @Nullable Input<String> queueName;
 
     public Input<String> getQueueName() {
         return this.queueName == null ? Input.empty() : this.queueName;
@@ -46,7 +46,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends io.pulum
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;

@@ -29,7 +29,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="applicationGatewayBackendAddressPools")
-        private final @Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
+      private final @Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
 
     public Input<List<SubResourceArgs>> getApplicationGatewayBackendAddressPools() {
         return this.applicationGatewayBackendAddressPools == null ? Input.empty() : this.applicationGatewayBackendAddressPools;
@@ -40,7 +40,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="applicationSecurityGroups")
-        private final @Nullable Input<List<SubResourceArgs>> applicationSecurityGroups;
+      private final @Nullable Input<List<SubResourceArgs>> applicationSecurityGroups;
 
     public Input<List<SubResourceArgs>> getApplicationSecurityGroups() {
         return this.applicationSecurityGroups == null ? Input.empty() : this.applicationSecurityGroups;
@@ -51,7 +51,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="loadBalancerBackendAddressPools")
-        private final @Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools;
+      private final @Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools;
 
     public Input<List<SubResourceArgs>> getLoadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? Input.empty() : this.loadBalancerBackendAddressPools;
@@ -62,7 +62,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -73,7 +73,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="primary")
-        private final @Nullable Input<Boolean> primary;
+      private final @Nullable Input<Boolean> primary;
 
     public Input<Boolean> getPrimary() {
         return this.primary == null ? Input.empty() : this.primary;
@@ -84,7 +84,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="privateIPAddressVersion")
-        private final @Nullable Input<Either<String,IPVersions>> privateIPAddressVersion;
+      private final @Nullable Input<Either<String,IPVersions>> privateIPAddressVersion;
 
     public Input<Either<String,IPVersions>> getPrivateIPAddressVersion() {
         return this.privateIPAddressVersion == null ? Input.empty() : this.privateIPAddressVersion;
@@ -95,7 +95,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="publicIPAddressConfiguration")
-        private final @Nullable Input<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
+      private final @Nullable Input<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
     public Input<VirtualMachinePublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
         return this.publicIPAddressConfiguration == null ? Input.empty() : this.publicIPAddressConfiguration;
@@ -106,7 +106,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
      * 
      */
     @InputImport(name="subnet")
-        private final @Nullable Input<SubResourceArgs> subnet;
+      private final @Nullable Input<SubResourceArgs> subnet;
 
     public Input<SubResourceArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;

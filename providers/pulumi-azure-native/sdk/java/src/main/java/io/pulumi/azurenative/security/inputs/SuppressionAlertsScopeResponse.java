@@ -18,7 +18,7 @@ public final class SuppressionAlertsScopeResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="allOf", required=true)
-        private final List<ScopeElementResponse> allOf;
+      private final List<ScopeElementResponse> allOf;
 
     public List<ScopeElementResponse> getAllOf() {
         return this.allOf;

@@ -23,7 +23,7 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postStart")
-        private final @Nullable Input<LifecycleHandlerArgs> postStart;
+      private final @Nullable Input<LifecycleHandlerArgs> postStart;
 
     public Input<LifecycleHandlerArgs> getPostStart() {
         return this.postStart == null ? Input.empty() : this.postStart;
@@ -34,7 +34,7 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preStop")
-        private final @Nullable Input<LifecycleHandlerArgs> preStop;
+      private final @Nullable Input<LifecycleHandlerArgs> preStop;
 
     public Input<LifecycleHandlerArgs> getPreStop() {
         return this.preStop == null ? Input.empty() : this.preStop;

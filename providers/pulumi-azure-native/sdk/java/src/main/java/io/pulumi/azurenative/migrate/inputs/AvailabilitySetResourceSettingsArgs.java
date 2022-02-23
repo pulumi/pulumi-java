@@ -24,7 +24,7 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="faultDomain")
-        private final @Nullable Input<Integer> faultDomain;
+      private final @Nullable Input<Integer> faultDomain;
 
     public Input<Integer> getFaultDomain() {
         return this.faultDomain == null ? Input.empty() : this.faultDomain;
@@ -36,7 +36,7 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -47,7 +47,7 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-        private final Input<String> targetResourceName;
+      private final Input<String> targetResourceName;
 
     public Input<String> getTargetResourceName() {
         return this.targetResourceName;
@@ -58,7 +58,7 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="updateDomain")
-        private final @Nullable Input<Integer> updateDomain;
+      private final @Nullable Input<Integer> updateDomain;
 
     public Input<Integer> getUpdateDomain() {
         return this.updateDomain == null ? Input.empty() : this.updateDomain;

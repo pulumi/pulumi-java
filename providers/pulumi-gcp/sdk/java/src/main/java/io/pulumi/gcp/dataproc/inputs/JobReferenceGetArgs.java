@@ -15,7 +15,7 @@ public final class JobReferenceGetArgs extends io.pulumi.resources.ResourceArgs 
     public static final JobReferenceGetArgs Empty = new JobReferenceGetArgs();
 
     @InputImport(name="jobId")
-        private final @Nullable Input<String> jobId;
+      private final @Nullable Input<String> jobId;
 
     public Input<String> getJobId() {
         return this.jobId == null ? Input.empty() : this.jobId;

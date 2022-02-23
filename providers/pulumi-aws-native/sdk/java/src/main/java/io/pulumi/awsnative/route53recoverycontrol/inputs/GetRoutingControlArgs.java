@@ -17,7 +17,7 @@ public final class GetRoutingControlArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="routingControlArn", required=true)
-        private final String routingControlArn;
+      private final String routingControlArn;
 
     public String getRoutingControlArn() {
         return this.routingControlArn;

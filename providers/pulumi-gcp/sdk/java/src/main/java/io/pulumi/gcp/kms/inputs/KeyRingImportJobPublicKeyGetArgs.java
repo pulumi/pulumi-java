@@ -15,7 +15,7 @@ public final class KeyRingImportJobPublicKeyGetArgs extends io.pulumi.resources.
     public static final KeyRingImportJobPublicKeyGetArgs Empty = new KeyRingImportJobPublicKeyGetArgs();
 
     @InputImport(name="pem")
-        private final @Nullable Input<String> pem;
+      private final @Nullable Input<String> pem;
 
     public Input<String> getPem() {
         return this.pem == null ? Input.empty() : this.pem;

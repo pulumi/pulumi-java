@@ -17,7 +17,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="columnName", required=true)
-        private final String columnName;
+      private final String columnName;
 
     public String getColumnName() {
         return this.columnName;
@@ -28,7 +28,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="schemaName", required=true)
-        private final String schemaName;
+      private final String schemaName;
 
     public String getSchemaName() {
         return this.schemaName;
@@ -61,7 +61,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sensitivityLabelSource", required=true)
-        private final String sensitivityLabelSource;
+      private final String sensitivityLabelSource;
 
     public String getSensitivityLabelSource() {
         return this.sensitivityLabelSource;
@@ -72,7 +72,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -83,7 +83,7 @@ public final class GetSensitivityLabelArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tableName", required=true)
-        private final String tableName;
+      private final String tableName;
 
     public String getTableName() {
         return this.tableName;

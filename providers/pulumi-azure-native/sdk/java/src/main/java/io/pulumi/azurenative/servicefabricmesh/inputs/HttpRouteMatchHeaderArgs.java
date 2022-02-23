@@ -25,7 +25,7 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,HeaderMatchType>> type;
+      private final @Nullable Input<Either<String,HeaderMatchType>> type;
 
     public Input<Either<String,HeaderMatchType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -47,7 +47,7 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

@@ -20,7 +20,7 @@ public final class DedicatedHostGroupInstanceViewResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="hosts")
-        private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
+      private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
 
     public List<DedicatedHostInstanceViewWithNameResponse> getHosts() {
         return this.hosts == null ? List.of() : this.hosts;

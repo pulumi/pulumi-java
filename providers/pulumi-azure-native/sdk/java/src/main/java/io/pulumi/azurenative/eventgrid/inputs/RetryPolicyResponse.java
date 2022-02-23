@@ -23,7 +23,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="eventTimeToLiveInMinutes")
-        private final @Nullable Integer eventTimeToLiveInMinutes;
+      private final @Nullable Integer eventTimeToLiveInMinutes;
 
     public Optional<Integer> getEventTimeToLiveInMinutes() {
         return this.eventTimeToLiveInMinutes == null ? Optional.empty() : Optional.ofNullable(this.eventTimeToLiveInMinutes);
@@ -34,7 +34,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxDeliveryAttempts")
-        private final @Nullable Integer maxDeliveryAttempts;
+      private final @Nullable Integer maxDeliveryAttempts;
 
     public Optional<Integer> getMaxDeliveryAttempts() {
         return this.maxDeliveryAttempts == null ? Optional.empty() : Optional.ofNullable(this.maxDeliveryAttempts);

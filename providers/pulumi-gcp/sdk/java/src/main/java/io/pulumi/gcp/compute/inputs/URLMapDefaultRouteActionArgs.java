@@ -28,7 +28,7 @@ public final class URLMapDefaultRouteActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="corsPolicy")
-        private final @Nullable Input<URLMapDefaultRouteActionCorsPolicyArgs> corsPolicy;
+      private final @Nullable Input<URLMapDefaultRouteActionCorsPolicyArgs> corsPolicy;
 
     public Input<URLMapDefaultRouteActionCorsPolicyArgs> getCorsPolicy() {
         return this.corsPolicy == null ? Input.empty() : this.corsPolicy;
@@ -44,7 +44,7 @@ public final class URLMapDefaultRouteActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="faultInjectionPolicy")
-        private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyArgs> faultInjectionPolicy;
+      private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyArgs> faultInjectionPolicy;
 
     public Input<URLMapDefaultRouteActionFaultInjectionPolicyArgs> getFaultInjectionPolicy() {
         return this.faultInjectionPolicy == null ? Input.empty() : this.faultInjectionPolicy;
@@ -58,7 +58,7 @@ public final class URLMapDefaultRouteActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="requestMirrorPolicy")
-        private final @Nullable Input<URLMapDefaultRouteActionRequestMirrorPolicyArgs> requestMirrorPolicy;
+      private final @Nullable Input<URLMapDefaultRouteActionRequestMirrorPolicyArgs> requestMirrorPolicy;
 
     public Input<URLMapDefaultRouteActionRequestMirrorPolicyArgs> getRequestMirrorPolicy() {
         return this.requestMirrorPolicy == null ? Input.empty() : this.requestMirrorPolicy;
@@ -70,7 +70,7 @@ public final class URLMapDefaultRouteActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retryPolicy")
-        private final @Nullable Input<URLMapDefaultRouteActionRetryPolicyArgs> retryPolicy;
+      private final @Nullable Input<URLMapDefaultRouteActionRetryPolicyArgs> retryPolicy;
 
     public Input<URLMapDefaultRouteActionRetryPolicyArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -84,7 +84,7 @@ public final class URLMapDefaultRouteActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable Input<URLMapDefaultRouteActionTimeoutArgs> timeout;
+      private final @Nullable Input<URLMapDefaultRouteActionTimeoutArgs> timeout;
 
     public Input<URLMapDefaultRouteActionTimeoutArgs> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -96,7 +96,7 @@ public final class URLMapDefaultRouteActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="urlRewrite")
-        private final @Nullable Input<URLMapDefaultRouteActionUrlRewriteArgs> urlRewrite;
+      private final @Nullable Input<URLMapDefaultRouteActionUrlRewriteArgs> urlRewrite;
 
     public Input<URLMapDefaultRouteActionUrlRewriteArgs> getUrlRewrite() {
         return this.urlRewrite == null ? Input.empty() : this.urlRewrite;
@@ -114,7 +114,7 @@ public final class URLMapDefaultRouteActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="weightedBackendServices")
-        private final @Nullable Input<List<URLMapDefaultRouteActionWeightedBackendServiceArgs>> weightedBackendServices;
+      private final @Nullable Input<List<URLMapDefaultRouteActionWeightedBackendServiceArgs>> weightedBackendServices;
 
     public Input<List<URLMapDefaultRouteActionWeightedBackendServiceArgs>> getWeightedBackendServices() {
         return this.weightedBackendServices == null ? Input.empty() : this.weightedBackendServices;

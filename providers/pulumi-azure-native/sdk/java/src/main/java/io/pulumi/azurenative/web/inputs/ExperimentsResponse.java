@@ -24,7 +24,7 @@ public final class ExperimentsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rampUpRules")
-        private final @Nullable List<RampUpRuleResponse> rampUpRules;
+      private final @Nullable List<RampUpRuleResponse> rampUpRules;
 
     public List<RampUpRuleResponse> getRampUpRules() {
         return this.rampUpRules == null ? List.of() : this.rampUpRules;

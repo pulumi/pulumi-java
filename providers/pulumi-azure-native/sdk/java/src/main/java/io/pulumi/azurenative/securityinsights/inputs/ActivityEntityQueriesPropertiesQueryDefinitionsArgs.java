@@ -23,7 +23,7 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends i
      * 
      */
     @InputImport(name="query")
-        private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;

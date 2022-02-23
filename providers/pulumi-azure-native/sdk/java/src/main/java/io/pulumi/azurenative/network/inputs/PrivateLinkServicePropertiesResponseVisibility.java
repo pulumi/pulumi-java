@@ -24,7 +24,7 @@ public final class PrivateLinkServicePropertiesResponseVisibility extends io.pul
      * 
      */
     @InputImport(name="subscriptions")
-        private final @Nullable List<String> subscriptions;
+      private final @Nullable List<String> subscriptions;
 
     public List<String> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;

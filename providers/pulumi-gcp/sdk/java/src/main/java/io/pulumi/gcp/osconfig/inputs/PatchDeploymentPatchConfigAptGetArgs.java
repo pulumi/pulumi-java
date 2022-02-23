@@ -20,7 +20,7 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="excludes")
-        private final @Nullable Input<List<String>> excludes;
+      private final @Nullable Input<List<String>> excludes;
 
     public Input<List<String>> getExcludes() {
         return this.excludes == null ? Input.empty() : this.excludes;
@@ -33,7 +33,7 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="exclusivePackages")
-        private final @Nullable Input<List<String>> exclusivePackages;
+      private final @Nullable Input<List<String>> exclusivePackages;
 
     public Input<List<String>> getExclusivePackages() {
         return this.exclusivePackages == null ? Input.empty() : this.exclusivePackages;
@@ -45,7 +45,7 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

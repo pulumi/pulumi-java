@@ -24,7 +24,7 @@ public final class SetValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isSecret")
-        private final @Nullable Input<Boolean> isSecret;
+      private final @Nullable Input<Boolean> isSecret;
 
     public Input<Boolean> getIsSecret() {
         return this.isSecret == null ? Input.empty() : this.isSecret;
@@ -35,7 +35,7 @@ public final class SetValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class SetValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

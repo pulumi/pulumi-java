@@ -135,6 +135,21 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public DataQualityJobDefinition(String name) {
+        this(name, DataQualityJobDefinitionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DataQualityJobDefinition(String name, DataQualityJobDefinitionArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

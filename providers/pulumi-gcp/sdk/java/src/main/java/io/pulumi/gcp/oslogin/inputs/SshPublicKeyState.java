@@ -19,7 +19,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTimeUsec")
-        private final @Nullable Input<String> expirationTimeUsec;
+      private final @Nullable Input<String> expirationTimeUsec;
 
     public Input<String> getExpirationTimeUsec() {
         return this.expirationTimeUsec == null ? Input.empty() : this.expirationTimeUsec;
@@ -30,7 +30,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint")
-        private final @Nullable Input<String> fingerprint;
+      private final @Nullable Input<String> fingerprint;
 
     public Input<String> getFingerprint() {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
@@ -41,7 +41,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-        private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -52,7 +52,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -63,7 +63,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="user")
-        private final @Nullable Input<String> user;
+      private final @Nullable Input<String> user;
 
     public Input<String> getUser() {
         return this.user == null ? Input.empty() : this.user;

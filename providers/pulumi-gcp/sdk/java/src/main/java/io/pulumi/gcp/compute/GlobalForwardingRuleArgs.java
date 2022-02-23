@@ -23,7 +23,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ipAddress")
-        private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -61,7 +61,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ipProtocol")
-        private final @Nullable Input<String> ipProtocol;
+      private final @Nullable Input<String> ipProtocol;
 
     public Input<String> getIpProtocol() {
         return this.ipProtocol == null ? Input.empty() : this.ipProtocol;
@@ -73,7 +73,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ipVersion")
-        private final @Nullable Input<String> ipVersion;
+      private final @Nullable Input<String> ipVersion;
 
     public Input<String> getIpVersion() {
         return this.ipVersion == null ? Input.empty() : this.ipVersion;
@@ -84,7 +84,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -106,7 +106,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="loadBalancingScheme")
-        private final @Nullable Input<String> loadBalancingScheme;
+      private final @Nullable Input<String> loadBalancingScheme;
 
     public Input<String> getLoadBalancingScheme() {
         return this.loadBalancingScheme == null ? Input.empty() : this.loadBalancingScheme;
@@ -131,7 +131,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metadataFilters")
-        private final @Nullable Input<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters;
+      private final @Nullable Input<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters;
 
     public Input<List<GlobalForwardingRuleMetadataFilterArgs>> getMetadataFilters() {
         return this.metadataFilters == null ? Input.empty() : this.metadataFilters;
@@ -143,7 +143,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -158,7 +158,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="network")
-        private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -184,7 +184,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="portRange")
-        private final @Nullable Input<String> portRange;
+      private final @Nullable Input<String> portRange;
 
     public Input<String> getPortRange() {
         return this.portRange == null ? Input.empty() : this.portRange;
@@ -196,7 +196,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -212,7 +212,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="target", required=true)
-        private final Input<String> target;
+      private final Input<String> target;
 
     public Input<String> getTarget() {
         return this.target;

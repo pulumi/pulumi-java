@@ -14,7 +14,7 @@ public final class FlowServiceNowSourcePropertiesArgs extends io.pulumi.resource
     public static final FlowServiceNowSourcePropertiesArgs Empty = new FlowServiceNowSourcePropertiesArgs();
 
     @InputImport(name="object", required=true)
-        private final Input<String> object;
+      private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;

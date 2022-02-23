@@ -21,7 +21,7 @@ public final class VirtualNetworkBgpCommunitiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="regionalCommunity", required=true)
-        private final String regionalCommunity;
+      private final String regionalCommunity;
 
     public String getRegionalCommunity() {
         return this.regionalCommunity;
@@ -32,7 +32,7 @@ public final class VirtualNetworkBgpCommunitiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="virtualNetworkCommunity", required=true)
-        private final String virtualNetworkCommunity;
+      private final String virtualNetworkCommunity;
 
     public String getVirtualNetworkCommunity() {
         return this.virtualNetworkCommunity;

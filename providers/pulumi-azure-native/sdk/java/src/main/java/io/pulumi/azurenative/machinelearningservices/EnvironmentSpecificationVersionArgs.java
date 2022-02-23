@@ -19,7 +19,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentSpecificationVersionArgs> properties;
+      private final Input<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentSpecificationVersionArgs> properties;
 
     public Input<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentSpecificationVersionArgs> getProperties() {
         return this.properties;
@@ -41,7 +41,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -63,7 +63,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

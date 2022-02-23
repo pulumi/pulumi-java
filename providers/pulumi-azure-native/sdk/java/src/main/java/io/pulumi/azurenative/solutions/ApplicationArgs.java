@@ -25,7 +25,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationDefinitionId")
-        private final @Nullable Input<String> applicationDefinitionId;
+      private final @Nullable Input<String> applicationDefinitionId;
 
     public Input<String> getApplicationDefinitionId() {
         return this.applicationDefinitionId == null ? Input.empty() : this.applicationDefinitionId;
@@ -36,7 +36,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName")
-        private final @Nullable Input<String> applicationName;
+      private final @Nullable Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName == null ? Input.empty() : this.applicationName;
@@ -47,7 +47,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Input<IdentityArgs> identity;
 
     public Input<IdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -58,7 +58,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jitAccessPolicy")
-        private final @Nullable Input<ApplicationJitAccessPolicyArgs> jitAccessPolicy;
+      private final @Nullable Input<ApplicationJitAccessPolicyArgs> jitAccessPolicy;
 
     public Input<ApplicationJitAccessPolicyArgs> getJitAccessPolicy() {
         return this.jitAccessPolicy == null ? Input.empty() : this.jitAccessPolicy;
@@ -69,7 +69,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -80,7 +80,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -91,7 +91,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedBy")
-        private final @Nullable Input<String> managedBy;
+      private final @Nullable Input<String> managedBy;
 
     public Input<String> getManagedBy() {
         return this.managedBy == null ? Input.empty() : this.managedBy;
@@ -102,7 +102,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedResourceGroupId")
-        private final @Nullable Input<String> managedResourceGroupId;
+      private final @Nullable Input<String> managedResourceGroupId;
 
     public Input<String> getManagedResourceGroupId() {
         return this.managedResourceGroupId == null ? Input.empty() : this.managedResourceGroupId;
@@ -113,7 +113,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Object> parameters;
+      private final @Nullable Input<Object> parameters;
 
     public Input<Object> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -124,7 +124,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plan")
-        private final @Nullable Input<PlanArgs> plan;
+      private final @Nullable Input<PlanArgs> plan;
 
     public Input<PlanArgs> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
@@ -135,7 +135,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -146,7 +146,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -157,7 +157,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

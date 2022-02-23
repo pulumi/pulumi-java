@@ -17,7 +17,7 @@ public final class GetLabAccountRegionalAvailabilityArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="labAccountName", required=true)
-        private final String labAccountName;
+      private final String labAccountName;
 
     public String getLabAccountName() {
         return this.labAccountName;
@@ -28,7 +28,7 @@ public final class GetLabAccountRegionalAvailabilityArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

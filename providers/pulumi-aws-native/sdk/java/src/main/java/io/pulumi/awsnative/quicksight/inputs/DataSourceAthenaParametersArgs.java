@@ -23,7 +23,7 @@ public final class DataSourceAthenaParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="workGroup")
-        private final @Nullable Input<String> workGroup;
+      private final @Nullable Input<String> workGroup;
 
     public Input<String> getWorkGroup() {
         return this.workGroup == null ? Input.empty() : this.workGroup;

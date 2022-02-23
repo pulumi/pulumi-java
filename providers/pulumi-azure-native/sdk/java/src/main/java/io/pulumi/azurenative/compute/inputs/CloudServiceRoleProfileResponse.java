@@ -24,7 +24,7 @@ public final class CloudServiceRoleProfileResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="roles")
-        private final @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles;
+      private final @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles;
 
     public List<CloudServiceRoleProfilePropertiesResponse> getRoles() {
         return this.roles == null ? List.of() : this.roles;

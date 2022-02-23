@@ -21,7 +21,7 @@ public final class DatadogOrganizationPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -32,7 +32,7 @@ public final class DatadogOrganizationPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

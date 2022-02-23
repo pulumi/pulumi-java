@@ -15,42 +15,42 @@ public final class DeliveryStreamSchemaConfigurationArgs extends io.pulumi.resou
     public static final DeliveryStreamSchemaConfigurationArgs Empty = new DeliveryStreamSchemaConfigurationArgs();
 
     @InputImport(name="catalogId")
-        private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
     }
 
     @InputImport(name="databaseName")
-        private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
     }
 
     @InputImport(name="roleARN")
-        private final @Nullable Input<String> roleARN;
+      private final @Nullable Input<String> roleARN;
 
     public Input<String> getRoleARN() {
         return this.roleARN == null ? Input.empty() : this.roleARN;
     }
 
     @InputImport(name="tableName")
-        private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
     }
 
     @InputImport(name="versionId")
-        private final @Nullable Input<String> versionId;
+      private final @Nullable Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;

@@ -20,21 +20,21 @@ public final class ScheduledQueryMultiMeasureAttributeMappingArgs extends io.pul
     public static final ScheduledQueryMultiMeasureAttributeMappingArgs Empty = new ScheduledQueryMultiMeasureAttributeMappingArgs();
 
     @InputImport(name="measureValueType", required=true)
-        private final Input<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> measureValueType;
+      private final Input<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> measureValueType;
 
     public Input<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> getMeasureValueType() {
         return this.measureValueType;
     }
 
     @InputImport(name="sourceColumn", required=true)
-        private final Input<String> sourceColumn;
+      private final Input<String> sourceColumn;
 
     public Input<String> getSourceColumn() {
         return this.sourceColumn;
     }
 
     @InputImport(name="targetMultiMeasureAttributeName")
-        private final @Nullable Input<String> targetMultiMeasureAttributeName;
+      private final @Nullable Input<String> targetMultiMeasureAttributeName;
 
     public Input<String> getTargetMultiMeasureAttributeName() {
         return this.targetMultiMeasureAttributeName == null ? Input.empty() : this.targetMultiMeasureAttributeName;

@@ -23,7 +23,7 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="agentId", required=true)
-        private final String agentId;
+      private final String agentId;
 
     public String getAgentId() {
         return this.agentId;
@@ -34,7 +34,7 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="biosId", required=true)
-        private final String biosId;
+      private final String biosId;
 
     public String getBiosId() {
         return this.biosId;
@@ -45,7 +45,7 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disks", required=true)
-        private final List<AgentDiskDetailsResponse> disks;
+      private final List<AgentDiskDetailsResponse> disks;
 
     public List<AgentDiskDetailsResponse> getDisks() {
         return this.disks;
@@ -56,7 +56,7 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fqdn", required=true)
-        private final String fqdn;
+      private final String fqdn;
 
     public String getFqdn() {
         return this.fqdn;
@@ -67,7 +67,7 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="machineId", required=true)
-        private final String machineId;
+      private final String machineId;
 
     public String getMachineId() {
         return this.machineId;

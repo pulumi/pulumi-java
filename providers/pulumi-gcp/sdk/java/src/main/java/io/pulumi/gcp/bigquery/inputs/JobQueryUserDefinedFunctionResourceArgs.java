@@ -20,7 +20,7 @@ public final class JobQueryUserDefinedFunctionResourceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="inlineCode")
-        private final @Nullable Input<String> inlineCode;
+      private final @Nullable Input<String> inlineCode;
 
     public Input<String> getInlineCode() {
         return this.inlineCode == null ? Input.empty() : this.inlineCode;
@@ -31,7 +31,7 @@ public final class JobQueryUserDefinedFunctionResourceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceUri")
-        private final @Nullable Input<String> resourceUri;
+      private final @Nullable Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri == null ? Input.empty() : this.resourceUri;

@@ -23,7 +23,7 @@ public final class BodyDiagnosticSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="bytes")
-        private final @Nullable Integer bytes;
+      private final @Nullable Integer bytes;
 
     public Optional<Integer> getBytes() {
         return this.bytes == null ? Optional.empty() : Optional.ofNullable(this.bytes);

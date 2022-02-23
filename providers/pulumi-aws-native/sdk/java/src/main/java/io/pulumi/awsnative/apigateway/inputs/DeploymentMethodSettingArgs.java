@@ -22,7 +22,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cacheDataEncrypted")
-        private final @Nullable Input<Boolean> cacheDataEncrypted;
+      private final @Nullable Input<Boolean> cacheDataEncrypted;
 
     public Input<Boolean> getCacheDataEncrypted() {
         return this.cacheDataEncrypted == null ? Input.empty() : this.cacheDataEncrypted;
@@ -33,7 +33,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cacheTtlInSeconds")
-        private final @Nullable Input<Integer> cacheTtlInSeconds;
+      private final @Nullable Input<Integer> cacheTtlInSeconds;
 
     public Input<Integer> getCacheTtlInSeconds() {
         return this.cacheTtlInSeconds == null ? Input.empty() : this.cacheTtlInSeconds;
@@ -44,7 +44,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cachingEnabled")
-        private final @Nullable Input<Boolean> cachingEnabled;
+      private final @Nullable Input<Boolean> cachingEnabled;
 
     public Input<Boolean> getCachingEnabled() {
         return this.cachingEnabled == null ? Input.empty() : this.cachingEnabled;
@@ -55,7 +55,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dataTraceEnabled")
-        private final @Nullable Input<Boolean> dataTraceEnabled;
+      private final @Nullable Input<Boolean> dataTraceEnabled;
 
     public Input<Boolean> getDataTraceEnabled() {
         return this.dataTraceEnabled == null ? Input.empty() : this.dataTraceEnabled;
@@ -66,7 +66,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="httpMethod")
-        private final @Nullable Input<String> httpMethod;
+      private final @Nullable Input<String> httpMethod;
 
     public Input<String> getHttpMethod() {
         return this.httpMethod == null ? Input.empty() : this.httpMethod;
@@ -77,7 +77,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="loggingLevel")
-        private final @Nullable Input<String> loggingLevel;
+      private final @Nullable Input<String> loggingLevel;
 
     public Input<String> getLoggingLevel() {
         return this.loggingLevel == null ? Input.empty() : this.loggingLevel;
@@ -88,7 +88,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="metricsEnabled")
-        private final @Nullable Input<Boolean> metricsEnabled;
+      private final @Nullable Input<Boolean> metricsEnabled;
 
     public Input<Boolean> getMetricsEnabled() {
         return this.metricsEnabled == null ? Input.empty() : this.metricsEnabled;
@@ -99,7 +99,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourcePath")
-        private final @Nullable Input<String> resourcePath;
+      private final @Nullable Input<String> resourcePath;
 
     public Input<String> getResourcePath() {
         return this.resourcePath == null ? Input.empty() : this.resourcePath;
@@ -110,7 +110,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="throttlingBurstLimit")
-        private final @Nullable Input<Integer> throttlingBurstLimit;
+      private final @Nullable Input<Integer> throttlingBurstLimit;
 
     public Input<Integer> getThrottlingBurstLimit() {
         return this.throttlingBurstLimit == null ? Input.empty() : this.throttlingBurstLimit;
@@ -121,7 +121,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="throttlingRateLimit")
-        private final @Nullable Input<Double> throttlingRateLimit;
+      private final @Nullable Input<Double> throttlingRateLimit;
 
     public Input<Double> getThrottlingRateLimit() {
         return this.throttlingRateLimit == null ? Input.empty() : this.throttlingRateLimit;

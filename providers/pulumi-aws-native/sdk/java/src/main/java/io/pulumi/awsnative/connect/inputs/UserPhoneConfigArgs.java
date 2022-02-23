@@ -22,28 +22,28 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
     public static final UserPhoneConfigArgs Empty = new UserPhoneConfigArgs();
 
     @InputImport(name="afterContactWorkTimeLimit")
-        private final @Nullable Input<Integer> afterContactWorkTimeLimit;
+      private final @Nullable Input<Integer> afterContactWorkTimeLimit;
 
     public Input<Integer> getAfterContactWorkTimeLimit() {
         return this.afterContactWorkTimeLimit == null ? Input.empty() : this.afterContactWorkTimeLimit;
     }
 
     @InputImport(name="autoAccept")
-        private final @Nullable Input<Boolean> autoAccept;
+      private final @Nullable Input<Boolean> autoAccept;
 
     public Input<Boolean> getAutoAccept() {
         return this.autoAccept == null ? Input.empty() : this.autoAccept;
     }
 
     @InputImport(name="deskPhoneNumber")
-        private final @Nullable Input<String> deskPhoneNumber;
+      private final @Nullable Input<String> deskPhoneNumber;
 
     public Input<String> getDeskPhoneNumber() {
         return this.deskPhoneNumber == null ? Input.empty() : this.deskPhoneNumber;
     }
 
     @InputImport(name="phoneType", required=true)
-        private final Input<UserPhoneType> phoneType;
+      private final Input<UserPhoneType> phoneType;
 
     public Input<UserPhoneType> getPhoneType() {
         return this.phoneType;

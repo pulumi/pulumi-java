@@ -22,7 +22,7 @@ public final class FilterTrackSelectionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="trackSelections", required=true)
-        private final List<FilterTrackPropertyConditionResponse> trackSelections;
+      private final List<FilterTrackPropertyConditionResponse> trackSelections;
 
     public List<FilterTrackPropertyConditionResponse> getTrackSelections() {
         return this.trackSelections;

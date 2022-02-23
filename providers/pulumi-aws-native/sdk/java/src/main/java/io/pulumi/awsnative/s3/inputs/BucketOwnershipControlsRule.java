@@ -19,7 +19,7 @@ public final class BucketOwnershipControlsRule extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="objectOwnership")
-        private final @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership;
+      private final @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership;
 
     public Optional<BucketOwnershipControlsRuleObjectOwnership> getObjectOwnership() {
         return this.objectOwnership == null ? Optional.empty() : Optional.ofNullable(this.objectOwnership);

@@ -26,7 +26,7 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultValue")
-        private final @Nullable Input<Object> defaultValue;
+      private final @Nullable Input<Object> defaultValue;
 
     public Input<Object> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -37,7 +37,7 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<Either<String,VariableType>> type;
+      private final Input<Either<String,VariableType>> type;
 
     public Input<Either<String,VariableType>> getType() {
         return this.type;

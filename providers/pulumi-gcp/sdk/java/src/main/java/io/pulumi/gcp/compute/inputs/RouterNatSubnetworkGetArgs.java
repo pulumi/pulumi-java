@@ -20,7 +20,7 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="secondaryIpRangeNames")
-        private final @Nullable Input<List<String>> secondaryIpRangeNames;
+      private final @Nullable Input<List<String>> secondaryIpRangeNames;
 
     public Input<List<String>> getSecondaryIpRangeNames() {
         return this.secondaryIpRangeNames == null ? Input.empty() : this.secondaryIpRangeNames;
@@ -48,7 +48,7 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sourceIpRangesToNats", required=true)
-        private final Input<List<String>> sourceIpRangesToNats;
+      private final Input<List<String>> sourceIpRangesToNats;
 
     public Input<List<String>> getSourceIpRangesToNats() {
         return this.sourceIpRangesToNats;

@@ -25,7 +25,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="actionType")
-        private final @Nullable Input<AutoHealActionType> actionType;
+      private final @Nullable Input<AutoHealActionType> actionType;
 
     public Input<AutoHealActionType> getActionType() {
         return this.actionType == null ? Input.empty() : this.actionType;
@@ -36,7 +36,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customAction")
-        private final @Nullable Input<AutoHealCustomActionArgs> customAction;
+      private final @Nullable Input<AutoHealCustomActionArgs> customAction;
 
     public Input<AutoHealCustomActionArgs> getCustomAction() {
         return this.customAction == null ? Input.empty() : this.customAction;
@@ -48,7 +48,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="minProcessExecutionTime")
-        private final @Nullable Input<String> minProcessExecutionTime;
+      private final @Nullable Input<String> minProcessExecutionTime;
 
     public Input<String> getMinProcessExecutionTime() {
         return this.minProcessExecutionTime == null ? Input.empty() : this.minProcessExecutionTime;

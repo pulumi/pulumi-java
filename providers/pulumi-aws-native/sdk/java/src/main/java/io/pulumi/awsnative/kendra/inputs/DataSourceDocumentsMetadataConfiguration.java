@@ -15,7 +15,7 @@ public final class DataSourceDocumentsMetadataConfiguration extends io.pulumi.re
     public static final DataSourceDocumentsMetadataConfiguration Empty = new DataSourceDocumentsMetadataConfiguration();
 
     @InputImport(name="s3Prefix")
-        private final @Nullable String s3Prefix;
+      private final @Nullable String s3Prefix;
 
     public Optional<String> getS3Prefix() {
         return this.s3Prefix == null ? Optional.empty() : Optional.ofNullable(this.s3Prefix);

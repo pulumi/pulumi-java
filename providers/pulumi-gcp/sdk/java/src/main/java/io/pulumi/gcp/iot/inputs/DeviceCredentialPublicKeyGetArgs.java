@@ -19,7 +19,7 @@ public final class DeviceCredentialPublicKeyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="format", required=true)
-        private final Input<String> format;
+      private final Input<String> format;
 
     public Input<String> getFormat() {
         return this.format;
@@ -30,7 +30,7 @@ public final class DeviceCredentialPublicKeyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="key", required=true)
-        private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;

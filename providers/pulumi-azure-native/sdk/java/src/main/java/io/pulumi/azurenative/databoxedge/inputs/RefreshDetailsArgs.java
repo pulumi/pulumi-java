@@ -23,7 +23,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errorManifestFile")
-        private final @Nullable Input<String> errorManifestFile;
+      private final @Nullable Input<String> errorManifestFile;
 
     public Input<String> getErrorManifestFile() {
         return this.errorManifestFile == null ? Input.empty() : this.errorManifestFile;
@@ -34,7 +34,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inProgressRefreshJobId")
-        private final @Nullable Input<String> inProgressRefreshJobId;
+      private final @Nullable Input<String> inProgressRefreshJobId;
 
     public Input<String> getInProgressRefreshJobId() {
         return this.inProgressRefreshJobId == null ? Input.empty() : this.inProgressRefreshJobId;
@@ -45,7 +45,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastCompletedRefreshJobTimeInUTC")
-        private final @Nullable Input<String> lastCompletedRefreshJobTimeInUTC;
+      private final @Nullable Input<String> lastCompletedRefreshJobTimeInUTC;
 
     public Input<String> getLastCompletedRefreshJobTimeInUTC() {
         return this.lastCompletedRefreshJobTimeInUTC == null ? Input.empty() : this.lastCompletedRefreshJobTimeInUTC;
@@ -56,7 +56,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastJob")
-        private final @Nullable Input<String> lastJob;
+      private final @Nullable Input<String> lastJob;
 
     public Input<String> getLastJob() {
         return this.lastJob == null ? Input.empty() : this.lastJob;

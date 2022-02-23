@@ -17,7 +17,7 @@ public final class GetCloudLinkArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudLinkName", required=true)
-        private final String cloudLinkName;
+      private final String cloudLinkName;
 
     public String getCloudLinkName() {
         return this.cloudLinkName;
@@ -28,7 +28,7 @@ public final class GetCloudLinkArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-        private final String privateCloudName;
+      private final String privateCloudName;
 
     public String getPrivateCloudName() {
         return this.privateCloudName;
@@ -39,7 +39,7 @@ public final class GetCloudLinkArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

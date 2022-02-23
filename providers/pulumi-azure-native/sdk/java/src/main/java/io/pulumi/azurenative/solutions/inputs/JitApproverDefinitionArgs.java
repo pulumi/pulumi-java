@@ -25,7 +25,7 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -36,7 +36,7 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -47,7 +47,7 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,JitApproverType>> type;
+      private final @Nullable Input<Either<String,JitApproverType>> type;
 
     public Input<Either<String,JitApproverType>> getType() {
         return this.type == null ? Input.empty() : this.type;

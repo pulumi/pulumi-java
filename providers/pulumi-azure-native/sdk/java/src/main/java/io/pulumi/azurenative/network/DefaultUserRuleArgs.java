@@ -19,7 +19,7 @@ public final class DefaultUserRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="configurationName", required=true)
-        private final Input<String> configurationName;
+      private final Input<String> configurationName;
 
     public Input<String> getConfigurationName() {
         return this.configurationName;
@@ -30,7 +30,7 @@ public final class DefaultUserRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="flag")
-        private final @Nullable Input<String> flag;
+      private final @Nullable Input<String> flag;
 
     public Input<String> getFlag() {
         return this.flag == null ? Input.empty() : this.flag;
@@ -42,7 +42,7 @@ public final class DefaultUserRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -53,7 +53,7 @@ public final class DefaultUserRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-        private final Input<String> networkManagerName;
+      private final Input<String> networkManagerName;
 
     public Input<String> getNetworkManagerName() {
         return this.networkManagerName;
@@ -64,7 +64,7 @@ public final class DefaultUserRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class DefaultUserRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ruleCollectionName", required=true)
-        private final Input<String> ruleCollectionName;
+      private final Input<String> ruleCollectionName;
 
     public Input<String> getRuleCollectionName() {
         return this.ruleCollectionName;
@@ -86,7 +86,7 @@ public final class DefaultUserRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ruleName")
-        private final @Nullable Input<String> ruleName;
+      private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;

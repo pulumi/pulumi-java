@@ -17,14 +17,14 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
     public static final SkuZoneDetailArgs Empty = new SkuZoneDetailArgs();
 
     @InputImport(name="capabilities")
-        private final @Nullable Input<List<SkuCapabilityArgs>> capabilities;
+      private final @Nullable Input<List<SkuCapabilityArgs>> capabilities;
 
     public Input<List<SkuCapabilityArgs>> getCapabilities() {
         return this.capabilities == null ? Input.empty() : this.capabilities;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<List<String>> name;
+      private final @Nullable Input<List<String>> name;
 
     public Input<List<String>> getName() {
         return this.name == null ? Input.empty() : this.name;

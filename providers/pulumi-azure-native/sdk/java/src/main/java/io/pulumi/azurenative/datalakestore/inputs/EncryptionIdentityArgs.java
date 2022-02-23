@@ -22,7 +22,7 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<EncryptionIdentityType> type;
+      private final Input<EncryptionIdentityType> type;
 
     public Input<EncryptionIdentityType> getType() {
         return this.type;

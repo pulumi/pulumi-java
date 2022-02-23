@@ -13,14 +13,14 @@ public final class GetRouterBgpAdvertisedIpRange extends io.pulumi.resources.Inv
     public static final GetRouterBgpAdvertisedIpRange Empty = new GetRouterBgpAdvertisedIpRange();
 
     @InputImport(name="description", required=true)
-        private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
     @InputImport(name="range", required=true)
-        private final String range;
+      private final String range;
 
     public String getRange() {
         return this.range;

@@ -28,7 +28,7 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="authentication")
-        private final @Nullable WebActivityAuthenticationResponse authentication;
+      private final @Nullable WebActivityAuthenticationResponse authentication;
 
     public Optional<WebActivityAuthenticationResponse> getAuthentication() {
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
@@ -39,7 +39,7 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="body")
-        private final @Nullable Object body;
+      private final @Nullable Object body;
 
     public Optional<Object> getBody() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
@@ -50,7 +50,7 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="dependsOn")
-        private final @Nullable List<ActivityDependencyResponse> dependsOn;
+      private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -61,7 +61,7 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -72,7 +72,7 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="headers")
-        private final @Nullable Object headers;
+      private final @Nullable Object headers;
 
     public Optional<Object> getHeaders() {
         return this.headers == null ? Optional.empty() : Optional.ofNullable(this.headers);
@@ -83,7 +83,7 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="method", required=true)
-        private final String method;
+      private final String method;
 
     public String getMethod() {
         return this.method;
@@ -94,7 +94,7 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -105,7 +105,7 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="reportStatusOnCallBack")
-        private final @Nullable Object reportStatusOnCallBack;
+      private final @Nullable Object reportStatusOnCallBack;
 
     public Optional<Object> getReportStatusOnCallBack() {
         return this.reportStatusOnCallBack == null ? Optional.empty() : Optional.ofNullable(this.reportStatusOnCallBack);
@@ -116,7 +116,7 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable String timeout;
+      private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -128,7 +128,7 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -139,7 +139,7 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="url", required=true)
-        private final Object url;
+      private final Object url;
 
     public Object getUrl() {
         return this.url;
@@ -150,7 +150,7 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="userProperties")
-        private final @Nullable List<UserPropertyResponse> userProperties;
+      private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;

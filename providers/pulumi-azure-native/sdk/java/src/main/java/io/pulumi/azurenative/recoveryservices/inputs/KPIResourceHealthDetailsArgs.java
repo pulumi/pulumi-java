@@ -25,7 +25,7 @@ public final class KPIResourceHealthDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceHealthStatus")
-        private final @Nullable Input<Either<String,ResourceHealthStatus>> resourceHealthStatus;
+      private final @Nullable Input<Either<String,ResourceHealthStatus>> resourceHealthStatus;
 
     public Input<Either<String,ResourceHealthStatus>> getResourceHealthStatus() {
         return this.resourceHealthStatus == null ? Input.empty() : this.resourceHealthStatus;

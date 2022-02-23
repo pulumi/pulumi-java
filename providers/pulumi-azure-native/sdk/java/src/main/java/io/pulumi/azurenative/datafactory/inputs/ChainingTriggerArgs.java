@@ -27,7 +27,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -38,7 +38,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dependsOn", required=true)
-        private final Input<List<PipelineReferenceArgs>> dependsOn;
+      private final Input<List<PipelineReferenceArgs>> dependsOn;
 
     public Input<List<PipelineReferenceArgs>> getDependsOn() {
         return this.dependsOn;
@@ -49,7 +49,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="pipeline", required=true)
-        private final Input<TriggerPipelineReferenceArgs> pipeline;
+      private final Input<TriggerPipelineReferenceArgs> pipeline;
 
     public Input<TriggerPipelineReferenceArgs> getPipeline() {
         return this.pipeline;
@@ -71,7 +71,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="runDimension", required=true)
-        private final Input<String> runDimension;
+      private final Input<String> runDimension;
 
     public Input<String> getRunDimension() {
         return this.runDimension;
@@ -83,7 +83,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

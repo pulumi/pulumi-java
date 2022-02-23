@@ -17,7 +17,7 @@ public final class GetDocumentationVersionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="documentationVersion", required=true)
-        private final String documentationVersion;
+      private final String documentationVersion;
 
     public String getDocumentationVersion() {
         return this.documentationVersion;
@@ -28,7 +28,7 @@ public final class GetDocumentationVersionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="restApiId", required=true)
-        private final String restApiId;
+      private final String restApiId;
 
     public String getRestApiId() {
         return this.restApiId;

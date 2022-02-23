@@ -22,7 +22,7 @@ public final class TemplateSourceTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn", required=true)
-        private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;

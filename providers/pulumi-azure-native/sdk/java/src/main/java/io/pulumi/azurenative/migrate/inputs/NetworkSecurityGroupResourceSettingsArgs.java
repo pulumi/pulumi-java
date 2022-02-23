@@ -26,7 +26,7 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -37,7 +37,7 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="securityRules")
-        private final @Nullable Input<List<NsgSecurityRuleArgs>> securityRules;
+      private final @Nullable Input<List<NsgSecurityRuleArgs>> securityRules;
 
     public Input<List<NsgSecurityRuleArgs>> getSecurityRules() {
         return this.securityRules == null ? Input.empty() : this.securityRules;
@@ -48,7 +48,7 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-        private final Input<String> targetResourceName;
+      private final Input<String> targetResourceName;
 
     public Input<String> getTargetResourceName() {
         return this.targetResourceName;

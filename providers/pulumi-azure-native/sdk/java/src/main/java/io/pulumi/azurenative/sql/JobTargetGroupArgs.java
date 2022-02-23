@@ -21,7 +21,7 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobAgentName", required=true)
-        private final Input<String> jobAgentName;
+      private final Input<String> jobAgentName;
 
     public Input<String> getJobAgentName() {
         return this.jobAgentName;
@@ -32,7 +32,7 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="members", required=true)
-        private final Input<List<JobTargetArgs>> members;
+      private final Input<List<JobTargetArgs>> members;
 
     public Input<List<JobTargetArgs>> getMembers() {
         return this.members;
@@ -43,7 +43,7 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -65,7 +65,7 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetGroupName")
-        private final @Nullable Input<String> targetGroupName;
+      private final @Nullable Input<String> targetGroupName;
 
     public Input<String> getTargetGroupName() {
         return this.targetGroupName == null ? Input.empty() : this.targetGroupName;

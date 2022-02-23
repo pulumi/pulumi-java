@@ -17,42 +17,42 @@ public final class InAppTemplateDefaultButtonConfigurationArgs extends io.pulumi
     public static final InAppTemplateDefaultButtonConfigurationArgs Empty = new InAppTemplateDefaultButtonConfigurationArgs();
 
     @InputImport(name="backgroundColor")
-        private final @Nullable Input<String> backgroundColor;
+      private final @Nullable Input<String> backgroundColor;
 
     public Input<String> getBackgroundColor() {
         return this.backgroundColor == null ? Input.empty() : this.backgroundColor;
     }
 
     @InputImport(name="borderRadius")
-        private final @Nullable Input<Integer> borderRadius;
+      private final @Nullable Input<Integer> borderRadius;
 
     public Input<Integer> getBorderRadius() {
         return this.borderRadius == null ? Input.empty() : this.borderRadius;
     }
 
     @InputImport(name="buttonAction")
-        private final @Nullable Input<InAppTemplateButtonAction> buttonAction;
+      private final @Nullable Input<InAppTemplateButtonAction> buttonAction;
 
     public Input<InAppTemplateButtonAction> getButtonAction() {
         return this.buttonAction == null ? Input.empty() : this.buttonAction;
     }
 
     @InputImport(name="link")
-        private final @Nullable Input<String> link;
+      private final @Nullable Input<String> link;
 
     public Input<String> getLink() {
         return this.link == null ? Input.empty() : this.link;
     }
 
     @InputImport(name="text")
-        private final @Nullable Input<String> text;
+      private final @Nullable Input<String> text;
 
     public Input<String> getText() {
         return this.text == null ? Input.empty() : this.text;
     }
 
     @InputImport(name="textColor")
-        private final @Nullable Input<String> textColor;
+      private final @Nullable Input<String> textColor;
 
     public Input<String> getTextColor() {
         return this.textColor == null ? Input.empty() : this.textColor;

@@ -19,7 +19,7 @@ public final class AssetModelMetricWindow extends io.pulumi.resources.InvokeArgs
     public static final AssetModelMetricWindow Empty = new AssetModelMetricWindow();
 
     @InputImport(name="tumbling")
-        private final @Nullable AssetModelTumblingWindow tumbling;
+      private final @Nullable AssetModelTumblingWindow tumbling;
 
     public Optional<AssetModelTumblingWindow> getTumbling() {
         return this.tumbling == null ? Optional.empty() : Optional.ofNullable(this.tumbling);

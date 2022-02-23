@@ -13,14 +13,14 @@ public final class ServiceActionDefinitionParameter extends io.pulumi.resources.
     public static final ServiceActionDefinitionParameter Empty = new ServiceActionDefinitionParameter();
 
     @InputImport(name="key", required=true)
-        private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-        private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;

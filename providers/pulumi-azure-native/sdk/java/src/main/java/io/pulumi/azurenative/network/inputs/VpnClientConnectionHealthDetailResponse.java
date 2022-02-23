@@ -22,7 +22,7 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="egressBytesTransferred", required=true)
-        private final Double egressBytesTransferred;
+      private final Double egressBytesTransferred;
 
     public Double getEgressBytesTransferred() {
         return this.egressBytesTransferred;
@@ -33,7 +33,7 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="egressPacketsTransferred", required=true)
-        private final Double egressPacketsTransferred;
+      private final Double egressPacketsTransferred;
 
     public Double getEgressPacketsTransferred() {
         return this.egressPacketsTransferred;
@@ -44,7 +44,7 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="ingressBytesTransferred", required=true)
-        private final Double ingressBytesTransferred;
+      private final Double ingressBytesTransferred;
 
     public Double getIngressBytesTransferred() {
         return this.ingressBytesTransferred;
@@ -55,7 +55,7 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="ingressPacketsTransferred", required=true)
-        private final Double ingressPacketsTransferred;
+      private final Double ingressPacketsTransferred;
 
     public Double getIngressPacketsTransferred() {
         return this.ingressPacketsTransferred;
@@ -66,7 +66,7 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="maxBandwidth", required=true)
-        private final Double maxBandwidth;
+      private final Double maxBandwidth;
 
     public Double getMaxBandwidth() {
         return this.maxBandwidth;
@@ -77,7 +77,7 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="maxPacketsPerSecond", required=true)
-        private final Double maxPacketsPerSecond;
+      private final Double maxPacketsPerSecond;
 
     public Double getMaxPacketsPerSecond() {
         return this.maxPacketsPerSecond;
@@ -88,7 +88,7 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="privateIpAddress", required=true)
-        private final String privateIpAddress;
+      private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
@@ -99,7 +99,7 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="publicIpAddress", required=true)
-        private final String publicIpAddress;
+      private final String publicIpAddress;
 
     public String getPublicIpAddress() {
         return this.publicIpAddress;
@@ -110,7 +110,7 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vpnConnectionDuration", required=true)
-        private final Double vpnConnectionDuration;
+      private final Double vpnConnectionDuration;
 
     public Double getVpnConnectionDuration() {
         return this.vpnConnectionDuration;
@@ -121,7 +121,7 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vpnConnectionId", required=true)
-        private final String vpnConnectionId;
+      private final String vpnConnectionId;
 
     public String getVpnConnectionId() {
         return this.vpnConnectionId;
@@ -132,7 +132,7 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vpnConnectionTime", required=true)
-        private final String vpnConnectionTime;
+      private final String vpnConnectionTime;
 
     public String getVpnConnectionTime() {
         return this.vpnConnectionTime;
@@ -143,7 +143,7 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vpnUserName", required=true)
-        private final String vpnUserName;
+      private final String vpnUserName;
 
     public String getVpnUserName() {
         return this.vpnUserName;

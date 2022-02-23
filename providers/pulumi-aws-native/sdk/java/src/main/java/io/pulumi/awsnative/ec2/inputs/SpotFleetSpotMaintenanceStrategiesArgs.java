@@ -15,7 +15,7 @@ public final class SpotFleetSpotMaintenanceStrategiesArgs extends io.pulumi.reso
     public static final SpotFleetSpotMaintenanceStrategiesArgs Empty = new SpotFleetSpotMaintenanceStrategiesArgs();
 
     @InputImport(name="capacityRebalance")
-        private final @Nullable Input<SpotFleetSpotCapacityRebalanceArgs> capacityRebalance;
+      private final @Nullable Input<SpotFleetSpotCapacityRebalanceArgs> capacityRebalance;
 
     public Input<SpotFleetSpotCapacityRebalanceArgs> getCapacityRebalance() {
         return this.capacityRebalance == null ? Input.empty() : this.capacityRebalance;

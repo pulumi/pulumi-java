@@ -19,7 +19,7 @@ public final class BucketLifecycleRuleActionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageClass")
-        private final @Nullable Input<String> storageClass;
+      private final @Nullable Input<String> storageClass;
 
     public Input<String> getStorageClass() {
         return this.storageClass == null ? Input.empty() : this.storageClass;
@@ -30,7 +30,7 @@ public final class BucketLifecycleRuleActionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

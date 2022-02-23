@@ -16,49 +16,49 @@ public final class FunctionIamMemberState extends io.pulumi.resources.ResourceAr
     public static final FunctionIamMemberState Empty = new FunctionIamMemberState();
 
     @InputImport(name="cloudFunction")
-        private final @Nullable Input<String> cloudFunction;
+      private final @Nullable Input<String> cloudFunction;
 
     public Input<String> getCloudFunction() {
         return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
     }
 
     @InputImport(name="condition")
-        private final @Nullable Input<FunctionIamMemberConditionGetArgs> condition;
+      private final @Nullable Input<FunctionIamMemberConditionGetArgs> condition;
 
     public Input<FunctionIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-        private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
     }
 
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
     }
 
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

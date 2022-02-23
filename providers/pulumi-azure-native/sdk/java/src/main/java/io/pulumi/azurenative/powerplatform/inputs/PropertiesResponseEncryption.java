@@ -24,7 +24,7 @@ public final class PropertiesResponseEncryption extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="keyVault")
-        private final @Nullable KeyVaultPropertiesResponse keyVault;
+      private final @Nullable KeyVaultPropertiesResponse keyVault;
 
     public Optional<KeyVaultPropertiesResponse> getKeyVault() {
         return this.keyVault == null ? Optional.empty() : Optional.ofNullable(this.keyVault);
@@ -35,7 +35,7 @@ public final class PropertiesResponseEncryption extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="state")
-        private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);

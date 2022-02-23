@@ -23,7 +23,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="firewallRuleGroupId", required=true)
-        private final Input<String> firewallRuleGroupId;
+      private final Input<String> firewallRuleGroupId;
 
     public Input<String> getFirewallRuleGroupId() {
         return this.firewallRuleGroupId;
@@ -34,7 +34,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="mutationProtection")
-        private final @Nullable Input<FirewallRuleGroupAssociationMutationProtection> mutationProtection;
+      private final @Nullable Input<FirewallRuleGroupAssociationMutationProtection> mutationProtection;
 
     public Input<FirewallRuleGroupAssociationMutationProtection> getMutationProtection() {
         return this.mutationProtection == null ? Input.empty() : this.mutationProtection;
@@ -45,7 +45,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="priority", required=true)
-        private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -67,7 +67,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<FirewallRuleGroupAssociationTagArgs>> tags;
+      private final @Nullable Input<List<FirewallRuleGroupAssociationTagArgs>> tags;
 
     public Input<List<FirewallRuleGroupAssociationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -78,7 +78,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vpcId", required=true)
-        private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;

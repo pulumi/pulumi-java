@@ -13,7 +13,7 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef exten
     public static final GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef Empty = new GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef();
 
     @InputImport(name="key", required=true)
-        private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -24,7 +24,7 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef exten
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

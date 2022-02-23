@@ -22,7 +22,7 @@ public final class HostPortRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="max", required=true)
-        private final Input<Integer> max;
+      private final Input<Integer> max;
 
     public Input<Integer> getMax() {
         return this.max;
@@ -33,7 +33,7 @@ public final class HostPortRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="min", required=true)
-        private final Input<Integer> min;
+      private final Input<Integer> min;
 
     public Input<Integer> getMin() {
         return this.min;

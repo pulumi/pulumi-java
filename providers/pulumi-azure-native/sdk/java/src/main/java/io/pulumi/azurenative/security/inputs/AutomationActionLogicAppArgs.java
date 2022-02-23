@@ -24,7 +24,7 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="actionType", required=true)
-        private final Input<String> actionType;
+      private final Input<String> actionType;
 
     public Input<String> getActionType() {
         return this.actionType;
@@ -35,7 +35,7 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="logicAppResourceId")
-        private final @Nullable Input<String> logicAppResourceId;
+      private final @Nullable Input<String> logicAppResourceId;
 
     public Input<String> getLogicAppResourceId() {
         return this.logicAppResourceId == null ? Input.empty() : this.logicAppResourceId;
@@ -46,7 +46,7 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="uri")
-        private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;

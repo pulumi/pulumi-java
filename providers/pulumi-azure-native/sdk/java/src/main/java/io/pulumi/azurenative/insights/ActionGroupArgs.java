@@ -32,7 +32,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionGroupName")
-        private final @Nullable Input<String> actionGroupName;
+      private final @Nullable Input<String> actionGroupName;
 
     public Input<String> getActionGroupName() {
         return this.actionGroupName == null ? Input.empty() : this.actionGroupName;
@@ -43,7 +43,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="armRoleReceivers")
-        private final @Nullable Input<List<ArmRoleReceiverArgs>> armRoleReceivers;
+      private final @Nullable Input<List<ArmRoleReceiverArgs>> armRoleReceivers;
 
     public Input<List<ArmRoleReceiverArgs>> getArmRoleReceivers() {
         return this.armRoleReceivers == null ? Input.empty() : this.armRoleReceivers;
@@ -54,7 +54,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationRunbookReceivers")
-        private final @Nullable Input<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers;
+      private final @Nullable Input<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers;
 
     public Input<List<AutomationRunbookReceiverArgs>> getAutomationRunbookReceivers() {
         return this.automationRunbookReceivers == null ? Input.empty() : this.automationRunbookReceivers;
@@ -65,7 +65,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureAppPushReceivers")
-        private final @Nullable Input<List<AzureAppPushReceiverArgs>> azureAppPushReceivers;
+      private final @Nullable Input<List<AzureAppPushReceiverArgs>> azureAppPushReceivers;
 
     public Input<List<AzureAppPushReceiverArgs>> getAzureAppPushReceivers() {
         return this.azureAppPushReceivers == null ? Input.empty() : this.azureAppPushReceivers;
@@ -76,7 +76,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureFunctionReceivers")
-        private final @Nullable Input<List<AzureFunctionReceiverArgs>> azureFunctionReceivers;
+      private final @Nullable Input<List<AzureFunctionReceiverArgs>> azureFunctionReceivers;
 
     public Input<List<AzureFunctionReceiverArgs>> getAzureFunctionReceivers() {
         return this.azureFunctionReceivers == null ? Input.empty() : this.azureFunctionReceivers;
@@ -87,7 +87,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailReceivers")
-        private final @Nullable Input<List<EmailReceiverArgs>> emailReceivers;
+      private final @Nullable Input<List<EmailReceiverArgs>> emailReceivers;
 
     public Input<List<EmailReceiverArgs>> getEmailReceivers() {
         return this.emailReceivers == null ? Input.empty() : this.emailReceivers;
@@ -98,7 +98,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -109,7 +109,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupShortName", required=true)
-        private final Input<String> groupShortName;
+      private final Input<String> groupShortName;
 
     public Input<String> getGroupShortName() {
         return this.groupShortName;
@@ -120,7 +120,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="itsmReceivers")
-        private final @Nullable Input<List<ItsmReceiverArgs>> itsmReceivers;
+      private final @Nullable Input<List<ItsmReceiverArgs>> itsmReceivers;
 
     public Input<List<ItsmReceiverArgs>> getItsmReceivers() {
         return this.itsmReceivers == null ? Input.empty() : this.itsmReceivers;
@@ -131,7 +131,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -142,7 +142,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logicAppReceivers")
-        private final @Nullable Input<List<LogicAppReceiverArgs>> logicAppReceivers;
+      private final @Nullable Input<List<LogicAppReceiverArgs>> logicAppReceivers;
 
     public Input<List<LogicAppReceiverArgs>> getLogicAppReceivers() {
         return this.logicAppReceivers == null ? Input.empty() : this.logicAppReceivers;
@@ -153,7 +153,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -164,7 +164,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smsReceivers")
-        private final @Nullable Input<List<SmsReceiverArgs>> smsReceivers;
+      private final @Nullable Input<List<SmsReceiverArgs>> smsReceivers;
 
     public Input<List<SmsReceiverArgs>> getSmsReceivers() {
         return this.smsReceivers == null ? Input.empty() : this.smsReceivers;
@@ -175,7 +175,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -186,7 +186,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="voiceReceivers")
-        private final @Nullable Input<List<VoiceReceiverArgs>> voiceReceivers;
+      private final @Nullable Input<List<VoiceReceiverArgs>> voiceReceivers;
 
     public Input<List<VoiceReceiverArgs>> getVoiceReceivers() {
         return this.voiceReceivers == null ? Input.empty() : this.voiceReceivers;
@@ -197,7 +197,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookReceivers")
-        private final @Nullable Input<List<WebhookReceiverArgs>> webhookReceivers;
+      private final @Nullable Input<List<WebhookReceiverArgs>> webhookReceivers;
 
     public Input<List<WebhookReceiverArgs>> getWebhookReceivers() {
         return this.webhookReceivers == null ? Input.empty() : this.webhookReceivers;

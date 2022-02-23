@@ -17,7 +17,7 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="customerSubscriptionName", required=true)
-        private final String customerSubscriptionName;
+      private final String customerSubscriptionName;
 
     public String getCustomerSubscriptionName() {
         return this.customerSubscriptionName;
@@ -28,7 +28,7 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="registrationName", required=true)
-        private final String registrationName;
+      private final String registrationName;
 
     public String getRegistrationName() {
         return this.registrationName;
@@ -39,7 +39,7 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-        private final String resourceGroup;
+      private final String resourceGroup;
 
     public String getResourceGroup() {
         return this.resourceGroup;

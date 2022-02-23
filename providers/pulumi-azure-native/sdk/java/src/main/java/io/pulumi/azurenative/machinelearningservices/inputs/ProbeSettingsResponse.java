@@ -24,7 +24,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="failureThreshold")
-        private final @Nullable Integer failureThreshold;
+      private final @Nullable Integer failureThreshold;
 
     public Optional<Integer> getFailureThreshold() {
         return this.failureThreshold == null ? Optional.empty() : Optional.ofNullable(this.failureThreshold);
@@ -35,7 +35,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="initialDelay")
-        private final @Nullable String initialDelay;
+      private final @Nullable String initialDelay;
 
     public Optional<String> getInitialDelay() {
         return this.initialDelay == null ? Optional.empty() : Optional.ofNullable(this.initialDelay);
@@ -46,7 +46,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="period")
-        private final @Nullable String period;
+      private final @Nullable String period;
 
     public Optional<String> getPeriod() {
         return this.period == null ? Optional.empty() : Optional.ofNullable(this.period);
@@ -57,7 +57,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="successThreshold")
-        private final @Nullable Integer successThreshold;
+      private final @Nullable Integer successThreshold;
 
     public Optional<Integer> getSuccessThreshold() {
         return this.successThreshold == null ? Optional.empty() : Optional.ofNullable(this.successThreshold);
@@ -68,7 +68,7 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable String timeout;
+      private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);

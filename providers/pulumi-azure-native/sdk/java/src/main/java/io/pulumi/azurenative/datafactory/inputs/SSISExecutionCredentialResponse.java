@@ -22,7 +22,7 @@ public final class SSISExecutionCredentialResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="domain", required=true)
-        private final Object domain;
+      private final Object domain;
 
     public Object getDomain() {
         return this.domain;
@@ -33,7 +33,7 @@ public final class SSISExecutionCredentialResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="password", required=true)
-        private final SecureStringResponse password;
+      private final SecureStringResponse password;
 
     public SecureStringResponse getPassword() {
         return this.password;
@@ -44,7 +44,7 @@ public final class SSISExecutionCredentialResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="userName", required=true)
-        private final Object userName;
+      private final Object userName;
 
     public Object getUserName() {
         return this.userName;

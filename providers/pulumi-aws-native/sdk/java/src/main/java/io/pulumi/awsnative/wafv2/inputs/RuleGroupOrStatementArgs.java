@@ -15,7 +15,7 @@ public final class RuleGroupOrStatementArgs extends io.pulumi.resources.Resource
     public static final RuleGroupOrStatementArgs Empty = new RuleGroupOrStatementArgs();
 
     @InputImport(name="statements", required=true)
-        private final Input<List<RuleGroupStatementArgs>> statements;
+      private final Input<List<RuleGroupStatementArgs>> statements;
 
     public Input<List<RuleGroupStatementArgs>> getStatements() {
         return this.statements;

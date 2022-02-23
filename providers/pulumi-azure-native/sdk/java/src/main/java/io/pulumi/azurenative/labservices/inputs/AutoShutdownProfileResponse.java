@@ -23,7 +23,7 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="disconnectDelay")
-        private final @Nullable String disconnectDelay;
+      private final @Nullable String disconnectDelay;
 
     public Optional<String> getDisconnectDelay() {
         return this.disconnectDelay == null ? Optional.empty() : Optional.ofNullable(this.disconnectDelay);
@@ -34,7 +34,7 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="idleDelay")
-        private final @Nullable String idleDelay;
+      private final @Nullable String idleDelay;
 
     public Optional<String> getIdleDelay() {
         return this.idleDelay == null ? Optional.empty() : Optional.ofNullable(this.idleDelay);
@@ -45,7 +45,7 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="noConnectDelay")
-        private final @Nullable String noConnectDelay;
+      private final @Nullable String noConnectDelay;
 
     public Optional<String> getNoConnectDelay() {
         return this.noConnectDelay == null ? Optional.empty() : Optional.ofNullable(this.noConnectDelay);
@@ -56,7 +56,7 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="shutdownOnDisconnect")
-        private final @Nullable String shutdownOnDisconnect;
+      private final @Nullable String shutdownOnDisconnect;
 
     public Optional<String> getShutdownOnDisconnect() {
         return this.shutdownOnDisconnect == null ? Optional.empty() : Optional.ofNullable(this.shutdownOnDisconnect);
@@ -67,7 +67,7 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="shutdownOnIdle")
-        private final @Nullable String shutdownOnIdle;
+      private final @Nullable String shutdownOnIdle;
 
     public Optional<String> getShutdownOnIdle() {
         return this.shutdownOnIdle == null ? Optional.empty() : Optional.ofNullable(this.shutdownOnIdle);
@@ -78,7 +78,7 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="shutdownWhenNotConnected")
-        private final @Nullable String shutdownWhenNotConnected;
+      private final @Nullable String shutdownWhenNotConnected;
 
     public Optional<String> getShutdownWhenNotConnected() {
         return this.shutdownWhenNotConnected == null ? Optional.empty() : Optional.ofNullable(this.shutdownWhenNotConnected);

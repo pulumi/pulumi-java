@@ -17,7 +17,7 @@ public final class GetExpressRouteCircuitArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="circuitName", required=true)
-        private final String circuitName;
+      private final String circuitName;
 
     public String getCircuitName() {
         return this.circuitName;
@@ -28,7 +28,7 @@ public final class GetExpressRouteCircuitArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

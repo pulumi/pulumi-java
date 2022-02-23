@@ -16,14 +16,14 @@ public final class ConfigUplinkSpectrumConfigArgs extends io.pulumi.resources.Re
     public static final ConfigUplinkSpectrumConfigArgs Empty = new ConfigUplinkSpectrumConfigArgs();
 
     @InputImport(name="centerFrequency")
-        private final @Nullable Input<ConfigFrequencyArgs> centerFrequency;
+      private final @Nullable Input<ConfigFrequencyArgs> centerFrequency;
 
     public Input<ConfigFrequencyArgs> getCenterFrequency() {
         return this.centerFrequency == null ? Input.empty() : this.centerFrequency;
     }
 
     @InputImport(name="polarization")
-        private final @Nullable Input<ConfigPolarization> polarization;
+      private final @Nullable Input<ConfigPolarization> polarization;
 
     public Input<ConfigPolarization> getPolarization() {
         return this.polarization == null ? Input.empty() : this.polarization;

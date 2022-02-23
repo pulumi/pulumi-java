@@ -19,7 +19,7 @@ public final class DetectorModel extends io.pulumi.resources.InvokeArgs {
     public static final DetectorModel Empty = new DetectorModel();
 
     @InputImport(name="arn")
-        private final @Nullable String arn;
+      private final @Nullable String arn;
 
     public Optional<String> getArn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);

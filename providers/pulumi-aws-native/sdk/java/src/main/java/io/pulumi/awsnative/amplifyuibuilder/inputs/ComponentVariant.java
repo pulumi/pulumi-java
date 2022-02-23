@@ -16,14 +16,14 @@ public final class ComponentVariant extends io.pulumi.resources.InvokeArgs {
     public static final ComponentVariant Empty = new ComponentVariant();
 
     @InputImport(name="overrides")
-        private final @Nullable ComponentOverrides overrides;
+      private final @Nullable ComponentOverrides overrides;
 
     public Optional<ComponentOverrides> getOverrides() {
         return this.overrides == null ? Optional.empty() : Optional.ofNullable(this.overrides);
     }
 
     @InputImport(name="variantValues")
-        private final @Nullable ComponentVariantValues variantValues;
+      private final @Nullable ComponentVariantValues variantValues;
 
     public Optional<ComponentVariantValues> getVariantValues() {
         return this.variantValues == null ? Optional.empty() : Optional.ofNullable(this.variantValues);

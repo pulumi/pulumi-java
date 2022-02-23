@@ -23,7 +23,7 @@ public final class ApplicationHAClusterPrometheusExporter extends io.pulumi.reso
      * 
      */
     @InputImport(name="prometheusPort")
-        private final @Nullable String prometheusPort;
+      private final @Nullable String prometheusPort;
 
     public Optional<String> getPrometheusPort() {
         return this.prometheusPort == null ? Optional.empty() : Optional.ofNullable(this.prometheusPort);

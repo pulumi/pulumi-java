@@ -14,7 +14,7 @@ public final class RuleGroupPublishMetricAction extends io.pulumi.resources.Invo
     public static final RuleGroupPublishMetricAction Empty = new RuleGroupPublishMetricAction();
 
     @InputImport(name="dimensions", required=true)
-        private final List<RuleGroupDimension> dimensions;
+      private final List<RuleGroupDimension> dimensions;
 
     public List<RuleGroupDimension> getDimensions() {
         return this.dimensions;

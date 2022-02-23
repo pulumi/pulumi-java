@@ -22,7 +22,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterLogging")
-        private final @Nullable Input<ClusterLoggingArgs> clusterLogging;
+      private final @Nullable Input<ClusterLoggingArgs> clusterLogging;
 
     public Input<ClusterLoggingArgs> getClusterLogging() {
         return this.clusterLogging == null ? Input.empty() : this.clusterLogging;

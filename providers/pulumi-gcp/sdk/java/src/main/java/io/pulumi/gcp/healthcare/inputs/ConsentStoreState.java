@@ -22,7 +22,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset")
-        private final @Nullable Input<String> dataset;
+      private final @Nullable Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
@@ -34,7 +34,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultConsentTtl")
-        private final @Nullable Input<String> defaultConsentTtl;
+      private final @Nullable Input<String> defaultConsentTtl;
 
     public Input<String> getDefaultConsentTtl() {
         return this.defaultConsentTtl == null ? Input.empty() : this.defaultConsentTtl;
@@ -45,7 +45,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableConsentCreateOnUpdate")
-        private final @Nullable Input<Boolean> enableConsentCreateOnUpdate;
+      private final @Nullable Input<Boolean> enableConsentCreateOnUpdate;
 
     public Input<Boolean> getEnableConsentCreateOnUpdate() {
         return this.enableConsentCreateOnUpdate == null ? Input.empty() : this.enableConsentCreateOnUpdate;
@@ -63,7 +63,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -75,7 +75,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

@@ -22,7 +22,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-        private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -33,7 +33,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionsPolicyDocument")
-        private final @Nullable Input<Object> permissionsPolicyDocument;
+      private final @Nullable Input<Object> permissionsPolicyDocument;
 
     public Input<Object> getPermissionsPolicyDocument() {
         return this.permissionsPolicyDocument == null ? Input.empty() : this.permissionsPolicyDocument;
@@ -44,7 +44,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<DomainTagArgs>> tags;
+      private final @Nullable Input<List<DomainTagArgs>> tags;
 
     public Input<List<DomainTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -24,7 +24,7 @@ public final class StreamingPolicyFairPlayConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="allowPersistentLicense", required=true)
-        private final Input<Boolean> allowPersistentLicense;
+      private final Input<Boolean> allowPersistentLicense;
 
     public Input<Boolean> getAllowPersistentLicense() {
         return this.allowPersistentLicense;
@@ -35,7 +35,7 @@ public final class StreamingPolicyFairPlayConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="customLicenseAcquisitionUrlTemplate")
-        private final @Nullable Input<String> customLicenseAcquisitionUrlTemplate;
+      private final @Nullable Input<String> customLicenseAcquisitionUrlTemplate;
 
     public Input<String> getCustomLicenseAcquisitionUrlTemplate() {
         return this.customLicenseAcquisitionUrlTemplate == null ? Input.empty() : this.customLicenseAcquisitionUrlTemplate;

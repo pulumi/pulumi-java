@@ -23,7 +23,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endpointName")
-        private final @Nullable Input<String> endpointName;
+      private final @Nullable Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName == null ? Input.empty() : this.endpointName;
@@ -34,7 +34,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<Object> properties;
+      private final Input<Object> properties;
 
     public Input<Object> getProperties() {
         return this.properties;
@@ -45,7 +45,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -56,7 +56,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;

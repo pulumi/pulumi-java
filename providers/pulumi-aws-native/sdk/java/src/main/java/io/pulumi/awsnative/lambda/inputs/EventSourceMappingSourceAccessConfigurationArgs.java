@@ -24,7 +24,7 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<EventSourceMappingSourceAccessConfigurationType> type;
+      private final @Nullable Input<EventSourceMappingSourceAccessConfigurationType> type;
 
     public Input<EventSourceMappingSourceAccessConfigurationType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -35,7 +35,7 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="uRI")
-        private final @Nullable Input<String> uRI;
+      private final @Nullable Input<String> uRI;
 
     public Input<String> getURI() {
         return this.uRI == null ? Input.empty() : this.uRI;

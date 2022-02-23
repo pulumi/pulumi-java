@@ -19,7 +19,7 @@ public final class AnalysisSourceEntityArgs extends io.pulumi.resources.Resource
     public static final AnalysisSourceEntityArgs Empty = new AnalysisSourceEntityArgs();
 
     @InputImport(name="sourceTemplate")
-        private final @Nullable Input<AnalysisSourceTemplateArgs> sourceTemplate;
+      private final @Nullable Input<AnalysisSourceTemplateArgs> sourceTemplate;
 
     public Input<AnalysisSourceTemplateArgs> getSourceTemplate() {
         return this.sourceTemplate == null ? Input.empty() : this.sourceTemplate;

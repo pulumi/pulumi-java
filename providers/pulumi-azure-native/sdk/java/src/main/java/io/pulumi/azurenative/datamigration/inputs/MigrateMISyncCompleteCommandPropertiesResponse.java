@@ -28,7 +28,7 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="commandType", required=true)
-        private final String commandType;
+      private final String commandType;
 
     public String getCommandType() {
         return this.commandType;
@@ -39,7 +39,7 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="errors", required=true)
-        private final List<ODataErrorResponse> errors;
+      private final List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
@@ -50,7 +50,7 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="input")
-        private final @Nullable MigrateMISyncCompleteCommandInputResponse input;
+      private final @Nullable MigrateMISyncCompleteCommandInputResponse input;
 
     public Optional<MigrateMISyncCompleteCommandInputResponse> getInput() {
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
@@ -61,7 +61,7 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="output", required=true)
-        private final MigrateMISyncCompleteCommandOutputResponse output;
+      private final MigrateMISyncCompleteCommandOutputResponse output;
 
     public MigrateMISyncCompleteCommandOutputResponse getOutput() {
         return this.output;
@@ -72,7 +72,7 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;

@@ -25,7 +25,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationType")
-        private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
+      private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
 
     public Input<Either<String,AuthenticationType>> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -36,7 +36,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionStringPrimaryKey")
-        private final @Nullable Input<String> connectionStringPrimaryKey;
+      private final @Nullable Input<String> connectionStringPrimaryKey;
 
     public Input<String> getConnectionStringPrimaryKey() {
         return this.connectionStringPrimaryKey == null ? Input.empty() : this.connectionStringPrimaryKey;
@@ -47,7 +47,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionStringSecondaryKey")
-        private final @Nullable Input<String> connectionStringSecondaryKey;
+      private final @Nullable Input<String> connectionStringSecondaryKey;
 
     public Input<String> getConnectionStringSecondaryKey() {
         return this.connectionStringSecondaryKey == null ? Input.empty() : this.connectionStringSecondaryKey;
@@ -58,7 +58,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterSecret")
-        private final @Nullable Input<String> deadLetterSecret;
+      private final @Nullable Input<String> deadLetterSecret;
 
     public Input<String> getDeadLetterSecret() {
         return this.deadLetterSecret == null ? Input.empty() : this.deadLetterSecret;
@@ -69,7 +69,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterUri")
-        private final @Nullable Input<String> deadLetterUri;
+      private final @Nullable Input<String> deadLetterUri;
 
     public Input<String> getDeadLetterUri() {
         return this.deadLetterUri == null ? Input.empty() : this.deadLetterUri;
@@ -81,7 +81,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointType", required=true)
-        private final Input<String> endpointType;
+      private final Input<String> endpointType;
 
     public Input<String> getEndpointType() {
         return this.endpointType;
@@ -92,7 +92,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointUri")
-        private final @Nullable Input<String> endpointUri;
+      private final @Nullable Input<String> endpointUri;
 
     public Input<String> getEndpointUri() {
         return this.endpointUri == null ? Input.empty() : this.endpointUri;
@@ -103,7 +103,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityPath")
-        private final @Nullable Input<String> entityPath;
+      private final @Nullable Input<String> entityPath;
 
     public Input<String> getEntityPath() {
         return this.entityPath == null ? Input.empty() : this.entityPath;

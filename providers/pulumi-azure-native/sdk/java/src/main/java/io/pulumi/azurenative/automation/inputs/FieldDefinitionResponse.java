@@ -24,7 +24,7 @@ public final class FieldDefinitionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isEncrypted")
-        private final @Nullable Boolean isEncrypted;
+      private final @Nullable Boolean isEncrypted;
 
     public Optional<Boolean> getIsEncrypted() {
         return this.isEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isEncrypted);
@@ -35,7 +35,7 @@ public final class FieldDefinitionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isOptional")
-        private final @Nullable Boolean isOptional;
+      private final @Nullable Boolean isOptional;
 
     public Optional<Boolean> getIsOptional() {
         return this.isOptional == null ? Optional.empty() : Optional.ofNullable(this.isOptional);
@@ -46,7 +46,7 @@ public final class FieldDefinitionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

@@ -19,7 +19,7 @@ public final class GuestPoliciesAssignmentGroupLabelArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="labels", required=true)
-        private final Input<Map<String,String>> labels;
+      private final Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels;

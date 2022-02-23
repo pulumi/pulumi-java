@@ -20,7 +20,7 @@ public final class SpatialSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path")
-        private final @Nullable String path;
+      private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -31,7 +31,7 @@ public final class SpatialSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="types")
-        private final @Nullable List<String> types;
+      private final @Nullable List<String> types;
 
     public List<String> getTypes() {
         return this.types == null ? List.of() : this.types;

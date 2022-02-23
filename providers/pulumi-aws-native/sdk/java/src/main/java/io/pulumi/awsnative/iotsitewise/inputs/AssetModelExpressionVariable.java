@@ -18,7 +18,7 @@ public final class AssetModelExpressionVariable extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -29,7 +29,7 @@ public final class AssetModelExpressionVariable extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="value", required=true)
-        private final AssetModelVariableValue value;
+      private final AssetModelVariableValue value;
 
     public AssetModelVariableValue getValue() {
         return this.value;

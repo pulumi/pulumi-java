@@ -23,7 +23,7 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gid")
-        private final @Nullable String gid;
+      private final @Nullable String gid;
 
     public Optional<String> getGid() {
         return this.gid == null ? Optional.empty() : Optional.ofNullable(this.gid);
@@ -34,7 +34,7 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="memoryAllocation", required=true)
-        private final String memoryAllocation;
+      private final String memoryAllocation;
 
     public String getMemoryAllocation() {
         return this.memoryAllocation;
@@ -45,7 +45,7 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sid")
-        private final @Nullable String sid;
+      private final @Nullable String sid;
 
     public Optional<String> getSid() {
         return this.sid == null ? Optional.empty() : Optional.ofNullable(this.sid);
@@ -56,7 +56,7 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uid")
-        private final @Nullable String uid;
+      private final @Nullable String uid;
 
     public Optional<String> getUid() {
         return this.uid == null ? Optional.empty() : Optional.ofNullable(this.uid);
@@ -67,7 +67,7 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="username")
-        private final @Nullable String username;
+      private final @Nullable String username;
 
     public Optional<String> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);

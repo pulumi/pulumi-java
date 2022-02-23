@@ -22,21 +22,21 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="actionName")
-        private final @Nullable Input<String> actionName;
+      private final @Nullable Input<String> actionName;
 
     public Input<String> getActionName() {
         return this.actionName == null ? Input.empty() : this.actionName;
     }
 
     @InputImport(name="actionParams", required=true)
-        private final Input<MitigationActionActionParamsArgs> actionParams;
+      private final Input<MitigationActionActionParamsArgs> actionParams;
 
     public Input<MitigationActionActionParamsArgs> getActionParams() {
         return this.actionParams;
     }
 
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -47,7 +47,7 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<MitigationActionTagArgs>> tags;
+      private final @Nullable Input<List<MitigationActionTagArgs>> tags;
 
     public Input<List<MitigationActionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

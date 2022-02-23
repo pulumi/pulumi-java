@@ -23,7 +23,7 @@ public final class ApplicationBillingDetailsDefinitionResponse extends io.pulumi
      * 
      */
     @InputImport(name="resourceUsageId")
-        private final @Nullable String resourceUsageId;
+      private final @Nullable String resourceUsageId;
 
     public Optional<String> getResourceUsageId() {
         return this.resourceUsageId == null ? Optional.empty() : Optional.ofNullable(this.resourceUsageId);

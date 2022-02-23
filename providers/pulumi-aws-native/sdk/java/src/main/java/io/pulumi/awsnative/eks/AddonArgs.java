@@ -22,7 +22,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonName")
-        private final @Nullable Input<String> addonName;
+      private final @Nullable Input<String> addonName;
 
     public Input<String> getAddonName() {
         return this.addonName == null ? Input.empty() : this.addonName;
@@ -33,7 +33,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonVersion")
-        private final @Nullable Input<String> addonVersion;
+      private final @Nullable Input<String> addonVersion;
 
     public Input<String> getAddonVersion() {
         return this.addonVersion == null ? Input.empty() : this.addonVersion;
@@ -44,7 +44,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-        private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -55,7 +55,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resolveConflicts")
-        private final @Nullable Input<AddonResolveConflicts> resolveConflicts;
+      private final @Nullable Input<AddonResolveConflicts> resolveConflicts;
 
     public Input<AddonResolveConflicts> getResolveConflicts() {
         return this.resolveConflicts == null ? Input.empty() : this.resolveConflicts;
@@ -66,7 +66,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountRoleArn")
-        private final @Nullable Input<String> serviceAccountRoleArn;
+      private final @Nullable Input<String> serviceAccountRoleArn;
 
     public Input<String> getServiceAccountRoleArn() {
         return this.serviceAccountRoleArn == null ? Input.empty() : this.serviceAccountRoleArn;
@@ -77,7 +77,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<AddonTagArgs>> tags;
+      private final @Nullable Input<List<AddonTagArgs>> tags;
 
     public Input<List<AddonTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

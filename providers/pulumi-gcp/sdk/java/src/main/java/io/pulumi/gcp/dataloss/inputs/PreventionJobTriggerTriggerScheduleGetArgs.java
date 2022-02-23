@@ -22,7 +22,7 @@ public final class PreventionJobTriggerTriggerScheduleGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="recurrencePeriodDuration")
-        private final @Nullable Input<String> recurrencePeriodDuration;
+      private final @Nullable Input<String> recurrencePeriodDuration;
 
     public Input<String> getRecurrencePeriodDuration() {
         return this.recurrencePeriodDuration == null ? Input.empty() : this.recurrencePeriodDuration;

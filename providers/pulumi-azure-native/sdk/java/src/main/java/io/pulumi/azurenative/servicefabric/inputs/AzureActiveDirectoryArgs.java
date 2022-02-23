@@ -23,7 +23,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="clientApplication")
-        private final @Nullable Input<String> clientApplication;
+      private final @Nullable Input<String> clientApplication;
 
     public Input<String> getClientApplication() {
         return this.clientApplication == null ? Input.empty() : this.clientApplication;
@@ -34,7 +34,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="clusterApplication")
-        private final @Nullable Input<String> clusterApplication;
+      private final @Nullable Input<String> clusterApplication;
 
     public Input<String> getClusterApplication() {
         return this.clusterApplication == null ? Input.empty() : this.clusterApplication;
@@ -45,7 +45,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tenantId")
-        private final @Nullable Input<String> tenantId;
+      private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;

@@ -18,42 +18,42 @@ public final class WorkGroupConfiguration extends io.pulumi.resources.InvokeArgs
     public static final WorkGroupConfiguration Empty = new WorkGroupConfiguration();
 
     @InputImport(name="bytesScannedCutoffPerQuery")
-        private final @Nullable Integer bytesScannedCutoffPerQuery;
+      private final @Nullable Integer bytesScannedCutoffPerQuery;
 
     public Optional<Integer> getBytesScannedCutoffPerQuery() {
         return this.bytesScannedCutoffPerQuery == null ? Optional.empty() : Optional.ofNullable(this.bytesScannedCutoffPerQuery);
     }
 
     @InputImport(name="enforceWorkGroupConfiguration")
-        private final @Nullable Boolean enforceWorkGroupConfiguration;
+      private final @Nullable Boolean enforceWorkGroupConfiguration;
 
     public Optional<Boolean> getEnforceWorkGroupConfiguration() {
         return this.enforceWorkGroupConfiguration == null ? Optional.empty() : Optional.ofNullable(this.enforceWorkGroupConfiguration);
     }
 
     @InputImport(name="engineVersion")
-        private final @Nullable WorkGroupEngineVersion engineVersion;
+      private final @Nullable WorkGroupEngineVersion engineVersion;
 
     public Optional<WorkGroupEngineVersion> getEngineVersion() {
         return this.engineVersion == null ? Optional.empty() : Optional.ofNullable(this.engineVersion);
     }
 
     @InputImport(name="publishCloudWatchMetricsEnabled")
-        private final @Nullable Boolean publishCloudWatchMetricsEnabled;
+      private final @Nullable Boolean publishCloudWatchMetricsEnabled;
 
     public Optional<Boolean> getPublishCloudWatchMetricsEnabled() {
         return this.publishCloudWatchMetricsEnabled == null ? Optional.empty() : Optional.ofNullable(this.publishCloudWatchMetricsEnabled);
     }
 
     @InputImport(name="requesterPaysEnabled")
-        private final @Nullable Boolean requesterPaysEnabled;
+      private final @Nullable Boolean requesterPaysEnabled;
 
     public Optional<Boolean> getRequesterPaysEnabled() {
         return this.requesterPaysEnabled == null ? Optional.empty() : Optional.ofNullable(this.requesterPaysEnabled);
     }
 
     @InputImport(name="resultConfiguration")
-        private final @Nullable WorkGroupResultConfiguration resultConfiguration;
+      private final @Nullable WorkGroupResultConfiguration resultConfiguration;
 
     public Optional<WorkGroupResultConfiguration> getResultConfiguration() {
         return this.resultConfiguration == null ? Optional.empty() : Optional.ofNullable(this.resultConfiguration);

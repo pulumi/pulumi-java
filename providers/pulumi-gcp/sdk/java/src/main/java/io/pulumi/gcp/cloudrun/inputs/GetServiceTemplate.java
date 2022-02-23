@@ -15,14 +15,14 @@ public final class GetServiceTemplate extends io.pulumi.resources.InvokeArgs {
     public static final GetServiceTemplate Empty = new GetServiceTemplate();
 
     @InputImport(name="metadatas", required=true)
-        private final List<GetServiceTemplateMetadata> metadatas;
+      private final List<GetServiceTemplateMetadata> metadatas;
 
     public List<GetServiceTemplateMetadata> getMetadatas() {
         return this.metadatas;
     }
 
     @InputImport(name="specs", required=true)
-        private final List<GetServiceTemplateSpec> specs;
+      private final List<GetServiceTemplateSpec> specs;
 
     public List<GetServiceTemplateSpec> getSpecs() {
         return this.specs;

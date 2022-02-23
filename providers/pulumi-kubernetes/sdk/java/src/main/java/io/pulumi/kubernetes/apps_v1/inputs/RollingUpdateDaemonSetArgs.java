@@ -25,7 +25,7 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maxSurge")
-        private final @Nullable Input<Either<Integer,String>> maxSurge;
+      private final @Nullable Input<Either<Integer,String>> maxSurge;
 
     public Input<Either<Integer,String>> getMaxSurge() {
         return this.maxSurge == null ? Input.empty() : this.maxSurge;
@@ -36,7 +36,7 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maxUnavailable")
-        private final @Nullable Input<Either<Integer,String>> maxUnavailable;
+      private final @Nullable Input<Either<Integer,String>> maxUnavailable;
 
     public Input<Either<Integer,String>> getMaxUnavailable() {
         return this.maxUnavailable == null ? Input.empty() : this.maxUnavailable;

@@ -17,7 +17,7 @@ public final class GetGroupMembershipsArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="group", required=true)
-        private final String group;
+      private final String group;
 
     public String getGroup() {
         return this.group;

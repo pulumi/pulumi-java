@@ -22,7 +22,7 @@ public final class ImageTemplateManagedImageSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="imageId", required=true)
-        private final Input<String> imageId;
+      private final Input<String> imageId;
 
     public Input<String> getImageId() {
         return this.imageId;
@@ -34,7 +34,7 @@ public final class ImageTemplateManagedImageSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

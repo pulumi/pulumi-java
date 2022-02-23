@@ -22,7 +22,7 @@ public final class EdifactAgreementContentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="receiveAgreement", required=true)
-        private final Input<EdifactOneWayAgreementArgs> receiveAgreement;
+      private final Input<EdifactOneWayAgreementArgs> receiveAgreement;
 
     public Input<EdifactOneWayAgreementArgs> getReceiveAgreement() {
         return this.receiveAgreement;
@@ -33,7 +33,7 @@ public final class EdifactAgreementContentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sendAgreement", required=true)
-        private final Input<EdifactOneWayAgreementArgs> sendAgreement;
+      private final Input<EdifactOneWayAgreementArgs> sendAgreement;
 
     public Input<EdifactOneWayAgreementArgs> getSendAgreement() {
         return this.sendAgreement;

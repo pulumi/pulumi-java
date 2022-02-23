@@ -25,7 +25,7 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="indexes")
-        private final @Nullable Input<List<IndexesArgs>> indexes;
+      private final @Nullable Input<List<IndexesArgs>> indexes;
 
     public Input<List<IndexesArgs>> getIndexes() {
         return this.indexes == null ? Input.empty() : this.indexes;
@@ -36,7 +36,7 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;

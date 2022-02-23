@@ -15,7 +15,7 @@ public final class StateMachineCloudWatchLogsLogGroup extends io.pulumi.resource
     public static final StateMachineCloudWatchLogsLogGroup Empty = new StateMachineCloudWatchLogsLogGroup();
 
     @InputImport(name="logGroupArn")
-        private final @Nullable String logGroupArn;
+      private final @Nullable String logGroupArn;
 
     public Optional<String> getLogGroupArn() {
         return this.logGroupArn == null ? Optional.empty() : Optional.ofNullable(this.logGroupArn);

@@ -14,7 +14,7 @@ public final class FlowDatadogSourcePropertiesArgs extends io.pulumi.resources.R
     public static final FlowDatadogSourcePropertiesArgs Empty = new FlowDatadogSourcePropertiesArgs();
 
     @InputImport(name="object", required=true)
-        private final Input<String> object;
+      private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;

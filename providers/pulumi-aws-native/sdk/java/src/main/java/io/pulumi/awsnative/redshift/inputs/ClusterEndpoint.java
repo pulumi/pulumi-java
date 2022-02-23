@@ -15,14 +15,14 @@ public final class ClusterEndpoint extends io.pulumi.resources.InvokeArgs {
     public static final ClusterEndpoint Empty = new ClusterEndpoint();
 
     @InputImport(name="address")
-        private final @Nullable String address;
+      private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
     @InputImport(name="port")
-        private final @Nullable String port;
+      private final @Nullable String port;
 
     public Optional<String> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);

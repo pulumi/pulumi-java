@@ -16,21 +16,21 @@ public final class CxVersionNluSettingArgs extends io.pulumi.resources.ResourceA
     public static final CxVersionNluSettingArgs Empty = new CxVersionNluSettingArgs();
 
     @InputImport(name="classificationThreshold")
-        private final @Nullable Input<Double> classificationThreshold;
+      private final @Nullable Input<Double> classificationThreshold;
 
     public Input<Double> getClassificationThreshold() {
         return this.classificationThreshold == null ? Input.empty() : this.classificationThreshold;
     }
 
     @InputImport(name="modelTrainingMode")
-        private final @Nullable Input<String> modelTrainingMode;
+      private final @Nullable Input<String> modelTrainingMode;
 
     public Input<String> getModelTrainingMode() {
         return this.modelTrainingMode == null ? Input.empty() : this.modelTrainingMode;
     }
 
     @InputImport(name="modelType")
-        private final @Nullable Input<String> modelType;
+      private final @Nullable Input<String> modelType;
 
     public Input<String> getModelType() {
         return this.modelType == null ? Input.empty() : this.modelType;

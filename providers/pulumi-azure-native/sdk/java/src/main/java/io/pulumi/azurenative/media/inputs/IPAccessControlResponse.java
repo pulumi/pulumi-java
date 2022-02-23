@@ -24,7 +24,7 @@ public final class IPAccessControlResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="allow")
-        private final @Nullable List<IPRangeResponse> allow;
+      private final @Nullable List<IPRangeResponse> allow;
 
     public List<IPRangeResponse> getAllow() {
         return this.allow == null ? List.of() : this.allow;

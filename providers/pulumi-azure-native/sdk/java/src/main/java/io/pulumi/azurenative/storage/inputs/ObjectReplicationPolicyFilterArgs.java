@@ -24,7 +24,7 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="minCreationTime")
-        private final @Nullable Input<String> minCreationTime;
+      private final @Nullable Input<String> minCreationTime;
 
     public Input<String> getMinCreationTime() {
         return this.minCreationTime == null ? Input.empty() : this.minCreationTime;
@@ -35,7 +35,7 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="prefixMatch")
-        private final @Nullable Input<List<String>> prefixMatch;
+      private final @Nullable Input<List<String>> prefixMatch;
 
     public Input<List<String>> getPrefixMatch() {
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;

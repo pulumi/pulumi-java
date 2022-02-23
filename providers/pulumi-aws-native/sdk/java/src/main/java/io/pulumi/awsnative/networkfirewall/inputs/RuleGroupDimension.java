@@ -13,7 +13,7 @@ public final class RuleGroupDimension extends io.pulumi.resources.InvokeArgs {
     public static final RuleGroupDimension Empty = new RuleGroupDimension();
 
     @InputImport(name="value", required=true)
-        private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;

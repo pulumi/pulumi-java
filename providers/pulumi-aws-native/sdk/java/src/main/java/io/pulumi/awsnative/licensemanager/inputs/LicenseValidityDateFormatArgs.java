@@ -18,7 +18,7 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="begin", required=true)
-        private final Input<String> begin;
+      private final Input<String> begin;
 
     public Input<String> getBegin() {
         return this.begin;
@@ -29,7 +29,7 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="end", required=true)
-        private final Input<String> end;
+      private final Input<String> end;
 
     public Input<String> getEnd() {
         return this.end;

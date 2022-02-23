@@ -23,7 +23,7 @@ public final class IPRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="action")
-        private final @Nullable String action;
+      private final @Nullable String action;
 
     public Optional<String> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -34,7 +34,7 @@ public final class IPRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iPAddressOrRange", required=true)
-        private final String iPAddressOrRange;
+      private final String iPAddressOrRange;
 
     public String getIPAddressOrRange() {
         return this.iPAddressOrRange;

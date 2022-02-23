@@ -19,7 +19,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs e
      * 
      */
     @InputImport(name="cloudSecret", required=true)
-        private final Input<String> cloudSecret;
+      private final Input<String> cloudSecret;
 
     public Input<String> getCloudSecret() {
         return this.cloudSecret;

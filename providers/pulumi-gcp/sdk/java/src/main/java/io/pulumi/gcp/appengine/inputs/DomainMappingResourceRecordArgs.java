@@ -15,21 +15,21 @@ public final class DomainMappingResourceRecordArgs extends io.pulumi.resources.R
     public static final DomainMappingResourceRecordArgs Empty = new DomainMappingResourceRecordArgs();
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="rrdata")
-        private final @Nullable Input<String> rrdata;
+      private final @Nullable Input<String> rrdata;
 
     public Input<String> getRrdata() {
         return this.rrdata == null ? Input.empty() : this.rrdata;
     }
 
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

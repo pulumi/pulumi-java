@@ -22,7 +22,7 @@ public final class OutputFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labels", required=true)
-        private final List<String> labels;
+      private final List<String> labels;
 
     public List<String> getLabels() {
         return this.labels;

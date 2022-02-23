@@ -19,7 +19,7 @@ public final class ClusterNodePoolNodeConfigGcfsConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;

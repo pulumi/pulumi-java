@@ -23,7 +23,7 @@ public final class NsRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nsdname")
-        private final @Nullable String nsdname;
+      private final @Nullable String nsdname;
 
     public Optional<String> getNsdname() {
         return this.nsdname == null ? Optional.empty() : Optional.ofNullable(this.nsdname);

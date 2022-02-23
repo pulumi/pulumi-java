@@ -19,14 +19,14 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
     public static final LocationNFSArgs Empty = new LocationNFSArgs();
 
     @InputImport(name="mountOptions")
-        private final @Nullable Input<LocationNFSMountOptionsArgs> mountOptions;
+      private final @Nullable Input<LocationNFSMountOptionsArgs> mountOptions;
 
     public Input<LocationNFSMountOptionsArgs> getMountOptions() {
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
     }
 
     @InputImport(name="onPremConfig", required=true)
-        private final Input<LocationNFSOnPremConfigArgs> onPremConfig;
+      private final Input<LocationNFSOnPremConfigArgs> onPremConfig;
 
     public Input<LocationNFSOnPremConfigArgs> getOnPremConfig() {
         return this.onPremConfig;
@@ -37,7 +37,7 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverHostname", required=true)
-        private final Input<String> serverHostname;
+      private final Input<String> serverHostname;
 
     public Input<String> getServerHostname() {
         return this.serverHostname;
@@ -48,7 +48,7 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdirectory", required=true)
-        private final Input<String> subdirectory;
+      private final Input<String> subdirectory;
 
     public Input<String> getSubdirectory() {
         return this.subdirectory;
@@ -59,7 +59,7 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<LocationNFSTagArgs>> tags;
+      private final @Nullable Input<List<LocationNFSTagArgs>> tags;
 
     public Input<List<LocationNFSTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

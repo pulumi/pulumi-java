@@ -22,7 +22,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="endTime")
-        private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -37,7 +37,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scheduleDeadlineTime")
-        private final @Nullable Input<String> scheduleDeadlineTime;
+      private final @Nullable Input<String> scheduleDeadlineTime;
 
     public Input<String> getScheduleDeadlineTime() {
         return this.scheduleDeadlineTime == null ? Input.empty() : this.scheduleDeadlineTime;
@@ -51,7 +51,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="startTime")
-        private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;

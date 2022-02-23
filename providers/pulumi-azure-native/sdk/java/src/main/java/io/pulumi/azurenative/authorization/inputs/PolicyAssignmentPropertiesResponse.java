@@ -21,7 +21,7 @@ public final class PolicyAssignmentPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="policy")
-        private final @Nullable PolicyAssignmentPropertiesResponsePolicy policy;
+      private final @Nullable PolicyAssignmentPropertiesResponsePolicy policy;
 
     public Optional<PolicyAssignmentPropertiesResponsePolicy> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -32,7 +32,7 @@ public final class PolicyAssignmentPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="roleDefinition")
-        private final @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition;
+      private final @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition;
 
     public Optional<PolicyAssignmentPropertiesResponseRoleDefinition> getRoleDefinition() {
         return this.roleDefinition == null ? Optional.empty() : Optional.ofNullable(this.roleDefinition);
@@ -43,7 +43,7 @@ public final class PolicyAssignmentPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="scope")
-        private final @Nullable PolicyAssignmentPropertiesResponseScope scope;
+      private final @Nullable PolicyAssignmentPropertiesResponseScope scope;
 
     public Optional<PolicyAssignmentPropertiesResponseScope> getScope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);

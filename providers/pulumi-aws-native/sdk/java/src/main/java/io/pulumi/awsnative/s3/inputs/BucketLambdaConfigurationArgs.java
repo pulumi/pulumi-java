@@ -24,7 +24,7 @@ public final class BucketLambdaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="event", required=true)
-        private final Input<String> event;
+      private final Input<String> event;
 
     public Input<String> getEvent() {
         return this.event;
@@ -35,7 +35,7 @@ public final class BucketLambdaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="filter")
-        private final @Nullable Input<BucketNotificationFilterArgs> filter;
+      private final @Nullable Input<BucketNotificationFilterArgs> filter;
 
     public Input<BucketNotificationFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -46,7 +46,7 @@ public final class BucketLambdaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="function", required=true)
-        private final Input<String> function;
+      private final Input<String> function;
 
     public Input<String> getFunction() {
         return this.function;

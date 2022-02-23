@@ -17,14 +17,14 @@ public final class EnergyServicePropertiesArgs extends io.pulumi.resources.Resou
     public static final EnergyServicePropertiesArgs Empty = new EnergyServicePropertiesArgs();
 
     @InputImport(name="authAppId")
-        private final @Nullable Input<String> authAppId;
+      private final @Nullable Input<String> authAppId;
 
     public Input<String> getAuthAppId() {
         return this.authAppId == null ? Input.empty() : this.authAppId;
     }
 
     @InputImport(name="dataPartitionNames")
-        private final @Nullable Input<List<DataPartitionNamesArgs>> dataPartitionNames;
+      private final @Nullable Input<List<DataPartitionNamesArgs>> dataPartitionNames;
 
     public Input<List<DataPartitionNamesArgs>> getDataPartitionNames() {
         return this.dataPartitionNames == null ? Input.empty() : this.dataPartitionNames;

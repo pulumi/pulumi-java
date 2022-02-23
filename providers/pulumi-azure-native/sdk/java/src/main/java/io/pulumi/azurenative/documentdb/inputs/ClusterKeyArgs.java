@@ -23,7 +23,7 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orderBy")
-        private final @Nullable Input<String> orderBy;
+      private final @Nullable Input<String> orderBy;
 
     public Input<String> getOrderBy() {
         return this.orderBy == null ? Input.empty() : this.orderBy;

@@ -23,7 +23,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="authenticationType", required=true)
-        private final Input<String> authenticationType;
+      private final Input<String> authenticationType;
 
     public Input<String> getAuthenticationType() {
         return this.authenticationType;
@@ -34,7 +34,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="awsAccessKeyId", required=true)
-        private final Input<String> awsAccessKeyId;
+      private final Input<String> awsAccessKeyId;
 
     public Input<String> getAwsAccessKeyId() {
         return this.awsAccessKeyId;
@@ -45,7 +45,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="awsSecretAccessKey", required=true)
-        private final Input<String> awsSecretAccessKey;
+      private final Input<String> awsSecretAccessKey;
 
     public Input<String> getAwsSecretAccessKey() {
         return this.awsSecretAccessKey;

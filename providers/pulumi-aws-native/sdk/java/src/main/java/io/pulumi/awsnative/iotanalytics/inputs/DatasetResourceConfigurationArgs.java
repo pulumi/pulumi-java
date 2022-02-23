@@ -15,14 +15,14 @@ public final class DatasetResourceConfigurationArgs extends io.pulumi.resources.
     public static final DatasetResourceConfigurationArgs Empty = new DatasetResourceConfigurationArgs();
 
     @InputImport(name="computeType", required=true)
-        private final Input<DatasetResourceConfigurationComputeType> computeType;
+      private final Input<DatasetResourceConfigurationComputeType> computeType;
 
     public Input<DatasetResourceConfigurationComputeType> getComputeType() {
         return this.computeType;
     }
 
     @InputImport(name="volumeSizeInGB", required=true)
-        private final Input<Integer> volumeSizeInGB;
+      private final Input<Integer> volumeSizeInGB;
 
     public Input<Integer> getVolumeSizeInGB() {
         return this.volumeSizeInGB;

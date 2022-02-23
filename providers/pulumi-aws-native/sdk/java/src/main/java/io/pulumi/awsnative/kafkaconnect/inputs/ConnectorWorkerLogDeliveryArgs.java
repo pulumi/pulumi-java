@@ -21,21 +21,21 @@ public final class ConnectorWorkerLogDeliveryArgs extends io.pulumi.resources.Re
     public static final ConnectorWorkerLogDeliveryArgs Empty = new ConnectorWorkerLogDeliveryArgs();
 
     @InputImport(name="cloudWatchLogs")
-        private final @Nullable Input<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs;
+      private final @Nullable Input<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs;
 
     public Input<ConnectorCloudWatchLogsLogDeliveryArgs> getCloudWatchLogs() {
         return this.cloudWatchLogs == null ? Input.empty() : this.cloudWatchLogs;
     }
 
     @InputImport(name="firehose")
-        private final @Nullable Input<ConnectorFirehoseLogDeliveryArgs> firehose;
+      private final @Nullable Input<ConnectorFirehoseLogDeliveryArgs> firehose;
 
     public Input<ConnectorFirehoseLogDeliveryArgs> getFirehose() {
         return this.firehose == null ? Input.empty() : this.firehose;
     }
 
     @InputImport(name="s3")
-        private final @Nullable Input<ConnectorS3LogDeliveryArgs> s3;
+      private final @Nullable Input<ConnectorS3LogDeliveryArgs> s3;
 
     public Input<ConnectorS3LogDeliveryArgs> getS3() {
         return this.s3 == null ? Input.empty() : this.s3;

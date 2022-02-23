@@ -31,7 +31,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestationAuthority")
-        private final @Nullable Input<NoteAttestationAuthorityGetArgs> attestationAuthority;
+      private final @Nullable Input<NoteAttestationAuthorityGetArgs> attestationAuthority;
 
     public Input<NoteAttestationAuthorityGetArgs> getAttestationAuthority() {
         return this.attestationAuthority == null ? Input.empty() : this.attestationAuthority;
@@ -42,7 +42,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-        private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -53,7 +53,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTime")
-        private final @Nullable Input<String> expirationTime;
+      private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -64,7 +64,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -75,7 +75,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="longDescription")
-        private final @Nullable Input<String> longDescription;
+      private final @Nullable Input<String> longDescription;
 
     public Input<String> getLongDescription() {
         return this.longDescription == null ? Input.empty() : this.longDescription;
@@ -86,7 +86,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -98,7 +98,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -109,7 +109,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedNoteNames")
-        private final @Nullable Input<List<String>> relatedNoteNames;
+      private final @Nullable Input<List<String>> relatedNoteNames;
 
     public Input<List<String>> getRelatedNoteNames() {
         return this.relatedNoteNames == null ? Input.empty() : this.relatedNoteNames;
@@ -121,7 +121,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedUrls")
-        private final @Nullable Input<List<NoteRelatedUrlGetArgs>> relatedUrls;
+      private final @Nullable Input<List<NoteRelatedUrlGetArgs>> relatedUrls;
 
     public Input<List<NoteRelatedUrlGetArgs>> getRelatedUrls() {
         return this.relatedUrls == null ? Input.empty() : this.relatedUrls;
@@ -132,7 +132,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortDescription")
-        private final @Nullable Input<String> shortDescription;
+      private final @Nullable Input<String> shortDescription;
 
     public Input<String> getShortDescription() {
         return this.shortDescription == null ? Input.empty() : this.shortDescription;
@@ -143,7 +143,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-        private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;

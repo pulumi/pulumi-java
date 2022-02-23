@@ -14,7 +14,7 @@ public final class SpotFleetTargetGroupArgs extends io.pulumi.resources.Resource
     public static final SpotFleetTargetGroupArgs Empty = new SpotFleetTargetGroupArgs();
 
     @InputImport(name="arn", required=true)
-        private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;

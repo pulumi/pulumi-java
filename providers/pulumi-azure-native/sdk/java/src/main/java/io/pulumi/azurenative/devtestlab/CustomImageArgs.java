@@ -26,7 +26,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="author")
-        private final @Nullable Input<String> author;
+      private final @Nullable Input<String> author;
 
     public Input<String> getAuthor() {
         return this.author == null ? Input.empty() : this.author;
@@ -37,7 +37,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customImagePlan")
-        private final @Nullable Input<CustomImagePropertiesFromPlanArgs> customImagePlan;
+      private final @Nullable Input<CustomImagePropertiesFromPlanArgs> customImagePlan;
 
     public Input<CustomImagePropertiesFromPlanArgs> getCustomImagePlan() {
         return this.customImagePlan == null ? Input.empty() : this.customImagePlan;
@@ -48,7 +48,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDiskStorageInfo")
-        private final @Nullable Input<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo;
+      private final @Nullable Input<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo;
 
     public Input<List<DataDiskStorageTypeInfoArgs>> getDataDiskStorageInfo() {
         return this.dataDiskStorageInfo == null ? Input.empty() : this.dataDiskStorageInfo;
@@ -59,7 +59,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -70,7 +70,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isPlanAuthorized")
-        private final @Nullable Input<Boolean> isPlanAuthorized;
+      private final @Nullable Input<Boolean> isPlanAuthorized;
 
     public Input<Boolean> getIsPlanAuthorized() {
         return this.isPlanAuthorized == null ? Input.empty() : this.isPlanAuthorized;
@@ -81,7 +81,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-        private final Input<String> labName;
+      private final Input<String> labName;
 
     public Input<String> getLabName() {
         return this.labName;
@@ -92,7 +92,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -103,7 +103,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedImageId")
-        private final @Nullable Input<String> managedImageId;
+      private final @Nullable Input<String> managedImageId;
 
     public Input<String> getManagedImageId() {
         return this.managedImageId == null ? Input.empty() : this.managedImageId;
@@ -114,7 +114,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedSnapshotId")
-        private final @Nullable Input<String> managedSnapshotId;
+      private final @Nullable Input<String> managedSnapshotId;
 
     public Input<String> getManagedSnapshotId() {
         return this.managedSnapshotId == null ? Input.empty() : this.managedSnapshotId;
@@ -125,7 +125,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -136,7 +136,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -147,7 +147,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -158,7 +158,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vhd")
-        private final @Nullable Input<CustomImagePropertiesCustomArgs> vhd;
+      private final @Nullable Input<CustomImagePropertiesCustomArgs> vhd;
 
     public Input<CustomImagePropertiesCustomArgs> getVhd() {
         return this.vhd == null ? Input.empty() : this.vhd;
@@ -169,7 +169,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vm")
-        private final @Nullable Input<CustomImagePropertiesFromVmArgs> vm;
+      private final @Nullable Input<CustomImagePropertiesFromVmArgs> vm;
 
     public Input<CustomImagePropertiesFromVmArgs> getVm() {
         return this.vm == null ? Input.empty() : this.vm;

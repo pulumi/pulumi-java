@@ -22,7 +22,7 @@ public final class RegionHealthCheckHttpsHealthCheckGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="host")
-        private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -35,7 +35,7 @@ public final class RegionHealthCheckHttpsHealthCheckGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -47,7 +47,7 @@ public final class RegionHealthCheckHttpsHealthCheckGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="portName")
-        private final @Nullable Input<String> portName;
+      private final @Nullable Input<String> portName;
 
     public Input<String> getPortName() {
         return this.portName == null ? Input.empty() : this.portName;
@@ -68,7 +68,7 @@ public final class RegionHealthCheckHttpsHealthCheckGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="portSpecification")
-        private final @Nullable Input<String> portSpecification;
+      private final @Nullable Input<String> portSpecification;
 
     public Input<String> getPortSpecification() {
         return this.portSpecification == null ? Input.empty() : this.portSpecification;
@@ -82,7 +82,7 @@ public final class RegionHealthCheckHttpsHealthCheckGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="proxyHeader")
-        private final @Nullable Input<String> proxyHeader;
+      private final @Nullable Input<String> proxyHeader;
 
     public Input<String> getProxyHeader() {
         return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
@@ -94,7 +94,7 @@ public final class RegionHealthCheckHttpsHealthCheckGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="requestPath")
-        private final @Nullable Input<String> requestPath;
+      private final @Nullable Input<String> requestPath;
 
     public Input<String> getRequestPath() {
         return this.requestPath == null ? Input.empty() : this.requestPath;
@@ -107,7 +107,7 @@ public final class RegionHealthCheckHttpsHealthCheckGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="response")
-        private final @Nullable Input<String> response;
+      private final @Nullable Input<String> response;
 
     public Input<String> getResponse() {
         return this.response == null ? Input.empty() : this.response;

@@ -16,7 +16,7 @@ public final class DataSourceConfluenceBlogConfigurationArgs extends io.pulumi.r
     public static final DataSourceConfluenceBlogConfigurationArgs Empty = new DataSourceConfluenceBlogConfigurationArgs();
 
     @InputImport(name="blogFieldMappings")
-        private final @Nullable Input<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings;
+      private final @Nullable Input<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings;
 
     public Input<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> getBlogFieldMappings() {
         return this.blogFieldMappings == null ? Input.empty() : this.blogFieldMappings;

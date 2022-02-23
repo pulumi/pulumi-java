@@ -24,7 +24,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerPort", required=true)
-        private final Input<Integer> containerPort;
+      private final Input<Integer> containerPort;
 
     public Input<Integer> getContainerPort() {
         return this.containerPort;
@@ -35,7 +35,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostIP")
-        private final @Nullable Input<String> hostIP;
+      private final @Nullable Input<String> hostIP;
 
     public Input<String> getHostIP() {
         return this.hostIP == null ? Input.empty() : this.hostIP;
@@ -46,7 +46,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPort")
-        private final @Nullable Input<Integer> hostPort;
+      private final @Nullable Input<Integer> hostPort;
 
     public Input<Integer> getHostPort() {
         return this.hostPort == null ? Input.empty() : this.hostPort;
@@ -57,7 +57,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -73,7 +73,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;

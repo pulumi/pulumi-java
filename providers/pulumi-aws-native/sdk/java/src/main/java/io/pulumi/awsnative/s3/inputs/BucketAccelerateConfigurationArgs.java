@@ -18,7 +18,7 @@ public final class BucketAccelerateConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="accelerationStatus", required=true)
-        private final Input<BucketAccelerateConfigurationAccelerationStatus> accelerationStatus;
+      private final Input<BucketAccelerateConfigurationAccelerationStatus> accelerationStatus;
 
     public Input<BucketAccelerateConfigurationAccelerationStatus> getAccelerationStatus() {
         return this.accelerationStatus;

@@ -19,7 +19,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clientId", required=true)
-        private final Input<String> clientId;
+      private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -30,7 +30,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clientSecret")
-        private final @Nullable Input<String> clientSecret;
+      private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -41,7 +41,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -52,7 +52,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -63,7 +63,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="metadataEndpoint", required=true)
-        private final Input<String> metadataEndpoint;
+      private final Input<String> metadataEndpoint;
 
     public Input<String> getMetadataEndpoint() {
         return this.metadataEndpoint;
@@ -74,7 +74,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="opid")
-        private final @Nullable Input<String> opid;
+      private final @Nullable Input<String> opid;
 
     public Input<String> getOpid() {
         return this.opid == null ? Input.empty() : this.opid;
@@ -85,7 +85,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -96,7 +96,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;

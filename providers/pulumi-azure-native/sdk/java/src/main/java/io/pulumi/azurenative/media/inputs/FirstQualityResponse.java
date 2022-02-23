@@ -21,7 +21,7 @@ public final class FirstQualityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bitrate", required=true)
-        private final Integer bitrate;
+      private final Integer bitrate;
 
     public Integer getBitrate() {
         return this.bitrate;

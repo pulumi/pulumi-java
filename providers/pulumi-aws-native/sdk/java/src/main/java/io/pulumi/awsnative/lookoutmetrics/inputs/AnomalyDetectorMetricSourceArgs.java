@@ -19,35 +19,35 @@ public final class AnomalyDetectorMetricSourceArgs extends io.pulumi.resources.R
     public static final AnomalyDetectorMetricSourceArgs Empty = new AnomalyDetectorMetricSourceArgs();
 
     @InputImport(name="appFlowConfig")
-        private final @Nullable Input<AnomalyDetectorAppFlowConfigArgs> appFlowConfig;
+      private final @Nullable Input<AnomalyDetectorAppFlowConfigArgs> appFlowConfig;
 
     public Input<AnomalyDetectorAppFlowConfigArgs> getAppFlowConfig() {
         return this.appFlowConfig == null ? Input.empty() : this.appFlowConfig;
     }
 
     @InputImport(name="cloudwatchConfig")
-        private final @Nullable Input<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig;
+      private final @Nullable Input<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig;
 
     public Input<AnomalyDetectorCloudwatchConfigArgs> getCloudwatchConfig() {
         return this.cloudwatchConfig == null ? Input.empty() : this.cloudwatchConfig;
     }
 
     @InputImport(name="rDSSourceConfig")
-        private final @Nullable Input<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig;
+      private final @Nullable Input<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig;
 
     public Input<AnomalyDetectorRDSSourceConfigArgs> getRDSSourceConfig() {
         return this.rDSSourceConfig == null ? Input.empty() : this.rDSSourceConfig;
     }
 
     @InputImport(name="redshiftSourceConfig")
-        private final @Nullable Input<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig;
+      private final @Nullable Input<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig;
 
     public Input<AnomalyDetectorRedshiftSourceConfigArgs> getRedshiftSourceConfig() {
         return this.redshiftSourceConfig == null ? Input.empty() : this.redshiftSourceConfig;
     }
 
     @InputImport(name="s3SourceConfig")
-        private final @Nullable Input<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig;
+      private final @Nullable Input<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig;
 
     public Input<AnomalyDetectorS3SourceConfigArgs> getS3SourceConfig() {
         return this.s3SourceConfig == null ? Input.empty() : this.s3SourceConfig;

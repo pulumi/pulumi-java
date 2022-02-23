@@ -23,7 +23,7 @@ public final class ApplicationLogPatternSet extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="logPatterns", required=true)
-        private final List<ApplicationLogPattern> logPatterns;
+      private final List<ApplicationLogPattern> logPatterns;
 
     public List<ApplicationLogPattern> getLogPatterns() {
         return this.logPatterns;
@@ -34,7 +34,7 @@ public final class ApplicationLogPatternSet extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="patternSetName", required=true)
-        private final String patternSetName;
+      private final String patternSetName;
 
     public String getPatternSetName() {
         return this.patternSetName;

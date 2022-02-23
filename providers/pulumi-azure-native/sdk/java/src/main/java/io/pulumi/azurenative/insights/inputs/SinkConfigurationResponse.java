@@ -13,7 +13,7 @@ public final class SinkConfigurationResponse extends io.pulumi.resources.InvokeA
     public static final SinkConfigurationResponse Empty = new SinkConfigurationResponse();
 
     @InputImport(name="kind", required=true)
-        private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;

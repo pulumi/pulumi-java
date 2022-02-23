@@ -17,7 +17,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="azureResourceName", required=true)
-        private final String azureResourceName;
+      private final String azureResourceName;
 
     public String getAzureResourceName() {
         return this.azureResourceName;
@@ -28,7 +28,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="privateEndpointName", required=true)
-        private final String privateEndpointName;
+      private final String privateEndpointName;
 
     public String getPrivateEndpointName() {
         return this.privateEndpointName;
@@ -39,7 +39,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

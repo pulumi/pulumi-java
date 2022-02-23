@@ -24,7 +24,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitrate")
-        private final @Nullable Input<Integer> bitrate;
+      private final @Nullable Input<Integer> bitrate;
 
     public Input<Integer> getBitrate() {
         return this.bitrate == null ? Input.empty() : this.bitrate;
@@ -35,7 +35,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channels")
-        private final @Nullable Input<Integer> channels;
+      private final @Nullable Input<Integer> channels;
 
     public Input<Integer> getChannels() {
         return this.channels == null ? Input.empty() : this.channels;
@@ -46,7 +46,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-        private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -58,7 +58,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -69,7 +69,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="samplingRate")
-        private final @Nullable Input<Integer> samplingRate;
+      private final @Nullable Input<Integer> samplingRate;
 
     public Input<Integer> getSamplingRate() {
         return this.samplingRate == null ? Input.empty() : this.samplingRate;

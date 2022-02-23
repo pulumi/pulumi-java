@@ -26,7 +26,7 @@ public final class PodDisruptionBudgetSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maxUnavailable")
-        private final @Nullable Input<Either<Integer,String>> maxUnavailable;
+      private final @Nullable Input<Either<Integer,String>> maxUnavailable;
 
     public Input<Either<Integer,String>> getMaxUnavailable() {
         return this.maxUnavailable == null ? Input.empty() : this.maxUnavailable;
@@ -37,7 +37,7 @@ public final class PodDisruptionBudgetSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="minAvailable")
-        private final @Nullable Input<Either<Integer,String>> minAvailable;
+      private final @Nullable Input<Either<Integer,String>> minAvailable;
 
     public Input<Either<Integer,String>> getMinAvailable() {
         return this.minAvailable == null ? Input.empty() : this.minAvailable;
@@ -48,7 +48,7 @@ public final class PodDisruptionBudgetSpecArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="selector")
-        private final @Nullable Input<LabelSelectorArgs> selector;
+      private final @Nullable Input<LabelSelectorArgs> selector;
 
     public Input<LabelSelectorArgs> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;

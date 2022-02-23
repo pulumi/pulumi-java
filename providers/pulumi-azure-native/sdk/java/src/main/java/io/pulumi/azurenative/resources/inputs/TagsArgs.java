@@ -20,7 +20,7 @@ public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
     public static final TagsArgs Empty = new TagsArgs();
 
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

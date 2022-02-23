@@ -25,7 +25,7 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="arn")
-        private final @Nullable String arn;
+      private final @Nullable String arn;
 
     public Optional<String> getArn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
@@ -36,7 +36,7 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdTime")
-        private final @Nullable String createdTime;
+      private final @Nullable String createdTime;
 
     public Optional<String> getCreatedTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
@@ -47,35 +47,35 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @InputImport(name="entityTypes")
-        private final @Nullable List<DetectorEntityType> entityTypes;
+      private final @Nullable List<DetectorEntityType> entityTypes;
 
     public List<DetectorEntityType> getEntityTypes() {
         return this.entityTypes == null ? List.of() : this.entityTypes;
     }
 
     @InputImport(name="eventVariables")
-        private final @Nullable List<DetectorEventVariable> eventVariables;
+      private final @Nullable List<DetectorEventVariable> eventVariables;
 
     public List<DetectorEventVariable> getEventVariables() {
         return this.eventVariables == null ? List.of() : this.eventVariables;
     }
 
     @InputImport(name="inline")
-        private final @Nullable Boolean inline;
+      private final @Nullable Boolean inline;
 
     public Optional<Boolean> getInline() {
         return this.inline == null ? Optional.empty() : Optional.ofNullable(this.inline);
     }
 
     @InputImport(name="labels")
-        private final @Nullable List<DetectorLabel> labels;
+      private final @Nullable List<DetectorLabel> labels;
 
     public List<DetectorLabel> getLabels() {
         return this.labels == null ? List.of() : this.labels;
@@ -86,7 +86,7 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastUpdatedTime")
-        private final @Nullable String lastUpdatedTime;
+      private final @Nullable String lastUpdatedTime;
 
     public Optional<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
@@ -97,7 +97,7 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -108,7 +108,7 @@ public final class DetectorEventType extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable List<DetectorTag> tags;
+      private final @Nullable List<DetectorTag> tags;
 
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

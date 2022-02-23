@@ -24,7 +24,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyList")
-        private final @Nullable Input<List<String>> policyList;
+      private final @Nullable Input<List<String>> policyList;
 
     public Input<List<String>> getPolicyList() {
         return this.policyList == null ? Input.empty() : this.policyList;

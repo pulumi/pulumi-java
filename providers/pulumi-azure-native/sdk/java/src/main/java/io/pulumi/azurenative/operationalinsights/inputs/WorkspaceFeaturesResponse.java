@@ -24,7 +24,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="clusterResourceId")
-        private final @Nullable String clusterResourceId;
+      private final @Nullable String clusterResourceId;
 
     public Optional<String> getClusterResourceId() {
         return this.clusterResourceId == null ? Optional.empty() : Optional.ofNullable(this.clusterResourceId);
@@ -35,7 +35,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="disableLocalAuth")
-        private final @Nullable Boolean disableLocalAuth;
+      private final @Nullable Boolean disableLocalAuth;
 
     public Optional<Boolean> getDisableLocalAuth() {
         return this.disableLocalAuth == null ? Optional.empty() : Optional.ofNullable(this.disableLocalAuth);
@@ -46,7 +46,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="enableDataExport")
-        private final @Nullable Boolean enableDataExport;
+      private final @Nullable Boolean enableDataExport;
 
     public Optional<Boolean> getEnableDataExport() {
         return this.enableDataExport == null ? Optional.empty() : Optional.ofNullable(this.enableDataExport);
@@ -57,7 +57,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="enableLogAccessUsingOnlyResourcePermissions")
-        private final @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions;
+      private final @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions;
 
     public Optional<Boolean> getEnableLogAccessUsingOnlyResourcePermissions() {
         return this.enableLogAccessUsingOnlyResourcePermissions == null ? Optional.empty() : Optional.ofNullable(this.enableLogAccessUsingOnlyResourcePermissions);
@@ -68,7 +68,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="immediatePurgeDataOn30Days")
-        private final @Nullable Boolean immediatePurgeDataOn30Days;
+      private final @Nullable Boolean immediatePurgeDataOn30Days;
 
     public Optional<Boolean> getImmediatePurgeDataOn30Days() {
         return this.immediatePurgeDataOn30Days == null ? Optional.empty() : Optional.ofNullable(this.immediatePurgeDataOn30Days);

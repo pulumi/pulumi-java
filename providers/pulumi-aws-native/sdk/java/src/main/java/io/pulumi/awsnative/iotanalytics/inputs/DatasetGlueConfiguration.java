@@ -13,14 +13,14 @@ public final class DatasetGlueConfiguration extends io.pulumi.resources.InvokeAr
     public static final DatasetGlueConfiguration Empty = new DatasetGlueConfiguration();
 
     @InputImport(name="databaseName", required=true)
-        private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="tableName", required=true)
-        private final String tableName;
+      private final String tableName;
 
     public String getTableName() {
         return this.tableName;

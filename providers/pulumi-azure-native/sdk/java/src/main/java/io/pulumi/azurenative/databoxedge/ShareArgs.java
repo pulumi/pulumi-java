@@ -29,7 +29,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessProtocol", required=true)
-        private final Input<Either<String,ShareAccessProtocol>> accessProtocol;
+      private final Input<Either<String,ShareAccessProtocol>> accessProtocol;
 
     public Input<Either<String,ShareAccessProtocol>> getAccessProtocol() {
         return this.accessProtocol;
@@ -40,7 +40,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureContainerInfo")
-        private final @Nullable Input<AzureContainerInfoArgs> azureContainerInfo;
+      private final @Nullable Input<AzureContainerInfoArgs> azureContainerInfo;
 
     public Input<AzureContainerInfoArgs> getAzureContainerInfo() {
         return this.azureContainerInfo == null ? Input.empty() : this.azureContainerInfo;
@@ -51,7 +51,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientAccessRights")
-        private final @Nullable Input<List<ClientAccessRightArgs>> clientAccessRights;
+      private final @Nullable Input<List<ClientAccessRightArgs>> clientAccessRights;
 
     public Input<List<ClientAccessRightArgs>> getClientAccessRights() {
         return this.clientAccessRights == null ? Input.empty() : this.clientAccessRights;
@@ -62,7 +62,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataPolicy")
-        private final @Nullable Input<Either<String,DataPolicy>> dataPolicy;
+      private final @Nullable Input<Either<String,DataPolicy>> dataPolicy;
 
     public Input<Either<String,DataPolicy>> getDataPolicy() {
         return this.dataPolicy == null ? Input.empty() : this.dataPolicy;
@@ -73,7 +73,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -84,7 +84,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-        private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -95,7 +95,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoringStatus", required=true)
-        private final Input<Either<String,MonitoringStatus>> monitoringStatus;
+      private final Input<Either<String,MonitoringStatus>> monitoringStatus;
 
     public Input<Either<String,MonitoringStatus>> getMonitoringStatus() {
         return this.monitoringStatus;
@@ -106,7 +106,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -117,7 +117,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="refreshDetails")
-        private final @Nullable Input<RefreshDetailsArgs> refreshDetails;
+      private final @Nullable Input<RefreshDetailsArgs> refreshDetails;
 
     public Input<RefreshDetailsArgs> getRefreshDetails() {
         return this.refreshDetails == null ? Input.empty() : this.refreshDetails;
@@ -128,7 +128,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -139,7 +139,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareStatus", required=true)
-        private final Input<Either<String,ShareStatus>> shareStatus;
+      private final Input<Either<String,ShareStatus>> shareStatus;
 
     public Input<Either<String,ShareStatus>> getShareStatus() {
         return this.shareStatus;
@@ -150,7 +150,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAccessRights")
-        private final @Nullable Input<List<UserAccessRightArgs>> userAccessRights;
+      private final @Nullable Input<List<UserAccessRightArgs>> userAccessRights;
 
     public Input<List<UserAccessRightArgs>> getUserAccessRights() {
         return this.userAccessRights == null ? Input.empty() : this.userAccessRights;

@@ -20,42 +20,42 @@ public final class DataSourceDatabaseConfigurationArgs extends io.pulumi.resourc
     public static final DataSourceDatabaseConfigurationArgs Empty = new DataSourceDatabaseConfigurationArgs();
 
     @InputImport(name="aclConfiguration")
-        private final @Nullable Input<DataSourceAclConfigurationArgs> aclConfiguration;
+      private final @Nullable Input<DataSourceAclConfigurationArgs> aclConfiguration;
 
     public Input<DataSourceAclConfigurationArgs> getAclConfiguration() {
         return this.aclConfiguration == null ? Input.empty() : this.aclConfiguration;
     }
 
     @InputImport(name="columnConfiguration", required=true)
-        private final Input<DataSourceColumnConfigurationArgs> columnConfiguration;
+      private final Input<DataSourceColumnConfigurationArgs> columnConfiguration;
 
     public Input<DataSourceColumnConfigurationArgs> getColumnConfiguration() {
         return this.columnConfiguration;
     }
 
     @InputImport(name="connectionConfiguration", required=true)
-        private final Input<DataSourceConnectionConfigurationArgs> connectionConfiguration;
+      private final Input<DataSourceConnectionConfigurationArgs> connectionConfiguration;
 
     public Input<DataSourceConnectionConfigurationArgs> getConnectionConfiguration() {
         return this.connectionConfiguration;
     }
 
     @InputImport(name="databaseEngineType", required=true)
-        private final Input<DataSourceDatabaseEngineType> databaseEngineType;
+      private final Input<DataSourceDatabaseEngineType> databaseEngineType;
 
     public Input<DataSourceDatabaseEngineType> getDatabaseEngineType() {
         return this.databaseEngineType;
     }
 
     @InputImport(name="sqlConfiguration")
-        private final @Nullable Input<DataSourceSqlConfigurationArgs> sqlConfiguration;
+      private final @Nullable Input<DataSourceSqlConfigurationArgs> sqlConfiguration;
 
     public Input<DataSourceSqlConfigurationArgs> getSqlConfiguration() {
         return this.sqlConfiguration == null ? Input.empty() : this.sqlConfiguration;
     }
 
     @InputImport(name="vpcConfiguration")
-        private final @Nullable Input<DataSourceVpcConfigurationArgs> vpcConfiguration;
+      private final @Nullable Input<DataSourceVpcConfigurationArgs> vpcConfiguration;
 
     public Input<DataSourceVpcConfigurationArgs> getVpcConfiguration() {
         return this.vpcConfiguration == null ? Input.empty() : this.vpcConfiguration;

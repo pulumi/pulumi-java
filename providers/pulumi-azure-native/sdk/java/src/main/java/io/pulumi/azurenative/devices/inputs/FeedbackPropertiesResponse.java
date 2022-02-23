@@ -24,7 +24,7 @@ public final class FeedbackPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="lockDurationAsIso8601")
-        private final @Nullable String lockDurationAsIso8601;
+      private final @Nullable String lockDurationAsIso8601;
 
     public Optional<String> getLockDurationAsIso8601() {
         return this.lockDurationAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.lockDurationAsIso8601);
@@ -35,7 +35,7 @@ public final class FeedbackPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="maxDeliveryCount")
-        private final @Nullable Integer maxDeliveryCount;
+      private final @Nullable Integer maxDeliveryCount;
 
     public Optional<Integer> getMaxDeliveryCount() {
         return this.maxDeliveryCount == null ? Optional.empty() : Optional.ofNullable(this.maxDeliveryCount);
@@ -46,7 +46,7 @@ public final class FeedbackPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ttlAsIso8601")
-        private final @Nullable String ttlAsIso8601;
+      private final @Nullable String ttlAsIso8601;
 
     public Optional<String> getTtlAsIso8601() {
         return this.ttlAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.ttlAsIso8601);

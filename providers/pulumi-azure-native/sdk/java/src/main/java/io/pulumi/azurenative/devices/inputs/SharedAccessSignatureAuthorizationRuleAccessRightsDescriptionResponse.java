@@ -23,7 +23,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * 
      */
     @InputImport(name="keyName", required=true)
-        private final String keyName;
+      private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
@@ -34,7 +34,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * 
      */
     @InputImport(name="primaryKey")
-        private final @Nullable String primaryKey;
+      private final @Nullable String primaryKey;
 
     public Optional<String> getPrimaryKey() {
         return this.primaryKey == null ? Optional.empty() : Optional.ofNullable(this.primaryKey);
@@ -45,7 +45,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * 
      */
     @InputImport(name="rights", required=true)
-        private final String rights;
+      private final String rights;
 
     public String getRights() {
         return this.rights;
@@ -56,7 +56,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * 
      */
     @InputImport(name="secondaryKey")
-        private final @Nullable String secondaryKey;
+      private final @Nullable String secondaryKey;
 
     public Optional<String> getSecondaryKey() {
         return this.secondaryKey == null ? Optional.empty() : Optional.ofNullable(this.secondaryKey);

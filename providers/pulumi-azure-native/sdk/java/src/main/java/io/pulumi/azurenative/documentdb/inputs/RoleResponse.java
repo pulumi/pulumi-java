@@ -23,7 +23,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="db")
-        private final @Nullable String db;
+      private final @Nullable String db;
 
     public Optional<String> getDb() {
         return this.db == null ? Optional.empty() : Optional.ofNullable(this.db);
@@ -34,7 +34,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="role")
-        private final @Nullable String role;
+      private final @Nullable String role;
 
     public Optional<String> getRole() {
         return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);

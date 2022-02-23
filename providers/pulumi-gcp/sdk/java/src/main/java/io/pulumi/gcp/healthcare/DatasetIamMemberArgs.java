@@ -16,7 +16,7 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
     public static final DatasetIamMemberArgs Empty = new DatasetIamMemberArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<DatasetIamMemberConditionArgs> condition;
+      private final @Nullable Input<DatasetIamMemberConditionArgs> condition;
 
     public Input<DatasetIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -30,14 +30,14 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="datasetId", required=true)
-        private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="member", required=true)
-        private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -50,7 +50,7 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

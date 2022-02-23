@@ -20,7 +20,7 @@ public final class ReservationSpecificReservationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="count", required=true)
-        private final Input<Integer> count;
+      private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -32,7 +32,7 @@ public final class ReservationSpecificReservationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="inUseCount")
-        private final @Nullable Input<Integer> inUseCount;
+      private final @Nullable Input<Integer> inUseCount;
 
     public Input<Integer> getInUseCount() {
         return this.inUseCount == null ? Input.empty() : this.inUseCount;
@@ -44,7 +44,7 @@ public final class ReservationSpecificReservationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="instanceProperties", required=true)
-        private final Input<ReservationSpecificReservationInstancePropertiesArgs> instanceProperties;
+      private final Input<ReservationSpecificReservationInstancePropertiesArgs> instanceProperties;
 
     public Input<ReservationSpecificReservationInstancePropertiesArgs> getInstanceProperties() {
         return this.instanceProperties;

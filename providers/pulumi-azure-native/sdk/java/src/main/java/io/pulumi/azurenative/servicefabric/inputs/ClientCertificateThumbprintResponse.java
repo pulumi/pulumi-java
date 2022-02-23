@@ -22,7 +22,7 @@ public final class ClientCertificateThumbprintResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="certificateThumbprint", required=true)
-        private final String certificateThumbprint;
+      private final String certificateThumbprint;
 
     public String getCertificateThumbprint() {
         return this.certificateThumbprint;
@@ -33,7 +33,7 @@ public final class ClientCertificateThumbprintResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isAdmin", required=true)
-        private final Boolean isAdmin;
+      private final Boolean isAdmin;
 
     public Boolean getIsAdmin() {
         return this.isAdmin;

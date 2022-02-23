@@ -25,7 +25,7 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="attachedConnections")
-        private final @Nullable List<String> attachedConnections;
+      private final @Nullable List<String> attachedConnections;
 
     public List<String> getAttachedConnections() {
         return this.attachedConnections == null ? List.of() : this.attachedConnections;
@@ -36,7 +36,7 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -47,7 +47,7 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -58,7 +58,7 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -69,7 +69,7 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -80,7 +80,7 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="routes")
-        private final @Nullable List<VirtualHubRouteV2Response> routes;
+      private final @Nullable List<VirtualHubRouteV2Response> routes;
 
     public List<VirtualHubRouteV2Response> getRoutes() {
         return this.routes == null ? List.of() : this.routes;

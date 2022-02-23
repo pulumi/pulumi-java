@@ -22,7 +22,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="backupRetentionSettings")
-        private final @Nullable Input<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs> backupRetentionSettings;
+      private final @Nullable Input<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs> backupRetentionSettings;
 
     public Input<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs> getBackupRetentionSettings() {
         return this.backupRetentionSettings == null ? Input.empty() : this.backupRetentionSettings;
@@ -34,7 +34,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="binaryLogEnabled")
-        private final @Nullable Input<Boolean> binaryLogEnabled;
+      private final @Nullable Input<Boolean> binaryLogEnabled;
 
     public Input<Boolean> getBinaryLogEnabled() {
         return this.binaryLogEnabled == null ? Input.empty() : this.binaryLogEnabled;
@@ -45,7 +45,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -56,7 +56,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -67,7 +67,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="pointInTimeRecoveryEnabled")
-        private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
+      private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
 
     public Input<Boolean> getPointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled == null ? Input.empty() : this.pointInTimeRecoveryEnabled;
@@ -79,7 +79,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="startTime")
-        private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -90,7 +90,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="transactionLogRetentionDays")
-        private final @Nullable Input<Integer> transactionLogRetentionDays;
+      private final @Nullable Input<Integer> transactionLogRetentionDays;
 
     public Input<Integer> getTransactionLogRetentionDays() {
         return this.transactionLogRetentionDays == null ? Input.empty() : this.transactionLogRetentionDays;

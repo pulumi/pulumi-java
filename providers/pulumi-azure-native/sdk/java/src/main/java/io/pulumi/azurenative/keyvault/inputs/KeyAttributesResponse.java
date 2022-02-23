@@ -25,7 +25,7 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="created", required=true)
-        private final Double created;
+      private final Double created;
 
     public Double getCreated() {
         return this.created;
@@ -36,7 +36,7 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -47,7 +47,7 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="expires")
-        private final @Nullable Double expires;
+      private final @Nullable Double expires;
 
     public Optional<Double> getExpires() {
         return this.expires == null ? Optional.empty() : Optional.ofNullable(this.expires);
@@ -58,7 +58,7 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="notBefore")
-        private final @Nullable Double notBefore;
+      private final @Nullable Double notBefore;
 
     public Optional<Double> getNotBefore() {
         return this.notBefore == null ? Optional.empty() : Optional.ofNullable(this.notBefore);
@@ -69,7 +69,7 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="recoveryLevel", required=true)
-        private final String recoveryLevel;
+      private final String recoveryLevel;
 
     public String getRecoveryLevel() {
         return this.recoveryLevel;
@@ -80,7 +80,7 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="updated", required=true)
-        private final Double updated;
+      private final Double updated;
 
     public Double getUpdated() {
         return this.updated;

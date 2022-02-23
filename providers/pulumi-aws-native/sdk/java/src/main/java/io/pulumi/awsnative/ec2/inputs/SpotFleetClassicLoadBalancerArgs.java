@@ -14,7 +14,7 @@ public final class SpotFleetClassicLoadBalancerArgs extends io.pulumi.resources.
     public static final SpotFleetClassicLoadBalancerArgs Empty = new SpotFleetClassicLoadBalancerArgs();
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

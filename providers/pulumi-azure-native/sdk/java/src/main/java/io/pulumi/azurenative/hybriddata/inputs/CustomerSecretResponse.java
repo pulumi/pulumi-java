@@ -21,7 +21,7 @@ public final class CustomerSecretResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="algorithm", required=true)
-        private final String algorithm;
+      private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -32,7 +32,7 @@ public final class CustomerSecretResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keyIdentifier", required=true)
-        private final String keyIdentifier;
+      private final String keyIdentifier;
 
     public String getKeyIdentifier() {
         return this.keyIdentifier;
@@ -43,7 +43,7 @@ public final class CustomerSecretResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keyValue", required=true)
-        private final String keyValue;
+      private final String keyValue;
 
     public String getKeyValue() {
         return this.keyValue;

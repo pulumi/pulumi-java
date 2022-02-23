@@ -19,7 +19,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudWatchRoleArn")
-        private final @Nullable Input<String> cloudWatchRoleArn;
+      private final @Nullable Input<String> cloudWatchRoleArn;
 
     public Input<String> getCloudWatchRoleArn() {
         return this.cloudWatchRoleArn == null ? Input.empty() : this.cloudWatchRoleArn;

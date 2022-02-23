@@ -25,7 +25,7 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interfaceString")
-        private final @Nullable Input<String> interfaceString;
+      private final @Nullable Input<String> interfaceString;
 
     public Input<String> getInterfaceString() {
         return this.interfaceString == null ? Input.empty() : this.interfaceString;
@@ -36,7 +36,7 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<List<ModuleAssetParameterArgs>> parameters;
+      private final @Nullable Input<List<ModuleAssetParameterArgs>> parameters;
 
     public Input<List<ModuleAssetParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;

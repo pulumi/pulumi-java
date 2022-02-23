@@ -15,14 +15,14 @@ public final class BudgetsActionActionThresholdArgs extends io.pulumi.resources.
     public static final BudgetsActionActionThresholdArgs Empty = new BudgetsActionActionThresholdArgs();
 
     @InputImport(name="type", required=true)
-        private final Input<BudgetsActionActionThresholdType> type;
+      private final Input<BudgetsActionActionThresholdType> type;
 
     public Input<BudgetsActionActionThresholdType> getType() {
         return this.type;
     }
 
     @InputImport(name="value", required=true)
-        private final Input<Double> value;
+      private final Input<Double> value;
 
     public Input<Double> getValue() {
         return this.value;

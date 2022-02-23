@@ -15,14 +15,14 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArg
     public static final SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs Empty = new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs();
 
     @InputImport(name="target")
-        private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
     }
 
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

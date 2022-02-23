@@ -31,7 +31,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoPause")
-        private final @Nullable Input<AutoPausePropertiesArgs> autoPause;
+      private final @Nullable Input<AutoPausePropertiesArgs> autoPause;
 
     public Input<AutoPausePropertiesArgs> getAutoPause() {
         return this.autoPause == null ? Input.empty() : this.autoPause;
@@ -42,7 +42,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoScale")
-        private final @Nullable Input<AutoScalePropertiesArgs> autoScale;
+      private final @Nullable Input<AutoScalePropertiesArgs> autoScale;
 
     public Input<AutoScalePropertiesArgs> getAutoScale() {
         return this.autoScale == null ? Input.empty() : this.autoScale;
@@ -53,7 +53,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigDataPoolName")
-        private final @Nullable Input<String> bigDataPoolName;
+      private final @Nullable Input<String> bigDataPoolName;
 
     public Input<String> getBigDataPoolName() {
         return this.bigDataPoolName == null ? Input.empty() : this.bigDataPoolName;
@@ -64,7 +64,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheSize")
-        private final @Nullable Input<Integer> cacheSize;
+      private final @Nullable Input<Integer> cacheSize;
 
     public Input<Integer> getCacheSize() {
         return this.cacheSize == null ? Input.empty() : this.cacheSize;
@@ -75,7 +75,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationDate")
-        private final @Nullable Input<String> creationDate;
+      private final @Nullable Input<String> creationDate;
 
     public Input<String> getCreationDate() {
         return this.creationDate == null ? Input.empty() : this.creationDate;
@@ -86,7 +86,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customLibraries")
-        private final @Nullable Input<List<LibraryInfoArgs>> customLibraries;
+      private final @Nullable Input<List<LibraryInfoArgs>> customLibraries;
 
     public Input<List<LibraryInfoArgs>> getCustomLibraries() {
         return this.customLibraries == null ? Input.empty() : this.customLibraries;
@@ -97,7 +97,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultSparkLogFolder")
-        private final @Nullable Input<String> defaultSparkLogFolder;
+      private final @Nullable Input<String> defaultSparkLogFolder;
 
     public Input<String> getDefaultSparkLogFolder() {
         return this.defaultSparkLogFolder == null ? Input.empty() : this.defaultSparkLogFolder;
@@ -108,7 +108,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dynamicExecutorAllocation")
-        private final @Nullable Input<DynamicExecutorAllocationArgs> dynamicExecutorAllocation;
+      private final @Nullable Input<DynamicExecutorAllocationArgs> dynamicExecutorAllocation;
 
     public Input<DynamicExecutorAllocationArgs> getDynamicExecutorAllocation() {
         return this.dynamicExecutorAllocation == null ? Input.empty() : this.dynamicExecutorAllocation;
@@ -119,7 +119,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="force")
-        private final @Nullable Input<Boolean> force;
+      private final @Nullable Input<Boolean> force;
 
     public Input<Boolean> getForce() {
         return this.force == null ? Input.empty() : this.force;
@@ -130,7 +130,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isComputeIsolationEnabled")
-        private final @Nullable Input<Boolean> isComputeIsolationEnabled;
+      private final @Nullable Input<Boolean> isComputeIsolationEnabled;
 
     public Input<Boolean> getIsComputeIsolationEnabled() {
         return this.isComputeIsolationEnabled == null ? Input.empty() : this.isComputeIsolationEnabled;
@@ -141,7 +141,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="libraryRequirements")
-        private final @Nullable Input<LibraryRequirementsArgs> libraryRequirements;
+      private final @Nullable Input<LibraryRequirementsArgs> libraryRequirements;
 
     public Input<LibraryRequirementsArgs> getLibraryRequirements() {
         return this.libraryRequirements == null ? Input.empty() : this.libraryRequirements;
@@ -152,7 +152,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -163,7 +163,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeCount")
-        private final @Nullable Input<Integer> nodeCount;
+      private final @Nullable Input<Integer> nodeCount;
 
     public Input<Integer> getNodeCount() {
         return this.nodeCount == null ? Input.empty() : this.nodeCount;
@@ -174,7 +174,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeSize")
-        private final @Nullable Input<Either<String,NodeSize>> nodeSize;
+      private final @Nullable Input<Either<String,NodeSize>> nodeSize;
 
     public Input<Either<String,NodeSize>> getNodeSize() {
         return this.nodeSize == null ? Input.empty() : this.nodeSize;
@@ -185,7 +185,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeSizeFamily")
-        private final @Nullable Input<Either<String,NodeSizeFamily>> nodeSizeFamily;
+      private final @Nullable Input<Either<String,NodeSizeFamily>> nodeSizeFamily;
 
     public Input<Either<String,NodeSizeFamily>> getNodeSizeFamily() {
         return this.nodeSizeFamily == null ? Input.empty() : this.nodeSizeFamily;
@@ -196,7 +196,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable Input<String> provisioningState;
+      private final @Nullable Input<String> provisioningState;
 
     public Input<String> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -207,7 +207,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -218,7 +218,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionLevelPackagesEnabled")
-        private final @Nullable Input<Boolean> sessionLevelPackagesEnabled;
+      private final @Nullable Input<Boolean> sessionLevelPackagesEnabled;
 
     public Input<Boolean> getSessionLevelPackagesEnabled() {
         return this.sessionLevelPackagesEnabled == null ? Input.empty() : this.sessionLevelPackagesEnabled;
@@ -229,7 +229,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkConfigProperties")
-        private final @Nullable Input<LibraryRequirementsArgs> sparkConfigProperties;
+      private final @Nullable Input<LibraryRequirementsArgs> sparkConfigProperties;
 
     public Input<LibraryRequirementsArgs> getSparkConfigProperties() {
         return this.sparkConfigProperties == null ? Input.empty() : this.sparkConfigProperties;
@@ -240,7 +240,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkEventsFolder")
-        private final @Nullable Input<String> sparkEventsFolder;
+      private final @Nullable Input<String> sparkEventsFolder;
 
     public Input<String> getSparkEventsFolder() {
         return this.sparkEventsFolder == null ? Input.empty() : this.sparkEventsFolder;
@@ -251,7 +251,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkVersion")
-        private final @Nullable Input<String> sparkVersion;
+      private final @Nullable Input<String> sparkVersion;
 
     public Input<String> getSparkVersion() {
         return this.sparkVersion == null ? Input.empty() : this.sparkVersion;
@@ -262,7 +262,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -273,7 +273,7 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

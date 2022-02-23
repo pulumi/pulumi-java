@@ -21,7 +21,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="default")
-        private final @Nullable Input<String> $default;
+      private final @Nullable Input<String> $default;
 
     public Input<String> get$default() {
         return this.$default == null ? Input.empty() : this.$default;
@@ -32,7 +32,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleEntries", required=true)
-        private final Input<List<ScheduleEntryArgs>> scheduleEntries;
+      private final Input<List<ScheduleEntryArgs>> scheduleEntries;
 
     public Input<List<ScheduleEntryArgs>> getScheduleEntries() {
         return this.scheduleEntries;

@@ -16,7 +16,7 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
     public static final InstanceIamMemberArgs Empty = new InstanceIamMemberArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<InstanceIamMemberConditionArgs> condition;
+      private final @Nullable Input<InstanceIamMemberConditionArgs> condition;
 
     public Input<InstanceIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,7 +27,7 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceName", required=true)
-        private final Input<String> instanceName;
+      private final Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName;
@@ -38,14 +38,14 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="member", required=true)
-        private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -57,7 +57,7 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -70,7 +70,7 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

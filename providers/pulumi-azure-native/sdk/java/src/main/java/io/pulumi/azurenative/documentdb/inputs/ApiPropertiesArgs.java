@@ -21,7 +21,7 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverVersion")
-        private final @Nullable Input<Either<String,ServerVersion>> serverVersion;
+      private final @Nullable Input<Either<String,ServerVersion>> serverVersion;
 
     public Input<Either<String,ServerVersion>> getServerVersion() {
         return this.serverVersion == null ? Input.empty() : this.serverVersion;

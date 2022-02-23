@@ -20,7 +20,7 @@ public final class AwsClusterControlPlaneRootVolumeGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="iops")
-        private final @Nullable Input<Integer> iops;
+      private final @Nullable Input<Integer> iops;
 
     public Input<Integer> getIops() {
         return this.iops == null ? Input.empty() : this.iops;
@@ -31,7 +31,7 @@ public final class AwsClusterControlPlaneRootVolumeGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="kmsKeyArn")
-        private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -42,7 +42,7 @@ public final class AwsClusterControlPlaneRootVolumeGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="sizeGib")
-        private final @Nullable Input<Integer> sizeGib;
+      private final @Nullable Input<Integer> sizeGib;
 
     public Input<Integer> getSizeGib() {
         return this.sizeGib == null ? Input.empty() : this.sizeGib;
@@ -53,7 +53,7 @@ public final class AwsClusterControlPlaneRootVolumeGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="volumeType")
-        private final @Nullable Input<String> volumeType;
+      private final @Nullable Input<String> volumeType;
 
     public Input<String> getVolumeType() {
         return this.volumeType == null ? Input.empty() : this.volumeType;

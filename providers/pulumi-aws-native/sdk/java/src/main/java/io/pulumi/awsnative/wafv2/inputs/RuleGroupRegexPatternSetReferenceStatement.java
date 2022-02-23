@@ -16,21 +16,21 @@ public final class RuleGroupRegexPatternSetReferenceStatement extends io.pulumi.
     public static final RuleGroupRegexPatternSetReferenceStatement Empty = new RuleGroupRegexPatternSetReferenceStatement();
 
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;
     }
 
     @InputImport(name="fieldToMatch", required=true)
-        private final RuleGroupFieldToMatch fieldToMatch;
+      private final RuleGroupFieldToMatch fieldToMatch;
 
     public RuleGroupFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="textTransformations", required=true)
-        private final List<RuleGroupTextTransformation> textTransformations;
+      private final List<RuleGroupTextTransformation> textTransformations;
 
     public List<RuleGroupTextTransformation> getTextTransformations() {
         return this.textTransformations;

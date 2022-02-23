@@ -15,7 +15,7 @@ public final class ListenerCertificate extends io.pulumi.resources.InvokeArgs {
     public static final ListenerCertificate Empty = new ListenerCertificate();
 
     @InputImport(name="certificateArn")
-        private final @Nullable String certificateArn;
+      private final @Nullable String certificateArn;
 
     public Optional<String> getCertificateArn() {
         return this.certificateArn == null ? Optional.empty() : Optional.ofNullable(this.certificateArn);

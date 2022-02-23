@@ -24,7 +24,7 @@ public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<Either<String,SystemAssignedServiceIdentityType>> type;
+      private final Input<Either<String,SystemAssignedServiceIdentityType>> type;
 
     public Input<Either<String,SystemAssignedServiceIdentityType>> getType() {
         return this.type;

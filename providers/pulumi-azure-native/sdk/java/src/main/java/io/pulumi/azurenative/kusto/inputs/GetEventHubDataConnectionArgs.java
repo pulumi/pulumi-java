@@ -17,7 +17,7 @@ public final class GetEventHubDataConnectionArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="clusterName", required=true)
-        private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetEventHubDataConnectionArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dataConnectionName", required=true)
-        private final String dataConnectionName;
+      private final String dataConnectionName;
 
     public String getDataConnectionName() {
         return this.dataConnectionName;
@@ -39,7 +39,7 @@ public final class GetEventHubDataConnectionArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -50,7 +50,7 @@ public final class GetEventHubDataConnectionArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

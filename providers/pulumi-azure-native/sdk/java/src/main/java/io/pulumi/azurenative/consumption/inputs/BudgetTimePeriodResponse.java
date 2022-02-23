@@ -23,7 +23,7 @@ public final class BudgetTimePeriodResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="endDate")
-        private final @Nullable String endDate;
+      private final @Nullable String endDate;
 
     public Optional<String> getEndDate() {
         return this.endDate == null ? Optional.empty() : Optional.ofNullable(this.endDate);
@@ -34,7 +34,7 @@ public final class BudgetTimePeriodResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="startDate", required=true)
-        private final String startDate;
+      private final String startDate;
 
     public String getStartDate() {
         return this.startDate;

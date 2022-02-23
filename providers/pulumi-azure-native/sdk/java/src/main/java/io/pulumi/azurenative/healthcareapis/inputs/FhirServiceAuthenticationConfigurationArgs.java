@@ -24,7 +24,7 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="audience")
-        private final @Nullable Input<String> audience;
+      private final @Nullable Input<String> audience;
 
     public Input<String> getAudience() {
         return this.audience == null ? Input.empty() : this.audience;
@@ -35,7 +35,7 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="authority")
-        private final @Nullable Input<String> authority;
+      private final @Nullable Input<String> authority;
 
     public Input<String> getAuthority() {
         return this.authority == null ? Input.empty() : this.authority;
@@ -46,7 +46,7 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="smartProxyEnabled")
-        private final @Nullable Input<Boolean> smartProxyEnabled;
+      private final @Nullable Input<Boolean> smartProxyEnabled;
 
     public Input<Boolean> getSmartProxyEnabled() {
         return this.smartProxyEnabled == null ? Input.empty() : this.smartProxyEnabled;

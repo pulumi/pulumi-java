@@ -27,7 +27,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action")
-        private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -38,7 +38,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="common")
-        private final @Nullable Input<Boolean> common;
+      private final @Nullable Input<Boolean> common;
 
     public Input<Boolean> getCommon() {
         return this.common == null ? Input.empty() : this.common;
@@ -49,7 +49,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configurationStatus")
-        private final @Nullable Input<String> configurationStatus;
+      private final @Nullable Input<String> configurationStatus;
 
     public Input<String> getConfigurationStatus() {
         return this.configurationStatus == null ? Input.empty() : this.configurationStatus;
@@ -60,7 +60,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fileType")
-        private final @Nullable Input<String> fileType;
+      private final @Nullable Input<String> fileType;
 
     public Input<String> getFileType() {
         return this.fileType == null ? Input.empty() : this.fileType;
@@ -71,7 +71,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -82,7 +82,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publisherInfo")
-        private final @Nullable Input<PublisherInfoArgs> publisherInfo;
+      private final @Nullable Input<PublisherInfoArgs> publisherInfo;
 
     public Input<PublisherInfoArgs> getPublisherInfo() {
         return this.publisherInfo == null ? Input.empty() : this.publisherInfo;
@@ -93,21 +93,21 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
     }
 
     @InputImport(name="userSids")
-        private final @Nullable Input<List<String>> userSids;
+      private final @Nullable Input<List<String>> userSids;
 
     public Input<List<String>> getUserSids() {
         return this.userSids == null ? Input.empty() : this.userSids;
     }
 
     @InputImport(name="usernames")
-        private final @Nullable Input<List<UserRecommendationArgs>> usernames;
+      private final @Nullable Input<List<UserRecommendationArgs>> usernames;
 
     public Input<List<UserRecommendationArgs>> getUsernames() {
         return this.usernames == null ? Input.empty() : this.usernames;

@@ -24,7 +24,7 @@ public final class SlowRequestsBasedTriggerResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Integer count;
+      private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
@@ -35,7 +35,7 @@ public final class SlowRequestsBasedTriggerResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="path")
-        private final @Nullable String path;
+      private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -46,7 +46,7 @@ public final class SlowRequestsBasedTriggerResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="timeInterval")
-        private final @Nullable String timeInterval;
+      private final @Nullable String timeInterval;
 
     public Optional<String> getTimeInterval() {
         return this.timeInterval == null ? Optional.empty() : Optional.ofNullable(this.timeInterval);
@@ -57,7 +57,7 @@ public final class SlowRequestsBasedTriggerResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="timeTaken")
-        private final @Nullable String timeTaken;
+      private final @Nullable String timeTaken;
 
     public Optional<String> getTimeTaken() {
         return this.timeTaken == null ? Optional.empty() : Optional.ofNullable(this.timeTaken);

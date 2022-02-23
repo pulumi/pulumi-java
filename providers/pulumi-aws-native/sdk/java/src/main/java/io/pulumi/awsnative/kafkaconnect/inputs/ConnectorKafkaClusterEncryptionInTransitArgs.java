@@ -18,7 +18,7 @@ public final class ConnectorKafkaClusterEncryptionInTransitArgs extends io.pulum
     public static final ConnectorKafkaClusterEncryptionInTransitArgs Empty = new ConnectorKafkaClusterEncryptionInTransitArgs();
 
     @InputImport(name="encryptionType", required=true)
-        private final Input<ConnectorKafkaClusterEncryptionInTransitType> encryptionType;
+      private final Input<ConnectorKafkaClusterEncryptionInTransitType> encryptionType;
 
     public Input<ConnectorKafkaClusterEncryptionInTransitType> getEncryptionType() {
         return this.encryptionType;

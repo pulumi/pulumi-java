@@ -14,14 +14,14 @@ public final class GetInstanceTemplateAdvancedMachineFeature extends io.pulumi.r
     public static final GetInstanceTemplateAdvancedMachineFeature Empty = new GetInstanceTemplateAdvancedMachineFeature();
 
     @InputImport(name="enableNestedVirtualization", required=true)
-        private final Boolean enableNestedVirtualization;
+      private final Boolean enableNestedVirtualization;
 
     public Boolean getEnableNestedVirtualization() {
         return this.enableNestedVirtualization;
     }
 
     @InputImport(name="threadsPerCore", required=true)
-        private final Integer threadsPerCore;
+      private final Integer threadsPerCore;
 
     public Integer getThreadsPerCore() {
         return this.threadsPerCore;

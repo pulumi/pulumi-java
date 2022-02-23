@@ -24,7 +24,7 @@ public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kafkaBootstrapServers")
-        private final @Nullable Input<List<String>> kafkaBootstrapServers;
+      private final @Nullable Input<List<String>> kafkaBootstrapServers;
 
     public Input<List<String>> getKafkaBootstrapServers() {
         return this.kafkaBootstrapServers == null ? Input.empty() : this.kafkaBootstrapServers;

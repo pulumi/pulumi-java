@@ -17,7 +17,7 @@ public final class GetCommunicationServiceArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="communicationServiceName", required=true)
-        private final String communicationServiceName;
+      private final String communicationServiceName;
 
     public String getCommunicationServiceName() {
         return this.communicationServiceName;
@@ -28,7 +28,7 @@ public final class GetCommunicationServiceArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

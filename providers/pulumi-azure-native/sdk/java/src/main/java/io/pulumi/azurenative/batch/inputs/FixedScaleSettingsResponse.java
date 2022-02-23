@@ -20,7 +20,7 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="nodeDeallocationOption")
-        private final @Nullable String nodeDeallocationOption;
+      private final @Nullable String nodeDeallocationOption;
 
     public Optional<String> getNodeDeallocationOption() {
         return this.nodeDeallocationOption == null ? Optional.empty() : Optional.ofNullable(this.nodeDeallocationOption);
@@ -31,7 +31,7 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resizeTimeout")
-        private final @Nullable String resizeTimeout;
+      private final @Nullable String resizeTimeout;
 
     public Optional<String> getResizeTimeout() {
         return this.resizeTimeout == null ? Optional.empty() : Optional.ofNullable(this.resizeTimeout);
@@ -42,7 +42,7 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="targetDedicatedNodes")
-        private final @Nullable Integer targetDedicatedNodes;
+      private final @Nullable Integer targetDedicatedNodes;
 
     public Optional<Integer> getTargetDedicatedNodes() {
         return this.targetDedicatedNodes == null ? Optional.empty() : Optional.ofNullable(this.targetDedicatedNodes);
@@ -53,7 +53,7 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="targetLowPriorityNodes")
-        private final @Nullable Integer targetLowPriorityNodes;
+      private final @Nullable Integer targetLowPriorityNodes;
 
     public Optional<Integer> getTargetLowPriorityNodes() {
         return this.targetLowPriorityNodes == null ? Optional.empty() : Optional.ofNullable(this.targetLowPriorityNodes);

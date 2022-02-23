@@ -15,21 +15,21 @@ public final class ApplicationUrlDispatchRuleArgs extends io.pulumi.resources.Re
     public static final ApplicationUrlDispatchRuleArgs Empty = new ApplicationUrlDispatchRuleArgs();
 
     @InputImport(name="domain")
-        private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
     }
 
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
     }
 
     @InputImport(name="service")
-        private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;

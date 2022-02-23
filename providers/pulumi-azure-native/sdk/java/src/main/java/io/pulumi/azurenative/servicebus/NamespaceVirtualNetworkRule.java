@@ -77,6 +77,21 @@ public class NamespaceVirtualNetworkRule extends io.pulumi.resources.CustomResou
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public NamespaceVirtualNetworkRule(String name) {
+        this(name, NamespaceVirtualNetworkRuleArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NamespaceVirtualNetworkRule(String name, NamespaceVirtualNetworkRuleArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

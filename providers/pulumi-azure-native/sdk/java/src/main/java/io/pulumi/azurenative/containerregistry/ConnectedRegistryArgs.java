@@ -24,7 +24,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientTokenIds")
-        private final @Nullable Input<List<String>> clientTokenIds;
+      private final @Nullable Input<List<String>> clientTokenIds;
 
     public Input<List<String>> getClientTokenIds() {
         return this.clientTokenIds == null ? Input.empty() : this.clientTokenIds;
@@ -35,7 +35,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectedRegistryName")
-        private final @Nullable Input<String> connectedRegistryName;
+      private final @Nullable Input<String> connectedRegistryName;
 
     public Input<String> getConnectedRegistryName() {
         return this.connectedRegistryName == null ? Input.empty() : this.connectedRegistryName;
@@ -46,7 +46,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="logging")
-        private final @Nullable Input<LoggingPropertiesArgs> logging;
+      private final @Nullable Input<LoggingPropertiesArgs> logging;
 
     public Input<LoggingPropertiesArgs> getLogging() {
         return this.logging == null ? Input.empty() : this.logging;
@@ -57,7 +57,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mode", required=true)
-        private final Input<Either<String,ConnectedRegistryMode>> mode;
+      private final Input<Either<String,ConnectedRegistryMode>> mode;
 
     public Input<Either<String,ConnectedRegistryMode>> getMode() {
         return this.mode;
@@ -68,7 +68,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parent", required=true)
-        private final Input<ParentPropertiesArgs> parent;
+      private final Input<ParentPropertiesArgs> parent;
 
     public Input<ParentPropertiesArgs> getParent() {
         return this.parent;
@@ -79,7 +79,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="registryName", required=true)
-        private final Input<String> registryName;
+      private final Input<String> registryName;
 
     public Input<String> getRegistryName() {
         return this.registryName;
@@ -90,7 +90,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

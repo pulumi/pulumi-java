@@ -15,7 +15,7 @@ public final class RuleGroupStatefulRuleOptionsArgs extends io.pulumi.resources.
     public static final RuleGroupStatefulRuleOptionsArgs Empty = new RuleGroupStatefulRuleOptionsArgs();
 
     @InputImport(name="ruleOrder")
-        private final @Nullable Input<RuleGroupRuleOrder> ruleOrder;
+      private final @Nullable Input<RuleGroupRuleOrder> ruleOrder;
 
     public Input<RuleGroupRuleOrder> getRuleOrder() {
         return this.ruleOrder == null ? Input.empty() : this.ruleOrder;

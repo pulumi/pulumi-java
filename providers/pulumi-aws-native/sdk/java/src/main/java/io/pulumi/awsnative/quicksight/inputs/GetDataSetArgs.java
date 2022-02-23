@@ -13,14 +13,14 @@ public final class GetDataSetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDataSetArgs Empty = new GetDataSetArgs();
 
     @InputImport(name="awsAccountId", required=true)
-        private final String awsAccountId;
+      private final String awsAccountId;
 
     public String getAwsAccountId() {
         return this.awsAccountId;
     }
 
     @InputImport(name="dataSetId", required=true)
-        private final String dataSetId;
+      private final String dataSetId;
 
     public String getDataSetId() {
         return this.dataSetId;

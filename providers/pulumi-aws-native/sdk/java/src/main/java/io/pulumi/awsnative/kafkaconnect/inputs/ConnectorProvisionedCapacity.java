@@ -23,7 +23,7 @@ public final class ConnectorProvisionedCapacity extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="mcuCount")
-        private final @Nullable Integer mcuCount;
+      private final @Nullable Integer mcuCount;
 
     public Optional<Integer> getMcuCount() {
         return this.mcuCount == null ? Optional.empty() : Optional.ofNullable(this.mcuCount);
@@ -34,7 +34,7 @@ public final class ConnectorProvisionedCapacity extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="workerCount", required=true)
-        private final Integer workerCount;
+      private final Integer workerCount;
 
     public Integer getWorkerCount() {
         return this.workerCount;

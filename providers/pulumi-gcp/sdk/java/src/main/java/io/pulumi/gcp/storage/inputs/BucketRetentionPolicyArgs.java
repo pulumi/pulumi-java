@@ -20,7 +20,7 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isLocked")
-        private final @Nullable Input<Boolean> isLocked;
+      private final @Nullable Input<Boolean> isLocked;
 
     public Input<Boolean> getIsLocked() {
         return this.isLocked == null ? Input.empty() : this.isLocked;
@@ -31,7 +31,7 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retentionPeriod", required=true)
-        private final Input<Integer> retentionPeriod;
+      private final Input<Integer> retentionPeriod;
 
     public Input<Integer> getRetentionPeriod() {
         return this.retentionPeriod;

@@ -21,7 +21,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessibility")
-        private final @Nullable Input<Either<String,Accessibility>> accessibility;
+      private final @Nullable Input<Either<String,Accessibility>> accessibility;
 
     public Input<Either<String,Accessibility>> getAccessibility() {
         return this.accessibility == null ? Input.empty() : this.accessibility;

@@ -17,7 +17,7 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gatewayResourceName", required=true)
-        private final String gatewayResourceName;
+      private final String gatewayResourceName;
 
     public String getGatewayResourceName() {
         return this.gatewayResourceName;
@@ -28,7 +28,7 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

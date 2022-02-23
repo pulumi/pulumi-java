@@ -23,7 +23,7 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vmResourceId")
-        private final @Nullable String vmResourceId;
+      private final @Nullable String vmResourceId;
 
     public Optional<String> getVmResourceId() {
         return this.vmResourceId == null ? Optional.empty() : Optional.ofNullable(this.vmResourceId);

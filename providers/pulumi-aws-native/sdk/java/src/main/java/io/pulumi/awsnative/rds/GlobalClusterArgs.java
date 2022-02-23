@@ -21,7 +21,7 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionProtection")
-        private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Input<Boolean> deletionProtection;
 
     public Input<Boolean> getDeletionProtection() {
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
@@ -33,7 +33,7 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine")
-        private final @Nullable Input<GlobalClusterEngine> engine;
+      private final @Nullable Input<GlobalClusterEngine> engine;
 
     public Input<GlobalClusterEngine> getEngine() {
         return this.engine == null ? Input.empty() : this.engine;
@@ -44,7 +44,7 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion")
-        private final @Nullable Input<String> engineVersion;
+      private final @Nullable Input<String> engineVersion;
 
     public Input<String> getEngineVersion() {
         return this.engineVersion == null ? Input.empty() : this.engineVersion;
@@ -55,7 +55,7 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalClusterIdentifier")
-        private final @Nullable Input<String> globalClusterIdentifier;
+      private final @Nullable Input<String> globalClusterIdentifier;
 
     public Input<String> getGlobalClusterIdentifier() {
         return this.globalClusterIdentifier == null ? Input.empty() : this.globalClusterIdentifier;
@@ -66,7 +66,7 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDBClusterIdentifier")
-        private final @Nullable Input<String> sourceDBClusterIdentifier;
+      private final @Nullable Input<String> sourceDBClusterIdentifier;
 
     public Input<String> getSourceDBClusterIdentifier() {
         return this.sourceDBClusterIdentifier == null ? Input.empty() : this.sourceDBClusterIdentifier;
@@ -78,7 +78,7 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageEncrypted")
-        private final @Nullable Input<Boolean> storageEncrypted;
+      private final @Nullable Input<Boolean> storageEncrypted;
 
     public Input<Boolean> getStorageEncrypted() {
         return this.storageEncrypted == null ? Input.empty() : this.storageEncrypted;

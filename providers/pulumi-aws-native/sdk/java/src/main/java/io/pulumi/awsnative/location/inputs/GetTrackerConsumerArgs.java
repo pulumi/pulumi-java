@@ -13,14 +13,14 @@ public final class GetTrackerConsumerArgs extends io.pulumi.resources.InvokeArgs
     public static final GetTrackerConsumerArgs Empty = new GetTrackerConsumerArgs();
 
     @InputImport(name="consumerArn", required=true)
-        private final String consumerArn;
+      private final String consumerArn;
 
     public String getConsumerArn() {
         return this.consumerArn;
     }
 
     @InputImport(name="trackerName", required=true)
-        private final String trackerName;
+      private final String trackerName;
 
     public String getTrackerName() {
         return this.trackerName;

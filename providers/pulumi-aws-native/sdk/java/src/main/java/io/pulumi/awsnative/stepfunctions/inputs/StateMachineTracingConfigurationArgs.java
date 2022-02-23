@@ -15,7 +15,7 @@ public final class StateMachineTracingConfigurationArgs extends io.pulumi.resour
     public static final StateMachineTracingConfigurationArgs Empty = new StateMachineTracingConfigurationArgs();
 
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;

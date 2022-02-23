@@ -27,7 +27,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="additionalColumns")
-        private final @Nullable Object additionalColumns;
+      private final @Nullable Object additionalColumns;
 
     public Optional<Object> getAdditionalColumns() {
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
@@ -38,7 +38,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Object disableMetricsCollection;
+      private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -49,7 +49,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isolationLevel")
-        private final @Nullable Object isolationLevel;
+      private final @Nullable Object isolationLevel;
 
     public Optional<Object> getIsolationLevel() {
         return this.isolationLevel == null ? Optional.empty() : Optional.ofNullable(this.isolationLevel);
@@ -60,7 +60,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Object maxConcurrentConnections;
+      private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -71,7 +71,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="partitionOption")
-        private final @Nullable Object partitionOption;
+      private final @Nullable Object partitionOption;
 
     public Optional<Object> getPartitionOption() {
         return this.partitionOption == null ? Optional.empty() : Optional.ofNullable(this.partitionOption);
@@ -82,7 +82,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="partitionSettings")
-        private final @Nullable SqlPartitionSettingsResponse partitionSettings;
+      private final @Nullable SqlPartitionSettingsResponse partitionSettings;
 
     public Optional<SqlPartitionSettingsResponse> getPartitionSettings() {
         return this.partitionSettings == null ? Optional.empty() : Optional.ofNullable(this.partitionSettings);
@@ -93,7 +93,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queryTimeout")
-        private final @Nullable Object queryTimeout;
+      private final @Nullable Object queryTimeout;
 
     public Optional<Object> getQueryTimeout() {
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
@@ -104,7 +104,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceRetryCount")
-        private final @Nullable Object sourceRetryCount;
+      private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
@@ -115,7 +115,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceRetryWait")
-        private final @Nullable Object sourceRetryWait;
+      private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
@@ -126,7 +126,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sqlReaderQuery")
-        private final @Nullable Object sqlReaderQuery;
+      private final @Nullable Object sqlReaderQuery;
 
     public Optional<Object> getSqlReaderQuery() {
         return this.sqlReaderQuery == null ? Optional.empty() : Optional.ofNullable(this.sqlReaderQuery);
@@ -137,7 +137,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sqlReaderStoredProcedureName")
-        private final @Nullable Object sqlReaderStoredProcedureName;
+      private final @Nullable Object sqlReaderStoredProcedureName;
 
     public Optional<Object> getSqlReaderStoredProcedureName() {
         return this.sqlReaderStoredProcedureName == null ? Optional.empty() : Optional.ofNullable(this.sqlReaderStoredProcedureName);
@@ -148,7 +148,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storedProcedureParameters")
-        private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
+      private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
 
     public Map<String,StoredProcedureParameterResponse> getStoredProcedureParameters() {
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
@@ -160,7 +160,7 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

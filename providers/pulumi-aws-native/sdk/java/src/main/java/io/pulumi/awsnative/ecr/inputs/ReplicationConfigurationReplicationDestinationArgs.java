@@ -18,14 +18,14 @@ public final class ReplicationConfigurationReplicationDestinationArgs extends io
     public static final ReplicationConfigurationReplicationDestinationArgs Empty = new ReplicationConfigurationReplicationDestinationArgs();
 
     @InputImport(name="region", required=true)
-        private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="registryId", required=true)
-        private final Input<String> registryId;
+      private final Input<String> registryId;
 
     public Input<String> getRegistryId() {
         return this.registryId;

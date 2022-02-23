@@ -23,7 +23,7 @@ public final class AdditionalCapabilitiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ultraSSDEnabled")
-        private final @Nullable Input<Boolean> ultraSSDEnabled;
+      private final @Nullable Input<Boolean> ultraSSDEnabled;
 
     public Input<Boolean> getUltraSSDEnabled() {
         return this.ultraSSDEnabled == null ? Input.empty() : this.ultraSSDEnabled;

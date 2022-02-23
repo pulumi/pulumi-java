@@ -22,7 +22,7 @@ public final class WorkspaceCustomBooleanParameterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<Boolean> value;
+      private final Input<Boolean> value;
 
     public Input<Boolean> getValue() {
         return this.value;

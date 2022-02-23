@@ -27,7 +27,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeResource")
-        private final @Nullable Input<ComputeResourceArgs> computeResource;
+      private final @Nullable Input<ComputeResourceArgs> computeResource;
 
     public Input<ComputeResourceArgs> getComputeResource() {
         return this.computeResource == null ? Input.empty() : this.computeResource;
@@ -38,7 +38,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-        private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -49,7 +49,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPlatform", required=true)
-        private final Input<Either<String,PlatformType>> hostPlatform;
+      private final Input<Either<String,PlatformType>> hostPlatform;
 
     public Input<Either<String,PlatformType>> getHostPlatform() {
         return this.hostPlatform;
@@ -60,7 +60,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ioTDeviceDetails", required=true)
-        private final Input<IoTDeviceInfoArgs> ioTDeviceDetails;
+      private final Input<IoTDeviceInfoArgs> ioTDeviceDetails;
 
     public Input<IoTDeviceInfoArgs> getIoTDeviceDetails() {
         return this.ioTDeviceDetails;
@@ -71,7 +71,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ioTEdgeAgentInfo")
-        private final @Nullable Input<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
+      private final @Nullable Input<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
 
     public Input<IoTEdgeAgentInfoArgs> getIoTEdgeAgentInfo() {
         return this.ioTEdgeAgentInfo == null ? Input.empty() : this.ioTEdgeAgentInfo;
@@ -82,7 +82,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ioTEdgeDeviceDetails", required=true)
-        private final Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
+      private final Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
     public Input<IoTDeviceInfoArgs> getIoTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
@@ -94,7 +94,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -105,7 +105,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -116,7 +116,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -127,7 +127,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleStatus", required=true)
-        private final Input<Either<String,RoleStatus>> roleStatus;
+      private final Input<Either<String,RoleStatus>> roleStatus;
 
     public Input<Either<String,RoleStatus>> getRoleStatus() {
         return this.roleStatus;
@@ -138,7 +138,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareMappings")
-        private final @Nullable Input<List<MountPointMapArgs>> shareMappings;
+      private final @Nullable Input<List<MountPointMapArgs>> shareMappings;
 
     public Input<List<MountPointMapArgs>> getShareMappings() {
         return this.shareMappings == null ? Input.empty() : this.shareMappings;

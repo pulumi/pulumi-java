@@ -19,14 +19,14 @@ public final class ScheduledQueryDimensionMappingArgs extends io.pulumi.resource
     public static final ScheduledQueryDimensionMappingArgs Empty = new ScheduledQueryDimensionMappingArgs();
 
     @InputImport(name="dimensionValueType", required=true)
-        private final Input<ScheduledQueryDimensionValueType> dimensionValueType;
+      private final Input<ScheduledQueryDimensionValueType> dimensionValueType;
 
     public Input<ScheduledQueryDimensionValueType> getDimensionValueType() {
         return this.dimensionValueType;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

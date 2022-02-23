@@ -26,7 +26,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="amlWorkspaceId")
-        private final @Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId;
+      private final @Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId;
 
     public Optional<WorkspaceCustomStringParameterResponse> getAmlWorkspaceId() {
         return this.amlWorkspaceId == null ? Optional.empty() : Optional.ofNullable(this.amlWorkspaceId);
@@ -37,7 +37,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="customPrivateSubnetName")
-        private final @Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName;
+      private final @Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getCustomPrivateSubnetName() {
         return this.customPrivateSubnetName == null ? Optional.empty() : Optional.ofNullable(this.customPrivateSubnetName);
@@ -48,7 +48,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="customPublicSubnetName")
-        private final @Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName;
+      private final @Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getCustomPublicSubnetName() {
         return this.customPublicSubnetName == null ? Optional.empty() : Optional.ofNullable(this.customPublicSubnetName);
@@ -59,7 +59,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="customVirtualNetworkId")
-        private final @Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId;
+      private final @Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId;
 
     public Optional<WorkspaceCustomStringParameterResponse> getCustomVirtualNetworkId() {
         return this.customVirtualNetworkId == null ? Optional.empty() : Optional.ofNullable(this.customVirtualNetworkId);
@@ -70,7 +70,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="enableNoPublicIp")
-        private final @Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp;
+      private final @Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp;
 
     public Optional<WorkspaceCustomBooleanParameterResponse> getEnableNoPublicIp() {
         return this.enableNoPublicIp == null ? Optional.empty() : Optional.ofNullable(this.enableNoPublicIp);
@@ -81,7 +81,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="encryption")
-        private final @Nullable WorkspaceEncryptionParameterResponse encryption;
+      private final @Nullable WorkspaceEncryptionParameterResponse encryption;
 
     public Optional<WorkspaceEncryptionParameterResponse> getEncryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
@@ -92,7 +92,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="loadBalancerBackendPoolName")
-        private final @Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName;
+      private final @Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getLoadBalancerBackendPoolName() {
         return this.loadBalancerBackendPoolName == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerBackendPoolName);
@@ -103,7 +103,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="loadBalancerId")
-        private final @Nullable WorkspaceCustomStringParameterResponse loadBalancerId;
+      private final @Nullable WorkspaceCustomStringParameterResponse loadBalancerId;
 
     public Optional<WorkspaceCustomStringParameterResponse> getLoadBalancerId() {
         return this.loadBalancerId == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerId);
@@ -114,7 +114,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="natGatewayName")
-        private final @Nullable WorkspaceCustomStringParameterResponse natGatewayName;
+      private final @Nullable WorkspaceCustomStringParameterResponse natGatewayName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getNatGatewayName() {
         return this.natGatewayName == null ? Optional.empty() : Optional.ofNullable(this.natGatewayName);
@@ -125,7 +125,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="prepareEncryption")
-        private final @Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption;
+      private final @Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption;
 
     public Optional<WorkspaceCustomBooleanParameterResponse> getPrepareEncryption() {
         return this.prepareEncryption == null ? Optional.empty() : Optional.ofNullable(this.prepareEncryption);
@@ -136,7 +136,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicIpName")
-        private final @Nullable WorkspaceCustomStringParameterResponse publicIpName;
+      private final @Nullable WorkspaceCustomStringParameterResponse publicIpName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getPublicIpName() {
         return this.publicIpName == null ? Optional.empty() : Optional.ofNullable(this.publicIpName);
@@ -147,7 +147,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="requireInfrastructureEncryption")
-        private final @Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption;
+      private final @Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption;
 
     public Optional<WorkspaceCustomBooleanParameterResponse> getRequireInfrastructureEncryption() {
         return this.requireInfrastructureEncryption == null ? Optional.empty() : Optional.ofNullable(this.requireInfrastructureEncryption);
@@ -158,7 +158,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceTags", required=true)
-        private final WorkspaceCustomObjectParameterResponse resourceTags;
+      private final WorkspaceCustomObjectParameterResponse resourceTags;
 
     public WorkspaceCustomObjectParameterResponse getResourceTags() {
         return this.resourceTags;
@@ -169,7 +169,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="storageAccountName")
-        private final @Nullable WorkspaceCustomStringParameterResponse storageAccountName;
+      private final @Nullable WorkspaceCustomStringParameterResponse storageAccountName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getStorageAccountName() {
         return this.storageAccountName == null ? Optional.empty() : Optional.ofNullable(this.storageAccountName);
@@ -180,7 +180,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="storageAccountSkuName")
-        private final @Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName;
+      private final @Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getStorageAccountSkuName() {
         return this.storageAccountSkuName == null ? Optional.empty() : Optional.ofNullable(this.storageAccountSkuName);
@@ -191,7 +191,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="vnetAddressPrefix")
-        private final @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix;
+      private final @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix;
 
     public Optional<WorkspaceCustomStringParameterResponse> getVnetAddressPrefix() {
         return this.vnetAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.vnetAddressPrefix);

@@ -18,7 +18,7 @@ public final class QuickConnectPhoneNumberQuickConnectConfigArgs extends io.pulu
     public static final QuickConnectPhoneNumberQuickConnectConfigArgs Empty = new QuickConnectPhoneNumberQuickConnectConfigArgs();
 
     @InputImport(name="phoneNumber", required=true)
-        private final Input<String> phoneNumber;
+      private final Input<String> phoneNumber;
 
     public Input<String> getPhoneNumber() {
         return this.phoneNumber;

@@ -18,28 +18,28 @@ public final class DataSourceSalesforceChatterFeedConfigurationArgs extends io.p
     public static final DataSourceSalesforceChatterFeedConfigurationArgs Empty = new DataSourceSalesforceChatterFeedConfigurationArgs();
 
     @InputImport(name="documentDataFieldName", required=true)
-        private final Input<String> documentDataFieldName;
+      private final Input<String> documentDataFieldName;
 
     public Input<String> getDocumentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @InputImport(name="documentTitleFieldName")
-        private final @Nullable Input<String> documentTitleFieldName;
+      private final @Nullable Input<String> documentTitleFieldName;
 
     public Input<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Input.empty() : this.documentTitleFieldName;
     }
 
     @InputImport(name="fieldMappings")
-        private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+      private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
     }
 
     @InputImport(name="includeFilterTypes")
-        private final @Nullable Input<List<DataSourceSalesforceChatterFeedIncludeFilterType>> includeFilterTypes;
+      private final @Nullable Input<List<DataSourceSalesforceChatterFeedIncludeFilterType>> includeFilterTypes;
 
     public Input<List<DataSourceSalesforceChatterFeedIncludeFilterType>> getIncludeFilterTypes() {
         return this.includeFilterTypes == null ? Input.empty() : this.includeFilterTypes;

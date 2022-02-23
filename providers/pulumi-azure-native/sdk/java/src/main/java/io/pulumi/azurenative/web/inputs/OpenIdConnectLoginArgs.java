@@ -24,7 +24,7 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="nameClaimType")
-        private final @Nullable Input<String> nameClaimType;
+      private final @Nullable Input<String> nameClaimType;
 
     public Input<String> getNameClaimType() {
         return this.nameClaimType == null ? Input.empty() : this.nameClaimType;
@@ -35,7 +35,7 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="scopes")
-        private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;

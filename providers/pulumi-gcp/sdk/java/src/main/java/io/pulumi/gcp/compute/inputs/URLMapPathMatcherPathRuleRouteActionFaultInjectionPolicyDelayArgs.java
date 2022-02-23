@@ -20,7 +20,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
      * 
      */
     @InputImport(name="fixedDelay", required=true)
-        private final Input<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
+      private final Input<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
 
     public Input<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs> getFixedDelay() {
         return this.fixedDelay;
@@ -32,7 +32,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
      * 
      */
     @InputImport(name="percentage", required=true)
-        private final Input<Double> percentage;
+      private final Input<Double> percentage;
 
     public Input<Double> getPercentage() {
         return this.percentage;

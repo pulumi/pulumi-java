@@ -19,7 +19,7 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="accessResourcePath")
-        private final @Nullable String accessResourcePath;
+      private final @Nullable String accessResourcePath;
 
     public Optional<String> getAccessResourcePath() {
         return this.accessResourcePath == null ? Optional.empty() : Optional.ofNullable(this.accessResourcePath);
@@ -30,7 +30,7 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="expireTime")
-        private final @Nullable String expireTime;
+      private final @Nullable String expireTime;
 
     public Optional<String> getExpireTime() {
         return this.expireTime == null ? Optional.empty() : Optional.ofNullable(this.expireTime);
@@ -41,7 +41,7 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="factoryName", required=true)
-        private final String factoryName;
+      private final String factoryName;
 
     public String getFactoryName() {
         return this.factoryName;
@@ -52,7 +52,7 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="permissions")
-        private final @Nullable String permissions;
+      private final @Nullable String permissions;
 
     public Optional<String> getPermissions() {
         return this.permissions == null ? Optional.empty() : Optional.ofNullable(this.permissions);
@@ -63,7 +63,7 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="profileName")
-        private final @Nullable String profileName;
+      private final @Nullable String profileName;
 
     public Optional<String> getProfileName() {
         return this.profileName == null ? Optional.empty() : Optional.ofNullable(this.profileName);
@@ -74,7 +74,7 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -85,7 +85,7 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="startTime")
-        private final @Nullable String startTime;
+      private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);

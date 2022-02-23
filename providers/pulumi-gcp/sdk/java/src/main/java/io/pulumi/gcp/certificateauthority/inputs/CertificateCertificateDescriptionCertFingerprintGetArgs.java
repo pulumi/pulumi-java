@@ -15,7 +15,7 @@ public final class CertificateCertificateDescriptionCertFingerprintGetArgs exten
     public static final CertificateCertificateDescriptionCertFingerprintGetArgs Empty = new CertificateCertificateDescriptionCertFingerprintGetArgs();
 
     @InputImport(name="sha256Hash")
-        private final @Nullable Input<String> sha256Hash;
+      private final @Nullable Input<String> sha256Hash;
 
     public Input<String> getSha256Hash() {
         return this.sha256Hash == null ? Input.empty() : this.sha256Hash;

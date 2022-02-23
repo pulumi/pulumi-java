@@ -21,7 +21,7 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="errorCode", required=true)
-        private final String errorCode;
+      private final String errorCode;
 
     public String getErrorCode() {
         return this.errorCode;
@@ -32,7 +32,7 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="errorInnerMessage", required=true)
-        private final String errorInnerMessage;
+      private final String errorInnerMessage;
 
     public String getErrorInnerMessage() {
         return this.errorInnerMessage;
@@ -43,7 +43,7 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="errorMessage", required=true)
-        private final String errorMessage;
+      private final String errorMessage;
 
     public String getErrorMessage() {
         return this.errorMessage;
@@ -54,7 +54,7 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="errorStartTime", required=true)
-        private final String errorStartTime;
+      private final String errorStartTime;
 
     public String getErrorStartTime() {
         return this.errorStartTime;

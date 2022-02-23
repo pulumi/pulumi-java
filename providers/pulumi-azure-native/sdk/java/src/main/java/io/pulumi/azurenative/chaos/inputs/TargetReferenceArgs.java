@@ -23,7 +23,7 @@ public final class TargetReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class TargetReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<TargetReferenceType> type;
+      private final Input<TargetReferenceType> type;
 
     public Input<TargetReferenceType> getType() {
         return this.type;

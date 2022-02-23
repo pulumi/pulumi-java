@@ -17,7 +17,7 @@ public final class ScheduledActionPauseClusterMessage extends io.pulumi.resource
     public static final ScheduledActionPauseClusterMessage Empty = new ScheduledActionPauseClusterMessage();
 
     @InputImport(name="clusterIdentifier", required=true)
-        private final String clusterIdentifier;
+      private final String clusterIdentifier;
 
     public String getClusterIdentifier() {
         return this.clusterIdentifier;

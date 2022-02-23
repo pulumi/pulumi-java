@@ -22,7 +22,7 @@ public final class RoutingPolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="destinations", required=true)
-        private final List<String> destinations;
+      private final List<String> destinations;
 
     public List<String> getDestinations() {
         return this.destinations;
@@ -33,7 +33,7 @@ public final class RoutingPolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class RoutingPolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="nextHop", required=true)
-        private final String nextHop;
+      private final String nextHop;
 
     public String getNextHop() {
         return this.nextHop;

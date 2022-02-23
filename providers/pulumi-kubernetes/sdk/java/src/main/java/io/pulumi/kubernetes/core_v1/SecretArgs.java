@@ -22,7 +22,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -33,7 +33,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-        private final @Nullable Input<Map<String,String>> data;
+      private final @Nullable Input<Map<String,String>> data;
 
     public Input<Map<String,String>> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -44,7 +44,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="immutable")
-        private final @Nullable Input<Boolean> immutable;
+      private final @Nullable Input<Boolean> immutable;
 
     public Input<Boolean> getImmutable() {
         return this.immutable == null ? Input.empty() : this.immutable;
@@ -55,7 +55,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -66,7 +66,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -77,7 +77,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stringData")
-        private final @Nullable Input<Map<String,String>> stringData;
+      private final @Nullable Input<Map<String,String>> stringData;
 
     public Input<Map<String,String>> getStringData() {
         return this.stringData == null ? Input.empty() : this.stringData;
@@ -88,7 +88,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

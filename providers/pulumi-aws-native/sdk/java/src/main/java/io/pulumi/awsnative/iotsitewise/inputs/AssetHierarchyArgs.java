@@ -22,7 +22,7 @@ public final class AssetHierarchyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="childAssetId", required=true)
-        private final Input<String> childAssetId;
+      private final Input<String> childAssetId;
 
     public Input<String> getChildAssetId() {
         return this.childAssetId;
@@ -33,7 +33,7 @@ public final class AssetHierarchyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logicalId", required=true)
-        private final Input<String> logicalId;
+      private final Input<String> logicalId;
 
     public Input<String> getLogicalId() {
         return this.logicalId;

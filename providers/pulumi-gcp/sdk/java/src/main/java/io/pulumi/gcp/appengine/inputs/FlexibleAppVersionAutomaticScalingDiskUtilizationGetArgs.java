@@ -19,7 +19,7 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs exte
      * 
      */
     @InputImport(name="targetReadBytesPerSecond")
-        private final @Nullable Input<Integer> targetReadBytesPerSecond;
+      private final @Nullable Input<Integer> targetReadBytesPerSecond;
 
     public Input<Integer> getTargetReadBytesPerSecond() {
         return this.targetReadBytesPerSecond == null ? Input.empty() : this.targetReadBytesPerSecond;
@@ -30,7 +30,7 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs exte
      * 
      */
     @InputImport(name="targetReadOpsPerSecond")
-        private final @Nullable Input<Integer> targetReadOpsPerSecond;
+      private final @Nullable Input<Integer> targetReadOpsPerSecond;
 
     public Input<Integer> getTargetReadOpsPerSecond() {
         return this.targetReadOpsPerSecond == null ? Input.empty() : this.targetReadOpsPerSecond;
@@ -41,7 +41,7 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs exte
      * 
      */
     @InputImport(name="targetWriteBytesPerSecond")
-        private final @Nullable Input<Integer> targetWriteBytesPerSecond;
+      private final @Nullable Input<Integer> targetWriteBytesPerSecond;
 
     public Input<Integer> getTargetWriteBytesPerSecond() {
         return this.targetWriteBytesPerSecond == null ? Input.empty() : this.targetWriteBytesPerSecond;
@@ -52,7 +52,7 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs exte
      * 
      */
     @InputImport(name="targetWriteOpsPerSecond")
-        private final @Nullable Input<Integer> targetWriteOpsPerSecond;
+      private final @Nullable Input<Integer> targetWriteOpsPerSecond;
 
     public Input<Integer> getTargetWriteOpsPerSecond() {
         return this.targetWriteOpsPerSecond == null ? Input.empty() : this.targetWriteOpsPerSecond;

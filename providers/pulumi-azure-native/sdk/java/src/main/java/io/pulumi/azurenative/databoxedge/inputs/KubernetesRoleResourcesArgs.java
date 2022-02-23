@@ -24,7 +24,7 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="compute", required=true)
-        private final Input<KubernetesRoleComputeArgs> compute;
+      private final Input<KubernetesRoleComputeArgs> compute;
 
     public Input<KubernetesRoleComputeArgs> getCompute() {
         return this.compute;
@@ -35,7 +35,7 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="storage")
-        private final @Nullable Input<KubernetesRoleStorageArgs> storage;
+      private final @Nullable Input<KubernetesRoleStorageArgs> storage;
 
     public Input<KubernetesRoleStorageArgs> getStorage() {
         return this.storage == null ? Input.empty() : this.storage;

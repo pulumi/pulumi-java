@@ -32,7 +32,7 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="onError")
-        private final @Nullable Input<Either<String,OnErrorType>> onError;
+      private final @Nullable Input<Either<String,OnErrorType>> onError;
 
     public Input<Either<String,OnErrorType>> getOnError() {
         return this.onError == null ? Input.empty() : this.onError;
@@ -43,7 +43,7 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="preset", required=true)
-        private final Input<Object> preset;
+      private final Input<Object> preset;
 
     public Input<Object> getPreset() {
         return this.preset;
@@ -54,7 +54,7 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="relativePriority")
-        private final @Nullable Input<Either<String,Priority>> relativePriority;
+      private final @Nullable Input<Either<String,Priority>> relativePriority;
 
     public Input<Either<String,Priority>> getRelativePriority() {
         return this.relativePriority == null ? Input.empty() : this.relativePriority;

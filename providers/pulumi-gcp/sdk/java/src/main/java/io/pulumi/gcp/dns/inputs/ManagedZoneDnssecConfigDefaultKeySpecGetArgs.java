@@ -21,7 +21,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="algorithm")
-        private final @Nullable Input<String> algorithm;
+      private final @Nullable Input<String> algorithm;
 
     public Input<String> getAlgorithm() {
         return this.algorithm == null ? Input.empty() : this.algorithm;
@@ -32,7 +32,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="keyLength")
-        private final @Nullable Input<Integer> keyLength;
+      private final @Nullable Input<Integer> keyLength;
 
     public Input<Integer> getKeyLength() {
         return this.keyLength == null ? Input.empty() : this.keyLength;
@@ -49,7 +49,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="keyType")
-        private final @Nullable Input<String> keyType;
+      private final @Nullable Input<String> keyType;
 
     public Input<String> getKeyType() {
         return this.keyType == null ? Input.empty() : this.keyType;
@@ -60,7 +60,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;

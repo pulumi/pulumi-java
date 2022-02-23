@@ -18,7 +18,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
      * 
      */
     @InputImport(name="datasetId", required=true)
-        private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -29,7 +29,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
      * 
      */
     @InputImport(name="projectId", required=true)
-        private final Input<String> projectId;
+      private final Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId;
@@ -40,7 +40,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
      * 
      */
     @InputImport(name="tableId", required=true)
-        private final Input<String> tableId;
+      private final Input<String> tableId;
 
     public Input<String> getTableId() {
         return this.tableId;

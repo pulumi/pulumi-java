@@ -19,7 +19,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataSetName")
-        private final @Nullable Input<String> dataSetName;
+      private final @Nullable Input<String> dataSetName;
 
     public Input<String> getDataSetName() {
         return this.dataSetName == null ? Input.empty() : this.dataSetName;
@@ -41,7 +41,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="folderPath", required=true)
-        private final Input<String> folderPath;
+      private final Input<String> folderPath;
 
     public Input<String> getFolderPath() {
         return this.folderPath;
@@ -53,7 +53,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -64,7 +64,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-        private final Input<String> resourceGroup;
+      private final Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup;
@@ -75,7 +75,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="shareName", required=true)
-        private final Input<String> shareName;
+      private final Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName;
@@ -97,7 +97,7 @@ public final class ADLSGen1FolderDataSetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-        private final Input<String> subscriptionId;
+      private final Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId;

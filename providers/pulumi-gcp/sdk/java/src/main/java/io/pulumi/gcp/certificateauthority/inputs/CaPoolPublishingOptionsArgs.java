@@ -20,7 +20,7 @@ public final class CaPoolPublishingOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="publishCaCert", required=true)
-        private final Input<Boolean> publishCaCert;
+      private final Input<Boolean> publishCaCert;
 
     public Input<Boolean> getPublishCaCert() {
         return this.publishCaCert;
@@ -34,7 +34,7 @@ public final class CaPoolPublishingOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="publishCrl", required=true)
-        private final Input<Boolean> publishCrl;
+      private final Input<Boolean> publishCrl;
 
     public Input<Boolean> getPublishCrl() {
         return this.publishCrl;

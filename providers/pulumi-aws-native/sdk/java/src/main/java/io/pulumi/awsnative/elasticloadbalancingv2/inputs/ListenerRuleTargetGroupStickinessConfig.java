@@ -16,14 +16,14 @@ public final class ListenerRuleTargetGroupStickinessConfig extends io.pulumi.res
     public static final ListenerRuleTargetGroupStickinessConfig Empty = new ListenerRuleTargetGroupStickinessConfig();
 
     @InputImport(name="durationSeconds")
-        private final @Nullable Integer durationSeconds;
+      private final @Nullable Integer durationSeconds;
 
     public Optional<Integer> getDurationSeconds() {
         return this.durationSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationSeconds);
     }
 
     @InputImport(name="enabled")
-        private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);

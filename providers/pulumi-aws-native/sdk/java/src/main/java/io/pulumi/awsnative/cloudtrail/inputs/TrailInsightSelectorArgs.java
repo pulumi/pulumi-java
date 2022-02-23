@@ -23,7 +23,7 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="insightType")
-        private final @Nullable Input<String> insightType;
+      private final @Nullable Input<String> insightType;
 
     public Input<String> getInsightType() {
         return this.insightType == null ? Input.empty() : this.insightType;

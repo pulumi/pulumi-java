@@ -17,21 +17,21 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecification extends i
     public static final GlobalTableReplicaGlobalSecondaryIndexSpecification Empty = new GlobalTableReplicaGlobalSecondaryIndexSpecification();
 
     @InputImport(name="contributorInsightsSpecification")
-        private final @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification;
+      private final @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification;
 
     public Optional<GlobalTableContributorInsightsSpecification> getContributorInsightsSpecification() {
         return this.contributorInsightsSpecification == null ? Optional.empty() : Optional.ofNullable(this.contributorInsightsSpecification);
     }
 
     @InputImport(name="indexName", required=true)
-        private final String indexName;
+      private final String indexName;
 
     public String getIndexName() {
         return this.indexName;
     }
 
     @InputImport(name="readProvisionedThroughputSettings")
-        private final @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
+      private final @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
 
     public Optional<GlobalTableReadProvisionedThroughputSettings> getReadProvisionedThroughputSettings() {
         return this.readProvisionedThroughputSettings == null ? Optional.empty() : Optional.ofNullable(this.readProvisionedThroughputSettings);

@@ -28,7 +28,7 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="categoryPattern")
-        private final @Nullable Input<String> categoryPattern;
+      private final @Nullable Input<String> categoryPattern;
 
     public Input<String> getCategoryPattern() {
         return this.categoryPattern == null ? Input.empty() : this.categoryPattern;
@@ -43,7 +43,7 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eventPattern")
-        private final @Nullable Input<String> eventPattern;
+      private final @Nullable Input<String> eventPattern;
 
     public Input<String> getEventPattern() {
         return this.eventPattern == null ? Input.empty() : this.eventPattern;
@@ -58,7 +58,7 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hubPattern")
-        private final @Nullable Input<String> hubPattern;
+      private final @Nullable Input<String> hubPattern;
 
     public Input<String> getHubPattern() {
         return this.hubPattern == null ? Input.empty() : this.hubPattern;
@@ -70,7 +70,7 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="urlTemplate", required=true)
-        private final Input<String> urlTemplate;
+      private final Input<String> urlTemplate;
 
     public Input<String> getUrlTemplate() {
         return this.urlTemplate;

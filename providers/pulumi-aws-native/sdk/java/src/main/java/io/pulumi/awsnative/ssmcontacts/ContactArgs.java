@@ -21,7 +21,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias", required=true)
-        private final Input<String> alias;
+      private final Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias;
@@ -32,7 +32,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -43,7 +43,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plan", required=true)
-        private final Input<List<ContactStageArgs>> plan;
+      private final Input<List<ContactStageArgs>> plan;
 
     public Input<List<ContactStageArgs>> getPlan() {
         return this.plan;
@@ -54,7 +54,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<ContactType> type;
+      private final Input<ContactType> type;
 
     public Input<ContactType> getType() {
         return this.type;

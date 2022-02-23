@@ -23,7 +23,7 @@ public final class AgentPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="cpu")
-        private final @Nullable Integer cpu;
+      private final @Nullable Integer cpu;
 
     public Optional<Integer> getCpu() {
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);

@@ -21,7 +21,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="certificateId")
-        private final @Nullable Input<Integer> certificateId;
+      private final @Nullable Input<Integer> certificateId;
 
     public Input<Integer> getCertificateId() {
         return this.certificateId == null ? Input.empty() : this.certificateId;
@@ -32,7 +32,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="managed")
-        private final @Nullable Input<MangedSslCertificateManagedArgs> managed;
+      private final @Nullable Input<MangedSslCertificateManagedArgs> managed;
 
     public Input<MangedSslCertificateManagedArgs> getManaged() {
         return this.managed == null ? Input.empty() : this.managed;
@@ -59,14 +59,14 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -78,7 +78,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

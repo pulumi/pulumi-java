@@ -19,7 +19,7 @@ public final class InstanceSchedulingNodeAffinityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="key", required=true)
-        private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -31,7 +31,7 @@ public final class InstanceSchedulingNodeAffinityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="operator", required=true)
-        private final Input<String> operator;
+      private final Input<String> operator;
 
     public Input<String> getOperator() {
         return this.operator;
@@ -42,7 +42,7 @@ public final class InstanceSchedulingNodeAffinityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="values", required=true)
-        private final Input<List<String>> values;
+      private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;

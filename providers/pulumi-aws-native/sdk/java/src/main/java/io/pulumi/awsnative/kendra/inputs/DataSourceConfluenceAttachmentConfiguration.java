@@ -17,14 +17,14 @@ public final class DataSourceConfluenceAttachmentConfiguration extends io.pulumi
     public static final DataSourceConfluenceAttachmentConfiguration Empty = new DataSourceConfluenceAttachmentConfiguration();
 
     @InputImport(name="attachmentFieldMappings")
-        private final @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings;
+      private final @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings;
 
     public List<DataSourceConfluenceAttachmentToIndexFieldMapping> getAttachmentFieldMappings() {
         return this.attachmentFieldMappings == null ? List.of() : this.attachmentFieldMappings;
     }
 
     @InputImport(name="crawlAttachments")
-        private final @Nullable Boolean crawlAttachments;
+      private final @Nullable Boolean crawlAttachments;
 
     public Optional<Boolean> getCrawlAttachments() {
         return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);

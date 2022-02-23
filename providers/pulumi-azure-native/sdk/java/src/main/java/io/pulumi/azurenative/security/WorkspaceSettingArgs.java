@@ -19,7 +19,7 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scope", required=true)
-        private final Input<String> scope;
+      private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -30,7 +30,7 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workspaceId", required=true)
-        private final Input<String> workspaceId;
+      private final Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId;
@@ -41,7 +41,7 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workspaceSettingName")
-        private final @Nullable Input<String> workspaceSettingName;
+      private final @Nullable Input<String> workspaceSettingName;
 
     public Input<String> getWorkspaceSettingName() {
         return this.workspaceSettingName == null ? Input.empty() : this.workspaceSettingName;

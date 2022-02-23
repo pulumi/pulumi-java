@@ -24,7 +24,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     public static final OriginEndpointArgs Empty = new OriginEndpointArgs();
 
     @InputImport(name="authorization")
-        private final @Nullable Input<OriginEndpointAuthorizationArgs> authorization;
+      private final @Nullable Input<OriginEndpointAuthorizationArgs> authorization;
 
     public Input<OriginEndpointAuthorizationArgs> getAuthorization() {
         return this.authorization == null ? Input.empty() : this.authorization;
@@ -35,21 +35,21 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelId", required=true)
-        private final Input<String> channelId;
+      private final Input<String> channelId;
 
     public Input<String> getChannelId() {
         return this.channelId;
     }
 
     @InputImport(name="cmafPackage")
-        private final @Nullable Input<OriginEndpointCmafPackageArgs> cmafPackage;
+      private final @Nullable Input<OriginEndpointCmafPackageArgs> cmafPackage;
 
     public Input<OriginEndpointCmafPackageArgs> getCmafPackage() {
         return this.cmafPackage == null ? Input.empty() : this.cmafPackage;
     }
 
     @InputImport(name="dashPackage")
-        private final @Nullable Input<OriginEndpointDashPackageArgs> dashPackage;
+      private final @Nullable Input<OriginEndpointDashPackageArgs> dashPackage;
 
     public Input<OriginEndpointDashPackageArgs> getDashPackage() {
         return this.dashPackage == null ? Input.empty() : this.dashPackage;
@@ -60,14 +60,14 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="hlsPackage")
-        private final @Nullable Input<OriginEndpointHlsPackageArgs> hlsPackage;
+      private final @Nullable Input<OriginEndpointHlsPackageArgs> hlsPackage;
 
     public Input<OriginEndpointHlsPackageArgs> getHlsPackage() {
         return this.hlsPackage == null ? Input.empty() : this.hlsPackage;
@@ -78,14 +78,14 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manifestName")
-        private final @Nullable Input<String> manifestName;
+      private final @Nullable Input<String> manifestName;
 
     public Input<String> getManifestName() {
         return this.manifestName == null ? Input.empty() : this.manifestName;
     }
 
     @InputImport(name="mssPackage")
-        private final @Nullable Input<OriginEndpointMssPackageArgs> mssPackage;
+      private final @Nullable Input<OriginEndpointMssPackageArgs> mssPackage;
 
     public Input<OriginEndpointMssPackageArgs> getMssPackage() {
         return this.mssPackage == null ? Input.empty() : this.mssPackage;
@@ -96,7 +96,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origination")
-        private final @Nullable Input<OriginEndpointOrigination> origination;
+      private final @Nullable Input<OriginEndpointOrigination> origination;
 
     public Input<OriginEndpointOrigination> getOrigination() {
         return this.origination == null ? Input.empty() : this.origination;
@@ -107,7 +107,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startoverWindowSeconds")
-        private final @Nullable Input<Integer> startoverWindowSeconds;
+      private final @Nullable Input<Integer> startoverWindowSeconds;
 
     public Input<Integer> getStartoverWindowSeconds() {
         return this.startoverWindowSeconds == null ? Input.empty() : this.startoverWindowSeconds;
@@ -118,7 +118,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<OriginEndpointTagArgs>> tags;
+      private final @Nullable Input<List<OriginEndpointTagArgs>> tags;
 
     public Input<List<OriginEndpointTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -129,7 +129,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeDelaySeconds")
-        private final @Nullable Input<Integer> timeDelaySeconds;
+      private final @Nullable Input<Integer> timeDelaySeconds;
 
     public Input<Integer> getTimeDelaySeconds() {
         return this.timeDelaySeconds == null ? Input.empty() : this.timeDelaySeconds;
@@ -140,7 +140,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="whitelist")
-        private final @Nullable Input<List<String>> whitelist;
+      private final @Nullable Input<List<String>> whitelist;
 
     public Input<List<String>> getWhitelist() {
         return this.whitelist == null ? Input.empty() : this.whitelist;

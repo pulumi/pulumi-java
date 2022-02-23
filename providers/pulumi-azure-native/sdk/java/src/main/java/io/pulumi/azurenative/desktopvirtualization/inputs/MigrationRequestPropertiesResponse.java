@@ -23,7 +23,7 @@ public final class MigrationRequestPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="migrationPath")
-        private final @Nullable String migrationPath;
+      private final @Nullable String migrationPath;
 
     public Optional<String> getMigrationPath() {
         return this.migrationPath == null ? Optional.empty() : Optional.ofNullable(this.migrationPath);
@@ -34,7 +34,7 @@ public final class MigrationRequestPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="operation")
-        private final @Nullable String operation;
+      private final @Nullable String operation;
 
     public Optional<String> getOperation() {
         return this.operation == null ? Optional.empty() : Optional.ofNullable(this.operation);

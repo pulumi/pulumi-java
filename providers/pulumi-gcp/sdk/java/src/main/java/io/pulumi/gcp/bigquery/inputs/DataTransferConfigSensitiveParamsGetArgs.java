@@ -19,7 +19,7 @@ public final class DataTransferConfigSensitiveParamsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="secretAccessKey", required=true)
-        private final Input<String> secretAccessKey;
+      private final Input<String> secretAccessKey;
 
     public Input<String> getSecretAccessKey() {
         return this.secretAccessKey;

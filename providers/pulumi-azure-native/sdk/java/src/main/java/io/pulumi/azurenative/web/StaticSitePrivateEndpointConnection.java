@@ -127,6 +127,21 @@ public class StaticSitePrivateEndpointConnection extends io.pulumi.resources.Cus
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public StaticSitePrivateEndpointConnection(String name) {
+        this(name, StaticSitePrivateEndpointConnectionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public StaticSitePrivateEndpointConnection(String name, StaticSitePrivateEndpointConnectionArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

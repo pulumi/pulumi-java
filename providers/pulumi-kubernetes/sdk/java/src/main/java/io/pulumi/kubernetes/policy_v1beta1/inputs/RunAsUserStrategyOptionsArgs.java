@@ -25,7 +25,7 @@ public final class RunAsUserStrategyOptionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ranges")
-        private final @Nullable Input<List<IDRangeArgs>> ranges;
+      private final @Nullable Input<List<IDRangeArgs>> ranges;
 
     public Input<List<IDRangeArgs>> getRanges() {
         return this.ranges == null ? Input.empty() : this.ranges;
@@ -36,7 +36,7 @@ public final class RunAsUserStrategyOptionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rule", required=true)
-        private final Input<String> rule;
+      private final Input<String> rule;
 
     public Input<String> getRule() {
         return this.rule;

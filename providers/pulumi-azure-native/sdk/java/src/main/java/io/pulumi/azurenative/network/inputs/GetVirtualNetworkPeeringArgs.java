@@ -17,7 +17,7 @@ public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="virtualNetworkName", required=true)
-        private final String virtualNetworkName;
+      private final String virtualNetworkName;
 
     public String getVirtualNetworkName() {
         return this.virtualNetworkName;
@@ -39,7 +39,7 @@ public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="virtualNetworkPeeringName", required=true)
-        private final String virtualNetworkPeeringName;
+      private final String virtualNetworkPeeringName;
 
     public String getVirtualNetworkPeeringName() {
         return this.virtualNetworkPeeringName;

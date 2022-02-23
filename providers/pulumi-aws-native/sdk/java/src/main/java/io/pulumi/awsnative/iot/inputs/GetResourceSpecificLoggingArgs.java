@@ -17,7 +17,7 @@ public final class GetResourceSpecificLoggingArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="targetId", required=true)
-        private final String targetId;
+      private final String targetId;
 
     public String getTargetId() {
         return this.targetId;

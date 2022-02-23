@@ -24,7 +24,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="autoUser")
-        private final @Nullable AutoUserSpecificationResponse autoUser;
+      private final @Nullable AutoUserSpecificationResponse autoUser;
 
     public Optional<AutoUserSpecificationResponse> getAutoUser() {
         return this.autoUser == null ? Optional.empty() : Optional.ofNullable(this.autoUser);
@@ -35,7 +35,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userName")
-        private final @Nullable String userName;
+      private final @Nullable String userName;
 
     public Optional<String> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);

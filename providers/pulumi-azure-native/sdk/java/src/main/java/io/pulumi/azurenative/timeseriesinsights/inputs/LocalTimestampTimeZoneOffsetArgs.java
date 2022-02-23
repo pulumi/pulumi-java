@@ -23,7 +23,7 @@ public final class LocalTimestampTimeZoneOffsetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="propertyName")
-        private final @Nullable Input<String> propertyName;
+      private final @Nullable Input<String> propertyName;
 
     public Input<String> getPropertyName() {
         return this.propertyName == null ? Input.empty() : this.propertyName;

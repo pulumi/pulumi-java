@@ -25,7 +25,7 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vmSize")
-        private final @Nullable Input<Either<String,VirtualMachineSizeTypes>> vmSize;
+      private final @Nullable Input<Either<String,VirtualMachineSizeTypes>> vmSize;
 
     public Input<Either<String,VirtualMachineSizeTypes>> getVmSize() {
         return this.vmSize == null ? Input.empty() : this.vmSize;

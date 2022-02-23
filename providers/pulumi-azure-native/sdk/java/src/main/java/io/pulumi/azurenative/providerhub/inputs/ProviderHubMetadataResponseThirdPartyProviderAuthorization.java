@@ -17,14 +17,14 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization ex
     public static final ProviderHubMetadataResponseThirdPartyProviderAuthorization Empty = new ProviderHubMetadataResponseThirdPartyProviderAuthorization();
 
     @InputImport(name="authorizations")
-        private final @Nullable List<LightHouseAuthorizationResponse> authorizations;
+      private final @Nullable List<LightHouseAuthorizationResponse> authorizations;
 
     public List<LightHouseAuthorizationResponse> getAuthorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
 
     @InputImport(name="managedByTenantId")
-        private final @Nullable String managedByTenantId;
+      private final @Nullable String managedByTenantId;
 
     public Optional<String> getManagedByTenantId() {
         return this.managedByTenantId == null ? Optional.empty() : Optional.ofNullable(this.managedByTenantId);

@@ -22,7 +22,7 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="offer", required=true)
-        private final Input<String> offer;
+      private final Input<String> offer;
 
     public Input<String> getOffer() {
         return this.offer;
@@ -33,7 +33,7 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publisher", required=true)
-        private final Input<String> publisher;
+      private final Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher;
@@ -44,7 +44,7 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sku", required=true)
-        private final Input<String> sku;
+      private final Input<String> sku;
 
     public Input<String> getSku() {
         return this.sku;

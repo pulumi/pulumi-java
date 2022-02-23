@@ -24,7 +24,7 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="matchExpressions")
-        private final @Nullable Input<List<NodeSelectorRequirementArgs>> matchExpressions;
+      private final @Nullable Input<List<NodeSelectorRequirementArgs>> matchExpressions;
 
     public Input<List<NodeSelectorRequirementArgs>> getMatchExpressions() {
         return this.matchExpressions == null ? Input.empty() : this.matchExpressions;
@@ -35,7 +35,7 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="matchFields")
-        private final @Nullable Input<List<NodeSelectorRequirementArgs>> matchFields;
+      private final @Nullable Input<List<NodeSelectorRequirementArgs>> matchFields;
 
     public Input<List<NodeSelectorRequirementArgs>> getMatchFields() {
         return this.matchFields == null ? Input.empty() : this.matchFields;

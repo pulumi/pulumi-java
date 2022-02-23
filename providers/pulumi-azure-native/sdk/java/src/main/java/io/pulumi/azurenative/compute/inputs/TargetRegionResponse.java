@@ -25,7 +25,7 @@ public final class TargetRegionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encryption")
-        private final @Nullable EncryptionImagesResponse encryption;
+      private final @Nullable EncryptionImagesResponse encryption;
 
     public Optional<EncryptionImagesResponse> getEncryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
@@ -36,7 +36,7 @@ public final class TargetRegionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class TargetRegionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="regionalReplicaCount")
-        private final @Nullable Integer regionalReplicaCount;
+      private final @Nullable Integer regionalReplicaCount;
 
     public Optional<Integer> getRegionalReplicaCount() {
         return this.regionalReplicaCount == null ? Optional.empty() : Optional.ofNullable(this.regionalReplicaCount);
@@ -58,7 +58,7 @@ public final class TargetRegionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageAccountType")
-        private final @Nullable String storageAccountType;
+      private final @Nullable String storageAccountType;
 
     public Optional<String> getStorageAccountType() {
         return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);

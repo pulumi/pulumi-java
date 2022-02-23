@@ -24,7 +24,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipRules")
-        private final @Nullable Input<List<IpRuleArgs>> ipRules;
+      private final @Nullable Input<List<IpRuleArgs>> ipRules;
 
     public Input<List<IpRuleArgs>> getIpRules() {
         return this.ipRules == null ? Input.empty() : this.ipRules;

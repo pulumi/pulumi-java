@@ -15,14 +15,14 @@ public final class BucketReplicationTimeArgs extends io.pulumi.resources.Resourc
     public static final BucketReplicationTimeArgs Empty = new BucketReplicationTimeArgs();
 
     @InputImport(name="status", required=true)
-        private final Input<BucketReplicationTimeStatus> status;
+      private final Input<BucketReplicationTimeStatus> status;
 
     public Input<BucketReplicationTimeStatus> getStatus() {
         return this.status;
     }
 
     @InputImport(name="time", required=true)
-        private final Input<BucketReplicationTimeValueArgs> time;
+      private final Input<BucketReplicationTimeValueArgs> time;
 
     public Input<BucketReplicationTimeValueArgs> getTime() {
         return this.time;

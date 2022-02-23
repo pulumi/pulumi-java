@@ -24,7 +24,7 @@ public final class DiskEncryptionConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="targets")
-        private final @Nullable List<String> targets;
+      private final @Nullable List<String> targets;
 
     public List<String> getTargets() {
         return this.targets == null ? List.of() : this.targets;

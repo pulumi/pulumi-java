@@ -26,7 +26,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -37,7 +37,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="data")
-        private final @Nullable Input<JsonElement> data;
+      private final @Nullable Input<JsonElement> data;
 
     public Input<JsonElement> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -48,7 +48,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -59,7 +59,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -70,7 +70,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="revision", required=true)
-        private final Input<Integer> revision;
+      private final Input<Integer> revision;
 
     public Input<Integer> getRevision() {
         return this.revision;

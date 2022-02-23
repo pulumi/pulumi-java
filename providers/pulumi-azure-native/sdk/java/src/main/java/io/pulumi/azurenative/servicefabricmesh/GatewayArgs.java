@@ -24,7 +24,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationNetwork", required=true)
-        private final Input<NetworkRefArgs> destinationNetwork;
+      private final Input<NetworkRefArgs> destinationNetwork;
 
     public Input<NetworkRefArgs> getDestinationNetwork() {
         return this.destinationNetwork;
@@ -46,7 +46,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayResourceName")
-        private final @Nullable Input<String> gatewayResourceName;
+      private final @Nullable Input<String> gatewayResourceName;
 
     public Input<String> getGatewayResourceName() {
         return this.gatewayResourceName == null ? Input.empty() : this.gatewayResourceName;
@@ -57,7 +57,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="http")
-        private final @Nullable Input<List<HttpConfigArgs>> http;
+      private final @Nullable Input<List<HttpConfigArgs>> http;
 
     public Input<List<HttpConfigArgs>> getHttp() {
         return this.http == null ? Input.empty() : this.http;
@@ -68,7 +68,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -79,7 +79,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceNetwork", required=true)
-        private final Input<NetworkRefArgs> sourceNetwork;
+      private final Input<NetworkRefArgs> sourceNetwork;
 
     public Input<NetworkRefArgs> getSourceNetwork() {
         return this.sourceNetwork;
@@ -101,7 +101,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tcp")
-        private final @Nullable Input<List<TcpConfigArgs>> tcp;
+      private final @Nullable Input<List<TcpConfigArgs>> tcp;
 
     public Input<List<TcpConfigArgs>> getTcp() {
         return this.tcp == null ? Input.empty() : this.tcp;

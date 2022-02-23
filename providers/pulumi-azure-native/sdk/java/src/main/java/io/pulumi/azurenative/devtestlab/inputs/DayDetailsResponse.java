@@ -23,7 +23,7 @@ public final class DayDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="time")
-        private final @Nullable String time;
+      private final @Nullable String time;
 
     public Optional<String> getTime() {
         return this.time == null ? Optional.empty() : Optional.ofNullable(this.time);

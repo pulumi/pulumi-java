@@ -23,7 +23,7 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="contactId", required=true)
-        private final Input<String> contactId;
+      private final Input<String> contactId;
 
     public Input<String> getContactId() {
         return this.contactId;
@@ -34,7 +34,7 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="isEssential", required=true)
-        private final Input<Boolean> isEssential;
+      private final Input<Boolean> isEssential;
 
     public Input<Boolean> getIsEssential() {
         return this.isEssential;

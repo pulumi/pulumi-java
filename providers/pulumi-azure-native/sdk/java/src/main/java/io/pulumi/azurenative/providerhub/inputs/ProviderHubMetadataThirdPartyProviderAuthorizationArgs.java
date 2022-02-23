@@ -17,14 +17,14 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
     public static final ProviderHubMetadataThirdPartyProviderAuthorizationArgs Empty = new ProviderHubMetadataThirdPartyProviderAuthorizationArgs();
 
     @InputImport(name="authorizations")
-        private final @Nullable Input<List<LightHouseAuthorizationArgs>> authorizations;
+      private final @Nullable Input<List<LightHouseAuthorizationArgs>> authorizations;
 
     public Input<List<LightHouseAuthorizationArgs>> getAuthorizations() {
         return this.authorizations == null ? Input.empty() : this.authorizations;
     }
 
     @InputImport(name="managedByTenantId")
-        private final @Nullable Input<String> managedByTenantId;
+      private final @Nullable Input<String> managedByTenantId;
 
     public Input<String> getManagedByTenantId() {
         return this.managedByTenantId == null ? Input.empty() : this.managedByTenantId;

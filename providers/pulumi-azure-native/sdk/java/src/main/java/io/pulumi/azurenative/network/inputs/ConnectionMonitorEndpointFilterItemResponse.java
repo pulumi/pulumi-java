@@ -23,7 +23,7 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends io.pulumi
      * 
      */
     @InputImport(name="address")
-        private final @Nullable String address;
+      private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
@@ -34,7 +34,7 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends io.pulumi
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

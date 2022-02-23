@@ -18,7 +18,7 @@ public final class ClusterClusterConfigSecurityConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="kerberosConfig", required=true)
-        private final Input<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
+      private final Input<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
 
     public Input<ClusterClusterConfigSecurityConfigKerberosConfigArgs> getKerberosConfig() {
         return this.kerberosConfig;

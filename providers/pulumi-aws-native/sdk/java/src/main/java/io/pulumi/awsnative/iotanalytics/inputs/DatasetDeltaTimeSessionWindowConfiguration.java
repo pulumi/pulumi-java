@@ -13,7 +13,7 @@ public final class DatasetDeltaTimeSessionWindowConfiguration extends io.pulumi.
     public static final DatasetDeltaTimeSessionWindowConfiguration Empty = new DatasetDeltaTimeSessionWindowConfiguration();
 
     @InputImport(name="timeoutInMinutes", required=true)
-        private final Integer timeoutInMinutes;
+      private final Integer timeoutInMinutes;
 
     public Integer getTimeoutInMinutes() {
         return this.timeoutInMinutes;

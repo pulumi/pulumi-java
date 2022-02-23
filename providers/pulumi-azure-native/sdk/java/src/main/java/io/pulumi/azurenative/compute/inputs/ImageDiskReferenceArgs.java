@@ -24,7 +24,7 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -35,7 +35,7 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lun")
-        private final @Nullable Input<Integer> lun;
+      private final @Nullable Input<Integer> lun;
 
     public Input<Integer> getLun() {
         return this.lun == null ? Input.empty() : this.lun;

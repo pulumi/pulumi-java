@@ -26,7 +26,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowMultiSelect")
-        private final @Nullable Input<Boolean> allowMultiSelect;
+      private final @Nullable Input<Boolean> allowMultiSelect;
 
     public Input<Boolean> getAllowMultiSelect() {
         return this.allowMultiSelect == null ? Input.empty() : this.allowMultiSelect;
@@ -37,7 +37,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classes", required=true)
-        private final Input<Map<String,LabelClassArgs>> classes;
+      private final Input<Map<String,LabelClassArgs>> classes;
 
     public Input<Map<String,LabelClassArgs>> getClasses() {
         return this.classes;
@@ -48,7 +48,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;

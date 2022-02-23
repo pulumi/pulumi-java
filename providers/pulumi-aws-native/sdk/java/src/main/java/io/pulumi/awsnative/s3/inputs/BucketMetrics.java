@@ -16,14 +16,14 @@ public final class BucketMetrics extends io.pulumi.resources.InvokeArgs {
     public static final BucketMetrics Empty = new BucketMetrics();
 
     @InputImport(name="eventThreshold")
-        private final @Nullable BucketReplicationTimeValue eventThreshold;
+      private final @Nullable BucketReplicationTimeValue eventThreshold;
 
     public Optional<BucketReplicationTimeValue> getEventThreshold() {
         return this.eventThreshold == null ? Optional.empty() : Optional.ofNullable(this.eventThreshold);
     }
 
     @InputImport(name="status", required=true)
-        private final BucketMetricsStatus status;
+      private final BucketMetricsStatus status;
 
     public BucketMetricsStatus getStatus() {
         return this.status;

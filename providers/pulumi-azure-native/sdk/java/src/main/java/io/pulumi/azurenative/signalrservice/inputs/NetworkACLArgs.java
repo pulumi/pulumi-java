@@ -26,7 +26,7 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allow")
-        private final @Nullable Input<List<Either<String,SignalRRequestType>>> allow;
+      private final @Nullable Input<List<Either<String,SignalRRequestType>>> allow;
 
     public Input<List<Either<String,SignalRRequestType>>> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
@@ -37,7 +37,7 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deny")
-        private final @Nullable Input<List<Either<String,SignalRRequestType>>> deny;
+      private final @Nullable Input<List<Either<String,SignalRRequestType>>> deny;
 
     public Input<List<Either<String,SignalRRequestType>>> getDeny() {
         return this.deny == null ? Input.empty() : this.deny;

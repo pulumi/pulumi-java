@@ -20,7 +20,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-        private final Input<List<String>> actions;
+      private final Input<List<String>> actions;
 
     public Input<List<String>> getActions() {
         return this.actions;
@@ -31,7 +31,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthorityArn", required=true)
-        private final Input<String> certificateAuthorityArn;
+      private final Input<String> certificateAuthorityArn;
 
     public Input<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn;
@@ -42,7 +42,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principal", required=true)
-        private final Input<String> principal;
+      private final Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal;
@@ -53,7 +53,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAccount")
-        private final @Nullable Input<String> sourceAccount;
+      private final @Nullable Input<String> sourceAccount;
 
     public Input<String> getSourceAccount() {
         return this.sourceAccount == null ? Input.empty() : this.sourceAccount;

@@ -18,7 +18,7 @@ public final class AzureClusterControlPlaneDatabaseEncryptionGetArgs extends io.
      * 
      */
     @InputImport(name="keyId", required=true)
-        private final Input<String> keyId;
+      private final Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId;

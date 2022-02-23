@@ -15,7 +15,7 @@ public final class SpotFleetMonitoringArgs extends io.pulumi.resources.ResourceA
     public static final SpotFleetMonitoringArgs Empty = new SpotFleetMonitoringArgs();
 
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;

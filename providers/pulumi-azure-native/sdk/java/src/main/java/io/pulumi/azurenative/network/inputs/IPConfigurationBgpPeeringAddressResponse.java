@@ -24,7 +24,7 @@ public final class IPConfigurationBgpPeeringAddressResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="customBgpIpAddresses")
-        private final @Nullable List<String> customBgpIpAddresses;
+      private final @Nullable List<String> customBgpIpAddresses;
 
     public List<String> getCustomBgpIpAddresses() {
         return this.customBgpIpAddresses == null ? List.of() : this.customBgpIpAddresses;
@@ -35,7 +35,7 @@ public final class IPConfigurationBgpPeeringAddressResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="defaultBgpIpAddresses", required=true)
-        private final List<String> defaultBgpIpAddresses;
+      private final List<String> defaultBgpIpAddresses;
 
     public List<String> getDefaultBgpIpAddresses() {
         return this.defaultBgpIpAddresses;
@@ -46,7 +46,7 @@ public final class IPConfigurationBgpPeeringAddressResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="ipconfigurationId")
-        private final @Nullable String ipconfigurationId;
+      private final @Nullable String ipconfigurationId;
 
     public Optional<String> getIpconfigurationId() {
         return this.ipconfigurationId == null ? Optional.empty() : Optional.ofNullable(this.ipconfigurationId);
@@ -57,7 +57,7 @@ public final class IPConfigurationBgpPeeringAddressResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="tunnelIpAddresses", required=true)
-        private final List<String> tunnelIpAddresses;
+      private final List<String> tunnelIpAddresses;
 
     public List<String> getTunnelIpAddresses() {
         return this.tunnelIpAddresses;

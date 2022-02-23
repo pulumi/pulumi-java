@@ -23,7 +23,7 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="componentName", required=true)
-        private final Input<String> componentName;
+      private final Input<String> componentName;
 
     public Input<String> getComponentName() {
         return this.componentName;
@@ -34,7 +34,7 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceList", required=true)
-        private final Input<List<String>> resourceList;
+      private final Input<List<String>> resourceList;
 
     public Input<List<String>> getResourceList() {
         return this.resourceList;

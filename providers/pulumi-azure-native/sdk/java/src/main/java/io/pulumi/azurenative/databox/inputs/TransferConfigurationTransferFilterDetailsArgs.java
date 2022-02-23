@@ -23,7 +23,7 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends io.pul
      * 
      */
     @InputImport(name="include")
-        private final @Nullable Input<TransferFilterDetailsArgs> include;
+      private final @Nullable Input<TransferFilterDetailsArgs> include;
 
     public Input<TransferFilterDetailsArgs> getInclude() {
         return this.include == null ? Input.empty() : this.include;

@@ -19,7 +19,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<String> metadata;
+      private final @Nullable Input<String> metadata;
 
     public Input<String> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -30,7 +30,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<String> properties;
+      private final @Nullable Input<String> properties;
 
     public Input<String> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -41,7 +41,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="providerInstanceName")
-        private final @Nullable Input<String> providerInstanceName;
+      private final @Nullable Input<String> providerInstanceName;
 
     public Input<String> getProviderInstanceName() {
         return this.providerInstanceName == null ? Input.empty() : this.providerInstanceName;
@@ -52,7 +52,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sapMonitorName", required=true)
-        private final Input<String> sapMonitorName;
+      private final Input<String> sapMonitorName;
 
     public Input<String> getSapMonitorName() {
         return this.sapMonitorName;
@@ -74,7 +74,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

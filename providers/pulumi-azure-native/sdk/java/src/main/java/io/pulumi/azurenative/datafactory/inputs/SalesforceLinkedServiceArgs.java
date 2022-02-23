@@ -31,7 +31,7 @@ public final class SalesforceLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -42,7 +42,7 @@ public final class SalesforceLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<Object> apiVersion;
+      private final @Nullable Input<Object> apiVersion;
 
     public Input<Object> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -53,7 +53,7 @@ public final class SalesforceLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -64,7 +64,7 @@ public final class SalesforceLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -75,7 +75,7 @@ public final class SalesforceLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -86,7 +86,7 @@ public final class SalesforceLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="environmentUrl")
-        private final @Nullable Input<Object> environmentUrl;
+      private final @Nullable Input<Object> environmentUrl;
 
     public Input<Object> getEnvironmentUrl() {
         return this.environmentUrl == null ? Input.empty() : this.environmentUrl;
@@ -97,7 +97,7 @@ public final class SalesforceLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -108,7 +108,7 @@ public final class SalesforceLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -119,7 +119,7 @@ public final class SalesforceLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="securityToken")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getSecurityToken() {
         return this.securityToken == null ? Input.empty() : this.securityToken;
@@ -131,7 +131,7 @@ public final class SalesforceLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -142,7 +142,7 @@ public final class SalesforceLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="username")
-        private final @Nullable Input<Object> username;
+      private final @Nullable Input<Object> username;
 
     public Input<Object> getUsername() {
         return this.username == null ? Input.empty() : this.username;

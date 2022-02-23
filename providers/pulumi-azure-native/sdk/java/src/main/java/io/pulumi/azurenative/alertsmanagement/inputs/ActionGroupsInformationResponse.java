@@ -24,7 +24,7 @@ public final class ActionGroupsInformationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="customEmailSubject")
-        private final @Nullable String customEmailSubject;
+      private final @Nullable String customEmailSubject;
 
     public Optional<String> getCustomEmailSubject() {
         return this.customEmailSubject == null ? Optional.empty() : Optional.ofNullable(this.customEmailSubject);
@@ -35,7 +35,7 @@ public final class ActionGroupsInformationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="customWebhookPayload")
-        private final @Nullable String customWebhookPayload;
+      private final @Nullable String customWebhookPayload;
 
     public Optional<String> getCustomWebhookPayload() {
         return this.customWebhookPayload == null ? Optional.empty() : Optional.ofNullable(this.customWebhookPayload);
@@ -46,7 +46,7 @@ public final class ActionGroupsInformationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="groupIds", required=true)
-        private final List<String> groupIds;
+      private final List<String> groupIds;
 
     public List<String> getGroupIds() {
         return this.groupIds;

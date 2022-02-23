@@ -14,7 +14,7 @@ public final class InstanceFromTemplateNetworkPerformanceConfigArgs extends io.p
     public static final InstanceFromTemplateNetworkPerformanceConfigArgs Empty = new InstanceFromTemplateNetworkPerformanceConfigArgs();
 
     @InputImport(name="totalEgressBandwidthTier", required=true)
-        private final Input<String> totalEgressBandwidthTier;
+      private final Input<String> totalEgressBandwidthTier;
 
     public Input<String> getTotalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;

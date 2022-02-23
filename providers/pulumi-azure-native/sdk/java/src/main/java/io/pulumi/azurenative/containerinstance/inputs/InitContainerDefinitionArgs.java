@@ -26,7 +26,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="command")
-        private final @Nullable Input<List<String>> command;
+      private final @Nullable Input<List<String>> command;
 
     public Input<List<String>> getCommand() {
         return this.command == null ? Input.empty() : this.command;
@@ -37,7 +37,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="environmentVariables")
-        private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
+      private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
 
     public Input<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -48,7 +48,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="image")
-        private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -59,7 +59,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -70,7 +70,7 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="volumeMounts")
-        private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
+      private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
 
     public Input<List<VolumeMountArgs>> getVolumeMounts() {
         return this.volumeMounts == null ? Input.empty() : this.volumeMounts;

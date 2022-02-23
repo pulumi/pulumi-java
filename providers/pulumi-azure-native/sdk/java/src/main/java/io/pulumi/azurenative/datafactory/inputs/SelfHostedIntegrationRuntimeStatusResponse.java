@@ -27,7 +27,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="autoUpdate", required=true)
-        private final String autoUpdate;
+      private final String autoUpdate;
 
     public String getAutoUpdate() {
         return this.autoUpdate;
@@ -38,7 +38,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="autoUpdateETA", required=true)
-        private final String autoUpdateETA;
+      private final String autoUpdateETA;
 
     public String getAutoUpdateETA() {
         return this.autoUpdateETA;
@@ -49,7 +49,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="capabilities", required=true)
-        private final Map<String,String> capabilities;
+      private final Map<String,String> capabilities;
 
     public Map<String,String> getCapabilities() {
         return this.capabilities;
@@ -60,7 +60,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="createTime", required=true)
-        private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -71,7 +71,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="dataFactoryName", required=true)
-        private final String dataFactoryName;
+      private final String dataFactoryName;
 
     public String getDataFactoryName() {
         return this.dataFactoryName;
@@ -82,7 +82,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="internalChannelEncryption", required=true)
-        private final String internalChannelEncryption;
+      private final String internalChannelEncryption;
 
     public String getInternalChannelEncryption() {
         return this.internalChannelEncryption;
@@ -93,7 +93,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="latestVersion", required=true)
-        private final String latestVersion;
+      private final String latestVersion;
 
     public String getLatestVersion() {
         return this.latestVersion;
@@ -104,7 +104,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="links")
-        private final @Nullable List<LinkedIntegrationRuntimeResponse> links;
+      private final @Nullable List<LinkedIntegrationRuntimeResponse> links;
 
     public List<LinkedIntegrationRuntimeResponse> getLinks() {
         return this.links == null ? List.of() : this.links;
@@ -115,7 +115,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="localTimeZoneOffset", required=true)
-        private final String localTimeZoneOffset;
+      private final String localTimeZoneOffset;
 
     public String getLocalTimeZoneOffset() {
         return this.localTimeZoneOffset;
@@ -126,7 +126,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="nodes")
-        private final @Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes;
+      private final @Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes;
 
     public List<SelfHostedIntegrationRuntimeNodeResponse> getNodes() {
         return this.nodes == null ? List.of() : this.nodes;
@@ -137,7 +137,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="pushedVersion", required=true)
-        private final String pushedVersion;
+      private final String pushedVersion;
 
     public String getPushedVersion() {
         return this.pushedVersion;
@@ -148,7 +148,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="scheduledUpdateDate", required=true)
-        private final String scheduledUpdateDate;
+      private final String scheduledUpdateDate;
 
     public String getScheduledUpdateDate() {
         return this.scheduledUpdateDate;
@@ -159,7 +159,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="serviceUrls", required=true)
-        private final List<String> serviceUrls;
+      private final List<String> serviceUrls;
 
     public List<String> getServiceUrls() {
         return this.serviceUrls;
@@ -170,7 +170,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -181,7 +181,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="taskQueueId", required=true)
-        private final String taskQueueId;
+      private final String taskQueueId;
 
     public String getTaskQueueId() {
         return this.taskQueueId;
@@ -193,7 +193,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -204,7 +204,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="updateDelayOffset", required=true)
-        private final String updateDelayOffset;
+      private final String updateDelayOffset;
 
     public String getUpdateDelayOffset() {
         return this.updateDelayOffset;
@@ -215,7 +215,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="version", required=true)
-        private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -226,7 +226,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * 
      */
     @InputImport(name="versionStatus", required=true)
-        private final String versionStatus;
+      private final String versionStatus;
 
     public String getVersionStatus() {
         return this.versionStatus;

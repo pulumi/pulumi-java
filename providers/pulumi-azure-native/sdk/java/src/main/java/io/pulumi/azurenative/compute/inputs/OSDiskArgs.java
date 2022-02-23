@@ -34,7 +34,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caching")
-        private final @Nullable Input<CachingTypes> caching;
+      private final @Nullable Input<CachingTypes> caching;
 
     public Input<CachingTypes> getCaching() {
         return this.caching == null ? Input.empty() : this.caching;
@@ -45,7 +45,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createOption", required=true)
-        private final Input<Either<String,DiskCreateOptionTypes>> createOption;
+      private final Input<Either<String,DiskCreateOptionTypes>> createOption;
 
     public Input<Either<String,DiskCreateOptionTypes>> getCreateOption() {
         return this.createOption;
@@ -56,7 +56,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteOption")
-        private final @Nullable Input<Either<String,DiskDeleteOptionTypes>> deleteOption;
+      private final @Nullable Input<Either<String,DiskDeleteOptionTypes>> deleteOption;
 
     public Input<Either<String,DiskDeleteOptionTypes>> getDeleteOption() {
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
@@ -67,7 +67,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diffDiskSettings")
-        private final @Nullable Input<DiffDiskSettingsArgs> diffDiskSettings;
+      private final @Nullable Input<DiffDiskSettingsArgs> diffDiskSettings;
 
     public Input<DiffDiskSettingsArgs> getDiffDiskSettings() {
         return this.diffDiskSettings == null ? Input.empty() : this.diffDiskSettings;
@@ -78,7 +78,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-        private final @Nullable Input<Integer> diskSizeGB;
+      private final @Nullable Input<Integer> diskSizeGB;
 
     public Input<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
@@ -89,7 +89,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionSettings")
-        private final @Nullable Input<DiskEncryptionSettingsArgs> encryptionSettings;
+      private final @Nullable Input<DiskEncryptionSettingsArgs> encryptionSettings;
 
     public Input<DiskEncryptionSettingsArgs> getEncryptionSettings() {
         return this.encryptionSettings == null ? Input.empty() : this.encryptionSettings;
@@ -100,7 +100,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-        private final @Nullable Input<VirtualHardDiskArgs> image;
+      private final @Nullable Input<VirtualHardDiskArgs> image;
 
     public Input<VirtualHardDiskArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -111,7 +111,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedDisk")
-        private final @Nullable Input<ManagedDiskParametersArgs> managedDisk;
+      private final @Nullable Input<ManagedDiskParametersArgs> managedDisk;
 
     public Input<ManagedDiskParametersArgs> getManagedDisk() {
         return this.managedDisk == null ? Input.empty() : this.managedDisk;
@@ -122,7 +122,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -133,7 +133,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType")
-        private final @Nullable Input<OperatingSystemTypes> osType;
+      private final @Nullable Input<OperatingSystemTypes> osType;
 
     public Input<OperatingSystemTypes> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -144,7 +144,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vhd")
-        private final @Nullable Input<VirtualHardDiskArgs> vhd;
+      private final @Nullable Input<VirtualHardDiskArgs> vhd;
 
     public Input<VirtualHardDiskArgs> getVhd() {
         return this.vhd == null ? Input.empty() : this.vhd;
@@ -155,7 +155,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeAcceleratorEnabled")
-        private final @Nullable Input<Boolean> writeAcceleratorEnabled;
+      private final @Nullable Input<Boolean> writeAcceleratorEnabled;
 
     public Input<Boolean> getWriteAcceleratorEnabled() {
         return this.writeAcceleratorEnabled == null ? Input.empty() : this.writeAcceleratorEnabled;

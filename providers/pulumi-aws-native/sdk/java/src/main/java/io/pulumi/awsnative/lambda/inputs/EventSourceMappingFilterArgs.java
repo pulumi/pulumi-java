@@ -23,7 +23,7 @@ public final class EventSourceMappingFilterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="pattern")
-        private final @Nullable Input<String> pattern;
+      private final @Nullable Input<String> pattern;
 
     public Input<String> getPattern() {
         return this.pattern == null ? Input.empty() : this.pattern;

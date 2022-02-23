@@ -223,6 +223,21 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public InfrastructureConfiguration(String name) {
+        this(name, InfrastructureConfigurationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public InfrastructureConfiguration(String name, InfrastructureConfigurationArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

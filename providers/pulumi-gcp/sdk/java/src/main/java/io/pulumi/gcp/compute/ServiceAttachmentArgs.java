@@ -23,7 +23,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionPreference", required=true)
-        private final Input<String> connectionPreference;
+      private final Input<String> connectionPreference;
 
     public Input<String> getConnectionPreference() {
         return this.connectionPreference;
@@ -36,7 +36,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="consumerAcceptLists")
-        private final @Nullable Input<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists;
+      private final @Nullable Input<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists;
 
     public Input<List<ServiceAttachmentConsumerAcceptListArgs>> getConsumerAcceptLists() {
         return this.consumerAcceptLists == null ? Input.empty() : this.consumerAcceptLists;
@@ -48,7 +48,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="consumerRejectLists")
-        private final @Nullable Input<List<String>> consumerRejectLists;
+      private final @Nullable Input<List<String>> consumerRejectLists;
 
     public Input<List<String>> getConsumerRejectLists() {
         return this.consumerRejectLists == null ? Input.empty() : this.consumerRejectLists;
@@ -59,7 +59,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -72,7 +72,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableProxyProtocol", required=true)
-        private final Input<Boolean> enableProxyProtocol;
+      private final Input<Boolean> enableProxyProtocol;
 
     public Input<Boolean> getEnableProxyProtocol() {
         return this.enableProxyProtocol;
@@ -88,7 +88,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -99,7 +99,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="natSubnets", required=true)
-        private final Input<List<String>> natSubnets;
+      private final Input<List<String>> natSubnets;
 
     public Input<List<String>> getNatSubnets() {
         return this.natSubnets;
@@ -111,7 +111,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -122,7 +122,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -134,7 +134,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetService", required=true)
-        private final Input<String> targetService;
+      private final Input<String> targetService;
 
     public Input<String> getTargetService() {
         return this.targetService;

@@ -23,7 +23,7 @@ public final class JobDeliveryInfoResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="scheduledDateTime")
-        private final @Nullable String scheduledDateTime;
+      private final @Nullable String scheduledDateTime;
 
     public Optional<String> getScheduledDateTime() {
         return this.scheduledDateTime == null ? Optional.empty() : Optional.ofNullable(this.scheduledDateTime);

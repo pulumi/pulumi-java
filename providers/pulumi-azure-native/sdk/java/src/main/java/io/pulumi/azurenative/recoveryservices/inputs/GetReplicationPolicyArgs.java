@@ -17,7 +17,7 @@ public final class GetReplicationPolicyArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="policyName", required=true)
-        private final String policyName;
+      private final String policyName;
 
     public String getPolicyName() {
         return this.policyName;
@@ -28,7 +28,7 @@ public final class GetReplicationPolicyArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetReplicationPolicyArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;

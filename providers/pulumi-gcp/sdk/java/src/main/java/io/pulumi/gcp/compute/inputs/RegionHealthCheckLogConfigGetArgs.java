@@ -20,7 +20,7 @@ public final class RegionHealthCheckLogConfigGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="enable")
-        private final @Nullable Input<Boolean> enable;
+      private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;

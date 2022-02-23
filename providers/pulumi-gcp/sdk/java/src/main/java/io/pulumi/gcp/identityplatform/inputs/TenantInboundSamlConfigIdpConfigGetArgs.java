@@ -23,7 +23,7 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="idpCertificates", required=true)
-        private final Input<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates;
+      private final Input<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates;
 
     public Input<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> getIdpCertificates() {
         return this.idpCertificates;
@@ -34,7 +34,7 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="idpEntityId", required=true)
-        private final Input<String> idpEntityId;
+      private final Input<String> idpEntityId;
 
     public Input<String> getIdpEntityId() {
         return this.idpEntityId;
@@ -45,7 +45,7 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="signRequest")
-        private final @Nullable Input<Boolean> signRequest;
+      private final @Nullable Input<Boolean> signRequest;
 
     public Input<Boolean> getSignRequest() {
         return this.signRequest == null ? Input.empty() : this.signRequest;
@@ -56,7 +56,7 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="ssoUrl", required=true)
-        private final Input<String> ssoUrl;
+      private final Input<String> ssoUrl;
 
     public Input<String> getSsoUrl() {
         return this.ssoUrl;

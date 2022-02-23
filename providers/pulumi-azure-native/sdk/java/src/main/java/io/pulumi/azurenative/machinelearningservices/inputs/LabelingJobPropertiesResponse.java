@@ -32,7 +32,7 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="createdTimeUtc", required=true)
-        private final String createdTimeUtc;
+      private final String createdTimeUtc;
 
     public String getCreatedTimeUtc() {
         return this.createdTimeUtc;
@@ -43,7 +43,7 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="datasetConfiguration", required=true)
-        private final LabelingDatasetConfigurationResponse datasetConfiguration;
+      private final LabelingDatasetConfigurationResponse datasetConfiguration;
 
     public LabelingDatasetConfigurationResponse getDatasetConfiguration() {
         return this.datasetConfiguration;
@@ -54,7 +54,7 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="jobInstructions", required=true)
-        private final LabelingJobInstructionsResponse jobInstructions;
+      private final LabelingJobInstructionsResponse jobInstructions;
 
     public LabelingJobInstructionsResponse getJobInstructions() {
         return this.jobInstructions;
@@ -65,7 +65,7 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="labelCategories", required=true)
-        private final Map<String,LabelCategoryResponse> labelCategories;
+      private final Map<String,LabelCategoryResponse> labelCategories;
 
     public Map<String,LabelCategoryResponse> getLabelCategories() {
         return this.labelCategories;
@@ -76,7 +76,7 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="labelingJobMediaProperties", required=true)
-        private final LabelingJobImagePropertiesResponse labelingJobMediaProperties;
+      private final LabelingJobImagePropertiesResponse labelingJobMediaProperties;
 
     public LabelingJobImagePropertiesResponse getLabelingJobMediaProperties() {
         return this.labelingJobMediaProperties;
@@ -87,7 +87,7 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="mlAssistConfiguration")
-        private final @Nullable MLAssistConfigurationResponse mlAssistConfiguration;
+      private final @Nullable MLAssistConfigurationResponse mlAssistConfiguration;
 
     public Optional<MLAssistConfigurationResponse> getMlAssistConfiguration() {
         return this.mlAssistConfiguration == null ? Optional.empty() : Optional.ofNullable(this.mlAssistConfiguration);
@@ -98,7 +98,7 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="progressMetrics", required=true)
-        private final ProgressMetricsResponse progressMetrics;
+      private final ProgressMetricsResponse progressMetrics;
 
     public ProgressMetricsResponse getProgressMetrics() {
         return this.progressMetrics;
@@ -109,7 +109,7 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="projectId", required=true)
-        private final String projectId;
+      private final String projectId;
 
     public String getProjectId() {
         return this.projectId;
@@ -120,7 +120,7 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Map<String,String> properties;
+      private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -131,7 +131,7 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="status", required=true)
-        private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -142,7 +142,7 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="statusMessages", required=true)
-        private final List<StatusMessageResponse> statusMessages;
+      private final List<StatusMessageResponse> statusMessages;
 
     public List<StatusMessageResponse> getStatusMessages() {
         return this.statusMessages;
@@ -153,7 +153,7 @@ public final class LabelingJobPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

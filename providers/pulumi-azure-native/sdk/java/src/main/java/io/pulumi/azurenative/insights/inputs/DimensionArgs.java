@@ -25,7 +25,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator", required=true)
-        private final Input<Either<String,Operator>> operator;
+      private final Input<Either<String,Operator>> operator;
 
     public Input<Either<String,Operator>> getOperator() {
         return this.operator;
@@ -47,7 +47,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values", required=true)
-        private final Input<List<String>> values;
+      private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;

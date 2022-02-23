@@ -23,7 +23,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-        private final @Nullable Input<String> args;
+      private final @Nullable Input<String> args;
 
     public Input<String> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -34,7 +34,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

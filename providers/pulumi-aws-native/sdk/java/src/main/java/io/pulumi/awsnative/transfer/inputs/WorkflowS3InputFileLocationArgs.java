@@ -23,7 +23,7 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="bucket")
-        private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -34,7 +34,7 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="key")
-        private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;

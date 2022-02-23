@@ -25,7 +25,7 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dockerImageUri", required=true)
-        private final Input<String> dockerImageUri;
+      private final Input<String> dockerImageUri;
 
     public Input<String> getDockerImageUri() {
         return this.dockerImageUri;
@@ -37,7 +37,7 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dockerSpecificationType", required=true)
-        private final Input<String> dockerSpecificationType;
+      private final Input<String> dockerSpecificationType;
 
     public Input<String> getDockerSpecificationType() {
         return this.dockerSpecificationType;
@@ -48,7 +48,7 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-        private final @Nullable Input<DockerImagePlatformArgs> platform;
+      private final @Nullable Input<DockerImagePlatformArgs> platform;
 
     public Input<DockerImagePlatformArgs> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;

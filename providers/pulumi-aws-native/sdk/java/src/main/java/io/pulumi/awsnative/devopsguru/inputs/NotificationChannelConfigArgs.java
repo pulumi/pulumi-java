@@ -19,7 +19,7 @@ public final class NotificationChannelConfigArgs extends io.pulumi.resources.Res
     public static final NotificationChannelConfigArgs Empty = new NotificationChannelConfigArgs();
 
     @InputImport(name="sns")
-        private final @Nullable Input<NotificationChannelSnsChannelConfigArgs> sns;
+      private final @Nullable Input<NotificationChannelSnsChannelConfigArgs> sns;
 
     public Input<NotificationChannelSnsChannelConfigArgs> getSns() {
         return this.sns == null ? Input.empty() : this.sns;

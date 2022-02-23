@@ -234,6 +234,21 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public OrchestratorInstanceServiceDetails(String name) {
+        this(name, OrchestratorInstanceServiceDetailsArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public OrchestratorInstanceServiceDetails(String name, OrchestratorInstanceServiceDetailsArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

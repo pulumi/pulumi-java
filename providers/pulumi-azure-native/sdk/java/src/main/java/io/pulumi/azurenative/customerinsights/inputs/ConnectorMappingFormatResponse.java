@@ -23,7 +23,7 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="acceptLanguage")
-        private final @Nullable String acceptLanguage;
+      private final @Nullable String acceptLanguage;
 
     public Optional<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
@@ -34,7 +34,7 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="arraySeparator")
-        private final @Nullable String arraySeparator;
+      private final @Nullable String arraySeparator;
 
     public Optional<String> getArraySeparator() {
         return this.arraySeparator == null ? Optional.empty() : Optional.ofNullable(this.arraySeparator);
@@ -45,7 +45,7 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="columnDelimiter")
-        private final @Nullable String columnDelimiter;
+      private final @Nullable String columnDelimiter;
 
     public Optional<String> getColumnDelimiter() {
         return this.columnDelimiter == null ? Optional.empty() : Optional.ofNullable(this.columnDelimiter);
@@ -56,7 +56,7 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="formatType", required=true)
-        private final String formatType;
+      private final String formatType;
 
     public String getFormatType() {
         return this.formatType;
@@ -67,7 +67,7 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="quoteCharacter")
-        private final @Nullable String quoteCharacter;
+      private final @Nullable String quoteCharacter;
 
     public Optional<String> getQuoteCharacter() {
         return this.quoteCharacter == null ? Optional.empty() : Optional.ofNullable(this.quoteCharacter);
@@ -78,7 +78,7 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="quoteEscapeCharacter")
-        private final @Nullable String quoteEscapeCharacter;
+      private final @Nullable String quoteEscapeCharacter;
 
     public Optional<String> getQuoteEscapeCharacter() {
         return this.quoteEscapeCharacter == null ? Optional.empty() : Optional.ofNullable(this.quoteEscapeCharacter);

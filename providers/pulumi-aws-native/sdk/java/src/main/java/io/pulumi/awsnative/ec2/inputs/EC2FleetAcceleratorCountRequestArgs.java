@@ -15,14 +15,14 @@ public final class EC2FleetAcceleratorCountRequestArgs extends io.pulumi.resourc
     public static final EC2FleetAcceleratorCountRequestArgs Empty = new EC2FleetAcceleratorCountRequestArgs();
 
     @InputImport(name="max")
-        private final @Nullable Input<Integer> max;
+      private final @Nullable Input<Integer> max;
 
     public Input<Integer> getMax() {
         return this.max == null ? Input.empty() : this.max;
     }
 
     @InputImport(name="min")
-        private final @Nullable Input<Integer> min;
+      private final @Nullable Input<Integer> min;
 
     public Input<Integer> getMin() {
         return this.min == null ? Input.empty() : this.min;

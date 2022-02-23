@@ -22,7 +22,7 @@ public final class EnvironmentVariableSetupResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -33,7 +33,7 @@ public final class EnvironmentVariableSetupResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="variableName", required=true)
-        private final String variableName;
+      private final String variableName;
 
     public String getVariableName() {
         return this.variableName;
@@ -44,7 +44,7 @@ public final class EnvironmentVariableSetupResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="variableValue", required=true)
-        private final String variableValue;
+      private final String variableValue;
 
     public String getVariableValue() {
         return this.variableValue;

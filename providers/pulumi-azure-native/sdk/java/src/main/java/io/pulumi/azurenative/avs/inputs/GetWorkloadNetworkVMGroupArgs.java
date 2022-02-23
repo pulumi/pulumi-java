@@ -17,7 +17,7 @@ public final class GetWorkloadNetworkVMGroupArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-        private final String privateCloudName;
+      private final String privateCloudName;
 
     public String getPrivateCloudName() {
         return this.privateCloudName;
@@ -28,7 +28,7 @@ public final class GetWorkloadNetworkVMGroupArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetWorkloadNetworkVMGroupArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="vmGroupId", required=true)
-        private final String vmGroupId;
+      private final String vmGroupId;
 
     public String getVmGroupId() {
         return this.vmGroupId;

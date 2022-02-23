@@ -17,7 +17,7 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="configurationAssignmentName", required=true)
-        private final String configurationAssignmentName;
+      private final String configurationAssignmentName;
 
     public String getConfigurationAssignmentName() {
         return this.configurationAssignmentName;
@@ -28,7 +28,7 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="providerName", required=true)
-        private final String providerName;
+      private final String providerName;
 
     public String getProviderName() {
         return this.providerName;
@@ -39,7 +39,7 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -61,7 +61,7 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceType", required=true)
-        private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;

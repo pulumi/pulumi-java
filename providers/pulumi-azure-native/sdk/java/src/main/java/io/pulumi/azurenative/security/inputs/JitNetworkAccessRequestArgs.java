@@ -21,7 +21,7 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="justification")
-        private final @Nullable Input<String> justification;
+      private final @Nullable Input<String> justification;
 
     public Input<String> getJustification() {
         return this.justification == null ? Input.empty() : this.justification;
@@ -32,7 +32,7 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="requestor", required=true)
-        private final Input<String> requestor;
+      private final Input<String> requestor;
 
     public Input<String> getRequestor() {
         return this.requestor;
@@ -43,14 +43,14 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="startTimeUtc", required=true)
-        private final Input<String> startTimeUtc;
+      private final Input<String> startTimeUtc;
 
     public Input<String> getStartTimeUtc() {
         return this.startTimeUtc;
     }
 
     @InputImport(name="virtualMachines", required=true)
-        private final Input<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines;
+      private final Input<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines;
 
     public Input<List<JitNetworkAccessRequestVirtualMachineArgs>> getVirtualMachines() {
         return this.virtualMachines;

@@ -22,7 +22,7 @@ public final class AS2OneWayAgreementResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="protocolSettings", required=true)
-        private final AS2ProtocolSettingsResponse protocolSettings;
+      private final AS2ProtocolSettingsResponse protocolSettings;
 
     public AS2ProtocolSettingsResponse getProtocolSettings() {
         return this.protocolSettings;
@@ -33,7 +33,7 @@ public final class AS2OneWayAgreementResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="receiverBusinessIdentity", required=true)
-        private final BusinessIdentityResponse receiverBusinessIdentity;
+      private final BusinessIdentityResponse receiverBusinessIdentity;
 
     public BusinessIdentityResponse getReceiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
@@ -44,7 +44,7 @@ public final class AS2OneWayAgreementResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="senderBusinessIdentity", required=true)
-        private final BusinessIdentityResponse senderBusinessIdentity;
+      private final BusinessIdentityResponse senderBusinessIdentity;
 
     public BusinessIdentityResponse getSenderBusinessIdentity() {
         return this.senderBusinessIdentity;

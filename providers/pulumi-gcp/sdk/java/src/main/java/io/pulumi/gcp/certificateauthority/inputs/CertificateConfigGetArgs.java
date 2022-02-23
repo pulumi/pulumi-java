@@ -21,7 +21,7 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publicKey", required=true)
-        private final Input<CertificateConfigPublicKeyGetArgs> publicKey;
+      private final Input<CertificateConfigPublicKeyGetArgs> publicKey;
 
     public Input<CertificateConfigPublicKeyGetArgs> getPublicKey() {
         return this.publicKey;
@@ -33,7 +33,7 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subjectConfig", required=true)
-        private final Input<CertificateConfigSubjectConfigGetArgs> subjectConfig;
+      private final Input<CertificateConfigSubjectConfigGetArgs> subjectConfig;
 
     public Input<CertificateConfigSubjectConfigGetArgs> getSubjectConfig() {
         return this.subjectConfig;
@@ -45,7 +45,7 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="x509Config", required=true)
-        private final Input<CertificateConfigX509ConfigGetArgs> x509Config;
+      private final Input<CertificateConfigX509ConfigGetArgs> x509Config;
 
     public Input<CertificateConfigX509ConfigGetArgs> getX509Config() {
         return this.x509Config;

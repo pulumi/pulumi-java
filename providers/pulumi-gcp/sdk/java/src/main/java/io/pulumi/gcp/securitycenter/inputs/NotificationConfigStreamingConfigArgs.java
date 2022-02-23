@@ -36,7 +36,7 @@ public final class NotificationConfigStreamingConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="filter", required=true)
-        private final Input<String> filter;
+      private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;

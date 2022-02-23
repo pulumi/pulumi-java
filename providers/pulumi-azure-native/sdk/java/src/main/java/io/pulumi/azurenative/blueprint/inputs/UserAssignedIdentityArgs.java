@@ -23,7 +23,7 @@ public final class UserAssignedIdentityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -34,7 +34,7 @@ public final class UserAssignedIdentityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="principalId")
-        private final @Nullable Input<String> principalId;
+      private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;

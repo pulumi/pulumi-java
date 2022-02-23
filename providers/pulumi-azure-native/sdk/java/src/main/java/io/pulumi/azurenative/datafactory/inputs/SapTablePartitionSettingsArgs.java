@@ -23,7 +23,7 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="maxPartitionsNumber")
-        private final @Nullable Input<Object> maxPartitionsNumber;
+      private final @Nullable Input<Object> maxPartitionsNumber;
 
     public Input<Object> getMaxPartitionsNumber() {
         return this.maxPartitionsNumber == null ? Input.empty() : this.maxPartitionsNumber;
@@ -34,7 +34,7 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="partitionColumnName")
-        private final @Nullable Input<Object> partitionColumnName;
+      private final @Nullable Input<Object> partitionColumnName;
 
     public Input<Object> getPartitionColumnName() {
         return this.partitionColumnName == null ? Input.empty() : this.partitionColumnName;
@@ -45,7 +45,7 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="partitionLowerBound")
-        private final @Nullable Input<Object> partitionLowerBound;
+      private final @Nullable Input<Object> partitionLowerBound;
 
     public Input<Object> getPartitionLowerBound() {
         return this.partitionLowerBound == null ? Input.empty() : this.partitionLowerBound;
@@ -56,7 +56,7 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="partitionUpperBound")
-        private final @Nullable Input<Object> partitionUpperBound;
+      private final @Nullable Input<Object> partitionUpperBound;
 
     public Input<Object> getPartitionUpperBound() {
         return this.partitionUpperBound == null ? Input.empty() : this.partitionUpperBound;

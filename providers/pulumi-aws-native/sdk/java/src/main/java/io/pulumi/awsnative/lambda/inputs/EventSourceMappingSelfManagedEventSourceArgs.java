@@ -23,7 +23,7 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulum
      * 
      */
     @InputImport(name="endpoints")
-        private final @Nullable Input<EventSourceMappingEndpointsArgs> endpoints;
+      private final @Nullable Input<EventSourceMappingEndpointsArgs> endpoints;
 
     public Input<EventSourceMappingEndpointsArgs> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;

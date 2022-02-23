@@ -19,7 +19,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="attachmentId", required=true)
-        private final Input<String> attachmentId;
+      private final Input<String> attachmentId;
 
     public Input<String> getAttachmentId() {
         return this.attachmentId;
@@ -30,7 +30,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,7 +41,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="policyId", required=true)
-        private final Input<String> policyId;
+      private final Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId;

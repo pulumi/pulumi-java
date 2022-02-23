@@ -15,7 +15,7 @@ public final class DomainZoneAwarenessConfigArgs extends io.pulumi.resources.Res
     public static final DomainZoneAwarenessConfigArgs Empty = new DomainZoneAwarenessConfigArgs();
 
     @InputImport(name="availabilityZoneCount")
-        private final @Nullable Input<Integer> availabilityZoneCount;
+      private final @Nullable Input<Integer> availabilityZoneCount;
 
     public Input<Integer> getAvailabilityZoneCount() {
         return this.availabilityZoneCount == null ? Input.empty() : this.availabilityZoneCount;

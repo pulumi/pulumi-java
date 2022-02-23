@@ -19,7 +19,7 @@ public final class NodePoolManagementGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="autoRepair")
-        private final @Nullable Input<Boolean> autoRepair;
+      private final @Nullable Input<Boolean> autoRepair;
 
     public Input<Boolean> getAutoRepair() {
         return this.autoRepair == null ? Input.empty() : this.autoRepair;
@@ -30,7 +30,7 @@ public final class NodePoolManagementGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="autoUpgrade")
-        private final @Nullable Input<Boolean> autoUpgrade;
+      private final @Nullable Input<Boolean> autoUpgrade;
 
     public Input<Boolean> getAutoUpgrade() {
         return this.autoUpgrade == null ? Input.empty() : this.autoUpgrade;

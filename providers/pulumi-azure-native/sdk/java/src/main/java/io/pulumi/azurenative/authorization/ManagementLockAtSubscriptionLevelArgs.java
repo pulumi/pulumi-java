@@ -23,7 +23,7 @@ public final class ManagementLockAtSubscriptionLevelArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="level", required=true)
-        private final Input<Either<String,LockLevel>> level;
+      private final Input<Either<String,LockLevel>> level;
 
     public Input<Either<String,LockLevel>> getLevel() {
         return this.level;
@@ -34,7 +34,7 @@ public final class ManagementLockAtSubscriptionLevelArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="lockName")
-        private final @Nullable Input<String> lockName;
+      private final @Nullable Input<String> lockName;
 
     public Input<String> getLockName() {
         return this.lockName == null ? Input.empty() : this.lockName;
@@ -45,7 +45,7 @@ public final class ManagementLockAtSubscriptionLevelArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="notes")
-        private final @Nullable Input<String> notes;
+      private final @Nullable Input<String> notes;
 
     public Input<String> getNotes() {
         return this.notes == null ? Input.empty() : this.notes;
@@ -56,7 +56,7 @@ public final class ManagementLockAtSubscriptionLevelArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="owners")
-        private final @Nullable Input<List<ManagementLockOwnerArgs>> owners;
+      private final @Nullable Input<List<ManagementLockOwnerArgs>> owners;
 
     public Input<List<ManagementLockOwnerArgs>> getOwners() {
         return this.owners == null ? Input.empty() : this.owners;

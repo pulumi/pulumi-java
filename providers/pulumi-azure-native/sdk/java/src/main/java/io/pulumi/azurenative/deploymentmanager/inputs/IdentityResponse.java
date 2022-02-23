@@ -22,7 +22,7 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identityIds", required=true)
-        private final List<String> identityIds;
+      private final List<String> identityIds;
 
     public List<String> getIdentityIds() {
         return this.identityIds;
@@ -33,7 +33,7 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

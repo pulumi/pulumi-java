@@ -17,7 +17,7 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="workspaceCollectionName", required=true)
-        private final String workspaceCollectionName;
+      private final String workspaceCollectionName;
 
     public String getWorkspaceCollectionName() {
         return this.workspaceCollectionName;

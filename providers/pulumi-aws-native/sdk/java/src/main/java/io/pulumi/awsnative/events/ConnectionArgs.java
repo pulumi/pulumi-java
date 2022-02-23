@@ -17,14 +17,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConnectionArgs Empty = new ConnectionArgs();
 
     @InputImport(name="authParameters", required=true)
-        private final Input<AuthParametersPropertiesArgs> authParameters;
+      private final Input<AuthParametersPropertiesArgs> authParameters;
 
     public Input<AuthParametersPropertiesArgs> getAuthParameters() {
         return this.authParameters;
     }
 
     @InputImport(name="authorizationType", required=true)
-        private final Input<ConnectionAuthorizationType> authorizationType;
+      private final Input<ConnectionAuthorizationType> authorizationType;
 
     public Input<ConnectionAuthorizationType> getAuthorizationType() {
         return this.authorizationType;
@@ -35,7 +35,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

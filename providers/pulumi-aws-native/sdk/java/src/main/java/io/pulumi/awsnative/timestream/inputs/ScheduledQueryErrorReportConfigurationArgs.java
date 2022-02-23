@@ -18,7 +18,7 @@ public final class ScheduledQueryErrorReportConfigurationArgs extends io.pulumi.
     public static final ScheduledQueryErrorReportConfigurationArgs Empty = new ScheduledQueryErrorReportConfigurationArgs();
 
     @InputImport(name="s3Configuration", required=true)
-        private final Input<ScheduledQueryS3ConfigurationArgs> s3Configuration;
+      private final Input<ScheduledQueryS3ConfigurationArgs> s3Configuration;
 
     public Input<ScheduledQueryS3ConfigurationArgs> getS3Configuration() {
         return this.s3Configuration;

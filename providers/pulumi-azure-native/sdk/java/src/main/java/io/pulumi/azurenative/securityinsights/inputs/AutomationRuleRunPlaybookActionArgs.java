@@ -24,7 +24,7 @@ public final class AutomationRuleRunPlaybookActionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="actionConfiguration", required=true)
-        private final Input<AutomationRuleRunPlaybookActionActionConfigurationArgs> actionConfiguration;
+      private final Input<AutomationRuleRunPlaybookActionActionConfigurationArgs> actionConfiguration;
 
     public Input<AutomationRuleRunPlaybookActionActionConfigurationArgs> getActionConfiguration() {
         return this.actionConfiguration;
@@ -36,7 +36,7 @@ public final class AutomationRuleRunPlaybookActionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="actionType", required=true)
-        private final Input<String> actionType;
+      private final Input<String> actionType;
 
     public Input<String> getActionType() {
         return this.actionType;
@@ -47,7 +47,7 @@ public final class AutomationRuleRunPlaybookActionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="order", required=true)
-        private final Input<Integer> order;
+      private final Input<Integer> order;
 
     public Input<Integer> getOrder() {
         return this.order;

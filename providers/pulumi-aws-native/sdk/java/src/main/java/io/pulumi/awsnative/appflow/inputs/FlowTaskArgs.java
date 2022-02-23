@@ -23,7 +23,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorOperator")
-        private final @Nullable Input<FlowConnectorOperatorArgs> connectorOperator;
+      private final @Nullable Input<FlowConnectorOperatorArgs> connectorOperator;
 
     public Input<FlowConnectorOperatorArgs> getConnectorOperator() {
         return this.connectorOperator == null ? Input.empty() : this.connectorOperator;
@@ -34,7 +34,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationField")
-        private final @Nullable Input<String> destinationField;
+      private final @Nullable Input<String> destinationField;
 
     public Input<String> getDestinationField() {
         return this.destinationField == null ? Input.empty() : this.destinationField;
@@ -45,7 +45,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceFields", required=true)
-        private final Input<List<String>> sourceFields;
+      private final Input<List<String>> sourceFields;
 
     public Input<List<String>> getSourceFields() {
         return this.sourceFields;
@@ -56,7 +56,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskProperties")
-        private final @Nullable Input<List<FlowTaskPropertiesObjectArgs>> taskProperties;
+      private final @Nullable Input<List<FlowTaskPropertiesObjectArgs>> taskProperties;
 
     public Input<List<FlowTaskPropertiesObjectArgs>> getTaskProperties() {
         return this.taskProperties == null ? Input.empty() : this.taskProperties;
@@ -67,7 +67,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskType", required=true)
-        private final Input<FlowTaskType> taskType;
+      private final Input<FlowTaskType> taskType;
 
     public Input<FlowTaskType> getTaskType() {
         return this.taskType;

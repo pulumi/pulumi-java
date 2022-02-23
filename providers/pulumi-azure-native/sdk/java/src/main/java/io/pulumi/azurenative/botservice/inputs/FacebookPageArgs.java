@@ -23,7 +23,7 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessToken")
-        private final @Nullable Input<String> accessToken;
+      private final @Nullable Input<String> accessToken;
 
     public Input<String> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -34,7 +34,7 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;

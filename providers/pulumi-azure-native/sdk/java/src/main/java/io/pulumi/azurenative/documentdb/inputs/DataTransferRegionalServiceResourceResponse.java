@@ -21,7 +21,7 @@ public final class DataTransferRegionalServiceResourceResponse extends io.pulumi
      * 
      */
     @InputImport(name="location", required=true)
-        private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -32,7 +32,7 @@ public final class DataTransferRegionalServiceResourceResponse extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class DataTransferRegionalServiceResourceResponse extends io.pulumi
      * 
      */
     @InputImport(name="status", required=true)
-        private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;

@@ -24,7 +24,7 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="receiverType")
-        private final @Nullable Input<String> receiverType;
+      private final @Nullable Input<String> receiverType;
 
     public Input<String> getReceiverType() {
         return this.receiverType == null ? Input.empty() : this.receiverType;
@@ -35,7 +35,7 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="receiverValue")
-        private final @Nullable Input<NotificationReceiverValueArgs> receiverValue;
+      private final @Nullable Input<NotificationReceiverValueArgs> receiverValue;
 
     public Input<NotificationReceiverValueArgs> getReceiverValue() {
         return this.receiverValue == null ? Input.empty() : this.receiverValue;

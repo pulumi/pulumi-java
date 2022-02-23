@@ -25,7 +25,7 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="distributionGroupListReceiverValue")
-        private final @Nullable Input<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue;
+      private final @Nullable Input<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue;
 
     public Input<DistributionGroupListReceiverValueArgs> getDistributionGroupListReceiverValue() {
         return this.distributionGroupListReceiverValue == null ? Input.empty() : this.distributionGroupListReceiverValue;
@@ -36,7 +36,7 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscriptionReceiverValue")
-        private final @Nullable Input<SubscriptionReceiverValueArgs> subscriptionReceiverValue;
+      private final @Nullable Input<SubscriptionReceiverValueArgs> subscriptionReceiverValue;
 
     public Input<SubscriptionReceiverValueArgs> getSubscriptionReceiverValue() {
         return this.subscriptionReceiverValue == null ? Input.empty() : this.subscriptionReceiverValue;
@@ -47,7 +47,7 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="userObjectReceiverValue")
-        private final @Nullable Input<UserObjectReceiverValueArgs> userObjectReceiverValue;
+      private final @Nullable Input<UserObjectReceiverValueArgs> userObjectReceiverValue;
 
     public Input<UserObjectReceiverValueArgs> getUserObjectReceiverValue() {
         return this.userObjectReceiverValue == null ? Input.empty() : this.userObjectReceiverValue;

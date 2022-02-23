@@ -21,14 +21,14 @@ public final class BotAliasConversationLogSettings extends io.pulumi.resources.I
     public static final BotAliasConversationLogSettings Empty = new BotAliasConversationLogSettings();
 
     @InputImport(name="audioLogSettings")
-        private final @Nullable List<BotAliasAudioLogSetting> audioLogSettings;
+      private final @Nullable List<BotAliasAudioLogSetting> audioLogSettings;
 
     public List<BotAliasAudioLogSetting> getAudioLogSettings() {
         return this.audioLogSettings == null ? List.of() : this.audioLogSettings;
     }
 
     @InputImport(name="textLogSettings")
-        private final @Nullable List<BotAliasTextLogSetting> textLogSettings;
+      private final @Nullable List<BotAliasTextLogSetting> textLogSettings;
 
     public List<BotAliasTextLogSetting> getTextLogSettings() {
         return this.textLogSettings == null ? List.of() : this.textLogSettings;

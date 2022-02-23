@@ -20,7 +20,7 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
     public static final ContainerPublicDomainNameArgs Empty = new ContainerPublicDomainNameArgs();
 
     @InputImport(name="certificateName")
-        private final @Nullable Input<String> certificateName;
+      private final @Nullable Input<String> certificateName;
 
     public Input<String> getCertificateName() {
         return this.certificateName == null ? Input.empty() : this.certificateName;
@@ -31,7 +31,7 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainNames")
-        private final @Nullable Input<List<String>> domainNames;
+      private final @Nullable Input<List<String>> domainNames;
 
     public Input<List<String>> getDomainNames() {
         return this.domainNames == null ? Input.empty() : this.domainNames;

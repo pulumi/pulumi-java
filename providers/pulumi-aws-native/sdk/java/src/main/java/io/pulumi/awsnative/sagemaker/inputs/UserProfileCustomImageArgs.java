@@ -24,7 +24,7 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="appImageConfigName", required=true)
-        private final Input<String> appImageConfigName;
+      private final Input<String> appImageConfigName;
 
     public Input<String> getAppImageConfigName() {
         return this.appImageConfigName;
@@ -35,7 +35,7 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="imageName", required=true)
-        private final Input<String> imageName;
+      private final Input<String> imageName;
 
     public Input<String> getImageName() {
         return this.imageName;
@@ -46,7 +46,7 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="imageVersionNumber")
-        private final @Nullable Input<Integer> imageVersionNumber;
+      private final @Nullable Input<Integer> imageVersionNumber;
 
     public Input<Integer> getImageVersionNumber() {
         return this.imageVersionNumber == null ? Input.empty() : this.imageVersionNumber;

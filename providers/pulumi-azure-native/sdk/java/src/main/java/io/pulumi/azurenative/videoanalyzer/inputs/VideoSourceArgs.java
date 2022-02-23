@@ -23,7 +23,7 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeSequences", required=true)
-        private final Input<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences;
+      private final Input<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences;
 
     public Input<VideoSequenceAbsoluteTimeMarkersArgs> getTimeSequences() {
         return this.timeSequences;
@@ -46,7 +46,7 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -57,7 +57,7 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoName", required=true)
-        private final Input<String> videoName;
+      private final Input<String> videoName;
 
     public Input<String> getVideoName() {
         return this.videoName;

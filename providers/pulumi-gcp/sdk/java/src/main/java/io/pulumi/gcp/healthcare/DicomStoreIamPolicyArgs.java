@@ -21,7 +21,7 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dicomStoreId", required=true)
-        private final Input<String> dicomStoreId;
+      private final Input<String> dicomStoreId;
 
     public Input<String> getDicomStoreId() {
         return this.dicomStoreId;
@@ -33,7 +33,7 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyData", required=true)
-        private final Input<String> policyData;
+      private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;

@@ -25,7 +25,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allocationWeight")
-        private final @Nullable Input<Integer> allocationWeight;
+      private final @Nullable Input<Integer> allocationWeight;
 
     public Input<Integer> getAllocationWeight() {
         return this.allocationWeight == null ? Input.empty() : this.allocationWeight;
@@ -36,7 +36,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="applyAllocationPolicy")
-        private final @Nullable Input<Boolean> applyAllocationPolicy;
+      private final @Nullable Input<Boolean> applyAllocationPolicy;
 
     public Input<Boolean> getApplyAllocationPolicy() {
         return this.applyAllocationPolicy == null ? Input.empty() : this.applyAllocationPolicy;
@@ -47,7 +47,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="connectionString", required=true)
-        private final Input<String> connectionString;
+      private final Input<String> connectionString;
 
     public Input<String> getConnectionString() {
         return this.connectionString;
@@ -58,7 +58,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location", required=true)
-        private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;

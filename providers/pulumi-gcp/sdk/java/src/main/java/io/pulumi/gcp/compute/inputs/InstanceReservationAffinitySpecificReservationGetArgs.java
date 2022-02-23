@@ -19,7 +19,7 @@ public final class InstanceReservationAffinitySpecificReservationGetArgs extends
      * 
      */
     @InputImport(name="key", required=true)
-        private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -30,7 +30,7 @@ public final class InstanceReservationAffinitySpecificReservationGetArgs extends
      * 
      */
     @InputImport(name="values", required=true)
-        private final Input<List<String>> values;
+      private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;

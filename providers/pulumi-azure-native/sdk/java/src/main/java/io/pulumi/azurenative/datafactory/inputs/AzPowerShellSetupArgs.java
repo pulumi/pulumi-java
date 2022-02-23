@@ -23,7 +23,7 @@ public final class AzPowerShellSetupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -34,7 +34,7 @@ public final class AzPowerShellSetupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="version", required=true)
-        private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;

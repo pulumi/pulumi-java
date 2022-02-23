@@ -26,7 +26,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="encryptionAlgorithm")
-        private final @Nullable Input<Either<String,JsonWebKeyEncryptionAlgorithm>> encryptionAlgorithm;
+      private final @Nullable Input<Either<String,JsonWebKeyEncryptionAlgorithm>> encryptionAlgorithm;
 
     public Input<Either<String,JsonWebKeyEncryptionAlgorithm>> getEncryptionAlgorithm() {
         return this.encryptionAlgorithm == null ? Input.empty() : this.encryptionAlgorithm;
@@ -37,7 +37,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="encryptionAtHost")
-        private final @Nullable Input<Boolean> encryptionAtHost;
+      private final @Nullable Input<Boolean> encryptionAtHost;
 
     public Input<Boolean> getEncryptionAtHost() {
         return this.encryptionAtHost == null ? Input.empty() : this.encryptionAtHost;
@@ -48,7 +48,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="keyName")
-        private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -59,7 +59,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="keyVersion")
-        private final @Nullable Input<String> keyVersion;
+      private final @Nullable Input<String> keyVersion;
 
     public Input<String> getKeyVersion() {
         return this.keyVersion == null ? Input.empty() : this.keyVersion;
@@ -70,7 +70,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="msiResourceId")
-        private final @Nullable Input<String> msiResourceId;
+      private final @Nullable Input<String> msiResourceId;
 
     public Input<String> getMsiResourceId() {
         return this.msiResourceId == null ? Input.empty() : this.msiResourceId;
@@ -81,7 +81,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vaultUri")
-        private final @Nullable Input<String> vaultUri;
+      private final @Nullable Input<String> vaultUri;
 
     public Input<String> getVaultUri() {
         return this.vaultUri == null ? Input.empty() : this.vaultUri;

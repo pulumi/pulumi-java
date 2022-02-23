@@ -17,7 +17,7 @@ public final class GetDscConfigurationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-        private final String automationAccountName;
+      private final String automationAccountName;
 
     public String getAutomationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetDscConfigurationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="configurationName", required=true)
-        private final String configurationName;
+      private final String configurationName;
 
     public String getConfigurationName() {
         return this.configurationName;
@@ -39,7 +39,7 @@ public final class GetDscConfigurationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

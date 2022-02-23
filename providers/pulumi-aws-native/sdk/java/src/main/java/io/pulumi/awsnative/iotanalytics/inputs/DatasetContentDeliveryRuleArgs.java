@@ -16,14 +16,14 @@ public final class DatasetContentDeliveryRuleArgs extends io.pulumi.resources.Re
     public static final DatasetContentDeliveryRuleArgs Empty = new DatasetContentDeliveryRuleArgs();
 
     @InputImport(name="destination", required=true)
-        private final Input<DatasetContentDeliveryRuleDestinationArgs> destination;
+      private final Input<DatasetContentDeliveryRuleDestinationArgs> destination;
 
     public Input<DatasetContentDeliveryRuleDestinationArgs> getDestination() {
         return this.destination;
     }
 
     @InputImport(name="entryName")
-        private final @Nullable Input<String> entryName;
+      private final @Nullable Input<String> entryName;
 
     public Input<String> getEntryName() {
         return this.entryName == null ? Input.empty() : this.entryName;

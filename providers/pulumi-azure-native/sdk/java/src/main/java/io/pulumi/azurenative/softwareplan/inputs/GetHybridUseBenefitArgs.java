@@ -17,7 +17,7 @@ public final class GetHybridUseBenefitArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="planId", required=true)
-        private final String planId;
+      private final String planId;
 
     public String getPlanId() {
         return this.planId;
@@ -28,7 +28,7 @@ public final class GetHybridUseBenefitArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="scope", required=true)
-        private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;

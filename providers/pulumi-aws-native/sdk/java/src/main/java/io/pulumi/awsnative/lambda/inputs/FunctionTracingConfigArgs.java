@@ -23,7 +23,7 @@ public final class FunctionTracingConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable Input<FunctionTracingConfigMode> mode;
+      private final @Nullable Input<FunctionTracingConfigMode> mode;
 
     public Input<FunctionTracingConfigMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;

@@ -25,7 +25,7 @@ public final class LinkedServiceReferenceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,Object> parameters;
+      private final @Nullable Map<String,Object> parameters;
 
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -36,7 +36,7 @@ public final class LinkedServiceReferenceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="referenceName", required=true)
-        private final String referenceName;
+      private final String referenceName;
 
     public String getReferenceName() {
         return this.referenceName;
@@ -47,7 +47,7 @@ public final class LinkedServiceReferenceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

@@ -25,7 +25,7 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-        private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -37,7 +37,7 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-        private final @Nullable Input<Map<String,String>> headers;
+      private final @Nullable Input<Map<String,String>> headers;
 
     public Input<Map<String,String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -48,7 +48,7 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpMethod")
-        private final @Nullable Input<String> httpMethod;
+      private final @Nullable Input<String> httpMethod;
 
     public Input<String> getHttpMethod() {
         return this.httpMethod == null ? Input.empty() : this.httpMethod;
@@ -61,7 +61,7 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oauthToken")
-        private final @Nullable Input<JobHttpTargetOauthTokenArgs> oauthToken;
+      private final @Nullable Input<JobHttpTargetOauthTokenArgs> oauthToken;
 
     public Input<JobHttpTargetOauthTokenArgs> getOauthToken() {
         return this.oauthToken == null ? Input.empty() : this.oauthToken;
@@ -74,7 +74,7 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oidcToken")
-        private final @Nullable Input<JobHttpTargetOidcTokenArgs> oidcToken;
+      private final @Nullable Input<JobHttpTargetOidcTokenArgs> oidcToken;
 
     public Input<JobHttpTargetOidcTokenArgs> getOidcToken() {
         return this.oidcToken == null ? Input.empty() : this.oidcToken;
@@ -85,7 +85,7 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-        private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;

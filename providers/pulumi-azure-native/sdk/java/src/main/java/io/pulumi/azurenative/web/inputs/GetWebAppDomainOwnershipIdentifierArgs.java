@@ -17,7 +17,7 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="domainOwnershipIdentifierName", required=true)
-        private final String domainOwnershipIdentifierName;
+      private final String domainOwnershipIdentifierName;
 
     public String getDomainOwnershipIdentifierName() {
         return this.domainOwnershipIdentifierName;
@@ -28,7 +28,7 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

@@ -13,7 +13,7 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetConfigArgs Empty = new GetConfigArgs();
 
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;

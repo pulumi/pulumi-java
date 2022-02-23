@@ -17,42 +17,42 @@ public final class TagTemplateIamBindingArgs extends io.pulumi.resources.Resourc
     public static final TagTemplateIamBindingArgs Empty = new TagTemplateIamBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<TagTemplateIamBindingConditionArgs> condition;
+      private final @Nullable Input<TagTemplateIamBindingConditionArgs> condition;
 
     public Input<TagTemplateIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
     }
 
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
     }
 
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
     }
 
     @InputImport(name="tagTemplate", required=true)
-        private final Input<String> tagTemplate;
+      private final Input<String> tagTemplate;
 
     public Input<String> getTagTemplate() {
         return this.tagTemplate;

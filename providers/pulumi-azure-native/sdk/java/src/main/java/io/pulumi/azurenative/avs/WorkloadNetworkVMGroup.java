@@ -134,6 +134,21 @@ public class WorkloadNetworkVMGroup extends io.pulumi.resources.CustomResource {
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public WorkloadNetworkVMGroup(String name) {
+        this(name, WorkloadNetworkVMGroupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WorkloadNetworkVMGroup(String name, WorkloadNetworkVMGroupArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

@@ -19,7 +19,7 @@ public final class ApiConfigGatewayConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="backendConfig", required=true)
-        private final Input<ApiConfigGatewayConfigBackendConfigGetArgs> backendConfig;
+      private final Input<ApiConfigGatewayConfigBackendConfigGetArgs> backendConfig;
 
     public Input<ApiConfigGatewayConfigBackendConfigGetArgs> getBackendConfig() {
         return this.backendConfig;

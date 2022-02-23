@@ -23,7 +23,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessTier")
-        private final @Nullable Input<BlobAccessTier> accessTier;
+      private final @Nullable Input<BlobAccessTier> accessTier;
 
     public Input<BlobAccessTier> getAccessTier() {
         return this.accessTier == null ? Input.empty() : this.accessTier;
@@ -34,7 +34,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -45,7 +45,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobName")
-        private final @Nullable Input<String> blobName;
+      private final @Nullable Input<String> blobName;
 
     public Input<String> getBlobName() {
         return this.blobName == null ? Input.empty() : this.blobName;
@@ -56,7 +56,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerName", required=true)
-        private final Input<String> containerName;
+      private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
@@ -67,7 +67,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentMd5")
-        private final @Nullable Input<String> contentMd5;
+      private final @Nullable Input<String> contentMd5;
 
     public Input<String> getContentMd5() {
         return this.contentMd5 == null ? Input.empty() : this.contentMd5;
@@ -78,7 +78,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-        private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -89,7 +89,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -100,7 +100,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-        private final @Nullable Input<AssetOrArchive> source;
+      private final @Nullable Input<AssetOrArchive> source;
 
     public Input<AssetOrArchive> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -122,7 +122,7 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<BlobType> type;
+      private final @Nullable Input<BlobType> type;
 
     public Input<BlobType> getType() {
         return this.type == null ? Input.empty() : this.type;

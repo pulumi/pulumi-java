@@ -23,7 +23,7 @@ public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="algorithm")
-        private final @Nullable String algorithm;
+      private final @Nullable String algorithm;
 
     public Optional<String> getAlgorithm() {
         return this.algorithm == null ? Optional.empty() : Optional.ofNullable(this.algorithm);
@@ -34,7 +34,7 @@ public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable String value;
+      private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);

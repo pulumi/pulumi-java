@@ -23,7 +23,7 @@ public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="location")
-        private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -45,7 +45,7 @@ public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="membershipType")
-        private final @Nullable String membershipType;
+      private final @Nullable String membershipType;
 
     public Optional<String> getMembershipType() {
         return this.membershipType == null ? Optional.empty() : Optional.ofNullable(this.membershipType);

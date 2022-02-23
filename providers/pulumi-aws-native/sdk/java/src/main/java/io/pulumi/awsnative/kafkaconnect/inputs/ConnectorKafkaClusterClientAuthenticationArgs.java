@@ -18,7 +18,7 @@ public final class ConnectorKafkaClusterClientAuthenticationArgs extends io.pulu
     public static final ConnectorKafkaClusterClientAuthenticationArgs Empty = new ConnectorKafkaClusterClientAuthenticationArgs();
 
     @InputImport(name="authenticationType", required=true)
-        private final Input<ConnectorKafkaClusterClientAuthenticationType> authenticationType;
+      private final Input<ConnectorKafkaClusterClientAuthenticationType> authenticationType;
 
     public Input<ConnectorKafkaClusterClientAuthenticationType> getAuthenticationType() {
         return this.authenticationType;

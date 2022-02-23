@@ -22,7 +22,7 @@ public final class HealthStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="healthStateName", required=true)
-        private final String healthStateName;
+      private final String healthStateName;
 
     public String getHealthStateName() {
         return this.healthStateName;
@@ -33,7 +33,7 @@ public final class HealthStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-        private final Double severity;
+      private final Double severity;
 
     public Double getSeverity() {
         return this.severity;

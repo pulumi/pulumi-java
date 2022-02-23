@@ -19,7 +19,7 @@ public final class AzureClusterAuthorizationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="adminUsers", required=true)
-        private final Input<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers;
+      private final Input<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers;
 
     public Input<List<AzureClusterAuthorizationAdminUserGetArgs>> getAdminUsers() {
         return this.adminUsers;

@@ -31,7 +31,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="concurrencyPolicy")
-        private final @Nullable Input<String> concurrencyPolicy;
+      private final @Nullable Input<String> concurrencyPolicy;
 
     public Input<String> getConcurrencyPolicy() {
         return this.concurrencyPolicy == null ? Input.empty() : this.concurrencyPolicy;
@@ -42,7 +42,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failedJobsHistoryLimit")
-        private final @Nullable Input<Integer> failedJobsHistoryLimit;
+      private final @Nullable Input<Integer> failedJobsHistoryLimit;
 
     public Input<Integer> getFailedJobsHistoryLimit() {
         return this.failedJobsHistoryLimit == null ? Input.empty() : this.failedJobsHistoryLimit;
@@ -53,7 +53,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobTemplate", required=true)
-        private final Input<JobTemplateSpecArgs> jobTemplate;
+      private final Input<JobTemplateSpecArgs> jobTemplate;
 
     public Input<JobTemplateSpecArgs> getJobTemplate() {
         return this.jobTemplate;
@@ -64,7 +64,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-        private final Input<String> schedule;
+      private final Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule;
@@ -75,7 +75,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startingDeadlineSeconds")
-        private final @Nullable Input<Integer> startingDeadlineSeconds;
+      private final @Nullable Input<Integer> startingDeadlineSeconds;
 
     public Input<Integer> getStartingDeadlineSeconds() {
         return this.startingDeadlineSeconds == null ? Input.empty() : this.startingDeadlineSeconds;
@@ -86,7 +86,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successfulJobsHistoryLimit")
-        private final @Nullable Input<Integer> successfulJobsHistoryLimit;
+      private final @Nullable Input<Integer> successfulJobsHistoryLimit;
 
     public Input<Integer> getSuccessfulJobsHistoryLimit() {
         return this.successfulJobsHistoryLimit == null ? Input.empty() : this.successfulJobsHistoryLimit;
@@ -97,7 +97,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suspend")
-        private final @Nullable Input<Boolean> suspend;
+      private final @Nullable Input<Boolean> suspend;
 
     public Input<Boolean> getSuspend() {
         return this.suspend == null ? Input.empty() : this.suspend;

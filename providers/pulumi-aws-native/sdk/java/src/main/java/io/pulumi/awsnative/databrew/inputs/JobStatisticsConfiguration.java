@@ -17,14 +17,14 @@ public final class JobStatisticsConfiguration extends io.pulumi.resources.Invoke
     public static final JobStatisticsConfiguration Empty = new JobStatisticsConfiguration();
 
     @InputImport(name="includedStatistics")
-        private final @Nullable List<String> includedStatistics;
+      private final @Nullable List<String> includedStatistics;
 
     public List<String> getIncludedStatistics() {
         return this.includedStatistics == null ? List.of() : this.includedStatistics;
     }
 
     @InputImport(name="overrides")
-        private final @Nullable List<JobStatisticOverride> overrides;
+      private final @Nullable List<JobStatisticOverride> overrides;
 
     public List<JobStatisticOverride> getOverrides() {
         return this.overrides == null ? List.of() : this.overrides;

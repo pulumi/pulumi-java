@@ -26,7 +26,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-        private final @Nullable Input<String> context;
+      private final @Nullable Input<String> context;
 
     public Input<String> getContext() {
         return this.context == null ? Input.empty() : this.context;
@@ -38,7 +38,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dockerSpecificationType", required=true)
-        private final Input<String> dockerSpecificationType;
+      private final Input<String> dockerSpecificationType;
 
     public Input<String> getDockerSpecificationType() {
         return this.dockerSpecificationType;
@@ -50,7 +50,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dockerfile", required=true)
-        private final Input<String> dockerfile;
+      private final Input<String> dockerfile;
 
     public Input<String> getDockerfile() {
         return this.dockerfile;
@@ -61,7 +61,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-        private final @Nullable Input<DockerImagePlatformArgs> platform;
+      private final @Nullable Input<DockerImagePlatformArgs> platform;
 
     public Input<DockerImagePlatformArgs> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;

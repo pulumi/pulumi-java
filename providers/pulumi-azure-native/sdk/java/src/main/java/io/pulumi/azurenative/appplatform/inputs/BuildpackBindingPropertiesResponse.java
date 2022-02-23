@@ -24,7 +24,7 @@ public final class BuildpackBindingPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="bindingType")
-        private final @Nullable String bindingType;
+      private final @Nullable String bindingType;
 
     public Optional<String> getBindingType() {
         return this.bindingType == null ? Optional.empty() : Optional.ofNullable(this.bindingType);
@@ -35,7 +35,7 @@ public final class BuildpackBindingPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="launchProperties")
-        private final @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties;
+      private final @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties;
 
     public Optional<BuildpackBindingLaunchPropertiesResponse> getLaunchProperties() {
         return this.launchProperties == null ? Optional.empty() : Optional.ofNullable(this.launchProperties);
@@ -46,7 +46,7 @@ public final class BuildpackBindingPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;

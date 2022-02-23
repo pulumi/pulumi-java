@@ -22,7 +22,7 @@ public final class KubernetesRoleComputeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vmProfile", required=true)
-        private final Input<String> vmProfile;
+      private final Input<String> vmProfile;
 
     public Input<String> getVmProfile() {
         return this.vmProfile;

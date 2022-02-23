@@ -16,21 +16,21 @@ public final class GetResourcePolicySnapshotSchedulePolicySnapshotProperty exten
     public static final GetResourcePolicySnapshotSchedulePolicySnapshotProperty Empty = new GetResourcePolicySnapshotSchedulePolicySnapshotProperty();
 
     @InputImport(name="guestFlush", required=true)
-        private final Boolean guestFlush;
+      private final Boolean guestFlush;
 
     public Boolean getGuestFlush() {
         return this.guestFlush;
     }
 
     @InputImport(name="labels", required=true)
-        private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
     }
 
     @InputImport(name="storageLocations", required=true)
-        private final List<String> storageLocations;
+      private final List<String> storageLocations;
 
     public List<String> getStorageLocations() {
         return this.storageLocations;

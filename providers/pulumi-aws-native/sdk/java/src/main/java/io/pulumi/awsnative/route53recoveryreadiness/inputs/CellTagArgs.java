@@ -15,14 +15,14 @@ public final class CellTagArgs extends io.pulumi.resources.ResourceArgs {
     public static final CellTagArgs Empty = new CellTagArgs();
 
     @InputImport(name="key", required=true)
-        private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-        private final Input<List<String>> value;
+      private final Input<List<String>> value;
 
     public Input<List<String>> getValue() {
         return this.value;

@@ -19,7 +19,7 @@ public final class ManagedZonePeeringConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetNetwork", required=true)
-        private final Input<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork;
+      private final Input<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork;
 
     public Input<ManagedZonePeeringConfigTargetNetworkGetArgs> getTargetNetwork() {
         return this.targetNetwork;

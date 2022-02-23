@@ -24,7 +24,7 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="systemsManagerAgent")
-        private final @Nullable Input<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
+      private final @Nullable Input<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
 
     public Input<ImageRecipeSystemsManagerAgentArgs> getSystemsManagerAgent() {
         return this.systemsManagerAgent == null ? Input.empty() : this.systemsManagerAgent;
@@ -35,7 +35,7 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="userDataOverride")
-        private final @Nullable Input<String> userDataOverride;
+      private final @Nullable Input<String> userDataOverride;
 
     public Input<String> getUserDataOverride() {
         return this.userDataOverride == null ? Input.empty() : this.userDataOverride;

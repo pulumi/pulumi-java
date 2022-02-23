@@ -29,7 +29,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compressionSettings")
-        private final @Nullable Input<CompressionSettingsArgs> compressionSettings;
+      private final @Nullable Input<CompressionSettingsArgs> compressionSettings;
 
     public Input<CompressionSettingsArgs> getCompressionSettings() {
         return this.compressionSettings == null ? Input.empty() : this.compressionSettings;
@@ -40,7 +40,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDomains")
-        private final @Nullable Input<List<ResourceReferenceArgs>> customDomains;
+      private final @Nullable Input<List<ResourceReferenceArgs>> customDomains;
 
     public Input<List<ResourceReferenceArgs>> getCustomDomains() {
         return this.customDomains == null ? Input.empty() : this.customDomains;
@@ -51,7 +51,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-        private final @Nullable Input<Either<String,EnabledState>> enabledState;
+      private final @Nullable Input<Either<String,EnabledState>> enabledState;
 
     public Input<Either<String,EnabledState>> getEnabledState() {
         return this.enabledState == null ? Input.empty() : this.enabledState;
@@ -62,7 +62,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-        private final Input<String> endpointName;
+      private final Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName;
@@ -73,7 +73,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardingProtocol")
-        private final @Nullable Input<Either<String,ForwardingProtocol>> forwardingProtocol;
+      private final @Nullable Input<Either<String,ForwardingProtocol>> forwardingProtocol;
 
     public Input<Either<String,ForwardingProtocol>> getForwardingProtocol() {
         return this.forwardingProtocol == null ? Input.empty() : this.forwardingProtocol;
@@ -84,7 +84,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpsRedirect")
-        private final @Nullable Input<Either<String,HttpsRedirect>> httpsRedirect;
+      private final @Nullable Input<Either<String,HttpsRedirect>> httpsRedirect;
 
     public Input<Either<String,HttpsRedirect>> getHttpsRedirect() {
         return this.httpsRedirect == null ? Input.empty() : this.httpsRedirect;
@@ -95,7 +95,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkToDefaultDomain")
-        private final @Nullable Input<Either<String,LinkToDefaultDomain>> linkToDefaultDomain;
+      private final @Nullable Input<Either<String,LinkToDefaultDomain>> linkToDefaultDomain;
 
     public Input<Either<String,LinkToDefaultDomain>> getLinkToDefaultDomain() {
         return this.linkToDefaultDomain == null ? Input.empty() : this.linkToDefaultDomain;
@@ -106,7 +106,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originGroup", required=true)
-        private final Input<ResourceReferenceArgs> originGroup;
+      private final Input<ResourceReferenceArgs> originGroup;
 
     public Input<ResourceReferenceArgs> getOriginGroup() {
         return this.originGroup;
@@ -117,7 +117,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originPath")
-        private final @Nullable Input<String> originPath;
+      private final @Nullable Input<String> originPath;
 
     public Input<String> getOriginPath() {
         return this.originPath == null ? Input.empty() : this.originPath;
@@ -128,7 +128,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patternsToMatch")
-        private final @Nullable Input<List<String>> patternsToMatch;
+      private final @Nullable Input<List<String>> patternsToMatch;
 
     public Input<List<String>> getPatternsToMatch() {
         return this.patternsToMatch == null ? Input.empty() : this.patternsToMatch;
@@ -139,7 +139,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-        private final Input<String> profileName;
+      private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -150,7 +150,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryStringCachingBehavior")
-        private final @Nullable Input<AfdQueryStringCachingBehavior> queryStringCachingBehavior;
+      private final @Nullable Input<AfdQueryStringCachingBehavior> queryStringCachingBehavior;
 
     public Input<AfdQueryStringCachingBehavior> getQueryStringCachingBehavior() {
         return this.queryStringCachingBehavior == null ? Input.empty() : this.queryStringCachingBehavior;
@@ -161,7 +161,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -172,7 +172,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeName")
-        private final @Nullable Input<String> routeName;
+      private final @Nullable Input<String> routeName;
 
     public Input<String> getRouteName() {
         return this.routeName == null ? Input.empty() : this.routeName;
@@ -183,7 +183,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleSets")
-        private final @Nullable Input<List<ResourceReferenceArgs>> ruleSets;
+      private final @Nullable Input<List<ResourceReferenceArgs>> ruleSets;
 
     public Input<List<ResourceReferenceArgs>> getRuleSets() {
         return this.ruleSets == null ? Input.empty() : this.ruleSets;
@@ -194,7 +194,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportedProtocols")
-        private final @Nullable Input<List<Either<String,AFDEndpointProtocols>>> supportedProtocols;
+      private final @Nullable Input<List<Either<String,AFDEndpointProtocols>>> supportedProtocols;
 
     public Input<List<Either<String,AFDEndpointProtocols>>> getSupportedProtocols() {
         return this.supportedProtocols == null ? Input.empty() : this.supportedProtocols;

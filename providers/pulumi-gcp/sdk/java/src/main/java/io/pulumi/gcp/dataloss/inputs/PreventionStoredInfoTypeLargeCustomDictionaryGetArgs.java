@@ -22,7 +22,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryGetArgs extends 
      * 
      */
     @InputImport(name="bigQueryField")
-        private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs> bigQueryField;
+      private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs> bigQueryField;
 
     public Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs> getBigQueryField() {
         return this.bigQueryField == null ? Input.empty() : this.bigQueryField;
@@ -34,7 +34,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryGetArgs extends 
      * 
      */
     @InputImport(name="cloudStorageFileSet")
-        private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs> cloudStorageFileSet;
+      private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs> cloudStorageFileSet;
 
     public Input<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs> getCloudStorageFileSet() {
         return this.cloudStorageFileSet == null ? Input.empty() : this.cloudStorageFileSet;
@@ -47,7 +47,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryGetArgs extends 
      * 
      */
     @InputImport(name="outputPath", required=true)
-        private final Input<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathGetArgs> outputPath;
+      private final Input<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathGetArgs> outputPath;
 
     public Input<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathGetArgs> getOutputPath() {
         return this.outputPath;

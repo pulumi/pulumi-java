@@ -21,7 +21,7 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayNameHint", required=true)
-        private final String displayNameHint;
+      private final String displayNameHint;
 
     public String getDisplayNameHint() {
         return this.displayNameHint;
@@ -32,7 +32,7 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -44,7 +44,7 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="kind", required=true)
-        private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -55,7 +55,7 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -66,7 +66,7 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="osFamilyHint", required=true)
-        private final String osFamilyHint;
+      private final String osFamilyHint;
 
     public String getOsFamilyHint() {
         return this.osFamilyHint;
@@ -77,7 +77,7 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

@@ -22,7 +22,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="certificate", required=true)
-        private final String certificate;
+      private final String certificate;
 
     public String getCertificate() {
         return this.certificate;
@@ -33,7 +33,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="created", required=true)
-        private final String created;
+      private final String created;
 
     public String getCreated() {
         return this.created;
@@ -44,7 +44,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="expiry", required=true)
-        private final String expiry;
+      private final String expiry;
 
     public String getExpiry() {
         return this.expiry;
@@ -55,7 +55,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="isVerified", required=true)
-        private final Boolean isVerified;
+      private final Boolean isVerified;
 
     public Boolean getIsVerified() {
         return this.isVerified;
@@ -66,7 +66,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="subject", required=true)
-        private final String subject;
+      private final String subject;
 
     public String getSubject() {
         return this.subject;
@@ -77,7 +77,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="thumbprint", required=true)
-        private final String thumbprint;
+      private final String thumbprint;
 
     public String getThumbprint() {
         return this.thumbprint;
@@ -88,7 +88,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="updated", required=true)
-        private final String updated;
+      private final String updated;
 
     public String getUpdated() {
         return this.updated;

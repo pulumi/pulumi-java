@@ -21,7 +21,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -32,7 +32,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dnsServerIps")
-        private final @Nullable Input<List<String>> dnsServerIps;
+      private final @Nullable Input<List<String>> dnsServerIps;
 
     public Input<List<String>> getDnsServerIps() {
         return this.dnsServerIps == null ? Input.empty() : this.dnsServerIps;
@@ -43,7 +43,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dnsServices")
-        private final @Nullable Input<Double> dnsServices;
+      private final @Nullable Input<Double> dnsServices;
 
     public Input<Double> getDnsServices() {
         return this.dnsServices == null ? Input.empty() : this.dnsServices;
@@ -54,7 +54,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dnsZoneId")
-        private final @Nullable Input<String> dnsZoneId;
+      private final @Nullable Input<String> dnsZoneId;
 
     public Input<String> getDnsZoneId() {
         return this.dnsZoneId == null ? Input.empty() : this.dnsZoneId;
@@ -65,7 +65,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="domain")
-        private final @Nullable Input<List<String>> domain;
+      private final @Nullable Input<List<String>> domain;
 
     public Input<List<String>> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -76,7 +76,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-        private final Input<String> privateCloudName;
+      private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -87,7 +87,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="revision")
-        private final @Nullable Input<Double> revision;
+      private final @Nullable Input<Double> revision;
 
     public Input<Double> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -109,7 +109,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sourceIp")
-        private final @Nullable Input<String> sourceIp;
+      private final @Nullable Input<String> sourceIp;
 
     public Input<String> getSourceIp() {
         return this.sourceIp == null ? Input.empty() : this.sourceIp;

@@ -21,7 +21,7 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends io.p
      * 
      */
     @InputImport(name="env", required=true)
-        private final Input<String> env;
+      private final Input<String> env;
 
     public Input<String> getEnv() {
         return this.env;
@@ -32,7 +32,7 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends io.p
      * 
      */
     @InputImport(name="versionName", required=true)
-        private final Input<String> versionName;
+      private final Input<String> versionName;
 
     public Input<String> getVersionName() {
         return this.versionName;

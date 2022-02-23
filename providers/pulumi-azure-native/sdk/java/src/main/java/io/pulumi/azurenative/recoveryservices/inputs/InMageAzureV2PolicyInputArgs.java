@@ -26,7 +26,7 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="appConsistentFrequencyInMinutes")
-        private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
+      private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
 
     public Input<Integer> getAppConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes == null ? Input.empty() : this.appConsistentFrequencyInMinutes;
@@ -37,7 +37,7 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="crashConsistentFrequencyInMinutes")
-        private final @Nullable Input<Integer> crashConsistentFrequencyInMinutes;
+      private final @Nullable Input<Integer> crashConsistentFrequencyInMinutes;
 
     public Input<Integer> getCrashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes == null ? Input.empty() : this.crashConsistentFrequencyInMinutes;
@@ -49,7 +49,7 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instanceType")
-        private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -60,7 +60,7 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="multiVmSyncStatus", required=true)
-        private final Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
+      private final Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
 
     public Input<Either<String,SetMultiVmSyncStatus>> getMultiVmSyncStatus() {
         return this.multiVmSyncStatus;
@@ -71,7 +71,7 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoveryPointHistory")
-        private final @Nullable Input<Integer> recoveryPointHistory;
+      private final @Nullable Input<Integer> recoveryPointHistory;
 
     public Input<Integer> getRecoveryPointHistory() {
         return this.recoveryPointHistory == null ? Input.empty() : this.recoveryPointHistory;
@@ -82,7 +82,7 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoveryPointThresholdInMinutes")
-        private final @Nullable Input<Integer> recoveryPointThresholdInMinutes;
+      private final @Nullable Input<Integer> recoveryPointThresholdInMinutes;
 
     public Input<Integer> getRecoveryPointThresholdInMinutes() {
         return this.recoveryPointThresholdInMinutes == null ? Input.empty() : this.recoveryPointThresholdInMinutes;

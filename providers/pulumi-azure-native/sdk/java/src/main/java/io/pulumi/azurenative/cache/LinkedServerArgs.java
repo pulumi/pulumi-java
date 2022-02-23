@@ -20,7 +20,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedRedisCacheId", required=true)
-        private final Input<String> linkedRedisCacheId;
+      private final Input<String> linkedRedisCacheId;
 
     public Input<String> getLinkedRedisCacheId() {
         return this.linkedRedisCacheId;
@@ -31,7 +31,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedRedisCacheLocation", required=true)
-        private final Input<String> linkedRedisCacheLocation;
+      private final Input<String> linkedRedisCacheLocation;
 
     public Input<String> getLinkedRedisCacheLocation() {
         return this.linkedRedisCacheLocation;
@@ -42,7 +42,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServerName")
-        private final @Nullable Input<String> linkedServerName;
+      private final @Nullable Input<String> linkedServerName;
 
     public Input<String> getLinkedServerName() {
         return this.linkedServerName == null ? Input.empty() : this.linkedServerName;
@@ -53,7 +53,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -64,7 +64,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverRole", required=true)
-        private final Input<ReplicationRole> serverRole;
+      private final Input<ReplicationRole> serverRole;
 
     public Input<ReplicationRole> getServerRole() {
         return this.serverRole;

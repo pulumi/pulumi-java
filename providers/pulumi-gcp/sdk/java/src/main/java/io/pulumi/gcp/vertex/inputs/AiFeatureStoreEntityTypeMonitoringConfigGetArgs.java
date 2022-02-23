@@ -20,7 +20,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends io.pu
      * 
      */
     @InputImport(name="snapshotAnalysis")
-        private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
+      private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
 
     public Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> getSnapshotAnalysis() {
         return this.snapshotAnalysis == null ? Input.empty() : this.snapshotAnalysis;

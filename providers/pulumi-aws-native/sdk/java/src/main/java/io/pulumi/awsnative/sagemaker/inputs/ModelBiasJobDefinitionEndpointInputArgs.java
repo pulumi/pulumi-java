@@ -26,14 +26,14 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="endTimeOffset")
-        private final @Nullable Input<String> endTimeOffset;
+      private final @Nullable Input<String> endTimeOffset;
 
     public Input<String> getEndTimeOffset() {
         return this.endTimeOffset == null ? Input.empty() : this.endTimeOffset;
     }
 
     @InputImport(name="endpointName", required=true)
-        private final Input<String> endpointName;
+      private final Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName;
@@ -44,7 +44,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="featuresAttribute")
-        private final @Nullable Input<String> featuresAttribute;
+      private final @Nullable Input<String> featuresAttribute;
 
     public Input<String> getFeaturesAttribute() {
         return this.featuresAttribute == null ? Input.empty() : this.featuresAttribute;
@@ -55,7 +55,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="inferenceAttribute")
-        private final @Nullable Input<String> inferenceAttribute;
+      private final @Nullable Input<String> inferenceAttribute;
 
     public Input<String> getInferenceAttribute() {
         return this.inferenceAttribute == null ? Input.empty() : this.inferenceAttribute;
@@ -66,7 +66,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="localPath", required=true)
-        private final Input<String> localPath;
+      private final Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath;
@@ -77,14 +77,14 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="probabilityAttribute")
-        private final @Nullable Input<String> probabilityAttribute;
+      private final @Nullable Input<String> probabilityAttribute;
 
     public Input<String> getProbabilityAttribute() {
         return this.probabilityAttribute == null ? Input.empty() : this.probabilityAttribute;
     }
 
     @InputImport(name="probabilityThresholdAttribute")
-        private final @Nullable Input<Double> probabilityThresholdAttribute;
+      private final @Nullable Input<Double> probabilityThresholdAttribute;
 
     public Input<Double> getProbabilityThresholdAttribute() {
         return this.probabilityThresholdAttribute == null ? Input.empty() : this.probabilityThresholdAttribute;
@@ -95,7 +95,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="s3DataDistributionType")
-        private final @Nullable Input<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
+      private final @Nullable Input<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
     public Input<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
         return this.s3DataDistributionType == null ? Input.empty() : this.s3DataDistributionType;
@@ -106,7 +106,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="s3InputMode")
-        private final @Nullable Input<ModelBiasJobDefinitionEndpointInputS3InputMode> s3InputMode;
+      private final @Nullable Input<ModelBiasJobDefinitionEndpointInputS3InputMode> s3InputMode;
 
     public Input<ModelBiasJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
         return this.s3InputMode == null ? Input.empty() : this.s3InputMode;
@@ -117,7 +117,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="startTimeOffset")
-        private final @Nullable Input<String> startTimeOffset;
+      private final @Nullable Input<String> startTimeOffset;
 
     public Input<String> getStartTimeOffset() {
         return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;

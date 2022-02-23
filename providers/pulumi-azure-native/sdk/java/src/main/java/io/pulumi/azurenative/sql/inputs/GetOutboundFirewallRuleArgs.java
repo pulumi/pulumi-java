@@ -13,7 +13,7 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
     public static final GetOutboundFirewallRuleArgs Empty = new GetOutboundFirewallRuleArgs();
 
     @InputImport(name="outboundRuleFqdn", required=true)
-        private final String outboundRuleFqdn;
+      private final String outboundRuleFqdn;
 
     public String getOutboundRuleFqdn() {
         return this.outboundRuleFqdn;
@@ -24,7 +24,7 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -35,7 +35,7 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;

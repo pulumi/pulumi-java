@@ -17,21 +17,21 @@ public final class WebACLRegexMatchStatementArgs extends io.pulumi.resources.Res
     public static final WebACLRegexMatchStatementArgs Empty = new WebACLRegexMatchStatementArgs();
 
     @InputImport(name="fieldToMatch", required=true)
-        private final Input<WebACLFieldToMatchArgs> fieldToMatch;
+      private final Input<WebACLFieldToMatchArgs> fieldToMatch;
 
     public Input<WebACLFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="regexString", required=true)
-        private final Input<String> regexString;
+      private final Input<String> regexString;
 
     public Input<String> getRegexString() {
         return this.regexString;
     }
 
     @InputImport(name="textTransformations", required=true)
-        private final Input<List<WebACLTextTransformationArgs>> textTransformations;
+      private final Input<List<WebACLTextTransformationArgs>> textTransformations;
 
     public Input<List<WebACLTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;

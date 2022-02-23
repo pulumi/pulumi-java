@@ -28,7 +28,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disableBgpRoutePropagation")
-        private final @Nullable Boolean disableBgpRoutePropagation;
+      private final @Nullable Boolean disableBgpRoutePropagation;
 
     public Optional<Boolean> getDisableBgpRoutePropagation() {
         return this.disableBgpRoutePropagation == null ? Optional.empty() : Optional.ofNullable(this.disableBgpRoutePropagation);
@@ -39,7 +39,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -50,7 +50,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -61,7 +61,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable String location;
+      private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -72,7 +72,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -83,7 +83,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -94,7 +94,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGuid", required=true)
-        private final String resourceGuid;
+      private final String resourceGuid;
 
     public String getResourceGuid() {
         return this.resourceGuid;
@@ -105,7 +105,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routes")
-        private final @Nullable List<RouteResponse> routes;
+      private final @Nullable List<RouteResponse> routes;
 
     public List<RouteResponse> getRoutes() {
         return this.routes == null ? List.of() : this.routes;
@@ -116,7 +116,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnets", required=true)
-        private final List<SubnetResponse> subnets;
+      private final List<SubnetResponse> subnets;
 
     public List<SubnetResponse> getSubnets() {
         return this.subnets;
@@ -127,7 +127,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -138,7 +138,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

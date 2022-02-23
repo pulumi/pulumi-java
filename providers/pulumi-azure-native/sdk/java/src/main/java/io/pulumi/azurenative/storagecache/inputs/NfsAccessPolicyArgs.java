@@ -24,7 +24,7 @@ public final class NfsAccessPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="accessRules", required=true)
-        private final Input<List<NfsAccessRuleArgs>> accessRules;
+      private final Input<List<NfsAccessRuleArgs>> accessRules;
 
     public Input<List<NfsAccessRuleArgs>> getAccessRules() {
         return this.accessRules;
@@ -35,7 +35,7 @@ public final class NfsAccessPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

@@ -13,14 +13,14 @@ public final class FrameworkControlInputParameter extends io.pulumi.resources.In
     public static final FrameworkControlInputParameter Empty = new FrameworkControlInputParameter();
 
     @InputImport(name="parameterName", required=true)
-        private final String parameterName;
+      private final String parameterName;
 
     public String getParameterName() {
         return this.parameterName;
     }
 
     @InputImport(name="parameterValue", required=true)
-        private final String parameterValue;
+      private final String parameterValue;
 
     public String getParameterValue() {
         return this.parameterValue;

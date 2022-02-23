@@ -27,7 +27,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-        private final @Nullable Boolean autoUpgradeMinorVersion;
+      private final @Nullable Boolean autoUpgradeMinorVersion;
 
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.autoUpgradeMinorVersion);
@@ -38,7 +38,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="enableAutomaticUpgrade")
-        private final @Nullable Boolean enableAutomaticUpgrade;
+      private final @Nullable Boolean enableAutomaticUpgrade;
 
     public Optional<Boolean> getEnableAutomaticUpgrade() {
         return this.enableAutomaticUpgrade == null ? Optional.empty() : Optional.ofNullable(this.enableAutomaticUpgrade);
@@ -49,7 +49,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="forceUpdateTag")
-        private final @Nullable String forceUpdateTag;
+      private final @Nullable String forceUpdateTag;
 
     public Optional<String> getForceUpdateTag() {
         return this.forceUpdateTag == null ? Optional.empty() : Optional.ofNullable(this.forceUpdateTag);
@@ -60,7 +60,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -71,7 +71,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="instanceView")
-        private final @Nullable VirtualMachineExtensionInstanceViewResponse instanceView;
+      private final @Nullable VirtualMachineExtensionInstanceViewResponse instanceView;
 
     public Optional<VirtualMachineExtensionInstanceViewResponse> getInstanceView() {
         return this.instanceView == null ? Optional.empty() : Optional.ofNullable(this.instanceView);
@@ -82,7 +82,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="location", required=true)
-        private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -93,7 +93,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -104,7 +104,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="protectedSettings")
-        private final @Nullable Object protectedSettings;
+      private final @Nullable Object protectedSettings;
 
     public Optional<Object> getProtectedSettings() {
         return this.protectedSettings == null ? Optional.empty() : Optional.ofNullable(this.protectedSettings);
@@ -115,7 +115,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -126,7 +126,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="publisher")
-        private final @Nullable String publisher;
+      private final @Nullable String publisher;
 
     public Optional<String> getPublisher() {
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
@@ -137,7 +137,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="settings")
-        private final @Nullable Object settings;
+      private final @Nullable Object settings;
 
     public Optional<Object> getSettings() {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
@@ -148,7 +148,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -159,7 +159,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -170,7 +170,7 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="typeHandlerVersion")
-        private final @Nullable String typeHandlerVersion;
+      private final @Nullable String typeHandlerVersion;
 
     public Optional<String> getTypeHandlerVersion() {
         return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);

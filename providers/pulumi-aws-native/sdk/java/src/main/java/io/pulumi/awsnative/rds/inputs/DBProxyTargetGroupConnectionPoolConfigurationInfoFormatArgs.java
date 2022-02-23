@@ -21,7 +21,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
      * 
      */
     @InputImport(name="connectionBorrowTimeout")
-        private final @Nullable Input<Integer> connectionBorrowTimeout;
+      private final @Nullable Input<Integer> connectionBorrowTimeout;
 
     public Input<Integer> getConnectionBorrowTimeout() {
         return this.connectionBorrowTimeout == null ? Input.empty() : this.connectionBorrowTimeout;
@@ -32,7 +32,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
      * 
      */
     @InputImport(name="initQuery")
-        private final @Nullable Input<String> initQuery;
+      private final @Nullable Input<String> initQuery;
 
     public Input<String> getInitQuery() {
         return this.initQuery == null ? Input.empty() : this.initQuery;
@@ -43,7 +43,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
      * 
      */
     @InputImport(name="maxConnectionsPercent")
-        private final @Nullable Input<Integer> maxConnectionsPercent;
+      private final @Nullable Input<Integer> maxConnectionsPercent;
 
     public Input<Integer> getMaxConnectionsPercent() {
         return this.maxConnectionsPercent == null ? Input.empty() : this.maxConnectionsPercent;
@@ -54,7 +54,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
      * 
      */
     @InputImport(name="maxIdleConnectionsPercent")
-        private final @Nullable Input<Integer> maxIdleConnectionsPercent;
+      private final @Nullable Input<Integer> maxIdleConnectionsPercent;
 
     public Input<Integer> getMaxIdleConnectionsPercent() {
         return this.maxIdleConnectionsPercent == null ? Input.empty() : this.maxIdleConnectionsPercent;
@@ -65,7 +65,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
      * 
      */
     @InputImport(name="sessionPinningFilters")
-        private final @Nullable Input<List<String>> sessionPinningFilters;
+      private final @Nullable Input<List<String>> sessionPinningFilters;
 
     public Input<List<String>> getSessionPinningFilters() {
         return this.sessionPinningFilters == null ? Input.empty() : this.sessionPinningFilters;

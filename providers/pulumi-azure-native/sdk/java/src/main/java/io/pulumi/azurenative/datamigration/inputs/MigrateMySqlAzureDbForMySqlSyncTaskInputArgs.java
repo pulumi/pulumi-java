@@ -24,7 +24,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-        private final Input<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases;
+      private final Input<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases;
 
     public Input<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> getSelectedDatabases() {
         return this.selectedDatabases;
@@ -35,7 +35,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-        private final Input<MySqlConnectionInfoArgs> sourceConnectionInfo;
+      private final Input<MySqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Input<MySqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -46,7 +46,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-        private final Input<MySqlConnectionInfoArgs> targetConnectionInfo;
+      private final Input<MySqlConnectionInfoArgs> targetConnectionInfo;
 
     public Input<MySqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;

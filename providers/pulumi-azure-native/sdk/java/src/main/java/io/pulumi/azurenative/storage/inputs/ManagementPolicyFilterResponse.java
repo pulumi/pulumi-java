@@ -25,7 +25,7 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="blobIndexMatch")
-        private final @Nullable List<TagFilterResponse> blobIndexMatch;
+      private final @Nullable List<TagFilterResponse> blobIndexMatch;
 
     public List<TagFilterResponse> getBlobIndexMatch() {
         return this.blobIndexMatch == null ? List.of() : this.blobIndexMatch;
@@ -36,7 +36,7 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="blobTypes", required=true)
-        private final List<String> blobTypes;
+      private final List<String> blobTypes;
 
     public List<String> getBlobTypes() {
         return this.blobTypes;
@@ -47,7 +47,7 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="prefixMatch")
-        private final @Nullable List<String> prefixMatch;
+      private final @Nullable List<String> prefixMatch;
 
     public List<String> getPrefixMatch() {
         return this.prefixMatch == null ? List.of() : this.prefixMatch;

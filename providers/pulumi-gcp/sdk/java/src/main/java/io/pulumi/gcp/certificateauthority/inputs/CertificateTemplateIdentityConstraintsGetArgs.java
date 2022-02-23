@@ -20,7 +20,7 @@ public final class CertificateTemplateIdentityConstraintsGetArgs extends io.pulu
      * 
      */
     @InputImport(name="allowSubjectAltNamesPassthrough", required=true)
-        private final Input<Boolean> allowSubjectAltNamesPassthrough;
+      private final Input<Boolean> allowSubjectAltNamesPassthrough;
 
     public Input<Boolean> getAllowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
@@ -31,7 +31,7 @@ public final class CertificateTemplateIdentityConstraintsGetArgs extends io.pulu
      * 
      */
     @InputImport(name="allowSubjectPassthrough", required=true)
-        private final Input<Boolean> allowSubjectPassthrough;
+      private final Input<Boolean> allowSubjectPassthrough;
 
     public Input<Boolean> getAllowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
@@ -42,7 +42,7 @@ public final class CertificateTemplateIdentityConstraintsGetArgs extends io.pulu
      * 
      */
     @InputImport(name="celExpression")
-        private final @Nullable Input<CertificateTemplateIdentityConstraintsCelExpressionGetArgs> celExpression;
+      private final @Nullable Input<CertificateTemplateIdentityConstraintsCelExpressionGetArgs> celExpression;
 
     public Input<CertificateTemplateIdentityConstraintsCelExpressionGetArgs> getCelExpression() {
         return this.celExpression == null ? Input.empty() : this.celExpression;

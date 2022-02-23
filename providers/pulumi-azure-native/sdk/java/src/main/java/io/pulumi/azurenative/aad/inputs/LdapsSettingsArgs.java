@@ -26,7 +26,7 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalAccess")
-        private final @Nullable Input<Either<String,ExternalAccess>> externalAccess;
+      private final @Nullable Input<Either<String,ExternalAccess>> externalAccess;
 
     public Input<Either<String,ExternalAccess>> getExternalAccess() {
         return this.externalAccess == null ? Input.empty() : this.externalAccess;
@@ -37,7 +37,7 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ldaps")
-        private final @Nullable Input<Either<String,Ldaps>> ldaps;
+      private final @Nullable Input<Either<String,Ldaps>> ldaps;
 
     public Input<Either<String,Ldaps>> getLdaps() {
         return this.ldaps == null ? Input.empty() : this.ldaps;
@@ -48,7 +48,7 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pfxCertificate")
-        private final @Nullable Input<String> pfxCertificate;
+      private final @Nullable Input<String> pfxCertificate;
 
     public Input<String> getPfxCertificate() {
         return this.pfxCertificate == null ? Input.empty() : this.pfxCertificate;
@@ -59,7 +59,7 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pfxCertificatePassword")
-        private final @Nullable Input<String> pfxCertificatePassword;
+      private final @Nullable Input<String> pfxCertificatePassword;
 
     public Input<String> getPfxCertificatePassword() {
         return this.pfxCertificatePassword == null ? Input.empty() : this.pfxCertificatePassword;

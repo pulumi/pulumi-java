@@ -22,14 +22,14 @@ public final class CertificateSigningRequestListArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
     @InputImport(name="items", required=true)
-        private final Input<List<CertificateSigningRequestArgs>> items;
+      private final Input<List<CertificateSigningRequestArgs>> items;
 
     public Input<List<CertificateSigningRequestArgs>> getItems() {
         return this.items;
@@ -40,14 +40,14 @@ public final class CertificateSigningRequestListArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="metadata")
-        private final @Nullable Input<ListMetaArgs> metadata;
+      private final @Nullable Input<ListMetaArgs> metadata;
 
     public Input<ListMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;

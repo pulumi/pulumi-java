@@ -13,14 +13,14 @@ public final class GetBucketLifecycleRuleAction extends io.pulumi.resources.Invo
     public static final GetBucketLifecycleRuleAction Empty = new GetBucketLifecycleRuleAction();
 
     @InputImport(name="storageClass", required=true)
-        private final String storageClass;
+      private final String storageClass;
 
     public String getStorageClass() {
         return this.storageClass;
     }
 
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

@@ -19,14 +19,14 @@ public final class KeyCreationTimeResponse extends io.pulumi.resources.InvokeArg
     public static final KeyCreationTimeResponse Empty = new KeyCreationTimeResponse();
 
     @InputImport(name="key1")
-        private final @Nullable String key1;
+      private final @Nullable String key1;
 
     public Optional<String> getKey1() {
         return this.key1 == null ? Optional.empty() : Optional.ofNullable(this.key1);
     }
 
     @InputImport(name="key2")
-        private final @Nullable String key2;
+      private final @Nullable String key2;
 
     public Optional<String> getKey2() {
         return this.key2 == null ? Optional.empty() : Optional.ofNullable(this.key2);

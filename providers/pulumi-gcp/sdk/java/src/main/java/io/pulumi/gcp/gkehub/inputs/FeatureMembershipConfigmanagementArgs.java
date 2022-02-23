@@ -23,7 +23,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="binauthz")
-        private final @Nullable Input<FeatureMembershipConfigmanagementBinauthzArgs> binauthz;
+      private final @Nullable Input<FeatureMembershipConfigmanagementBinauthzArgs> binauthz;
 
     public Input<FeatureMembershipConfigmanagementBinauthzArgs> getBinauthz() {
         return this.binauthz == null ? Input.empty() : this.binauthz;
@@ -34,7 +34,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="configSync")
-        private final @Nullable Input<FeatureMembershipConfigmanagementConfigSyncArgs> configSync;
+      private final @Nullable Input<FeatureMembershipConfigmanagementConfigSyncArgs> configSync;
 
     public Input<FeatureMembershipConfigmanagementConfigSyncArgs> getConfigSync() {
         return this.configSync == null ? Input.empty() : this.configSync;
@@ -45,7 +45,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hierarchyController")
-        private final @Nullable Input<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController;
+      private final @Nullable Input<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController;
 
     public Input<FeatureMembershipConfigmanagementHierarchyControllerArgs> getHierarchyController() {
         return this.hierarchyController == null ? Input.empty() : this.hierarchyController;
@@ -56,7 +56,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="policyController")
-        private final @Nullable Input<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController;
+      private final @Nullable Input<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController;
 
     public Input<FeatureMembershipConfigmanagementPolicyControllerArgs> getPolicyController() {
         return this.policyController == null ? Input.empty() : this.policyController;
@@ -67,7 +67,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

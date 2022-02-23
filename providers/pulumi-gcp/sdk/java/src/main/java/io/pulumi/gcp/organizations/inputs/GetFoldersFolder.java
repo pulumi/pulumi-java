@@ -17,7 +17,7 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createTime", required=true)
-        private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -28,7 +28,7 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deleteTime", required=true)
-        private final String deleteTime;
+      private final String deleteTime;
 
     public String getDeleteTime() {
         return this.deleteTime;
@@ -39,7 +39,7 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -50,7 +50,7 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -61,7 +61,7 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -72,7 +72,7 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-        private final String parent;
+      private final String parent;
 
     public String getParent() {
         return this.parent;
@@ -83,7 +83,7 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -94,7 +94,7 @@ public final class GetFoldersFolder extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="updateTime", required=true)
-        private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;

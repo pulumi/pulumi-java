@@ -15,14 +15,14 @@ public final class BackupVaultNotificationObjectTypeArgs extends io.pulumi.resou
     public static final BackupVaultNotificationObjectTypeArgs Empty = new BackupVaultNotificationObjectTypeArgs();
 
     @InputImport(name="backupVaultEvents", required=true)
-        private final Input<List<String>> backupVaultEvents;
+      private final Input<List<String>> backupVaultEvents;
 
     public Input<List<String>> getBackupVaultEvents() {
         return this.backupVaultEvents;
     }
 
     @InputImport(name="sNSTopicArn", required=true)
-        private final Input<String> sNSTopicArn;
+      private final Input<String> sNSTopicArn;
 
     public Input<String> getSNSTopicArn() {
         return this.sNSTopicArn;

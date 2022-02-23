@@ -26,7 +26,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="loadBalancerResourceId")
-        private final @Nullable Input<String> loadBalancerResourceId;
+      private final @Nullable Input<String> loadBalancerResourceId;
 
     public Input<String> getLoadBalancerResourceId() {
         return this.loadBalancerResourceId == null ? Input.empty() : this.loadBalancerResourceId;
@@ -37,7 +37,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateIpAddress")
-        private final @Nullable Input<PrivateIPAddressArgs> privateIpAddress;
+      private final @Nullable Input<PrivateIPAddressArgs> privateIpAddress;
 
     public Input<PrivateIPAddressArgs> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
@@ -48,7 +48,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="probePort")
-        private final @Nullable Input<Integer> probePort;
+      private final @Nullable Input<Integer> probePort;
 
     public Input<Integer> getProbePort() {
         return this.probePort == null ? Input.empty() : this.probePort;
@@ -59,7 +59,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="publicIpAddressResourceId")
-        private final @Nullable Input<String> publicIpAddressResourceId;
+      private final @Nullable Input<String> publicIpAddressResourceId;
 
     public Input<String> getPublicIpAddressResourceId() {
         return this.publicIpAddressResourceId == null ? Input.empty() : this.publicIpAddressResourceId;
@@ -70,7 +70,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sqlVirtualMachineInstances")
-        private final @Nullable Input<List<String>> sqlVirtualMachineInstances;
+      private final @Nullable Input<List<String>> sqlVirtualMachineInstances;
 
     public Input<List<String>> getSqlVirtualMachineInstances() {
         return this.sqlVirtualMachineInstances == null ? Input.empty() : this.sqlVirtualMachineInstances;

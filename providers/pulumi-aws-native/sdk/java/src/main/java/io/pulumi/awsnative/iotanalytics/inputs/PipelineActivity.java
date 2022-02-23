@@ -24,70 +24,70 @@ public final class PipelineActivity extends io.pulumi.resources.InvokeArgs {
     public static final PipelineActivity Empty = new PipelineActivity();
 
     @InputImport(name="addAttributes")
-        private final @Nullable PipelineAddAttributes addAttributes;
+      private final @Nullable PipelineAddAttributes addAttributes;
 
     public Optional<PipelineAddAttributes> getAddAttributes() {
         return this.addAttributes == null ? Optional.empty() : Optional.ofNullable(this.addAttributes);
     }
 
     @InputImport(name="channel")
-        private final @Nullable PipelineChannel channel;
+      private final @Nullable PipelineChannel channel;
 
     public Optional<PipelineChannel> getChannel() {
         return this.channel == null ? Optional.empty() : Optional.ofNullable(this.channel);
     }
 
     @InputImport(name="datastore")
-        private final @Nullable PipelineDatastore datastore;
+      private final @Nullable PipelineDatastore datastore;
 
     public Optional<PipelineDatastore> getDatastore() {
         return this.datastore == null ? Optional.empty() : Optional.ofNullable(this.datastore);
     }
 
     @InputImport(name="deviceRegistryEnrich")
-        private final @Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich;
+      private final @Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich;
 
     public Optional<PipelineDeviceRegistryEnrich> getDeviceRegistryEnrich() {
         return this.deviceRegistryEnrich == null ? Optional.empty() : Optional.ofNullable(this.deviceRegistryEnrich);
     }
 
     @InputImport(name="deviceShadowEnrich")
-        private final @Nullable PipelineDeviceShadowEnrich deviceShadowEnrich;
+      private final @Nullable PipelineDeviceShadowEnrich deviceShadowEnrich;
 
     public Optional<PipelineDeviceShadowEnrich> getDeviceShadowEnrich() {
         return this.deviceShadowEnrich == null ? Optional.empty() : Optional.ofNullable(this.deviceShadowEnrich);
     }
 
     @InputImport(name="filter")
-        private final @Nullable PipelineFilter filter;
+      private final @Nullable PipelineFilter filter;
 
     public Optional<PipelineFilter> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
     @InputImport(name="lambda")
-        private final @Nullable PipelineLambda lambda;
+      private final @Nullable PipelineLambda lambda;
 
     public Optional<PipelineLambda> getLambda() {
         return this.lambda == null ? Optional.empty() : Optional.ofNullable(this.lambda);
     }
 
     @InputImport(name="math")
-        private final @Nullable PipelineMath math;
+      private final @Nullable PipelineMath math;
 
     public Optional<PipelineMath> getMath() {
         return this.math == null ? Optional.empty() : Optional.ofNullable(this.math);
     }
 
     @InputImport(name="removeAttributes")
-        private final @Nullable PipelineRemoveAttributes removeAttributes;
+      private final @Nullable PipelineRemoveAttributes removeAttributes;
 
     public Optional<PipelineRemoveAttributes> getRemoveAttributes() {
         return this.removeAttributes == null ? Optional.empty() : Optional.ofNullable(this.removeAttributes);
     }
 
     @InputImport(name="selectAttributes")
-        private final @Nullable PipelineSelectAttributes selectAttributes;
+      private final @Nullable PipelineSelectAttributes selectAttributes;
 
     public Optional<PipelineSelectAttributes> getSelectAttributes() {
         return this.selectAttributes == null ? Optional.empty() : Optional.ofNullable(this.selectAttributes);

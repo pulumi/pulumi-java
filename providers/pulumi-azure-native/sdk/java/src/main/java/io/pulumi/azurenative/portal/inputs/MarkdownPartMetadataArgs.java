@@ -26,7 +26,7 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="inputs")
-        private final @Nullable Input<List<Object>> inputs;
+      private final @Nullable Input<List<Object>> inputs;
 
     public Input<List<Object>> getInputs() {
         return this.inputs == null ? Input.empty() : this.inputs;
@@ -37,7 +37,7 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="settings")
-        private final @Nullable Input<MarkdownPartMetadataSettingsArgs> settings;
+      private final @Nullable Input<MarkdownPartMetadataSettingsArgs> settings;
 
     public Input<MarkdownPartMetadataSettingsArgs> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -49,7 +49,7 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

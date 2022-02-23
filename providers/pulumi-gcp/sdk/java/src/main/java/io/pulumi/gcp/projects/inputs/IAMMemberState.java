@@ -21,7 +21,7 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-        private final @Nullable Input<IAMMemberConditionGetArgs> condition;
+      private final @Nullable Input<IAMMemberConditionGetArgs> condition;
 
     public Input<IAMMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -32,14 +32,14 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-        private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -51,7 +51,7 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -64,7 +64,7 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

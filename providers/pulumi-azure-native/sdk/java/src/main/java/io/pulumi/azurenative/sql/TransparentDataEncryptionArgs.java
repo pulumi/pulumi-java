@@ -21,7 +21,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -32,7 +32,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -43,7 +43,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -54,7 +54,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<Either<String,TransparentDataEncryptionStatus>> status;
+      private final @Nullable Input<Either<String,TransparentDataEncryptionStatus>> status;
 
     public Input<Either<String,TransparentDataEncryptionStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -65,7 +65,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="transparentDataEncryptionName")
-        private final @Nullable Input<String> transparentDataEncryptionName;
+      private final @Nullable Input<String> transparentDataEncryptionName;
 
     public Input<String> getTransparentDataEncryptionName() {
         return this.transparentDataEncryptionName == null ? Input.empty() : this.transparentDataEncryptionName;

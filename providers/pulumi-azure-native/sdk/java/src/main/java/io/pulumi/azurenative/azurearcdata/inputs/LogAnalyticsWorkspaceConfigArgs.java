@@ -23,7 +23,7 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="primaryKey")
-        private final @Nullable Input<String> primaryKey;
+      private final @Nullable Input<String> primaryKey;
 
     public Input<String> getPrimaryKey() {
         return this.primaryKey == null ? Input.empty() : this.primaryKey;
@@ -34,7 +34,7 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="workspaceId")
-        private final @Nullable Input<String> workspaceId;
+      private final @Nullable Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId == null ? Input.empty() : this.workspaceId;

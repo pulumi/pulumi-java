@@ -32,7 +32,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -43,7 +43,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="authentication")
-        private final @Nullable Input<Object> authentication;
+      private final @Nullable Input<Object> authentication;
 
     public Input<Object> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -54,7 +54,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -65,7 +65,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="credential")
-        private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -76,7 +76,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -87,7 +87,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -98,7 +98,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="functionAppUrl", required=true)
-        private final Input<Object> functionAppUrl;
+      private final Input<Object> functionAppUrl;
 
     public Input<Object> getFunctionAppUrl() {
         return this.functionAppUrl;
@@ -109,7 +109,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="functionKey")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> functionKey;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> functionKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getFunctionKey() {
         return this.functionKey == null ? Input.empty() : this.functionKey;
@@ -120,7 +120,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -131,7 +131,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<Object> resourceId;
+      private final @Nullable Input<Object> resourceId;
 
     public Input<Object> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -143,7 +143,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

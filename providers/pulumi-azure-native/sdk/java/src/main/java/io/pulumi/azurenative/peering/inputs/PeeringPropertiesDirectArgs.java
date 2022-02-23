@@ -28,7 +28,7 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connections")
-        private final @Nullable Input<List<DirectConnectionArgs>> connections;
+      private final @Nullable Input<List<DirectConnectionArgs>> connections;
 
     public Input<List<DirectConnectionArgs>> getConnections() {
         return this.connections == null ? Input.empty() : this.connections;
@@ -39,7 +39,7 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="directPeeringType")
-        private final @Nullable Input<Either<String,DirectPeeringType>> directPeeringType;
+      private final @Nullable Input<Either<String,DirectPeeringType>> directPeeringType;
 
     public Input<Either<String,DirectPeeringType>> getDirectPeeringType() {
         return this.directPeeringType == null ? Input.empty() : this.directPeeringType;
@@ -50,7 +50,7 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="peerAsn")
-        private final @Nullable Input<SubResourceArgs> peerAsn;
+      private final @Nullable Input<SubResourceArgs> peerAsn;
 
     public Input<SubResourceArgs> getPeerAsn() {
         return this.peerAsn == null ? Input.empty() : this.peerAsn;

@@ -25,7 +25,7 @@ public final class JobInputSequenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="inputs")
-        private final @Nullable Input<List<JobInputClipArgs>> inputs;
+      private final @Nullable Input<List<JobInputClipArgs>> inputs;
 
     public Input<List<JobInputClipArgs>> getInputs() {
         return this.inputs == null ? Input.empty() : this.inputs;
@@ -37,7 +37,7 @@ public final class JobInputSequenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;

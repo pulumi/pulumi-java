@@ -26,7 +26,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="inferencingComputeBinding", required=true)
-        private final ComputeBindingResponse inferencingComputeBinding;
+      private final ComputeBindingResponse inferencingComputeBinding;
 
     public ComputeBindingResponse getInferencingComputeBinding() {
         return this.inferencingComputeBinding;
@@ -37,7 +37,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="mlAssistEnabled")
-        private final @Nullable Boolean mlAssistEnabled;
+      private final @Nullable Boolean mlAssistEnabled;
 
     public Optional<Boolean> getMlAssistEnabled() {
         return this.mlAssistEnabled == null ? Optional.empty() : Optional.ofNullable(this.mlAssistEnabled);
@@ -48,7 +48,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="modelNamePrefix", required=true)
-        private final String modelNamePrefix;
+      private final String modelNamePrefix;
 
     public String getModelNamePrefix() {
         return this.modelNamePrefix;
@@ -59,7 +59,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="prelabelAccuracyThreshold")
-        private final @Nullable Double prelabelAccuracyThreshold;
+      private final @Nullable Double prelabelAccuracyThreshold;
 
     public Optional<Double> getPrelabelAccuracyThreshold() {
         return this.prelabelAccuracyThreshold == null ? Optional.empty() : Optional.ofNullable(this.prelabelAccuracyThreshold);
@@ -70,7 +70,7 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="trainingComputeBinding", required=true)
-        private final ComputeBindingResponse trainingComputeBinding;
+      private final ComputeBindingResponse trainingComputeBinding;
 
     public ComputeBindingResponse getTrainingComputeBinding() {
         return this.trainingComputeBinding;

@@ -15,7 +15,7 @@ public final class RuleGroupActionDefinition extends io.pulumi.resources.InvokeA
     public static final RuleGroupActionDefinition Empty = new RuleGroupActionDefinition();
 
     @InputImport(name="publishMetricAction")
-        private final @Nullable RuleGroupPublishMetricAction publishMetricAction;
+      private final @Nullable RuleGroupPublishMetricAction publishMetricAction;
 
     public Optional<RuleGroupPublishMetricAction> getPublishMetricAction() {
         return this.publishMetricAction == null ? Optional.empty() : Optional.ofNullable(this.publishMetricAction);

@@ -15,14 +15,14 @@ public final class DestinationTagArgs extends io.pulumi.resources.ResourceArgs {
     public static final DestinationTagArgs Empty = new DestinationTagArgs();
 
     @InputImport(name="key")
-        private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
     }
 
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

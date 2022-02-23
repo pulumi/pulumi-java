@@ -20,7 +20,7 @@ public final class PreventionJobTriggerTriggerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="schedule")
-        private final @Nullable Input<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
+      private final @Nullable Input<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
 
     public Input<PreventionJobTriggerTriggerScheduleGetArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;

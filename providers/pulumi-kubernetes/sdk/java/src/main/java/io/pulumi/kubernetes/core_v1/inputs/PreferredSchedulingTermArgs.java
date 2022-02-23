@@ -23,7 +23,7 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="preference", required=true)
-        private final Input<NodeSelectorTermArgs> preference;
+      private final Input<NodeSelectorTermArgs> preference;
 
     public Input<NodeSelectorTermArgs> getPreference() {
         return this.preference;
@@ -34,7 +34,7 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="weight", required=true)
-        private final Input<Integer> weight;
+      private final Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight;

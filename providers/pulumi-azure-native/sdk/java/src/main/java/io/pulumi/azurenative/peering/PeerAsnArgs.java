@@ -24,7 +24,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerAsn")
-        private final @Nullable Input<Integer> peerAsn;
+      private final @Nullable Input<Integer> peerAsn;
 
     public Input<Integer> getPeerAsn() {
         return this.peerAsn == null ? Input.empty() : this.peerAsn;
@@ -35,7 +35,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerAsnName")
-        private final @Nullable Input<String> peerAsnName;
+      private final @Nullable Input<String> peerAsnName;
 
     public Input<String> getPeerAsnName() {
         return this.peerAsnName == null ? Input.empty() : this.peerAsnName;
@@ -46,7 +46,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerContactDetail")
-        private final @Nullable Input<List<ContactDetailArgs>> peerContactDetail;
+      private final @Nullable Input<List<ContactDetailArgs>> peerContactDetail;
 
     public Input<List<ContactDetailArgs>> getPeerContactDetail() {
         return this.peerContactDetail == null ? Input.empty() : this.peerContactDetail;
@@ -57,7 +57,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerName")
-        private final @Nullable Input<String> peerName;
+      private final @Nullable Input<String> peerName;
 
     public Input<String> getPeerName() {
         return this.peerName == null ? Input.empty() : this.peerName;
@@ -68,7 +68,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationState")
-        private final @Nullable Input<Either<String,ValidationState>> validationState;
+      private final @Nullable Input<Either<String,ValidationState>> validationState;
 
     public Input<Either<String,ValidationState>> getValidationState() {
         return this.validationState == null ? Input.empty() : this.validationState;

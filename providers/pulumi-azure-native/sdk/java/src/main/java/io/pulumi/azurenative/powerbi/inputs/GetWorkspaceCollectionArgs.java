@@ -17,7 +17,7 @@ public final class GetWorkspaceCollectionArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetWorkspaceCollectionArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="workspaceCollectionName", required=true)
-        private final String workspaceCollectionName;
+      private final String workspaceCollectionName;
 
     public String getWorkspaceCollectionName() {
         return this.workspaceCollectionName;

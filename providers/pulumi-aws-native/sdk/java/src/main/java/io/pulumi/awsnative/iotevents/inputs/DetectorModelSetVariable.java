@@ -21,7 +21,7 @@ public final class DetectorModelSetVariable extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="value", required=true)
-        private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -32,7 +32,7 @@ public final class DetectorModelSetVariable extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="variableName", required=true)
-        private final String variableName;
+      private final String variableName;
 
     public String getVariableName() {
         return this.variableName;

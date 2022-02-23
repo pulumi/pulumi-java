@@ -23,7 +23,7 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="expectedValue")
-        private final @Nullable String expectedValue;
+      private final @Nullable String expectedValue;
 
     public Optional<String> getExpectedValue() {
         return this.expectedValue == null ? Optional.empty() : Optional.ofNullable(this.expectedValue);
@@ -34,7 +34,7 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="operator")
-        private final @Nullable String operator;
+      private final @Nullable String operator;
 
     public Optional<String> getOperator() {
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
@@ -45,7 +45,7 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="propertyJPath")
-        private final @Nullable String propertyJPath;
+      private final @Nullable String propertyJPath;
 
     public Optional<String> getPropertyJPath() {
         return this.propertyJPath == null ? Optional.empty() : Optional.ofNullable(this.propertyJPath);
@@ -56,7 +56,7 @@ public final class AutomationTriggeringRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="propertyType")
-        private final @Nullable String propertyType;
+      private final @Nullable String propertyType;
 
     public Optional<String> getPropertyType() {
         return this.propertyType == null ? Optional.empty() : Optional.ofNullable(this.propertyType);

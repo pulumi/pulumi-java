@@ -20,35 +20,35 @@ public final class CapacityProviderManagedScalingArgs extends io.pulumi.resource
     public static final CapacityProviderManagedScalingArgs Empty = new CapacityProviderManagedScalingArgs();
 
     @InputImport(name="instanceWarmupPeriod")
-        private final @Nullable Input<Integer> instanceWarmupPeriod;
+      private final @Nullable Input<Integer> instanceWarmupPeriod;
 
     public Input<Integer> getInstanceWarmupPeriod() {
         return this.instanceWarmupPeriod == null ? Input.empty() : this.instanceWarmupPeriod;
     }
 
     @InputImport(name="maximumScalingStepSize")
-        private final @Nullable Input<Integer> maximumScalingStepSize;
+      private final @Nullable Input<Integer> maximumScalingStepSize;
 
     public Input<Integer> getMaximumScalingStepSize() {
         return this.maximumScalingStepSize == null ? Input.empty() : this.maximumScalingStepSize;
     }
 
     @InputImport(name="minimumScalingStepSize")
-        private final @Nullable Input<Integer> minimumScalingStepSize;
+      private final @Nullable Input<Integer> minimumScalingStepSize;
 
     public Input<Integer> getMinimumScalingStepSize() {
         return this.minimumScalingStepSize == null ? Input.empty() : this.minimumScalingStepSize;
     }
 
     @InputImport(name="status")
-        private final @Nullable Input<CapacityProviderManagedScalingStatus> status;
+      private final @Nullable Input<CapacityProviderManagedScalingStatus> status;
 
     public Input<CapacityProviderManagedScalingStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
     }
 
     @InputImport(name="targetCapacity")
-        private final @Nullable Input<Integer> targetCapacity;
+      private final @Nullable Input<Integer> targetCapacity;
 
     public Input<Integer> getTargetCapacity() {
         return this.targetCapacity == null ? Input.empty() : this.targetCapacity;

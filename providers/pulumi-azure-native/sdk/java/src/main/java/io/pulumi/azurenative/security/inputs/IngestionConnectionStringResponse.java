@@ -21,7 +21,7 @@ public final class IngestionConnectionStringResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="location", required=true)
-        private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -32,7 +32,7 @@ public final class IngestionConnectionStringResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="value", required=true)
-        private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;

@@ -25,7 +25,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="groupId")
-        private final @Nullable Input<String> groupId;
+      private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -36,7 +36,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="privateLink")
-        private final @Nullable Input<ResourceReferenceArgs> privateLink;
+      private final @Nullable Input<ResourceReferenceArgs> privateLink;
 
     public Input<ResourceReferenceArgs> getPrivateLink() {
         return this.privateLink == null ? Input.empty() : this.privateLink;
@@ -47,7 +47,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="privateLinkLocation")
-        private final @Nullable Input<String> privateLinkLocation;
+      private final @Nullable Input<String> privateLinkLocation;
 
     public Input<String> getPrivateLinkLocation() {
         return this.privateLinkLocation == null ? Input.empty() : this.privateLinkLocation;
@@ -58,7 +58,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="requestMessage")
-        private final @Nullable Input<String> requestMessage;
+      private final @Nullable Input<String> requestMessage;
 
     public Input<String> getRequestMessage() {
         return this.requestMessage == null ? Input.empty() : this.requestMessage;
@@ -69,7 +69,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<SharedPrivateLinkResourceStatus> status;
+      private final @Nullable Input<SharedPrivateLinkResourceStatus> status;
 
     public Input<SharedPrivateLinkResourceStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;

@@ -17,7 +17,7 @@ public final class GetStorageSyncServiceArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetStorageSyncServiceArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="storageSyncServiceName", required=true)
-        private final String storageSyncServiceName;
+      private final String storageSyncServiceName;
 
     public String getStorageSyncServiceName() {
         return this.storageSyncServiceName;

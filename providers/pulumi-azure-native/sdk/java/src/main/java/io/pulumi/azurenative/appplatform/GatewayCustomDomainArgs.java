@@ -20,7 +20,7 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="domainName")
-        private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -31,7 +31,7 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gatewayName", required=true)
-        private final Input<String> gatewayName;
+      private final Input<String> gatewayName;
 
     public Input<String> getGatewayName() {
         return this.gatewayName;
@@ -42,7 +42,7 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<GatewayCustomDomainPropertiesArgs> properties;
+      private final @Nullable Input<GatewayCustomDomainPropertiesArgs> properties;
 
     public Input<GatewayCustomDomainPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;

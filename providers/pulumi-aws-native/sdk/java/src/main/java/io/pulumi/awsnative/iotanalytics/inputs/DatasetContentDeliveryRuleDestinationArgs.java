@@ -16,14 +16,14 @@ public final class DatasetContentDeliveryRuleDestinationArgs extends io.pulumi.r
     public static final DatasetContentDeliveryRuleDestinationArgs Empty = new DatasetContentDeliveryRuleDestinationArgs();
 
     @InputImport(name="iotEventsDestinationConfiguration")
-        private final @Nullable Input<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration;
+      private final @Nullable Input<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration;
 
     public Input<DatasetIotEventsDestinationConfigurationArgs> getIotEventsDestinationConfiguration() {
         return this.iotEventsDestinationConfiguration == null ? Input.empty() : this.iotEventsDestinationConfiguration;
     }
 
     @InputImport(name="s3DestinationConfiguration")
-        private final @Nullable Input<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration;
+      private final @Nullable Input<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration;
 
     public Input<DatasetS3DestinationConfigurationArgs> getS3DestinationConfiguration() {
         return this.s3DestinationConfiguration == null ? Input.empty() : this.s3DestinationConfiguration;

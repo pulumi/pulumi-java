@@ -19,7 +19,7 @@ public final class RegionInstanceGroupManagerNamedPortGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -31,7 +31,7 @@ public final class RegionInstanceGroupManagerNamedPortGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="port", required=true)
-        private final Input<Integer> port;
+      private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;

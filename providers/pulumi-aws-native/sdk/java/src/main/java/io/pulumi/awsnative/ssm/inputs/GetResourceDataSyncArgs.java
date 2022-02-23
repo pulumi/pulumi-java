@@ -13,7 +13,7 @@ public final class GetResourceDataSyncArgs extends io.pulumi.resources.InvokeArg
     public static final GetResourceDataSyncArgs Empty = new GetResourceDataSyncArgs();
 
     @InputImport(name="syncName", required=true)
-        private final String syncName;
+      private final String syncName;
 
     public String getSyncName() {
         return this.syncName;

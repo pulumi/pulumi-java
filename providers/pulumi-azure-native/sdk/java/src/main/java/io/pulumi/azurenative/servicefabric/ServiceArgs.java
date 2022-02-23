@@ -32,7 +32,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName", required=true)
-        private final Input<String> applicationName;
+      private final Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName;
@@ -43,7 +43,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-        private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -54,7 +54,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="correlationScheme")
-        private final @Nullable Input<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
+      private final @Nullable Input<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
 
     public Input<List<ServiceCorrelationDescriptionArgs>> getCorrelationScheme() {
         return this.correlationScheme == null ? Input.empty() : this.correlationScheme;
@@ -65,7 +65,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultMoveCost")
-        private final @Nullable Input<Either<String,MoveCost>> defaultMoveCost;
+      private final @Nullable Input<Either<String,MoveCost>> defaultMoveCost;
 
     public Input<Either<String,MoveCost>> getDefaultMoveCost() {
         return this.defaultMoveCost == null ? Input.empty() : this.defaultMoveCost;
@@ -76,7 +76,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -87,7 +87,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionDescription")
-        private final @Nullable Input<Object> partitionDescription;
+      private final @Nullable Input<Object> partitionDescription;
 
     public Input<Object> getPartitionDescription() {
         return this.partitionDescription == null ? Input.empty() : this.partitionDescription;
@@ -98,7 +98,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placementConstraints")
-        private final @Nullable Input<String> placementConstraints;
+      private final @Nullable Input<String> placementConstraints;
 
     public Input<String> getPlacementConstraints() {
         return this.placementConstraints == null ? Input.empty() : this.placementConstraints;
@@ -109,7 +109,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -120,7 +120,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceDnsName")
-        private final @Nullable Input<String> serviceDnsName;
+      private final @Nullable Input<String> serviceDnsName;
 
     public Input<String> getServiceDnsName() {
         return this.serviceDnsName == null ? Input.empty() : this.serviceDnsName;
@@ -131,7 +131,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceKind", required=true)
-        private final Input<Either<String,ServiceKind>> serviceKind;
+      private final Input<Either<String,ServiceKind>> serviceKind;
 
     public Input<Either<String,ServiceKind>> getServiceKind() {
         return this.serviceKind;
@@ -142,7 +142,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceLoadMetrics")
-        private final @Nullable Input<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
+      private final @Nullable Input<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
 
     public Input<List<ServiceLoadMetricDescriptionArgs>> getServiceLoadMetrics() {
         return this.serviceLoadMetrics == null ? Input.empty() : this.serviceLoadMetrics;
@@ -153,7 +153,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-        private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -164,7 +164,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicePackageActivationMode")
-        private final @Nullable Input<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
+      private final @Nullable Input<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
 
     public Input<Either<String,ArmServicePackageActivationMode>> getServicePackageActivationMode() {
         return this.servicePackageActivationMode == null ? Input.empty() : this.servicePackageActivationMode;
@@ -175,7 +175,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicePlacementPolicies")
-        private final @Nullable Input<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
+      private final @Nullable Input<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
 
     public Input<List<ServicePlacementPolicyDescriptionArgs>> getServicePlacementPolicies() {
         return this.servicePlacementPolicies == null ? Input.empty() : this.servicePlacementPolicies;
@@ -186,7 +186,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceTypeName")
-        private final @Nullable Input<String> serviceTypeName;
+      private final @Nullable Input<String> serviceTypeName;
 
     public Input<String> getServiceTypeName() {
         return this.serviceTypeName == null ? Input.empty() : this.serviceTypeName;
@@ -197,7 +197,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

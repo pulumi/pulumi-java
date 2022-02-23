@@ -23,7 +23,7 @@ public final class SafetyRuleAssertionRule extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="assertedControls", required=true)
-        private final List<String> assertedControls;
+      private final List<String> assertedControls;
 
     public List<String> getAssertedControls() {
         return this.assertedControls;
@@ -34,7 +34,7 @@ public final class SafetyRuleAssertionRule extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="waitPeriodMs", required=true)
-        private final Integer waitPeriodMs;
+      private final Integer waitPeriodMs;
 
     public Integer getWaitPeriodMs() {
         return this.waitPeriodMs;

@@ -24,7 +24,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource")
-        private final @Nullable Input<TypedLocalObjectReferenceArgs> resource;
+      private final @Nullable Input<TypedLocalObjectReferenceArgs> resource;
 
     public Input<TypedLocalObjectReferenceArgs> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -35,7 +35,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-        private final @Nullable Input<IngressServiceBackendArgs> service;
+      private final @Nullable Input<IngressServiceBackendArgs> service;
 
     public Input<IngressServiceBackendArgs> getService() {
         return this.service == null ? Input.empty() : this.service;

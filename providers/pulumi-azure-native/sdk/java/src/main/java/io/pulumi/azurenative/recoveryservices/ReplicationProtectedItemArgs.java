@@ -20,7 +20,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="fabricName", required=true)
-        private final Input<String> fabricName;
+      private final Input<String> fabricName;
 
     public Input<String> getFabricName() {
         return this.fabricName;
@@ -31,7 +31,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<EnableProtectionInputPropertiesArgs> properties;
+      private final @Nullable Input<EnableProtectionInputPropertiesArgs> properties;
 
     public Input<EnableProtectionInputPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protectionContainerName", required=true)
-        private final Input<String> protectionContainerName;
+      private final Input<String> protectionContainerName;
 
     public Input<String> getProtectionContainerName() {
         return this.protectionContainerName;
@@ -53,7 +53,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="replicatedProtectedItemName")
-        private final @Nullable Input<String> replicatedProtectedItemName;
+      private final @Nullable Input<String> replicatedProtectedItemName;
 
     public Input<String> getReplicatedProtectedItemName() {
         return this.replicatedProtectedItemName == null ? Input.empty() : this.replicatedProtectedItemName;
@@ -64,7 +64,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;

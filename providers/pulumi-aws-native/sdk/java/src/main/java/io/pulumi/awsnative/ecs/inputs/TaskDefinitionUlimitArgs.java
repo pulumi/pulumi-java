@@ -15,21 +15,21 @@ public final class TaskDefinitionUlimitArgs extends io.pulumi.resources.Resource
     public static final TaskDefinitionUlimitArgs Empty = new TaskDefinitionUlimitArgs();
 
     @InputImport(name="hardLimit", required=true)
-        private final Input<Integer> hardLimit;
+      private final Input<Integer> hardLimit;
 
     public Input<Integer> getHardLimit() {
         return this.hardLimit;
     }
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="softLimit", required=true)
-        private final Input<Integer> softLimit;
+      private final Input<Integer> softLimit;
 
     public Input<Integer> getSoftLimit() {
         return this.softLimit;

@@ -16,7 +16,7 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
     public static final Hl7StoreIamMemberArgs Empty = new Hl7StoreIamMemberArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<Hl7StoreIamMemberConditionArgs> condition;
+      private final @Nullable Input<Hl7StoreIamMemberConditionArgs> condition;
 
     public Input<Hl7StoreIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -30,14 +30,14 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hl7V2StoreId", required=true)
-        private final Input<String> hl7V2StoreId;
+      private final Input<String> hl7V2StoreId;
 
     public Input<String> getHl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
     @InputImport(name="member", required=true)
-        private final Input<String> member;
+      private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -50,7 +50,7 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

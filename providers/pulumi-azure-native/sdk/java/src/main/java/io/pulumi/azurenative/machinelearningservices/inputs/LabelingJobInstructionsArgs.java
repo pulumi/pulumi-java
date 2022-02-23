@@ -23,7 +23,7 @@ public final class LabelingJobInstructionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="uri")
-        private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;

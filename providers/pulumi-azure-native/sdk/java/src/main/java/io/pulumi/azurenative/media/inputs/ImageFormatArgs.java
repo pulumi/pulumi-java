@@ -22,7 +22,7 @@ public final class ImageFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filenamePattern", required=true)
-        private final Input<String> filenamePattern;
+      private final Input<String> filenamePattern;
 
     public Input<String> getFilenamePattern() {
         return this.filenamePattern;
@@ -34,7 +34,7 @@ public final class ImageFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;

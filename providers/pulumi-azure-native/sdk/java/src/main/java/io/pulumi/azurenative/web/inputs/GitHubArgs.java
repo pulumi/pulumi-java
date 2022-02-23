@@ -25,7 +25,7 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -36,7 +36,7 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="login")
-        private final @Nullable Input<LoginScopesArgs> login;
+      private final @Nullable Input<LoginScopesArgs> login;
 
     public Input<LoginScopesArgs> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -47,7 +47,7 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registration")
-        private final @Nullable Input<ClientRegistrationArgs> registration;
+      private final @Nullable Input<ClientRegistrationArgs> registration;
 
     public Input<ClientRegistrationArgs> getRegistration() {
         return this.registration == null ? Input.empty() : this.registration;

@@ -23,7 +23,7 @@ public final class KubeEnvironmentProfileArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;

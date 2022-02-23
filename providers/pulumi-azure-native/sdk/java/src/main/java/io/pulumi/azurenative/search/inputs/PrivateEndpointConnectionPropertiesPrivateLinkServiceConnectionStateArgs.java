@@ -24,7 +24,7 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
      * 
      */
     @InputImport(name="actionsRequired")
-        private final @Nullable Input<String> actionsRequired;
+      private final @Nullable Input<String> actionsRequired;
 
     public Input<String> getActionsRequired() {
         return this.actionsRequired == null ? Input.empty() : this.actionsRequired;
@@ -35,7 +35,7 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<PrivateLinkServiceConnectionStatus> status;
+      private final @Nullable Input<PrivateLinkServiceConnectionStatus> status;
 
     public Input<PrivateLinkServiceConnectionStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;

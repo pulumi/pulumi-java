@@ -25,7 +25,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="azureResourceId", required=true)
-        private final String azureResourceId;
+      private final String azureResourceId;
 
     public String getAzureResourceId() {
         return this.azureResourceId;
@@ -36,7 +36,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="createdBy")
-        private final @Nullable UserInfoResponse createdBy;
+      private final @Nullable UserInfoResponse createdBy;
 
     public Optional<UserInfoResponse> getCreatedBy() {
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
@@ -47,7 +47,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -58,7 +58,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="endTimeUtc")
-        private final @Nullable String endTimeUtc;
+      private final @Nullable String endTimeUtc;
 
     public Optional<String> getEndTimeUtc() {
         return this.endTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.endTimeUtc);
@@ -69,7 +69,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="eventTime")
-        private final @Nullable String eventTime;
+      private final @Nullable String eventTime;
 
     public Optional<String> getEventTime() {
         return this.eventTime == null ? Optional.empty() : Optional.ofNullable(this.eventTime);
@@ -81,7 +81,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="kind", required=true)
-        private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -92,7 +92,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable List<String> labels;
+      private final @Nullable List<String> labels;
 
     public List<String> getLabels() {
         return this.labels == null ? List.of() : this.labels;
@@ -103,7 +103,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="notes")
-        private final @Nullable String notes;
+      private final @Nullable String notes;
 
     public Optional<String> getNotes() {
         return this.notes == null ? Optional.empty() : Optional.ofNullable(this.notes);
@@ -114,7 +114,7 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="startTimeUtc")
-        private final @Nullable String startTimeUtc;
+      private final @Nullable String startTimeUtc;
 
     public Optional<String> getStartTimeUtc() {
         return this.startTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.startTimeUtc);

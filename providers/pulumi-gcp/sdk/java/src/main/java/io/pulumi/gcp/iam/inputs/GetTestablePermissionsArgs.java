@@ -20,7 +20,7 @@ public final class GetTestablePermissionsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="customSupportLevel")
-        private final @Nullable String customSupportLevel;
+      private final @Nullable String customSupportLevel;
 
     public Optional<String> getCustomSupportLevel() {
         return this.customSupportLevel == null ? Optional.empty() : Optional.ofNullable(this.customSupportLevel);
@@ -31,7 +31,7 @@ public final class GetTestablePermissionsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fullResourceName", required=true)
-        private final String fullResourceName;
+      private final String fullResourceName;
 
     public String getFullResourceName() {
         return this.fullResourceName;
@@ -42,7 +42,7 @@ public final class GetTestablePermissionsArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="stages")
-        private final @Nullable List<String> stages;
+      private final @Nullable List<String> stages;
 
     public List<String> getStages() {
         return this.stages == null ? List.of() : this.stages;

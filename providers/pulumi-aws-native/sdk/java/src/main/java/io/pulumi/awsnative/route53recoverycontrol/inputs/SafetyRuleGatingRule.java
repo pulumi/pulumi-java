@@ -23,7 +23,7 @@ public final class SafetyRuleGatingRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gatingControls", required=true)
-        private final List<String> gatingControls;
+      private final List<String> gatingControls;
 
     public List<String> getGatingControls() {
         return this.gatingControls;
@@ -35,7 +35,7 @@ public final class SafetyRuleGatingRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetControls", required=true)
-        private final List<String> targetControls;
+      private final List<String> targetControls;
 
     public List<String> getTargetControls() {
         return this.targetControls;
@@ -46,7 +46,7 @@ public final class SafetyRuleGatingRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="waitPeriodMs", required=true)
-        private final Integer waitPeriodMs;
+      private final Integer waitPeriodMs;
 
     public Integer getWaitPeriodMs() {
         return this.waitPeriodMs;

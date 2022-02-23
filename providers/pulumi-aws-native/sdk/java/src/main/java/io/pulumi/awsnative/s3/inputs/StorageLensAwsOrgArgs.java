@@ -18,7 +18,7 @@ public final class StorageLensAwsOrgArgs extends io.pulumi.resources.ResourceArg
     public static final StorageLensAwsOrgArgs Empty = new StorageLensAwsOrgArgs();
 
     @InputImport(name="arn", required=true)
-        private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;

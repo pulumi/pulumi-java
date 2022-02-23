@@ -18,7 +18,7 @@ public final class ModelBiasJobDefinitionMonitoringResourcesArgs extends io.pulu
     public static final ModelBiasJobDefinitionMonitoringResourcesArgs Empty = new ModelBiasJobDefinitionMonitoringResourcesArgs();
 
     @InputImport(name="clusterConfig", required=true)
-        private final Input<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig;
+      private final Input<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig;
 
     public Input<ModelBiasJobDefinitionClusterConfigArgs> getClusterConfig() {
         return this.clusterConfig;

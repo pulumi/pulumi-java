@@ -17,7 +17,7 @@ public final class MitigationActionUpdateCACertificateParams extends io.pulumi.r
     public static final MitigationActionUpdateCACertificateParams Empty = new MitigationActionUpdateCACertificateParams();
 
     @InputImport(name="action", required=true)
-        private final MitigationActionUpdateCACertificateParamsAction action;
+      private final MitigationActionUpdateCACertificateParamsAction action;
 
     public MitigationActionUpdateCACertificateParamsAction getAction() {
         return this.action;

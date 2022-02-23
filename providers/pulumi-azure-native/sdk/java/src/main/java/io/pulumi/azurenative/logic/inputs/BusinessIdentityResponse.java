@@ -21,7 +21,7 @@ public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="qualifier", required=true)
-        private final String qualifier;
+      private final String qualifier;
 
     public String getQualifier() {
         return this.qualifier;
@@ -32,7 +32,7 @@ public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="value", required=true)
-        private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;

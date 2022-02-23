@@ -18,7 +18,7 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -29,7 +29,7 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -40,7 +40,7 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
      * 
      */
     @InputImport(name="rid", required=true)
-        private final String rid;
+      private final String rid;
 
     public String getRid() {
         return this.rid;
@@ -51,7 +51,7 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
      * 
      */
     @InputImport(name="ts", required=true)
-        private final Double ts;
+      private final Double ts;
 
     public Double getTs() {
         return this.ts;
@@ -62,7 +62,7 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
      * 
      */
     @InputImport(name="viewDefinition", required=true)
-        private final String viewDefinition;
+      private final String viewDefinition;
 
     public String getViewDefinition() {
         return this.viewDefinition;

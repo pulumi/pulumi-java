@@ -21,7 +21,7 @@ public final class BucketAbortIncompleteMultipartUpload extends io.pulumi.resour
      * 
      */
     @InputImport(name="daysAfterInitiation", required=true)
-        private final Integer daysAfterInitiation;
+      private final Integer daysAfterInitiation;
 
     public Integer getDaysAfterInitiation() {
         return this.daysAfterInitiation;

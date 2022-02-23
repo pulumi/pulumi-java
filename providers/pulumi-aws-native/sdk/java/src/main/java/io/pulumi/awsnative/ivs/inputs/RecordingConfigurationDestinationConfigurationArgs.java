@@ -18,7 +18,7 @@ public final class RecordingConfigurationDestinationConfigurationArgs extends io
     public static final RecordingConfigurationDestinationConfigurationArgs Empty = new RecordingConfigurationDestinationConfigurationArgs();
 
     @InputImport(name="s3", required=true)
-        private final Input<RecordingConfigurationS3DestinationConfigurationArgs> s3;
+      private final Input<RecordingConfigurationS3DestinationConfigurationArgs> s3;
 
     public Input<RecordingConfigurationS3DestinationConfigurationArgs> getS3() {
         return this.s3;

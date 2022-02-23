@@ -20,7 +20,7 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="branch", required=true)
-        private final Input<String> branch;
+      private final Input<String> branch;
 
     public Input<String> getBranch() {
         return this.branch;
@@ -32,7 +32,7 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="commentControl")
-        private final @Nullable Input<String> commentControl;
+      private final @Nullable Input<String> commentControl;
 
     public Input<String> getCommentControl() {
         return this.commentControl == null ? Input.empty() : this.commentControl;
@@ -43,7 +43,7 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="invertRegex")
-        private final @Nullable Input<Boolean> invertRegex;
+      private final @Nullable Input<Boolean> invertRegex;
 
     public Input<Boolean> getInvertRegex() {
         return this.invertRegex == null ? Input.empty() : this.invertRegex;

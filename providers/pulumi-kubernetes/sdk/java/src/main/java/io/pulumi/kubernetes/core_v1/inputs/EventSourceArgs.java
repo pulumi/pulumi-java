@@ -23,7 +23,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="component")
-        private final @Nullable Input<String> component;
+      private final @Nullable Input<String> component;
 
     public Input<String> getComponent() {
         return this.component == null ? Input.empty() : this.component;
@@ -34,7 +34,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-        private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;

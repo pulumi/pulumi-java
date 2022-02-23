@@ -26,7 +26,7 @@ public final class FailoverGroupReadWriteEndpointArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="failoverPolicy", required=true)
-        private final Input<Either<String,ReadWriteEndpointFailoverPolicy>> failoverPolicy;
+      private final Input<Either<String,ReadWriteEndpointFailoverPolicy>> failoverPolicy;
 
     public Input<Either<String,ReadWriteEndpointFailoverPolicy>> getFailoverPolicy() {
         return this.failoverPolicy;
@@ -37,7 +37,7 @@ public final class FailoverGroupReadWriteEndpointArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="failoverWithDataLossGracePeriodMinutes")
-        private final @Nullable Input<Integer> failoverWithDataLossGracePeriodMinutes;
+      private final @Nullable Input<Integer> failoverWithDataLossGracePeriodMinutes;
 
     public Input<Integer> getFailoverWithDataLossGracePeriodMinutes() {
         return this.failoverWithDataLossGracePeriodMinutes == null ? Input.empty() : this.failoverWithDataLossGracePeriodMinutes;

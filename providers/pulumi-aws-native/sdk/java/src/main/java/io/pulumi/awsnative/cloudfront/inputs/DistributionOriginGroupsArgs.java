@@ -17,14 +17,14 @@ public final class DistributionOriginGroupsArgs extends io.pulumi.resources.Reso
     public static final DistributionOriginGroupsArgs Empty = new DistributionOriginGroupsArgs();
 
     @InputImport(name="items")
-        private final @Nullable Input<List<DistributionOriginGroupArgs>> items;
+      private final @Nullable Input<List<DistributionOriginGroupArgs>> items;
 
     public Input<List<DistributionOriginGroupArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
     }
 
     @InputImport(name="quantity", required=true)
-        private final Input<Integer> quantity;
+      private final Input<Integer> quantity;
 
     public Input<Integer> getQuantity() {
         return this.quantity;

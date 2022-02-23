@@ -20,14 +20,14 @@ public final class RecipeSecondaryInputArgs extends io.pulumi.resources.Resource
     public static final RecipeSecondaryInputArgs Empty = new RecipeSecondaryInputArgs();
 
     @InputImport(name="dataCatalogInputDefinition")
-        private final @Nullable Input<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
+      private final @Nullable Input<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
 
     public Input<RecipeDataCatalogInputDefinitionArgs> getDataCatalogInputDefinition() {
         return this.dataCatalogInputDefinition == null ? Input.empty() : this.dataCatalogInputDefinition;
     }
 
     @InputImport(name="s3InputDefinition")
-        private final @Nullable Input<RecipeS3LocationArgs> s3InputDefinition;
+      private final @Nullable Input<RecipeS3LocationArgs> s3InputDefinition;
 
     public Input<RecipeS3LocationArgs> getS3InputDefinition() {
         return this.s3InputDefinition == null ? Input.empty() : this.s3InputDefinition;

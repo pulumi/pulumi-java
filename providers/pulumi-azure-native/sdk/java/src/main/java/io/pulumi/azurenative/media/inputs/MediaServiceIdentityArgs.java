@@ -20,7 +20,7 @@ public final class MediaServiceIdentityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<Either<String,ManagedIdentityType>> type;
+      private final Input<Either<String,ManagedIdentityType>> type;
 
     public Input<Either<String,ManagedIdentityType>> getType() {
         return this.type;

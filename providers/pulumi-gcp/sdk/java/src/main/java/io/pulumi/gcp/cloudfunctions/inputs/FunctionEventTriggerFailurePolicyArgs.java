@@ -18,7 +18,7 @@ public final class FunctionEventTriggerFailurePolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="retry", required=true)
-        private final Input<Boolean> retry;
+      private final Input<Boolean> retry;
 
     public Input<Boolean> getRetry() {
         return this.retry;

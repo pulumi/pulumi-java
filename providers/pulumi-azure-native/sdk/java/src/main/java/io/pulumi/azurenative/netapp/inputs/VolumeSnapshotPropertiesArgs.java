@@ -23,7 +23,7 @@ public final class VolumeSnapshotPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="snapshotPolicyId")
-        private final @Nullable Input<String> snapshotPolicyId;
+      private final @Nullable Input<String> snapshotPolicyId;
 
     public Input<String> getSnapshotPolicyId() {
         return this.snapshotPolicyId == null ? Input.empty() : this.snapshotPolicyId;

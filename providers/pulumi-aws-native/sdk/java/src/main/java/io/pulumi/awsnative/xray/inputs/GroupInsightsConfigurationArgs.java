@@ -19,7 +19,7 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="insightsEnabled")
-        private final @Nullable Input<Boolean> insightsEnabled;
+      private final @Nullable Input<Boolean> insightsEnabled;
 
     public Input<Boolean> getInsightsEnabled() {
         return this.insightsEnabled == null ? Input.empty() : this.insightsEnabled;
@@ -30,7 +30,7 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="notificationsEnabled")
-        private final @Nullable Input<Boolean> notificationsEnabled;
+      private final @Nullable Input<Boolean> notificationsEnabled;
 
     public Input<Boolean> getNotificationsEnabled() {
         return this.notificationsEnabled == null ? Input.empty() : this.notificationsEnabled;

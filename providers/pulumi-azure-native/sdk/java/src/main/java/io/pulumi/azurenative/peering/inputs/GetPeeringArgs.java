@@ -17,7 +17,7 @@ public final class GetPeeringArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="peeringName", required=true)
-        private final String peeringName;
+      private final String peeringName;
 
     public String getPeeringName() {
         return this.peeringName;
@@ -28,7 +28,7 @@ public final class GetPeeringArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

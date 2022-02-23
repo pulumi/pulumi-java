@@ -23,7 +23,7 @@ public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable String parameters;
+      private final @Nullable String parameters;
 
     public Optional<String> getParameters() {
         return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
@@ -45,7 +45,7 @@ public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="policyDefinitionId")
-        private final @Nullable String policyDefinitionId;
+      private final @Nullable String policyDefinitionId;
 
     public Optional<String> getPolicyDefinitionId() {
         return this.policyDefinitionId == null ? Optional.empty() : Optional.ofNullable(this.policyDefinitionId);

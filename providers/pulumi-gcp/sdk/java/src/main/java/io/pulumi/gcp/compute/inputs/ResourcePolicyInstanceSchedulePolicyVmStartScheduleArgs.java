@@ -18,7 +18,7 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs exten
      * 
      */
     @InputImport(name="schedule", required=true)
-        private final Input<String> schedule;
+      private final Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule;

@@ -25,7 +25,7 @@ public final class CacheHealthResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="conditions", required=true)
-        private final List<ConditionResponse> conditions;
+      private final List<ConditionResponse> conditions;
 
     public List<ConditionResponse> getConditions() {
         return this.conditions;
@@ -36,7 +36,7 @@ public final class CacheHealthResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state")
-        private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -47,7 +47,7 @@ public final class CacheHealthResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="statusDescription")
-        private final @Nullable String statusDescription;
+      private final @Nullable String statusDescription;
 
     public Optional<String> getStatusDescription() {
         return this.statusDescription == null ? Optional.empty() : Optional.ofNullable(this.statusDescription);

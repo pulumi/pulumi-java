@@ -21,7 +21,7 @@ public final class UrlSigningParamIdentifierResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="paramIndicator", required=true)
-        private final String paramIndicator;
+      private final String paramIndicator;
 
     public String getParamIndicator() {
         return this.paramIndicator;
@@ -32,7 +32,7 @@ public final class UrlSigningParamIdentifierResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="paramName", required=true)
-        private final String paramName;
+      private final String paramName;
 
     public String getParamName() {
         return this.paramName;

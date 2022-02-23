@@ -21,7 +21,7 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stageName", required=true)
-        private final String stageName;
+      private final String stageName;
 
     public String getStageName() {
         return this.stageName;
@@ -43,7 +43,7 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stageStatus", required=true)
-        private final String stageStatus;
+      private final String stageStatus;
 
     public String getStageStatus() {
         return this.stageStatus;
@@ -54,7 +54,7 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTime", required=true)
-        private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;

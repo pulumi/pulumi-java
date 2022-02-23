@@ -23,7 +23,7 @@ public final class KeyVaultKeyReferenceSourceVaultArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;

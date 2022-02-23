@@ -25,7 +25,7 @@ public final class GitRepoVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="directory")
-        private final @Nullable Input<String> directory;
+      private final @Nullable Input<String> directory;
 
     public Input<String> getDirectory() {
         return this.directory == null ? Input.empty() : this.directory;
@@ -36,7 +36,7 @@ public final class GitRepoVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="repository", required=true)
-        private final Input<String> repository;
+      private final Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository;
@@ -47,7 +47,7 @@ public final class GitRepoVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="revision")
-        private final @Nullable Input<String> revision;
+      private final @Nullable Input<String> revision;
 
     public Input<String> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;

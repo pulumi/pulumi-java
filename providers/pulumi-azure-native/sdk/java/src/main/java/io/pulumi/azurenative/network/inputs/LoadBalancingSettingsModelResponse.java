@@ -24,7 +24,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="additionalLatencyMilliseconds")
-        private final @Nullable Integer additionalLatencyMilliseconds;
+      private final @Nullable Integer additionalLatencyMilliseconds;
 
     public Optional<Integer> getAdditionalLatencyMilliseconds() {
         return this.additionalLatencyMilliseconds == null ? Optional.empty() : Optional.ofNullable(this.additionalLatencyMilliseconds);
@@ -35,7 +35,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -46,7 +46,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -57,7 +57,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceState", required=true)
-        private final String resourceState;
+      private final String resourceState;
 
     public String getResourceState() {
         return this.resourceState;
@@ -68,7 +68,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sampleSize")
-        private final @Nullable Integer sampleSize;
+      private final @Nullable Integer sampleSize;
 
     public Optional<Integer> getSampleSize() {
         return this.sampleSize == null ? Optional.empty() : Optional.ofNullable(this.sampleSize);
@@ -79,7 +79,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="successfulSamplesRequired")
-        private final @Nullable Integer successfulSamplesRequired;
+      private final @Nullable Integer successfulSamplesRequired;
 
     public Optional<Integer> getSuccessfulSamplesRequired() {
         return this.successfulSamplesRequired == null ? Optional.empty() : Optional.ofNullable(this.successfulSamplesRequired);
@@ -90,7 +90,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

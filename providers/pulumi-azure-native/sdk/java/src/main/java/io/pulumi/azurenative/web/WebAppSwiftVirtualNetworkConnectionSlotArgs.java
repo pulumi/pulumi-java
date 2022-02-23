@@ -20,7 +20,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -31,7 +31,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -42,7 +42,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
      * 
      */
     @InputImport(name="slot", required=true)
-        private final Input<String> slot;
+      private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -64,7 +64,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
      * 
      */
     @InputImport(name="subnetResourceId")
-        private final @Nullable Input<String> subnetResourceId;
+      private final @Nullable Input<String> subnetResourceId;
 
     public Input<String> getSubnetResourceId() {
         return this.subnetResourceId == null ? Input.empty() : this.subnetResourceId;
@@ -75,7 +75,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
      * 
      */
     @InputImport(name="swiftSupported")
-        private final @Nullable Input<Boolean> swiftSupported;
+      private final @Nullable Input<Boolean> swiftSupported;
 
     public Input<Boolean> getSwiftSupported() {
         return this.swiftSupported == null ? Input.empty() : this.swiftSupported;

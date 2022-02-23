@@ -17,7 +17,7 @@ public final class GetReferenceDataSetArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="environmentName", required=true)
-        private final String environmentName;
+      private final String environmentName;
 
     public String getEnvironmentName() {
         return this.environmentName;
@@ -28,7 +28,7 @@ public final class GetReferenceDataSetArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="referenceDataSetName", required=true)
-        private final String referenceDataSetName;
+      private final String referenceDataSetName;
 
     public String getReferenceDataSetName() {
         return this.referenceDataSetName;
@@ -39,7 +39,7 @@ public final class GetReferenceDataSetArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

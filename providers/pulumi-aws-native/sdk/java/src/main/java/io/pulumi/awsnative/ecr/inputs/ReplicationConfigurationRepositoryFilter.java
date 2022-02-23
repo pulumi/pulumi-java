@@ -18,14 +18,14 @@ public final class ReplicationConfigurationRepositoryFilter extends io.pulumi.re
     public static final ReplicationConfigurationRepositoryFilter Empty = new ReplicationConfigurationRepositoryFilter();
 
     @InputImport(name="filter", required=true)
-        private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
     }
 
     @InputImport(name="filterType", required=true)
-        private final ReplicationConfigurationFilterType filterType;
+      private final ReplicationConfigurationFilterType filterType;
 
     public ReplicationConfigurationFilterType getFilterType() {
         return this.filterType;

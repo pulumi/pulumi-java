@@ -15,14 +15,14 @@ public final class TopicRuleAssetPropertyTimestamp extends io.pulumi.resources.I
     public static final TopicRuleAssetPropertyTimestamp Empty = new TopicRuleAssetPropertyTimestamp();
 
     @InputImport(name="offsetInNanos")
-        private final @Nullable String offsetInNanos;
+      private final @Nullable String offsetInNanos;
 
     public Optional<String> getOffsetInNanos() {
         return this.offsetInNanos == null ? Optional.empty() : Optional.ofNullable(this.offsetInNanos);
     }
 
     @InputImport(name="timeInSeconds", required=true)
-        private final String timeInSeconds;
+      private final String timeInSeconds;
 
     public String getTimeInSeconds() {
         return this.timeInSeconds;

@@ -25,7 +25,7 @@ public final class OpenAuthenticationAccessPolicyResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="claims")
-        private final @Nullable List<OpenAuthenticationPolicyClaimResponse> claims;
+      private final @Nullable List<OpenAuthenticationPolicyClaimResponse> claims;
 
     public List<OpenAuthenticationPolicyClaimResponse> getClaims() {
         return this.claims == null ? List.of() : this.claims;
@@ -36,7 +36,7 @@ public final class OpenAuthenticationAccessPolicyResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

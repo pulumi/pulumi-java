@@ -15,7 +15,7 @@ public final class DataSourceSqlConfigurationArgs extends io.pulumi.resources.Re
     public static final DataSourceSqlConfigurationArgs Empty = new DataSourceSqlConfigurationArgs();
 
     @InputImport(name="queryIdentifiersEnclosingOption")
-        private final @Nullable Input<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption;
+      private final @Nullable Input<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption;
 
     public Input<DataSourceQueryIdentifiersEnclosingOption> getQueryIdentifiersEnclosingOption() {
         return this.queryIdentifiersEnclosingOption == null ? Input.empty() : this.queryIdentifiersEnclosingOption;

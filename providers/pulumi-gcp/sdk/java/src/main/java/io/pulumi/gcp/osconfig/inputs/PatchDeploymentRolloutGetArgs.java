@@ -24,7 +24,7 @@ public final class PatchDeploymentRolloutGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="disruptionBudget", required=true)
-        private final Input<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget;
+      private final Input<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget;
 
     public Input<PatchDeploymentRolloutDisruptionBudgetGetArgs> getDisruptionBudget() {
         return this.disruptionBudget;
@@ -36,7 +36,7 @@ public final class PatchDeploymentRolloutGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="mode", required=true)
-        private final Input<String> mode;
+      private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;

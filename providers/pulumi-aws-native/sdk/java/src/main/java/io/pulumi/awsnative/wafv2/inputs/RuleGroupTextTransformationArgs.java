@@ -19,14 +19,14 @@ public final class RuleGroupTextTransformationArgs extends io.pulumi.resources.R
     public static final RuleGroupTextTransformationArgs Empty = new RuleGroupTextTransformationArgs();
 
     @InputImport(name="priority", required=true)
-        private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
     }
 
     @InputImport(name="type", required=true)
-        private final Input<RuleGroupTextTransformationType> type;
+      private final Input<RuleGroupTextTransformationType> type;
 
     public Input<RuleGroupTextTransformationType> getType() {
         return this.type;

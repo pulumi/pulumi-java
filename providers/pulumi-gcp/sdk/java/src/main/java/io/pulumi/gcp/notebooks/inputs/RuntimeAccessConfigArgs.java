@@ -21,7 +21,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accessType")
-        private final @Nullable Input<String> accessType;
+      private final @Nullable Input<String> accessType;
 
     public Input<String> getAccessType() {
         return this.accessType == null ? Input.empty() : this.accessType;
@@ -33,7 +33,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="proxyUri")
-        private final @Nullable Input<String> proxyUri;
+      private final @Nullable Input<String> proxyUri;
 
     public Input<String> getProxyUri() {
         return this.proxyUri == null ? Input.empty() : this.proxyUri;
@@ -45,7 +45,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="runtimeOwner")
-        private final @Nullable Input<String> runtimeOwner;
+      private final @Nullable Input<String> runtimeOwner;
 
     public Input<String> getRuntimeOwner() {
         return this.runtimeOwner == null ? Input.empty() : this.runtimeOwner;

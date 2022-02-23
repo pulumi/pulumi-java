@@ -21,7 +21,7 @@ public final class PolicyAdmissionWhitelistPatternArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="namePattern", required=true)
-        private final Input<String> namePattern;
+      private final Input<String> namePattern;
 
     public Input<String> getNamePattern() {
         return this.namePattern;

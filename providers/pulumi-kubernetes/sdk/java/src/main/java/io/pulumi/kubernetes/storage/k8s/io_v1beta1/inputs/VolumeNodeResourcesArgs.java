@@ -23,7 +23,7 @@ public final class VolumeNodeResourcesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;

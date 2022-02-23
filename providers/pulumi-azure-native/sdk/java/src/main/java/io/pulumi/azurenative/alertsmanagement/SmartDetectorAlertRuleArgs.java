@@ -27,7 +27,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="actionGroups", required=true)
-        private final Input<ActionGroupsInformationArgs> actionGroups;
+      private final Input<ActionGroupsInformationArgs> actionGroups;
 
     public Input<ActionGroupsInformationArgs> getActionGroups() {
         return this.actionGroups;
@@ -38,7 +38,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="alertRuleName")
-        private final @Nullable Input<String> alertRuleName;
+      private final @Nullable Input<String> alertRuleName;
 
     public Input<String> getAlertRuleName() {
         return this.alertRuleName == null ? Input.empty() : this.alertRuleName;
@@ -49,7 +49,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="detector", required=true)
-        private final Input<DetectorArgs> detector;
+      private final Input<DetectorArgs> detector;
 
     public Input<DetectorArgs> getDetector() {
         return this.detector;
@@ -71,7 +71,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="frequency", required=true)
-        private final Input<String> frequency;
+      private final Input<String> frequency;
 
     public Input<String> getFrequency() {
         return this.frequency;
@@ -82,7 +82,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -93,7 +93,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -104,7 +104,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scope", required=true)
-        private final Input<List<String>> scope;
+      private final Input<List<String>> scope;
 
     public Input<List<String>> getScope() {
         return this.scope;
@@ -115,7 +115,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="severity", required=true)
-        private final Input<Either<String,Severity>> severity;
+      private final Input<Either<String,Severity>> severity;
 
     public Input<Either<String,Severity>> getSeverity() {
         return this.severity;
@@ -126,7 +126,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="state", required=true)
-        private final Input<Either<String,AlertRuleState>> state;
+      private final Input<Either<String,AlertRuleState>> state;
 
     public Input<Either<String,AlertRuleState>> getState() {
         return this.state;
@@ -137,7 +137,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -148,7 +148,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="throttling")
-        private final @Nullable Input<ThrottlingInformationArgs> throttling;
+      private final @Nullable Input<ThrottlingInformationArgs> throttling;
 
     public Input<ThrottlingInformationArgs> getThrottling() {
         return this.throttling == null ? Input.empty() : this.throttling;

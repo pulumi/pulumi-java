@@ -23,7 +23,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     public static final TableArgs Empty = new TableArgs();
 
     @InputImport(name="billingMode")
-        private final @Nullable Input<TableBillingModeArgs> billingMode;
+      private final @Nullable Input<TableBillingModeArgs> billingMode;
 
     public Input<TableBillingModeArgs> getBillingMode() {
         return this.billingMode == null ? Input.empty() : this.billingMode;
@@ -34,7 +34,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusteringKeyColumns")
-        private final @Nullable Input<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
+      private final @Nullable Input<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
 
     public Input<List<TableClusteringKeyColumnArgs>> getClusteringKeyColumns() {
         return this.clusteringKeyColumns == null ? Input.empty() : this.clusteringKeyColumns;
@@ -45,14 +45,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultTimeToLive")
-        private final @Nullable Input<Integer> defaultTimeToLive;
+      private final @Nullable Input<Integer> defaultTimeToLive;
 
     public Input<Integer> getDefaultTimeToLive() {
         return this.defaultTimeToLive == null ? Input.empty() : this.defaultTimeToLive;
     }
 
     @InputImport(name="encryptionSpecification")
-        private final @Nullable Input<TableEncryptionSpecificationArgs> encryptionSpecification;
+      private final @Nullable Input<TableEncryptionSpecificationArgs> encryptionSpecification;
 
     public Input<TableEncryptionSpecificationArgs> getEncryptionSpecification() {
         return this.encryptionSpecification == null ? Input.empty() : this.encryptionSpecification;
@@ -63,7 +63,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyspaceName", required=true)
-        private final Input<String> keyspaceName;
+      private final Input<String> keyspaceName;
 
     public Input<String> getKeyspaceName() {
         return this.keyspaceName;
@@ -74,7 +74,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionKeyColumns", required=true)
-        private final Input<List<TableColumnArgs>> partitionKeyColumns;
+      private final Input<List<TableColumnArgs>> partitionKeyColumns;
 
     public Input<List<TableColumnArgs>> getPartitionKeyColumns() {
         return this.partitionKeyColumns;
@@ -85,7 +85,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pointInTimeRecoveryEnabled")
-        private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
+      private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
 
     public Input<Boolean> getPointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled == null ? Input.empty() : this.pointInTimeRecoveryEnabled;
@@ -96,7 +96,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regularColumns")
-        private final @Nullable Input<List<TableColumnArgs>> regularColumns;
+      private final @Nullable Input<List<TableColumnArgs>> regularColumns;
 
     public Input<List<TableColumnArgs>> getRegularColumns() {
         return this.regularColumns == null ? Input.empty() : this.regularColumns;
@@ -107,7 +107,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-        private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
@@ -118,7 +118,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<TableTagArgs>> tags;
+      private final @Nullable Input<List<TableTagArgs>> tags;
 
     public Input<List<TableTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

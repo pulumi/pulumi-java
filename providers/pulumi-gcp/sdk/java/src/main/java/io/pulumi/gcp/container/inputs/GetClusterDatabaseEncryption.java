@@ -13,14 +13,14 @@ public final class GetClusterDatabaseEncryption extends io.pulumi.resources.Invo
     public static final GetClusterDatabaseEncryption Empty = new GetClusterDatabaseEncryption();
 
     @InputImport(name="keyName", required=true)
-        private final String keyName;
+      private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
     }
 
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;

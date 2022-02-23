@@ -20,7 +20,7 @@ public final class BillingAccountSinkExclusionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class BillingAccountSinkExclusionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="disabled")
-        private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -43,7 +43,7 @@ public final class BillingAccountSinkExclusionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="filter", required=true)
-        private final Input<String> filter;
+      private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -54,7 +54,7 @@ public final class BillingAccountSinkExclusionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

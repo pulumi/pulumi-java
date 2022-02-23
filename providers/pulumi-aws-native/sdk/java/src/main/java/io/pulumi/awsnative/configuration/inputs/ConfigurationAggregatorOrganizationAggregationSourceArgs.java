@@ -17,21 +17,21 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     public static final ConfigurationAggregatorOrganizationAggregationSourceArgs Empty = new ConfigurationAggregatorOrganizationAggregationSourceArgs();
 
     @InputImport(name="allAwsRegions")
-        private final @Nullable Input<Boolean> allAwsRegions;
+      private final @Nullable Input<Boolean> allAwsRegions;
 
     public Input<Boolean> getAllAwsRegions() {
         return this.allAwsRegions == null ? Input.empty() : this.allAwsRegions;
     }
 
     @InputImport(name="awsRegions")
-        private final @Nullable Input<List<String>> awsRegions;
+      private final @Nullable Input<List<String>> awsRegions;
 
     public Input<List<String>> getAwsRegions() {
         return this.awsRegions == null ? Input.empty() : this.awsRegions;
     }
 
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

@@ -23,7 +23,7 @@ public final class ComputeVmInstanceViewStatusResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="code")
-        private final @Nullable String code;
+      private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -34,7 +34,7 @@ public final class ComputeVmInstanceViewStatusResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="displayStatus")
-        private final @Nullable String displayStatus;
+      private final @Nullable String displayStatus;
 
     public Optional<String> getDisplayStatus() {
         return this.displayStatus == null ? Optional.empty() : Optional.ofNullable(this.displayStatus);
@@ -45,7 +45,7 @@ public final class ComputeVmInstanceViewStatusResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="message")
-        private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);

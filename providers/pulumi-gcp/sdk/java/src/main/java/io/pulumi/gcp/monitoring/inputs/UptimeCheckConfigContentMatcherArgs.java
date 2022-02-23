@@ -19,7 +19,7 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="content", required=true)
-        private final Input<String> content;
+      private final Input<String> content;
 
     public Input<String> getContent() {
         return this.content;
@@ -32,7 +32,7 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="matcher")
-        private final @Nullable Input<String> matcher;
+      private final @Nullable Input<String> matcher;
 
     public Input<String> getMatcher() {
         return this.matcher == null ? Input.empty() : this.matcher;

@@ -13,14 +13,14 @@ public final class GetBucketObjectContentCustomerEncryption extends io.pulumi.re
     public static final GetBucketObjectContentCustomerEncryption Empty = new GetBucketObjectContentCustomerEncryption();
 
     @InputImport(name="encryptionAlgorithm", required=true)
-        private final String encryptionAlgorithm;
+      private final String encryptionAlgorithm;
 
     public String getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
 
     @InputImport(name="encryptionKey", required=true)
-        private final String encryptionKey;
+      private final String encryptionKey;
 
     public String getEncryptionKey() {
         return this.encryptionKey;

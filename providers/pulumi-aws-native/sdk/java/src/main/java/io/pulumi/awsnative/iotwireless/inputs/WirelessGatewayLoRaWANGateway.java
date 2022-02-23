@@ -13,14 +13,14 @@ public final class WirelessGatewayLoRaWANGateway extends io.pulumi.resources.Inv
     public static final WirelessGatewayLoRaWANGateway Empty = new WirelessGatewayLoRaWANGateway();
 
     @InputImport(name="gatewayEui", required=true)
-        private final String gatewayEui;
+      private final String gatewayEui;
 
     public String getGatewayEui() {
         return this.gatewayEui;
     }
 
     @InputImport(name="rfRegion", required=true)
-        private final String rfRegion;
+      private final String rfRegion;
 
     public String getRfRegion() {
         return this.rfRegion;

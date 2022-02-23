@@ -24,14 +24,14 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="current", required=true)
-        private final Input<MetricValueStatusArgs> current;
+      private final Input<MetricValueStatusArgs> current;
 
     public Input<MetricValueStatusArgs> getCurrent() {
         return this.current;
     }
 
     @InputImport(name="describedObject", required=true)
-        private final Input<CrossVersionObjectReferenceArgs> describedObject;
+      private final Input<CrossVersionObjectReferenceArgs> describedObject;
 
     public Input<CrossVersionObjectReferenceArgs> getDescribedObject() {
         return this.describedObject;
@@ -42,7 +42,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metric", required=true)
-        private final Input<MetricIdentifierArgs> metric;
+      private final Input<MetricIdentifierArgs> metric;
 
     public Input<MetricIdentifierArgs> getMetric() {
         return this.metric;

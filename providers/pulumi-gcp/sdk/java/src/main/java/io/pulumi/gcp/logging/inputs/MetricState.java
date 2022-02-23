@@ -24,7 +24,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketOptions")
-        private final @Nullable Input<MetricBucketOptionsGetArgs> bucketOptions;
+      private final @Nullable Input<MetricBucketOptionsGetArgs> bucketOptions;
 
     public Input<MetricBucketOptionsGetArgs> getBucketOptions() {
         return this.bucketOptions == null ? Input.empty() : this.bucketOptions;
@@ -36,7 +36,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-        private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -62,7 +62,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelExtractors")
-        private final @Nullable Input<Map<String,String>> labelExtractors;
+      private final @Nullable Input<Map<String,String>> labelExtractors;
 
     public Input<Map<String,String>> getLabelExtractors() {
         return this.labelExtractors == null ? Input.empty() : this.labelExtractors;
@@ -74,7 +74,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricDescriptor")
-        private final @Nullable Input<MetricMetricDescriptorGetArgs> metricDescriptor;
+      private final @Nullable Input<MetricMetricDescriptorGetArgs> metricDescriptor;
 
     public Input<MetricMetricDescriptorGetArgs> getMetricDescriptor() {
         return this.metricDescriptor == null ? Input.empty() : this.metricDescriptor;
@@ -89,7 +89,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -118,7 +118,7 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="valueExtractor")
-        private final @Nullable Input<String> valueExtractor;
+      private final @Nullable Input<String> valueExtractor;
 
     public Input<String> getValueExtractor() {
         return this.valueExtractor == null ? Input.empty() : this.valueExtractor;

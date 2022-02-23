@@ -25,7 +25,7 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auth")
-        private final @Nullable Input<UpstreamAuthSettingsArgs> auth;
+      private final @Nullable Input<UpstreamAuthSettingsArgs> auth;
 
     public Input<UpstreamAuthSettingsArgs> getAuth() {
         return this.auth == null ? Input.empty() : this.auth;
@@ -36,7 +36,7 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemEvents")
-        private final @Nullable Input<List<String>> systemEvents;
+      private final @Nullable Input<List<String>> systemEvents;
 
     public Input<List<String>> getSystemEvents() {
         return this.systemEvents == null ? Input.empty() : this.systemEvents;
@@ -48,7 +48,7 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlTemplate", required=true)
-        private final Input<String> urlTemplate;
+      private final Input<String> urlTemplate;
 
     public Input<String> getUrlTemplate() {
         return this.urlTemplate;
@@ -63,7 +63,7 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userEventPattern")
-        private final @Nullable Input<String> userEventPattern;
+      private final @Nullable Input<String> userEventPattern;
 
     public Input<String> getUserEventPattern() {
         return this.userEventPattern == null ? Input.empty() : this.userEventPattern;

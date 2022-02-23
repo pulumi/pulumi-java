@@ -35,7 +35,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="commands", required=true)
-        private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
+      private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
@@ -46,7 +46,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="errors", required=true)
-        private final List<ODataErrorResponse> errors;
+      private final List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
@@ -57,7 +57,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="input")
-        private final @Nullable MigrateSqlServerSqlDbSyncTaskInputResponse input;
+      private final @Nullable MigrateSqlServerSqlDbSyncTaskInputResponse input;
 
     public Optional<MigrateSqlServerSqlDbSyncTaskInputResponse> getInput() {
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
@@ -68,7 +68,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="output", required=true)
-        private final List<Object> output;
+      private final List<Object> output;
 
     public List<Object> getOutput() {
         return this.output;
@@ -79,7 +79,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -91,7 +91,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="taskType", required=true)
-        private final String taskType;
+      private final String taskType;
 
     public String getTaskType() {
         return this.taskType;

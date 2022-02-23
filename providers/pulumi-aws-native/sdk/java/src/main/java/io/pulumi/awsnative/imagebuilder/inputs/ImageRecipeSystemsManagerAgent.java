@@ -23,7 +23,7 @@ public final class ImageRecipeSystemsManagerAgent extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="uninstallAfterBuild")
-        private final @Nullable Boolean uninstallAfterBuild;
+      private final @Nullable Boolean uninstallAfterBuild;
 
     public Optional<Boolean> getUninstallAfterBuild() {
         return this.uninstallAfterBuild == null ? Optional.empty() : Optional.ofNullable(this.uninstallAfterBuild);

@@ -23,7 +23,7 @@ public final class InputDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="attributes", required=true)
-        private final Input<List<InputAttributeArgs>> attributes;
+      private final Input<List<InputAttributeArgs>> attributes;
 
     public Input<List<InputAttributeArgs>> getAttributes() {
         return this.attributes;

@@ -21,7 +21,7 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends io
      * 
      */
     @InputImport(name="location", required=true)
-        private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -32,7 +32,7 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends io
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends io
      * 
      */
     @InputImport(name="sqlDedicatedGatewayEndpoint", required=true)
-        private final String sqlDedicatedGatewayEndpoint;
+      private final String sqlDedicatedGatewayEndpoint;
 
     public String getSqlDedicatedGatewayEndpoint() {
         return this.sqlDedicatedGatewayEndpoint;
@@ -54,7 +54,7 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends io
      * 
      */
     @InputImport(name="status", required=true)
-        private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;

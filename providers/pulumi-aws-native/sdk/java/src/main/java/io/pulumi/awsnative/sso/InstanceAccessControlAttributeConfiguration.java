@@ -59,6 +59,21 @@ public class InstanceAccessControlAttributeConfiguration extends io.pulumi.resou
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public InstanceAccessControlAttributeConfiguration(String name) {
+        this(name, InstanceAccessControlAttributeConfigurationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public InstanceAccessControlAttributeConfiguration(String name, InstanceAccessControlAttributeConfigurationArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

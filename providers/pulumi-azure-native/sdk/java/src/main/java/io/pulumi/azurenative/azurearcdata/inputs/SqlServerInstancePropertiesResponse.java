@@ -23,7 +23,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="collation")
-        private final @Nullable String collation;
+      private final @Nullable String collation;
 
     public Optional<String> getCollation() {
         return this.collation == null ? Optional.empty() : Optional.ofNullable(this.collation);
@@ -34,7 +34,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="containerResourceId", required=true)
-        private final String containerResourceId;
+      private final String containerResourceId;
 
     public String getContainerResourceId() {
         return this.containerResourceId;
@@ -45,7 +45,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="createTime", required=true)
-        private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -56,7 +56,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="currentVersion")
-        private final @Nullable String currentVersion;
+      private final @Nullable String currentVersion;
 
     public Optional<String> getCurrentVersion() {
         return this.currentVersion == null ? Optional.empty() : Optional.ofNullable(this.currentVersion);
@@ -67,7 +67,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="edition")
-        private final @Nullable String edition;
+      private final @Nullable String edition;
 
     public Optional<String> getEdition() {
         return this.edition == null ? Optional.empty() : Optional.ofNullable(this.edition);
@@ -78,7 +78,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="instanceName")
-        private final @Nullable String instanceName;
+      private final @Nullable String instanceName;
 
     public Optional<String> getInstanceName() {
         return this.instanceName == null ? Optional.empty() : Optional.ofNullable(this.instanceName);
@@ -89,7 +89,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="licenseType")
-        private final @Nullable String licenseType;
+      private final @Nullable String licenseType;
 
     public Optional<String> getLicenseType() {
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
@@ -100,7 +100,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="patchLevel")
-        private final @Nullable String patchLevel;
+      private final @Nullable String patchLevel;
 
     public Optional<String> getPatchLevel() {
         return this.patchLevel == null ? Optional.empty() : Optional.ofNullable(this.patchLevel);
@@ -111,14 +111,14 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="productId")
-        private final @Nullable String productId;
+      private final @Nullable String productId;
 
     public Optional<String> getProductId() {
         return this.productId == null ? Optional.empty() : Optional.ofNullable(this.productId);
     }
 
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -129,7 +129,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="status", required=true)
-        private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -140,7 +140,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tcpDynamicPorts")
-        private final @Nullable String tcpDynamicPorts;
+      private final @Nullable String tcpDynamicPorts;
 
     public Optional<String> getTcpDynamicPorts() {
         return this.tcpDynamicPorts == null ? Optional.empty() : Optional.ofNullable(this.tcpDynamicPorts);
@@ -151,7 +151,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tcpStaticPorts")
-        private final @Nullable String tcpStaticPorts;
+      private final @Nullable String tcpStaticPorts;
 
     public Optional<String> getTcpStaticPorts() {
         return this.tcpStaticPorts == null ? Optional.empty() : Optional.ofNullable(this.tcpStaticPorts);
@@ -162,7 +162,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="vCore")
-        private final @Nullable String vCore;
+      private final @Nullable String vCore;
 
     public Optional<String> getVCore() {
         return this.vCore == null ? Optional.empty() : Optional.ofNullable(this.vCore);
@@ -173,7 +173,7 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="version")
-        private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);

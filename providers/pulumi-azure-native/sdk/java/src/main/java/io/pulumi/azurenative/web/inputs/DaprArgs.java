@@ -27,7 +27,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-        private final @Nullable Input<String> appId;
+      private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -38,7 +38,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appPort")
-        private final @Nullable Input<Integer> appPort;
+      private final @Nullable Input<Integer> appPort;
 
     public Input<Integer> getAppPort() {
         return this.appPort == null ? Input.empty() : this.appPort;
@@ -49,7 +49,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="components")
-        private final @Nullable Input<List<DaprComponentArgs>> components;
+      private final @Nullable Input<List<DaprComponentArgs>> components;
 
     public Input<List<DaprComponentArgs>> getComponents() {
         return this.components == null ? Input.empty() : this.components;
@@ -60,7 +60,7 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;

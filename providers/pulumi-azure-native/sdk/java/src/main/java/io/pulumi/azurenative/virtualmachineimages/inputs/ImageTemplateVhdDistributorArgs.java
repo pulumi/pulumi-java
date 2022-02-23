@@ -24,7 +24,7 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="artifactTags")
-        private final @Nullable Input<Map<String,String>> artifactTags;
+      private final @Nullable Input<Map<String,String>> artifactTags;
 
     public Input<Map<String,String>> getArtifactTags() {
         return this.artifactTags == null ? Input.empty() : this.artifactTags;
@@ -35,7 +35,7 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="runOutputName", required=true)
-        private final Input<String> runOutputName;
+      private final Input<String> runOutputName;
 
     public Input<String> getRunOutputName() {
         return this.runOutputName;
@@ -47,7 +47,7 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

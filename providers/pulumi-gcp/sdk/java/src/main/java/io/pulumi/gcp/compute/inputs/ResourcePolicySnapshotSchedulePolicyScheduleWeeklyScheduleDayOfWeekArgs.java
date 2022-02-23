@@ -19,7 +19,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * 
      */
     @InputImport(name="day", required=true)
-        private final Input<String> day;
+      private final Input<String> day;
 
     public Input<String> getDay() {
         return this.day;
@@ -30,7 +30,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * 
      */
     @InputImport(name="startTime", required=true)
-        private final Input<String> startTime;
+      private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;

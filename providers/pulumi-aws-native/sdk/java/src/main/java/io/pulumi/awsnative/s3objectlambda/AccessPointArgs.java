@@ -20,7 +20,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectLambdaConfiguration", required=true)
-        private final Input<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration;
+      private final Input<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration;
 
     public Input<AccessPointObjectLambdaConfigurationArgs> getObjectLambdaConfiguration() {
         return this.objectLambdaConfiguration;

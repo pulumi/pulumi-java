@@ -25,7 +25,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="attachedConnections")
-        private final @Nullable Input<List<String>> attachedConnections;
+      private final @Nullable Input<List<String>> attachedConnections;
 
     public Input<List<String>> getAttachedConnections() {
         return this.attachedConnections == null ? Input.empty() : this.attachedConnections;
@@ -36,7 +36,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -47,7 +47,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="routes")
-        private final @Nullable Input<List<VirtualHubRouteV2Args>> routes;
+      private final @Nullable Input<List<VirtualHubRouteV2Args>> routes;
 
     public Input<List<VirtualHubRouteV2Args>> getRoutes() {
         return this.routes == null ? Input.empty() : this.routes;

@@ -17,14 +17,14 @@ public final class ConformancePackInputParameter extends io.pulumi.resources.Inv
     public static final ConformancePackInputParameter Empty = new ConformancePackInputParameter();
 
     @InputImport(name="parameterName", required=true)
-        private final String parameterName;
+      private final String parameterName;
 
     public String getParameterName() {
         return this.parameterName;
     }
 
     @InputImport(name="parameterValue", required=true)
-        private final String parameterValue;
+      private final String parameterValue;
 
     public String getParameterValue() {
         return this.parameterValue;

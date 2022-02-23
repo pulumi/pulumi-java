@@ -20,14 +20,14 @@ public final class ReplicationSetReplicationRegion extends io.pulumi.resources.I
     public static final ReplicationSetReplicationRegion Empty = new ReplicationSetReplicationRegion();
 
     @InputImport(name="regionConfiguration")
-        private final @Nullable ReplicationSetRegionConfiguration regionConfiguration;
+      private final @Nullable ReplicationSetRegionConfiguration regionConfiguration;
 
     public Optional<ReplicationSetRegionConfiguration> getRegionConfiguration() {
         return this.regionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.regionConfiguration);
     }
 
     @InputImport(name="regionName")
-        private final @Nullable String regionName;
+      private final @Nullable String regionName;
 
     public Optional<String> getRegionName() {
         return this.regionName == null ? Optional.empty() : Optional.ofNullable(this.regionName);

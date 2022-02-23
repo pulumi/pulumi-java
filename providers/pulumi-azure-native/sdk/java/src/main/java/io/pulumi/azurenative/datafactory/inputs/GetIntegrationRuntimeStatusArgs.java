@@ -17,7 +17,7 @@ public final class GetIntegrationRuntimeStatusArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="factoryName", required=true)
-        private final String factoryName;
+      private final String factoryName;
 
     public String getFactoryName() {
         return this.factoryName;
@@ -28,7 +28,7 @@ public final class GetIntegrationRuntimeStatusArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="integrationRuntimeName", required=true)
-        private final String integrationRuntimeName;
+      private final String integrationRuntimeName;
 
     public String getIntegrationRuntimeName() {
         return this.integrationRuntimeName;
@@ -39,7 +39,7 @@ public final class GetIntegrationRuntimeStatusArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

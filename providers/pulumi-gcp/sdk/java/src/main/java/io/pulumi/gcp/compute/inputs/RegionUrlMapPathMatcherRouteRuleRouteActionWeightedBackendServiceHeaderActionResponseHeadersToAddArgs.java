@@ -19,7 +19,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * 
      */
     @InputImport(name="headerName", required=true)
-        private final Input<String> headerName;
+      private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;
@@ -30,7 +30,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * 
      */
     @InputImport(name="headerValue", required=true)
-        private final Input<String> headerValue;
+      private final Input<String> headerValue;
 
     public Input<String> getHeaderValue() {
         return this.headerValue;
@@ -43,7 +43,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * 
      */
     @InputImport(name="replace", required=true)
-        private final Input<Boolean> replace;
+      private final Input<Boolean> replace;
 
     public Input<Boolean> getReplace() {
         return this.replace;

@@ -23,7 +23,7 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="postTask")
-        private final @Nullable Input<TaskPropertiesArgs> postTask;
+      private final @Nullable Input<TaskPropertiesArgs> postTask;
 
     public Input<TaskPropertiesArgs> getPostTask() {
         return this.postTask == null ? Input.empty() : this.postTask;
@@ -34,7 +34,7 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="preTask")
-        private final @Nullable Input<TaskPropertiesArgs> preTask;
+      private final @Nullable Input<TaskPropertiesArgs> preTask;
 
     public Input<TaskPropertiesArgs> getPreTask() {
         return this.preTask == null ? Input.empty() : this.preTask;

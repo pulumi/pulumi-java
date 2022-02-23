@@ -19,7 +19,7 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="countryCode")
-        private final @Nullable Input<String> countryCode;
+      private final @Nullable Input<String> countryCode;
 
     public Input<String> getCountryCode() {
         return this.countryCode == null ? Input.empty() : this.countryCode;
@@ -30,7 +30,7 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;

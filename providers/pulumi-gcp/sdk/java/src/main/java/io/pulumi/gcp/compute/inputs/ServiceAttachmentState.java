@@ -23,7 +23,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectedEndpoints")
-        private final @Nullable Input<List<ServiceAttachmentConnectedEndpointGetArgs>> connectedEndpoints;
+      private final @Nullable Input<List<ServiceAttachmentConnectedEndpointGetArgs>> connectedEndpoints;
 
     public Input<List<ServiceAttachmentConnectedEndpointGetArgs>> getConnectedEndpoints() {
         return this.connectedEndpoints == null ? Input.empty() : this.connectedEndpoints;
@@ -35,7 +35,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectionPreference")
-        private final @Nullable Input<String> connectionPreference;
+      private final @Nullable Input<String> connectionPreference;
 
     public Input<String> getConnectionPreference() {
         return this.connectionPreference == null ? Input.empty() : this.connectionPreference;
@@ -48,7 +48,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="consumerAcceptLists")
-        private final @Nullable Input<List<ServiceAttachmentConsumerAcceptListGetArgs>> consumerAcceptLists;
+      private final @Nullable Input<List<ServiceAttachmentConsumerAcceptListGetArgs>> consumerAcceptLists;
 
     public Input<List<ServiceAttachmentConsumerAcceptListGetArgs>> getConsumerAcceptLists() {
         return this.consumerAcceptLists == null ? Input.empty() : this.consumerAcceptLists;
@@ -60,7 +60,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="consumerRejectLists")
-        private final @Nullable Input<List<String>> consumerRejectLists;
+      private final @Nullable Input<List<String>> consumerRejectLists;
 
     public Input<List<String>> getConsumerRejectLists() {
         return this.consumerRejectLists == null ? Input.empty() : this.consumerRejectLists;
@@ -71,7 +71,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -84,7 +84,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableProxyProtocol")
-        private final @Nullable Input<Boolean> enableProxyProtocol;
+      private final @Nullable Input<Boolean> enableProxyProtocol;
 
     public Input<Boolean> getEnableProxyProtocol() {
         return this.enableProxyProtocol == null ? Input.empty() : this.enableProxyProtocol;
@@ -95,7 +95,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fingerprint")
-        private final @Nullable Input<String> fingerprint;
+      private final @Nullable Input<String> fingerprint;
 
     public Input<String> getFingerprint() {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
@@ -111,7 +111,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -122,7 +122,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="natSubnets")
-        private final @Nullable Input<List<String>> natSubnets;
+      private final @Nullable Input<List<String>> natSubnets;
 
     public Input<List<String>> getNatSubnets() {
         return this.natSubnets == null ? Input.empty() : this.natSubnets;
@@ -134,7 +134,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -145,7 +145,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -156,7 +156,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -168,7 +168,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetService")
-        private final @Nullable Input<String> targetService;
+      private final @Nullable Input<String> targetService;
 
     public Input<String> getTargetService() {
         return this.targetService == null ? Input.empty() : this.targetService;

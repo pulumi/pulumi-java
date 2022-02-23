@@ -17,21 +17,21 @@ public final class DataflowEndpointGroupDataflowEndpoint extends io.pulumi.resou
     public static final DataflowEndpointGroupDataflowEndpoint Empty = new DataflowEndpointGroupDataflowEndpoint();
 
     @InputImport(name="address")
-        private final @Nullable DataflowEndpointGroupSocketAddress address;
+      private final @Nullable DataflowEndpointGroupSocketAddress address;
 
     public Optional<DataflowEndpointGroupSocketAddress> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
     @InputImport(name="mtu")
-        private final @Nullable Integer mtu;
+      private final @Nullable Integer mtu;
 
     public Optional<Integer> getMtu() {
         return this.mtu == null ? Optional.empty() : Optional.ofNullable(this.mtu);
     }
 
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);

@@ -26,7 +26,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authorizedAzureSubscriptionIds")
-        private final @Nullable Input<List<String>> authorizedAzureSubscriptionIds;
+      private final @Nullable Input<List<String>> authorizedAzureSubscriptionIds;
 
     public Input<List<String>> getAuthorizedAzureSubscriptionIds() {
         return this.authorizedAzureSubscriptionIds == null ? Input.empty() : this.authorizedAzureSubscriptionIds;
@@ -37,7 +37,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="customerServiceUri")
-        private final @Nullable Input<String> customerServiceUri;
+      private final @Nullable Input<String> customerServiceUri;
 
     public Input<String> getCustomerServiceUri() {
         return this.customerServiceUri == null ? Input.empty() : this.customerServiceUri;
@@ -48,7 +48,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -59,7 +59,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="logoUri")
-        private final @Nullable Input<String> logoUri;
+      private final @Nullable Input<String> logoUri;
 
     public Input<String> getLogoUri() {
         return this.logoUri == null ? Input.empty() : this.logoUri;
@@ -71,7 +71,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="longDescription")
-        private final @Nullable Input<String> longDescription;
+      private final @Nullable Input<String> longDescription;
 
     public Input<String> getLongDescription() {
         return this.longDescription == null ? Input.empty() : this.longDescription;
@@ -82,7 +82,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerCustomerServiceExtension")
-        private final @Nullable Input<String> partnerCustomerServiceExtension;
+      private final @Nullable Input<String> partnerCustomerServiceExtension;
 
     public Input<String> getPartnerCustomerServiceExtension() {
         return this.partnerCustomerServiceExtension == null ? Input.empty() : this.partnerCustomerServiceExtension;
@@ -96,7 +96,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerCustomerServiceNumber")
-        private final @Nullable Input<String> partnerCustomerServiceNumber;
+      private final @Nullable Input<String> partnerCustomerServiceNumber;
 
     public Input<String> getPartnerCustomerServiceNumber() {
         return this.partnerCustomerServiceNumber == null ? Input.empty() : this.partnerCustomerServiceNumber;
@@ -107,7 +107,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerName")
-        private final @Nullable Input<String> partnerName;
+      private final @Nullable Input<String> partnerName;
 
     public Input<String> getPartnerName() {
         return this.partnerName == null ? Input.empty() : this.partnerName;
@@ -118,7 +118,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerRegistrationName")
-        private final @Nullable Input<String> partnerRegistrationName;
+      private final @Nullable Input<String> partnerRegistrationName;
 
     public Input<String> getPartnerRegistrationName() {
         return this.partnerRegistrationName == null ? Input.empty() : this.partnerRegistrationName;
@@ -129,7 +129,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerResourceTypeDescription")
-        private final @Nullable Input<String> partnerResourceTypeDescription;
+      private final @Nullable Input<String> partnerResourceTypeDescription;
 
     public Input<String> getPartnerResourceTypeDescription() {
         return this.partnerResourceTypeDescription == null ? Input.empty() : this.partnerResourceTypeDescription;
@@ -140,7 +140,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerResourceTypeDisplayName")
-        private final @Nullable Input<String> partnerResourceTypeDisplayName;
+      private final @Nullable Input<String> partnerResourceTypeDisplayName;
 
     public Input<String> getPartnerResourceTypeDisplayName() {
         return this.partnerResourceTypeDisplayName == null ? Input.empty() : this.partnerResourceTypeDisplayName;
@@ -151,7 +151,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerResourceTypeName")
-        private final @Nullable Input<String> partnerResourceTypeName;
+      private final @Nullable Input<String> partnerResourceTypeName;
 
     public Input<String> getPartnerResourceTypeName() {
         return this.partnerResourceTypeName == null ? Input.empty() : this.partnerResourceTypeName;
@@ -162,7 +162,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -174,7 +174,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="setupUri")
-        private final @Nullable Input<String> setupUri;
+      private final @Nullable Input<String> setupUri;
 
     public Input<String> getSetupUri() {
         return this.setupUri == null ? Input.empty() : this.setupUri;
@@ -185,7 +185,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="visibilityState")
-        private final @Nullable Input<Either<String,PartnerRegistrationVisibilityState>> visibilityState;
+      private final @Nullable Input<Either<String,PartnerRegistrationVisibilityState>> visibilityState;
 
     public Input<Either<String,PartnerRegistrationVisibilityState>> getVisibilityState() {
         return this.visibilityState == null ? Input.empty() : this.visibilityState;

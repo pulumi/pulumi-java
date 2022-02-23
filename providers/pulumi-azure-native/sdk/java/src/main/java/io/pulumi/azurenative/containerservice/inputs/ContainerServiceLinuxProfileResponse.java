@@ -22,7 +22,7 @@ public final class ContainerServiceLinuxProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="adminUsername", required=true)
-        private final String adminUsername;
+      private final String adminUsername;
 
     public String getAdminUsername() {
         return this.adminUsername;
@@ -33,7 +33,7 @@ public final class ContainerServiceLinuxProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="ssh", required=true)
-        private final ContainerServiceSshConfigurationResponse ssh;
+      private final ContainerServiceSshConfigurationResponse ssh;
 
     public ContainerServiceSshConfigurationResponse getSsh() {
         return this.ssh;

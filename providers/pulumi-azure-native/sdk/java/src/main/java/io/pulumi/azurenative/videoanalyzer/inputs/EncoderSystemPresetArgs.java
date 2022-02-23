@@ -24,7 +24,7 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<Either<String,EncoderSystemPresetType>> name;
+      private final Input<Either<String,EncoderSystemPresetType>> name;
 
     public Input<Either<String,EncoderSystemPresetType>> getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

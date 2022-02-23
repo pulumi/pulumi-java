@@ -19,7 +19,7 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="datastoreName")
-        private final @Nullable Input<String> datastoreName;
+      private final @Nullable Input<String> datastoreName;
 
     public Input<String> getDatastoreName() {
         return this.datastoreName == null ? Input.empty() : this.datastoreName;
@@ -30,7 +30,7 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="query")
-        private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;

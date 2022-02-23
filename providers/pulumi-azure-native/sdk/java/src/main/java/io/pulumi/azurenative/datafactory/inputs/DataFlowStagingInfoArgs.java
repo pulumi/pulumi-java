@@ -24,7 +24,7 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="folderPath")
-        private final @Nullable Input<Object> folderPath;
+      private final @Nullable Input<Object> folderPath;
 
     public Input<Object> getFolderPath() {
         return this.folderPath == null ? Input.empty() : this.folderPath;
@@ -35,7 +35,7 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="linkedService")
-        private final @Nullable Input<LinkedServiceReferenceArgs> linkedService;
+      private final @Nullable Input<LinkedServiceReferenceArgs> linkedService;
 
     public Input<LinkedServiceReferenceArgs> getLinkedService() {
         return this.linkedService == null ? Input.empty() : this.linkedService;

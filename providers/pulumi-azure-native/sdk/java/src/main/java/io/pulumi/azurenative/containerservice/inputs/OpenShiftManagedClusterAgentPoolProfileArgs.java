@@ -28,7 +28,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
      * 
      */
     @InputImport(name="count", required=true)
-        private final Input<Integer> count;
+      private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -39,7 +39,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -50,7 +50,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
      * 
      */
     @InputImport(name="osType")
-        private final @Nullable Input<Either<String,OSType>> osType;
+      private final @Nullable Input<Either<String,OSType>> osType;
 
     public Input<Either<String,OSType>> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -61,7 +61,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<Either<String,OpenShiftAgentPoolProfileRole>> role;
+      private final @Nullable Input<Either<String,OpenShiftAgentPoolProfileRole>> role;
 
     public Input<Either<String,OpenShiftAgentPoolProfileRole>> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -72,7 +72,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
      * 
      */
     @InputImport(name="subnetCidr")
-        private final @Nullable Input<String> subnetCidr;
+      private final @Nullable Input<String> subnetCidr;
 
     public Input<String> getSubnetCidr() {
         return this.subnetCidr == null ? Input.empty() : this.subnetCidr;
@@ -83,7 +83,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
      * 
      */
     @InputImport(name="vmSize", required=true)
-        private final Input<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
+      private final Input<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
 
     public Input<Either<String,OpenShiftContainerServiceVMSize>> getVmSize() {
         return this.vmSize;

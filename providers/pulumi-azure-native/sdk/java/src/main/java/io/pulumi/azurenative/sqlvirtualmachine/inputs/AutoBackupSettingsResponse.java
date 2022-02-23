@@ -25,7 +25,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="backupScheduleType")
-        private final @Nullable String backupScheduleType;
+      private final @Nullable String backupScheduleType;
 
     public Optional<String> getBackupScheduleType() {
         return this.backupScheduleType == null ? Optional.empty() : Optional.ofNullable(this.backupScheduleType);
@@ -36,7 +36,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="backupSystemDbs")
-        private final @Nullable Boolean backupSystemDbs;
+      private final @Nullable Boolean backupSystemDbs;
 
     public Optional<Boolean> getBackupSystemDbs() {
         return this.backupSystemDbs == null ? Optional.empty() : Optional.ofNullable(this.backupSystemDbs);
@@ -47,7 +47,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enable")
-        private final @Nullable Boolean enable;
+      private final @Nullable Boolean enable;
 
     public Optional<Boolean> getEnable() {
         return this.enable == null ? Optional.empty() : Optional.ofNullable(this.enable);
@@ -58,7 +58,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enableEncryption")
-        private final @Nullable Boolean enableEncryption;
+      private final @Nullable Boolean enableEncryption;
 
     public Optional<Boolean> getEnableEncryption() {
         return this.enableEncryption == null ? Optional.empty() : Optional.ofNullable(this.enableEncryption);
@@ -69,7 +69,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fullBackupFrequency")
-        private final @Nullable String fullBackupFrequency;
+      private final @Nullable String fullBackupFrequency;
 
     public Optional<String> getFullBackupFrequency() {
         return this.fullBackupFrequency == null ? Optional.empty() : Optional.ofNullable(this.fullBackupFrequency);
@@ -80,7 +80,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fullBackupStartTime")
-        private final @Nullable Integer fullBackupStartTime;
+      private final @Nullable Integer fullBackupStartTime;
 
     public Optional<Integer> getFullBackupStartTime() {
         return this.fullBackupStartTime == null ? Optional.empty() : Optional.ofNullable(this.fullBackupStartTime);
@@ -91,7 +91,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fullBackupWindowHours")
-        private final @Nullable Integer fullBackupWindowHours;
+      private final @Nullable Integer fullBackupWindowHours;
 
     public Optional<Integer> getFullBackupWindowHours() {
         return this.fullBackupWindowHours == null ? Optional.empty() : Optional.ofNullable(this.fullBackupWindowHours);
@@ -102,7 +102,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="logBackupFrequency")
-        private final @Nullable Integer logBackupFrequency;
+      private final @Nullable Integer logBackupFrequency;
 
     public Optional<Integer> getLogBackupFrequency() {
         return this.logBackupFrequency == null ? Optional.empty() : Optional.ofNullable(this.logBackupFrequency);
@@ -113,7 +113,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="retentionPeriod")
-        private final @Nullable Integer retentionPeriod;
+      private final @Nullable Integer retentionPeriod;
 
     public Optional<Integer> getRetentionPeriod() {
         return this.retentionPeriod == null ? Optional.empty() : Optional.ofNullable(this.retentionPeriod);
@@ -124,7 +124,7 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="storageAccountUrl")
-        private final @Nullable String storageAccountUrl;
+      private final @Nullable String storageAccountUrl;
 
     public Optional<String> getStorageAccountUrl() {
         return this.storageAccountUrl == null ? Optional.empty() : Optional.ofNullable(this.storageAccountUrl);

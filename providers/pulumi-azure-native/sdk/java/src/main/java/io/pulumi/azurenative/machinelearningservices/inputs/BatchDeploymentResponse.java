@@ -35,7 +35,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="codeConfiguration")
-        private final @Nullable CodeConfigurationResponse codeConfiguration;
+      private final @Nullable CodeConfigurationResponse codeConfiguration;
 
     public Optional<CodeConfigurationResponse> getCodeConfiguration() {
         return this.codeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.codeConfiguration);
@@ -46,7 +46,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="compute")
-        private final @Nullable ComputeConfigurationResponse compute;
+      private final @Nullable ComputeConfigurationResponse compute;
 
     public Optional<ComputeConfigurationResponse> getCompute() {
         return this.compute == null ? Optional.empty() : Optional.ofNullable(this.compute);
@@ -57,7 +57,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -68,7 +68,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="environmentId")
-        private final @Nullable String environmentId;
+      private final @Nullable String environmentId;
 
     public Optional<String> getEnvironmentId() {
         return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
@@ -79,7 +79,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="environmentVariables")
-        private final @Nullable Map<String,String> environmentVariables;
+      private final @Nullable Map<String,String> environmentVariables;
 
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
@@ -94,7 +94,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="errorThreshold")
-        private final @Nullable Integer errorThreshold;
+      private final @Nullable Integer errorThreshold;
 
     public Optional<Integer> getErrorThreshold() {
         return this.errorThreshold == null ? Optional.empty() : Optional.ofNullable(this.errorThreshold);
@@ -105,7 +105,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="loggingLevel")
-        private final @Nullable String loggingLevel;
+      private final @Nullable String loggingLevel;
 
     public Optional<String> getLoggingLevel() {
         return this.loggingLevel == null ? Optional.empty() : Optional.ofNullable(this.loggingLevel);
@@ -118,7 +118,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="miniBatchSize")
-        private final @Nullable Double miniBatchSize;
+      private final @Nullable Double miniBatchSize;
 
     public Optional<Double> getMiniBatchSize() {
         return this.miniBatchSize == null ? Optional.empty() : Optional.ofNullable(this.miniBatchSize);
@@ -129,7 +129,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="model")
-        private final @Nullable Object model;
+      private final @Nullable Object model;
 
     public Object getModel() {
         return this.model == null ? null : this.model;
@@ -140,7 +140,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="outputConfiguration")
-        private final @Nullable BatchOutputConfigurationResponse outputConfiguration;
+      private final @Nullable BatchOutputConfigurationResponse outputConfiguration;
 
     public Optional<BatchOutputConfigurationResponse> getOutputConfiguration() {
         return this.outputConfiguration == null ? Optional.empty() : Optional.ofNullable(this.outputConfiguration);
@@ -151,7 +151,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="partitionKeys")
-        private final @Nullable List<String> partitionKeys;
+      private final @Nullable List<String> partitionKeys;
 
     public List<String> getPartitionKeys() {
         return this.partitionKeys == null ? List.of() : this.partitionKeys;
@@ -162,7 +162,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Map<String,String> properties;
+      private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -173,7 +173,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="retrySettings")
-        private final @Nullable BatchRetrySettingsResponse retrySettings;
+      private final @Nullable BatchRetrySettingsResponse retrySettings;
 
     public Optional<BatchRetrySettingsResponse> getRetrySettings() {
         return this.retrySettings == null ? Optional.empty() : Optional.ofNullable(this.retrySettings);

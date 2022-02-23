@@ -18,21 +18,21 @@ public final class EntryBigqueryTableSpecArgs extends io.pulumi.resources.Resour
     public static final EntryBigqueryTableSpecArgs Empty = new EntryBigqueryTableSpecArgs();
 
     @InputImport(name="tableSourceType")
-        private final @Nullable Input<String> tableSourceType;
+      private final @Nullable Input<String> tableSourceType;
 
     public Input<String> getTableSourceType() {
         return this.tableSourceType == null ? Input.empty() : this.tableSourceType;
     }
 
     @InputImport(name="tableSpecs")
-        private final @Nullable Input<List<EntryBigqueryTableSpecTableSpecArgs>> tableSpecs;
+      private final @Nullable Input<List<EntryBigqueryTableSpecTableSpecArgs>> tableSpecs;
 
     public Input<List<EntryBigqueryTableSpecTableSpecArgs>> getTableSpecs() {
         return this.tableSpecs == null ? Input.empty() : this.tableSpecs;
     }
 
     @InputImport(name="viewSpecs")
-        private final @Nullable Input<List<EntryBigqueryTableSpecViewSpecArgs>> viewSpecs;
+      private final @Nullable Input<List<EntryBigqueryTableSpecViewSpecArgs>> viewSpecs;
 
     public Input<List<EntryBigqueryTableSpecViewSpecArgs>> getViewSpecs() {
         return this.viewSpecs == null ? Input.empty() : this.viewSpecs;

@@ -13,7 +13,7 @@ public final class GetDomainConfigurationArgs extends io.pulumi.resources.Invoke
     public static final GetDomainConfigurationArgs Empty = new GetDomainConfigurationArgs();
 
     @InputImport(name="domainConfigurationName", required=true)
-        private final String domainConfigurationName;
+      private final String domainConfigurationName;
 
     public String getDomainConfigurationName() {
         return this.domainConfigurationName;

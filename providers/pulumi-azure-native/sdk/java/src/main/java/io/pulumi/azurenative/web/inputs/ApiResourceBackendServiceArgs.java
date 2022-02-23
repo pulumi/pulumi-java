@@ -23,7 +23,7 @@ public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serviceUrl")
-        private final @Nullable Input<String> serviceUrl;
+      private final @Nullable Input<String> serviceUrl;
 
     public Input<String> getServiceUrl() {
         return this.serviceUrl == null ? Input.empty() : this.serviceUrl;

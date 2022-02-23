@@ -14,14 +14,14 @@ public final class ReadinessCheckTag extends io.pulumi.resources.InvokeArgs {
     public static final ReadinessCheckTag Empty = new ReadinessCheckTag();
 
     @InputImport(name="key", required=true)
-        private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-        private final List<String> value;
+      private final List<String> value;
 
     public List<String> getValue() {
         return this.value;

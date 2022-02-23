@@ -24,7 +24,7 @@ public final class FhirServiceAuthenticationConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="audience")
-        private final @Nullable String audience;
+      private final @Nullable String audience;
 
     public Optional<String> getAudience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
@@ -35,7 +35,7 @@ public final class FhirServiceAuthenticationConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="authority")
-        private final @Nullable String authority;
+      private final @Nullable String authority;
 
     public Optional<String> getAuthority() {
         return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
@@ -46,7 +46,7 @@ public final class FhirServiceAuthenticationConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="smartProxyEnabled")
-        private final @Nullable Boolean smartProxyEnabled;
+      private final @Nullable Boolean smartProxyEnabled;
 
     public Optional<Boolean> getSmartProxyEnabled() {
         return this.smartProxyEnabled == null ? Optional.empty() : Optional.ofNullable(this.smartProxyEnabled);

@@ -24,7 +24,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="additionalSettings")
-        private final @Nullable String additionalSettings;
+      private final @Nullable String additionalSettings;
 
     public Optional<String> getAdditionalSettings() {
         return this.additionalSettings == null ? Optional.empty() : Optional.ofNullable(this.additionalSettings);
@@ -35,7 +35,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="authentication")
-        private final @Nullable String authentication;
+      private final @Nullable String authentication;
 
     public Optional<String> getAuthentication() {
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
@@ -46,7 +46,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="dataSource", required=true)
-        private final String dataSource;
+      private final String dataSource;
 
     public String getDataSource() {
         return this.dataSource;
@@ -57,7 +57,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="encryptConnection")
-        private final @Nullable Boolean encryptConnection;
+      private final @Nullable Boolean encryptConnection;
 
     public Optional<Boolean> getEncryptConnection() {
         return this.encryptConnection == null ? Optional.empty() : Optional.ofNullable(this.encryptConnection);
@@ -68,7 +68,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="password")
-        private final @Nullable String password;
+      private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -79,7 +79,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="platform")
-        private final @Nullable String platform;
+      private final @Nullable String platform;
 
     public Optional<String> getPlatform() {
         return this.platform == null ? Optional.empty() : Optional.ofNullable(this.platform);
@@ -90,7 +90,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="trustServerCertificate")
-        private final @Nullable Boolean trustServerCertificate;
+      private final @Nullable Boolean trustServerCertificate;
 
     public Optional<Boolean> getTrustServerCertificate() {
         return this.trustServerCertificate == null ? Optional.empty() : Optional.ofNullable(this.trustServerCertificate);
@@ -102,7 +102,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -113,7 +113,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="userName")
-        private final @Nullable String userName;
+      private final @Nullable String userName;
 
     public Optional<String> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);

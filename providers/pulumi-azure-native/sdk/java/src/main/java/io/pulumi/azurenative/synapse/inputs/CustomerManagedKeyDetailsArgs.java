@@ -23,7 +23,7 @@ public final class CustomerManagedKeyDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="key")
-        private final @Nullable Input<WorkspaceKeyDetailsArgs> key;
+      private final @Nullable Input<WorkspaceKeyDetailsArgs> key;
 
     public Input<WorkspaceKeyDetailsArgs> getKey() {
         return this.key == null ? Input.empty() : this.key;

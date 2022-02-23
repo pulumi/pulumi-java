@@ -19,7 +19,7 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="expand")
-        private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="galleryApplicationName", required=true)
-        private final String galleryApplicationName;
+      private final String galleryApplicationName;
 
     public String getGalleryApplicationName() {
         return this.galleryApplicationName;
@@ -41,7 +41,7 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="galleryApplicationVersionName", required=true)
-        private final String galleryApplicationVersionName;
+      private final String galleryApplicationVersionName;
 
     public String getGalleryApplicationVersionName() {
         return this.galleryApplicationVersionName;
@@ -52,7 +52,7 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="galleryName", required=true)
-        private final String galleryName;
+      private final String galleryName;
 
     public String getGalleryName() {
         return this.galleryName;
@@ -63,7 +63,7 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

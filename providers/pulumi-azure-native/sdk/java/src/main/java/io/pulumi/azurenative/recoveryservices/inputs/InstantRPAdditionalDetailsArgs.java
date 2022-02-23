@@ -15,14 +15,14 @@ public final class InstantRPAdditionalDetailsArgs extends io.pulumi.resources.Re
     public static final InstantRPAdditionalDetailsArgs Empty = new InstantRPAdditionalDetailsArgs();
 
     @InputImport(name="azureBackupRGNamePrefix")
-        private final @Nullable Input<String> azureBackupRGNamePrefix;
+      private final @Nullable Input<String> azureBackupRGNamePrefix;
 
     public Input<String> getAzureBackupRGNamePrefix() {
         return this.azureBackupRGNamePrefix == null ? Input.empty() : this.azureBackupRGNamePrefix;
     }
 
     @InputImport(name="azureBackupRGNameSuffix")
-        private final @Nullable Input<String> azureBackupRGNameSuffix;
+      private final @Nullable Input<String> azureBackupRGNameSuffix;
 
     public Input<String> getAzureBackupRGNameSuffix() {
         return this.azureBackupRGNameSuffix == null ? Input.empty() : this.azureBackupRGNameSuffix;

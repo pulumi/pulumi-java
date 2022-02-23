@@ -23,7 +23,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="collation")
-        private final @Nullable Input<String> collation;
+      private final @Nullable Input<String> collation;
 
     public Input<String> getCollation() {
         return this.collation == null ? Input.empty() : this.collation;
@@ -34,7 +34,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="containerResourceId", required=true)
-        private final Input<String> containerResourceId;
+      private final Input<String> containerResourceId;
 
     public Input<String> getContainerResourceId() {
         return this.containerResourceId;
@@ -45,7 +45,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="currentVersion")
-        private final @Nullable Input<String> currentVersion;
+      private final @Nullable Input<String> currentVersion;
 
     public Input<String> getCurrentVersion() {
         return this.currentVersion == null ? Input.empty() : this.currentVersion;
@@ -56,7 +56,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="edition")
-        private final @Nullable Input<String> edition;
+      private final @Nullable Input<String> edition;
 
     public Input<String> getEdition() {
         return this.edition == null ? Input.empty() : this.edition;
@@ -67,7 +67,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceName")
-        private final @Nullable Input<String> instanceName;
+      private final @Nullable Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName == null ? Input.empty() : this.instanceName;
@@ -78,7 +78,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="licenseType")
-        private final @Nullable Input<String> licenseType;
+      private final @Nullable Input<String> licenseType;
 
     public Input<String> getLicenseType() {
         return this.licenseType == null ? Input.empty() : this.licenseType;
@@ -89,7 +89,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="patchLevel")
-        private final @Nullable Input<String> patchLevel;
+      private final @Nullable Input<String> patchLevel;
 
     public Input<String> getPatchLevel() {
         return this.patchLevel == null ? Input.empty() : this.patchLevel;
@@ -100,7 +100,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="productId")
-        private final @Nullable Input<String> productId;
+      private final @Nullable Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId == null ? Input.empty() : this.productId;
@@ -111,7 +111,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="status", required=true)
-        private final Input<String> status;
+      private final Input<String> status;
 
     public Input<String> getStatus() {
         return this.status;
@@ -122,7 +122,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tcpDynamicPorts")
-        private final @Nullable Input<String> tcpDynamicPorts;
+      private final @Nullable Input<String> tcpDynamicPorts;
 
     public Input<String> getTcpDynamicPorts() {
         return this.tcpDynamicPorts == null ? Input.empty() : this.tcpDynamicPorts;
@@ -133,7 +133,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tcpStaticPorts")
-        private final @Nullable Input<String> tcpStaticPorts;
+      private final @Nullable Input<String> tcpStaticPorts;
 
     public Input<String> getTcpStaticPorts() {
         return this.tcpStaticPorts == null ? Input.empty() : this.tcpStaticPorts;
@@ -144,7 +144,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vCore")
-        private final @Nullable Input<String> vCore;
+      private final @Nullable Input<String> vCore;
 
     public Input<String> getVCore() {
         return this.vCore == null ? Input.empty() : this.vCore;
@@ -155,7 +155,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

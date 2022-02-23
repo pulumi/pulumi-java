@@ -25,7 +25,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credential", required=true)
-        private final Input<String> credential;
+      private final Input<String> credential;
 
     public Input<String> getCredential() {
         return this.credential;
@@ -36,7 +36,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -47,7 +47,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName")
-        private final @Nullable Input<String> resourceGroupName;
+      private final @Nullable Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName == null ? Input.empty() : this.resourceGroupName;
@@ -58,7 +58,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaName")
-        private final @Nullable Input<String> schemaName;
+      private final @Nullable Input<String> schemaName;
 
     public Input<String> getSchemaName() {
         return this.schemaName == null ? Input.empty() : this.schemaName;
@@ -69,7 +69,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -80,7 +80,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-        private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -91,7 +91,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName", required=true)
-        private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;
@@ -102,7 +102,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,JobStepOutputType>> type;
+      private final @Nullable Input<Either<String,JobStepOutputType>> type;
 
     public Input<Either<String,JobStepOutputType>> getType() {
         return this.type == null ? Input.empty() : this.type;

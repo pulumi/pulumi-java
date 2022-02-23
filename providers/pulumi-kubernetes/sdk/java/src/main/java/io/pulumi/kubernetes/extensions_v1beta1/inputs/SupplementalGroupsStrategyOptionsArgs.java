@@ -25,7 +25,7 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="ranges")
-        private final @Nullable Input<List<IDRangeArgs>> ranges;
+      private final @Nullable Input<List<IDRangeArgs>> ranges;
 
     public Input<List<IDRangeArgs>> getRanges() {
         return this.ranges == null ? Input.empty() : this.ranges;
@@ -36,7 +36,7 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="rule")
-        private final @Nullable Input<String> rule;
+      private final @Nullable Input<String> rule;
 
     public Input<String> getRule() {
         return this.rule == null ? Input.empty() : this.rule;

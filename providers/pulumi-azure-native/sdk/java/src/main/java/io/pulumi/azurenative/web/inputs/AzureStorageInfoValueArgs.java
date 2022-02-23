@@ -24,7 +24,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="accessKey")
-        private final @Nullable Input<String> accessKey;
+      private final @Nullable Input<String> accessKey;
 
     public Input<String> getAccessKey() {
         return this.accessKey == null ? Input.empty() : this.accessKey;
@@ -35,7 +35,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="accountName")
-        private final @Nullable Input<String> accountName;
+      private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -46,7 +46,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mountPath")
-        private final @Nullable Input<String> mountPath;
+      private final @Nullable Input<String> mountPath;
 
     public Input<String> getMountPath() {
         return this.mountPath == null ? Input.empty() : this.mountPath;
@@ -57,7 +57,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="shareName")
-        private final @Nullable Input<String> shareName;
+      private final @Nullable Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName == null ? Input.empty() : this.shareName;
@@ -68,7 +68,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<AzureStorageType> type;
+      private final @Nullable Input<AzureStorageType> type;
 
     public Input<AzureStorageType> getType() {
         return this.type == null ? Input.empty() : this.type;

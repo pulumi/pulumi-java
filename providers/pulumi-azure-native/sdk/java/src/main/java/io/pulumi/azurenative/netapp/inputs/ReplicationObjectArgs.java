@@ -26,7 +26,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endpointType")
-        private final @Nullable Input<Either<String,EndpointType>> endpointType;
+      private final @Nullable Input<Either<String,EndpointType>> endpointType;
 
     public Input<Either<String,EndpointType>> getEndpointType() {
         return this.endpointType == null ? Input.empty() : this.endpointType;
@@ -37,7 +37,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="remoteVolumeRegion")
-        private final @Nullable Input<String> remoteVolumeRegion;
+      private final @Nullable Input<String> remoteVolumeRegion;
 
     public Input<String> getRemoteVolumeRegion() {
         return this.remoteVolumeRegion == null ? Input.empty() : this.remoteVolumeRegion;
@@ -48,7 +48,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="remoteVolumeResourceId", required=true)
-        private final Input<String> remoteVolumeResourceId;
+      private final Input<String> remoteVolumeResourceId;
 
     public Input<String> getRemoteVolumeResourceId() {
         return this.remoteVolumeResourceId;
@@ -59,7 +59,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicationId")
-        private final @Nullable Input<String> replicationId;
+      private final @Nullable Input<String> replicationId;
 
     public Input<String> getReplicationId() {
         return this.replicationId == null ? Input.empty() : this.replicationId;
@@ -70,7 +70,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicationSchedule", required=true)
-        private final Input<Either<String,ReplicationSchedule>> replicationSchedule;
+      private final Input<Either<String,ReplicationSchedule>> replicationSchedule;
 
     public Input<Either<String,ReplicationSchedule>> getReplicationSchedule() {
         return this.replicationSchedule;

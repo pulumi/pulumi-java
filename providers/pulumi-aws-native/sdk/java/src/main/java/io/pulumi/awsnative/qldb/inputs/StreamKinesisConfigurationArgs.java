@@ -16,14 +16,14 @@ public final class StreamKinesisConfigurationArgs extends io.pulumi.resources.Re
     public static final StreamKinesisConfigurationArgs Empty = new StreamKinesisConfigurationArgs();
 
     @InputImport(name="aggregationEnabled")
-        private final @Nullable Input<Boolean> aggregationEnabled;
+      private final @Nullable Input<Boolean> aggregationEnabled;
 
     public Input<Boolean> getAggregationEnabled() {
         return this.aggregationEnabled == null ? Input.empty() : this.aggregationEnabled;
     }
 
     @InputImport(name="streamArn")
-        private final @Nullable Input<String> streamArn;
+      private final @Nullable Input<String> streamArn;
 
     public Input<String> getStreamArn() {
         return this.streamArn == null ? Input.empty() : this.streamArn;

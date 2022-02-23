@@ -21,7 +21,7 @@ public final class PipelineRunSourcePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class PipelineRunSourcePropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,PipelineRunSourceType>> type;
+      private final @Nullable Input<Either<String,PipelineRunSourceType>> type;
 
     public Input<Either<String,PipelineRunSourceType>> getType() {
         return this.type == null ? Input.empty() : this.type;

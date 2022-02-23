@@ -25,7 +25,7 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="privateEndpoint")
-        private final @Nullable MHSMPrivateEndpointResponse privateEndpoint;
+      private final @Nullable MHSMPrivateEndpointResponse privateEndpoint;
 
     public Optional<MHSMPrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
@@ -36,7 +36,7 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-        private final @Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+      private final @Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<MHSMPrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
@@ -47,7 +47,7 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;

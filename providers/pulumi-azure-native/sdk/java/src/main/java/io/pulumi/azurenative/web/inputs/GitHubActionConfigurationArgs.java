@@ -25,7 +25,7 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="codeConfiguration")
-        private final @Nullable Input<GitHubActionCodeConfigurationArgs> codeConfiguration;
+      private final @Nullable Input<GitHubActionCodeConfigurationArgs> codeConfiguration;
 
     public Input<GitHubActionCodeConfigurationArgs> getCodeConfiguration() {
         return this.codeConfiguration == null ? Input.empty() : this.codeConfiguration;
@@ -36,7 +36,7 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="containerConfiguration")
-        private final @Nullable Input<GitHubActionContainerConfigurationArgs> containerConfiguration;
+      private final @Nullable Input<GitHubActionContainerConfigurationArgs> containerConfiguration;
 
     public Input<GitHubActionContainerConfigurationArgs> getContainerConfiguration() {
         return this.containerConfiguration == null ? Input.empty() : this.containerConfiguration;
@@ -47,7 +47,7 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="generateWorkflowFile")
-        private final @Nullable Input<Boolean> generateWorkflowFile;
+      private final @Nullable Input<Boolean> generateWorkflowFile;
 
     public Input<Boolean> getGenerateWorkflowFile() {
         return this.generateWorkflowFile == null ? Input.empty() : this.generateWorkflowFile;
@@ -58,7 +58,7 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isLinux")
-        private final @Nullable Input<Boolean> isLinux;
+      private final @Nullable Input<Boolean> isLinux;
 
     public Input<Boolean> getIsLinux() {
         return this.isLinux == null ? Input.empty() : this.isLinux;

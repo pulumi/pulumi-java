@@ -23,7 +23,7 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="settings")
-        private final @Nullable Input<ConfigurationServiceSettingsArgs> settings;
+      private final @Nullable Input<ConfigurationServiceSettingsArgs> settings;
 
     public Input<ConfigurationServiceSettingsArgs> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;

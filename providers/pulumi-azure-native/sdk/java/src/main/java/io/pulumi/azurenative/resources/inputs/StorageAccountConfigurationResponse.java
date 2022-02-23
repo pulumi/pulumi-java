@@ -23,7 +23,7 @@ public final class StorageAccountConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="storageAccountKey")
-        private final @Nullable String storageAccountKey;
+      private final @Nullable String storageAccountKey;
 
     public Optional<String> getStorageAccountKey() {
         return this.storageAccountKey == null ? Optional.empty() : Optional.ofNullable(this.storageAccountKey);
@@ -34,7 +34,7 @@ public final class StorageAccountConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="storageAccountName")
-        private final @Nullable String storageAccountName;
+      private final @Nullable String storageAccountName;
 
     public Optional<String> getStorageAccountName() {
         return this.storageAccountName == null ? Optional.empty() : Optional.ofNullable(this.storageAccountName);

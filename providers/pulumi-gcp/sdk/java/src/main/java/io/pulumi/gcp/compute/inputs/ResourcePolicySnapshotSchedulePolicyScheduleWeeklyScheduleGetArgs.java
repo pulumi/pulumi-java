@@ -20,7 +20,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGet
      * 
      */
     @InputImport(name="dayOfWeeks", required=true)
-        private final Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks;
+      private final Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks;
 
     public Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> getDayOfWeeks() {
         return this.dayOfWeeks;

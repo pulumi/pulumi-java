@@ -23,7 +23,7 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema exten
      * 
      */
     @InputImport(name="ref")
-        private final @Nullable String ref;
+      private final @Nullable String ref;
 
     public Optional<String> getRef() {
         return this.ref == null ? Optional.empty() : Optional.ofNullable(this.ref);

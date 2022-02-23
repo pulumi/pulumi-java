@@ -13,7 +13,7 @@ public final class GetDevicePoolArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDevicePoolArgs Empty = new GetDevicePoolArgs();
 
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;

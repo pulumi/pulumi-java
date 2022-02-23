@@ -15,14 +15,14 @@ public final class LogAnalyticsConfigurationArgs extends io.pulumi.resources.Res
     public static final LogAnalyticsConfigurationArgs Empty = new LogAnalyticsConfigurationArgs();
 
     @InputImport(name="customerId")
-        private final @Nullable Input<String> customerId;
+      private final @Nullable Input<String> customerId;
 
     public Input<String> getCustomerId() {
         return this.customerId == null ? Input.empty() : this.customerId;
     }
 
     @InputImport(name="sharedKey")
-        private final @Nullable Input<String> sharedKey;
+      private final @Nullable Input<String> sharedKey;
 
     public Input<String> getSharedKey() {
         return this.sharedKey == null ? Input.empty() : this.sharedKey;

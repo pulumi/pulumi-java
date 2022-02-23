@@ -19,7 +19,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheId")
-        private final @Nullable Input<String> cacheId;
+      private final @Nullable Input<String> cacheId;
 
     public Input<String> getCacheId() {
         return this.cacheId == null ? Input.empty() : this.cacheId;
@@ -30,7 +30,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionString", required=true)
-        private final Input<String> connectionString;
+      private final Input<String> connectionString;
 
     public Input<String> getConnectionString() {
         return this.connectionString;
@@ -41,7 +41,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -52,7 +52,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -74,7 +74,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -85,7 +85,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useFromLocation", required=true)
-        private final Input<String> useFromLocation;
+      private final Input<String> useFromLocation;
 
     public Input<String> getUseFromLocation() {
         return this.useFromLocation;

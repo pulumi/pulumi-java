@@ -17,7 +17,7 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-        private final String managedInstanceName;
+      private final String managedInstanceName;
 
     public String getManagedInstanceName() {
         return this.managedInstanceName;
@@ -28,7 +28,7 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="privateEndpointConnectionName", required=true)
-        private final String privateEndpointConnectionName;
+      private final String privateEndpointConnectionName;
 
     public String getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
@@ -39,7 +39,7 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends io.pu
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

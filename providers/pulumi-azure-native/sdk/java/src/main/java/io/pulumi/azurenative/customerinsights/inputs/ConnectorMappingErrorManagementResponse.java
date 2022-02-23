@@ -24,7 +24,7 @@ public final class ConnectorMappingErrorManagementResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="errorLimit")
-        private final @Nullable Integer errorLimit;
+      private final @Nullable Integer errorLimit;
 
     public Optional<Integer> getErrorLimit() {
         return this.errorLimit == null ? Optional.empty() : Optional.ofNullable(this.errorLimit);
@@ -35,7 +35,7 @@ public final class ConnectorMappingErrorManagementResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="errorManagementType", required=true)
-        private final String errorManagementType;
+      private final String errorManagementType;
 
     public String getErrorManagementType() {
         return this.errorManagementType;

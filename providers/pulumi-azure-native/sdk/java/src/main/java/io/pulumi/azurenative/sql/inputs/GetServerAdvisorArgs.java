@@ -17,7 +17,7 @@ public final class GetServerAdvisorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="advisorName", required=true)
-        private final String advisorName;
+      private final String advisorName;
 
     public String getAdvisorName() {
         return this.advisorName;
@@ -28,7 +28,7 @@ public final class GetServerAdvisorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetServerAdvisorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final String serverName;
+      private final String serverName;
 
     public String getServerName() {
         return this.serverName;

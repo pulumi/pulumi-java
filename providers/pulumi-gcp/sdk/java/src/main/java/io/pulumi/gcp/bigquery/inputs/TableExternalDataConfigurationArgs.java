@@ -26,7 +26,7 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="autodetect", required=true)
-        private final Input<Boolean> autodetect;
+      private final Input<Boolean> autodetect;
 
     public Input<Boolean> getAutodetect() {
         return this.autodetect;
@@ -38,7 +38,7 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="compression")
-        private final @Nullable Input<String> compression;
+      private final @Nullable Input<String> compression;
 
     public Input<String> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
@@ -50,7 +50,7 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="csvOptions")
-        private final @Nullable Input<TableExternalDataConfigurationCsvOptionsArgs> csvOptions;
+      private final @Nullable Input<TableExternalDataConfigurationCsvOptionsArgs> csvOptions;
 
     public Input<TableExternalDataConfigurationCsvOptionsArgs> getCsvOptions() {
         return this.csvOptions == null ? Input.empty() : this.csvOptions;
@@ -63,7 +63,7 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="googleSheetsOptions")
-        private final @Nullable Input<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions;
+      private final @Nullable Input<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions;
 
     public Input<TableExternalDataConfigurationGoogleSheetsOptionsArgs> getGoogleSheetsOptions() {
         return this.googleSheetsOptions == null ? Input.empty() : this.googleSheetsOptions;
@@ -77,7 +77,7 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="hivePartitioningOptions")
-        private final @Nullable Input<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions;
+      private final @Nullable Input<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions;
 
     public Input<TableExternalDataConfigurationHivePartitioningOptionsArgs> getHivePartitioningOptions() {
         return this.hivePartitioningOptions == null ? Input.empty() : this.hivePartitioningOptions;
@@ -93,7 +93,7 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ignoreUnknownValues")
-        private final @Nullable Input<Boolean> ignoreUnknownValues;
+      private final @Nullable Input<Boolean> ignoreUnknownValues;
 
     public Input<Boolean> getIgnoreUnknownValues() {
         return this.ignoreUnknownValues == null ? Input.empty() : this.ignoreUnknownValues;
@@ -105,7 +105,7 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxBadRecords")
-        private final @Nullable Input<Integer> maxBadRecords;
+      private final @Nullable Input<Integer> maxBadRecords;
 
     public Input<Integer> getMaxBadRecords() {
         return this.maxBadRecords == null ? Input.empty() : this.maxBadRecords;
@@ -126,7 +126,7 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="schema")
-        private final @Nullable Input<String> schema;
+      private final @Nullable Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -141,7 +141,7 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sourceFormat", required=true)
-        private final Input<String> sourceFormat;
+      private final Input<String> sourceFormat;
 
     public Input<String> getSourceFormat() {
         return this.sourceFormat;
@@ -153,7 +153,7 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sourceUris", required=true)
-        private final Input<List<String>> sourceUris;
+      private final Input<List<String>> sourceUris;
 
     public Input<List<String>> getSourceUris() {
         return this.sourceUris;

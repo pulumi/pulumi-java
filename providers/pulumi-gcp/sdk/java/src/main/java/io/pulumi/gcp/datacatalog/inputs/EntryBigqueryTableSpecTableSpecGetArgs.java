@@ -15,7 +15,7 @@ public final class EntryBigqueryTableSpecTableSpecGetArgs extends io.pulumi.reso
     public static final EntryBigqueryTableSpecTableSpecGetArgs Empty = new EntryBigqueryTableSpecTableSpecGetArgs();
 
     @InputImport(name="groupedEntry")
-        private final @Nullable Input<String> groupedEntry;
+      private final @Nullable Input<String> groupedEntry;
 
     public Input<String> getGroupedEntry() {
         return this.groupedEntry == null ? Input.empty() : this.groupedEntry;

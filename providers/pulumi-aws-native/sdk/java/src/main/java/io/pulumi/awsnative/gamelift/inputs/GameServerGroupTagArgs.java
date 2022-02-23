@@ -19,7 +19,7 @@ public final class GameServerGroupTagArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="key")
-        private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -30,7 +30,7 @@ public final class GameServerGroupTagArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

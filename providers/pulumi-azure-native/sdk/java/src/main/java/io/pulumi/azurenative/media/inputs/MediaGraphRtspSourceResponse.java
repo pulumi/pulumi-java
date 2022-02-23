@@ -24,7 +24,7 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="endpoint", required=true)
-        private final Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint;
+      private final Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint;
 
     public Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> getEndpoint() {
         return this.endpoint;
@@ -35,7 +35,7 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -58,7 +58,7 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="transport", required=true)
-        private final String transport;
+      private final String transport;
 
     public String getTransport() {
         return this.transport;

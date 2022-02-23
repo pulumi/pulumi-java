@@ -20,7 +20,7 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleArn")
-        private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
@@ -31,7 +31,7 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfig")
-        private final @Nullable Input<HookVersionLoggingConfigArgs> loggingConfig;
+      private final @Nullable Input<HookVersionLoggingConfigArgs> loggingConfig;
 
     public Input<HookVersionLoggingConfigArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -44,7 +44,7 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaHandlerPackage", required=true)
-        private final Input<String> schemaHandlerPackage;
+      private final Input<String> schemaHandlerPackage;
 
     public Input<String> getSchemaHandlerPackage() {
         return this.schemaHandlerPackage;
@@ -57,7 +57,7 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName", required=true)
-        private final Input<String> typeName;
+      private final Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName;

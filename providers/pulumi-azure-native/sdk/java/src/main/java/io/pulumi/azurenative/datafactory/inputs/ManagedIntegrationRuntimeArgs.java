@@ -27,7 +27,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="computeProperties")
-        private final @Nullable Input<IntegrationRuntimeComputePropertiesArgs> computeProperties;
+      private final @Nullable Input<IntegrationRuntimeComputePropertiesArgs> computeProperties;
 
     public Input<IntegrationRuntimeComputePropertiesArgs> getComputeProperties() {
         return this.computeProperties == null ? Input.empty() : this.computeProperties;
@@ -38,7 +38,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="customerVirtualNetwork")
-        private final @Nullable Input<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork;
+      private final @Nullable Input<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork;
 
     public Input<IntegrationRuntimeCustomerVirtualNetworkArgs> getCustomerVirtualNetwork() {
         return this.customerVirtualNetwork == null ? Input.empty() : this.customerVirtualNetwork;
@@ -49,7 +49,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="managedVirtualNetwork")
-        private final @Nullable Input<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork;
+      private final @Nullable Input<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork;
 
     public Input<ManagedVirtualNetworkReferenceArgs> getManagedVirtualNetwork() {
         return this.managedVirtualNetwork == null ? Input.empty() : this.managedVirtualNetwork;
@@ -71,7 +71,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ssisProperties")
-        private final @Nullable Input<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
+      private final @Nullable Input<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
 
     public Input<IntegrationRuntimeSsisPropertiesArgs> getSsisProperties() {
         return this.ssisProperties == null ? Input.empty() : this.ssisProperties;
@@ -83,7 +83,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

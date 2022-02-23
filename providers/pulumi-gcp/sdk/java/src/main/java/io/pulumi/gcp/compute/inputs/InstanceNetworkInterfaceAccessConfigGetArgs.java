@@ -20,7 +20,7 @@ public final class InstanceNetworkInterfaceAccessConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="natIp")
-        private final @Nullable Input<String> natIp;
+      private final @Nullable Input<String> natIp;
 
     public Input<String> getNatIp() {
         return this.natIp == null ? Input.empty() : this.natIp;
@@ -32,7 +32,7 @@ public final class InstanceNetworkInterfaceAccessConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="networkTier")
-        private final @Nullable Input<String> networkTier;
+      private final @Nullable Input<String> networkTier;
 
     public Input<String> getNetworkTier() {
         return this.networkTier == null ? Input.empty() : this.networkTier;
@@ -44,7 +44,7 @@ public final class InstanceNetworkInterfaceAccessConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="publicPtrDomainName")
-        private final @Nullable Input<String> publicPtrDomainName;
+      private final @Nullable Input<String> publicPtrDomainName;
 
     public Input<String> getPublicPtrDomainName() {
         return this.publicPtrDomainName == null ? Input.empty() : this.publicPtrDomainName;

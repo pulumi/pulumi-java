@@ -19,7 +19,7 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends io.pulu
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -30,7 +30,7 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends io.pulu
      * 
      */
     @InputImport(name="ports", required=true)
-        private final List<JitNetworkAccessRequestPortResponse> ports;
+      private final List<JitNetworkAccessRequestPortResponse> ports;
 
     public List<JitNetworkAccessRequestPortResponse> getPorts() {
         return this.ports;

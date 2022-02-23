@@ -23,7 +23,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="days", required=true)
-        private final Input<Integer> days;
+      private final Input<Integer> days;
 
     public Input<Integer> getDays() {
         return this.days;
@@ -34,7 +34,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;

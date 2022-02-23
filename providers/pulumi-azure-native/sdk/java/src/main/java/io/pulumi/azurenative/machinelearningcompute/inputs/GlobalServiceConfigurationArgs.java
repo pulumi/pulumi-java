@@ -26,7 +26,7 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="autoScale")
-        private final @Nullable Input<AutoScaleConfigurationArgs> autoScale;
+      private final @Nullable Input<AutoScaleConfigurationArgs> autoScale;
 
     public Input<AutoScaleConfigurationArgs> getAutoScale() {
         return this.autoScale == null ? Input.empty() : this.autoScale;
@@ -37,7 +37,7 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -48,7 +48,7 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serviceAuth")
-        private final @Nullable Input<ServiceAuthConfigurationArgs> serviceAuth;
+      private final @Nullable Input<ServiceAuthConfigurationArgs> serviceAuth;
 
     public Input<ServiceAuthConfigurationArgs> getServiceAuth() {
         return this.serviceAuth == null ? Input.empty() : this.serviceAuth;
@@ -59,7 +59,7 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ssl")
-        private final @Nullable Input<SslConfigurationArgs> ssl;
+      private final @Nullable Input<SslConfigurationArgs> ssl;
 
     public Input<SslConfigurationArgs> getSsl() {
         return this.ssl == null ? Input.empty() : this.ssl;

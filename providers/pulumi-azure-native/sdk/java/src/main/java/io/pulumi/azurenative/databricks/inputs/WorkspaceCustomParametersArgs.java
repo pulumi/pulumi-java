@@ -25,7 +25,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="amlWorkspaceId")
-        private final @Nullable Input<WorkspaceCustomStringParameterArgs> amlWorkspaceId;
+      private final @Nullable Input<WorkspaceCustomStringParameterArgs> amlWorkspaceId;
 
     public Input<WorkspaceCustomStringParameterArgs> getAmlWorkspaceId() {
         return this.amlWorkspaceId == null ? Input.empty() : this.amlWorkspaceId;
@@ -36,7 +36,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="customPrivateSubnetName")
-        private final @Nullable Input<WorkspaceCustomStringParameterArgs> customPrivateSubnetName;
+      private final @Nullable Input<WorkspaceCustomStringParameterArgs> customPrivateSubnetName;
 
     public Input<WorkspaceCustomStringParameterArgs> getCustomPrivateSubnetName() {
         return this.customPrivateSubnetName == null ? Input.empty() : this.customPrivateSubnetName;
@@ -47,7 +47,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="customPublicSubnetName")
-        private final @Nullable Input<WorkspaceCustomStringParameterArgs> customPublicSubnetName;
+      private final @Nullable Input<WorkspaceCustomStringParameterArgs> customPublicSubnetName;
 
     public Input<WorkspaceCustomStringParameterArgs> getCustomPublicSubnetName() {
         return this.customPublicSubnetName == null ? Input.empty() : this.customPublicSubnetName;
@@ -58,7 +58,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="customVirtualNetworkId")
-        private final @Nullable Input<WorkspaceCustomStringParameterArgs> customVirtualNetworkId;
+      private final @Nullable Input<WorkspaceCustomStringParameterArgs> customVirtualNetworkId;
 
     public Input<WorkspaceCustomStringParameterArgs> getCustomVirtualNetworkId() {
         return this.customVirtualNetworkId == null ? Input.empty() : this.customVirtualNetworkId;
@@ -69,7 +69,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enableNoPublicIp")
-        private final @Nullable Input<WorkspaceCustomBooleanParameterArgs> enableNoPublicIp;
+      private final @Nullable Input<WorkspaceCustomBooleanParameterArgs> enableNoPublicIp;
 
     public Input<WorkspaceCustomBooleanParameterArgs> getEnableNoPublicIp() {
         return this.enableNoPublicIp == null ? Input.empty() : this.enableNoPublicIp;
@@ -80,7 +80,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="encryption")
-        private final @Nullable Input<WorkspaceEncryptionParameterArgs> encryption;
+      private final @Nullable Input<WorkspaceEncryptionParameterArgs> encryption;
 
     public Input<WorkspaceEncryptionParameterArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -91,7 +91,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="loadBalancerBackendPoolName")
-        private final @Nullable Input<WorkspaceCustomStringParameterArgs> loadBalancerBackendPoolName;
+      private final @Nullable Input<WorkspaceCustomStringParameterArgs> loadBalancerBackendPoolName;
 
     public Input<WorkspaceCustomStringParameterArgs> getLoadBalancerBackendPoolName() {
         return this.loadBalancerBackendPoolName == null ? Input.empty() : this.loadBalancerBackendPoolName;
@@ -102,7 +102,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="loadBalancerId")
-        private final @Nullable Input<WorkspaceCustomStringParameterArgs> loadBalancerId;
+      private final @Nullable Input<WorkspaceCustomStringParameterArgs> loadBalancerId;
 
     public Input<WorkspaceCustomStringParameterArgs> getLoadBalancerId() {
         return this.loadBalancerId == null ? Input.empty() : this.loadBalancerId;
@@ -113,7 +113,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="natGatewayName")
-        private final @Nullable Input<WorkspaceCustomStringParameterArgs> natGatewayName;
+      private final @Nullable Input<WorkspaceCustomStringParameterArgs> natGatewayName;
 
     public Input<WorkspaceCustomStringParameterArgs> getNatGatewayName() {
         return this.natGatewayName == null ? Input.empty() : this.natGatewayName;
@@ -124,7 +124,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="prepareEncryption")
-        private final @Nullable Input<WorkspaceCustomBooleanParameterArgs> prepareEncryption;
+      private final @Nullable Input<WorkspaceCustomBooleanParameterArgs> prepareEncryption;
 
     public Input<WorkspaceCustomBooleanParameterArgs> getPrepareEncryption() {
         return this.prepareEncryption == null ? Input.empty() : this.prepareEncryption;
@@ -135,7 +135,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="publicIpName")
-        private final @Nullable Input<WorkspaceCustomStringParameterArgs> publicIpName;
+      private final @Nullable Input<WorkspaceCustomStringParameterArgs> publicIpName;
 
     public Input<WorkspaceCustomStringParameterArgs> getPublicIpName() {
         return this.publicIpName == null ? Input.empty() : this.publicIpName;
@@ -146,7 +146,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="requireInfrastructureEncryption")
-        private final @Nullable Input<WorkspaceCustomBooleanParameterArgs> requireInfrastructureEncryption;
+      private final @Nullable Input<WorkspaceCustomBooleanParameterArgs> requireInfrastructureEncryption;
 
     public Input<WorkspaceCustomBooleanParameterArgs> getRequireInfrastructureEncryption() {
         return this.requireInfrastructureEncryption == null ? Input.empty() : this.requireInfrastructureEncryption;
@@ -157,7 +157,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageAccountName")
-        private final @Nullable Input<WorkspaceCustomStringParameterArgs> storageAccountName;
+      private final @Nullable Input<WorkspaceCustomStringParameterArgs> storageAccountName;
 
     public Input<WorkspaceCustomStringParameterArgs> getStorageAccountName() {
         return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
@@ -168,7 +168,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageAccountSkuName")
-        private final @Nullable Input<WorkspaceCustomStringParameterArgs> storageAccountSkuName;
+      private final @Nullable Input<WorkspaceCustomStringParameterArgs> storageAccountSkuName;
 
     public Input<WorkspaceCustomStringParameterArgs> getStorageAccountSkuName() {
         return this.storageAccountSkuName == null ? Input.empty() : this.storageAccountSkuName;
@@ -179,7 +179,7 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="vnetAddressPrefix")
-        private final @Nullable Input<WorkspaceCustomStringParameterArgs> vnetAddressPrefix;
+      private final @Nullable Input<WorkspaceCustomStringParameterArgs> vnetAddressPrefix;
 
     public Input<WorkspaceCustomStringParameterArgs> getVnetAddressPrefix() {
         return this.vnetAddressPrefix == null ? Input.empty() : this.vnetAddressPrefix;

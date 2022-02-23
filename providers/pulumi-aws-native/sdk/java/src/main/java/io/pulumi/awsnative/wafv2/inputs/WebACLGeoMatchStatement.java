@@ -17,14 +17,14 @@ public final class WebACLGeoMatchStatement extends io.pulumi.resources.InvokeArg
     public static final WebACLGeoMatchStatement Empty = new WebACLGeoMatchStatement();
 
     @InputImport(name="countryCodes")
-        private final @Nullable List<String> countryCodes;
+      private final @Nullable List<String> countryCodes;
 
     public List<String> getCountryCodes() {
         return this.countryCodes == null ? List.of() : this.countryCodes;
     }
 
     @InputImport(name="forwardedIPConfig")
-        private final @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
+      private final @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
 
     public Optional<WebACLForwardedIPConfiguration> getForwardedIPConfig() {
         return this.forwardedIPConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardedIPConfig);

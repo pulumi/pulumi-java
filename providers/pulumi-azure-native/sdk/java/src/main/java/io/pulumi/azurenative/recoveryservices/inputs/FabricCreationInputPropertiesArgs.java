@@ -26,7 +26,7 @@ public final class FabricCreationInputPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="customDetails")
-        private final @Nullable Input<Object> customDetails;
+      private final @Nullable Input<Object> customDetails;
 
     public Input<Object> getCustomDetails() {
         return this.customDetails == null ? Input.empty() : this.customDetails;

@@ -26,7 +26,7 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="additionalFeaturesServerConfigurations")
-        private final @Nullable Input<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
+      private final @Nullable Input<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
 
     public Input<AdditionalFeaturesServerConfigurationsArgs> getAdditionalFeaturesServerConfigurations() {
         return this.additionalFeaturesServerConfigurations == null ? Input.empty() : this.additionalFeaturesServerConfigurations;
@@ -37,7 +37,7 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sqlConnectivityUpdateSettings")
-        private final @Nullable Input<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
+      private final @Nullable Input<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
 
     public Input<SqlConnectivityUpdateSettingsArgs> getSqlConnectivityUpdateSettings() {
         return this.sqlConnectivityUpdateSettings == null ? Input.empty() : this.sqlConnectivityUpdateSettings;
@@ -48,7 +48,7 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sqlStorageUpdateSettings")
-        private final @Nullable Input<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
+      private final @Nullable Input<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
 
     public Input<SqlStorageUpdateSettingsArgs> getSqlStorageUpdateSettings() {
         return this.sqlStorageUpdateSettings == null ? Input.empty() : this.sqlStorageUpdateSettings;
@@ -59,7 +59,7 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sqlWorkloadTypeUpdateSettings")
-        private final @Nullable Input<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;
+      private final @Nullable Input<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;
 
     public Input<SqlWorkloadTypeUpdateSettingsArgs> getSqlWorkloadTypeUpdateSettings() {
         return this.sqlWorkloadTypeUpdateSettings == null ? Input.empty() : this.sqlWorkloadTypeUpdateSettings;

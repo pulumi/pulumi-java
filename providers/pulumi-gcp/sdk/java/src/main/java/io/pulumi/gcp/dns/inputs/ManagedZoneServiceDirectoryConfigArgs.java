@@ -19,7 +19,7 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="namespace", required=true)
-        private final Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
+      private final Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
 
     public Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> getNamespace() {
         return this.namespace;

@@ -31,7 +31,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptedProtocols")
-        private final @Nullable Input<List<Either<String,FrontDoorProtocol>>> acceptedProtocols;
+      private final @Nullable Input<List<Either<String,FrontDoorProtocol>>> acceptedProtocols;
 
     public Input<List<Either<String,FrontDoorProtocol>>> getAcceptedProtocols() {
         return this.acceptedProtocols == null ? Input.empty() : this.acceptedProtocols;
@@ -42,7 +42,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-        private final @Nullable Input<Either<String,RoutingRuleEnabledState>> enabledState;
+      private final @Nullable Input<Either<String,RoutingRuleEnabledState>> enabledState;
 
     public Input<Either<String,RoutingRuleEnabledState>> getEnabledState() {
         return this.enabledState == null ? Input.empty() : this.enabledState;
@@ -53,7 +53,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendEndpoints")
-        private final @Nullable Input<List<SubResourceArgs>> frontendEndpoints;
+      private final @Nullable Input<List<SubResourceArgs>> frontendEndpoints;
 
     public Input<List<SubResourceArgs>> getFrontendEndpoints() {
         return this.frontendEndpoints == null ? Input.empty() : this.frontendEndpoints;
@@ -64,7 +64,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -75,7 +75,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -86,7 +86,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patternsToMatch")
-        private final @Nullable Input<List<String>> patternsToMatch;
+      private final @Nullable Input<List<String>> patternsToMatch;
 
     public Input<List<String>> getPatternsToMatch() {
         return this.patternsToMatch == null ? Input.empty() : this.patternsToMatch;
@@ -97,7 +97,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeConfiguration")
-        private final @Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration;
+      private final @Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration;
 
     public Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> getRouteConfiguration() {
         return this.routeConfiguration == null ? Input.empty() : this.routeConfiguration;
@@ -108,7 +108,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rulesEngine")
-        private final @Nullable Input<SubResourceArgs> rulesEngine;
+      private final @Nullable Input<SubResourceArgs> rulesEngine;
 
     public Input<SubResourceArgs> getRulesEngine() {
         return this.rulesEngine == null ? Input.empty() : this.rulesEngine;
@@ -119,7 +119,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webApplicationFirewallPolicyLink")
-        private final @Nullable Input<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
+      private final @Nullable Input<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
     public Input<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
         return this.webApplicationFirewallPolicyLink == null ? Input.empty() : this.webApplicationFirewallPolicyLink;

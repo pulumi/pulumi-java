@@ -23,7 +23,7 @@ public final class BlobInventoryPolicyRuleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="definition", required=true)
-        private final BlobInventoryPolicyDefinitionResponse definition;
+      private final BlobInventoryPolicyDefinitionResponse definition;
 
     public BlobInventoryPolicyDefinitionResponse getDefinition() {
         return this.definition;
@@ -34,7 +34,7 @@ public final class BlobInventoryPolicyRuleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -45,7 +45,7 @@ public final class BlobInventoryPolicyRuleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

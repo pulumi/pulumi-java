@@ -21,7 +21,7 @@ public final class ClusterNetworkPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -32,7 +32,7 @@ public final class ClusterNetworkPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="provider")
-        private final @Nullable Input<String> provider;
+      private final @Nullable Input<String> provider;
 
     public Input<String> getProvider() {
         return this.provider == null ? Input.empty() : this.provider;

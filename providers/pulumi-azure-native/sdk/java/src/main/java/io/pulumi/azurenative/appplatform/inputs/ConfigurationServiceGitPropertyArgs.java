@@ -24,7 +24,7 @@ public final class ConfigurationServiceGitPropertyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="repositories")
-        private final @Nullable Input<List<ConfigurationServiceGitRepositoryArgs>> repositories;
+      private final @Nullable Input<List<ConfigurationServiceGitRepositoryArgs>> repositories;
 
     public Input<List<ConfigurationServiceGitRepositoryArgs>> getRepositories() {
         return this.repositories == null ? Input.empty() : this.repositories;

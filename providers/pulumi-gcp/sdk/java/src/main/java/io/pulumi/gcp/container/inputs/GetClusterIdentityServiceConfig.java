@@ -13,7 +13,7 @@ public final class GetClusterIdentityServiceConfig extends io.pulumi.resources.I
     public static final GetClusterIdentityServiceConfig Empty = new GetClusterIdentityServiceConfig();
 
     @InputImport(name="enabled", required=true)
-        private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;

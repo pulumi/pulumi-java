@@ -15,7 +15,7 @@ public final class CertificateCertificateDescriptionSubjectKeyIdArgs extends io.
     public static final CertificateCertificateDescriptionSubjectKeyIdArgs Empty = new CertificateCertificateDescriptionSubjectKeyIdArgs();
 
     @InputImport(name="keyId")
-        private final @Nullable Input<String> keyId;
+      private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;

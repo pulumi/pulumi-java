@@ -24,7 +24,7 @@ public final class ParentPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class ParentPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="syncProperties", required=true)
-        private final Input<SyncPropertiesArgs> syncProperties;
+      private final Input<SyncPropertiesArgs> syncProperties;
 
     public Input<SyncPropertiesArgs> getSyncProperties() {
         return this.syncProperties;

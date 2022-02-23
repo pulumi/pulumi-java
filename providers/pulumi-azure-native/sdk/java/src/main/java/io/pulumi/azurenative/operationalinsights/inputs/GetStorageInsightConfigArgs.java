@@ -17,7 +17,7 @@ public final class GetStorageInsightConfigArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetStorageInsightConfigArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="storageInsightName", required=true)
-        private final String storageInsightName;
+      private final String storageInsightName;
 
     public String getStorageInsightName() {
         return this.storageInsightName;
@@ -39,7 +39,7 @@ public final class GetStorageInsightConfigArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final String workspaceName;
+      private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;

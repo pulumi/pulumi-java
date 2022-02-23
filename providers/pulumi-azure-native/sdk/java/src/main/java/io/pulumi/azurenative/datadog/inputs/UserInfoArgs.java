@@ -23,7 +23,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailAddress")
-        private final @Nullable Input<String> emailAddress;
+      private final @Nullable Input<String> emailAddress;
 
     public Input<String> getEmailAddress() {
         return this.emailAddress == null ? Input.empty() : this.emailAddress;
@@ -34,7 +34,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phoneNumber")
-        private final @Nullable Input<String> phoneNumber;
+      private final @Nullable Input<String> phoneNumber;
 
     public Input<String> getPhoneNumber() {
         return this.phoneNumber == null ? Input.empty() : this.phoneNumber;

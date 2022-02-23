@@ -15,21 +15,21 @@ public final class EnvironmentConfigWorkloadsConfigWebServerArgs extends io.pulu
     public static final EnvironmentConfigWorkloadsConfigWebServerArgs Empty = new EnvironmentConfigWorkloadsConfigWebServerArgs();
 
     @InputImport(name="cpu")
-        private final @Nullable Input<Double> cpu;
+      private final @Nullable Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
     }
 
     @InputImport(name="memoryGb")
-        private final @Nullable Input<Double> memoryGb;
+      private final @Nullable Input<Double> memoryGb;
 
     public Input<Double> getMemoryGb() {
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
     }
 
     @InputImport(name="storageGb")
-        private final @Nullable Input<Double> storageGb;
+      private final @Nullable Input<Double> storageGb;
 
     public Input<Double> getStorageGb() {
         return this.storageGb == null ? Input.empty() : this.storageGb;

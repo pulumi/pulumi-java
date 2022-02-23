@@ -23,7 +23,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="blobEndpoint", required=true)
-        private final String blobEndpoint;
+      private final String blobEndpoint;
 
     public String getBlobEndpoint() {
         return this.blobEndpoint;
@@ -34,7 +34,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="protectedAccountKeyName", required=true)
-        private final String protectedAccountKeyName;
+      private final String protectedAccountKeyName;
 
     public String getProtectedAccountKeyName() {
         return this.protectedAccountKeyName;
@@ -45,7 +45,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="protectedAccountKeyName2")
-        private final @Nullable String protectedAccountKeyName2;
+      private final @Nullable String protectedAccountKeyName2;
 
     public Optional<String> getProtectedAccountKeyName2() {
         return this.protectedAccountKeyName2 == null ? Optional.empty() : Optional.ofNullable(this.protectedAccountKeyName2);
@@ -56,7 +56,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="queueEndpoint", required=true)
-        private final String queueEndpoint;
+      private final String queueEndpoint;
 
     public String getQueueEndpoint() {
         return this.queueEndpoint;
@@ -67,7 +67,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="storageAccountName", required=true)
-        private final String storageAccountName;
+      private final String storageAccountName;
 
     public String getStorageAccountName() {
         return this.storageAccountName;
@@ -78,7 +78,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="tableEndpoint", required=true)
-        private final String tableEndpoint;
+      private final String tableEndpoint;
 
     public String getTableEndpoint() {
         return this.tableEndpoint;

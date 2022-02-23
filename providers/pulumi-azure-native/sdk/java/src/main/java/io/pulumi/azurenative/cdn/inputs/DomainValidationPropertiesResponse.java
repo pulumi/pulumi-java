@@ -21,7 +21,7 @@ public final class DomainValidationPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="expirationDate", required=true)
-        private final String expirationDate;
+      private final String expirationDate;
 
     public String getExpirationDate() {
         return this.expirationDate;
@@ -32,7 +32,7 @@ public final class DomainValidationPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="validationToken", required=true)
-        private final String validationToken;
+      private final String validationToken;
 
     public String getValidationToken() {
         return this.validationToken;

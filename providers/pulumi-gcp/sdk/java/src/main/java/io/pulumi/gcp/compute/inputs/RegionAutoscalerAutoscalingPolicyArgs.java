@@ -35,7 +35,7 @@ public final class RegionAutoscalerAutoscalingPolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="cooldownPeriod")
-        private final @Nullable Input<Integer> cooldownPeriod;
+      private final @Nullable Input<Integer> cooldownPeriod;
 
     public Input<Integer> getCooldownPeriod() {
         return this.cooldownPeriod == null ? Input.empty() : this.cooldownPeriod;
@@ -49,7 +49,7 @@ public final class RegionAutoscalerAutoscalingPolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="cpuUtilization")
-        private final @Nullable Input<RegionAutoscalerAutoscalingPolicyCpuUtilizationArgs> cpuUtilization;
+      private final @Nullable Input<RegionAutoscalerAutoscalingPolicyCpuUtilizationArgs> cpuUtilization;
 
     public Input<RegionAutoscalerAutoscalingPolicyCpuUtilizationArgs> getCpuUtilization() {
         return this.cpuUtilization == null ? Input.empty() : this.cpuUtilization;
@@ -61,7 +61,7 @@ public final class RegionAutoscalerAutoscalingPolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="loadBalancingUtilization")
-        private final @Nullable Input<RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs> loadBalancingUtilization;
+      private final @Nullable Input<RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs> loadBalancingUtilization;
 
     public Input<RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs> getLoadBalancingUtilization() {
         return this.loadBalancingUtilization == null ? Input.empty() : this.loadBalancingUtilization;
@@ -75,7 +75,7 @@ public final class RegionAutoscalerAutoscalingPolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="maxReplicas", required=true)
-        private final Input<Integer> maxReplicas;
+      private final Input<Integer> maxReplicas;
 
     public Input<Integer> getMaxReplicas() {
         return this.maxReplicas;
@@ -87,7 +87,7 @@ public final class RegionAutoscalerAutoscalingPolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="metrics")
-        private final @Nullable Input<List<RegionAutoscalerAutoscalingPolicyMetricArgs>> metrics;
+      private final @Nullable Input<List<RegionAutoscalerAutoscalingPolicyMetricArgs>> metrics;
 
     public Input<List<RegionAutoscalerAutoscalingPolicyMetricArgs>> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
@@ -101,7 +101,7 @@ public final class RegionAutoscalerAutoscalingPolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="minReplicas", required=true)
-        private final Input<Integer> minReplicas;
+      private final Input<Integer> minReplicas;
 
     public Input<Integer> getMinReplicas() {
         return this.minReplicas;
@@ -114,7 +114,7 @@ public final class RegionAutoscalerAutoscalingPolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -127,7 +127,7 @@ public final class RegionAutoscalerAutoscalingPolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="scaleDownControl")
-        private final @Nullable Input<RegionAutoscalerAutoscalingPolicyScaleDownControlArgs> scaleDownControl;
+      private final @Nullable Input<RegionAutoscalerAutoscalingPolicyScaleDownControlArgs> scaleDownControl;
 
     public Input<RegionAutoscalerAutoscalingPolicyScaleDownControlArgs> getScaleDownControl() {
         return this.scaleDownControl == null ? Input.empty() : this.scaleDownControl;
@@ -140,7 +140,7 @@ public final class RegionAutoscalerAutoscalingPolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="scaleInControl")
-        private final @Nullable Input<RegionAutoscalerAutoscalingPolicyScaleInControlArgs> scaleInControl;
+      private final @Nullable Input<RegionAutoscalerAutoscalingPolicyScaleInControlArgs> scaleInControl;
 
     public Input<RegionAutoscalerAutoscalingPolicyScaleInControlArgs> getScaleInControl() {
         return this.scaleInControl == null ? Input.empty() : this.scaleInControl;
@@ -152,7 +152,7 @@ public final class RegionAutoscalerAutoscalingPolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="scalingSchedules")
-        private final @Nullable Input<List<RegionAutoscalerAutoscalingPolicyScalingScheduleArgs>> scalingSchedules;
+      private final @Nullable Input<List<RegionAutoscalerAutoscalingPolicyScalingScheduleArgs>> scalingSchedules;
 
     public Input<List<RegionAutoscalerAutoscalingPolicyScalingScheduleArgs>> getScalingSchedules() {
         return this.scalingSchedules == null ? Input.empty() : this.scalingSchedules;

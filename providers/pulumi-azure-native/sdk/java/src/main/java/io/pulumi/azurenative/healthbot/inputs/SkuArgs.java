@@ -22,7 +22,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<SkuName> name;
+      private final Input<SkuName> name;
 
     public Input<SkuName> getName() {
         return this.name;

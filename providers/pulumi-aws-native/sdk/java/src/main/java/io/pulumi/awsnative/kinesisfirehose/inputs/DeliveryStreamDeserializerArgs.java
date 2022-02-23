@@ -16,14 +16,14 @@ public final class DeliveryStreamDeserializerArgs extends io.pulumi.resources.Re
     public static final DeliveryStreamDeserializerArgs Empty = new DeliveryStreamDeserializerArgs();
 
     @InputImport(name="hiveJsonSerDe")
-        private final @Nullable Input<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe;
+      private final @Nullable Input<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe;
 
     public Input<DeliveryStreamHiveJsonSerDeArgs> getHiveJsonSerDe() {
         return this.hiveJsonSerDe == null ? Input.empty() : this.hiveJsonSerDe;
     }
 
     @InputImport(name="openXJsonSerDe")
-        private final @Nullable Input<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe;
+      private final @Nullable Input<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe;
 
     public Input<DeliveryStreamOpenXJsonSerDeArgs> getOpenXJsonSerDe() {
         return this.openXJsonSerDe == null ? Input.empty() : this.openXJsonSerDe;

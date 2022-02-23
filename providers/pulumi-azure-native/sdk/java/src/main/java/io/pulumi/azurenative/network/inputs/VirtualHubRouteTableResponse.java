@@ -24,7 +24,7 @@ public final class VirtualHubRouteTableResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="routes")
-        private final @Nullable List<VirtualHubRouteResponse> routes;
+      private final @Nullable List<VirtualHubRouteResponse> routes;
 
     public List<VirtualHubRouteResponse> getRoutes() {
         return this.routes == null ? List.of() : this.routes;

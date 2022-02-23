@@ -24,7 +24,7 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="registration")
-        private final @Nullable Input<AzureStaticWebAppsRegistrationArgs> registration;
+      private final @Nullable Input<AzureStaticWebAppsRegistrationArgs> registration;
 
     public Input<AzureStaticWebAppsRegistrationArgs> getRegistration() {
         return this.registration == null ? Input.empty() : this.registration;

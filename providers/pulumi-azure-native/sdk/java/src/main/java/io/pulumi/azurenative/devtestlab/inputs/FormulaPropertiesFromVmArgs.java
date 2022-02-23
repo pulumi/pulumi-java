@@ -23,7 +23,7 @@ public final class FormulaPropertiesFromVmArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="labVmId")
-        private final @Nullable Input<String> labVmId;
+      private final @Nullable Input<String> labVmId;
 
     public Input<String> getLabVmId() {
         return this.labVmId == null ? Input.empty() : this.labVmId;

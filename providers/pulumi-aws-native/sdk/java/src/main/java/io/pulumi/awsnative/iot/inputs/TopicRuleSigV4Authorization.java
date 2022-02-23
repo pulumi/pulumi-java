@@ -13,21 +13,21 @@ public final class TopicRuleSigV4Authorization extends io.pulumi.resources.Invok
     public static final TopicRuleSigV4Authorization Empty = new TopicRuleSigV4Authorization();
 
     @InputImport(name="roleArn", required=true)
-        private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="serviceName", required=true)
-        private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
     }
 
     @InputImport(name="signingRegion", required=true)
-        private final String signingRegion;
+      private final String signingRegion;
 
     public String getSigningRegion() {
         return this.signingRegion;

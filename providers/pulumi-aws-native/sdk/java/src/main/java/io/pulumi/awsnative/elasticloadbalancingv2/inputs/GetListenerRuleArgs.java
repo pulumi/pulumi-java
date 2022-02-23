@@ -13,7 +13,7 @@ public final class GetListenerRuleArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetListenerRuleArgs Empty = new GetListenerRuleArgs();
 
     @InputImport(name="ruleArn", required=true)
-        private final String ruleArn;
+      private final String ruleArn;
 
     public String getRuleArn() {
         return this.ruleArn;

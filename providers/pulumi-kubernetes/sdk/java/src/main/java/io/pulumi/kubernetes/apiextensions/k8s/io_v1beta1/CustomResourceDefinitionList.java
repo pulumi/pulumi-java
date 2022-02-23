@@ -73,6 +73,21 @@ public class CustomResourceDefinitionList extends io.pulumi.resources.CustomReso
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public CustomResourceDefinitionList(String name) {
+        this(name, CustomResourceDefinitionListArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CustomResourceDefinitionList(String name, CustomResourceDefinitionListArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

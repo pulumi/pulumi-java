@@ -19,7 +19,7 @@ public final class DashboardSheetControlsOptionArgs extends io.pulumi.resources.
     public static final DashboardSheetControlsOptionArgs Empty = new DashboardSheetControlsOptionArgs();
 
     @InputImport(name="visibilityState")
-        private final @Nullable Input<DashboardUIState> visibilityState;
+      private final @Nullable Input<DashboardUIState> visibilityState;
 
     public Input<DashboardUIState> getVisibilityState() {
         return this.visibilityState == null ? Input.empty() : this.visibilityState;

@@ -15,42 +15,42 @@ public final class GetBackendServiceCircuitBreaker extends io.pulumi.resources.I
     public static final GetBackendServiceCircuitBreaker Empty = new GetBackendServiceCircuitBreaker();
 
     @InputImport(name="connectTimeouts", required=true)
-        private final List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts;
+      private final List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts;
 
     public List<GetBackendServiceCircuitBreakerConnectTimeout> getConnectTimeouts() {
         return this.connectTimeouts;
     }
 
     @InputImport(name="maxConnections", required=true)
-        private final Integer maxConnections;
+      private final Integer maxConnections;
 
     public Integer getMaxConnections() {
         return this.maxConnections;
     }
 
     @InputImport(name="maxPendingRequests", required=true)
-        private final Integer maxPendingRequests;
+      private final Integer maxPendingRequests;
 
     public Integer getMaxPendingRequests() {
         return this.maxPendingRequests;
     }
 
     @InputImport(name="maxRequests", required=true)
-        private final Integer maxRequests;
+      private final Integer maxRequests;
 
     public Integer getMaxRequests() {
         return this.maxRequests;
     }
 
     @InputImport(name="maxRequestsPerConnection", required=true)
-        private final Integer maxRequestsPerConnection;
+      private final Integer maxRequestsPerConnection;
 
     public Integer getMaxRequestsPerConnection() {
         return this.maxRequestsPerConnection;
     }
 
     @InputImport(name="maxRetries", required=true)
-        private final Integer maxRetries;
+      private final Integer maxRetries;
 
     public Integer getMaxRetries() {
         return this.maxRetries;

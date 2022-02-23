@@ -20,7 +20,7 @@ public final class IAMAuditConfigAuditLogConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="exemptedMembers")
-        private final @Nullable Input<List<String>> exemptedMembers;
+      private final @Nullable Input<List<String>> exemptedMembers;
 
     public Input<List<String>> getExemptedMembers() {
         return this.exemptedMembers == null ? Input.empty() : this.exemptedMembers;
@@ -31,7 +31,7 @@ public final class IAMAuditConfigAuditLogConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logType", required=true)
-        private final Input<String> logType;
+      private final Input<String> logType;
 
     public Input<String> getLogType() {
         return this.logType;

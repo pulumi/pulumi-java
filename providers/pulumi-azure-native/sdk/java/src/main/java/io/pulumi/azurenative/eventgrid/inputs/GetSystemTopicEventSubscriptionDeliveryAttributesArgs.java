@@ -17,7 +17,7 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesArgs extends
      * 
      */
     @InputImport(name="eventSubscriptionName", required=true)
-        private final String eventSubscriptionName;
+      private final String eventSubscriptionName;
 
     public String getEventSubscriptionName() {
         return this.eventSubscriptionName;
@@ -28,7 +28,7 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesArgs extends
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesArgs extends
      * 
      */
     @InputImport(name="systemTopicName", required=true)
-        private final String systemTopicName;
+      private final String systemTopicName;
 
     public String getSystemTopicName() {
         return this.systemTopicName;

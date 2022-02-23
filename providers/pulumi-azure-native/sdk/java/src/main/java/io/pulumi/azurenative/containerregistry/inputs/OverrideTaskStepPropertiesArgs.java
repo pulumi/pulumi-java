@@ -23,7 +23,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="arguments")
-        private final @Nullable Input<List<ArgumentArgs>> arguments;
+      private final @Nullable Input<List<ArgumentArgs>> arguments;
 
     public Input<List<ArgumentArgs>> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -34,7 +34,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="contextPath")
-        private final @Nullable Input<String> contextPath;
+      private final @Nullable Input<String> contextPath;
 
     public Input<String> getContextPath() {
         return this.contextPath == null ? Input.empty() : this.contextPath;
@@ -45,7 +45,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="file")
-        private final @Nullable Input<String> file;
+      private final @Nullable Input<String> file;
 
     public Input<String> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -56,7 +56,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="target")
-        private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -67,7 +67,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="updateTriggerToken")
-        private final @Nullable Input<String> updateTriggerToken;
+      private final @Nullable Input<String> updateTriggerToken;
 
     public Input<String> getUpdateTriggerToken() {
         return this.updateTriggerToken == null ? Input.empty() : this.updateTriggerToken;
@@ -78,7 +78,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="values")
-        private final @Nullable Input<List<SetValueArgs>> values;
+      private final @Nullable Input<List<SetValueArgs>> values;
 
     public Input<List<SetValueArgs>> getValues() {
         return this.values == null ? Input.empty() : this.values;

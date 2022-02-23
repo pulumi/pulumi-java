@@ -30,147 +30,147 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServiceArgs Empty = new ServiceArgs();
 
     @InputImport(name="capacityProviderStrategy")
-        private final @Nullable Input<List<ServiceCapacityProviderStrategyItemArgs>> capacityProviderStrategy;
+      private final @Nullable Input<List<ServiceCapacityProviderStrategyItemArgs>> capacityProviderStrategy;
 
     public Input<List<ServiceCapacityProviderStrategyItemArgs>> getCapacityProviderStrategy() {
         return this.capacityProviderStrategy == null ? Input.empty() : this.capacityProviderStrategy;
     }
 
     @InputImport(name="cluster")
-        private final @Nullable Input<String> cluster;
+      private final @Nullable Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster == null ? Input.empty() : this.cluster;
     }
 
     @InputImport(name="deploymentConfiguration")
-        private final @Nullable Input<ServiceDeploymentConfigurationArgs> deploymentConfiguration;
+      private final @Nullable Input<ServiceDeploymentConfigurationArgs> deploymentConfiguration;
 
     public Input<ServiceDeploymentConfigurationArgs> getDeploymentConfiguration() {
         return this.deploymentConfiguration == null ? Input.empty() : this.deploymentConfiguration;
     }
 
     @InputImport(name="deploymentController")
-        private final @Nullable Input<ServiceDeploymentControllerArgs> deploymentController;
+      private final @Nullable Input<ServiceDeploymentControllerArgs> deploymentController;
 
     public Input<ServiceDeploymentControllerArgs> getDeploymentController() {
         return this.deploymentController == null ? Input.empty() : this.deploymentController;
     }
 
     @InputImport(name="desiredCount")
-        private final @Nullable Input<Integer> desiredCount;
+      private final @Nullable Input<Integer> desiredCount;
 
     public Input<Integer> getDesiredCount() {
         return this.desiredCount == null ? Input.empty() : this.desiredCount;
     }
 
     @InputImport(name="enableECSManagedTags")
-        private final @Nullable Input<Boolean> enableECSManagedTags;
+      private final @Nullable Input<Boolean> enableECSManagedTags;
 
     public Input<Boolean> getEnableECSManagedTags() {
         return this.enableECSManagedTags == null ? Input.empty() : this.enableECSManagedTags;
     }
 
     @InputImport(name="enableExecuteCommand")
-        private final @Nullable Input<Boolean> enableExecuteCommand;
+      private final @Nullable Input<Boolean> enableExecuteCommand;
 
     public Input<Boolean> getEnableExecuteCommand() {
         return this.enableExecuteCommand == null ? Input.empty() : this.enableExecuteCommand;
     }
 
     @InputImport(name="healthCheckGracePeriodSeconds")
-        private final @Nullable Input<Integer> healthCheckGracePeriodSeconds;
+      private final @Nullable Input<Integer> healthCheckGracePeriodSeconds;
 
     public Input<Integer> getHealthCheckGracePeriodSeconds() {
         return this.healthCheckGracePeriodSeconds == null ? Input.empty() : this.healthCheckGracePeriodSeconds;
     }
 
     @InputImport(name="launchType")
-        private final @Nullable Input<ServiceLaunchType> launchType;
+      private final @Nullable Input<ServiceLaunchType> launchType;
 
     public Input<ServiceLaunchType> getLaunchType() {
         return this.launchType == null ? Input.empty() : this.launchType;
     }
 
     @InputImport(name="loadBalancers")
-        private final @Nullable Input<List<ServiceLoadBalancerArgs>> loadBalancers;
+      private final @Nullable Input<List<ServiceLoadBalancerArgs>> loadBalancers;
 
     public Input<List<ServiceLoadBalancerArgs>> getLoadBalancers() {
         return this.loadBalancers == null ? Input.empty() : this.loadBalancers;
     }
 
     @InputImport(name="networkConfiguration")
-        private final @Nullable Input<ServiceNetworkConfigurationArgs> networkConfiguration;
+      private final @Nullable Input<ServiceNetworkConfigurationArgs> networkConfiguration;
 
     public Input<ServiceNetworkConfigurationArgs> getNetworkConfiguration() {
         return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
     }
 
     @InputImport(name="placementConstraints")
-        private final @Nullable Input<List<ServicePlacementConstraintArgs>> placementConstraints;
+      private final @Nullable Input<List<ServicePlacementConstraintArgs>> placementConstraints;
 
     public Input<List<ServicePlacementConstraintArgs>> getPlacementConstraints() {
         return this.placementConstraints == null ? Input.empty() : this.placementConstraints;
     }
 
     @InputImport(name="placementStrategies")
-        private final @Nullable Input<List<ServicePlacementStrategyArgs>> placementStrategies;
+      private final @Nullable Input<List<ServicePlacementStrategyArgs>> placementStrategies;
 
     public Input<List<ServicePlacementStrategyArgs>> getPlacementStrategies() {
         return this.placementStrategies == null ? Input.empty() : this.placementStrategies;
     }
 
     @InputImport(name="platformVersion")
-        private final @Nullable Input<String> platformVersion;
+      private final @Nullable Input<String> platformVersion;
 
     public Input<String> getPlatformVersion() {
         return this.platformVersion == null ? Input.empty() : this.platformVersion;
     }
 
     @InputImport(name="propagateTags")
-        private final @Nullable Input<ServicePropagateTags> propagateTags;
+      private final @Nullable Input<ServicePropagateTags> propagateTags;
 
     public Input<ServicePropagateTags> getPropagateTags() {
         return this.propagateTags == null ? Input.empty() : this.propagateTags;
     }
 
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
     }
 
     @InputImport(name="schedulingStrategy")
-        private final @Nullable Input<ServiceSchedulingStrategy> schedulingStrategy;
+      private final @Nullable Input<ServiceSchedulingStrategy> schedulingStrategy;
 
     public Input<ServiceSchedulingStrategy> getSchedulingStrategy() {
         return this.schedulingStrategy == null ? Input.empty() : this.schedulingStrategy;
     }
 
     @InputImport(name="serviceName")
-        private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
     @InputImport(name="serviceRegistries")
-        private final @Nullable Input<List<ServiceRegistryArgs>> serviceRegistries;
+      private final @Nullable Input<List<ServiceRegistryArgs>> serviceRegistries;
 
     public Input<List<ServiceRegistryArgs>> getServiceRegistries() {
         return this.serviceRegistries == null ? Input.empty() : this.serviceRegistries;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<ServiceTagArgs>> tags;
+      private final @Nullable Input<List<ServiceTagArgs>> tags;
 
     public Input<List<ServiceTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="taskDefinition")
-        private final @Nullable Input<String> taskDefinition;
+      private final @Nullable Input<String> taskDefinition;
 
     public Input<String> getTaskDefinition() {
         return this.taskDefinition == null ? Input.empty() : this.taskDefinition;

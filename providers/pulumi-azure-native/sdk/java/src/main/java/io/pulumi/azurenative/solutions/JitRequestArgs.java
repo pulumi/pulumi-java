@@ -23,7 +23,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationResourceId", required=true)
-        private final Input<String> applicationResourceId;
+      private final Input<String> applicationResourceId;
 
     public Input<String> getApplicationResourceId() {
         return this.applicationResourceId;
@@ -34,7 +34,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jitAuthorizationPolicies", required=true)
-        private final Input<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies;
+      private final Input<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies;
 
     public Input<List<JitAuthorizationPoliciesArgs>> getJitAuthorizationPolicies() {
         return this.jitAuthorizationPolicies;
@@ -45,7 +45,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jitRequestName")
-        private final @Nullable Input<String> jitRequestName;
+      private final @Nullable Input<String> jitRequestName;
 
     public Input<String> getJitRequestName() {
         return this.jitRequestName == null ? Input.empty() : this.jitRequestName;
@@ -56,7 +56,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jitSchedulingPolicy", required=true)
-        private final Input<JitSchedulingPolicyArgs> jitSchedulingPolicy;
+      private final Input<JitSchedulingPolicyArgs> jitSchedulingPolicy;
 
     public Input<JitSchedulingPolicyArgs> getJitSchedulingPolicy() {
         return this.jitSchedulingPolicy;
@@ -67,7 +67,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -78,7 +78,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

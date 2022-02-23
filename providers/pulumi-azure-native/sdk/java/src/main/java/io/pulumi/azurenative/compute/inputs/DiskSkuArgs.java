@@ -25,7 +25,7 @@ public final class DiskSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<Either<String,DiskStorageAccountTypes>> name;
+      private final @Nullable Input<Either<String,DiskStorageAccountTypes>> name;
 
     public Input<Either<String,DiskStorageAccountTypes>> getName() {
         return this.name == null ? Input.empty() : this.name;

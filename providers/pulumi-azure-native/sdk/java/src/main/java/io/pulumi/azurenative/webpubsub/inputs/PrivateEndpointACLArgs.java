@@ -26,7 +26,7 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allow")
-        private final @Nullable Input<List<Either<String,WebPubSubRequestType>>> allow;
+      private final @Nullable Input<List<Either<String,WebPubSubRequestType>>> allow;
 
     public Input<List<Either<String,WebPubSubRequestType>>> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
@@ -37,7 +37,7 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="deny")
-        private final @Nullable Input<List<Either<String,WebPubSubRequestType>>> deny;
+      private final @Nullable Input<List<Either<String,WebPubSubRequestType>>> deny;
 
     public Input<List<Either<String,WebPubSubRequestType>>> getDeny() {
         return this.deny == null ? Input.empty() : this.deny;
@@ -48,7 +48,7 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

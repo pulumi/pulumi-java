@@ -26,7 +26,7 @@ public final class WebBasicAuthenticationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="authenticationType", required=true)
-        private final String authenticationType;
+      private final String authenticationType;
 
     public String getAuthenticationType() {
         return this.authenticationType;
@@ -37,7 +37,7 @@ public final class WebBasicAuthenticationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="password", required=true)
-        private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+      private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password;
@@ -48,7 +48,7 @@ public final class WebBasicAuthenticationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="url", required=true)
-        private final Object url;
+      private final Object url;
 
     public Object getUrl() {
         return this.url;
@@ -59,7 +59,7 @@ public final class WebBasicAuthenticationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="username", required=true)
-        private final Object username;
+      private final Object username;
 
     public Object getUsername() {
         return this.username;

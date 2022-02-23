@@ -17,7 +17,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-        private final String profileName;
+      private final String profileName;
 
     public String getProfileName() {
         return this.profileName;
@@ -28,7 +28,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleName", required=true)
-        private final String ruleName;
+      private final String ruleName;
 
     public String getRuleName() {
         return this.ruleName;
@@ -50,7 +50,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleSetName", required=true)
-        private final String ruleSetName;
+      private final String ruleSetName;
 
     public String getRuleSetName() {
         return this.ruleSetName;

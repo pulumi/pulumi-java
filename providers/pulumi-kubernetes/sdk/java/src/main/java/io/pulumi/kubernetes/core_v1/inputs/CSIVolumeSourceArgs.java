@@ -26,7 +26,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="driver", required=true)
-        private final Input<String> driver;
+      private final Input<String> driver;
 
     public Input<String> getDriver() {
         return this.driver;
@@ -37,7 +37,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fsType")
-        private final @Nullable Input<String> fsType;
+      private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -48,7 +48,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="nodePublishSecretRef")
-        private final @Nullable Input<LocalObjectReferenceArgs> nodePublishSecretRef;
+      private final @Nullable Input<LocalObjectReferenceArgs> nodePublishSecretRef;
 
     public Input<LocalObjectReferenceArgs> getNodePublishSecretRef() {
         return this.nodePublishSecretRef == null ? Input.empty() : this.nodePublishSecretRef;
@@ -59,7 +59,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readOnly")
-        private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -70,7 +70,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="volumeAttributes")
-        private final @Nullable Input<Map<String,String>> volumeAttributes;
+      private final @Nullable Input<Map<String,String>> volumeAttributes;
 
     public Input<Map<String,String>> getVolumeAttributes() {
         return this.volumeAttributes == null ? Input.empty() : this.volumeAttributes;

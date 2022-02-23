@@ -13,14 +13,14 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
     @InputImport(name="cluster", required=true)
-        private final String cluster;
+      private final String cluster;
 
     public String getCluster() {
         return this.cluster;
     }
 
     @InputImport(name="serviceArn", required=true)
-        private final String serviceArn;
+      private final String serviceArn;
 
     public String getServiceArn() {
         return this.serviceArn;

@@ -21,7 +21,7 @@ public final class OriginEndpointAuthorization extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="cdnIdentifierSecret", required=true)
-        private final String cdnIdentifierSecret;
+      private final String cdnIdentifierSecret;
 
     public String getCdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
@@ -32,7 +32,7 @@ public final class OriginEndpointAuthorization extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="secretsRoleArn", required=true)
-        private final String secretsRoleArn;
+      private final String secretsRoleArn;
 
     public String getSecretsRoleArn() {
         return this.secretsRoleArn;

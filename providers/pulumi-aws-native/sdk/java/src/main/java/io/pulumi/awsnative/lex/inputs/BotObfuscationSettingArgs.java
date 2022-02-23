@@ -22,7 +22,7 @@ public final class BotObfuscationSettingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="obfuscationSettingType", required=true)
-        private final Input<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType;
+      private final Input<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType;
 
     public Input<BotObfuscationSettingObfuscationSettingType> getObfuscationSettingType() {
         return this.obfuscationSettingType;

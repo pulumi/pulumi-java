@@ -17,7 +17,7 @@ public final class GetAdaptiveApplicationControlArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ascLocation", required=true)
-        private final String ascLocation;
+      private final String ascLocation;
 
     public String getAscLocation() {
         return this.ascLocation;
@@ -28,7 +28,7 @@ public final class GetAdaptiveApplicationControlArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="groupName", required=true)
-        private final String groupName;
+      private final String groupName;
 
     public String getGroupName() {
         return this.groupName;

@@ -13,7 +13,7 @@ public final class GetAuthorizerArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAuthorizerArgs Empty = new GetAuthorizerArgs();
 
     @InputImport(name="authorizerId", required=true)
-        private final String authorizerId;
+      private final String authorizerId;
 
     public String getAuthorizerId() {
         return this.authorizerId;
@@ -24,7 +24,7 @@ public final class GetAuthorizerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-        private final String restApiId;
+      private final String restApiId;
 
     public String getRestApiId() {
         return this.restApiId;

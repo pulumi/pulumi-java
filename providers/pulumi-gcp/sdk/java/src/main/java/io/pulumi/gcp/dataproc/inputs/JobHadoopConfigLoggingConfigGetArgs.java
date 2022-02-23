@@ -15,7 +15,7 @@ public final class JobHadoopConfigLoggingConfigGetArgs extends io.pulumi.resourc
     public static final JobHadoopConfigLoggingConfigGetArgs Empty = new JobHadoopConfigLoggingConfigGetArgs();
 
     @InputImport(name="driverLogLevels", required=true)
-        private final Input<Map<String,String>> driverLogLevels;
+      private final Input<Map<String,String>> driverLogLevels;
 
     public Input<Map<String,String>> getDriverLogLevels() {
         return this.driverLogLevels;

@@ -22,7 +22,7 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="exponent", required=true)
-        private final Input<String> exponent;
+      private final Input<String> exponent;
 
     public Input<String> getExponent() {
         return this.exponent;
@@ -33,7 +33,7 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="modulus", required=true)
-        private final Input<String> modulus;
+      private final Input<String> modulus;
 
     public Input<String> getModulus() {
         return this.modulus;
@@ -45,7 +45,7 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;

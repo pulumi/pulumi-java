@@ -22,7 +22,7 @@ public final class ResultStatisticsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ingestedRecords", required=true)
-        private final Integer ingestedRecords;
+      private final Integer ingestedRecords;
 
     public Integer getIngestedRecords() {
         return this.ingestedRecords;
@@ -33,7 +33,7 @@ public final class ResultStatisticsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="progress", required=true)
-        private final Double progress;
+      private final Double progress;
 
     public Double getProgress() {
         return this.progress;

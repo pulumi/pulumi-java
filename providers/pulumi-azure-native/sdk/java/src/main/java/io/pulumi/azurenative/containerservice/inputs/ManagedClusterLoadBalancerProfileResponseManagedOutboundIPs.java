@@ -23,7 +23,7 @@ public final class ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs e
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Integer count;
+      private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);

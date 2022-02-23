@@ -24,7 +24,7 @@ public final class StatefulSetUpdateStrategyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rollingUpdate")
-        private final @Nullable Input<RollingUpdateStatefulSetStrategyArgs> rollingUpdate;
+      private final @Nullable Input<RollingUpdateStatefulSetStrategyArgs> rollingUpdate;
 
     public Input<RollingUpdateStatefulSetStrategyArgs> getRollingUpdate() {
         return this.rollingUpdate == null ? Input.empty() : this.rollingUpdate;
@@ -39,7 +39,7 @@ public final class StatefulSetUpdateStrategyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

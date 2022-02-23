@@ -15,7 +15,7 @@ public final class AssociationInstanceAssociationOutputLocationArgs extends io.p
     public static final AssociationInstanceAssociationOutputLocationArgs Empty = new AssociationInstanceAssociationOutputLocationArgs();
 
     @InputImport(name="s3Location")
-        private final @Nullable Input<AssociationS3OutputLocationArgs> s3Location;
+      private final @Nullable Input<AssociationS3OutputLocationArgs> s3Location;
 
     public Input<AssociationS3OutputLocationArgs> getS3Location() {
         return this.s3Location == null ? Input.empty() : this.s3Location;

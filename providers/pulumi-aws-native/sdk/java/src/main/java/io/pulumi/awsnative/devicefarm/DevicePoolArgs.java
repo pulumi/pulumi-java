@@ -19,42 +19,42 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
     public static final DevicePoolArgs Empty = new DevicePoolArgs();
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="maxDevices")
-        private final @Nullable Input<Integer> maxDevices;
+      private final @Nullable Input<Integer> maxDevices;
 
     public Input<Integer> getMaxDevices() {
         return this.maxDevices == null ? Input.empty() : this.maxDevices;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="projectArn", required=true)
-        private final Input<String> projectArn;
+      private final Input<String> projectArn;
 
     public Input<String> getProjectArn() {
         return this.projectArn;
     }
 
     @InputImport(name="rules", required=true)
-        private final Input<List<DevicePoolRuleArgs>> rules;
+      private final Input<List<DevicePoolRuleArgs>> rules;
 
     public Input<List<DevicePoolRuleArgs>> getRules() {
         return this.rules;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<DevicePoolTagArgs>> tags;
+      private final @Nullable Input<List<DevicePoolTagArgs>> tags;
 
     public Input<List<DevicePoolTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -21,7 +21,7 @@ public final class ServerInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serverId", required=true)
-        private final String serverId;
+      private final String serverId;
 
     public String getServerId() {
         return this.serverId;

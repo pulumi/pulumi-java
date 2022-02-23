@@ -18,7 +18,7 @@ public final class RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs extend
     public static final RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs Empty = new RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs();
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

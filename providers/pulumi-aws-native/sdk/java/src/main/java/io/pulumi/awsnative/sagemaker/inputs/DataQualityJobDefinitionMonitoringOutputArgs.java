@@ -18,7 +18,7 @@ public final class DataQualityJobDefinitionMonitoringOutputArgs extends io.pulum
     public static final DataQualityJobDefinitionMonitoringOutputArgs Empty = new DataQualityJobDefinitionMonitoringOutputArgs();
 
     @InputImport(name="s3Output", required=true)
-        private final Input<DataQualityJobDefinitionS3OutputArgs> s3Output;
+      private final Input<DataQualityJobDefinitionS3OutputArgs> s3Output;
 
     public Input<DataQualityJobDefinitionS3OutputArgs> getS3Output() {
         return this.s3Output;

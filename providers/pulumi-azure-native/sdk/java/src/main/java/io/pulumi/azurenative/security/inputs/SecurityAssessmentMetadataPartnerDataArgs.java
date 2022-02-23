@@ -23,7 +23,7 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="partnerName", required=true)
-        private final Input<String> partnerName;
+      private final Input<String> partnerName;
 
     public Input<String> getPartnerName() {
         return this.partnerName;
@@ -34,7 +34,7 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="productName")
-        private final @Nullable Input<String> productName;
+      private final @Nullable Input<String> productName;
 
     public Input<String> getProductName() {
         return this.productName == null ? Input.empty() : this.productName;
@@ -45,7 +45,7 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="secret", required=true)
-        private final Input<String> secret;
+      private final Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret;

@@ -22,7 +22,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<IdentityType> type;
+      private final Input<IdentityType> type;
 
     public Input<IdentityType> getType() {
         return this.type;

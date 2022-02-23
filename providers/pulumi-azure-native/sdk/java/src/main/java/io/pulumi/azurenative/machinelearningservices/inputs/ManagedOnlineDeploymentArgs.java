@@ -31,7 +31,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="appInsightsEnabled")
-        private final @Nullable Input<Boolean> appInsightsEnabled;
+      private final @Nullable Input<Boolean> appInsightsEnabled;
 
     public Input<Boolean> getAppInsightsEnabled() {
         return this.appInsightsEnabled == null ? Input.empty() : this.appInsightsEnabled;
@@ -42,7 +42,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="codeConfiguration")
-        private final @Nullable Input<CodeConfigurationArgs> codeConfiguration;
+      private final @Nullable Input<CodeConfigurationArgs> codeConfiguration;
 
     public Input<CodeConfigurationArgs> getCodeConfiguration() {
         return this.codeConfiguration == null ? Input.empty() : this.codeConfiguration;
@@ -53,7 +53,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -65,7 +65,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="endpointComputeType", required=true)
-        private final Input<String> endpointComputeType;
+      private final Input<String> endpointComputeType;
 
     public Input<String> getEndpointComputeType() {
         return this.endpointComputeType;
@@ -76,7 +76,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="environmentId")
-        private final @Nullable Input<String> environmentId;
+      private final @Nullable Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId == null ? Input.empty() : this.environmentId;
@@ -87,7 +87,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="environmentVariables")
-        private final @Nullable Input<Map<String,String>> environmentVariables;
+      private final @Nullable Input<Map<String,String>> environmentVariables;
 
     public Input<Map<String,String>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -98,7 +98,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instanceType")
-        private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -109,7 +109,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="livenessProbe")
-        private final @Nullable Input<ProbeSettingsArgs> livenessProbe;
+      private final @Nullable Input<ProbeSettingsArgs> livenessProbe;
 
     public Input<ProbeSettingsArgs> getLivenessProbe() {
         return this.livenessProbe == null ? Input.empty() : this.livenessProbe;
@@ -120,7 +120,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="model")
-        private final @Nullable Input<Object> model;
+      private final @Nullable Input<Object> model;
 
     public Input<Object> getModel() {
         return this.model == null ? Input.empty() : this.model;
@@ -131,7 +131,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -142,7 +142,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="readinessProbe")
-        private final @Nullable Input<ProbeSettingsArgs> readinessProbe;
+      private final @Nullable Input<ProbeSettingsArgs> readinessProbe;
 
     public Input<ProbeSettingsArgs> getReadinessProbe() {
         return this.readinessProbe == null ? Input.empty() : this.readinessProbe;
@@ -153,7 +153,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="requestSettings")
-        private final @Nullable Input<OnlineRequestSettingsArgs> requestSettings;
+      private final @Nullable Input<OnlineRequestSettingsArgs> requestSettings;
 
     public Input<OnlineRequestSettingsArgs> getRequestSettings() {
         return this.requestSettings == null ? Input.empty() : this.requestSettings;
@@ -164,7 +164,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="scaleSettings")
-        private final @Nullable Input<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings;
+      private final @Nullable Input<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings;
 
     public Input<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> getScaleSettings() {
         return this.scaleSettings == null ? Input.empty() : this.scaleSettings;

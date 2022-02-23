@@ -31,7 +31,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -42,7 +42,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="authenticationType")
-        private final @Nullable String authenticationType;
+      private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
@@ -53,7 +53,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="clientCustomerID")
-        private final @Nullable Object clientCustomerID;
+      private final @Nullable Object clientCustomerID;
 
     public Optional<Object> getClientCustomerID() {
         return this.clientCustomerID == null ? Optional.empty() : Optional.ofNullable(this.clientCustomerID);
@@ -64,7 +64,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable Object clientId;
+      private final @Nullable Object clientId;
 
     public Optional<Object> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -75,7 +75,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="clientSecret")
-        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getClientSecret() {
         return this.clientSecret == null ? null : this.clientSecret;
@@ -86,7 +86,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -97,7 +97,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="connectionProperties")
-        private final @Nullable Object connectionProperties;
+      private final @Nullable Object connectionProperties;
 
     public Optional<Object> getConnectionProperties() {
         return this.connectionProperties == null ? Optional.empty() : Optional.ofNullable(this.connectionProperties);
@@ -108,7 +108,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -119,7 +119,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="developerToken")
-        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getDeveloperToken() {
         return this.developerToken == null ? null : this.developerToken;
@@ -130,7 +130,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="email")
-        private final @Nullable Object email;
+      private final @Nullable Object email;
 
     public Optional<Object> getEmail() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
@@ -141,7 +141,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -152,7 +152,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="keyFilePath")
-        private final @Nullable Object keyFilePath;
+      private final @Nullable Object keyFilePath;
 
     public Optional<Object> getKeyFilePath() {
         return this.keyFilePath == null ? Optional.empty() : Optional.ofNullable(this.keyFilePath);
@@ -163,7 +163,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -174,7 +174,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="refreshToken")
-        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getRefreshToken() {
         return this.refreshToken == null ? null : this.refreshToken;
@@ -185,7 +185,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="trustedCertPath")
-        private final @Nullable Object trustedCertPath;
+      private final @Nullable Object trustedCertPath;
 
     public Optional<Object> getTrustedCertPath() {
         return this.trustedCertPath == null ? Optional.empty() : Optional.ofNullable(this.trustedCertPath);
@@ -197,7 +197,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -208,7 +208,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="useSystemTrustStore")
-        private final @Nullable Object useSystemTrustStore;
+      private final @Nullable Object useSystemTrustStore;
 
     public Optional<Object> getUseSystemTrustStore() {
         return this.useSystemTrustStore == null ? Optional.empty() : Optional.ofNullable(this.useSystemTrustStore);

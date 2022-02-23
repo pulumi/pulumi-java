@@ -26,7 +26,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="clientCertificateId")
-        private final @Nullable Input<String> clientCertificateId;
+      private final @Nullable Input<String> clientCertificateId;
 
     public Input<String> getClientCertificateId() {
         return this.clientCertificateId == null ? Input.empty() : this.clientCertificateId;
@@ -37,7 +37,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="clientCertificatethumbprint")
-        private final @Nullable Input<String> clientCertificatethumbprint;
+      private final @Nullable Input<String> clientCertificatethumbprint;
 
     public Input<String> getClientCertificatethumbprint() {
         return this.clientCertificatethumbprint == null ? Input.empty() : this.clientCertificatethumbprint;
@@ -48,7 +48,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="managementEndpoints", required=true)
-        private final Input<List<String>> managementEndpoints;
+      private final Input<List<String>> managementEndpoints;
 
     public Input<List<String>> getManagementEndpoints() {
         return this.managementEndpoints;
@@ -59,7 +59,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="maxPartitionResolutionRetries")
-        private final @Nullable Input<Integer> maxPartitionResolutionRetries;
+      private final @Nullable Input<Integer> maxPartitionResolutionRetries;
 
     public Input<Integer> getMaxPartitionResolutionRetries() {
         return this.maxPartitionResolutionRetries == null ? Input.empty() : this.maxPartitionResolutionRetries;
@@ -70,7 +70,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="serverCertificateThumbprints")
-        private final @Nullable Input<List<String>> serverCertificateThumbprints;
+      private final @Nullable Input<List<String>> serverCertificateThumbprints;
 
     public Input<List<String>> getServerCertificateThumbprints() {
         return this.serverCertificateThumbprints == null ? Input.empty() : this.serverCertificateThumbprints;
@@ -81,7 +81,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="serverX509Names")
-        private final @Nullable Input<List<X509CertificateNameArgs>> serverX509Names;
+      private final @Nullable Input<List<X509CertificateNameArgs>> serverX509Names;
 
     public Input<List<X509CertificateNameArgs>> getServerX509Names() {
         return this.serverX509Names == null ? Input.empty() : this.serverX509Names;

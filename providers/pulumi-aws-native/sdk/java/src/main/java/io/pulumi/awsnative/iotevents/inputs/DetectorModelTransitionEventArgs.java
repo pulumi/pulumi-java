@@ -25,7 +25,7 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="actions")
-        private final @Nullable Input<List<DetectorModelActionArgs>> actions;
+      private final @Nullable Input<List<DetectorModelActionArgs>> actions;
 
     public Input<List<DetectorModelActionArgs>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -36,7 +36,7 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="condition", required=true)
-        private final Input<String> condition;
+      private final Input<String> condition;
 
     public Input<String> getCondition() {
         return this.condition;
@@ -47,7 +47,7 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="eventName", required=true)
-        private final Input<String> eventName;
+      private final Input<String> eventName;
 
     public Input<String> getEventName() {
         return this.eventName;
@@ -58,7 +58,7 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="nextState", required=true)
-        private final Input<String> nextState;
+      private final Input<String> nextState;
 
     public Input<String> getNextState() {
         return this.nextState;

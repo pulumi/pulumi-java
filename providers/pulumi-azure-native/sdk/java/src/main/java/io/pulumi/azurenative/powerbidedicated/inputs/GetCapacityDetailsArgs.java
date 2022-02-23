@@ -17,7 +17,7 @@ public final class GetCapacityDetailsArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dedicatedCapacityName", required=true)
-        private final String dedicatedCapacityName;
+      private final String dedicatedCapacityName;
 
     public String getDedicatedCapacityName() {
         return this.dedicatedCapacityName;
@@ -28,7 +28,7 @@ public final class GetCapacityDetailsArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

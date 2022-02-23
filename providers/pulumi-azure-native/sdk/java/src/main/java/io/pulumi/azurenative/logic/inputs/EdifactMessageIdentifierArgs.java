@@ -22,7 +22,7 @@ public final class EdifactMessageIdentifierArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="messageId", required=true)
-        private final Input<String> messageId;
+      private final Input<String> messageId;
 
     public Input<String> getMessageId() {
         return this.messageId;

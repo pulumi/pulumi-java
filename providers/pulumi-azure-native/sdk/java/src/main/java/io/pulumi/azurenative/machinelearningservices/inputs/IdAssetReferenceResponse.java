@@ -21,7 +21,7 @@ public final class IdAssetReferenceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="assetId", required=true)
-        private final String assetId;
+      private final String assetId;
 
     public String getAssetId() {
         return this.assetId;
@@ -33,7 +33,7 @@ public final class IdAssetReferenceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="referenceType", required=true)
-        private final String referenceType;
+      private final String referenceType;
 
     public String getReferenceType() {
         return this.referenceType;

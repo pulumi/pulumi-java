@@ -19,7 +19,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accessibility")
-        private final @Nullable String accessibility;
+      private final @Nullable String accessibility;
 
     public Optional<String> getAccessibility() {
         return this.accessibility == null ? Optional.empty() : Optional.ofNullable(this.accessibility);
@@ -30,7 +30,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="altStackReference", required=true)
-        private final String altStackReference;
+      private final String altStackReference;
 
     public String getAltStackReference() {
         return this.altStackReference;
@@ -41,7 +41,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="planDisplayName", required=true)
-        private final String planDisplayName;
+      private final String planDisplayName;
 
     public String getPlanDisplayName() {
         return this.planDisplayName;
@@ -52,7 +52,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="planId", required=true)
-        private final String planId;
+      private final String planId;
 
     public String getPlanId() {
         return this.planId;
@@ -63,7 +63,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="skuId", required=true)
-        private final String skuId;
+      private final String skuId;
 
     public String getSkuId() {
         return this.skuId;
@@ -74,7 +74,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stackType", required=true)
-        private final String stackType;
+      private final String stackType;
 
     public String getStackType() {
         return this.stackType;

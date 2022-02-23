@@ -23,7 +23,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * 
      */
     @InputImport(name="bucketName", required=true)
-        private final String bucketName;
+      private final String bucketName;
 
     public String getBucketName() {
         return this.bucketName;
@@ -34,7 +34,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * 
      */
     @InputImport(name="encryptionOption", required=true)
-        private final String encryptionOption;
+      private final String encryptionOption;
 
     public String getEncryptionOption() {
         return this.encryptionOption;
@@ -45,7 +45,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * 
      */
     @InputImport(name="kmsKeyId")
-        private final @Nullable String kmsKeyId;
+      private final @Nullable String kmsKeyId;
 
     public Optional<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
@@ -56,7 +56,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * 
      */
     @InputImport(name="objectKeyPrefix")
-        private final @Nullable String objectKeyPrefix;
+      private final @Nullable String objectKeyPrefix;
 
     public Optional<String> getObjectKeyPrefix() {
         return this.objectKeyPrefix == null ? Optional.empty() : Optional.ofNullable(this.objectKeyPrefix);

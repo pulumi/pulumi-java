@@ -13,14 +13,14 @@ public final class GetBackendServiceCdnPolicyNegativeCachingPolicy extends io.pu
     public static final GetBackendServiceCdnPolicyNegativeCachingPolicy Empty = new GetBackendServiceCdnPolicyNegativeCachingPolicy();
 
     @InputImport(name="code", required=true)
-        private final Integer code;
+      private final Integer code;
 
     public Integer getCode() {
         return this.code;
     }
 
     @InputImport(name="ttl", required=true)
-        private final Integer ttl;
+      private final Integer ttl;
 
     public Integer getTtl() {
         return this.ttl;

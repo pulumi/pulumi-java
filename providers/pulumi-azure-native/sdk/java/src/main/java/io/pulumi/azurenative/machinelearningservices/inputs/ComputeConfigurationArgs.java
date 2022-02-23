@@ -26,7 +26,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceCount")
-        private final @Nullable Input<Integer> instanceCount;
+      private final @Nullable Input<Integer> instanceCount;
 
     public Input<Integer> getInstanceCount() {
         return this.instanceCount == null ? Input.empty() : this.instanceCount;
@@ -37,7 +37,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceType")
-        private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -48,7 +48,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isLocal")
-        private final @Nullable Input<Boolean> isLocal;
+      private final @Nullable Input<Boolean> isLocal;
 
     public Input<Boolean> getIsLocal() {
         return this.isLocal == null ? Input.empty() : this.isLocal;
@@ -59,7 +59,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -70,7 +70,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -81,7 +81,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="target")
-        private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;

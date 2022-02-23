@@ -25,119 +25,119 @@ public final class HealthCheckConfigProperties extends io.pulumi.resources.Invok
     public static final HealthCheckConfigProperties Empty = new HealthCheckConfigProperties();
 
     @InputImport(name="alarmIdentifier")
-        private final @Nullable HealthCheckAlarmIdentifier alarmIdentifier;
+      private final @Nullable HealthCheckAlarmIdentifier alarmIdentifier;
 
     public Optional<HealthCheckAlarmIdentifier> getAlarmIdentifier() {
         return this.alarmIdentifier == null ? Optional.empty() : Optional.ofNullable(this.alarmIdentifier);
     }
 
     @InputImport(name="childHealthChecks")
-        private final @Nullable List<String> childHealthChecks;
+      private final @Nullable List<String> childHealthChecks;
 
     public List<String> getChildHealthChecks() {
         return this.childHealthChecks == null ? List.of() : this.childHealthChecks;
     }
 
     @InputImport(name="enableSNI")
-        private final @Nullable Boolean enableSNI;
+      private final @Nullable Boolean enableSNI;
 
     public Optional<Boolean> getEnableSNI() {
         return this.enableSNI == null ? Optional.empty() : Optional.ofNullable(this.enableSNI);
     }
 
     @InputImport(name="failureThreshold")
-        private final @Nullable Integer failureThreshold;
+      private final @Nullable Integer failureThreshold;
 
     public Optional<Integer> getFailureThreshold() {
         return this.failureThreshold == null ? Optional.empty() : Optional.ofNullable(this.failureThreshold);
     }
 
     @InputImport(name="fullyQualifiedDomainName")
-        private final @Nullable String fullyQualifiedDomainName;
+      private final @Nullable String fullyQualifiedDomainName;
 
     public Optional<String> getFullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName == null ? Optional.empty() : Optional.ofNullable(this.fullyQualifiedDomainName);
     }
 
     @InputImport(name="healthThreshold")
-        private final @Nullable Integer healthThreshold;
+      private final @Nullable Integer healthThreshold;
 
     public Optional<Integer> getHealthThreshold() {
         return this.healthThreshold == null ? Optional.empty() : Optional.ofNullable(this.healthThreshold);
     }
 
     @InputImport(name="iPAddress")
-        private final @Nullable String iPAddress;
+      private final @Nullable String iPAddress;
 
     public Optional<String> getIPAddress() {
         return this.iPAddress == null ? Optional.empty() : Optional.ofNullable(this.iPAddress);
     }
 
     @InputImport(name="insufficientDataHealthStatus")
-        private final @Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus;
+      private final @Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus;
 
     public Optional<HealthCheckConfigPropertiesInsufficientDataHealthStatus> getInsufficientDataHealthStatus() {
         return this.insufficientDataHealthStatus == null ? Optional.empty() : Optional.ofNullable(this.insufficientDataHealthStatus);
     }
 
     @InputImport(name="inverted")
-        private final @Nullable Boolean inverted;
+      private final @Nullable Boolean inverted;
 
     public Optional<Boolean> getInverted() {
         return this.inverted == null ? Optional.empty() : Optional.ofNullable(this.inverted);
     }
 
     @InputImport(name="measureLatency")
-        private final @Nullable Boolean measureLatency;
+      private final @Nullable Boolean measureLatency;
 
     public Optional<Boolean> getMeasureLatency() {
         return this.measureLatency == null ? Optional.empty() : Optional.ofNullable(this.measureLatency);
     }
 
     @InputImport(name="port")
-        private final @Nullable Integer port;
+      private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
     @InputImport(name="regions")
-        private final @Nullable List<String> regions;
+      private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
     }
 
     @InputImport(name="requestInterval")
-        private final @Nullable Integer requestInterval;
+      private final @Nullable Integer requestInterval;
 
     public Optional<Integer> getRequestInterval() {
         return this.requestInterval == null ? Optional.empty() : Optional.ofNullable(this.requestInterval);
     }
 
     @InputImport(name="resourcePath")
-        private final @Nullable String resourcePath;
+      private final @Nullable String resourcePath;
 
     public Optional<String> getResourcePath() {
         return this.resourcePath == null ? Optional.empty() : Optional.ofNullable(this.resourcePath);
     }
 
     @InputImport(name="routingControlArn")
-        private final @Nullable String routingControlArn;
+      private final @Nullable String routingControlArn;
 
     public Optional<String> getRoutingControlArn() {
         return this.routingControlArn == null ? Optional.empty() : Optional.ofNullable(this.routingControlArn);
     }
 
     @InputImport(name="searchString")
-        private final @Nullable String searchString;
+      private final @Nullable String searchString;
 
     public Optional<String> getSearchString() {
         return this.searchString == null ? Optional.empty() : Optional.ofNullable(this.searchString);
     }
 
     @InputImport(name="type", required=true)
-        private final HealthCheckConfigPropertiesType type;
+      private final HealthCheckConfigPropertiesType type;
 
     public HealthCheckConfigPropertiesType getType() {
         return this.type;

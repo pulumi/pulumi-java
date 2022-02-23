@@ -17,7 +17,7 @@ public final class ConfigIamBindingArgs extends io.pulumi.resources.ResourceArgs
     public static final ConfigIamBindingArgs Empty = new ConfigIamBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<ConfigIamBindingConditionArgs> condition;
+      private final @Nullable Input<ConfigIamBindingConditionArgs> condition;
 
     public Input<ConfigIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,14 +28,14 @@ public final class ConfigIamBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="config", required=true)
-        private final Input<String> config;
+      private final Input<String> config;
 
     public Input<String> getConfig() {
         return this.config;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -47,7 +47,7 @@ public final class ConfigIamBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -60,7 +60,7 @@ public final class ConfigIamBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

@@ -26,7 +26,7 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="excludedKbNumbers")
-        private final @Nullable Input<List<String>> excludedKbNumbers;
+      private final @Nullable Input<List<String>> excludedKbNumbers;
 
     public Input<List<String>> getExcludedKbNumbers() {
         return this.excludedKbNumbers == null ? Input.empty() : this.excludedKbNumbers;
@@ -37,7 +37,7 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="includedKbNumbers")
-        private final @Nullable Input<List<String>> includedKbNumbers;
+      private final @Nullable Input<List<String>> includedKbNumbers;
 
     public Input<List<String>> getIncludedKbNumbers() {
         return this.includedKbNumbers == null ? Input.empty() : this.includedKbNumbers;
@@ -48,7 +48,7 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="includedUpdateClassifications")
-        private final @Nullable Input<Either<String,WindowsUpdateClasses>> includedUpdateClassifications;
+      private final @Nullable Input<Either<String,WindowsUpdateClasses>> includedUpdateClassifications;
 
     public Input<Either<String,WindowsUpdateClasses>> getIncludedUpdateClassifications() {
         return this.includedUpdateClassifications == null ? Input.empty() : this.includedUpdateClassifications;
@@ -59,7 +59,7 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rebootSetting")
-        private final @Nullable Input<String> rebootSetting;
+      private final @Nullable Input<String> rebootSetting;
 
     public Input<String> getRebootSetting() {
         return this.rebootSetting == null ? Input.empty() : this.rebootSetting;

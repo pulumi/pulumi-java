@@ -63,7 +63,7 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activities")
-        private final @Nullable Input<List<Object>> activities;
+      private final @Nullable Input<List<Object>> activities;
 
     public Input<List<Object>> getActivities() {
         return this.activities == null ? Input.empty() : this.activities;
@@ -74,7 +74,7 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

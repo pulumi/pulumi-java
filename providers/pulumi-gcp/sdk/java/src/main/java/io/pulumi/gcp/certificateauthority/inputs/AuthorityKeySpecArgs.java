@@ -21,7 +21,7 @@ public final class AuthorityKeySpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="algorithm")
-        private final @Nullable Input<String> algorithm;
+      private final @Nullable Input<String> algorithm;
 
     public Input<String> getAlgorithm() {
         return this.algorithm == null ? Input.empty() : this.algorithm;
@@ -33,7 +33,7 @@ public final class AuthorityKeySpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudKmsKeyVersion")
-        private final @Nullable Input<String> cloudKmsKeyVersion;
+      private final @Nullable Input<String> cloudKmsKeyVersion;
 
     public Input<String> getCloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion == null ? Input.empty() : this.cloudKmsKeyVersion;

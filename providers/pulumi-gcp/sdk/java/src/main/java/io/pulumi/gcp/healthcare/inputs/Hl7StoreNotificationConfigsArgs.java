@@ -27,7 +27,7 @@ public final class Hl7StoreNotificationConfigsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="filter")
-        private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -43,7 +43,7 @@ public final class Hl7StoreNotificationConfigsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-        private final Input<String> pubsubTopic;
+      private final Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic;

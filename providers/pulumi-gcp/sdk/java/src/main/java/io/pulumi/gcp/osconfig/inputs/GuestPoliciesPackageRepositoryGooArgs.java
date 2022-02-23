@@ -21,7 +21,7 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="url", required=true)
-        private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;

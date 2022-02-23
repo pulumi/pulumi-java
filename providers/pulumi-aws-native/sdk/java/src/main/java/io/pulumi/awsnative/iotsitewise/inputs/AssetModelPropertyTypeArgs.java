@@ -22,28 +22,28 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
     public static final AssetModelPropertyTypeArgs Empty = new AssetModelPropertyTypeArgs();
 
     @InputImport(name="attribute")
-        private final @Nullable Input<AssetModelAttributeArgs> attribute;
+      private final @Nullable Input<AssetModelAttributeArgs> attribute;
 
     public Input<AssetModelAttributeArgs> getAttribute() {
         return this.attribute == null ? Input.empty() : this.attribute;
     }
 
     @InputImport(name="metric")
-        private final @Nullable Input<AssetModelMetricArgs> metric;
+      private final @Nullable Input<AssetModelMetricArgs> metric;
 
     public Input<AssetModelMetricArgs> getMetric() {
         return this.metric == null ? Input.empty() : this.metric;
     }
 
     @InputImport(name="transform")
-        private final @Nullable Input<AssetModelTransformArgs> transform;
+      private final @Nullable Input<AssetModelTransformArgs> transform;
 
     public Input<AssetModelTransformArgs> getTransform() {
         return this.transform == null ? Input.empty() : this.transform;
     }
 
     @InputImport(name="typeName", required=true)
-        private final Input<AssetModelTypeName> typeName;
+      private final Input<AssetModelTypeName> typeName;
 
     public Input<AssetModelTypeName> getTypeName() {
         return this.typeName;

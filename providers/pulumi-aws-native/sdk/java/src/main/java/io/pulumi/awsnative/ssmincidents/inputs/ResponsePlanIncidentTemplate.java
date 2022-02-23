@@ -26,7 +26,7 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="dedupeString")
-        private final @Nullable String dedupeString;
+      private final @Nullable String dedupeString;
 
     public Optional<String> getDedupeString() {
         return this.dedupeString == null ? Optional.empty() : Optional.ofNullable(this.dedupeString);
@@ -37,7 +37,7 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="impact", required=true)
-        private final Integer impact;
+      private final Integer impact;
 
     public Integer getImpact() {
         return this.impact;
@@ -48,7 +48,7 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="notificationTargets")
-        private final @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets;
+      private final @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets;
 
     public List<ResponsePlanNotificationTargetItem> getNotificationTargets() {
         return this.notificationTargets == null ? List.of() : this.notificationTargets;
@@ -59,7 +59,7 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="summary")
-        private final @Nullable String summary;
+      private final @Nullable String summary;
 
     public Optional<String> getSummary() {
         return this.summary == null ? Optional.empty() : Optional.ofNullable(this.summary);
@@ -70,7 +70,7 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="title", required=true)
-        private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;

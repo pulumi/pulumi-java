@@ -25,7 +25,7 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="buildpackGroups")
-        private final @Nullable Input<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
+      private final @Nullable Input<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
 
     public Input<List<BuildpacksGroupPropertiesArgs>> getBuildpackGroups() {
         return this.buildpackGroups == null ? Input.empty() : this.buildpackGroups;
@@ -36,7 +36,7 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stack")
-        private final @Nullable Input<StackPropertiesArgs> stack;
+      private final @Nullable Input<StackPropertiesArgs> stack;
 
     public Input<StackPropertiesArgs> getStack() {
         return this.stack == null ? Input.empty() : this.stack;

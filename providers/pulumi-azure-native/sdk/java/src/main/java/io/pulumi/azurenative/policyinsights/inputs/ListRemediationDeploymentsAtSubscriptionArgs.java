@@ -20,7 +20,7 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends io.pulum
      * 
      */
     @InputImport(name="remediationName", required=true)
-        private final String remediationName;
+      private final String remediationName;
 
     public String getRemediationName() {
         return this.remediationName;
@@ -31,7 +31,7 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends io.pulum
      * 
      */
     @InputImport(name="top")
-        private final @Nullable Integer top;
+      private final @Nullable Integer top;
 
     public Optional<Integer> getTop() {
         return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);

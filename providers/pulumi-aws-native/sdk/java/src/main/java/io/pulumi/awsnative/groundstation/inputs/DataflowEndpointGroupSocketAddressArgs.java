@@ -16,14 +16,14 @@ public final class DataflowEndpointGroupSocketAddressArgs extends io.pulumi.reso
     public static final DataflowEndpointGroupSocketAddressArgs Empty = new DataflowEndpointGroupSocketAddressArgs();
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;

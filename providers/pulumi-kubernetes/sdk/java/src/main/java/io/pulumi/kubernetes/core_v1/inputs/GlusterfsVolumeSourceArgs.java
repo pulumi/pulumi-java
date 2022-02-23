@@ -24,7 +24,7 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="endpoints", required=true)
-        private final Input<String> endpoints;
+      private final Input<String> endpoints;
 
     public Input<String> getEndpoints() {
         return this.endpoints;
@@ -35,7 +35,7 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="path", required=true)
-        private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -46,7 +46,7 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="readOnly")
-        private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;

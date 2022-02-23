@@ -19,14 +19,14 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
     public static final SkuResourcePropertiesArgs Empty = new SkuResourcePropertiesArgs();
 
     @InputImport(name="provisioningState")
-        private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
     public Input<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
     @InputImport(name="skuSettings", required=true)
-        private final Input<List<SkuSettingArgs>> skuSettings;
+      private final Input<List<SkuSettingArgs>> skuSettings;
 
     public Input<List<SkuSettingArgs>> getSkuSettings() {
         return this.skuSettings;

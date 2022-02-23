@@ -23,7 +23,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endIpAddress")
-        private final @Nullable Input<String> endIpAddress;
+      private final @Nullable Input<String> endIpAddress;
 
     public Input<String> getEndIpAddress() {
         return this.endIpAddress == null ? Input.empty() : this.endIpAddress;
@@ -34,7 +34,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-        private final @Nullable Input<String> ruleName;
+      private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -45,7 +45,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startIpAddress")
-        private final @Nullable Input<String> startIpAddress;
+      private final @Nullable Input<String> startIpAddress;
 
     public Input<String> getStartIpAddress() {
         return this.startIpAddress == null ? Input.empty() : this.startIpAddress;

@@ -23,7 +23,7 @@ public final class StorageClassificationMappingPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="targetStorageClassificationId")
-        private final @Nullable String targetStorageClassificationId;
+      private final @Nullable String targetStorageClassificationId;
 
     public Optional<String> getTargetStorageClassificationId() {
         return this.targetStorageClassificationId == null ? Optional.empty() : Optional.ofNullable(this.targetStorageClassificationId);

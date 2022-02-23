@@ -24,7 +24,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="containedResources")
-        private final @Nullable Input<List<String>> containedResources;
+      private final @Nullable Input<List<String>> containedResources;
 
     public Input<List<String>> getContainedResources() {
         return this.containedResources == null ? Input.empty() : this.containedResources;
@@ -35,7 +35,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="referencedResources")
-        private final @Nullable Input<List<String>> referencedResources;
+      private final @Nullable Input<List<String>> referencedResources;
 
     public Input<List<String>> getReferencedResources() {
         return this.referencedResources == null ? Input.empty() : this.referencedResources;
@@ -46,7 +46,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workspaceResourceId", required=true)
-        private final Input<String> workspaceResourceId;
+      private final Input<String> workspaceResourceId;
 
     public Input<String> getWorkspaceResourceId() {
         return this.workspaceResourceId;

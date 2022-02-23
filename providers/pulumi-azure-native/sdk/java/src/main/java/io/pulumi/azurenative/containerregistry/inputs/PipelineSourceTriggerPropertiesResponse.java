@@ -17,7 +17,7 @@ public final class PipelineSourceTriggerPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="status", required=true)
-        private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;

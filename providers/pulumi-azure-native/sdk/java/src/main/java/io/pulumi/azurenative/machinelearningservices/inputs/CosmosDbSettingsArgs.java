@@ -19,7 +19,7 @@ public final class CosmosDbSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="collectionsThroughput")
-        private final @Nullable Input<Integer> collectionsThroughput;
+      private final @Nullable Input<Integer> collectionsThroughput;
 
     public Input<Integer> getCollectionsThroughput() {
         return this.collectionsThroughput == null ? Input.empty() : this.collectionsThroughput;

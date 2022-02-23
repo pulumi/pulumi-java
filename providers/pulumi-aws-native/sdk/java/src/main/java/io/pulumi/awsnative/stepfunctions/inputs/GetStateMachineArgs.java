@@ -13,7 +13,7 @@ public final class GetStateMachineArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetStateMachineArgs Empty = new GetStateMachineArgs();
 
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;

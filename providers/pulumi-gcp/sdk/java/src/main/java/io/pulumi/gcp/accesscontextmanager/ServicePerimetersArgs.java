@@ -22,7 +22,7 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parent", required=true)
-        private final Input<String> parent;
+      private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -34,7 +34,7 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="servicePerimeters")
-        private final @Nullable Input<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters;
+      private final @Nullable Input<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters;
 
     public Input<List<ServicePerimetersServicePerimeterArgs>> getServicePerimeters() {
         return this.servicePerimeters == null ? Input.empty() : this.servicePerimeters;

@@ -16,28 +16,28 @@ public final class CollectorAgentPropertiesResponse extends io.pulumi.resources.
     public static final CollectorAgentPropertiesResponse Empty = new CollectorAgentPropertiesResponse();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
     }
 
     @InputImport(name="lastHeartbeatUtc", required=true)
-        private final String lastHeartbeatUtc;
+      private final String lastHeartbeatUtc;
 
     public String getLastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
 
     @InputImport(name="spnDetails")
-        private final @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails;
+      private final @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails;
 
     public Optional<CollectorBodyAgentSpnPropertiesResponse> getSpnDetails() {
         return this.spnDetails == null ? Optional.empty() : Optional.ofNullable(this.spnDetails);
     }
 
     @InputImport(name="version", required=true)
-        private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;

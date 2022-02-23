@@ -16,14 +16,14 @@ public final class TaskDefinitionFirelensConfigurationArgs extends io.pulumi.res
     public static final TaskDefinitionFirelensConfigurationArgs Empty = new TaskDefinitionFirelensConfigurationArgs();
 
     @InputImport(name="options")
-        private final @Nullable Input<Object> options;
+      private final @Nullable Input<Object> options;
 
     public Input<Object> getOptions() {
         return this.options == null ? Input.empty() : this.options;
     }
 
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

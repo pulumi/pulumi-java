@@ -21,7 +21,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -32,7 +32,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingIntentName")
-        private final @Nullable Input<String> routingIntentName;
+      private final @Nullable Input<String> routingIntentName;
 
     public Input<String> getRoutingIntentName() {
         return this.routingIntentName == null ? Input.empty() : this.routingIntentName;
@@ -65,7 +65,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingPolicies")
-        private final @Nullable Input<List<RoutingPolicyArgs>> routingPolicies;
+      private final @Nullable Input<List<RoutingPolicyArgs>> routingPolicies;
 
     public Input<List<RoutingPolicyArgs>> getRoutingPolicies() {
         return this.routingPolicies == null ? Input.empty() : this.routingPolicies;
@@ -76,7 +76,7 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualHubName", required=true)
-        private final Input<String> virtualHubName;
+      private final Input<String> virtualHubName;
 
     public Input<String> getVirtualHubName() {
         return this.virtualHubName;

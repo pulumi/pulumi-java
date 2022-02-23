@@ -16,14 +16,14 @@ public final class GroupTagFilter extends io.pulumi.resources.InvokeArgs {
     public static final GroupTagFilter Empty = new GroupTagFilter();
 
     @InputImport(name="key")
-        private final @Nullable String key;
+      private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
     @InputImport(name="values")
-        private final @Nullable List<String> values;
+      private final @Nullable List<String> values;
 
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;

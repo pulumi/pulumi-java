@@ -15,7 +15,7 @@ public final class FrontEndConfigurationArgs extends io.pulumi.resources.Resourc
     public static final FrontEndConfigurationArgs Empty = new FrontEndConfigurationArgs();
 
     @InputImport(name="kind")
-        private final @Nullable Input<FrontEndServiceType> kind;
+      private final @Nullable Input<FrontEndServiceType> kind;
 
     public Input<FrontEndServiceType> getKind() {
         return this.kind == null ? Input.empty() : this.kind;

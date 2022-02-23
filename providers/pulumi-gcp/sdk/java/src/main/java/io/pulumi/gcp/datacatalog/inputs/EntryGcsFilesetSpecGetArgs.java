@@ -31,7 +31,7 @@ public final class EntryGcsFilesetSpecGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="filePatterns", required=true)
-        private final Input<List<String>> filePatterns;
+      private final Input<List<String>> filePatterns;
 
     public Input<List<String>> getFilePatterns() {
         return this.filePatterns;
@@ -44,7 +44,7 @@ public final class EntryGcsFilesetSpecGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sampleGcsFileSpecs")
-        private final @Nullable Input<List<EntryGcsFilesetSpecSampleGcsFileSpecGetArgs>> sampleGcsFileSpecs;
+      private final @Nullable Input<List<EntryGcsFilesetSpecSampleGcsFileSpecGetArgs>> sampleGcsFileSpecs;
 
     public Input<List<EntryGcsFilesetSpecSampleGcsFileSpecGetArgs>> getSampleGcsFileSpecs() {
         return this.sampleGcsFileSpecs == null ? Input.empty() : this.sampleGcsFileSpecs;

@@ -23,7 +23,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="artifactGcsUri")
-        private final @Nullable Input<String> artifactGcsUri;
+      private final @Nullable Input<String> artifactGcsUri;
 
     public Input<String> getArtifactGcsUri() {
         return this.artifactGcsUri == null ? Input.empty() : this.artifactGcsUri;
@@ -34,7 +34,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endpointUri")
-        private final @Nullable Input<String> endpointUri;
+      private final @Nullable Input<String> endpointUri;
 
     public Input<String> getEndpointUri() {
         return this.endpointUri == null ? Input.empty() : this.endpointUri;
@@ -46,7 +46,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hiveMetastoreConfig")
-        private final @Nullable Input<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig;
+      private final @Nullable Input<MetastoreServiceHiveMetastoreConfigGetArgs> hiveMetastoreConfig;
 
     public Input<MetastoreServiceHiveMetastoreConfigGetArgs> getHiveMetastoreConfig() {
         return this.hiveMetastoreConfig == null ? Input.empty() : this.hiveMetastoreConfig;
@@ -57,7 +57,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -69,7 +69,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -82,7 +82,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maintenanceWindow")
-        private final @Nullable Input<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow;
+      private final @Nullable Input<MetastoreServiceMaintenanceWindowGetArgs> maintenanceWindow;
 
     public Input<MetastoreServiceMaintenanceWindowGetArgs> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -93,7 +93,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -105,7 +105,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="network")
-        private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -116,7 +116,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -128,7 +128,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -141,7 +141,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceId")
-        private final @Nullable Input<String> serviceId;
+      private final @Nullable Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId == null ? Input.empty() : this.serviceId;
@@ -152,7 +152,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="state")
-        private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -163,7 +163,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stateMessage")
-        private final @Nullable Input<String> stateMessage;
+      private final @Nullable Input<String> stateMessage;
 
     public Input<String> getStateMessage() {
         return this.stateMessage == null ? Input.empty() : this.stateMessage;
@@ -175,7 +175,7 @@ public final class MetastoreServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<String> tier;
+      private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;

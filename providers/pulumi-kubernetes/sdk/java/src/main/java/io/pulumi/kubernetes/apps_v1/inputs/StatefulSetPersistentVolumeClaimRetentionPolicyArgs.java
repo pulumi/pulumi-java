@@ -23,7 +23,7 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
      * 
      */
     @InputImport(name="whenDeleted")
-        private final @Nullable Input<String> whenDeleted;
+      private final @Nullable Input<String> whenDeleted;
 
     public Input<String> getWhenDeleted() {
         return this.whenDeleted == null ? Input.empty() : this.whenDeleted;
@@ -34,7 +34,7 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
      * 
      */
     @InputImport(name="whenScaled")
-        private final @Nullable Input<String> whenScaled;
+      private final @Nullable Input<String> whenScaled;
 
     public Input<String> getWhenScaled() {
         return this.whenScaled == null ? Input.empty() : this.whenScaled;

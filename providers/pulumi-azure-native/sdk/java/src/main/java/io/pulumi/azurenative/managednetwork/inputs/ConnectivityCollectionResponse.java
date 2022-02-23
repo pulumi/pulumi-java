@@ -23,7 +23,7 @@ public final class ConnectivityCollectionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="groups", required=true)
-        private final List<ManagedNetworkGroupResponse> groups;
+      private final List<ManagedNetworkGroupResponse> groups;
 
     public List<ManagedNetworkGroupResponse> getGroups() {
         return this.groups;
@@ -34,7 +34,7 @@ public final class ConnectivityCollectionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="peerings", required=true)
-        private final List<ManagedNetworkPeeringPolicyResponse> peerings;
+      private final List<ManagedNetworkPeeringPolicyResponse> peerings;
 
     public List<ManagedNetworkPeeringPolicyResponse> getPeerings() {
         return this.peerings;

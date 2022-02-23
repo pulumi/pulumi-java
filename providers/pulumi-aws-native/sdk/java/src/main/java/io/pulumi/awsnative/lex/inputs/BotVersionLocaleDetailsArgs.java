@@ -18,7 +18,7 @@ public final class BotVersionLocaleDetailsArgs extends io.pulumi.resources.Resou
     public static final BotVersionLocaleDetailsArgs Empty = new BotVersionLocaleDetailsArgs();
 
     @InputImport(name="sourceBotVersion", required=true)
-        private final Input<String> sourceBotVersion;
+      private final Input<String> sourceBotVersion;
 
     public Input<String> getSourceBotVersion() {
         return this.sourceBotVersion;

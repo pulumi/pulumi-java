@@ -22,7 +22,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -33,7 +33,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName")
-        private final @Nullable Input<String> metricName;
+      private final @Nullable Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName == null ? Input.empty() : this.metricName;
@@ -44,7 +44,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricType", required=true)
-        private final Input<CustomMetricMetricType> metricType;
+      private final Input<CustomMetricMetricType> metricType;
 
     public Input<CustomMetricMetricType> getMetricType() {
         return this.metricType;
@@ -55,7 +55,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<CustomMetricTagArgs>> tags;
+      private final @Nullable Input<List<CustomMetricTagArgs>> tags;
 
     public Input<List<CustomMetricTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

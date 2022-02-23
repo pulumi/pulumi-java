@@ -23,7 +23,7 @@ public final class PipelinePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elapsedTimeMetric")
-        private final @Nullable Input<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
+      private final @Nullable Input<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
 
     public Input<PipelineElapsedTimeMetricPolicyArgs> getElapsedTimeMetric() {
         return this.elapsedTimeMetric == null ? Input.empty() : this.elapsedTimeMetric;

@@ -23,7 +23,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
      * 
      */
     @InputImport(name="exec")
-        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs> exec;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs> exec;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs> getExec() {
         return this.exec == null ? Input.empty() : this.exec;
@@ -34,7 +34,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
      * 
      */
     @InputImport(name="file")
-        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs> file;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs> file;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -45,7 +45,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
      * 
      */
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -56,7 +56,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
      * 
      */
     @InputImport(name="pkg")
-        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs> pkg;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs> pkg;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs> getPkg() {
         return this.pkg == null ? Input.empty() : this.pkg;
@@ -67,7 +67,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
      * 
      */
     @InputImport(name="repository")
-        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs> repository;
+      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs> repository;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs> getRepository() {
         return this.repository == null ? Input.empty() : this.repository;

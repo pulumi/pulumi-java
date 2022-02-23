@@ -23,7 +23,7 @@ public final class GitHubActionCodeConfigurationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="runtimeStack")
-        private final @Nullable String runtimeStack;
+      private final @Nullable String runtimeStack;
 
     public Optional<String> getRuntimeStack() {
         return this.runtimeStack == null ? Optional.empty() : Optional.ofNullable(this.runtimeStack);
@@ -34,7 +34,7 @@ public final class GitHubActionCodeConfigurationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="runtimeVersion")
-        private final @Nullable String runtimeVersion;
+      private final @Nullable String runtimeVersion;
 
     public Optional<String> getRuntimeVersion() {
         return this.runtimeVersion == null ? Optional.empty() : Optional.ofNullable(this.runtimeVersion);

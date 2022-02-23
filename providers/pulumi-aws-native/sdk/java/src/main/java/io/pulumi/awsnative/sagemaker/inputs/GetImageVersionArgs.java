@@ -13,7 +13,7 @@ public final class GetImageVersionArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetImageVersionArgs Empty = new GetImageVersionArgs();
 
     @InputImport(name="imageVersionArn", required=true)
-        private final String imageVersionArn;
+      private final String imageVersionArn;
 
     public String getImageVersionArn() {
         return this.imageVersionArn;

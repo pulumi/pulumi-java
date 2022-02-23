@@ -21,7 +21,7 @@ public final class ConfigurationInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ConfigurationInfoResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="version", required=true)
-        private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;

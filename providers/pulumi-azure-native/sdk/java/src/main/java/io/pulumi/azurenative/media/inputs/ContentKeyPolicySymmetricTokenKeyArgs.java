@@ -22,7 +22,7 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="keyValue", required=true)
-        private final Input<String> keyValue;
+      private final Input<String> keyValue;
 
     public Input<String> getKeyValue() {
         return this.keyValue;
@@ -34,7 +34,7 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final Input<String> odataType;
+      private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;

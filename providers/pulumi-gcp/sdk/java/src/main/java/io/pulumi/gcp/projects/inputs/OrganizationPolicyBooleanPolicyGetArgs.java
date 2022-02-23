@@ -18,7 +18,7 @@ public final class OrganizationPolicyBooleanPolicyGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="enforced", required=true)
-        private final Input<Boolean> enforced;
+      private final Input<Boolean> enforced;
 
     public Input<Boolean> getEnforced() {
         return this.enforced;

@@ -38,7 +38,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalCapabilities")
-        private final @Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities;
+      private final @Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities;
 
     public Input<AdditionalCapabilitiesArgs> getAdditionalCapabilities() {
         return this.additionalCapabilities == null ? Input.empty() : this.additionalCapabilities;
@@ -49,7 +49,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilitySet")
-        private final @Nullable Input<SubResourceArgs> availabilitySet;
+      private final @Nullable Input<SubResourceArgs> availabilitySet;
 
     public Input<SubResourceArgs> getAvailabilitySet() {
         return this.availabilitySet == null ? Input.empty() : this.availabilitySet;
@@ -60,7 +60,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingProfile")
-        private final @Nullable Input<BillingProfileArgs> billingProfile;
+      private final @Nullable Input<BillingProfileArgs> billingProfile;
 
     public Input<BillingProfileArgs> getBillingProfile() {
         return this.billingProfile == null ? Input.empty() : this.billingProfile;
@@ -71,7 +71,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diagnosticsProfile")
-        private final @Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile;
+      private final @Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile;
 
     public Input<DiagnosticsProfileArgs> getDiagnosticsProfile() {
         return this.diagnosticsProfile == null ? Input.empty() : this.diagnosticsProfile;
@@ -82,7 +82,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evictionPolicy")
-        private final @Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
+      private final @Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
 
     public Input<Either<String,VirtualMachineEvictionPolicyTypes>> getEvictionPolicy() {
         return this.evictionPolicy == null ? Input.empty() : this.evictionPolicy;
@@ -93,7 +93,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -104,7 +104,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensionsTimeBudget")
-        private final @Nullable Input<String> extensionsTimeBudget;
+      private final @Nullable Input<String> extensionsTimeBudget;
 
     public Input<String> getExtensionsTimeBudget() {
         return this.extensionsTimeBudget == null ? Input.empty() : this.extensionsTimeBudget;
@@ -115,7 +115,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hardwareProfile")
-        private final @Nullable Input<HardwareProfileArgs> hardwareProfile;
+      private final @Nullable Input<HardwareProfileArgs> hardwareProfile;
 
     public Input<HardwareProfileArgs> getHardwareProfile() {
         return this.hardwareProfile == null ? Input.empty() : this.hardwareProfile;
@@ -126,7 +126,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-        private final @Nullable Input<SubResourceArgs> host;
+      private final @Nullable Input<SubResourceArgs> host;
 
     public Input<SubResourceArgs> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -137,7 +137,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostGroup")
-        private final @Nullable Input<SubResourceArgs> hostGroup;
+      private final @Nullable Input<SubResourceArgs> hostGroup;
 
     public Input<SubResourceArgs> getHostGroup() {
         return this.hostGroup == null ? Input.empty() : this.hostGroup;
@@ -148,7 +148,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<VirtualMachineIdentityArgs> identity;
+      private final @Nullable Input<VirtualMachineIdentityArgs> identity;
 
     public Input<VirtualMachineIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -159,7 +159,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseType")
-        private final @Nullable Input<String> licenseType;
+      private final @Nullable Input<String> licenseType;
 
     public Input<String> getLicenseType() {
         return this.licenseType == null ? Input.empty() : this.licenseType;
@@ -170,7 +170,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -181,7 +181,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfile")
-        private final @Nullable Input<NetworkProfileArgs> networkProfile;
+      private final @Nullable Input<NetworkProfileArgs> networkProfile;
 
     public Input<NetworkProfileArgs> getNetworkProfile() {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
@@ -192,7 +192,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osProfile")
-        private final @Nullable Input<OSProfileArgs> osProfile;
+      private final @Nullable Input<OSProfileArgs> osProfile;
 
     public Input<OSProfileArgs> getOsProfile() {
         return this.osProfile == null ? Input.empty() : this.osProfile;
@@ -203,7 +203,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plan")
-        private final @Nullable Input<PlanArgs> plan;
+      private final @Nullable Input<PlanArgs> plan;
 
     public Input<PlanArgs> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
@@ -214,7 +214,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformFaultDomain")
-        private final @Nullable Input<Integer> platformFaultDomain;
+      private final @Nullable Input<Integer> platformFaultDomain;
 
     public Input<Integer> getPlatformFaultDomain() {
         return this.platformFaultDomain == null ? Input.empty() : this.platformFaultDomain;
@@ -225,7 +225,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-        private final @Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority;
+      private final @Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority;
 
     public Input<Either<String,VirtualMachinePriorityTypes>> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -236,7 +236,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proximityPlacementGroup")
-        private final @Nullable Input<SubResourceArgs> proximityPlacementGroup;
+      private final @Nullable Input<SubResourceArgs> proximityPlacementGroup;
 
     public Input<SubResourceArgs> getProximityPlacementGroup() {
         return this.proximityPlacementGroup == null ? Input.empty() : this.proximityPlacementGroup;
@@ -247,7 +247,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -258,7 +258,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduledEventsProfile")
-        private final @Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile;
+      private final @Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile;
 
     public Input<ScheduledEventsProfileArgs> getScheduledEventsProfile() {
         return this.scheduledEventsProfile == null ? Input.empty() : this.scheduledEventsProfile;
@@ -269,7 +269,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityProfile")
-        private final @Nullable Input<SecurityProfileArgs> securityProfile;
+      private final @Nullable Input<SecurityProfileArgs> securityProfile;
 
     public Input<SecurityProfileArgs> getSecurityProfile() {
         return this.securityProfile == null ? Input.empty() : this.securityProfile;
@@ -280,7 +280,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageProfile")
-        private final @Nullable Input<StorageProfileArgs> storageProfile;
+      private final @Nullable Input<StorageProfileArgs> storageProfile;
 
     public Input<StorageProfileArgs> getStorageProfile() {
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
@@ -291,7 +291,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -302,7 +302,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userData")
-        private final @Nullable Input<String> userData;
+      private final @Nullable Input<String> userData;
 
     public Input<String> getUserData() {
         return this.userData == null ? Input.empty() : this.userData;
@@ -313,7 +313,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualMachineScaleSet")
-        private final @Nullable Input<SubResourceArgs> virtualMachineScaleSet;
+      private final @Nullable Input<SubResourceArgs> virtualMachineScaleSet;
 
     public Input<SubResourceArgs> getVirtualMachineScaleSet() {
         return this.virtualMachineScaleSet == null ? Input.empty() : this.virtualMachineScaleSet;
@@ -324,7 +324,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmName")
-        private final @Nullable Input<String> vmName;
+      private final @Nullable Input<String> vmName;
 
     public Input<String> getVmName() {
         return this.vmName == null ? Input.empty() : this.vmName;
@@ -335,7 +335,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-        private final @Nullable Input<List<String>> zones;
+      private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;

@@ -26,7 +26,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * 
      */
     @InputImport(name="deleteOnTermination")
-        private final @Nullable Input<Boolean> deleteOnTermination;
+      private final @Nullable Input<Boolean> deleteOnTermination;
 
     public Input<Boolean> getDeleteOnTermination() {
         return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
@@ -37,7 +37,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * 
      */
     @InputImport(name="encrypted")
-        private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Input<Boolean> encrypted;
 
     public Input<Boolean> getEncrypted() {
         return this.encrypted == null ? Input.empty() : this.encrypted;
@@ -48,7 +48,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * 
      */
     @InputImport(name="iops")
-        private final @Nullable Input<Integer> iops;
+      private final @Nullable Input<Integer> iops;
 
     public Input<Integer> getIops() {
         return this.iops == null ? Input.empty() : this.iops;
@@ -59,7 +59,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * 
      */
     @InputImport(name="kmsKeyId")
-        private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -70,7 +70,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * 
      */
     @InputImport(name="snapshotId")
-        private final @Nullable Input<String> snapshotId;
+      private final @Nullable Input<String> snapshotId;
 
     public Input<String> getSnapshotId() {
         return this.snapshotId == null ? Input.empty() : this.snapshotId;
@@ -81,7 +81,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * 
      */
     @InputImport(name="throughput")
-        private final @Nullable Input<Integer> throughput;
+      private final @Nullable Input<Integer> throughput;
 
     public Input<Integer> getThroughput() {
         return this.throughput == null ? Input.empty() : this.throughput;
@@ -92,7 +92,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * 
      */
     @InputImport(name="volumeSize")
-        private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Input<Integer> volumeSize;
 
     public Input<Integer> getVolumeSize() {
         return this.volumeSize == null ? Input.empty() : this.volumeSize;
@@ -103,7 +103,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * 
      */
     @InputImport(name="volumeType")
-        private final @Nullable Input<ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType> volumeType;
+      private final @Nullable Input<ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType> volumeType;
 
     public Input<ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType> getVolumeType() {
         return this.volumeType == null ? Input.empty() : this.volumeType;

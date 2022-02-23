@@ -20,7 +20,7 @@ public final class ResponsePlanChatChannelArgs extends io.pulumi.resources.Resou
     public static final ResponsePlanChatChannelArgs Empty = new ResponsePlanChatChannelArgs();
 
     @InputImport(name="chatbotSns")
-        private final @Nullable Input<List<String>> chatbotSns;
+      private final @Nullable Input<List<String>> chatbotSns;
 
     public Input<List<String>> getChatbotSns() {
         return this.chatbotSns == null ? Input.empty() : this.chatbotSns;

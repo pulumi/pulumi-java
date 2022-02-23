@@ -20,14 +20,14 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="notificationRegistrationName")
-        private final @Nullable Input<String> notificationRegistrationName;
+      private final @Nullable Input<String> notificationRegistrationName;
 
     public Input<String> getNotificationRegistrationName() {
         return this.notificationRegistrationName == null ? Input.empty() : this.notificationRegistrationName;
     }
 
     @InputImport(name="properties")
-        private final @Nullable Input<NotificationRegistrationPropertiesArgs> properties;
+      private final @Nullable Input<NotificationRegistrationPropertiesArgs> properties;
 
     public Input<NotificationRegistrationPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -38,7 +38,7 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-        private final Input<String> providerNamespace;
+      private final Input<String> providerNamespace;
 
     public Input<String> getProviderNamespace() {
         return this.providerNamespace;

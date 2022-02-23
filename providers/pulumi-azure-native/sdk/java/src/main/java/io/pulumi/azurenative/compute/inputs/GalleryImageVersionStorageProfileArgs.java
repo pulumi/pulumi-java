@@ -26,7 +26,7 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="dataDiskImages")
-        private final @Nullable Input<List<GalleryDataDiskImageArgs>> dataDiskImages;
+      private final @Nullable Input<List<GalleryDataDiskImageArgs>> dataDiskImages;
 
     public Input<List<GalleryDataDiskImageArgs>> getDataDiskImages() {
         return this.dataDiskImages == null ? Input.empty() : this.dataDiskImages;
@@ -37,7 +37,7 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="osDiskImage")
-        private final @Nullable Input<GalleryOSDiskImageArgs> osDiskImage;
+      private final @Nullable Input<GalleryOSDiskImageArgs> osDiskImage;
 
     public Input<GalleryOSDiskImageArgs> getOsDiskImage() {
         return this.osDiskImage == null ? Input.empty() : this.osDiskImage;
@@ -48,7 +48,7 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="source")
-        private final @Nullable Input<GalleryArtifactVersionSourceArgs> source;
+      private final @Nullable Input<GalleryArtifactVersionSourceArgs> source;
 
     public Input<GalleryArtifactVersionSourceArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;

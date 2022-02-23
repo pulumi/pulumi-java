@@ -22,7 +22,7 @@ public final class AlertLambdaConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lambdaArn", required=true)
-        private final Input<String> lambdaArn;
+      private final Input<String> lambdaArn;
 
     public Input<String> getLambdaArn() {
         return this.lambdaArn;
@@ -33,7 +33,7 @@ public final class AlertLambdaConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

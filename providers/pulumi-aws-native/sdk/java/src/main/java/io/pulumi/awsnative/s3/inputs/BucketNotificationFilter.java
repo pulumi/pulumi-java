@@ -17,7 +17,7 @@ public final class BucketNotificationFilter extends io.pulumi.resources.InvokeAr
     public static final BucketNotificationFilter Empty = new BucketNotificationFilter();
 
     @InputImport(name="s3Key", required=true)
-        private final BucketS3KeyFilter s3Key;
+      private final BucketS3KeyFilter s3Key;
 
     public BucketS3KeyFilter getS3Key() {
         return this.s3Key;

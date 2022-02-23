@@ -24,7 +24,7 @@ public final class IoTEdgeAgentInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="imageName", required=true)
-        private final String imageName;
+      private final String imageName;
 
     public String getImageName() {
         return this.imageName;
@@ -35,7 +35,7 @@ public final class IoTEdgeAgentInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="imageRepository")
-        private final @Nullable ImageRepositoryCredentialResponse imageRepository;
+      private final @Nullable ImageRepositoryCredentialResponse imageRepository;
 
     public Optional<ImageRepositoryCredentialResponse> getImageRepository() {
         return this.imageRepository == null ? Optional.empty() : Optional.ofNullable(this.imageRepository);
@@ -46,7 +46,7 @@ public final class IoTEdgeAgentInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tag", required=true)
-        private final String tag;
+      private final String tag;
 
     public String getTag() {
         return this.tag;

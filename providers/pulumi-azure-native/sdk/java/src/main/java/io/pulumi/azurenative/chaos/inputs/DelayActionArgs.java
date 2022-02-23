@@ -22,7 +22,7 @@ public final class DelayActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="duration", required=true)
-        private final Input<String> duration;
+      private final Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration;
@@ -33,7 +33,7 @@ public final class DelayActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class DelayActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

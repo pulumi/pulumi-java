@@ -19,7 +19,7 @@ public final class ExcludedPathResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path")
-        private final @Nullable String path;
+      private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);

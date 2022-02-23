@@ -16,21 +16,21 @@ public final class ConnectorProfileOAuthPropertiesArgs extends io.pulumi.resourc
     public static final ConnectorProfileOAuthPropertiesArgs Empty = new ConnectorProfileOAuthPropertiesArgs();
 
     @InputImport(name="authCodeUrl")
-        private final @Nullable Input<String> authCodeUrl;
+      private final @Nullable Input<String> authCodeUrl;
 
     public Input<String> getAuthCodeUrl() {
         return this.authCodeUrl == null ? Input.empty() : this.authCodeUrl;
     }
 
     @InputImport(name="oAuthScopes")
-        private final @Nullable Input<List<String>> oAuthScopes;
+      private final @Nullable Input<List<String>> oAuthScopes;
 
     public Input<List<String>> getOAuthScopes() {
         return this.oAuthScopes == null ? Input.empty() : this.oAuthScopes;
     }
 
     @InputImport(name="tokenUrl")
-        private final @Nullable Input<String> tokenUrl;
+      private final @Nullable Input<String> tokenUrl;
 
     public Input<String> getTokenUrl() {
         return this.tokenUrl == null ? Input.empty() : this.tokenUrl;

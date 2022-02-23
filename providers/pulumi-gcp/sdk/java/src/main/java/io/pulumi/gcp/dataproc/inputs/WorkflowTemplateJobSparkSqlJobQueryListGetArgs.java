@@ -19,7 +19,7 @@ public final class WorkflowTemplateJobSparkSqlJobQueryListGetArgs extends io.pul
      * 
      */
     @InputImport(name="queries", required=true)
-        private final Input<List<String>> queries;
+      private final Input<List<String>> queries;
 
     public Input<List<String>> getQueries() {
         return this.queries;

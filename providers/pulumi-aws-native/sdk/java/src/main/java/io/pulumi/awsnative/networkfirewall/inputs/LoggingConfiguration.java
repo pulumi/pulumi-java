@@ -14,7 +14,7 @@ public final class LoggingConfiguration extends io.pulumi.resources.InvokeArgs {
     public static final LoggingConfiguration Empty = new LoggingConfiguration();
 
     @InputImport(name="logDestinationConfigs", required=true)
-        private final List<LoggingConfigurationLogDestinationConfig> logDestinationConfigs;
+      private final List<LoggingConfigurationLogDestinationConfig> logDestinationConfigs;
 
     public List<LoggingConfigurationLogDestinationConfig> getLogDestinationConfigs() {
         return this.logDestinationConfigs;

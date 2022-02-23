@@ -19,7 +19,7 @@ public final class WorkflowTemplateParameterValidationRegexArgs extends io.pulum
      * 
      */
     @InputImport(name="regexes", required=true)
-        private final Input<List<String>> regexes;
+      private final Input<List<String>> regexes;
 
     public Input<List<String>> getRegexes() {
         return this.regexes;

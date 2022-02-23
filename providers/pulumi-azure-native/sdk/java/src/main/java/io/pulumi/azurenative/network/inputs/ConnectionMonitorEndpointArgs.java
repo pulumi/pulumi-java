@@ -28,7 +28,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="address")
-        private final @Nullable Input<String> address;
+      private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -39,7 +39,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="coverageLevel")
-        private final @Nullable Input<Either<String,CoverageLevel>> coverageLevel;
+      private final @Nullable Input<Either<String,CoverageLevel>> coverageLevel;
 
     public Input<Either<String,CoverageLevel>> getCoverageLevel() {
         return this.coverageLevel == null ? Input.empty() : this.coverageLevel;
@@ -50,7 +50,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="filter")
-        private final @Nullable Input<ConnectionMonitorEndpointFilterArgs> filter;
+      private final @Nullable Input<ConnectionMonitorEndpointFilterArgs> filter;
 
     public Input<ConnectionMonitorEndpointFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -61,7 +61,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -72,7 +72,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceId")
-        private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -83,7 +83,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="scope")
-        private final @Nullable Input<ConnectionMonitorEndpointScopeArgs> scope;
+      private final @Nullable Input<ConnectionMonitorEndpointScopeArgs> scope;
 
     public Input<ConnectionMonitorEndpointScopeArgs> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -94,7 +94,7 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,EndpointType>> type;
+      private final @Nullable Input<Either<String,EndpointType>> type;
 
     public Input<Either<String,EndpointType>> getType() {
         return this.type == null ? Input.empty() : this.type;

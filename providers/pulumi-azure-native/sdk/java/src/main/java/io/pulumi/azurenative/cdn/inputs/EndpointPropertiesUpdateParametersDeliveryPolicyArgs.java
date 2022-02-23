@@ -25,7 +25,7 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
      * 
      */
     @InputImport(name="rules", required=true)
-        private final Input<List<DeliveryRuleArgs>> rules;
+      private final Input<List<DeliveryRuleArgs>> rules;
 
     public Input<List<DeliveryRuleArgs>> getRules() {
         return this.rules;

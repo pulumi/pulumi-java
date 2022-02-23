@@ -14,7 +14,7 @@ public final class WebACLLabelArgs extends io.pulumi.resources.ResourceArgs {
     public static final WebACLLabelArgs Empty = new WebACLLabelArgs();
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

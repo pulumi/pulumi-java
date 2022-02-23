@@ -23,7 +23,7 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="logLevel", required=true)
-        private final Input<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
+      private final Input<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
 
     public Input<MitigationActionEnableIoTLoggingParamsLogLevel> getLogLevel() {
         return this.logLevel;
@@ -34,7 +34,7 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="roleArnForLogging", required=true)
-        private final Input<String> roleArnForLogging;
+      private final Input<String> roleArnForLogging;
 
     public Input<String> getRoleArnForLogging() {
         return this.roleArnForLogging;

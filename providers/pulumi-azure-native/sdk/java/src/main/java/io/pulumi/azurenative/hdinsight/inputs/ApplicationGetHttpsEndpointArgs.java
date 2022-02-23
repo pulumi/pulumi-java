@@ -26,7 +26,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="accessModes")
-        private final @Nullable Input<List<String>> accessModes;
+      private final @Nullable Input<List<String>> accessModes;
 
     public Input<List<String>> getAccessModes() {
         return this.accessModes == null ? Input.empty() : this.accessModes;
@@ -37,7 +37,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="destinationPort")
-        private final @Nullable Input<Integer> destinationPort;
+      private final @Nullable Input<Integer> destinationPort;
 
     public Input<Integer> getDestinationPort() {
         return this.destinationPort == null ? Input.empty() : this.destinationPort;
@@ -48,7 +48,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="disableGatewayAuth")
-        private final @Nullable Input<Boolean> disableGatewayAuth;
+      private final @Nullable Input<Boolean> disableGatewayAuth;
 
     public Input<Boolean> getDisableGatewayAuth() {
         return this.disableGatewayAuth == null ? Input.empty() : this.disableGatewayAuth;
@@ -59,7 +59,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="privateIPAddress")
-        private final @Nullable Input<String> privateIPAddress;
+      private final @Nullable Input<String> privateIPAddress;
 
     public Input<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
@@ -70,7 +70,7 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subDomainSuffix")
-        private final @Nullable Input<String> subDomainSuffix;
+      private final @Nullable Input<String> subDomainSuffix;
 
     public Input<String> getSubDomainSuffix() {
         return this.subDomainSuffix == null ? Input.empty() : this.subDomainSuffix;

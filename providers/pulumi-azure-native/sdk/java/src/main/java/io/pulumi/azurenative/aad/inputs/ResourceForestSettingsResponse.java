@@ -25,7 +25,7 @@ public final class ResourceForestSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceForest")
-        private final @Nullable String resourceForest;
+      private final @Nullable String resourceForest;
 
     public Optional<String> getResourceForest() {
         return this.resourceForest == null ? Optional.empty() : Optional.ofNullable(this.resourceForest);
@@ -36,7 +36,7 @@ public final class ResourceForestSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="settings")
-        private final @Nullable List<ForestTrustResponse> settings;
+      private final @Nullable List<ForestTrustResponse> settings;
 
     public List<ForestTrustResponse> getSettings() {
         return this.settings == null ? List.of() : this.settings;

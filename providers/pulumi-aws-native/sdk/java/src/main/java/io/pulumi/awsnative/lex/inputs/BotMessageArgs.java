@@ -22,28 +22,28 @@ public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
     public static final BotMessageArgs Empty = new BotMessageArgs();
 
     @InputImport(name="customPayload")
-        private final @Nullable Input<BotCustomPayloadArgs> customPayload;
+      private final @Nullable Input<BotCustomPayloadArgs> customPayload;
 
     public Input<BotCustomPayloadArgs> getCustomPayload() {
         return this.customPayload == null ? Input.empty() : this.customPayload;
     }
 
     @InputImport(name="imageResponseCard")
-        private final @Nullable Input<BotImageResponseCardArgs> imageResponseCard;
+      private final @Nullable Input<BotImageResponseCardArgs> imageResponseCard;
 
     public Input<BotImageResponseCardArgs> getImageResponseCard() {
         return this.imageResponseCard == null ? Input.empty() : this.imageResponseCard;
     }
 
     @InputImport(name="plainTextMessage")
-        private final @Nullable Input<BotPlainTextMessageArgs> plainTextMessage;
+      private final @Nullable Input<BotPlainTextMessageArgs> plainTextMessage;
 
     public Input<BotPlainTextMessageArgs> getPlainTextMessage() {
         return this.plainTextMessage == null ? Input.empty() : this.plainTextMessage;
     }
 
     @InputImport(name="sSMLMessage")
-        private final @Nullable Input<BotSSMLMessageArgs> sSMLMessage;
+      private final @Nullable Input<BotSSMLMessageArgs> sSMLMessage;
 
     public Input<BotSSMLMessageArgs> getSSMLMessage() {
         return this.sSMLMessage == null ? Input.empty() : this.sSMLMessage;

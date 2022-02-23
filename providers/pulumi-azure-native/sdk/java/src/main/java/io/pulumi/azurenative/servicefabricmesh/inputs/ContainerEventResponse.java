@@ -24,7 +24,7 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Integer count;
+      private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
@@ -35,7 +35,7 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="firstTimestamp")
-        private final @Nullable String firstTimestamp;
+      private final @Nullable String firstTimestamp;
 
     public Optional<String> getFirstTimestamp() {
         return this.firstTimestamp == null ? Optional.empty() : Optional.ofNullable(this.firstTimestamp);
@@ -46,7 +46,7 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="lastTimestamp")
-        private final @Nullable String lastTimestamp;
+      private final @Nullable String lastTimestamp;
 
     public Optional<String> getLastTimestamp() {
         return this.lastTimestamp == null ? Optional.empty() : Optional.ofNullable(this.lastTimestamp);
@@ -57,7 +57,7 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="message")
-        private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -68,7 +68,7 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -79,7 +79,7 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

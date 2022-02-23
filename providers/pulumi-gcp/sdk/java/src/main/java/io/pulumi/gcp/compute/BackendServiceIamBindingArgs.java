@@ -17,35 +17,35 @@ public final class BackendServiceIamBindingArgs extends io.pulumi.resources.Reso
     public static final BackendServiceIamBindingArgs Empty = new BackendServiceIamBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<BackendServiceIamBindingConditionArgs> condition;
+      private final @Nullable Input<BackendServiceIamBindingConditionArgs> condition;
 
     public Input<BackendServiceIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;

@@ -31,7 +31,7 @@ public final class StreamInputPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="datasource")
-        private final @Nullable Object datasource;
+      private final @Nullable Object datasource;
 
     public Object getDatasource() {
         return this.datasource == null ? null : this.datasource;
@@ -42,7 +42,7 @@ public final class StreamInputPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="diagnostics", required=true)
-        private final DiagnosticsResponse diagnostics;
+      private final DiagnosticsResponse diagnostics;
 
     public DiagnosticsResponse getDiagnostics() {
         return this.diagnostics;
@@ -53,7 +53,7 @@ public final class StreamInputPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -64,7 +64,7 @@ public final class StreamInputPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="serialization")
-        private final @Nullable Object serialization;
+      private final @Nullable Object serialization;
 
     public Object getSerialization() {
         return this.serialization == null ? null : this.serialization;
@@ -76,7 +76,7 @@ public final class StreamInputPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

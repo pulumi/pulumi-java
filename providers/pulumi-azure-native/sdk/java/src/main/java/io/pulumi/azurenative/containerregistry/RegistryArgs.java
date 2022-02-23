@@ -25,7 +25,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUserEnabled")
-        private final @Nullable Input<Boolean> adminUserEnabled;
+      private final @Nullable Input<Boolean> adminUserEnabled;
 
     public Input<Boolean> getAdminUserEnabled() {
         return this.adminUserEnabled == null ? Input.empty() : this.adminUserEnabled;
@@ -36,7 +36,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -47,7 +47,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkRuleSet")
-        private final @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
+      private final @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
 
     public Input<NetworkRuleSetArgs> getNetworkRuleSet() {
         return this.networkRuleSet == null ? Input.empty() : this.networkRuleSet;
@@ -58,7 +58,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policies")
-        private final @Nullable Input<PoliciesArgs> policies;
+      private final @Nullable Input<PoliciesArgs> policies;
 
     public Input<PoliciesArgs> getPolicies() {
         return this.policies == null ? Input.empty() : this.policies;
@@ -69,7 +69,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName")
-        private final @Nullable Input<String> registryName;
+      private final @Nullable Input<String> registryName;
 
     public Input<String> getRegistryName() {
         return this.registryName == null ? Input.empty() : this.registryName;
@@ -80,7 +80,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -91,7 +91,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-        private final Input<SkuArgs> sku;
+      private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -102,7 +102,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccount")
-        private final @Nullable Input<StorageAccountPropertiesArgs> storageAccount;
+      private final @Nullable Input<StorageAccountPropertiesArgs> storageAccount;
 
     public Input<StorageAccountPropertiesArgs> getStorageAccount() {
         return this.storageAccount == null ? Input.empty() : this.storageAccount;
@@ -113,7 +113,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

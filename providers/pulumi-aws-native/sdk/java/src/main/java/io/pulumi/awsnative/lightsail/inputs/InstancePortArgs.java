@@ -25,7 +25,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessDirection")
-        private final @Nullable Input<String> accessDirection;
+      private final @Nullable Input<String> accessDirection;
 
     public Input<String> getAccessDirection() {
         return this.accessDirection == null ? Input.empty() : this.accessDirection;
@@ -36,7 +36,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessFrom")
-        private final @Nullable Input<String> accessFrom;
+      private final @Nullable Input<String> accessFrom;
 
     public Input<String> getAccessFrom() {
         return this.accessFrom == null ? Input.empty() : this.accessFrom;
@@ -47,21 +47,21 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessType")
-        private final @Nullable Input<String> accessType;
+      private final @Nullable Input<String> accessType;
 
     public Input<String> getAccessType() {
         return this.accessType == null ? Input.empty() : this.accessType;
     }
 
     @InputImport(name="cidrListAliases")
-        private final @Nullable Input<List<String>> cidrListAliases;
+      private final @Nullable Input<List<String>> cidrListAliases;
 
     public Input<List<String>> getCidrListAliases() {
         return this.cidrListAliases == null ? Input.empty() : this.cidrListAliases;
     }
 
     @InputImport(name="cidrs")
-        private final @Nullable Input<List<String>> cidrs;
+      private final @Nullable Input<List<String>> cidrs;
 
     public Input<List<String>> getCidrs() {
         return this.cidrs == null ? Input.empty() : this.cidrs;
@@ -72,7 +72,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commonName")
-        private final @Nullable Input<String> commonName;
+      private final @Nullable Input<String> commonName;
 
     public Input<String> getCommonName() {
         return this.commonName == null ? Input.empty() : this.commonName;
@@ -83,14 +83,14 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fromPort")
-        private final @Nullable Input<Integer> fromPort;
+      private final @Nullable Input<Integer> fromPort;
 
     public Input<Integer> getFromPort() {
         return this.fromPort == null ? Input.empty() : this.fromPort;
     }
 
     @InputImport(name="ipv6Cidrs")
-        private final @Nullable Input<List<String>> ipv6Cidrs;
+      private final @Nullable Input<List<String>> ipv6Cidrs;
 
     public Input<List<String>> getIpv6Cidrs() {
         return this.ipv6Cidrs == null ? Input.empty() : this.ipv6Cidrs;
@@ -101,7 +101,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -112,7 +112,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toPort")
-        private final @Nullable Input<Integer> toPort;
+      private final @Nullable Input<Integer> toPort;
 
     public Input<Integer> getToPort() {
         return this.toPort == null ? Input.empty() : this.toPort;

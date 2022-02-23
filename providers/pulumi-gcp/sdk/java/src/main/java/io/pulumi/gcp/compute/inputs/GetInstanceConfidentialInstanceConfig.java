@@ -13,7 +13,7 @@ public final class GetInstanceConfidentialInstanceConfig extends io.pulumi.resou
     public static final GetInstanceConfidentialInstanceConfig Empty = new GetInstanceConfidentialInstanceConfig();
 
     @InputImport(name="enableConfidentialCompute", required=true)
-        private final Boolean enableConfidentialCompute;
+      private final Boolean enableConfidentialCompute;
 
     public Boolean getEnableConfidentialCompute() {
         return this.enableConfidentialCompute;

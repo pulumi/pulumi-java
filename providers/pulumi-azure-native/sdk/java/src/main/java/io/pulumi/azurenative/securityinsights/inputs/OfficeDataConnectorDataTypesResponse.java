@@ -25,7 +25,7 @@ public final class OfficeDataConnectorDataTypesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="exchange")
-        private final @Nullable OfficeDataConnectorDataTypesResponseExchange exchange;
+      private final @Nullable OfficeDataConnectorDataTypesResponseExchange exchange;
 
     public Optional<OfficeDataConnectorDataTypesResponseExchange> getExchange() {
         return this.exchange == null ? Optional.empty() : Optional.ofNullable(this.exchange);
@@ -36,7 +36,7 @@ public final class OfficeDataConnectorDataTypesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sharePoint")
-        private final @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint;
+      private final @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint;
 
     public Optional<OfficeDataConnectorDataTypesResponseSharePoint> getSharePoint() {
         return this.sharePoint == null ? Optional.empty() : Optional.ofNullable(this.sharePoint);
@@ -47,7 +47,7 @@ public final class OfficeDataConnectorDataTypesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="teams")
-        private final @Nullable OfficeDataConnectorDataTypesResponseTeams teams;
+      private final @Nullable OfficeDataConnectorDataTypesResponseTeams teams;
 
     public Optional<OfficeDataConnectorDataTypesResponseTeams> getTeams() {
         return this.teams == null ? Optional.empty() : Optional.ofNullable(this.teams);

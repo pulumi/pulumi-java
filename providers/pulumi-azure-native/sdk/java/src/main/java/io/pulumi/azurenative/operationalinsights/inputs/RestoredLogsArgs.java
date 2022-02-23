@@ -23,7 +23,7 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endRestoreTime")
-        private final @Nullable Input<String> endRestoreTime;
+      private final @Nullable Input<String> endRestoreTime;
 
     public Input<String> getEndRestoreTime() {
         return this.endRestoreTime == null ? Input.empty() : this.endRestoreTime;
@@ -34,7 +34,7 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startRestoreTime")
-        private final @Nullable Input<String> startRestoreTime;
+      private final @Nullable Input<String> startRestoreTime;
 
     public Input<String> getStartRestoreTime() {
         return this.startRestoreTime == null ? Input.empty() : this.startRestoreTime;

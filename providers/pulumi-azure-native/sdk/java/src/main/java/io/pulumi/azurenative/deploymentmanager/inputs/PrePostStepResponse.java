@@ -21,7 +21,7 @@ public final class PrePostStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stepId", required=true)
-        private final String stepId;
+      private final String stepId;
 
     public String getStepId() {
         return this.stepId;

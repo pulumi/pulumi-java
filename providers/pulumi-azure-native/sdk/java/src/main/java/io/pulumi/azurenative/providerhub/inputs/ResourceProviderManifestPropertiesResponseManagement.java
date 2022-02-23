@@ -18,56 +18,56 @@ public final class ResourceProviderManifestPropertiesResponseManagement extends 
     public static final ResourceProviderManifestPropertiesResponseManagement Empty = new ResourceProviderManifestPropertiesResponseManagement();
 
     @InputImport(name="incidentContactEmail")
-        private final @Nullable String incidentContactEmail;
+      private final @Nullable String incidentContactEmail;
 
     public Optional<String> getIncidentContactEmail() {
         return this.incidentContactEmail == null ? Optional.empty() : Optional.ofNullable(this.incidentContactEmail);
     }
 
     @InputImport(name="incidentRoutingService")
-        private final @Nullable String incidentRoutingService;
+      private final @Nullable String incidentRoutingService;
 
     public Optional<String> getIncidentRoutingService() {
         return this.incidentRoutingService == null ? Optional.empty() : Optional.ofNullable(this.incidentRoutingService);
     }
 
     @InputImport(name="incidentRoutingTeam")
-        private final @Nullable String incidentRoutingTeam;
+      private final @Nullable String incidentRoutingTeam;
 
     public Optional<String> getIncidentRoutingTeam() {
         return this.incidentRoutingTeam == null ? Optional.empty() : Optional.ofNullable(this.incidentRoutingTeam);
     }
 
     @InputImport(name="manifestOwners")
-        private final @Nullable List<String> manifestOwners;
+      private final @Nullable List<String> manifestOwners;
 
     public List<String> getManifestOwners() {
         return this.manifestOwners == null ? List.of() : this.manifestOwners;
     }
 
     @InputImport(name="resourceAccessPolicy")
-        private final @Nullable String resourceAccessPolicy;
+      private final @Nullable String resourceAccessPolicy;
 
     public Optional<String> getResourceAccessPolicy() {
         return this.resourceAccessPolicy == null ? Optional.empty() : Optional.ofNullable(this.resourceAccessPolicy);
     }
 
     @InputImport(name="resourceAccessRoles")
-        private final @Nullable List<Object> resourceAccessRoles;
+      private final @Nullable List<Object> resourceAccessRoles;
 
     public List<Object> getResourceAccessRoles() {
         return this.resourceAccessRoles == null ? List.of() : this.resourceAccessRoles;
     }
 
     @InputImport(name="schemaOwners")
-        private final @Nullable List<String> schemaOwners;
+      private final @Nullable List<String> schemaOwners;
 
     public List<String> getSchemaOwners() {
         return this.schemaOwners == null ? List.of() : this.schemaOwners;
     }
 
     @InputImport(name="serviceTreeInfos")
-        private final @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos;
+      private final @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos;
 
     public List<ServiceTreeInfoResponse> getServiceTreeInfos() {
         return this.serviceTreeInfos == null ? List.of() : this.serviceTreeInfos;

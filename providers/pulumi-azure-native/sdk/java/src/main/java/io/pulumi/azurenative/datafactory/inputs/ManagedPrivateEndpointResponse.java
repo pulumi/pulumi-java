@@ -26,7 +26,7 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="connectionState")
-        private final @Nullable ConnectionStatePropertiesResponse connectionState;
+      private final @Nullable ConnectionStatePropertiesResponse connectionState;
 
     public Optional<ConnectionStatePropertiesResponse> getConnectionState() {
         return this.connectionState == null ? Optional.empty() : Optional.ofNullable(this.connectionState);
@@ -37,7 +37,7 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="fqdns")
-        private final @Nullable List<String> fqdns;
+      private final @Nullable List<String> fqdns;
 
     public List<String> getFqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
@@ -48,7 +48,7 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="groupId")
-        private final @Nullable String groupId;
+      private final @Nullable String groupId;
 
     public Optional<String> getGroupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
@@ -59,7 +59,7 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="isReserved", required=true)
-        private final Boolean isReserved;
+      private final Boolean isReserved;
 
     public Boolean getIsReserved() {
         return this.isReserved;
@@ -70,7 +70,7 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="privateLinkResourceId")
-        private final @Nullable String privateLinkResourceId;
+      private final @Nullable String privateLinkResourceId;
 
     public Optional<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
@@ -81,7 +81,7 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;

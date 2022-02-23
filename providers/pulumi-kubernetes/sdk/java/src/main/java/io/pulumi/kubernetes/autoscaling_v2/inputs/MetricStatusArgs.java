@@ -28,7 +28,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerResource")
-        private final @Nullable Input<ContainerResourceMetricStatusArgs> containerResource;
+      private final @Nullable Input<ContainerResourceMetricStatusArgs> containerResource;
 
     public Input<ContainerResourceMetricStatusArgs> getContainerResource() {
         return this.containerResource == null ? Input.empty() : this.containerResource;
@@ -39,7 +39,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="external")
-        private final @Nullable Input<ExternalMetricStatusArgs> external;
+      private final @Nullable Input<ExternalMetricStatusArgs> external;
 
     public Input<ExternalMetricStatusArgs> getExternal() {
         return this.external == null ? Input.empty() : this.external;
@@ -50,7 +50,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="object")
-        private final @Nullable Input<ObjectMetricStatusArgs> object;
+      private final @Nullable Input<ObjectMetricStatusArgs> object;
 
     public Input<ObjectMetricStatusArgs> getObject() {
         return this.object == null ? Input.empty() : this.object;
@@ -61,7 +61,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pods")
-        private final @Nullable Input<PodsMetricStatusArgs> pods;
+      private final @Nullable Input<PodsMetricStatusArgs> pods;
 
     public Input<PodsMetricStatusArgs> getPods() {
         return this.pods == null ? Input.empty() : this.pods;
@@ -72,7 +72,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resource")
-        private final @Nullable Input<ResourceMetricStatusArgs> resource;
+      private final @Nullable Input<ResourceMetricStatusArgs> resource;
 
     public Input<ResourceMetricStatusArgs> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -83,7 +83,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

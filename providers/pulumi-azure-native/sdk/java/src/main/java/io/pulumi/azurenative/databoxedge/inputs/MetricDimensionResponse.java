@@ -21,7 +21,7 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sourceName", required=true)
-        private final String sourceName;
+      private final String sourceName;
 
     public String getSourceName() {
         return this.sourceName;
@@ -32,7 +32,7 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sourceType", required=true)
-        private final String sourceType;
+      private final String sourceType;
 
     public String getSourceType() {
         return this.sourceType;

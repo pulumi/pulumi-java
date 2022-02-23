@@ -15,7 +15,7 @@ public final class DefaultRolloutSpecificationProviderRegistrationArgs extends i
     public static final DefaultRolloutSpecificationProviderRegistrationArgs Empty = new DefaultRolloutSpecificationProviderRegistrationArgs();
 
     @InputImport(name="properties")
-        private final @Nullable Input<ProviderRegistrationPropertiesArgs> properties;
+      private final @Nullable Input<ProviderRegistrationPropertiesArgs> properties;
 
     public Input<ProviderRegistrationPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;

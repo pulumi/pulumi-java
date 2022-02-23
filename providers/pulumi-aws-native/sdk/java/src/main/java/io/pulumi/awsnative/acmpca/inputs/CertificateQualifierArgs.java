@@ -18,7 +18,7 @@ public final class CertificateQualifierArgs extends io.pulumi.resources.Resource
     public static final CertificateQualifierArgs Empty = new CertificateQualifierArgs();
 
     @InputImport(name="cpsUri", required=true)
-        private final Input<String> cpsUri;
+      private final Input<String> cpsUri;
 
     public Input<String> getCpsUri() {
         return this.cpsUri;

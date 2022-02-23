@@ -17,7 +17,7 @@ public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-        private final String integrationAccountName;
+      private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -28,7 +28,7 @@ public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="rosettaNetProcessConfigurationName", required=true)
-        private final String rosettaNetProcessConfigurationName;
+      private final String rosettaNetProcessConfigurationName;
 
     public String getRosettaNetProcessConfigurationName() {
         return this.rosettaNetProcessConfigurationName;

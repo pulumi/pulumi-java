@@ -20,21 +20,21 @@ public final class BucketDefaultRetentionArgs extends io.pulumi.resources.Resour
     public static final BucketDefaultRetentionArgs Empty = new BucketDefaultRetentionArgs();
 
     @InputImport(name="days")
-        private final @Nullable Input<Integer> days;
+      private final @Nullable Input<Integer> days;
 
     public Input<Integer> getDays() {
         return this.days == null ? Input.empty() : this.days;
     }
 
     @InputImport(name="mode")
-        private final @Nullable Input<BucketDefaultRetentionMode> mode;
+      private final @Nullable Input<BucketDefaultRetentionMode> mode;
 
     public Input<BucketDefaultRetentionMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
     }
 
     @InputImport(name="years")
-        private final @Nullable Input<Integer> years;
+      private final @Nullable Input<Integer> years;
 
     public Input<Integer> getYears() {
         return this.years == null ? Input.empty() : this.years;

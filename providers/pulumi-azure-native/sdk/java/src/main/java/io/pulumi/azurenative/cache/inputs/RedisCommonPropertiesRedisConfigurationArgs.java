@@ -23,7 +23,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="aofStorageConnectionString0")
-        private final @Nullable Input<String> aofStorageConnectionString0;
+      private final @Nullable Input<String> aofStorageConnectionString0;
 
     public Input<String> getAofStorageConnectionString0() {
         return this.aofStorageConnectionString0 == null ? Input.empty() : this.aofStorageConnectionString0;
@@ -34,7 +34,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="aofStorageConnectionString1")
-        private final @Nullable Input<String> aofStorageConnectionString1;
+      private final @Nullable Input<String> aofStorageConnectionString1;
 
     public Input<String> getAofStorageConnectionString1() {
         return this.aofStorageConnectionString1 == null ? Input.empty() : this.aofStorageConnectionString1;
@@ -45,7 +45,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="maxfragmentationmemoryReserved")
-        private final @Nullable Input<String> maxfragmentationmemoryReserved;
+      private final @Nullable Input<String> maxfragmentationmemoryReserved;
 
     public Input<String> getMaxfragmentationmemoryReserved() {
         return this.maxfragmentationmemoryReserved == null ? Input.empty() : this.maxfragmentationmemoryReserved;
@@ -56,7 +56,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="maxmemoryDelta")
-        private final @Nullable Input<String> maxmemoryDelta;
+      private final @Nullable Input<String> maxmemoryDelta;
 
     public Input<String> getMaxmemoryDelta() {
         return this.maxmemoryDelta == null ? Input.empty() : this.maxmemoryDelta;
@@ -67,7 +67,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="maxmemoryPolicy")
-        private final @Nullable Input<String> maxmemoryPolicy;
+      private final @Nullable Input<String> maxmemoryPolicy;
 
     public Input<String> getMaxmemoryPolicy() {
         return this.maxmemoryPolicy == null ? Input.empty() : this.maxmemoryPolicy;
@@ -78,7 +78,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="maxmemoryReserved")
-        private final @Nullable Input<String> maxmemoryReserved;
+      private final @Nullable Input<String> maxmemoryReserved;
 
     public Input<String> getMaxmemoryReserved() {
         return this.maxmemoryReserved == null ? Input.empty() : this.maxmemoryReserved;
@@ -89,7 +89,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="rdbBackupEnabled")
-        private final @Nullable Input<String> rdbBackupEnabled;
+      private final @Nullable Input<String> rdbBackupEnabled;
 
     public Input<String> getRdbBackupEnabled() {
         return this.rdbBackupEnabled == null ? Input.empty() : this.rdbBackupEnabled;
@@ -100,7 +100,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="rdbBackupFrequency")
-        private final @Nullable Input<String> rdbBackupFrequency;
+      private final @Nullable Input<String> rdbBackupFrequency;
 
     public Input<String> getRdbBackupFrequency() {
         return this.rdbBackupFrequency == null ? Input.empty() : this.rdbBackupFrequency;
@@ -111,7 +111,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="rdbBackupMaxSnapshotCount")
-        private final @Nullable Input<String> rdbBackupMaxSnapshotCount;
+      private final @Nullable Input<String> rdbBackupMaxSnapshotCount;
 
     public Input<String> getRdbBackupMaxSnapshotCount() {
         return this.rdbBackupMaxSnapshotCount == null ? Input.empty() : this.rdbBackupMaxSnapshotCount;
@@ -122,7 +122,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="rdbStorageConnectionString")
-        private final @Nullable Input<String> rdbStorageConnectionString;
+      private final @Nullable Input<String> rdbStorageConnectionString;
 
     public Input<String> getRdbStorageConnectionString() {
         return this.rdbStorageConnectionString == null ? Input.empty() : this.rdbStorageConnectionString;

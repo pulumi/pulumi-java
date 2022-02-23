@@ -23,7 +23,7 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primary")
-        private final @Nullable Input<String> primary;
+      private final @Nullable Input<String> primary;
 
     public Input<String> getPrimary() {
         return this.primary == null ? Input.empty() : this.primary;
@@ -34,7 +34,7 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondary")
-        private final @Nullable Input<String> secondary;
+      private final @Nullable Input<String> secondary;
 
     public Input<String> getSecondary() {
         return this.secondary == null ? Input.empty() : this.secondary;

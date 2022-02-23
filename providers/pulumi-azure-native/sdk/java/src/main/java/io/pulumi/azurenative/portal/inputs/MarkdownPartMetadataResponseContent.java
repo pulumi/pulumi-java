@@ -23,7 +23,7 @@ public final class MarkdownPartMetadataResponseContent extends io.pulumi.resourc
      * 
      */
     @InputImport(name="settings")
-        private final @Nullable MarkdownPartMetadataResponseSettingsSettings settings;
+      private final @Nullable MarkdownPartMetadataResponseSettingsSettings settings;
 
     public Optional<MarkdownPartMetadataResponseSettingsSettings> getSettings() {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);

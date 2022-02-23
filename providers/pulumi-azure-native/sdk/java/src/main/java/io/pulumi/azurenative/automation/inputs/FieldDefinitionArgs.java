@@ -24,7 +24,7 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isEncrypted")
-        private final @Nullable Input<Boolean> isEncrypted;
+      private final @Nullable Input<Boolean> isEncrypted;
 
     public Input<Boolean> getIsEncrypted() {
         return this.isEncrypted == null ? Input.empty() : this.isEncrypted;
@@ -35,7 +35,7 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isOptional")
-        private final @Nullable Input<Boolean> isOptional;
+      private final @Nullable Input<Boolean> isOptional;
 
     public Input<Boolean> getIsOptional() {
         return this.isOptional == null ? Input.empty() : this.isOptional;
@@ -46,7 +46,7 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

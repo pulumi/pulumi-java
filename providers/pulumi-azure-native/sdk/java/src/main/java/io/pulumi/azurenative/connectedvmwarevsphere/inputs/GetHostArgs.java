@@ -17,7 +17,7 @@ public final class GetHostArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hostName", required=true)
-        private final String hostName;
+      private final String hostName;
 
     public String getHostName() {
         return this.hostName;
@@ -28,7 +28,7 @@ public final class GetHostArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

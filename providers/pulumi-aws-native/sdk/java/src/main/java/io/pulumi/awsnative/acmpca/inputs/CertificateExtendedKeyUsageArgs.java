@@ -19,14 +19,14 @@ public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.R
     public static final CertificateExtendedKeyUsageArgs Empty = new CertificateExtendedKeyUsageArgs();
 
     @InputImport(name="extendedKeyUsageObjectIdentifier")
-        private final @Nullable Input<String> extendedKeyUsageObjectIdentifier;
+      private final @Nullable Input<String> extendedKeyUsageObjectIdentifier;
 
     public Input<String> getExtendedKeyUsageObjectIdentifier() {
         return this.extendedKeyUsageObjectIdentifier == null ? Input.empty() : this.extendedKeyUsageObjectIdentifier;
     }
 
     @InputImport(name="extendedKeyUsageType")
-        private final @Nullable Input<String> extendedKeyUsageType;
+      private final @Nullable Input<String> extendedKeyUsageType;
 
     public Input<String> getExtendedKeyUsageType() {
         return this.extendedKeyUsageType == null ? Input.empty() : this.extendedKeyUsageType;

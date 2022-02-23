@@ -27,7 +27,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -38,7 +38,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -49,7 +49,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="primary")
-        private final @Nullable Input<Boolean> primary;
+      private final @Nullable Input<Boolean> primary;
 
     public Input<Boolean> getPrimary() {
         return this.primary == null ? Input.empty() : this.primary;
@@ -60,7 +60,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="privateIPAddress")
-        private final @Nullable Input<String> privateIPAddress;
+      private final @Nullable Input<String> privateIPAddress;
 
     public Input<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
@@ -71,7 +71,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="privateIPAllocationMethod")
-        private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+      private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Input<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
@@ -82,7 +82,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="subnet")
-        private final @Nullable Input<SubResourceArgs> subnet;
+      private final @Nullable Input<SubResourceArgs> subnet;
 
     public Input<SubResourceArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;

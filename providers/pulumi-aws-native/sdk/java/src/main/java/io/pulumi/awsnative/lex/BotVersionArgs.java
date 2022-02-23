@@ -17,21 +17,21 @@ public final class BotVersionArgs extends io.pulumi.resources.ResourceArgs {
     public static final BotVersionArgs Empty = new BotVersionArgs();
 
     @InputImport(name="botId", required=true)
-        private final Input<String> botId;
+      private final Input<String> botId;
 
     public Input<String> getBotId() {
         return this.botId;
     }
 
     @InputImport(name="botVersionLocaleSpecification", required=true)
-        private final Input<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification;
+      private final Input<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification;
 
     public Input<List<BotVersionLocaleSpecificationArgs>> getBotVersionLocaleSpecification() {
         return this.botVersionLocaleSpecification;
     }
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;

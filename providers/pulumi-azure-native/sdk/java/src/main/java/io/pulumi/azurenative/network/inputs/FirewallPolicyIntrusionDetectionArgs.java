@@ -26,7 +26,7 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="configuration")
-        private final @Nullable Input<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
+      private final @Nullable Input<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
 
     public Input<FirewallPolicyIntrusionDetectionConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -37,7 +37,7 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
+      private final @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
     public Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;

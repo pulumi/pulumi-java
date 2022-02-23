@@ -15,7 +15,7 @@ public final class FunctionSourceRepositoryGetArgs extends io.pulumi.resources.R
     public static final FunctionSourceRepositoryGetArgs Empty = new FunctionSourceRepositoryGetArgs();
 
     @InputImport(name="deployedUrl")
-        private final @Nullable Input<String> deployedUrl;
+      private final @Nullable Input<String> deployedUrl;
 
     public Input<String> getDeployedUrl() {
         return this.deployedUrl == null ? Input.empty() : this.deployedUrl;
@@ -26,7 +26,7 @@ public final class FunctionSourceRepositoryGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="url", required=true)
-        private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;

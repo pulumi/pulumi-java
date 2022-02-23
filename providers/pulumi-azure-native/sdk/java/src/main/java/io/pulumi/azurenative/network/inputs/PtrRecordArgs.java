@@ -23,7 +23,7 @@ public final class PtrRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ptrdname")
-        private final @Nullable Input<String> ptrdname;
+      private final @Nullable Input<String> ptrdname;
 
     public Input<String> getPtrdname() {
         return this.ptrdname == null ? Input.empty() : this.ptrdname;

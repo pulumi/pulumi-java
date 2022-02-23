@@ -25,7 +25,7 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="deadLetterDestination")
-        private final @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
+      private final @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
     public Input<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
         return this.deadLetterDestination == null ? Input.empty() : this.deadLetterDestination;
@@ -36,7 +36,7 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<EventSubscriptionIdentityArgs> identity;
+      private final @Nullable Input<EventSubscriptionIdentityArgs> identity;
 
     public Input<EventSubscriptionIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;

@@ -22,7 +22,7 @@ public final class AutoStorageBasePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageAccountId", required=true)
-        private final Input<String> storageAccountId;
+      private final Input<String> storageAccountId;
 
     public Input<String> getStorageAccountId() {
         return this.storageAccountId;

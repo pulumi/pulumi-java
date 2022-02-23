@@ -19,7 +19,7 @@ public final class DatabaseInstanceCloneGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="pointInTime")
-        private final @Nullable Input<String> pointInTime;
+      private final @Nullable Input<String> pointInTime;
 
     public Input<String> getPointInTime() {
         return this.pointInTime == null ? Input.empty() : this.pointInTime;
@@ -30,7 +30,7 @@ public final class DatabaseInstanceCloneGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceInstanceName", required=true)
-        private final Input<String> sourceInstanceName;
+      private final Input<String> sourceInstanceName;
 
     public Input<String> getSourceInstanceName() {
         return this.sourceInstanceName;

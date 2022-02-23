@@ -23,7 +23,7 @@ public final class Hl7StoreNotificationConfigGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-        private final Input<String> pubsubTopic;
+      private final Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic;

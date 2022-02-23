@@ -21,7 +21,7 @@ public final class ManagementAssociationPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="applicationId", required=true)
-        private final String applicationId;
+      private final String applicationId;
 
     public String getApplicationId() {
         return this.applicationId;

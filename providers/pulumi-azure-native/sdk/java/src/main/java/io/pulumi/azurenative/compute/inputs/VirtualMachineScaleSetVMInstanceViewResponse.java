@@ -32,7 +32,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="assignedHost", required=true)
-        private final String assignedHost;
+      private final String assignedHost;
 
     public String getAssignedHost() {
         return this.assignedHost;
@@ -43,7 +43,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="bootDiagnostics")
-        private final @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
+      private final @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
 
     public Optional<BootDiagnosticsInstanceViewResponse> getBootDiagnostics() {
         return this.bootDiagnostics == null ? Optional.empty() : Optional.ofNullable(this.bootDiagnostics);
@@ -54,7 +54,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="disks")
-        private final @Nullable List<DiskInstanceViewResponse> disks;
+      private final @Nullable List<DiskInstanceViewResponse> disks;
 
     public List<DiskInstanceViewResponse> getDisks() {
         return this.disks == null ? List.of() : this.disks;
@@ -65,7 +65,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="extensions")
-        private final @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
+      private final @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
 
     public List<VirtualMachineExtensionInstanceViewResponse> getExtensions() {
         return this.extensions == null ? List.of() : this.extensions;
@@ -76,7 +76,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="maintenanceRedeployStatus")
-        private final @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
+      private final @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
 
     public Optional<MaintenanceRedeployStatusResponse> getMaintenanceRedeployStatus() {
         return this.maintenanceRedeployStatus == null ? Optional.empty() : Optional.ofNullable(this.maintenanceRedeployStatus);
@@ -87,7 +87,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="placementGroupId")
-        private final @Nullable String placementGroupId;
+      private final @Nullable String placementGroupId;
 
     public Optional<String> getPlacementGroupId() {
         return this.placementGroupId == null ? Optional.empty() : Optional.ofNullable(this.placementGroupId);
@@ -98,7 +98,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="platformFaultDomain")
-        private final @Nullable Integer platformFaultDomain;
+      private final @Nullable Integer platformFaultDomain;
 
     public Optional<Integer> getPlatformFaultDomain() {
         return this.platformFaultDomain == null ? Optional.empty() : Optional.ofNullable(this.platformFaultDomain);
@@ -109,7 +109,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="platformUpdateDomain")
-        private final @Nullable Integer platformUpdateDomain;
+      private final @Nullable Integer platformUpdateDomain;
 
     public Optional<Integer> getPlatformUpdateDomain() {
         return this.platformUpdateDomain == null ? Optional.empty() : Optional.ofNullable(this.platformUpdateDomain);
@@ -120,7 +120,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="rdpThumbPrint")
-        private final @Nullable String rdpThumbPrint;
+      private final @Nullable String rdpThumbPrint;
 
     public Optional<String> getRdpThumbPrint() {
         return this.rdpThumbPrint == null ? Optional.empty() : Optional.ofNullable(this.rdpThumbPrint);
@@ -131,7 +131,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="statuses")
-        private final @Nullable List<InstanceViewStatusResponse> statuses;
+      private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
@@ -142,7 +142,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="vmAgent")
-        private final @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
+      private final @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
 
     public Optional<VirtualMachineAgentInstanceViewResponse> getVmAgent() {
         return this.vmAgent == null ? Optional.empty() : Optional.ofNullable(this.vmAgent);
@@ -153,7 +153,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
      * 
      */
     @InputImport(name="vmHealth", required=true)
-        private final VirtualMachineHealthStatusResponse vmHealth;
+      private final VirtualMachineHealthStatusResponse vmHealth;
 
     public VirtualMachineHealthStatusResponse getVmHealth() {
         return this.vmHealth;

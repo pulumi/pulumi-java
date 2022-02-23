@@ -18,28 +18,28 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
     public static final TaskDefinitionVolumeArgs Empty = new TaskDefinitionVolumeArgs();
 
     @InputImport(name="dockerVolumeConfiguration")
-        private final @Nullable Input<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration;
+      private final @Nullable Input<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration;
 
     public Input<TaskDefinitionDockerVolumeConfigurationArgs> getDockerVolumeConfiguration() {
         return this.dockerVolumeConfiguration == null ? Input.empty() : this.dockerVolumeConfiguration;
     }
 
     @InputImport(name="eFSVolumeConfiguration")
-        private final @Nullable Input<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration;
+      private final @Nullable Input<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration;
 
     public Input<TaskDefinitionEFSVolumeConfigurationArgs> getEFSVolumeConfiguration() {
         return this.eFSVolumeConfiguration == null ? Input.empty() : this.eFSVolumeConfiguration;
     }
 
     @InputImport(name="host")
-        private final @Nullable Input<TaskDefinitionHostVolumePropertiesArgs> host;
+      private final @Nullable Input<TaskDefinitionHostVolumePropertiesArgs> host;
 
     public Input<TaskDefinitionHostVolumePropertiesArgs> getHost() {
         return this.host == null ? Input.empty() : this.host;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

@@ -20,7 +20,7 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<Map<String,Object>> properties;
+      private final Input<Map<String,Object>> properties;
 
     public Input<Map<String,Object>> getProperties() {
         return this.properties;
@@ -31,7 +31,7 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

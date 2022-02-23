@@ -18,7 +18,7 @@ public final class PackagingConfigurationCmafEncryptionArgs extends io.pulumi.re
     public static final PackagingConfigurationCmafEncryptionArgs Empty = new PackagingConfigurationCmafEncryptionArgs();
 
     @InputImport(name="spekeKeyProvider", required=true)
-        private final Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
+      private final Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Input<PackagingConfigurationSpekeKeyProviderArgs> getSpekeKeyProvider() {
         return this.spekeKeyProvider;

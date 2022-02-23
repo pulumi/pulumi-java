@@ -16,14 +16,14 @@ public final class NetworkInsightsAccessScopeResourceStatementRequestArgs extend
     public static final NetworkInsightsAccessScopeResourceStatementRequestArgs Empty = new NetworkInsightsAccessScopeResourceStatementRequestArgs();
 
     @InputImport(name="resourceTypes")
-        private final @Nullable Input<List<String>> resourceTypes;
+      private final @Nullable Input<List<String>> resourceTypes;
 
     public Input<List<String>> getResourceTypes() {
         return this.resourceTypes == null ? Input.empty() : this.resourceTypes;
     }
 
     @InputImport(name="resources")
-        private final @Nullable Input<List<String>> resources;
+      private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;

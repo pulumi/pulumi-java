@@ -84,6 +84,21 @@ public class ServiceAccountIamPolicy extends io.pulumi.resources.CustomResource 
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public ServiceAccountIamPolicy(String name) {
+        this(name, ServiceAccountIamPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ServiceAccountIamPolicy(String name, ServiceAccountIamPolicyArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

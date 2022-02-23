@@ -26,7 +26,7 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -37,21 +37,21 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="prefix")
-        private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
     @InputImport(name="storageClassAnalysis", required=true)
-        private final Input<BucketStorageClassAnalysisArgs> storageClassAnalysis;
+      private final Input<BucketStorageClassAnalysisArgs> storageClassAnalysis;
 
     public Input<BucketStorageClassAnalysisArgs> getStorageClassAnalysis() {
         return this.storageClassAnalysis;
     }
 
     @InputImport(name="tagFilters")
-        private final @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
+      private final @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
 
     public Input<List<BucketTagFilterArgs>> getTagFilters() {
         return this.tagFilters == null ? Input.empty() : this.tagFilters;

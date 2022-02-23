@@ -28,7 +28,7 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="defaultValueSpecification")
-        private final @Nullable Input<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification;
+      private final @Nullable Input<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification;
 
     public Input<BotSlotDefaultValueSpecificationArgs> getDefaultValueSpecification() {
         return this.defaultValueSpecification == null ? Input.empty() : this.defaultValueSpecification;
@@ -39,7 +39,7 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="promptSpecification")
-        private final @Nullable Input<BotPromptSpecificationArgs> promptSpecification;
+      private final @Nullable Input<BotPromptSpecificationArgs> promptSpecification;
 
     public Input<BotPromptSpecificationArgs> getPromptSpecification() {
         return this.promptSpecification == null ? Input.empty() : this.promptSpecification;
@@ -50,7 +50,7 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sampleUtterances")
-        private final @Nullable Input<List<BotSampleUtteranceArgs>> sampleUtterances;
+      private final @Nullable Input<List<BotSampleUtteranceArgs>> sampleUtterances;
 
     public Input<List<BotSampleUtteranceArgs>> getSampleUtterances() {
         return this.sampleUtterances == null ? Input.empty() : this.sampleUtterances;
@@ -61,7 +61,7 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="slotConstraint", required=true)
-        private final Input<BotSlotConstraint> slotConstraint;
+      private final Input<BotSlotConstraint> slotConstraint;
 
     public Input<BotSlotConstraint> getSlotConstraint() {
         return this.slotConstraint;
@@ -72,7 +72,7 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="waitAndContinueSpecification")
-        private final @Nullable Input<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification;
+      private final @Nullable Input<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification;
 
     public Input<BotWaitAndContinueSpecificationArgs> getWaitAndContinueSpecification() {
         return this.waitAndContinueSpecification == null ? Input.empty() : this.waitAndContinueSpecification;

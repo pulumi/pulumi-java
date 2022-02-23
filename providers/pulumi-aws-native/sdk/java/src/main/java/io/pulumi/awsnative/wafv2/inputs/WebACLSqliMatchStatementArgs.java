@@ -20,14 +20,14 @@ public final class WebACLSqliMatchStatementArgs extends io.pulumi.resources.Reso
     public static final WebACLSqliMatchStatementArgs Empty = new WebACLSqliMatchStatementArgs();
 
     @InputImport(name="fieldToMatch", required=true)
-        private final Input<WebACLFieldToMatchArgs> fieldToMatch;
+      private final Input<WebACLFieldToMatchArgs> fieldToMatch;
 
     public Input<WebACLFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="textTransformations", required=true)
-        private final Input<List<WebACLTextTransformationArgs>> textTransformations;
+      private final Input<List<WebACLTextTransformationArgs>> textTransformations;
 
     public Input<List<WebACLTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;

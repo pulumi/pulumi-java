@@ -16,14 +16,14 @@ public final class DefaultRolloutSpecificationResponseMediumTraffic extends io.p
     public static final DefaultRolloutSpecificationResponseMediumTraffic Empty = new DefaultRolloutSpecificationResponseMediumTraffic();
 
     @InputImport(name="regions")
-        private final @Nullable List<String> regions;
+      private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
     }
 
     @InputImport(name="waitDuration")
-        private final @Nullable String waitDuration;
+      private final @Nullable String waitDuration;
 
     public Optional<String> getWaitDuration() {
         return this.waitDuration == null ? Optional.empty() : Optional.ofNullable(this.waitDuration);

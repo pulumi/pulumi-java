@@ -19,7 +19,7 @@ public final class InstanceAccessControlAttributeConfigurationPropertiesArgs ext
     public static final InstanceAccessControlAttributeConfigurationPropertiesArgs Empty = new InstanceAccessControlAttributeConfigurationPropertiesArgs();
 
     @InputImport(name="accessControlAttributes", required=true)
-        private final Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
+      private final Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
 
     public Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> getAccessControlAttributes() {
         return this.accessControlAttributes;

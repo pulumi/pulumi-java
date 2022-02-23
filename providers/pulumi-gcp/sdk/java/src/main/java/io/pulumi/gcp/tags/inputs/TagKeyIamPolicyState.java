@@ -19,7 +19,7 @@ public final class TagKeyIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -31,7 +31,7 @@ public final class TagKeyIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData")
-        private final @Nullable Input<String> policyData;
+      private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -42,7 +42,7 @@ public final class TagKeyIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagKey")
-        private final @Nullable Input<String> tagKey;
+      private final @Nullable Input<String> tagKey;
 
     public Input<String> getTagKey() {
         return this.tagKey == null ? Input.empty() : this.tagKey;

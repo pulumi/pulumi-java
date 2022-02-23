@@ -24,7 +24,7 @@ public final class KeyVaultKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attributes")
-        private final @Nullable KeyVaultKeyResponseAttributes attributes;
+      private final @Nullable KeyVaultKeyResponseAttributes attributes;
 
     public Optional<KeyVaultKeyResponseAttributes> getAttributes() {
         return this.attributes == null ? Optional.empty() : Optional.ofNullable(this.attributes);
@@ -35,7 +35,7 @@ public final class KeyVaultKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kid")
-        private final @Nullable String kid;
+      private final @Nullable String kid;
 
     public Optional<String> getKid() {
         return this.kid == null ? Optional.empty() : Optional.ofNullable(this.kid);

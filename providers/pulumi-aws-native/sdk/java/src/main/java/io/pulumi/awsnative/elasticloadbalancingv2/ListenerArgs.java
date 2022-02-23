@@ -19,49 +19,49 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     public static final ListenerArgs Empty = new ListenerArgs();
 
     @InputImport(name="alpnPolicy")
-        private final @Nullable Input<List<String>> alpnPolicy;
+      private final @Nullable Input<List<String>> alpnPolicy;
 
     public Input<List<String>> getAlpnPolicy() {
         return this.alpnPolicy == null ? Input.empty() : this.alpnPolicy;
     }
 
     @InputImport(name="certificates")
-        private final @Nullable Input<List<ListenerCertificateArgs>> certificates;
+      private final @Nullable Input<List<ListenerCertificateArgs>> certificates;
 
     public Input<List<ListenerCertificateArgs>> getCertificates() {
         return this.certificates == null ? Input.empty() : this.certificates;
     }
 
     @InputImport(name="defaultActions", required=true)
-        private final Input<List<ListenerActionArgs>> defaultActions;
+      private final Input<List<ListenerActionArgs>> defaultActions;
 
     public Input<List<ListenerActionArgs>> getDefaultActions() {
         return this.defaultActions;
     }
 
     @InputImport(name="loadBalancerArn", required=true)
-        private final Input<String> loadBalancerArn;
+      private final Input<String> loadBalancerArn;
 
     public Input<String> getLoadBalancerArn() {
         return this.loadBalancerArn;
     }
 
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
     }
 
     @InputImport(name="protocol")
-        private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
     @InputImport(name="sslPolicy")
-        private final @Nullable Input<String> sslPolicy;
+      private final @Nullable Input<String> sslPolicy;
 
     public Input<String> getSslPolicy() {
         return this.sslPolicy == null ? Input.empty() : this.sslPolicy;

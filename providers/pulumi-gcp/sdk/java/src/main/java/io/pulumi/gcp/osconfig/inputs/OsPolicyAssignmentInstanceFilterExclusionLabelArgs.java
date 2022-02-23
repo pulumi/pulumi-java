@@ -20,7 +20,7 @@ public final class OsPolicyAssignmentInstanceFilterExclusionLabelArgs extends io
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;

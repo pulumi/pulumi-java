@@ -15,14 +15,14 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     public static final ClusterEndpointArgs Empty = new ClusterEndpointArgs();
 
     @InputImport(name="address")
-        private final @Nullable Input<String> address;
+      private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
     }
 
     @InputImport(name="port")
-        private final @Nullable Input<String> port;
+      private final @Nullable Input<String> port;
 
     public Input<String> getPort() {
         return this.port == null ? Input.empty() : this.port;

@@ -17,35 +17,35 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     public static final EntitlementArgs Empty = new EntitlementArgs();
 
     @InputImport(name="appVisibility", required=true)
-        private final Input<String> appVisibility;
+      private final Input<String> appVisibility;
 
     public Input<String> getAppVisibility() {
         return this.appVisibility;
     }
 
     @InputImport(name="attributes", required=true)
-        private final Input<List<EntitlementAttributeArgs>> attributes;
+      private final Input<List<EntitlementAttributeArgs>> attributes;
 
     public Input<List<EntitlementAttributeArgs>> getAttributes() {
         return this.attributes;
     }
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="stackName", required=true)
-        private final Input<String> stackName;
+      private final Input<String> stackName;
 
     public Input<String> getStackName() {
         return this.stackName;

@@ -16,7 +16,7 @@ public final class DataSourceWebCrawlerAuthenticationConfigurationArgs extends i
     public static final DataSourceWebCrawlerAuthenticationConfigurationArgs Empty = new DataSourceWebCrawlerAuthenticationConfigurationArgs();
 
     @InputImport(name="basicAuthentication")
-        private final @Nullable Input<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication;
+      private final @Nullable Input<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication;
 
     public Input<List<DataSourceWebCrawlerBasicAuthenticationArgs>> getBasicAuthentication() {
         return this.basicAuthentication == null ? Input.empty() : this.basicAuthentication;

@@ -24,7 +24,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="autoscaleEnabled")
-        private final @Nullable Input<Boolean> autoscaleEnabled;
+      private final @Nullable Input<Boolean> autoscaleEnabled;
 
     public Input<Boolean> getAutoscaleEnabled() {
         return this.autoscaleEnabled == null ? Input.empty() : this.autoscaleEnabled;
@@ -35,7 +35,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="maxReplicas")
-        private final @Nullable Input<Integer> maxReplicas;
+      private final @Nullable Input<Integer> maxReplicas;
 
     public Input<Integer> getMaxReplicas() {
         return this.maxReplicas == null ? Input.empty() : this.maxReplicas;
@@ -46,7 +46,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="minReplicas")
-        private final @Nullable Input<Integer> minReplicas;
+      private final @Nullable Input<Integer> minReplicas;
 
     public Input<Integer> getMinReplicas() {
         return this.minReplicas == null ? Input.empty() : this.minReplicas;
@@ -57,7 +57,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="refreshPeriodInSeconds")
-        private final @Nullable Input<Integer> refreshPeriodInSeconds;
+      private final @Nullable Input<Integer> refreshPeriodInSeconds;
 
     public Input<Integer> getRefreshPeriodInSeconds() {
         return this.refreshPeriodInSeconds == null ? Input.empty() : this.refreshPeriodInSeconds;
@@ -68,7 +68,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetUtilization")
-        private final @Nullable Input<Integer> targetUtilization;
+      private final @Nullable Input<Integer> targetUtilization;
 
     public Input<Integer> getTargetUtilization() {
         return this.targetUtilization == null ? Input.empty() : this.targetUtilization;

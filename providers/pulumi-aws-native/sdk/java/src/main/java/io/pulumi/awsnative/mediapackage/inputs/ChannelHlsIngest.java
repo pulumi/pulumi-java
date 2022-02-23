@@ -24,7 +24,7 @@ public final class ChannelHlsIngest extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ingestEndpoints")
-        private final @Nullable List<ChannelIngestEndpoint> ingestEndpoints;
+      private final @Nullable List<ChannelIngestEndpoint> ingestEndpoints;
 
     public List<ChannelIngestEndpoint> getIngestEndpoints() {
         return this.ingestEndpoints == null ? List.of() : this.ingestEndpoints;

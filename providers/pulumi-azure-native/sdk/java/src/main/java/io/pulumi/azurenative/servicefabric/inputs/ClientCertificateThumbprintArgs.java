@@ -23,7 +23,7 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateThumbprint", required=true)
-        private final Input<String> certificateThumbprint;
+      private final Input<String> certificateThumbprint;
 
     public Input<String> getCertificateThumbprint() {
         return this.certificateThumbprint;
@@ -34,7 +34,7 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="isAdmin", required=true)
-        private final Input<Boolean> isAdmin;
+      private final Input<Boolean> isAdmin;
 
     public Input<Boolean> getIsAdmin() {
         return this.isAdmin;

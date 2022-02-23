@@ -22,7 +22,7 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="interactionPropertyName", required=true)
-        private final Input<String> interactionPropertyName;
+      private final Input<String> interactionPropertyName;
 
     public Input<String> getInteractionPropertyName() {
         return this.interactionPropertyName;
@@ -33,7 +33,7 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="profilePropertyName", required=true)
-        private final Input<String> profilePropertyName;
+      private final Input<String> profilePropertyName;
 
     public Input<String> getProfilePropertyName() {
         return this.profilePropertyName;

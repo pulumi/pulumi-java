@@ -23,7 +23,7 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="provider")
-        private final @Nullable Input<String> provider;
+      private final @Nullable Input<String> provider;
 
     public Input<String> getProvider() {
         return this.provider == null ? Input.empty() : this.provider;

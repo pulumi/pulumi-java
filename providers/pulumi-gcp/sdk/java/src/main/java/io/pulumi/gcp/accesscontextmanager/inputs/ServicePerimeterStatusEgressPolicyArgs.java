@@ -21,7 +21,7 @@ public final class ServicePerimeterStatusEgressPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="egressFrom")
-        private final @Nullable Input<ServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom;
+      private final @Nullable Input<ServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom;
 
     public Input<ServicePerimeterStatusEgressPolicyEgressFromArgs> getEgressFrom() {
         return this.egressFrom == null ? Input.empty() : this.egressFrom;
@@ -34,7 +34,7 @@ public final class ServicePerimeterStatusEgressPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="egressTo")
-        private final @Nullable Input<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo;
+      private final @Nullable Input<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo;
 
     public Input<ServicePerimeterStatusEgressPolicyEgressToArgs> getEgressTo() {
         return this.egressTo == null ? Input.empty() : this.egressTo;

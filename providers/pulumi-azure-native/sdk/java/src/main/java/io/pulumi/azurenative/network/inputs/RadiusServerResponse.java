@@ -24,7 +24,7 @@ public final class RadiusServerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="radiusServerAddress", required=true)
-        private final String radiusServerAddress;
+      private final String radiusServerAddress;
 
     public String getRadiusServerAddress() {
         return this.radiusServerAddress;
@@ -35,7 +35,7 @@ public final class RadiusServerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="radiusServerScore")
-        private final @Nullable Double radiusServerScore;
+      private final @Nullable Double radiusServerScore;
 
     public Optional<Double> getRadiusServerScore() {
         return this.radiusServerScore == null ? Optional.empty() : Optional.ofNullable(this.radiusServerScore);
@@ -46,7 +46,7 @@ public final class RadiusServerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="radiusServerSecret")
-        private final @Nullable String radiusServerSecret;
+      private final @Nullable String radiusServerSecret;
 
     public Optional<String> getRadiusServerSecret() {
         return this.radiusServerSecret == null ? Optional.empty() : Optional.ofNullable(this.radiusServerSecret);

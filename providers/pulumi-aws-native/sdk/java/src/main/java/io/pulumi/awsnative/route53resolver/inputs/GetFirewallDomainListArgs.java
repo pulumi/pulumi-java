@@ -17,7 +17,7 @@ public final class GetFirewallDomainListArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

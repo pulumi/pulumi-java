@@ -21,7 +21,7 @@ public final class SecurityAssessmentPartnerDataResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="partnerName", required=true)
-        private final String partnerName;
+      private final String partnerName;
 
     public String getPartnerName() {
         return this.partnerName;
@@ -32,7 +32,7 @@ public final class SecurityAssessmentPartnerDataResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="secret", required=true)
-        private final String secret;
+      private final String secret;
 
     public String getSecret() {
         return this.secret;

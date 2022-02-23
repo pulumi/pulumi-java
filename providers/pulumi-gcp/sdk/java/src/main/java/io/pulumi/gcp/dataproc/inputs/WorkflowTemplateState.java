@@ -25,7 +25,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="createTime")
-        private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -36,7 +36,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dagTimeout")
-        private final @Nullable Input<String> dagTimeout;
+      private final @Nullable Input<String> dagTimeout;
 
     public Input<String> getDagTimeout() {
         return this.dagTimeout == null ? Input.empty() : this.dagTimeout;
@@ -47,7 +47,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="jobs")
-        private final @Nullable Input<List<WorkflowTemplateJobGetArgs>> jobs;
+      private final @Nullable Input<List<WorkflowTemplateJobGetArgs>> jobs;
 
     public Input<List<WorkflowTemplateJobGetArgs>> getJobs() {
         return this.jobs == null ? Input.empty() : this.jobs;
@@ -58,7 +58,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -69,7 +69,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -80,7 +80,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -91,7 +91,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<List<WorkflowTemplateParameterGetArgs>> parameters;
+      private final @Nullable Input<List<WorkflowTemplateParameterGetArgs>> parameters;
 
     public Input<List<WorkflowTemplateParameterGetArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -102,7 +102,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="placement")
-        private final @Nullable Input<WorkflowTemplatePlacementGetArgs> placement;
+      private final @Nullable Input<WorkflowTemplatePlacementGetArgs> placement;
 
     public Input<WorkflowTemplatePlacementGetArgs> getPlacement() {
         return this.placement == null ? Input.empty() : this.placement;
@@ -113,7 +113,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -124,7 +124,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="updateTime")
-        private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -139,7 +139,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
      */
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
     @InputImport(name="version")
-        private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
     public Input<Integer> getVersion() {

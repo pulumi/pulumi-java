@@ -27,7 +27,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="container")
-        private final @Nullable ContainerResponse container;
+      private final @Nullable ContainerResponse container;
 
     public Optional<ContainerResponse> getContainer() {
         return this.container == null ? Optional.empty() : Optional.ofNullable(this.container);
@@ -38,7 +38,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="containerNetworkInterfaceConfiguration", required=true)
-        private final ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration;
+      private final ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration;
 
     public ContainerNetworkInterfaceConfigurationResponse getContainerNetworkInterfaceConfiguration() {
         return this.containerNetworkInterfaceConfiguration;
@@ -49,7 +49,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -60,7 +60,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -71,7 +71,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="ipConfigurations", required=true)
-        private final List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations;
+      private final List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations;
 
     public List<ContainerNetworkInterfaceIpConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations;
@@ -82,7 +82,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -93,7 +93,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -104,7 +104,7 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

@@ -19,7 +19,7 @@ public final class WorkflowTemplateParameterValidationValuesGetArgs extends io.p
      * 
      */
     @InputImport(name="values", required=true)
-        private final Input<List<String>> values;
+      private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;

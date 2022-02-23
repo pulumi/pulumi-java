@@ -20,14 +20,14 @@ public final class AccessPointTransformationConfigurationArgs extends io.pulumi.
     public static final AccessPointTransformationConfigurationArgs Empty = new AccessPointTransformationConfigurationArgs();
 
     @InputImport(name="actions", required=true)
-        private final Input<List<String>> actions;
+      private final Input<List<String>> actions;
 
     public Input<List<String>> getActions() {
         return this.actions;
     }
 
     @InputImport(name="contentTransformation", required=true)
-        private final Input<Object> contentTransformation;
+      private final Input<Object> contentTransformation;
 
     public Input<Object> getContentTransformation() {
         return this.contentTransformation;

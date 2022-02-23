@@ -14,21 +14,21 @@ public final class GetInstanceSchedulingNodeAffinity extends io.pulumi.resources
     public static final GetInstanceSchedulingNodeAffinity Empty = new GetInstanceSchedulingNodeAffinity();
 
     @InputImport(name="key", required=true)
-        private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="operator", required=true)
-        private final String operator;
+      private final String operator;
 
     public String getOperator() {
         return this.operator;
     }
 
     @InputImport(name="values", required=true)
-        private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;

@@ -17,7 +17,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-        private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;

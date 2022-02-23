@@ -28,7 +28,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="failoverDeploymentModel")
-        private final @Nullable Input<Either<String,FailoverDeploymentModel>> failoverDeploymentModel;
+      private final @Nullable Input<Either<String,FailoverDeploymentModel>> failoverDeploymentModel;
 
     public Input<Either<String,FailoverDeploymentModel>> getFailoverDeploymentModel() {
         return this.failoverDeploymentModel == null ? Input.empty() : this.failoverDeploymentModel;
@@ -39,7 +39,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="groups", required=true)
-        private final Input<List<RecoveryPlanGroupArgs>> groups;
+      private final Input<List<RecoveryPlanGroupArgs>> groups;
 
     public Input<List<RecoveryPlanGroupArgs>> getGroups() {
         return this.groups;
@@ -50,7 +50,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="primaryFabricId", required=true)
-        private final Input<String> primaryFabricId;
+      private final Input<String> primaryFabricId;
 
     public Input<String> getPrimaryFabricId() {
         return this.primaryFabricId;
@@ -61,7 +61,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="providerSpecificInput")
-        private final @Nullable Input<List<RecoveryPlanA2AInputArgs>> providerSpecificInput;
+      private final @Nullable Input<List<RecoveryPlanA2AInputArgs>> providerSpecificInput;
 
     public Input<List<RecoveryPlanA2AInputArgs>> getProviderSpecificInput() {
         return this.providerSpecificInput == null ? Input.empty() : this.providerSpecificInput;
@@ -72,7 +72,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="recoveryFabricId", required=true)
-        private final Input<String> recoveryFabricId;
+      private final Input<String> recoveryFabricId;
 
     public Input<String> getRecoveryFabricId() {
         return this.recoveryFabricId;

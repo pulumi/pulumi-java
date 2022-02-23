@@ -24,7 +24,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPeriodHours")
-        private final @Nullable Input<Integer> retentionPeriodHours;
+      private final @Nullable Input<Integer> retentionPeriodHours;
 
     public Input<Integer> getRetentionPeriodHours() {
         return this.retentionPeriodHours == null ? Input.empty() : this.retentionPeriodHours;
@@ -46,7 +46,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shardCount")
-        private final @Nullable Input<Integer> shardCount;
+      private final @Nullable Input<Integer> shardCount;
 
     public Input<Integer> getShardCount() {
         return this.shardCount == null ? Input.empty() : this.shardCount;
@@ -57,7 +57,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamEncryption")
-        private final @Nullable Input<StreamEncryptionArgs> streamEncryption;
+      private final @Nullable Input<StreamEncryptionArgs> streamEncryption;
 
     public Input<StreamEncryptionArgs> getStreamEncryption() {
         return this.streamEncryption == null ? Input.empty() : this.streamEncryption;
@@ -68,7 +68,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamModeDetails")
-        private final @Nullable Input<StreamModeDetailsArgs> streamModeDetails;
+      private final @Nullable Input<StreamModeDetailsArgs> streamModeDetails;
 
     public Input<StreamModeDetailsArgs> getStreamModeDetails() {
         return this.streamModeDetails == null ? Input.empty() : this.streamModeDetails;
@@ -79,7 +79,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<StreamTagArgs>> tags;
+      private final @Nullable Input<List<StreamTagArgs>> tags;
 
     public Input<List<StreamTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

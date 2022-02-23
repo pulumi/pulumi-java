@@ -24,7 +24,7 @@ public final class SshConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="publicKeys")
-        private final @Nullable List<SshPublicKeyResponse> publicKeys;
+      private final @Nullable List<SshPublicKeyResponse> publicKeys;
 
     public List<SshPublicKeyResponse> getPublicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;

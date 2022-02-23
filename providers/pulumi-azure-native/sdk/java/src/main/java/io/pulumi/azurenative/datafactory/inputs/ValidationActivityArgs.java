@@ -28,7 +28,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="childItems")
-        private final @Nullable Input<Object> childItems;
+      private final @Nullable Input<Object> childItems;
 
     public Input<Object> getChildItems() {
         return this.childItems == null ? Input.empty() : this.childItems;
@@ -39,7 +39,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataset", required=true)
-        private final Input<DatasetReferenceArgs> dataset;
+      private final Input<DatasetReferenceArgs> dataset;
 
     public Input<DatasetReferenceArgs> getDataset() {
         return this.dataset;
@@ -50,7 +50,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dependsOn")
-        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -61,7 +61,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -72,7 +72,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="minimumSize")
-        private final @Nullable Input<Object> minimumSize;
+      private final @Nullable Input<Object> minimumSize;
 
     public Input<Object> getMinimumSize() {
         return this.minimumSize == null ? Input.empty() : this.minimumSize;
@@ -83,7 +83,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -94,7 +94,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sleep")
-        private final @Nullable Input<Object> sleep;
+      private final @Nullable Input<Object> sleep;
 
     public Input<Object> getSleep() {
         return this.sleep == null ? Input.empty() : this.sleep;
@@ -105,7 +105,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable Input<Object> timeout;
+      private final @Nullable Input<Object> timeout;
 
     public Input<Object> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -117,7 +117,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -128,7 +128,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="userProperties")
-        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;

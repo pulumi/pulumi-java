@@ -15,21 +15,21 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
     public static final ResourceProviderAuthorizationArgs Empty = new ResourceProviderAuthorizationArgs();
 
     @InputImport(name="applicationId")
-        private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
     }
 
     @InputImport(name="managedByRoleDefinitionId")
-        private final @Nullable Input<String> managedByRoleDefinitionId;
+      private final @Nullable Input<String> managedByRoleDefinitionId;
 
     public Input<String> getManagedByRoleDefinitionId() {
         return this.managedByRoleDefinitionId == null ? Input.empty() : this.managedByRoleDefinitionId;
     }
 
     @InputImport(name="roleDefinitionId")
-        private final @Nullable Input<String> roleDefinitionId;
+      private final @Nullable Input<String> roleDefinitionId;
 
     public Input<String> getRoleDefinitionId() {
         return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;

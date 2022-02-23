@@ -24,7 +24,7 @@ public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="code", required=true)
-        private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -35,7 +35,7 @@ public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="details")
-        private final @Nullable List<AzureResourceErrorInfoResponse> details;
+      private final @Nullable List<AzureResourceErrorInfoResponse> details;
 
     public List<AzureResourceErrorInfoResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
@@ -46,7 +46,7 @@ public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="message", required=true)
-        private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;

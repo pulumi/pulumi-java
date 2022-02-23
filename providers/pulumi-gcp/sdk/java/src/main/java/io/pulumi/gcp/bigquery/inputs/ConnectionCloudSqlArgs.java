@@ -20,7 +20,7 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="credential", required=true)
-        private final Input<ConnectionCloudSqlCredentialArgs> credential;
+      private final Input<ConnectionCloudSqlCredentialArgs> credential;
 
     public Input<ConnectionCloudSqlCredentialArgs> getCredential() {
         return this.credential;
@@ -31,7 +31,7 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="database", required=true)
-        private final Input<String> database;
+      private final Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database;
@@ -42,7 +42,7 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceId", required=true)
-        private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -54,7 +54,7 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

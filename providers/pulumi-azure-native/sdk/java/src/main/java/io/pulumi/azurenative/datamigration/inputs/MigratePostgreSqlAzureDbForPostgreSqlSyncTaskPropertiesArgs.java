@@ -24,7 +24,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs e
      * 
      */
     @InputImport(name="input")
-        private final @Nullable Input<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input;
+      private final @Nullable Input<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input;
 
     public Input<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -36,7 +36,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs e
      * 
      */
     @InputImport(name="taskType", required=true)
-        private final Input<String> taskType;
+      private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;

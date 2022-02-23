@@ -25,7 +25,7 @@ public final class StreamingPolicyContentKeyResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="label")
-        private final @Nullable String label;
+      private final @Nullable String label;
 
     public Optional<String> getLabel() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
@@ -36,7 +36,7 @@ public final class StreamingPolicyContentKeyResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="policyName")
-        private final @Nullable String policyName;
+      private final @Nullable String policyName;
 
     public Optional<String> getPolicyName() {
         return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
@@ -47,7 +47,7 @@ public final class StreamingPolicyContentKeyResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="tracks")
-        private final @Nullable List<TrackSelectionResponse> tracks;
+      private final @Nullable List<TrackSelectionResponse> tracks;
 
     public List<TrackSelectionResponse> getTracks() {
         return this.tracks == null ? List.of() : this.tracks;

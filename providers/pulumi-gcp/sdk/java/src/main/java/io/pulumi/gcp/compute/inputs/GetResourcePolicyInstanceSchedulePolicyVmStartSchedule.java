@@ -13,7 +13,7 @@ public final class GetResourcePolicyInstanceSchedulePolicyVmStartSchedule extend
     public static final GetResourcePolicyInstanceSchedulePolicyVmStartSchedule Empty = new GetResourcePolicyInstanceSchedulePolicyVmStartSchedule();
 
     @InputImport(name="schedule", required=true)
-        private final String schedule;
+      private final String schedule;
 
     public String getSchedule() {
         return this.schedule;

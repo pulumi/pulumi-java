@@ -26,7 +26,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="driver", required=true)
-        private final Input<String> driver;
+      private final Input<String> driver;
 
     public Input<String> getDriver() {
         return this.driver;
@@ -37,7 +37,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fsType")
-        private final @Nullable Input<String> fsType;
+      private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -48,7 +48,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="options")
-        private final @Nullable Input<Map<String,String>> options;
+      private final @Nullable Input<Map<String,String>> options;
 
     public Input<Map<String,String>> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -59,7 +59,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="readOnly")
-        private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -70,7 +70,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="secretRef")
-        private final @Nullable Input<SecretReferenceArgs> secretRef;
+      private final @Nullable Input<SecretReferenceArgs> secretRef;
 
     public Input<SecretReferenceArgs> getSecretRef() {
         return this.secretRef == null ? Input.empty() : this.secretRef;

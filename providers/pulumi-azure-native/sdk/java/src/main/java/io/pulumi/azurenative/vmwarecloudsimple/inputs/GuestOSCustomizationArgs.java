@@ -24,7 +24,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dnsServers")
-        private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Input<List<String>> dnsServers;
 
     public Input<List<String>> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -35,7 +35,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="hostName")
-        private final @Nullable Input<String> hostName;
+      private final @Nullable Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName == null ? Input.empty() : this.hostName;
@@ -46,7 +46,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -57,7 +57,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyId")
-        private final @Nullable Input<String> policyId;
+      private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -68,7 +68,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="username")
-        private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;

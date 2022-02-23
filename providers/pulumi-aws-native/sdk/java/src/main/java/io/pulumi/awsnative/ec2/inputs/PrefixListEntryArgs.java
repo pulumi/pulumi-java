@@ -15,14 +15,14 @@ public final class PrefixListEntryArgs extends io.pulumi.resources.ResourceArgs 
     public static final PrefixListEntryArgs Empty = new PrefixListEntryArgs();
 
     @InputImport(name="cidr", required=true)
-        private final Input<String> cidr;
+      private final Input<String> cidr;
 
     public Input<String> getCidr() {
         return this.cidr;
     }
 
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;

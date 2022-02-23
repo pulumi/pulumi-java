@@ -337,6 +337,21 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public WorkloadIdentityPoolProvider(String name) {
+        this(name, WorkloadIdentityPoolProviderArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WorkloadIdentityPoolProvider(String name, WorkloadIdentityPoolProviderArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

@@ -18,7 +18,7 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;

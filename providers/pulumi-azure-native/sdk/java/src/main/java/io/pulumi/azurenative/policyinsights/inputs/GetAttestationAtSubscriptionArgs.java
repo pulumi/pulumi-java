@@ -17,7 +17,7 @@ public final class GetAttestationAtSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="attestationName", required=true)
-        private final String attestationName;
+      private final String attestationName;
 
     public String getAttestationName() {
         return this.attestationName;

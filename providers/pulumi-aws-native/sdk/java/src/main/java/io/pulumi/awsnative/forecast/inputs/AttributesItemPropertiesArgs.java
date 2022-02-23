@@ -20,7 +20,7 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="attributeName")
-        private final @Nullable Input<String> attributeName;
+      private final @Nullable Input<String> attributeName;
 
     public Input<String> getAttributeName() {
         return this.attributeName == null ? Input.empty() : this.attributeName;
@@ -31,7 +31,7 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="attributeType")
-        private final @Nullable Input<DatasetAttributesItemPropertiesAttributeType> attributeType;
+      private final @Nullable Input<DatasetAttributesItemPropertiesAttributeType> attributeType;
 
     public Input<DatasetAttributesItemPropertiesAttributeType> getAttributeType() {
         return this.attributeType == null ? Input.empty() : this.attributeType;

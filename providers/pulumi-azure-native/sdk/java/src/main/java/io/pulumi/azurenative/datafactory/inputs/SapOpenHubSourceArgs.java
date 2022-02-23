@@ -24,7 +24,7 @@ public final class SapOpenHubSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="additionalColumns")
-        private final @Nullable Input<Object> additionalColumns;
+      private final @Nullable Input<Object> additionalColumns;
 
     public Input<Object> getAdditionalColumns() {
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
@@ -35,7 +35,7 @@ public final class SapOpenHubSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="baseRequestId")
-        private final @Nullable Input<Object> baseRequestId;
+      private final @Nullable Input<Object> baseRequestId;
 
     public Input<Object> getBaseRequestId() {
         return this.baseRequestId == null ? Input.empty() : this.baseRequestId;
@@ -46,7 +46,7 @@ public final class SapOpenHubSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="customRfcReadTableFunctionModule")
-        private final @Nullable Input<Object> customRfcReadTableFunctionModule;
+      private final @Nullable Input<Object> customRfcReadTableFunctionModule;
 
     public Input<Object> getCustomRfcReadTableFunctionModule() {
         return this.customRfcReadTableFunctionModule == null ? Input.empty() : this.customRfcReadTableFunctionModule;
@@ -57,7 +57,7 @@ public final class SapOpenHubSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -68,7 +68,7 @@ public final class SapOpenHubSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="excludeLastRequest")
-        private final @Nullable Input<Object> excludeLastRequest;
+      private final @Nullable Input<Object> excludeLastRequest;
 
     public Input<Object> getExcludeLastRequest() {
         return this.excludeLastRequest == null ? Input.empty() : this.excludeLastRequest;
@@ -79,7 +79,7 @@ public final class SapOpenHubSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -90,7 +90,7 @@ public final class SapOpenHubSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="queryTimeout")
-        private final @Nullable Input<Object> queryTimeout;
+      private final @Nullable Input<Object> queryTimeout;
 
     public Input<Object> getQueryTimeout() {
         return this.queryTimeout == null ? Input.empty() : this.queryTimeout;
@@ -101,7 +101,7 @@ public final class SapOpenHubSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sapDataColumnDelimiter")
-        private final @Nullable Input<Object> sapDataColumnDelimiter;
+      private final @Nullable Input<Object> sapDataColumnDelimiter;
 
     public Input<Object> getSapDataColumnDelimiter() {
         return this.sapDataColumnDelimiter == null ? Input.empty() : this.sapDataColumnDelimiter;
@@ -112,7 +112,7 @@ public final class SapOpenHubSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceRetryCount")
-        private final @Nullable Input<Object> sourceRetryCount;
+      private final @Nullable Input<Object> sourceRetryCount;
 
     public Input<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
@@ -123,7 +123,7 @@ public final class SapOpenHubSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceRetryWait")
-        private final @Nullable Input<Object> sourceRetryWait;
+      private final @Nullable Input<Object> sourceRetryWait;
 
     public Input<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
@@ -135,7 +135,7 @@ public final class SapOpenHubSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

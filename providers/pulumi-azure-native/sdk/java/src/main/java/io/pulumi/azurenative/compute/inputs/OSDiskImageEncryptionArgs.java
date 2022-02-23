@@ -23,7 +23,7 @@ public final class OSDiskImageEncryptionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="diskEncryptionSetId")
-        private final @Nullable Input<String> diskEncryptionSetId;
+      private final @Nullable Input<String> diskEncryptionSetId;
 
     public Input<String> getDiskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Input.empty() : this.diskEncryptionSetId;

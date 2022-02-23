@@ -26,7 +26,7 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="chartQueryResults")
-        private final @Nullable List<InsightsTableResultResponse> chartQueryResults;
+      private final @Nullable List<InsightsTableResultResponse> chartQueryResults;
 
     public List<InsightsTableResultResponse> getChartQueryResults() {
         return this.chartQueryResults == null ? List.of() : this.chartQueryResults;
@@ -37,7 +37,7 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="queryId")
-        private final @Nullable String queryId;
+      private final @Nullable String queryId;
 
     public Optional<String> getQueryId() {
         return this.queryId == null ? Optional.empty() : Optional.ofNullable(this.queryId);
@@ -48,7 +48,7 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="queryTimeInterval")
-        private final @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval;
+      private final @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval;
 
     public Optional<EntityInsightItemResponseQueryTimeInterval> getQueryTimeInterval() {
         return this.queryTimeInterval == null ? Optional.empty() : Optional.ofNullable(this.queryTimeInterval);
@@ -59,7 +59,7 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="tableQueryResults")
-        private final @Nullable InsightsTableResultResponse tableQueryResults;
+      private final @Nullable InsightsTableResultResponse tableQueryResults;
 
     public Optional<InsightsTableResultResponse> getTableQueryResults() {
         return this.tableQueryResults == null ? Optional.empty() : Optional.ofNullable(this.tableQueryResults);

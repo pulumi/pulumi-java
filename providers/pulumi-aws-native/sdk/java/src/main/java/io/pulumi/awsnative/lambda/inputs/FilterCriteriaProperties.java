@@ -24,7 +24,7 @@ public final class FilterCriteriaProperties extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="filters")
-        private final @Nullable List<EventSourceMappingFilter> filters;
+      private final @Nullable List<EventSourceMappingFilter> filters;
 
     public List<EventSourceMappingFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;

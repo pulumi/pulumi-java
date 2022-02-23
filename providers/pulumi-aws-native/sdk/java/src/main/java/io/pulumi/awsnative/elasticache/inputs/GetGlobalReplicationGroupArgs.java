@@ -17,7 +17,7 @@ public final class GetGlobalReplicationGroupArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="globalReplicationGroupId", required=true)
-        private final String globalReplicationGroupId;
+      private final String globalReplicationGroupId;
 
     public String getGlobalReplicationGroupId() {
         return this.globalReplicationGroupId;

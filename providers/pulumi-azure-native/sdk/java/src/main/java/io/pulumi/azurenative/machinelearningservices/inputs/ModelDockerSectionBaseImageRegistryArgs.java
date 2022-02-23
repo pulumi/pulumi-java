@@ -19,21 +19,21 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
     public static final ModelDockerSectionBaseImageRegistryArgs Empty = new ModelDockerSectionBaseImageRegistryArgs();
 
     @InputImport(name="address")
-        private final @Nullable Input<String> address;
+      private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
     }
 
     @InputImport(name="password")
-        private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
     }
 
     @InputImport(name="username")
-        private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;

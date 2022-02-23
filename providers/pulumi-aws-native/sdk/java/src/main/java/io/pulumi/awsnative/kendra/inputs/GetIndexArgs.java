@@ -13,7 +13,7 @@ public final class GetIndexArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetIndexArgs Empty = new GetIndexArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

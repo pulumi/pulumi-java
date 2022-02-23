@@ -13,14 +13,14 @@ public final class SubscriptionStateOverrideActionResponse extends io.pulumi.res
     public static final SubscriptionStateOverrideActionResponse Empty = new SubscriptionStateOverrideActionResponse();
 
     @InputImport(name="action", required=true)
-        private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
     }
 
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;

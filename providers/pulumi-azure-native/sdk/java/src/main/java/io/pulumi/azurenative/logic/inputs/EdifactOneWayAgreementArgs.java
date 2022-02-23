@@ -23,7 +23,7 @@ public final class EdifactOneWayAgreementArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="protocolSettings", required=true)
-        private final Input<EdifactProtocolSettingsArgs> protocolSettings;
+      private final Input<EdifactProtocolSettingsArgs> protocolSettings;
 
     public Input<EdifactProtocolSettingsArgs> getProtocolSettings() {
         return this.protocolSettings;
@@ -34,7 +34,7 @@ public final class EdifactOneWayAgreementArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="receiverBusinessIdentity", required=true)
-        private final Input<BusinessIdentityArgs> receiverBusinessIdentity;
+      private final Input<BusinessIdentityArgs> receiverBusinessIdentity;
 
     public Input<BusinessIdentityArgs> getReceiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
@@ -45,7 +45,7 @@ public final class EdifactOneWayAgreementArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="senderBusinessIdentity", required=true)
-        private final Input<BusinessIdentityArgs> senderBusinessIdentity;
+      private final Input<BusinessIdentityArgs> senderBusinessIdentity;
 
     public Input<BusinessIdentityArgs> getSenderBusinessIdentity() {
         return this.senderBusinessIdentity;

@@ -21,7 +21,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="storageType", required=true)
-        private final String storageType;
+      private final String storageType;
 
     public String getStorageType() {
         return this.storageType;

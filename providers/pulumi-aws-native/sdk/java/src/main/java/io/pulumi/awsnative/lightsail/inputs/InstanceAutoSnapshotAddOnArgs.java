@@ -23,7 +23,7 @@ public final class InstanceAutoSnapshotAddOnArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="snapshotTimeOfDay")
-        private final @Nullable Input<String> snapshotTimeOfDay;
+      private final @Nullable Input<String> snapshotTimeOfDay;
 
     public Input<String> getSnapshotTimeOfDay() {
         return this.snapshotTimeOfDay == null ? Input.empty() : this.snapshotTimeOfDay;

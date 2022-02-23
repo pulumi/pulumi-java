@@ -18,7 +18,7 @@ public final class InstanceTemplateDiskDiskEncryptionKeyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="kmsKeySelfLink", required=true)
-        private final Input<String> kmsKeySelfLink;
+      private final Input<String> kmsKeySelfLink;
 
     public Input<String> getKmsKeySelfLink() {
         return this.kmsKeySelfLink;

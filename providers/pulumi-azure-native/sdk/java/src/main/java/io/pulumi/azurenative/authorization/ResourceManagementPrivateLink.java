@@ -83,6 +83,21 @@ public class ResourceManagementPrivateLink extends io.pulumi.resources.CustomRes
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public ResourceManagementPrivateLink(String name) {
+        this(name, ResourceManagementPrivateLinkArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ResourceManagementPrivateLink(String name, ResourceManagementPrivateLinkArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

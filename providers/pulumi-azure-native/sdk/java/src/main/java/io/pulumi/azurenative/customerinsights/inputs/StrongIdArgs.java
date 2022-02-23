@@ -25,7 +25,7 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<Map<String,String>> description;
+      private final @Nullable Input<Map<String,String>> description;
 
     public Input<Map<String,String>> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<Map<String,String>> displayName;
+      private final @Nullable Input<Map<String,String>> displayName;
 
     public Input<Map<String,String>> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -47,7 +47,7 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPropertyNames", required=true)
-        private final Input<List<String>> keyPropertyNames;
+      private final Input<List<String>> keyPropertyNames;
 
     public Input<List<String>> getKeyPropertyNames() {
         return this.keyPropertyNames;
@@ -58,7 +58,7 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strongIdName", required=true)
-        private final Input<String> strongIdName;
+      private final Input<String> strongIdName;
 
     public Input<String> getStrongIdName() {
         return this.strongIdName;

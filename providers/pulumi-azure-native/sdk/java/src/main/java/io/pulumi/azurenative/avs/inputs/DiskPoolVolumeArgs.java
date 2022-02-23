@@ -24,7 +24,7 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoints")
-        private final @Nullable Input<List<String>> endpoints;
+      private final @Nullable Input<List<String>> endpoints;
 
     public Input<List<String>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
@@ -35,7 +35,7 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lunName")
-        private final @Nullable Input<String> lunName;
+      private final @Nullable Input<String> lunName;
 
     public Input<String> getLunName() {
         return this.lunName == null ? Input.empty() : this.lunName;

@@ -15,14 +15,14 @@ public final class AuthorizationActionMappingArgs extends io.pulumi.resources.Re
     public static final AuthorizationActionMappingArgs Empty = new AuthorizationActionMappingArgs();
 
     @InputImport(name="desired")
-        private final @Nullable Input<String> desired;
+      private final @Nullable Input<String> desired;
 
     public Input<String> getDesired() {
         return this.desired == null ? Input.empty() : this.desired;
     }
 
     @InputImport(name="original")
-        private final @Nullable Input<String> original;
+      private final @Nullable Input<String> original;
 
     public Input<String> getOriginal() {
         return this.original == null ? Input.empty() : this.original;

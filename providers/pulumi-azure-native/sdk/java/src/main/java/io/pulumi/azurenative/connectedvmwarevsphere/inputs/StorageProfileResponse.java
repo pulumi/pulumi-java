@@ -25,7 +25,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="disks")
-        private final @Nullable List<VirtualDiskResponse> disks;
+      private final @Nullable List<VirtualDiskResponse> disks;
 
     public List<VirtualDiskResponse> getDisks() {
         return this.disks == null ? List.of() : this.disks;
@@ -36,7 +36,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="scsiControllers", required=true)
-        private final List<VirtualSCSIControllerResponse> scsiControllers;
+      private final List<VirtualSCSIControllerResponse> scsiControllers;
 
     public List<VirtualSCSIControllerResponse> getScsiControllers() {
         return this.scsiControllers;

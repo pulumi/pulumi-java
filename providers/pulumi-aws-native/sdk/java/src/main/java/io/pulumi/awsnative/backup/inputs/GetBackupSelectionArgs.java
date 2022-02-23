@@ -13,7 +13,7 @@ public final class GetBackupSelectionArgs extends io.pulumi.resources.InvokeArgs
     public static final GetBackupSelectionArgs Empty = new GetBackupSelectionArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

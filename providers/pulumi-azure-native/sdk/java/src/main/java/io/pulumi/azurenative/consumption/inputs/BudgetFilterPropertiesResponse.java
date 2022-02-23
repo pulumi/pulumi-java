@@ -23,7 +23,7 @@ public final class BudgetFilterPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="dimensions")
-        private final @Nullable BudgetComparisonExpressionResponse dimensions;
+      private final @Nullable BudgetComparisonExpressionResponse dimensions;
 
     public Optional<BudgetComparisonExpressionResponse> getDimensions() {
         return this.dimensions == null ? Optional.empty() : Optional.ofNullable(this.dimensions);
@@ -34,7 +34,7 @@ public final class BudgetFilterPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable BudgetComparisonExpressionResponse tags;
+      private final @Nullable BudgetComparisonExpressionResponse tags;
 
     public Optional<BudgetComparisonExpressionResponse> getTags() {
         return this.tags == null ? Optional.empty() : Optional.ofNullable(this.tags);

@@ -21,7 +21,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-        private final @Nullable Input<String> eTag;
+      private final @Nullable Input<String> eTag;
 
     public Input<String> getETag() {
         return this.eTag == null ? Input.empty() : this.eTag;
@@ -32,7 +32,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<DppIdentityDetailsArgs> identity;
+      private final @Nullable Input<DppIdentityDetailsArgs> identity;
 
     public Input<DppIdentityDetailsArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -43,7 +43,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -54,7 +54,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties;
+      private final Input<io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties;
 
     public Input<io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> getProperties() {
         return this.properties;
@@ -65,7 +65,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vaultName")
-        private final @Nullable Input<String> vaultName;
+      private final @Nullable Input<String> vaultName;
 
     public Input<String> getVaultName() {
         return this.vaultName == null ? Input.empty() : this.vaultName;

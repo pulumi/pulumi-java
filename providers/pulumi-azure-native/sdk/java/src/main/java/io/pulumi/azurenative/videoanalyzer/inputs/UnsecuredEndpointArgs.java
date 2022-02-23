@@ -25,7 +25,7 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="credentials", required=true)
-        private final Input<UsernamePasswordCredentialsArgs> credentials;
+      private final Input<UsernamePasswordCredentialsArgs> credentials;
 
     public Input<UsernamePasswordCredentialsArgs> getCredentials() {
         return this.credentials;
@@ -36,7 +36,7 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tunnel")
-        private final @Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel;
+      private final @Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel;
 
     public Input<SecureIotDeviceRemoteTunnelArgs> getTunnel() {
         return this.tunnel == null ? Input.empty() : this.tunnel;
@@ -48,7 +48,7 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -59,7 +59,7 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="url", required=true)
-        private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;

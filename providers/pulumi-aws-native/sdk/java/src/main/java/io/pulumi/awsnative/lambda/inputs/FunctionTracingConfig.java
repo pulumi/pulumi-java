@@ -23,7 +23,7 @@ public final class FunctionTracingConfig extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="mode")
-        private final @Nullable FunctionTracingConfigMode mode;
+      private final @Nullable FunctionTracingConfigMode mode;
 
     public Optional<FunctionTracingConfigMode> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);

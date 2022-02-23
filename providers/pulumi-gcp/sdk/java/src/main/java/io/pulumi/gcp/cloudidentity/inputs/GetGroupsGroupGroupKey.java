@@ -13,14 +13,14 @@ public final class GetGroupsGroupGroupKey extends io.pulumi.resources.InvokeArgs
     public static final GetGroupsGroupGroupKey Empty = new GetGroupsGroupGroupKey();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
     }
 
     @InputImport(name="namespace", required=true)
-        private final String namespace;
+      private final String namespace;
 
     public String getNamespace() {
         return this.namespace;

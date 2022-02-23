@@ -23,7 +23,7 @@ public final class DefenderForContainersAwsOfferingResponseKubernetesService ext
      * 
      */
     @InputImport(name="cloudRoleArn")
-        private final @Nullable String cloudRoleArn;
+      private final @Nullable String cloudRoleArn;
 
     public Optional<String> getCloudRoleArn() {
         return this.cloudRoleArn == null ? Optional.empty() : Optional.ofNullable(this.cloudRoleArn);

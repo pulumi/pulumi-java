@@ -32,7 +32,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -43,7 +43,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="authenticationType")
-        private final @Nullable Input<Either<String,SftpAuthenticationType>> authenticationType;
+      private final @Nullable Input<Either<String,SftpAuthenticationType>> authenticationType;
 
     public Input<Either<String,SftpAuthenticationType>> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -54,7 +54,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -65,7 +65,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -76,7 +76,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -87,7 +87,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="host", required=true)
-        private final Input<Object> host;
+      private final Input<Object> host;
 
     public Input<Object> getHost() {
         return this.host;
@@ -98,7 +98,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="hostKeyFingerprint")
-        private final @Nullable Input<Object> hostKeyFingerprint;
+      private final @Nullable Input<Object> hostKeyFingerprint;
 
     public Input<Object> getHostKeyFingerprint() {
         return this.hostKeyFingerprint == null ? Input.empty() : this.hostKeyFingerprint;
@@ -109,7 +109,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -120,7 +120,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="passPhrase")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> passPhrase;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> passPhrase;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassPhrase() {
         return this.passPhrase == null ? Input.empty() : this.passPhrase;
@@ -131,7 +131,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -142,7 +142,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Object> port;
+      private final @Nullable Input<Object> port;
 
     public Input<Object> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -153,7 +153,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="privateKeyContent")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKeyContent;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKeyContent;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPrivateKeyContent() {
         return this.privateKeyContent == null ? Input.empty() : this.privateKeyContent;
@@ -164,7 +164,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="privateKeyPath")
-        private final @Nullable Input<Object> privateKeyPath;
+      private final @Nullable Input<Object> privateKeyPath;
 
     public Input<Object> getPrivateKeyPath() {
         return this.privateKeyPath == null ? Input.empty() : this.privateKeyPath;
@@ -175,7 +175,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="skipHostKeyValidation")
-        private final @Nullable Input<Object> skipHostKeyValidation;
+      private final @Nullable Input<Object> skipHostKeyValidation;
 
     public Input<Object> getSkipHostKeyValidation() {
         return this.skipHostKeyValidation == null ? Input.empty() : this.skipHostKeyValidation;
@@ -187,7 +187,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -198,7 +198,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userName")
-        private final @Nullable Input<Object> userName;
+      private final @Nullable Input<Object> userName;
 
     public Input<Object> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;

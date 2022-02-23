@@ -24,7 +24,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="duration")
-        private final @Nullable Input<String> duration;
+      private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -48,7 +48,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceFilter", required=true)
-        private final Input<PatchDeploymentInstanceFilterArgs> instanceFilter;
+      private final Input<PatchDeploymentInstanceFilterArgs> instanceFilter;
 
     public Input<PatchDeploymentInstanceFilterArgs> getInstanceFilter() {
         return this.instanceFilter;
@@ -60,7 +60,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="oneTimeSchedule")
-        private final @Nullable Input<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule;
+      private final @Nullable Input<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule;
 
     public Input<PatchDeploymentOneTimeScheduleArgs> getOneTimeSchedule() {
         return this.oneTimeSchedule == null ? Input.empty() : this.oneTimeSchedule;
@@ -72,7 +72,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="patchConfig")
-        private final @Nullable Input<PatchDeploymentPatchConfigArgs> patchConfig;
+      private final @Nullable Input<PatchDeploymentPatchConfigArgs> patchConfig;
 
     public Input<PatchDeploymentPatchConfigArgs> getPatchConfig() {
         return this.patchConfig == null ? Input.empty() : this.patchConfig;
@@ -88,7 +88,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="patchDeploymentId", required=true)
-        private final Input<String> patchDeploymentId;
+      private final Input<String> patchDeploymentId;
 
     public Input<String> getPatchDeploymentId() {
         return this.patchDeploymentId;
@@ -100,7 +100,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -112,7 +112,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="recurringSchedule")
-        private final @Nullable Input<PatchDeploymentRecurringScheduleArgs> recurringSchedule;
+      private final @Nullable Input<PatchDeploymentRecurringScheduleArgs> recurringSchedule;
 
     public Input<PatchDeploymentRecurringScheduleArgs> getRecurringSchedule() {
         return this.recurringSchedule == null ? Input.empty() : this.recurringSchedule;
@@ -124,7 +124,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rollout")
-        private final @Nullable Input<PatchDeploymentRolloutArgs> rollout;
+      private final @Nullable Input<PatchDeploymentRolloutArgs> rollout;
 
     public Input<PatchDeploymentRolloutArgs> getRollout() {
         return this.rollout == null ? Input.empty() : this.rollout;

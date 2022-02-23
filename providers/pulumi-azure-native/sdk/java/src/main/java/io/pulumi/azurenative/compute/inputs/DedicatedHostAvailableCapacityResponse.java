@@ -24,7 +24,7 @@ public final class DedicatedHostAvailableCapacityResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="allocatableVMs")
-        private final @Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs;
+      private final @Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs;
 
     public List<DedicatedHostAllocatableVMResponse> getAllocatableVMs() {
         return this.allocatableVMs == null ? List.of() : this.allocatableVMs;

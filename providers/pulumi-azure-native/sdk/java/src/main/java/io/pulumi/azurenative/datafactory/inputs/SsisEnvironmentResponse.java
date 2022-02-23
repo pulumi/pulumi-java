@@ -26,7 +26,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -37,7 +37,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="folderId")
-        private final @Nullable Double folderId;
+      private final @Nullable Double folderId;
 
     public Optional<Double> getFolderId() {
         return this.folderId == null ? Optional.empty() : Optional.ofNullable(this.folderId);
@@ -48,7 +48,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Double id;
+      private final @Nullable Double id;
 
     public Optional<Double> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -59,7 +59,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -71,7 +71,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -82,7 +82,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="variables")
-        private final @Nullable List<SsisVariableResponse> variables;
+      private final @Nullable List<SsisVariableResponse> variables;
 
     public List<SsisVariableResponse> getVariables() {
         return this.variables == null ? List.of() : this.variables;

@@ -27,7 +27,7 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowInsecure")
-        private final @Nullable Boolean allowInsecure;
+      private final @Nullable Boolean allowInsecure;
 
     public Optional<Boolean> getAllowInsecure() {
         return this.allowInsecure == null ? Optional.empty() : Optional.ofNullable(this.allowInsecure);
@@ -38,7 +38,7 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="external")
-        private final @Nullable Boolean external;
+      private final @Nullable Boolean external;
 
     public Optional<Boolean> getExternal() {
         return this.external == null ? Optional.empty() : Optional.ofNullable(this.external);
@@ -49,7 +49,7 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fqdn", required=true)
-        private final String fqdn;
+      private final String fqdn;
 
     public String getFqdn() {
         return this.fqdn;
@@ -60,14 +60,14 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetPort")
-        private final @Nullable Integer targetPort;
+      private final @Nullable Integer targetPort;
 
     public Optional<Integer> getTargetPort() {
         return this.targetPort == null ? Optional.empty() : Optional.ofNullable(this.targetPort);
     }
 
     @InputImport(name="traffic")
-        private final @Nullable List<TrafficWeightResponse> traffic;
+      private final @Nullable List<TrafficWeightResponse> traffic;
 
     public List<TrafficWeightResponse> getTraffic() {
         return this.traffic == null ? List.of() : this.traffic;
@@ -78,7 +78,7 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transport")
-        private final @Nullable String transport;
+      private final @Nullable String transport;
 
     public Optional<String> getTransport() {
         return this.transport == null ? Optional.empty() : Optional.ofNullable(this.transport);

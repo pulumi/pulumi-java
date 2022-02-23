@@ -24,7 +24,7 @@ public final class SanEnableProtectionInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instanceType")
-        private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;

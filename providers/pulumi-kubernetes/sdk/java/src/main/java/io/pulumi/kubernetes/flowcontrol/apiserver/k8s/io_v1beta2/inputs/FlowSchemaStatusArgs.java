@@ -24,7 +24,7 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="conditions")
-        private final @Nullable Input<List<FlowSchemaConditionArgs>> conditions;
+      private final @Nullable Input<List<FlowSchemaConditionArgs>> conditions;
 
     public Input<List<FlowSchemaConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;

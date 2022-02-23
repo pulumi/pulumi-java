@@ -14,14 +14,14 @@ public final class JobStatisticOverride extends io.pulumi.resources.InvokeArgs {
     public static final JobStatisticOverride Empty = new JobStatisticOverride();
 
     @InputImport(name="parameters", required=true)
-        private final JobParameterMap parameters;
+      private final JobParameterMap parameters;
 
     public JobParameterMap getParameters() {
         return this.parameters;
     }
 
     @InputImport(name="statistic", required=true)
-        private final String statistic;
+      private final String statistic;
 
     public String getStatistic() {
         return this.statistic;

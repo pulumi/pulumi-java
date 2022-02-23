@@ -19,7 +19,7 @@ public final class WebACLAllowActionArgs extends io.pulumi.resources.ResourceArg
     public static final WebACLAllowActionArgs Empty = new WebACLAllowActionArgs();
 
     @InputImport(name="customRequestHandling")
-        private final @Nullable Input<WebACLCustomRequestHandlingArgs> customRequestHandling;
+      private final @Nullable Input<WebACLCustomRequestHandlingArgs> customRequestHandling;
 
     public Input<WebACLCustomRequestHandlingArgs> getCustomRequestHandling() {
         return this.customRequestHandling == null ? Input.empty() : this.customRequestHandling;

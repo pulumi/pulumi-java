@@ -15,14 +15,14 @@ public final class TaskDefinitionPlacementConstraintArgs extends io.pulumi.resou
     public static final TaskDefinitionPlacementConstraintArgs Empty = new TaskDefinitionPlacementConstraintArgs();
 
     @InputImport(name="expression")
-        private final @Nullable Input<String> expression;
+      private final @Nullable Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression == null ? Input.empty() : this.expression;
     }
 
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

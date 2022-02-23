@@ -22,7 +22,7 @@ public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="copyLogDetailsType", required=true)
-        private final String copyLogDetailsType;
+      private final String copyLogDetailsType;
 
     public String getCopyLogDetailsType() {
         return this.copyLogDetailsType;
@@ -33,7 +33,7 @@ public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="diskSerialNumber", required=true)
-        private final String diskSerialNumber;
+      private final String diskSerialNumber;
 
     public String getDiskSerialNumber() {
         return this.diskSerialNumber;
@@ -44,7 +44,7 @@ public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="errorLogLink", required=true)
-        private final String errorLogLink;
+      private final String errorLogLink;
 
     public String getErrorLogLink() {
         return this.errorLogLink;
@@ -55,7 +55,7 @@ public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="verboseLogLink", required=true)
-        private final String verboseLogLink;
+      private final String verboseLogLink;
 
     public String getVerboseLogLink() {
         return this.verboseLogLink;

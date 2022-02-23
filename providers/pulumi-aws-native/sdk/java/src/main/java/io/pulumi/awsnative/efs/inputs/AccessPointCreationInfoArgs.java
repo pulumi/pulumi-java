@@ -18,7 +18,7 @@ public final class AccessPointCreationInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ownerGid", required=true)
-        private final Input<String> ownerGid;
+      private final Input<String> ownerGid;
 
     public Input<String> getOwnerGid() {
         return this.ownerGid;
@@ -29,7 +29,7 @@ public final class AccessPointCreationInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ownerUid", required=true)
-        private final Input<String> ownerUid;
+      private final Input<String> ownerUid;
 
     public Input<String> getOwnerUid() {
         return this.ownerUid;
@@ -40,7 +40,7 @@ public final class AccessPointCreationInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="permissions", required=true)
-        private final Input<String> permissions;
+      private final Input<String> permissions;
 
     public Input<String> getPermissions() {
         return this.permissions;

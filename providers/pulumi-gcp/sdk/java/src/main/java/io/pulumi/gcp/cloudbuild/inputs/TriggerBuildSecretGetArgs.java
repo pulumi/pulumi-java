@@ -20,7 +20,7 @@ public final class TriggerBuildSecretGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-        private final Input<String> kmsKeyName;
+      private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;
@@ -33,7 +33,7 @@ public final class TriggerBuildSecretGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secretEnv")
-        private final @Nullable Input<Map<String,String>> secretEnv;
+      private final @Nullable Input<Map<String,String>> secretEnv;
 
     public Input<Map<String,String>> getSecretEnv() {
         return this.secretEnv == null ? Input.empty() : this.secretEnv;

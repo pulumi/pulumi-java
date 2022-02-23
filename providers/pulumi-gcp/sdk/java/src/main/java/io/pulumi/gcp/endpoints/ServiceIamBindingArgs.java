@@ -17,14 +17,14 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
     public static final ServiceIamBindingArgs Empty = new ServiceIamBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<ServiceIamBindingConditionArgs> condition;
+      private final @Nullable Input<ServiceIamBindingConditionArgs> condition;
 
     public Input<ServiceIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -37,14 +37,14 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
     }
 
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;

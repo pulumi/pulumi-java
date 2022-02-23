@@ -20,7 +20,7 @@ public final class GameServerClusterConnectionInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="gkeClusterReference", required=true)
-        private final Input<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference;
+      private final Input<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference;
 
     public Input<GameServerClusterConnectionInfoGkeClusterReferenceArgs> getGkeClusterReference() {
         return this.gkeClusterReference;
@@ -33,7 +33,7 @@ public final class GameServerClusterConnectionInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="namespace", required=true)
-        private final Input<String> namespace;
+      private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;

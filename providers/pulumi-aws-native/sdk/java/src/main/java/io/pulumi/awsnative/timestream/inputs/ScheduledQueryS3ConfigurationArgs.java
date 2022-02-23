@@ -20,21 +20,21 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
     public static final ScheduledQueryS3ConfigurationArgs Empty = new ScheduledQueryS3ConfigurationArgs();
 
     @InputImport(name="bucketName", required=true)
-        private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="encryptionOption")
-        private final @Nullable Input<ScheduledQueryEncryptionOption> encryptionOption;
+      private final @Nullable Input<ScheduledQueryEncryptionOption> encryptionOption;
 
     public Input<ScheduledQueryEncryptionOption> getEncryptionOption() {
         return this.encryptionOption == null ? Input.empty() : this.encryptionOption;
     }
 
     @InputImport(name="objectKeyPrefix")
-        private final @Nullable Input<String> objectKeyPrefix;
+      private final @Nullable Input<String> objectKeyPrefix;
 
     public Input<String> getObjectKeyPrefix() {
         return this.objectKeyPrefix == null ? Input.empty() : this.objectKeyPrefix;

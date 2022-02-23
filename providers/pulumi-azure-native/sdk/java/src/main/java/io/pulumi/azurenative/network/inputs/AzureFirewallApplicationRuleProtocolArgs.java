@@ -26,7 +26,7 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -37,7 +37,7 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="protocolType")
-        private final @Nullable Input<Either<String,AzureFirewallApplicationRuleProtocolType>> protocolType;
+      private final @Nullable Input<Either<String,AzureFirewallApplicationRuleProtocolType>> protocolType;
 
     public Input<Either<String,AzureFirewallApplicationRuleProtocolType>> getProtocolType() {
         return this.protocolType == null ? Input.empty() : this.protocolType;

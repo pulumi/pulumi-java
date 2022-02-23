@@ -18,7 +18,7 @@ public final class GameServerGroupTargetTrackingConfigurationArgs extends io.pul
     public static final GameServerGroupTargetTrackingConfigurationArgs Empty = new GameServerGroupTargetTrackingConfigurationArgs();
 
     @InputImport(name="targetValue", required=true)
-        private final Input<Double> targetValue;
+      private final Input<Double> targetValue;
 
     public Input<Double> getTargetValue() {
         return this.targetValue;

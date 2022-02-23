@@ -17,7 +17,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-        private final String resourceId;
+      private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -28,7 +28,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-        private final String restApiId;
+      private final String restApiId;
 
     public String getRestApiId() {
         return this.restApiId;

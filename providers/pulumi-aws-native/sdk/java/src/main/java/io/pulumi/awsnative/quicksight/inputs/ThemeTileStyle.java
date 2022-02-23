@@ -19,7 +19,7 @@ public final class ThemeTileStyle extends io.pulumi.resources.InvokeArgs {
     public static final ThemeTileStyle Empty = new ThemeTileStyle();
 
     @InputImport(name="border")
-        private final @Nullable ThemeBorderStyle border;
+      private final @Nullable ThemeBorderStyle border;
 
     public Optional<ThemeBorderStyle> getBorder() {
         return this.border == null ? Optional.empty() : Optional.ofNullable(this.border);

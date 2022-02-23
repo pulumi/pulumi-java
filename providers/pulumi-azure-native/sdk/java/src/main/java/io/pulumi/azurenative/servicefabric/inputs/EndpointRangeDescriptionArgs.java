@@ -22,7 +22,7 @@ public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="endPort", required=true)
-        private final Input<Integer> endPort;
+      private final Input<Integer> endPort;
 
     public Input<Integer> getEndPort() {
         return this.endPort;
@@ -33,7 +33,7 @@ public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="startPort", required=true)
-        private final Input<Integer> startPort;
+      private final Input<Integer> startPort;
 
     public Input<Integer> getStartPort() {
         return this.startPort;

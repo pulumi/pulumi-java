@@ -22,7 +22,7 @@ public final class RuleGroupCustomRequestHandling extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="insertHeaders", required=true)
-        private final List<RuleGroupCustomHTTPHeader> insertHeaders;
+      private final List<RuleGroupCustomHTTPHeader> insertHeaders;
 
     public List<RuleGroupCustomHTTPHeader> getInsertHeaders() {
         return this.insertHeaders;

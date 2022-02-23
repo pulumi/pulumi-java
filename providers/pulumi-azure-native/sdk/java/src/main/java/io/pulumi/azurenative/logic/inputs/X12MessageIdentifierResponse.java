@@ -21,7 +21,7 @@ public final class X12MessageIdentifierResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="messageId", required=true)
-        private final String messageId;
+      private final String messageId;
 
     public String getMessageId() {
         return this.messageId;

@@ -24,7 +24,7 @@ public final class SshProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeys")
-        private final @Nullable Input<List<SshPublicKeyArgs>> publicKeys;
+      private final @Nullable Input<List<SshPublicKeyArgs>> publicKeys;
 
     public Input<List<SshPublicKeyArgs>> getPublicKeys() {
         return this.publicKeys == null ? Input.empty() : this.publicKeys;

@@ -13,7 +13,7 @@ public final class GetRegistryPolicyArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetRegistryPolicyArgs Empty = new GetRegistryPolicyArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

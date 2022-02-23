@@ -17,7 +17,7 @@ public final class GetReplicationvCenterArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="fabricName", required=true)
-        private final String fabricName;
+      private final String fabricName;
 
     public String getFabricName() {
         return this.fabricName;
@@ -28,7 +28,7 @@ public final class GetReplicationvCenterArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetReplicationvCenterArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -50,7 +50,7 @@ public final class GetReplicationvCenterArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="vCenterName", required=true)
-        private final String vCenterName;
+      private final String vCenterName;
 
     public String getVCenterName() {
         return this.vCenterName;

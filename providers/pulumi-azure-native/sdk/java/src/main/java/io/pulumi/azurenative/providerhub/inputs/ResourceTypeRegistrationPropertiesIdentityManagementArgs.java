@@ -17,14 +17,14 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
     public static final ResourceTypeRegistrationPropertiesIdentityManagementArgs Empty = new ResourceTypeRegistrationPropertiesIdentityManagementArgs();
 
     @InputImport(name="applicationId")
-        private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
     }
 
     @InputImport(name="type")
-        private final @Nullable Input<Either<String,IdentityManagementTypes>> type;
+      private final @Nullable Input<Either<String,IdentityManagementTypes>> type;
 
     public Input<Either<String,IdentityManagementTypes>> getType() {
         return this.type == null ? Input.empty() : this.type;

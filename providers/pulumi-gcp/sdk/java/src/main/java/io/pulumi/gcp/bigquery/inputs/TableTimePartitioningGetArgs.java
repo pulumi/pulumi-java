@@ -22,7 +22,7 @@ public final class TableTimePartitioningGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="expirationMs")
-        private final @Nullable Input<Integer> expirationMs;
+      private final @Nullable Input<Integer> expirationMs;
 
     public Input<Integer> getExpirationMs() {
         return this.expirationMs == null ? Input.empty() : this.expirationMs;
@@ -34,7 +34,7 @@ public final class TableTimePartitioningGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="field")
-        private final @Nullable Input<String> field;
+      private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -47,7 +47,7 @@ public final class TableTimePartitioningGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="requirePartitionFilter")
-        private final @Nullable Input<Boolean> requirePartitionFilter;
+      private final @Nullable Input<Boolean> requirePartitionFilter;
 
     public Input<Boolean> getRequirePartitionFilter() {
         return this.requirePartitionFilter == null ? Input.empty() : this.requirePartitionFilter;
@@ -59,7 +59,7 @@ public final class TableTimePartitioningGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

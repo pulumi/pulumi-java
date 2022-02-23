@@ -28,7 +28,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -39,7 +39,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -50,7 +50,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<Either<String,Kind>> kind;
+      private final Input<Either<String,Kind>> kind;
 
     public Input<Either<String,Kind>> getKind() {
         return this.kind;
@@ -61,7 +61,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<List<ParameterDeclarationArgs>> parameters;
+      private final @Nullable Input<List<ParameterDeclarationArgs>> parameters;
 
     public Input<List<ParameterDeclarationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -72,7 +72,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pipelineTopologyName")
-        private final @Nullable Input<String> pipelineTopologyName;
+      private final @Nullable Input<String> pipelineTopologyName;
 
     public Input<String> getPipelineTopologyName() {
         return this.pipelineTopologyName == null ? Input.empty() : this.pipelineTopologyName;
@@ -83,7 +83,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="processors")
-        private final @Nullable Input<List<EncoderProcessorArgs>> processors;
+      private final @Nullable Input<List<EncoderProcessorArgs>> processors;
 
     public Input<List<EncoderProcessorArgs>> getProcessors() {
         return this.processors == null ? Input.empty() : this.processors;
@@ -94,7 +94,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -105,7 +105,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sinks", required=true)
-        private final Input<List<VideoSinkArgs>> sinks;
+      private final Input<List<VideoSinkArgs>> sinks;
 
     public Input<List<VideoSinkArgs>> getSinks() {
         return this.sinks;
@@ -116,7 +116,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sku", required=true)
-        private final Input<SkuArgs> sku;
+      private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -127,7 +127,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sources", required=true)
-        private final Input<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;
+      private final Input<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;
 
     public Input<List<Either<RtspSourceArgs,VideoSourceArgs>>> getSources() {
         return this.sources;

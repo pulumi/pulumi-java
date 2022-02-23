@@ -19,14 +19,14 @@ public final class CertificateAuthorityAccessMethodArgs extends io.pulumi.resour
     public static final CertificateAuthorityAccessMethodArgs Empty = new CertificateAuthorityAccessMethodArgs();
 
     @InputImport(name="accessMethodType")
-        private final @Nullable Input<String> accessMethodType;
+      private final @Nullable Input<String> accessMethodType;
 
     public Input<String> getAccessMethodType() {
         return this.accessMethodType == null ? Input.empty() : this.accessMethodType;
     }
 
     @InputImport(name="customObjectIdentifier")
-        private final @Nullable Input<String> customObjectIdentifier;
+      private final @Nullable Input<String> customObjectIdentifier;
 
     public Input<String> getCustomObjectIdentifier() {
         return this.customObjectIdentifier == null ? Input.empty() : this.customObjectIdentifier;

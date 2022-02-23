@@ -25,7 +25,7 @@ public final class ExpressionEvaluationOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scope")
-        private final @Nullable Input<Either<String,ExpressionEvaluationOptionsScopeType>> scope;
+      private final @Nullable Input<Either<String,ExpressionEvaluationOptionsScopeType>> scope;
 
     public Input<Either<String,ExpressionEvaluationOptionsScopeType>> getScope() {
         return this.scope == null ? Input.empty() : this.scope;

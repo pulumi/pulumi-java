@@ -24,7 +24,7 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -35,7 +35,7 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationAddresses")
-        private final @Nullable List<String> destinationAddresses;
+      private final @Nullable List<String> destinationAddresses;
 
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
@@ -46,7 +46,7 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationPorts")
-        private final @Nullable List<String> destinationPorts;
+      private final @Nullable List<String> destinationPorts;
 
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
@@ -57,7 +57,7 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipProtocols")
-        private final @Nullable List<String> ipProtocols;
+      private final @Nullable List<String> ipProtocols;
 
     public List<String> getIpProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
@@ -68,7 +68,7 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -80,7 +80,7 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleType", required=true)
-        private final String ruleType;
+      private final String ruleType;
 
     public String getRuleType() {
         return this.ruleType;
@@ -91,7 +91,7 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceAddresses")
-        private final @Nullable List<String> sourceAddresses;
+      private final @Nullable List<String> sourceAddresses;
 
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
@@ -102,7 +102,7 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceIpGroups")
-        private final @Nullable List<String> sourceIpGroups;
+      private final @Nullable List<String> sourceIpGroups;
 
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
@@ -113,7 +113,7 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="translatedAddress")
-        private final @Nullable String translatedAddress;
+      private final @Nullable String translatedAddress;
 
     public Optional<String> getTranslatedAddress() {
         return this.translatedAddress == null ? Optional.empty() : Optional.ofNullable(this.translatedAddress);
@@ -124,7 +124,7 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="translatedFqdn")
-        private final @Nullable String translatedFqdn;
+      private final @Nullable String translatedFqdn;
 
     public Optional<String> getTranslatedFqdn() {
         return this.translatedFqdn == null ? Optional.empty() : Optional.ofNullable(this.translatedFqdn);
@@ -135,7 +135,7 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="translatedPort")
-        private final @Nullable String translatedPort;
+      private final @Nullable String translatedPort;
 
     public Optional<String> getTranslatedPort() {
         return this.translatedPort == null ? Optional.empty() : Optional.ofNullable(this.translatedPort);

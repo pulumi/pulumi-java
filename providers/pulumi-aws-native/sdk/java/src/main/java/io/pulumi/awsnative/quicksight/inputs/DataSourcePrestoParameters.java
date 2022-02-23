@@ -22,7 +22,7 @@ public final class DataSourcePrestoParameters extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="catalog", required=true)
-        private final String catalog;
+      private final String catalog;
 
     public String getCatalog() {
         return this.catalog;
@@ -33,7 +33,7 @@ public final class DataSourcePrestoParameters extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="host", required=true)
-        private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
@@ -44,7 +44,7 @@ public final class DataSourcePrestoParameters extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="port", required=true)
-        private final Double port;
+      private final Double port;
 
     public Double getPort() {
         return this.port;

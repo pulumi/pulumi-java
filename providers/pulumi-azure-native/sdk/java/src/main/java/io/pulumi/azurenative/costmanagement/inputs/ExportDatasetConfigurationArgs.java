@@ -24,7 +24,7 @@ public final class ExportDatasetConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="columns")
-        private final @Nullable Input<List<String>> columns;
+      private final @Nullable Input<List<String>> columns;
 
     public Input<List<String>> getColumns() {
         return this.columns == null ? Input.empty() : this.columns;

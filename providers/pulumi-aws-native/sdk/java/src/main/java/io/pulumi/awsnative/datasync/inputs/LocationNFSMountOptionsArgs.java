@@ -23,7 +23,7 @@ public final class LocationNFSMountOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<LocationNFSMountOptionsVersion> version;
+      private final @Nullable Input<LocationNFSMountOptionsVersion> version;
 
     public Input<LocationNFSMountOptionsVersion> getVersion() {
         return this.version == null ? Input.empty() : this.version;

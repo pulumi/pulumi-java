@@ -23,7 +23,7 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="componentArn")
-        private final @Nullable Input<String> componentArn;
+      private final @Nullable Input<String> componentArn;
 
     public Input<String> getComponentArn() {
         return this.componentArn == null ? Input.empty() : this.componentArn;

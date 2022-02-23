@@ -27,7 +27,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigG
      * 
      */
     @InputImport(name="outputSchema")
-        private final @Nullable Input<String> outputSchema;
+      private final @Nullable Input<String> outputSchema;
 
     public Input<String> getOutputSchema() {
         return this.outputSchema == null ? Input.empty() : this.outputSchema;
@@ -39,7 +39,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigG
      * 
      */
     @InputImport(name="table", required=true)
-        private final Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table;
+      private final Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table;
 
     public Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> getTable() {
         return this.table;

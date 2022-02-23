@@ -20,14 +20,14 @@ public final class BotAliasTextLogSetting extends io.pulumi.resources.InvokeArgs
     public static final BotAliasTextLogSetting Empty = new BotAliasTextLogSetting();
 
     @InputImport(name="destination")
-        private final @Nullable BotAliasTextLogDestination destination;
+      private final @Nullable BotAliasTextLogDestination destination;
 
     public Optional<BotAliasTextLogDestination> getDestination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
     }
 
     @InputImport(name="enabled")
-        private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);

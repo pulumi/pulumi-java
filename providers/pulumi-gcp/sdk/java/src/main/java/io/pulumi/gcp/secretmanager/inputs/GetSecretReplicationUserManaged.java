@@ -14,7 +14,7 @@ public final class GetSecretReplicationUserManaged extends io.pulumi.resources.I
     public static final GetSecretReplicationUserManaged Empty = new GetSecretReplicationUserManaged();
 
     @InputImport(name="replicas", required=true)
-        private final List<GetSecretReplicationUserManagedReplica> replicas;
+      private final List<GetSecretReplicationUserManagedReplica> replicas;
 
     public List<GetSecretReplicationUserManagedReplica> getReplicas() {
         return this.replicas;

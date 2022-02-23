@@ -22,7 +22,7 @@ public final class WorkspaceCustomStringParameterArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

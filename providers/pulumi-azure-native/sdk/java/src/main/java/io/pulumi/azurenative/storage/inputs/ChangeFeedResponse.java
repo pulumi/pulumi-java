@@ -24,7 +24,7 @@ public final class ChangeFeedResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Boolean enabled;
+      private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -35,7 +35,7 @@ public final class ChangeFeedResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retentionInDays")
-        private final @Nullable Integer retentionInDays;
+      private final @Nullable Integer retentionInDays;
 
     public Optional<Integer> getRetentionInDays() {
         return this.retentionInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionInDays);

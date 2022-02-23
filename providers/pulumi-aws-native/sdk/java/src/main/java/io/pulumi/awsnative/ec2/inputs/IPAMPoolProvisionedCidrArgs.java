@@ -18,7 +18,7 @@ public final class IPAMPoolProvisionedCidrArgs extends io.pulumi.resources.Resou
     public static final IPAMPoolProvisionedCidrArgs Empty = new IPAMPoolProvisionedCidrArgs();
 
     @InputImport(name="cidr", required=true)
-        private final Input<String> cidr;
+      private final Input<String> cidr;
 
     public Input<String> getCidr() {
         return this.cidr;

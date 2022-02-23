@@ -24,7 +24,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoTrackingConfiguration")
-        private final @Nullable Input<AutoTrackingConfiguration> autoTrackingConfiguration;
+      private final @Nullable Input<AutoTrackingConfiguration> autoTrackingConfiguration;
 
     public Input<AutoTrackingConfiguration> getAutoTrackingConfiguration() {
         return this.autoTrackingConfiguration == null ? Input.empty() : this.autoTrackingConfiguration;
@@ -35,7 +35,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactProfileName")
-        private final @Nullable Input<String> contactProfileName;
+      private final @Nullable Input<String> contactProfileName;
 
     public Input<String> getContactProfileName() {
         return this.contactProfileName == null ? Input.empty() : this.contactProfileName;
@@ -46,7 +46,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHubUri")
-        private final @Nullable Input<String> eventHubUri;
+      private final @Nullable Input<String> eventHubUri;
 
     public Input<String> getEventHubUri() {
         return this.eventHubUri == null ? Input.empty() : this.eventHubUri;
@@ -57,7 +57,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="links", required=true)
-        private final Input<List<ContactProfileLinkArgs>> links;
+      private final Input<List<ContactProfileLinkArgs>> links;
 
     public Input<List<ContactProfileLinkArgs>> getLinks() {
         return this.links;
@@ -68,7 +68,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -79,7 +79,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumElevationDegrees")
-        private final @Nullable Input<Double> minimumElevationDegrees;
+      private final @Nullable Input<Double> minimumElevationDegrees;
 
     public Input<Double> getMinimumElevationDegrees() {
         return this.minimumElevationDegrees == null ? Input.empty() : this.minimumElevationDegrees;
@@ -90,7 +90,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumViableContactDuration")
-        private final @Nullable Input<String> minimumViableContactDuration;
+      private final @Nullable Input<String> minimumViableContactDuration;
 
     public Input<String> getMinimumViableContactDuration() {
         return this.minimumViableContactDuration == null ? Input.empty() : this.minimumViableContactDuration;
@@ -101,7 +101,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -112,7 +112,7 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

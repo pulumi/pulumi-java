@@ -20,7 +20,7 @@ public final class StandardAppVersionManualScalingArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="instances", required=true)
-        private final Input<Integer> instances;
+      private final Input<Integer> instances;
 
     public Input<Integer> getInstances() {
         return this.instances;

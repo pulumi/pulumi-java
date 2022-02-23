@@ -19,7 +19,7 @@ public final class RepositoryImageScanningConfigurationArgs extends io.pulumi.re
     public static final RepositoryImageScanningConfigurationArgs Empty = new RepositoryImageScanningConfigurationArgs();
 
     @InputImport(name="scanOnPush")
-        private final @Nullable Input<Boolean> scanOnPush;
+      private final @Nullable Input<Boolean> scanOnPush;
 
     public Input<Boolean> getScanOnPush() {
         return this.scanOnPush == null ? Input.empty() : this.scanOnPush;

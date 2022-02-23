@@ -24,7 +24,7 @@ public final class EventChannelSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="source")
-        private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;

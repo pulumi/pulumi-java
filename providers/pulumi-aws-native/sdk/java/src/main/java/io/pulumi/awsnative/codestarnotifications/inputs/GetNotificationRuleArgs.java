@@ -13,7 +13,7 @@ public final class GetNotificationRuleArgs extends io.pulumi.resources.InvokeArg
     public static final GetNotificationRuleArgs Empty = new GetNotificationRuleArgs();
 
     @InputImport(name="arn", required=true)
-        private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;

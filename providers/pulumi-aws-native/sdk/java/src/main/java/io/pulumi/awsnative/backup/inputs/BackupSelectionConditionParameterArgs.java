@@ -15,14 +15,14 @@ public final class BackupSelectionConditionParameterArgs extends io.pulumi.resou
     public static final BackupSelectionConditionParameterArgs Empty = new BackupSelectionConditionParameterArgs();
 
     @InputImport(name="conditionKey")
-        private final @Nullable Input<String> conditionKey;
+      private final @Nullable Input<String> conditionKey;
 
     public Input<String> getConditionKey() {
         return this.conditionKey == null ? Input.empty() : this.conditionKey;
     }
 
     @InputImport(name="conditionValue")
-        private final @Nullable Input<String> conditionValue;
+      private final @Nullable Input<String> conditionValue;
 
     public Input<String> getConditionValue() {
         return this.conditionValue == null ? Input.empty() : this.conditionValue;

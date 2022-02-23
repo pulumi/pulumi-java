@@ -24,7 +24,7 @@ public final class ComputeIsolationPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enableComputeIsolation")
-        private final @Nullable Input<Boolean> enableComputeIsolation;
+      private final @Nullable Input<Boolean> enableComputeIsolation;
 
     public Input<Boolean> getEnableComputeIsolation() {
         return this.enableComputeIsolation == null ? Input.empty() : this.enableComputeIsolation;
@@ -35,7 +35,7 @@ public final class ComputeIsolationPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="hostSku")
-        private final @Nullable Input<String> hostSku;
+      private final @Nullable Input<String> hostSku;
 
     public Input<String> getHostSku() {
         return this.hostSku == null ? Input.empty() : this.hostSku;

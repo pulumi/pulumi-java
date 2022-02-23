@@ -21,7 +21,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hcxCloudManager", required=true)
-        private final String hcxCloudManager;
+      private final String hcxCloudManager;
 
     public String getHcxCloudManager() {
         return this.hcxCloudManager;
@@ -32,7 +32,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nsxtManager", required=true)
-        private final String nsxtManager;
+      private final String nsxtManager;
 
     public String getNsxtManager() {
         return this.nsxtManager;
@@ -43,7 +43,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vcsa", required=true)
-        private final String vcsa;
+      private final String vcsa;
 
     public String getVcsa() {
         return this.vcsa;

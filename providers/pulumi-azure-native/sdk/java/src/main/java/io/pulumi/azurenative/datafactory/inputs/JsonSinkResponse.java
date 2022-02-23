@@ -31,7 +31,7 @@ public final class JsonSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Object disableMetricsCollection;
+      private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -42,7 +42,7 @@ public final class JsonSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="formatSettings")
-        private final @Nullable JsonWriteSettingsResponse formatSettings;
+      private final @Nullable JsonWriteSettingsResponse formatSettings;
 
     public Optional<JsonWriteSettingsResponse> getFormatSettings() {
         return this.formatSettings == null ? Optional.empty() : Optional.ofNullable(this.formatSettings);
@@ -53,7 +53,7 @@ public final class JsonSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Object maxConcurrentConnections;
+      private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -64,7 +64,7 @@ public final class JsonSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sinkRetryCount")
-        private final @Nullable Object sinkRetryCount;
+      private final @Nullable Object sinkRetryCount;
 
     public Optional<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
@@ -75,7 +75,7 @@ public final class JsonSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sinkRetryWait")
-        private final @Nullable Object sinkRetryWait;
+      private final @Nullable Object sinkRetryWait;
 
     public Optional<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
@@ -86,7 +86,7 @@ public final class JsonSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storeSettings")
-        private final @Nullable Object storeSettings;
+      private final @Nullable Object storeSettings;
 
     public Object getStoreSettings() {
         return this.storeSettings == null ? null : this.storeSettings;
@@ -98,7 +98,7 @@ public final class JsonSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -109,7 +109,7 @@ public final class JsonSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="writeBatchSize")
-        private final @Nullable Object writeBatchSize;
+      private final @Nullable Object writeBatchSize;
 
     public Optional<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
@@ -120,7 +120,7 @@ public final class JsonSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="writeBatchTimeout")
-        private final @Nullable Object writeBatchTimeout;
+      private final @Nullable Object writeBatchTimeout;
 
     public Optional<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);

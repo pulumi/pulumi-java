@@ -25,7 +25,7 @@ public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="principalId", required=true)
-        private final String principalId;
+      private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -36,7 +36,7 @@ public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tenantId", required=true)
-        private final String tenantId;
+      private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -47,7 +47,7 @@ public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -58,7 +58,7 @@ public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="userAssignedIdentities")
-        private final @Nullable Map<String,Object> userAssignedIdentities;
+      private final @Nullable Map<String,Object> userAssignedIdentities;
 
     public Map<String,Object> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;

@@ -19,7 +19,7 @@ public final class RegionBackendServiceIapGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="oauth2ClientId", required=true)
-        private final Input<String> oauth2ClientId;
+      private final Input<String> oauth2ClientId;
 
     public Input<String> getOauth2ClientId() {
         return this.oauth2ClientId;
@@ -31,7 +31,7 @@ public final class RegionBackendServiceIapGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="oauth2ClientSecret", required=true)
-        private final Input<String> oauth2ClientSecret;
+      private final Input<String> oauth2ClientSecret;
 
     public Input<String> getOauth2ClientSecret() {
         return this.oauth2ClientSecret;
@@ -44,7 +44,7 @@ public final class RegionBackendServiceIapGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="oauth2ClientSecretSha256")
-        private final @Nullable Input<String> oauth2ClientSecretSha256;
+      private final @Nullable Input<String> oauth2ClientSecretSha256;
 
     public Input<String> getOauth2ClientSecretSha256() {
         return this.oauth2ClientSecretSha256 == null ? Input.empty() : this.oauth2ClientSecretSha256;

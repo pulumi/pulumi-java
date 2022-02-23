@@ -18,14 +18,14 @@ public final class OrganizationConformancePackConformancePackInputParameterArgs 
     public static final OrganizationConformancePackConformancePackInputParameterArgs Empty = new OrganizationConformancePackConformancePackInputParameterArgs();
 
     @InputImport(name="parameterName", required=true)
-        private final Input<String> parameterName;
+      private final Input<String> parameterName;
 
     public Input<String> getParameterName() {
         return this.parameterName;
     }
 
     @InputImport(name="parameterValue", required=true)
-        private final Input<String> parameterValue;
+      private final Input<String> parameterValue;
 
     public Input<String> getParameterValue() {
         return this.parameterValue;

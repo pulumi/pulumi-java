@@ -23,7 +23,7 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="referenceName", required=true)
-        private final Input<String> referenceName;
+      private final Input<String> referenceName;
 
     public Input<String> getReferenceName() {
         return this.referenceName;
@@ -45,7 +45,7 @@ public final class PipelineReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

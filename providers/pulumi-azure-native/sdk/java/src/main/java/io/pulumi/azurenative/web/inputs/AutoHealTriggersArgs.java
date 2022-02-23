@@ -28,7 +28,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="privateBytesInKB")
-        private final @Nullable Input<Integer> privateBytesInKB;
+      private final @Nullable Input<Integer> privateBytesInKB;
 
     public Input<Integer> getPrivateBytesInKB() {
         return this.privateBytesInKB == null ? Input.empty() : this.privateBytesInKB;
@@ -39,7 +39,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requests")
-        private final @Nullable Input<RequestsBasedTriggerArgs> requests;
+      private final @Nullable Input<RequestsBasedTriggerArgs> requests;
 
     public Input<RequestsBasedTriggerArgs> getRequests() {
         return this.requests == null ? Input.empty() : this.requests;
@@ -50,7 +50,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="slowRequests")
-        private final @Nullable Input<SlowRequestsBasedTriggerArgs> slowRequests;
+      private final @Nullable Input<SlowRequestsBasedTriggerArgs> slowRequests;
 
     public Input<SlowRequestsBasedTriggerArgs> getSlowRequests() {
         return this.slowRequests == null ? Input.empty() : this.slowRequests;
@@ -61,7 +61,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="slowRequestsWithPath")
-        private final @Nullable Input<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath;
+      private final @Nullable Input<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath;
 
     public Input<List<SlowRequestsBasedTriggerArgs>> getSlowRequestsWithPath() {
         return this.slowRequestsWithPath == null ? Input.empty() : this.slowRequestsWithPath;
@@ -72,7 +72,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="statusCodes")
-        private final @Nullable Input<List<StatusCodesBasedTriggerArgs>> statusCodes;
+      private final @Nullable Input<List<StatusCodesBasedTriggerArgs>> statusCodes;
 
     public Input<List<StatusCodesBasedTriggerArgs>> getStatusCodes() {
         return this.statusCodes == null ? Input.empty() : this.statusCodes;
@@ -83,7 +83,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="statusCodesRange")
-        private final @Nullable Input<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange;
+      private final @Nullable Input<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange;
 
     public Input<List<StatusCodesRangeBasedTriggerArgs>> getStatusCodesRange() {
         return this.statusCodesRange == null ? Input.empty() : this.statusCodesRange;

@@ -21,7 +21,7 @@ public final class ReportConfigAggregationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="function", required=true)
-        private final String function;
+      private final String function;
 
     public String getFunction() {
         return this.function;
@@ -32,7 +32,7 @@ public final class ReportConfigAggregationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

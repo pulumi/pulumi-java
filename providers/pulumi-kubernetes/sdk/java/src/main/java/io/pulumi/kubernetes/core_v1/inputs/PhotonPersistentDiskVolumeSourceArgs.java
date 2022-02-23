@@ -23,7 +23,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fsType")
-        private final @Nullable Input<String> fsType;
+      private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -34,7 +34,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="pdID", required=true)
-        private final Input<String> pdID;
+      private final Input<String> pdID;
 
     public Input<String> getPdID() {
         return this.pdID;

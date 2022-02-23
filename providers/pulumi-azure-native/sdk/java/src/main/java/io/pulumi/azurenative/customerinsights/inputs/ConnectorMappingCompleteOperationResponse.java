@@ -23,7 +23,7 @@ public final class ConnectorMappingCompleteOperationResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="completionOperationType")
-        private final @Nullable String completionOperationType;
+      private final @Nullable String completionOperationType;
 
     public Optional<String> getCompletionOperationType() {
         return this.completionOperationType == null ? Optional.empty() : Optional.ofNullable(this.completionOperationType);
@@ -34,7 +34,7 @@ public final class ConnectorMappingCompleteOperationResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="destinationFolder")
-        private final @Nullable String destinationFolder;
+      private final @Nullable String destinationFolder;
 
     public Optional<String> getDestinationFolder() {
         return this.destinationFolder == null ? Optional.empty() : Optional.ofNullable(this.destinationFolder);

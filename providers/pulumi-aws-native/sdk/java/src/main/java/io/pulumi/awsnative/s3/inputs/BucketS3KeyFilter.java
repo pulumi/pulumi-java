@@ -18,7 +18,7 @@ public final class BucketS3KeyFilter extends io.pulumi.resources.InvokeArgs {
     public static final BucketS3KeyFilter Empty = new BucketS3KeyFilter();
 
     @InputImport(name="rules", required=true)
-        private final List<BucketFilterRule> rules;
+      private final List<BucketFilterRule> rules;
 
     public List<BucketFilterRule> getRules() {
         return this.rules;

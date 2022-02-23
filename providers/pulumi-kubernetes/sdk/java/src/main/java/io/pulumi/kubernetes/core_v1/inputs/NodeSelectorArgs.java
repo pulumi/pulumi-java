@@ -23,7 +23,7 @@ public final class NodeSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeSelectorTerms", required=true)
-        private final Input<List<NodeSelectorTermArgs>> nodeSelectorTerms;
+      private final Input<List<NodeSelectorTermArgs>> nodeSelectorTerms;
 
     public Input<List<NodeSelectorTermArgs>> getNodeSelectorTerms() {
         return this.nodeSelectorTerms;

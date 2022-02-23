@@ -16,7 +16,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
     public static final ConsentStoreIamMemberState Empty = new ConsentStoreIamMemberState();
 
     @InputImport(name="condition")
-        private final @Nullable Input<ConsentStoreIamMemberConditionGetArgs> condition;
+      private final @Nullable Input<ConsentStoreIamMemberConditionGetArgs> condition;
 
     public Input<ConsentStoreIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,7 +27,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="consentStoreId")
-        private final @Nullable Input<String> consentStoreId;
+      private final @Nullable Input<String> consentStoreId;
 
     public Input<String> getConsentStoreId() {
         return this.consentStoreId == null ? Input.empty() : this.consentStoreId;
@@ -40,7 +40,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataset")
-        private final @Nullable Input<String> dataset;
+      private final @Nullable Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
@@ -51,14 +51,14 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-        private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -71,7 +71,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

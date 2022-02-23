@@ -17,7 +17,7 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="shareName", required=true)
-        private final String shareName;
+      private final String shareName;
 
     public String getShareName() {
         return this.shareName;
@@ -50,7 +50,7 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="synchronizationSettingName", required=true)
-        private final String synchronizationSettingName;
+      private final String synchronizationSettingName;
 
     public String getSynchronizationSettingName() {
         return this.synchronizationSettingName;

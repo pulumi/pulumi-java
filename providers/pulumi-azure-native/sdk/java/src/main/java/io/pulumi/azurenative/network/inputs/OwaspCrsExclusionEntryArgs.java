@@ -25,7 +25,7 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="matchVariable", required=true)
-        private final Input<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable;
+      private final Input<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable;
 
     public Input<Either<String,OwaspCrsExclusionEntryMatchVariable>> getMatchVariable() {
         return this.matchVariable;
@@ -36,7 +36,7 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="selector", required=true)
-        private final Input<String> selector;
+      private final Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector;
@@ -47,7 +47,7 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="selectorMatchOperator", required=true)
-        private final Input<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator;
+      private final Input<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator;
 
     public Input<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> getSelectorMatchOperator() {
         return this.selectorMatchOperator;

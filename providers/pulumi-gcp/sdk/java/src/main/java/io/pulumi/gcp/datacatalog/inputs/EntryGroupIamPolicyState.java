@@ -19,7 +19,7 @@ public final class EntryGroupIamPolicyState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="entryGroup")
-        private final @Nullable Input<String> entryGroup;
+      private final @Nullable Input<String> entryGroup;
 
     public Input<String> getEntryGroup() {
         return this.entryGroup == null ? Input.empty() : this.entryGroup;
@@ -30,7 +30,7 @@ public final class EntryGroupIamPolicyState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -42,7 +42,7 @@ public final class EntryGroupIamPolicyState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyData")
-        private final @Nullable Input<String> policyData;
+      private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -54,14 +54,14 @@ public final class EntryGroupIamPolicyState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-        private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;

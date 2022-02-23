@@ -19,7 +19,7 @@ public final class ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs ex
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;

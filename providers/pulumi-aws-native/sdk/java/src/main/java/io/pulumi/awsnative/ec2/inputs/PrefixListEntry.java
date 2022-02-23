@@ -15,14 +15,14 @@ public final class PrefixListEntry extends io.pulumi.resources.InvokeArgs {
     public static final PrefixListEntry Empty = new PrefixListEntry();
 
     @InputImport(name="cidr", required=true)
-        private final String cidr;
+      private final String cidr;
 
     public String getCidr() {
         return this.cidr;
     }
 
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);

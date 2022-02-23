@@ -22,7 +22,7 @@ public final class ServiceEncryptionConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kmsKey", required=true)
-        private final Input<String> kmsKey;
+      private final Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey;

@@ -15,7 +15,7 @@ public final class IntegrationTriggerPropertiesArgs extends io.pulumi.resources.
     public static final IntegrationTriggerPropertiesArgs Empty = new IntegrationTriggerPropertiesArgs();
 
     @InputImport(name="scheduled")
-        private final @Nullable Input<IntegrationScheduledTriggerPropertiesArgs> scheduled;
+      private final @Nullable Input<IntegrationScheduledTriggerPropertiesArgs> scheduled;
 
     public Input<IntegrationScheduledTriggerPropertiesArgs> getScheduled() {
         return this.scheduled == null ? Input.empty() : this.scheduled;

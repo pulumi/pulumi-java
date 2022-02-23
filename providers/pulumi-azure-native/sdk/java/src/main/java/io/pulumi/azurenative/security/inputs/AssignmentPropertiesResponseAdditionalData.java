@@ -23,7 +23,7 @@ public final class AssignmentPropertiesResponseAdditionalData extends io.pulumi.
      * 
      */
     @InputImport(name="exemptionCategory")
-        private final @Nullable String exemptionCategory;
+      private final @Nullable String exemptionCategory;
 
     public Optional<String> getExemptionCategory() {
         return this.exemptionCategory == null ? Optional.empty() : Optional.ofNullable(this.exemptionCategory);

@@ -23,7 +23,7 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricTrigger", required=true)
-        private final Input<MetricTriggerArgs> metricTrigger;
+      private final Input<MetricTriggerArgs> metricTrigger;
 
     public Input<MetricTriggerArgs> getMetricTrigger() {
         return this.metricTrigger;
@@ -34,7 +34,7 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scaleAction", required=true)
-        private final Input<ScaleActionArgs> scaleAction;
+      private final Input<ScaleActionArgs> scaleAction;
 
     public Input<ScaleActionArgs> getScaleAction() {
         return this.scaleAction;

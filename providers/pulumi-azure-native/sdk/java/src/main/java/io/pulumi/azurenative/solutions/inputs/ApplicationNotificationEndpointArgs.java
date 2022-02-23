@@ -22,7 +22,7 @@ public final class ApplicationNotificationEndpointArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="uri", required=true)
-        private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;

@@ -23,7 +23,7 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-        private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -34,7 +34,7 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instructions")
-        private final @Nullable Input<String> instructions;
+      private final @Nullable Input<String> instructions;
 
     public Input<String> getInstructions() {
         return this.instructions == null ? Input.empty() : this.instructions;
@@ -45,7 +45,7 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone")
-        private final @Nullable Input<String> phone;
+      private final @Nullable Input<String> phone;
 
     public Input<String> getPhone() {
         return this.phone == null ? Input.empty() : this.phone;
@@ -56,7 +56,7 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-        private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;

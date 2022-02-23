@@ -22,7 +22,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -33,7 +33,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-        private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -44,7 +44,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequency")
-        private final @Nullable Input<RecurrenceFrequency> frequency;
+      private final @Nullable Input<RecurrenceFrequency> frequency;
 
     public Input<RecurrenceFrequency> getFrequency() {
         return this.frequency == null ? Input.empty() : this.frequency;
@@ -55,14 +55,14 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interval")
-        private final @Nullable Input<Integer> interval;
+      private final @Nullable Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
     }
 
     @InputImport(name="schedule")
-        private final @Nullable Input<JobRecurrenceScheduleArgs> schedule;
+      private final @Nullable Input<JobRecurrenceScheduleArgs> schedule;
 
     public Input<JobRecurrenceScheduleArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;

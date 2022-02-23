@@ -17,7 +17,7 @@ public final class GetAccessReviewScheduleDefinitionByIdArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="scheduleDefinitionId", required=true)
-        private final String scheduleDefinitionId;
+      private final String scheduleDefinitionId;
 
     public String getScheduleDefinitionId() {
         return this.scheduleDefinitionId;

@@ -22,7 +22,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientId", required=true)
-        private final Input<String> clientId;
+      private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -33,7 +33,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="secret", required=true)
-        private final Input<String> secret;
+      private final Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret;

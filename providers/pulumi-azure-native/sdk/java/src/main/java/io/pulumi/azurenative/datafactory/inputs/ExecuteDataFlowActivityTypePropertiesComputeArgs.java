@@ -23,7 +23,7 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
      * 
      */
     @InputImport(name="computeType")
-        private final @Nullable Input<Object> computeType;
+      private final @Nullable Input<Object> computeType;
 
     public Input<Object> getComputeType() {
         return this.computeType == null ? Input.empty() : this.computeType;
@@ -34,7 +34,7 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
      * 
      */
     @InputImport(name="coreCount")
-        private final @Nullable Input<Object> coreCount;
+      private final @Nullable Input<Object> coreCount;
 
     public Input<Object> getCoreCount() {
         return this.coreCount == null ? Input.empty() : this.coreCount;

@@ -21,7 +21,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -32,7 +32,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedNetworkName")
-        private final @Nullable Input<String> managedNetworkName;
+      private final @Nullable Input<String> managedNetworkName;
 
     public Input<String> getManagedNetworkName() {
         return this.managedNetworkName == null ? Input.empty() : this.managedNetworkName;
@@ -43,7 +43,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-        private final @Nullable Input<ScopeArgs> scope;
+      private final @Nullable Input<ScopeArgs> scope;
 
     public Input<ScopeArgs> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -65,7 +65,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

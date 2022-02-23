@@ -25,7 +25,7 @@ public final class ManagedVirtualNetworkSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="allowedAadTenantIdsForLinking")
-        private final @Nullable Input<List<String>> allowedAadTenantIdsForLinking;
+      private final @Nullable Input<List<String>> allowedAadTenantIdsForLinking;
 
     public Input<List<String>> getAllowedAadTenantIdsForLinking() {
         return this.allowedAadTenantIdsForLinking == null ? Input.empty() : this.allowedAadTenantIdsForLinking;
@@ -36,7 +36,7 @@ public final class ManagedVirtualNetworkSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="linkedAccessCheckOnTargetResource")
-        private final @Nullable Input<Boolean> linkedAccessCheckOnTargetResource;
+      private final @Nullable Input<Boolean> linkedAccessCheckOnTargetResource;
 
     public Input<Boolean> getLinkedAccessCheckOnTargetResource() {
         return this.linkedAccessCheckOnTargetResource == null ? Input.empty() : this.linkedAccessCheckOnTargetResource;
@@ -47,7 +47,7 @@ public final class ManagedVirtualNetworkSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="preventDataExfiltration")
-        private final @Nullable Input<Boolean> preventDataExfiltration;
+      private final @Nullable Input<Boolean> preventDataExfiltration;
 
     public Input<Boolean> getPreventDataExfiltration() {
         return this.preventDataExfiltration == null ? Input.empty() : this.preventDataExfiltration;

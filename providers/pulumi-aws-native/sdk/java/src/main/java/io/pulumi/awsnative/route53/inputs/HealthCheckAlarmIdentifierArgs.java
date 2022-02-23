@@ -22,7 +22,7 @@ public final class HealthCheckAlarmIdentifierArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class HealthCheckAlarmIdentifierArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="region", required=true)
-        private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;

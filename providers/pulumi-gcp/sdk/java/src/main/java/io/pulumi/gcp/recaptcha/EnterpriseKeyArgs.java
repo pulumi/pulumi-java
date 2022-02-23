@@ -24,7 +24,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidSettings")
-        private final @Nullable Input<EnterpriseKeyAndroidSettingsArgs> androidSettings;
+      private final @Nullable Input<EnterpriseKeyAndroidSettingsArgs> androidSettings;
 
     public Input<EnterpriseKeyAndroidSettingsArgs> getAndroidSettings() {
         return this.androidSettings == null ? Input.empty() : this.androidSettings;
@@ -35,7 +35,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-        private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -46,7 +46,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosSettings")
-        private final @Nullable Input<EnterpriseKeyIosSettingsArgs> iosSettings;
+      private final @Nullable Input<EnterpriseKeyIosSettingsArgs> iosSettings;
 
     public Input<EnterpriseKeyIosSettingsArgs> getIosSettings() {
         return this.iosSettings == null ? Input.empty() : this.iosSettings;
@@ -57,7 +57,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -68,7 +68,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -79,7 +79,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testingOptions")
-        private final @Nullable Input<EnterpriseKeyTestingOptionsArgs> testingOptions;
+      private final @Nullable Input<EnterpriseKeyTestingOptionsArgs> testingOptions;
 
     public Input<EnterpriseKeyTestingOptionsArgs> getTestingOptions() {
         return this.testingOptions == null ? Input.empty() : this.testingOptions;
@@ -90,7 +90,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webSettings")
-        private final @Nullable Input<EnterpriseKeyWebSettingsArgs> webSettings;
+      private final @Nullable Input<EnterpriseKeyWebSettingsArgs> webSettings;
 
     public Input<EnterpriseKeyWebSettingsArgs> getWebSettings() {
         return this.webSettings == null ? Input.empty() : this.webSettings;

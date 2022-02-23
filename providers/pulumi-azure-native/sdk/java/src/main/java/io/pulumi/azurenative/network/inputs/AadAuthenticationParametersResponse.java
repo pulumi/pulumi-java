@@ -23,7 +23,7 @@ public final class AadAuthenticationParametersResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="aadAudience")
-        private final @Nullable String aadAudience;
+      private final @Nullable String aadAudience;
 
     public Optional<String> getAadAudience() {
         return this.aadAudience == null ? Optional.empty() : Optional.ofNullable(this.aadAudience);
@@ -34,7 +34,7 @@ public final class AadAuthenticationParametersResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="aadIssuer")
-        private final @Nullable String aadIssuer;
+      private final @Nullable String aadIssuer;
 
     public Optional<String> getAadIssuer() {
         return this.aadIssuer == null ? Optional.empty() : Optional.ofNullable(this.aadIssuer);
@@ -45,7 +45,7 @@ public final class AadAuthenticationParametersResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="aadTenant")
-        private final @Nullable String aadTenant;
+      private final @Nullable String aadTenant;
 
     public Optional<String> getAadTenant() {
         return this.aadTenant == null ? Optional.empty() : Optional.ofNullable(this.aadTenant);

@@ -22,14 +22,14 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessString", required=true)
-        private final Input<String> accessString;
+      private final Input<String> accessString;
 
     public Input<String> getAccessString() {
         return this.accessString;
     }
 
     @InputImport(name="authenticationMode", required=true)
-        private final Input<AuthenticationModePropertiesArgs> authenticationMode;
+      private final Input<AuthenticationModePropertiesArgs> authenticationMode;
 
     public Input<AuthenticationModePropertiesArgs> getAuthenticationMode() {
         return this.authenticationMode;
@@ -40,7 +40,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<UserTagArgs>> tags;
+      private final @Nullable Input<List<UserTagArgs>> tags;
 
     public Input<List<UserTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -51,7 +51,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-        private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;

@@ -18,7 +18,7 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
      * 
      */
     @InputImport(name="apiKey", required=true)
-        private final Input<String> apiKey;
+      private final Input<String> apiKey;
 
     public Input<String> getApiKey() {
         return this.apiKey;
@@ -29,7 +29,7 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
      * 
      */
     @InputImport(name="applicationKey", required=true)
-        private final Input<String> applicationKey;
+      private final Input<String> applicationKey;
 
     public Input<String> getApplicationKey() {
         return this.applicationKey;

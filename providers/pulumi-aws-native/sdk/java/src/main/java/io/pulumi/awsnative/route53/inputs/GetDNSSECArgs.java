@@ -17,7 +17,7 @@ public final class GetDNSSECArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hostedZoneId", required=true)
-        private final String hostedZoneId;
+      private final String hostedZoneId;
 
     public String getHostedZoneId() {
         return this.hostedZoneId;

@@ -19,7 +19,7 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="backendBucket")
-        private final @Nullable Input<String> backendBucket;
+      private final @Nullable Input<String> backendBucket;
 
     public Input<String> getBackendBucket() {
         return this.backendBucket == null ? Input.empty() : this.backendBucket;
@@ -32,7 +32,7 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="keyValue")
-        private final @Nullable Input<String> keyValue;
+      private final @Nullable Input<String> keyValue;
 
     public Input<String> getKeyValue() {
         return this.keyValue == null ? Input.empty() : this.keyValue;
@@ -43,7 +43,7 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;

@@ -25,7 +25,7 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
      * 
      */
     @InputImport(name="configId")
-        private final @Nullable Input<String> configId;
+      private final @Nullable Input<String> configId;
 
     public Input<String> getConfigId() {
         return this.configId == null ? Input.empty() : this.configId;
@@ -36,7 +36,7 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
      * 
      */
     @InputImport(name="disableTraceSampling")
-        private final @Nullable Input<Boolean> disableTraceSampling;
+      private final @Nullable Input<Boolean> disableTraceSampling;
 
     public Input<Boolean> getDisableTraceSampling() {
         return this.disableTraceSampling == null ? Input.empty() : this.disableTraceSampling;
@@ -47,7 +47,7 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -60,7 +60,7 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
      * 
      */
     @InputImport(name="rolloutStrategy")
-        private final @Nullable Input<String> rolloutStrategy;
+      private final @Nullable Input<String> rolloutStrategy;
 
     public Input<String> getRolloutStrategy() {
         return this.rolloutStrategy == null ? Input.empty() : this.rolloutStrategy;

@@ -15,14 +15,14 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends io.pulumi.reso
     public static final TaskDefinitionInferenceAcceleratorArgs Empty = new TaskDefinitionInferenceAcceleratorArgs();
 
     @InputImport(name="deviceName")
-        private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
     @InputImport(name="deviceType")
-        private final @Nullable Input<String> deviceType;
+      private final @Nullable Input<String> deviceType;
 
     public Input<String> getDeviceType() {
         return this.deviceType == null ? Input.empty() : this.deviceType;

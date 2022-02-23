@@ -14,7 +14,7 @@ public final class ResponseHeadersPolicyAccessControlExposeHeaders extends io.pu
     public static final ResponseHeadersPolicyAccessControlExposeHeaders Empty = new ResponseHeadersPolicyAccessControlExposeHeaders();
 
     @InputImport(name="items", required=true)
-        private final List<String> items;
+      private final List<String> items;
 
     public List<String> getItems() {
         return this.items;

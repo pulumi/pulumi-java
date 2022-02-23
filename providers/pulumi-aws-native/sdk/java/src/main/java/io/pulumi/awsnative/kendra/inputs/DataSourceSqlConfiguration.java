@@ -15,7 +15,7 @@ public final class DataSourceSqlConfiguration extends io.pulumi.resources.Invoke
     public static final DataSourceSqlConfiguration Empty = new DataSourceSqlConfiguration();
 
     @InputImport(name="queryIdentifiersEnclosingOption")
-        private final @Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption;
+      private final @Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption;
 
     public Optional<DataSourceQueryIdentifiersEnclosingOption> getQueryIdentifiersEnclosingOption() {
         return this.queryIdentifiersEnclosingOption == null ? Optional.empty() : Optional.ofNullable(this.queryIdentifiersEnclosingOption);

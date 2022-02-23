@@ -15,14 +15,14 @@ public final class NetworkInterfacePrivateIpAddressSpecificationArgs extends io.
     public static final NetworkInterfacePrivateIpAddressSpecificationArgs Empty = new NetworkInterfacePrivateIpAddressSpecificationArgs();
 
     @InputImport(name="primary", required=true)
-        private final Input<Boolean> primary;
+      private final Input<Boolean> primary;
 
     public Input<Boolean> getPrimary() {
         return this.primary;
     }
 
     @InputImport(name="privateIpAddress", required=true)
-        private final Input<String> privateIpAddress;
+      private final Input<String> privateIpAddress;
 
     public Input<String> getPrivateIpAddress() {
         return this.privateIpAddress;

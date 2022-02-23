@@ -13,7 +13,7 @@ public final class FlowSingularSourceProperties extends io.pulumi.resources.Invo
     public static final FlowSingularSourceProperties Empty = new FlowSingularSourceProperties();
 
     @InputImport(name="object", required=true)
-        private final String object;
+      private final String object;
 
     public String getObject() {
         return this.object;

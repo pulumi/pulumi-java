@@ -17,7 +17,7 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="batchConfigurationName", required=true)
-        private final String batchConfigurationName;
+      private final String batchConfigurationName;
 
     public String getBatchConfigurationName() {
         return this.batchConfigurationName;
@@ -28,7 +28,7 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-        private final String integrationAccountName;
+      private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -39,7 +39,7 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

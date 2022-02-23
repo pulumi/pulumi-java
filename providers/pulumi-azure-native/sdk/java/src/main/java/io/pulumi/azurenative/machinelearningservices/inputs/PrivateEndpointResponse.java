@@ -21,7 +21,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -32,7 +32,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="subnetArmId", required=true)
-        private final String subnetArmId;
+      private final String subnetArmId;
 
     public String getSubnetArmId() {
         return this.subnetArmId;

@@ -77,6 +77,21 @@ public class TrafficManagerUserMetricsKey extends io.pulumi.resources.CustomReso
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public TrafficManagerUserMetricsKey(String name) {
+        this(name, TrafficManagerUserMetricsKeyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TrafficManagerUserMetricsKey(String name, @Nullable TrafficManagerUserMetricsKeyArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

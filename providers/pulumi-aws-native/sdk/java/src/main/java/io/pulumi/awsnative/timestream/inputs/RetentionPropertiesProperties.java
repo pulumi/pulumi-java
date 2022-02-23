@@ -23,7 +23,7 @@ public final class RetentionPropertiesProperties extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="magneticStoreRetentionPeriodInDays")
-        private final @Nullable String magneticStoreRetentionPeriodInDays;
+      private final @Nullable String magneticStoreRetentionPeriodInDays;
 
     public Optional<String> getMagneticStoreRetentionPeriodInDays() {
         return this.magneticStoreRetentionPeriodInDays == null ? Optional.empty() : Optional.ofNullable(this.magneticStoreRetentionPeriodInDays);
@@ -34,7 +34,7 @@ public final class RetentionPropertiesProperties extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="memoryStoreRetentionPeriodInHours")
-        private final @Nullable String memoryStoreRetentionPeriodInHours;
+      private final @Nullable String memoryStoreRetentionPeriodInHours;
 
     public Optional<String> getMemoryStoreRetentionPeriodInHours() {
         return this.memoryStoreRetentionPeriodInHours == null ? Optional.empty() : Optional.ofNullable(this.memoryStoreRetentionPeriodInHours);

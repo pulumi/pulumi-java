@@ -22,7 +22,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="attributes")
-        private final @Nullable Input<Object> attributes;
+      private final @Nullable Input<Object> attributes;
 
     public Input<Object> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -33,7 +33,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fixedRate")
-        private final @Nullable Input<Double> fixedRate;
+      private final @Nullable Input<Double> fixedRate;
 
     public Input<Double> getFixedRate() {
         return this.fixedRate == null ? Input.empty() : this.fixedRate;
@@ -44,7 +44,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hTTPMethod")
-        private final @Nullable Input<String> hTTPMethod;
+      private final @Nullable Input<String> hTTPMethod;
 
     public Input<String> getHTTPMethod() {
         return this.hTTPMethod == null ? Input.empty() : this.hTTPMethod;
@@ -55,7 +55,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="host")
-        private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -66,7 +66,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="priority")
-        private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -77,7 +77,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="reservoirSize")
-        private final @Nullable Input<Integer> reservoirSize;
+      private final @Nullable Input<Integer> reservoirSize;
 
     public Input<Integer> getReservoirSize() {
         return this.reservoirSize == null ? Input.empty() : this.reservoirSize;
@@ -88,21 +88,21 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceARN")
-        private final @Nullable Input<String> resourceARN;
+      private final @Nullable Input<String> resourceARN;
 
     public Input<String> getResourceARN() {
         return this.resourceARN == null ? Input.empty() : this.resourceARN;
     }
 
     @InputImport(name="ruleARN")
-        private final @Nullable Input<String> ruleARN;
+      private final @Nullable Input<String> ruleARN;
 
     public Input<String> getRuleARN() {
         return this.ruleARN == null ? Input.empty() : this.ruleARN;
     }
 
     @InputImport(name="ruleName")
-        private final @Nullable Input<String> ruleName;
+      private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -113,7 +113,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceName")
-        private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -124,7 +124,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceType")
-        private final @Nullable Input<String> serviceType;
+      private final @Nullable Input<String> serviceType;
 
     public Input<String> getServiceType() {
         return this.serviceType == null ? Input.empty() : this.serviceType;
@@ -135,7 +135,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="uRLPath")
-        private final @Nullable Input<String> uRLPath;
+      private final @Nullable Input<String> uRLPath;
 
     public Input<String> getURLPath() {
         return this.uRLPath == null ? Input.empty() : this.uRLPath;

@@ -23,7 +23,7 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="channelAccessToken")
-        private final @Nullable Input<String> channelAccessToken;
+      private final @Nullable Input<String> channelAccessToken;
 
     public Input<String> getChannelAccessToken() {
         return this.channelAccessToken == null ? Input.empty() : this.channelAccessToken;
@@ -34,7 +34,7 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="channelSecret")
-        private final @Nullable Input<String> channelSecret;
+      private final @Nullable Input<String> channelSecret;
 
     public Input<String> getChannelSecret() {
         return this.channelSecret == null ? Input.empty() : this.channelSecret;

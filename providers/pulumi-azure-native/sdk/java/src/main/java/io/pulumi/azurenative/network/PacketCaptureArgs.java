@@ -24,7 +24,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bytesToCapturePerPacket")
-        private final @Nullable Input<Double> bytesToCapturePerPacket;
+      private final @Nullable Input<Double> bytesToCapturePerPacket;
 
     public Input<Double> getBytesToCapturePerPacket() {
         return this.bytesToCapturePerPacket == null ? Input.empty() : this.bytesToCapturePerPacket;
@@ -35,7 +35,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filters")
-        private final @Nullable Input<List<PacketCaptureFilterArgs>> filters;
+      private final @Nullable Input<List<PacketCaptureFilterArgs>> filters;
 
     public Input<List<PacketCaptureFilterArgs>> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;
@@ -46,7 +46,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkWatcherName", required=true)
-        private final Input<String> networkWatcherName;
+      private final Input<String> networkWatcherName;
 
     public Input<String> getNetworkWatcherName() {
         return this.networkWatcherName;
@@ -57,7 +57,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packetCaptureName")
-        private final @Nullable Input<String> packetCaptureName;
+      private final @Nullable Input<String> packetCaptureName;
 
     public Input<String> getPacketCaptureName() {
         return this.packetCaptureName == null ? Input.empty() : this.packetCaptureName;
@@ -68,7 +68,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -79,7 +79,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageLocation", required=true)
-        private final Input<PacketCaptureStorageLocationArgs> storageLocation;
+      private final Input<PacketCaptureStorageLocationArgs> storageLocation;
 
     public Input<PacketCaptureStorageLocationArgs> getStorageLocation() {
         return this.storageLocation;
@@ -90,7 +90,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target", required=true)
-        private final Input<String> target;
+      private final Input<String> target;
 
     public Input<String> getTarget() {
         return this.target;
@@ -101,7 +101,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeLimitInSeconds")
-        private final @Nullable Input<Integer> timeLimitInSeconds;
+      private final @Nullable Input<Integer> timeLimitInSeconds;
 
     public Input<Integer> getTimeLimitInSeconds() {
         return this.timeLimitInSeconds == null ? Input.empty() : this.timeLimitInSeconds;
@@ -112,7 +112,7 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="totalBytesPerSession")
-        private final @Nullable Input<Double> totalBytesPerSession;
+      private final @Nullable Input<Double> totalBytesPerSession;
 
     public Input<Double> getTotalBytesPerSession() {
         return this.totalBytesPerSession == null ? Input.empty() : this.totalBytesPerSession;

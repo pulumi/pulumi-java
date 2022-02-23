@@ -25,7 +25,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
      * 
      */
     @InputImport(name="applicationGatewayName", required=true)
-        private final String applicationGatewayName;
+      private final String applicationGatewayName;
 
     public String getApplicationGatewayName() {
         return this.applicationGatewayName;
@@ -36,7 +36,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
      * 
      */
     @InputImport(name="backendAddressPool")
-        private final @Nullable SubResource backendAddressPool;
+      private final @Nullable SubResource backendAddressPool;
 
     public Optional<SubResource> getBackendAddressPool() {
         return this.backendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.backendAddressPool);
@@ -47,7 +47,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
      * 
      */
     @InputImport(name="backendHttpSettings")
-        private final @Nullable SubResource backendHttpSettings;
+      private final @Nullable SubResource backendHttpSettings;
 
     public Optional<SubResource> getBackendHttpSettings() {
         return this.backendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.backendHttpSettings);
@@ -58,7 +58,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
      * 
      */
     @InputImport(name="expand")
-        private final @Nullable String expand;
+      private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -69,7 +69,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
      * 
      */
     @InputImport(name="host")
-        private final @Nullable String host;
+      private final @Nullable String host;
 
     public Optional<String> getHost() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
@@ -80,7 +80,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
      * 
      */
     @InputImport(name="match")
-        private final @Nullable ApplicationGatewayProbeHealthResponseMatch match;
+      private final @Nullable ApplicationGatewayProbeHealthResponseMatch match;
 
     public Optional<ApplicationGatewayProbeHealthResponseMatch> getMatch() {
         return this.match == null ? Optional.empty() : Optional.ofNullable(this.match);
@@ -91,7 +91,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
      * 
      */
     @InputImport(name="path")
-        private final @Nullable String path;
+      private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -102,7 +102,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
      * 
      */
     @InputImport(name="pickHostNameFromBackendHttpSettings")
-        private final @Nullable Boolean pickHostNameFromBackendHttpSettings;
+      private final @Nullable Boolean pickHostNameFromBackendHttpSettings;
 
     public Optional<Boolean> getPickHostNameFromBackendHttpSettings() {
         return this.pickHostNameFromBackendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.pickHostNameFromBackendHttpSettings);
@@ -113,7 +113,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable Either<String,ApplicationGatewayProtocol> protocol;
+      private final @Nullable Either<String,ApplicationGatewayProtocol> protocol;
 
     public Either<String,ApplicationGatewayProtocol> getProtocol() {
         return this.protocol == null ? null : this.protocol;
@@ -124,7 +124,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -135,7 +135,7 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
      * 
      */
     @InputImport(name="timeout")
-        private final @Nullable Integer timeout;
+      private final @Nullable Integer timeout;
 
     public Optional<Integer> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);

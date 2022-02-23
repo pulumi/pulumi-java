@@ -24,7 +24,7 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<B2CResourceSKUName> name;
+      private final @Nullable Input<B2CResourceSKUName> name;
 
     public Input<B2CResourceSKUName> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<B2CResourceSKUTier> tier;
+      private final @Nullable Input<B2CResourceSKUTier> tier;
 
     public Input<B2CResourceSKUTier> getTier() {
         return this.tier == null ? Input.empty() : this.tier;

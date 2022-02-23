@@ -19,14 +19,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     public static final PipelineArgs Empty = new PipelineArgs();
 
     @InputImport(name="parallelismConfiguration")
-        private final @Nullable Input<ParallelismConfigurationPropertiesArgs> parallelismConfiguration;
+      private final @Nullable Input<ParallelismConfigurationPropertiesArgs> parallelismConfiguration;
 
     public Input<ParallelismConfigurationPropertiesArgs> getParallelismConfiguration() {
         return this.parallelismConfiguration == null ? Input.empty() : this.parallelismConfiguration;
     }
 
     @InputImport(name="pipelineDefinition", required=true)
-        private final Input<Object> pipelineDefinition;
+      private final Input<Object> pipelineDefinition;
 
     public Input<Object> getPipelineDefinition() {
         return this.pipelineDefinition;
@@ -37,7 +37,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineDescription")
-        private final @Nullable Input<String> pipelineDescription;
+      private final @Nullable Input<String> pipelineDescription;
 
     public Input<String> getPipelineDescription() {
         return this.pipelineDescription == null ? Input.empty() : this.pipelineDescription;
@@ -48,7 +48,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineDisplayName")
-        private final @Nullable Input<String> pipelineDisplayName;
+      private final @Nullable Input<String> pipelineDisplayName;
 
     public Input<String> getPipelineDisplayName() {
         return this.pipelineDisplayName == null ? Input.empty() : this.pipelineDisplayName;
@@ -59,7 +59,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineName")
-        private final @Nullable Input<String> pipelineName;
+      private final @Nullable Input<String> pipelineName;
 
     public Input<String> getPipelineName() {
         return this.pipelineName == null ? Input.empty() : this.pipelineName;
@@ -70,14 +70,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="tags")
-        private final @Nullable Input<List<PipelineTagArgs>> tags;
+      private final @Nullable Input<List<PipelineTagArgs>> tags;
 
     public Input<List<PipelineTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

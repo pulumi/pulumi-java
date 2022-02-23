@@ -26,7 +26,7 @@ public final class BatchPoolIdentityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<PoolIdentityType> type;
+      private final Input<PoolIdentityType> type;
 
     public Input<PoolIdentityType> getType() {
         return this.type;
@@ -37,7 +37,7 @@ public final class BatchPoolIdentityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userAssignedIdentities")
-        private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
+      private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 
     public Input<Map<String,Object>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;

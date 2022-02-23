@@ -22,7 +22,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorType", required=true)
-        private final Input<String> acceleratorType;
+      private final Input<String> acceleratorType;
 
     public Input<String> getAcceleratorType() {
         return this.acceleratorType;
@@ -40,7 +40,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-        private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
@@ -51,7 +51,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -62,7 +62,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -73,7 +73,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-        private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -99,7 +99,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -111,7 +111,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulingConfig")
-        private final @Nullable Input<NodeSchedulingConfigArgs> schedulingConfig;
+      private final @Nullable Input<NodeSchedulingConfigArgs> schedulingConfig;
 
     public Input<NodeSchedulingConfigArgs> getSchedulingConfig() {
         return this.schedulingConfig == null ? Input.empty() : this.schedulingConfig;
@@ -122,7 +122,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tensorflowVersion", required=true)
-        private final Input<String> tensorflowVersion;
+      private final Input<String> tensorflowVersion;
 
     public Input<String> getTensorflowVersion() {
         return this.tensorflowVersion;
@@ -136,7 +136,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useServiceNetworking")
-        private final @Nullable Input<Boolean> useServiceNetworking;
+      private final @Nullable Input<Boolean> useServiceNetworking;
 
     public Input<Boolean> getUseServiceNetworking() {
         return this.useServiceNetworking == null ? Input.empty() : this.useServiceNetworking;
@@ -147,7 +147,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-        private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;

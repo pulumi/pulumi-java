@@ -23,7 +23,7 @@ public final class VpnNatRuleMappingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="addressSpace")
-        private final @Nullable String addressSpace;
+      private final @Nullable String addressSpace;
 
     public Optional<String> getAddressSpace() {
         return this.addressSpace == null ? Optional.empty() : Optional.ofNullable(this.addressSpace);

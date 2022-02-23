@@ -13,7 +13,7 @@ public final class GetSecretTopic extends io.pulumi.resources.InvokeArgs {
     public static final GetSecretTopic Empty = new GetSecretTopic();
 
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

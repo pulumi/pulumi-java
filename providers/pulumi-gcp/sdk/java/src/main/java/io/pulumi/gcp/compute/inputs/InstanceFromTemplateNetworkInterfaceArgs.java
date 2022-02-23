@@ -20,28 +20,28 @@ public final class InstanceFromTemplateNetworkInterfaceArgs extends io.pulumi.re
     public static final InstanceFromTemplateNetworkInterfaceArgs Empty = new InstanceFromTemplateNetworkInterfaceArgs();
 
     @InputImport(name="accessConfigs")
-        private final @Nullable Input<List<InstanceFromTemplateNetworkInterfaceAccessConfigArgs>> accessConfigs;
+      private final @Nullable Input<List<InstanceFromTemplateNetworkInterfaceAccessConfigArgs>> accessConfigs;
 
     public Input<List<InstanceFromTemplateNetworkInterfaceAccessConfigArgs>> getAccessConfigs() {
         return this.accessConfigs == null ? Input.empty() : this.accessConfigs;
     }
 
     @InputImport(name="aliasIpRanges")
-        private final @Nullable Input<List<InstanceFromTemplateNetworkInterfaceAliasIpRangeArgs>> aliasIpRanges;
+      private final @Nullable Input<List<InstanceFromTemplateNetworkInterfaceAliasIpRangeArgs>> aliasIpRanges;
 
     public Input<List<InstanceFromTemplateNetworkInterfaceAliasIpRangeArgs>> getAliasIpRanges() {
         return this.aliasIpRanges == null ? Input.empty() : this.aliasIpRanges;
     }
 
     @InputImport(name="ipv6AccessConfigs")
-        private final @Nullable Input<List<InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs>> ipv6AccessConfigs;
+      private final @Nullable Input<List<InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs>> ipv6AccessConfigs;
 
     public Input<List<InstanceFromTemplateNetworkInterfaceIpv6AccessConfigArgs>> getIpv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? Input.empty() : this.ipv6AccessConfigs;
     }
 
     @InputImport(name="ipv6AccessType")
-        private final @Nullable Input<String> ipv6AccessType;
+      private final @Nullable Input<String> ipv6AccessType;
 
     public Input<String> getIpv6AccessType() {
         return this.ipv6AccessType == null ? Input.empty() : this.ipv6AccessType;
@@ -53,56 +53,56 @@ public final class InstanceFromTemplateNetworkInterfaceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="network")
-        private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
     }
 
     @InputImport(name="networkIp")
-        private final @Nullable Input<String> networkIp;
+      private final @Nullable Input<String> networkIp;
 
     public Input<String> getNetworkIp() {
         return this.networkIp == null ? Input.empty() : this.networkIp;
     }
 
     @InputImport(name="nicType")
-        private final @Nullable Input<String> nicType;
+      private final @Nullable Input<String> nicType;
 
     public Input<String> getNicType() {
         return this.nicType == null ? Input.empty() : this.nicType;
     }
 
     @InputImport(name="queueCount")
-        private final @Nullable Input<Integer> queueCount;
+      private final @Nullable Input<Integer> queueCount;
 
     public Input<Integer> getQueueCount() {
         return this.queueCount == null ? Input.empty() : this.queueCount;
     }
 
     @InputImport(name="stackType")
-        private final @Nullable Input<String> stackType;
+      private final @Nullable Input<String> stackType;
 
     public Input<String> getStackType() {
         return this.stackType == null ? Input.empty() : this.stackType;
     }
 
     @InputImport(name="subnetwork")
-        private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
     }
 
     @InputImport(name="subnetworkProject")
-        private final @Nullable Input<String> subnetworkProject;
+      private final @Nullable Input<String> subnetworkProject;
 
     public Input<String> getSubnetworkProject() {
         return this.subnetworkProject == null ? Input.empty() : this.subnetworkProject;

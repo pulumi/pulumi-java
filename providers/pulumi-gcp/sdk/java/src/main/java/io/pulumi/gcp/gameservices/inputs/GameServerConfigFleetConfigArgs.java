@@ -25,7 +25,7 @@ public final class GameServerConfigFleetConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fleetSpec", required=true)
-        private final Input<String> fleetSpec;
+      private final Input<String> fleetSpec;
 
     public Input<String> getFleetSpec() {
         return this.fleetSpec;
@@ -36,7 +36,7 @@ public final class GameServerConfigFleetConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

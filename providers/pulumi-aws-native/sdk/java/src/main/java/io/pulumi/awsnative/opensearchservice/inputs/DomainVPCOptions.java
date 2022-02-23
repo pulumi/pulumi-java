@@ -16,14 +16,14 @@ public final class DomainVPCOptions extends io.pulumi.resources.InvokeArgs {
     public static final DomainVPCOptions Empty = new DomainVPCOptions();
 
     @InputImport(name="securityGroupIds")
-        private final @Nullable List<String> securityGroupIds;
+      private final @Nullable List<String> securityGroupIds;
 
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
 
     @InputImport(name="subnetIds")
-        private final @Nullable List<String> subnetIds;
+      private final @Nullable List<String> subnetIds;
 
     public List<String> getSubnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;

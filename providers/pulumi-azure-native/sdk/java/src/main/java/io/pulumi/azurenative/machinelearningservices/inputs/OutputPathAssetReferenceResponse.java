@@ -23,7 +23,7 @@ public final class OutputPathAssetReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="jobId")
-        private final @Nullable String jobId;
+      private final @Nullable String jobId;
 
     public Optional<String> getJobId() {
         return this.jobId == null ? Optional.empty() : Optional.ofNullable(this.jobId);
@@ -34,7 +34,7 @@ public final class OutputPathAssetReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="path")
-        private final @Nullable String path;
+      private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -46,7 +46,7 @@ public final class OutputPathAssetReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="referenceType", required=true)
-        private final String referenceType;
+      private final String referenceType;
 
     public String getReferenceType() {
         return this.referenceType;

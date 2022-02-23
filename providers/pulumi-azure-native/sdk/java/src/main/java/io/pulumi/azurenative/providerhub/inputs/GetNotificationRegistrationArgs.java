@@ -17,7 +17,7 @@ public final class GetNotificationRegistrationArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="notificationRegistrationName", required=true)
-        private final String notificationRegistrationName;
+      private final String notificationRegistrationName;
 
     public String getNotificationRegistrationName() {
         return this.notificationRegistrationName;
@@ -28,7 +28,7 @@ public final class GetNotificationRegistrationArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-        private final String providerNamespace;
+      private final String providerNamespace;
 
     public String getProviderNamespace() {
         return this.providerNamespace;

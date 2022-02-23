@@ -19,7 +19,7 @@ public final class ApiDiagnosticLoggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="apiId", required=true)
-        private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -30,7 +30,7 @@ public final class ApiDiagnosticLoggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="diagnosticId", required=true)
-        private final Input<String> diagnosticId;
+      private final Input<String> diagnosticId;
 
     public Input<String> getDiagnosticId() {
         return this.diagnosticId;
@@ -41,7 +41,7 @@ public final class ApiDiagnosticLoggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="loggerid")
-        private final @Nullable Input<String> loggerid;
+      private final @Nullable Input<String> loggerid;
 
     public Input<String> getLoggerid() {
         return this.loggerid == null ? Input.empty() : this.loggerid;
@@ -52,7 +52,7 @@ public final class ApiDiagnosticLoggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class ApiDiagnosticLoggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceName", required=true)
-        private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;

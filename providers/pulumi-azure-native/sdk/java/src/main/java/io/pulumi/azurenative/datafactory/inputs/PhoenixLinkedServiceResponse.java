@@ -31,7 +31,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="allowHostNameCNMismatch")
-        private final @Nullable Object allowHostNameCNMismatch;
+      private final @Nullable Object allowHostNameCNMismatch;
 
     public Optional<Object> getAllowHostNameCNMismatch() {
         return this.allowHostNameCNMismatch == null ? Optional.empty() : Optional.ofNullable(this.allowHostNameCNMismatch);
@@ -42,7 +42,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="allowSelfSignedServerCert")
-        private final @Nullable Object allowSelfSignedServerCert;
+      private final @Nullable Object allowSelfSignedServerCert;
 
     public Optional<Object> getAllowSelfSignedServerCert() {
         return this.allowSelfSignedServerCert == null ? Optional.empty() : Optional.ofNullable(this.allowSelfSignedServerCert);
@@ -53,7 +53,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable List<Object> annotations;
+      private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -64,7 +64,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="authenticationType", required=true)
-        private final String authenticationType;
+      private final String authenticationType;
 
     public String getAuthenticationType() {
         return this.authenticationType;
@@ -75,7 +75,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -86,7 +86,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -97,7 +97,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enableSsl")
-        private final @Nullable Object enableSsl;
+      private final @Nullable Object enableSsl;
 
     public Optional<Object> getEnableSsl() {
         return this.enableSsl == null ? Optional.empty() : Optional.ofNullable(this.enableSsl);
@@ -108,7 +108,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Object encryptedCredential;
+      private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -119,7 +119,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="host", required=true)
-        private final Object host;
+      private final Object host;
 
     public Object getHost() {
         return this.host;
@@ -130,7 +130,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="httpPath")
-        private final @Nullable Object httpPath;
+      private final @Nullable Object httpPath;
 
     public Optional<Object> getHttpPath() {
         return this.httpPath == null ? Optional.empty() : Optional.ofNullable(this.httpPath);
@@ -141,7 +141,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -152,7 +152,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password == null ? null : this.password;
@@ -163,7 +163,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Object port;
+      private final @Nullable Object port;
 
     public Optional<Object> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -174,7 +174,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="trustedCertPath")
-        private final @Nullable Object trustedCertPath;
+      private final @Nullable Object trustedCertPath;
 
     public Optional<Object> getTrustedCertPath() {
         return this.trustedCertPath == null ? Optional.empty() : Optional.ofNullable(this.trustedCertPath);
@@ -186,7 +186,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -197,7 +197,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="useSystemTrustStore")
-        private final @Nullable Object useSystemTrustStore;
+      private final @Nullable Object useSystemTrustStore;
 
     public Optional<Object> getUseSystemTrustStore() {
         return this.useSystemTrustStore == null ? Optional.empty() : Optional.ofNullable(this.useSystemTrustStore);
@@ -208,7 +208,7 @@ public final class PhoenixLinkedServiceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="username")
-        private final @Nullable Object username;
+      private final @Nullable Object username;
 
     public Optional<Object> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);

@@ -19,7 +19,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     public static final ThemeArgs Empty = new ThemeArgs();
 
     @InputImport(name="awsAccountId", required=true)
-        private final Input<String> awsAccountId;
+      private final Input<String> awsAccountId;
 
     public Input<String> getAwsAccountId() {
         return this.awsAccountId;
@@ -33,14 +33,14 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseThemeId")
-        private final @Nullable Input<String> baseThemeId;
+      private final @Nullable Input<String> baseThemeId;
 
     public Input<String> getBaseThemeId() {
         return this.baseThemeId == null ? Input.empty() : this.baseThemeId;
     }
 
     @InputImport(name="configuration")
-        private final @Nullable Input<ThemeConfigurationArgs> configuration;
+      private final @Nullable Input<ThemeConfigurationArgs> configuration;
 
     public Input<ThemeConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -51,7 +51,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -63,7 +63,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-        private final @Nullable Input<List<ThemeResourcePermissionArgs>> permissions;
+      private final @Nullable Input<List<ThemeResourcePermissionArgs>> permissions;
 
     public Input<List<ThemeResourcePermissionArgs>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -75,14 +75,14 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<ThemeTagArgs>> tags;
+      private final @Nullable Input<List<ThemeTagArgs>> tags;
 
     public Input<List<ThemeTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="themeId", required=true)
-        private final Input<String> themeId;
+      private final Input<String> themeId;
 
     public Input<String> getThemeId() {
         return this.themeId;
@@ -96,7 +96,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionDescription")
-        private final @Nullable Input<String> versionDescription;
+      private final @Nullable Input<String> versionDescription;
 
     public Input<String> getVersionDescription() {
         return this.versionDescription == null ? Input.empty() : this.versionDescription;

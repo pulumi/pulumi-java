@@ -23,7 +23,7 @@ public final class AdmCredentialResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="authTokenUrl")
-        private final @Nullable String authTokenUrl;
+      private final @Nullable String authTokenUrl;
 
     public Optional<String> getAuthTokenUrl() {
         return this.authTokenUrl == null ? Optional.empty() : Optional.ofNullable(this.authTokenUrl);
@@ -34,7 +34,7 @@ public final class AdmCredentialResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="clientId")
-        private final @Nullable String clientId;
+      private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -45,7 +45,7 @@ public final class AdmCredentialResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="clientSecret")
-        private final @Nullable String clientSecret;
+      private final @Nullable String clientSecret;
 
     public Optional<String> getClientSecret() {
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);

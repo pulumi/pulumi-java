@@ -18,7 +18,7 @@ public final class EgressOnlyInternetGatewayArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="vpcId", required=true)
-        private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;

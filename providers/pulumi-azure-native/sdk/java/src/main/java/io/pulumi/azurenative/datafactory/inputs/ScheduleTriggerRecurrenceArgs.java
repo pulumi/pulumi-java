@@ -27,7 +27,7 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="endTime")
-        private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -38,7 +38,7 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="frequency")
-        private final @Nullable Input<Either<String,RecurrenceFrequency>> frequency;
+      private final @Nullable Input<Either<String,RecurrenceFrequency>> frequency;
 
     public Input<Either<String,RecurrenceFrequency>> getFrequency() {
         return this.frequency == null ? Input.empty() : this.frequency;
@@ -49,7 +49,7 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="interval")
-        private final @Nullable Input<Integer> interval;
+      private final @Nullable Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -60,7 +60,7 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="schedule")
-        private final @Nullable Input<RecurrenceScheduleArgs> schedule;
+      private final @Nullable Input<RecurrenceScheduleArgs> schedule;
 
     public Input<RecurrenceScheduleArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -71,7 +71,7 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="startTime")
-        private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -82,7 +82,7 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="timeZone")
-        private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;

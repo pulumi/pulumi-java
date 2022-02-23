@@ -17,7 +17,7 @@ public final class DicomStoreIamBindingState extends io.pulumi.resources.Resourc
     public static final DicomStoreIamBindingState Empty = new DicomStoreIamBindingState();
 
     @InputImport(name="condition")
-        private final @Nullable Input<DicomStoreIamBindingConditionGetArgs> condition;
+      private final @Nullable Input<DicomStoreIamBindingConditionGetArgs> condition;
 
     public Input<DicomStoreIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -31,7 +31,7 @@ public final class DicomStoreIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dicomStoreId")
-        private final @Nullable Input<String> dicomStoreId;
+      private final @Nullable Input<String> dicomStoreId;
 
     public Input<String> getDicomStoreId() {
         return this.dicomStoreId == null ? Input.empty() : this.dicomStoreId;
@@ -42,14 +42,14 @@ public final class DicomStoreIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-        private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -62,7 +62,7 @@ public final class DicomStoreIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

@@ -17,7 +17,7 @@ public final class GetDisasterRecoveryConfigArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="alias", required=true)
-        private final String alias;
+      private final String alias;
 
     public String getAlias() {
         return this.alias;
@@ -28,7 +28,7 @@ public final class GetDisasterRecoveryConfigArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="namespaceName", required=true)
-        private final String namespaceName;
+      private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class GetDisasterRecoveryConfigArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

@@ -19,7 +19,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-        private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -63,7 +63,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoName")
-        private final @Nullable Input<String> videoName;
+      private final @Nullable Input<String> videoName;
 
     public Input<String> getVideoName() {
         return this.videoName == null ? Input.empty() : this.videoName;

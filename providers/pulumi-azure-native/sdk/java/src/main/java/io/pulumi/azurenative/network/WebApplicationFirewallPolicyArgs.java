@@ -24,7 +24,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="customRules")
-        private final @Nullable Input<List<WebApplicationFirewallCustomRuleArgs>> customRules;
+      private final @Nullable Input<List<WebApplicationFirewallCustomRuleArgs>> customRules;
 
     public Input<List<WebApplicationFirewallCustomRuleArgs>> getCustomRules() {
         return this.customRules == null ? Input.empty() : this.customRules;
@@ -35,7 +35,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -46,7 +46,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -57,7 +57,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="managedRules", required=true)
-        private final Input<ManagedRulesDefinitionArgs> managedRules;
+      private final Input<ManagedRulesDefinitionArgs> managedRules;
 
     public Input<ManagedRulesDefinitionArgs> getManagedRules() {
         return this.managedRules;
@@ -68,7 +68,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="policyName")
-        private final @Nullable Input<String> policyName;
+      private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
@@ -79,7 +79,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="policySettings")
-        private final @Nullable Input<PolicySettingsArgs> policySettings;
+      private final @Nullable Input<PolicySettingsArgs> policySettings;
 
     public Input<PolicySettingsArgs> getPolicySettings() {
         return this.policySettings == null ? Input.empty() : this.policySettings;
@@ -90,7 +90,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

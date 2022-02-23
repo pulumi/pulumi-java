@@ -13,7 +13,7 @@ public final class GlobalTableReplicaSSESpecification extends io.pulumi.resource
     public static final GlobalTableReplicaSSESpecification Empty = new GlobalTableReplicaSSESpecification();
 
     @InputImport(name="kMSMasterKeyId", required=true)
-        private final String kMSMasterKeyId;
+      private final String kMSMasterKeyId;
 
     public String getKMSMasterKeyId() {
         return this.kMSMasterKeyId;

@@ -23,7 +23,7 @@ public final class DefenderForContainersAwsOfferingKubernetesScubaReaderArgs ext
      * 
      */
     @InputImport(name="cloudRoleArn")
-        private final @Nullable Input<String> cloudRoleArn;
+      private final @Nullable Input<String> cloudRoleArn;
 
     public Input<String> getCloudRoleArn() {
         return this.cloudRoleArn == null ? Input.empty() : this.cloudRoleArn;

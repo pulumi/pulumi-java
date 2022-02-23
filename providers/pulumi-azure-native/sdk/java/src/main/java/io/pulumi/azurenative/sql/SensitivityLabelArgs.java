@@ -20,7 +20,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="columnName", required=true)
-        private final Input<String> columnName;
+      private final Input<String> columnName;
 
     public Input<String> getColumnName() {
         return this.columnName;
@@ -31,7 +31,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="databaseName", required=true)
-        private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -42,7 +42,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="informationType")
-        private final @Nullable Input<String> informationType;
+      private final @Nullable Input<String> informationType;
 
     public Input<String> getInformationType() {
         return this.informationType == null ? Input.empty() : this.informationType;
@@ -53,7 +53,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="informationTypeId")
-        private final @Nullable Input<String> informationTypeId;
+      private final @Nullable Input<String> informationTypeId;
 
     public Input<String> getInformationTypeId() {
         return this.informationTypeId == null ? Input.empty() : this.informationTypeId;
@@ -64,7 +64,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labelId")
-        private final @Nullable Input<String> labelId;
+      private final @Nullable Input<String> labelId;
 
     public Input<String> getLabelId() {
         return this.labelId == null ? Input.empty() : this.labelId;
@@ -75,14 +75,14 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labelName")
-        private final @Nullable Input<String> labelName;
+      private final @Nullable Input<String> labelName;
 
     public Input<String> getLabelName() {
         return this.labelName == null ? Input.empty() : this.labelName;
     }
 
     @InputImport(name="rank")
-        private final @Nullable Input<SensitivityLabelRank> rank;
+      private final @Nullable Input<SensitivityLabelRank> rank;
 
     public Input<SensitivityLabelRank> getRank() {
         return this.rank == null ? Input.empty() : this.rank;
@@ -93,7 +93,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -104,7 +104,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="schemaName", required=true)
-        private final Input<String> schemaName;
+      private final Input<String> schemaName;
 
     public Input<String> getSchemaName() {
         return this.schemaName;
@@ -115,7 +115,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sensitivityLabelSource")
-        private final @Nullable Input<String> sensitivityLabelSource;
+      private final @Nullable Input<String> sensitivityLabelSource;
 
     public Input<String> getSensitivityLabelSource() {
         return this.sensitivityLabelSource == null ? Input.empty() : this.sensitivityLabelSource;
@@ -126,7 +126,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverName", required=true)
-        private final Input<String> serverName;
+      private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -137,7 +137,7 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tableName", required=true)
-        private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;

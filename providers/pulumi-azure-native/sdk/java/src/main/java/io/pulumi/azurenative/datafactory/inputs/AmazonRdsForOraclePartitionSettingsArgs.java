@@ -24,7 +24,7 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="partitionColumnName")
-        private final @Nullable Input<Object> partitionColumnName;
+      private final @Nullable Input<Object> partitionColumnName;
 
     public Input<Object> getPartitionColumnName() {
         return this.partitionColumnName == null ? Input.empty() : this.partitionColumnName;
@@ -35,7 +35,7 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="partitionLowerBound")
-        private final @Nullable Input<Object> partitionLowerBound;
+      private final @Nullable Input<Object> partitionLowerBound;
 
     public Input<Object> getPartitionLowerBound() {
         return this.partitionLowerBound == null ? Input.empty() : this.partitionLowerBound;
@@ -46,7 +46,7 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="partitionNames")
-        private final @Nullable Input<List<Object>> partitionNames;
+      private final @Nullable Input<List<Object>> partitionNames;
 
     public Input<List<Object>> getPartitionNames() {
         return this.partitionNames == null ? Input.empty() : this.partitionNames;
@@ -57,7 +57,7 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="partitionUpperBound")
-        private final @Nullable Input<Object> partitionUpperBound;
+      private final @Nullable Input<Object> partitionUpperBound;
 
     public Input<Object> getPartitionUpperBound() {
         return this.partitionUpperBound == null ? Input.empty() : this.partitionUpperBound;

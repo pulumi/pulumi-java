@@ -25,7 +25,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="assetName", required=true)
-        private final String assetName;
+      private final String assetName;
 
     public String getAssetName() {
         return this.assetName;
@@ -36,7 +36,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="endTime", required=true)
-        private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -47,7 +47,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="error", required=true)
-        private final JobErrorResponse error;
+      private final JobErrorResponse error;
 
     public JobErrorResponse getError() {
         return this.error;
@@ -58,7 +58,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="label")
-        private final @Nullable String label;
+      private final @Nullable String label;
 
     public Optional<String> getLabel() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
@@ -70,7 +70,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -81,7 +81,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="progress", required=true)
-        private final Integer progress;
+      private final Integer progress;
 
     public Integer getProgress() {
         return this.progress;
@@ -92,7 +92,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="startTime", required=true)
-        private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -103,7 +103,7 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="state", required=true)
-        private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;

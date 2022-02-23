@@ -14,21 +14,21 @@ public final class DataSourceOracleParameters extends io.pulumi.resources.Invoke
     public static final DataSourceOracleParameters Empty = new DataSourceOracleParameters();
 
     @InputImport(name="database", required=true)
-        private final String database;
+      private final String database;
 
     public String getDatabase() {
         return this.database;
     }
 
     @InputImport(name="host", required=true)
-        private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
     }
 
     @InputImport(name="port", required=true)
-        private final Double port;
+      private final Double port;
 
     public Double getPort() {
         return this.port;

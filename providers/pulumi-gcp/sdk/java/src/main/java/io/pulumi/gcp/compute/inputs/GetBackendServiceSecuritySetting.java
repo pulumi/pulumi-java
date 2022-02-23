@@ -14,14 +14,14 @@ public final class GetBackendServiceSecuritySetting extends io.pulumi.resources.
     public static final GetBackendServiceSecuritySetting Empty = new GetBackendServiceSecuritySetting();
 
     @InputImport(name="clientTlsPolicy", required=true)
-        private final String clientTlsPolicy;
+      private final String clientTlsPolicy;
 
     public String getClientTlsPolicy() {
         return this.clientTlsPolicy;
     }
 
     @InputImport(name="subjectAltNames", required=true)
-        private final List<String> subjectAltNames;
+      private final List<String> subjectAltNames;
 
     public List<String> getSubjectAltNames() {
         return this.subjectAltNames;

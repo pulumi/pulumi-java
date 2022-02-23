@@ -24,7 +24,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="httpProxy")
-        private final @Nullable Input<String> httpProxy;
+      private final @Nullable Input<String> httpProxy;
 
     public Input<String> getHttpProxy() {
         return this.httpProxy == null ? Input.empty() : this.httpProxy;
@@ -35,7 +35,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="httpsProxy")
-        private final @Nullable Input<String> httpsProxy;
+      private final @Nullable Input<String> httpsProxy;
 
     public Input<String> getHttpsProxy() {
         return this.httpsProxy == null ? Input.empty() : this.httpsProxy;
@@ -46,7 +46,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="noProxy")
-        private final @Nullable Input<List<String>> noProxy;
+      private final @Nullable Input<List<String>> noProxy;
 
     public Input<List<String>> getNoProxy() {
         return this.noProxy == null ? Input.empty() : this.noProxy;
@@ -57,7 +57,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="trustedCa")
-        private final @Nullable Input<String> trustedCa;
+      private final @Nullable Input<String> trustedCa;
 
     public Input<String> getTrustedCa() {
         return this.trustedCa == null ? Input.empty() : this.trustedCa;

@@ -25,7 +25,7 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="provider")
-        private final @Nullable Input<ClusterEncryptionConfigProviderPropertiesArgs> provider;
+      private final @Nullable Input<ClusterEncryptionConfigProviderPropertiesArgs> provider;
 
     public Input<ClusterEncryptionConfigProviderPropertiesArgs> getProvider() {
         return this.provider == null ? Input.empty() : this.provider;
@@ -36,7 +36,7 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resources")
-        private final @Nullable Input<List<String>> resources;
+      private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;

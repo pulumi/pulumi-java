@@ -17,7 +17,7 @@ public final class GetLocationNFSArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locationArn", required=true)
-        private final String locationArn;
+      private final String locationArn;
 
     public String getLocationArn() {
         return this.locationArn;

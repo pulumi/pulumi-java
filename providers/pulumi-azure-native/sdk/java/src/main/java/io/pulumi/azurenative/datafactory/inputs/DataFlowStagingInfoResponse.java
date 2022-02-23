@@ -24,7 +24,7 @@ public final class DataFlowStagingInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="folderPath")
-        private final @Nullable Object folderPath;
+      private final @Nullable Object folderPath;
 
     public Optional<Object> getFolderPath() {
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
@@ -35,7 +35,7 @@ public final class DataFlowStagingInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="linkedService")
-        private final @Nullable LinkedServiceReferenceResponse linkedService;
+      private final @Nullable LinkedServiceReferenceResponse linkedService;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedService() {
         return this.linkedService == null ? Optional.empty() : Optional.ofNullable(this.linkedService);

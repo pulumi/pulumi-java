@@ -23,7 +23,7 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="regex")
-        private final @Nullable Input<String> regex;
+      private final @Nullable Input<String> regex;
 
     public Input<String> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;

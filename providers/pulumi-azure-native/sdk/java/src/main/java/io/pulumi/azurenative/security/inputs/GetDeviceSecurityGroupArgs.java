@@ -17,7 +17,7 @@ public final class GetDeviceSecurityGroupArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="deviceSecurityGroupName", required=true)
-        private final String deviceSecurityGroupName;
+      private final String deviceSecurityGroupName;
 
     public String getDeviceSecurityGroupName() {
         return this.deviceSecurityGroupName;
@@ -28,7 +28,7 @@ public final class GetDeviceSecurityGroupArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceId", required=true)
-        private final String resourceId;
+      private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;

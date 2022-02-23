@@ -23,7 +23,7 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="friendlyName")
-        private final @Nullable String friendlyName;
+      private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
@@ -34,7 +34,7 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="remoteDnsIps")
-        private final @Nullable String remoteDnsIps;
+      private final @Nullable String remoteDnsIps;
 
     public Optional<String> getRemoteDnsIps() {
         return this.remoteDnsIps == null ? Optional.empty() : Optional.ofNullable(this.remoteDnsIps);
@@ -45,7 +45,7 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="trustDirection")
-        private final @Nullable String trustDirection;
+      private final @Nullable String trustDirection;
 
     public Optional<String> getTrustDirection() {
         return this.trustDirection == null ? Optional.empty() : Optional.ofNullable(this.trustDirection);
@@ -56,7 +56,7 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="trustPassword")
-        private final @Nullable String trustPassword;
+      private final @Nullable String trustPassword;
 
     public Optional<String> getTrustPassword() {
         return this.trustPassword == null ? Optional.empty() : Optional.ofNullable(this.trustPassword);
@@ -67,7 +67,7 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="trustedDomainFqdn")
-        private final @Nullable String trustedDomainFqdn;
+      private final @Nullable String trustedDomainFqdn;
 
     public Optional<String> getTrustedDomainFqdn() {
         return this.trustedDomainFqdn == null ? Optional.empty() : Optional.ofNullable(this.trustedDomainFqdn);

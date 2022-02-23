@@ -17,7 +17,7 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -28,7 +28,7 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queryPackName", required=true)
-        private final String queryPackName;
+      private final String queryPackName;
 
     public String getQueryPackName() {
         return this.queryPackName;
@@ -39,7 +39,7 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

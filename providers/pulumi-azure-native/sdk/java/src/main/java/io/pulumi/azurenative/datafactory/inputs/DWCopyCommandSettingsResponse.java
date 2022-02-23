@@ -26,7 +26,7 @@ public final class DWCopyCommandSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="additionalOptions")
-        private final @Nullable Map<String,String> additionalOptions;
+      private final @Nullable Map<String,String> additionalOptions;
 
     public Map<String,String> getAdditionalOptions() {
         return this.additionalOptions == null ? Map.of() : this.additionalOptions;
@@ -37,7 +37,7 @@ public final class DWCopyCommandSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="defaultValues")
-        private final @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues;
+      private final @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues;
 
     public List<DWCopyCommandDefaultValueResponse> getDefaultValues() {
         return this.defaultValues == null ? List.of() : this.defaultValues;

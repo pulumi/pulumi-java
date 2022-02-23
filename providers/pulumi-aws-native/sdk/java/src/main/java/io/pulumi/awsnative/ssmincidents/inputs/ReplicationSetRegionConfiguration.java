@@ -17,7 +17,7 @@ public final class ReplicationSetRegionConfiguration extends io.pulumi.resources
     public static final ReplicationSetRegionConfiguration Empty = new ReplicationSetRegionConfiguration();
 
     @InputImport(name="sseKmsKeyId", required=true)
-        private final String sseKmsKeyId;
+      private final String sseKmsKeyId;
 
     public String getSseKmsKeyId() {
         return this.sseKmsKeyId;

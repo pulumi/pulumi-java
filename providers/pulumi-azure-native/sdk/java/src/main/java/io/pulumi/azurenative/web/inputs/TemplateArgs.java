@@ -29,7 +29,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containers")
-        private final @Nullable Input<List<ContainerArgs>> containers;
+      private final @Nullable Input<List<ContainerArgs>> containers;
 
     public Input<List<ContainerArgs>> getContainers() {
         return this.containers == null ? Input.empty() : this.containers;
@@ -40,7 +40,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dapr")
-        private final @Nullable Input<DaprArgs> dapr;
+      private final @Nullable Input<DaprArgs> dapr;
 
     public Input<DaprArgs> getDapr() {
         return this.dapr == null ? Input.empty() : this.dapr;
@@ -51,7 +51,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionSuffix")
-        private final @Nullable Input<String> revisionSuffix;
+      private final @Nullable Input<String> revisionSuffix;
 
     public Input<String> getRevisionSuffix() {
         return this.revisionSuffix == null ? Input.empty() : this.revisionSuffix;
@@ -62,7 +62,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scale")
-        private final @Nullable Input<ScaleArgs> scale;
+      private final @Nullable Input<ScaleArgs> scale;
 
     public Input<ScaleArgs> getScale() {
         return this.scale == null ? Input.empty() : this.scale;

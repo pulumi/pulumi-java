@@ -22,7 +22,7 @@ public final class BotSlotDefaultValueArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="defaultValue", required=true)
-        private final Input<String> defaultValue;
+      private final Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue;

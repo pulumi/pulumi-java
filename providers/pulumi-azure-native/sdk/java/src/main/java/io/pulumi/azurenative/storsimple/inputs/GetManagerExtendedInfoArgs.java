@@ -17,7 +17,7 @@ public final class GetManagerExtendedInfoArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="managerName", required=true)
-        private final String managerName;
+      private final String managerName;
 
     public String getManagerName() {
         return this.managerName;
@@ -28,7 +28,7 @@ public final class GetManagerExtendedInfoArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

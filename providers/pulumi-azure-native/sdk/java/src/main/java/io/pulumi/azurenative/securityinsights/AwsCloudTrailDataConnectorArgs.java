@@ -20,7 +20,7 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="awsRoleArn")
-        private final @Nullable Input<String> awsRoleArn;
+      private final @Nullable Input<String> awsRoleArn;
 
     public Input<String> getAwsRoleArn() {
         return this.awsRoleArn == null ? Input.empty() : this.awsRoleArn;
@@ -31,7 +31,7 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataConnectorId")
-        private final @Nullable Input<String> dataConnectorId;
+      private final @Nullable Input<String> dataConnectorId;
 
     public Input<String> getDataConnectorId() {
         return this.dataConnectorId == null ? Input.empty() : this.dataConnectorId;
@@ -42,7 +42,7 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataTypes")
-        private final @Nullable Input<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes;
+      private final @Nullable Input<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes;
 
     public Input<AwsCloudTrailDataConnectorDataTypesArgs> getDataTypes() {
         return this.dataTypes == null ? Input.empty() : this.dataTypes;
@@ -54,7 +54,7 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kind", required=true)
-        private final Input<String> kind;
+      private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -65,7 +65,7 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="workspaceName", required=true)
-        private final Input<String> workspaceName;
+      private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;

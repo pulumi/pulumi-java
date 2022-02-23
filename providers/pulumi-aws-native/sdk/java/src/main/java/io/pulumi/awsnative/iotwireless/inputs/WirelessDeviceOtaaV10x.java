@@ -13,14 +13,14 @@ public final class WirelessDeviceOtaaV10x extends io.pulumi.resources.InvokeArgs
     public static final WirelessDeviceOtaaV10x Empty = new WirelessDeviceOtaaV10x();
 
     @InputImport(name="appEui", required=true)
-        private final String appEui;
+      private final String appEui;
 
     public String getAppEui() {
         return this.appEui;
     }
 
     @InputImport(name="appKey", required=true)
-        private final String appKey;
+      private final String appKey;
 
     public String getAppKey() {
         return this.appKey;

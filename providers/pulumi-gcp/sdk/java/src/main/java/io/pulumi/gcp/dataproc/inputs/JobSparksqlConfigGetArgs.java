@@ -22,14 +22,14 @@ public final class JobSparksqlConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="jarFileUris")
-        private final @Nullable Input<List<String>> jarFileUris;
+      private final @Nullable Input<List<String>> jarFileUris;
 
     public Input<List<String>> getJarFileUris() {
         return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
     }
 
     @InputImport(name="loggingConfig")
-        private final @Nullable Input<JobSparksqlConfigLoggingConfigGetArgs> loggingConfig;
+      private final @Nullable Input<JobSparksqlConfigLoggingConfigGetArgs> loggingConfig;
 
     public Input<JobSparksqlConfigLoggingConfigGetArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -40,7 +40,7 @@ public final class JobSparksqlConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -52,7 +52,7 @@ public final class JobSparksqlConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queryFileUri")
-        private final @Nullable Input<String> queryFileUri;
+      private final @Nullable Input<String> queryFileUri;
 
     public Input<String> getQueryFileUri() {
         return this.queryFileUri == null ? Input.empty() : this.queryFileUri;
@@ -64,7 +64,7 @@ public final class JobSparksqlConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queryLists")
-        private final @Nullable Input<List<String>> queryLists;
+      private final @Nullable Input<List<String>> queryLists;
 
     public Input<List<String>> getQueryLists() {
         return this.queryLists == null ? Input.empty() : this.queryLists;
@@ -75,7 +75,7 @@ public final class JobSparksqlConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scriptVariables")
-        private final @Nullable Input<Map<String,String>> scriptVariables;
+      private final @Nullable Input<Map<String,String>> scriptVariables;
 
     public Input<Map<String,String>> getScriptVariables() {
         return this.scriptVariables == null ? Input.empty() : this.scriptVariables;

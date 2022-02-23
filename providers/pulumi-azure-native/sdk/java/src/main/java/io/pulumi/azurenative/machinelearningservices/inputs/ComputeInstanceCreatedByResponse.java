@@ -21,7 +21,7 @@ public final class ComputeInstanceCreatedByResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="userId", required=true)
-        private final String userId;
+      private final String userId;
 
     public String getUserId() {
         return this.userId;
@@ -32,7 +32,7 @@ public final class ComputeInstanceCreatedByResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="userName", required=true)
-        private final String userName;
+      private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -43,7 +43,7 @@ public final class ComputeInstanceCreatedByResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="userOrgId", required=true)
-        private final String userOrgId;
+      private final String userOrgId;
 
     public String getUserOrgId() {
         return this.userOrgId;

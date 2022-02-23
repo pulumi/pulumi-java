@@ -24,7 +24,7 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterResourceId")
-        private final @Nullable Input<String> clusterResourceId;
+      private final @Nullable Input<String> clusterResourceId;
 
     public Input<String> getClusterResourceId() {
         return this.clusterResourceId == null ? Input.empty() : this.clusterResourceId;
@@ -35,7 +35,7 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disableLocalAuth")
-        private final @Nullable Input<Boolean> disableLocalAuth;
+      private final @Nullable Input<Boolean> disableLocalAuth;
 
     public Input<Boolean> getDisableLocalAuth() {
         return this.disableLocalAuth == null ? Input.empty() : this.disableLocalAuth;
@@ -46,7 +46,7 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableDataExport")
-        private final @Nullable Input<Boolean> enableDataExport;
+      private final @Nullable Input<Boolean> enableDataExport;
 
     public Input<Boolean> getEnableDataExport() {
         return this.enableDataExport == null ? Input.empty() : this.enableDataExport;
@@ -57,7 +57,7 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableLogAccessUsingOnlyResourcePermissions")
-        private final @Nullable Input<Boolean> enableLogAccessUsingOnlyResourcePermissions;
+      private final @Nullable Input<Boolean> enableLogAccessUsingOnlyResourcePermissions;
 
     public Input<Boolean> getEnableLogAccessUsingOnlyResourcePermissions() {
         return this.enableLogAccessUsingOnlyResourcePermissions == null ? Input.empty() : this.enableLogAccessUsingOnlyResourcePermissions;
@@ -68,7 +68,7 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="immediatePurgeDataOn30Days")
-        private final @Nullable Input<Boolean> immediatePurgeDataOn30Days;
+      private final @Nullable Input<Boolean> immediatePurgeDataOn30Days;
 
     public Input<Boolean> getImmediatePurgeDataOn30Days() {
         return this.immediatePurgeDataOn30Days == null ? Input.empty() : this.immediatePurgeDataOn30Days;

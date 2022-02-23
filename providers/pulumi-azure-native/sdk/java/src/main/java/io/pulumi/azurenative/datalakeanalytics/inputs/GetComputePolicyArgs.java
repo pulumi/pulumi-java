@@ -17,7 +17,7 @@ public final class GetComputePolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetComputePolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="computePolicyName", required=true)
-        private final String computePolicyName;
+      private final String computePolicyName;
 
     public String getComputePolicyName() {
         return this.computePolicyName;
@@ -39,7 +39,7 @@ public final class GetComputePolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

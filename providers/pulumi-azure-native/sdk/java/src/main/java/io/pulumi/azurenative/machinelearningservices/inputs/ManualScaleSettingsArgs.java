@@ -20,7 +20,7 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceCount")
-        private final @Nullable Input<Integer> instanceCount;
+      private final @Nullable Input<Integer> instanceCount;
 
     public Input<Integer> getInstanceCount() {
         return this.instanceCount == null ? Input.empty() : this.instanceCount;
@@ -31,7 +31,7 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxInstances")
-        private final @Nullable Input<Integer> maxInstances;
+      private final @Nullable Input<Integer> maxInstances;
 
     public Input<Integer> getMaxInstances() {
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
@@ -42,7 +42,7 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="minInstances")
-        private final @Nullable Input<Integer> minInstances;
+      private final @Nullable Input<Integer> minInstances;
 
     public Input<Integer> getMinInstances() {
         return this.minInstances == null ? Input.empty() : this.minInstances;
@@ -53,7 +53,7 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="scaleType", required=true)
-        private final Input<String> scaleType;
+      private final Input<String> scaleType;
 
     public Input<String> getScaleType() {
         return this.scaleType;

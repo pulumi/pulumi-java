@@ -23,7 +23,7 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-        private final @Nullable Input<String> credentials;
+      private final @Nullable Input<String> credentials;
 
     public Input<String> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -34,7 +34,7 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-        private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;

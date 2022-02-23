@@ -25,7 +25,7 @@ public final class HubPublicIPAddressesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="addresses")
-        private final @Nullable List<AzureFirewallPublicIPAddressResponse> addresses;
+      private final @Nullable List<AzureFirewallPublicIPAddressResponse> addresses;
 
     public List<AzureFirewallPublicIPAddressResponse> getAddresses() {
         return this.addresses == null ? List.of() : this.addresses;
@@ -36,7 +36,7 @@ public final class HubPublicIPAddressesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Integer count;
+      private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);

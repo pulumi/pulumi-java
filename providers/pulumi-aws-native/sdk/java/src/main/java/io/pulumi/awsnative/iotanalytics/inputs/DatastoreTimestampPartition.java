@@ -15,14 +15,14 @@ public final class DatastoreTimestampPartition extends io.pulumi.resources.Invok
     public static final DatastoreTimestampPartition Empty = new DatastoreTimestampPartition();
 
     @InputImport(name="attributeName", required=true)
-        private final String attributeName;
+      private final String attributeName;
 
     public String getAttributeName() {
         return this.attributeName;
     }
 
     @InputImport(name="timestampFormat")
-        private final @Nullable String timestampFormat;
+      private final @Nullable String timestampFormat;
 
     public Optional<String> getTimestampFormat() {
         return this.timestampFormat == null ? Optional.empty() : Optional.ofNullable(this.timestampFormat);

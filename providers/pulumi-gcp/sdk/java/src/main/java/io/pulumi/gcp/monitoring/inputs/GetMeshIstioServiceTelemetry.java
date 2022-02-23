@@ -13,7 +13,7 @@ public final class GetMeshIstioServiceTelemetry extends io.pulumi.resources.Invo
     public static final GetMeshIstioServiceTelemetry Empty = new GetMeshIstioServiceTelemetry();
 
     @InputImport(name="resourceName", required=true)
-        private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;

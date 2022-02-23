@@ -20,7 +20,7 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="managementConfigurationName")
-        private final @Nullable Input<String> managementConfigurationName;
+      private final @Nullable Input<String> managementConfigurationName;
 
     public Input<String> getManagementConfigurationName() {
         return this.managementConfigurationName == null ? Input.empty() : this.managementConfigurationName;
@@ -42,7 +42,7 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<ManagementConfigurationPropertiesArgs> properties;
+      private final @Nullable Input<ManagementConfigurationPropertiesArgs> properties;
 
     public Input<ManagementConfigurationPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

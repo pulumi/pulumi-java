@@ -25,7 +25,7 @@ public final class WorkloadInquiryDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="inquiryValidation")
-        private final @Nullable InquiryValidationResponse inquiryValidation;
+      private final @Nullable InquiryValidationResponse inquiryValidation;
 
     public Optional<InquiryValidationResponse> getInquiryValidation() {
         return this.inquiryValidation == null ? Optional.empty() : Optional.ofNullable(this.inquiryValidation);
@@ -36,7 +36,7 @@ public final class WorkloadInquiryDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="itemCount")
-        private final @Nullable Double itemCount;
+      private final @Nullable Double itemCount;
 
     public Optional<Double> getItemCount() {
         return this.itemCount == null ? Optional.empty() : Optional.ofNullable(this.itemCount);
@@ -47,7 +47,7 @@ public final class WorkloadInquiryDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);

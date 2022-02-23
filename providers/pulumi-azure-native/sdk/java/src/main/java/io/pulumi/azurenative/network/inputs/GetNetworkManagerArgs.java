@@ -17,7 +17,7 @@ public final class GetNetworkManagerArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-        private final String networkManagerName;
+      private final String networkManagerName;
 
     public String getNetworkManagerName() {
         return this.networkManagerName;
@@ -28,7 +28,7 @@ public final class GetNetworkManagerArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

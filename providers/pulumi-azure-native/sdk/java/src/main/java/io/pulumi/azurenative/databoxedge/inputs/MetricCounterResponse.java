@@ -25,7 +25,7 @@ public final class MetricCounterResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="additionalDimensions")
-        private final @Nullable List<MetricDimensionResponse> additionalDimensions;
+      private final @Nullable List<MetricDimensionResponse> additionalDimensions;
 
     public List<MetricDimensionResponse> getAdditionalDimensions() {
         return this.additionalDimensions == null ? List.of() : this.additionalDimensions;
@@ -36,7 +36,7 @@ public final class MetricCounterResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dimensionFilter")
-        private final @Nullable List<MetricDimensionResponse> dimensionFilter;
+      private final @Nullable List<MetricDimensionResponse> dimensionFilter;
 
     public List<MetricDimensionResponse> getDimensionFilter() {
         return this.dimensionFilter == null ? List.of() : this.dimensionFilter;
@@ -47,7 +47,7 @@ public final class MetricCounterResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="instance")
-        private final @Nullable String instance;
+      private final @Nullable String instance;
 
     public Optional<String> getInstance() {
         return this.instance == null ? Optional.empty() : Optional.ofNullable(this.instance);
@@ -58,7 +58,7 @@ public final class MetricCounterResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

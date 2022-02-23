@@ -24,7 +24,7 @@ public final class ServiceAcrConfigurationInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="loginServers")
-        private final @Nullable List<String> loginServers;
+      private final @Nullable List<String> loginServers;
 
     public List<String> getLoginServers() {
         return this.loginServers == null ? List.of() : this.loginServers;

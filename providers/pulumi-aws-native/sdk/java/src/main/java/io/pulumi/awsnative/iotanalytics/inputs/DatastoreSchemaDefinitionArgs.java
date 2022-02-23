@@ -16,7 +16,7 @@ public final class DatastoreSchemaDefinitionArgs extends io.pulumi.resources.Res
     public static final DatastoreSchemaDefinitionArgs Empty = new DatastoreSchemaDefinitionArgs();
 
     @InputImport(name="columns")
-        private final @Nullable Input<List<DatastoreColumnArgs>> columns;
+      private final @Nullable Input<List<DatastoreColumnArgs>> columns;
 
     public Input<List<DatastoreColumnArgs>> getColumns() {
         return this.columns == null ? Input.empty() : this.columns;

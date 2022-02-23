@@ -22,7 +22,7 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
     public static final StackSetStackInstancesArgs Empty = new StackSetStackInstancesArgs();
 
     @InputImport(name="deploymentTargets", required=true)
-        private final Input<StackSetDeploymentTargetsArgs> deploymentTargets;
+      private final Input<StackSetDeploymentTargetsArgs> deploymentTargets;
 
     public Input<StackSetDeploymentTargetsArgs> getDeploymentTargets() {
         return this.deploymentTargets;
@@ -33,7 +33,7 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="parameterOverrides")
-        private final @Nullable Input<List<StackSetParameterArgs>> parameterOverrides;
+      private final @Nullable Input<List<StackSetParameterArgs>> parameterOverrides;
 
     public Input<List<StackSetParameterArgs>> getParameterOverrides() {
         return this.parameterOverrides == null ? Input.empty() : this.parameterOverrides;
@@ -44,7 +44,7 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="regions", required=true)
-        private final Input<List<String>> regions;
+      private final Input<List<String>> regions;
 
     public Input<List<String>> getRegions() {
         return this.regions;

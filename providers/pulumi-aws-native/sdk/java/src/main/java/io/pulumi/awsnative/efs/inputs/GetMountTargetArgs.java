@@ -13,7 +13,7 @@ public final class GetMountTargetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetMountTargetArgs Empty = new GetMountTargetArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

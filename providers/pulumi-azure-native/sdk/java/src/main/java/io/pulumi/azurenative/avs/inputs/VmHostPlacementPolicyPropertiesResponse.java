@@ -24,7 +24,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="affinityType", required=true)
-        private final String affinityType;
+      private final String affinityType;
 
     public String getAffinityType() {
         return this.affinityType;
@@ -35,7 +35,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable String displayName;
+      private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -46,7 +46,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="hostMembers", required=true)
-        private final List<String> hostMembers;
+      private final List<String> hostMembers;
 
     public List<String> getHostMembers() {
         return this.hostMembers;
@@ -57,7 +57,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -68,7 +68,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="state")
-        private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -80,7 +80,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -91,7 +91,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vmMembers", required=true)
-        private final List<String> vmMembers;
+      private final List<String> vmMembers;
 
     public List<String> getVmMembers() {
         return this.vmMembers;

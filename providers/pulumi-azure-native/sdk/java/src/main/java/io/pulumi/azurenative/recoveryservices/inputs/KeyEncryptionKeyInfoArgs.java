@@ -23,7 +23,7 @@ public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyIdentifier")
-        private final @Nullable Input<String> keyIdentifier;
+      private final @Nullable Input<String> keyIdentifier;
 
     public Input<String> getKeyIdentifier() {
         return this.keyIdentifier == null ? Input.empty() : this.keyIdentifier;
@@ -34,7 +34,7 @@ public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVaultResourceArmId")
-        private final @Nullable Input<String> keyVaultResourceArmId;
+      private final @Nullable Input<String> keyVaultResourceArmId;
 
     public Input<String> getKeyVaultResourceArmId() {
         return this.keyVaultResourceArmId == null ? Input.empty() : this.keyVaultResourceArmId;

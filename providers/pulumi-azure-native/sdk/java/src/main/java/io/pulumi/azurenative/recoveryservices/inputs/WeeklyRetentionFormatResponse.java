@@ -24,7 +24,7 @@ public final class WeeklyRetentionFormatResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="daysOfTheWeek")
-        private final @Nullable List<String> daysOfTheWeek;
+      private final @Nullable List<String> daysOfTheWeek;
 
     public List<String> getDaysOfTheWeek() {
         return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
@@ -35,7 +35,7 @@ public final class WeeklyRetentionFormatResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="weeksOfTheMonth")
-        private final @Nullable List<String> weeksOfTheMonth;
+      private final @Nullable List<String> weeksOfTheMonth;
 
     public List<String> getWeeksOfTheMonth() {
         return this.weeksOfTheMonth == null ? List.of() : this.weeksOfTheMonth;

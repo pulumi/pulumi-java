@@ -26,7 +26,7 @@ public final class WorkloadIdentityPoolProviderOidcArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="allowedAudiences")
-        private final @Nullable Input<List<String>> allowedAudiences;
+      private final @Nullable Input<List<String>> allowedAudiences;
 
     public Input<List<String>> getAllowedAudiences() {
         return this.allowedAudiences == null ? Input.empty() : this.allowedAudiences;
@@ -37,7 +37,7 @@ public final class WorkloadIdentityPoolProviderOidcArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="issuerUri", required=true)
-        private final Input<String> issuerUri;
+      private final Input<String> issuerUri;
 
     public Input<String> getIssuerUri() {
         return this.issuerUri;

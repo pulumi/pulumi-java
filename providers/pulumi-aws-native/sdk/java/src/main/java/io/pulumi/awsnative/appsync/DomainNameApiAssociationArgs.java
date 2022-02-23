@@ -14,14 +14,14 @@ public final class DomainNameApiAssociationArgs extends io.pulumi.resources.Reso
     public static final DomainNameApiAssociationArgs Empty = new DomainNameApiAssociationArgs();
 
     @InputImport(name="apiId", required=true)
-        private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
     }
 
     @InputImport(name="domainName", required=true)
-        private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;

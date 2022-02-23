@@ -23,7 +23,7 @@ public final class TIDataConnectorDataTypesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="indicators")
-        private final @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
+      private final @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
 
     public Optional<TIDataConnectorDataTypesResponseIndicators> getIndicators() {
         return this.indicators == null ? Optional.empty() : Optional.ofNullable(this.indicators);

@@ -23,7 +23,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="createTime")
-        private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -34,7 +34,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="group")
-        private final @Nullable Input<String> group;
+      private final @Nullable Input<String> group;
 
     public Input<String> getGroup() {
         return this.group == null ? Input.empty() : this.group;
@@ -46,7 +46,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="memberKey")
-        private final @Nullable Input<GroupMembershipMemberKeyGetArgs> memberKey;
+      private final @Nullable Input<GroupMembershipMemberKeyGetArgs> memberKey;
 
     public Input<GroupMembershipMemberKeyGetArgs> getMemberKey() {
         return this.memberKey == null ? Input.empty() : this.memberKey;
@@ -58,7 +58,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="preferredMemberKey")
-        private final @Nullable Input<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
+      private final @Nullable Input<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
 
     public Input<GroupMembershipPreferredMemberKeyGetArgs> getPreferredMemberKey() {
         return this.preferredMemberKey == null ? Input.empty() : this.preferredMemberKey;
@@ -83,7 +83,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="roles")
-        private final @Nullable Input<List<GroupMembershipRoleGetArgs>> roles;
+      private final @Nullable Input<List<GroupMembershipRoleGetArgs>> roles;
 
     public Input<List<GroupMembershipRoleGetArgs>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;
@@ -94,7 +94,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -105,7 +105,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="updateTime")
-        private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;

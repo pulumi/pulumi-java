@@ -21,7 +21,7 @@ public final class RecommendedActionErrorInfoResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="errorCode", required=true)
-        private final String errorCode;
+      private final String errorCode;
 
     public String getErrorCode() {
         return this.errorCode;
@@ -32,7 +32,7 @@ public final class RecommendedActionErrorInfoResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="isRetryable", required=true)
-        private final String isRetryable;
+      private final String isRetryable;
 
     public String getIsRetryable() {
         return this.isRetryable;

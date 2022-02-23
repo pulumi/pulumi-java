@@ -16,7 +16,7 @@ public final class DeliveryStreamHiveJsonSerDeArgs extends io.pulumi.resources.R
     public static final DeliveryStreamHiveJsonSerDeArgs Empty = new DeliveryStreamHiveJsonSerDeArgs();
 
     @InputImport(name="timestampFormats")
-        private final @Nullable Input<List<String>> timestampFormats;
+      private final @Nullable Input<List<String>> timestampFormats;
 
     public Input<List<String>> getTimestampFormats() {
         return this.timestampFormats == null ? Input.empty() : this.timestampFormats;

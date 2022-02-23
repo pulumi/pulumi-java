@@ -15,7 +15,7 @@ public final class ConfigDecodeConfig extends io.pulumi.resources.InvokeArgs {
     public static final ConfigDecodeConfig Empty = new ConfigDecodeConfig();
 
     @InputImport(name="unvalidatedJSON")
-        private final @Nullable String unvalidatedJSON;
+      private final @Nullable String unvalidatedJSON;
 
     public Optional<String> getUnvalidatedJSON() {
         return this.unvalidatedJSON == null ? Optional.empty() : Optional.ofNullable(this.unvalidatedJSON);

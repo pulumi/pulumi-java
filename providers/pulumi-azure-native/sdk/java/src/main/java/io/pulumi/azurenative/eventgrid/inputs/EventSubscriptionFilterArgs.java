@@ -38,7 +38,7 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="advancedFilters")
-        private final @Nullable Input<List<Object>> advancedFilters;
+      private final @Nullable Input<List<Object>> advancedFilters;
 
     public Input<List<Object>> getAdvancedFilters() {
         return this.advancedFilters == null ? Input.empty() : this.advancedFilters;
@@ -49,7 +49,7 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="includedEventTypes")
-        private final @Nullable Input<List<String>> includedEventTypes;
+      private final @Nullable Input<List<String>> includedEventTypes;
 
     public Input<List<String>> getIncludedEventTypes() {
         return this.includedEventTypes == null ? Input.empty() : this.includedEventTypes;
@@ -61,7 +61,7 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="isSubjectCaseSensitive")
-        private final @Nullable Input<Boolean> isSubjectCaseSensitive;
+      private final @Nullable Input<Boolean> isSubjectCaseSensitive;
 
     public Input<Boolean> getIsSubjectCaseSensitive() {
         return this.isSubjectCaseSensitive == null ? Input.empty() : this.isSubjectCaseSensitive;
@@ -74,7 +74,7 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subjectBeginsWith")
-        private final @Nullable Input<String> subjectBeginsWith;
+      private final @Nullable Input<String> subjectBeginsWith;
 
     public Input<String> getSubjectBeginsWith() {
         return this.subjectBeginsWith == null ? Input.empty() : this.subjectBeginsWith;
@@ -86,7 +86,7 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subjectEndsWith")
-        private final @Nullable Input<String> subjectEndsWith;
+      private final @Nullable Input<String> subjectEndsWith;
 
     public Input<String> getSubjectEndsWith() {
         return this.subjectEndsWith == null ? Input.empty() : this.subjectEndsWith;

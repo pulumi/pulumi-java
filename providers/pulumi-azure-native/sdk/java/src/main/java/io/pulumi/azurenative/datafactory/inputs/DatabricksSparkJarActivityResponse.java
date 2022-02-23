@@ -30,7 +30,7 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="dependsOn")
-        private final @Nullable List<ActivityDependencyResponse> dependsOn;
+      private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -41,7 +41,7 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -52,7 +52,7 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="libraries")
-        private final @Nullable List<Map<String,Object>> libraries;
+      private final @Nullable List<Map<String,Object>> libraries;
 
     public List<Map<String,Object>> getLibraries() {
         return this.libraries == null ? List.of() : this.libraries;
@@ -63,7 +63,7 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="linkedServiceName")
-        private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
@@ -74,7 +74,7 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="mainClassName", required=true)
-        private final Object mainClassName;
+      private final Object mainClassName;
 
     public Object getMainClassName() {
         return this.mainClassName;
@@ -85,7 +85,7 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -96,7 +96,7 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable List<Object> parameters;
+      private final @Nullable List<Object> parameters;
 
     public List<Object> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
@@ -107,7 +107,7 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="policy")
-        private final @Nullable ActivityPolicyResponse policy;
+      private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -119,7 +119,7 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -130,7 +130,7 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="userProperties")
-        private final @Nullable List<UserPropertyResponse> userProperties;
+      private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;

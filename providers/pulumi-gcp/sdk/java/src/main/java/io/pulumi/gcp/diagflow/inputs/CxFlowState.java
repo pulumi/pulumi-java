@@ -23,7 +23,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -49,7 +49,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHandlers")
-        private final @Nullable Input<List<CxFlowEventHandlerGetArgs>> eventHandlers;
+      private final @Nullable Input<List<CxFlowEventHandlerGetArgs>> eventHandlers;
 
     public Input<List<CxFlowEventHandlerGetArgs>> getEventHandlers() {
         return this.eventHandlers == null ? Input.empty() : this.eventHandlers;
@@ -65,7 +65,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-        private final @Nullable Input<String> languageCode;
+      private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
@@ -77,7 +77,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nluSettings")
-        private final @Nullable Input<CxFlowNluSettingsGetArgs> nluSettings;
+      private final @Nullable Input<CxFlowNluSettingsGetArgs> nluSettings;
 
     public Input<CxFlowNluSettingsGetArgs> getNluSettings() {
         return this.nluSettings == null ? Input.empty() : this.nluSettings;
@@ -101,7 +101,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-        private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -115,7 +115,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitionRouteGroups")
-        private final @Nullable Input<List<String>> transitionRouteGroups;
+      private final @Nullable Input<List<String>> transitionRouteGroups;
 
     public Input<List<String>> getTransitionRouteGroups() {
         return this.transitionRouteGroups == null ? Input.empty() : this.transitionRouteGroups;
@@ -128,7 +128,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitionRoutes")
-        private final @Nullable Input<List<CxFlowTransitionRouteGetArgs>> transitionRoutes;
+      private final @Nullable Input<List<CxFlowTransitionRouteGetArgs>> transitionRoutes;
 
     public Input<List<CxFlowTransitionRouteGetArgs>> getTransitionRoutes() {
         return this.transitionRoutes == null ? Input.empty() : this.transitionRoutes;

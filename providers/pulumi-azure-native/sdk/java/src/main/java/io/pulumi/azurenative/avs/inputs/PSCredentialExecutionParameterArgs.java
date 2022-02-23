@@ -23,7 +23,7 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="password")
-        private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -46,7 +46,7 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -57,7 +57,7 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="username")
-        private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;

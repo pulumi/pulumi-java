@@ -21,63 +21,63 @@ public final class DataSourceSalesforceConfiguration extends io.pulumi.resources
     public static final DataSourceSalesforceConfiguration Empty = new DataSourceSalesforceConfiguration();
 
     @InputImport(name="chatterFeedConfiguration")
-        private final @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration;
+      private final @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration;
 
     public Optional<DataSourceSalesforceChatterFeedConfiguration> getChatterFeedConfiguration() {
         return this.chatterFeedConfiguration == null ? Optional.empty() : Optional.ofNullable(this.chatterFeedConfiguration);
     }
 
     @InputImport(name="crawlAttachments")
-        private final @Nullable Boolean crawlAttachments;
+      private final @Nullable Boolean crawlAttachments;
 
     public Optional<Boolean> getCrawlAttachments() {
         return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);
     }
 
     @InputImport(name="excludeAttachmentFilePatterns")
-        private final @Nullable List<String> excludeAttachmentFilePatterns;
+      private final @Nullable List<String> excludeAttachmentFilePatterns;
 
     public List<String> getExcludeAttachmentFilePatterns() {
         return this.excludeAttachmentFilePatterns == null ? List.of() : this.excludeAttachmentFilePatterns;
     }
 
     @InputImport(name="includeAttachmentFilePatterns")
-        private final @Nullable List<String> includeAttachmentFilePatterns;
+      private final @Nullable List<String> includeAttachmentFilePatterns;
 
     public List<String> getIncludeAttachmentFilePatterns() {
         return this.includeAttachmentFilePatterns == null ? List.of() : this.includeAttachmentFilePatterns;
     }
 
     @InputImport(name="knowledgeArticleConfiguration")
-        private final @Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration;
+      private final @Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration;
 
     public Optional<DataSourceSalesforceKnowledgeArticleConfiguration> getKnowledgeArticleConfiguration() {
         return this.knowledgeArticleConfiguration == null ? Optional.empty() : Optional.ofNullable(this.knowledgeArticleConfiguration);
     }
 
     @InputImport(name="secretArn", required=true)
-        private final String secretArn;
+      private final String secretArn;
 
     public String getSecretArn() {
         return this.secretArn;
     }
 
     @InputImport(name="serverUrl", required=true)
-        private final String serverUrl;
+      private final String serverUrl;
 
     public String getServerUrl() {
         return this.serverUrl;
     }
 
     @InputImport(name="standardObjectAttachmentConfiguration")
-        private final @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration;
+      private final @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration;
 
     public Optional<DataSourceSalesforceStandardObjectAttachmentConfiguration> getStandardObjectAttachmentConfiguration() {
         return this.standardObjectAttachmentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.standardObjectAttachmentConfiguration);
     }
 
     @InputImport(name="standardObjectConfigurations")
-        private final @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations;
+      private final @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations;
 
     public List<DataSourceSalesforceStandardObjectConfiguration> getStandardObjectConfigurations() {
         return this.standardObjectConfigurations == null ? List.of() : this.standardObjectConfigurations;

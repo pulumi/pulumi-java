@@ -22,7 +22,7 @@ public final class ApplicationCustomComponent extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="componentName", required=true)
-        private final String componentName;
+      private final String componentName;
 
     public String getComponentName() {
         return this.componentName;
@@ -33,7 +33,7 @@ public final class ApplicationCustomComponent extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceList", required=true)
-        private final List<String> resourceList;
+      private final List<String> resourceList;
 
     public List<String> getResourceList() {
         return this.resourceList;

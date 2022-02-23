@@ -19,7 +19,7 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="daysPerMonth")
-        private final @Nullable Input<Double> daysPerMonth;
+      private final @Nullable Input<Double> daysPerMonth;
 
     public Input<Double> getDaysPerMonth() {
         return this.daysPerMonth == null ? Input.empty() : this.daysPerMonth;
@@ -30,7 +30,7 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hoursPerDay")
-        private final @Nullable Input<Double> hoursPerDay;
+      private final @Nullable Input<Double> hoursPerDay;
 
     public Input<Double> getHoursPerDay() {
         return this.hoursPerDay == null ? Input.empty() : this.hoursPerDay;

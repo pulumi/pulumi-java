@@ -18,7 +18,7 @@ public final class EventIntegrationEventFilterArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="source", required=true)
-        private final Input<String> source;
+      private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;

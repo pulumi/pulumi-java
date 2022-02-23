@@ -25,7 +25,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enrolledServices", required=true)
-        private final Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
+      private final Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
     public Input<List<AccessApprovalSettingsEnrolledServiceArgs>> getEnrolledServices() {
         return this.enrolledServices;
@@ -36,7 +36,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="folderId", required=true)
-        private final Input<String> folderId;
+      private final Input<String> folderId;
 
     public Input<String> getFolderId() {
         return this.folderId;
@@ -49,7 +49,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="notificationEmails")
-        private final @Nullable Input<List<String>> notificationEmails;
+      private final @Nullable Input<List<String>> notificationEmails;
 
     public Input<List<String>> getNotificationEmails() {
         return this.notificationEmails == null ? Input.empty() : this.notificationEmails;

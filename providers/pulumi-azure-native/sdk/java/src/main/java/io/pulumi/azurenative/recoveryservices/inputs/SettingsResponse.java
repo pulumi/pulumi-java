@@ -25,7 +25,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isCompression")
-        private final @Nullable Boolean isCompression;
+      private final @Nullable Boolean isCompression;
 
     public Optional<Boolean> getIsCompression() {
         return this.isCompression == null ? Optional.empty() : Optional.ofNullable(this.isCompression);
@@ -36,7 +36,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="issqlcompression")
-        private final @Nullable Boolean issqlcompression;
+      private final @Nullable Boolean issqlcompression;
 
     public Optional<Boolean> getIssqlcompression() {
         return this.issqlcompression == null ? Optional.empty() : Optional.ofNullable(this.issqlcompression);
@@ -47,7 +47,7 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeZone")
-        private final @Nullable String timeZone;
+      private final @Nullable String timeZone;
 
     public Optional<String> getTimeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);

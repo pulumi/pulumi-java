@@ -25,7 +25,7 @@ public final class ApplicationLogsConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="azureBlobStorage")
-        private final @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage;
+      private final @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage;
 
     public Optional<AzureBlobStorageApplicationLogsConfigResponse> getAzureBlobStorage() {
         return this.azureBlobStorage == null ? Optional.empty() : Optional.ofNullable(this.azureBlobStorage);
@@ -36,7 +36,7 @@ public final class ApplicationLogsConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="azureTableStorage")
-        private final @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage;
+      private final @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage;
 
     public Optional<AzureTableStorageApplicationLogsConfigResponse> getAzureTableStorage() {
         return this.azureTableStorage == null ? Optional.empty() : Optional.ofNullable(this.azureTableStorage);
@@ -47,7 +47,7 @@ public final class ApplicationLogsConfigResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="fileSystem")
-        private final @Nullable FileSystemApplicationLogsConfigResponse fileSystem;
+      private final @Nullable FileSystemApplicationLogsConfigResponse fileSystem;
 
     public Optional<FileSystemApplicationLogsConfigResponse> getFileSystem() {
         return this.fileSystem == null ? Optional.empty() : Optional.ofNullable(this.fileSystem);

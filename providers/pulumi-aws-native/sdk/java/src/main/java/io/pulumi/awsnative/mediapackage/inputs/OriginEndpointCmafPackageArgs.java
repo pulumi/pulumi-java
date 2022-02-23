@@ -24,7 +24,7 @@ public final class OriginEndpointCmafPackageArgs extends io.pulumi.resources.Res
     public static final OriginEndpointCmafPackageArgs Empty = new OriginEndpointCmafPackageArgs();
 
     @InputImport(name="encryption")
-        private final @Nullable Input<OriginEndpointCmafEncryptionArgs> encryption;
+      private final @Nullable Input<OriginEndpointCmafEncryptionArgs> encryption;
 
     public Input<OriginEndpointCmafEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -35,7 +35,7 @@ public final class OriginEndpointCmafPackageArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="hlsManifests")
-        private final @Nullable Input<List<OriginEndpointHlsManifestArgs>> hlsManifests;
+      private final @Nullable Input<List<OriginEndpointHlsManifestArgs>> hlsManifests;
 
     public Input<List<OriginEndpointHlsManifestArgs>> getHlsManifests() {
         return this.hlsManifests == null ? Input.empty() : this.hlsManifests;
@@ -46,7 +46,7 @@ public final class OriginEndpointCmafPackageArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="segmentDurationSeconds")
-        private final @Nullable Input<Integer> segmentDurationSeconds;
+      private final @Nullable Input<Integer> segmentDurationSeconds;
 
     public Input<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Input.empty() : this.segmentDurationSeconds;
@@ -57,14 +57,14 @@ public final class OriginEndpointCmafPackageArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="segmentPrefix")
-        private final @Nullable Input<String> segmentPrefix;
+      private final @Nullable Input<String> segmentPrefix;
 
     public Input<String> getSegmentPrefix() {
         return this.segmentPrefix == null ? Input.empty() : this.segmentPrefix;
     }
 
     @InputImport(name="streamSelection")
-        private final @Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection;
+      private final @Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection;
 
     public Input<OriginEndpointStreamSelectionArgs> getStreamSelection() {
         return this.streamSelection == null ? Input.empty() : this.streamSelection;

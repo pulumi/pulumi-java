@@ -25,7 +25,7 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sqlWorkloadType")
-        private final @Nullable Input<Either<String,SqlWorkloadType>> sqlWorkloadType;
+      private final @Nullable Input<Either<String,SqlWorkloadType>> sqlWorkloadType;
 
     public Input<Either<String,SqlWorkloadType>> getSqlWorkloadType() {
         return this.sqlWorkloadType == null ? Input.empty() : this.sqlWorkloadType;

@@ -28,7 +28,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendPort", required=true)
-        private final Input<Integer> backendPort;
+      private final Input<Integer> backendPort;
 
     public Input<Integer> getBackendPort() {
         return this.backendPort;
@@ -39,7 +39,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableFloatingIP")
-        private final @Nullable Input<Boolean> enableFloatingIP;
+      private final @Nullable Input<Boolean> enableFloatingIP;
 
     public Input<Boolean> getEnableFloatingIP() {
         return this.enableFloatingIP == null ? Input.empty() : this.enableFloatingIP;
@@ -50,7 +50,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableTcpReset")
-        private final @Nullable Input<Boolean> enableTcpReset;
+      private final @Nullable Input<Boolean> enableTcpReset;
 
     public Input<Boolean> getEnableTcpReset() {
         return this.enableTcpReset == null ? Input.empty() : this.enableTcpReset;
@@ -61,7 +61,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendIPConfiguration")
-        private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
+      private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
 
     public Input<SubResourceArgs> getFrontendIPConfiguration() {
         return this.frontendIPConfiguration == null ? Input.empty() : this.frontendIPConfiguration;
@@ -72,7 +72,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendPortRangeEnd", required=true)
-        private final Input<Integer> frontendPortRangeEnd;
+      private final Input<Integer> frontendPortRangeEnd;
 
     public Input<Integer> getFrontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
@@ -83,7 +83,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendPortRangeStart", required=true)
-        private final Input<Integer> frontendPortRangeStart;
+      private final Input<Integer> frontendPortRangeStart;
 
     public Input<Integer> getFrontendPortRangeStart() {
         return this.frontendPortRangeStart;
@@ -94,7 +94,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -105,7 +105,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-        private final @Nullable Input<Integer> idleTimeoutInMinutes;
+      private final @Nullable Input<Integer> idleTimeoutInMinutes;
 
     public Input<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
@@ -116,7 +116,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -127,7 +127,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-        private final Input<Either<String,TransportProtocol>> protocol;
+      private final Input<Either<String,TransportProtocol>> protocol;
 
     public Input<Either<String,TransportProtocol>> getProtocol() {
         return this.protocol;

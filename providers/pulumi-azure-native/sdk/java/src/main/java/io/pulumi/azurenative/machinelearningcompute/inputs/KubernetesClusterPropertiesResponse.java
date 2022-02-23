@@ -23,7 +23,7 @@ public final class KubernetesClusterPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="servicePrincipal")
-        private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
+      private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
     public Optional<ServicePrincipalPropertiesResponse> getServicePrincipal() {
         return this.servicePrincipal == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipal);

@@ -22,7 +22,7 @@ public final class ApplicationGatewayFirewallExclusionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="matchVariable", required=true)
-        private final Input<String> matchVariable;
+      private final Input<String> matchVariable;
 
     public Input<String> getMatchVariable() {
         return this.matchVariable;
@@ -33,7 +33,7 @@ public final class ApplicationGatewayFirewallExclusionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="selector", required=true)
-        private final Input<String> selector;
+      private final Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector;
@@ -44,7 +44,7 @@ public final class ApplicationGatewayFirewallExclusionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="selectorMatchOperator", required=true)
-        private final Input<String> selectorMatchOperator;
+      private final Input<String> selectorMatchOperator;
 
     public Input<String> getSelectorMatchOperator() {
         return this.selectorMatchOperator;

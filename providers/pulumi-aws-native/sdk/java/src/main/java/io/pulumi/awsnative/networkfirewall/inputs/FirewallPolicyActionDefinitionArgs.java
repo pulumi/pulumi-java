@@ -15,7 +15,7 @@ public final class FirewallPolicyActionDefinitionArgs extends io.pulumi.resource
     public static final FirewallPolicyActionDefinitionArgs Empty = new FirewallPolicyActionDefinitionArgs();
 
     @InputImport(name="publishMetricAction")
-        private final @Nullable Input<FirewallPolicyPublishMetricActionArgs> publishMetricAction;
+      private final @Nullable Input<FirewallPolicyPublishMetricActionArgs> publishMetricAction;
 
     public Input<FirewallPolicyPublishMetricActionArgs> getPublishMetricAction() {
         return this.publishMetricAction == null ? Input.empty() : this.publishMetricAction;

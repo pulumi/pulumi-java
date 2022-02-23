@@ -16,14 +16,14 @@ public final class EtwProviderConfigurationArgs extends io.pulumi.resources.Reso
     public static final EtwProviderConfigurationArgs Empty = new EtwProviderConfigurationArgs();
 
     @InputImport(name="events", required=true)
-        private final Input<List<EtwEventConfigurationArgs>> events;
+      private final Input<List<EtwEventConfigurationArgs>> events;
 
     public Input<List<EtwEventConfigurationArgs>> getEvents() {
         return this.events;
     }
 
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;

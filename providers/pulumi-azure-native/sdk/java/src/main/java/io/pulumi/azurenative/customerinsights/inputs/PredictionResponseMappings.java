@@ -21,7 +21,7 @@ public final class PredictionResponseMappings extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="grade", required=true)
-        private final String grade;
+      private final String grade;
 
     public String getGrade() {
         return this.grade;
@@ -32,7 +32,7 @@ public final class PredictionResponseMappings extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="reason", required=true)
-        private final String reason;
+      private final String reason;
 
     public String getReason() {
         return this.reason;
@@ -43,7 +43,7 @@ public final class PredictionResponseMappings extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="score", required=true)
-        private final String score;
+      private final String score;
 
     public String getScore() {
         return this.score;

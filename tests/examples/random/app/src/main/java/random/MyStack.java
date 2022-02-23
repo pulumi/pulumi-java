@@ -39,14 +39,11 @@ public final class MyStack extends Stack {
                         .setLength(16)
                         .setSpecial(true)
                         .setOverrideSpecial("_%@")
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         this.randomPassword = randomPassword.getResult();
 
-        var randomPet = new RandomPet("my-pet",
-                RandomPetArgs.builder().build(),
-                CustomResourceOptions.Empty);
+        var randomPet = new RandomPet("my-pet");
 
         this.randomPetKeepers = randomPet.getKeepers();
 
@@ -54,38 +51,32 @@ public final class MyStack extends Stack {
                 RandomIntegerArgs.builder()
                         .setMax(100)
                         .setMin(0)
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         this.randomInteger = randomInteger.getResult();
 
         var randomString = new RandomString("my-string",
                 RandomStringArgs.builder()
                         .setLength(10)
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         this.randomString = randomString.getResult();
 
         var randomId = new RandomId("my-id",
                 RandomIdArgs.builder()
                         .setByteLength(10)
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         this.randomIdHex = randomId.getHex();
 
-        var randomUuid = new RandomUuid("my-uuid",
-                RandomUuidArgs.builder().build(),
-                CustomResourceOptions.Empty);
+        var randomUuid = new RandomUuid("my-uuid");
 
         this.randomUuid = randomUuid.getResult();
 
         var randomShuffle = new RandomShuffle("my-shuffle",
                 RandomShuffleArgs.builder()
                         .setInputs(List.of("A", "B", "C"))
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         this.shuffled = randomShuffle.getResults();
     }

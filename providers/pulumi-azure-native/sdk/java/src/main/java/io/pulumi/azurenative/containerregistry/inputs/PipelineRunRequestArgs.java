@@ -29,7 +29,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="artifacts")
-        private final @Nullable Input<List<String>> artifacts;
+      private final @Nullable Input<List<String>> artifacts;
 
     public Input<List<String>> getArtifacts() {
         return this.artifacts == null ? Input.empty() : this.artifacts;
@@ -40,7 +40,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="catalogDigest")
-        private final @Nullable Input<String> catalogDigest;
+      private final @Nullable Input<String> catalogDigest;
 
     public Input<String> getCatalogDigest() {
         return this.catalogDigest == null ? Input.empty() : this.catalogDigest;
@@ -51,7 +51,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pipelineResourceId")
-        private final @Nullable Input<String> pipelineResourceId;
+      private final @Nullable Input<String> pipelineResourceId;
 
     public Input<String> getPipelineResourceId() {
         return this.pipelineResourceId == null ? Input.empty() : this.pipelineResourceId;
@@ -62,7 +62,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="source")
-        private final @Nullable Input<PipelineRunSourcePropertiesArgs> source;
+      private final @Nullable Input<PipelineRunSourcePropertiesArgs> source;
 
     public Input<PipelineRunSourcePropertiesArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -73,7 +73,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="target")
-        private final @Nullable Input<PipelineRunTargetPropertiesArgs> target;
+      private final @Nullable Input<PipelineRunTargetPropertiesArgs> target;
 
     public Input<PipelineRunTargetPropertiesArgs> getTarget() {
         return this.target == null ? Input.empty() : this.target;

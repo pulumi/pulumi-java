@@ -31,7 +31,7 @@ public final class JobInputHttpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="baseUri")
-        private final @Nullable String baseUri;
+      private final @Nullable String baseUri;
 
     public Optional<String> getBaseUri() {
         return this.baseUri == null ? Optional.empty() : Optional.ofNullable(this.baseUri);
@@ -42,7 +42,7 @@ public final class JobInputHttpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="end")
-        private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end;
+      private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end;
 
     public Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> getEnd() {
         return this.end == null ? null : this.end;
@@ -53,7 +53,7 @@ public final class JobInputHttpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="files")
-        private final @Nullable List<String> files;
+      private final @Nullable List<String> files;
 
     public List<String> getFiles() {
         return this.files == null ? List.of() : this.files;
@@ -64,7 +64,7 @@ public final class JobInputHttpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputDefinitions")
-        private final @Nullable List<Object> inputDefinitions;
+      private final @Nullable List<Object> inputDefinitions;
 
     public List<Object> getInputDefinitions() {
         return this.inputDefinitions == null ? List.of() : this.inputDefinitions;
@@ -75,7 +75,7 @@ public final class JobInputHttpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="label")
-        private final @Nullable String label;
+      private final @Nullable String label;
 
     public Optional<String> getLabel() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
@@ -87,7 +87,7 @@ public final class JobInputHttpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-        private final String odataType;
+      private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -98,7 +98,7 @@ public final class JobInputHttpResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="start")
-        private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
+      private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
 
     public Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> getStart() {
         return this.start == null ? null : this.start;

@@ -27,7 +27,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="encryptionAtHost")
-        private final @Nullable Input<Boolean> encryptionAtHost;
+      private final @Nullable Input<Boolean> encryptionAtHost;
 
     public Input<Boolean> getEncryptionAtHost() {
         return this.encryptionAtHost == null ? Input.empty() : this.encryptionAtHost;
@@ -38,7 +38,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="securityType")
-        private final @Nullable Input<Either<String,SecurityTypes>> securityType;
+      private final @Nullable Input<Either<String,SecurityTypes>> securityType;
 
     public Input<Either<String,SecurityTypes>> getSecurityType() {
         return this.securityType == null ? Input.empty() : this.securityType;
@@ -49,7 +49,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uefiSettings")
-        private final @Nullable Input<UefiSettingsArgs> uefiSettings;
+      private final @Nullable Input<UefiSettingsArgs> uefiSettings;
 
     public Input<UefiSettingsArgs> getUefiSettings() {
         return this.uefiSettings == null ? Input.empty() : this.uefiSettings;

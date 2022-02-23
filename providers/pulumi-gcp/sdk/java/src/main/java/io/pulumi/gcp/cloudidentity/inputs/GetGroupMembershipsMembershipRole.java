@@ -17,7 +17,7 @@ public final class GetGroupMembershipsMembershipRole extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

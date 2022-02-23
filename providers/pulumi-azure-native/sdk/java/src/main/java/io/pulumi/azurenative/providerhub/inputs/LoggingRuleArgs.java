@@ -19,28 +19,28 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final LoggingRuleArgs Empty = new LoggingRuleArgs();
 
     @InputImport(name="action", required=true)
-        private final Input<String> action;
+      private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
     }
 
     @InputImport(name="detailLevel", required=true)
-        private final Input<Either<String,LoggingDetails>> detailLevel;
+      private final Input<Either<String,LoggingDetails>> detailLevel;
 
     public Input<Either<String,LoggingDetails>> getDetailLevel() {
         return this.detailLevel;
     }
 
     @InputImport(name="direction", required=true)
-        private final Input<Either<String,LoggingDirections>> direction;
+      private final Input<Either<String,LoggingDirections>> direction;
 
     public Input<Either<String,LoggingDirections>> getDirection() {
         return this.direction;
     }
 
     @InputImport(name="hiddenPropertyPaths")
-        private final @Nullable Input<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
+      private final @Nullable Input<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
 
     public Input<LoggingRuleHiddenPropertyPathsArgs> getHiddenPropertyPaths() {
         return this.hiddenPropertyPaths == null ? Input.empty() : this.hiddenPropertyPaths;

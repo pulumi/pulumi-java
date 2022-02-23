@@ -20,7 +20,7 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="intervalDurationDays", required=true)
-        private final Input<Integer> intervalDurationDays;
+      private final Input<Integer> intervalDurationDays;
 
     public Input<Integer> getIntervalDurationDays() {
         return this.intervalDurationDays;
@@ -33,7 +33,7 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scheduleTime")
-        private final @Nullable Input<String> scheduleTime;
+      private final @Nullable Input<String> scheduleTime;
 
     public Input<String> getScheduleTime() {
         return this.scheduleTime == null ? Input.empty() : this.scheduleTime;

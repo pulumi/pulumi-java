@@ -27,7 +27,7 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="count")
-        private final @Nullable Input<Integer> count;
+      private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -38,7 +38,7 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="durationType")
-        private final @Nullable Input<Either<String,RetentionDurationType>> durationType;
+      private final @Nullable Input<Either<String,RetentionDurationType>> durationType;
 
     public Input<Either<String,RetentionDurationType>> getDurationType() {
         return this.durationType == null ? Input.empty() : this.durationType;

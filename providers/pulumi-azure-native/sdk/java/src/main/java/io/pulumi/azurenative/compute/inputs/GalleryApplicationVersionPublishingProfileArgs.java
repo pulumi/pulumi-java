@@ -31,7 +31,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
      * 
      */
     @InputImport(name="enableHealthCheck")
-        private final @Nullable Input<Boolean> enableHealthCheck;
+      private final @Nullable Input<Boolean> enableHealthCheck;
 
     public Input<Boolean> getEnableHealthCheck() {
         return this.enableHealthCheck == null ? Input.empty() : this.enableHealthCheck;
@@ -42,7 +42,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
      * 
      */
     @InputImport(name="endOfLifeDate")
-        private final @Nullable Input<String> endOfLifeDate;
+      private final @Nullable Input<String> endOfLifeDate;
 
     public Input<String> getEndOfLifeDate() {
         return this.endOfLifeDate == null ? Input.empty() : this.endOfLifeDate;
@@ -53,14 +53,14 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
      * 
      */
     @InputImport(name="excludeFromLatest")
-        private final @Nullable Input<Boolean> excludeFromLatest;
+      private final @Nullable Input<Boolean> excludeFromLatest;
 
     public Input<Boolean> getExcludeFromLatest() {
         return this.excludeFromLatest == null ? Input.empty() : this.excludeFromLatest;
     }
 
     @InputImport(name="manageActions")
-        private final @Nullable Input<UserArtifactManageArgs> manageActions;
+      private final @Nullable Input<UserArtifactManageArgs> manageActions;
 
     public Input<UserArtifactManageArgs> getManageActions() {
         return this.manageActions == null ? Input.empty() : this.manageActions;
@@ -71,7 +71,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
      * 
      */
     @InputImport(name="replicaCount")
-        private final @Nullable Input<Integer> replicaCount;
+      private final @Nullable Input<Integer> replicaCount;
 
     public Input<Integer> getReplicaCount() {
         return this.replicaCount == null ? Input.empty() : this.replicaCount;
@@ -82,7 +82,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
      * 
      */
     @InputImport(name="source", required=true)
-        private final Input<UserArtifactSourceArgs> source;
+      private final Input<UserArtifactSourceArgs> source;
 
     public Input<UserArtifactSourceArgs> getSource() {
         return this.source;
@@ -93,7 +93,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
      * 
      */
     @InputImport(name="storageAccountType")
-        private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
+      private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
 
     public Input<Either<String,StorageAccountType>> getStorageAccountType() {
         return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
@@ -104,7 +104,7 @@ public final class GalleryApplicationVersionPublishingProfileArgs extends io.pul
      * 
      */
     @InputImport(name="targetRegions")
-        private final @Nullable Input<List<TargetRegionArgs>> targetRegions;
+      private final @Nullable Input<List<TargetRegionArgs>> targetRegions;
 
     public Input<List<TargetRegionArgs>> getTargetRegions() {
         return this.targetRegions == null ? Input.empty() : this.targetRegions;

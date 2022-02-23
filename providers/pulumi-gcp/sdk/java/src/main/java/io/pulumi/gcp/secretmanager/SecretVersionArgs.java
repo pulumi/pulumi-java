@@ -20,7 +20,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -31,7 +31,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret", required=true)
-        private final Input<String> secret;
+      private final Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret;
@@ -43,7 +43,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretData", required=true)
-        private final Input<String> secretData;
+      private final Input<String> secretData;
 
     public Input<String> getSecretData() {
         return this.secretData;

@@ -25,7 +25,7 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="capacityInBytes")
-        private final @Nullable Double capacityInBytes;
+      private final @Nullable Double capacityInBytes;
 
     public Optional<Double> getCapacityInBytes() {
         return this.capacityInBytes == null ? Optional.empty() : Optional.ofNullable(this.capacityInBytes);
@@ -36,7 +36,7 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="freeSpaceInBytes")
-        private final @Nullable Double freeSpaceInBytes;
+      private final @Nullable Double freeSpaceInBytes;
 
     public Optional<Double> getFreeSpaceInBytes() {
         return this.freeSpaceInBytes == null ? Optional.empty() : Optional.ofNullable(this.freeSpaceInBytes);
@@ -47,7 +47,7 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="thresholdPercentage")
-        private final @Nullable Integer thresholdPercentage;
+      private final @Nullable Integer thresholdPercentage;
 
     public Optional<Integer> getThresholdPercentage() {
         return this.thresholdPercentage == null ? Optional.empty() : Optional.ofNullable(this.thresholdPercentage);
@@ -58,7 +58,7 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="volumeName")
-        private final @Nullable String volumeName;
+      private final @Nullable String volumeName;
 
     public Optional<String> getVolumeName() {
         return this.volumeName == null ? Optional.empty() : Optional.ofNullable(this.volumeName);

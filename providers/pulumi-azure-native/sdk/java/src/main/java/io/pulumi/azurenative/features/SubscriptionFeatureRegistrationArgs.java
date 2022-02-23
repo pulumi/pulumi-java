@@ -20,14 +20,14 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="featureName")
-        private final @Nullable Input<String> featureName;
+      private final @Nullable Input<String> featureName;
 
     public Input<String> getFeatureName() {
         return this.featureName == null ? Input.empty() : this.featureName;
     }
 
     @InputImport(name="properties")
-        private final @Nullable Input<SubscriptionFeatureRegistrationPropertiesArgs> properties;
+      private final @Nullable Input<SubscriptionFeatureRegistrationPropertiesArgs> properties;
 
     public Input<SubscriptionFeatureRegistrationPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -38,7 +38,7 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-        private final Input<String> providerNamespace;
+      private final Input<String> providerNamespace;
 
     public Input<String> getProviderNamespace() {
         return this.providerNamespace;

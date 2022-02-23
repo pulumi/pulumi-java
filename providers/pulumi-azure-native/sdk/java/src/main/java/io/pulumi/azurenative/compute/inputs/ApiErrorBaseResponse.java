@@ -23,7 +23,7 @@ public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="code")
-        private final @Nullable String code;
+      private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -34,7 +34,7 @@ public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message")
-        private final @Nullable String message;
+      private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -45,7 +45,7 @@ public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="target")
-        private final @Nullable String target;
+      private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);

@@ -25,7 +25,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bootStrapConfigurationBlobs")
-        private final @Nullable Input<List<String>> bootStrapConfigurationBlobs;
+      private final @Nullable Input<List<String>> bootStrapConfigurationBlobs;
 
     public Input<List<String>> getBootStrapConfigurationBlobs() {
         return this.bootStrapConfigurationBlobs == null ? Input.empty() : this.bootStrapConfigurationBlobs;
@@ -36,7 +36,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cloudInitConfiguration")
-        private final @Nullable Input<String> cloudInitConfiguration;
+      private final @Nullable Input<String> cloudInitConfiguration;
 
     public Input<String> getCloudInitConfiguration() {
         return this.cloudInitConfiguration == null ? Input.empty() : this.cloudInitConfiguration;
@@ -47,7 +47,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cloudInitConfigurationBlobs")
-        private final @Nullable Input<List<String>> cloudInitConfigurationBlobs;
+      private final @Nullable Input<List<String>> cloudInitConfigurationBlobs;
 
     public Input<List<String>> getCloudInitConfigurationBlobs() {
         return this.cloudInitConfigurationBlobs == null ? Input.empty() : this.cloudInitConfigurationBlobs;
@@ -58,7 +58,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -69,7 +69,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
     public Input<ManagedServiceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -80,7 +80,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -91,7 +91,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="networkVirtualApplianceName")
-        private final @Nullable Input<String> networkVirtualApplianceName;
+      private final @Nullable Input<String> networkVirtualApplianceName;
 
     public Input<String> getNetworkVirtualApplianceName() {
         return this.networkVirtualApplianceName == null ? Input.empty() : this.networkVirtualApplianceName;
@@ -102,7 +102,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="nvaSku")
-        private final @Nullable Input<VirtualApplianceSkuPropertiesArgs> nvaSku;
+      private final @Nullable Input<VirtualApplianceSkuPropertiesArgs> nvaSku;
 
     public Input<VirtualApplianceSkuPropertiesArgs> getNvaSku() {
         return this.nvaSku == null ? Input.empty() : this.nvaSku;
@@ -113,7 +113,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -124,7 +124,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -135,7 +135,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="virtualApplianceAsn")
-        private final @Nullable Input<Double> virtualApplianceAsn;
+      private final @Nullable Input<Double> virtualApplianceAsn;
 
     public Input<Double> getVirtualApplianceAsn() {
         return this.virtualApplianceAsn == null ? Input.empty() : this.virtualApplianceAsn;
@@ -146,7 +146,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="virtualHub")
-        private final @Nullable Input<SubResourceArgs> virtualHub;
+      private final @Nullable Input<SubResourceArgs> virtualHub;
 
     public Input<SubResourceArgs> getVirtualHub() {
         return this.virtualHub == null ? Input.empty() : this.virtualHub;

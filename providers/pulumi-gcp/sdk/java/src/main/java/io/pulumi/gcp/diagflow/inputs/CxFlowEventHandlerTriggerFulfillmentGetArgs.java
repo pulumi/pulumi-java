@@ -23,7 +23,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="messages")
-        private final @Nullable Input<List<CxFlowEventHandlerTriggerFulfillmentMessageGetArgs>> messages;
+      private final @Nullable Input<List<CxFlowEventHandlerTriggerFulfillmentMessageGetArgs>> messages;
 
     public Input<List<CxFlowEventHandlerTriggerFulfillmentMessageGetArgs>> getMessages() {
         return this.messages == null ? Input.empty() : this.messages;
@@ -34,7 +34,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="returnPartialResponses")
-        private final @Nullable Input<Boolean> returnPartialResponses;
+      private final @Nullable Input<Boolean> returnPartialResponses;
 
     public Input<Boolean> getReturnPartialResponses() {
         return this.returnPartialResponses == null ? Input.empty() : this.returnPartialResponses;
@@ -45,7 +45,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="tag")
-        private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -56,7 +56,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="webhook")
-        private final @Nullable Input<String> webhook;
+      private final @Nullable Input<String> webhook;
 
     public Input<String> getWebhook() {
         return this.webhook == null ? Input.empty() : this.webhook;

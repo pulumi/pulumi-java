@@ -23,7 +23,7 @@ public final class ACIServiceCreateRequestDataCollectionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="eventHubEnabled")
-        private final @Nullable Input<Boolean> eventHubEnabled;
+      private final @Nullable Input<Boolean> eventHubEnabled;
 
     public Input<Boolean> getEventHubEnabled() {
         return this.eventHubEnabled == null ? Input.empty() : this.eventHubEnabled;
@@ -34,7 +34,7 @@ public final class ACIServiceCreateRequestDataCollectionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="storageEnabled")
-        private final @Nullable Input<Boolean> storageEnabled;
+      private final @Nullable Input<Boolean> storageEnabled;
 
     public Input<Boolean> getStorageEnabled() {
         return this.storageEnabled == null ? Input.empty() : this.storageEnabled;

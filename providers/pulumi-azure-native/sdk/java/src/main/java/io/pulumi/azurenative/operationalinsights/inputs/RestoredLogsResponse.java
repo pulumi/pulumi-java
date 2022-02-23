@@ -23,7 +23,7 @@ public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endRestoreTime")
-        private final @Nullable String endRestoreTime;
+      private final @Nullable String endRestoreTime;
 
     public Optional<String> getEndRestoreTime() {
         return this.endRestoreTime == null ? Optional.empty() : Optional.ofNullable(this.endRestoreTime);
@@ -34,7 +34,7 @@ public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceTable", required=true)
-        private final String sourceTable;
+      private final String sourceTable;
 
     public String getSourceTable() {
         return this.sourceTable;
@@ -45,7 +45,7 @@ public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startRestoreTime")
-        private final @Nullable String startRestoreTime;
+      private final @Nullable String startRestoreTime;
 
     public Optional<String> getStartRestoreTime() {
         return this.startRestoreTime == null ? Optional.empty() : Optional.ofNullable(this.startRestoreTime);

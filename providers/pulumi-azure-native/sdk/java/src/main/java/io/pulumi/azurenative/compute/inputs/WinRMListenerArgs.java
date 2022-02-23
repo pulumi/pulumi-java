@@ -24,7 +24,7 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateUrl")
-        private final @Nullable Input<String> certificateUrl;
+      private final @Nullable Input<String> certificateUrl;
 
     public Input<String> getCertificateUrl() {
         return this.certificateUrl == null ? Input.empty() : this.certificateUrl;
@@ -35,7 +35,7 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable Input<ProtocolTypes> protocol;
+      private final @Nullable Input<ProtocolTypes> protocol;
 
     public Input<ProtocolTypes> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;

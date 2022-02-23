@@ -23,7 +23,7 @@ public final class StudioComponentComputeFarmConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="activeDirectoryUser")
-        private final @Nullable Input<String> activeDirectoryUser;
+      private final @Nullable Input<String> activeDirectoryUser;
 
     public Input<String> getActiveDirectoryUser() {
         return this.activeDirectoryUser == null ? Input.empty() : this.activeDirectoryUser;
@@ -34,7 +34,7 @@ public final class StudioComponentComputeFarmConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="endpoint")
-        private final @Nullable Input<String> endpoint;
+      private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;

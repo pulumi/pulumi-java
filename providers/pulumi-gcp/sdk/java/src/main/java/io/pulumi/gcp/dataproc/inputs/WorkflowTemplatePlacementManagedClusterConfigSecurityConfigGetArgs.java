@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGe
      * 
      */
     @InputImport(name="kerberosConfig")
-        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig;
+      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> getKerberosConfig() {
         return this.kerberosConfig == null ? Input.empty() : this.kerberosConfig;

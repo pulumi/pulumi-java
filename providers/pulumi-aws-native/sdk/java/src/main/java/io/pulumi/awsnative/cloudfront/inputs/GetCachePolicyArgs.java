@@ -13,7 +13,7 @@ public final class GetCachePolicyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCachePolicyArgs Empty = new GetCachePolicyArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

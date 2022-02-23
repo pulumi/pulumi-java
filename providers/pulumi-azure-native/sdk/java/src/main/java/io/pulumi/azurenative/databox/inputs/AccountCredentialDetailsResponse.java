@@ -23,7 +23,7 @@ public final class AccountCredentialDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="accountConnectionString", required=true)
-        private final String accountConnectionString;
+      private final String accountConnectionString;
 
     public String getAccountConnectionString() {
         return this.accountConnectionString;
@@ -34,7 +34,7 @@ public final class AccountCredentialDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final String accountName;
+      private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -45,7 +45,7 @@ public final class AccountCredentialDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dataAccountType", required=true)
-        private final String dataAccountType;
+      private final String dataAccountType;
 
     public String getDataAccountType() {
         return this.dataAccountType;
@@ -56,7 +56,7 @@ public final class AccountCredentialDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="shareCredentialDetails", required=true)
-        private final List<ShareCredentialDetailsResponse> shareCredentialDetails;
+      private final List<ShareCredentialDetailsResponse> shareCredentialDetails;
 
     public List<ShareCredentialDetailsResponse> getShareCredentialDetails() {
         return this.shareCredentialDetails;

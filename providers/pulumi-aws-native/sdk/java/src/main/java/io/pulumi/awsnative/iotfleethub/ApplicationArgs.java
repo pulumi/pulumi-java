@@ -21,7 +21,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationDescription")
-        private final @Nullable Input<String> applicationDescription;
+      private final @Nullable Input<String> applicationDescription;
 
     public Input<String> getApplicationDescription() {
         return this.applicationDescription == null ? Input.empty() : this.applicationDescription;
@@ -32,7 +32,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName")
-        private final @Nullable Input<String> applicationName;
+      private final @Nullable Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName == null ? Input.empty() : this.applicationName;
@@ -43,7 +43,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-        private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -54,7 +54,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<ApplicationTagArgs>> tags;
+      private final @Nullable Input<List<ApplicationTagArgs>> tags;
 
     public Input<List<ApplicationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

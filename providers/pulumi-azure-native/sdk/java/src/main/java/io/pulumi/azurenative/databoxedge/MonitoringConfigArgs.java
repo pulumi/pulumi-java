@@ -20,7 +20,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceName", required=true)
-        private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -31,7 +31,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricConfigurations", required=true)
-        private final Input<List<MetricConfigurationArgs>> metricConfigurations;
+      private final Input<List<MetricConfigurationArgs>> metricConfigurations;
 
     public Input<List<MetricConfigurationArgs>> getMetricConfigurations() {
         return this.metricConfigurations;
@@ -42,7 +42,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="roleName", required=true)
-        private final Input<String> roleName;
+      private final Input<String> roleName;
 
     public Input<String> getRoleName() {
         return this.roleName;

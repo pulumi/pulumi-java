@@ -19,7 +19,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="attachmentTarget")
-        private final @Nullable Input<String> attachmentTarget;
+      private final @Nullable Input<String> attachmentTarget;
 
     public Input<String> getAttachmentTarget() {
         return this.attachmentTarget == null ? Input.empty() : this.attachmentTarget;
@@ -30,7 +30,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="firewallPolicy")
-        private final @Nullable Input<String> firewallPolicy;
+      private final @Nullable Input<String> firewallPolicy;
 
     public Input<String> getFirewallPolicy() {
         return this.firewallPolicy == null ? Input.empty() : this.firewallPolicy;
@@ -41,7 +41,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -52,7 +52,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="shortName")
-        private final @Nullable Input<String> shortName;
+      private final @Nullable Input<String> shortName;
 
     public Input<String> getShortName() {
         return this.shortName == null ? Input.empty() : this.shortName;

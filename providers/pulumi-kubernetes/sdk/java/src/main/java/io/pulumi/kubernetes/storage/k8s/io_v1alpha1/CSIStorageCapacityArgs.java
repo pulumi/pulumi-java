@@ -21,7 +21,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiVersion")
-        private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -34,7 +34,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="capacity")
-        private final @Nullable Input<String> capacity;
+      private final @Nullable Input<String> capacity;
 
     public Input<String> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -45,7 +45,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -58,7 +58,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maximumVolumeSize")
-        private final @Nullable Input<String> maximumVolumeSize;
+      private final @Nullable Input<String> maximumVolumeSize;
 
     public Input<String> getMaximumVolumeSize() {
         return this.maximumVolumeSize == null ? Input.empty() : this.maximumVolumeSize;
@@ -73,7 +73,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -84,7 +84,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="nodeTopology")
-        private final @Nullable Input<LabelSelectorArgs> nodeTopology;
+      private final @Nullable Input<LabelSelectorArgs> nodeTopology;
 
     public Input<LabelSelectorArgs> getNodeTopology() {
         return this.nodeTopology == null ? Input.empty() : this.nodeTopology;
@@ -95,7 +95,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="storageClassName", required=true)
-        private final Input<String> storageClassName;
+      private final Input<String> storageClassName;
 
     public Input<String> getStorageClassName() {
         return this.storageClassName;

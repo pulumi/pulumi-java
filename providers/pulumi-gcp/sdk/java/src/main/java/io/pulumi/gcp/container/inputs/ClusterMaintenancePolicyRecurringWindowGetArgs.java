@@ -14,21 +14,21 @@ public final class ClusterMaintenancePolicyRecurringWindowGetArgs extends io.pul
     public static final ClusterMaintenancePolicyRecurringWindowGetArgs Empty = new ClusterMaintenancePolicyRecurringWindowGetArgs();
 
     @InputImport(name="endTime", required=true)
-        private final Input<String> endTime;
+      private final Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime;
     }
 
     @InputImport(name="recurrence", required=true)
-        private final Input<String> recurrence;
+      private final Input<String> recurrence;
 
     public Input<String> getRecurrence() {
         return this.recurrence;
     }
 
     @InputImport(name="startTime", required=true)
-        private final Input<String> startTime;
+      private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;

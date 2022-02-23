@@ -29,7 +29,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="debugSetting")
-        private final @Nullable Input<DebugSettingArgs> debugSetting;
+      private final @Nullable Input<DebugSettingArgs> debugSetting;
 
     public Input<DebugSettingArgs> getDebugSetting() {
         return this.debugSetting == null ? Input.empty() : this.debugSetting;
@@ -40,7 +40,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="expressionEvaluationOptions")
-        private final @Nullable Input<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions;
+      private final @Nullable Input<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions;
 
     public Input<ExpressionEvaluationOptionsArgs> getExpressionEvaluationOptions() {
         return this.expressionEvaluationOptions == null ? Input.empty() : this.expressionEvaluationOptions;
@@ -51,7 +51,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mode", required=true)
-        private final Input<DeploymentMode> mode;
+      private final Input<DeploymentMode> mode;
 
     public Input<DeploymentMode> getMode() {
         return this.mode;
@@ -62,7 +62,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="onErrorDeployment")
-        private final @Nullable Input<OnErrorDeploymentArgs> onErrorDeployment;
+      private final @Nullable Input<OnErrorDeploymentArgs> onErrorDeployment;
 
     public Input<OnErrorDeploymentArgs> getOnErrorDeployment() {
         return this.onErrorDeployment == null ? Input.empty() : this.onErrorDeployment;
@@ -73,7 +73,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Object> parameters;
+      private final @Nullable Input<Object> parameters;
 
     public Input<Object> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -84,7 +84,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parametersLink")
-        private final @Nullable Input<ParametersLinkArgs> parametersLink;
+      private final @Nullable Input<ParametersLinkArgs> parametersLink;
 
     public Input<ParametersLinkArgs> getParametersLink() {
         return this.parametersLink == null ? Input.empty() : this.parametersLink;
@@ -95,7 +95,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="template")
-        private final @Nullable Input<Object> template;
+      private final @Nullable Input<Object> template;
 
     public Input<Object> getTemplate() {
         return this.template == null ? Input.empty() : this.template;
@@ -106,7 +106,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="templateLink")
-        private final @Nullable Input<TemplateLinkArgs> templateLink;
+      private final @Nullable Input<TemplateLinkArgs> templateLink;
 
     public Input<TemplateLinkArgs> getTemplateLink() {
         return this.templateLink == null ? Input.empty() : this.templateLink;

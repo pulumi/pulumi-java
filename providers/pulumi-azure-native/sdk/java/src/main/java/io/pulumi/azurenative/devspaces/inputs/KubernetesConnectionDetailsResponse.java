@@ -24,7 +24,7 @@ public final class KubernetesConnectionDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="instanceType", required=true)
-        private final String instanceType;
+      private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -35,7 +35,7 @@ public final class KubernetesConnectionDetailsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kubeConfig")
-        private final @Nullable String kubeConfig;
+      private final @Nullable String kubeConfig;
 
     public Optional<String> getKubeConfig() {
         return this.kubeConfig == null ? Optional.empty() : Optional.ofNullable(this.kubeConfig);

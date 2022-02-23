@@ -31,7 +31,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="absoluteCriteria")
-        private final @Nullable Input<List<Either<String,AbsoluteMarker>>> absoluteCriteria;
+      private final @Nullable Input<List<Either<String,AbsoluteMarker>>> absoluteCriteria;
 
     public Input<List<Either<String,AbsoluteMarker>>> getAbsoluteCriteria() {
         return this.absoluteCriteria == null ? Input.empty() : this.absoluteCriteria;
@@ -42,7 +42,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="daysOfMonth")
-        private final @Nullable Input<List<DayArgs>> daysOfMonth;
+      private final @Nullable Input<List<DayArgs>> daysOfMonth;
 
     public Input<List<DayArgs>> getDaysOfMonth() {
         return this.daysOfMonth == null ? Input.empty() : this.daysOfMonth;
@@ -53,7 +53,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="daysOfTheWeek")
-        private final @Nullable Input<List<Either<String,DayOfWeek>>> daysOfTheWeek;
+      private final @Nullable Input<List<Either<String,DayOfWeek>>> daysOfTheWeek;
 
     public Input<List<Either<String,DayOfWeek>>> getDaysOfTheWeek() {
         return this.daysOfTheWeek == null ? Input.empty() : this.daysOfTheWeek;
@@ -64,7 +64,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="monthsOfYear")
-        private final @Nullable Input<List<Either<String,Month>>> monthsOfYear;
+      private final @Nullable Input<List<Either<String,Month>>> monthsOfYear;
 
     public Input<List<Either<String,Month>>> getMonthsOfYear() {
         return this.monthsOfYear == null ? Input.empty() : this.monthsOfYear;
@@ -76,7 +76,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="objectType", required=true)
-        private final Input<String> objectType;
+      private final Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType;
@@ -87,7 +87,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scheduleTimes")
-        private final @Nullable Input<List<String>> scheduleTimes;
+      private final @Nullable Input<List<String>> scheduleTimes;
 
     public Input<List<String>> getScheduleTimes() {
         return this.scheduleTimes == null ? Input.empty() : this.scheduleTimes;
@@ -98,7 +98,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="weeksOfTheMonth")
-        private final @Nullable Input<List<Either<String,WeekNumber>>> weeksOfTheMonth;
+      private final @Nullable Input<List<Either<String,WeekNumber>>> weeksOfTheMonth;
 
     public Input<List<Either<String,WeekNumber>>> getWeeksOfTheMonth() {
         return this.weeksOfTheMonth == null ? Input.empty() : this.weeksOfTheMonth;

@@ -23,7 +23,7 @@ public final class ConnStringValueTypePairArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<ConnectionStringType> type;
+      private final Input<ConnectionStringType> type;
 
     public Input<ConnectionStringType> getType() {
         return this.type;
@@ -34,7 +34,7 @@ public final class ConnStringValueTypePairArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="value", required=true)
-        private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

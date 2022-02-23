@@ -23,7 +23,7 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="recommendationAction")
-        private final @Nullable Input<String> recommendationAction;
+      private final @Nullable Input<String> recommendationAction;
 
     public Input<String> getRecommendationAction() {
         return this.recommendationAction == null ? Input.empty() : this.recommendationAction;
@@ -34,7 +34,7 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="username")
-        private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;

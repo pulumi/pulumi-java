@@ -23,7 +23,7 @@ public final class RosettaNetPipBusinessDocumentResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-        private final @Nullable String description;
+      private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -34,7 +34,7 @@ public final class RosettaNetPipBusinessDocumentResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class RosettaNetPipBusinessDocumentResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="version", required=true)
-        private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;

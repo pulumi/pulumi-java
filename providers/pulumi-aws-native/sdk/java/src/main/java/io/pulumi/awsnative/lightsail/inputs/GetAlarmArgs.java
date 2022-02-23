@@ -17,7 +17,7 @@ public final class GetAlarmArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="alarmName", required=true)
-        private final String alarmName;
+      private final String alarmName;
 
     public String getAlarmName() {
         return this.alarmName;

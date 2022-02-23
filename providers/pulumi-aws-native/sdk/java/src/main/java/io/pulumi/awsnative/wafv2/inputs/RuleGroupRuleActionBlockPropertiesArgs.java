@@ -19,7 +19,7 @@ public final class RuleGroupRuleActionBlockPropertiesArgs extends io.pulumi.reso
     public static final RuleGroupRuleActionBlockPropertiesArgs Empty = new RuleGroupRuleActionBlockPropertiesArgs();
 
     @InputImport(name="customResponse")
-        private final @Nullable Input<RuleGroupCustomResponseArgs> customResponse;
+      private final @Nullable Input<RuleGroupCustomResponseArgs> customResponse;
 
     public Input<RuleGroupCustomResponseArgs> getCustomResponse() {
         return this.customResponse == null ? Input.empty() : this.customResponse;

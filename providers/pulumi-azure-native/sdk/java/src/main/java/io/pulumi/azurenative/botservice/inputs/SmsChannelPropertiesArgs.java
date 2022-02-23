@@ -24,7 +24,7 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accountSID", required=true)
-        private final Input<String> accountSID;
+      private final Input<String> accountSID;
 
     public Input<String> getAccountSID() {
         return this.accountSID;
@@ -35,7 +35,7 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="authToken")
-        private final @Nullable Input<String> authToken;
+      private final @Nullable Input<String> authToken;
 
     public Input<String> getAuthToken() {
         return this.authToken == null ? Input.empty() : this.authToken;
@@ -46,7 +46,7 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isEnabled", required=true)
-        private final Input<Boolean> isEnabled;
+      private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -57,7 +57,7 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isValidated")
-        private final @Nullable Input<Boolean> isValidated;
+      private final @Nullable Input<Boolean> isValidated;
 
     public Input<Boolean> getIsValidated() {
         return this.isValidated == null ? Input.empty() : this.isValidated;
@@ -68,7 +68,7 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="phone", required=true)
-        private final Input<String> phone;
+      private final Input<String> phone;
 
     public Input<String> getPhone() {
         return this.phone;

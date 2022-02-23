@@ -23,7 +23,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attestationName")
-        private final @Nullable Input<String> attestationName;
+      private final @Nullable Input<String> attestationName;
 
     public Input<String> getAttestationName() {
         return this.attestationName == null ? Input.empty() : this.attestationName;
@@ -34,7 +34,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="comments")
-        private final @Nullable Input<String> comments;
+      private final @Nullable Input<String> comments;
 
     public Input<String> getComments() {
         return this.comments == null ? Input.empty() : this.comments;
@@ -45,7 +45,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="complianceState")
-        private final @Nullable Input<Either<String,ComplianceState>> complianceState;
+      private final @Nullable Input<Either<String,ComplianceState>> complianceState;
 
     public Input<Either<String,ComplianceState>> getComplianceState() {
         return this.complianceState == null ? Input.empty() : this.complianceState;
@@ -56,7 +56,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="evidence")
-        private final @Nullable Input<List<AttestationEvidenceArgs>> evidence;
+      private final @Nullable Input<List<AttestationEvidenceArgs>> evidence;
 
     public Input<List<AttestationEvidenceArgs>> getEvidence() {
         return this.evidence == null ? Input.empty() : this.evidence;
@@ -67,7 +67,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="expiresOn")
-        private final @Nullable Input<String> expiresOn;
+      private final @Nullable Input<String> expiresOn;
 
     public Input<String> getExpiresOn() {
         return this.expiresOn == null ? Input.empty() : this.expiresOn;
@@ -78,7 +78,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="owner")
-        private final @Nullable Input<String> owner;
+      private final @Nullable Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -89,7 +89,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyAssignmentId", required=true)
-        private final Input<String> policyAssignmentId;
+      private final Input<String> policyAssignmentId;
 
     public Input<String> getPolicyAssignmentId() {
         return this.policyAssignmentId;
@@ -100,7 +100,7 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyDefinitionReferenceId")
-        private final @Nullable Input<String> policyDefinitionReferenceId;
+      private final @Nullable Input<String> policyDefinitionReferenceId;
 
     public Input<String> getPolicyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId == null ? Input.empty() : this.policyDefinitionReferenceId;

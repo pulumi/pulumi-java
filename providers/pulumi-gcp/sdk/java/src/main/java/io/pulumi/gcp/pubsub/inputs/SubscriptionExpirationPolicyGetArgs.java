@@ -22,7 +22,7 @@ public final class SubscriptionExpirationPolicyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ttl", required=true)
-        private final Input<String> ttl;
+      private final Input<String> ttl;
 
     public Input<String> getTtl() {
         return this.ttl;

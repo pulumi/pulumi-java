@@ -17,21 +17,21 @@ public final class RegistryListCredentialsResultResponse extends io.pulumi.resou
     public static final RegistryListCredentialsResultResponse Empty = new RegistryListCredentialsResultResponse();
 
     @InputImport(name="location", required=true)
-        private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="passwords")
-        private final @Nullable List<PasswordResponse> passwords;
+      private final @Nullable List<PasswordResponse> passwords;
 
     public List<PasswordResponse> getPasswords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
 
     @InputImport(name="username", required=true)
-        private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;

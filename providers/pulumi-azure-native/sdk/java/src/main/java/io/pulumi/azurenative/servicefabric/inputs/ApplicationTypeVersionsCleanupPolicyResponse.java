@@ -17,7 +17,7 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="maxUnusedVersionsToKeep", required=true)
-        private final Double maxUnusedVersionsToKeep;
+      private final Double maxUnusedVersionsToKeep;
 
     public Double getMaxUnusedVersionsToKeep() {
         return this.maxUnusedVersionsToKeep;

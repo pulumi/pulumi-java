@@ -24,7 +24,7 @@ public final class MongoIndexOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expireAfterSeconds")
-        private final @Nullable Input<Integer> expireAfterSeconds;
+      private final @Nullable Input<Integer> expireAfterSeconds;
 
     public Input<Integer> getExpireAfterSeconds() {
         return this.expireAfterSeconds == null ? Input.empty() : this.expireAfterSeconds;
@@ -35,7 +35,7 @@ public final class MongoIndexOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="unique")
-        private final @Nullable Input<Boolean> unique;
+      private final @Nullable Input<Boolean> unique;
 
     public Input<Boolean> getUnique() {
         return this.unique == null ? Input.empty() : this.unique;

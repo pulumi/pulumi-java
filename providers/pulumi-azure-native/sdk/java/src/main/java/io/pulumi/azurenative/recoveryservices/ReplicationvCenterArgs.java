@@ -20,7 +20,7 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fabricName", required=true)
-        private final Input<String> fabricName;
+      private final Input<String> fabricName;
 
     public Input<String> getFabricName() {
         return this.fabricName;
@@ -31,7 +31,7 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="properties")
-        private final @Nullable Input<AddVCenterRequestPropertiesArgs> properties;
+      private final @Nullable Input<AddVCenterRequestPropertiesArgs> properties;
 
     public Input<AddVCenterRequestPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceName", required=true)
-        private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -64,7 +64,7 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vCenterName")
-        private final @Nullable Input<String> vCenterName;
+      private final @Nullable Input<String> vCenterName;
 
     public Input<String> getVCenterName() {
         return this.vCenterName == null ? Input.empty() : this.vCenterName;

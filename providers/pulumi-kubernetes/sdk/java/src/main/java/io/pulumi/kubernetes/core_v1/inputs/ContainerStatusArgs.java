@@ -26,7 +26,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="containerID")
-        private final @Nullable Input<String> containerID;
+      private final @Nullable Input<String> containerID;
 
     public Input<String> getContainerID() {
         return this.containerID == null ? Input.empty() : this.containerID;
@@ -37,7 +37,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="image", required=true)
-        private final Input<String> image;
+      private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
@@ -48,7 +48,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="imageID", required=true)
-        private final Input<String> imageID;
+      private final Input<String> imageID;
 
     public Input<String> getImageID() {
         return this.imageID;
@@ -59,7 +59,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="lastState")
-        private final @Nullable Input<ContainerStateArgs> lastState;
+      private final @Nullable Input<ContainerStateArgs> lastState;
 
     public Input<ContainerStateArgs> getLastState() {
         return this.lastState == null ? Input.empty() : this.lastState;
@@ -70,7 +70,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -81,7 +81,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ready", required=true)
-        private final Input<Boolean> ready;
+      private final Input<Boolean> ready;
 
     public Input<Boolean> getReady() {
         return this.ready;
@@ -92,7 +92,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restartCount", required=true)
-        private final Input<Integer> restartCount;
+      private final Input<Integer> restartCount;
 
     public Input<Integer> getRestartCount() {
         return this.restartCount;
@@ -103,7 +103,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="started")
-        private final @Nullable Input<Boolean> started;
+      private final @Nullable Input<Boolean> started;
 
     public Input<Boolean> getStarted() {
         return this.started == null ? Input.empty() : this.started;
@@ -114,7 +114,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="state")
-        private final @Nullable Input<ContainerStateArgs> state;
+      private final @Nullable Input<ContainerStateArgs> state;
 
     public Input<ContainerStateArgs> getState() {
         return this.state == null ? Input.empty() : this.state;

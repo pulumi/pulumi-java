@@ -23,7 +23,7 @@ public final class AdhocBasedTriggerContextResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="objectType", required=true)
-        private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -34,7 +34,7 @@ public final class AdhocBasedTriggerContextResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="taggingCriteria", required=true)
-        private final AdhocBasedTaggingCriteriaResponse taggingCriteria;
+      private final AdhocBasedTaggingCriteriaResponse taggingCriteria;
 
     public AdhocBasedTaggingCriteriaResponse getTaggingCriteria() {
         return this.taggingCriteria;

@@ -25,7 +25,7 @@ public final class LinuxOsInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxOsState")
-        private final @Nullable Input<Either<String,LinuxOsState>> linuxOsState;
+      private final @Nullable Input<Either<String,LinuxOsState>> linuxOsState;
 
     public Input<Either<String,LinuxOsState>> getLinuxOsState() {
         return this.linuxOsState == null ? Input.empty() : this.linuxOsState;

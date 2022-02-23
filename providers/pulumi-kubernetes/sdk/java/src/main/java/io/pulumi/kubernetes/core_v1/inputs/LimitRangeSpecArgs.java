@@ -23,7 +23,7 @@ public final class LimitRangeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limits", required=true)
-        private final Input<List<LimitRangeItemArgs>> limits;
+      private final Input<List<LimitRangeItemArgs>> limits;
 
     public Input<List<LimitRangeItemArgs>> getLimits() {
         return this.limits;

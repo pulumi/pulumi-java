@@ -23,7 +23,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs exten
      * 
      */
     @InputImport(name="encryptionKeyReference")
-        private final @Nullable Input<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference;
+      private final @Nullable Input<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference;
 
     public Input<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> getEncryptionKeyReference() {
         return this.encryptionKeyReference == null ? Input.empty() : this.encryptionKeyReference;

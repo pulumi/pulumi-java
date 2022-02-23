@@ -13,7 +13,7 @@ public final class GetListenerArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetListenerArgs Empty = new GetListenerArgs();
 
     @InputImport(name="listenerArn", required=true)
-        private final String listenerArn;
+      private final String listenerArn;
 
     public String getListenerArn() {
         return this.listenerArn;

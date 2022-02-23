@@ -150,6 +150,21 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public SynapseWorkspaceSqlPoolTableDataSetMapping(String name) {
+        this(name, SynapseWorkspaceSqlPoolTableDataSetMappingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SynapseWorkspaceSqlPoolTableDataSetMapping(String name, SynapseWorkspaceSqlPoolTableDataSetMappingArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

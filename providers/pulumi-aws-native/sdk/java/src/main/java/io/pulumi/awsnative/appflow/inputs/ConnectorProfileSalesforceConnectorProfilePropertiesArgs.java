@@ -20,14 +20,14 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
      * 
      */
     @InputImport(name="instanceUrl")
-        private final @Nullable Input<String> instanceUrl;
+      private final @Nullable Input<String> instanceUrl;
 
     public Input<String> getInstanceUrl() {
         return this.instanceUrl == null ? Input.empty() : this.instanceUrl;
     }
 
     @InputImport(name="isSandboxEnvironment")
-        private final @Nullable Input<Boolean> isSandboxEnvironment;
+      private final @Nullable Input<Boolean> isSandboxEnvironment;
 
     public Input<Boolean> getIsSandboxEnvironment() {
         return this.isSandboxEnvironment == null ? Input.empty() : this.isSandboxEnvironment;

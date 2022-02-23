@@ -19,7 +19,7 @@ public final class PatchDeploymentRecurringScheduleTimeZoneArgs extends io.pulum
      * 
      */
     @InputImport(name="id", required=true)
-        private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -30,7 +30,7 @@ public final class PatchDeploymentRecurringScheduleTimeZoneArgs extends io.pulum
      * 
      */
     @InputImport(name="version")
-        private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

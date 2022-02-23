@@ -23,7 +23,7 @@ public final class PtrRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ptrdname")
-        private final @Nullable String ptrdname;
+      private final @Nullable String ptrdname;
 
     public Optional<String> getPtrdname() {
         return this.ptrdname == null ? Optional.empty() : Optional.ofNullable(this.ptrdname);

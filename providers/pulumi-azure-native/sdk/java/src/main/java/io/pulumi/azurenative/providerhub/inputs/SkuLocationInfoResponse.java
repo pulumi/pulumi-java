@@ -17,35 +17,35 @@ public final class SkuLocationInfoResponse extends io.pulumi.resources.InvokeArg
     public static final SkuLocationInfoResponse Empty = new SkuLocationInfoResponse();
 
     @InputImport(name="extendedLocations")
-        private final @Nullable List<String> extendedLocations;
+      private final @Nullable List<String> extendedLocations;
 
     public List<String> getExtendedLocations() {
         return this.extendedLocations == null ? List.of() : this.extendedLocations;
     }
 
     @InputImport(name="location", required=true)
-        private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
     @InputImport(name="zoneDetails")
-        private final @Nullable List<SkuZoneDetailResponse> zoneDetails;
+      private final @Nullable List<SkuZoneDetailResponse> zoneDetails;
 
     public List<SkuZoneDetailResponse> getZoneDetails() {
         return this.zoneDetails == null ? List.of() : this.zoneDetails;
     }
 
     @InputImport(name="zones")
-        private final @Nullable List<String> zones;
+      private final @Nullable List<String> zones;
 
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;

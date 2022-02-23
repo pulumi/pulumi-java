@@ -21,7 +21,7 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -32,7 +32,7 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="params")
-        private final @Nullable Input<Map<String,String>> params;
+      private final @Nullable Input<Map<String,String>> params;
 
     public Input<Map<String,String>> getParams() {
         return this.params == null ? Input.empty() : this.params;

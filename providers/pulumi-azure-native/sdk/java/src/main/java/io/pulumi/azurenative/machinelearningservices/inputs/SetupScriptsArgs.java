@@ -23,7 +23,7 @@ public final class SetupScriptsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scripts")
-        private final @Nullable Input<ScriptsToExecuteArgs> scripts;
+      private final @Nullable Input<ScriptsToExecuteArgs> scripts;
 
     public Input<ScriptsToExecuteArgs> getScripts() {
         return this.scripts == null ? Input.empty() : this.scripts;

@@ -20,14 +20,14 @@ public final class BotSlotTypeValueArgs extends io.pulumi.resources.ResourceArgs
     public static final BotSlotTypeValueArgs Empty = new BotSlotTypeValueArgs();
 
     @InputImport(name="sampleValue", required=true)
-        private final Input<BotSampleValueArgs> sampleValue;
+      private final Input<BotSampleValueArgs> sampleValue;
 
     public Input<BotSampleValueArgs> getSampleValue() {
         return this.sampleValue;
     }
 
     @InputImport(name="synonyms")
-        private final @Nullable Input<List<BotSampleValueArgs>> synonyms;
+      private final @Nullable Input<List<BotSampleValueArgs>> synonyms;
 
     public Input<List<BotSampleValueArgs>> getSynonyms() {
         return this.synonyms == null ? Input.empty() : this.synonyms;

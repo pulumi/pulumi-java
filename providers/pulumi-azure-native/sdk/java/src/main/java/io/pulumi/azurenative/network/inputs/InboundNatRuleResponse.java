@@ -27,7 +27,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="backendIPConfiguration", required=true)
-        private final NetworkInterfaceIPConfigurationResponse backendIPConfiguration;
+      private final NetworkInterfaceIPConfigurationResponse backendIPConfiguration;
 
     public NetworkInterfaceIPConfigurationResponse getBackendIPConfiguration() {
         return this.backendIPConfiguration;
@@ -38,7 +38,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="backendPort")
-        private final @Nullable Integer backendPort;
+      private final @Nullable Integer backendPort;
 
     public Optional<Integer> getBackendPort() {
         return this.backendPort == null ? Optional.empty() : Optional.ofNullable(this.backendPort);
@@ -49,7 +49,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="enableFloatingIP")
-        private final @Nullable Boolean enableFloatingIP;
+      private final @Nullable Boolean enableFloatingIP;
 
     public Optional<Boolean> getEnableFloatingIP() {
         return this.enableFloatingIP == null ? Optional.empty() : Optional.ofNullable(this.enableFloatingIP);
@@ -60,7 +60,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="enableTcpReset")
-        private final @Nullable Boolean enableTcpReset;
+      private final @Nullable Boolean enableTcpReset;
 
     public Optional<Boolean> getEnableTcpReset() {
         return this.enableTcpReset == null ? Optional.empty() : Optional.ofNullable(this.enableTcpReset);
@@ -71,7 +71,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="etag", required=true)
-        private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -82,7 +82,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="frontendIPConfiguration")
-        private final @Nullable SubResourceResponse frontendIPConfiguration;
+      private final @Nullable SubResourceResponse frontendIPConfiguration;
 
     public Optional<SubResourceResponse> getFrontendIPConfiguration() {
         return this.frontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontendIPConfiguration);
@@ -93,7 +93,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="frontendPort")
-        private final @Nullable Integer frontendPort;
+      private final @Nullable Integer frontendPort;
 
     public Optional<Integer> getFrontendPort() {
         return this.frontendPort == null ? Optional.empty() : Optional.ofNullable(this.frontendPort);
@@ -104,7 +104,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="id")
-        private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -115,7 +115,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-        private final @Nullable Integer idleTimeoutInMinutes;
+      private final @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
@@ -126,7 +126,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -137,7 +137,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable String protocol;
+      private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -148,7 +148,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -159,7 +159,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

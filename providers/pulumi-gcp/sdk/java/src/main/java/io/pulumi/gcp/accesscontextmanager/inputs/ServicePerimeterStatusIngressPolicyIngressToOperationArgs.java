@@ -25,7 +25,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressToOperationArgs ext
      * 
      */
     @InputImport(name="methodSelectors")
-        private final @Nullable Input<List<ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs>> methodSelectors;
+      private final @Nullable Input<List<ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs>> methodSelectors;
 
     public Input<List<ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorArgs>> getMethodSelectors() {
         return this.methodSelectors == null ? Input.empty() : this.methodSelectors;
@@ -38,7 +38,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressToOperationArgs ext
      * 
      */
     @InputImport(name="serviceName")
-        private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;

@@ -26,7 +26,7 @@ public final class X12ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
-        private final Input<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
+      private final Input<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
 
     public Input<Boolean> getAllowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
@@ -37,7 +37,7 @@ public final class X12ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="checkDuplicateGroupControlNumber", required=true)
-        private final Input<Boolean> checkDuplicateGroupControlNumber;
+      private final Input<Boolean> checkDuplicateGroupControlNumber;
 
     public Input<Boolean> getCheckDuplicateGroupControlNumber() {
         return this.checkDuplicateGroupControlNumber;
@@ -48,7 +48,7 @@ public final class X12ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="checkDuplicateInterchangeControlNumber", required=true)
-        private final Input<Boolean> checkDuplicateInterchangeControlNumber;
+      private final Input<Boolean> checkDuplicateInterchangeControlNumber;
 
     public Input<Boolean> getCheckDuplicateInterchangeControlNumber() {
         return this.checkDuplicateInterchangeControlNumber;
@@ -59,7 +59,7 @@ public final class X12ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="checkDuplicateTransactionSetControlNumber", required=true)
-        private final Input<Boolean> checkDuplicateTransactionSetControlNumber;
+      private final Input<Boolean> checkDuplicateTransactionSetControlNumber;
 
     public Input<Boolean> getCheckDuplicateTransactionSetControlNumber() {
         return this.checkDuplicateTransactionSetControlNumber;
@@ -70,7 +70,7 @@ public final class X12ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="interchangeControlNumberValidityDays", required=true)
-        private final Input<Integer> interchangeControlNumberValidityDays;
+      private final Input<Integer> interchangeControlNumberValidityDays;
 
     public Input<Integer> getInterchangeControlNumberValidityDays() {
         return this.interchangeControlNumberValidityDays;
@@ -81,7 +81,7 @@ public final class X12ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="trailingSeparatorPolicy", required=true)
-        private final Input<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
+      private final Input<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
 
     public Input<Either<String,TrailingSeparatorPolicy>> getTrailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
@@ -92,7 +92,7 @@ public final class X12ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
-        private final Input<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
+      private final Input<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
 
     public Input<Boolean> getTrimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
@@ -103,7 +103,7 @@ public final class X12ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validateCharacterSet", required=true)
-        private final Input<Boolean> validateCharacterSet;
+      private final Input<Boolean> validateCharacterSet;
 
     public Input<Boolean> getValidateCharacterSet() {
         return this.validateCharacterSet;
@@ -114,7 +114,7 @@ public final class X12ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validateEDITypes", required=true)
-        private final Input<Boolean> validateEDITypes;
+      private final Input<Boolean> validateEDITypes;
 
     public Input<Boolean> getValidateEDITypes() {
         return this.validateEDITypes;
@@ -125,7 +125,7 @@ public final class X12ValidationSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validateXSDTypes", required=true)
-        private final Input<Boolean> validateXSDTypes;
+      private final Input<Boolean> validateXSDTypes;
 
     public Input<Boolean> getValidateXSDTypes() {
         return this.validateXSDTypes;

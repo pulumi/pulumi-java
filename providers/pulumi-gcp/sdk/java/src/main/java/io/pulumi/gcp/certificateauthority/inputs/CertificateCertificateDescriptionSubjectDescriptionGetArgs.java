@@ -18,7 +18,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
     public static final CertificateCertificateDescriptionSubjectDescriptionGetArgs Empty = new CertificateCertificateDescriptionSubjectDescriptionGetArgs();
 
     @InputImport(name="hexSerialNumber")
-        private final @Nullable Input<String> hexSerialNumber;
+      private final @Nullable Input<String> hexSerialNumber;
 
     public Input<String> getHexSerialNumber() {
         return this.hexSerialNumber == null ? Input.empty() : this.hexSerialNumber;
@@ -31,21 +31,21 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
      * 
      */
     @InputImport(name="lifetime")
-        private final @Nullable Input<String> lifetime;
+      private final @Nullable Input<String> lifetime;
 
     public Input<String> getLifetime() {
         return this.lifetime == null ? Input.empty() : this.lifetime;
     }
 
     @InputImport(name="notAfterTime")
-        private final @Nullable Input<String> notAfterTime;
+      private final @Nullable Input<String> notAfterTime;
 
     public Input<String> getNotAfterTime() {
         return this.notAfterTime == null ? Input.empty() : this.notAfterTime;
     }
 
     @InputImport(name="notBeforeTime")
-        private final @Nullable Input<String> notBeforeTime;
+      private final @Nullable Input<String> notBeforeTime;
 
     public Input<String> getNotBeforeTime() {
         return this.notBeforeTime == null ? Input.empty() : this.notBeforeTime;
@@ -57,7 +57,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
      * 
      */
     @InputImport(name="subjectAltNames")
-        private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs>> subjectAltNames;
+      private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs>> subjectAltNames;
 
     public Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs>> getSubjectAltNames() {
         return this.subjectAltNames == null ? Input.empty() : this.subjectAltNames;
@@ -69,7 +69,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
      * 
      */
     @InputImport(name="subjects")
-        private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs>> subjects;
+      private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs>> subjects;
 
     public Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs>> getSubjects() {
         return this.subjects == null ? Input.empty() : this.subjects;

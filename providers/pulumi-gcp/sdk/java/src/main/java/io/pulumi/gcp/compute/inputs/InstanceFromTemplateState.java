@@ -34,7 +34,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="advancedMachineFeatures")
-        private final @Nullable Input<InstanceFromTemplateAdvancedMachineFeaturesGetArgs> advancedMachineFeatures;
+      private final @Nullable Input<InstanceFromTemplateAdvancedMachineFeaturesGetArgs> advancedMachineFeatures;
 
     public Input<InstanceFromTemplateAdvancedMachineFeaturesGetArgs> getAdvancedMachineFeatures() {
         return this.advancedMachineFeatures == null ? Input.empty() : this.advancedMachineFeatures;
@@ -46,7 +46,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowStoppingForUpdate")
-        private final @Nullable Input<Boolean> allowStoppingForUpdate;
+      private final @Nullable Input<Boolean> allowStoppingForUpdate;
 
     public Input<Boolean> getAllowStoppingForUpdate() {
         return this.allowStoppingForUpdate == null ? Input.empty() : this.allowStoppingForUpdate;
@@ -57,7 +57,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="attachedDisks")
-        private final @Nullable Input<List<InstanceFromTemplateAttachedDiskGetArgs>> attachedDisks;
+      private final @Nullable Input<List<InstanceFromTemplateAttachedDiskGetArgs>> attachedDisks;
 
     public Input<List<InstanceFromTemplateAttachedDiskGetArgs>> getAttachedDisks() {
         return this.attachedDisks == null ? Input.empty() : this.attachedDisks;
@@ -68,7 +68,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="bootDisk")
-        private final @Nullable Input<InstanceFromTemplateBootDiskGetArgs> bootDisk;
+      private final @Nullable Input<InstanceFromTemplateBootDiskGetArgs> bootDisk;
 
     public Input<InstanceFromTemplateBootDiskGetArgs> getBootDisk() {
         return this.bootDisk == null ? Input.empty() : this.bootDisk;
@@ -79,7 +79,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="canIpForward")
-        private final @Nullable Input<Boolean> canIpForward;
+      private final @Nullable Input<Boolean> canIpForward;
 
     public Input<Boolean> getCanIpForward() {
         return this.canIpForward == null ? Input.empty() : this.canIpForward;
@@ -91,7 +91,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="confidentialInstanceConfig")
-        private final @Nullable Input<InstanceFromTemplateConfidentialInstanceConfigGetArgs> confidentialInstanceConfig;
+      private final @Nullable Input<InstanceFromTemplateConfidentialInstanceConfigGetArgs> confidentialInstanceConfig;
 
     public Input<InstanceFromTemplateConfidentialInstanceConfigGetArgs> getConfidentialInstanceConfig() {
         return this.confidentialInstanceConfig == null ? Input.empty() : this.confidentialInstanceConfig;
@@ -102,7 +102,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cpuPlatform")
-        private final @Nullable Input<String> cpuPlatform;
+      private final @Nullable Input<String> cpuPlatform;
 
     public Input<String> getCpuPlatform() {
         return this.cpuPlatform == null ? Input.empty() : this.cpuPlatform;
@@ -113,7 +113,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="currentStatus")
-        private final @Nullable Input<String> currentStatus;
+      private final @Nullable Input<String> currentStatus;
 
     public Input<String> getCurrentStatus() {
         return this.currentStatus == null ? Input.empty() : this.currentStatus;
@@ -124,7 +124,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="deletionProtection")
-        private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Input<Boolean> deletionProtection;
 
     public Input<Boolean> getDeletionProtection() {
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
@@ -135,7 +135,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -146,7 +146,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="desiredStatus")
-        private final @Nullable Input<String> desiredStatus;
+      private final @Nullable Input<String> desiredStatus;
 
     public Input<String> getDesiredStatus() {
         return this.desiredStatus == null ? Input.empty() : this.desiredStatus;
@@ -157,7 +157,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enableDisplay")
-        private final @Nullable Input<Boolean> enableDisplay;
+      private final @Nullable Input<Boolean> enableDisplay;
 
     public Input<Boolean> getEnableDisplay() {
         return this.enableDisplay == null ? Input.empty() : this.enableDisplay;
@@ -168,7 +168,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="guestAccelerators")
-        private final @Nullable Input<List<InstanceFromTemplateGuestAcceleratorGetArgs>> guestAccelerators;
+      private final @Nullable Input<List<InstanceFromTemplateGuestAcceleratorGetArgs>> guestAccelerators;
 
     public Input<List<InstanceFromTemplateGuestAcceleratorGetArgs>> getGuestAccelerators() {
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
@@ -181,7 +181,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hostname")
-        private final @Nullable Input<String> hostname;
+      private final @Nullable Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname == null ? Input.empty() : this.hostname;
@@ -192,7 +192,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="instanceId")
-        private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -203,7 +203,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="labelFingerprint")
-        private final @Nullable Input<String> labelFingerprint;
+      private final @Nullable Input<String> labelFingerprint;
 
     public Input<String> getLabelFingerprint() {
         return this.labelFingerprint == null ? Input.empty() : this.labelFingerprint;
@@ -214,7 +214,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="labels")
-        private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -225,7 +225,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="machineType")
-        private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -236,7 +236,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -247,7 +247,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="metadataFingerprint")
-        private final @Nullable Input<String> metadataFingerprint;
+      private final @Nullable Input<String> metadataFingerprint;
 
     public Input<String> getMetadataFingerprint() {
         return this.metadataFingerprint == null ? Input.empty() : this.metadataFingerprint;
@@ -258,7 +258,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="metadataStartupScript")
-        private final @Nullable Input<String> metadataStartupScript;
+      private final @Nullable Input<String> metadataStartupScript;
 
     public Input<String> getMetadataStartupScript() {
         return this.metadataStartupScript == null ? Input.empty() : this.metadataStartupScript;
@@ -269,7 +269,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="minCpuPlatform")
-        private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -281,7 +281,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -292,7 +292,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="networkInterfaces")
-        private final @Nullable Input<List<InstanceFromTemplateNetworkInterfaceGetArgs>> networkInterfaces;
+      private final @Nullable Input<List<InstanceFromTemplateNetworkInterfaceGetArgs>> networkInterfaces;
 
     public Input<List<InstanceFromTemplateNetworkInterfaceGetArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -304,7 +304,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="networkPerformanceConfig")
-        private final @Nullable Input<InstanceFromTemplateNetworkPerformanceConfigGetArgs> networkPerformanceConfig;
+      private final @Nullable Input<InstanceFromTemplateNetworkPerformanceConfigGetArgs> networkPerformanceConfig;
 
     public Input<InstanceFromTemplateNetworkPerformanceConfigGetArgs> getNetworkPerformanceConfig() {
         return this.networkPerformanceConfig == null ? Input.empty() : this.networkPerformanceConfig;
@@ -316,7 +316,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -327,7 +327,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="reservationAffinity")
-        private final @Nullable Input<InstanceFromTemplateReservationAffinityGetArgs> reservationAffinity;
+      private final @Nullable Input<InstanceFromTemplateReservationAffinityGetArgs> reservationAffinity;
 
     public Input<InstanceFromTemplateReservationAffinityGetArgs> getReservationAffinity() {
         return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
@@ -339,7 +339,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourcePolicies")
-        private final @Nullable Input<String> resourcePolicies;
+      private final @Nullable Input<String> resourcePolicies;
 
     public Input<String> getResourcePolicies() {
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
@@ -350,7 +350,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="scheduling")
-        private final @Nullable Input<InstanceFromTemplateSchedulingGetArgs> scheduling;
+      private final @Nullable Input<InstanceFromTemplateSchedulingGetArgs> scheduling;
 
     public Input<InstanceFromTemplateSchedulingGetArgs> getScheduling() {
         return this.scheduling == null ? Input.empty() : this.scheduling;
@@ -361,7 +361,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="scratchDisks")
-        private final @Nullable Input<List<InstanceFromTemplateScratchDiskGetArgs>> scratchDisks;
+      private final @Nullable Input<List<InstanceFromTemplateScratchDiskGetArgs>> scratchDisks;
 
     public Input<List<InstanceFromTemplateScratchDiskGetArgs>> getScratchDisks() {
         return this.scratchDisks == null ? Input.empty() : this.scratchDisks;
@@ -372,7 +372,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="selfLink")
-        private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -383,7 +383,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceAccount")
-        private final @Nullable Input<InstanceFromTemplateServiceAccountGetArgs> serviceAccount;
+      private final @Nullable Input<InstanceFromTemplateServiceAccountGetArgs> serviceAccount;
 
     public Input<InstanceFromTemplateServiceAccountGetArgs> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -394,7 +394,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-        private final @Nullable Input<InstanceFromTemplateShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
+      private final @Nullable Input<InstanceFromTemplateShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
     public Input<InstanceFromTemplateShieldedInstanceConfigGetArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
@@ -406,7 +406,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceInstanceTemplate")
-        private final @Nullable Input<String> sourceInstanceTemplate;
+      private final @Nullable Input<String> sourceInstanceTemplate;
 
     public Input<String> getSourceInstanceTemplate() {
         return this.sourceInstanceTemplate == null ? Input.empty() : this.sourceInstanceTemplate;
@@ -417,7 +417,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -428,7 +428,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tagsFingerprint")
-        private final @Nullable Input<String> tagsFingerprint;
+      private final @Nullable Input<String> tagsFingerprint;
 
     public Input<String> getTagsFingerprint() {
         return this.tagsFingerprint == null ? Input.empty() : this.tagsFingerprint;
@@ -440,7 +440,7 @@ public final class InstanceFromTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="zone")
-        private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;

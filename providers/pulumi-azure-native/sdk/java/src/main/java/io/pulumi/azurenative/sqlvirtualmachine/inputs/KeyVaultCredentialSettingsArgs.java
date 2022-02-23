@@ -24,7 +24,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="azureKeyVaultUrl")
-        private final @Nullable Input<String> azureKeyVaultUrl;
+      private final @Nullable Input<String> azureKeyVaultUrl;
 
     public Input<String> getAzureKeyVaultUrl() {
         return this.azureKeyVaultUrl == null ? Input.empty() : this.azureKeyVaultUrl;
@@ -35,7 +35,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="credentialName")
-        private final @Nullable Input<String> credentialName;
+      private final @Nullable Input<String> credentialName;
 
     public Input<String> getCredentialName() {
         return this.credentialName == null ? Input.empty() : this.credentialName;
@@ -46,7 +46,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enable")
-        private final @Nullable Input<Boolean> enable;
+      private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -57,7 +57,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="servicePrincipalName")
-        private final @Nullable Input<String> servicePrincipalName;
+      private final @Nullable Input<String> servicePrincipalName;
 
     public Input<String> getServicePrincipalName() {
         return this.servicePrincipalName == null ? Input.empty() : this.servicePrincipalName;
@@ -68,7 +68,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="servicePrincipalSecret")
-        private final @Nullable Input<String> servicePrincipalSecret;
+      private final @Nullable Input<String> servicePrincipalSecret;
 
     public Input<String> getServicePrincipalSecret() {
         return this.servicePrincipalSecret == null ? Input.empty() : this.servicePrincipalSecret;

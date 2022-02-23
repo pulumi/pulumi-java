@@ -20,7 +20,7 @@ public final class SloBasicSliLatencyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="threshold", required=true)
-        private final Input<String> threshold;
+      private final Input<String> threshold;
 
     public Input<String> getThreshold() {
         return this.threshold;

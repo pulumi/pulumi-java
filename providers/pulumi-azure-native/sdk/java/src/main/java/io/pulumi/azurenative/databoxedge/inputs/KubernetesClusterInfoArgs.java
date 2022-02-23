@@ -22,7 +22,7 @@ public final class KubernetesClusterInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version", required=true)
-        private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;

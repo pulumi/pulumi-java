@@ -25,7 +25,7 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-        private final Input<String> schedule;
+      private final Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule;
@@ -47,7 +47,7 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<Either<String,TriggerStatus>> status;
+      private final @Nullable Input<Either<String,TriggerStatus>> status;
 
     public Input<Either<String,TriggerStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;

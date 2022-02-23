@@ -24,7 +24,7 @@ public final class TxtRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-        private final @Nullable Input<List<String>> value;
+      private final @Nullable Input<List<String>> value;
 
     public Input<List<String>> getValue() {
         return this.value == null ? Input.empty() : this.value;

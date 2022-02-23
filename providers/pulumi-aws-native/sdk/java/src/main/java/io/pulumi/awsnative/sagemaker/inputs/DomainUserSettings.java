@@ -27,7 +27,7 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="executionRole")
-        private final @Nullable String executionRole;
+      private final @Nullable String executionRole;
 
     public Optional<String> getExecutionRole() {
         return this.executionRole == null ? Optional.empty() : Optional.ofNullable(this.executionRole);
@@ -38,7 +38,7 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jupyterServerAppSettings")
-        private final @Nullable DomainJupyterServerAppSettings jupyterServerAppSettings;
+      private final @Nullable DomainJupyterServerAppSettings jupyterServerAppSettings;
 
     public Optional<DomainJupyterServerAppSettings> getJupyterServerAppSettings() {
         return this.jupyterServerAppSettings == null ? Optional.empty() : Optional.ofNullable(this.jupyterServerAppSettings);
@@ -49,7 +49,7 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kernelGatewayAppSettings")
-        private final @Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings;
+      private final @Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings;
 
     public Optional<DomainKernelGatewayAppSettings> getKernelGatewayAppSettings() {
         return this.kernelGatewayAppSettings == null ? Optional.empty() : Optional.ofNullable(this.kernelGatewayAppSettings);
@@ -60,7 +60,7 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="securityGroups")
-        private final @Nullable List<String> securityGroups;
+      private final @Nullable List<String> securityGroups;
 
     public List<String> getSecurityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
@@ -71,7 +71,7 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sharingSettings")
-        private final @Nullable DomainSharingSettings sharingSettings;
+      private final @Nullable DomainSharingSettings sharingSettings;
 
     public Optional<DomainSharingSettings> getSharingSettings() {
         return this.sharingSettings == null ? Optional.empty() : Optional.ofNullable(this.sharingSettings);

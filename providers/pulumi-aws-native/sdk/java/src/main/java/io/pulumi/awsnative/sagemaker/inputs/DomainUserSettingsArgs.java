@@ -27,7 +27,7 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="executionRole")
-        private final @Nullable Input<String> executionRole;
+      private final @Nullable Input<String> executionRole;
 
     public Input<String> getExecutionRole() {
         return this.executionRole == null ? Input.empty() : this.executionRole;
@@ -38,7 +38,7 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="jupyterServerAppSettings")
-        private final @Nullable Input<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings;
+      private final @Nullable Input<DomainJupyterServerAppSettingsArgs> jupyterServerAppSettings;
 
     public Input<DomainJupyterServerAppSettingsArgs> getJupyterServerAppSettings() {
         return this.jupyterServerAppSettings == null ? Input.empty() : this.jupyterServerAppSettings;
@@ -49,7 +49,7 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kernelGatewayAppSettings")
-        private final @Nullable Input<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
+      private final @Nullable Input<DomainKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
 
     public Input<DomainKernelGatewayAppSettingsArgs> getKernelGatewayAppSettings() {
         return this.kernelGatewayAppSettings == null ? Input.empty() : this.kernelGatewayAppSettings;
@@ -60,7 +60,7 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="securityGroups")
-        private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -71,7 +71,7 @@ public final class DomainUserSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sharingSettings")
-        private final @Nullable Input<DomainSharingSettingsArgs> sharingSettings;
+      private final @Nullable Input<DomainSharingSettingsArgs> sharingSettings;
 
     public Input<DomainSharingSettingsArgs> getSharingSettings() {
         return this.sharingSettings == null ? Input.empty() : this.sharingSettings;

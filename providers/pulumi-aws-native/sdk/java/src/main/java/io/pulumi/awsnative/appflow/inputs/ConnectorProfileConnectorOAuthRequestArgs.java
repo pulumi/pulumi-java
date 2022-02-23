@@ -19,7 +19,7 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="authCode")
-        private final @Nullable Input<String> authCode;
+      private final @Nullable Input<String> authCode;
 
     public Input<String> getAuthCode() {
         return this.authCode == null ? Input.empty() : this.authCode;
@@ -31,7 +31,7 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="redirectUri")
-        private final @Nullable Input<String> redirectUri;
+      private final @Nullable Input<String> redirectUri;
 
     public Input<String> getRedirectUri() {
         return this.redirectUri == null ? Input.empty() : this.redirectUri;

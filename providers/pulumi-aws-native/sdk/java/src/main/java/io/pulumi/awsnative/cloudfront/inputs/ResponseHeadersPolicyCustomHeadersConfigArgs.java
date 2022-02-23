@@ -15,7 +15,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
     public static final ResponseHeadersPolicyCustomHeadersConfigArgs Empty = new ResponseHeadersPolicyCustomHeadersConfigArgs();
 
     @InputImport(name="items", required=true)
-        private final Input<List<ResponseHeadersPolicyCustomHeaderArgs>> items;
+      private final Input<List<ResponseHeadersPolicyCustomHeaderArgs>> items;
 
     public Input<List<ResponseHeadersPolicyCustomHeaderArgs>> getItems() {
         return this.items;

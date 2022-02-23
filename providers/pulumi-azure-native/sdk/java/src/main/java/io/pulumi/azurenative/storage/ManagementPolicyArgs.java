@@ -20,7 +20,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="managementPolicyName")
-        private final @Nullable Input<String> managementPolicyName;
+      private final @Nullable Input<String> managementPolicyName;
 
     public Input<String> getManagementPolicyName() {
         return this.managementPolicyName == null ? Input.empty() : this.managementPolicyName;
@@ -42,7 +42,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policy", required=true)
-        private final Input<ManagementPolicySchemaArgs> policy;
+      private final Input<ManagementPolicySchemaArgs> policy;
 
     public Input<ManagementPolicySchemaArgs> getPolicy() {
         return this.policy;
@@ -53,7 +53,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;

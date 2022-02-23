@@ -23,7 +23,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="containerName")
-        private final @Nullable Input<String> containerName;
+      private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -34,7 +34,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="divisor")
-        private final @Nullable Input<String> divisor;
+      private final @Nullable Input<String> divisor;
 
     public Input<String> getDivisor() {
         return this.divisor == null ? Input.empty() : this.divisor;
@@ -45,7 +45,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resource", required=true)
-        private final Input<String> resource;
+      private final Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource;

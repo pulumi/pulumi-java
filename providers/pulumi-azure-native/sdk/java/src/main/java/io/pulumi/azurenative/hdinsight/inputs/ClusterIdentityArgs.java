@@ -26,7 +26,7 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<ResourceIdentityType> type;
+      private final @Nullable Input<ResourceIdentityType> type;
 
     public Input<ResourceIdentityType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -37,7 +37,7 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userAssignedIdentities")
-        private final @Nullable Input<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities;
+      private final @Nullable Input<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities;
 
     public Input<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;

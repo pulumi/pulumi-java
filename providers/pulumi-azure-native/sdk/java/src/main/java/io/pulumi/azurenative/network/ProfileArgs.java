@@ -30,7 +30,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedEndpointRecordTypes")
-        private final @Nullable Input<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
+      private final @Nullable Input<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
 
     public Input<List<Either<String,AllowedEndpointRecordType>>> getAllowedEndpointRecordTypes() {
         return this.allowedEndpointRecordTypes == null ? Input.empty() : this.allowedEndpointRecordTypes;
@@ -41,7 +41,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsConfig")
-        private final @Nullable Input<DnsConfigArgs> dnsConfig;
+      private final @Nullable Input<DnsConfigArgs> dnsConfig;
 
     public Input<DnsConfigArgs> getDnsConfig() {
         return this.dnsConfig == null ? Input.empty() : this.dnsConfig;
@@ -52,7 +52,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoints")
-        private final @Nullable Input<List<EndpointArgs>> endpoints;
+      private final @Nullable Input<List<EndpointArgs>> endpoints;
 
     public Input<List<EndpointArgs>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
@@ -63,7 +63,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -74,7 +74,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -85,7 +85,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxReturn")
-        private final @Nullable Input<Double> maxReturn;
+      private final @Nullable Input<Double> maxReturn;
 
     public Input<Double> getMaxReturn() {
         return this.maxReturn == null ? Input.empty() : this.maxReturn;
@@ -96,7 +96,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitorConfig")
-        private final @Nullable Input<MonitorConfigArgs> monitorConfig;
+      private final @Nullable Input<MonitorConfigArgs> monitorConfig;
 
     public Input<MonitorConfigArgs> getMonitorConfig() {
         return this.monitorConfig == null ? Input.empty() : this.monitorConfig;
@@ -107,7 +107,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -118,7 +118,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName")
-        private final @Nullable Input<String> profileName;
+      private final @Nullable Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName == null ? Input.empty() : this.profileName;
@@ -129,7 +129,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileStatus")
-        private final @Nullable Input<Either<String,ProfileStatus>> profileStatus;
+      private final @Nullable Input<Either<String,ProfileStatus>> profileStatus;
 
     public Input<Either<String,ProfileStatus>> getProfileStatus() {
         return this.profileStatus == null ? Input.empty() : this.profileStatus;
@@ -140,7 +140,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -151,7 +151,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -162,7 +162,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficRoutingMethod")
-        private final @Nullable Input<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
+      private final @Nullable Input<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
 
     public Input<Either<String,TrafficRoutingMethod>> getTrafficRoutingMethod() {
         return this.trafficRoutingMethod == null ? Input.empty() : this.trafficRoutingMethod;
@@ -173,7 +173,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficViewEnrollmentStatus")
-        private final @Nullable Input<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
+      private final @Nullable Input<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
 
     public Input<Either<String,TrafficViewEnrollmentStatus>> getTrafficViewEnrollmentStatus() {
         return this.trafficViewEnrollmentStatus == null ? Input.empty() : this.trafficViewEnrollmentStatus;
@@ -184,7 +184,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

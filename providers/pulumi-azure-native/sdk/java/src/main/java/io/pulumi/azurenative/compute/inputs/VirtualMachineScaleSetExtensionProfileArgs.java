@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
      * 
      */
     @InputImport(name="extensions")
-        private final @Nullable Input<List<VirtualMachineScaleSetExtensionArgs>> extensions;
+      private final @Nullable Input<List<VirtualMachineScaleSetExtensionArgs>> extensions;
 
     public Input<List<VirtualMachineScaleSetExtensionArgs>> getExtensions() {
         return this.extensions == null ? Input.empty() : this.extensions;
@@ -36,7 +36,7 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
      * 
      */
     @InputImport(name="extensionsTimeBudget")
-        private final @Nullable Input<String> extensionsTimeBudget;
+      private final @Nullable Input<String> extensionsTimeBudget;
 
     public Input<String> getExtensionsTimeBudget() {
         return this.extensionsTimeBudget == null ? Input.empty() : this.extensionsTimeBudget;

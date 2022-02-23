@@ -19,7 +19,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGet
      * 
      */
     @InputImport(name="hoursInCycle", required=true)
-        private final Input<Integer> hoursInCycle;
+      private final Input<Integer> hoursInCycle;
 
     public Input<Integer> getHoursInCycle() {
         return this.hoursInCycle;
@@ -30,7 +30,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGet
      * 
      */
     @InputImport(name="startTime", required=true)
-        private final Input<String> startTime;
+      private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;

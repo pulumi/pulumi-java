@@ -25,7 +25,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="documentEndpoint", required=true)
-        private final String documentEndpoint;
+      private final String documentEndpoint;
 
     public String getDocumentEndpoint() {
         return this.documentEndpoint;
@@ -36,7 +36,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="failoverPriority")
-        private final @Nullable Integer failoverPriority;
+      private final @Nullable Integer failoverPriority;
 
     public Optional<Integer> getFailoverPriority() {
         return this.failoverPriority == null ? Optional.empty() : Optional.ofNullable(this.failoverPriority);
@@ -47,7 +47,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -58,7 +58,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isZoneRedundant")
-        private final @Nullable Boolean isZoneRedundant;
+      private final @Nullable Boolean isZoneRedundant;
 
     public Optional<Boolean> getIsZoneRedundant() {
         return this.isZoneRedundant == null ? Optional.empty() : Optional.ofNullable(this.isZoneRedundant);
@@ -69,7 +69,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locationName")
-        private final @Nullable String locationName;
+      private final @Nullable String locationName;
 
     public Optional<String> getLocationName() {
         return this.locationName == null ? Optional.empty() : Optional.ofNullable(this.locationName);
@@ -80,7 +80,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-        private final String provisioningState;
+      private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;

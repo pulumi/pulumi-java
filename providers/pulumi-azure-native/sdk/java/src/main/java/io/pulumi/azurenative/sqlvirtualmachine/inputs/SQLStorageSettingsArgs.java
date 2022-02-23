@@ -25,7 +25,7 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultFilePath")
-        private final @Nullable Input<String> defaultFilePath;
+      private final @Nullable Input<String> defaultFilePath;
 
     public Input<String> getDefaultFilePath() {
         return this.defaultFilePath == null ? Input.empty() : this.defaultFilePath;
@@ -36,7 +36,7 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="luns")
-        private final @Nullable Input<List<Integer>> luns;
+      private final @Nullable Input<List<Integer>> luns;
 
     public Input<List<Integer>> getLuns() {
         return this.luns == null ? Input.empty() : this.luns;

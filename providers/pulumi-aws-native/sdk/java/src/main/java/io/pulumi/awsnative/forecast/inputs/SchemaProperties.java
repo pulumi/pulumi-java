@@ -16,7 +16,7 @@ public final class SchemaProperties extends io.pulumi.resources.InvokeArgs {
     public static final SchemaProperties Empty = new SchemaProperties();
 
     @InputImport(name="attributes")
-        private final @Nullable List<AttributesItemProperties> attributes;
+      private final @Nullable List<AttributesItemProperties> attributes;
 
     public List<AttributesItemProperties> getAttributes() {
         return this.attributes == null ? List.of() : this.attributes;

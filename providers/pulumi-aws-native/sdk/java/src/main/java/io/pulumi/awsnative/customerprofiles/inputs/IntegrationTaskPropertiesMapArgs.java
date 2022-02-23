@@ -15,14 +15,14 @@ public final class IntegrationTaskPropertiesMapArgs extends io.pulumi.resources.
     public static final IntegrationTaskPropertiesMapArgs Empty = new IntegrationTaskPropertiesMapArgs();
 
     @InputImport(name="operatorPropertyKey", required=true)
-        private final Input<IntegrationOperatorPropertiesKeys> operatorPropertyKey;
+      private final Input<IntegrationOperatorPropertiesKeys> operatorPropertyKey;
 
     public Input<IntegrationOperatorPropertiesKeys> getOperatorPropertyKey() {
         return this.operatorPropertyKey;
     }
 
     @InputImport(name="property", required=true)
-        private final Input<String> property;
+      private final Input<String> property;
 
     public Input<String> getProperty() {
         return this.property;

@@ -20,7 +20,7 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configurationName")
-        private final @Nullable Input<String> configurationName;
+      private final @Nullable Input<String> configurationName;
 
     public Input<String> getConfigurationName() {
         return this.configurationName == null ? Input.empty() : this.configurationName;
@@ -31,7 +31,7 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enforcePrivateMarkdownStorage")
-        private final @Nullable Input<Boolean> enforcePrivateMarkdownStorage;
+      private final @Nullable Input<Boolean> enforcePrivateMarkdownStorage;
 
     public Input<Boolean> getEnforcePrivateMarkdownStorage() {
         return this.enforcePrivateMarkdownStorage == null ? Input.empty() : this.enforcePrivateMarkdownStorage;

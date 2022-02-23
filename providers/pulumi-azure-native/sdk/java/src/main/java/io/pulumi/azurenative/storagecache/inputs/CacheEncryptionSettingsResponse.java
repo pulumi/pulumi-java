@@ -23,7 +23,7 @@ public final class CacheEncryptionSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="keyEncryptionKey")
-        private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
+      private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
     public Optional<KeyVaultKeyReferenceResponse> getKeyEncryptionKey() {
         return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);

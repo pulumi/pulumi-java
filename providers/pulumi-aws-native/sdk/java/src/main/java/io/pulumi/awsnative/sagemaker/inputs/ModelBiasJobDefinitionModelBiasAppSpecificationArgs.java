@@ -24,7 +24,7 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends i
      * 
      */
     @InputImport(name="configUri", required=true)
-        private final Input<String> configUri;
+      private final Input<String> configUri;
 
     public Input<String> getConfigUri() {
         return this.configUri;
@@ -35,7 +35,7 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends i
      * 
      */
     @InputImport(name="environment")
-        private final @Nullable Input<Object> environment;
+      private final @Nullable Input<Object> environment;
 
     public Input<Object> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -46,7 +46,7 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecificationArgs extends i
      * 
      */
     @InputImport(name="imageUri", required=true)
-        private final Input<String> imageUri;
+      private final Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri;

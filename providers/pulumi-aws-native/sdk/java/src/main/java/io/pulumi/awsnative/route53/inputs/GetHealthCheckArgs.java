@@ -13,7 +13,7 @@ public final class GetHealthCheckArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetHealthCheckArgs Empty = new GetHealthCheckArgs();
 
     @InputImport(name="healthCheckId", required=true)
-        private final String healthCheckId;
+      private final String healthCheckId;
 
     public String getHealthCheckId() {
         return this.healthCheckId;

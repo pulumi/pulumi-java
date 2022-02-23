@@ -24,7 +24,7 @@ public final class VideoEncoderH264Response extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="bitrateKbps")
-        private final @Nullable String bitrateKbps;
+      private final @Nullable String bitrateKbps;
 
     public Optional<String> getBitrateKbps() {
         return this.bitrateKbps == null ? Optional.empty() : Optional.ofNullable(this.bitrateKbps);
@@ -35,7 +35,7 @@ public final class VideoEncoderH264Response extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="frameRate")
-        private final @Nullable String frameRate;
+      private final @Nullable String frameRate;
 
     public Optional<String> getFrameRate() {
         return this.frameRate == null ? Optional.empty() : Optional.ofNullable(this.frameRate);
@@ -46,7 +46,7 @@ public final class VideoEncoderH264Response extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="scale")
-        private final @Nullable VideoScaleResponse scale;
+      private final @Nullable VideoScaleResponse scale;
 
     public Optional<VideoScaleResponse> getScale() {
         return this.scale == null ? Optional.empty() : Optional.ofNullable(this.scale);
@@ -58,7 +58,7 @@ public final class VideoEncoderH264Response extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

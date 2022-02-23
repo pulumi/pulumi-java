@@ -20,7 +20,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -31,7 +31,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="networkInterfaceName", required=true)
-        private final Input<String> networkInterfaceName;
+      private final Input<String> networkInterfaceName;
 
     public Input<String> getNetworkInterfaceName() {
         return this.networkInterfaceName;
@@ -53,7 +53,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="tapConfigurationName")
-        private final @Nullable Input<String> tapConfigurationName;
+      private final @Nullable Input<String> tapConfigurationName;
 
     public Input<String> getTapConfigurationName() {
         return this.tapConfigurationName == null ? Input.empty() : this.tapConfigurationName;
@@ -75,7 +75,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="virtualNetworkTap")
-        private final @Nullable Input<VirtualNetworkTapArgs> virtualNetworkTap;
+      private final @Nullable Input<VirtualNetworkTapArgs> virtualNetworkTap;
 
     public Input<VirtualNetworkTapArgs> getVirtualNetworkTap() {
         return this.virtualNetworkTap == null ? Input.empty() : this.virtualNetworkTap;

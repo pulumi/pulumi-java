@@ -15,14 +15,14 @@ public final class BotVersionLocaleSpecificationArgs extends io.pulumi.resources
     public static final BotVersionLocaleSpecificationArgs Empty = new BotVersionLocaleSpecificationArgs();
 
     @InputImport(name="botVersionLocaleDetails", required=true)
-        private final Input<BotVersionLocaleDetailsArgs> botVersionLocaleDetails;
+      private final Input<BotVersionLocaleDetailsArgs> botVersionLocaleDetails;
 
     public Input<BotVersionLocaleDetailsArgs> getBotVersionLocaleDetails() {
         return this.botVersionLocaleDetails;
     }
 
     @InputImport(name="localeId", required=true)
-        private final Input<String> localeId;
+      private final Input<String> localeId;
 
     public Input<String> getLocaleId() {
         return this.localeId;

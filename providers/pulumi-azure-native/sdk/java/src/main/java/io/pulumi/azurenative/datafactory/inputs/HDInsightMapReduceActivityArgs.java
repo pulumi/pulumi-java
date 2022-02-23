@@ -32,7 +32,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="arguments")
-        private final @Nullable Input<List<Object>> arguments;
+      private final @Nullable Input<List<Object>> arguments;
 
     public Input<List<Object>> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -43,7 +43,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="className", required=true)
-        private final Input<Object> className;
+      private final Input<Object> className;
 
     public Input<Object> getClassName() {
         return this.className;
@@ -54,7 +54,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="defines")
-        private final @Nullable Input<Map<String,Object>> defines;
+      private final @Nullable Input<Map<String,Object>> defines;
 
     public Input<Map<String,Object>> getDefines() {
         return this.defines == null ? Input.empty() : this.defines;
@@ -65,7 +65,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dependsOn")
-        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -76,7 +76,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -87,7 +87,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="getDebugInfo")
-        private final @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
+      private final @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
     public Input<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
         return this.getDebugInfo == null ? Input.empty() : this.getDebugInfo;
@@ -98,7 +98,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jarFilePath", required=true)
-        private final Input<Object> jarFilePath;
+      private final Input<Object> jarFilePath;
 
     public Input<Object> getJarFilePath() {
         return this.jarFilePath;
@@ -109,7 +109,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jarLibs")
-        private final @Nullable Input<List<Object>> jarLibs;
+      private final @Nullable Input<List<Object>> jarLibs;
 
     public Input<List<Object>> getJarLibs() {
         return this.jarLibs == null ? Input.empty() : this.jarLibs;
@@ -120,7 +120,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jarLinkedService")
-        private final @Nullable Input<LinkedServiceReferenceArgs> jarLinkedService;
+      private final @Nullable Input<LinkedServiceReferenceArgs> jarLinkedService;
 
     public Input<LinkedServiceReferenceArgs> getJarLinkedService() {
         return this.jarLinkedService == null ? Input.empty() : this.jarLinkedService;
@@ -131,7 +131,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="linkedServiceName")
-        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -142,7 +142,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -153,7 +153,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="policy")
-        private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -164,7 +164,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="storageLinkedServices")
-        private final @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices;
+      private final @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
     public Input<List<LinkedServiceReferenceArgs>> getStorageLinkedServices() {
         return this.storageLinkedServices == null ? Input.empty() : this.storageLinkedServices;
@@ -176,7 +176,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -187,7 +187,7 @@ public final class HDInsightMapReduceActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="userProperties")
-        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;

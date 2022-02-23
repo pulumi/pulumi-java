@@ -23,49 +23,49 @@ public final class ScheduledQueryTimestreamConfigurationArgs extends io.pulumi.r
     public static final ScheduledQueryTimestreamConfigurationArgs Empty = new ScheduledQueryTimestreamConfigurationArgs();
 
     @InputImport(name="databaseName", required=true)
-        private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="dimensionMappings", required=true)
-        private final Input<List<ScheduledQueryDimensionMappingArgs>> dimensionMappings;
+      private final Input<List<ScheduledQueryDimensionMappingArgs>> dimensionMappings;
 
     public Input<List<ScheduledQueryDimensionMappingArgs>> getDimensionMappings() {
         return this.dimensionMappings;
     }
 
     @InputImport(name="measureNameColumn")
-        private final @Nullable Input<String> measureNameColumn;
+      private final @Nullable Input<String> measureNameColumn;
 
     public Input<String> getMeasureNameColumn() {
         return this.measureNameColumn == null ? Input.empty() : this.measureNameColumn;
     }
 
     @InputImport(name="mixedMeasureMappings")
-        private final @Nullable Input<List<ScheduledQueryMixedMeasureMappingArgs>> mixedMeasureMappings;
+      private final @Nullable Input<List<ScheduledQueryMixedMeasureMappingArgs>> mixedMeasureMappings;
 
     public Input<List<ScheduledQueryMixedMeasureMappingArgs>> getMixedMeasureMappings() {
         return this.mixedMeasureMappings == null ? Input.empty() : this.mixedMeasureMappings;
     }
 
     @InputImport(name="multiMeasureMappings")
-        private final @Nullable Input<ScheduledQueryMultiMeasureMappingsArgs> multiMeasureMappings;
+      private final @Nullable Input<ScheduledQueryMultiMeasureMappingsArgs> multiMeasureMappings;
 
     public Input<ScheduledQueryMultiMeasureMappingsArgs> getMultiMeasureMappings() {
         return this.multiMeasureMappings == null ? Input.empty() : this.multiMeasureMappings;
     }
 
     @InputImport(name="tableName", required=true)
-        private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;
     }
 
     @InputImport(name="timeColumn", required=true)
-        private final Input<String> timeColumn;
+      private final Input<String> timeColumn;
 
     public Input<String> getTimeColumn() {
         return this.timeColumn;

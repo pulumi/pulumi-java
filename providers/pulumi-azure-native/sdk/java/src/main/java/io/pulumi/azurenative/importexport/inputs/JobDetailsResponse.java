@@ -34,7 +34,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backupDriveManifest")
-        private final @Nullable Boolean backupDriveManifest;
+      private final @Nullable Boolean backupDriveManifest;
 
     public Optional<Boolean> getBackupDriveManifest() {
         return this.backupDriveManifest == null ? Optional.empty() : Optional.ofNullable(this.backupDriveManifest);
@@ -45,7 +45,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cancelRequested")
-        private final @Nullable Boolean cancelRequested;
+      private final @Nullable Boolean cancelRequested;
 
     public Optional<Boolean> getCancelRequested() {
         return this.cancelRequested == null ? Optional.empty() : Optional.ofNullable(this.cancelRequested);
@@ -56,7 +56,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deliveryPackage")
-        private final @Nullable DeliveryPackageInformationResponse deliveryPackage;
+      private final @Nullable DeliveryPackageInformationResponse deliveryPackage;
 
     public Optional<DeliveryPackageInformationResponse> getDeliveryPackage() {
         return this.deliveryPackage == null ? Optional.empty() : Optional.ofNullable(this.deliveryPackage);
@@ -67,7 +67,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diagnosticsPath")
-        private final @Nullable String diagnosticsPath;
+      private final @Nullable String diagnosticsPath;
 
     public Optional<String> getDiagnosticsPath() {
         return this.diagnosticsPath == null ? Optional.empty() : Optional.ofNullable(this.diagnosticsPath);
@@ -78,7 +78,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="driveList")
-        private final @Nullable List<DriveStatusResponse> driveList;
+      private final @Nullable List<DriveStatusResponse> driveList;
 
     public List<DriveStatusResponse> getDriveList() {
         return this.driveList == null ? List.of() : this.driveList;
@@ -89,7 +89,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encryptionKey")
-        private final @Nullable EncryptionKeyDetailsResponse encryptionKey;
+      private final @Nullable EncryptionKeyDetailsResponse encryptionKey;
 
     public Optional<EncryptionKeyDetailsResponse> getEncryptionKey() {
         return this.encryptionKey == null ? Optional.empty() : Optional.ofNullable(this.encryptionKey);
@@ -100,7 +100,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="export")
-        private final @Nullable ExportResponse export;
+      private final @Nullable ExportResponse export;
 
     public Optional<ExportResponse> getExport() {
         return this.export == null ? Optional.empty() : Optional.ofNullable(this.export);
@@ -111,7 +111,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="incompleteBlobListUri")
-        private final @Nullable String incompleteBlobListUri;
+      private final @Nullable String incompleteBlobListUri;
 
     public Optional<String> getIncompleteBlobListUri() {
         return this.incompleteBlobListUri == null ? Optional.empty() : Optional.ofNullable(this.incompleteBlobListUri);
@@ -122,7 +122,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobType")
-        private final @Nullable String jobType;
+      private final @Nullable String jobType;
 
     public Optional<String> getJobType() {
         return this.jobType == null ? Optional.empty() : Optional.ofNullable(this.jobType);
@@ -133,7 +133,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logLevel")
-        private final @Nullable String logLevel;
+      private final @Nullable String logLevel;
 
     public Optional<String> getLogLevel() {
         return this.logLevel == null ? Optional.empty() : Optional.ofNullable(this.logLevel);
@@ -144,7 +144,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="percentComplete")
-        private final @Nullable Integer percentComplete;
+      private final @Nullable Integer percentComplete;
 
     public Optional<Integer> getPercentComplete() {
         return this.percentComplete == null ? Optional.empty() : Optional.ofNullable(this.percentComplete);
@@ -155,7 +155,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState")
-        private final @Nullable String provisioningState;
+      private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -166,7 +166,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="returnAddress")
-        private final @Nullable ReturnAddressResponse returnAddress;
+      private final @Nullable ReturnAddressResponse returnAddress;
 
     public Optional<ReturnAddressResponse> getReturnAddress() {
         return this.returnAddress == null ? Optional.empty() : Optional.ofNullable(this.returnAddress);
@@ -177,7 +177,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="returnPackage")
-        private final @Nullable PackageInformationResponse returnPackage;
+      private final @Nullable PackageInformationResponse returnPackage;
 
     public Optional<PackageInformationResponse> getReturnPackage() {
         return this.returnPackage == null ? Optional.empty() : Optional.ofNullable(this.returnPackage);
@@ -188,7 +188,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="returnShipping")
-        private final @Nullable ReturnShippingResponse returnShipping;
+      private final @Nullable ReturnShippingResponse returnShipping;
 
     public Optional<ReturnShippingResponse> getReturnShipping() {
         return this.returnShipping == null ? Optional.empty() : Optional.ofNullable(this.returnShipping);
@@ -199,7 +199,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="shippingInformation")
-        private final @Nullable ShippingInformationResponse shippingInformation;
+      private final @Nullable ShippingInformationResponse shippingInformation;
 
     public Optional<ShippingInformationResponse> getShippingInformation() {
         return this.shippingInformation == null ? Optional.empty() : Optional.ofNullable(this.shippingInformation);
@@ -210,7 +210,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state")
-        private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -221,7 +221,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageAccountId")
-        private final @Nullable String storageAccountId;
+      private final @Nullable String storageAccountId;
 
     public Optional<String> getStorageAccountId() {
         return this.storageAccountId == null ? Optional.empty() : Optional.ofNullable(this.storageAccountId);

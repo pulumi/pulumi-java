@@ -29,7 +29,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backendAddressPool")
-        private final @Nullable Input<SubResourceArgs> backendAddressPool;
+      private final @Nullable Input<SubResourceArgs> backendAddressPool;
 
     public Input<SubResourceArgs> getBackendAddressPool() {
         return this.backendAddressPool == null ? Input.empty() : this.backendAddressPool;
@@ -40,7 +40,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backendPort")
-        private final @Nullable Input<Integer> backendPort;
+      private final @Nullable Input<Integer> backendPort;
 
     public Input<Integer> getBackendPort() {
         return this.backendPort == null ? Input.empty() : this.backendPort;
@@ -51,7 +51,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disableOutboundSnat")
-        private final @Nullable Input<Boolean> disableOutboundSnat;
+      private final @Nullable Input<Boolean> disableOutboundSnat;
 
     public Input<Boolean> getDisableOutboundSnat() {
         return this.disableOutboundSnat == null ? Input.empty() : this.disableOutboundSnat;
@@ -62,7 +62,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableFloatingIP")
-        private final @Nullable Input<Boolean> enableFloatingIP;
+      private final @Nullable Input<Boolean> enableFloatingIP;
 
     public Input<Boolean> getEnableFloatingIP() {
         return this.enableFloatingIP == null ? Input.empty() : this.enableFloatingIP;
@@ -73,7 +73,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableTcpReset")
-        private final @Nullable Input<Boolean> enableTcpReset;
+      private final @Nullable Input<Boolean> enableTcpReset;
 
     public Input<Boolean> getEnableTcpReset() {
         return this.enableTcpReset == null ? Input.empty() : this.enableTcpReset;
@@ -84,7 +84,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="frontendIPConfiguration")
-        private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
+      private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
 
     public Input<SubResourceArgs> getFrontendIPConfiguration() {
         return this.frontendIPConfiguration == null ? Input.empty() : this.frontendIPConfiguration;
@@ -95,7 +95,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="frontendPort", required=true)
-        private final Input<Integer> frontendPort;
+      private final Input<Integer> frontendPort;
 
     public Input<Integer> getFrontendPort() {
         return this.frontendPort;
@@ -106,7 +106,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id")
-        private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -117,7 +117,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-        private final @Nullable Input<Integer> idleTimeoutInMinutes;
+      private final @Nullable Input<Integer> idleTimeoutInMinutes;
 
     public Input<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
@@ -128,7 +128,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="loadDistribution")
-        private final @Nullable Input<Either<String,LoadDistribution>> loadDistribution;
+      private final @Nullable Input<Either<String,LoadDistribution>> loadDistribution;
 
     public Input<Either<String,LoadDistribution>> getLoadDistribution() {
         return this.loadDistribution == null ? Input.empty() : this.loadDistribution;
@@ -139,7 +139,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -150,7 +150,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="probe")
-        private final @Nullable Input<SubResourceArgs> probe;
+      private final @Nullable Input<SubResourceArgs> probe;
 
     public Input<SubResourceArgs> getProbe() {
         return this.probe == null ? Input.empty() : this.probe;
@@ -161,7 +161,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol", required=true)
-        private final Input<Either<String,TransportProtocol>> protocol;
+      private final Input<Either<String,TransportProtocol>> protocol;
 
     public Input<Either<String,TransportProtocol>> getProtocol() {
         return this.protocol;

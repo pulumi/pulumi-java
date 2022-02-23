@@ -20,42 +20,42 @@ public final class ResponseHeadersPolicySecurityHeadersConfig extends io.pulumi.
     public static final ResponseHeadersPolicySecurityHeadersConfig Empty = new ResponseHeadersPolicySecurityHeadersConfig();
 
     @InputImport(name="contentSecurityPolicy")
-        private final @Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy;
+      private final @Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy;
 
     public Optional<ResponseHeadersPolicyContentSecurityPolicy> getContentSecurityPolicy() {
         return this.contentSecurityPolicy == null ? Optional.empty() : Optional.ofNullable(this.contentSecurityPolicy);
     }
 
     @InputImport(name="contentTypeOptions")
-        private final @Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions;
+      private final @Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions;
 
     public Optional<ResponseHeadersPolicyContentTypeOptions> getContentTypeOptions() {
         return this.contentTypeOptions == null ? Optional.empty() : Optional.ofNullable(this.contentTypeOptions);
     }
 
     @InputImport(name="frameOptions")
-        private final @Nullable ResponseHeadersPolicyFrameOptions frameOptions;
+      private final @Nullable ResponseHeadersPolicyFrameOptions frameOptions;
 
     public Optional<ResponseHeadersPolicyFrameOptions> getFrameOptions() {
         return this.frameOptions == null ? Optional.empty() : Optional.ofNullable(this.frameOptions);
     }
 
     @InputImport(name="referrerPolicy")
-        private final @Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy;
+      private final @Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy;
 
     public Optional<ResponseHeadersPolicyReferrerPolicy> getReferrerPolicy() {
         return this.referrerPolicy == null ? Optional.empty() : Optional.ofNullable(this.referrerPolicy);
     }
 
     @InputImport(name="strictTransportSecurity")
-        private final @Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity;
+      private final @Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity;
 
     public Optional<ResponseHeadersPolicyStrictTransportSecurity> getStrictTransportSecurity() {
         return this.strictTransportSecurity == null ? Optional.empty() : Optional.ofNullable(this.strictTransportSecurity);
     }
 
     @InputImport(name="xSSProtection")
-        private final @Nullable ResponseHeadersPolicyXSSProtection xSSProtection;
+      private final @Nullable ResponseHeadersPolicyXSSProtection xSSProtection;
 
     public Optional<ResponseHeadersPolicyXSSProtection> getXSSProtection() {
         return this.xSSProtection == null ? Optional.empty() : Optional.ofNullable(this.xSSProtection);

@@ -25,7 +25,7 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="anonymousConnectPolicy")
-        private final @Nullable Input<String> anonymousConnectPolicy;
+      private final @Nullable Input<String> anonymousConnectPolicy;
 
     public Input<String> getAnonymousConnectPolicy() {
         return this.anonymousConnectPolicy == null ? Input.empty() : this.anonymousConnectPolicy;
@@ -36,7 +36,7 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="eventHandlers")
-        private final @Nullable Input<List<EventHandlerArgs>> eventHandlers;
+      private final @Nullable Input<List<EventHandlerArgs>> eventHandlers;
 
     public Input<List<EventHandlerArgs>> getEventHandlers() {
         return this.eventHandlers == null ? Input.empty() : this.eventHandlers;

@@ -14,14 +14,14 @@ public final class ClusterNodePoolUpgradeSettingsGetArgs extends io.pulumi.resou
     public static final ClusterNodePoolUpgradeSettingsGetArgs Empty = new ClusterNodePoolUpgradeSettingsGetArgs();
 
     @InputImport(name="maxSurge", required=true)
-        private final Input<Integer> maxSurge;
+      private final Input<Integer> maxSurge;
 
     public Input<Integer> getMaxSurge() {
         return this.maxSurge;
     }
 
     @InputImport(name="maxUnavailable", required=true)
-        private final Input<Integer> maxUnavailable;
+      private final Input<Integer> maxUnavailable;
 
     public Input<Integer> getMaxUnavailable() {
         return this.maxUnavailable;

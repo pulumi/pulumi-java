@@ -27,7 +27,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family")
-        private final @Nullable Input<Either<String,Family>> family;
+      private final @Nullable Input<Either<String,Family>> family;
 
     public Input<Either<String,Family>> getFamily() {
         return this.family == null ? Input.empty() : this.family;
@@ -38,7 +38,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -49,7 +49,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-        private final @Nullable Input<Either<String,Size>> size;
+      private final @Nullable Input<Either<String,Size>> size;
 
     public Input<Either<String,Size>> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -60,7 +60,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-        private final @Nullable Input<Either<String,Tier>> tier;
+      private final @Nullable Input<Either<String,Tier>> tier;
 
     public Input<Either<String,Tier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;

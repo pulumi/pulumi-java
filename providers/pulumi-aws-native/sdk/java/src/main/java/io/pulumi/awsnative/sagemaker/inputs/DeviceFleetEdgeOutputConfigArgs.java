@@ -19,7 +19,7 @@ public final class DeviceFleetEdgeOutputConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kmsKeyId")
-        private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -30,7 +30,7 @@ public final class DeviceFleetEdgeOutputConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="s3OutputLocation", required=true)
-        private final Input<String> s3OutputLocation;
+      private final Input<String> s3OutputLocation;
 
     public Input<String> getS3OutputLocation() {
         return this.s3OutputLocation;

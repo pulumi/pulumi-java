@@ -24,7 +24,7 @@ public final class UserObjectReceiverValueArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userObjectIds")
-        private final @Nullable Input<List<String>> userObjectIds;
+      private final @Nullable Input<List<String>> userObjectIds;
 
     public Input<List<String>> getUserObjectIds() {
         return this.userObjectIds == null ? Input.empty() : this.userObjectIds;

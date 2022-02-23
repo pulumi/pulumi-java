@@ -19,7 +19,7 @@ public final class ClusterWorkloadIdentityConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="workloadPool")
-        private final @Nullable Input<String> workloadPool;
+      private final @Nullable Input<String> workloadPool;
 
     public Input<String> getWorkloadPool() {
         return this.workloadPool == null ? Input.empty() : this.workloadPool;

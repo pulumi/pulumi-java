@@ -23,7 +23,7 @@ public final class WorkloadNetworkSegmentPortVifResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="portName")
-        private final @Nullable String portName;
+      private final @Nullable String portName;
 
     public Optional<String> getPortName() {
         return this.portName == null ? Optional.empty() : Optional.ofNullable(this.portName);

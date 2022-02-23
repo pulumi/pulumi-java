@@ -24,7 +24,7 @@ public final class MigrateSqlServerSqlMITaskPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="input")
-        private final @Nullable Input<MigrateSqlServerSqlMITaskInputArgs> input;
+      private final @Nullable Input<MigrateSqlServerSqlMITaskInputArgs> input;
 
     public Input<MigrateSqlServerSqlMITaskInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -36,7 +36,7 @@ public final class MigrateSqlServerSqlMITaskPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="taskType", required=true)
-        private final Input<String> taskType;
+      private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;

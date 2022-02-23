@@ -14,7 +14,7 @@ public final class ProviderHubMetadataResponseProviderAuthentication extends io.
     public static final ProviderHubMetadataResponseProviderAuthentication Empty = new ProviderHubMetadataResponseProviderAuthentication();
 
     @InputImport(name="allowedAudiences", required=true)
-        private final List<String> allowedAudiences;
+      private final List<String> allowedAudiences;
 
     public List<String> getAllowedAudiences() {
         return this.allowedAudiences;

@@ -23,7 +23,7 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -34,7 +34,7 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscriptionId")
-        private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -45,7 +45,7 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscriptionName")
-        private final @Nullable Input<String> subscriptionName;
+      private final @Nullable Input<String> subscriptionName;
 
     public Input<String> getSubscriptionName() {
         return this.subscriptionName == null ? Input.empty() : this.subscriptionName;

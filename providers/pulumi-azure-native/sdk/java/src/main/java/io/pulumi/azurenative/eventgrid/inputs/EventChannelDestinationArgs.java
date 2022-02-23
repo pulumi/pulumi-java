@@ -24,7 +24,7 @@ public final class EventChannelDestinationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="azureSubscriptionId")
-        private final @Nullable Input<String> azureSubscriptionId;
+      private final @Nullable Input<String> azureSubscriptionId;
 
     public Input<String> getAzureSubscriptionId() {
         return this.azureSubscriptionId == null ? Input.empty() : this.azureSubscriptionId;
@@ -35,7 +35,7 @@ public final class EventChannelDestinationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="partnerTopicName")
-        private final @Nullable Input<String> partnerTopicName;
+      private final @Nullable Input<String> partnerTopicName;
 
     public Input<String> getPartnerTopicName() {
         return this.partnerTopicName == null ? Input.empty() : this.partnerTopicName;
@@ -47,7 +47,7 @@ public final class EventChannelDestinationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroup")
-        private final @Nullable Input<String> resourceGroup;
+      private final @Nullable Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;

@@ -15,14 +15,14 @@ public final class DataSourceVpcConfigurationArgs extends io.pulumi.resources.Re
     public static final DataSourceVpcConfigurationArgs Empty = new DataSourceVpcConfigurationArgs();
 
     @InputImport(name="securityGroupIds", required=true)
-        private final Input<List<String>> securityGroupIds;
+      private final Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
     @InputImport(name="subnetIds", required=true)
-        private final Input<List<String>> subnetIds;
+      private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;

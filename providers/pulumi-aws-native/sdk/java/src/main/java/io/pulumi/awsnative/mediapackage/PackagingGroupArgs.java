@@ -22,7 +22,7 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorization")
-        private final @Nullable Input<PackagingGroupAuthorizationArgs> authorization;
+      private final @Nullable Input<PackagingGroupAuthorizationArgs> authorization;
 
     public Input<PackagingGroupAuthorizationArgs> getAuthorization() {
         return this.authorization == null ? Input.empty() : this.authorization;
@@ -33,7 +33,7 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egressAccessLogs")
-        private final @Nullable Input<PackagingGroupLogConfigurationArgs> egressAccessLogs;
+      private final @Nullable Input<PackagingGroupLogConfigurationArgs> egressAccessLogs;
 
     public Input<PackagingGroupLogConfigurationArgs> getEgressAccessLogs() {
         return this.egressAccessLogs == null ? Input.empty() : this.egressAccessLogs;
@@ -44,7 +44,7 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<PackagingGroupTagArgs>> tags;
+      private final @Nullable Input<List<PackagingGroupTagArgs>> tags;
 
     public Input<List<PackagingGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

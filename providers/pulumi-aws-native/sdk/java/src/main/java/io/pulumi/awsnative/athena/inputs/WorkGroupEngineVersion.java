@@ -19,14 +19,14 @@ public final class WorkGroupEngineVersion extends io.pulumi.resources.InvokeArgs
     public static final WorkGroupEngineVersion Empty = new WorkGroupEngineVersion();
 
     @InputImport(name="effectiveEngineVersion")
-        private final @Nullable String effectiveEngineVersion;
+      private final @Nullable String effectiveEngineVersion;
 
     public Optional<String> getEffectiveEngineVersion() {
         return this.effectiveEngineVersion == null ? Optional.empty() : Optional.ofNullable(this.effectiveEngineVersion);
     }
 
     @InputImport(name="selectedEngineVersion")
-        private final @Nullable String selectedEngineVersion;
+      private final @Nullable String selectedEngineVersion;
 
     public Optional<String> getSelectedEngineVersion() {
         return this.selectedEngineVersion == null ? Optional.empty() : Optional.ofNullable(this.selectedEngineVersion);

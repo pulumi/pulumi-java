@@ -23,7 +23,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userAltSecId")
-        private final @Nullable String userAltSecId;
+      private final @Nullable String userAltSecId;
 
     public Optional<String> getUserAltSecId() {
         return this.userAltSecId == null ? Optional.empty() : Optional.ofNullable(this.userAltSecId);
@@ -34,7 +34,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userIdp")
-        private final @Nullable String userIdp;
+      private final @Nullable String userIdp;
 
     public Optional<String> getUserIdp() {
         return this.userIdp == null ? Optional.empty() : Optional.ofNullable(this.userIdp);
@@ -45,7 +45,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userIss")
-        private final @Nullable String userIss;
+      private final @Nullable String userIss;
 
     public Optional<String> getUserIss() {
         return this.userIss == null ? Optional.empty() : Optional.ofNullable(this.userIss);
@@ -56,7 +56,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userName")
-        private final @Nullable String userName;
+      private final @Nullable String userName;
 
     public Optional<String> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
@@ -67,7 +67,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userObjectId")
-        private final @Nullable String userObjectId;
+      private final @Nullable String userObjectId;
 
     public Optional<String> getUserObjectId() {
         return this.userObjectId == null ? Optional.empty() : Optional.ofNullable(this.userObjectId);
@@ -78,7 +78,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userPuId")
-        private final @Nullable String userPuId;
+      private final @Nullable String userPuId;
 
     public Optional<String> getUserPuId() {
         return this.userPuId == null ? Optional.empty() : Optional.ofNullable(this.userPuId);
@@ -89,7 +89,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userTenantId")
-        private final @Nullable String userTenantId;
+      private final @Nullable String userTenantId;
 
     public Optional<String> getUserTenantId() {
         return this.userTenantId == null ? Optional.empty() : Optional.ofNullable(this.userTenantId);

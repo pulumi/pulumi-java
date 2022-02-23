@@ -25,7 +25,7 @@ public final class ApplicationDeltaHealthPolicyResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultServiceTypeDeltaHealthPolicy")
-        private final @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy;
+      private final @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy;
 
     public Optional<ServiceTypeDeltaHealthPolicyResponse> getDefaultServiceTypeDeltaHealthPolicy() {
         return this.defaultServiceTypeDeltaHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.defaultServiceTypeDeltaHealthPolicy);
@@ -36,7 +36,7 @@ public final class ApplicationDeltaHealthPolicyResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="serviceTypeDeltaHealthPolicies")
-        private final @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies;
+      private final @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies;
 
     public Map<String,ServiceTypeDeltaHealthPolicyResponse> getServiceTypeDeltaHealthPolicies() {
         return this.serviceTypeDeltaHealthPolicies == null ? Map.of() : this.serviceTypeDeltaHealthPolicies;

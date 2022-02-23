@@ -25,7 +25,7 @@ public final class ResourceForestSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceForest")
-        private final @Nullable Input<String> resourceForest;
+      private final @Nullable Input<String> resourceForest;
 
     public Input<String> getResourceForest() {
         return this.resourceForest == null ? Input.empty() : this.resourceForest;
@@ -36,7 +36,7 @@ public final class ResourceForestSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="settings")
-        private final @Nullable Input<List<ForestTrustArgs>> settings;
+      private final @Nullable Input<List<ForestTrustArgs>> settings;
 
     public Input<List<ForestTrustArgs>> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;

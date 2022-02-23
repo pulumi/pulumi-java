@@ -24,7 +24,7 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -35,7 +35,7 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="logGroup")
-        private final @Nullable Input<String> logGroup;
+      private final @Nullable Input<String> logGroup;
 
     public Input<String> getLogGroup() {
         return this.logGroup == null ? Input.empty() : this.logGroup;

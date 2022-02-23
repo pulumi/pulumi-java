@@ -26,7 +26,7 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enforceCertificateNameCheck")
-        private final @Nullable Input<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck;
+      private final @Nullable Input<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck;
 
     public Input<Either<String,EnforceCertificateNameCheckEnabledState>> getEnforceCertificateNameCheck() {
         return this.enforceCertificateNameCheck == null ? Input.empty() : this.enforceCertificateNameCheck;
@@ -37,7 +37,7 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sendRecvTimeoutSeconds")
-        private final @Nullable Input<Integer> sendRecvTimeoutSeconds;
+      private final @Nullable Input<Integer> sendRecvTimeoutSeconds;
 
     public Input<Integer> getSendRecvTimeoutSeconds() {
         return this.sendRecvTimeoutSeconds == null ? Input.empty() : this.sendRecvTimeoutSeconds;

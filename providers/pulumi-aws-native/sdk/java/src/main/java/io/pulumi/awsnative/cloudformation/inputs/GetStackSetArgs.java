@@ -17,7 +17,7 @@ public final class GetStackSetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stackSetId", required=true)
-        private final String stackSetId;
+      private final String stackSetId;
 
     public String getStackSetId() {
         return this.stackSetId;

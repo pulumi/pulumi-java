@@ -24,7 +24,7 @@ public final class OrcWriteSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="fileNamePrefix")
-        private final @Nullable Object fileNamePrefix;
+      private final @Nullable Object fileNamePrefix;
 
     public Optional<Object> getFileNamePrefix() {
         return this.fileNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.fileNamePrefix);
@@ -35,7 +35,7 @@ public final class OrcWriteSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="maxRowsPerFile")
-        private final @Nullable Object maxRowsPerFile;
+      private final @Nullable Object maxRowsPerFile;
 
     public Optional<Object> getMaxRowsPerFile() {
         return this.maxRowsPerFile == null ? Optional.empty() : Optional.ofNullable(this.maxRowsPerFile);
@@ -47,7 +47,7 @@ public final class OrcWriteSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

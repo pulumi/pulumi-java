@@ -164,6 +164,21 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
     /**
      *
      * @param name The _unique_ name of the resulting resource.
+     */
+    public KustoDatabaseDataSetMapping(String name) {
+        this(name, KustoDatabaseDataSetMappingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public KustoDatabaseDataSetMapping(String name, KustoDatabaseDataSetMappingArgs args) {
+        this(name, args, null);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */

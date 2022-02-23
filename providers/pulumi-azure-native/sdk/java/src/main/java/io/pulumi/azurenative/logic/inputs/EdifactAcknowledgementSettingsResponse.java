@@ -25,7 +25,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="acknowledgementControlNumberLowerBound", required=true)
-        private final Integer acknowledgementControlNumberLowerBound;
+      private final Integer acknowledgementControlNumberLowerBound;
 
     public Integer getAcknowledgementControlNumberLowerBound() {
         return this.acknowledgementControlNumberLowerBound;
@@ -36,7 +36,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="acknowledgementControlNumberPrefix")
-        private final @Nullable String acknowledgementControlNumberPrefix;
+      private final @Nullable String acknowledgementControlNumberPrefix;
 
     public Optional<String> getAcknowledgementControlNumberPrefix() {
         return this.acknowledgementControlNumberPrefix == null ? Optional.empty() : Optional.ofNullable(this.acknowledgementControlNumberPrefix);
@@ -47,7 +47,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="acknowledgementControlNumberSuffix")
-        private final @Nullable String acknowledgementControlNumberSuffix;
+      private final @Nullable String acknowledgementControlNumberSuffix;
 
     public Optional<String> getAcknowledgementControlNumberSuffix() {
         return this.acknowledgementControlNumberSuffix == null ? Optional.empty() : Optional.ofNullable(this.acknowledgementControlNumberSuffix);
@@ -58,7 +58,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="acknowledgementControlNumberUpperBound", required=true)
-        private final Integer acknowledgementControlNumberUpperBound;
+      private final Integer acknowledgementControlNumberUpperBound;
 
     public Integer getAcknowledgementControlNumberUpperBound() {
         return this.acknowledgementControlNumberUpperBound;
@@ -69,7 +69,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="batchFunctionalAcknowledgements", required=true)
-        private final Boolean batchFunctionalAcknowledgements;
+      private final Boolean batchFunctionalAcknowledgements;
 
     public Boolean getBatchFunctionalAcknowledgements() {
         return this.batchFunctionalAcknowledgements;
@@ -80,7 +80,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="batchTechnicalAcknowledgements", required=true)
-        private final Boolean batchTechnicalAcknowledgements;
+      private final Boolean batchTechnicalAcknowledgements;
 
     public Boolean getBatchTechnicalAcknowledgements() {
         return this.batchTechnicalAcknowledgements;
@@ -91,7 +91,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="needFunctionalAcknowledgement", required=true)
-        private final Boolean needFunctionalAcknowledgement;
+      private final Boolean needFunctionalAcknowledgement;
 
     public Boolean getNeedFunctionalAcknowledgement() {
         return this.needFunctionalAcknowledgement;
@@ -102,7 +102,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="needLoopForValidMessages", required=true)
-        private final Boolean needLoopForValidMessages;
+      private final Boolean needLoopForValidMessages;
 
     public Boolean getNeedLoopForValidMessages() {
         return this.needLoopForValidMessages;
@@ -113,7 +113,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="needTechnicalAcknowledgement", required=true)
-        private final Boolean needTechnicalAcknowledgement;
+      private final Boolean needTechnicalAcknowledgement;
 
     public Boolean getNeedTechnicalAcknowledgement() {
         return this.needTechnicalAcknowledgement;
@@ -124,7 +124,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="rolloverAcknowledgementControlNumber", required=true)
-        private final Boolean rolloverAcknowledgementControlNumber;
+      private final Boolean rolloverAcknowledgementControlNumber;
 
     public Boolean getRolloverAcknowledgementControlNumber() {
         return this.rolloverAcknowledgementControlNumber;
@@ -135,7 +135,7 @@ public final class EdifactAcknowledgementSettingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="sendSynchronousAcknowledgement", required=true)
-        private final Boolean sendSynchronousAcknowledgement;
+      private final Boolean sendSynchronousAcknowledgement;
 
     public Boolean getSendSynchronousAcknowledgement() {
         return this.sendSynchronousAcknowledgement;

@@ -17,7 +17,7 @@ public final class GetDiskEncryptionSetArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="diskEncryptionSetName", required=true)
-        private final String diskEncryptionSetName;
+      private final String diskEncryptionSetName;
 
     public String getDiskEncryptionSetName() {
         return this.diskEncryptionSetName;
@@ -28,7 +28,7 @@ public final class GetDiskEncryptionSetArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

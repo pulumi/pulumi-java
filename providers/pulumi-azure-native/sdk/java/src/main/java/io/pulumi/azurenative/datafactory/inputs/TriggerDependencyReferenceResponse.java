@@ -22,7 +22,7 @@ public final class TriggerDependencyReferenceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="referenceTrigger", required=true)
-        private final TriggerReferenceResponse referenceTrigger;
+      private final TriggerReferenceResponse referenceTrigger;
 
     public TriggerReferenceResponse getReferenceTrigger() {
         return this.referenceTrigger;
@@ -34,7 +34,7 @@ public final class TriggerDependencyReferenceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

@@ -15,7 +15,7 @@ public final class NodePoolNodeConfigLinuxNodeConfigGetArgs extends io.pulumi.re
     public static final NodePoolNodeConfigLinuxNodeConfigGetArgs Empty = new NodePoolNodeConfigLinuxNodeConfigGetArgs();
 
     @InputImport(name="sysctls", required=true)
-        private final Input<Map<String,String>> sysctls;
+      private final Input<Map<String,String>> sysctls;
 
     public Input<Map<String,String>> getSysctls() {
         return this.sysctls;

@@ -23,7 +23,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardName")
-        private final @Nullable Input<String> dashboardName;
+      private final @Nullable Input<String> dashboardName;
 
     public Input<String> getDashboardName() {
         return this.dashboardName == null ? Input.empty() : this.dashboardName;
@@ -34,7 +34,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lenses")
-        private final @Nullable Input<List<DashboardLensArgs>> lenses;
+      private final @Nullable Input<List<DashboardLensArgs>> lenses;
 
     public Input<List<DashboardLensArgs>> getLenses() {
         return this.lenses == null ? Input.empty() : this.lenses;
@@ -45,7 +45,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -56,7 +56,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<Map<String,Object>> metadata;
+      private final @Nullable Input<Map<String,Object>> metadata;
 
     public Input<Map<String,Object>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -67,7 +67,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

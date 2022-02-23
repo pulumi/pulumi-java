@@ -24,7 +24,7 @@ public final class ModelExplainabilityJobDefinitionS3OutputArgs extends io.pulum
      * 
      */
     @InputImport(name="localPath", required=true)
-        private final Input<String> localPath;
+      private final Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath;
@@ -35,7 +35,7 @@ public final class ModelExplainabilityJobDefinitionS3OutputArgs extends io.pulum
      * 
      */
     @InputImport(name="s3UploadMode")
-        private final @Nullable Input<ModelExplainabilityJobDefinitionS3OutputS3UploadMode> s3UploadMode;
+      private final @Nullable Input<ModelExplainabilityJobDefinitionS3OutputS3UploadMode> s3UploadMode;
 
     public Input<ModelExplainabilityJobDefinitionS3OutputS3UploadMode> getS3UploadMode() {
         return this.s3UploadMode == null ? Input.empty() : this.s3UploadMode;
@@ -46,7 +46,7 @@ public final class ModelExplainabilityJobDefinitionS3OutputArgs extends io.pulum
      * 
      */
     @InputImport(name="s3Uri", required=true)
-        private final Input<String> s3Uri;
+      private final Input<String> s3Uri;
 
     public Input<String> getS3Uri() {
         return this.s3Uri;

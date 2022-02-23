@@ -23,7 +23,7 @@ public final class AnalysisStringParameterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class AnalysisStringParameterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="values", required=true)
-        private final Input<List<String>> values;
+      private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;

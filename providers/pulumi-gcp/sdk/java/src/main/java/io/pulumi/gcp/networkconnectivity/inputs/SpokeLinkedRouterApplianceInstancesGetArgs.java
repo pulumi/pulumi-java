@@ -20,7 +20,7 @@ public final class SpokeLinkedRouterApplianceInstancesGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="instances", required=true)
-        private final Input<List<SpokeLinkedRouterApplianceInstancesInstanceGetArgs>> instances;
+      private final Input<List<SpokeLinkedRouterApplianceInstancesInstanceGetArgs>> instances;
 
     public Input<List<SpokeLinkedRouterApplianceInstancesInstanceGetArgs>> getInstances() {
         return this.instances;
@@ -31,7 +31,7 @@ public final class SpokeLinkedRouterApplianceInstancesGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="siteToSiteDataTransfer", required=true)
-        private final Input<Boolean> siteToSiteDataTransfer;
+      private final Input<Boolean> siteToSiteDataTransfer;
 
     public Input<Boolean> getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;

@@ -23,7 +23,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computerName")
-        private final @Nullable Input<String> computerName;
+      private final @Nullable Input<String> computerName;
 
     public Input<String> getComputerName() {
         return this.computerName == null ? Input.empty() : this.computerName;
@@ -34,7 +34,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshPublicKey")
-        private final @Nullable Input<String> sshPublicKey;
+      private final @Nullable Input<String> sshPublicKey;
 
     public Input<String> getSshPublicKey() {
         return this.sshPublicKey == null ? Input.empty() : this.sshPublicKey;

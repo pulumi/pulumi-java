@@ -25,14 +25,14 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="port")
-        private final @Nullable Input<String> port;
+      private final @Nullable Input<String> port;
 
     public Input<String> getPort() {
         return this.port == null ? Input.empty() : this.port;
     }
 
     @InputImport(name="runtimeEnvironmentVariables")
-        private final @Nullable Input<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
+      private final @Nullable Input<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
 
     public Input<List<ServiceKeyValuePairArgs>> getRuntimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? Input.empty() : this.runtimeEnvironmentVariables;
@@ -43,7 +43,7 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="startCommand")
-        private final @Nullable Input<String> startCommand;
+      private final @Nullable Input<String> startCommand;
 
     public Input<String> getStartCommand() {
         return this.startCommand == null ? Input.empty() : this.startCommand;

@@ -26,7 +26,7 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="galleryImageResourceId")
-        private final @Nullable Input<String> galleryImageResourceId;
+      private final @Nullable Input<String> galleryImageResourceId;
 
     public Input<String> getGalleryImageResourceId() {
         return this.galleryImageResourceId == null ? Input.empty() : this.galleryImageResourceId;
@@ -37,7 +37,7 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="referenceVm", required=true)
-        private final Input<ReferenceVmArgs> referenceVm;
+      private final Input<ReferenceVmArgs> referenceVm;
 
     public Input<ReferenceVmArgs> getReferenceVm() {
         return this.referenceVm;
@@ -48,7 +48,7 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="size")
-        private final @Nullable Input<Either<String,ManagedLabVmSize>> size;
+      private final @Nullable Input<Either<String,ManagedLabVmSize>> size;
 
     public Input<Either<String,ManagedLabVmSize>> getSize() {
         return this.size == null ? Input.empty() : this.size;

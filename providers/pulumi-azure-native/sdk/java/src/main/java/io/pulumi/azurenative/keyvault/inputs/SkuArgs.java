@@ -25,7 +25,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family", required=true)
-        private final Input<Either<String,SkuFamily>> family;
+      private final Input<Either<String,SkuFamily>> family;
 
     public Input<Either<String,SkuFamily>> getFamily() {
         return this.family;
@@ -36,7 +36,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<SkuName> name;
+      private final Input<SkuName> name;
 
     public Input<SkuName> getName() {
         return this.name;

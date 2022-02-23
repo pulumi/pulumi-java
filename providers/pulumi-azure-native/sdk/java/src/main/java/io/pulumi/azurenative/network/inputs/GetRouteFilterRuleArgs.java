@@ -17,7 +17,7 @@ public final class GetRouteFilterRuleArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetRouteFilterRuleArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="routeFilterName", required=true)
-        private final String routeFilterName;
+      private final String routeFilterName;
 
     public String getRouteFilterName() {
         return this.routeFilterName;
@@ -39,7 +39,7 @@ public final class GetRouteFilterRuleArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ruleName", required=true)
-        private final String ruleName;
+      private final String ruleName;
 
     public String getRuleName() {
         return this.ruleName;

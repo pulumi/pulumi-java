@@ -23,7 +23,7 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="phrase")
-        private final @Nullable String phrase;
+      private final @Nullable String phrase;
 
     public Optional<String> getPhrase() {
         return this.phrase == null ? Optional.empty() : Optional.ofNullable(this.phrase);
@@ -34,7 +34,7 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-        private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -45,7 +45,7 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="variable")
-        private final @Nullable String variable;
+      private final @Nullable String variable;
 
     public Optional<String> getVariable() {
         return this.variable == null ? Optional.empty() : Optional.ofNullable(this.variable);

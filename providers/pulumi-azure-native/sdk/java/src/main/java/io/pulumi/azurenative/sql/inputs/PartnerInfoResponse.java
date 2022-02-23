@@ -21,7 +21,7 @@ public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -32,7 +32,7 @@ public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-        private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -43,7 +43,7 @@ public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="replicationRole", required=true)
-        private final String replicationRole;
+      private final String replicationRole;
 
     public String getReplicationRole() {
         return this.replicationRole;

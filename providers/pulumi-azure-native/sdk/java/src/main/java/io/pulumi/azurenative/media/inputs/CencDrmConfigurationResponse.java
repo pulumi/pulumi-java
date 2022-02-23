@@ -24,7 +24,7 @@ public final class CencDrmConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="playReady")
-        private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
+      private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
 
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> getPlayReady() {
         return this.playReady == null ? Optional.empty() : Optional.ofNullable(this.playReady);
@@ -35,7 +35,7 @@ public final class CencDrmConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="widevine")
-        private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
+      private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
     public Optional<StreamingPolicyWidevineConfigurationResponse> getWidevine() {
         return this.widevine == null ? Optional.empty() : Optional.ofNullable(this.widevine);

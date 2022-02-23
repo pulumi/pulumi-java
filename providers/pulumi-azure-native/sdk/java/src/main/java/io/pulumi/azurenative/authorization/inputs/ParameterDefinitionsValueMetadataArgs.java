@@ -24,7 +24,7 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="assignPermissions")
-        private final @Nullable Input<Boolean> assignPermissions;
+      private final @Nullable Input<Boolean> assignPermissions;
 
     public Input<Boolean> getAssignPermissions() {
         return this.assignPermissions == null ? Input.empty() : this.assignPermissions;
@@ -35,7 +35,7 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -57,7 +57,7 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="strongType")
-        private final @Nullable Input<String> strongType;
+      private final @Nullable Input<String> strongType;
 
     public Input<String> getStrongType() {
         return this.strongType == null ? Input.empty() : this.strongType;

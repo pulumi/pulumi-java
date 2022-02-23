@@ -23,7 +23,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="aadTenantId")
-        private final @Nullable Input<String> aadTenantId;
+      private final @Nullable Input<String> aadTenantId;
 
     public Input<String> getAadTenantId() {
         return this.aadTenantId == null ? Input.empty() : this.aadTenantId;
@@ -34,7 +34,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="audience")
-        private final @Nullable Input<String> audience;
+      private final @Nullable Input<String> audience;
 
     public Input<String> getAudience() {
         return this.audience == null ? Input.empty() : this.audience;
@@ -45,7 +45,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="servicePrincipalClientId")
-        private final @Nullable Input<String> servicePrincipalClientId;
+      private final @Nullable Input<String> servicePrincipalClientId;
 
     public Input<String> getServicePrincipalClientId() {
         return this.servicePrincipalClientId == null ? Input.empty() : this.servicePrincipalClientId;
@@ -56,7 +56,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="uniqueName")
-        private final @Nullable Input<String> uniqueName;
+      private final @Nullable Input<String> uniqueName;
 
     public Input<String> getUniqueName() {
         return this.uniqueName == null ? Input.empty() : this.uniqueName;

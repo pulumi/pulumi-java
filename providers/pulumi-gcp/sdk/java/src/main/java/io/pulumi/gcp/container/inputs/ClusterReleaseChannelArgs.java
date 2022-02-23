@@ -23,7 +23,7 @@ public final class ClusterReleaseChannelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="channel", required=true)
-        private final Input<String> channel;
+      private final Input<String> channel;
 
     public Input<String> getChannel() {
         return this.channel;

@@ -24,7 +24,7 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="copyBehavior")
-        private final @Nullable Input<Object> copyBehavior;
+      private final @Nullable Input<Object> copyBehavior;
 
     public Input<Object> getCopyBehavior() {
         return this.copyBehavior == null ? Input.empty() : this.copyBehavior;
@@ -35,7 +35,7 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disableMetricsCollection")
-        private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -46,7 +46,7 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-        private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -57,7 +57,7 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="operationTimeout")
-        private final @Nullable Input<Object> operationTimeout;
+      private final @Nullable Input<Object> operationTimeout;
 
     public Input<Object> getOperationTimeout() {
         return this.operationTimeout == null ? Input.empty() : this.operationTimeout;
@@ -69,7 +69,7 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -80,7 +80,7 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="useTempFileRename")
-        private final @Nullable Input<Object> useTempFileRename;
+      private final @Nullable Input<Object> useTempFileRename;
 
     public Input<Object> getUseTempFileRename() {
         return this.useTempFileRename == null ? Input.empty() : this.useTempFileRename;

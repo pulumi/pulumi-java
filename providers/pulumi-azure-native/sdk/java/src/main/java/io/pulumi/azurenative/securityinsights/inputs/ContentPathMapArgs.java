@@ -25,7 +25,7 @@ public final class ContentPathMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-        private final @Nullable Input<Either<String,ContentType>> contentType;
+      private final @Nullable Input<Either<String,ContentType>> contentType;
 
     public Input<Either<String,ContentType>> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -36,7 +36,7 @@ public final class ContentPathMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-        private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;

@@ -21,7 +21,7 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="certificateAlternativeNames")
-        private final @Nullable Input<List<String>> certificateAlternativeNames;
+      private final @Nullable Input<List<String>> certificateAlternativeNames;
 
     public Input<List<String>> getCertificateAlternativeNames() {
         return this.certificateAlternativeNames == null ? Input.empty() : this.certificateAlternativeNames;
@@ -32,7 +32,7 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="certificateDomainName", required=true)
-        private final Input<String> certificateDomainName;
+      private final Input<String> certificateDomainName;
 
     public Input<String> getCertificateDomainName() {
         return this.certificateDomainName;
@@ -43,7 +43,7 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="certificateName", required=true)
-        private final Input<String> certificateName;
+      private final Input<String> certificateName;
 
     public Input<String> getCertificateName() {
         return this.certificateName;
@@ -54,7 +54,7 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="isAttached")
-        private final @Nullable Input<Boolean> isAttached;
+      private final @Nullable Input<Boolean> isAttached;
 
     public Input<Boolean> getIsAttached() {
         return this.isAttached == null ? Input.empty() : this.isAttached;
@@ -65,7 +65,7 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="loadBalancerName", required=true)
-        private final Input<String> loadBalancerName;
+      private final Input<String> loadBalancerName;
 
     public Input<String> getLoadBalancerName() {
         return this.loadBalancerName;

@@ -25,7 +25,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enrolledServices", required=true)
-        private final Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
+      private final Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
     public Input<List<AccessApprovalSettingsEnrolledServiceArgs>> getEnrolledServices() {
         return this.enrolledServices;
@@ -38,7 +38,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="notificationEmails")
-        private final @Nullable Input<List<String>> notificationEmails;
+      private final @Nullable Input<List<String>> notificationEmails;
 
     public Input<List<String>> getNotificationEmails() {
         return this.notificationEmails == null ? Input.empty() : this.notificationEmails;
@@ -55,7 +55,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      */
     @Deprecated /* Deprecated in favor of `project_id` */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     @Deprecated /* Deprecated in favor of `project_id` */
     public Input<String> getProject() {
@@ -67,7 +67,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="projectId", required=true)
-        private final Input<String> projectId;
+      private final Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId;

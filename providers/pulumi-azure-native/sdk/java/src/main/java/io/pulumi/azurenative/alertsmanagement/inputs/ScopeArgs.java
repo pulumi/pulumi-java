@@ -26,7 +26,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopeType")
-        private final @Nullable Input<Either<String,ScopeType>> scopeType;
+      private final @Nullable Input<Either<String,ScopeType>> scopeType;
 
     public Input<Either<String,ScopeType>> getScopeType() {
         return this.scopeType == null ? Input.empty() : this.scopeType;
@@ -37,7 +37,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-        private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;

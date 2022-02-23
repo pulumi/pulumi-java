@@ -23,7 +23,7 @@ public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="path", required=true)
-        private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -34,7 +34,7 @@ public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="template", required=true)
-        private final Input<Object> template;
+      private final Input<Object> template;
 
     public Input<Object> getTemplate() {
         return this.template;

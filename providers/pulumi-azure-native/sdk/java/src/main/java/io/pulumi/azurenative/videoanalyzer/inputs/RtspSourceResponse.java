@@ -26,7 +26,7 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpoint", required=true)
-        private final Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint;
+      private final Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint;
 
     public Either<TlsEndpointResponse,UnsecuredEndpointResponse> getEndpoint() {
         return this.endpoint;
@@ -37,7 +37,7 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -48,7 +48,7 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transport")
-        private final @Nullable String transport;
+      private final @Nullable String transport;
 
     public Optional<String> getTransport() {
         return this.transport == null ? Optional.empty() : Optional.ofNullable(this.transport);
@@ -60,7 +60,7 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

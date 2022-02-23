@@ -14,14 +14,14 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     public static final InstanceAccessControlAttributeConfigurationAccessControlAttribute Empty = new InstanceAccessControlAttributeConfigurationAccessControlAttribute();
 
     @InputImport(name="key", required=true)
-        private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-        private final InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value;
+      private final InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value;
 
     public InstanceAccessControlAttributeConfigurationAccessControlAttributeValue getValue() {
         return this.value;

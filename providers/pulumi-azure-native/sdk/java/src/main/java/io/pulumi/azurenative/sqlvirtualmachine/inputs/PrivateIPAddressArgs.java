@@ -23,7 +23,7 @@ public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipAddress")
-        private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -34,7 +34,7 @@ public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnetResourceId")
-        private final @Nullable Input<String> subnetResourceId;
+      private final @Nullable Input<String> subnetResourceId;
 
     public Input<String> getSubnetResourceId() {
         return this.subnetResourceId == null ? Input.empty() : this.subnetResourceId;

@@ -13,14 +13,14 @@ public final class GetProfilePermissionArgs extends io.pulumi.resources.InvokeAr
     public static final GetProfilePermissionArgs Empty = new GetProfilePermissionArgs();
 
     @InputImport(name="profileName", required=true)
-        private final String profileName;
+      private final String profileName;
 
     public String getProfileName() {
         return this.profileName;
     }
 
     @InputImport(name="statementId", required=true)
-        private final String statementId;
+      private final String statementId;
 
     public String getStatementId() {
         return this.statementId;

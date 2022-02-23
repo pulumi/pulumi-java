@@ -17,7 +17,7 @@ public final class GetWorkflowArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workflowId", required=true)
-        private final String workflowId;
+      private final String workflowId;
 
     public String getWorkflowId() {
         return this.workflowId;

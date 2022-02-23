@@ -17,7 +17,7 @@ public final class GetVendorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vendorName", required=true)
-        private final String vendorName;
+      private final String vendorName;
 
     public String getVendorName() {
         return this.vendorName;

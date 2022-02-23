@@ -24,7 +24,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
      * 
      */
     @InputImport(name="keyName")
-        private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -35,7 +35,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
      * 
      */
     @InputImport(name="keyVault")
-        private final @Nullable Input<ResourceReferenceArgs> keyVault;
+      private final @Nullable Input<ResourceReferenceArgs> keyVault;
 
     public Input<ResourceReferenceArgs> getKeyVault() {
         return this.keyVault == null ? Input.empty() : this.keyVault;
@@ -46,7 +46,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
      * 
      */
     @InputImport(name="keyVersion")
-        private final @Nullable Input<String> keyVersion;
+      private final @Nullable Input<String> keyVersion;
 
     public Input<String> getKeyVersion() {
         return this.keyVersion == null ? Input.empty() : this.keyVersion;

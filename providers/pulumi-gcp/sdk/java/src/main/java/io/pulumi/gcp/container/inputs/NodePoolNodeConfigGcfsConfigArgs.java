@@ -14,7 +14,7 @@ public final class NodePoolNodeConfigGcfsConfigArgs extends io.pulumi.resources.
     public static final NodePoolNodeConfigGcfsConfigArgs Empty = new NodePoolNodeConfigGcfsConfigArgs();
 
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;

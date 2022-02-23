@@ -22,7 +22,7 @@ public final class ServerEndpointRecallErrorResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="count", required=true)
-        private final Double count;
+      private final Double count;
 
     public Double getCount() {
         return this.count;
@@ -33,7 +33,7 @@ public final class ServerEndpointRecallErrorResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="errorCode", required=true)
-        private final Integer errorCode;
+      private final Integer errorCode;
 
     public Integer getErrorCode() {
         return this.errorCode;

@@ -21,7 +21,7 @@ public final class MonitoringScheduleEndpointInput extends io.pulumi.resources.I
     public static final MonitoringScheduleEndpointInput Empty = new MonitoringScheduleEndpointInput();
 
     @InputImport(name="endpointName", required=true)
-        private final String endpointName;
+      private final String endpointName;
 
     public String getEndpointName() {
         return this.endpointName;
@@ -32,7 +32,7 @@ public final class MonitoringScheduleEndpointInput extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="localPath", required=true)
-        private final String localPath;
+      private final String localPath;
 
     public String getLocalPath() {
         return this.localPath;
@@ -43,7 +43,7 @@ public final class MonitoringScheduleEndpointInput extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="s3DataDistributionType")
-        private final @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType;
+      private final @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType;
 
     public Optional<MonitoringScheduleEndpointInputS3DataDistributionType> getS3DataDistributionType() {
         return this.s3DataDistributionType == null ? Optional.empty() : Optional.ofNullable(this.s3DataDistributionType);
@@ -54,7 +54,7 @@ public final class MonitoringScheduleEndpointInput extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="s3InputMode")
-        private final @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode;
+      private final @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode;
 
     public Optional<MonitoringScheduleEndpointInputS3InputMode> getS3InputMode() {
         return this.s3InputMode == null ? Optional.empty() : Optional.ofNullable(this.s3InputMode);

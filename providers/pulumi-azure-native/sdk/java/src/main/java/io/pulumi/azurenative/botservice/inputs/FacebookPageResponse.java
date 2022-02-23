@@ -23,7 +23,7 @@ public final class FacebookPageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accessToken")
-        private final @Nullable String accessToken;
+      private final @Nullable String accessToken;
 
     public Optional<String> getAccessToken() {
         return this.accessToken == null ? Optional.empty() : Optional.ofNullable(this.accessToken);
@@ -34,7 +34,7 @@ public final class FacebookPageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

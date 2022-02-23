@@ -23,7 +23,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportDeliveryChannel", required=true)
-        private final Input<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
+      private final Input<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
 
     public Input<ReportDeliveryChannelPropertiesArgs> getReportDeliveryChannel() {
         return this.reportDeliveryChannel;
@@ -34,7 +34,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportPlanDescription")
-        private final @Nullable Input<String> reportPlanDescription;
+      private final @Nullable Input<String> reportPlanDescription;
 
     public Input<String> getReportPlanDescription() {
         return this.reportPlanDescription == null ? Input.empty() : this.reportPlanDescription;
@@ -45,7 +45,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportPlanName")
-        private final @Nullable Input<String> reportPlanName;
+      private final @Nullable Input<String> reportPlanName;
 
     public Input<String> getReportPlanName() {
         return this.reportPlanName == null ? Input.empty() : this.reportPlanName;
@@ -56,7 +56,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportPlanTags")
-        private final @Nullable Input<List<ReportPlanTagArgs>> reportPlanTags;
+      private final @Nullable Input<List<ReportPlanTagArgs>> reportPlanTags;
 
     public Input<List<ReportPlanTagArgs>> getReportPlanTags() {
         return this.reportPlanTags == null ? Input.empty() : this.reportPlanTags;
@@ -67,7 +67,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportSetting", required=true)
-        private final Input<ReportSettingPropertiesArgs> reportSetting;
+      private final Input<ReportSettingPropertiesArgs> reportSetting;
 
     public Input<ReportSettingPropertiesArgs> getReportSetting() {
         return this.reportSetting;

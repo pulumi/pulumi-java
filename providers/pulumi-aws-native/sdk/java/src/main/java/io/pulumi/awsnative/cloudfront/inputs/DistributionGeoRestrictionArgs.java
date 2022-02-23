@@ -16,14 +16,14 @@ public final class DistributionGeoRestrictionArgs extends io.pulumi.resources.Re
     public static final DistributionGeoRestrictionArgs Empty = new DistributionGeoRestrictionArgs();
 
     @InputImport(name="locations")
-        private final @Nullable Input<List<String>> locations;
+      private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
     }
 
     @InputImport(name="restrictionType", required=true)
-        private final Input<String> restrictionType;
+      private final Input<String> restrictionType;
 
     public Input<String> getRestrictionType() {
         return this.restrictionType;

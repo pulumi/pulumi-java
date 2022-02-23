@@ -24,7 +24,7 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoArgs extends io.pulum
      * 
      */
     @InputImport(name="oldestRecoveryPoint")
-        private final @Nullable Input<String> oldestRecoveryPoint;
+      private final @Nullable Input<String> oldestRecoveryPoint;
 
     public Input<String> getOldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Input.empty() : this.oldestRecoveryPoint;
@@ -35,7 +35,7 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoArgs extends io.pulum
      * 
      */
     @InputImport(name="policyState")
-        private final @Nullable Input<String> policyState;
+      private final @Nullable Input<String> policyState;
 
     public Input<String> getPolicyState() {
         return this.policyState == null ? Input.empty() : this.policyState;
@@ -46,7 +46,7 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoArgs extends io.pulum
      * 
      */
     @InputImport(name="recoveryPointCount")
-        private final @Nullable Input<Integer> recoveryPointCount;
+      private final @Nullable Input<Integer> recoveryPointCount;
 
     public Input<Integer> getRecoveryPointCount() {
         return this.recoveryPointCount == null ? Input.empty() : this.recoveryPointCount;

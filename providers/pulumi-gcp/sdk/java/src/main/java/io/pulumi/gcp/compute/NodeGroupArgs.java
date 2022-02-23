@@ -24,7 +24,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingPolicy")
-        private final @Nullable Input<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
+      private final @Nullable Input<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
     public Input<NodeGroupAutoscalingPolicyArgs> getAutoscalingPolicy() {
         return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
@@ -35,7 +35,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialSize")
-        private final @Nullable Input<Integer> initialSize;
+      private final @Nullable Input<Integer> initialSize;
 
     public Input<Integer> getInitialSize() {
         return this.initialSize == null ? Input.empty() : this.initialSize;
@@ -57,7 +57,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenancePolicy")
-        private final @Nullable Input<String> maintenancePolicy;
+      private final @Nullable Input<String> maintenancePolicy;
 
     public Input<String> getMaintenancePolicy() {
         return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
@@ -69,7 +69,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-        private final @Nullable Input<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
+      private final @Nullable Input<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
 
     public Input<NodeGroupMaintenanceWindowArgs> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -80,7 +80,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -91,7 +91,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeTemplate", required=true)
-        private final Input<String> nodeTemplate;
+      private final Input<String> nodeTemplate;
 
     public Input<String> getNodeTemplate() {
         return this.nodeTemplate;
@@ -103,7 +103,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -114,7 +114,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-        private final @Nullable Input<Integer> size;
+      private final @Nullable Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -125,7 +125,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-        private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;

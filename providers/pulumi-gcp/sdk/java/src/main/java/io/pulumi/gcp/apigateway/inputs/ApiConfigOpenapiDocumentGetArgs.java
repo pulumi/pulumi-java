@@ -19,7 +19,7 @@ public final class ApiConfigOpenapiDocumentGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="document", required=true)
-        private final Input<ApiConfigOpenapiDocumentDocumentGetArgs> document;
+      private final Input<ApiConfigOpenapiDocumentDocumentGetArgs> document;
 
     public Input<ApiConfigOpenapiDocumentDocumentGetArgs> getDocument() {
         return this.document;

@@ -17,7 +17,7 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environmentId", required=true)
-        private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;

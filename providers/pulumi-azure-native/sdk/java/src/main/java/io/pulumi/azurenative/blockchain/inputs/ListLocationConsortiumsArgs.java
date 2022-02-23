@@ -17,7 +17,7 @@ public final class ListLocationConsortiumsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="locationName", required=true)
-        private final String locationName;
+      private final String locationName;
 
     public String getLocationName() {
         return this.locationName;

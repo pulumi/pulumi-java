@@ -33,7 +33,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="compute")
-        private final @Nullable Input<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute;
+      private final @Nullable Input<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute;
 
     public Input<ExecuteDataFlowActivityTypePropertiesComputeArgs> getCompute() {
         return this.compute == null ? Input.empty() : this.compute;
@@ -44,7 +44,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="continueOnError")
-        private final @Nullable Input<Object> continueOnError;
+      private final @Nullable Input<Object> continueOnError;
 
     public Input<Object> getContinueOnError() {
         return this.continueOnError == null ? Input.empty() : this.continueOnError;
@@ -55,7 +55,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dataFlow", required=true)
-        private final Input<DataFlowReferenceArgs> dataFlow;
+      private final Input<DataFlowReferenceArgs> dataFlow;
 
     public Input<DataFlowReferenceArgs> getDataFlow() {
         return this.dataFlow;
@@ -66,7 +66,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dependsOn")
-        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -77,7 +77,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -88,7 +88,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="integrationRuntime")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> integrationRuntime;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> integrationRuntime;
 
     public Input<IntegrationRuntimeReferenceArgs> getIntegrationRuntime() {
         return this.integrationRuntime == null ? Input.empty() : this.integrationRuntime;
@@ -99,7 +99,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="linkedServiceName")
-        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -110,7 +110,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -121,7 +121,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="policy")
-        private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -132,7 +132,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="runConcurrently")
-        private final @Nullable Input<Object> runConcurrently;
+      private final @Nullable Input<Object> runConcurrently;
 
     public Input<Object> getRunConcurrently() {
         return this.runConcurrently == null ? Input.empty() : this.runConcurrently;
@@ -143,7 +143,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="staging")
-        private final @Nullable Input<DataFlowStagingInfoArgs> staging;
+      private final @Nullable Input<DataFlowStagingInfoArgs> staging;
 
     public Input<DataFlowStagingInfoArgs> getStaging() {
         return this.staging == null ? Input.empty() : this.staging;
@@ -154,7 +154,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="traceLevel")
-        private final @Nullable Input<Object> traceLevel;
+      private final @Nullable Input<Object> traceLevel;
 
     public Input<Object> getTraceLevel() {
         return this.traceLevel == null ? Input.empty() : this.traceLevel;
@@ -166,7 +166,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -177,7 +177,7 @@ public final class ExecuteDataFlowActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userProperties")
-        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;

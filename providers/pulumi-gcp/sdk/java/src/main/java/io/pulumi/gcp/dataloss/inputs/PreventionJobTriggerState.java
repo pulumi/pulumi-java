@@ -22,7 +22,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -45,7 +45,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="inspectJob")
-        private final @Nullable Input<PreventionJobTriggerInspectJobGetArgs> inspectJob;
+      private final @Nullable Input<PreventionJobTriggerInspectJobGetArgs> inspectJob;
 
     public Input<PreventionJobTriggerInspectJobGetArgs> getInspectJob() {
         return this.inspectJob == null ? Input.empty() : this.inspectJob;
@@ -56,7 +56,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lastRunTime")
-        private final @Nullable Input<String> lastRunTime;
+      private final @Nullable Input<String> lastRunTime;
 
     public Input<String> getLastRunTime() {
         return this.lastRunTime == null ? Input.empty() : this.lastRunTime;
@@ -67,7 +67,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,7 +79,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="parent")
-        private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -92,7 +92,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="status")
-        private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -104,7 +104,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="triggers")
-        private final @Nullable Input<List<PreventionJobTriggerTriggerGetArgs>> triggers;
+      private final @Nullable Input<List<PreventionJobTriggerTriggerGetArgs>> triggers;
 
     public Input<List<PreventionJobTriggerTriggerGetArgs>> getTriggers() {
         return this.triggers == null ? Input.empty() : this.triggers;

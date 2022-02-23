@@ -23,7 +23,7 @@ public final class PacketCaptureFilterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="localIPAddress")
-        private final @Nullable String localIPAddress;
+      private final @Nullable String localIPAddress;
 
     public Optional<String> getLocalIPAddress() {
         return this.localIPAddress == null ? Optional.empty() : Optional.ofNullable(this.localIPAddress);
@@ -34,7 +34,7 @@ public final class PacketCaptureFilterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="localPort")
-        private final @Nullable String localPort;
+      private final @Nullable String localPort;
 
     public Optional<String> getLocalPort() {
         return this.localPort == null ? Optional.empty() : Optional.ofNullable(this.localPort);
@@ -45,7 +45,7 @@ public final class PacketCaptureFilterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="protocol")
-        private final @Nullable String protocol;
+      private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -56,7 +56,7 @@ public final class PacketCaptureFilterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="remoteIPAddress")
-        private final @Nullable String remoteIPAddress;
+      private final @Nullable String remoteIPAddress;
 
     public Optional<String> getRemoteIPAddress() {
         return this.remoteIPAddress == null ? Optional.empty() : Optional.ofNullable(this.remoteIPAddress);
@@ -67,7 +67,7 @@ public final class PacketCaptureFilterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="remotePort")
-        private final @Nullable String remotePort;
+      private final @Nullable String remotePort;
 
     public Optional<String> getRemotePort() {
         return this.remotePort == null ? Optional.empty() : Optional.ofNullable(this.remotePort);

@@ -33,7 +33,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-        private final Input<String> accountName;
+      private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -44,7 +44,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationLicenses")
-        private final @Nullable Input<List<String>> applicationLicenses;
+      private final @Nullable Input<List<String>> applicationLicenses;
 
     public Input<List<String>> getApplicationLicenses() {
         return this.applicationLicenses == null ? Input.empty() : this.applicationLicenses;
@@ -55,7 +55,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationPackages")
-        private final @Nullable Input<List<ApplicationPackageReferenceArgs>> applicationPackages;
+      private final @Nullable Input<List<ApplicationPackageReferenceArgs>> applicationPackages;
 
     public Input<List<ApplicationPackageReferenceArgs>> getApplicationPackages() {
         return this.applicationPackages == null ? Input.empty() : this.applicationPackages;
@@ -66,7 +66,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificates")
-        private final @Nullable Input<List<CertificateReferenceArgs>> certificates;
+      private final @Nullable Input<List<CertificateReferenceArgs>> certificates;
 
     public Input<List<CertificateReferenceArgs>> getCertificates() {
         return this.certificates == null ? Input.empty() : this.certificates;
@@ -77,7 +77,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentConfiguration")
-        private final @Nullable Input<DeploymentConfigurationArgs> deploymentConfiguration;
+      private final @Nullable Input<DeploymentConfigurationArgs> deploymentConfiguration;
 
     public Input<DeploymentConfigurationArgs> getDeploymentConfiguration() {
         return this.deploymentConfiguration == null ? Input.empty() : this.deploymentConfiguration;
@@ -88,7 +88,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-        private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -99,7 +99,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-        private final @Nullable Input<BatchPoolIdentityArgs> identity;
+      private final @Nullable Input<BatchPoolIdentityArgs> identity;
 
     public Input<BatchPoolIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -110,7 +110,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interNodeCommunication")
-        private final @Nullable Input<InterNodeCommunicationState> interNodeCommunication;
+      private final @Nullable Input<InterNodeCommunicationState> interNodeCommunication;
 
     public Input<InterNodeCommunicationState> getInterNodeCommunication() {
         return this.interNodeCommunication == null ? Input.empty() : this.interNodeCommunication;
@@ -121,7 +121,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-        private final @Nullable Input<List<MetadataItemArgs>> metadata;
+      private final @Nullable Input<List<MetadataItemArgs>> metadata;
 
     public Input<List<MetadataItemArgs>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -132,7 +132,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountConfiguration")
-        private final @Nullable Input<List<MountConfigurationArgs>> mountConfiguration;
+      private final @Nullable Input<List<MountConfigurationArgs>> mountConfiguration;
 
     public Input<List<MountConfigurationArgs>> getMountConfiguration() {
         return this.mountConfiguration == null ? Input.empty() : this.mountConfiguration;
@@ -143,7 +143,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfiguration")
-        private final @Nullable Input<NetworkConfigurationArgs> networkConfiguration;
+      private final @Nullable Input<NetworkConfigurationArgs> networkConfiguration;
 
     public Input<NetworkConfigurationArgs> getNetworkConfiguration() {
         return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
@@ -154,7 +154,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolName")
-        private final @Nullable Input<String> poolName;
+      private final @Nullable Input<String> poolName;
 
     public Input<String> getPoolName() {
         return this.poolName == null ? Input.empty() : this.poolName;
@@ -165,7 +165,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -176,7 +176,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scaleSettings")
-        private final @Nullable Input<ScaleSettingsArgs> scaleSettings;
+      private final @Nullable Input<ScaleSettingsArgs> scaleSettings;
 
     public Input<ScaleSettingsArgs> getScaleSettings() {
         return this.scaleSettings == null ? Input.empty() : this.scaleSettings;
@@ -187,7 +187,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTask")
-        private final @Nullable Input<StartTaskArgs> startTask;
+      private final @Nullable Input<StartTaskArgs> startTask;
 
     public Input<StartTaskArgs> getStartTask() {
         return this.startTask == null ? Input.empty() : this.startTask;
@@ -198,7 +198,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskSchedulingPolicy")
-        private final @Nullable Input<TaskSchedulingPolicyArgs> taskSchedulingPolicy;
+      private final @Nullable Input<TaskSchedulingPolicyArgs> taskSchedulingPolicy;
 
     public Input<TaskSchedulingPolicyArgs> getTaskSchedulingPolicy() {
         return this.taskSchedulingPolicy == null ? Input.empty() : this.taskSchedulingPolicy;
@@ -209,14 +209,14 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskSlotsPerNode")
-        private final @Nullable Input<Integer> taskSlotsPerNode;
+      private final @Nullable Input<Integer> taskSlotsPerNode;
 
     public Input<Integer> getTaskSlotsPerNode() {
         return this.taskSlotsPerNode == null ? Input.empty() : this.taskSlotsPerNode;
     }
 
     @InputImport(name="userAccounts")
-        private final @Nullable Input<List<UserAccountArgs>> userAccounts;
+      private final @Nullable Input<List<UserAccountArgs>> userAccounts;
 
     public Input<List<UserAccountArgs>> getUserAccounts() {
         return this.userAccounts == null ? Input.empty() : this.userAccounts;
@@ -227,7 +227,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmSize")
-        private final @Nullable Input<String> vmSize;
+      private final @Nullable Input<String> vmSize;
 
     public Input<String> getVmSize() {
         return this.vmSize == null ? Input.empty() : this.vmSize;

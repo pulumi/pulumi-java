@@ -13,7 +13,7 @@ public final class GetAttributeGroupAssociationArgs extends io.pulumi.resources.
     public static final GetAttributeGroupAssociationArgs Empty = new GetAttributeGroupAssociationArgs();
 
     @InputImport(name="id", required=true)
-        private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;

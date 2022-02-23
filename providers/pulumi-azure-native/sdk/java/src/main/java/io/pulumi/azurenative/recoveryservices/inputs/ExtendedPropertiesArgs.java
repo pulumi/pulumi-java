@@ -23,7 +23,7 @@ public final class ExtendedPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="diskExclusionProperties")
-        private final @Nullable Input<DiskExclusionPropertiesArgs> diskExclusionProperties;
+      private final @Nullable Input<DiskExclusionPropertiesArgs> diskExclusionProperties;
 
     public Input<DiskExclusionPropertiesArgs> getDiskExclusionProperties() {
         return this.diskExclusionProperties == null ? Input.empty() : this.diskExclusionProperties;

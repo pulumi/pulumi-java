@@ -24,7 +24,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="capabilities", required=true)
-        private final Map<String,String> capabilities;
+      private final Map<String,String> capabilities;
 
     public Map<String,String> getCapabilities() {
         return this.capabilities;
@@ -35,7 +35,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="concurrentJobsLimit", required=true)
-        private final Integer concurrentJobsLimit;
+      private final Integer concurrentJobsLimit;
 
     public Integer getConcurrentJobsLimit() {
         return this.concurrentJobsLimit;
@@ -46,7 +46,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="expiryTime", required=true)
-        private final String expiryTime;
+      private final String expiryTime;
 
     public String getExpiryTime() {
         return this.expiryTime;
@@ -57,7 +57,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="hostServiceUri", required=true)
-        private final String hostServiceUri;
+      private final String hostServiceUri;
 
     public String getHostServiceUri() {
         return this.hostServiceUri;
@@ -68,7 +68,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="isActiveDispatcher", required=true)
-        private final Boolean isActiveDispatcher;
+      private final Boolean isActiveDispatcher;
 
     public Boolean getIsActiveDispatcher() {
         return this.isActiveDispatcher;
@@ -79,7 +79,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="lastConnectTime", required=true)
-        private final String lastConnectTime;
+      private final String lastConnectTime;
 
     public String getLastConnectTime() {
         return this.lastConnectTime;
@@ -90,7 +90,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="lastEndUpdateTime", required=true)
-        private final String lastEndUpdateTime;
+      private final String lastEndUpdateTime;
 
     public String getLastEndUpdateTime() {
         return this.lastEndUpdateTime;
@@ -101,7 +101,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="lastStartTime", required=true)
-        private final String lastStartTime;
+      private final String lastStartTime;
 
     public String getLastStartTime() {
         return this.lastStartTime;
@@ -112,7 +112,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="lastStartUpdateTime", required=true)
-        private final String lastStartUpdateTime;
+      private final String lastStartUpdateTime;
 
     public String getLastStartUpdateTime() {
         return this.lastStartUpdateTime;
@@ -123,7 +123,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="lastStopTime", required=true)
-        private final String lastStopTime;
+      private final String lastStopTime;
 
     public String getLastStopTime() {
         return this.lastStopTime;
@@ -134,7 +134,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="lastUpdateResult", required=true)
-        private final String lastUpdateResult;
+      private final String lastUpdateResult;
 
     public String getLastUpdateResult() {
         return this.lastUpdateResult;
@@ -145,7 +145,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="machineName", required=true)
-        private final String machineName;
+      private final String machineName;
 
     public String getMachineName() {
         return this.machineName;
@@ -156,7 +156,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="maxConcurrentJobs", required=true)
-        private final Integer maxConcurrentJobs;
+      private final Integer maxConcurrentJobs;
 
     public Integer getMaxConcurrentJobs() {
         return this.maxConcurrentJobs;
@@ -167,7 +167,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="nodeName", required=true)
-        private final String nodeName;
+      private final String nodeName;
 
     public String getNodeName() {
         return this.nodeName;
@@ -178,7 +178,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="registerTime", required=true)
-        private final String registerTime;
+      private final String registerTime;
 
     public String getRegisterTime() {
         return this.registerTime;
@@ -189,7 +189,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="status", required=true)
-        private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -200,7 +200,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="version", required=true)
-        private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -211,7 +211,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="versionStatus", required=true)
-        private final String versionStatus;
+      private final String versionStatus;
 
     public String getVersionStatus() {
         return this.versionStatus;

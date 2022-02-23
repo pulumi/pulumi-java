@@ -18,7 +18,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs e
      * 
      */
     @InputImport(name="path", required=true)
-        private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;

@@ -21,7 +21,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="endAddress")
-        private final @Nullable Input<String> endAddress;
+      private final @Nullable Input<String> endAddress;
 
     public Input<String> getEndAddress() {
         return this.endAddress == null ? Input.empty() : this.endAddress;
@@ -32,7 +32,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kind")
-        private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -43,7 +43,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -54,7 +54,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="routeName")
-        private final @Nullable Input<String> routeName;
+      private final @Nullable Input<String> routeName;
 
     public Input<String> getRouteName() {
         return this.routeName == null ? Input.empty() : this.routeName;
@@ -81,7 +81,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="routeType")
-        private final @Nullable Input<Either<String,RouteType>> routeType;
+      private final @Nullable Input<Either<String,RouteType>> routeType;
 
     public Input<Either<String,RouteType>> getRouteType() {
         return this.routeType == null ? Input.empty() : this.routeType;
@@ -92,7 +92,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="startAddress")
-        private final @Nullable Input<String> startAddress;
+      private final @Nullable Input<String> startAddress;
 
     public Input<String> getStartAddress() {
         return this.startAddress == null ? Input.empty() : this.startAddress;
@@ -103,7 +103,7 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="vnetName", required=true)
-        private final Input<String> vnetName;
+      private final Input<String> vnetName;
 
     public Input<String> getVnetName() {
         return this.vnetName;

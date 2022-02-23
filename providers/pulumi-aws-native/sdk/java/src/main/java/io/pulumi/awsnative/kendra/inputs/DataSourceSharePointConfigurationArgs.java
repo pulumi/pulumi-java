@@ -25,84 +25,84 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
     public static final DataSourceSharePointConfigurationArgs Empty = new DataSourceSharePointConfigurationArgs();
 
     @InputImport(name="crawlAttachments")
-        private final @Nullable Input<Boolean> crawlAttachments;
+      private final @Nullable Input<Boolean> crawlAttachments;
 
     public Input<Boolean> getCrawlAttachments() {
         return this.crawlAttachments == null ? Input.empty() : this.crawlAttachments;
     }
 
     @InputImport(name="disableLocalGroups")
-        private final @Nullable Input<Boolean> disableLocalGroups;
+      private final @Nullable Input<Boolean> disableLocalGroups;
 
     public Input<Boolean> getDisableLocalGroups() {
         return this.disableLocalGroups == null ? Input.empty() : this.disableLocalGroups;
     }
 
     @InputImport(name="documentTitleFieldName")
-        private final @Nullable Input<String> documentTitleFieldName;
+      private final @Nullable Input<String> documentTitleFieldName;
 
     public Input<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Input.empty() : this.documentTitleFieldName;
     }
 
     @InputImport(name="exclusionPatterns")
-        private final @Nullable Input<List<String>> exclusionPatterns;
+      private final @Nullable Input<List<String>> exclusionPatterns;
 
     public Input<List<String>> getExclusionPatterns() {
         return this.exclusionPatterns == null ? Input.empty() : this.exclusionPatterns;
     }
 
     @InputImport(name="fieldMappings")
-        private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+      private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
     }
 
     @InputImport(name="inclusionPatterns")
-        private final @Nullable Input<List<String>> inclusionPatterns;
+      private final @Nullable Input<List<String>> inclusionPatterns;
 
     public Input<List<String>> getInclusionPatterns() {
         return this.inclusionPatterns == null ? Input.empty() : this.inclusionPatterns;
     }
 
     @InputImport(name="secretArn", required=true)
-        private final Input<String> secretArn;
+      private final Input<String> secretArn;
 
     public Input<String> getSecretArn() {
         return this.secretArn;
     }
 
     @InputImport(name="sharePointVersion", required=true)
-        private final Input<DataSourceSharePointConfigurationSharePointVersion> sharePointVersion;
+      private final Input<DataSourceSharePointConfigurationSharePointVersion> sharePointVersion;
 
     public Input<DataSourceSharePointConfigurationSharePointVersion> getSharePointVersion() {
         return this.sharePointVersion;
     }
 
     @InputImport(name="sslCertificateS3Path")
-        private final @Nullable Input<DataSourceS3PathArgs> sslCertificateS3Path;
+      private final @Nullable Input<DataSourceS3PathArgs> sslCertificateS3Path;
 
     public Input<DataSourceS3PathArgs> getSslCertificateS3Path() {
         return this.sslCertificateS3Path == null ? Input.empty() : this.sslCertificateS3Path;
     }
 
     @InputImport(name="urls", required=true)
-        private final Input<List<String>> urls;
+      private final Input<List<String>> urls;
 
     public Input<List<String>> getUrls() {
         return this.urls;
     }
 
     @InputImport(name="useChangeLog")
-        private final @Nullable Input<Boolean> useChangeLog;
+      private final @Nullable Input<Boolean> useChangeLog;
 
     public Input<Boolean> getUseChangeLog() {
         return this.useChangeLog == null ? Input.empty() : this.useChangeLog;
     }
 
     @InputImport(name="vpcConfiguration")
-        private final @Nullable Input<DataSourceVpcConfigurationArgs> vpcConfiguration;
+      private final @Nullable Input<DataSourceVpcConfigurationArgs> vpcConfiguration;
 
     public Input<DataSourceVpcConfigurationArgs> getVpcConfiguration() {
         return this.vpcConfiguration == null ? Input.empty() : this.vpcConfiguration;

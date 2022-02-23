@@ -18,7 +18,7 @@ public final class WebACLExcludedRuleArgs extends io.pulumi.resources.ResourceAr
     public static final WebACLExcludedRuleArgs Empty = new WebACLExcludedRuleArgs();
 
     @InputImport(name="name", required=true)
-        private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

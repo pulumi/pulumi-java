@@ -17,7 +17,7 @@ public final class GetSystemTopicArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSystemTopicArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="systemTopicName", required=true)
-        private final String systemTopicName;
+      private final String systemTopicName;
 
     public String getSystemTopicName() {
         return this.systemTopicName;

@@ -22,7 +22,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyName", required=true)
-        private final Input<String> keyName;
+      private final Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName;
@@ -33,7 +33,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVersion", required=true)
-        private final Input<String> keyVersion;
+      private final Input<String> keyVersion;
 
     public Input<String> getKeyVersion() {
         return this.keyVersion;
@@ -44,7 +44,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vaultBaseUrl", required=true)
-        private final Input<String> vaultBaseUrl;
+      private final Input<String> vaultBaseUrl;
 
     public Input<String> getVaultBaseUrl() {
         return this.vaultBaseUrl;

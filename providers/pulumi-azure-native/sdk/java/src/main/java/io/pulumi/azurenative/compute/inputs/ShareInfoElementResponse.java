@@ -17,7 +17,7 @@ public final class ShareInfoElementResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="vmUri", required=true)
-        private final String vmUri;
+      private final String vmUri;
 
     public String getVmUri() {
         return this.vmUri;

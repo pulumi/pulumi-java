@@ -23,7 +23,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityLimit")
-        private final @Nullable Input<Integer> capacityLimit;
+      private final @Nullable Input<Integer> capacityLimit;
 
     public Input<Integer> getCapacityLimit() {
         return this.capacityLimit == null ? Input.empty() : this.capacityLimit;
@@ -34,7 +34,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityObjectId")
-        private final @Nullable Input<String> capacityObjectId;
+      private final @Nullable Input<String> capacityObjectId;
 
     public Input<String> getCapacityObjectId() {
         return this.capacityObjectId == null ? Input.empty() : this.capacityObjectId;
@@ -45,7 +45,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-        private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -56,7 +56,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final Input<String> resourceGroupName;
+      private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-        private final Input<AutoScaleVCoreSkuArgs> sku;
+      private final Input<AutoScaleVCoreSkuArgs> sku;
 
     public Input<AutoScaleVCoreSkuArgs> getSku() {
         return this.sku;
@@ -78,7 +78,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemData")
-        private final @Nullable Input<SystemDataArgs> systemData;
+      private final @Nullable Input<SystemDataArgs> systemData;
 
     public Input<SystemDataArgs> getSystemData() {
         return this.systemData == null ? Input.empty() : this.systemData;
@@ -89,7 +89,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -100,7 +100,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vcoreName")
-        private final @Nullable Input<String> vcoreName;
+      private final @Nullable Input<String> vcoreName;
 
     public Input<String> getVcoreName() {
         return this.vcoreName == null ? Input.empty() : this.vcoreName;

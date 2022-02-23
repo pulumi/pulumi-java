@@ -24,7 +24,7 @@ public final class StreamingEndpointAccessControlResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="akamai")
-        private final @Nullable AkamaiAccessControlResponse akamai;
+      private final @Nullable AkamaiAccessControlResponse akamai;
 
     public Optional<AkamaiAccessControlResponse> getAkamai() {
         return this.akamai == null ? Optional.empty() : Optional.ofNullable(this.akamai);
@@ -35,7 +35,7 @@ public final class StreamingEndpointAccessControlResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="ip")
-        private final @Nullable IPAccessControlResponse ip;
+      private final @Nullable IPAccessControlResponse ip;
 
     public Optional<IPAccessControlResponse> getIp() {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);

@@ -22,7 +22,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessageTextArgs extends i
      * 
      */
     @InputImport(name="allowPlaybackInterruption")
-        private final @Nullable Input<Boolean> allowPlaybackInterruption;
+      private final @Nullable Input<Boolean> allowPlaybackInterruption;
 
     public Input<Boolean> getAllowPlaybackInterruption() {
         return this.allowPlaybackInterruption == null ? Input.empty() : this.allowPlaybackInterruption;
@@ -33,7 +33,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessageTextArgs extends i
      * 
      */
     @InputImport(name="texts")
-        private final @Nullable Input<List<String>> texts;
+      private final @Nullable Input<List<String>> texts;
 
     public Input<List<String>> getTexts() {
         return this.texts == null ? Input.empty() : this.texts;

@@ -20,7 +20,7 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxJobCount")
-        private final @Nullable Input<Integer> maxJobCount;
+      private final @Nullable Input<Integer> maxJobCount;
 
     public Input<Integer> getMaxJobCount() {
         return this.maxJobCount == null ? Input.empty() : this.maxJobCount;
@@ -31,7 +31,7 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxJobOccurrence")
-        private final @Nullable Input<Integer> maxJobOccurrence;
+      private final @Nullable Input<Integer> maxJobOccurrence;
 
     public Input<Integer> getMaxJobOccurrence() {
         return this.maxJobOccurrence == null ? Input.empty() : this.maxJobOccurrence;
@@ -42,7 +42,7 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxRecurrence")
-        private final @Nullable Input<JobMaxRecurrenceArgs> maxRecurrence;
+      private final @Nullable Input<JobMaxRecurrenceArgs> maxRecurrence;
 
     public Input<JobMaxRecurrenceArgs> getMaxRecurrence() {
         return this.maxRecurrence == null ? Input.empty() : this.maxRecurrence;

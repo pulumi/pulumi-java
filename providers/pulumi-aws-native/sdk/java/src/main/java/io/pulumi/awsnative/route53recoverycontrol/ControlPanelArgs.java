@@ -21,7 +21,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterArn")
-        private final @Nullable Input<String> clusterArn;
+      private final @Nullable Input<String> clusterArn;
 
     public Input<String> getClusterArn() {
         return this.clusterArn == null ? Input.empty() : this.clusterArn;
@@ -32,7 +32,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-        private final @Nullable Input<List<ControlPanelTagArgs>> tags;
+      private final @Nullable Input<List<ControlPanelTagArgs>> tags;
 
     public Input<List<ControlPanelTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

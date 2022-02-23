@@ -24,7 +24,7 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowedRuntimeClassNames", required=true)
-        private final Input<List<String>> allowedRuntimeClassNames;
+      private final Input<List<String>> allowedRuntimeClassNames;
 
     public Input<List<String>> getAllowedRuntimeClassNames() {
         return this.allowedRuntimeClassNames;
@@ -35,7 +35,7 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="defaultRuntimeClassName")
-        private final @Nullable Input<String> defaultRuntimeClassName;
+      private final @Nullable Input<String> defaultRuntimeClassName;
 
     public Input<String> getDefaultRuntimeClassName() {
         return this.defaultRuntimeClassName == null ? Input.empty() : this.defaultRuntimeClassName;

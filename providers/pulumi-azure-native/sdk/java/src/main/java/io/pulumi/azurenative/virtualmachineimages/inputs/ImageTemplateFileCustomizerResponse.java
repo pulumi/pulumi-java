@@ -23,7 +23,7 @@ public final class ImageTemplateFileCustomizerResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="destination")
-        private final @Nullable String destination;
+      private final @Nullable String destination;
 
     public Optional<String> getDestination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
@@ -34,7 +34,7 @@ public final class ImageTemplateFileCustomizerResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -45,7 +45,7 @@ public final class ImageTemplateFileCustomizerResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sha256Checksum")
-        private final @Nullable String sha256Checksum;
+      private final @Nullable String sha256Checksum;
 
     public Optional<String> getSha256Checksum() {
         return this.sha256Checksum == null ? Optional.empty() : Optional.ofNullable(this.sha256Checksum);
@@ -56,7 +56,7 @@ public final class ImageTemplateFileCustomizerResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sourceUri")
-        private final @Nullable String sourceUri;
+      private final @Nullable String sourceUri;
 
     public Optional<String> getSourceUri() {
         return this.sourceUri == null ? Optional.empty() : Optional.ofNullable(this.sourceUri);
@@ -68,7 +68,7 @@ public final class ImageTemplateFileCustomizerResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-        private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

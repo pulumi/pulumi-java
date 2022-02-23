@@ -23,7 +23,7 @@ public final class UrlRewriteActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-        private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class UrlRewriteActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="parameters", required=true)
-        private final UrlRewriteActionParametersResponse parameters;
+      private final UrlRewriteActionParametersResponse parameters;
 
     public UrlRewriteActionParametersResponse getParameters() {
         return this.parameters;

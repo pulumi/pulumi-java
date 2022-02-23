@@ -24,7 +24,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-        private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -46,7 +46,7 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamingUnits")
-        private final @Nullable Input<Integer> streamingUnits;
+      private final @Nullable Input<Integer> streamingUnits;
 
     public Input<Integer> getStreamingUnits() {
         return this.streamingUnits == null ? Input.empty() : this.streamingUnits;

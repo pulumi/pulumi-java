@@ -23,7 +23,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dataTransferSubscriberFeePercent")
-        private final @Nullable Input<Integer> dataTransferSubscriberFeePercent;
+      private final @Nullable Input<Integer> dataTransferSubscriberFeePercent;
 
     public Input<Integer> getDataTransferSubscriberFeePercent() {
         return this.dataTransferSubscriberFeePercent == null ? Input.empty() : this.dataTransferSubscriberFeePercent;
@@ -34,7 +34,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description", required=true)
-        private final Input<String> description;
+      private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -45,7 +45,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="encryption")
-        private final @Nullable Input<FlowEntitlementEncryptionArgs> encryption;
+      private final @Nullable Input<FlowEntitlementEncryptionArgs> encryption;
 
     public Input<FlowEntitlementEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -56,7 +56,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="entitlementStatus")
-        private final @Nullable Input<FlowEntitlementEntitlementStatus> entitlementStatus;
+      private final @Nullable Input<FlowEntitlementEntitlementStatus> entitlementStatus;
 
     public Input<FlowEntitlementEntitlementStatus> getEntitlementStatus() {
         return this.entitlementStatus == null ? Input.empty() : this.entitlementStatus;
@@ -67,7 +67,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="flowArn", required=true)
-        private final Input<String> flowArn;
+      private final Input<String> flowArn;
 
     public Input<String> getFlowArn() {
         return this.flowArn;
@@ -78,7 +78,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-        private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subscribers", required=true)
-        private final Input<List<String>> subscribers;
+      private final Input<List<String>> subscribers;
 
     public Input<List<String>> getSubscribers() {
         return this.subscribers;

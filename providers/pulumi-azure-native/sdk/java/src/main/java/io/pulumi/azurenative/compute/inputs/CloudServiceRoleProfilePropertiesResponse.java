@@ -24,7 +24,7 @@ public final class CloudServiceRoleProfilePropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-        private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -35,7 +35,7 @@ public final class CloudServiceRoleProfilePropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="sku")
-        private final @Nullable CloudServiceRoleSkuResponse sku;
+      private final @Nullable CloudServiceRoleSkuResponse sku;
 
     public Optional<CloudServiceRoleSkuResponse> getSku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);

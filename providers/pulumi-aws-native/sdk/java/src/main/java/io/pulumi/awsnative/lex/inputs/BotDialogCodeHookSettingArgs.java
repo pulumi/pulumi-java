@@ -18,7 +18,7 @@ public final class BotDialogCodeHookSettingArgs extends io.pulumi.resources.Reso
     public static final BotDialogCodeHookSettingArgs Empty = new BotDialogCodeHookSettingArgs();
 
     @InputImport(name="enabled", required=true)
-        private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;

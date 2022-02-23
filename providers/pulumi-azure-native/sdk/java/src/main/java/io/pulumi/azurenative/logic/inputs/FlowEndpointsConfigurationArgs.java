@@ -23,7 +23,7 @@ public final class FlowEndpointsConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="connector")
-        private final @Nullable Input<FlowEndpointsArgs> connector;
+      private final @Nullable Input<FlowEndpointsArgs> connector;
 
     public Input<FlowEndpointsArgs> getConnector() {
         return this.connector == null ? Input.empty() : this.connector;
@@ -34,7 +34,7 @@ public final class FlowEndpointsConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="workflow")
-        private final @Nullable Input<FlowEndpointsArgs> workflow;
+      private final @Nullable Input<FlowEndpointsArgs> workflow;
 
     public Input<FlowEndpointsArgs> getWorkflow() {
         return this.workflow == null ? Input.empty() : this.workflow;

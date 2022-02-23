@@ -32,7 +32,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="accessToken")
-        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
+      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -43,7 +43,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="annotations")
-        private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -54,7 +54,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="authentication")
-        private final @Nullable Input<Object> authentication;
+      private final @Nullable Input<Object> authentication;
 
     public Input<Object> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -65,7 +65,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="connectVia")
-        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -76,7 +76,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="credential")
-        private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -87,7 +87,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-        private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -98,7 +98,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="domain", required=true)
-        private final Input<Object> domain;
+      private final Input<Object> domain;
 
     public Input<Object> getDomain() {
         return this.domain;
@@ -109,7 +109,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="encryptedCredential")
-        private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -120,7 +120,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="existingClusterId")
-        private final @Nullable Input<Object> existingClusterId;
+      private final @Nullable Input<Object> existingClusterId;
 
     public Input<Object> getExistingClusterId() {
         return this.existingClusterId == null ? Input.empty() : this.existingClusterId;
@@ -131,7 +131,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="instancePoolId")
-        private final @Nullable Input<Object> instancePoolId;
+      private final @Nullable Input<Object> instancePoolId;
 
     public Input<Object> getInstancePoolId() {
         return this.instancePoolId == null ? Input.empty() : this.instancePoolId;
@@ -142,7 +142,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="newClusterCustomTags")
-        private final @Nullable Input<Map<String,Object>> newClusterCustomTags;
+      private final @Nullable Input<Map<String,Object>> newClusterCustomTags;
 
     public Input<Map<String,Object>> getNewClusterCustomTags() {
         return this.newClusterCustomTags == null ? Input.empty() : this.newClusterCustomTags;
@@ -153,7 +153,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="newClusterDriverNodeType")
-        private final @Nullable Input<Object> newClusterDriverNodeType;
+      private final @Nullable Input<Object> newClusterDriverNodeType;
 
     public Input<Object> getNewClusterDriverNodeType() {
         return this.newClusterDriverNodeType == null ? Input.empty() : this.newClusterDriverNodeType;
@@ -164,7 +164,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="newClusterEnableElasticDisk")
-        private final @Nullable Input<Object> newClusterEnableElasticDisk;
+      private final @Nullable Input<Object> newClusterEnableElasticDisk;
 
     public Input<Object> getNewClusterEnableElasticDisk() {
         return this.newClusterEnableElasticDisk == null ? Input.empty() : this.newClusterEnableElasticDisk;
@@ -175,7 +175,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="newClusterInitScripts")
-        private final @Nullable Input<Object> newClusterInitScripts;
+      private final @Nullable Input<Object> newClusterInitScripts;
 
     public Input<Object> getNewClusterInitScripts() {
         return this.newClusterInitScripts == null ? Input.empty() : this.newClusterInitScripts;
@@ -186,7 +186,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="newClusterLogDestination")
-        private final @Nullable Input<Object> newClusterLogDestination;
+      private final @Nullable Input<Object> newClusterLogDestination;
 
     public Input<Object> getNewClusterLogDestination() {
         return this.newClusterLogDestination == null ? Input.empty() : this.newClusterLogDestination;
@@ -197,7 +197,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="newClusterNodeType")
-        private final @Nullable Input<Object> newClusterNodeType;
+      private final @Nullable Input<Object> newClusterNodeType;
 
     public Input<Object> getNewClusterNodeType() {
         return this.newClusterNodeType == null ? Input.empty() : this.newClusterNodeType;
@@ -208,7 +208,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="newClusterNumOfWorker")
-        private final @Nullable Input<Object> newClusterNumOfWorker;
+      private final @Nullable Input<Object> newClusterNumOfWorker;
 
     public Input<Object> getNewClusterNumOfWorker() {
         return this.newClusterNumOfWorker == null ? Input.empty() : this.newClusterNumOfWorker;
@@ -219,7 +219,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="newClusterSparkConf")
-        private final @Nullable Input<Map<String,Object>> newClusterSparkConf;
+      private final @Nullable Input<Map<String,Object>> newClusterSparkConf;
 
     public Input<Map<String,Object>> getNewClusterSparkConf() {
         return this.newClusterSparkConf == null ? Input.empty() : this.newClusterSparkConf;
@@ -230,7 +230,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="newClusterSparkEnvVars")
-        private final @Nullable Input<Map<String,Object>> newClusterSparkEnvVars;
+      private final @Nullable Input<Map<String,Object>> newClusterSparkEnvVars;
 
     public Input<Map<String,Object>> getNewClusterSparkEnvVars() {
         return this.newClusterSparkEnvVars == null ? Input.empty() : this.newClusterSparkEnvVars;
@@ -241,7 +241,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="newClusterVersion")
-        private final @Nullable Input<Object> newClusterVersion;
+      private final @Nullable Input<Object> newClusterVersion;
 
     public Input<Object> getNewClusterVersion() {
         return this.newClusterVersion == null ? Input.empty() : this.newClusterVersion;
@@ -252,7 +252,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parameters")
-        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -263,7 +263,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="policyId")
-        private final @Nullable Input<Object> policyId;
+      private final @Nullable Input<Object> policyId;
 
     public Input<Object> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -275,7 +275,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -286,7 +286,7 @@ public final class AzureDatabricksLinkedServiceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="workspaceResourceId")
-        private final @Nullable Input<Object> workspaceResourceId;
+      private final @Nullable Input<Object> workspaceResourceId;
 
     public Input<Object> getWorkspaceResourceId() {
         return this.workspaceResourceId == null ? Input.empty() : this.workspaceResourceId;

@@ -17,7 +17,7 @@ public final class GetMonitorDefaultKeyArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="monitorName", required=true)
-        private final String monitorName;
+      private final String monitorName;
 
     public String getMonitorName() {
         return this.monitorName;
@@ -28,7 +28,7 @@ public final class GetMonitorDefaultKeyArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-        private final String resourceGroupName;
+      private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;

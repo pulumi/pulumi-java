@@ -24,7 +24,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dnsServers")
-        private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Input<List<String>> dnsServers;
 
     public Input<List<String>> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -35,7 +35,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="internalDnsNameLabel")
-        private final @Nullable Input<String> internalDnsNameLabel;
+      private final @Nullable Input<String> internalDnsNameLabel;
 
     public Input<String> getInternalDnsNameLabel() {
         return this.internalDnsNameLabel == null ? Input.empty() : this.internalDnsNameLabel;

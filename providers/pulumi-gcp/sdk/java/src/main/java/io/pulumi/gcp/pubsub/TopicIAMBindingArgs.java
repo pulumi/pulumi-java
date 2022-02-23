@@ -17,14 +17,14 @@ public final class TopicIAMBindingArgs extends io.pulumi.resources.ResourceArgs 
     public static final TopicIAMBindingArgs Empty = new TopicIAMBindingArgs();
 
     @InputImport(name="condition")
-        private final @Nullable Input<TopicIAMBindingConditionArgs> condition;
+      private final @Nullable Input<TopicIAMBindingConditionArgs> condition;
 
     public Input<TopicIAMBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-        private final Input<List<String>> members;
+      private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -36,7 +36,7 @@ public final class TopicIAMBindingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-        private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -49,7 +49,7 @@ public final class TopicIAMBindingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role", required=true)
-        private final Input<String> role;
+      private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -60,7 +60,7 @@ public final class TopicIAMBindingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="topic", required=true)
-        private final Input<String> topic;
+      private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;

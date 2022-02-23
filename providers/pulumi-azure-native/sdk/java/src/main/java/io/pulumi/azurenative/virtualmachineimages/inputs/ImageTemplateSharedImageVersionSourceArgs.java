@@ -22,7 +22,7 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="imageVersionId", required=true)
-        private final Input<String> imageVersionId;
+      private final Input<String> imageVersionId;
 
     public Input<String> getImageVersionId() {
         return this.imageVersionId;
@@ -34,7 +34,7 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-        private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

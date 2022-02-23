@@ -20,7 +20,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliasName")
-        private final @Nullable Input<String> aliasName;
+      private final @Nullable Input<String> aliasName;
 
     public Input<String> getAliasName() {
         return this.aliasName == null ? Input.empty() : this.aliasName;
@@ -31,7 +31,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-        private final Input<PutAliasRequestPropertiesArgs> properties;
+      private final Input<PutAliasRequestPropertiesArgs> properties;
 
     public Input<PutAliasRequestPropertiesArgs> getProperties() {
         return this.properties;

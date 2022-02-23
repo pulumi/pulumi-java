@@ -18,7 +18,7 @@ public final class RecordingConfigurationS3DestinationConfigurationArgs extends 
     public static final RecordingConfigurationS3DestinationConfigurationArgs Empty = new RecordingConfigurationS3DestinationConfigurationArgs();
 
     @InputImport(name="bucketName", required=true)
-        private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;

@@ -13,7 +13,7 @@ public final class ResourceProviderManifestPropertiesResponseFeaturesRule extend
     public static final ResourceProviderManifestPropertiesResponseFeaturesRule Empty = new ResourceProviderManifestPropertiesResponseFeaturesRule();
 
     @InputImport(name="requiredFeaturesPolicy", required=true)
-        private final String requiredFeaturesPolicy;
+      private final String requiredFeaturesPolicy;
 
     public String getRequiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;

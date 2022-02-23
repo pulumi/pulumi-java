@@ -26,7 +26,7 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enabled")
-        private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -37,7 +37,7 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyType")
-        private final @Nullable Input<Either<String,KeyType>> keyType;
+      private final @Nullable Input<Either<String,KeyType>> keyType;
 
     public Input<Either<String,KeyType>> getKeyType() {
         return this.keyType == null ? Input.empty() : this.keyType;

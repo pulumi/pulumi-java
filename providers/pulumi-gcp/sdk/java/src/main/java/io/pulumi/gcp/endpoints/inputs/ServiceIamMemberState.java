@@ -16,7 +16,7 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     public static final ServiceIamMemberState Empty = new ServiceIamMemberState();
 
     @InputImport(name="condition")
-        private final @Nullable Input<ServiceIamMemberConditionGetArgs> condition;
+      private final @Nullable Input<ServiceIamMemberConditionGetArgs> condition;
 
     public Input<ServiceIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-        private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-        private final @Nullable Input<String> member;
+      private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -47,14 +47,14 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-        private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
     }
 
     @InputImport(name="serviceName")
-        private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;

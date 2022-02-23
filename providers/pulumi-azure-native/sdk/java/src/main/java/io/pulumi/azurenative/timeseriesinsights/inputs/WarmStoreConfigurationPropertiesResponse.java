@@ -21,7 +21,7 @@ public final class WarmStoreConfigurationPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="dataRetention", required=true)
-        private final String dataRetention;
+      private final String dataRetention;
 
     public String getDataRetention() {
         return this.dataRetention;
