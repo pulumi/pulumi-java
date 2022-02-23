@@ -75,7 +75,6 @@ public final class CloudAuditOptionsResponse {
             this.logName = Objects.requireNonNull(logName);
             return this;
         }
-
         public CloudAuditOptionsResponse build() {
             return new CloudAuditOptionsResponse(authorizationLoggingOptions, logName);
         }

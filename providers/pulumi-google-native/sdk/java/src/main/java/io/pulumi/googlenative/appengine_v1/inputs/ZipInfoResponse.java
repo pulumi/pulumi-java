@@ -22,7 +22,7 @@ public final class ZipInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filesCount", required=true)
-    private final Integer filesCount;
+      private final Integer filesCount;
 
     public Integer getFilesCount() {
         return this.filesCount;
@@ -33,7 +33,7 @@ public final class ZipInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceUrl", required=true)
-    private final String sourceUrl;
+      private final String sourceUrl;
 
     public String getSourceUrl() {
         return this.sourceUrl;
@@ -82,7 +82,6 @@ public final class ZipInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
-
         public ZipInfoResponse build() {
             return new ZipInfoResponse(filesCount, sourceUrl);
         }

@@ -352,7 +352,6 @@ public final class GetEnvironmentSettingResult {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-
         public GetEnvironmentSettingResult build() {
             return new GetEnvironmentSettingResult(configurationState, description, id, lastChanged, lastPublished, latestOperationResult, location, name, provisioningState, publishingState, resourceSettings, tags, title, type, uniqueIdentifier);
         }

@@ -74,7 +74,6 @@ public final class ImageTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ImageTag build() {
             return new ImageTag(key, value);
         }

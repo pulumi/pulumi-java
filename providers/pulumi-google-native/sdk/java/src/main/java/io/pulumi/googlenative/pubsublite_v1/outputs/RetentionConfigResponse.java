@@ -74,7 +74,6 @@ public final class RetentionConfigResponse {
             this.period = Objects.requireNonNull(period);
             return this;
         }
-
         public RetentionConfigResponse build() {
             return new RetentionConfigResponse(perPartitionBytes, period);
         }

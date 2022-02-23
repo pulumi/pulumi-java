@@ -203,7 +203,6 @@ public final class GetDisasterRecoveryConfigResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDisasterRecoveryConfigResult build() {
             return new GetDisasterRecoveryConfigResult(alternateName, id, name, partnerNamespace, pendingReplicationOperationsCount, provisioningState, role, type);
         }

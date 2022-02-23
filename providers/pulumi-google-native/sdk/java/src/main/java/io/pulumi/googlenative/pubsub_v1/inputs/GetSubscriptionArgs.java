@@ -15,14 +15,14 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSubscriptionArgs Empty = new GetSubscriptionArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="subscriptionId", required=true)
-    private final String subscriptionId;
+      private final String subscriptionId;
 
     public String getSubscriptionId() {
         return this.subscriptionId;
@@ -71,7 +71,6 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public GetSubscriptionArgs build() {
             return new GetSubscriptionArgs(project, subscriptionId);
         }

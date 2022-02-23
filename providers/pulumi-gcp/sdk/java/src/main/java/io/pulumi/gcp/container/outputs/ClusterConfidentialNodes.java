@@ -54,7 +54,6 @@ public final class ClusterConfidentialNodes {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ClusterConfidentialNodes build() {
             return new ClusterConfidentialNodes(enabled);
         }

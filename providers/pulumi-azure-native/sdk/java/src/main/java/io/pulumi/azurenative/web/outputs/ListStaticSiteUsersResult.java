@@ -76,7 +76,6 @@ public final class ListStaticSiteUsersResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListStaticSiteUsersResult build() {
             return new ListStaticSiteUsersResult(nextLink, value);
         }

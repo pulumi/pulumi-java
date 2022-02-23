@@ -74,7 +74,6 @@ public final class ServiceCorrelationDescriptionResponse {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public ServiceCorrelationDescriptionResponse build() {
             return new ServiceCorrelationDescriptionResponse(scheme, serviceName);
         }

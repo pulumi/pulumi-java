@@ -23,7 +23,7 @@ public final class CloudRepoSourceContextResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="aliasContext", required=true)
-    private final AliasContextResponse aliasContext;
+      private final AliasContextResponse aliasContext;
 
     public AliasContextResponse getAliasContext() {
         return this.aliasContext;
@@ -34,7 +34,7 @@ public final class CloudRepoSourceContextResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="repoId", required=true)
-    private final RepoIdResponse repoId;
+      private final RepoIdResponse repoId;
 
     public RepoIdResponse getRepoId() {
         return this.repoId;
@@ -45,7 +45,7 @@ public final class CloudRepoSourceContextResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="revisionId", required=true)
-    private final String revisionId;
+      private final String revisionId;
 
     public String getRevisionId() {
         return this.revisionId;
@@ -104,7 +104,6 @@ public final class CloudRepoSourceContextResponse extends io.pulumi.resources.In
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public CloudRepoSourceContextResponse build() {
             return new CloudRepoSourceContextResponse(aliasContext, repoId, revisionId);
         }

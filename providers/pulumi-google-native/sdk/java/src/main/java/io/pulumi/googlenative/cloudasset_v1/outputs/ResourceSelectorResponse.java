@@ -52,7 +52,6 @@ public final class ResourceSelectorResponse {
             this.fullResourceName = Objects.requireNonNull(fullResourceName);
             return this;
         }
-
         public ResourceSelectorResponse build() {
             return new ResourceSelectorResponse(fullResourceName);
         }

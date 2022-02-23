@@ -119,7 +119,6 @@ public final class GetQueueServicePropertiesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetQueueServicePropertiesResult build() {
             return new GetQueueServicePropertiesResult(cors, id, name, type);
         }

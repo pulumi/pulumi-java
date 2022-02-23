@@ -88,7 +88,6 @@ public final class OccurenceAttestation {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-
         public OccurenceAttestation build() {
             return new OccurenceAttestation(serializedPayload, signatures);
         }

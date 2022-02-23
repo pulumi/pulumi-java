@@ -58,7 +58,6 @@ public final class CustomServiceTelemetry {
             this.resourceName = resourceName;
             return this;
         }
-
         public CustomServiceTelemetry build() {
             return new CustomServiceTelemetry(resourceName);
         }

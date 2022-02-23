@@ -203,7 +203,6 @@ public final class GetBandwidthScheduleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBandwidthScheduleResult build() {
             return new GetBandwidthScheduleResult(days, id, name, rateInMbps, start, stop, systemData, type);
         }

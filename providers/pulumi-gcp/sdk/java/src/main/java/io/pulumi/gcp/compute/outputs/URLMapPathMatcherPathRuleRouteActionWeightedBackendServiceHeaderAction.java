@@ -128,7 +128,6 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHea
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction build() {
             return new URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

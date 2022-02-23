@@ -221,7 +221,6 @@ public final class UpgradeDetailsResponse {
             this.upgradedResourceId = Objects.requireNonNull(upgradedResourceId);
             return this;
         }
-
         public UpgradeDetailsResponse build() {
             return new UpgradeDetailsResponse(endTimeUtc, lastUpdatedTimeUtc, message, operationId, previousResourceId, startTimeUtc, status, triggerType, upgradedResourceId);
         }

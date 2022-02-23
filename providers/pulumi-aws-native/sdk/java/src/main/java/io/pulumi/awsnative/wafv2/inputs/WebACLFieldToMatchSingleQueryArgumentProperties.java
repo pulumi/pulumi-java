@@ -17,7 +17,7 @@ public final class WebACLFieldToMatchSingleQueryArgumentProperties extends io.pu
     public static final WebACLFieldToMatchSingleQueryArgumentProperties Empty = new WebACLFieldToMatchSingleQueryArgumentProperties();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,6 @@ public final class WebACLFieldToMatchSingleQueryArgumentProperties extends io.pu
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WebACLFieldToMatchSingleQueryArgumentProperties build() {
             return new WebACLFieldToMatchSingleQueryArgumentProperties(name);
         }

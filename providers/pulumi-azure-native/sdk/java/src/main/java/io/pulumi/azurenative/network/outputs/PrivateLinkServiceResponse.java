@@ -401,7 +401,6 @@ public final class PrivateLinkServiceResponse {
             this.visibility = visibility;
             return this;
         }
-
         public PrivateLinkServiceResponse build() {
             return new PrivateLinkServiceResponse(alias, autoApproval, enableProxyProtocol, etag, extendedLocation, fqdns, id, ipConfigurations, loadBalancerFrontendIpConfigurations, location, name, networkInterfaces, privateEndpointConnections, provisioningState, tags, type, visibility);
         }

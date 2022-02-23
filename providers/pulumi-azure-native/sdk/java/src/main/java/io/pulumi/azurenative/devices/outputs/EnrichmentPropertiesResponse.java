@@ -96,7 +96,6 @@ public final class EnrichmentPropertiesResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EnrichmentPropertiesResponse build() {
             return new EnrichmentPropertiesResponse(endpointNames, key, value);
         }

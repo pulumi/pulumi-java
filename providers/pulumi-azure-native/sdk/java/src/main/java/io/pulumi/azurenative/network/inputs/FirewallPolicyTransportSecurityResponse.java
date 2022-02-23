@@ -23,7 +23,7 @@ public final class FirewallPolicyTransportSecurityResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="certificateAuthority")
-    private final @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority;
+        private final @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority;
 
     public Optional<FirewallPolicyCertificateAuthorityResponse> getCertificateAuthority() {
         return this.certificateAuthority == null ? Optional.empty() : Optional.ofNullable(this.certificateAuthority);
@@ -61,7 +61,6 @@ public final class FirewallPolicyTransportSecurityResponse extends io.pulumi.res
             this.certificateAuthority = certificateAuthority;
             return this;
         }
-
         public FirewallPolicyTransportSecurityResponse build() {
             return new FirewallPolicyTransportSecurityResponse(certificateAuthority);
         }

@@ -73,7 +73,6 @@ public final class StateMachineS3Location {
             this.version = version;
             return this;
         }
-
         public StateMachineS3Location build() {
             return new StateMachineS3Location(bucket, key, version);
         }

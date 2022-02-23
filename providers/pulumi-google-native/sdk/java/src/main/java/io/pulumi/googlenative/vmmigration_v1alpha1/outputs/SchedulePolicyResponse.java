@@ -75,7 +75,6 @@ public final class SchedulePolicyResponse {
             this.skipOsAdaptation = Objects.requireNonNull(skipOsAdaptation);
             return this;
         }
-
         public SchedulePolicyResponse build() {
             return new SchedulePolicyResponse(idleDuration, skipOsAdaptation);
         }

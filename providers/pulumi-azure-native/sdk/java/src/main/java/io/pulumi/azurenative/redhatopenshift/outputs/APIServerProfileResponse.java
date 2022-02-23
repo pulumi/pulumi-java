@@ -97,7 +97,6 @@ public final class APIServerProfileResponse {
             this.visibility = visibility;
             return this;
         }
-
         public APIServerProfileResponse build() {
             return new APIServerProfileResponse(ip, url, visibility);
         }

@@ -22,7 +22,7 @@ public final class V2AndroidKeyRestrictionsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowedApplications", required=true)
-    private final List<V2AndroidApplicationResponse> allowedApplications;
+      private final List<V2AndroidApplicationResponse> allowedApplications;
 
     public List<V2AndroidApplicationResponse> getAllowedApplications() {
         return this.allowedApplications;
@@ -60,7 +60,6 @@ public final class V2AndroidKeyRestrictionsResponse extends io.pulumi.resources.
             this.allowedApplications = Objects.requireNonNull(allowedApplications);
             return this;
         }
-
         public V2AndroidKeyRestrictionsResponse build() {
             return new V2AndroidKeyRestrictionsResponse(allowedApplications);
         }

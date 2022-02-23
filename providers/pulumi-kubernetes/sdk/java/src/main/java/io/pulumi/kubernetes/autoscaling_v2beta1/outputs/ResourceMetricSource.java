@@ -98,7 +98,6 @@ public final class ResourceMetricSource {
             this.targetAverageValue = targetAverageValue;
             return this;
         }
-
         public ResourceMetricSource build() {
             return new ResourceMetricSource(name, targetAverageUtilization, targetAverageValue);
         }

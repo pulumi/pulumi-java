@@ -90,7 +90,6 @@ public final class DataQualityJobDefinitionNetworkConfig {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public DataQualityJobDefinitionNetworkConfig build() {
             return new DataQualityJobDefinitionNetworkConfig(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }

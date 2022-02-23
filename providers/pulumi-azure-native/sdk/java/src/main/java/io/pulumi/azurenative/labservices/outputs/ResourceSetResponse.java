@@ -76,7 +76,6 @@ public final class ResourceSetResponse {
             this.vmResourceId = vmResourceId;
             return this;
         }
-
         public ResourceSetResponse build() {
             return new ResourceSetResponse(resourceSettingId, vmResourceId);
         }

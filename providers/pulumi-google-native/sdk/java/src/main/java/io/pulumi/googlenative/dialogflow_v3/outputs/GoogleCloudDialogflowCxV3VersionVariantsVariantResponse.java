@@ -97,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3VersionVariantsVariantResponse build() {
             return new GoogleCloudDialogflowCxV3VersionVariantsVariantResponse(isControlGroup, trafficAllocation, version);
         }

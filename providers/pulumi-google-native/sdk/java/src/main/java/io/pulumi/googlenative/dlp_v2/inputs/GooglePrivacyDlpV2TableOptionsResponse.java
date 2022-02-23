@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2TableOptionsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="identifyingFields", required=true)
-    private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
+      private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> getIdentifyingFields() {
         return this.identifyingFields;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2TableOptionsResponse extends io.pulumi.reso
             this.identifyingFields = Objects.requireNonNull(identifyingFields);
             return this;
         }
-
         public GooglePrivacyDlpV2TableOptionsResponse build() {
             return new GooglePrivacyDlpV2TableOptionsResponse(identifyingFields);
         }

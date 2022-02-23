@@ -75,7 +75,6 @@ public final class LoggingResponse {
             this.producerDestinations = Objects.requireNonNull(producerDestinations);
             return this;
         }
-
         public LoggingResponse build() {
             return new LoggingResponse(consumerDestinations, producerDestinations);
         }

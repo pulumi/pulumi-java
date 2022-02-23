@@ -53,7 +53,6 @@ public final class AuthorityConfigX509ConfigPolicyId {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public AuthorityConfigX509ConfigPolicyId build() {
             return new AuthorityConfigX509ConfigPolicyId(objectIdPaths);
         }

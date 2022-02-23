@@ -74,7 +74,6 @@ public final class ImportFileResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ImportFileResponse build() {
             return new ImportFileResponse(content, name);
         }

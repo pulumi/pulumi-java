@@ -60,7 +60,6 @@ public final class ClusterTag {
             this.value = value;
             return this;
         }
-
         public ClusterTag build() {
             return new ClusterTag(key, value);
         }

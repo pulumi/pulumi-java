@@ -74,7 +74,6 @@ public final class UserTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public UserTag build() {
             return new UserTag(key, value);
         }

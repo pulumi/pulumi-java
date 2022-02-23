@@ -45,7 +45,6 @@ public final class JobPigConfigLoggingConfig {
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
         }
-
         public JobPigConfigLoggingConfig build() {
             return new JobPigConfigLoggingConfig(driverLogLevels);
         }

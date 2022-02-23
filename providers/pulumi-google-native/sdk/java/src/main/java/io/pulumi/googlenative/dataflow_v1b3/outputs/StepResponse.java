@@ -96,7 +96,6 @@ public final class StepResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public StepResponse build() {
             return new StepResponse(kind, name, properties);
         }

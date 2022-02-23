@@ -16,7 +16,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     public static final ResourceTypeRegistrationArgs Empty = new ResourceTypeRegistrationArgs();
 
     @InputImport(name="properties")
-    private final @Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties;
+        private final @Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties;
 
     public Input<ResourceTypeRegistrationPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -27,7 +27,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-    private final Input<String> providerNamespace;
+        private final Input<String> providerNamespace;
 
     public Input<String> getProviderNamespace() {
         return this.providerNamespace;
@@ -38,7 +38,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+        private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -112,7 +112,6 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
-
         public ResourceTypeRegistrationArgs build() {
             return new ResourceTypeRegistrationArgs(properties, providerNamespace, resourceType);
         }

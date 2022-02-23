@@ -31,7 +31,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="agentExpiryDate")
-    private final @Nullable String agentExpiryDate;
+        private final @Nullable String agentExpiryDate;
 
     public Optional<String> getAgentExpiryDate() {
         return this.agentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.agentExpiryDate);
@@ -42,7 +42,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="agentVersion")
-    private final @Nullable String agentVersion;
+        private final @Nullable String agentVersion;
 
     public Optional<String> getAgentVersion() {
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
@@ -53,7 +53,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="azureVMDiskDetails")
-    private final @Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails;
+        private final @Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails;
 
     public List<AzureVmDiskDetailsResponse> getAzureVMDiskDetails() {
         return this.azureVMDiskDetails == null ? List.of() : this.azureVMDiskDetails;
@@ -64,7 +64,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="compressedDataRateInMB")
-    private final @Nullable Double compressedDataRateInMB;
+        private final @Nullable Double compressedDataRateInMB;
 
     public Optional<Double> getCompressedDataRateInMB() {
         return this.compressedDataRateInMB == null ? Optional.empty() : Optional.ofNullable(this.compressedDataRateInMB);
@@ -75,7 +75,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="datastores")
-    private final @Nullable List<String> datastores;
+        private final @Nullable List<String> datastores;
 
     public List<String> getDatastores() {
         return this.datastores == null ? List.of() : this.datastores;
@@ -86,7 +86,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="discoveryType")
-    private final @Nullable String discoveryType;
+        private final @Nullable String discoveryType;
 
     public Optional<String> getDiscoveryType() {
         return this.discoveryType == null ? Optional.empty() : Optional.ofNullable(this.discoveryType);
@@ -97,7 +97,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="diskResized")
-    private final @Nullable String diskResized;
+        private final @Nullable String diskResized;
 
     public Optional<String> getDiskResized() {
         return this.diskResized == null ? Optional.empty() : Optional.ofNullable(this.diskResized);
@@ -108,7 +108,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="enableRdpOnTargetOption")
-    private final @Nullable String enableRdpOnTargetOption;
+        private final @Nullable String enableRdpOnTargetOption;
 
     public Optional<String> getEnableRdpOnTargetOption() {
         return this.enableRdpOnTargetOption == null ? Optional.empty() : Optional.ofNullable(this.enableRdpOnTargetOption);
@@ -119,7 +119,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="infrastructureVmId")
-    private final @Nullable String infrastructureVmId;
+        private final @Nullable String infrastructureVmId;
 
     public Optional<String> getInfrastructureVmId() {
         return this.infrastructureVmId == null ? Optional.empty() : Optional.ofNullable(this.infrastructureVmId);
@@ -131,7 +131,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -142,7 +142,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable String ipAddress;
+        private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
@@ -153,7 +153,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="isAgentUpdateRequired")
-    private final @Nullable String isAgentUpdateRequired;
+        private final @Nullable String isAgentUpdateRequired;
 
     public Optional<String> getIsAgentUpdateRequired() {
         return this.isAgentUpdateRequired == null ? Optional.empty() : Optional.ofNullable(this.isAgentUpdateRequired);
@@ -164,7 +164,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="isRebootAfterUpdateRequired")
-    private final @Nullable String isRebootAfterUpdateRequired;
+        private final @Nullable String isRebootAfterUpdateRequired;
 
     public Optional<String> getIsRebootAfterUpdateRequired() {
         return this.isRebootAfterUpdateRequired == null ? Optional.empty() : Optional.ofNullable(this.isRebootAfterUpdateRequired);
@@ -175,7 +175,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="lastHeartbeat")
-    private final @Nullable String lastHeartbeat;
+        private final @Nullable String lastHeartbeat;
 
     public Optional<String> getLastHeartbeat() {
         return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
@@ -186,7 +186,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="lastRpoCalculatedTime")
-    private final @Nullable String lastRpoCalculatedTime;
+        private final @Nullable String lastRpoCalculatedTime;
 
     public Optional<String> getLastRpoCalculatedTime() {
         return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
@@ -197,7 +197,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="lastUpdateReceivedTime")
-    private final @Nullable String lastUpdateReceivedTime;
+        private final @Nullable String lastUpdateReceivedTime;
 
     public Optional<String> getLastUpdateReceivedTime() {
         return this.lastUpdateReceivedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdateReceivedTime);
@@ -208,7 +208,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="licenseType")
-    private final @Nullable String licenseType;
+        private final @Nullable String licenseType;
 
     public Optional<String> getLicenseType() {
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
@@ -219,7 +219,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="masterTargetId")
-    private final @Nullable String masterTargetId;
+        private final @Nullable String masterTargetId;
 
     public Optional<String> getMasterTargetId() {
         return this.masterTargetId == null ? Optional.empty() : Optional.ofNullable(this.masterTargetId);
@@ -230,7 +230,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="multiVmGroupId")
-    private final @Nullable String multiVmGroupId;
+        private final @Nullable String multiVmGroupId;
 
     public Optional<String> getMultiVmGroupId() {
         return this.multiVmGroupId == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupId);
@@ -241,7 +241,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="multiVmGroupName")
-    private final @Nullable String multiVmGroupName;
+        private final @Nullable String multiVmGroupName;
 
     public Optional<String> getMultiVmGroupName() {
         return this.multiVmGroupName == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupName);
@@ -252,7 +252,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="multiVmSyncStatus")
-    private final @Nullable String multiVmSyncStatus;
+        private final @Nullable String multiVmSyncStatus;
 
     public Optional<String> getMultiVmSyncStatus() {
         return this.multiVmSyncStatus == null ? Optional.empty() : Optional.ofNullable(this.multiVmSyncStatus);
@@ -263,7 +263,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="osDiskId")
-    private final @Nullable String osDiskId;
+        private final @Nullable String osDiskId;
 
     public Optional<String> getOsDiskId() {
         return this.osDiskId == null ? Optional.empty() : Optional.ofNullable(this.osDiskId);
@@ -274,7 +274,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable String osType;
+        private final @Nullable String osType;
 
     public Optional<String> getOsType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
@@ -285,7 +285,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="osVersion")
-    private final @Nullable String osVersion;
+        private final @Nullable String osVersion;
 
     public Optional<String> getOsVersion() {
         return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
@@ -296,7 +296,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="processServerId")
-    private final @Nullable String processServerId;
+        private final @Nullable String processServerId;
 
     public Optional<String> getProcessServerId() {
         return this.processServerId == null ? Optional.empty() : Optional.ofNullable(this.processServerId);
@@ -307,7 +307,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="processServerName", required=true)
-    private final String processServerName;
+        private final String processServerName;
 
     public String getProcessServerName() {
         return this.processServerName;
@@ -318,7 +318,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="protectedDisks")
-    private final @Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks;
+        private final @Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks;
 
     public List<InMageAzureV2ProtectedDiskDetailsResponse> getProtectedDisks() {
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
@@ -329,7 +329,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="protectedManagedDisks")
-    private final @Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks;
+        private final @Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks;
 
     public List<InMageAzureV2ManagedDiskDetailsResponse> getProtectedManagedDisks() {
         return this.protectedManagedDisks == null ? List.of() : this.protectedManagedDisks;
@@ -340,7 +340,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="protectionStage")
-    private final @Nullable String protectionStage;
+        private final @Nullable String protectionStage;
 
     public Optional<String> getProtectionStage() {
         return this.protectionStage == null ? Optional.empty() : Optional.ofNullable(this.protectionStage);
@@ -351,7 +351,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryAvailabilitySetId")
-    private final @Nullable String recoveryAvailabilitySetId;
+        private final @Nullable String recoveryAvailabilitySetId;
 
     public Optional<String> getRecoveryAvailabilitySetId() {
         return this.recoveryAvailabilitySetId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAvailabilitySetId);
@@ -362,7 +362,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryAzureLogStorageAccountId")
-    private final @Nullable String recoveryAzureLogStorageAccountId;
+        private final @Nullable String recoveryAzureLogStorageAccountId;
 
     public Optional<String> getRecoveryAzureLogStorageAccountId() {
         return this.recoveryAzureLogStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureLogStorageAccountId);
@@ -373,7 +373,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryAzureResourceGroupId")
-    private final @Nullable String recoveryAzureResourceGroupId;
+        private final @Nullable String recoveryAzureResourceGroupId;
 
     public Optional<String> getRecoveryAzureResourceGroupId() {
         return this.recoveryAzureResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureResourceGroupId);
@@ -384,7 +384,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryAzureStorageAccount")
-    private final @Nullable String recoveryAzureStorageAccount;
+        private final @Nullable String recoveryAzureStorageAccount;
 
     public Optional<String> getRecoveryAzureStorageAccount() {
         return this.recoveryAzureStorageAccount == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureStorageAccount);
@@ -395,7 +395,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryAzureVMName")
-    private final @Nullable String recoveryAzureVMName;
+        private final @Nullable String recoveryAzureVMName;
 
     public Optional<String> getRecoveryAzureVMName() {
         return this.recoveryAzureVMName == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMName);
@@ -406,7 +406,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryAzureVMSize")
-    private final @Nullable String recoveryAzureVMSize;
+        private final @Nullable String recoveryAzureVMSize;
 
     public Optional<String> getRecoveryAzureVMSize() {
         return this.recoveryAzureVMSize == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMSize);
@@ -417,7 +417,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="replicaId")
-    private final @Nullable String replicaId;
+        private final @Nullable String replicaId;
 
     public Optional<String> getReplicaId() {
         return this.replicaId == null ? Optional.empty() : Optional.ofNullable(this.replicaId);
@@ -428,7 +428,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="resyncProgressPercentage")
-    private final @Nullable Integer resyncProgressPercentage;
+        private final @Nullable Integer resyncProgressPercentage;
 
     public Optional<Integer> getResyncProgressPercentage() {
         return this.resyncProgressPercentage == null ? Optional.empty() : Optional.ofNullable(this.resyncProgressPercentage);
@@ -439,7 +439,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="rpoInSeconds")
-    private final @Nullable Double rpoInSeconds;
+        private final @Nullable Double rpoInSeconds;
 
     public Optional<Double> getRpoInSeconds() {
         return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
@@ -450,7 +450,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="selectedRecoveryAzureNetworkId")
-    private final @Nullable String selectedRecoveryAzureNetworkId;
+        private final @Nullable String selectedRecoveryAzureNetworkId;
 
     public Optional<String> getSelectedRecoveryAzureNetworkId() {
         return this.selectedRecoveryAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
@@ -461,7 +461,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="selectedSourceNicId")
-    private final @Nullable String selectedSourceNicId;
+        private final @Nullable String selectedSourceNicId;
 
     public Optional<String> getSelectedSourceNicId() {
         return this.selectedSourceNicId == null ? Optional.empty() : Optional.ofNullable(this.selectedSourceNicId);
@@ -472,7 +472,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="selectedTfoAzureNetworkId")
-    private final @Nullable String selectedTfoAzureNetworkId;
+        private final @Nullable String selectedTfoAzureNetworkId;
 
     public Optional<String> getSelectedTfoAzureNetworkId() {
         return this.selectedTfoAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedTfoAzureNetworkId);
@@ -483,7 +483,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="sourceVmCpuCount")
-    private final @Nullable Integer sourceVmCpuCount;
+        private final @Nullable Integer sourceVmCpuCount;
 
     public Optional<Integer> getSourceVmCpuCount() {
         return this.sourceVmCpuCount == null ? Optional.empty() : Optional.ofNullable(this.sourceVmCpuCount);
@@ -494,7 +494,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="sourceVmRamSizeInMB")
-    private final @Nullable Integer sourceVmRamSizeInMB;
+        private final @Nullable Integer sourceVmRamSizeInMB;
 
     public Optional<Integer> getSourceVmRamSizeInMB() {
         return this.sourceVmRamSizeInMB == null ? Optional.empty() : Optional.ofNullable(this.sourceVmRamSizeInMB);
@@ -505,7 +505,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="targetAvailabilityZone")
-    private final @Nullable String targetAvailabilityZone;
+        private final @Nullable String targetAvailabilityZone;
 
     public Optional<String> getTargetAvailabilityZone() {
         return this.targetAvailabilityZone == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilityZone);
@@ -516,7 +516,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="targetProximityPlacementGroupId")
-    private final @Nullable String targetProximityPlacementGroupId;
+        private final @Nullable String targetProximityPlacementGroupId;
 
     public Optional<String> getTargetProximityPlacementGroupId() {
         return this.targetProximityPlacementGroupId == null ? Optional.empty() : Optional.ofNullable(this.targetProximityPlacementGroupId);
@@ -527,7 +527,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="targetVmId")
-    private final @Nullable String targetVmId;
+        private final @Nullable String targetVmId;
 
     public Optional<String> getTargetVmId() {
         return this.targetVmId == null ? Optional.empty() : Optional.ofNullable(this.targetVmId);
@@ -538,7 +538,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="uncompressedDataRateInMB")
-    private final @Nullable Double uncompressedDataRateInMB;
+        private final @Nullable Double uncompressedDataRateInMB;
 
     public Optional<Double> getUncompressedDataRateInMB() {
         return this.uncompressedDataRateInMB == null ? Optional.empty() : Optional.ofNullable(this.uncompressedDataRateInMB);
@@ -549,7 +549,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="useManagedDisks")
-    private final @Nullable String useManagedDisks;
+        private final @Nullable String useManagedDisks;
 
     public Optional<String> getUseManagedDisks() {
         return this.useManagedDisks == null ? Optional.empty() : Optional.ofNullable(this.useManagedDisks);
@@ -560,7 +560,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vCenterInfrastructureId")
-    private final @Nullable String vCenterInfrastructureId;
+        private final @Nullable String vCenterInfrastructureId;
 
     public Optional<String> getVCenterInfrastructureId() {
         return this.vCenterInfrastructureId == null ? Optional.empty() : Optional.ofNullable(this.vCenterInfrastructureId);
@@ -571,7 +571,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="validationErrors")
-    private final @Nullable List<HealthErrorResponse> validationErrors;
+        private final @Nullable List<HealthErrorResponse> validationErrors;
 
     public List<HealthErrorResponse> getValidationErrors() {
         return this.validationErrors == null ? List.of() : this.validationErrors;
@@ -582,7 +582,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vhdName")
-    private final @Nullable String vhdName;
+        private final @Nullable String vhdName;
 
     public Optional<String> getVhdName() {
         return this.vhdName == null ? Optional.empty() : Optional.ofNullable(this.vhdName);
@@ -593,7 +593,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vmId")
-    private final @Nullable String vmId;
+        private final @Nullable String vmId;
 
     public Optional<String> getVmId() {
         return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
@@ -604,7 +604,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vmNics")
-    private final @Nullable List<VMNicDetailsResponse> vmNics;
+        private final @Nullable List<VMNicDetailsResponse> vmNics;
 
     public List<VMNicDetailsResponse> getVmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
@@ -615,7 +615,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vmProtectionState")
-    private final @Nullable String vmProtectionState;
+        private final @Nullable String vmProtectionState;
 
     public Optional<String> getVmProtectionState() {
         return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
@@ -626,7 +626,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vmProtectionStateDescription")
-    private final @Nullable String vmProtectionStateDescription;
+        private final @Nullable String vmProtectionStateDescription;
 
     public Optional<String> getVmProtectionStateDescription() {
         return this.vmProtectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionStateDescription);
@@ -1205,7 +1205,6 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }
-
         public InMageAzureV2ReplicationDetailsResponse build() {
             return new InMageAzureV2ReplicationDetailsResponse(agentExpiryDate, agentVersion, azureVMDiskDetails, compressedDataRateInMB, datastores, discoveryType, diskResized, enableRdpOnTargetOption, infrastructureVmId, instanceType, ipAddress, isAgentUpdateRequired, isRebootAfterUpdateRequired, lastHeartbeat, lastRpoCalculatedTime, lastUpdateReceivedTime, licenseType, masterTargetId, multiVmGroupId, multiVmGroupName, multiVmSyncStatus, osDiskId, osType, osVersion, processServerId, processServerName, protectedDisks, protectedManagedDisks, protectionStage, recoveryAvailabilitySetId, recoveryAzureLogStorageAccountId, recoveryAzureResourceGroupId, recoveryAzureStorageAccount, recoveryAzureVMName, recoveryAzureVMSize, replicaId, resyncProgressPercentage, rpoInSeconds, selectedRecoveryAzureNetworkId, selectedSourceNicId, selectedTfoAzureNetworkId, sourceVmCpuCount, sourceVmRamSizeInMB, targetAvailabilityZone, targetProximityPlacementGroupId, targetVmId, uncompressedDataRateInMB, useManagedDisks, vCenterInfrastructureId, validationErrors, vhdName, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }

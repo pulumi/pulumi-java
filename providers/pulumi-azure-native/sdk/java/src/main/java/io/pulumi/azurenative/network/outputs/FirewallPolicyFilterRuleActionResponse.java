@@ -54,7 +54,6 @@ public final class FirewallPolicyFilterRuleActionResponse {
             this.type = type;
             return this;
         }
-
         public FirewallPolicyFilterRuleActionResponse build() {
             return new FirewallPolicyFilterRuleActionResponse(type);
         }

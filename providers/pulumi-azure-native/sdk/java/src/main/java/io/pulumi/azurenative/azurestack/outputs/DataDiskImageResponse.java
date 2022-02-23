@@ -75,7 +75,6 @@ public final class DataDiskImageResponse {
             this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
             return this;
         }
-
         public DataDiskImageResponse build() {
             return new DataDiskImageResponse(lun, sourceBlobSasUri);
         }

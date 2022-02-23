@@ -80,7 +80,6 @@ public final class GetDatabaseInstanceRestoreBackupContext {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetDatabaseInstanceRestoreBackupContext build() {
             return new GetDatabaseInstanceRestoreBackupContext(backupRunId, instanceId, project);
         }

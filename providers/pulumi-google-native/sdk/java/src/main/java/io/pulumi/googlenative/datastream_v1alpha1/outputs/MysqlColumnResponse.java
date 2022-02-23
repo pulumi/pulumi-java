@@ -181,7 +181,6 @@ public final class MysqlColumnResponse {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public MysqlColumnResponse build() {
             return new MysqlColumnResponse(collation, columnName, dataType, length, nullable, ordinalPosition, primaryKey);
         }

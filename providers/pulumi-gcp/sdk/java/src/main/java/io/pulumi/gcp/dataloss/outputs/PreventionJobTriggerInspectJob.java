@@ -102,7 +102,6 @@ public final class PreventionJobTriggerInspectJob {
             this.storageConfig = Objects.requireNonNull(storageConfig);
             return this;
         }
-
         public PreventionJobTriggerInspectJob build() {
             return new PreventionJobTriggerInspectJob(actions, inspectTemplateName, storageConfig);
         }

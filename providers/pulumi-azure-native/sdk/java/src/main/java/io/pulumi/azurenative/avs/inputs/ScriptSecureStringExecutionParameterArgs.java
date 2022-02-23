@@ -23,7 +23,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="secureValue")
-    private final @Nullable Input<String> secureValue;
+        private final @Nullable Input<String> secureValue;
 
     public Input<String> getSecureValue() {
         return this.secureValue == null ? Input.empty() : this.secureValue;
@@ -46,7 +46,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -120,7 +120,6 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ScriptSecureStringExecutionParameterArgs build() {
             return new ScriptSecureStringExecutionParameterArgs(name, secureValue, type);
         }

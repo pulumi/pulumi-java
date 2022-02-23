@@ -99,7 +99,6 @@ public final class RoutingConfigurationResponse {
             this.vnetRoutes = vnetRoutes;
             return this;
         }
-
         public RoutingConfigurationResponse build() {
             return new RoutingConfigurationResponse(associatedRouteTable, propagatedRouteTables, vnetRoutes);
         }

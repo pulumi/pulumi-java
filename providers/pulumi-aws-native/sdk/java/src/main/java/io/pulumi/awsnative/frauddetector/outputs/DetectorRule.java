@@ -213,7 +213,6 @@ public final class DetectorRule {
             this.tags = tags;
             return this;
         }
-
         public DetectorRule build() {
             return new DetectorRule(arn, createdTime, description, detectorId, expression, language, lastUpdatedTime, outcomes, ruleId, ruleVersion, tags);
         }

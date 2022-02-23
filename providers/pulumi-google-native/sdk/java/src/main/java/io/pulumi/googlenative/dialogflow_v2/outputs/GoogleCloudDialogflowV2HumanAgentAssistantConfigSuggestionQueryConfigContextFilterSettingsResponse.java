@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
             this.dropVirtualAgentMessages = Objects.requireNonNull(dropVirtualAgentMessages);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse(dropHandoffMessages, dropIvrMessages, dropVirtualAgentMessages);
         }

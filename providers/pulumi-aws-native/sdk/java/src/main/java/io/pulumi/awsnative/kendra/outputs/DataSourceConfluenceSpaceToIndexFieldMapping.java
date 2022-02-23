@@ -74,7 +74,6 @@ public final class DataSourceConfluenceSpaceToIndexFieldMapping {
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
         }
-
         public DataSourceConfluenceSpaceToIndexFieldMapping build() {
             return new DataSourceConfluenceSpaceToIndexFieldMapping(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }

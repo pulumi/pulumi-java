@@ -23,7 +23,7 @@ public final class DWCopyCommandDefaultValueResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="columnName")
-    private final @Nullable Object columnName;
+        private final @Nullable Object columnName;
 
     public Optional<Object> getColumnName() {
         return this.columnName == null ? Optional.empty() : Optional.ofNullable(this.columnName);
@@ -34,7 +34,7 @@ public final class DWCopyCommandDefaultValueResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Object defaultValue;
+        private final @Nullable Object defaultValue;
 
     public Optional<Object> getDefaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
@@ -83,7 +83,6 @@ public final class DWCopyCommandDefaultValueResponse extends io.pulumi.resources
             this.defaultValue = defaultValue;
             return this;
         }
-
         public DWCopyCommandDefaultValueResponse build() {
             return new DWCopyCommandDefaultValueResponse(columnName, defaultValue);
         }

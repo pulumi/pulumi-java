@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2betaPromotionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="promotionId", required=true)
-    private final String promotionId;
+      private final String promotionId;
 
     public String getPromotionId() {
         return this.promotionId;
@@ -59,7 +59,6 @@ public final class GoogleCloudRetailV2betaPromotionResponse extends io.pulumi.re
             this.promotionId = Objects.requireNonNull(promotionId);
             return this;
         }
-
         public GoogleCloudRetailV2betaPromotionResponse build() {
             return new GoogleCloudRetailV2betaPromotionResponse(promotionId);
         }

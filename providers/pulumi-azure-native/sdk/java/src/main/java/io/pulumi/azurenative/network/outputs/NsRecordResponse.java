@@ -54,7 +54,6 @@ public final class NsRecordResponse {
             this.nsdname = nsdname;
             return this;
         }
-
         public NsRecordResponse build() {
             return new NsRecordResponse(nsdname);
         }

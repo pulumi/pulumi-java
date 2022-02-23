@@ -44,7 +44,6 @@ public final class ScheduledQueryErrorReportConfiguration {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
-
         public ScheduledQueryErrorReportConfiguration build() {
             return new ScheduledQueryErrorReportConfiguration(s3Configuration);
         }

@@ -74,7 +74,6 @@ public final class ApiProfileResponse {
             this.profileVersion = Objects.requireNonNull(profileVersion);
             return this;
         }
-
         public ApiProfileResponse build() {
             return new ApiProfileResponse(apiVersion, profileVersion);
         }

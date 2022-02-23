@@ -13,7 +13,7 @@ public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetFirewallPolicyArgs Empty = new GetFirewallPolicyArgs();
 
     @InputImport(name="firewallPolicy", required=true)
-    private final String firewallPolicy;
+      private final String firewallPolicy;
 
     public String getFirewallPolicy() {
         return this.firewallPolicy;
@@ -51,7 +51,6 @@ public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
             return this;
         }
-
         public GetFirewallPolicyArgs build() {
             return new GetFirewallPolicyArgs(firewallPolicy);
         }

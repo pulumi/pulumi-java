@@ -96,7 +96,6 @@ public final class TimeWindowResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public TimeWindowResponse build() {
             return new TimeWindowResponse(endTime, maintenanceExclusionOptions, startTime);
         }

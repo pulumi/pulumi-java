@@ -117,7 +117,6 @@ public final class BastionShareableLinkResponse {
             this.vm = Objects.requireNonNull(vm);
             return this;
         }
-
         public BastionShareableLinkResponse build() {
             return new BastionShareableLinkResponse(bsl, createdAt, message, vm);
         }

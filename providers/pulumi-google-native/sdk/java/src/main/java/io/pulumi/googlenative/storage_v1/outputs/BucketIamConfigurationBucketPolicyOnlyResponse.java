@@ -75,7 +75,6 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse {
             this.lockedTime = Objects.requireNonNull(lockedTime);
             return this;
         }
-
         public BucketIamConfigurationBucketPolicyOnlyResponse build() {
             return new BucketIamConfigurationBucketPolicyOnlyResponse(enabled, lockedTime);
         }

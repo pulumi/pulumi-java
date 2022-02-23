@@ -23,7 +23,7 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targets", required=true)
-    private final List<TargetReferenceResponse> targets;
+        private final List<TargetReferenceResponse> targets;
 
     public List<TargetReferenceResponse> getTargets() {
         return this.targets;
@@ -45,7 +45,7 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -104,7 +104,6 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SelectorResponse build() {
             return new SelectorResponse(id, targets, type);
         }

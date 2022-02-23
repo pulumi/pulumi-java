@@ -163,7 +163,6 @@ public final class GetFlowEntitlementResult {
             this.subscribers = subscribers;
             return this;
         }
-
         public GetFlowEntitlementResult build() {
             return new GetFlowEntitlementResult(description, encryption, entitlementArn, entitlementStatus, flowArn, subscribers);
         }

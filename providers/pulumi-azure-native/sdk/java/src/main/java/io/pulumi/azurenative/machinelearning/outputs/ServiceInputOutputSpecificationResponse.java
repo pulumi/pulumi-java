@@ -120,7 +120,6 @@ public final class ServiceInputOutputSpecificationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceInputOutputSpecificationResponse build() {
             return new ServiceInputOutputSpecificationResponse(description, properties, title, type);
         }

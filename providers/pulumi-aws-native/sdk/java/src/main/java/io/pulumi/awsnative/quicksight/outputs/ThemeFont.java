@@ -46,7 +46,6 @@ public final class ThemeFont {
             this.fontFamily = fontFamily;
             return this;
         }
-
         public ThemeFont build() {
             return new ThemeFont(fontFamily);
         }

@@ -77,7 +77,6 @@ public final class KeyVaultKeyResponse {
             this.kid = kid;
             return this;
         }
-
         public KeyVaultKeyResponse build() {
             return new KeyVaultKeyResponse(attributes, kid);
         }

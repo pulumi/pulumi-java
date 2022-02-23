@@ -103,7 +103,6 @@ public final class GetPackageResult {
             this.tags = tags;
             return this;
         }
-
         public GetPackageResult build() {
             return new GetPackageResult(arn, createdTime, packageId, storageLocation, tags);
         }

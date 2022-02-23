@@ -184,7 +184,6 @@ public final class PowerQuerySinkResponse {
             this.script = script;
             return this;
         }
-
         public PowerQuerySinkResponse build() {
             return new PowerQuerySinkResponse(dataset, description, flowlet, linkedService, name, schemaLinkedService, script);
         }

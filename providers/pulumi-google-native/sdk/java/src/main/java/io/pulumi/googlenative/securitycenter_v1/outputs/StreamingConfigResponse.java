@@ -52,7 +52,6 @@ public final class StreamingConfigResponse {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public StreamingConfigResponse build() {
             return new StreamingConfigResponse(filter);
         }

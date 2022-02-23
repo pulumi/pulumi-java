@@ -117,7 +117,6 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse {
             this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile);
             return this;
         }
-
         public GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse build() {
             return new GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse(enabledUnknownSources, ownerProfileAccount, ownershipPrivilege, supportsWorkProfile);
         }

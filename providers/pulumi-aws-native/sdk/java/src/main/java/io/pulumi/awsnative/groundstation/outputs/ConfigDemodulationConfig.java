@@ -46,7 +46,6 @@ public final class ConfigDemodulationConfig {
             this.unvalidatedJSON = unvalidatedJSON;
             return this;
         }
-
         public ConfigDemodulationConfig build() {
             return new ConfigDemodulationConfig(unvalidatedJSON);
         }

@@ -54,7 +54,6 @@ public final class RateLimitRuleListResponse {
             this.rules = rules;
             return this;
         }
-
         public RateLimitRuleListResponse build() {
             return new RateLimitRuleListResponse(rules);
         }

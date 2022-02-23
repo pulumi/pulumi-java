@@ -24,7 +24,7 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="exclude")
-    private final @Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
+        private final @Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
 
     public Input<List<ConnectionMonitorEndpointScopeItemArgs>> getExclude() {
         return this.exclude == null ? Input.empty() : this.exclude;
@@ -35,7 +35,7 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="include")
-    private final @Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> include;
+        private final @Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> include;
 
     public Input<List<ConnectionMonitorEndpointScopeItemArgs>> getInclude() {
         return this.include == null ? Input.empty() : this.include;
@@ -94,7 +94,6 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
             this.include = Input.ofNullable(include);
             return this;
         }
-
         public ConnectionMonitorEndpointScopeArgs build() {
             return new ConnectionMonitorEndpointScopeArgs(exclude, include);
         }

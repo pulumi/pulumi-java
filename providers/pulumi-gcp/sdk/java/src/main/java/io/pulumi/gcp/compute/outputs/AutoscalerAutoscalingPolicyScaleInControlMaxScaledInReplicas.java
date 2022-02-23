@@ -80,7 +80,6 @@ public final class AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas 
             this.percent = percent;
             return this;
         }
-
         public AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas build() {
             return new AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas(fixed, percent);
         }

@@ -16,28 +16,28 @@ public final class EnvironmentConfigWorkloadsConfigSchedulerArgs extends io.pulu
     public static final EnvironmentConfigWorkloadsConfigSchedulerArgs Empty = new EnvironmentConfigWorkloadsConfigSchedulerArgs();
 
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+        private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
     }
 
     @InputImport(name="cpu")
-    private final @Nullable Input<Double> cpu;
+        private final @Nullable Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
     }
 
     @InputImport(name="memoryGb")
-    private final @Nullable Input<Double> memoryGb;
+        private final @Nullable Input<Double> memoryGb;
 
     public Input<Double> getMemoryGb() {
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
     }
 
     @InputImport(name="storageGb")
-    private final @Nullable Input<Double> storageGb;
+        private final @Nullable Input<Double> storageGb;
 
     public Input<Double> getStorageGb() {
         return this.storageGb == null ? Input.empty() : this.storageGb;
@@ -126,7 +126,6 @@ public final class EnvironmentConfigWorkloadsConfigSchedulerArgs extends io.pulu
             this.storageGb = Input.ofNullable(storageGb);
             return this;
         }
-
         public EnvironmentConfigWorkloadsConfigSchedulerArgs build() {
             return new EnvironmentConfigWorkloadsConfigSchedulerArgs(count, cpu, memoryGb, storageGb);
         }

@@ -74,7 +74,6 @@ public final class AutoUpgradeOptionsResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public AutoUpgradeOptionsResponse build() {
             return new AutoUpgradeOptionsResponse(autoUpgradeStartTime, description);
         }

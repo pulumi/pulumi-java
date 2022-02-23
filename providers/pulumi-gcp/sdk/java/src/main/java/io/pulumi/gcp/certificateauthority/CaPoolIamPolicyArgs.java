@@ -19,7 +19,7 @@ public final class CaPoolIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="caPool", required=true)
-    private final Input<String> caPool;
+        private final Input<String> caPool;
 
     public Input<String> getCaPool() {
         return this.caPool;
@@ -32,7 +32,7 @@ public final class CaPoolIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -44,7 +44,7 @@ public final class CaPoolIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -56,7 +56,7 @@ public final class CaPoolIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -145,7 +145,6 @@ public final class CaPoolIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public CaPoolIamPolicyArgs build() {
             return new CaPoolIamPolicyArgs(caPool, location, policyData, project);
         }

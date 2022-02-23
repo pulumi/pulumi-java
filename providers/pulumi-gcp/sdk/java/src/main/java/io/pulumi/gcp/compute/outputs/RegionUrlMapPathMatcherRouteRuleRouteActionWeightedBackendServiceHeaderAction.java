@@ -130,7 +130,6 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderAction build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

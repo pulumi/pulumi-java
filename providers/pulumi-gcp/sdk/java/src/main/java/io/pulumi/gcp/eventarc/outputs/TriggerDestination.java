@@ -77,7 +77,6 @@ public final class TriggerDestination {
             this.cloudRunService = cloudRunService;
             return this;
         }
-
         public TriggerDestination build() {
             return new TriggerDestination(cloudFunction, cloudRunService);
         }

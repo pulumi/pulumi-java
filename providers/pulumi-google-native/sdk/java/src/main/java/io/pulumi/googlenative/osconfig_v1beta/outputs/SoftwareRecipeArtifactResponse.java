@@ -97,7 +97,6 @@ public final class SoftwareRecipeArtifactResponse {
             this.remote = Objects.requireNonNull(remote);
             return this;
         }
-
         public SoftwareRecipeArtifactResponse build() {
             return new SoftwareRecipeArtifactResponse(allowInsecure, gcs, remote);
         }

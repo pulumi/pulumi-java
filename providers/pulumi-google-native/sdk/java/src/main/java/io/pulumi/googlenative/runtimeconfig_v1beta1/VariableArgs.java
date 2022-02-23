@@ -15,7 +15,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     public static final VariableArgs Empty = new VariableArgs();
 
     @InputImport(name="configId", required=true)
-    private final Input<String> configId;
+      private final Input<String> configId;
 
     public Input<String> getConfigId() {
         return this.configId;
@@ -26,21 +26,21 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -51,7 +51,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<String> text;
+      private final @Nullable Input<String> text;
 
     public Input<String> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -62,7 +62,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -181,7 +181,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public VariableArgs build() {
             return new VariableArgs(configId, name, project, requestId, text, value);
         }

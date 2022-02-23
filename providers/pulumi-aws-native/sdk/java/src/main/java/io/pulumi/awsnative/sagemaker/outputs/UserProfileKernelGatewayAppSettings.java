@@ -78,7 +78,6 @@ public final class UserProfileKernelGatewayAppSettings {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public UserProfileKernelGatewayAppSettings build() {
             return new UserProfileKernelGatewayAppSettings(customImages, defaultResourceSpec);
         }

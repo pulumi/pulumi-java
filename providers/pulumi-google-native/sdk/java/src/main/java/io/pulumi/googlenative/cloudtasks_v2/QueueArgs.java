@@ -23,14 +23,14 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appEngineRoutingOverride")
-    private final @Nullable Input<AppEngineRoutingArgs> appEngineRoutingOverride;
+      private final @Nullable Input<AppEngineRoutingArgs> appEngineRoutingOverride;
 
     public Input<AppEngineRoutingArgs> getAppEngineRoutingOverride() {
         return this.appEngineRoutingOverride == null ? Input.empty() : this.appEngineRoutingOverride;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -41,14 +41,14 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -59,7 +59,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimits")
-    private final @Nullable Input<RateLimitsArgs> rateLimits;
+      private final @Nullable Input<RateLimitsArgs> rateLimits;
 
     public Input<RateLimitsArgs> getRateLimits() {
         return this.rateLimits == null ? Input.empty() : this.rateLimits;
@@ -70,7 +70,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryConfig")
-    private final @Nullable Input<RetryConfigArgs> retryConfig;
+      private final @Nullable Input<RetryConfigArgs> retryConfig;
 
     public Input<RetryConfigArgs> getRetryConfig() {
         return this.retryConfig == null ? Input.empty() : this.retryConfig;
@@ -81,7 +81,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackdriverLoggingConfig")
-    private final @Nullable Input<StackdriverLoggingConfigArgs> stackdriverLoggingConfig;
+      private final @Nullable Input<StackdriverLoggingConfigArgs> stackdriverLoggingConfig;
 
     public Input<StackdriverLoggingConfigArgs> getStackdriverLoggingConfig() {
         return this.stackdriverLoggingConfig == null ? Input.empty() : this.stackdriverLoggingConfig;
@@ -215,7 +215,6 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             this.stackdriverLoggingConfig = Input.ofNullable(stackdriverLoggingConfig);
             return this;
         }
-
         public QueueArgs build() {
             return new QueueArgs(appEngineRoutingOverride, location, name, project, rateLimits, retryConfig, stackdriverLoggingConfig);
         }

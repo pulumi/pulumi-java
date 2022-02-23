@@ -76,7 +76,6 @@ public final class CompositeFilterResponse {
             this.subFilters = Objects.requireNonNull(subFilters);
             return this;
         }
-
         public CompositeFilterResponse build() {
             return new CompositeFilterResponse(logicOperator, subFilters);
         }

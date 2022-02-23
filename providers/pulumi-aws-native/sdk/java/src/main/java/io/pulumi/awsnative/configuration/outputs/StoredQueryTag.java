@@ -74,7 +74,6 @@ public final class StoredQueryTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StoredQueryTag build() {
             return new StoredQueryTag(key, value);
         }

@@ -78,7 +78,6 @@ public final class KubernetesConnectionDetailsResponse {
             this.kubeConfig = kubeConfig;
             return this;
         }
-
         public KubernetesConnectionDetailsResponse build() {
             return new KubernetesConnectionDetailsResponse(instanceType, kubeConfig);
         }

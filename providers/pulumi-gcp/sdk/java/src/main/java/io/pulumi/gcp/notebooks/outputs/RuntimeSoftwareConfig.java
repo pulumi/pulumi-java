@@ -195,7 +195,6 @@ public final class RuntimeSoftwareConfig {
             this.postStartupScript = postStartupScript;
             return this;
         }
-
         public RuntimeSoftwareConfig build() {
             return new RuntimeSoftwareConfig(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, notebookUpgradeSchedule, postStartupScript);
         }

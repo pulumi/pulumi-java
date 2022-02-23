@@ -18,7 +18,7 @@ public final class AwsClusterControlPlaneSshConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ec2KeyPair", required=true)
-    private final Input<String> ec2KeyPair;
+        private final Input<String> ec2KeyPair;
 
     public Input<String> getEc2KeyPair() {
         return this.ec2KeyPair;
@@ -61,7 +61,6 @@ public final class AwsClusterControlPlaneSshConfigGetArgs extends io.pulumi.reso
             this.ec2KeyPair = Input.of(Objects.requireNonNull(ec2KeyPair));
             return this;
         }
-
         public AwsClusterControlPlaneSshConfigGetArgs build() {
             return new AwsClusterControlPlaneSshConfigGetArgs(ec2KeyPair);
         }

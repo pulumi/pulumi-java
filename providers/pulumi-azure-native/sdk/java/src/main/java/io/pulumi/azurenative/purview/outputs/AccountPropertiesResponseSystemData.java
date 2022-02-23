@@ -158,7 +158,6 @@ public final class AccountPropertiesResponseSystemData {
             this.lastModifiedByType = Objects.requireNonNull(lastModifiedByType);
             return this;
         }
-
         public AccountPropertiesResponseSystemData build() {
             return new AccountPropertiesResponseSystemData(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

@@ -15,14 +15,14 @@ public final class EnvelopeSignatureArgs extends io.pulumi.resources.ResourceArg
     public static final EnvelopeSignatureArgs Empty = new EnvelopeSignatureArgs();
 
     @InputImport(name="keyid")
-    private final @Nullable Input<String> keyid;
+      private final @Nullable Input<String> keyid;
 
     public Input<String> getKeyid() {
         return this.keyid == null ? Input.empty() : this.keyid;
     }
 
     @InputImport(name="sig")
-    private final @Nullable Input<String> sig;
+      private final @Nullable Input<String> sig;
 
     public Input<String> getSig() {
         return this.sig == null ? Input.empty() : this.sig;
@@ -81,7 +81,6 @@ public final class EnvelopeSignatureArgs extends io.pulumi.resources.ResourceArg
             this.sig = Input.ofNullable(sig);
             return this;
         }
-
         public EnvelopeSignatureArgs build() {
             return new EnvelopeSignatureArgs(keyid, sig);
         }

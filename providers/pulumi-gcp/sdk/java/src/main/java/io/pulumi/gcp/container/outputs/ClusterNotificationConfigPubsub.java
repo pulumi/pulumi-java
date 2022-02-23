@@ -79,7 +79,6 @@ public final class ClusterNotificationConfigPubsub {
             this.topic = topic;
             return this;
         }
-
         public ClusterNotificationConfigPubsub build() {
             return new ClusterNotificationConfigPubsub(enabled, topic);
         }

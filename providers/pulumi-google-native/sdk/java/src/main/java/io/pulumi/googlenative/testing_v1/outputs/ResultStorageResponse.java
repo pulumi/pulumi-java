@@ -119,7 +119,6 @@ public final class ResultStorageResponse {
             this.toolResultsHistory = Objects.requireNonNull(toolResultsHistory);
             return this;
         }
-
         public ResultStorageResponse build() {
             return new ResultStorageResponse(googleCloudStorage, resultsUrl, toolResultsExecution, toolResultsHistory);
         }

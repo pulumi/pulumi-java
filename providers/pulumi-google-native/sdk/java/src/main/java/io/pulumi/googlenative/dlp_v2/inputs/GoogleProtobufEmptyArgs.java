@@ -34,7 +34,6 @@ public final class GoogleProtobufEmptyArgs extends io.pulumi.resources.ResourceA
         public Builder(GoogleProtobufEmptyArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleProtobufEmptyArgs build() {
             return new GoogleProtobufEmptyArgs();
         }

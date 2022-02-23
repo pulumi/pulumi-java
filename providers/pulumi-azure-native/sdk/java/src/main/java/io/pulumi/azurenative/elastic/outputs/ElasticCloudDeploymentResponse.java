@@ -179,7 +179,6 @@ public final class ElasticCloudDeploymentResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ElasticCloudDeploymentResponse build() {
             return new ElasticCloudDeploymentResponse(azureSubscriptionId, deploymentId, elasticsearchRegion, elasticsearchServiceUrl, kibanaServiceUrl, kibanaSsoUrl, name);
         }

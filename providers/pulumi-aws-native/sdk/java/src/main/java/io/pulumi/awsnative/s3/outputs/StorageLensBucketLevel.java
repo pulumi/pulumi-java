@@ -61,7 +61,6 @@ public final class StorageLensBucketLevel {
             this.prefixLevel = prefixLevel;
             return this;
         }
-
         public StorageLensBucketLevel build() {
             return new StorageLensBucketLevel(activityMetrics, prefixLevel);
         }

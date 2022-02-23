@@ -290,7 +290,6 @@ public final class AzureBlobFSReadSettingsResponse {
             this.wildcardFolderPath = wildcardFolderPath;
             return this;
         }
-
         public AzureBlobFSReadSettingsResponse build() {
             return new AzureBlobFSReadSettingsResponse(deleteFilesAfterCompletion, disableMetricsCollection, enablePartitionDiscovery, fileListPath, maxConcurrentConnections, modifiedDatetimeEnd, modifiedDatetimeStart, partitionRootPath, recursive, type, wildcardFileName, wildcardFolderPath);
         }

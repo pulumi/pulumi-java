@@ -23,7 +23,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="thumbprint", required=true)
-    private final String thumbprint;
+        private final String thumbprint;
 
     public String getThumbprint() {
         return this.thumbprint;
@@ -34,7 +34,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="thumbprintSecondary")
-    private final @Nullable String thumbprintSecondary;
+        private final @Nullable String thumbprintSecondary;
 
     public Optional<String> getThumbprintSecondary() {
         return this.thumbprintSecondary == null ? Optional.empty() : Optional.ofNullable(this.thumbprintSecondary);
@@ -45,7 +45,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="x509StoreName")
-    private final @Nullable String x509StoreName;
+        private final @Nullable String x509StoreName;
 
     public Optional<String> getX509StoreName() {
         return this.x509StoreName == null ? Optional.empty() : Optional.ofNullable(this.x509StoreName);
@@ -104,7 +104,6 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
             this.x509StoreName = x509StoreName;
             return this;
         }
-
         public CertificateDescriptionResponse build() {
             return new CertificateDescriptionResponse(thumbprint, thumbprintSecondary, x509StoreName);
         }

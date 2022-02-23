@@ -77,7 +77,6 @@ public final class IngressEnvironmentStatusResponse {
             this.stateDetails = Objects.requireNonNull(stateDetails);
             return this;
         }
-
         public IngressEnvironmentStatusResponse build() {
             return new IngressEnvironmentStatusResponse(state, stateDetails);
         }

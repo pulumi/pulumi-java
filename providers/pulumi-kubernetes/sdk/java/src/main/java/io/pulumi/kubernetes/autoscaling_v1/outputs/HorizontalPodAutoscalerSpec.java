@@ -119,7 +119,6 @@ public final class HorizontalPodAutoscalerSpec {
             this.targetCPUUtilizationPercentage = targetCPUUtilizationPercentage;
             return this;
         }
-
         public HorizontalPodAutoscalerSpec build() {
             return new HorizontalPodAutoscalerSpec(maxReplicas, minReplicas, scaleTargetRef, targetCPUUtilizationPercentage);
         }

@@ -44,7 +44,6 @@ public final class MitigationActionReplaceDefaultPolicyVersionParams {
             this.templateName = Objects.requireNonNull(templateName);
             return this;
         }
-
         public MitigationActionReplaceDefaultPolicyVersionParams build() {
             return new MitigationActionReplaceDefaultPolicyVersionParams(templateName);
         }

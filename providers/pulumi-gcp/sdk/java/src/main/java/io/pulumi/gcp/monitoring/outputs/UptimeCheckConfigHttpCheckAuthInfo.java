@@ -76,7 +76,6 @@ public final class UptimeCheckConfigHttpCheckAuthInfo {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public UptimeCheckConfigHttpCheckAuthInfo build() {
             return new UptimeCheckConfigHttpCheckAuthInfo(password, username);
         }

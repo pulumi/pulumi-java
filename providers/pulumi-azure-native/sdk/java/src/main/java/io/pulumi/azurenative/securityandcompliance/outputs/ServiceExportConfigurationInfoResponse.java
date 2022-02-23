@@ -54,7 +54,6 @@ public final class ServiceExportConfigurationInfoResponse {
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public ServiceExportConfigurationInfoResponse build() {
             return new ServiceExportConfigurationInfoResponse(storageAccountName);
         }

@@ -98,7 +98,6 @@ public final class DetectorModelSetTimer {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }
-
         public DetectorModelSetTimer build() {
             return new DetectorModelSetTimer(durationExpression, seconds, timerName);
         }

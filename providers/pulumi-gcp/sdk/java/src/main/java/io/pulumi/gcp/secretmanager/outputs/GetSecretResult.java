@@ -190,7 +190,6 @@ public final class GetSecretResult {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public GetSecretResult build() {
             return new GetSecretResult(createTime, expireTime, id, labels, name, project, replications, rotations, secretId, topics, ttl);
         }

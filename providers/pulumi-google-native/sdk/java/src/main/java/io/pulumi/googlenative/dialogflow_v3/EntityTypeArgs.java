@@ -21,7 +21,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     public static final EntityTypeArgs Empty = new EntityTypeArgs();
 
     @InputImport(name="agentId", required=true)
-    private final Input<String> agentId;
+      private final Input<String> agentId;
 
     public Input<String> getAgentId() {
         return this.agentId;
@@ -32,7 +32,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoExpansionMode")
-    private final @Nullable Input<EntityTypeAutoExpansionMode> autoExpansionMode;
+      private final @Nullable Input<EntityTypeAutoExpansionMode> autoExpansionMode;
 
     public Input<EntityTypeAutoExpansionMode> getAutoExpansionMode() {
         return this.autoExpansionMode == null ? Input.empty() : this.autoExpansionMode;
@@ -43,7 +43,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -54,7 +54,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableFuzzyExtraction")
-    private final @Nullable Input<Boolean> enableFuzzyExtraction;
+      private final @Nullable Input<Boolean> enableFuzzyExtraction;
 
     public Input<Boolean> getEnableFuzzyExtraction() {
         return this.enableFuzzyExtraction == null ? Input.empty() : this.enableFuzzyExtraction;
@@ -65,7 +65,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entities")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities;
 
     public Input<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> getEntities() {
         return this.entities == null ? Input.empty() : this.entities;
@@ -76,7 +76,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludedPhrases")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs>> excludedPhrases;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs>> excludedPhrases;
 
     public Input<List<GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs>> getExcludedPhrases() {
         return this.excludedPhrases == null ? Input.empty() : this.excludedPhrases;
@@ -87,21 +87,21 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<EntityTypeKind> kind;
+      private final Input<EntityTypeKind> kind;
 
     public Input<EntityTypeKind> getKind() {
         return this.kind;
     }
 
     @InputImport(name="languageCode")
-    private final @Nullable Input<String> languageCode;
+      private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -112,14 +112,14 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -130,7 +130,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redact")
-    private final @Nullable Input<Boolean> redact;
+      private final @Nullable Input<Boolean> redact;
 
     public Input<Boolean> getRedact() {
         return this.redact == null ? Input.empty() : this.redact;
@@ -339,7 +339,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.redact = Input.ofNullable(redact);
             return this;
         }
-
         public EntityTypeArgs build() {
             return new EntityTypeArgs(agentId, autoExpansionMode, displayName, enableFuzzyExtraction, entities, excludedPhrases, kind, languageCode, location, name, project, redact);
         }

@@ -587,7 +587,6 @@ public final class GetAppServiceCertificateOrderResult {
             this.validityInYears = validityInYears;
             return this;
         }
-
         public GetAppServiceCertificateOrderResult build() {
             return new GetAppServiceCertificateOrderResult(appServiceCertificateNotRenewableReasons, autoRenew, certificates, csr, distinguishedName, domainVerificationToken, expirationTime, id, intermediate, isPrivateKeyExternal, keySize, kind, lastCertificateIssuanceTime, location, name, nextAutoRenewalTimeStamp, productType, provisioningState, root, serialNumber, signedCertificate, status, systemData, tags, type, validityInYears);
         }

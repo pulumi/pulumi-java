@@ -159,7 +159,6 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse {
             this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3TransitionRouteResponse build() {
             return new GoogleCloudDialogflowCxV3TransitionRouteResponse(condition, intent, name, targetFlow, targetPage, triggerFulfillment);
         }

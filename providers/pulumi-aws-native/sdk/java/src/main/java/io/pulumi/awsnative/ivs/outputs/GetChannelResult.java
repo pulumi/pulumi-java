@@ -228,7 +228,6 @@ public final class GetChannelResult {
             this.type = type;
             return this;
         }
-
         public GetChannelResult build() {
             return new GetChannelResult(arn, authorized, ingestEndpoint, latencyMode, name, playbackUrl, recordingConfigurationArn, tags, type);
         }

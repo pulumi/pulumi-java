@@ -24,7 +24,7 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<List<String>> permissions;
+      private final @Nullable Input<List<String>> permissions;
 
     public Input<List<String>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -35,7 +35,7 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable Input<List<String>> roles;
+      private final @Nullable Input<List<String>> roles;
 
     public Input<List<String>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;
@@ -94,7 +94,6 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
             this.roles = Input.ofNullable(roles);
             return this;
         }
-
         public AccessSelectorArgs build() {
             return new AccessSelectorArgs(permissions, roles);
         }

@@ -46,7 +46,6 @@ public final class RuleGroupLabelSummary {
             this.name = name;
             return this;
         }
-
         public RuleGroupLabelSummary build() {
             return new RuleGroupLabelSummary(name);
         }

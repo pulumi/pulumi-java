@@ -14,49 +14,49 @@ public final class GetHealthCheckHttpHealthCheck extends io.pulumi.resources.Inv
     public static final GetHealthCheckHttpHealthCheck Empty = new GetHealthCheckHttpHealthCheck();
 
     @InputImport(name="host", required=true)
-    private final String host;
+        private final String host;
 
     public String getHost() {
         return this.host;
     }
 
     @InputImport(name="port", required=true)
-    private final Integer port;
+        private final Integer port;
 
     public Integer getPort() {
         return this.port;
     }
 
     @InputImport(name="portName", required=true)
-    private final String portName;
+        private final String portName;
 
     public String getPortName() {
         return this.portName;
     }
 
     @InputImport(name="portSpecification", required=true)
-    private final String portSpecification;
+        private final String portSpecification;
 
     public String getPortSpecification() {
         return this.portSpecification;
     }
 
     @InputImport(name="proxyHeader", required=true)
-    private final String proxyHeader;
+        private final String proxyHeader;
 
     public String getProxyHeader() {
         return this.proxyHeader;
     }
 
     @InputImport(name="requestPath", required=true)
-    private final String requestPath;
+        private final String requestPath;
 
     public String getRequestPath() {
         return this.requestPath;
     }
 
     @InputImport(name="response", required=true)
-    private final String response;
+        private final String response;
 
     public String getResponse() {
         return this.response;
@@ -155,7 +155,6 @@ public final class GetHealthCheckHttpHealthCheck extends io.pulumi.resources.Inv
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public GetHealthCheckHttpHealthCheck build() {
             return new GetHealthCheckHttpHealthCheck(host, port, portName, portSpecification, proxyHeader, requestPath, response);
         }

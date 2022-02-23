@@ -56,7 +56,6 @@ public final class CertificateCertificateDescriptionConfigValue {
             this.keyUsages = keyUsages;
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValue build() {
             return new CertificateCertificateDescriptionConfigValue(keyUsages);
         }

@@ -163,7 +163,6 @@ public final class FacebookChannelPropertiesResponse {
             this.verifyToken = Objects.requireNonNull(verifyToken);
             return this;
         }
-
         public FacebookChannelPropertiesResponse build() {
             return new FacebookChannelPropertiesResponse(appId, appSecret, callbackUrl, isEnabled, pages, verifyToken);
         }

@@ -75,7 +75,6 @@ public final class HealthStateResponse {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public HealthStateResponse build() {
             return new HealthStateResponse(healthStateName, severity);
         }

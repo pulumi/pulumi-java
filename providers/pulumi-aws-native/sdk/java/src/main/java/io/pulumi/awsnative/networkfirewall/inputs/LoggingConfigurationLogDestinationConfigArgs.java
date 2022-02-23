@@ -20,21 +20,21 @@ public final class LoggingConfigurationLogDestinationConfigArgs extends io.pulum
      * 
      */
     @InputImport(name="logDestination", required=true)
-    private final Input<Object> logDestination;
+        private final Input<Object> logDestination;
 
     public Input<Object> getLogDestination() {
         return this.logDestination;
     }
 
     @InputImport(name="logDestinationType", required=true)
-    private final Input<LoggingConfigurationLogDestinationConfigLogDestinationType> logDestinationType;
+        private final Input<LoggingConfigurationLogDestinationConfigLogDestinationType> logDestinationType;
 
     public Input<LoggingConfigurationLogDestinationConfigLogDestinationType> getLogDestinationType() {
         return this.logDestinationType;
     }
 
     @InputImport(name="logType", required=true)
-    private final Input<LoggingConfigurationLogDestinationConfigLogType> logType;
+        private final Input<LoggingConfigurationLogDestinationConfigLogType> logType;
 
     public Input<LoggingConfigurationLogDestinationConfigLogType> getLogType() {
         return this.logType;
@@ -108,7 +108,6 @@ public final class LoggingConfigurationLogDestinationConfigArgs extends io.pulum
             this.logType = Input.of(Objects.requireNonNull(logType));
             return this;
         }
-
         public LoggingConfigurationLogDestinationConfigArgs build() {
             return new LoggingConfigurationLogDestinationConfigArgs(logDestination, logDestinationType, logType);
         }

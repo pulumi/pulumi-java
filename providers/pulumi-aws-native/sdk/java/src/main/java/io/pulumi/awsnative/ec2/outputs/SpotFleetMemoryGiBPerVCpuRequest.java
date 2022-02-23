@@ -60,7 +60,6 @@ public final class SpotFleetMemoryGiBPerVCpuRequest {
             this.min = min;
             return this;
         }
-
         public SpotFleetMemoryGiBPerVCpuRequest build() {
             return new SpotFleetMemoryGiBPerVCpuRequest(max, min);
         }

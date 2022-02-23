@@ -74,7 +74,6 @@ public final class JsonFileFormatResponse {
             this.schemaFileFormat = Objects.requireNonNull(schemaFileFormat);
             return this;
         }
-
         public JsonFileFormatResponse build() {
             return new JsonFileFormatResponse(compression, schemaFileFormat);
         }

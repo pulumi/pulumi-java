@@ -289,7 +289,6 @@ public final class BuildProvenanceResponse {
             this.triggerId = Objects.requireNonNull(triggerId);
             return this;
         }
-
         public BuildProvenanceResponse build() {
             return new BuildProvenanceResponse(buildOptions, builderVersion, builtArtifacts, commands, createTime, creator, finishTime, logsBucket, project, sourceProvenance, startTime, triggerId);
         }

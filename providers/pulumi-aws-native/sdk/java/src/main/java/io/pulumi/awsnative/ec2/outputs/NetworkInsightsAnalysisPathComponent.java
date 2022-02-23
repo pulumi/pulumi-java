@@ -182,7 +182,6 @@ public final class NetworkInsightsAnalysisPathComponent {
             this.vpc = vpc;
             return this;
         }
-
         public NetworkInsightsAnalysisPathComponent build() {
             return new NetworkInsightsAnalysisPathComponent(aclRule, component, destinationVpc, inboundHeader, outboundHeader, routeTableRoute, securityGroupRule, sequenceNumber, sourceVpc, subnet, vpc);
         }

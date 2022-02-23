@@ -160,7 +160,6 @@ public final class GetProviderInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProviderInstanceResult build() {
             return new GetProviderInstanceResult(id, metadata, name, properties, provisioningState, type);
         }

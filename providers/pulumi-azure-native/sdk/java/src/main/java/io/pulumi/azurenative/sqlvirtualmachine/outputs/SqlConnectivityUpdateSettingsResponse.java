@@ -77,7 +77,6 @@ public final class SqlConnectivityUpdateSettingsResponse {
             this.port = port;
             return this;
         }
-
         public SqlConnectivityUpdateSettingsResponse build() {
             return new SqlConnectivityUpdateSettingsResponse(connectivityType, port);
         }

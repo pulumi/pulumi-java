@@ -20,7 +20,7 @@ public final class SloBasicSliLatencyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final Input<String> threshold;
+        private final Input<String> threshold;
 
     public Input<String> getThreshold() {
         return this.threshold;
@@ -63,7 +63,6 @@ public final class SloBasicSliLatencyArgs extends io.pulumi.resources.ResourceAr
             this.threshold = Input.of(Objects.requireNonNull(threshold));
             return this;
         }
-
         public SloBasicSliLatencyArgs build() {
             return new SloBasicSliLatencyArgs(threshold);
         }

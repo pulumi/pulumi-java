@@ -287,7 +287,6 @@ public final class GetSqlDBTableDataSetMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlDBTableDataSetMappingResult build() {
             return new GetSqlDBTableDataSetMappingResult(dataSetId, dataSetMappingStatus, databaseName, id, kind, name, provisioningState, schemaName, sqlServerResourceId, systemData, tableName, type);
         }

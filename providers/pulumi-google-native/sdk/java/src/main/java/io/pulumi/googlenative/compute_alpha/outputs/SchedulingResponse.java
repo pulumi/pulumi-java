@@ -394,7 +394,6 @@ public final class SchedulingResponse {
             this.terminationTime = Objects.requireNonNull(terminationTime);
             return this;
         }
-
         public SchedulingResponse build() {
             return new SchedulingResponse(automaticRestart, availabilityDomain, currentCpus, currentMemoryMb, hostErrorTimeoutSeconds, instanceTerminationAction, latencyTolerant, locationHint, maintenanceFreezeDurationHours, maintenanceInterval, maxRunDuration, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel, terminationTime);
         }

@@ -121,7 +121,6 @@ public final class FacebookResponse {
             this.registration = registration;
             return this;
         }
-
         public FacebookResponse build() {
             return new FacebookResponse(enabled, graphApiVersion, login, registration);
         }

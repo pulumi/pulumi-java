@@ -111,7 +111,6 @@ public final class RecipeDataCatalogInputDefinition {
             this.tempDirectory = tempDirectory;
             return this;
         }
-
         public RecipeDataCatalogInputDefinition build() {
             return new RecipeDataCatalogInputDefinition(catalogId, databaseName, tableName, tempDirectory);
         }

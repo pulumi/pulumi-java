@@ -61,7 +61,6 @@ public final class DataflowEndpointGroupSocketAddress {
             this.port = port;
             return this;
         }
-
         public DataflowEndpointGroupSocketAddress build() {
             return new DataflowEndpointGroupSocketAddress(name, port);
         }

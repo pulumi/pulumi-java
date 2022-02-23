@@ -140,7 +140,6 @@ public final class StaticSiteTemplateOptionsResponse {
             this.templateRepositoryUrl = templateRepositoryUrl;
             return this;
         }
-
         public StaticSiteTemplateOptionsResponse build() {
             return new StaticSiteTemplateOptionsResponse(description, isPrivate, owner, repositoryName, templateRepositoryUrl);
         }

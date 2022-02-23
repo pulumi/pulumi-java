@@ -74,7 +74,6 @@ public final class ListRedisKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListRedisKeysResult build() {
             return new ListRedisKeysResult(primaryKey, secondaryKey);
         }

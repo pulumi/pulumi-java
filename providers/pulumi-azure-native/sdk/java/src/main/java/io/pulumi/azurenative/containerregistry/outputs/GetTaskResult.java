@@ -446,7 +446,6 @@ public final class GetTaskResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTaskResult build() {
             return new GetTaskResult(agentConfiguration, agentPoolName, creationDate, credentials, id, identity, isSystemTask, location, logTemplate, name, platform, provisioningState, status, step, systemData, tags, timeout, trigger, type);
         }

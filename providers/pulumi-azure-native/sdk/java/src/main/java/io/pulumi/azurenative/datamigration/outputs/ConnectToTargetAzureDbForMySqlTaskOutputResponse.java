@@ -139,7 +139,6 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToTargetAzureDbForMySqlTaskOutputResponse build() {
             return new ConnectToTargetAzureDbForMySqlTaskOutputResponse(databases, id, serverVersion, targetServerBrandVersion, validationErrors);
         }

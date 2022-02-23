@@ -23,7 +23,7 @@ public final class IngressProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable String ip;
+        private final @Nullable String ip;
 
     public Optional<String> getIp() {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
@@ -34,7 +34,7 @@ public final class IngressProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -45,7 +45,7 @@ public final class IngressProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="visibility")
-    private final @Nullable String visibility;
+        private final @Nullable String visibility;
 
     public Optional<String> getVisibility() {
         return this.visibility == null ? Optional.empty() : Optional.ofNullable(this.visibility);
@@ -104,7 +104,6 @@ public final class IngressProfileResponse extends io.pulumi.resources.InvokeArgs
             this.visibility = visibility;
             return this;
         }
-
         public IngressProfileResponse build() {
             return new IngressProfileResponse(ip, name, visibility);
         }

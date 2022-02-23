@@ -19,7 +19,7 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificateExpirationDate")
-    private final @Nullable Input<String> certificateExpirationDate;
+        private final @Nullable Input<String> certificateExpirationDate;
 
     public Input<String> getCertificateExpirationDate() {
         return this.certificateExpirationDate == null ? Input.empty() : this.certificateExpirationDate;
@@ -30,7 +30,7 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificateSubjectName")
-    private final @Nullable Input<String> certificateSubjectName;
+        private final @Nullable Input<String> certificateSubjectName;
 
     public Input<String> getCertificateSubjectName() {
         return this.certificateSubjectName == null ? Input.empty() : this.certificateSubjectName;
@@ -41,7 +41,7 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificateThumbprint")
-    private final @Nullable Input<String> certificateThumbprint;
+        private final @Nullable Input<String> certificateThumbprint;
 
     public Input<String> getCertificateThumbprint() {
         return this.certificateThumbprint == null ? Input.empty() : this.certificateThumbprint;
@@ -52,7 +52,7 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -63,7 +63,7 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="pfx")
-    private final @Nullable Input<String> pfx;
+        private final @Nullable Input<String> pfx;
 
     public Input<String> getPfx() {
         return this.pfx == null ? Input.empty() : this.pfx;
@@ -75,7 +75,7 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -194,7 +194,6 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ClientCertAuthenticationArgs build() {
             return new ClientCertAuthenticationArgs(certificateExpirationDate, certificateSubjectName, certificateThumbprint, password, pfx, type);
         }

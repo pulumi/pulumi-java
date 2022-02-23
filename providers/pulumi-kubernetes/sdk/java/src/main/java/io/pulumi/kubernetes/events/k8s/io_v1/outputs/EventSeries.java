@@ -75,7 +75,6 @@ public final class EventSeries {
             this.lastObservedTime = Objects.requireNonNull(lastObservedTime);
             return this;
         }
-
         public EventSeries build() {
             return new EventSeries(count, lastObservedTime);
         }

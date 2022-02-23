@@ -95,7 +95,6 @@ public final class ToolResultsExecutionResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public ToolResultsExecutionResponse build() {
             return new ToolResultsExecutionResponse(executionId, historyId, project);
         }

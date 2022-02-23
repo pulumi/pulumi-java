@@ -22,7 +22,7 @@ public final class PipelineConditionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="pipelineReadyCondition", required=true)
-    private final PipelineReadyConditionResponse pipelineReadyCondition;
+      private final PipelineReadyConditionResponse pipelineReadyCondition;
 
     public PipelineReadyConditionResponse getPipelineReadyCondition() {
         return this.pipelineReadyCondition;
@@ -33,7 +33,7 @@ public final class PipelineConditionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="targetsPresentCondition", required=true)
-    private final TargetsPresentConditionResponse targetsPresentCondition;
+      private final TargetsPresentConditionResponse targetsPresentCondition;
 
     public TargetsPresentConditionResponse getTargetsPresentCondition() {
         return this.targetsPresentCondition;
@@ -82,7 +82,6 @@ public final class PipelineConditionResponse extends io.pulumi.resources.InvokeA
             this.targetsPresentCondition = Objects.requireNonNull(targetsPresentCondition);
             return this;
         }
-
         public PipelineConditionResponse build() {
             return new PipelineConditionResponse(pipelineReadyCondition, targetsPresentCondition);
         }

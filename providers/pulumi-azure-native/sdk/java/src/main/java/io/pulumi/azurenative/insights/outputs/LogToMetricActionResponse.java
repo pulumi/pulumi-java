@@ -78,7 +78,6 @@ public final class LogToMetricActionResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public LogToMetricActionResponse build() {
             return new LogToMetricActionResponse(criteria, odataType);
         }

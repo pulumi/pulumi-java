@@ -26,7 +26,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="containerNetworkInterfaces")
-    private final @Nullable Input<List<SubResourceArgs>> containerNetworkInterfaces;
+        private final @Nullable Input<List<SubResourceArgs>> containerNetworkInterfaces;
 
     public Input<List<SubResourceArgs>> getContainerNetworkInterfaces() {
         return this.containerNetworkInterfaces == null ? Input.empty() : this.containerNetworkInterfaces;
@@ -37,7 +37,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -48,7 +48,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="ipConfigurations")
-    private final @Nullable Input<List<IPConfigurationProfileArgs>> ipConfigurations;
+        private final @Nullable Input<List<IPConfigurationProfileArgs>> ipConfigurations;
 
     public Input<List<IPConfigurationProfileArgs>> getIpConfigurations() {
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
@@ -59,7 +59,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -148,7 +148,6 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ContainerNetworkInterfaceConfigurationArgs build() {
             return new ContainerNetworkInterfaceConfigurationArgs(containerNetworkInterfaces, id, ipConfigurations, name);
         }

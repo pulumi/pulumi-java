@@ -30,7 +30,6 @@ public final class DataSetLogicalTableMap {
         public Builder(DataSetLogicalTableMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DataSetLogicalTableMap build() {
             return new DataSetLogicalTableMap();
         }

@@ -75,7 +75,6 @@ public final class V2ApiTargetResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public V2ApiTargetResponse build() {
             return new V2ApiTargetResponse(methods, service);
         }

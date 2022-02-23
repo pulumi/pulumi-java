@@ -78,7 +78,6 @@ public final class UptimeCheckConfigResourceGroup {
             this.resourceType = resourceType;
             return this;
         }
-
         public UptimeCheckConfigResourceGroup build() {
             return new UptimeCheckConfigResourceGroup(groupId, resourceType);
         }

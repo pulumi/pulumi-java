@@ -246,7 +246,6 @@ public final class GetBackupScheduleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBackupScheduleResult build() {
             return new GetBackupScheduleResult(backupType, id, kind, lastSuccessfulRun, name, retentionCount, scheduleRecurrence, scheduleStatus, startTime, type);
         }

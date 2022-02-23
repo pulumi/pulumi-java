@@ -25,7 +25,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backfillAll")
-    private final @Nullable Input<BackfillAllStrategyArgs> backfillAll;
+      private final @Nullable Input<BackfillAllStrategyArgs> backfillAll;
 
     public Input<BackfillAllStrategyArgs> getBackfillAll() {
         return this.backfillAll == null ? Input.empty() : this.backfillAll;
@@ -36,7 +36,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backfillNone")
-    private final @Nullable Input<BackfillNoneStrategyArgs> backfillNone;
+      private final @Nullable Input<BackfillNoneStrategyArgs> backfillNone;
 
     public Input<BackfillNoneStrategyArgs> getBackfillNone() {
         return this.backfillNone == null ? Input.empty() : this.backfillNone;
@@ -47,7 +47,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerManagedEncryptionKey")
-    private final @Nullable Input<String> customerManagedEncryptionKey;
+      private final @Nullable Input<String> customerManagedEncryptionKey;
 
     public Input<String> getCustomerManagedEncryptionKey() {
         return this.customerManagedEncryptionKey == null ? Input.empty() : this.customerManagedEncryptionKey;
@@ -58,7 +58,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationConfig", required=true)
-    private final Input<DestinationConfigArgs> destinationConfig;
+      private final Input<DestinationConfigArgs> destinationConfig;
 
     public Input<DestinationConfigArgs> getDestinationConfig() {
         return this.destinationConfig;
@@ -69,14 +69,14 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="force")
-    private final @Nullable Input<String> force;
+      private final @Nullable Input<String> force;
 
     public Input<String> getForce() {
         return this.force == null ? Input.empty() : this.force;
@@ -87,28 +87,28 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -119,7 +119,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceConfig", required=true)
-    private final Input<SourceConfigArgs> sourceConfig;
+      private final Input<SourceConfigArgs> sourceConfig;
 
     public Input<SourceConfigArgs> getSourceConfig() {
         return this.sourceConfig;
@@ -130,21 +130,21 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<StreamState> state;
+      private final @Nullable Input<StreamState> state;
 
     public Input<StreamState> getState() {
         return this.state == null ? Input.empty() : this.state;
     }
 
     @InputImport(name="streamId", required=true)
-    private final Input<String> streamId;
+      private final Input<String> streamId;
 
     public Input<String> getStreamId() {
         return this.streamId;
     }
 
     @InputImport(name="validateOnly")
-    private final @Nullable Input<String> validateOnly;
+      private final @Nullable Input<String> validateOnly;
 
     public Input<String> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
@@ -383,7 +383,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
-
         public StreamArgs build() {
             return new StreamArgs(backfillAll, backfillNone, customerManagedEncryptionKey, destinationConfig, displayName, force, labels, location, project, requestId, sourceConfig, state, streamId, validateOnly);
         }

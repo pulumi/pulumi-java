@@ -77,7 +77,6 @@ public final class CassandraKeyspaceGetPropertiesResponseOptions {
             this.throughput = throughput;
             return this;
         }
-
         public CassandraKeyspaceGetPropertiesResponseOptions build() {
             return new CassandraKeyspaceGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }

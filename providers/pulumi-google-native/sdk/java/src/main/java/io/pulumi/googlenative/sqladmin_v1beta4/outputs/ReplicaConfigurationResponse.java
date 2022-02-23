@@ -97,7 +97,6 @@ public final class ReplicaConfigurationResponse {
             this.mysqlReplicaConfiguration = Objects.requireNonNull(mysqlReplicaConfiguration);
             return this;
         }
-
         public ReplicaConfigurationResponse build() {
             return new ReplicaConfigurationResponse(failoverTarget, kind, mysqlReplicaConfiguration);
         }

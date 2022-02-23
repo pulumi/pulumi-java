@@ -119,7 +119,6 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentials {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public ConnectorProfileSalesforceConnectorProfileCredentials build() {
             return new ConnectorProfileSalesforceConnectorProfileCredentials(accessToken, clientCredentialsArn, connectorOAuthRequest, refreshToken);
         }

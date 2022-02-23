@@ -230,7 +230,6 @@ public final class TriggerBuildSourceRepoSource {
             this.tagName = tagName;
             return this;
         }
-
         public TriggerBuildSourceRepoSource build() {
             return new TriggerBuildSourceRepoSource(branchName, commitSha, dir, invertRegex, projectId, repoName, substitutions, tagName);
         }

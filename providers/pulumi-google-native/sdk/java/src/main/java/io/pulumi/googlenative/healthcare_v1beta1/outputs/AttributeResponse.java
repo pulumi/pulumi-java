@@ -75,7 +75,6 @@ public final class AttributeResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public AttributeResponse build() {
             return new AttributeResponse(attributeDefinitionId, values);
         }

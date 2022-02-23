@@ -55,7 +55,6 @@ public final class PreventionStoredInfoTypeDictionaryWordList {
             this.words = Objects.requireNonNull(words);
             return this;
         }
-
         public PreventionStoredInfoTypeDictionaryWordList build() {
             return new PreventionStoredInfoTypeDictionaryWordList(words);
         }

@@ -182,7 +182,6 @@ public final class GetWebAppSlotConfigurationNamesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppSlotConfigurationNamesResult build() {
             return new GetWebAppSlotConfigurationNamesResult(appSettingNames, azureStorageConfigNames, connectionStringNames, id, kind, name, type);
         }

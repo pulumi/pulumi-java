@@ -20,7 +20,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
      * 
      */
     @InputImport(name="keytab", required=true)
-    private final Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab;
+        private final Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab;
 
     public Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> getKeytab() {
         return this.keytab;
@@ -31,7 +31,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
      * 
      */
     @InputImport(name="krb5ConfigGcsUri", required=true)
-    private final Input<String> krb5ConfigGcsUri;
+        private final Input<String> krb5ConfigGcsUri;
 
     public Input<String> getKrb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri;
@@ -42,7 +42,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
      * 
      */
     @InputImport(name="principal", required=true)
-    private final Input<String> principal;
+        private final Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal;
@@ -116,7 +116,6 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
             this.principal = Input.of(Objects.requireNonNull(principal));
             return this;
         }
-
         public MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs build() {
             return new MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs(keytab, krb5ConfigGcsUri, principal);
         }

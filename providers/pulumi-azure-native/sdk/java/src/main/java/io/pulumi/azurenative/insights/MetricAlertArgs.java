@@ -28,7 +28,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable Input<List<MetricAlertActionArgs>> actions;
+        private final @Nullable Input<List<MetricAlertActionArgs>> actions;
 
     public Input<List<MetricAlertActionArgs>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -39,7 +39,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoMitigate")
-    private final @Nullable Input<Boolean> autoMitigate;
+        private final @Nullable Input<Boolean> autoMitigate;
 
     public Input<Boolean> getAutoMitigate() {
         return this.autoMitigate == null ? Input.empty() : this.autoMitigate;
@@ -50,7 +50,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="criteria", required=true)
-    private final Input<Object> criteria;
+        private final Input<Object> criteria;
 
     public Input<Object> getCriteria() {
         return this.criteria;
@@ -61,7 +61,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -72,7 +72,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -83,7 +83,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluationFrequency", required=true)
-    private final Input<String> evaluationFrequency;
+        private final Input<String> evaluationFrequency;
 
     public Input<String> getEvaluationFrequency() {
         return this.evaluationFrequency;
@@ -94,7 +94,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -105,7 +105,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -116,7 +116,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+        private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -127,7 +127,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes", required=true)
-    private final Input<List<String>> scopes;
+        private final Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes;
@@ -138,7 +138,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-    private final Input<Integer> severity;
+        private final Input<Integer> severity;
 
     public Input<Integer> getSeverity() {
         return this.severity;
@@ -149,7 +149,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -160,7 +160,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceRegion")
-    private final @Nullable Input<String> targetResourceRegion;
+        private final @Nullable Input<String> targetResourceRegion;
 
     public Input<String> getTargetResourceRegion() {
         return this.targetResourceRegion == null ? Input.empty() : this.targetResourceRegion;
@@ -171,7 +171,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceType")
-    private final @Nullable Input<String> targetResourceType;
+        private final @Nullable Input<String> targetResourceType;
 
     public Input<String> getTargetResourceType() {
         return this.targetResourceType == null ? Input.empty() : this.targetResourceType;
@@ -182,7 +182,7 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowSize", required=true)
-    private final Input<String> windowSize;
+        private final Input<String> windowSize;
 
     public Input<String> getWindowSize() {
         return this.windowSize;
@@ -436,7 +436,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
             this.windowSize = Input.of(Objects.requireNonNull(windowSize));
             return this;
         }
-
         public MetricAlertArgs build() {
             return new MetricAlertArgs(actions, autoMitigate, criteria, description, enabled, evaluationFrequency, location, resourceGroupName, ruleName, scopes, severity, tags, targetResourceRegion, targetResourceType, windowSize);
         }

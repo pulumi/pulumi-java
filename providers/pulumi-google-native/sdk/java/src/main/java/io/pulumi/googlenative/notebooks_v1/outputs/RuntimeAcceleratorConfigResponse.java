@@ -74,7 +74,6 @@ public final class RuntimeAcceleratorConfigResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RuntimeAcceleratorConfigResponse build() {
             return new RuntimeAcceleratorConfigResponse(coreCount, type);
         }

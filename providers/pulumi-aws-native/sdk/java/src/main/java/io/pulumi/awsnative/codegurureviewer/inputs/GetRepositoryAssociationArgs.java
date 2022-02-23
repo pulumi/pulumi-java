@@ -17,7 +17,7 @@ public final class GetRepositoryAssociationArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="associationArn", required=true)
-    private final String associationArn;
+        private final String associationArn;
 
     public String getAssociationArn() {
         return this.associationArn;
@@ -55,7 +55,6 @@ public final class GetRepositoryAssociationArgs extends io.pulumi.resources.Invo
             this.associationArn = Objects.requireNonNull(associationArn);
             return this;
         }
-
         public GetRepositoryAssociationArgs build() {
             return new GetRepositoryAssociationArgs(associationArn);
         }

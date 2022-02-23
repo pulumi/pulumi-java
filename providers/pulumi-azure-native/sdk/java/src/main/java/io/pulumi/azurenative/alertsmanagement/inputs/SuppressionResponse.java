@@ -26,7 +26,7 @@ public final class SuppressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable ConditionsResponse conditions;
+        private final @Nullable ConditionsResponse conditions;
 
     public Optional<ConditionsResponse> getConditions() {
         return this.conditions == null ? Optional.empty() : Optional.ofNullable(this.conditions);
@@ -37,7 +37,7 @@ public final class SuppressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdAt", required=true)
-    private final String createdAt;
+        private final String createdAt;
 
     public String getCreatedAt() {
         return this.createdAt;
@@ -48,7 +48,7 @@ public final class SuppressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdBy", required=true)
-    private final String createdBy;
+        private final String createdBy;
 
     public String getCreatedBy() {
         return this.createdBy;
@@ -59,7 +59,7 @@ public final class SuppressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -70,7 +70,7 @@ public final class SuppressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastModifiedAt", required=true)
-    private final String lastModifiedAt;
+        private final String lastModifiedAt;
 
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
@@ -81,7 +81,7 @@ public final class SuppressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastModifiedBy", required=true)
-    private final String lastModifiedBy;
+        private final String lastModifiedBy;
 
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
@@ -92,7 +92,7 @@ public final class SuppressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable ScopeResponse scope;
+        private final @Nullable ScopeResponse scope;
 
     public Optional<ScopeResponse> getScope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
@@ -103,7 +103,7 @@ public final class SuppressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -114,7 +114,7 @@ public final class SuppressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="suppressionConfig", required=true)
-    private final SuppressionConfigResponse suppressionConfig;
+        private final SuppressionConfigResponse suppressionConfig;
 
     public SuppressionConfigResponse getSuppressionConfig() {
         return this.suppressionConfig;
@@ -126,7 +126,7 @@ public final class SuppressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -255,7 +255,6 @@ public final class SuppressionResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SuppressionResponse build() {
             return new SuppressionResponse(conditions, createdAt, createdBy, description, lastModifiedAt, lastModifiedBy, scope, status, suppressionConfig, type);
         }

@@ -160,7 +160,6 @@ public final class SubjectDescriptionResponse {
             this.subjectAltName = Objects.requireNonNull(subjectAltName);
             return this;
         }
-
         public SubjectDescriptionResponse build() {
             return new SubjectDescriptionResponse(hexSerialNumber, lifetime, notAfterTime, notBeforeTime, subject, subjectAltName);
         }

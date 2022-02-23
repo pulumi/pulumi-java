@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
      * 
      */
     @InputImport(name="rbmSuggestion", required=true)
-    private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion;
+      private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> getRbmSuggestion() {
         return this.rbmSuggestion;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse(rbmSuggestion, text);
         }

@@ -21,7 +21,7 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
     public static final ServiceImageRepositoryArgs Empty = new ServiceImageRepositoryArgs();
 
     @InputImport(name="imageConfiguration")
-    private final @Nullable Input<ServiceImageConfigurationArgs> imageConfiguration;
+        private final @Nullable Input<ServiceImageConfigurationArgs> imageConfiguration;
 
     public Input<ServiceImageConfigurationArgs> getImageConfiguration() {
         return this.imageConfiguration == null ? Input.empty() : this.imageConfiguration;
@@ -32,7 +32,7 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="imageIdentifier", required=true)
-    private final Input<String> imageIdentifier;
+        private final Input<String> imageIdentifier;
 
     public Input<String> getImageIdentifier() {
         return this.imageIdentifier;
@@ -43,7 +43,7 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="imageRepositoryType", required=true)
-    private final Input<ServiceImageRepositoryImageRepositoryType> imageRepositoryType;
+        private final Input<ServiceImageRepositoryImageRepositoryType> imageRepositoryType;
 
     public Input<ServiceImageRepositoryImageRepositoryType> getImageRepositoryType() {
         return this.imageRepositoryType;
@@ -117,7 +117,6 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
             this.imageRepositoryType = Input.of(Objects.requireNonNull(imageRepositoryType));
             return this;
         }
-
         public ServiceImageRepositoryArgs build() {
             return new ServiceImageRepositoryArgs(imageConfiguration, imageIdentifier, imageRepositoryType);
         }

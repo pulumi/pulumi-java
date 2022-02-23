@@ -54,7 +54,6 @@ public final class GetDiagnosticServiceTokenReadWriteResult {
             this.token = token;
             return this;
         }
-
         public GetDiagnosticServiceTokenReadWriteResult build() {
             return new GetDiagnosticServiceTokenReadWriteResult(token);
         }

@@ -54,7 +54,6 @@ public final class TransitGatewayConnectOptions {
             this.protocol = protocol;
             return this;
         }
-
         public TransitGatewayConnectOptions build() {
             return new TransitGatewayConnectOptions(protocol);
         }

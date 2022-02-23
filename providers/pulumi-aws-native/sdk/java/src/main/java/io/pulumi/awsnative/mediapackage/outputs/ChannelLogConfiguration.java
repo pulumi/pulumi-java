@@ -54,7 +54,6 @@ public final class ChannelLogConfiguration {
             this.logGroupName = logGroupName;
             return this;
         }
-
         public ChannelLogConfiguration build() {
             return new ChannelLogConfiguration(logGroupName);
         }

@@ -54,7 +54,6 @@ public final class ApplicationManagementPolicyResponse {
             this.mode = mode;
             return this;
         }
-
         public ApplicationManagementPolicyResponse build() {
             return new ApplicationManagementPolicyResponse(mode);
         }

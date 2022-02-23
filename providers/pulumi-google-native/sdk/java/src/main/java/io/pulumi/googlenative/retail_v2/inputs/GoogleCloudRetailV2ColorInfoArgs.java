@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2ColorInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="colorFamilies")
-    private final @Nullable Input<List<String>> colorFamilies;
+      private final @Nullable Input<List<String>> colorFamilies;
 
     public Input<List<String>> getColorFamilies() {
         return this.colorFamilies == null ? Input.empty() : this.colorFamilies;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2ColorInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="colors")
-    private final @Nullable Input<List<String>> colors;
+      private final @Nullable Input<List<String>> colors;
 
     public Input<List<String>> getColors() {
         return this.colors == null ? Input.empty() : this.colors;
@@ -94,7 +94,6 @@ public final class GoogleCloudRetailV2ColorInfoArgs extends io.pulumi.resources.
             this.colors = Input.ofNullable(colors);
             return this;
         }
-
         public GoogleCloudRetailV2ColorInfoArgs build() {
             return new GoogleCloudRetailV2ColorInfoArgs(colorFamilies, colors);
         }

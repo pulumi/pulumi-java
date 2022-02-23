@@ -124,7 +124,6 @@ public final class ClusterHealthPolicyResponse {
             this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;
             return this;
         }
-
         public ClusterHealthPolicyResponse build() {
             return new ClusterHealthPolicyResponse(applicationHealthPolicies, maxPercentUnhealthyApplications, maxPercentUnhealthyNodes);
         }

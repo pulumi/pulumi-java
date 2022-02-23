@@ -46,7 +46,6 @@ public final class DashboardSheetControlsOption {
             this.visibilityState = visibilityState;
             return this;
         }
-
         public DashboardSheetControlsOption build() {
             return new DashboardSheetControlsOption(visibilityState);
         }

@@ -78,7 +78,6 @@ public final class ListBotConnectionServiceProvidersResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListBotConnectionServiceProvidersResult build() {
             return new ListBotConnectionServiceProvidersResult(nextLink, value);
         }

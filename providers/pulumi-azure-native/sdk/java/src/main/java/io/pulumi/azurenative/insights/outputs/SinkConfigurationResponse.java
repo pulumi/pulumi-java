@@ -44,7 +44,6 @@ public final class SinkConfigurationResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public SinkConfigurationResponse build() {
             return new SinkConfigurationResponse(kind);
         }

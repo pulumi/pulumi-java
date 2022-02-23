@@ -207,7 +207,6 @@ public final class GetPeriodicTimerEventTriggerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPeriodicTimerEventTriggerResult build() {
             return new GetPeriodicTimerEventTriggerResult(customContextTag, id, kind, name, sinkInfo, sourceInfo, systemData, type);
         }

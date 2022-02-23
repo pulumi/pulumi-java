@@ -54,7 +54,6 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
             this.query = query;
             return this;
         }
-
         public ActivityEntityQueriesPropertiesResponseQueryDefinitions build() {
             return new ActivityEntityQueriesPropertiesResponseQueryDefinitions(query);
         }

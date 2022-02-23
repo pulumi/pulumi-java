@@ -112,7 +112,6 @@ public final class InstanceFromMachineImageAttachedDisk {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public InstanceFromMachineImageAttachedDisk build() {
             return new InstanceFromMachineImageAttachedDisk(deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, kmsKeySelfLink, mode, source);
         }

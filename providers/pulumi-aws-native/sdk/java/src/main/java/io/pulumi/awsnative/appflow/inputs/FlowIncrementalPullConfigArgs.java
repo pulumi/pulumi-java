@@ -19,7 +19,7 @@ public final class FlowIncrementalPullConfigArgs extends io.pulumi.resources.Res
     public static final FlowIncrementalPullConfigArgs Empty = new FlowIncrementalPullConfigArgs();
 
     @InputImport(name="datetimeTypeFieldName")
-    private final @Nullable Input<String> datetimeTypeFieldName;
+        private final @Nullable Input<String> datetimeTypeFieldName;
 
     public Input<String> getDatetimeTypeFieldName() {
         return this.datetimeTypeFieldName == null ? Input.empty() : this.datetimeTypeFieldName;
@@ -62,7 +62,6 @@ public final class FlowIncrementalPullConfigArgs extends io.pulumi.resources.Res
             this.datetimeTypeFieldName = Input.ofNullable(datetimeTypeFieldName);
             return this;
         }
-
         public FlowIncrementalPullConfigArgs build() {
             return new FlowIncrementalPullConfigArgs(datetimeTypeFieldName);
         }

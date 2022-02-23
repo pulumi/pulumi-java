@@ -61,7 +61,6 @@ public final class AnomalyDetectorJsonFormatDescriptor {
             this.fileCompression = fileCompression;
             return this;
         }
-
         public AnomalyDetectorJsonFormatDescriptor build() {
             return new AnomalyDetectorJsonFormatDescriptor(charset, fileCompression);
         }

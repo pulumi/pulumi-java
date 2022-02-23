@@ -23,7 +23,7 @@ public final class MaintenanceExclusionOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<MaintenanceExclusionOptionsScope> scope;
+      private final @Nullable Input<MaintenanceExclusionOptionsScope> scope;
 
     public Input<MaintenanceExclusionOptionsScope> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -66,7 +66,6 @@ public final class MaintenanceExclusionOptionsArgs extends io.pulumi.resources.R
             this.scope = Input.ofNullable(scope);
             return this;
         }
-
         public MaintenanceExclusionOptionsArgs build() {
             return new MaintenanceExclusionOptionsArgs(scope);
         }

@@ -25,7 +25,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="byproducts", required=true)
-    private final ByProductsResponse byproducts;
+      private final ByProductsResponse byproducts;
 
     public ByProductsResponse getByproducts() {
         return this.byproducts;
@@ -36,7 +36,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="command", required=true)
-    private final List<String> command;
+      private final List<String> command;
 
     public List<String> getCommand() {
         return this.command;
@@ -47,7 +47,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environment", required=true)
-    private final EnvironmentResponse environment;
+      private final EnvironmentResponse environment;
 
     public EnvironmentResponse getEnvironment() {
         return this.environment;
@@ -58,7 +58,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="materials", required=true)
-    private final List<GrafeasV1beta1IntotoArtifactResponse> materials;
+      private final List<GrafeasV1beta1IntotoArtifactResponse> materials;
 
     public List<GrafeasV1beta1IntotoArtifactResponse> getMaterials() {
         return this.materials;
@@ -69,7 +69,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="products", required=true)
-    private final List<GrafeasV1beta1IntotoArtifactResponse> products;
+      private final List<GrafeasV1beta1IntotoArtifactResponse> products;
 
     public List<GrafeasV1beta1IntotoArtifactResponse> getProducts() {
         return this.products;
@@ -148,7 +148,6 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
             this.products = Objects.requireNonNull(products);
             return this;
         }
-
         public LinkResponse build() {
             return new LinkResponse(byproducts, command, environment, materials, products);
         }

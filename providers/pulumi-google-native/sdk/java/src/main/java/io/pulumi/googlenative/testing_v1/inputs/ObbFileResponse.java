@@ -22,7 +22,7 @@ public final class ObbFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="obb", required=true)
-    private final FileReferenceResponse obb;
+      private final FileReferenceResponse obb;
 
     public FileReferenceResponse getObb() {
         return this.obb;
@@ -33,7 +33,7 @@ public final class ObbFileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="obbFileName", required=true)
-    private final String obbFileName;
+      private final String obbFileName;
 
     public String getObbFileName() {
         return this.obbFileName;
@@ -82,7 +82,6 @@ public final class ObbFileResponse extends io.pulumi.resources.InvokeArgs {
             this.obbFileName = Objects.requireNonNull(obbFileName);
             return this;
         }
-
         public ObbFileResponse build() {
             return new ObbFileResponse(obb, obbFileName);
         }

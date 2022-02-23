@@ -142,7 +142,6 @@ public final class GetBackendBucketIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetBackendBucketIamPolicyResult build() {
             return new GetBackendBucketIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

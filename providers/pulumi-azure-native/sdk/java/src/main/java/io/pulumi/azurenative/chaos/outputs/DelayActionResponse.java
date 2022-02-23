@@ -97,7 +97,6 @@ public final class DelayActionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DelayActionResponse build() {
             return new DelayActionResponse(duration, name, type);
         }

@@ -54,7 +54,6 @@ public final class CloudServiceExtensionProfileResponse {
             this.extensions = extensions;
             return this;
         }
-
         public CloudServiceExtensionProfileResponse build() {
             return new CloudServiceExtensionProfileResponse(extensions);
         }

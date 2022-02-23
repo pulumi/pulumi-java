@@ -355,7 +355,6 @@ public final class ServiceResourceDescriptionResponse {
             this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
             return this;
         }
-
         public ServiceResourceDescriptionResponse build() {
             return new ServiceResourceDescriptionResponse(autoScalingPolicies, codePackages, description, diagnostics, healthState, id, name, networkRefs, osType, provisioningState, replicaCount, status, statusDetails, type, unhealthyEvaluation);
         }

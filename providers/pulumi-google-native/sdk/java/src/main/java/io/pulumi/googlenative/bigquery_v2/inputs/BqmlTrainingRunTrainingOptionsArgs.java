@@ -21,63 +21,63 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
     public static final BqmlTrainingRunTrainingOptionsArgs Empty = new BqmlTrainingRunTrainingOptionsArgs();
 
     @InputImport(name="earlyStop")
-    private final @Nullable Input<Boolean> earlyStop;
+      private final @Nullable Input<Boolean> earlyStop;
 
     public Input<Boolean> getEarlyStop() {
         return this.earlyStop == null ? Input.empty() : this.earlyStop;
     }
 
     @InputImport(name="l1Reg")
-    private final @Nullable Input<Double> l1Reg;
+      private final @Nullable Input<Double> l1Reg;
 
     public Input<Double> getL1Reg() {
         return this.l1Reg == null ? Input.empty() : this.l1Reg;
     }
 
     @InputImport(name="l2Reg")
-    private final @Nullable Input<Double> l2Reg;
+      private final @Nullable Input<Double> l2Reg;
 
     public Input<Double> getL2Reg() {
         return this.l2Reg == null ? Input.empty() : this.l2Reg;
     }
 
     @InputImport(name="learnRate")
-    private final @Nullable Input<Double> learnRate;
+      private final @Nullable Input<Double> learnRate;
 
     public Input<Double> getLearnRate() {
         return this.learnRate == null ? Input.empty() : this.learnRate;
     }
 
     @InputImport(name="learnRateStrategy")
-    private final @Nullable Input<String> learnRateStrategy;
+      private final @Nullable Input<String> learnRateStrategy;
 
     public Input<String> getLearnRateStrategy() {
         return this.learnRateStrategy == null ? Input.empty() : this.learnRateStrategy;
     }
 
     @InputImport(name="lineSearchInitLearnRate")
-    private final @Nullable Input<Double> lineSearchInitLearnRate;
+      private final @Nullable Input<Double> lineSearchInitLearnRate;
 
     public Input<Double> getLineSearchInitLearnRate() {
         return this.lineSearchInitLearnRate == null ? Input.empty() : this.lineSearchInitLearnRate;
     }
 
     @InputImport(name="maxIteration")
-    private final @Nullable Input<String> maxIteration;
+      private final @Nullable Input<String> maxIteration;
 
     public Input<String> getMaxIteration() {
         return this.maxIteration == null ? Input.empty() : this.maxIteration;
     }
 
     @InputImport(name="minRelProgress")
-    private final @Nullable Input<Double> minRelProgress;
+      private final @Nullable Input<Double> minRelProgress;
 
     public Input<Double> getMinRelProgress() {
         return this.minRelProgress == null ? Input.empty() : this.minRelProgress;
     }
 
     @InputImport(name="warmStart")
-    private final @Nullable Input<Boolean> warmStart;
+      private final @Nullable Input<Boolean> warmStart;
 
     public Input<Boolean> getWarmStart() {
         return this.warmStart == null ? Input.empty() : this.warmStart;
@@ -241,7 +241,6 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
             this.warmStart = Input.ofNullable(warmStart);
             return this;
         }
-
         public BqmlTrainingRunTrainingOptionsArgs build() {
             return new BqmlTrainingRunTrainingOptionsArgs(earlyStop, l1Reg, l2Reg, learnRate, learnRateStrategy, lineSearchInitLearnRate, maxIteration, minRelProgress, warmStart);
         }

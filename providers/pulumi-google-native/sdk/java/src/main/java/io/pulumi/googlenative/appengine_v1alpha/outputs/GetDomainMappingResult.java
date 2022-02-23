@@ -98,7 +98,6 @@ public final class GetDomainMappingResult {
             this.sslSettings = Objects.requireNonNull(sslSettings);
             return this;
         }
-
         public GetDomainMappingResult build() {
             return new GetDomainMappingResult(name, resourceRecords, sslSettings);
         }

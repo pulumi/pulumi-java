@@ -169,7 +169,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse build() {
             return new ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

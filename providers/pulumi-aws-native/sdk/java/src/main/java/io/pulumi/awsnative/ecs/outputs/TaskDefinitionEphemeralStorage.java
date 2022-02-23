@@ -46,7 +46,6 @@ public final class TaskDefinitionEphemeralStorage {
             this.sizeInGiB = sizeInGiB;
             return this;
         }
-
         public TaskDefinitionEphemeralStorage build() {
             return new TaskDefinitionEphemeralStorage(sizeInGiB);
         }

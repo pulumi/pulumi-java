@@ -26,7 +26,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -37,7 +37,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parentTrigger", required=true)
-    private final Input<Object> parentTrigger;
+        private final Input<Object> parentTrigger;
 
     public Input<Object> getParentTrigger() {
         return this.parentTrigger;
@@ -59,7 +59,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="requestedEndTime", required=true)
-    private final Input<String> requestedEndTime;
+        private final Input<String> requestedEndTime;
 
     public Input<String> getRequestedEndTime() {
         return this.requestedEndTime;
@@ -70,7 +70,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="requestedStartTime", required=true)
-    private final Input<String> requestedStartTime;
+        private final Input<String> requestedStartTime;
 
     public Input<String> getRequestedStartTime() {
         return this.requestedStartTime;
@@ -81,7 +81,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rerunConcurrency", required=true)
-    private final Input<Integer> rerunConcurrency;
+        private final Input<Integer> rerunConcurrency;
 
     public Input<Integer> getRerunConcurrency() {
         return this.rerunConcurrency;
@@ -93,7 +93,7 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -227,7 +227,6 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public RerunTumblingWindowTriggerArgs build() {
             return new RerunTumblingWindowTriggerArgs(annotations, description, parentTrigger, requestedEndTime, requestedStartTime, rerunConcurrency, type);
         }

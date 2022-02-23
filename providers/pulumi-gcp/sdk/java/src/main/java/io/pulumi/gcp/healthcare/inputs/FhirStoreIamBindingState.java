@@ -17,7 +17,7 @@ public final class FhirStoreIamBindingState extends io.pulumi.resources.Resource
     public static final FhirStoreIamBindingState Empty = new FhirStoreIamBindingState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<FhirStoreIamBindingConditionGetArgs> condition;
+        private final @Nullable Input<FhirStoreIamBindingConditionGetArgs> condition;
 
     public Input<FhirStoreIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,7 +28,7 @@ public final class FhirStoreIamBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -42,14 +42,14 @@ public final class FhirStoreIamBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="fhirStoreId")
-    private final @Nullable Input<String> fhirStoreId;
+        private final @Nullable Input<String> fhirStoreId;
 
     public Input<String> getFhirStoreId() {
         return this.fhirStoreId == null ? Input.empty() : this.fhirStoreId;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -62,7 +62,7 @@ public final class FhirStoreIamBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -166,7 +166,6 @@ public final class FhirStoreIamBindingState extends io.pulumi.resources.Resource
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public FhirStoreIamBindingState build() {
             return new FhirStoreIamBindingState(condition, etag, fhirStoreId, members, role);
         }

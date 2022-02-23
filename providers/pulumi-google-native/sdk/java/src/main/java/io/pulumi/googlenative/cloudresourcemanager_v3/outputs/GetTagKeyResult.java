@@ -200,7 +200,6 @@ public final class GetTagKeyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetTagKeyResult build() {
             return new GetTagKeyResult(createTime, description, etag, name, namespacedName, parent, shortName, updateTime);
         }

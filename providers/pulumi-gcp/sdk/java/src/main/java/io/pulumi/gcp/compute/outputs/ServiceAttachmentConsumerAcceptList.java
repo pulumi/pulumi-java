@@ -77,7 +77,6 @@ public final class ServiceAttachmentConsumerAcceptList {
             this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
             return this;
         }
-
         public ServiceAttachmentConsumerAcceptList build() {
             return new ServiceAttachmentConsumerAcceptList(connectionLimit, projectIdOrNum);
         }

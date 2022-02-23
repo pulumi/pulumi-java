@@ -22,7 +22,7 @@ public final class ClusterLogging extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterLogging")
-    private final @Nullable ClusterLogging clusterLogging;
+        private final @Nullable ClusterLogging clusterLogging;
 
     public Optional<ClusterLogging> getClusterLogging() {
         return this.clusterLogging == null ? Optional.empty() : Optional.ofNullable(this.clusterLogging);
@@ -60,7 +60,6 @@ public final class ClusterLogging extends io.pulumi.resources.InvokeArgs {
             this.clusterLogging = clusterLogging;
             return this;
         }
-
         public ClusterLogging build() {
             return new ClusterLogging(clusterLogging);
         }

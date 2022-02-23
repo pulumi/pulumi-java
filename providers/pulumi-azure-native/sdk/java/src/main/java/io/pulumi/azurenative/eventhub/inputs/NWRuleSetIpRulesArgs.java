@@ -25,7 +25,7 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<Either<String,NetworkRuleIPAction>> action;
+        private final @Nullable Input<Either<String,NetworkRuleIPAction>> action;
 
     public Input<Either<String,NetworkRuleIPAction>> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -36,7 +36,7 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipMask")
-    private final @Nullable Input<String> ipMask;
+        private final @Nullable Input<String> ipMask;
 
     public Input<String> getIpMask() {
         return this.ipMask == null ? Input.empty() : this.ipMask;
@@ -95,7 +95,6 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
             this.ipMask = Input.ofNullable(ipMask);
             return this;
         }
-
         public NWRuleSetIpRulesArgs build() {
             return new NWRuleSetIpRulesArgs(action, ipMask);
         }

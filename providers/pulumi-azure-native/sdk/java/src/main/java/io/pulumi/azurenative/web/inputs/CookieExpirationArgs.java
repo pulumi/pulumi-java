@@ -24,7 +24,7 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="convention")
-    private final @Nullable Input<CookieExpirationConvention> convention;
+        private final @Nullable Input<CookieExpirationConvention> convention;
 
     public Input<CookieExpirationConvention> getConvention() {
         return this.convention == null ? Input.empty() : this.convention;
@@ -35,7 +35,7 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timeToExpiration")
-    private final @Nullable Input<String> timeToExpiration;
+        private final @Nullable Input<String> timeToExpiration;
 
     public Input<String> getTimeToExpiration() {
         return this.timeToExpiration == null ? Input.empty() : this.timeToExpiration;
@@ -94,7 +94,6 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
             this.timeToExpiration = Input.ofNullable(timeToExpiration);
             return this;
         }
-
         public CookieExpirationArgs build() {
             return new CookieExpirationArgs(convention, timeToExpiration);
         }

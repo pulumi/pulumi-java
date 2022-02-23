@@ -52,7 +52,6 @@ public final class ServiceEncryptionConfiguration {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
-
         public ServiceEncryptionConfiguration build() {
             return new ServiceEncryptionConfiguration(kmsKey);
         }

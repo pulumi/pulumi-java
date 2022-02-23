@@ -24,7 +24,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -46,7 +46,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="managementGroupId", required=true)
-    private final Input<String> managementGroupId;
+        private final Input<String> managementGroupId;
 
     public Input<String> getManagementGroupId() {
         return this.managementGroupId;
@@ -57,7 +57,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+        private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -68,7 +68,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+        private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -79,7 +79,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
     public Input<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -90,7 +90,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="policyDefinitionName")
-    private final @Nullable Input<String> policyDefinitionName;
+        private final @Nullable Input<String> policyDefinitionName;
 
     public Input<String> getPolicyDefinitionName() {
         return this.policyDefinitionName == null ? Input.empty() : this.policyDefinitionName;
@@ -101,7 +101,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="policyRule")
-    private final @Nullable Input<Object> policyRule;
+        private final @Nullable Input<Object> policyRule;
 
     public Input<Object> getPolicyRule() {
         return this.policyRule == null ? Input.empty() : this.policyRule;
@@ -112,7 +112,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="policyType")
-    private final @Nullable Input<Either<String,PolicyType>> policyType;
+        private final @Nullable Input<Either<String,PolicyType>> policyType;
 
     public Input<Either<String,PolicyType>> getPolicyType() {
         return this.policyType == null ? Input.empty() : this.policyType;
@@ -276,7 +276,6 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
             this.policyType = Input.ofNullable(policyType);
             return this;
         }
-
         public PolicyDefinitionAtManagementGroupArgs build() {
             return new PolicyDefinitionAtManagementGroupArgs(description, displayName, managementGroupId, metadata, mode, parameters, policyDefinitionName, policyRule, policyType);
         }

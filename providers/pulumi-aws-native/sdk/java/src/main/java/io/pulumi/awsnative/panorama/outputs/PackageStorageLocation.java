@@ -99,7 +99,6 @@ public final class PackageStorageLocation {
             this.repoPrefixLocation = repoPrefixLocation;
             return this;
         }
-
         public PackageStorageLocation build() {
             return new PackageStorageLocation(binaryPrefixLocation, bucket, generatedPrefixLocation, manifestPrefixLocation, repoPrefixLocation);
         }

@@ -182,7 +182,6 @@ public final class GetRoleManagementPolicyAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRoleManagementPolicyAssignmentResult build() {
             return new GetRoleManagementPolicyAssignmentResult(id, name, policyAssignmentProperties, policyId, roleDefinitionId, scope, type);
         }

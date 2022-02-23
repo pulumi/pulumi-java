@@ -122,7 +122,6 @@ public final class DaprResponse {
             this.enabled = enabled;
             return this;
         }
-
         public DaprResponse build() {
             return new DaprResponse(appId, appPort, components, enabled);
         }

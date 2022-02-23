@@ -162,7 +162,6 @@ public final class GetAppResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(id, identity, location, name, properties, type);
         }

@@ -97,7 +97,6 @@ public final class PlatformPropertiesResponse {
             this.variant = variant;
             return this;
         }
-
         public PlatformPropertiesResponse build() {
             return new PlatformPropertiesResponse(architecture, os, variant);
         }

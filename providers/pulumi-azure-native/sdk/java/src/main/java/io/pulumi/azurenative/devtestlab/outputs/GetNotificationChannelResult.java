@@ -310,7 +310,6 @@ public final class GetNotificationChannelResult {
             this.webHookUrl = webHookUrl;
             return this;
         }
-
         public GetNotificationChannelResult build() {
             return new GetNotificationChannelResult(createdDate, description, emailRecipient, events, id, location, name, notificationLocale, provisioningState, tags, type, uniqueIdentifier, webHookUrl);
         }

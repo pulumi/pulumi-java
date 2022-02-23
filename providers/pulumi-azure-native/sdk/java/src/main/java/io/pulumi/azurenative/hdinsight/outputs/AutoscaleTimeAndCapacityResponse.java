@@ -98,7 +98,6 @@ public final class AutoscaleTimeAndCapacityResponse {
             this.time = time;
             return this;
         }
-
         public AutoscaleTimeAndCapacityResponse build() {
             return new AutoscaleTimeAndCapacityResponse(maxInstanceCount, minInstanceCount, time);
         }

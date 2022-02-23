@@ -99,7 +99,6 @@ public final class PoliciesResponse {
             this.trustPolicy = trustPolicy;
             return this;
         }
-
         public PoliciesResponse build() {
             return new PoliciesResponse(quarantinePolicy, retentionPolicy, trustPolicy);
         }

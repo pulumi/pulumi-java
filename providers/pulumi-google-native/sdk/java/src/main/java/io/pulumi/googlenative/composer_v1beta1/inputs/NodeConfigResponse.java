@@ -25,7 +25,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final Integer diskSizeGb;
+      private final Integer diskSizeGb;
 
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
@@ -36,7 +36,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enableIpMasqAgent", required=true)
-    private final Boolean enableIpMasqAgent;
+      private final Boolean enableIpMasqAgent;
 
     public Boolean getEnableIpMasqAgent() {
         return this.enableIpMasqAgent;
@@ -47,7 +47,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipAllocationPolicy", required=true)
-    private final IPAllocationPolicyResponse ipAllocationPolicy;
+      private final IPAllocationPolicyResponse ipAllocationPolicy;
 
     public IPAllocationPolicyResponse getIpAllocationPolicy() {
         return this.ipAllocationPolicy;
@@ -58,7 +58,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -69,7 +69,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -80,7 +80,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxPodsPerNode", required=true)
-    private final Integer maxPodsPerNode;
+      private final Integer maxPodsPerNode;
 
     public Integer getMaxPodsPerNode() {
         return this.maxPodsPerNode;
@@ -91,7 +91,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -102,7 +102,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oauthScopes", required=true)
-    private final List<String> oauthScopes;
+      private final List<String> oauthScopes;
 
     public List<String> getOauthScopes() {
         return this.oauthScopes;
@@ -113,7 +113,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
@@ -124,7 +124,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnetwork", required=true)
-    private final String subnetwork;
+      private final String subnetwork;
 
     public String getSubnetwork() {
         return this.subnetwork;
@@ -135,7 +135,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags", required=true)
-    private final List<String> tags;
+      private final List<String> tags;
 
     public List<String> getTags() {
         return this.tags;
@@ -274,7 +274,6 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public NodeConfigResponse build() {
             return new NodeConfigResponse(diskSizeGb, enableIpMasqAgent, ipAllocationPolicy, location, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags);
         }

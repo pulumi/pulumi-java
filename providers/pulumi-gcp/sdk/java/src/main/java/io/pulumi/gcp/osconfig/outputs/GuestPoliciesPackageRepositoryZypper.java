@@ -121,7 +121,6 @@ public final class GuestPoliciesPackageRepositoryZypper {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GuestPoliciesPackageRepositoryZypper build() {
             return new GuestPoliciesPackageRepositoryZypper(baseUrl, displayName, gpgKeys, id);
         }

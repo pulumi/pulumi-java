@@ -188,7 +188,6 @@ public final class DatabaseInstanceSettingsBackupConfiguration {
             this.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;
         }
-
         public DatabaseInstanceSettingsBackupConfiguration build() {
             return new DatabaseInstanceSettingsBackupConfiguration(backupRetentionSettings, binaryLogEnabled, enabled, location, pointInTimeRecoveryEnabled, startTime, transactionLogRetentionDays);
         }

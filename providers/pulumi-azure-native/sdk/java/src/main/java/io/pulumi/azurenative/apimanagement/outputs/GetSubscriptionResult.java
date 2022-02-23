@@ -371,7 +371,6 @@ public final class GetSubscriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSubscriptionResult build() {
             return new GetSubscriptionResult(allowTracing, createdDate, displayName, endDate, expirationDate, id, name, notificationDate, ownerId, primaryKey, scope, secondaryKey, startDate, state, stateComment, type);
         }

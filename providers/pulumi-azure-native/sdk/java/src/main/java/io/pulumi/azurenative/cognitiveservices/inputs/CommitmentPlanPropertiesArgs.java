@@ -27,7 +27,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="autoRenew")
-    private final @Nullable Input<Boolean> autoRenew;
+        private final @Nullable Input<Boolean> autoRenew;
 
     public Input<Boolean> getAutoRenew() {
         return this.autoRenew == null ? Input.empty() : this.autoRenew;
@@ -38,7 +38,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="current")
-    private final @Nullable Input<CommitmentPeriodArgs> current;
+        private final @Nullable Input<CommitmentPeriodArgs> current;
 
     public Input<CommitmentPeriodArgs> getCurrent() {
         return this.current == null ? Input.empty() : this.current;
@@ -49,7 +49,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="hostingModel")
-    private final @Nullable Input<Either<String,HostingModel>> hostingModel;
+        private final @Nullable Input<Either<String,HostingModel>> hostingModel;
 
     public Input<Either<String,HostingModel>> getHostingModel() {
         return this.hostingModel == null ? Input.empty() : this.hostingModel;
@@ -60,7 +60,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="next")
-    private final @Nullable Input<CommitmentPeriodArgs> next;
+        private final @Nullable Input<CommitmentPeriodArgs> next;
 
     public Input<CommitmentPeriodArgs> getNext() {
         return this.next == null ? Input.empty() : this.next;
@@ -71,7 +71,7 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="planType")
-    private final @Nullable Input<String> planType;
+        private final @Nullable Input<String> planType;
 
     public Input<String> getPlanType() {
         return this.planType == null ? Input.empty() : this.planType;
@@ -175,7 +175,6 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
             this.planType = Input.ofNullable(planType);
             return this;
         }
-
         public CommitmentPlanPropertiesArgs build() {
             return new CommitmentPlanPropertiesArgs(autoRenew, current, hostingModel, next, planType);
         }

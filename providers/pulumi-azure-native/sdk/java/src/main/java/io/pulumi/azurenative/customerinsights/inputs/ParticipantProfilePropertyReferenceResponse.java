@@ -21,7 +21,7 @@ public final class ParticipantProfilePropertyReferenceResponse extends io.pulumi
      * 
      */
     @InputImport(name="interactionPropertyName", required=true)
-    private final String interactionPropertyName;
+        private final String interactionPropertyName;
 
     public String getInteractionPropertyName() {
         return this.interactionPropertyName;
@@ -32,7 +32,7 @@ public final class ParticipantProfilePropertyReferenceResponse extends io.pulumi
      * 
      */
     @InputImport(name="profilePropertyName", required=true)
-    private final String profilePropertyName;
+        private final String profilePropertyName;
 
     public String getProfilePropertyName() {
         return this.profilePropertyName;
@@ -81,7 +81,6 @@ public final class ParticipantProfilePropertyReferenceResponse extends io.pulumi
             this.profilePropertyName = Objects.requireNonNull(profilePropertyName);
             return this;
         }
-
         public ParticipantProfilePropertyReferenceResponse build() {
             return new ParticipantProfilePropertyReferenceResponse(interactionPropertyName, profilePropertyName);
         }

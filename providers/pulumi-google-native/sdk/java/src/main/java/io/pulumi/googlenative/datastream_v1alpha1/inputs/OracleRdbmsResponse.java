@@ -22,7 +22,7 @@ public final class OracleRdbmsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oracleSchemas", required=true)
-    private final List<OracleSchemaResponse> oracleSchemas;
+      private final List<OracleSchemaResponse> oracleSchemas;
 
     public List<OracleSchemaResponse> getOracleSchemas() {
         return this.oracleSchemas;
@@ -60,7 +60,6 @@ public final class OracleRdbmsResponse extends io.pulumi.resources.InvokeArgs {
             this.oracleSchemas = Objects.requireNonNull(oracleSchemas);
             return this;
         }
-
         public OracleRdbmsResponse build() {
             return new OracleRdbmsResponse(oracleSchemas);
         }

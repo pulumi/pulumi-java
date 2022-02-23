@@ -58,7 +58,6 @@ public final class GetInstanceNode {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetInstanceNode build() {
             return new GetInstanceNode(id, zone);
         }

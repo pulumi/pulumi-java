@@ -363,7 +363,6 @@ public final class AzureBlobDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureBlobDatasetResponse build() {
             return new AzureBlobDatasetResponse(annotations, compression, description, fileName, folder, folderPath, format, linkedServiceName, modifiedDatetimeEnd, modifiedDatetimeStart, parameters, schema, structure, tableRootLocation, type);
         }

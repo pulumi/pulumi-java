@@ -52,7 +52,6 @@ public final class GatewayGreengrassV2 {
             this.coreDeviceThingName = Objects.requireNonNull(coreDeviceThingName);
             return this;
         }
-
         public GatewayGreengrassV2 build() {
             return new GatewayGreengrassV2(coreDeviceThingName);
         }

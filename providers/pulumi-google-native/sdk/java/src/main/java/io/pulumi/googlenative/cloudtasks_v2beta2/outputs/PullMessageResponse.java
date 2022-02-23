@@ -74,7 +74,6 @@ public final class PullMessageResponse {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public PullMessageResponse build() {
             return new PullMessageResponse(payload, tag);
         }

@@ -21,7 +21,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardDefinition", required=true)
-    private final Input<String> dashboardDefinition;
+        private final Input<String> dashboardDefinition;
 
     public Input<String> getDashboardDefinition() {
         return this.dashboardDefinition;
@@ -32,7 +32,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardDescription", required=true)
-    private final Input<String> dashboardDescription;
+        private final Input<String> dashboardDescription;
 
     public Input<String> getDashboardDescription() {
         return this.dashboardDescription;
@@ -43,7 +43,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardName")
-    private final @Nullable Input<String> dashboardName;
+        private final @Nullable Input<String> dashboardName;
 
     public Input<String> getDashboardName() {
         return this.dashboardName == null ? Input.empty() : this.dashboardName;
@@ -54,7 +54,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+        private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -65,7 +65,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DashboardTagArgs>> tags;
+        private final @Nullable Input<List<DashboardTagArgs>> tags;
 
     public Input<List<DashboardTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -169,7 +169,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DashboardArgs build() {
             return new DashboardArgs(dashboardDefinition, dashboardDescription, dashboardName, projectId, tags);
         }

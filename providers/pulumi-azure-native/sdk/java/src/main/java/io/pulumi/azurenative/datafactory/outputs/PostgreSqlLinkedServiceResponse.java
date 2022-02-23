@@ -210,7 +210,6 @@ public final class PostgreSqlLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PostgreSqlLinkedServiceResponse build() {
             return new PostgreSqlLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type);
         }

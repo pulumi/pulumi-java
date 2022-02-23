@@ -58,7 +58,6 @@ public final class NotificationRuleTarget {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
-
         public NotificationRuleTarget build() {
             return new NotificationRuleTarget(targetAddress, targetType);
         }

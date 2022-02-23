@@ -328,7 +328,6 @@ public final class DetailResponse {
             this.vendor = Objects.requireNonNull(vendor);
             return this;
         }
-
         public DetailResponse build() {
             return new DetailResponse(affectedCpeUri, affectedPackage, affectedVersionEnd, affectedVersionStart, description, fixedCpeUri, fixedPackage, fixedVersion, isObsolete, packageType, severityName, source, sourceUpdateTime, vendor);
         }

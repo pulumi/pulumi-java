@@ -53,7 +53,6 @@ public final class RuntimeMetricsResponse {
             this.systemMetrics = Objects.requireNonNull(systemMetrics);
             return this;
         }
-
         public RuntimeMetricsResponse build() {
             return new RuntimeMetricsResponse(systemMetrics);
         }

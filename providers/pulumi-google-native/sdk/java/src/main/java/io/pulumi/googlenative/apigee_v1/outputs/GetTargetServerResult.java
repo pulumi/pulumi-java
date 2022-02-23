@@ -182,7 +182,6 @@ public final class GetTargetServerResult {
             this.sSLInfo = Objects.requireNonNull(sSLInfo);
             return this;
         }
-
         public GetTargetServerResult build() {
             return new GetTargetServerResult(description, host, isEnabled, name, port, protocol, sSLInfo);
         }

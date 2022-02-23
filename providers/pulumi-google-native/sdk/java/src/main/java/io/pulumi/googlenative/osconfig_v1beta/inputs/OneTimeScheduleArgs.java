@@ -22,7 +22,7 @@ public final class OneTimeScheduleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="executeTime", required=true)
-    private final Input<String> executeTime;
+      private final Input<String> executeTime;
 
     public Input<String> getExecuteTime() {
         return this.executeTime;
@@ -65,7 +65,6 @@ public final class OneTimeScheduleArgs extends io.pulumi.resources.ResourceArgs 
             this.executeTime = Input.of(Objects.requireNonNull(executeTime));
             return this;
         }
-
         public OneTimeScheduleArgs build() {
             return new OneTimeScheduleArgs(executeTime);
         }

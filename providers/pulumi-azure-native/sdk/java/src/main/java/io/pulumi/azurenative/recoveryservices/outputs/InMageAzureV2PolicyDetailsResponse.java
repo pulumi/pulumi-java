@@ -163,7 +163,6 @@ public final class InMageAzureV2PolicyDetailsResponse {
             this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
         }
-
         public InMageAzureV2PolicyDetailsResponse build() {
             return new InMageAzureV2PolicyDetailsResponse(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory, recoveryPointThresholdInMinutes);
         }

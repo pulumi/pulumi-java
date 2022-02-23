@@ -116,7 +116,6 @@ public final class JobStatusResponse {
             this.substate = Objects.requireNonNull(substate);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(details, state, stateStartTime, substate);
         }

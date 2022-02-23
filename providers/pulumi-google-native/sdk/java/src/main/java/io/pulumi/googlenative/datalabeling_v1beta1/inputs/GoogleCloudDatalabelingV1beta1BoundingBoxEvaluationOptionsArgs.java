@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
      * 
      */
     @InputImport(name="iouThreshold")
-    private final @Nullable Input<Double> iouThreshold;
+      private final @Nullable Input<Double> iouThreshold;
 
     public Input<Double> getIouThreshold() {
         return this.iouThreshold == null ? Input.empty() : this.iouThreshold;
@@ -66,7 +66,6 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
             this.iouThreshold = Input.ofNullable(iouThreshold);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs build() {
             return new GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs(iouThreshold);
         }

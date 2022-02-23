@@ -74,7 +74,6 @@ public final class AssignedUserResponse {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public AssignedUserResponse build() {
             return new AssignedUserResponse(objectId, tenantId);
         }

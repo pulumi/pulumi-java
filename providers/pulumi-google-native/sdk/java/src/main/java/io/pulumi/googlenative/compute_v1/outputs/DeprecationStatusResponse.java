@@ -137,7 +137,6 @@ public final class DeprecationStatusResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public DeprecationStatusResponse build() {
             return new DeprecationStatusResponse(deleted, deprecated, obsolete, replacement, state);
         }

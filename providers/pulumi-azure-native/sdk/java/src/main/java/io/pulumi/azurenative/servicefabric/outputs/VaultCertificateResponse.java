@@ -74,7 +74,6 @@ public final class VaultCertificateResponse {
             this.certificateUrl = Objects.requireNonNull(certificateUrl);
             return this;
         }
-
         public VaultCertificateResponse build() {
             return new VaultCertificateResponse(certificateStore, certificateUrl);
         }

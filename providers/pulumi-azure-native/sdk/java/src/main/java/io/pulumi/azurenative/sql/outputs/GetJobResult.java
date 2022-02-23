@@ -162,7 +162,6 @@ public final class GetJobResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(description, id, name, schedule, type, version);
         }

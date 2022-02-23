@@ -30,7 +30,6 @@ public final class MasterResponse {
         public Builder(MasterResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public MasterResponse build() {
             return new MasterResponse();
         }

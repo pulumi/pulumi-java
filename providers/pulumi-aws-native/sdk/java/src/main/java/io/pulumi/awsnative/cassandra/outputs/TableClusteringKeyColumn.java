@@ -61,7 +61,6 @@ public final class TableClusteringKeyColumn {
             this.orderBy = orderBy;
             return this;
         }
-
         public TableClusteringKeyColumn build() {
             return new TableClusteringKeyColumn(column, orderBy);
         }

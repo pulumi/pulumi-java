@@ -118,7 +118,6 @@ public final class AzureIaaSVMHealthDetailsResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public AzureIaaSVMHealthDetailsResponse build() {
             return new AzureIaaSVMHealthDetailsResponse(code, message, recommendations, title);
         }

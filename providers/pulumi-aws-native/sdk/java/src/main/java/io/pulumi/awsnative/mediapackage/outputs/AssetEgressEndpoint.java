@@ -74,7 +74,6 @@ public final class AssetEgressEndpoint {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public AssetEgressEndpoint build() {
             return new AssetEgressEndpoint(packagingConfigurationId, url);
         }

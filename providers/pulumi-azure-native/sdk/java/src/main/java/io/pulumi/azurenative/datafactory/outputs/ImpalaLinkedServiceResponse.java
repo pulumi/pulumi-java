@@ -380,7 +380,6 @@ public final class ImpalaLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public ImpalaLinkedServiceResponse build() {
             return new ImpalaLinkedServiceResponse(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, connectVia, description, enableSsl, encryptedCredential, host, parameters, password, port, trustedCertPath, type, useSystemTrustStore, username);
         }

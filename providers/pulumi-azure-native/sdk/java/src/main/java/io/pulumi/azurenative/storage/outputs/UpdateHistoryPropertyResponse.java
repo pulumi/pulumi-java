@@ -159,7 +159,6 @@ public final class UpdateHistoryPropertyResponse {
             this.upn = Objects.requireNonNull(upn);
             return this;
         }
-
         public UpdateHistoryPropertyResponse build() {
             return new UpdateHistoryPropertyResponse(immutabilityPeriodSinceCreationInDays, objectIdentifier, tenantId, timestamp, update, upn);
         }

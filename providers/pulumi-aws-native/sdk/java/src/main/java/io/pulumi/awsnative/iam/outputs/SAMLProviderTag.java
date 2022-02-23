@@ -74,7 +74,6 @@ public final class SAMLProviderTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SAMLProviderTag build() {
             return new SAMLProviderTag(key, value);
         }

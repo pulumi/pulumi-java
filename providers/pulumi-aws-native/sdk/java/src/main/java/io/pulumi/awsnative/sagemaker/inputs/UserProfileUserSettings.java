@@ -27,7 +27,7 @@ public final class UserProfileUserSettings extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="executionRole")
-    private final @Nullable String executionRole;
+        private final @Nullable String executionRole;
 
     public Optional<String> getExecutionRole() {
         return this.executionRole == null ? Optional.empty() : Optional.ofNullable(this.executionRole);
@@ -38,7 +38,7 @@ public final class UserProfileUserSettings extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="jupyterServerAppSettings")
-    private final @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings;
+        private final @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings;
 
     public Optional<UserProfileJupyterServerAppSettings> getJupyterServerAppSettings() {
         return this.jupyterServerAppSettings == null ? Optional.empty() : Optional.ofNullable(this.jupyterServerAppSettings);
@@ -49,7 +49,7 @@ public final class UserProfileUserSettings extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="kernelGatewayAppSettings")
-    private final @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings;
+        private final @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings;
 
     public Optional<UserProfileKernelGatewayAppSettings> getKernelGatewayAppSettings() {
         return this.kernelGatewayAppSettings == null ? Optional.empty() : Optional.ofNullable(this.kernelGatewayAppSettings);
@@ -60,7 +60,7 @@ public final class UserProfileUserSettings extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable List<String> securityGroups;
+        private final @Nullable List<String> securityGroups;
 
     public List<String> getSecurityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
@@ -71,7 +71,7 @@ public final class UserProfileUserSettings extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sharingSettings")
-    private final @Nullable UserProfileSharingSettings sharingSettings;
+        private final @Nullable UserProfileSharingSettings sharingSettings;
 
     public Optional<UserProfileSharingSettings> getSharingSettings() {
         return this.sharingSettings == null ? Optional.empty() : Optional.ofNullable(this.sharingSettings);
@@ -150,7 +150,6 @@ public final class UserProfileUserSettings extends io.pulumi.resources.InvokeArg
             this.sharingSettings = sharingSettings;
             return this;
         }
-
         public UserProfileUserSettings build() {
             return new UserProfileUserSettings(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings);
         }

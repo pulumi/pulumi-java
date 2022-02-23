@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionArgs extends io.pulu
      * 
      */
     @InputImport(name="redirectUri")
-    private final @Nullable Input<String> redirectUri;
+      private final @Nullable Input<String> redirectUri;
 
     public Input<String> getRedirectUri() {
         return this.redirectUri == null ? Input.empty() : this.redirectUri;
@@ -66,7 +66,6 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionArgs extends io.pulu
             this.redirectUri = Input.ofNullable(redirectUri);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleRedirectActionArgs build() {
             return new GoogleCloudRetailV2betaRuleRedirectActionArgs(redirectUri);
         }

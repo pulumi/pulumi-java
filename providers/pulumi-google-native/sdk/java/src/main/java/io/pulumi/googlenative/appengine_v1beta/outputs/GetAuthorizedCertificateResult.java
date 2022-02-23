@@ -204,7 +204,6 @@ public final class GetAuthorizedCertificateResult {
             this.visibleDomainMappings = Objects.requireNonNull(visibleDomainMappings);
             return this;
         }
-
         public GetAuthorizedCertificateResult build() {
             return new GetAuthorizedCertificateResult(certificateRawData, displayName, domainMappingsCount, domainNames, expireTime, managedCertificate, name, visibleDomainMappings);
         }

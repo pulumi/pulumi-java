@@ -76,7 +76,6 @@ public final class NetAppVolumeResponse {
             this.nfsProviderIp = nfsProviderIp;
             return this;
         }
-
         public NetAppVolumeResponse build() {
             return new NetAppVolumeResponse(nfsFilePath, nfsProviderIp);
         }

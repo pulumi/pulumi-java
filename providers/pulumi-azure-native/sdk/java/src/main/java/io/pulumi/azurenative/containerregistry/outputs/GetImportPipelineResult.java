@@ -249,7 +249,6 @@ public final class GetImportPipelineResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetImportPipelineResult build() {
             return new GetImportPipelineResult(id, identity, location, name, options, provisioningState, source, systemData, trigger, type);
         }

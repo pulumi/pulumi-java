@@ -169,7 +169,6 @@ public final class AppAutoBranchCreationConfig {
             this.stage = stage;
             return this;
         }
-
         public AppAutoBranchCreationConfig build() {
             return new AppAutoBranchCreationConfig(autoBranchCreationPatterns, basicAuthConfig, buildSpec, enableAutoBranchCreation, enableAutoBuild, enablePerformanceMode, enablePullRequestPreview, environmentVariables, pullRequestEnvironmentName, stage);
         }

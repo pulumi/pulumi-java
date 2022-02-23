@@ -245,7 +245,6 @@ public final class GetSecurityAdminConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSecurityAdminConfigurationResult build() {
             return new GetSecurityAdminConfigurationResult(deleteExistingNSGs, description, displayName, etag, id, name, provisioningState, securityType, systemData, type);
         }

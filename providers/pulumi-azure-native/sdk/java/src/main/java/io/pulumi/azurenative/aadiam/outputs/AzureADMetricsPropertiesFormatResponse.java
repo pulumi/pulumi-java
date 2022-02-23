@@ -52,7 +52,6 @@ public final class AzureADMetricsPropertiesFormatResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public AzureADMetricsPropertiesFormatResponse build() {
             return new AzureADMetricsPropertiesFormatResponse(provisioningState);
         }

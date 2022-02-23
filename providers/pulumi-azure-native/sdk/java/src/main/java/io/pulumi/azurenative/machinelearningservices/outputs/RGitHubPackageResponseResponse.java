@@ -54,7 +54,6 @@ public final class RGitHubPackageResponseResponse {
             this.repository = repository;
             return this;
         }
-
         public RGitHubPackageResponseResponse build() {
             return new RGitHubPackageResponseResponse(repository);
         }

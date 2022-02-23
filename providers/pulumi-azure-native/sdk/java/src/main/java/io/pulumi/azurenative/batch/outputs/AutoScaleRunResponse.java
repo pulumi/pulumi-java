@@ -82,7 +82,6 @@ public final class AutoScaleRunResponse {
             this.results = results;
             return this;
         }
-
         public AutoScaleRunResponse build() {
             return new AutoScaleRunResponse(error, evaluationTime, results);
         }

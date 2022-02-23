@@ -24,7 +24,7 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appProtocol")
-    private final @Nullable Input<String> appProtocol;
+        private final @Nullable Input<String> appProtocol;
 
     public Input<String> getAppProtocol() {
         return this.appProtocol == null ? Input.empty() : this.appProtocol;
@@ -35,7 +35,7 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -62,7 +62,7 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+        private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -151,7 +151,6 @@ public final class EndpointPortArgs extends io.pulumi.resources.ResourceArgs {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
-
         public EndpointPortArgs build() {
             return new EndpointPortArgs(appProtocol, name, port, protocol);
         }

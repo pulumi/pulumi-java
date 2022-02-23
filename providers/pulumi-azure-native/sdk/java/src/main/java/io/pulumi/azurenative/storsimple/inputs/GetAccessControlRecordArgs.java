@@ -17,7 +17,7 @@ public final class GetAccessControlRecordArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="accessControlRecordName", required=true)
-    private final String accessControlRecordName;
+        private final String accessControlRecordName;
 
     public String getAccessControlRecordName() {
         return this.accessControlRecordName;
@@ -28,7 +28,7 @@ public final class GetAccessControlRecordArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="managerName", required=true)
-    private final String managerName;
+        private final String managerName;
 
     public String getManagerName() {
         return this.managerName;
@@ -39,7 +39,7 @@ public final class GetAccessControlRecordArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetAccessControlRecordArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetAccessControlRecordArgs build() {
             return new GetAccessControlRecordArgs(accessControlRecordName, managerName, resourceGroupName);
         }

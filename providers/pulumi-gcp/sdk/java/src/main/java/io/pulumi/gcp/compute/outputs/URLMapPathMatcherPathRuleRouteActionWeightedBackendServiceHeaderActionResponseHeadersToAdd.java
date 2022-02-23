@@ -98,7 +98,6 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHea
             this.replace = Objects.requireNonNull(replace);
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd build() {
             return new URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd(headerName, headerValue, replace);
         }

@@ -22,7 +22,7 @@ public final class EgressFromResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identities", required=true)
-    private final List<String> identities;
+      private final List<String> identities;
 
     public List<String> getIdentities() {
         return this.identities;
@@ -33,7 +33,7 @@ public final class EgressFromResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identityType", required=true)
-    private final String identityType;
+      private final String identityType;
 
     public String getIdentityType() {
         return this.identityType;
@@ -82,7 +82,6 @@ public final class EgressFromResponse extends io.pulumi.resources.InvokeArgs {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
-
         public EgressFromResponse build() {
             return new EgressFromResponse(identities, identityType);
         }

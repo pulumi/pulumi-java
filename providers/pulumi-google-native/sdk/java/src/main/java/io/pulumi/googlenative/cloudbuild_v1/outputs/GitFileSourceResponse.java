@@ -116,7 +116,6 @@ public final class GitFileSourceResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GitFileSourceResponse build() {
             return new GitFileSourceResponse(path, repoType, revision, uri);
         }

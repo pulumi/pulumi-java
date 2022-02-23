@@ -19,14 +19,14 @@ public final class WebACLTextTransformationArgs extends io.pulumi.resources.Reso
     public static final WebACLTextTransformationArgs Empty = new WebACLTextTransformationArgs();
 
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+        private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<WebACLTextTransformationType> type;
+        private final Input<WebACLTextTransformationType> type;
 
     public Input<WebACLTextTransformationType> getType() {
         return this.type;
@@ -85,7 +85,6 @@ public final class WebACLTextTransformationArgs extends io.pulumi.resources.Reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public WebACLTextTransformationArgs build() {
             return new WebACLTextTransformationArgs(priority, type);
         }

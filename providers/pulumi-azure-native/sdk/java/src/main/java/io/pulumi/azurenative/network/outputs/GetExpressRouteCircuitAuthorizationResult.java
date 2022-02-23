@@ -181,7 +181,6 @@ public final class GetExpressRouteCircuitAuthorizationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExpressRouteCircuitAuthorizationResult build() {
             return new GetExpressRouteCircuitAuthorizationResult(authorizationKey, authorizationUseStatus, etag, id, name, provisioningState, type);
         }

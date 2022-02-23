@@ -142,7 +142,6 @@ public final class ColumnSpecificationResponse {
             this.xMsIsordered = xMsIsordered;
             return this;
         }
-
         public ColumnSpecificationResponse build() {
             return new ColumnSpecificationResponse($enum, format, type, xMsIsnullable, xMsIsordered);
         }

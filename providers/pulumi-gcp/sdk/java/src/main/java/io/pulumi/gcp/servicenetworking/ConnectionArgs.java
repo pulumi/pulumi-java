@@ -19,7 +19,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network", required=true)
-    private final Input<String> network;
+        private final Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network;
@@ -32,7 +32,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedPeeringRanges", required=true)
-    private final Input<List<String>> reservedPeeringRanges;
+        private final Input<List<String>> reservedPeeringRanges;
 
     public Input<List<String>> getReservedPeeringRanges() {
         return this.reservedPeeringRanges;
@@ -45,7 +45,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+        private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -119,7 +119,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
-
         public ConnectionArgs build() {
             return new ConnectionArgs(network, reservedPeeringRanges, service);
         }

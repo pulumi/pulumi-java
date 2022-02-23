@@ -139,7 +139,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse build() {
             return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse(allowAll, condition, denyAll, enforce, values);
         }

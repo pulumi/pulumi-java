@@ -23,7 +23,7 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="routingMode")
-    private final @Nullable Input<NetworkRoutingConfigRoutingMode> routingMode;
+      private final @Nullable Input<NetworkRoutingConfigRoutingMode> routingMode;
 
     public Input<NetworkRoutingConfigRoutingMode> getRoutingMode() {
         return this.routingMode == null ? Input.empty() : this.routingMode;
@@ -66,7 +66,6 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
             this.routingMode = Input.ofNullable(routingMode);
             return this;
         }
-
         public NetworkRoutingConfigArgs build() {
             return new NetworkRoutingConfigArgs(routingMode);
         }

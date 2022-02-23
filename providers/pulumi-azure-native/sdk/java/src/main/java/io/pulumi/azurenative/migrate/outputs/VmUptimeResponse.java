@@ -76,7 +76,6 @@ public final class VmUptimeResponse {
             this.hoursPerDay = hoursPerDay;
             return this;
         }
-
         public VmUptimeResponse build() {
             return new VmUptimeResponse(daysPerMonth, hoursPerDay);
         }

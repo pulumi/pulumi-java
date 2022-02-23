@@ -54,7 +54,6 @@ public final class AzureClusterControlPlaneMainVolume {
             this.sizeGib = sizeGib;
             return this;
         }
-
         public AzureClusterControlPlaneMainVolume build() {
             return new AzureClusterControlPlaneMainVolume(sizeGib);
         }

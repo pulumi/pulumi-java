@@ -159,7 +159,6 @@ public final class GetIntegrationRuntimeConnectionInfoResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetIntegrationRuntimeConnectionInfoResult build() {
             return new GetIntegrationRuntimeConnectionInfoResult(hostServiceUri, identityCertThumbprint, isIdentityCertExprired, publicKey, serviceToken, version);
         }

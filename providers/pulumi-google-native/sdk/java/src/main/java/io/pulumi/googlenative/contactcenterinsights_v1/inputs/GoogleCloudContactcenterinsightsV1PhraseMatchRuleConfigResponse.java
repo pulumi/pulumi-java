@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
      * 
      */
     @InputImport(name="exactMatchConfig", required=true)
-    private final GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
+      private final GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
 
     public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse getExactMatchConfig() {
         return this.exactMatchConfig;
@@ -59,7 +59,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
             this.exactMatchConfig = Objects.requireNonNull(exactMatchConfig);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse(exactMatchConfig);
         }

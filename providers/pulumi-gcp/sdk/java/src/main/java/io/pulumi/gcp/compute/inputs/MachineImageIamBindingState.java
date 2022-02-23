@@ -22,7 +22,7 @@ public final class MachineImageIamBindingState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<MachineImageIamBindingConditionGetArgs> condition;
+        private final @Nullable Input<MachineImageIamBindingConditionGetArgs> condition;
 
     public Input<MachineImageIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -33,7 +33,7 @@ public final class MachineImageIamBindingState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -44,14 +44,14 @@ public final class MachineImageIamBindingState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="machineImage")
-    private final @Nullable Input<String> machineImage;
+        private final @Nullable Input<String> machineImage;
 
     public Input<String> getMachineImage() {
         return this.machineImage == null ? Input.empty() : this.machineImage;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -63,7 +63,7 @@ public final class MachineImageIamBindingState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -76,7 +76,7 @@ public final class MachineImageIamBindingState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -195,7 +195,6 @@ public final class MachineImageIamBindingState extends io.pulumi.resources.Resou
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public MachineImageIamBindingState build() {
             return new MachineImageIamBindingState(condition, etag, machineImage, members, project, role);
         }

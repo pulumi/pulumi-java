@@ -245,7 +245,6 @@ public final class GetViewResult {
             this.viewName = Objects.requireNonNull(viewName);
             return this;
         }
-
         public GetViewResult build() {
             return new GetViewResult(changed, created, definition, displayName, id, name, tenantId, type, userId, viewName);
         }

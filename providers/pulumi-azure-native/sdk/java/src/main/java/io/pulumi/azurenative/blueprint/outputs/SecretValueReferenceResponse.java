@@ -98,7 +98,6 @@ public final class SecretValueReferenceResponse {
             this.secretVersion = secretVersion;
             return this;
         }
-
         public SecretValueReferenceResponse build() {
             return new SecretValueReferenceResponse(keyVault, secretName, secretVersion);
         }

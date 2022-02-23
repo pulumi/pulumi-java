@@ -151,7 +151,6 @@ public final class BqmlTrainingRunTrainingOptionsResponse {
             this.warmStart = Objects.requireNonNull(warmStart);
             return this;
         }
-
         public BqmlTrainingRunTrainingOptionsResponse build() {
             return new BqmlTrainingRunTrainingOptionsResponse(earlyStop, l1Reg, l2Reg, learnRate, learnRateStrategy, lineSearchInitLearnRate, maxIteration, minRelProgress, warmStart);
         }

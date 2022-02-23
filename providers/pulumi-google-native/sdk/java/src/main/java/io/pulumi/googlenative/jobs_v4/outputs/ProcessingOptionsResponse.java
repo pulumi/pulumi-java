@@ -75,7 +75,6 @@ public final class ProcessingOptionsResponse {
             this.htmlSanitization = Objects.requireNonNull(htmlSanitization);
             return this;
         }
-
         public ProcessingOptionsResponse build() {
             return new ProcessingOptionsResponse(disableStreetAddressResolution, htmlSanitization);
         }

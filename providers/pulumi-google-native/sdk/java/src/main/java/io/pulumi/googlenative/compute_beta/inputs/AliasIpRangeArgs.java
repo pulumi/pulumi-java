@@ -23,7 +23,7 @@ public final class AliasIpRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipCidrRange")
-    private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
@@ -34,7 +34,7 @@ public final class AliasIpRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetworkRangeName")
-    private final @Nullable Input<String> subnetworkRangeName;
+      private final @Nullable Input<String> subnetworkRangeName;
 
     public Input<String> getSubnetworkRangeName() {
         return this.subnetworkRangeName == null ? Input.empty() : this.subnetworkRangeName;
@@ -93,7 +93,6 @@ public final class AliasIpRangeArgs extends io.pulumi.resources.ResourceArgs {
             this.subnetworkRangeName = Input.ofNullable(subnetworkRangeName);
             return this;
         }
-
         public AliasIpRangeArgs build() {
             return new AliasIpRangeArgs(ipCidrRange, subnetworkRangeName);
         }

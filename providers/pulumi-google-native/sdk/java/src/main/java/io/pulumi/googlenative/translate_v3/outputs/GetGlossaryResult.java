@@ -183,7 +183,6 @@ public final class GetGlossaryResult {
             this.submitTime = Objects.requireNonNull(submitTime);
             return this;
         }
-
         public GetGlossaryResult build() {
             return new GetGlossaryResult(endTime, entryCount, inputConfig, languageCodesSet, languagePair, name, submitTime);
         }

@@ -205,7 +205,6 @@ public final class URLMapDefaultUrlRedirect {
             this.stripQuery = Objects.requireNonNull(stripQuery);
             return this;
         }
-
         public URLMapDefaultUrlRedirect build() {
             return new URLMapDefaultUrlRedirect(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
         }

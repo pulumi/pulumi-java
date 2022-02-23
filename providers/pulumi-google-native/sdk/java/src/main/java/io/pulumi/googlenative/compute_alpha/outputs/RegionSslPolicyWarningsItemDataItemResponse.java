@@ -74,7 +74,6 @@ public final class RegionSslPolicyWarningsItemDataItemResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RegionSslPolicyWarningsItemDataItemResponse build() {
             return new RegionSslPolicyWarningsItemDataItemResponse(key, value);
         }

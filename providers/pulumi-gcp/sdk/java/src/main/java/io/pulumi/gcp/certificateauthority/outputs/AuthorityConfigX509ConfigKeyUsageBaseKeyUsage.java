@@ -223,7 +223,6 @@ public final class AuthorityConfigX509ConfigKeyUsageBaseKeyUsage {
             this.keyEncipherment = keyEncipherment;
             return this;
         }
-
         public AuthorityConfigX509ConfigKeyUsageBaseKeyUsage build() {
             return new AuthorityConfigX509ConfigKeyUsageBaseKeyUsage(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
         }

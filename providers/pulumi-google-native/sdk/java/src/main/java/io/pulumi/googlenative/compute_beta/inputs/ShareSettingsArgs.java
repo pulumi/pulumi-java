@@ -26,7 +26,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectMap")
-    private final @Nullable Input<Map<String,String>> projectMap;
+      private final @Nullable Input<Map<String,String>> projectMap;
 
     public Input<Map<String,String>> getProjectMap() {
         return this.projectMap == null ? Input.empty() : this.projectMap;
@@ -37,7 +37,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projects")
-    private final @Nullable Input<List<String>> projects;
+      private final @Nullable Input<List<String>> projects;
 
     public Input<List<String>> getProjects() {
         return this.projects == null ? Input.empty() : this.projects;
@@ -48,7 +48,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareType")
-    private final @Nullable Input<ShareSettingsShareType> shareType;
+      private final @Nullable Input<ShareSettingsShareType> shareType;
 
     public Input<ShareSettingsShareType> getShareType() {
         return this.shareType == null ? Input.empty() : this.shareType;
@@ -122,7 +122,6 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.shareType = Input.ofNullable(shareType);
             return this;
         }
-
         public ShareSettingsArgs build() {
             return new ShareSettingsArgs(projectMap, projects, shareType);
         }

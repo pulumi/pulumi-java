@@ -24,7 +24,7 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="googleCloudStorage", required=true)
-    private final GoogleCloudStorageResponse googleCloudStorage;
+      private final GoogleCloudStorageResponse googleCloudStorage;
 
     public GoogleCloudStorageResponse getGoogleCloudStorage() {
         return this.googleCloudStorage;
@@ -35,7 +35,7 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resultsUrl", required=true)
-    private final String resultsUrl;
+      private final String resultsUrl;
 
     public String getResultsUrl() {
         return this.resultsUrl;
@@ -46,7 +46,7 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="toolResultsExecution", required=true)
-    private final ToolResultsExecutionResponse toolResultsExecution;
+      private final ToolResultsExecutionResponse toolResultsExecution;
 
     public ToolResultsExecutionResponse getToolResultsExecution() {
         return this.toolResultsExecution;
@@ -57,7 +57,7 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="toolResultsHistory", required=true)
-    private final ToolResultsHistoryResponse toolResultsHistory;
+      private final ToolResultsHistoryResponse toolResultsHistory;
 
     public ToolResultsHistoryResponse getToolResultsHistory() {
         return this.toolResultsHistory;
@@ -126,7 +126,6 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
             this.toolResultsHistory = Objects.requireNonNull(toolResultsHistory);
             return this;
         }
-
         public ResultStorageResponse build() {
             return new ResultStorageResponse(googleCloudStorage, resultsUrl, toolResultsExecution, toolResultsHistory);
         }

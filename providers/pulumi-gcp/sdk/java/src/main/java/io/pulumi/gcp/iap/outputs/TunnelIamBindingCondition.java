@@ -97,7 +97,6 @@ public final class TunnelIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public TunnelIamBindingCondition build() {
             return new TunnelIamBindingCondition(description, expression, title);
         }

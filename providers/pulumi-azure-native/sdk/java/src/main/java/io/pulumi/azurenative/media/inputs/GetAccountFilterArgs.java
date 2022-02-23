@@ -17,7 +17,7 @@ public final class GetAccountFilterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetAccountFilterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filterName", required=true)
-    private final String filterName;
+        private final String filterName;
 
     public String getFilterName() {
         return this.filterName;
@@ -39,7 +39,7 @@ public final class GetAccountFilterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetAccountFilterArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetAccountFilterArgs build() {
             return new GetAccountFilterArgs(accountName, filterName, resourceGroupName);
         }

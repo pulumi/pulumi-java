@@ -25,7 +25,7 @@ public final class WeeklyRetentionScheduleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="daysOfTheWeek")
-    private final @Nullable List<String> daysOfTheWeek;
+        private final @Nullable List<String> daysOfTheWeek;
 
     public List<String> getDaysOfTheWeek() {
         return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
@@ -36,7 +36,7 @@ public final class WeeklyRetentionScheduleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retentionDuration")
-    private final @Nullable RetentionDurationResponse retentionDuration;
+        private final @Nullable RetentionDurationResponse retentionDuration;
 
     public Optional<RetentionDurationResponse> getRetentionDuration() {
         return this.retentionDuration == null ? Optional.empty() : Optional.ofNullable(this.retentionDuration);
@@ -47,7 +47,7 @@ public final class WeeklyRetentionScheduleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retentionTimes")
-    private final @Nullable List<String> retentionTimes;
+        private final @Nullable List<String> retentionTimes;
 
     public List<String> getRetentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;
@@ -106,7 +106,6 @@ public final class WeeklyRetentionScheduleResponse extends io.pulumi.resources.I
             this.retentionTimes = retentionTimes;
             return this;
         }
-
         public WeeklyRetentionScheduleResponse build() {
             return new WeeklyRetentionScheduleResponse(daysOfTheWeek, retentionDuration, retentionTimes);
         }

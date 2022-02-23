@@ -46,7 +46,6 @@ public final class DatastoreSchemaDefinition {
             this.columns = columns;
             return this;
         }
-
         public DatastoreSchemaDefinition build() {
             return new DatastoreSchemaDefinition(columns);
         }

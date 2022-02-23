@@ -61,7 +61,6 @@ public final class ConfigFrequencyBandwidth {
             this.value = value;
             return this;
         }
-
         public ConfigFrequencyBandwidth build() {
             return new ConfigFrequencyBandwidth(units, value);
         }

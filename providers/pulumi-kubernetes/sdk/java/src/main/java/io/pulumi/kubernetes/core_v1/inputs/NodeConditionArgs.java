@@ -23,7 +23,7 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastHeartbeatTime")
-    private final @Nullable Input<String> lastHeartbeatTime;
+        private final @Nullable Input<String> lastHeartbeatTime;
 
     public Input<String> getLastHeartbeatTime() {
         return this.lastHeartbeatTime == null ? Input.empty() : this.lastHeartbeatTime;
@@ -34,7 +34,7 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastTransitionTime")
-    private final @Nullable Input<String> lastTransitionTime;
+        private final @Nullable Input<String> lastTransitionTime;
 
     public Input<String> getLastTransitionTime() {
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
@@ -45,7 +45,7 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+        private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -56,7 +56,7 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-    private final @Nullable Input<String> reason;
+        private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -67,7 +67,7 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<String> status;
+        private final Input<String> status;
 
     public Input<String> getStatus() {
         return this.status;
@@ -85,7 +85,7 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -204,7 +204,6 @@ public final class NodeConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public NodeConditionArgs build() {
             return new NodeConditionArgs(lastHeartbeatTime, lastTransitionTime, message, reason, status, type);
         }

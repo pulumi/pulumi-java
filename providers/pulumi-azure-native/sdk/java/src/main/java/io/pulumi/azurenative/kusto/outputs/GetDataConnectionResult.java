@@ -139,7 +139,6 @@ public final class GetDataConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataConnectionResult build() {
             return new GetDataConnectionResult(id, kind, location, name, type);
         }

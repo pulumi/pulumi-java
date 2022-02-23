@@ -44,7 +44,6 @@ public final class GetClusterAddonsConfigGcpFilestoreCsiDriverConfig {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetClusterAddonsConfigGcpFilestoreCsiDriverConfig build() {
             return new GetClusterAddonsConfigGcpFilestoreCsiDriverConfig(enabled);
         }

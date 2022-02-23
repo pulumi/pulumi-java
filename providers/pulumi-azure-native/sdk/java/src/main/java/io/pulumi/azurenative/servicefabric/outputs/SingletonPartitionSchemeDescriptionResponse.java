@@ -54,7 +54,6 @@ public final class SingletonPartitionSchemeDescriptionResponse {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }
-
         public SingletonPartitionSchemeDescriptionResponse build() {
             return new SingletonPartitionSchemeDescriptionResponse(partitionScheme);
         }

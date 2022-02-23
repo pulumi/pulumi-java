@@ -166,7 +166,6 @@ public final class GetApplicationResult {
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(appBlockArn, arn, attributesToDelete, createdTime, description, displayName, iconS3Location, launchParameters, launchPath, workingDirectory);
         }

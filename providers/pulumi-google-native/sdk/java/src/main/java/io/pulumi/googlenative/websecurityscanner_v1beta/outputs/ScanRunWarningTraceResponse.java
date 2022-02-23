@@ -52,7 +52,6 @@ public final class ScanRunWarningTraceResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public ScanRunWarningTraceResponse build() {
             return new ScanRunWarningTraceResponse(code);
         }

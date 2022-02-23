@@ -26,7 +26,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Input<AuthenticationArgs> authentication;
+      private final @Nullable Input<AuthenticationArgs> authentication;
 
     public Input<AuthenticationArgs> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -37,7 +37,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blacklistPatterns")
-    private final @Nullable Input<List<String>> blacklistPatterns;
+      private final @Nullable Input<List<String>> blacklistPatterns;
 
     public Input<List<String>> getBlacklistPatterns() {
         return this.blacklistPatterns == null ? Input.empty() : this.blacklistPatterns;
@@ -48,7 +48,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -59,7 +59,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestRun")
-    private final @Nullable Input<ScanRunArgs> latestRun;
+      private final @Nullable Input<ScanRunArgs> latestRun;
 
     public Input<ScanRunArgs> getLatestRun() {
         return this.latestRun == null ? Input.empty() : this.latestRun;
@@ -70,7 +70,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxQps")
-    private final @Nullable Input<Integer> maxQps;
+      private final @Nullable Input<Integer> maxQps;
 
     public Input<Integer> getMaxQps() {
         return this.maxQps == null ? Input.empty() : this.maxQps;
@@ -81,14 +81,14 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -99,7 +99,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<ScheduleArgs> schedule;
+      private final @Nullable Input<ScheduleArgs> schedule;
 
     public Input<ScheduleArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -110,7 +110,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startingUrls", required=true)
-    private final Input<List<String>> startingUrls;
+      private final Input<List<String>> startingUrls;
 
     public Input<List<String>> getStartingUrls() {
         return this.startingUrls;
@@ -121,7 +121,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetPlatforms")
-    private final @Nullable Input<List<ScanConfigTargetPlatformsItem>> targetPlatforms;
+      private final @Nullable Input<List<ScanConfigTargetPlatformsItem>> targetPlatforms;
 
     public Input<List<ScanConfigTargetPlatformsItem>> getTargetPlatforms() {
         return this.targetPlatforms == null ? Input.empty() : this.targetPlatforms;
@@ -132,7 +132,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAgent")
-    private final @Nullable Input<ScanConfigUserAgent> userAgent;
+      private final @Nullable Input<ScanConfigUserAgent> userAgent;
 
     public Input<ScanConfigUserAgent> getUserAgent() {
         return this.userAgent == null ? Input.empty() : this.userAgent;
@@ -326,7 +326,6 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.userAgent = Input.ofNullable(userAgent);
             return this;
         }
-
         public ScanConfigArgs build() {
             return new ScanConfigArgs(authentication, blacklistPatterns, displayName, latestRun, maxQps, name, project, schedule, startingUrls, targetPlatforms, userAgent);
         }

@@ -25,7 +25,7 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -36,7 +36,7 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="oauth2ClientId")
-    private final @Nullable Input<String> oauth2ClientId;
+      private final @Nullable Input<String> oauth2ClientId;
 
     public Input<String> getOauth2ClientId() {
         return this.oauth2ClientId == null ? Input.empty() : this.oauth2ClientId;
@@ -47,7 +47,7 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="oauth2ClientInfo")
-    private final @Nullable Input<BackendServiceIAPOAuth2ClientInfoArgs> oauth2ClientInfo;
+      private final @Nullable Input<BackendServiceIAPOAuth2ClientInfoArgs> oauth2ClientInfo;
 
     public Input<BackendServiceIAPOAuth2ClientInfoArgs> getOauth2ClientInfo() {
         return this.oauth2ClientInfo == null ? Input.empty() : this.oauth2ClientInfo;
@@ -58,7 +58,7 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="oauth2ClientSecret")
-    private final @Nullable Input<String> oauth2ClientSecret;
+      private final @Nullable Input<String> oauth2ClientSecret;
 
     public Input<String> getOauth2ClientSecret() {
         return this.oauth2ClientSecret == null ? Input.empty() : this.oauth2ClientSecret;
@@ -147,7 +147,6 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
             this.oauth2ClientSecret = Input.ofNullable(oauth2ClientSecret);
             return this;
         }
-
         public BackendServiceIAPArgs build() {
             return new BackendServiceIAPArgs(enabled, oauth2ClientId, oauth2ClientInfo, oauth2ClientSecret);
         }

@@ -100,7 +100,6 @@ public final class AlertRuleLeafConditionResponse {
             this.field = field;
             return this;
         }
-
         public AlertRuleLeafConditionResponse build() {
             return new AlertRuleLeafConditionResponse(containsAny, equals, field);
         }

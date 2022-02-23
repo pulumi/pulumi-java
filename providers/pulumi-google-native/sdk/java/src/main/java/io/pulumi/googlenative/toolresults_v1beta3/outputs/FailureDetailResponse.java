@@ -179,7 +179,6 @@ public final class FailureDetailResponse {
             this.unableToCrawl = Objects.requireNonNull(unableToCrawl);
             return this;
         }
-
         public FailureDetailResponse build() {
             return new FailureDetailResponse(crashed, deviceOutOfMemory, failedRoboscript, notInstalled, otherNativeCrash, timedOut, unableToCrawl);
         }

@@ -19,42 +19,42 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
     public static final RuleGroupArgs Empty = new RuleGroupArgs();
 
     @InputImport(name="capacity", required=true)
-    private final Input<Integer> capacity;
+        private final Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="ruleGroup")
-    private final @Nullable Input<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup;
+        private final @Nullable Input<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup;
 
     public Input<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> getRuleGroup() {
         return this.ruleGroup == null ? Input.empty() : this.ruleGroup;
     }
 
     @InputImport(name="ruleGroupName")
-    private final @Nullable Input<String> ruleGroupName;
+        private final @Nullable Input<String> ruleGroupName;
 
     public Input<String> getRuleGroupName() {
         return this.ruleGroupName == null ? Input.empty() : this.ruleGroupName;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<RuleGroupTagArgs>> tags;
+        private final @Nullable Input<List<RuleGroupTagArgs>> tags;
 
     public Input<List<RuleGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<RuleGroupTypeEnum> type;
+        private final Input<RuleGroupTypeEnum> type;
 
     public Input<RuleGroupTypeEnum> getType() {
         return this.type;
@@ -173,7 +173,6 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public RuleGroupArgs build() {
             return new RuleGroupArgs(capacity, description, ruleGroup, ruleGroupName, tags, type);
         }

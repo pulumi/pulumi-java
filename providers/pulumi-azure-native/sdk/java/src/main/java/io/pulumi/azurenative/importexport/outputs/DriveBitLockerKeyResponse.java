@@ -76,7 +76,6 @@ public final class DriveBitLockerKeyResponse {
             this.driveId = driveId;
             return this;
         }
-
         public DriveBitLockerKeyResponse build() {
             return new DriveBitLockerKeyResponse(bitLockerKey, driveId);
         }

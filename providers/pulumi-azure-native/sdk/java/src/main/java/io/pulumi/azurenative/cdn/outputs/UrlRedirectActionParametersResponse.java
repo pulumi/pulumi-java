@@ -173,7 +173,6 @@ public final class UrlRedirectActionParametersResponse {
             this.redirectType = Objects.requireNonNull(redirectType);
             return this;
         }
-
         public UrlRedirectActionParametersResponse build() {
             return new UrlRedirectActionParametersResponse(customFragment, customHostname, customPath, customQueryString, destinationProtocol, odataType, redirectType);
         }

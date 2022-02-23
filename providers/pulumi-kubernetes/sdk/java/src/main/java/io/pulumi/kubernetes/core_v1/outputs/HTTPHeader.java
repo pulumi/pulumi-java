@@ -74,7 +74,6 @@ public final class HTTPHeader {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public HTTPHeader build() {
             return new HTTPHeader(name, value);
         }

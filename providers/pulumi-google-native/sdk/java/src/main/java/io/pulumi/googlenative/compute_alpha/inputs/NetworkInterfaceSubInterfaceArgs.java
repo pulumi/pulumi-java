@@ -21,14 +21,14 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
     @InputImport(name="ipAllocationMode")
-    private final @Nullable Input<NetworkInterfaceSubInterfaceIpAllocationMode> ipAllocationMode;
+      private final @Nullable Input<NetworkInterfaceSubInterfaceIpAllocationMode> ipAllocationMode;
 
     public Input<NetworkInterfaceSubInterfaceIpAllocationMode> getIpAllocationMode() {
         return this.ipAllocationMode == null ? Input.empty() : this.ipAllocationMode;
@@ -39,7 +39,7 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -50,7 +50,7 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vlan")
-    private final @Nullable Input<Integer> vlan;
+      private final @Nullable Input<Integer> vlan;
 
     public Input<Integer> getVlan() {
         return this.vlan == null ? Input.empty() : this.vlan;
@@ -139,7 +139,6 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
             this.vlan = Input.ofNullable(vlan);
             return this;
         }
-
         public NetworkInterfaceSubInterfaceArgs build() {
             return new NetworkInterfaceSubInterfaceArgs(ipAddress, ipAllocationMode, subnetwork, vlan);
         }

@@ -23,7 +23,7 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ssh")
-    private final @Nullable SshConfigurationResponse ssh;
+        private final @Nullable SshConfigurationResponse ssh;
 
     public Optional<SshConfigurationResponse> getSsh() {
         return this.ssh == null ? Optional.empty() : Optional.ofNullable(this.ssh);
@@ -61,7 +61,6 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
             this.ssh = ssh;
             return this;
         }
-
         public LinuxConfigurationResponse build() {
             return new LinuxConfigurationResponse(ssh);
         }

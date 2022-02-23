@@ -21,7 +21,7 @@ public final class GoogleTypeTimeOfDayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="hours", required=true)
-    private final Integer hours;
+      private final Integer hours;
 
     public Integer getHours() {
         return this.hours;
@@ -32,7 +32,7 @@ public final class GoogleTypeTimeOfDayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="minutes", required=true)
-    private final Integer minutes;
+      private final Integer minutes;
 
     public Integer getMinutes() {
         return this.minutes;
@@ -43,7 +43,7 @@ public final class GoogleTypeTimeOfDayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="nanos", required=true)
-    private final Integer nanos;
+      private final Integer nanos;
 
     public Integer getNanos() {
         return this.nanos;
@@ -54,7 +54,7 @@ public final class GoogleTypeTimeOfDayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="seconds", required=true)
-    private final Integer seconds;
+      private final Integer seconds;
 
     public Integer getSeconds() {
         return this.seconds;
@@ -123,7 +123,6 @@ public final class GoogleTypeTimeOfDayResponse extends io.pulumi.resources.Invok
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public GoogleTypeTimeOfDayResponse build() {
             return new GoogleTypeTimeOfDayResponse(hours, minutes, nanos, seconds);
         }

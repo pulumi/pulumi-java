@@ -120,7 +120,6 @@ public final class ToolExecutionResponse {
             this.toolOutputs = Objects.requireNonNull(toolOutputs);
             return this;
         }
-
         public ToolExecutionResponse build() {
             return new ToolExecutionResponse(commandLineArguments, exitCode, toolLogs, toolOutputs);
         }

@@ -205,7 +205,6 @@ public final class SquareSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SquareSourceResponse build() {
             return new SquareSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

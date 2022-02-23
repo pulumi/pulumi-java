@@ -58,7 +58,6 @@ public final class GlobalTableTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GlobalTableTag build() {
             return new GlobalTableTag(key, value);
         }

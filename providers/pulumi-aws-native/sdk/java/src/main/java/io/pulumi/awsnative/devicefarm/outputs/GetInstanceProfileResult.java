@@ -128,7 +128,6 @@ public final class GetInstanceProfileResult {
             this.tags = tags;
             return this;
         }
-
         public GetInstanceProfileResult build() {
             return new GetInstanceProfileResult(arn, description, excludeAppPackagesFromCleanup, name, packageCleanup, rebootAfterUse, tags);
         }

@@ -497,7 +497,6 @@ public final class CommandJobResponse {
             this.timeout = timeout;
             return this;
         }
-
         public CommandJobResponse build() {
             return new CommandJobResponse(codeId, command, compute, description, distribution, environmentId, environmentVariables, experimentName, identity, inputDataBindings, interactionEndpoints, jobType, output, outputDataBindings, parameters, priority, properties, provisioningState, status, tags, timeout);
         }

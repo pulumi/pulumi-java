@@ -79,7 +79,6 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis {
             this.monitoringInterval = monitoringInterval;
             return this;
         }
-
         public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis build() {
             return new AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis(disabled, monitoringInterval);
         }

@@ -161,7 +161,6 @@ public final class ConditionResponse {
             this.requiredAccessLevels = Objects.requireNonNull(requiredAccessLevels);
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(devicePolicy, ipSubnetworks, members, negate, regions, requiredAccessLevels);
         }

@@ -77,7 +77,6 @@ public final class GetAppResult {
             this.resourceSpec = resourceSpec;
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(appArn, resourceSpec);
         }

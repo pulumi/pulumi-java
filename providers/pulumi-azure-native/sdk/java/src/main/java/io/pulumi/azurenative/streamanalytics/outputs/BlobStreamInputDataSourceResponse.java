@@ -186,7 +186,6 @@ public final class BlobStreamInputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobStreamInputDataSourceResponse build() {
             return new BlobStreamInputDataSourceResponse(container, dateFormat, pathPattern, sourcePartitionCount, storageAccounts, timeFormat, type);
         }

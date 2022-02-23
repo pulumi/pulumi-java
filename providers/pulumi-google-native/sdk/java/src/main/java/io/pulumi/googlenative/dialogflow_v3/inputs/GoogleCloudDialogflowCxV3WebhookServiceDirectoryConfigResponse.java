@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
      * 
      */
     @InputImport(name="genericWebService", required=true)
-    private final GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService;
+      private final GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService;
 
     public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse getGenericWebService() {
         return this.genericWebService;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse build() {
             return new GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse(genericWebService, service);
         }

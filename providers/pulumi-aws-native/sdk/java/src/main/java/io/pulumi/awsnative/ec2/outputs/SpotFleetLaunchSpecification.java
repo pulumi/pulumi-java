@@ -279,7 +279,6 @@ public final class SpotFleetLaunchSpecification {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
-
         public SpotFleetLaunchSpecification build() {
             return new SpotFleetLaunchSpecification(blockDeviceMappings, ebsOptimized, iamInstanceProfile, imageId, instanceRequirements, instanceType, kernelId, keyName, monitoring, networkInterfaces, placement, ramdiskId, securityGroups, spotPrice, subnetId, tagSpecifications, userData, weightedCapacity);
         }

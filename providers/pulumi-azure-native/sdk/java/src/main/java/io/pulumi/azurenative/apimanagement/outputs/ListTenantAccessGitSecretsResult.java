@@ -119,7 +119,6 @@ public final class ListTenantAccessGitSecretsResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListTenantAccessGitSecretsResult build() {
             return new ListTenantAccessGitSecretsResult(enabled, id, primaryKey, secondaryKey);
         }

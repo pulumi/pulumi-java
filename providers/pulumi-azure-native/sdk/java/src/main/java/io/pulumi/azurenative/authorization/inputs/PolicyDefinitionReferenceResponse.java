@@ -26,7 +26,7 @@ public final class PolicyDefinitionReferenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="groupNames")
-    private final @Nullable List<String> groupNames;
+        private final @Nullable List<String> groupNames;
 
     public List<String> getGroupNames() {
         return this.groupNames == null ? List.of() : this.groupNames;
@@ -37,7 +37,7 @@ public final class PolicyDefinitionReferenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterValuesValueResponse> parameters;
+        private final @Nullable Map<String,ParameterValuesValueResponse> parameters;
 
     public Map<String,ParameterValuesValueResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -48,7 +48,7 @@ public final class PolicyDefinitionReferenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="policyDefinitionId", required=true)
-    private final String policyDefinitionId;
+        private final String policyDefinitionId;
 
     public String getPolicyDefinitionId() {
         return this.policyDefinitionId;
@@ -59,7 +59,7 @@ public final class PolicyDefinitionReferenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="policyDefinitionReferenceId")
-    private final @Nullable String policyDefinitionReferenceId;
+        private final @Nullable String policyDefinitionReferenceId;
 
     public Optional<String> getPolicyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId == null ? Optional.empty() : Optional.ofNullable(this.policyDefinitionReferenceId);
@@ -128,7 +128,6 @@ public final class PolicyDefinitionReferenceResponse extends io.pulumi.resources
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
-
         public PolicyDefinitionReferenceResponse build() {
             return new PolicyDefinitionReferenceResponse(groupNames, parameters, policyDefinitionId, policyDefinitionReferenceId);
         }

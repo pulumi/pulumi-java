@@ -78,7 +78,6 @@ public final class ContainerServiceDeployment {
             this.publicEndpoint = publicEndpoint;
             return this;
         }
-
         public ContainerServiceDeployment build() {
             return new ContainerServiceDeployment(containers, publicEndpoint);
         }

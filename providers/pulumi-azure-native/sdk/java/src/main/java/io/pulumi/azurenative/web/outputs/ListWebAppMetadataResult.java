@@ -140,7 +140,6 @@ public final class ListWebAppMetadataResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppMetadataResult build() {
             return new ListWebAppMetadataResult(id, kind, name, properties, type);
         }

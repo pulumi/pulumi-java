@@ -20,7 +20,7 @@ public final class DatasetDatabaseInputDefinition extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="databaseTableName")
-    private final @Nullable String databaseTableName;
+        private final @Nullable String databaseTableName;
 
     public Optional<String> getDatabaseTableName() {
         return this.databaseTableName == null ? Optional.empty() : Optional.ofNullable(this.databaseTableName);
@@ -31,7 +31,7 @@ public final class DatasetDatabaseInputDefinition extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="glueConnectionName", required=true)
-    private final String glueConnectionName;
+        private final String glueConnectionName;
 
     public String getGlueConnectionName() {
         return this.glueConnectionName;
@@ -42,14 +42,14 @@ public final class DatasetDatabaseInputDefinition extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable String queryString;
+        private final @Nullable String queryString;
 
     public Optional<String> getQueryString() {
         return this.queryString == null ? Optional.empty() : Optional.ofNullable(this.queryString);
     }
 
     @InputImport(name="tempDirectory")
-    private final @Nullable DatasetS3Location tempDirectory;
+        private final @Nullable DatasetS3Location tempDirectory;
 
     public Optional<DatasetS3Location> getTempDirectory() {
         return this.tempDirectory == null ? Optional.empty() : Optional.ofNullable(this.tempDirectory);
@@ -118,7 +118,6 @@ public final class DatasetDatabaseInputDefinition extends io.pulumi.resources.In
             this.tempDirectory = tempDirectory;
             return this;
         }
-
         public DatasetDatabaseInputDefinition build() {
             return new DatasetDatabaseInputDefinition(databaseTableName, glueConnectionName, queryString, tempDirectory);
         }

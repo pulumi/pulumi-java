@@ -54,7 +54,6 @@ public final class CustomLocationPropertiesResponseAuthentication {
             this.type = type;
             return this;
         }
-
         public CustomLocationPropertiesResponseAuthentication build() {
             return new CustomLocationPropertiesResponseAuthentication(type);
         }

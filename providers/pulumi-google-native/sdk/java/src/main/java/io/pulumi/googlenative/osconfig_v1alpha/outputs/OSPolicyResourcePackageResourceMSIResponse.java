@@ -76,7 +76,6 @@ public final class OSPolicyResourcePackageResourceMSIResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public OSPolicyResourcePackageResourceMSIResponse build() {
             return new OSPolicyResourcePackageResourceMSIResponse(properties, source);
         }

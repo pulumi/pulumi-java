@@ -46,7 +46,6 @@ public final class ApplicationInstanceManifestPayload {
             this.payloadData = payloadData;
             return this;
         }
-
         public ApplicationInstanceManifestPayload build() {
             return new ApplicationInstanceManifestPayload(payloadData);
         }

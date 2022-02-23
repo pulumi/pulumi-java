@@ -184,7 +184,6 @@ public final class SharePointOnlineListSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SharePointOnlineListSourceResponse build() {
             return new SharePointOnlineListSourceResponse(disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }

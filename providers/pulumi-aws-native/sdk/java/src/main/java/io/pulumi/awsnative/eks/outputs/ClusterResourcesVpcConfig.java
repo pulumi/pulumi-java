@@ -141,7 +141,6 @@ public final class ClusterResourcesVpcConfig {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public ClusterResourcesVpcConfig build() {
             return new ClusterResourcesVpcConfig(endpointPrivateAccess, endpointPublicAccess, publicAccessCidrs, securityGroupIds, subnetIds);
         }

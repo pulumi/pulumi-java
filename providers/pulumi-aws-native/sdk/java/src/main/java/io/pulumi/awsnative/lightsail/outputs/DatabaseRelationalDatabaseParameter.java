@@ -203,7 +203,6 @@ public final class DatabaseRelationalDatabaseParameter {
             this.parameterValue = parameterValue;
             return this;
         }
-
         public DatabaseRelationalDatabaseParameter build() {
             return new DatabaseRelationalDatabaseParameter(allowedValues, applyMethod, applyType, dataType, description, isModifiable, parameterName, parameterValue);
         }

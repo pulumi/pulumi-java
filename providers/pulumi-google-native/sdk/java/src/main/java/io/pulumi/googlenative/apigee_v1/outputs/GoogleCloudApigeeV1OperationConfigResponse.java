@@ -120,7 +120,6 @@ public final class GoogleCloudApigeeV1OperationConfigResponse {
             this.quota = Objects.requireNonNull(quota);
             return this;
         }
-
         public GoogleCloudApigeeV1OperationConfigResponse build() {
             return new GoogleCloudApigeeV1OperationConfigResponse(apiSource, attributes, operations, quota);
         }

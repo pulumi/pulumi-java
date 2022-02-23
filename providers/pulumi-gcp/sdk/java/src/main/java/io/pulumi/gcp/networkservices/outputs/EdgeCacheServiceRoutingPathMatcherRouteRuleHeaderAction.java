@@ -131,7 +131,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
             this.responseHeaderToRemoves = responseHeaderToRemoves;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction(requestHeaderToAdds, requestHeaderToRemoves, responseHeaderToAdds, responseHeaderToRemoves);
         }

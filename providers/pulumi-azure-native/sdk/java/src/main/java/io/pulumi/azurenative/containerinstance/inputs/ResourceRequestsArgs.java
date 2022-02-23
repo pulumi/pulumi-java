@@ -24,7 +24,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cpu", required=true)
-    private final Input<Double> cpu;
+        private final Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu;
@@ -35,7 +35,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="gpu")
-    private final @Nullable Input<GpuResourceArgs> gpu;
+        private final @Nullable Input<GpuResourceArgs> gpu;
 
     public Input<GpuResourceArgs> getGpu() {
         return this.gpu == null ? Input.empty() : this.gpu;
@@ -46,7 +46,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="memoryInGB", required=true)
-    private final Input<Double> memoryInGB;
+        private final Input<Double> memoryInGB;
 
     public Input<Double> getMemoryInGB() {
         return this.memoryInGB;
@@ -120,7 +120,6 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
             this.memoryInGB = Input.of(Objects.requireNonNull(memoryInGB));
             return this;
         }
-
         public ResourceRequestsArgs build() {
             return new ResourceRequestsArgs(cpu, gpu, memoryInGB);
         }

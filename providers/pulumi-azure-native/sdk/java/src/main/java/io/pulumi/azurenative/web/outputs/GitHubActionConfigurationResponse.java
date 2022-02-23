@@ -120,7 +120,6 @@ public final class GitHubActionConfigurationResponse {
             this.isLinux = isLinux;
             return this;
         }
-
         public GitHubActionConfigurationResponse build() {
             return new GitHubActionConfigurationResponse(codeConfiguration, containerConfiguration, generateWorkflowFile, isLinux);
         }

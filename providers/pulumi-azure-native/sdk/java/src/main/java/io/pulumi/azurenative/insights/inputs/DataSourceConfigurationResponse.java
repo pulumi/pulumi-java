@@ -22,7 +22,7 @@ public final class DataSourceConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="eventLogs")
-    private final @Nullable List<EventLogConfigurationResponse> eventLogs;
+        private final @Nullable List<EventLogConfigurationResponse> eventLogs;
 
     public List<EventLogConfigurationResponse> getEventLogs() {
         return this.eventLogs == null ? List.of() : this.eventLogs;
@@ -33,7 +33,7 @@ public final class DataSourceConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="perfCounters")
-    private final @Nullable List<PerformanceCounterConfigurationResponse> perfCounters;
+        private final @Nullable List<PerformanceCounterConfigurationResponse> perfCounters;
 
     public List<PerformanceCounterConfigurationResponse> getPerfCounters() {
         return this.perfCounters == null ? List.of() : this.perfCounters;
@@ -44,7 +44,7 @@ public final class DataSourceConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="providers")
-    private final @Nullable List<EtwProviderConfigurationResponse> providers;
+        private final @Nullable List<EtwProviderConfigurationResponse> providers;
 
     public List<EtwProviderConfigurationResponse> getProviders() {
         return this.providers == null ? List.of() : this.providers;
@@ -103,7 +103,6 @@ public final class DataSourceConfigurationResponse extends io.pulumi.resources.I
             this.providers = providers;
             return this;
         }
-
         public DataSourceConfigurationResponse build() {
             return new DataSourceConfigurationResponse(eventLogs, perfCounters, providers);
         }

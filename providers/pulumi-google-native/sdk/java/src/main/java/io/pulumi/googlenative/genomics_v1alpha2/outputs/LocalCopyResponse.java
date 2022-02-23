@@ -74,7 +74,6 @@ public final class LocalCopyResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public LocalCopyResponse build() {
             return new LocalCopyResponse(disk, path);
         }

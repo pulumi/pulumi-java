@@ -74,7 +74,6 @@ public final class BotAliasCloudWatchLogGroupLogDestination {
             this.logPrefix = Objects.requireNonNull(logPrefix);
             return this;
         }
-
         public BotAliasCloudWatchLogGroupLogDestination build() {
             return new BotAliasCloudWatchLogGroupLogDestination(cloudWatchLogGroupArn, logPrefix);
         }

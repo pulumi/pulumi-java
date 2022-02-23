@@ -180,7 +180,6 @@ public final class GetApiResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetApiResult build() {
             return new GetApiResult(createTime, displayName, labels, managedService, name, state, updateTime);
         }

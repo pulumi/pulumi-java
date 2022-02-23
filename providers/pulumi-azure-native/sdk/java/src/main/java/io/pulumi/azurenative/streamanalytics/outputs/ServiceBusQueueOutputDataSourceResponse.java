@@ -163,7 +163,6 @@ public final class ServiceBusQueueOutputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceBusQueueOutputDataSourceResponse build() {
             return new ServiceBusQueueOutputDataSourceResponse(propertyColumns, queueName, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }

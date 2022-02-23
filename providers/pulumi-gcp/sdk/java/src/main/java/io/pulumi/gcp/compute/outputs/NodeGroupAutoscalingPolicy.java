@@ -114,7 +114,6 @@ public final class NodeGroupAutoscalingPolicy {
             this.mode = mode;
             return this;
         }
-
         public NodeGroupAutoscalingPolicy build() {
             return new NodeGroupAutoscalingPolicy(maxNodes, minNodes, mode);
         }

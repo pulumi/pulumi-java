@@ -23,7 +23,7 @@ public final class PackageOccurrenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="location", required=true)
-    private final List<LocationResponse> location;
+      private final List<LocationResponse> location;
 
     public List<LocationResponse> getLocation() {
         return this.location;
@@ -34,7 +34,7 @@ public final class PackageOccurrenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -83,7 +83,6 @@ public final class PackageOccurrenceResponse extends io.pulumi.resources.InvokeA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PackageOccurrenceResponse build() {
             return new PackageOccurrenceResponse(location, name);
         }

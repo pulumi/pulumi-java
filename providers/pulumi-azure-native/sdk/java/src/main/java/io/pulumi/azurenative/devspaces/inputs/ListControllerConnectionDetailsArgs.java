@@ -17,7 +17,7 @@ public final class ListControllerConnectionDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class ListControllerConnectionDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListControllerConnectionDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="targetContainerHostResourceId", required=true)
-    private final String targetContainerHostResourceId;
+        private final String targetContainerHostResourceId;
 
     public String getTargetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
@@ -98,7 +98,6 @@ public final class ListControllerConnectionDetailsArgs extends io.pulumi.resourc
             this.targetContainerHostResourceId = Objects.requireNonNull(targetContainerHostResourceId);
             return this;
         }
-
         public ListControllerConnectionDetailsArgs build() {
             return new ListControllerConnectionDetailsArgs(name, resourceGroupName, targetContainerHostResourceId);
         }

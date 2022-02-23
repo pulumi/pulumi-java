@@ -54,7 +54,6 @@ public final class EncryptionPreferencesResponse {
             this.doubleEncryption = doubleEncryption;
             return this;
         }
-
         public EncryptionPreferencesResponse build() {
             return new EncryptionPreferencesResponse(doubleEncryption);
         }

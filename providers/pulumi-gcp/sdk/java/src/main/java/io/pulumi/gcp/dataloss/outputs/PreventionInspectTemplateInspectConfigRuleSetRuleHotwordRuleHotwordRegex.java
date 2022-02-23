@@ -79,7 +79,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex(groupIndexes, pattern);
         }

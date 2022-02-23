@@ -52,7 +52,6 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse {
             this.document = Objects.requireNonNull(document);
             return this;
         }
-
         public ApigatewayApiConfigOpenApiDocumentResponse build() {
             return new ApigatewayApiConfigOpenApiDocumentResponse(document);
         }

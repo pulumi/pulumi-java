@@ -17,28 +17,28 @@ public final class AppBlockScriptDetailsArgs extends io.pulumi.resources.Resourc
     public static final AppBlockScriptDetailsArgs Empty = new AppBlockScriptDetailsArgs();
 
     @InputImport(name="executableParameters")
-    private final @Nullable Input<String> executableParameters;
+        private final @Nullable Input<String> executableParameters;
 
     public Input<String> getExecutableParameters() {
         return this.executableParameters == null ? Input.empty() : this.executableParameters;
     }
 
     @InputImport(name="executablePath", required=true)
-    private final Input<String> executablePath;
+        private final Input<String> executablePath;
 
     public Input<String> getExecutablePath() {
         return this.executablePath;
     }
 
     @InputImport(name="scriptS3Location", required=true)
-    private final Input<AppBlockS3LocationArgs> scriptS3Location;
+        private final Input<AppBlockS3LocationArgs> scriptS3Location;
 
     public Input<AppBlockS3LocationArgs> getScriptS3Location() {
         return this.scriptS3Location;
     }
 
     @InputImport(name="timeoutInSeconds", required=true)
-    private final Input<Integer> timeoutInSeconds;
+        private final Input<Integer> timeoutInSeconds;
 
     public Input<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds;
@@ -127,7 +127,6 @@ public final class AppBlockScriptDetailsArgs extends io.pulumi.resources.Resourc
             this.timeoutInSeconds = Input.of(Objects.requireNonNull(timeoutInSeconds));
             return this;
         }
-
         public AppBlockScriptDetailsArgs build() {
             return new AppBlockScriptDetailsArgs(executableParameters, executablePath, scriptS3Location, timeoutInSeconds);
         }

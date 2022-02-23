@@ -21,7 +21,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allSubscriptions")
-    private final @Nullable Input<Boolean> allSubscriptions;
+        private final @Nullable Input<Boolean> allSubscriptions;
 
     public Input<Boolean> getAllSubscriptions() {
         return this.allSubscriptions == null ? Input.empty() : this.allSubscriptions;
@@ -32,7 +32,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="claim")
-    private final @Nullable Input<String> claim;
+        private final @Nullable Input<String> claim;
 
     public Input<String> getClaim() {
         return this.claim == null ? Input.empty() : this.claim;
@@ -43,7 +43,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="collectionId")
-    private final @Nullable Input<String> collectionId;
+        private final @Nullable Input<String> collectionId;
 
     public Input<String> getCollectionId() {
         return this.collectionId == null ? Input.empty() : this.collectionId;
@@ -54,7 +54,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="collectionName")
-    private final @Nullable Input<String> collectionName;
+        private final @Nullable Input<String> collectionName;
 
     public Input<String> getCollectionName() {
         return this.collectionName == null ? Input.empty() : this.collectionName;
@@ -65,7 +65,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -76,7 +76,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateStoreId", required=true)
-    private final Input<String> privateStoreId;
+        private final Input<String> privateStoreId;
 
     public Input<String> getPrivateStoreId() {
         return this.privateStoreId;
@@ -87,7 +87,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subscriptionsList")
-    private final @Nullable Input<List<String>> subscriptionsList;
+        private final @Nullable Input<List<String>> subscriptionsList;
 
     public Input<List<String>> getSubscriptionsList() {
         return this.subscriptionsList == null ? Input.empty() : this.subscriptionsList;
@@ -221,7 +221,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
             this.subscriptionsList = Input.ofNullable(subscriptionsList);
             return this;
         }
-
         public PrivateStoreCollectionArgs build() {
             return new PrivateStoreCollectionArgs(allSubscriptions, claim, collectionId, collectionName, enabled, privateStoreId, subscriptionsList);
         }

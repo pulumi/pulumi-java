@@ -155,7 +155,6 @@ public final class StorageLensS3BucketDestination {
             this.prefix = prefix;
             return this;
         }
-
         public StorageLensS3BucketDestination build() {
             return new StorageLensS3BucketDestination(accountId, arn, encryption, format, outputSchemaVersion, prefix);
         }

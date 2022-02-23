@@ -88,7 +88,6 @@ public final class GameServerConfigFleetConfig {
             this.name = name;
             return this;
         }
-
         public GameServerConfigFleetConfig build() {
             return new GameServerConfigFleetConfig(fleetSpec, name);
         }

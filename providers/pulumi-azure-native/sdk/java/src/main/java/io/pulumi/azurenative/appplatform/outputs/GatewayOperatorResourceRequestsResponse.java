@@ -96,7 +96,6 @@ public final class GatewayOperatorResourceRequestsResponse {
             this.memory = Objects.requireNonNull(memory);
             return this;
         }
-
         public GatewayOperatorResourceRequestsResponse build() {
             return new GatewayOperatorResourceRequestsResponse(cpu, instanceCount, memory);
         }

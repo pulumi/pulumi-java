@@ -15,7 +15,7 @@ public final class DataSourceAccessControlListConfiguration extends io.pulumi.re
     public static final DataSourceAccessControlListConfiguration Empty = new DataSourceAccessControlListConfiguration();
 
     @InputImport(name="keyPath")
-    private final @Nullable String keyPath;
+        private final @Nullable String keyPath;
 
     public Optional<String> getKeyPath() {
         return this.keyPath == null ? Optional.empty() : Optional.ofNullable(this.keyPath);
@@ -53,7 +53,6 @@ public final class DataSourceAccessControlListConfiguration extends io.pulumi.re
             this.keyPath = keyPath;
             return this;
         }
-
         public DataSourceAccessControlListConfiguration build() {
             return new DataSourceAccessControlListConfiguration(keyPath);
         }

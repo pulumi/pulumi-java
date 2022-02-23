@@ -503,7 +503,6 @@ public final class GetKpiResult {
             this.unit = unit;
             return this;
         }
-
         public GetKpiResult build() {
             return new GetKpiResult(aliases, calculationWindow, calculationWindowFieldName, description, displayName, entityType, entityTypeName, expression, extracts, filter, function, groupBy, groupByMetadata, id, kpiName, name, participantProfilesMetadata, provisioningState, tenantId, thresHolds, type, unit);
         }

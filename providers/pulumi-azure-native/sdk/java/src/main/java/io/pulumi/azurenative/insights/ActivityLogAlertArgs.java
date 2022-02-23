@@ -24,7 +24,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="actions", required=true)
-    private final Input<ActionListArgs> actions;
+        private final Input<ActionListArgs> actions;
 
     public Input<ActionListArgs> getActions() {
         return this.actions;
@@ -35,7 +35,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="activityLogAlertName")
-    private final @Nullable Input<String> activityLogAlertName;
+        private final @Nullable Input<String> activityLogAlertName;
 
     public Input<String> getActivityLogAlertName() {
         return this.activityLogAlertName == null ? Input.empty() : this.activityLogAlertName;
@@ -46,7 +46,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="condition", required=true)
-    private final Input<AlertRuleAllOfConditionArgs> condition;
+        private final Input<AlertRuleAllOfConditionArgs> condition;
 
     public Input<AlertRuleAllOfConditionArgs> getCondition() {
         return this.condition;
@@ -57,7 +57,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -68,7 +68,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -79,7 +79,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -90,7 +90,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scopes", required=true)
-    private final Input<List<String>> scopes;
+        private final Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes;
@@ -112,7 +112,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -276,7 +276,6 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ActivityLogAlertArgs build() {
             return new ActivityLogAlertArgs(actions, activityLogAlertName, condition, description, enabled, location, resourceGroupName, scopes, tags);
         }

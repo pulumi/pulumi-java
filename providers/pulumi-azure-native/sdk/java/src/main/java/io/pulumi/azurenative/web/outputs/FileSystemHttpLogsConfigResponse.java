@@ -106,7 +106,6 @@ public final class FileSystemHttpLogsConfigResponse {
             this.retentionInMb = retentionInMb;
             return this;
         }
-
         public FileSystemHttpLogsConfigResponse build() {
             return new FileSystemHttpLogsConfigResponse(enabled, retentionInDays, retentionInMb);
         }

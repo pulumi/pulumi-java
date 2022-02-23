@@ -21,7 +21,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayName")
-    private final @Nullable Input<String> gatewayName;
+        private final @Nullable Input<String> gatewayName;
 
     public Input<String> getGatewayName() {
         return this.gatewayName == null ? Input.empty() : this.gatewayName;
@@ -32,7 +32,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<GatewayPropertiesArgs> properties;
+        private final @Nullable Input<GatewayPropertiesArgs> properties;
 
     public Input<GatewayPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -43,7 +43,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -65,7 +65,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+        private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -169,7 +169,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.sku = Input.ofNullable(sku);
             return this;
         }
-
         public GatewayArgs build() {
             return new GatewayArgs(gatewayName, properties, resourceGroupName, serviceName, sku);
         }

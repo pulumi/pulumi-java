@@ -417,7 +417,6 @@ public final class ApplicationGatewayBackendHttpSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayBackendHttpSettingsResponse build() {
             return new ApplicationGatewayBackendHttpSettingsResponse(affinityCookieName, authenticationCertificates, connectionDraining, cookieBasedAffinity, etag, hostName, id, name, path, pickHostNameFromBackendAddress, port, probe, probeEnabled, protocol, provisioningState, requestTimeout, trustedRootCertificates, type);
         }

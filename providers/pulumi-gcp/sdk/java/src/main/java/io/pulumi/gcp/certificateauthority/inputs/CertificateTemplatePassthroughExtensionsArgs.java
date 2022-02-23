@@ -21,7 +21,7 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
      * 
      */
     @InputImport(name="additionalExtensions")
-    private final @Nullable Input<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs>> additionalExtensions;
+        private final @Nullable Input<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs>> additionalExtensions;
 
     public Input<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs>> getAdditionalExtensions() {
         return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
@@ -32,7 +32,7 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
      * 
      */
     @InputImport(name="knownExtensions")
-    private final @Nullable Input<List<String>> knownExtensions;
+        private final @Nullable Input<List<String>> knownExtensions;
 
     public Input<List<String>> getKnownExtensions() {
         return this.knownExtensions == null ? Input.empty() : this.knownExtensions;
@@ -91,7 +91,6 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
             this.knownExtensions = Input.ofNullable(knownExtensions);
             return this;
         }
-
         public CertificateTemplatePassthroughExtensionsArgs build() {
             return new CertificateTemplatePassthroughExtensionsArgs(additionalExtensions, knownExtensions);
         }

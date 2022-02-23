@@ -24,7 +24,7 @@ public final class SchemaConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recursiveStructureDepth")
-    private final @Nullable Input<String> recursiveStructureDepth;
+      private final @Nullable Input<String> recursiveStructureDepth;
 
     public Input<String> getRecursiveStructureDepth() {
         return this.recursiveStructureDepth == null ? Input.empty() : this.recursiveStructureDepth;
@@ -35,7 +35,7 @@ public final class SchemaConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaType")
-    private final @Nullable Input<SchemaConfigSchemaType> schemaType;
+      private final @Nullable Input<SchemaConfigSchemaType> schemaType;
 
     public Input<SchemaConfigSchemaType> getSchemaType() {
         return this.schemaType == null ? Input.empty() : this.schemaType;
@@ -94,7 +94,6 @@ public final class SchemaConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.schemaType = Input.ofNullable(schemaType);
             return this;
         }
-
         public SchemaConfigArgs build() {
             return new SchemaConfigArgs(recursiveStructureDepth, schemaType);
         }

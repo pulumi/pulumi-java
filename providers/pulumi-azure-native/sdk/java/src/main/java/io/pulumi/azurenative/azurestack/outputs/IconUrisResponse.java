@@ -139,7 +139,6 @@ public final class IconUrisResponse {
             this.wide = wide;
             return this;
         }
-
         public IconUrisResponse build() {
             return new IconUrisResponse(hero, large, medium, small, wide);
         }

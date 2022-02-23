@@ -182,7 +182,6 @@ public final class NodeResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public NodeResponse build() {
             return new NodeResponse(host, nodeId, parameters, port, state, updateAvailable, zone);
         }

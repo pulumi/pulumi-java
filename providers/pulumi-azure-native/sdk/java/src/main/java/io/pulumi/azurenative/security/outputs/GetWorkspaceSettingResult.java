@@ -137,7 +137,6 @@ public final class GetWorkspaceSettingResult {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public GetWorkspaceSettingResult build() {
             return new GetWorkspaceSettingResult(id, name, scope, type, workspaceId);
         }

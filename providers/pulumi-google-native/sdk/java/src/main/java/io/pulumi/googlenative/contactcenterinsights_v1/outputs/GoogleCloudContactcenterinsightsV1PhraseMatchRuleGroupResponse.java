@@ -76,7 +76,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(phraseMatchRules, type);
         }

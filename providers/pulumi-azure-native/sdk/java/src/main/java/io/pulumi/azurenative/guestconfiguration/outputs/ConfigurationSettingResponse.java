@@ -162,7 +162,6 @@ public final class ConfigurationSettingResponse {
             this.refreshFrequencyMins = refreshFrequencyMins;
             return this;
         }
-
         public ConfigurationSettingResponse build() {
             return new ConfigurationSettingResponse(actionAfterReboot, allowModuleOverwrite, configurationMode, configurationModeFrequencyMins, rebootIfNeeded, refreshFrequencyMins);
         }

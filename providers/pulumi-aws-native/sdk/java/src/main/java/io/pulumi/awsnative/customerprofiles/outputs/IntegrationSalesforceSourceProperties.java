@@ -74,7 +74,6 @@ public final class IntegrationSalesforceSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public IntegrationSalesforceSourceProperties build() {
             return new IntegrationSalesforceSourceProperties(enableDynamicFieldUpdate, includeDeletedRecords, object);
         }

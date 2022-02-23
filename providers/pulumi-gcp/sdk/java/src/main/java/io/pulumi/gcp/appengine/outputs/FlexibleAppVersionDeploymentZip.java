@@ -77,7 +77,6 @@ public final class FlexibleAppVersionDeploymentZip {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
-
         public FlexibleAppVersionDeploymentZip build() {
             return new FlexibleAppVersionDeploymentZip(filesCount, sourceUrl);
         }

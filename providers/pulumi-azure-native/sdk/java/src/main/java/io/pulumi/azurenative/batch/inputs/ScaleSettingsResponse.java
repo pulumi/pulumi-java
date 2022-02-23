@@ -24,7 +24,7 @@ public final class ScaleSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="autoScale")
-    private final @Nullable AutoScaleSettingsResponse autoScale;
+        private final @Nullable AutoScaleSettingsResponse autoScale;
 
     public Optional<AutoScaleSettingsResponse> getAutoScale() {
         return this.autoScale == null ? Optional.empty() : Optional.ofNullable(this.autoScale);
@@ -35,7 +35,7 @@ public final class ScaleSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="fixedScale")
-    private final @Nullable FixedScaleSettingsResponse fixedScale;
+        private final @Nullable FixedScaleSettingsResponse fixedScale;
 
     public Optional<FixedScaleSettingsResponse> getFixedScale() {
         return this.fixedScale == null ? Optional.empty() : Optional.ofNullable(this.fixedScale);
@@ -84,7 +84,6 @@ public final class ScaleSettingsResponse extends io.pulumi.resources.InvokeArgs 
             this.fixedScale = fixedScale;
             return this;
         }
-
         public ScaleSettingsResponse build() {
             return new ScaleSettingsResponse(autoScale, fixedScale);
         }

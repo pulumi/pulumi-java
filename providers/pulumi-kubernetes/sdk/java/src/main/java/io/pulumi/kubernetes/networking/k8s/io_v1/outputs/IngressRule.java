@@ -83,7 +83,6 @@ public final class IngressRule {
             this.http = http;
             return this;
         }
-
         public IngressRule build() {
             return new IngressRule(host, http);
         }

@@ -76,7 +76,6 @@ public final class BasicLevelResponse {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public BasicLevelResponse build() {
             return new BasicLevelResponse(combiningFunction, conditions);
         }

@@ -29,7 +29,7 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bypass")
-    private final @Nullable Input<Either<String,NetworkRuleBypassOptions>> bypass;
+        private final @Nullable Input<Either<String,NetworkRuleBypassOptions>> bypass;
 
     public Input<Either<String,NetworkRuleBypassOptions>> getBypass() {
         return this.bypass == null ? Input.empty() : this.bypass;
@@ -40,7 +40,7 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultAction")
-    private final @Nullable Input<Either<String,NetworkRuleAction>> defaultAction;
+        private final @Nullable Input<Either<String,NetworkRuleAction>> defaultAction;
 
     public Input<Either<String,NetworkRuleAction>> getDefaultAction() {
         return this.defaultAction == null ? Input.empty() : this.defaultAction;
@@ -51,7 +51,7 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ipRules")
-    private final @Nullable Input<List<MHSMIPRuleArgs>> ipRules;
+        private final @Nullable Input<List<MHSMIPRuleArgs>> ipRules;
 
     public Input<List<MHSMIPRuleArgs>> getIpRules() {
         return this.ipRules == null ? Input.empty() : this.ipRules;
@@ -62,7 +62,7 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualNetworkRules")
-    private final @Nullable Input<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules;
+        private final @Nullable Input<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules;
 
     public Input<List<MHSMVirtualNetworkRuleArgs>> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? Input.empty() : this.virtualNetworkRules;
@@ -151,7 +151,6 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
             this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
             return this;
         }
-
         public MHSMNetworkRuleSetArgs build() {
             return new MHSMNetworkRuleSetArgs(bypass, defaultAction, ipRules, virtualNetworkRules);
         }

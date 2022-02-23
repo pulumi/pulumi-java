@@ -204,7 +204,6 @@ public final class EndpointsResponse {
             this.web = Objects.requireNonNull(web);
             return this;
         }
-
         public EndpointsResponse build() {
             return new EndpointsResponse(blob, dfs, file, internetEndpoints, microsoftEndpoints, queue, table, web);
         }

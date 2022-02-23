@@ -22,7 +22,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-    private final Input<String> expression;
+        private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
@@ -44,7 +44,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expressionType", required=true)
-    private final Input<DestinationExpressionType> expressionType;
+        private final Input<DestinationExpressionType> expressionType;
 
     public Input<DestinationExpressionType> getExpressionType() {
         return this.expressionType;
@@ -55,7 +55,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -77,7 +77,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DestinationTagArgs>> tags;
+        private final @Nullable Input<List<DestinationTagArgs>> tags;
 
     public Input<List<DestinationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,6 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DestinationArgs build() {
             return new DestinationArgs(description, expression, expressionType, name, roleArn, tags);
         }

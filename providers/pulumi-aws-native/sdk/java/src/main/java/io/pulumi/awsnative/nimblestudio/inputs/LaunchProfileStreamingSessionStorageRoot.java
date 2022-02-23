@@ -24,7 +24,7 @@ public final class LaunchProfileStreamingSessionStorageRoot extends io.pulumi.re
      * 
      */
     @InputImport(name="linux")
-    private final @Nullable String linux;
+        private final @Nullable String linux;
 
     public Optional<String> getLinux() {
         return this.linux == null ? Optional.empty() : Optional.ofNullable(this.linux);
@@ -35,7 +35,7 @@ public final class LaunchProfileStreamingSessionStorageRoot extends io.pulumi.re
      * 
      */
     @InputImport(name="windows")
-    private final @Nullable String windows;
+        private final @Nullable String windows;
 
     public Optional<String> getWindows() {
         return this.windows == null ? Optional.empty() : Optional.ofNullable(this.windows);
@@ -84,7 +84,6 @@ public final class LaunchProfileStreamingSessionStorageRoot extends io.pulumi.re
             this.windows = windows;
             return this;
         }
-
         public LaunchProfileStreamingSessionStorageRoot build() {
             return new LaunchProfileStreamingSessionStorageRoot(linux, windows);
         }

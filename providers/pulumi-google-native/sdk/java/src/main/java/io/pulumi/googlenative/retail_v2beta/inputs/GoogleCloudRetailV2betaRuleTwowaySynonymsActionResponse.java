@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse exten
      * 
      */
     @InputImport(name="synonyms", required=true)
-    private final List<String> synonyms;
+      private final List<String> synonyms;
 
     public List<String> getSynonyms() {
         return this.synonyms;
@@ -60,7 +60,6 @@ public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse exten
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse build() {
             return new GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse(synonyms);
         }

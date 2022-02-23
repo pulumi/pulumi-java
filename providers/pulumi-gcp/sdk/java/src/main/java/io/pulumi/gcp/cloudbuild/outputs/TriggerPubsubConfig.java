@@ -124,7 +124,6 @@ public final class TriggerPubsubConfig {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public TriggerPubsubConfig build() {
             return new TriggerPubsubConfig(serviceAccountEmail, state, subscription, topic);
         }

@@ -22,7 +22,7 @@ public final class ContentHashArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final Input<String> algorithm;
+        private final Input<String> algorithm;
 
     public Input<String> getAlgorithm() {
         return this.algorithm;
@@ -33,7 +33,7 @@ public final class ContentHashArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -92,7 +92,6 @@ public final class ContentHashArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public ContentHashArgs build() {
             return new ContentHashArgs(algorithm, value);
         }

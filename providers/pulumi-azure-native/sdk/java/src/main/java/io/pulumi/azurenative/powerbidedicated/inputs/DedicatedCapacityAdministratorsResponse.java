@@ -24,7 +24,7 @@ public final class DedicatedCapacityAdministratorsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="members")
-    private final @Nullable List<String> members;
+        private final @Nullable List<String> members;
 
     public List<String> getMembers() {
         return this.members == null ? List.of() : this.members;
@@ -62,7 +62,6 @@ public final class DedicatedCapacityAdministratorsResponse extends io.pulumi.res
             this.members = members;
             return this;
         }
-
         public DedicatedCapacityAdministratorsResponse build() {
             return new DedicatedCapacityAdministratorsResponse(members);
         }

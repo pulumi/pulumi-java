@@ -100,7 +100,6 @@ public final class VirtualMachineScaleSetNetworkProfileResponse {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
-
         public VirtualMachineScaleSetNetworkProfileResponse build() {
             return new VirtualMachineScaleSetNetworkProfileResponse(healthProbe, networkApiVersion, networkInterfaceConfigurations);
         }

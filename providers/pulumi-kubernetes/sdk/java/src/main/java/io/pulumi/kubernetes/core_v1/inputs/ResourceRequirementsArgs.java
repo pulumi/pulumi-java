@@ -24,7 +24,7 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="limits")
-    private final @Nullable Input<Map<String,String>> limits;
+        private final @Nullable Input<Map<String,String>> limits;
 
     public Input<Map<String,String>> getLimits() {
         return this.limits == null ? Input.empty() : this.limits;
@@ -35,7 +35,7 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="requests")
-    private final @Nullable Input<Map<String,String>> requests;
+        private final @Nullable Input<Map<String,String>> requests;
 
     public Input<Map<String,String>> getRequests() {
         return this.requests == null ? Input.empty() : this.requests;
@@ -94,7 +94,6 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
             this.requests = Input.ofNullable(requests);
             return this;
         }
-
         public ResourceRequirementsArgs build() {
             return new ResourceRequirementsArgs(limits, requests);
         }

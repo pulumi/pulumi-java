@@ -205,7 +205,6 @@ public final class ImpalaSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImpalaSourceResponse build() {
             return new ImpalaSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

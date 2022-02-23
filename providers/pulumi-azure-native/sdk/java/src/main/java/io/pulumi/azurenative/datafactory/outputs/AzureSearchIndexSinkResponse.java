@@ -205,7 +205,6 @@ public final class AzureSearchIndexSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public AzureSearchIndexSinkResponse build() {
             return new AzureSearchIndexSinkResponse(disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

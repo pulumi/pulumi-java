@@ -76,7 +76,6 @@ public final class ResourceSetDescriptionResponse {
             this.exceptions = exceptions;
             return this;
         }
-
         public ResourceSetDescriptionResponse build() {
             return new ResourceSetDescriptionResponse(elements, exceptions);
         }

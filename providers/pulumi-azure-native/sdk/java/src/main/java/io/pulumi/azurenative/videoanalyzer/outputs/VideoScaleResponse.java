@@ -97,7 +97,6 @@ public final class VideoScaleResponse {
             this.width = width;
             return this;
         }
-
         public VideoScaleResponse build() {
             return new VideoScaleResponse(height, mode, width);
         }

@@ -210,7 +210,6 @@ public final class AzureMariaDBLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureMariaDBLinkedServiceResponse build() {
             return new AzureMariaDBLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, pwd, type);
         }

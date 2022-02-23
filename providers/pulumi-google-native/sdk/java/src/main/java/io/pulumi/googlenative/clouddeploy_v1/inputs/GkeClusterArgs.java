@@ -23,7 +23,7 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-    private final @Nullable Input<String> cluster;
+      private final @Nullable Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster == null ? Input.empty() : this.cluster;
@@ -66,7 +66,6 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.cluster = Input.ofNullable(cluster);
             return this;
         }
-
         public GkeClusterArgs build() {
             return new GkeClusterArgs(cluster);
         }

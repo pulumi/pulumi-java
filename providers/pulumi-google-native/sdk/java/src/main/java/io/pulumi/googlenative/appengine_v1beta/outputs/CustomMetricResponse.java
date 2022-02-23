@@ -138,7 +138,6 @@ public final class CustomMetricResponse {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }
-
         public CustomMetricResponse build() {
             return new CustomMetricResponse(filter, metricName, singleInstanceAssignment, targetType, targetUtilization);
         }

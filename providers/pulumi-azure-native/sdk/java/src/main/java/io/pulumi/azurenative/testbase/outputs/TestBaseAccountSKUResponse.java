@@ -141,7 +141,6 @@ public final class TestBaseAccountSKUResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public TestBaseAccountSKUResponse build() {
             return new TestBaseAccountSKUResponse(capabilities, locations, name, resourceType, tier);
         }

@@ -54,7 +54,6 @@ public final class DockerImagePlatformResponse {
             this.operatingSystemType = operatingSystemType;
             return this;
         }
-
         public DockerImagePlatformResponse build() {
             return new DockerImagePlatformResponse(operatingSystemType);
         }

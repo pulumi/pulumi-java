@@ -23,7 +23,7 @@ public final class HttpsTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityLevel")
-    private final @Nullable Input<HttpsTriggerSecurityLevel> securityLevel;
+      private final @Nullable Input<HttpsTriggerSecurityLevel> securityLevel;
 
     public Input<HttpsTriggerSecurityLevel> getSecurityLevel() {
         return this.securityLevel == null ? Input.empty() : this.securityLevel;
@@ -66,7 +66,6 @@ public final class HttpsTriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.securityLevel = Input.ofNullable(securityLevel);
             return this;
         }
-
         public HttpsTriggerArgs build() {
             return new HttpsTriggerArgs(securityLevel);
         }

@@ -74,7 +74,6 @@ public final class DatabaseTypeResponse {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public DatabaseTypeResponse build() {
             return new DatabaseTypeResponse(engine, provider);
         }

@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
             this.model = Objects.requireNonNull(model);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse(model);
         }

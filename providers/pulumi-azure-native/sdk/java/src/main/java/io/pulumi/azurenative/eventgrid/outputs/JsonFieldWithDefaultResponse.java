@@ -76,7 +76,6 @@ public final class JsonFieldWithDefaultResponse {
             this.sourceField = sourceField;
             return this;
         }
-
         public JsonFieldWithDefaultResponse build() {
             return new JsonFieldWithDefaultResponse(defaultValue, sourceField);
         }

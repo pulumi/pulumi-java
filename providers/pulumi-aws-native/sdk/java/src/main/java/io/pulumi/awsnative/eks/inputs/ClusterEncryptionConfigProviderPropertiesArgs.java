@@ -23,7 +23,7 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="keyArn")
-    private final @Nullable Input<String> keyArn;
+        private final @Nullable Input<String> keyArn;
 
     public Input<String> getKeyArn() {
         return this.keyArn == null ? Input.empty() : this.keyArn;
@@ -66,7 +66,6 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends io.pulu
             this.keyArn = Input.ofNullable(keyArn);
             return this;
         }
-
         public ClusterEncryptionConfigProviderPropertiesArgs build() {
             return new ClusterEncryptionConfigProviderPropertiesArgs(keyArn);
         }

@@ -78,7 +78,6 @@ public final class GetComponentCurrentBillingFeatureResult {
             this.dataVolumeCap = dataVolumeCap;
             return this;
         }
-
         public GetComponentCurrentBillingFeatureResult build() {
             return new GetComponentCurrentBillingFeatureResult(currentBillingFeatures, dataVolumeCap);
         }

@@ -421,7 +421,6 @@ public final class GetMetricAlertResult {
             this.windowSize = Objects.requireNonNull(windowSize);
             return this;
         }
-
         public GetMetricAlertResult build() {
             return new GetMetricAlertResult(actions, autoMitigate, criteria, description, enabled, evaluationFrequency, id, isMigrated, lastUpdatedTime, location, name, scopes, severity, tags, targetResourceRegion, targetResourceType, type, windowSize);
         }

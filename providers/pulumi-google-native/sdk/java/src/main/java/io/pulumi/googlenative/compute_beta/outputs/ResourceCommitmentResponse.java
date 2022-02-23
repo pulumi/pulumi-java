@@ -95,7 +95,6 @@ public final class ResourceCommitmentResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceCommitmentResponse build() {
             return new ResourceCommitmentResponse(acceleratorType, amount, type);
         }

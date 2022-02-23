@@ -17,21 +17,21 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends 
     public static final NetworkInsightsAccessScopeAccessScopePathRequestArgs Empty = new NetworkInsightsAccessScopeAccessScopePathRequestArgs();
 
     @InputImport(name="destination")
-    private final @Nullable Input<NetworkInsightsAccessScopePathStatementRequestArgs> destination;
+        private final @Nullable Input<NetworkInsightsAccessScopePathStatementRequestArgs> destination;
 
     public Input<NetworkInsightsAccessScopePathStatementRequestArgs> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
     }
 
     @InputImport(name="source")
-    private final @Nullable Input<NetworkInsightsAccessScopePathStatementRequestArgs> source;
+        private final @Nullable Input<NetworkInsightsAccessScopePathStatementRequestArgs> source;
 
     public Input<NetworkInsightsAccessScopePathStatementRequestArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
     }
 
     @InputImport(name="throughResources")
-    private final @Nullable Input<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources;
+        private final @Nullable Input<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources;
 
     public Input<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> getThroughResources() {
         return this.throughResources == null ? Input.empty() : this.throughResources;
@@ -105,7 +105,6 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends 
             this.throughResources = Input.ofNullable(throughResources);
             return this;
         }
-
         public NetworkInsightsAccessScopeAccessScopePathRequestArgs build() {
             return new NetworkInsightsAccessScopeAccessScopePathRequestArgs(destination, source, throughResources);
         }

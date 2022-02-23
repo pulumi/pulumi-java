@@ -53,7 +53,6 @@ public final class OracleRdbmsResponse {
             this.oracleSchemas = Objects.requireNonNull(oracleSchemas);
             return this;
         }
-
         public OracleRdbmsResponse build() {
             return new OracleRdbmsResponse(oracleSchemas);
         }

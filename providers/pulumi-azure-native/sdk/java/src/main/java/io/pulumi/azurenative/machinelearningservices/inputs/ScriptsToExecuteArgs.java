@@ -23,7 +23,7 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="creationScript")
-    private final @Nullable Input<ScriptReferenceArgs> creationScript;
+        private final @Nullable Input<ScriptReferenceArgs> creationScript;
 
     public Input<ScriptReferenceArgs> getCreationScript() {
         return this.creationScript == null ? Input.empty() : this.creationScript;
@@ -34,7 +34,7 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startupScript")
-    private final @Nullable Input<ScriptReferenceArgs> startupScript;
+        private final @Nullable Input<ScriptReferenceArgs> startupScript;
 
     public Input<ScriptReferenceArgs> getStartupScript() {
         return this.startupScript == null ? Input.empty() : this.startupScript;
@@ -93,7 +93,6 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
             this.startupScript = Input.ofNullable(startupScript);
             return this;
         }
-
         public ScriptsToExecuteArgs build() {
             return new ScriptsToExecuteArgs(creationScript, startupScript);
         }

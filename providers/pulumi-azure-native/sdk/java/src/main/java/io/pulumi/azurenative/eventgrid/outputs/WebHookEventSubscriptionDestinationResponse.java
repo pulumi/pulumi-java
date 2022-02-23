@@ -184,7 +184,6 @@ public final class WebHookEventSubscriptionDestinationResponse {
             this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
         }
-
         public WebHookEventSubscriptionDestinationResponse build() {
             return new WebHookEventSubscriptionDestinationResponse(azureActiveDirectoryApplicationIdOrUri, azureActiveDirectoryTenantId, endpointBaseUrl, endpointType, endpointUrl, maxEventsPerBatch, preferredBatchSizeInKilobytes);
         }

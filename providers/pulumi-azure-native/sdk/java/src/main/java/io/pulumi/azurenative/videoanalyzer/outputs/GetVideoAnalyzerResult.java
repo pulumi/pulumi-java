@@ -251,7 +251,6 @@ public final class GetVideoAnalyzerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVideoAnalyzerResult build() {
             return new GetVideoAnalyzerResult(encryption, endpoints, id, identity, location, name, storageAccounts, systemData, tags, type);
         }

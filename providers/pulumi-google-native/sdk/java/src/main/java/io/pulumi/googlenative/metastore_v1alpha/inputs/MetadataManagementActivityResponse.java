@@ -23,7 +23,7 @@ public final class MetadataManagementActivityResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="metadataExports", required=true)
-    private final List<MetadataExportResponse> metadataExports;
+      private final List<MetadataExportResponse> metadataExports;
 
     public List<MetadataExportResponse> getMetadataExports() {
         return this.metadataExports;
@@ -34,7 +34,7 @@ public final class MetadataManagementActivityResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="restores", required=true)
-    private final List<RestoreResponse> restores;
+      private final List<RestoreResponse> restores;
 
     public List<RestoreResponse> getRestores() {
         return this.restores;
@@ -83,7 +83,6 @@ public final class MetadataManagementActivityResponse extends io.pulumi.resource
             this.restores = Objects.requireNonNull(restores);
             return this;
         }
-
         public MetadataManagementActivityResponse build() {
             return new MetadataManagementActivityResponse(metadataExports, restores);
         }

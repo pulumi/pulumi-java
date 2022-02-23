@@ -138,7 +138,6 @@ public final class GetDpsCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDpsCertificateResult build() {
             return new GetDpsCertificateResult(etag, id, name, properties, type);
         }

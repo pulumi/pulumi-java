@@ -24,7 +24,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="categories", required=true)
-    private final List<CategoryResponse> categories;
+      private final List<CategoryResponse> categories;
 
     public List<CategoryResponse> getCategories() {
         return this.categories;
@@ -35,7 +35,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -46,7 +46,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="identity", required=true)
-    private final IdentityResponse identity;
+      private final IdentityResponse identity;
 
     public IdentityResponse getIdentity() {
         return this.identity;
@@ -57,7 +57,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="kbArticleIds", required=true)
-    private final List<String> kbArticleIds;
+      private final List<String> kbArticleIds;
 
     public List<String> getKbArticleIds() {
         return this.kbArticleIds;
@@ -68,7 +68,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="lastPublishedTimestamp", required=true)
-    private final String lastPublishedTimestamp;
+      private final String lastPublishedTimestamp;
 
     public String getLastPublishedTimestamp() {
         return this.lastPublishedTimestamp;
@@ -79,7 +79,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="supportUrl", required=true)
-    private final String supportUrl;
+      private final String supportUrl;
 
     public String getSupportUrl() {
         return this.supportUrl;
@@ -90,7 +90,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -189,7 +189,6 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public WindowsUpdateResponse build() {
             return new WindowsUpdateResponse(categories, description, identity, kbArticleIds, lastPublishedTimestamp, supportUrl, title);
         }

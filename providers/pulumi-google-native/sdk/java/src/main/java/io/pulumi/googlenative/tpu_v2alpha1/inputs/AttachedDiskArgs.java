@@ -24,7 +24,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<AttachedDiskMode> mode;
+      private final @Nullable Input<AttachedDiskMode> mode;
 
     public Input<AttachedDiskMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -35,7 +35,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDisk")
-    private final @Nullable Input<String> sourceDisk;
+      private final @Nullable Input<String> sourceDisk;
 
     public Input<String> getSourceDisk() {
         return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
@@ -94,7 +94,6 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceDisk = Input.ofNullable(sourceDisk);
             return this;
         }
-
         public AttachedDiskArgs build() {
             return new AttachedDiskArgs(mode, sourceDisk);
         }

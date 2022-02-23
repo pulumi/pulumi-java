@@ -26,7 +26,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availableFeatures")
-    private final @Nullable Input<List<String>> availableFeatures;
+      private final @Nullable Input<List<String>> availableFeatures;
 
     public Input<List<String>> getAvailableFeatures() {
         return this.availableFeatures == null ? Input.empty() : this.availableFeatures;
@@ -37,7 +37,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultVersion")
-    private final @Nullable Input<Boolean> defaultVersion;
+      private final @Nullable Input<Boolean> defaultVersion;
 
     public Input<Boolean> getDefaultVersion() {
         return this.defaultVersion == null ? Input.empty() : this.defaultVersion;
@@ -48,7 +48,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<VersionType> type;
+      private final @Nullable Input<VersionType> type;
 
     public Input<VersionType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -59,7 +59,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionNumber")
-    private final @Nullable Input<String> versionNumber;
+      private final @Nullable Input<String> versionNumber;
 
     public Input<String> getVersionNumber() {
         return this.versionNumber == null ? Input.empty() : this.versionNumber;
@@ -148,7 +148,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             this.versionNumber = Input.ofNullable(versionNumber);
             return this;
         }
-
         public VersionArgs build() {
             return new VersionArgs(availableFeatures, defaultVersion, type, versionNumber);
         }

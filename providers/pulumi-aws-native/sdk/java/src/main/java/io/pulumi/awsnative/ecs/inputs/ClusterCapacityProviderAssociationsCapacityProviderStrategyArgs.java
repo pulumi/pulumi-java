@@ -18,21 +18,21 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategyAr
     public static final ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs Empty = new ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs();
 
     @InputImport(name="base")
-    private final @Nullable Input<Integer> base;
+        private final @Nullable Input<Integer> base;
 
     public Input<Integer> getBase() {
         return this.base == null ? Input.empty() : this.base;
     }
 
     @InputImport(name="capacityProvider", required=true)
-    private final Input<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider;
+        private final Input<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider;
 
     public Input<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> getCapacityProvider() {
         return this.capacityProvider;
     }
 
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+        private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -106,7 +106,6 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategyAr
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs build() {
             return new ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(base, capacityProvider, weight);
         }

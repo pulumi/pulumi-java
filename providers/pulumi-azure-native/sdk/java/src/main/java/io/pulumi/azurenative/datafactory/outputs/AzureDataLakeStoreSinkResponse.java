@@ -226,7 +226,6 @@ public final class AzureDataLakeStoreSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public AzureDataLakeStoreSinkResponse build() {
             return new AzureDataLakeStoreSinkResponse(copyBehavior, disableMetricsCollection, enableAdlsSingleFileParallel, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

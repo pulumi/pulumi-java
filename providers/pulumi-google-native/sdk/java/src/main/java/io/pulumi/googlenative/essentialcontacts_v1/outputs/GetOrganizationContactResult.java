@@ -159,7 +159,6 @@ public final class GetOrganizationContactResult {
             this.validationState = Objects.requireNonNull(validationState);
             return this;
         }
-
         public GetOrganizationContactResult build() {
             return new GetOrganizationContactResult(email, languageTag, name, notificationCategorySubscriptions, validateTime, validationState);
         }

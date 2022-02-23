@@ -160,7 +160,6 @@ public final class GetNamespaceIpFilterRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNamespaceIpFilterRuleResult build() {
             return new GetNamespaceIpFilterRuleResult(action, filterName, id, ipMask, name, type);
         }

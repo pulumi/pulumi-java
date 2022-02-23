@@ -352,7 +352,6 @@ public final class FlowSource {
             this.whitelistCidr = whitelistCidr;
             return this;
         }
-
         public FlowSource build() {
             return new FlowSource(decryption, description, entitlementArn, ingestIp, ingestPort, maxBitrate, maxLatency, minLatency, name, protocol, sourceArn, sourceIngestPort, streamId, vpcInterfaceName, whitelistCidr);
         }

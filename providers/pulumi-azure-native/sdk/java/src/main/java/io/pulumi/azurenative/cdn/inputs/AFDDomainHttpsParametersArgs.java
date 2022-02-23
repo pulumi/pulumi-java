@@ -27,7 +27,7 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificateType", required=true)
-    private final Input<Either<String,AfdCertificateType>> certificateType;
+        private final Input<Either<String,AfdCertificateType>> certificateType;
 
     public Input<Either<String,AfdCertificateType>> getCertificateType() {
         return this.certificateType;
@@ -38,7 +38,7 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="minimumTlsVersion")
-    private final @Nullable Input<AfdMinimumTlsVersion> minimumTlsVersion;
+        private final @Nullable Input<AfdMinimumTlsVersion> minimumTlsVersion;
 
     public Input<AfdMinimumTlsVersion> getMinimumTlsVersion() {
         return this.minimumTlsVersion == null ? Input.empty() : this.minimumTlsVersion;
@@ -49,7 +49,7 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<ResourceReferenceArgs> secret;
+        private final @Nullable Input<ResourceReferenceArgs> secret;
 
     public Input<ResourceReferenceArgs> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -123,7 +123,6 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
             this.secret = Input.ofNullable(secret);
             return this;
         }
-
         public AFDDomainHttpsParametersArgs build() {
             return new AFDDomainHttpsParametersArgs(certificateType, minimumTlsVersion, secret);
         }

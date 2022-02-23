@@ -108,7 +108,6 @@ public final class CustomRegistryCredentialsResponse {
             this.userName = userName;
             return this;
         }
-
         public CustomRegistryCredentialsResponse build() {
             return new CustomRegistryCredentialsResponse(identity, password, userName);
         }

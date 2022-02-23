@@ -161,7 +161,6 @@ public final class SubnetOverrideResponse {
             this.virtualNetworkPoolName = virtualNetworkPoolName;
             return this;
         }
-
         public SubnetOverrideResponse build() {
             return new SubnetOverrideResponse(labSubnetName, resourceId, sharedPublicIpAddressConfiguration, useInVmCreationPermission, usePublicIpAddressPermission, virtualNetworkPoolName);
         }

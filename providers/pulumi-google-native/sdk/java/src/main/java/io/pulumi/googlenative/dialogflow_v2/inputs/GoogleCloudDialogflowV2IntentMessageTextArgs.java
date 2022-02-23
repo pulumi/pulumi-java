@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTextArgs extends io.pulum
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<List<String>> text;
+      private final @Nullable Input<List<String>> text;
 
     public Input<List<String>> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -67,7 +67,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTextArgs extends io.pulum
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageTextArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageTextArgs(text);
         }

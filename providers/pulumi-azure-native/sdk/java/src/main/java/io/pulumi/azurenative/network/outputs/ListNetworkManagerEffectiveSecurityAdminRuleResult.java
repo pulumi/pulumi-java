@@ -80,7 +80,6 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleResult {
             this.value = value;
             return this;
         }
-
         public ListNetworkManagerEffectiveSecurityAdminRuleResult build() {
             return new ListNetworkManagerEffectiveSecurityAdminRuleResult(skipToken, value);
         }

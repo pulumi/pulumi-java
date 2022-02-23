@@ -76,7 +76,6 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VideoSequenceAbsoluteTimeMarkersResponse build() {
             return new VideoSequenceAbsoluteTimeMarkersResponse(ranges, type);
         }

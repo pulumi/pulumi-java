@@ -29,7 +29,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="allowJaggedRows", required=true)
-    private final Boolean allowJaggedRows;
+      private final Boolean allowJaggedRows;
 
     public Boolean getAllowJaggedRows() {
         return this.allowJaggedRows;
@@ -40,7 +40,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="allowQuotedNewlines", required=true)
-    private final Boolean allowQuotedNewlines;
+      private final Boolean allowQuotedNewlines;
 
     public Boolean getAllowQuotedNewlines() {
         return this.allowQuotedNewlines;
@@ -51,7 +51,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="autodetect", required=true)
-    private final Boolean autodetect;
+      private final Boolean autodetect;
 
     public Boolean getAutodetect() {
         return this.autodetect;
@@ -62,7 +62,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clustering", required=true)
-    private final ClusteringResponse clustering;
+      private final ClusteringResponse clustering;
 
     public ClusteringResponse getClustering() {
         return this.clustering;
@@ -73,7 +73,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="createDisposition", required=true)
-    private final String createDisposition;
+      private final String createDisposition;
 
     public String getCreateDisposition() {
         return this.createDisposition;
@@ -84,7 +84,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="decimalTargetTypes", required=true)
-    private final List<String> decimalTargetTypes;
+      private final List<String> decimalTargetTypes;
 
     public List<String> getDecimalTargetTypes() {
         return this.decimalTargetTypes;
@@ -95,7 +95,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="destinationEncryptionConfiguration", required=true)
-    private final EncryptionConfigurationResponse destinationEncryptionConfiguration;
+      private final EncryptionConfigurationResponse destinationEncryptionConfiguration;
 
     public EncryptionConfigurationResponse getDestinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration;
@@ -106,7 +106,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="destinationTable", required=true)
-    private final TableReferenceResponse destinationTable;
+      private final TableReferenceResponse destinationTable;
 
     public TableReferenceResponse getDestinationTable() {
         return this.destinationTable;
@@ -117,7 +117,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="destinationTableProperties", required=true)
-    private final DestinationTablePropertiesResponse destinationTableProperties;
+      private final DestinationTablePropertiesResponse destinationTableProperties;
 
     public DestinationTablePropertiesResponse getDestinationTableProperties() {
         return this.destinationTableProperties;
@@ -128,7 +128,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="encoding", required=true)
-    private final String encoding;
+      private final String encoding;
 
     public String getEncoding() {
         return this.encoding;
@@ -139,7 +139,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="fieldDelimiter", required=true)
-    private final String fieldDelimiter;
+      private final String fieldDelimiter;
 
     public String getFieldDelimiter() {
         return this.fieldDelimiter;
@@ -150,7 +150,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="hivePartitioningOptions", required=true)
-    private final HivePartitioningOptionsResponse hivePartitioningOptions;
+      private final HivePartitioningOptionsResponse hivePartitioningOptions;
 
     public HivePartitioningOptionsResponse getHivePartitioningOptions() {
         return this.hivePartitioningOptions;
@@ -161,7 +161,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="ignoreUnknownValues", required=true)
-    private final Boolean ignoreUnknownValues;
+      private final Boolean ignoreUnknownValues;
 
     public Boolean getIgnoreUnknownValues() {
         return this.ignoreUnknownValues;
@@ -172,7 +172,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="jsonExtension", required=true)
-    private final String jsonExtension;
+      private final String jsonExtension;
 
     public String getJsonExtension() {
         return this.jsonExtension;
@@ -183,7 +183,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="maxBadRecords", required=true)
-    private final Integer maxBadRecords;
+      private final Integer maxBadRecords;
 
     public Integer getMaxBadRecords() {
         return this.maxBadRecords;
@@ -194,7 +194,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="nullMarker", required=true)
-    private final String nullMarker;
+      private final String nullMarker;
 
     public String getNullMarker() {
         return this.nullMarker;
@@ -205,7 +205,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="parquetOptions", required=true)
-    private final ParquetOptionsResponse parquetOptions;
+      private final ParquetOptionsResponse parquetOptions;
 
     public ParquetOptionsResponse getParquetOptions() {
         return this.parquetOptions;
@@ -216,7 +216,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="projectionFields", required=true)
-    private final List<String> projectionFields;
+      private final List<String> projectionFields;
 
     public List<String> getProjectionFields() {
         return this.projectionFields;
@@ -227,7 +227,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="quote", required=true)
-    private final String quote;
+      private final String quote;
 
     public String getQuote() {
         return this.quote;
@@ -238,7 +238,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="rangePartitioning", required=true)
-    private final RangePartitioningResponse rangePartitioning;
+      private final RangePartitioningResponse rangePartitioning;
 
     public RangePartitioningResponse getRangePartitioning() {
         return this.rangePartitioning;
@@ -249,7 +249,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="schema", required=true)
-    private final TableSchemaResponse schema;
+      private final TableSchemaResponse schema;
 
     public TableSchemaResponse getSchema() {
         return this.schema;
@@ -260,7 +260,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="schemaUpdateOptions", required=true)
-    private final List<String> schemaUpdateOptions;
+      private final List<String> schemaUpdateOptions;
 
     public List<String> getSchemaUpdateOptions() {
         return this.schemaUpdateOptions;
@@ -271,7 +271,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="skipLeadingRows", required=true)
-    private final Integer skipLeadingRows;
+      private final Integer skipLeadingRows;
 
     public Integer getSkipLeadingRows() {
         return this.skipLeadingRows;
@@ -282,7 +282,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sourceFormat", required=true)
-    private final String sourceFormat;
+      private final String sourceFormat;
 
     public String getSourceFormat() {
         return this.sourceFormat;
@@ -293,7 +293,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sourceUris", required=true)
-    private final List<String> sourceUris;
+      private final List<String> sourceUris;
 
     public List<String> getSourceUris() {
         return this.sourceUris;
@@ -304,7 +304,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="timePartitioning", required=true)
-    private final TimePartitioningResponse timePartitioning;
+      private final TimePartitioningResponse timePartitioning;
 
     public TimePartitioningResponse getTimePartitioning() {
         return this.timePartitioning;
@@ -315,7 +315,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="useAvroLogicalTypes", required=true)
-    private final Boolean useAvroLogicalTypes;
+      private final Boolean useAvroLogicalTypes;
 
     public Boolean getUseAvroLogicalTypes() {
         return this.useAvroLogicalTypes;
@@ -326,7 +326,7 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="writeDisposition", required=true)
-    private final String writeDisposition;
+      private final String writeDisposition;
 
     public String getWriteDisposition() {
         return this.writeDisposition;
@@ -635,7 +635,6 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }
-
         public JobConfigurationLoadResponse build() {
             return new JobConfigurationLoadResponse(allowJaggedRows, allowQuotedNewlines, autodetect, clustering, createDisposition, decimalTargetTypes, destinationEncryptionConfiguration, destinationTable, destinationTableProperties, encoding, fieldDelimiter, hivePartitioningOptions, ignoreUnknownValues, jsonExtension, maxBadRecords, nullMarker, parquetOptions, projectionFields, quote, rangePartitioning, schema, schemaUpdateOptions, skipLeadingRows, sourceFormat, sourceUris, timePartitioning, useAvroLogicalTypes, writeDisposition);
         }

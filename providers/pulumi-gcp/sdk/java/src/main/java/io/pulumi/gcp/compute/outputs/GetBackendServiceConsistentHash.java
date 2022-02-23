@@ -74,7 +74,6 @@ public final class GetBackendServiceConsistentHash {
             this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
             return this;
         }
-
         public GetBackendServiceConsistentHash build() {
             return new GetBackendServiceConsistentHash(httpCookies, httpHeaderName, minimumRingSize);
         }

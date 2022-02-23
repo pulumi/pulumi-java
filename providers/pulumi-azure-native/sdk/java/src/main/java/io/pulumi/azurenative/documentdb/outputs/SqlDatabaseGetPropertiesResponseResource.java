@@ -161,7 +161,6 @@ public final class SqlDatabaseGetPropertiesResponseResource {
             this.users = users;
             return this;
         }
-
         public SqlDatabaseGetPropertiesResponseResource build() {
             return new SqlDatabaseGetPropertiesResponseResource(colls, etag, id, rid, ts, users);
         }

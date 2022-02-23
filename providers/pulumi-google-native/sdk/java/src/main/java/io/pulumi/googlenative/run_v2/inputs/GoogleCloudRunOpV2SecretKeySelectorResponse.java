@@ -21,7 +21,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends io.pulumi
      * 
      */
     @InputImport(name="secret", required=true)
-    private final String secret;
+      private final String secret;
 
     public String getSecret() {
         return this.secret;
@@ -32,7 +32,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends io.pulumi
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -81,7 +81,6 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends io.pulumi
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudRunOpV2SecretKeySelectorResponse build() {
             return new GoogleCloudRunOpV2SecretKeySelectorResponse(secret, version);
         }

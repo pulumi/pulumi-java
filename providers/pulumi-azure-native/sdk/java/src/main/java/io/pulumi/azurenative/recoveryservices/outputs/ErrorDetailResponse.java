@@ -96,7 +96,6 @@ public final class ErrorDetailResponse {
             this.recommendations = Objects.requireNonNull(recommendations);
             return this;
         }
-
         public ErrorDetailResponse build() {
             return new ErrorDetailResponse(code, message, recommendations);
         }

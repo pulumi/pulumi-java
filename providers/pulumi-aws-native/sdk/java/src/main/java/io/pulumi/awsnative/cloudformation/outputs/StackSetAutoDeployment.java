@@ -76,7 +76,6 @@ public final class StackSetAutoDeployment {
             this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
             return this;
         }
-
         public StackSetAutoDeployment build() {
             return new StackSetAutoDeployment(enabled, retainStacksOnAccountRemoval);
         }

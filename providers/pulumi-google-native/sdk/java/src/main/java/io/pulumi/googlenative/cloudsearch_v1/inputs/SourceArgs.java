@@ -24,7 +24,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predefinedSource")
-    private final @Nullable Input<SourcePredefinedSource> predefinedSource;
+      private final @Nullable Input<SourcePredefinedSource> predefinedSource;
 
     public Input<SourcePredefinedSource> getPredefinedSource() {
         return this.predefinedSource == null ? Input.empty() : this.predefinedSource;
@@ -94,7 +94,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.predefinedSource = Input.ofNullable(predefinedSource);
             return this;
         }
-
         public SourceArgs build() {
             return new SourceArgs(name, predefinedSource);
         }

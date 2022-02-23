@@ -23,7 +23,7 @@ public final class OrderBy extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="field")
-    private final @Nullable String field;
+        private final @Nullable String field;
 
     public Optional<String> getField() {
         return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
@@ -34,7 +34,7 @@ public final class OrderBy extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="order")
-    private final @Nullable String order;
+        private final @Nullable String order;
 
     public Optional<String> getOrder() {
         return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
@@ -83,7 +83,6 @@ public final class OrderBy extends io.pulumi.resources.InvokeArgs {
             this.order = order;
             return this;
         }
-
         public OrderBy build() {
             return new OrderBy(field, order);
         }

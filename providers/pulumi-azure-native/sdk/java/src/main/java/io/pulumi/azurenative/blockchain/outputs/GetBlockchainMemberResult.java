@@ -459,7 +459,6 @@ public final class GetBlockchainMemberResult {
             this.validatorNodesSku = validatorNodesSku;
             return this;
         }
-
         public GetBlockchainMemberResult build() {
             return new GetBlockchainMemberResult(consortium, consortiumManagementAccountAddress, consortiumManagementAccountPassword, consortiumMemberDisplayName, consortiumRole, dns, firewallRules, id, location, name, password, protocol, provisioningState, publicKey, rootContractAddress, sku, tags, type, userName, validatorNodesSku);
         }

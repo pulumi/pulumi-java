@@ -181,7 +181,6 @@ public final class ObjectReference {
             this.uid = uid;
             return this;
         }
-
         public ObjectReference build() {
             return new ObjectReference(apiVersion, fieldPath, kind, name, namespace, resourceVersion, uid);
         }

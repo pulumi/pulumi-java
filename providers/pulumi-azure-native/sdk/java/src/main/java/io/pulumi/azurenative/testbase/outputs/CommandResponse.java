@@ -246,7 +246,6 @@ public final class CommandResponse {
             this.runElevated = runElevated;
             return this;
         }
-
         public CommandResponse build() {
             return new CommandResponse(action, alwaysRun, applyUpdateBefore, content, contentType, maxRunTime, name, restartAfter, runAsInteractive, runElevated);
         }

@@ -268,7 +268,6 @@ public final class GetOrganizationResult {
             this.userDetail = userDetail;
             return this;
         }
-
         public GetOrganizationResult build() {
             return new GetOrganizationResult(createdTime, id, location, name, offerDetail, organizationId, provisioningState, ssoUrl, tags, type, userDetail);
         }

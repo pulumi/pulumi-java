@@ -413,7 +413,6 @@ public final class ProcessServerDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ProcessServerDetailsResponse build() {
             return new ProcessServerDetailsResponse(availableMemoryInBytes, availableSpaceInBytes, freeSpacePercentage, health, healthErrors, historicHealth, id, lastHeartbeatUtc, memoryUsagePercentage, name, processorUsagePercentage, throughputInBytes, throughputUploadPendingDataInBytes, totalMemoryInBytes, totalSpaceInBytes, usedMemoryInBytes, usedSpaceInBytes, version);
         }

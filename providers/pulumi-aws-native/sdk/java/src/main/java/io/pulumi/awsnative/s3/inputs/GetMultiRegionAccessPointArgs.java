@@ -17,7 +17,7 @@ public final class GetMultiRegionAccessPointArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,6 @@ public final class GetMultiRegionAccessPointArgs extends io.pulumi.resources.Inv
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetMultiRegionAccessPointArgs build() {
             return new GetMultiRegionAccessPointArgs(name);
         }

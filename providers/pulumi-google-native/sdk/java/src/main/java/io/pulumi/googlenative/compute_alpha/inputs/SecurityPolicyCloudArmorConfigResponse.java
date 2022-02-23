@@ -21,7 +21,7 @@ public final class SecurityPolicyCloudArmorConfigResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="enableMl", required=true)
-    private final Boolean enableMl;
+      private final Boolean enableMl;
 
     public Boolean getEnableMl() {
         return this.enableMl;
@@ -59,7 +59,6 @@ public final class SecurityPolicyCloudArmorConfigResponse extends io.pulumi.reso
             this.enableMl = Objects.requireNonNull(enableMl);
             return this;
         }
-
         public SecurityPolicyCloudArmorConfigResponse build() {
             return new SecurityPolicyCloudArmorConfigResponse(enableMl);
         }

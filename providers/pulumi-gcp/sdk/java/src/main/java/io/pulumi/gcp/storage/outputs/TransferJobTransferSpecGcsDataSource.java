@@ -76,7 +76,6 @@ public final class TransferJobTransferSpecGcsDataSource {
             this.path = path;
             return this;
         }
-
         public TransferJobTransferSpecGcsDataSource build() {
             return new TransferJobTransferSpecGcsDataSource(bucketName, path);
         }

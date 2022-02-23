@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      * 
      */
     @InputImport(name="confidenceScore", required=true)
-    private final Double confidenceScore;
+      private final Double confidenceScore;
 
     public Double getConfidenceScore() {
         return this.confidenceScore;
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Map<String,String> metadata;
+      private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata;
@@ -45,7 +45,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      * 
      */
     @InputImport(name="queryRecord", required=true)
-    private final String queryRecord;
+      private final String queryRecord;
 
     public String getQueryRecord() {
         return this.queryRecord;
@@ -56,7 +56,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -67,7 +67,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -78,7 +78,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -167,7 +167,6 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse(confidenceScore, metadata, queryRecord, source, title, uri);
         }

@@ -176,7 +176,6 @@ public final class GetDatabaseResult {
             this.tags = tags;
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(backupRetention, caCertificateIdentifier, databaseArn, preferredBackupWindow, preferredMaintenanceWindow, publiclyAccessible, tags);
         }

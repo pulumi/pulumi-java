@@ -118,7 +118,6 @@ public final class WindowsDetailResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WindowsDetailResponse build() {
             return new WindowsDetailResponse(cpeUri, description, fixingKbs, name);
         }

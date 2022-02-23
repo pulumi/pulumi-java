@@ -249,7 +249,6 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
-
         public ApplicationGatewayWebApplicationFirewallConfigurationResponse build() {
             return new ApplicationGatewayWebApplicationFirewallConfigurationResponse(disabledRuleGroups, enabled, exclusions, fileUploadLimitInMb, firewallMode, maxRequestBodySize, maxRequestBodySizeInKb, requestBodyCheck, ruleSetType, ruleSetVersion);
         }

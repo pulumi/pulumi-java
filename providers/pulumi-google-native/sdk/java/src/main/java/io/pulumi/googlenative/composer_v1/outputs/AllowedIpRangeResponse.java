@@ -74,7 +74,6 @@ public final class AllowedIpRangeResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AllowedIpRangeResponse build() {
             return new AllowedIpRangeResponse(description, value);
         }

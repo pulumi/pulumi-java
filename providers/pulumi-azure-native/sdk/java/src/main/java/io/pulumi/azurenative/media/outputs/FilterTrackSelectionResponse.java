@@ -53,7 +53,6 @@ public final class FilterTrackSelectionResponse {
             this.trackSelections = Objects.requireNonNull(trackSelections);
             return this;
         }
-
         public FilterTrackSelectionResponse build() {
             return new FilterTrackSelectionResponse(trackSelections);
         }

@@ -110,7 +110,6 @@ public final class ClusterNodePoolNodeConfigKubeletConfig {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
         }
-
         public ClusterNodePoolNodeConfigKubeletConfig build() {
             return new ClusterNodePoolNodeConfigKubeletConfig(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
         }

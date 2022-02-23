@@ -97,7 +97,6 @@ public final class GoogleCloudRunOpV2VolumeResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public GoogleCloudRunOpV2VolumeResponse build() {
             return new GoogleCloudRunOpV2VolumeResponse(cloudSqlInstance, name, secret);
         }

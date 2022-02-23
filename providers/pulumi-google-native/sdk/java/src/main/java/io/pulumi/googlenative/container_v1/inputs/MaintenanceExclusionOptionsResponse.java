@@ -21,7 +21,7 @@ public final class MaintenanceExclusionOptionsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -59,7 +59,6 @@ public final class MaintenanceExclusionOptionsResponse extends io.pulumi.resourc
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public MaintenanceExclusionOptionsResponse build() {
             return new MaintenanceExclusionOptionsResponse(scope);
         }

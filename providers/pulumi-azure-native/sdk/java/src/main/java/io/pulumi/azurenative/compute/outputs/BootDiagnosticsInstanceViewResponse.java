@@ -96,7 +96,6 @@ public final class BootDiagnosticsInstanceViewResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BootDiagnosticsInstanceViewResponse build() {
             return new BootDiagnosticsInstanceViewResponse(consoleScreenshotBlobUri, serialConsoleLogBlobUri, status);
         }

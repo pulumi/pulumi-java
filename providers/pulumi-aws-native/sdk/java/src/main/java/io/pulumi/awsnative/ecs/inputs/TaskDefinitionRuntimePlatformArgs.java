@@ -15,14 +15,14 @@ public final class TaskDefinitionRuntimePlatformArgs extends io.pulumi.resources
     public static final TaskDefinitionRuntimePlatformArgs Empty = new TaskDefinitionRuntimePlatformArgs();
 
     @InputImport(name="cpuArchitecture")
-    private final @Nullable Input<String> cpuArchitecture;
+        private final @Nullable Input<String> cpuArchitecture;
 
     public Input<String> getCpuArchitecture() {
         return this.cpuArchitecture == null ? Input.empty() : this.cpuArchitecture;
     }
 
     @InputImport(name="operatingSystemFamily")
-    private final @Nullable Input<String> operatingSystemFamily;
+        private final @Nullable Input<String> operatingSystemFamily;
 
     public Input<String> getOperatingSystemFamily() {
         return this.operatingSystemFamily == null ? Input.empty() : this.operatingSystemFamily;
@@ -81,7 +81,6 @@ public final class TaskDefinitionRuntimePlatformArgs extends io.pulumi.resources
             this.operatingSystemFamily = Input.ofNullable(operatingSystemFamily);
             return this;
         }
-
         public TaskDefinitionRuntimePlatformArgs build() {
             return new TaskDefinitionRuntimePlatformArgs(cpuArchitecture, operatingSystemFamily);
         }

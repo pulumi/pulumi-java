@@ -23,7 +23,7 @@ public final class DeliveryRuleCacheExpirationActionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class DeliveryRuleCacheExpirationActionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final CacheExpirationActionParametersResponse parameters;
+        private final CacheExpirationActionParametersResponse parameters;
 
     public CacheExpirationActionParametersResponse getParameters() {
         return this.parameters;
@@ -83,7 +83,6 @@ public final class DeliveryRuleCacheExpirationActionResponse extends io.pulumi.r
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleCacheExpirationActionResponse build() {
             return new DeliveryRuleCacheExpirationActionResponse(name, parameters);
         }

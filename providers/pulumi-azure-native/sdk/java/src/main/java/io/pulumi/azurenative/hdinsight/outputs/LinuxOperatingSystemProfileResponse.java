@@ -98,7 +98,6 @@ public final class LinuxOperatingSystemProfileResponse {
             this.username = username;
             return this;
         }
-
         public LinuxOperatingSystemProfileResponse build() {
             return new LinuxOperatingSystemProfileResponse(password, sshProfile, username);
         }

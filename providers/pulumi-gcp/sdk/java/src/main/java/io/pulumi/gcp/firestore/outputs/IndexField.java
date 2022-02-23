@@ -105,7 +105,6 @@ public final class IndexField {
             this.order = order;
             return this;
         }
-
         public IndexField build() {
             return new IndexField(arrayConfig, fieldPath, order);
         }

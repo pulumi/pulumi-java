@@ -61,7 +61,6 @@ public final class SpotFleetPrivateIpAddressSpecification {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public SpotFleetPrivateIpAddressSpecification build() {
             return new SpotFleetPrivateIpAddressSpecification(primary, privateIpAddress);
         }

@@ -186,7 +186,6 @@ public final class FlexibleAppVersionReadinessCheck {
             this.timeout = timeout;
             return this;
         }
-
         public FlexibleAppVersionReadinessCheck build() {
             return new FlexibleAppVersionReadinessCheck(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);
         }

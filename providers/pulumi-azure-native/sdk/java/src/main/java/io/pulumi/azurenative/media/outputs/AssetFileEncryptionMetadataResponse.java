@@ -97,7 +97,6 @@ public final class AssetFileEncryptionMetadataResponse {
             this.initializationVector = initializationVector;
             return this;
         }
-
         public AssetFileEncryptionMetadataResponse build() {
             return new AssetFileEncryptionMetadataResponse(assetFileId, assetFileName, initializationVector);
         }

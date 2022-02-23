@@ -31,7 +31,7 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -42,7 +42,7 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -53,7 +53,7 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="connectionString", required=true)
-    private final Object connectionString;
+        private final Object connectionString;
 
     public Object getConnectionString() {
         return this.connectionString;
@@ -64,7 +64,7 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -75,7 +75,7 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+        private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -86,7 +86,7 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -97,7 +97,7 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password == null ? null : this.password;
@@ -109,7 +109,7 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -218,7 +218,6 @@ public final class AmazonRdsForOracleLinkedServiceResponse extends io.pulumi.res
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonRdsForOracleLinkedServiceResponse build() {
             return new AmazonRdsForOracleLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type);
         }

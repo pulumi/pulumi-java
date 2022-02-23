@@ -21,7 +21,7 @@ public final class PrivatePoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="artifactStorage", required=true)
-    private final String artifactStorage;
+      private final String artifactStorage;
 
     public String getArtifactStorage() {
         return this.artifactStorage;
@@ -32,7 +32,7 @@ public final class PrivatePoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
@@ -43,7 +43,7 @@ public final class PrivatePoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workerPool", required=true)
-    private final String workerPool;
+      private final String workerPool;
 
     public String getWorkerPool() {
         return this.workerPool;
@@ -102,7 +102,6 @@ public final class PrivatePoolResponse extends io.pulumi.resources.InvokeArgs {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }
-
         public PrivatePoolResponse build() {
             return new PrivatePoolResponse(artifactStorage, serviceAccount, workerPool);
         }

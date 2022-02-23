@@ -75,7 +75,6 @@ public final class GoogleCloudRetailV2alphaColorInfoResponse {
             this.colors = Objects.requireNonNull(colors);
             return this;
         }
-
         public GoogleCloudRetailV2alphaColorInfoResponse build() {
             return new GoogleCloudRetailV2alphaColorInfoResponse(colorFamilies, colors);
         }

@@ -79,7 +79,6 @@ public final class InstanceReservationAffinity {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InstanceReservationAffinity build() {
             return new InstanceReservationAffinity(specificReservation, type);
         }

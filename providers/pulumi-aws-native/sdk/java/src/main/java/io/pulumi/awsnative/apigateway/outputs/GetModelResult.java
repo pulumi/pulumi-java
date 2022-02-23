@@ -77,7 +77,6 @@ public final class GetModelResult {
             this.schema = schema;
             return this;
         }
-
         public GetModelResult build() {
             return new GetModelResult(description, schema);
         }

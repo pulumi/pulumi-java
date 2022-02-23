@@ -34,7 +34,6 @@ public final class PullTargetResponse extends io.pulumi.resources.InvokeArgs {
         public Builder(PullTargetResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public PullTargetResponse build() {
             return new PullTargetResponse();
         }

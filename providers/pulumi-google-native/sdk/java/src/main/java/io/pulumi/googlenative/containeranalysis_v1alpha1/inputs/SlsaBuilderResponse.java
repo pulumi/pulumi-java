@@ -34,7 +34,6 @@ public final class SlsaBuilderResponse extends io.pulumi.resources.InvokeArgs {
         public Builder(SlsaBuilderResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public SlsaBuilderResponse build() {
             return new SlsaBuilderResponse();
         }

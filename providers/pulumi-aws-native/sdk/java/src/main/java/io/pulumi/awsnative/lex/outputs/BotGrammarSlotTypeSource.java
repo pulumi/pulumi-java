@@ -97,7 +97,6 @@ public final class BotGrammarSlotTypeSource {
             this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
             return this;
         }
-
         public BotGrammarSlotTypeSource build() {
             return new BotGrammarSlotTypeSource(kmsKeyArn, s3BucketName, s3ObjectKey);
         }

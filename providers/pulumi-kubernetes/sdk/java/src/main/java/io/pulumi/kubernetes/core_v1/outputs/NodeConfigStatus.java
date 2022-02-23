@@ -119,7 +119,6 @@ public final class NodeConfigStatus {
             this.lastKnownGood = lastKnownGood;
             return this;
         }
-
         public NodeConfigStatus build() {
             return new NodeConfigStatus(active, assigned, error, lastKnownGood);
         }

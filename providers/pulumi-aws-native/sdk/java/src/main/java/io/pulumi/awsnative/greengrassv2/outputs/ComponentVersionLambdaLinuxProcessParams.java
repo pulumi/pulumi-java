@@ -61,7 +61,6 @@ public final class ComponentVersionLambdaLinuxProcessParams {
             this.isolationMode = isolationMode;
             return this;
         }
-
         public ComponentVersionLambdaLinuxProcessParams build() {
             return new ComponentVersionLambdaLinuxProcessParams(containerParams, isolationMode);
         }

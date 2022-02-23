@@ -61,7 +61,6 @@ public final class ConnectorProfileConfig {
             this.connectorProfileProperties = connectorProfileProperties;
             return this;
         }
-
         public ConnectorProfileConfig build() {
             return new ConnectorProfileConfig(connectorProfileCredentials, connectorProfileProperties);
         }

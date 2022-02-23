@@ -22,7 +22,7 @@ public final class BackendServiceLogConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="enable", required=true)
-    private final Boolean enable;
+      private final Boolean enable;
 
     public Boolean getEnable() {
         return this.enable;
@@ -33,7 +33,7 @@ public final class BackendServiceLogConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sampleRate", required=true)
-    private final Double sampleRate;
+      private final Double sampleRate;
 
     public Double getSampleRate() {
         return this.sampleRate;
@@ -82,7 +82,6 @@ public final class BackendServiceLogConfigResponse extends io.pulumi.resources.I
             this.sampleRate = Objects.requireNonNull(sampleRate);
             return this;
         }
-
         public BackendServiceLogConfigResponse build() {
             return new BackendServiceLogConfigResponse(enable, sampleRate);
         }

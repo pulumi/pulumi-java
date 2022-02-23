@@ -21,7 +21,7 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="customerDemarcId", required=true)
-    private final String customerDemarcId;
+      private final String customerDemarcId;
 
     public String getCustomerDemarcId() {
         return this.customerDemarcId;
@@ -32,7 +32,7 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="googleCircuitId", required=true)
-    private final String googleCircuitId;
+      private final String googleCircuitId;
 
     public String getGoogleCircuitId() {
         return this.googleCircuitId;
@@ -43,7 +43,7 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="googleDemarcId", required=true)
-    private final String googleDemarcId;
+      private final String googleDemarcId;
 
     public String getGoogleDemarcId() {
         return this.googleDemarcId;
@@ -102,7 +102,6 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
             this.googleDemarcId = Objects.requireNonNull(googleDemarcId);
             return this;
         }
-
         public InterconnectCircuitInfoResponse build() {
             return new InterconnectCircuitInfoResponse(customerDemarcId, googleCircuitId, googleDemarcId);
         }

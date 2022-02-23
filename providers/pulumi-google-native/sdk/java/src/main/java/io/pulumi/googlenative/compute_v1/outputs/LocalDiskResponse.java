@@ -96,7 +96,6 @@ public final class LocalDiskResponse {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public LocalDiskResponse build() {
             return new LocalDiskResponse(diskCount, diskSizeGb, diskType);
         }

@@ -15,14 +15,14 @@ public final class ResourceGuardOperationDetailResponse extends io.pulumi.resour
     public static final ResourceGuardOperationDetailResponse Empty = new ResourceGuardOperationDetailResponse();
 
     @InputImport(name="defaultResourceRequest")
-    private final @Nullable String defaultResourceRequest;
+        private final @Nullable String defaultResourceRequest;
 
     public Optional<String> getDefaultResourceRequest() {
         return this.defaultResourceRequest == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceRequest);
     }
 
     @InputImport(name="vaultCriticalOperation")
-    private final @Nullable String vaultCriticalOperation;
+        private final @Nullable String vaultCriticalOperation;
 
     public Optional<String> getVaultCriticalOperation() {
         return this.vaultCriticalOperation == null ? Optional.empty() : Optional.ofNullable(this.vaultCriticalOperation);
@@ -71,7 +71,6 @@ public final class ResourceGuardOperationDetailResponse extends io.pulumi.resour
             this.vaultCriticalOperation = vaultCriticalOperation;
             return this;
         }
-
         public ResourceGuardOperationDetailResponse build() {
             return new ResourceGuardOperationDetailResponse(defaultResourceRequest, vaultCriticalOperation);
         }

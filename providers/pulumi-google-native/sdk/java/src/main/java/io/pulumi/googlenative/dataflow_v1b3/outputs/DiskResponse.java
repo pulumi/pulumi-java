@@ -96,7 +96,6 @@ public final class DiskResponse {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
-
         public DiskResponse build() {
             return new DiskResponse(diskType, mountPoint, sizeGb);
         }

@@ -548,7 +548,6 @@ public final class GetClusterResult {
             this.zones = zones;
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(dataIngestionUri, enableDiskEncryption, enableDoubleEncryption, enablePurge, enableStreamingIngest, engineType, etag, id, identity, keyVaultProperties, languageExtensions, location, name, optimizedAutoscale, provisioningState, sku, state, stateReason, tags, trustedExternalTenants, type, uri, virtualNetworkConfiguration, zones);
         }

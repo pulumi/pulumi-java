@@ -175,7 +175,6 @@ public final class GetHyperVSiteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHyperVSiteResult build() {
             return new GetHyperVSiteResult(eTag, id, location, name, properties, tags, type);
         }

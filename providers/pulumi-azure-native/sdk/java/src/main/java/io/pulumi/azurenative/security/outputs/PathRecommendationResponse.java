@@ -211,7 +211,6 @@ public final class PathRecommendationResponse {
             this.usernames = usernames;
             return this;
         }
-
         public PathRecommendationResponse build() {
             return new PathRecommendationResponse(action, common, configurationStatus, fileType, path, publisherInfo, type, userSids, usernames);
         }

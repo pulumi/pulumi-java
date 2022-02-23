@@ -24,7 +24,7 @@ public final class DataQualityJobDefinitionNetworkConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="enableInterContainerTrafficEncryption")
-    private final @Nullable Input<Boolean> enableInterContainerTrafficEncryption;
+        private final @Nullable Input<Boolean> enableInterContainerTrafficEncryption;
 
     public Input<Boolean> getEnableInterContainerTrafficEncryption() {
         return this.enableInterContainerTrafficEncryption == null ? Input.empty() : this.enableInterContainerTrafficEncryption;
@@ -35,14 +35,14 @@ public final class DataQualityJobDefinitionNetworkConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="enableNetworkIsolation")
-    private final @Nullable Input<Boolean> enableNetworkIsolation;
+        private final @Nullable Input<Boolean> enableNetworkIsolation;
 
     public Input<Boolean> getEnableNetworkIsolation() {
         return this.enableNetworkIsolation == null ? Input.empty() : this.enableNetworkIsolation;
     }
 
     @InputImport(name="vpcConfig")
-    private final @Nullable Input<DataQualityJobDefinitionVpcConfigArgs> vpcConfig;
+        private final @Nullable Input<DataQualityJobDefinitionVpcConfigArgs> vpcConfig;
 
     public Input<DataQualityJobDefinitionVpcConfigArgs> getVpcConfig() {
         return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
@@ -116,7 +116,6 @@ public final class DataQualityJobDefinitionNetworkConfigArgs extends io.pulumi.r
             this.vpcConfig = Input.ofNullable(vpcConfig);
             return this;
         }
-
         public DataQualityJobDefinitionNetworkConfigArgs build() {
             return new DataQualityJobDefinitionNetworkConfigArgs(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }

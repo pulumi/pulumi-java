@@ -83,7 +83,6 @@ public final class DetectorModelAssetPropertyValue {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DetectorModelAssetPropertyValue build() {
             return new DetectorModelAssetPropertyValue(quality, timestamp, value);
         }

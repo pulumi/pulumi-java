@@ -182,7 +182,6 @@ public final class GetConfigurationAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationAssignmentResult build() {
             return new GetConfigurationAssignmentResult(id, location, maintenanceConfigurationId, name, resourceId, systemData, type);
         }

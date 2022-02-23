@@ -141,7 +141,6 @@ public final class GetTransitGatewayConnectResult {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
-
         public GetTransitGatewayConnectResult build() {
             return new GetTransitGatewayConnectResult(creationTime, state, tags, transitGatewayAttachmentId, transitGatewayId);
         }

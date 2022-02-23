@@ -52,7 +52,6 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigResponse {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
-
         public GoogleCloudHealthcareV1beta1DicomStreamConfigResponse build() {
             return new GoogleCloudHealthcareV1beta1DicomStreamConfigResponse(bigqueryDestination);
         }

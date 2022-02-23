@@ -20,7 +20,7 @@ public final class ConnectorSubnetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class ConnectorSubnetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+        private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -90,7 +90,6 @@ public final class ConnectorSubnetGetArgs extends io.pulumi.resources.ResourceAr
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
-
         public ConnectorSubnetGetArgs build() {
             return new ConnectorSubnetGetArgs(name, projectId);
         }

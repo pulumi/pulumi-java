@@ -372,7 +372,6 @@ public final class GetSystemTopicEventSubscriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSystemTopicEventSubscriptionResult build() {
             return new GetSystemTopicEventSubscriptionResult(deadLetterDestination, deadLetterWithResourceIdentity, deliveryWithResourceIdentity, destination, eventDeliverySchema, expirationTimeUtc, filter, id, labels, name, provisioningState, retryPolicy, systemData, topic, type);
         }

@@ -112,7 +112,6 @@ public final class HttpVersionMatchConditionParametersResponse {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public HttpVersionMatchConditionParametersResponse build() {
             return new HttpVersionMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator);
         }

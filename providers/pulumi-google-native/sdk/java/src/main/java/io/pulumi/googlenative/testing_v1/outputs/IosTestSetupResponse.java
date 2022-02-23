@@ -119,7 +119,6 @@ public final class IosTestSetupResponse {
             this.pushFiles = Objects.requireNonNull(pushFiles);
             return this;
         }
-
         public IosTestSetupResponse build() {
             return new IosTestSetupResponse(additionalIpas, networkProfile, pullDirectories, pushFiles);
         }

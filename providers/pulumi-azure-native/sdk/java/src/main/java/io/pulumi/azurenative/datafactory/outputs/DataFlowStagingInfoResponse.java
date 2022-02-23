@@ -77,7 +77,6 @@ public final class DataFlowStagingInfoResponse {
             this.linkedService = linkedService;
             return this;
         }
-
         public DataFlowStagingInfoResponse build() {
             return new DataFlowStagingInfoResponse(folderPath, linkedService);
         }

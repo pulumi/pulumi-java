@@ -77,7 +77,6 @@ public final class VirtualNetworkRuleResponse {
             this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
-
         public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(id, ignoreMissingVnetServiceEndpoint);
         }

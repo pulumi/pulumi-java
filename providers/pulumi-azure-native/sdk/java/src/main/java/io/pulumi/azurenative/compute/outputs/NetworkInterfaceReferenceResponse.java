@@ -98,7 +98,6 @@ public final class NetworkInterfaceReferenceResponse {
             this.primary = primary;
             return this;
         }
-
         public NetworkInterfaceReferenceResponse build() {
             return new NetworkInterfaceReferenceResponse(deleteOption, id, primary);
         }

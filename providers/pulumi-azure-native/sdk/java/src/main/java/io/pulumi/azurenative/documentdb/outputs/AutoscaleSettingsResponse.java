@@ -54,7 +54,6 @@ public final class AutoscaleSettingsResponse {
             this.maxThroughput = maxThroughput;
             return this;
         }
-
         public AutoscaleSettingsResponse build() {
             return new AutoscaleSettingsResponse(maxThroughput);
         }

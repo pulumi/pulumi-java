@@ -98,7 +98,6 @@ public final class GetUserGroupResult {
             this.userIds = userIds;
             return this;
         }
-
         public GetUserGroupResult build() {
             return new GetUserGroupResult(arn, status, userIds);
         }

@@ -130,7 +130,6 @@ public final class GetAccountIdTokenResult {
             this.targetServiceAccount = targetServiceAccount;
             return this;
         }
-
         public GetAccountIdTokenResult build() {
             return new GetAccountIdTokenResult(delegates, id, idToken, includeEmail, targetAudience, targetServiceAccount);
         }

@@ -81,7 +81,6 @@ public final class AuthorityConfigSubjectConfig {
             this.subjectAltName = subjectAltName;
             return this;
         }
-
         public AuthorityConfigSubjectConfig build() {
             return new AuthorityConfigSubjectConfig(subject, subjectAltName);
         }

@@ -22,7 +22,7 @@ public final class SingleClusterRoutingResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="allowTransactionalWrites", required=true)
-    private final Boolean allowTransactionalWrites;
+      private final Boolean allowTransactionalWrites;
 
     public Boolean getAllowTransactionalWrites() {
         return this.allowTransactionalWrites;
@@ -33,7 +33,7 @@ public final class SingleClusterRoutingResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clusterId", required=true)
-    private final String clusterId;
+      private final String clusterId;
 
     public String getClusterId() {
         return this.clusterId;
@@ -82,7 +82,6 @@ public final class SingleClusterRoutingResponse extends io.pulumi.resources.Invo
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public SingleClusterRoutingResponse build() {
             return new SingleClusterRoutingResponse(allowTransactionalWrites, clusterId);
         }

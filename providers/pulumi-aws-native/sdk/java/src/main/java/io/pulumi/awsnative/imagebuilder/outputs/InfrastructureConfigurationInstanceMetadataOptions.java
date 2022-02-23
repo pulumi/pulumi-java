@@ -77,7 +77,6 @@ public final class InfrastructureConfigurationInstanceMetadataOptions {
             this.httpTokens = httpTokens;
             return this;
         }
-
         public InfrastructureConfigurationInstanceMetadataOptions build() {
             return new InfrastructureConfigurationInstanceMetadataOptions(httpPutResponseHopLimit, httpTokens);
         }

@@ -74,7 +74,6 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1GcsSourceResponse build() {
             return new GoogleCloudDatalabelingV1beta1GcsSourceResponse(inputUri, mimeType);
         }

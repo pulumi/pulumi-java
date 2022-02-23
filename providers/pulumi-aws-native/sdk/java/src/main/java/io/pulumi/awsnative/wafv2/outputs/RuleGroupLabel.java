@@ -44,7 +44,6 @@ public final class RuleGroupLabel {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public RuleGroupLabel build() {
             return new RuleGroupLabel(name);
         }

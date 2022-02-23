@@ -99,7 +99,6 @@ public final class CronJobStatus {
             this.lastSuccessfulTime = lastSuccessfulTime;
             return this;
         }
-
         public CronJobStatus build() {
             return new CronJobStatus(active, lastScheduleTime, lastSuccessfulTime);
         }

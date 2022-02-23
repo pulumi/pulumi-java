@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse exte
      * 
      */
     @InputImport(name="onewayTerms", required=true)
-    private final List<String> onewayTerms;
+      private final List<String> onewayTerms;
 
     public List<String> getOnewayTerms() {
         return this.onewayTerms;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse exte
      * 
      */
     @InputImport(name="queryTerms", required=true)
-    private final List<String> queryTerms;
+      private final List<String> queryTerms;
 
     public List<String> getQueryTerms() {
         return this.queryTerms;
@@ -44,7 +44,7 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse exte
      * 
      */
     @InputImport(name="synonyms", required=true)
-    private final List<String> synonyms;
+      private final List<String> synonyms;
 
     public List<String> getSynonyms() {
         return this.synonyms;
@@ -103,7 +103,6 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse exte
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse(onewayTerms, queryTerms, synonyms);
         }

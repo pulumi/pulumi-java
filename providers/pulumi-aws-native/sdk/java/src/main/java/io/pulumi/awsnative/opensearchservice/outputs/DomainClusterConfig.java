@@ -167,7 +167,6 @@ public final class DomainClusterConfig {
             this.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;
         }
-
         public DomainClusterConfig build() {
             return new DomainClusterConfig(dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfig, zoneAwarenessEnabled);
         }

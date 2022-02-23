@@ -97,7 +97,6 @@ public final class GenericSignedAttestationResponse {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-
         public GenericSignedAttestationResponse build() {
             return new GenericSignedAttestationResponse(contentType, serializedPayload, signatures);
         }

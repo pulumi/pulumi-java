@@ -18,7 +18,7 @@ public final class InstanceTemplateDiskDiskEncryptionKeyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="kmsKeySelfLink", required=true)
-    private final Input<String> kmsKeySelfLink;
+        private final Input<String> kmsKeySelfLink;
 
     public Input<String> getKmsKeySelfLink() {
         return this.kmsKeySelfLink;
@@ -61,7 +61,6 @@ public final class InstanceTemplateDiskDiskEncryptionKeyArgs extends io.pulumi.r
             this.kmsKeySelfLink = Input.of(Objects.requireNonNull(kmsKeySelfLink));
             return this;
         }
-
         public InstanceTemplateDiskDiskEncryptionKeyArgs build() {
             return new InstanceTemplateDiskDiskEncryptionKeyArgs(kmsKeySelfLink);
         }

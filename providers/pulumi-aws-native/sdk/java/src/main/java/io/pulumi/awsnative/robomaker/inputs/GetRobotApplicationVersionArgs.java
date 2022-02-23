@@ -13,7 +13,7 @@ public final class GetRobotApplicationVersionArgs extends io.pulumi.resources.In
     public static final GetRobotApplicationVersionArgs Empty = new GetRobotApplicationVersionArgs();
 
     @InputImport(name="arn", required=true)
-    private final String arn;
+        private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -51,7 +51,6 @@ public final class GetRobotApplicationVersionArgs extends io.pulumi.resources.In
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public GetRobotApplicationVersionArgs build() {
             return new GetRobotApplicationVersionArgs(arn);
         }

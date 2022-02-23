@@ -24,7 +24,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldName")
-    private final @Nullable Input<String> fieldName;
+      private final @Nullable Input<String> fieldName;
 
     public Input<String> getFieldName() {
         return this.fieldName == null ? Input.empty() : this.fieldName;
@@ -35,7 +35,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<InputMappingLocation> location;
+      private final @Nullable Input<InputMappingLocation> location;
 
     public Input<InputMappingLocation> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methodMatch")
-    private final @Nullable Input<String> methodMatch;
+      private final @Nullable Input<String> methodMatch;
 
     public Input<String> getMethodMatch() {
         return this.methodMatch == null ? Input.empty() : this.methodMatch;
@@ -57,7 +57,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -146,7 +146,6 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public InputMappingArgs build() {
             return new InputMappingArgs(fieldName, location, methodMatch, value);
         }

@@ -231,7 +231,6 @@ public final class ResponsysObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResponsysObjectDatasetResponse build() {
             return new ResponsysObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

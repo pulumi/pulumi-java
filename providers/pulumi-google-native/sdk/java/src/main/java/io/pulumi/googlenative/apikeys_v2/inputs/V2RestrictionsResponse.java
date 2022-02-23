@@ -26,7 +26,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="androidKeyRestrictions", required=true)
-    private final V2AndroidKeyRestrictionsResponse androidKeyRestrictions;
+      private final V2AndroidKeyRestrictionsResponse androidKeyRestrictions;
 
     public V2AndroidKeyRestrictionsResponse getAndroidKeyRestrictions() {
         return this.androidKeyRestrictions;
@@ -37,7 +37,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="apiTargets", required=true)
-    private final List<V2ApiTargetResponse> apiTargets;
+      private final List<V2ApiTargetResponse> apiTargets;
 
     public List<V2ApiTargetResponse> getApiTargets() {
         return this.apiTargets;
@@ -48,7 +48,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="browserKeyRestrictions", required=true)
-    private final V2BrowserKeyRestrictionsResponse browserKeyRestrictions;
+      private final V2BrowserKeyRestrictionsResponse browserKeyRestrictions;
 
     public V2BrowserKeyRestrictionsResponse getBrowserKeyRestrictions() {
         return this.browserKeyRestrictions;
@@ -59,7 +59,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="iosKeyRestrictions", required=true)
-    private final V2IosKeyRestrictionsResponse iosKeyRestrictions;
+      private final V2IosKeyRestrictionsResponse iosKeyRestrictions;
 
     public V2IosKeyRestrictionsResponse getIosKeyRestrictions() {
         return this.iosKeyRestrictions;
@@ -70,7 +70,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="serverKeyRestrictions", required=true)
-    private final V2ServerKeyRestrictionsResponse serverKeyRestrictions;
+      private final V2ServerKeyRestrictionsResponse serverKeyRestrictions;
 
     public V2ServerKeyRestrictionsResponse getServerKeyRestrictions() {
         return this.serverKeyRestrictions;
@@ -149,7 +149,6 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
             this.serverKeyRestrictions = Objects.requireNonNull(serverKeyRestrictions);
             return this;
         }
-
         public V2RestrictionsResponse build() {
             return new V2RestrictionsResponse(androidKeyRestrictions, apiTargets, browserKeyRestrictions, iosKeyRestrictions, serverKeyRestrictions);
         }

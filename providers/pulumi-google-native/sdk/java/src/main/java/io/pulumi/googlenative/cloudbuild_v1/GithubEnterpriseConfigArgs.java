@@ -20,7 +20,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+      private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -31,14 +31,14 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="gheConfigId")
-    private final @Nullable Input<String> gheConfigId;
+      private final @Nullable Input<String> gheConfigId;
 
     public Input<String> getGheConfigId() {
         return this.gheConfigId == null ? Input.empty() : this.gheConfigId;
@@ -49,14 +49,14 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hostUrl")
-    private final @Nullable Input<String> hostUrl;
+      private final @Nullable Input<String> hostUrl;
 
     public Input<String> getHostUrl() {
         return this.hostUrl == null ? Input.empty() : this.hostUrl;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -67,7 +67,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,21 +78,21 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="peeredNetwork")
-    private final @Nullable Input<String> peeredNetwork;
+      private final @Nullable Input<String> peeredNetwork;
 
     public Input<String> getPeeredNetwork() {
         return this.peeredNetwork == null ? Input.empty() : this.peeredNetwork;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+      private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -103,7 +103,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable Input<GitHubEnterpriseSecretsArgs> secrets;
+      private final @Nullable Input<GitHubEnterpriseSecretsArgs> secrets;
 
     public Input<GitHubEnterpriseSecretsArgs> getSecrets() {
         return this.secrets == null ? Input.empty() : this.secrets;
@@ -114,7 +114,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sslCa")
-    private final @Nullable Input<String> sslCa;
+      private final @Nullable Input<String> sslCa;
 
     public Input<String> getSslCa() {
         return this.sslCa == null ? Input.empty() : this.sslCa;
@@ -125,7 +125,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="webhookKey")
-    private final @Nullable Input<String> webhookKey;
+      private final @Nullable Input<String> webhookKey;
 
     public Input<String> getWebhookKey() {
         return this.webhookKey == null ? Input.empty() : this.webhookKey;
@@ -334,7 +334,6 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             this.webhookKey = Input.ofNullable(webhookKey);
             return this;
         }
-
         public GithubEnterpriseConfigArgs build() {
             return new GithubEnterpriseConfigArgs(appId, displayName, gheConfigId, hostUrl, location, name, peeredNetwork, project, projectId, secrets, sslCa, webhookKey);
         }

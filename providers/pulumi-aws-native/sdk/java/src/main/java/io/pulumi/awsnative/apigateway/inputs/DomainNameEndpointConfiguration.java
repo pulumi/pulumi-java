@@ -16,7 +16,7 @@ public final class DomainNameEndpointConfiguration extends io.pulumi.resources.I
     public static final DomainNameEndpointConfiguration Empty = new DomainNameEndpointConfiguration();
 
     @InputImport(name="types")
-    private final @Nullable List<String> types;
+        private final @Nullable List<String> types;
 
     public List<String> getTypes() {
         return this.types == null ? List.of() : this.types;
@@ -54,7 +54,6 @@ public final class DomainNameEndpointConfiguration extends io.pulumi.resources.I
             this.types = types;
             return this;
         }
-
         public DomainNameEndpointConfiguration build() {
             return new DomainNameEndpointConfiguration(types);
         }

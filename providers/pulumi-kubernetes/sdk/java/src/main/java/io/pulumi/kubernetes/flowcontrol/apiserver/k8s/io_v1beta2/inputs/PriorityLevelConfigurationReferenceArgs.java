@@ -22,7 +22,7 @@ public final class PriorityLevelConfigurationReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -65,7 +65,6 @@ public final class PriorityLevelConfigurationReferenceArgs extends io.pulumi.res
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public PriorityLevelConfigurationReferenceArgs build() {
             return new PriorityLevelConfigurationReferenceArgs(name);
         }

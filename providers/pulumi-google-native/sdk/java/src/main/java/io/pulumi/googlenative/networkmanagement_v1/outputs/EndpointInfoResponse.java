@@ -180,7 +180,6 @@ public final class EndpointInfoResponse {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }
-
         public EndpointInfoResponse build() {
             return new EndpointInfoResponse(destinationIp, destinationNetworkUri, destinationPort, protocol, sourceIp, sourceNetworkUri, sourcePort);
         }

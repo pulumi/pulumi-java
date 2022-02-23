@@ -151,7 +151,6 @@ public final class BigtableColumnResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BigtableColumnResponse build() {
             return new BigtableColumnResponse(encoding, fieldName, onlyReadLatest, qualifierEncoded, qualifierString, type);
         }

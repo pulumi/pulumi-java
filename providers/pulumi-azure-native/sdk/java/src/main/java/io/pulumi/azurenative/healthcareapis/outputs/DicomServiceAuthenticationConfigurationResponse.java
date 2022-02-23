@@ -75,7 +75,6 @@ public final class DicomServiceAuthenticationConfigurationResponse {
             this.authority = Objects.requireNonNull(authority);
             return this;
         }
-
         public DicomServiceAuthenticationConfigurationResponse build() {
             return new DicomServiceAuthenticationConfigurationResponse(audiences, authority);
         }

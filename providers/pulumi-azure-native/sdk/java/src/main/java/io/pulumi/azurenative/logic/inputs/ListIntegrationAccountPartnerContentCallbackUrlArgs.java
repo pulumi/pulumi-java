@@ -21,7 +21,7 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-    private final String integrationAccountName;
+        private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -32,7 +32,7 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
      * 
      */
     @InputImport(name="keyType")
-    private final @Nullable Either<String,KeyType> keyType;
+        private final @Nullable Either<String,KeyType> keyType;
 
     public Either<String,KeyType> getKeyType() {
         return this.keyType == null ? null : this.keyType;
@@ -43,7 +43,7 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
      * 
      */
     @InputImport(name="notAfter")
-    private final @Nullable String notAfter;
+        private final @Nullable String notAfter;
 
     public Optional<String> getNotAfter() {
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
@@ -54,7 +54,7 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
      * 
      */
     @InputImport(name="partnerName", required=true)
-    private final String partnerName;
+        private final String partnerName;
 
     public String getPartnerName() {
         return this.partnerName;
@@ -65,7 +65,7 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -144,7 +144,6 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListIntegrationAccountPartnerContentCallbackUrlArgs build() {
             return new ListIntegrationAccountPartnerContentCallbackUrlArgs(integrationAccountName, keyType, notAfter, partnerName, resourceGroupName);
         }

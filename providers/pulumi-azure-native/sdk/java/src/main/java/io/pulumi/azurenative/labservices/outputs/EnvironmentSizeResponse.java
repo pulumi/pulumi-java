@@ -143,7 +143,6 @@ public final class EnvironmentSizeResponse {
             this.vmSizes = vmSizes;
             return this;
         }
-
         public EnvironmentSizeResponse build() {
             return new EnvironmentSizeResponse(maxPrice, minMemory, minNumberOfCores, name, vmSizes);
         }

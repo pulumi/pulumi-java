@@ -21,7 +21,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<ParameterDefinitionArgs>> parameters;
+        private final @Nullable Input<List<ParameterDefinitionArgs>> parameters;
 
     public Input<List<ParameterDefinitionArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -54,7 +54,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineJobName")
-    private final @Nullable Input<String> pipelineJobName;
+        private final @Nullable Input<String> pipelineJobName;
 
     public Input<String> getPipelineJobName() {
         return this.pipelineJobName == null ? Input.empty() : this.pipelineJobName;
@@ -65,7 +65,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topologyName", required=true)
-    private final Input<String> topologyName;
+        private final Input<String> topologyName;
 
     public Input<String> getTopologyName() {
         return this.topologyName;
@@ -195,7 +195,6 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
             this.topologyName = Input.of(Objects.requireNonNull(topologyName));
             return this;
         }
-
         public PipelineJobArgs build() {
             return new PipelineJobArgs(accountName, description, parameters, pipelineJobName, resourceGroupName, topologyName);
         }

@@ -224,7 +224,6 @@ public final class HealthCheckHttpsHealthCheck {
             this.response = response;
             return this;
         }
-
         public HealthCheckHttpsHealthCheck build() {
             return new HealthCheckHttpsHealthCheck(host, port, portName, portSpecification, proxyHeader, requestPath, response);
         }

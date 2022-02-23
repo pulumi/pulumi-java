@@ -229,7 +229,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse {
             this.twowaySynonymsAction = Objects.requireNonNull(twowaySynonymsAction);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleResponse build() {
             return new GoogleCloudRetailV2alphaRuleResponse(boostAction, condition, doNotAssociateAction, filterAction, ignoreAction, onewaySynonymsAction, redirectAction, replacementAction, twowaySynonymsAction);
         }

@@ -25,7 +25,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
      * 
      */
     @InputImport(name="all")
-    private final @Nullable Input<Object> all;
+        private final @Nullable Input<Object> all;
 
     public Input<Object> getAll() {
         return this.all == null ? Input.empty() : this.all;
@@ -36,7 +36,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
      * 
      */
     @InputImport(name="includedPaths")
-    private final @Nullable Input<List<String>> includedPaths;
+        private final @Nullable Input<List<String>> includedPaths;
 
     public Input<List<String>> getIncludedPaths() {
         return this.includedPaths == null ? Input.empty() : this.includedPaths;
@@ -95,7 +95,6 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
             this.includedPaths = Input.ofNullable(includedPaths);
             return this;
         }
-
         public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs build() {
             return new LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs(all, includedPaths);
         }

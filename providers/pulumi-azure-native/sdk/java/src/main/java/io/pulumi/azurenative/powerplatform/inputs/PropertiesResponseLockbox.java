@@ -23,7 +23,7 @@ public final class PropertiesResponseLockbox extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -61,7 +61,6 @@ public final class PropertiesResponseLockbox extends io.pulumi.resources.InvokeA
             this.state = state;
             return this;
         }
-
         public PropertiesResponseLockbox build() {
             return new PropertiesResponseLockbox(state);
         }

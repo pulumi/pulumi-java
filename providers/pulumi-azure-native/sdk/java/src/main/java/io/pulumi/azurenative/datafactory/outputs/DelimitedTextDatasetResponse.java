@@ -433,7 +433,6 @@ public final class DelimitedTextDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DelimitedTextDatasetResponse build() {
             return new DelimitedTextDatasetResponse(annotations, columnDelimiter, compressionCodec, compressionLevel, description, encodingName, escapeChar, firstRowAsHeader, folder, linkedServiceName, location, nullValue, parameters, quoteChar, rowDelimiter, schema, structure, type);
         }

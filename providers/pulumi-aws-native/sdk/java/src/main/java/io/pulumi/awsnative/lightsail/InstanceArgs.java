@@ -26,7 +26,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addOns")
-    private final @Nullable Input<List<InstanceAddOnArgs>> addOns;
+        private final @Nullable Input<List<InstanceAddOnArgs>> addOns;
 
     public Input<List<InstanceAddOnArgs>> getAddOns() {
         return this.addOns == null ? Input.empty() : this.addOns;
@@ -37,7 +37,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+        private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -48,7 +48,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blueprintId", required=true)
-    private final Input<String> blueprintId;
+        private final Input<String> blueprintId;
 
     public Input<String> getBlueprintId() {
         return this.blueprintId;
@@ -59,14 +59,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId", required=true)
-    private final Input<String> bundleId;
+        private final Input<String> bundleId;
 
     public Input<String> getBundleId() {
         return this.bundleId;
     }
 
     @InputImport(name="hardware")
-    private final @Nullable Input<InstanceHardwareArgs> hardware;
+        private final @Nullable Input<InstanceHardwareArgs> hardware;
 
     public Input<InstanceHardwareArgs> getHardware() {
         return this.hardware == null ? Input.empty() : this.hardware;
@@ -77,7 +77,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceName")
-    private final @Nullable Input<String> instanceName;
+        private final @Nullable Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName == null ? Input.empty() : this.instanceName;
@@ -88,28 +88,28 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPairName")
-    private final @Nullable Input<String> keyPairName;
+        private final @Nullable Input<String> keyPairName;
 
     public Input<String> getKeyPairName() {
         return this.keyPairName == null ? Input.empty() : this.keyPairName;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<InstanceLocationArgs> location;
+        private final @Nullable Input<InstanceLocationArgs> location;
 
     public Input<InstanceLocationArgs> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="networking")
-    private final @Nullable Input<InstanceNetworkingArgs> networking;
+        private final @Nullable Input<InstanceNetworkingArgs> networking;
 
     public Input<InstanceNetworkingArgs> getNetworking() {
         return this.networking == null ? Input.empty() : this.networking;
     }
 
     @InputImport(name="state")
-    private final @Nullable Input<InstanceStateArgs> state;
+        private final @Nullable Input<InstanceStateArgs> state;
 
     public Input<InstanceStateArgs> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -120,7 +120,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<InstanceTagArgs>> tags;
+        private final @Nullable Input<List<InstanceTagArgs>> tags;
 
     public Input<List<InstanceTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -131,7 +131,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userData")
-    private final @Nullable Input<String> userData;
+        private final @Nullable Input<String> userData;
 
     public Input<String> getUserData() {
         return this.userData == null ? Input.empty() : this.userData;
@@ -340,7 +340,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.userData = Input.ofNullable(userData);
             return this;
         }
-
         public InstanceArgs build() {
             return new InstanceArgs(addOns, availabilityZone, blueprintId, bundleId, hardware, instanceName, keyPairName, location, networking, state, tags, userData);
         }

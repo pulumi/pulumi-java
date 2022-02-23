@@ -100,7 +100,6 @@ public final class VirtualMachineAgentInstanceViewResponse {
             this.vmAgentVersion = vmAgentVersion;
             return this;
         }
-
         public VirtualMachineAgentInstanceViewResponse build() {
             return new VirtualMachineAgentInstanceViewResponse(extensionHandlers, statuses, vmAgentVersion);
         }

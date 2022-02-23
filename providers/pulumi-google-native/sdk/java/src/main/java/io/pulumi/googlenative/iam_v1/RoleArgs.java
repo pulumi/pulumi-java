@@ -22,7 +22,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleted")
-    private final @Nullable Input<Boolean> deleted;
+      private final @Nullable Input<Boolean> deleted;
 
     public Input<Boolean> getDeleted() {
         return this.deleted == null ? Input.empty() : this.deleted;
@@ -33,7 +33,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -55,7 +55,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includedPermissions")
-    private final @Nullable Input<List<String>> includedPermissions;
+      private final @Nullable Input<List<String>> includedPermissions;
 
     public Input<List<String>> getIncludedPermissions() {
         return this.includedPermissions == null ? Input.empty() : this.includedPermissions;
@@ -66,14 +66,14 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -84,7 +84,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleId")
-    private final @Nullable Input<String> roleId;
+      private final @Nullable Input<String> roleId;
 
     public Input<String> getRoleId() {
         return this.roleId == null ? Input.empty() : this.roleId;
@@ -95,7 +95,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stage")
-    private final @Nullable Input<RoleStage> stage;
+      private final @Nullable Input<RoleStage> stage;
 
     public Input<RoleStage> getStage() {
         return this.stage == null ? Input.empty() : this.stage;
@@ -106,7 +106,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -270,7 +270,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public RoleArgs build() {
             return new RoleArgs(deleted, description, etag, includedPermissions, name, project, roleId, stage, title);
         }

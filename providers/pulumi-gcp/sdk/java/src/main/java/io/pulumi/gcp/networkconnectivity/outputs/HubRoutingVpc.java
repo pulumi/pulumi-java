@@ -46,7 +46,6 @@ public final class HubRoutingVpc {
             this.uri = uri;
             return this;
         }
-
         public HubRoutingVpc build() {
             return new HubRoutingVpc(uri);
         }

@@ -74,7 +74,6 @@ public final class KeyVersionSpecResponse {
             this.cloudKmsKeyVersion = Objects.requireNonNull(cloudKmsKeyVersion);
             return this;
         }
-
         public KeyVersionSpecResponse build() {
             return new KeyVersionSpecResponse(algorithm, cloudKmsKeyVersion);
         }

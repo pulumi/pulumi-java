@@ -27,7 +27,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions;
+      private final @Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions;
 
     public Input<List<GoogleCloudRunV1ConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -38,7 +38,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mappedRouteName")
-    private final @Nullable Input<String> mappedRouteName;
+      private final @Nullable Input<String> mappedRouteName;
 
     public Input<String> getMappedRouteName() {
         return this.mappedRouteName == null ? Input.empty() : this.mappedRouteName;
@@ -49,7 +49,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="observedGeneration")
-    private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
@@ -60,7 +60,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceRecords")
-    private final @Nullable Input<List<ResourceRecordArgs>> resourceRecords;
+      private final @Nullable Input<List<ResourceRecordArgs>> resourceRecords;
 
     public Input<List<ResourceRecordArgs>> getResourceRecords() {
         return this.resourceRecords == null ? Input.empty() : this.resourceRecords;
@@ -71,7 +71,7 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -175,7 +175,6 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public DomainMappingStatusArgs build() {
             return new DomainMappingStatusArgs(conditions, mappedRouteName, observedGeneration, resourceRecords, url);
         }

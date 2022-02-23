@@ -91,7 +91,6 @@ public final class EntityTypeEntity {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EntityTypeEntity build() {
             return new EntityTypeEntity(synonyms, value);
         }

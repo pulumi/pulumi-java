@@ -24,7 +24,7 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="creationTime")
-    private final @Nullable String creationTime;
+        private final @Nullable String creationTime;
 
     public Optional<String> getCreationTime() {
         return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
@@ -35,7 +35,7 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="draftContentLink")
-    private final @Nullable ContentLinkResponse draftContentLink;
+        private final @Nullable ContentLinkResponse draftContentLink;
 
     public Optional<ContentLinkResponse> getDraftContentLink() {
         return this.draftContentLink == null ? Optional.empty() : Optional.ofNullable(this.draftContentLink);
@@ -46,7 +46,7 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inEdit")
-    private final @Nullable Boolean inEdit;
+        private final @Nullable Boolean inEdit;
 
     public Optional<Boolean> getInEdit() {
         return this.inEdit == null ? Optional.empty() : Optional.ofNullable(this.inEdit);
@@ -57,7 +57,7 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastModifiedTime")
-    private final @Nullable String lastModifiedTime;
+        private final @Nullable String lastModifiedTime;
 
     public Optional<String> getLastModifiedTime() {
         return this.lastModifiedTime == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedTime);
@@ -68,7 +68,7 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outputTypes")
-    private final @Nullable List<String> outputTypes;
+        private final @Nullable List<String> outputTypes;
 
     public List<String> getOutputTypes() {
         return this.outputTypes == null ? List.of() : this.outputTypes;
@@ -79,7 +79,7 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,RunbookParameterResponse> parameters;
+        private final @Nullable Map<String,RunbookParameterResponse> parameters;
 
     public Map<String,RunbookParameterResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -168,7 +168,6 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
             this.parameters = parameters;
             return this;
         }
-
         public RunbookDraftResponse build() {
             return new RunbookDraftResponse(creationTime, draftContentLink, inEdit, lastModifiedTime, outputTypes, parameters);
         }

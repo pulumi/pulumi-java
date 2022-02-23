@@ -21,7 +21,7 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="appliesToGroups")
-    private final @Nullable Input<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups;
+        private final @Nullable Input<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups;
 
     public Input<List<NetworkManagerSecurityGroupItemArgs>> getAppliesToGroups() {
         return this.appliesToGroups == null ? Input.empty() : this.appliesToGroups;
@@ -32,7 +32,7 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configurationName", required=true)
-    private final Input<String> configurationName;
+        private final Input<String> configurationName;
 
     public Input<String> getConfigurationName() {
         return this.configurationName;
@@ -43,7 +43,7 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -54,7 +54,7 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -65,7 +65,7 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-    private final Input<String> networkManagerName;
+        private final Input<String> networkManagerName;
 
     public Input<String> getNetworkManagerName() {
         return this.networkManagerName;
@@ -76,7 +76,7 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ruleCollectionName")
-    private final @Nullable Input<String> ruleCollectionName;
+        private final @Nullable Input<String> ruleCollectionName;
 
     public Input<String> getRuleCollectionName() {
         return this.ruleCollectionName == null ? Input.empty() : this.ruleCollectionName;
@@ -221,7 +221,6 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
             this.ruleCollectionName = Input.ofNullable(ruleCollectionName);
             return this;
         }
-
         public UserRuleCollectionArgs build() {
             return new UserRuleCollectionArgs(appliesToGroups, configurationName, description, displayName, networkManagerName, resourceGroupName, ruleCollectionName);
         }

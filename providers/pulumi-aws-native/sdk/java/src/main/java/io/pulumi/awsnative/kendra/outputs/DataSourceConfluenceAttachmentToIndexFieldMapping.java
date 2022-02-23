@@ -74,7 +74,6 @@ public final class DataSourceConfluenceAttachmentToIndexFieldMapping {
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
         }
-
         public DataSourceConfluenceAttachmentToIndexFieldMapping build() {
             return new DataSourceConfluenceAttachmentToIndexFieldMapping(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }

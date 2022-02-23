@@ -46,7 +46,6 @@ public final class RuleGroupActionDefinition {
             this.publishMetricAction = publishMetricAction;
             return this;
         }
-
         public RuleGroupActionDefinition build() {
             return new RuleGroupActionDefinition(publishMetricAction);
         }

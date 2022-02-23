@@ -162,7 +162,6 @@ public final class EventHubOutputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EventHubOutputDataSourceResponse build() {
             return new EventHubOutputDataSourceResponse(eventHubName, partitionKey, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }

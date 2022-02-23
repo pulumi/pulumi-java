@@ -218,7 +218,6 @@ public final class URLMapPathMatcherRouteRule {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public URLMapPathMatcherRouteRule build() {
             return new URLMapPathMatcherRouteRule(headerAction, matchRules, priority, routeAction, service, urlRedirect);
         }

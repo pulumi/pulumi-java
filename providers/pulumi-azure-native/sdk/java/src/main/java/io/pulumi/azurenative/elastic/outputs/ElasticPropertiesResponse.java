@@ -77,7 +77,6 @@ public final class ElasticPropertiesResponse {
             this.elasticCloudUser = elasticCloudUser;
             return this;
         }
-
         public ElasticPropertiesResponse build() {
             return new ElasticPropertiesResponse(elasticCloudDeployment, elasticCloudUser);
         }

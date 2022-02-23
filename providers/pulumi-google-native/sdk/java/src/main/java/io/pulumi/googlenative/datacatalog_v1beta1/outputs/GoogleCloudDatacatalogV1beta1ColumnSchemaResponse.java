@@ -138,7 +138,6 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1ColumnSchemaResponse build() {
             return new GoogleCloudDatacatalogV1beta1ColumnSchemaResponse(column, description, mode, subcolumns, type);
         }

@@ -89,7 +89,6 @@ public final class NFSMountConfigurationResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public NFSMountConfigurationResponse build() {
             return new NFSMountConfigurationResponse(mountOptions, relativeMountPath, source);
         }

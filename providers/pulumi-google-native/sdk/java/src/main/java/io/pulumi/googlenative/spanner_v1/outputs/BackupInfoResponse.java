@@ -116,7 +116,6 @@ public final class BackupInfoResponse {
             this.versionTime = Objects.requireNonNull(versionTime);
             return this;
         }
-
         public BackupInfoResponse build() {
             return new BackupInfoResponse(backup, createTime, sourceDatabase, versionTime);
         }

@@ -117,7 +117,6 @@ public final class GerritSourceContextResponse {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public GerritSourceContextResponse build() {
             return new GerritSourceContextResponse(aliasContext, gerritProject, hostUri, revisionId);
         }

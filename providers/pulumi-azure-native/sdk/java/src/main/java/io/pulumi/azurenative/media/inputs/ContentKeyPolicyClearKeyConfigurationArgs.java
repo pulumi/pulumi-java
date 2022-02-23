@@ -23,7 +23,7 @@ public final class ContentKeyPolicyClearKeyConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -66,7 +66,6 @@ public final class ContentKeyPolicyClearKeyConfigurationArgs extends io.pulumi.r
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public ContentKeyPolicyClearKeyConfigurationArgs build() {
             return new ContentKeyPolicyClearKeyConfigurationArgs(odataType);
         }

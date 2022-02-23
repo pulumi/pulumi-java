@@ -23,7 +23,7 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="memory")
-    private final @Nullable Input<ResourceRangeArgs> memory;
+        private final @Nullable Input<ResourceRangeArgs> memory;
 
     public Input<ResourceRangeArgs> getMemory() {
         return this.memory == null ? Input.empty() : this.memory;
@@ -34,7 +34,7 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="vCPUs")
-    private final @Nullable Input<ResourceRangeArgs> vCPUs;
+        private final @Nullable Input<ResourceRangeArgs> vCPUs;
 
     public Input<ResourceRangeArgs> getVCPUs() {
         return this.vCPUs == null ? Input.empty() : this.vCPUs;
@@ -93,7 +93,6 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
             this.vCPUs = Input.ofNullable(vCPUs);
             return this;
         }
-
         public RecommendedMachineConfigurationArgs build() {
             return new RecommendedMachineConfigurationArgs(memory, vCPUs);
         }

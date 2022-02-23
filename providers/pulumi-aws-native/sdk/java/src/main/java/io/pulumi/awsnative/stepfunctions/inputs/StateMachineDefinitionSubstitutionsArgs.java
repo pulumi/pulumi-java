@@ -30,7 +30,6 @@ public final class StateMachineDefinitionSubstitutionsArgs extends io.pulumi.res
         public Builder(StateMachineDefinitionSubstitutionsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StateMachineDefinitionSubstitutionsArgs build() {
             return new StateMachineDefinitionSubstitutionsArgs();
         }

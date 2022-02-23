@@ -245,7 +245,6 @@ public final class GetGraphQueryResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGraphQueryResult build() {
             return new GetGraphQueryResult(description, etag, id, location, name, query, resultKind, tags, timeModified, type);
         }

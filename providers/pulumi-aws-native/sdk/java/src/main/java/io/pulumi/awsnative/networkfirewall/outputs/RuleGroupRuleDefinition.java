@@ -60,7 +60,6 @@ public final class RuleGroupRuleDefinition {
             this.matchAttributes = Objects.requireNonNull(matchAttributes);
             return this;
         }
-
         public RuleGroupRuleDefinition build() {
             return new RuleGroupRuleDefinition(actions, matchAttributes);
         }

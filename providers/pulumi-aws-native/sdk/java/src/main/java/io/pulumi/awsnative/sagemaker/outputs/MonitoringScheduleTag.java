@@ -74,7 +74,6 @@ public final class MonitoringScheduleTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public MonitoringScheduleTag build() {
             return new MonitoringScheduleTag(key, value);
         }

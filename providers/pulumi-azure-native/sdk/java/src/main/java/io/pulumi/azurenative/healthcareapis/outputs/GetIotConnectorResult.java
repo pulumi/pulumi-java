@@ -270,7 +270,6 @@ public final class GetIotConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIotConnectorResult build() {
             return new GetIotConnectorResult(deviceMapping, etag, id, identity, ingestionEndpointConfiguration, location, name, provisioningState, systemData, tags, type);
         }

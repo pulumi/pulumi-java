@@ -141,7 +141,6 @@ public final class ContinuousActionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ContinuousActionResponse build() {
             return new ContinuousActionResponse(duration, name, parameters, selectorId, type);
         }

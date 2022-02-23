@@ -75,7 +75,6 @@ public final class GrafeasV1beta1BuildDetailsResponse {
             this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
             return this;
         }
-
         public GrafeasV1beta1BuildDetailsResponse build() {
             return new GrafeasV1beta1BuildDetailsResponse(provenance, provenanceBytes);
         }

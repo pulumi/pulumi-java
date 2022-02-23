@@ -60,7 +60,6 @@ public final class EC2FleetTotalLocalStorageGBRequest {
             this.min = min;
             return this;
         }
-
         public EC2FleetTotalLocalStorageGBRequest build() {
             return new EC2FleetTotalLocalStorageGBRequest(max, min);
         }

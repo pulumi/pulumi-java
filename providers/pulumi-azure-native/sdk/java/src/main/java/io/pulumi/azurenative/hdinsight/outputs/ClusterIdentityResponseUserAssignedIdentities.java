@@ -97,7 +97,6 @@ public final class ClusterIdentityResponseUserAssignedIdentities {
             this.tenantId = tenantId;
             return this;
         }
-
         public ClusterIdentityResponseUserAssignedIdentities build() {
             return new ClusterIdentityResponseUserAssignedIdentities(clientId, principalId, tenantId);
         }

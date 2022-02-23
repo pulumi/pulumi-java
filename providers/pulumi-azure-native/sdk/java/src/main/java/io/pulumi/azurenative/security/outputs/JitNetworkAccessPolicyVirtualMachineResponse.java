@@ -99,7 +99,6 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-
         public JitNetworkAccessPolicyVirtualMachineResponse build() {
             return new JitNetworkAccessPolicyVirtualMachineResponse(id, ports, publicIpAddress);
         }

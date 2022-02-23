@@ -115,7 +115,6 @@ public final class CIFSMountConfigurationResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public CIFSMountConfigurationResponse build() {
             return new CIFSMountConfigurationResponse(mountOptions, password, relativeMountPath, source, username);
         }

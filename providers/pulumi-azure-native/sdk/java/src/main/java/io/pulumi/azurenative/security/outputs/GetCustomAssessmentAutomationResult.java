@@ -266,7 +266,6 @@ public final class GetCustomAssessmentAutomationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCustomAssessmentAutomationResult build() {
             return new GetCustomAssessmentAutomationResult(assessmentKey, compressedQuery, description, displayName, id, name, remediationDescription, severity, supportedCloud, systemData, type);
         }

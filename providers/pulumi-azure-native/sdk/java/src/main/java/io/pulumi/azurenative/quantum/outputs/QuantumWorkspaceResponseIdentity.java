@@ -97,7 +97,6 @@ public final class QuantumWorkspaceResponseIdentity {
             this.type = type;
             return this;
         }
-
         public QuantumWorkspaceResponseIdentity build() {
             return new QuantumWorkspaceResponseIdentity(principalId, tenantId, type);
         }

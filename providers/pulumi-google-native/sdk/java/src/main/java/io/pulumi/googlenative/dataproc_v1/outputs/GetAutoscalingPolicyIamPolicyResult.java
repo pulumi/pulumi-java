@@ -98,7 +98,6 @@ public final class GetAutoscalingPolicyIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetAutoscalingPolicyIamPolicyResult build() {
             return new GetAutoscalingPolicyIamPolicyResult(bindings, etag, version);
         }

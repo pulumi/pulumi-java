@@ -74,7 +74,6 @@ public final class SecurityAssessmentPartnerDataResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public SecurityAssessmentPartnerDataResponse build() {
             return new SecurityAssessmentPartnerDataResponse(partnerName, secret);
         }

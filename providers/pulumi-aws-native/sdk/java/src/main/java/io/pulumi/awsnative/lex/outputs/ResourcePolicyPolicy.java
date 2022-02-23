@@ -30,7 +30,6 @@ public final class ResourcePolicyPolicy {
         public Builder(ResourcePolicyPolicy defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ResourcePolicyPolicy build() {
             return new ResourcePolicyPolicy();
         }

@@ -54,7 +54,6 @@ public final class APIServiceStatus {
             this.conditions = conditions;
             return this;
         }
-
         public APIServiceStatus build() {
             return new APIServiceStatus(conditions);
         }

@@ -76,7 +76,6 @@ public final class VideoPublishingOptionsResponse {
             this.disableRtspPublishing = disableRtspPublishing;
             return this;
         }
-
         public VideoPublishingOptionsResponse build() {
             return new VideoPublishingOptionsResponse(disableArchive, disableRtspPublishing);
         }

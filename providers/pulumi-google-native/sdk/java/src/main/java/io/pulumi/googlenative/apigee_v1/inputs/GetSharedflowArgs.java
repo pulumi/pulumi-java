@@ -13,14 +13,14 @@ public final class GetSharedflowArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSharedflowArgs Empty = new GetSharedflowArgs();
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="sharedflowId", required=true)
-    private final String sharedflowId;
+      private final String sharedflowId;
 
     public String getSharedflowId() {
         return this.sharedflowId;
@@ -69,7 +69,6 @@ public final class GetSharedflowArgs extends io.pulumi.resources.InvokeArgs {
             this.sharedflowId = Objects.requireNonNull(sharedflowId);
             return this;
         }
-
         public GetSharedflowArgs build() {
             return new GetSharedflowArgs(organizationId, sharedflowId);
         }

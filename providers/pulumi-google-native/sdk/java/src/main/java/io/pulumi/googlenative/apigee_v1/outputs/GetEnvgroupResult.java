@@ -138,7 +138,6 @@ public final class GetEnvgroupResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetEnvgroupResult build() {
             return new GetEnvgroupResult(createdAt, hostnames, lastModifiedAt, name, state);
         }

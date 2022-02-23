@@ -22,7 +22,7 @@ public final class AlertStrategyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="autoClose", required=true)
-    private final String autoClose;
+      private final String autoClose;
 
     public String getAutoClose() {
         return this.autoClose;
@@ -33,7 +33,7 @@ public final class AlertStrategyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="notificationRateLimit", required=true)
-    private final NotificationRateLimitResponse notificationRateLimit;
+      private final NotificationRateLimitResponse notificationRateLimit;
 
     public NotificationRateLimitResponse getNotificationRateLimit() {
         return this.notificationRateLimit;
@@ -82,7 +82,6 @@ public final class AlertStrategyResponse extends io.pulumi.resources.InvokeArgs 
             this.notificationRateLimit = Objects.requireNonNull(notificationRateLimit);
             return this;
         }
-
         public AlertStrategyResponse build() {
             return new AlertStrategyResponse(autoClose, notificationRateLimit);
         }

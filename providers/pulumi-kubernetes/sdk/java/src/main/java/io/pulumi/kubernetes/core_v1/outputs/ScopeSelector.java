@@ -54,7 +54,6 @@ public final class ScopeSelector {
             this.matchExpressions = matchExpressions;
             return this;
         }
-
         public ScopeSelector build() {
             return new ScopeSelector(matchExpressions);
         }

@@ -99,7 +99,6 @@ public final class GetStreamKeyResult {
             this.value = value;
             return this;
         }
-
         public GetStreamKeyResult build() {
             return new GetStreamKeyResult(arn, tags, value);
         }

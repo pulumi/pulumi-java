@@ -26,7 +26,7 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleetAutoscalerSpec", required=true)
-    private final Input<String> fleetAutoscalerSpec;
+      private final Input<String> fleetAutoscalerSpec;
 
     public Input<String> getFleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
@@ -37,7 +37,7 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -48,7 +48,7 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedules")
-    private final @Nullable Input<List<ScheduleArgs>> schedules;
+      private final @Nullable Input<List<ScheduleArgs>> schedules;
 
     public Input<List<ScheduleArgs>> getSchedules() {
         return this.schedules == null ? Input.empty() : this.schedules;
@@ -59,7 +59,7 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selectors")
-    private final @Nullable Input<List<LabelSelectorArgs>> selectors;
+      private final @Nullable Input<List<LabelSelectorArgs>> selectors;
 
     public Input<List<LabelSelectorArgs>> getSelectors() {
         return this.selectors == null ? Input.empty() : this.selectors;
@@ -148,7 +148,6 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.selectors = Input.ofNullable(selectors);
             return this;
         }
-
         public ScalingConfigArgs build() {
             return new ScalingConfigArgs(fleetAutoscalerSpec, name, schedules, selectors);
         }

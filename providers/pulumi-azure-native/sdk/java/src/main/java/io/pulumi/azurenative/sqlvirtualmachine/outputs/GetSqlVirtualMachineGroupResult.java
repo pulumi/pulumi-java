@@ -288,7 +288,6 @@ public final class GetSqlVirtualMachineGroupResult {
             this.wsfcDomainProfile = wsfcDomainProfile;
             return this;
         }
-
         public GetSqlVirtualMachineGroupResult build() {
             return new GetSqlVirtualMachineGroupResult(clusterConfiguration, clusterManagerType, id, location, name, provisioningState, scaleType, sqlImageOffer, sqlImageSku, tags, type, wsfcDomainProfile);
         }

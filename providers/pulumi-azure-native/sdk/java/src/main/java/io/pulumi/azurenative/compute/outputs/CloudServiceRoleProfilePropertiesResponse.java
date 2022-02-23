@@ -77,7 +77,6 @@ public final class CloudServiceRoleProfilePropertiesResponse {
             this.sku = sku;
             return this;
         }
-
         public CloudServiceRoleProfilePropertiesResponse build() {
             return new CloudServiceRoleProfilePropertiesResponse(name, sku);
         }

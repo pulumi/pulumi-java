@@ -159,7 +159,6 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse {
             this.recommendedAction = Objects.requireNonNull(recommendedAction);
             return this;
         }
-
         public InMageRcmLastAgentUpgradeErrorDetailsResponse build() {
             return new InMageRcmLastAgentUpgradeErrorDetailsResponse(errorCode, errorMessage, errorMessageParameters, errorTags, possibleCauses, recommendedAction);
         }

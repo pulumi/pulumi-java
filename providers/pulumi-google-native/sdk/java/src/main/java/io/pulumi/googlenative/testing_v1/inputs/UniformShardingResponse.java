@@ -21,7 +21,7 @@ public final class UniformShardingResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="numShards", required=true)
-    private final Integer numShards;
+      private final Integer numShards;
 
     public Integer getNumShards() {
         return this.numShards;
@@ -59,7 +59,6 @@ public final class UniformShardingResponse extends io.pulumi.resources.InvokeArg
             this.numShards = Objects.requireNonNull(numShards);
             return this;
         }
-
         public UniformShardingResponse build() {
             return new UniformShardingResponse(numShards);
         }

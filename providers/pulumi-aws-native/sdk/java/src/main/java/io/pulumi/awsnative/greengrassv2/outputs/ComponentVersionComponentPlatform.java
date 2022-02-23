@@ -61,7 +61,6 @@ public final class ComponentVersionComponentPlatform {
             this.name = name;
             return this;
         }
-
         public ComponentVersionComponentPlatform build() {
             return new ComponentVersionComponentPlatform(attributes, name);
         }

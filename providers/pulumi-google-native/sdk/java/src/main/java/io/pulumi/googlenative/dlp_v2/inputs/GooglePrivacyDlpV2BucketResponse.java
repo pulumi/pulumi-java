@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="max", required=true)
-    private final GooglePrivacyDlpV2ValueResponse max;
+      private final GooglePrivacyDlpV2ValueResponse max;
 
     public GooglePrivacyDlpV2ValueResponse getMax() {
         return this.max;
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="min", required=true)
-    private final GooglePrivacyDlpV2ValueResponse min;
+      private final GooglePrivacyDlpV2ValueResponse min;
 
     public GooglePrivacyDlpV2ValueResponse getMin() {
         return this.min;
@@ -43,7 +43,7 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="replacementValue", required=true)
-    private final GooglePrivacyDlpV2ValueResponse replacementValue;
+      private final GooglePrivacyDlpV2ValueResponse replacementValue;
 
     public GooglePrivacyDlpV2ValueResponse getReplacementValue() {
         return this.replacementValue;
@@ -102,7 +102,6 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
             this.replacementValue = Objects.requireNonNull(replacementValue);
             return this;
         }
-
         public GooglePrivacyDlpV2BucketResponse build() {
             return new GooglePrivacyDlpV2BucketResponse(max, min, replacementValue);
         }

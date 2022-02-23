@@ -24,7 +24,7 @@ public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="finalizers")
-    private final @Nullable Input<List<String>> finalizers;
+        private final @Nullable Input<List<String>> finalizers;
 
     public Input<List<String>> getFinalizers() {
         return this.finalizers == null ? Input.empty() : this.finalizers;
@@ -67,7 +67,6 @@ public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.finalizers = Input.ofNullable(finalizers);
             return this;
         }
-
         public NamespaceSpecArgs build() {
             return new NamespaceSpecArgs(finalizers);
         }

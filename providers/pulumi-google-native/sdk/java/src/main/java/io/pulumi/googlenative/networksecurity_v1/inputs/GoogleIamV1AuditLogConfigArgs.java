@@ -25,7 +25,7 @@ public final class GoogleIamV1AuditLogConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="exemptedMembers")
-    private final @Nullable Input<List<String>> exemptedMembers;
+      private final @Nullable Input<List<String>> exemptedMembers;
 
     public Input<List<String>> getExemptedMembers() {
         return this.exemptedMembers == null ? Input.empty() : this.exemptedMembers;
@@ -36,7 +36,7 @@ public final class GoogleIamV1AuditLogConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="logType")
-    private final @Nullable Input<GoogleIamV1AuditLogConfigLogType> logType;
+      private final @Nullable Input<GoogleIamV1AuditLogConfigLogType> logType;
 
     public Input<GoogleIamV1AuditLogConfigLogType> getLogType() {
         return this.logType == null ? Input.empty() : this.logType;
@@ -95,7 +95,6 @@ public final class GoogleIamV1AuditLogConfigArgs extends io.pulumi.resources.Res
             this.logType = Input.ofNullable(logType);
             return this;
         }
-
         public GoogleIamV1AuditLogConfigArgs build() {
             return new GoogleIamV1AuditLogConfigArgs(exemptedMembers, logType);
         }

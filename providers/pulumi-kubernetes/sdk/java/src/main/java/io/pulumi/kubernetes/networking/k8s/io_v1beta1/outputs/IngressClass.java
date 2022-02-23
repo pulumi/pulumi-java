@@ -120,7 +120,6 @@ public final class IngressClass {
             this.spec = spec;
             return this;
         }
-
         public IngressClass build() {
             return new IngressClass(apiVersion, kind, metadata, spec);
         }

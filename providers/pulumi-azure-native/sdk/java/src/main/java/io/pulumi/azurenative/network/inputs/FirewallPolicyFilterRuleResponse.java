@@ -30,7 +30,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="action")
-    private final @Nullable FirewallPolicyFilterRuleActionResponse action;
+        private final @Nullable FirewallPolicyFilterRuleActionResponse action;
 
     public Optional<FirewallPolicyFilterRuleActionResponse> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -41,7 +41,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -52,7 +52,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Integer priority;
+        private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -63,7 +63,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ruleConditions")
-    private final @Nullable List<Object> ruleConditions;
+        private final @Nullable List<Object> ruleConditions;
 
     public List<Object> getRuleConditions() {
         return this.ruleConditions == null ? List.of() : this.ruleConditions;
@@ -75,7 +75,7 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ruleType", required=true)
-    private final String ruleType;
+        private final String ruleType;
 
     public String getRuleType() {
         return this.ruleType;
@@ -154,7 +154,6 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public FirewallPolicyFilterRuleResponse build() {
             return new FirewallPolicyFilterRuleResponse(action, name, priority, ruleConditions, ruleType);
         }

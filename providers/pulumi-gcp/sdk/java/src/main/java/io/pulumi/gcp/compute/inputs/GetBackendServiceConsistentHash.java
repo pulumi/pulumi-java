@@ -16,21 +16,21 @@ public final class GetBackendServiceConsistentHash extends io.pulumi.resources.I
     public static final GetBackendServiceConsistentHash Empty = new GetBackendServiceConsistentHash();
 
     @InputImport(name="httpCookies", required=true)
-    private final List<GetBackendServiceConsistentHashHttpCooky> httpCookies;
+        private final List<GetBackendServiceConsistentHashHttpCooky> httpCookies;
 
     public List<GetBackendServiceConsistentHashHttpCooky> getHttpCookies() {
         return this.httpCookies;
     }
 
     @InputImport(name="httpHeaderName", required=true)
-    private final String httpHeaderName;
+        private final String httpHeaderName;
 
     public String getHttpHeaderName() {
         return this.httpHeaderName;
     }
 
     @InputImport(name="minimumRingSize", required=true)
-    private final Integer minimumRingSize;
+        private final Integer minimumRingSize;
 
     public Integer getMinimumRingSize() {
         return this.minimumRingSize;
@@ -89,7 +89,6 @@ public final class GetBackendServiceConsistentHash extends io.pulumi.resources.I
             this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
             return this;
         }
-
         public GetBackendServiceConsistentHash build() {
             return new GetBackendServiceConsistentHash(httpCookies, httpHeaderName, minimumRingSize);
         }

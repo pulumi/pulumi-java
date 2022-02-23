@@ -181,7 +181,6 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStaticSiteUserProvidedFunctionAppForStaticSiteResult build() {
             return new GetStaticSiteUserProvidedFunctionAppForStaticSiteResult(createdOn, functionAppRegion, functionAppResourceId, id, kind, name, type);
         }

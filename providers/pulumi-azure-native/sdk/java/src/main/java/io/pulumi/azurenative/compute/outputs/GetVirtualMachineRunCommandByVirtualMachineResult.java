@@ -377,7 +377,6 @@ public final class GetVirtualMachineRunCommandByVirtualMachineResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualMachineRunCommandByVirtualMachineResult build() {
             return new GetVirtualMachineRunCommandByVirtualMachineResult(asyncExecution, errorBlobUri, id, instanceView, location, name, outputBlobUri, parameters, protectedParameters, provisioningState, runAsPassword, runAsUser, source, tags, timeoutInSeconds, type);
         }

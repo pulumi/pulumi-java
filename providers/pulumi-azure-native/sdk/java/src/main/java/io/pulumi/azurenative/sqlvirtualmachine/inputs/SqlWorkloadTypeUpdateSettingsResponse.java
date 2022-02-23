@@ -23,7 +23,7 @@ public final class SqlWorkloadTypeUpdateSettingsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="sqlWorkloadType")
-    private final @Nullable String sqlWorkloadType;
+        private final @Nullable String sqlWorkloadType;
 
     public Optional<String> getSqlWorkloadType() {
         return this.sqlWorkloadType == null ? Optional.empty() : Optional.ofNullable(this.sqlWorkloadType);
@@ -61,7 +61,6 @@ public final class SqlWorkloadTypeUpdateSettingsResponse extends io.pulumi.resou
             this.sqlWorkloadType = sqlWorkloadType;
             return this;
         }
-
         public SqlWorkloadTypeUpdateSettingsResponse build() {
             return new SqlWorkloadTypeUpdateSettingsResponse(sqlWorkloadType);
         }

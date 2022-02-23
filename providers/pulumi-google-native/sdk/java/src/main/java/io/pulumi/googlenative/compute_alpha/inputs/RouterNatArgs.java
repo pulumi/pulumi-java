@@ -32,7 +32,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="drainNatIps")
-    private final @Nullable Input<List<String>> drainNatIps;
+      private final @Nullable Input<List<String>> drainNatIps;
 
     public Input<List<String>> getDrainNatIps() {
         return this.drainNatIps == null ? Input.empty() : this.drainNatIps;
@@ -43,14 +43,14 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDynamicPortAllocation")
-    private final @Nullable Input<Boolean> enableDynamicPortAllocation;
+      private final @Nullable Input<Boolean> enableDynamicPortAllocation;
 
     public Input<Boolean> getEnableDynamicPortAllocation() {
         return this.enableDynamicPortAllocation == null ? Input.empty() : this.enableDynamicPortAllocation;
     }
 
     @InputImport(name="enableEndpointIndependentMapping")
-    private final @Nullable Input<Boolean> enableEndpointIndependentMapping;
+      private final @Nullable Input<Boolean> enableEndpointIndependentMapping;
 
     public Input<Boolean> getEnableEndpointIndependentMapping() {
         return this.enableEndpointIndependentMapping == null ? Input.empty() : this.enableEndpointIndependentMapping;
@@ -61,7 +61,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="icmpIdleTimeoutSec")
-    private final @Nullable Input<Integer> icmpIdleTimeoutSec;
+      private final @Nullable Input<Integer> icmpIdleTimeoutSec;
 
     public Input<Integer> getIcmpIdleTimeoutSec() {
         return this.icmpIdleTimeoutSec == null ? Input.empty() : this.icmpIdleTimeoutSec;
@@ -72,7 +72,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-    private final @Nullable Input<RouterNatLogConfigArgs> logConfig;
+      private final @Nullable Input<RouterNatLogConfigArgs> logConfig;
 
     public Input<RouterNatLogConfigArgs> getLogConfig() {
         return this.logConfig == null ? Input.empty() : this.logConfig;
@@ -83,7 +83,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxPortsPerVm")
-    private final @Nullable Input<Integer> maxPortsPerVm;
+      private final @Nullable Input<Integer> maxPortsPerVm;
 
     public Input<Integer> getMaxPortsPerVm() {
         return this.maxPortsPerVm == null ? Input.empty() : this.maxPortsPerVm;
@@ -94,7 +94,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minPortsPerVm")
-    private final @Nullable Input<Integer> minPortsPerVm;
+      private final @Nullable Input<Integer> minPortsPerVm;
 
     public Input<Integer> getMinPortsPerVm() {
         return this.minPortsPerVm == null ? Input.empty() : this.minPortsPerVm;
@@ -105,7 +105,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -116,7 +116,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="natIpAllocateOption")
-    private final @Nullable Input<RouterNatNatIpAllocateOption> natIpAllocateOption;
+      private final @Nullable Input<RouterNatNatIpAllocateOption> natIpAllocateOption;
 
     public Input<RouterNatNatIpAllocateOption> getNatIpAllocateOption() {
         return this.natIpAllocateOption == null ? Input.empty() : this.natIpAllocateOption;
@@ -127,7 +127,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="natIps")
-    private final @Nullable Input<List<String>> natIps;
+      private final @Nullable Input<List<String>> natIps;
 
     public Input<List<String>> getNatIps() {
         return this.natIps == null ? Input.empty() : this.natIps;
@@ -138,7 +138,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<RouterNatRuleArgs>> rules;
+      private final @Nullable Input<List<RouterNatRuleArgs>> rules;
 
     public Input<List<RouterNatRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -149,7 +149,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSubnetworkIpRangesToNat")
-    private final @Nullable Input<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat;
+      private final @Nullable Input<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat;
 
     public Input<RouterNatSourceSubnetworkIpRangesToNat> getSourceSubnetworkIpRangesToNat() {
         return this.sourceSubnetworkIpRangesToNat == null ? Input.empty() : this.sourceSubnetworkIpRangesToNat;
@@ -160,7 +160,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetworks")
-    private final @Nullable Input<List<RouterNatSubnetworkToNatArgs>> subnetworks;
+      private final @Nullable Input<List<RouterNatSubnetworkToNatArgs>> subnetworks;
 
     public Input<List<RouterNatSubnetworkToNatArgs>> getSubnetworks() {
         return this.subnetworks == null ? Input.empty() : this.subnetworks;
@@ -171,7 +171,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tcpEstablishedIdleTimeoutSec")
-    private final @Nullable Input<Integer> tcpEstablishedIdleTimeoutSec;
+      private final @Nullable Input<Integer> tcpEstablishedIdleTimeoutSec;
 
     public Input<Integer> getTcpEstablishedIdleTimeoutSec() {
         return this.tcpEstablishedIdleTimeoutSec == null ? Input.empty() : this.tcpEstablishedIdleTimeoutSec;
@@ -182,7 +182,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tcpTimeWaitTimeoutSec")
-    private final @Nullable Input<Integer> tcpTimeWaitTimeoutSec;
+      private final @Nullable Input<Integer> tcpTimeWaitTimeoutSec;
 
     public Input<Integer> getTcpTimeWaitTimeoutSec() {
         return this.tcpTimeWaitTimeoutSec == null ? Input.empty() : this.tcpTimeWaitTimeoutSec;
@@ -193,7 +193,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tcpTransitoryIdleTimeoutSec")
-    private final @Nullable Input<Integer> tcpTransitoryIdleTimeoutSec;
+      private final @Nullable Input<Integer> tcpTransitoryIdleTimeoutSec;
 
     public Input<Integer> getTcpTransitoryIdleTimeoutSec() {
         return this.tcpTransitoryIdleTimeoutSec == null ? Input.empty() : this.tcpTransitoryIdleTimeoutSec;
@@ -204,7 +204,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<RouterNatType> type;
+      private final @Nullable Input<RouterNatType> type;
 
     public Input<RouterNatType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -215,7 +215,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="udpIdleTimeoutSec")
-    private final @Nullable Input<Integer> udpIdleTimeoutSec;
+      private final @Nullable Input<Integer> udpIdleTimeoutSec;
 
     public Input<Integer> getUdpIdleTimeoutSec() {
         return this.udpIdleTimeoutSec == null ? Input.empty() : this.udpIdleTimeoutSec;
@@ -514,7 +514,6 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
             this.udpIdleTimeoutSec = Input.ofNullable(udpIdleTimeoutSec);
             return this;
         }
-
         public RouterNatArgs build() {
             return new RouterNatArgs(drainNatIps, enableDynamicPortAllocation, enableEndpointIndependentMapping, icmpIdleTimeoutSec, logConfig, maxPortsPerVm, minPortsPerVm, name, natIpAllocateOption, natIps, rules, sourceSubnetworkIpRangesToNat, subnetworks, tcpEstablishedIdleTimeoutSec, tcpTimeWaitTimeoutSec, tcpTransitoryIdleTimeoutSec, type, udpIdleTimeoutSec);
         }

@@ -100,7 +100,6 @@ public final class GetRecordingConfigurationResult {
             this.tags = tags;
             return this;
         }
-
         public GetRecordingConfigurationResult build() {
             return new GetRecordingConfigurationResult(arn, state, tags);
         }

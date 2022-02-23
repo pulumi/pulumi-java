@@ -860,7 +860,6 @@ public final class ApplicationGatewayResponse {
             this.zones = zones;
             return this;
         }
-
         public ApplicationGatewayResponse build() {
             return new ApplicationGatewayResponse(authenticationCertificates, autoscaleConfiguration, backendAddressPools, backendHttpSettingsCollection, customErrorConfigurations, enableFips, enableHttp2, etag, firewallPolicy, forceFirewallPolicyAssociation, frontendIPConfigurations, frontendPorts, gatewayIPConfigurations, httpListeners, id, identity, location, name, operationalState, privateEndpointConnections, privateLinkConfigurations, probes, provisioningState, redirectConfigurations, requestRoutingRules, resourceGuid, rewriteRuleSets, sku, sslCertificates, sslPolicy, sslProfiles, tags, trustedClientCertificates, trustedRootCertificates, type, urlPathMaps, webApplicationFirewallConfiguration, zones);
         }

@@ -185,7 +185,6 @@ public final class GetBackendServiceBackend {
             this.maxUtilization = Objects.requireNonNull(maxUtilization);
             return this;
         }
-
         public GetBackendServiceBackend build() {
             return new GetBackendServiceBackend(balancingMode, capacityScaler, description, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);
         }

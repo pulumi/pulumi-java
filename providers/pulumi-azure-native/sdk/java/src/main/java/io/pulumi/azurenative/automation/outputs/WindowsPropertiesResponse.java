@@ -119,7 +119,6 @@ public final class WindowsPropertiesResponse {
             this.rebootSetting = rebootSetting;
             return this;
         }
-
         public WindowsPropertiesResponse build() {
             return new WindowsPropertiesResponse(excludedKbNumbers, includedKbNumbers, includedUpdateClassifications, rebootSetting);
         }

@@ -275,7 +275,6 @@ public final class ShopifyLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public ShopifyLinkedServiceResponse build() {
             return new ShopifyLinkedServiceResponse(accessToken, annotations, connectVia, description, encryptedCredential, host, parameters, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

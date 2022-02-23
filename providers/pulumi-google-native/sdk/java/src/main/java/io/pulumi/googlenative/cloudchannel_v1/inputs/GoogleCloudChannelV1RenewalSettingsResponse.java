@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
      * 
      */
     @InputImport(name="enableRenewal", required=true)
-    private final Boolean enableRenewal;
+      private final Boolean enableRenewal;
 
     public Boolean getEnableRenewal() {
         return this.enableRenewal;
@@ -34,7 +34,7 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
      * 
      */
     @InputImport(name="paymentCycle", required=true)
-    private final GoogleCloudChannelV1PeriodResponse paymentCycle;
+      private final GoogleCloudChannelV1PeriodResponse paymentCycle;
 
     public GoogleCloudChannelV1PeriodResponse getPaymentCycle() {
         return this.paymentCycle;
@@ -45,7 +45,7 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
      * 
      */
     @InputImport(name="paymentPlan", required=true)
-    private final String paymentPlan;
+      private final String paymentPlan;
 
     public String getPaymentPlan() {
         return this.paymentPlan;
@@ -56,7 +56,7 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
      * 
      */
     @InputImport(name="resizeUnitCount", required=true)
-    private final Boolean resizeUnitCount;
+      private final Boolean resizeUnitCount;
 
     public Boolean getResizeUnitCount() {
         return this.resizeUnitCount;
@@ -125,7 +125,6 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
             this.resizeUnitCount = Objects.requireNonNull(resizeUnitCount);
             return this;
         }
-
         public GoogleCloudChannelV1RenewalSettingsResponse build() {
             return new GoogleCloudChannelV1RenewalSettingsResponse(enableRenewal, paymentCycle, paymentPlan, resizeUnitCount);
         }

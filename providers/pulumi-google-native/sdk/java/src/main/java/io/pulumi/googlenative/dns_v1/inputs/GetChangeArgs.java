@@ -15,28 +15,28 @@ public final class GetChangeArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetChangeArgs Empty = new GetChangeArgs();
 
     @InputImport(name="changeId", required=true)
-    private final String changeId;
+      private final String changeId;
 
     public String getChangeId() {
         return this.changeId;
     }
 
     @InputImport(name="clientOperationId")
-    private final @Nullable String clientOperationId;
+      private final @Nullable String clientOperationId;
 
     public Optional<String> getClientOperationId() {
         return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
     }
 
     @InputImport(name="managedZone", required=true)
-    private final String managedZone;
+      private final String managedZone;
 
     public String getManagedZone() {
         return this.managedZone;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetChangeArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetChangeArgs build() {
             return new GetChangeArgs(changeId, clientOperationId, managedZone, project);
         }

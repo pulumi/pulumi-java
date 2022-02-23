@@ -387,7 +387,6 @@ public final class DataBoxJobDetailsResponse {
             this.shippingAddress = shippingAddress;
             return this;
         }
-
         public DataBoxJobDetailsResponse build() {
             return new DataBoxJobDetailsResponse(chainOfCustodySasKey, contactDetails, copyLogDetails, copyProgress, dataExportDetails, dataImportDetails, deliveryPackage, devicePassword, expectedDataSizeInTeraBytes, jobDetailsType, jobStages, keyEncryptionKey, preferences, returnPackage, reverseShipmentLabelSasKey, shippingAddress);
         }

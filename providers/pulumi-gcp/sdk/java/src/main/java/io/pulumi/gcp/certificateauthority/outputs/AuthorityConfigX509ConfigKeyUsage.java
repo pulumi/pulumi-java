@@ -105,7 +105,6 @@ public final class AuthorityConfigX509ConfigKeyUsage {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-
         public AuthorityConfigX509ConfigKeyUsage build() {
             return new AuthorityConfigX509ConfigKeyUsage(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

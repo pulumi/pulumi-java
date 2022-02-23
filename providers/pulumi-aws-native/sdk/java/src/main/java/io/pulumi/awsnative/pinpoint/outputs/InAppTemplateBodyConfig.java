@@ -74,7 +74,6 @@ public final class InAppTemplateBodyConfig {
             this.textColor = textColor;
             return this;
         }
-
         public InAppTemplateBodyConfig build() {
             return new InAppTemplateBodyConfig(alignment, body, textColor);
         }

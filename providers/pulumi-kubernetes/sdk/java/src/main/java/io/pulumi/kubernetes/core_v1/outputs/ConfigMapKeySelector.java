@@ -98,7 +98,6 @@ public final class ConfigMapKeySelector {
             this.optional = optional;
             return this;
         }
-
         public ConfigMapKeySelector build() {
             return new ConfigMapKeySelector(key, name, optional);
         }

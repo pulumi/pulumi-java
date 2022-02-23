@@ -77,7 +77,6 @@ public final class MongoIndexOptionsResponse {
             this.unique = unique;
             return this;
         }
-
         public MongoIndexOptionsResponse build() {
             return new MongoIndexOptionsResponse(expireAfterSeconds, unique);
         }

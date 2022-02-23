@@ -54,7 +54,6 @@ public final class WindowsUserConfigurationResponse {
             this.loginMode = loginMode;
             return this;
         }
-
         public WindowsUserConfigurationResponse build() {
             return new WindowsUserConfigurationResponse(loginMode);
         }

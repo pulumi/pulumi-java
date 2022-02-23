@@ -76,7 +76,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             this.targetGkeCluster = targetGkeCluster;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget(clusterNamespace, targetGkeCluster);
         }

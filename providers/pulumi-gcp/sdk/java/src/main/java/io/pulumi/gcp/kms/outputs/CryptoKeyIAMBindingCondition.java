@@ -97,7 +97,6 @@ public final class CryptoKeyIAMBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public CryptoKeyIAMBindingCondition build() {
             return new CryptoKeyIAMBindingCondition(description, expression, title);
         }

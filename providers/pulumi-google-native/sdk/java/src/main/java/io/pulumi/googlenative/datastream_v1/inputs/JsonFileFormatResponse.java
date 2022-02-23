@@ -21,7 +21,7 @@ public final class JsonFileFormatResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="compression", required=true)
-    private final String compression;
+      private final String compression;
 
     public String getCompression() {
         return this.compression;
@@ -32,7 +32,7 @@ public final class JsonFileFormatResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="schemaFileFormat", required=true)
-    private final String schemaFileFormat;
+      private final String schemaFileFormat;
 
     public String getSchemaFileFormat() {
         return this.schemaFileFormat;
@@ -81,7 +81,6 @@ public final class JsonFileFormatResponse extends io.pulumi.resources.InvokeArgs
             this.schemaFileFormat = Objects.requireNonNull(schemaFileFormat);
             return this;
         }
-
         public JsonFileFormatResponse build() {
             return new JsonFileFormatResponse(compression, schemaFileFormat);
         }

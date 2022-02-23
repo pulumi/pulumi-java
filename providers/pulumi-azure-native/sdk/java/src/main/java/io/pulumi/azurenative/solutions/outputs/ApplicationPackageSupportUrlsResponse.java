@@ -76,7 +76,6 @@ public final class ApplicationPackageSupportUrlsResponse {
             this.publicAzure = publicAzure;
             return this;
         }
-
         public ApplicationPackageSupportUrlsResponse build() {
             return new ApplicationPackageSupportUrlsResponse(governmentCloud, publicAzure);
         }

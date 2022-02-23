@@ -23,7 +23,7 @@ public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="filePath")
-    private final @Nullable Input<String> filePath;
+        private final @Nullable Input<String> filePath;
 
     public Input<String> getFilePath() {
         return this.filePath == null ? Input.empty() : this.filePath;
@@ -34,7 +34,7 @@ public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storageId")
-    private final @Nullable Input<String> storageId;
+        private final @Nullable Input<String> storageId;
 
     public Input<String> getStorageId() {
         return this.storageId == null ? Input.empty() : this.storageId;
@@ -45,7 +45,7 @@ public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storagePath")
-    private final @Nullable Input<String> storagePath;
+        private final @Nullable Input<String> storagePath;
 
     public Input<String> getStoragePath() {
         return this.storagePath == null ? Input.empty() : this.storagePath;
@@ -119,7 +119,6 @@ public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.
             this.storagePath = Input.ofNullable(storagePath);
             return this;
         }
-
         public PacketCaptureStorageLocationArgs build() {
             return new PacketCaptureStorageLocationArgs(filePath, storageId, storagePath);
         }

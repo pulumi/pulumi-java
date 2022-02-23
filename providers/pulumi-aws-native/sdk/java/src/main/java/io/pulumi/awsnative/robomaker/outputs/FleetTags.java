@@ -30,7 +30,6 @@ public final class FleetTags {
         public Builder(FleetTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public FleetTags build() {
             return new FleetTags();
         }

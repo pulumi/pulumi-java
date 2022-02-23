@@ -21,7 +21,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -59,7 +59,6 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OutputResponse build() {
             return new OutputResponse(uri);
         }

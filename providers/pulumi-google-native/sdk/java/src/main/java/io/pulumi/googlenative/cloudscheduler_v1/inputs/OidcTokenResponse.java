@@ -21,7 +21,7 @@ public final class OidcTokenResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="audience", required=true)
-    private final String audience;
+      private final String audience;
 
     public String getAudience() {
         return this.audience;
@@ -32,7 +32,7 @@ public final class OidcTokenResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail", required=true)
-    private final String serviceAccountEmail;
+      private final String serviceAccountEmail;
 
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
@@ -81,7 +81,6 @@ public final class OidcTokenResponse extends io.pulumi.resources.InvokeArgs {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public OidcTokenResponse build() {
             return new OidcTokenResponse(audience, serviceAccountEmail);
         }

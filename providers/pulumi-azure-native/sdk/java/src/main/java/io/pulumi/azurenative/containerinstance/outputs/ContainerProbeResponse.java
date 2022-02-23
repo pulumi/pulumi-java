@@ -183,7 +183,6 @@ public final class ContainerProbeResponse {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public ContainerProbeResponse build() {
             return new ContainerProbeResponse(exec, failureThreshold, httpGet, initialDelaySeconds, periodSeconds, successThreshold, timeoutSeconds);
         }

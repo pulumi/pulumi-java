@@ -67,7 +67,6 @@ public final class SubjectResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public SubjectResponse build() {
             return new SubjectResponse(digest, name);
         }

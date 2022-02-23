@@ -14,14 +14,14 @@ public final class GetClusterNetworkPolicy extends io.pulumi.resources.InvokeArg
     public static final GetClusterNetworkPolicy Empty = new GetClusterNetworkPolicy();
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
     @InputImport(name="provider", required=true)
-    private final String provider;
+        private final String provider;
 
     public String getProvider() {
         return this.provider;
@@ -70,7 +70,6 @@ public final class GetClusterNetworkPolicy extends io.pulumi.resources.InvokeArg
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public GetClusterNetworkPolicy build() {
             return new GetClusterNetworkPolicy(enabled, provider);
         }

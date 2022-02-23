@@ -85,7 +85,6 @@ public final class DeploymentStrategy {
             this.type = type;
             return this;
         }
-
         public DeploymentStrategy build() {
             return new DeploymentStrategy(rollingUpdate, type);
         }

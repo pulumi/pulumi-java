@@ -60,7 +60,6 @@ public final class VpcConnectorTag {
             this.value = value;
             return this;
         }
-
         public VpcConnectorTag build() {
             return new VpcConnectorTag(key, value);
         }

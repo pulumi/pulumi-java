@@ -81,7 +81,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.wordList = wordList;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary(cloudStoragePath, wordList);
         }

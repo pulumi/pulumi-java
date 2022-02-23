@@ -117,7 +117,6 @@ public final class RouterNatRuleActionResponse {
             this.sourceNatDrainRanges = Objects.requireNonNull(sourceNatDrainRanges);
             return this;
         }
-
         public RouterNatRuleActionResponse build() {
             return new RouterNatRuleActionResponse(sourceNatActiveIps, sourceNatActiveRanges, sourceNatDrainIps, sourceNatDrainRanges);
         }

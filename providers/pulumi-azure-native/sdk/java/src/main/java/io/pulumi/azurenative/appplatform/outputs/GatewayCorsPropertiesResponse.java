@@ -163,7 +163,6 @@ public final class GatewayCorsPropertiesResponse {
             this.maxAge = maxAge;
             return this;
         }
-
         public GatewayCorsPropertiesResponse build() {
             return new GatewayCorsPropertiesResponse(allowCredentials, allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAge);
         }

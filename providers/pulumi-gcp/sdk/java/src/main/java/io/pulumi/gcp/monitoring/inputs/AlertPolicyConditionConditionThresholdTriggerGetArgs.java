@@ -22,7 +22,7 @@ public final class AlertPolicyConditionConditionThresholdTriggerGetArgs extends 
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+        private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class AlertPolicyConditionConditionThresholdTriggerGetArgs extends 
      * 
      */
     @InputImport(name="percent")
-    private final @Nullable Input<Double> percent;
+        private final @Nullable Input<Double> percent;
 
     public Input<Double> getPercent() {
         return this.percent == null ? Input.empty() : this.percent;
@@ -94,7 +94,6 @@ public final class AlertPolicyConditionConditionThresholdTriggerGetArgs extends 
             this.percent = Input.ofNullable(percent);
             return this;
         }
-
         public AlertPolicyConditionConditionThresholdTriggerGetArgs build() {
             return new AlertPolicyConditionConditionThresholdTriggerGetArgs(count, percent);
         }

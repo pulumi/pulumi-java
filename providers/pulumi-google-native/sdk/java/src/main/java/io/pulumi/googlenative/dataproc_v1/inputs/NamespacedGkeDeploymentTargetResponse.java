@@ -21,7 +21,7 @@ public final class NamespacedGkeDeploymentTargetResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="clusterNamespace", required=true)
-    private final String clusterNamespace;
+      private final String clusterNamespace;
 
     public String getClusterNamespace() {
         return this.clusterNamespace;
@@ -32,7 +32,7 @@ public final class NamespacedGkeDeploymentTargetResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetGkeCluster", required=true)
-    private final String targetGkeCluster;
+      private final String targetGkeCluster;
 
     public String getTargetGkeCluster() {
         return this.targetGkeCluster;
@@ -81,7 +81,6 @@ public final class NamespacedGkeDeploymentTargetResponse extends io.pulumi.resou
             this.targetGkeCluster = Objects.requireNonNull(targetGkeCluster);
             return this;
         }
-
         public NamespacedGkeDeploymentTargetResponse build() {
             return new NamespacedGkeDeploymentTargetResponse(clusterNamespace, targetGkeCluster);
         }

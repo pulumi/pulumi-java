@@ -251,7 +251,6 @@ public final class GetSchemaRegistryResult {
             this.updatedAtUtc = Objects.requireNonNull(updatedAtUtc);
             return this;
         }
-
         public GetSchemaRegistryResult build() {
             return new GetSchemaRegistryResult(createdAtUtc, eTag, groupProperties, id, location, name, schemaCompatibility, schemaType, systemData, type, updatedAtUtc);
         }

@@ -53,7 +53,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
             this.transcriptSegments = Objects.requireNonNull(transcriptSegments);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(transcriptSegments);
         }

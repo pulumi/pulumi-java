@@ -98,7 +98,6 @@ public final class ChannelTypeDescriptionResponse {
             this.channelType = channelType;
             return this;
         }
-
         public ChannelTypeDescriptionResponse build() {
             return new ChannelTypeDescriptionResponse(channelDescription, channelFunctions, channelType);
         }

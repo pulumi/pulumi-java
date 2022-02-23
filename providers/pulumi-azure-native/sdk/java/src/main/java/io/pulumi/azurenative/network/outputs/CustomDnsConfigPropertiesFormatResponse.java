@@ -77,7 +77,6 @@ public final class CustomDnsConfigPropertiesFormatResponse {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public CustomDnsConfigPropertiesFormatResponse build() {
             return new CustomDnsConfigPropertiesFormatResponse(fqdn, ipAddresses);
         }

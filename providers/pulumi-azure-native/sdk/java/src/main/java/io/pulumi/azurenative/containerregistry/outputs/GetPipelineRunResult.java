@@ -205,7 +205,6 @@ public final class GetPipelineRunResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPipelineRunResult build() {
             return new GetPipelineRunResult(forceUpdateTag, id, name, provisioningState, request, response, systemData, type);
         }

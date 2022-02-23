@@ -163,7 +163,6 @@ public final class SourceResponse {
             this.storageSource = Objects.requireNonNull(storageSource);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(additionalContexts, artifactStorageSource, context, fileHashes, repoSource, storageSource);
         }

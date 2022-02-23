@@ -111,7 +111,6 @@ public final class PersistentVolumeStatus {
             this.reason = reason;
             return this;
         }
-
         public PersistentVolumeStatus build() {
             return new PersistentVolumeStatus(message, phase, reason);
         }

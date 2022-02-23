@@ -58,7 +58,6 @@ public final class GetTopicSchemaSetting {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public GetTopicSchemaSetting build() {
             return new GetTopicSchemaSetting(encoding, schema);
         }

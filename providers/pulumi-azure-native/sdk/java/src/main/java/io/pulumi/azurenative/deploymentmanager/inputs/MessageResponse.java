@@ -21,7 +21,7 @@ public final class MessageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
@@ -32,7 +32,7 @@ public final class MessageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeStamp", required=true)
-    private final String timeStamp;
+        private final String timeStamp;
 
     public String getTimeStamp() {
         return this.timeStamp;
@@ -81,7 +81,6 @@ public final class MessageResponse extends io.pulumi.resources.InvokeArgs {
             this.timeStamp = Objects.requireNonNull(timeStamp);
             return this;
         }
-
         public MessageResponse build() {
             return new MessageResponse(message, timeStamp);
         }

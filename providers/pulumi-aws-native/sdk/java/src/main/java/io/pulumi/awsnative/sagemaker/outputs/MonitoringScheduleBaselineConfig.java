@@ -61,7 +61,6 @@ public final class MonitoringScheduleBaselineConfig {
             this.statisticsResource = statisticsResource;
             return this;
         }
-
         public MonitoringScheduleBaselineConfig build() {
             return new MonitoringScheduleBaselineConfig(constraintsResource, statisticsResource);
         }

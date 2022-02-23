@@ -97,7 +97,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskInputResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }

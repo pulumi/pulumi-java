@@ -17,7 +17,7 @@ public final class SessionInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sessionId", required=true)
-    private final String sessionId;
+      private final String sessionId;
 
     public String getSessionId() {
         return this.sessionId;
@@ -55,7 +55,6 @@ public final class SessionInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }
-
         public SessionInfoResponse build() {
             return new SessionInfoResponse(sessionId);
         }

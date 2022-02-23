@@ -138,7 +138,6 @@ public final class OSPolicyResourceFileResourceResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public OSPolicyResourceFileResourceResponse build() {
             return new OSPolicyResourceFileResourceResponse(content, file, path, permissions, state);
         }

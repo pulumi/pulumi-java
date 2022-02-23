@@ -75,7 +75,6 @@ public final class DataSourceSparkParameters {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceSparkParameters build() {
             return new DataSourceSparkParameters(host, port);
         }

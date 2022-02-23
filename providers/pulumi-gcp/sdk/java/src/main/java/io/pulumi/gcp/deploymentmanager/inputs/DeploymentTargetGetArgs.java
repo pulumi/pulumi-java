@@ -22,7 +22,7 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<DeploymentTargetConfigGetArgs> config;
+        private final Input<DeploymentTargetConfigGetArgs> config;
 
     public Input<DeploymentTargetConfigGetArgs> getConfig() {
         return this.config;
@@ -36,7 +36,7 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="imports")
-    private final @Nullable Input<List<DeploymentTargetImportGetArgs>> imports;
+        private final @Nullable Input<List<DeploymentTargetImportGetArgs>> imports;
 
     public Input<List<DeploymentTargetImportGetArgs>> getImports() {
         return this.imports == null ? Input.empty() : this.imports;
@@ -95,7 +95,6 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
             this.imports = Input.ofNullable(imports);
             return this;
         }
-
         public DeploymentTargetGetArgs build() {
             return new DeploymentTargetGetArgs(config, imports);
         }

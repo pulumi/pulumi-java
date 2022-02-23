@@ -224,7 +224,6 @@ public final class GetSignalRSharedPrivateLinkResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSignalRSharedPrivateLinkResourceResult build() {
             return new GetSignalRSharedPrivateLinkResourceResult(groupId, id, name, privateLinkResourceId, provisioningState, requestMessage, status, systemData, type);
         }

@@ -22,7 +22,7 @@ public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagName", required=true)
-    private final Input<String> tagName;
+        private final Input<String> tagName;
 
     public Input<String> getTagName() {
         return this.tagName;
@@ -65,7 +65,6 @@ public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
             this.tagName = Input.of(Objects.requireNonNull(tagName));
             return this;
         }
-
         public RetentionTagArgs build() {
             return new RetentionTagArgs(tagName);
         }

@@ -21,7 +21,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudRunService", required=true)
-    private final CloudRunServiceResponse cloudRunService;
+      private final CloudRunServiceResponse cloudRunService;
 
     public CloudRunServiceResponse getCloudRunService() {
         return this.cloudRunService;
@@ -59,7 +59,6 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
             this.cloudRunService = Objects.requireNonNull(cloudRunService);
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(cloudRunService);
         }

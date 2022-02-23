@@ -26,7 +26,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -37,7 +37,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="lowerLoadThreshold", required=true)
-    private final Input<Double> lowerLoadThreshold;
+        private final Input<Double> lowerLoadThreshold;
 
     public Input<Double> getLowerLoadThreshold() {
         return this.lowerLoadThreshold;
@@ -48,7 +48,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metric", required=true)
-    private final Input<AutoScalingResourceMetricArgs> metric;
+        private final Input<AutoScalingResourceMetricArgs> metric;
 
     public Input<AutoScalingResourceMetricArgs> getMetric() {
         return this.metric;
@@ -59,7 +59,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="scaleIntervalInSeconds", required=true)
-    private final Input<Integer> scaleIntervalInSeconds;
+        private final Input<Integer> scaleIntervalInSeconds;
 
     public Input<Integer> getScaleIntervalInSeconds() {
         return this.scaleIntervalInSeconds;
@@ -70,7 +70,7 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="upperLoadThreshold", required=true)
-    private final Input<Double> upperLoadThreshold;
+        private final Input<Double> upperLoadThreshold;
 
     public Input<Double> getUpperLoadThreshold() {
         return this.upperLoadThreshold;
@@ -174,7 +174,6 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
             this.upperLoadThreshold = Input.of(Objects.requireNonNull(upperLoadThreshold));
             return this;
         }
-
         public AverageLoadScalingTriggerArgs build() {
             return new AverageLoadScalingTriggerArgs(kind, lowerLoadThreshold, metric, scaleIntervalInSeconds, upperLoadThreshold);
         }

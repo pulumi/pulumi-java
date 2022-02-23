@@ -277,7 +277,6 @@ public final class NodeTypeDescriptionResponse {
             this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
             return this;
         }
-
         public NodeTypeDescriptionResponse build() {
             return new NodeTypeDescriptionResponse(applicationPorts, capacities, clientConnectionEndpointPort, durabilityLevel, ephemeralPorts, httpGatewayEndpointPort, isPrimary, name, placementProperties, reverseProxyEndpointPort, vmInstanceCount);
         }

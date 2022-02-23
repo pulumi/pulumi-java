@@ -52,7 +52,6 @@ public final class NodeInputResponse {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }
-
         public NodeInputResponse build() {
             return new NodeInputResponse(nodeName);
         }

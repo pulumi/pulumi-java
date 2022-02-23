@@ -60,7 +60,6 @@ public final class DeliveryStreamBufferingHints {
             this.sizeInMBs = sizeInMBs;
             return this;
         }
-
         public DeliveryStreamBufferingHints build() {
             return new DeliveryStreamBufferingHints(intervalInSeconds, sizeInMBs);
         }

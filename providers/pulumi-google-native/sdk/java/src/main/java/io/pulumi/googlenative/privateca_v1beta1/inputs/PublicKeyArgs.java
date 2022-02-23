@@ -24,7 +24,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -35,7 +35,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<PublicKeyType> type;
+      private final @Nullable Input<PublicKeyType> type;
 
     public Input<PublicKeyType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -94,7 +94,6 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public PublicKeyArgs build() {
             return new PublicKeyArgs(key, type);
         }

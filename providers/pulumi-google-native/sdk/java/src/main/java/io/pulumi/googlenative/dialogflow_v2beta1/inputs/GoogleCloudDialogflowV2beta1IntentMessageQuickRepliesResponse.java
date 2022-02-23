@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
      * 
      */
     @InputImport(name="quickReplies", required=true)
-    private final List<String> quickReplies;
+      private final List<String> quickReplies;
 
     public List<String> getQuickReplies() {
         return this.quickReplies;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse(quickReplies, title);
         }

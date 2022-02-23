@@ -158,7 +158,6 @@ public final class CloudSQLInstanceInfoResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public CloudSQLInstanceInfoResponse build() {
             return new CloudSQLInstanceInfoResponse(displayName, externalIp, internalIp, networkUri, region, uri);
         }

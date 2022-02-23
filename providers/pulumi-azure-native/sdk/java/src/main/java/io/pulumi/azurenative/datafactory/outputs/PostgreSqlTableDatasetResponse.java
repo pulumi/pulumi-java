@@ -252,7 +252,6 @@ public final class PostgreSqlTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PostgreSqlTableDatasetResponse build() {
             return new PostgreSqlTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

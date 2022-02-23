@@ -202,7 +202,6 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubject {
             this.streetAddress = streetAddress;
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectDescriptionSubject build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubject(commonName, countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
         }

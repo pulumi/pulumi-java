@@ -76,7 +76,6 @@ public final class OracleTableResponse {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public OracleTableResponse build() {
             return new OracleTableResponse(oracleColumns, tableName);
         }

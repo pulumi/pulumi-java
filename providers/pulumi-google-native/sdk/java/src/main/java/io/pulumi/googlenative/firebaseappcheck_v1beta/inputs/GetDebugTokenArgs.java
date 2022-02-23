@@ -15,21 +15,21 @@ public final class GetDebugTokenArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDebugTokenArgs Empty = new GetDebugTokenArgs();
 
     @InputImport(name="appId", required=true)
-    private final String appId;
+      private final String appId;
 
     public String getAppId() {
         return this.appId;
     }
 
     @InputImport(name="debugTokenId", required=true)
-    private final String debugTokenId;
+      private final String debugTokenId;
 
     public String getDebugTokenId() {
         return this.debugTokenId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetDebugTokenArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetDebugTokenArgs build() {
             return new GetDebugTokenArgs(appId, debugTokenId, project);
         }

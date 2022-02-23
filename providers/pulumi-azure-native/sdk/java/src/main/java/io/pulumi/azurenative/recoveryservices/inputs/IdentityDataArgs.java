@@ -27,7 +27,7 @@ public final class IdentityDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ResourceIdentityType>> type;
+        private final Input<Either<String,ResourceIdentityType>> type;
 
     public Input<Either<String,ResourceIdentityType>> getType() {
         return this.type;
@@ -38,7 +38,7 @@ public final class IdentityDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
+        private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 
     public Input<Map<String,Object>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
@@ -97,7 +97,6 @@ public final class IdentityDataArgs extends io.pulumi.resources.ResourceArgs {
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }
-
         public IdentityDataArgs build() {
             return new IdentityDataArgs(type, userAssignedIdentities);
         }

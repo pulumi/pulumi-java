@@ -16,21 +16,21 @@ public final class PipelineAddAttributes extends io.pulumi.resources.InvokeArgs 
     public static final PipelineAddAttributes Empty = new PipelineAddAttributes();
 
     @InputImport(name="attributes", required=true)
-    private final Object attributes;
+        private final Object attributes;
 
     public Object getAttributes() {
         return this.attributes;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-    private final @Nullable String next;
+        private final @Nullable String next;
 
     public Optional<String> getNext() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
@@ -89,7 +89,6 @@ public final class PipelineAddAttributes extends io.pulumi.resources.InvokeArgs 
             this.next = next;
             return this;
         }
-
         public PipelineAddAttributes build() {
             return new PipelineAddAttributes(attributes, name, next);
         }

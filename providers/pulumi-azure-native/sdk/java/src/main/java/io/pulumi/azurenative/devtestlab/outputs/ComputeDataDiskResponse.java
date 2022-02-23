@@ -119,7 +119,6 @@ public final class ComputeDataDiskResponse {
             this.name = name;
             return this;
         }
-
         public ComputeDataDiskResponse build() {
             return new ComputeDataDiskResponse(diskSizeGiB, diskUri, managedDiskId, name);
         }

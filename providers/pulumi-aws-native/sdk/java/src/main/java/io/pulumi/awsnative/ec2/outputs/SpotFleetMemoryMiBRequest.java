@@ -60,7 +60,6 @@ public final class SpotFleetMemoryMiBRequest {
             this.min = min;
             return this;
         }
-
         public SpotFleetMemoryMiBRequest build() {
             return new SpotFleetMemoryMiBRequest(max, min);
         }

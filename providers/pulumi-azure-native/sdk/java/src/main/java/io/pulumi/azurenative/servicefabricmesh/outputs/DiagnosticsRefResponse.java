@@ -78,7 +78,6 @@ public final class DiagnosticsRefResponse {
             this.sinkRefs = sinkRefs;
             return this;
         }
-
         public DiagnosticsRefResponse build() {
             return new DiagnosticsRefResponse(enabled, sinkRefs);
         }

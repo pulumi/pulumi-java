@@ -75,7 +75,6 @@ public final class LocationHDFSNameNode {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public LocationHDFSNameNode build() {
             return new LocationHDFSNameNode(hostname, port);
         }

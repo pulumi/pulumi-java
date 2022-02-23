@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse ex
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse ex
      * 
      */
     @InputImport(name="synonyms", required=true)
-    private final List<String> synonyms;
+      private final List<String> synonyms;
 
     public List<String> getSynonyms() {
         return this.synonyms;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse ex
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse(key, synonyms);
         }

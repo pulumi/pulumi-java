@@ -116,7 +116,6 @@ public final class AndroidAppInfoResponse {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }
-
         public AndroidAppInfoResponse build() {
             return new AndroidAppInfoResponse(name, packageName, versionCode, versionName);
         }

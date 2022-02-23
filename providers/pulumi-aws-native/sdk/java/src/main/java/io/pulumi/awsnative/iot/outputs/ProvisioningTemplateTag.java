@@ -58,7 +58,6 @@ public final class ProvisioningTemplateTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ProvisioningTemplateTag build() {
             return new ProvisioningTemplateTag(key, value);
         }

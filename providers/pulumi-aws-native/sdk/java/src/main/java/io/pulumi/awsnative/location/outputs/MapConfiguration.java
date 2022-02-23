@@ -44,7 +44,6 @@ public final class MapConfiguration {
             this.style = Objects.requireNonNull(style);
             return this;
         }
-
         public MapConfiguration build() {
             return new MapConfiguration(style);
         }

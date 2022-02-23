@@ -54,7 +54,6 @@ public final class StreamingPolicyWidevineConfigurationResponse {
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
-
         public StreamingPolicyWidevineConfigurationResponse build() {
             return new StreamingPolicyWidevineConfigurationResponse(customLicenseAcquisitionUrlTemplate);
         }

@@ -95,7 +95,6 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse build() {
             return new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse(env, instanceId, location);
         }

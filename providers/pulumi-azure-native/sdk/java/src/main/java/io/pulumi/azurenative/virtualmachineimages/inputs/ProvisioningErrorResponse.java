@@ -23,7 +23,7 @@ public final class ProvisioningErrorResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+        private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -34,7 +34,7 @@ public final class ProvisioningErrorResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningErrorCode")
-    private final @Nullable String provisioningErrorCode;
+        private final @Nullable String provisioningErrorCode;
 
     public Optional<String> getProvisioningErrorCode() {
         return this.provisioningErrorCode == null ? Optional.empty() : Optional.ofNullable(this.provisioningErrorCode);
@@ -83,7 +83,6 @@ public final class ProvisioningErrorResponse extends io.pulumi.resources.InvokeA
             this.provisioningErrorCode = provisioningErrorCode;
             return this;
         }
-
         public ProvisioningErrorResponse build() {
             return new ProvisioningErrorResponse(message, provisioningErrorCode);
         }

@@ -142,7 +142,6 @@ public final class DelimitedTextWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DelimitedTextWriteSettingsResponse build() {
             return new DelimitedTextWriteSettingsResponse(fileExtension, fileNamePrefix, maxRowsPerFile, quoteAllText, type);
         }

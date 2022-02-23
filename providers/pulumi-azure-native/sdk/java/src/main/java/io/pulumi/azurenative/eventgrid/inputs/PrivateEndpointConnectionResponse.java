@@ -22,7 +22,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="groupIds")
-    private final @Nullable List<String> groupIds;
+        private final @Nullable List<String> groupIds;
 
     public List<String> getGroupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
@@ -33,7 +33,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -44,7 +44,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable PrivateEndpointResponse privateEndpoint;
+        private final @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
@@ -66,7 +66,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable ConnectionStateResponse privateLinkServiceConnectionState;
+        private final @Nullable ConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<ConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
@@ -77,7 +77,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+        private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -88,7 +88,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -187,7 +187,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateEndpointConnectionResponse build() {
             return new PrivateEndpointConnectionResponse(groupIds, id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

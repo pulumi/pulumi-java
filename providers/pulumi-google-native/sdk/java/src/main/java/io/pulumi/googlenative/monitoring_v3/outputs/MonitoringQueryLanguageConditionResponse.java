@@ -96,7 +96,6 @@ public final class MonitoringQueryLanguageConditionResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public MonitoringQueryLanguageConditionResponse build() {
             return new MonitoringQueryLanguageConditionResponse(duration, query, trigger);
         }

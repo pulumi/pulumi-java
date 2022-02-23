@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
      * 
      */
     @InputImport(name="phraseMatchRules", required=true)
-    private final List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules;
+      private final List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules;
 
     public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> getPhraseMatchRules() {
         return this.phraseMatchRules;
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -83,7 +83,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(phraseMatchRules, type);
         }

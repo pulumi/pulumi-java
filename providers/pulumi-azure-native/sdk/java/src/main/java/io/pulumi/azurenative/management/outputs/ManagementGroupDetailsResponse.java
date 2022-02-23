@@ -143,7 +143,6 @@ public final class ManagementGroupDetailsResponse {
             this.version = version;
             return this;
         }
-
         public ManagementGroupDetailsResponse build() {
             return new ManagementGroupDetailsResponse(parent, path, updatedBy, updatedTime, version);
         }

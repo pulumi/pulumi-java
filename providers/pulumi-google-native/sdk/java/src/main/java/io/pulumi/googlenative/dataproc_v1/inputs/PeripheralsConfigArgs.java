@@ -24,7 +24,7 @@ public final class PeripheralsConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metastoreService")
-    private final @Nullable Input<String> metastoreService;
+      private final @Nullable Input<String> metastoreService;
 
     public Input<String> getMetastoreService() {
         return this.metastoreService == null ? Input.empty() : this.metastoreService;
@@ -35,7 +35,7 @@ public final class PeripheralsConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sparkHistoryServerConfig")
-    private final @Nullable Input<SparkHistoryServerConfigArgs> sparkHistoryServerConfig;
+      private final @Nullable Input<SparkHistoryServerConfigArgs> sparkHistoryServerConfig;
 
     public Input<SparkHistoryServerConfigArgs> getSparkHistoryServerConfig() {
         return this.sparkHistoryServerConfig == null ? Input.empty() : this.sparkHistoryServerConfig;
@@ -94,7 +94,6 @@ public final class PeripheralsConfigArgs extends io.pulumi.resources.ResourceArg
             this.sparkHistoryServerConfig = Input.ofNullable(sparkHistoryServerConfig);
             return this;
         }
-
         public PeripheralsConfigArgs build() {
             return new PeripheralsConfigArgs(metastoreService, sparkHistoryServerConfig);
         }

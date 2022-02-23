@@ -194,7 +194,6 @@ public final class FeatureMembershipConfigmanagementConfigSyncGit {
             this.syncWaitSecs = syncWaitSecs;
             return this;
         }
-
         public FeatureMembershipConfigmanagementConfigSyncGit build() {
             return new FeatureMembershipConfigmanagementConfigSyncGit(gcpServiceAccountEmail, httpsProxy, policyDir, secretType, syncBranch, syncRepo, syncRev, syncWaitSecs);
         }

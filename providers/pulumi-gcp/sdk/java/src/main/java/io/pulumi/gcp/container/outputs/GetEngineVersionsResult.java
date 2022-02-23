@@ -222,7 +222,6 @@ public final class GetEngineVersionsResult {
             this.versionPrefix = versionPrefix;
             return this;
         }
-
         public GetEngineVersionsResult build() {
             return new GetEngineVersionsResult(defaultClusterVersion, id, latestMasterVersion, latestNodeVersion, location, project, releaseChannelDefaultVersion, validMasterVersions, validNodeVersions, versionPrefix);
         }

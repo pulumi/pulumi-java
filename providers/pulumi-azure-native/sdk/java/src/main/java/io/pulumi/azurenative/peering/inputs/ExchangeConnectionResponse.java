@@ -25,7 +25,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="bgpSession")
-    private final @Nullable BgpSessionResponse bgpSession;
+        private final @Nullable BgpSessionResponse bgpSession;
 
     public Optional<BgpSessionResponse> getBgpSession() {
         return this.bgpSession == null ? Optional.empty() : Optional.ofNullable(this.bgpSession);
@@ -36,7 +36,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="connectionIdentifier")
-    private final @Nullable String connectionIdentifier;
+        private final @Nullable String connectionIdentifier;
 
     public Optional<String> getConnectionIdentifier() {
         return this.connectionIdentifier == null ? Optional.empty() : Optional.ofNullable(this.connectionIdentifier);
@@ -47,7 +47,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="connectionState", required=true)
-    private final String connectionState;
+        private final String connectionState;
 
     public String getConnectionState() {
         return this.connectionState;
@@ -58,7 +58,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="errorMessage", required=true)
-    private final String errorMessage;
+        private final String errorMessage;
 
     public String getErrorMessage() {
         return this.errorMessage;
@@ -69,7 +69,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="peeringDBFacilityId")
-    private final @Nullable Integer peeringDBFacilityId;
+        private final @Nullable Integer peeringDBFacilityId;
 
     public Optional<Integer> getPeeringDBFacilityId() {
         return this.peeringDBFacilityId == null ? Optional.empty() : Optional.ofNullable(this.peeringDBFacilityId);
@@ -148,7 +148,6 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
             this.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
-
         public ExchangeConnectionResponse build() {
             return new ExchangeConnectionResponse(bgpSession, connectionIdentifier, connectionState, errorMessage, peeringDBFacilityId);
         }

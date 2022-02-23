@@ -73,7 +73,6 @@ public final class InstanceFromMachineImageShieldedInstanceConfig {
             this.enableVtpm = enableVtpm;
             return this;
         }
-
         public InstanceFromMachineImageShieldedInstanceConfig build() {
             return new InstanceFromMachineImageShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

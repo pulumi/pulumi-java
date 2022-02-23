@@ -17,7 +17,7 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
      * 
      */
     @InputImport(name="lastRunStartTime", required=true)
-    private final String lastRunStartTime;
+      private final String lastRunStartTime;
 
     public String getLastRunStartTime() {
         return this.lastRunStartTime;
@@ -28,7 +28,7 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
      * 
      */
     @InputImport(name="nextRunStartTime", required=true)
-    private final String nextRunStartTime;
+      private final String nextRunStartTime;
 
     public String getNextRunStartTime() {
         return this.nextRunStartTime;
@@ -77,7 +77,6 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
             this.nextRunStartTime = Objects.requireNonNull(nextRunStartTime);
             return this;
         }
-
         public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse build() {
             return new ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse(lastRunStartTime, nextRunStartTime);
         }

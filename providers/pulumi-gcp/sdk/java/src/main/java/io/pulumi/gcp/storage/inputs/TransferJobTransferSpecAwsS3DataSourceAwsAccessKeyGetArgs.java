@@ -18,7 +18,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
      * 
      */
     @InputImport(name="accessKeyId", required=true)
-    private final Input<String> accessKeyId;
+        private final Input<String> accessKeyId;
 
     public Input<String> getAccessKeyId() {
         return this.accessKeyId;
@@ -29,7 +29,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
      * 
      */
     @InputImport(name="secretAccessKey", required=true)
-    private final Input<String> secretAccessKey;
+        private final Input<String> secretAccessKey;
 
     public Input<String> getSecretAccessKey() {
         return this.secretAccessKey;
@@ -88,7 +88,6 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
             this.secretAccessKey = Input.of(Objects.requireNonNull(secretAccessKey));
             return this;
         }
-
         public TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs build() {
             return new TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs(accessKeyId, secretAccessKey);
         }

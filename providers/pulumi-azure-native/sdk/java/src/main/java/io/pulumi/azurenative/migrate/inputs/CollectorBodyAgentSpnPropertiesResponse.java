@@ -19,7 +19,7 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable String applicationId;
+        private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
@@ -30,7 +30,7 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="audience")
-    private final @Nullable String audience;
+        private final @Nullable String audience;
 
     public Optional<String> getAudience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
@@ -41,7 +41,7 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="authority")
-    private final @Nullable String authority;
+        private final @Nullable String authority;
 
     public Optional<String> getAuthority() {
         return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
@@ -52,7 +52,7 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable String objectId;
+        private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
@@ -63,7 +63,7 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -142,7 +142,6 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
             this.tenantId = tenantId;
             return this;
         }
-
         public CollectorBodyAgentSpnPropertiesResponse build() {
             return new CollectorBodyAgentSpnPropertiesResponse(applicationId, audience, authority, objectId, tenantId);
         }

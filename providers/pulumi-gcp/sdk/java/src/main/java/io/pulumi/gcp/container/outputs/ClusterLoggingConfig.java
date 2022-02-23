@@ -53,7 +53,6 @@ public final class ClusterLoggingConfig {
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-
         public ClusterLoggingConfig build() {
             return new ClusterLoggingConfig(enableComponents);
         }

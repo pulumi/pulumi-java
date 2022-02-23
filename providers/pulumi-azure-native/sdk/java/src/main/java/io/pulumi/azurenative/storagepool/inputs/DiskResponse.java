@@ -21,7 +21,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -59,7 +59,6 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public DiskResponse build() {
             return new DiskResponse(id);
         }

@@ -23,7 +23,7 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends io.p
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+        private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -34,7 +34,7 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends io.p
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -45,7 +45,7 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends io.p
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -104,7 +104,6 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends io.p
             this.type = type;
             return this;
         }
-
         public PolicyAssignmentPropertiesResponseRoleDefinition build() {
             return new PolicyAssignmentPropertiesResponseRoleDefinition(displayName, id, type);
         }

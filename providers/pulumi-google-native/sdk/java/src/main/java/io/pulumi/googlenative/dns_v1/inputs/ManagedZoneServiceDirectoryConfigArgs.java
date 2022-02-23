@@ -20,7 +20,7 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
     public static final ManagedZoneServiceDirectoryConfigArgs Empty = new ManagedZoneServiceDirectoryConfigArgs();
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -31,7 +31,7 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
+      private final @Nullable Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
 
     public Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -90,7 +90,6 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
-
         public ManagedZoneServiceDirectoryConfigArgs build() {
             return new ManagedZoneServiceDirectoryConfigArgs(kind, namespace);
         }

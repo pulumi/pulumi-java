@@ -182,7 +182,6 @@ public final class LoadBalancingSettingsModelResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public LoadBalancingSettingsModelResponse build() {
             return new LoadBalancingSettingsModelResponse(additionalLatencyMilliseconds, id, name, resourceState, sampleSize, successfulSamplesRequired, type);
         }

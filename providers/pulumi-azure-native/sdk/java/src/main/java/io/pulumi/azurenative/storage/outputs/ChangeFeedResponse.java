@@ -77,7 +77,6 @@ public final class ChangeFeedResponse {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public ChangeFeedResponse build() {
             return new ChangeFeedResponse(enabled, retentionInDays);
         }

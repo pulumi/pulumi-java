@@ -46,7 +46,6 @@ public final class GetProjectResult {
             this.arn = arn;
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(arn);
         }

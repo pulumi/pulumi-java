@@ -54,7 +54,6 @@ public final class MoveResourceErrorResponse {
             this.properties = properties;
             return this;
         }
-
         public MoveResourceErrorResponse build() {
             return new MoveResourceErrorResponse(properties);
         }

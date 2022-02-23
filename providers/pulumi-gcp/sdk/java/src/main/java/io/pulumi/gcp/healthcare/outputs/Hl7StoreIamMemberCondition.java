@@ -73,7 +73,6 @@ public final class Hl7StoreIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Hl7StoreIamMemberCondition build() {
             return new Hl7StoreIamMemberCondition(description, expression, title);
         }

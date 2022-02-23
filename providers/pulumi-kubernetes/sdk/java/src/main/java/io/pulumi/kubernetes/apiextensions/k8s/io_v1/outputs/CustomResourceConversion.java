@@ -79,7 +79,6 @@ public final class CustomResourceConversion {
             this.webhook = webhook;
             return this;
         }
-
         public CustomResourceConversion build() {
             return new CustomResourceConversion(strategy, webhook);
         }

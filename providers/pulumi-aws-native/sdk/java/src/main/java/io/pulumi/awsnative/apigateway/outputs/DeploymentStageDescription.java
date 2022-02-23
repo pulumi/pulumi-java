@@ -442,7 +442,6 @@ public final class DeploymentStageDescription {
             this.variables = variables;
             return this;
         }
-
         public DeploymentStageDescription build() {
             return new DeploymentStageDescription(accessLogSetting, cacheClusterEnabled, cacheClusterSize, cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, canarySetting, clientCertificateId, dataTraceEnabled, description, documentationVersion, loggingLevel, methodSettings, metricsEnabled, tags, throttlingBurstLimit, throttlingRateLimit, tracingEnabled, variables);
         }

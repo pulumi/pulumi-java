@@ -56,7 +56,6 @@ public final class PreventionJobTriggerTrigger {
             this.schedule = schedule;
             return this;
         }
-
         public PreventionJobTriggerTrigger build() {
             return new PreventionJobTriggerTrigger(schedule);
         }

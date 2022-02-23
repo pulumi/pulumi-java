@@ -54,7 +54,6 @@ public final class GetStudioSessionMappingResult {
             this.sessionPolicyArn = sessionPolicyArn;
             return this;
         }
-
         public GetStudioSessionMappingResult build() {
             return new GetStudioSessionMappingResult(sessionPolicyArn);
         }

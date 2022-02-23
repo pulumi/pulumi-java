@@ -79,7 +79,6 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public MetricAlertSingleResourceMultipleMetricCriteriaResponse build() {
             return new MetricAlertSingleResourceMultipleMetricCriteriaResponse(allOf, odataType);
         }

@@ -23,7 +23,7 @@ public final class DiskAutoSnapshotAddOnArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="snapshotTimeOfDay")
-    private final @Nullable Input<String> snapshotTimeOfDay;
+        private final @Nullable Input<String> snapshotTimeOfDay;
 
     public Input<String> getSnapshotTimeOfDay() {
         return this.snapshotTimeOfDay == null ? Input.empty() : this.snapshotTimeOfDay;
@@ -66,7 +66,6 @@ public final class DiskAutoSnapshotAddOnArgs extends io.pulumi.resources.Resourc
             this.snapshotTimeOfDay = Input.ofNullable(snapshotTimeOfDay);
             return this;
         }
-
         public DiskAutoSnapshotAddOnArgs build() {
             return new DiskAutoSnapshotAddOnArgs(snapshotTimeOfDay);
         }

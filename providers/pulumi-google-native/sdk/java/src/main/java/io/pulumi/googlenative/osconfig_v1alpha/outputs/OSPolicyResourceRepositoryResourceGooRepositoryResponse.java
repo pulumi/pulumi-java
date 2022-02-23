@@ -74,7 +74,6 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceGooRepositoryResponse build() {
             return new OSPolicyResourceRepositoryResourceGooRepositoryResponse(name, url);
         }

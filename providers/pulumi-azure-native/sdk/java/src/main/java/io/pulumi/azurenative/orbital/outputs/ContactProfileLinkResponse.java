@@ -142,7 +142,6 @@ public final class ContactProfileLinkResponse {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }
-
         public ContactProfileLinkResponse build() {
             return new ContactProfileLinkResponse(channels, direction, eirpdBW, gainOverTemperature, polarization);
         }

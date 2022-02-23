@@ -143,7 +143,6 @@ public final class GetBotResult {
             this.roleArn = roleArn;
             return this;
         }
-
         public GetBotResult build() {
             return new GetBotResult(arn, dataPrivacy, description, id, idleSessionTTLInSeconds, name, roleArn);
         }

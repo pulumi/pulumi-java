@@ -24,7 +24,7 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="artifactSelector")
-    private final @Nullable String artifactSelector;
+        private final @Nullable String artifactSelector;
 
     public Optional<String> getArtifactSelector() {
         return this.artifactSelector == null ? Optional.empty() : Optional.ofNullable(this.artifactSelector);
@@ -35,7 +35,7 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="relativePath")
-    private final @Nullable String relativePath;
+        private final @Nullable String relativePath;
 
     public Optional<String> getRelativePath() {
         return this.relativePath == null ? Optional.empty() : Optional.ofNullable(this.relativePath);
@@ -46,7 +46,7 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -57,7 +57,7 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -126,7 +126,6 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
             this.version = version;
             return this;
         }
-
         public UserSourceInfoResponse build() {
             return new UserSourceInfoResponse(artifactSelector, relativePath, type, version);
         }

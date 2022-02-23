@@ -97,7 +97,6 @@ public final class VaultPrivateEndpointConnectionResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public VaultPrivateEndpointConnectionResponse build() {
             return new VaultPrivateEndpointConnectionResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

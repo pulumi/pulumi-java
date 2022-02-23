@@ -78,7 +78,6 @@ public final class HybridConnectionEventSubscriptionDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public HybridConnectionEventSubscriptionDestinationResponse build() {
             return new HybridConnectionEventSubscriptionDestinationResponse(endpointType, resourceId);
         }

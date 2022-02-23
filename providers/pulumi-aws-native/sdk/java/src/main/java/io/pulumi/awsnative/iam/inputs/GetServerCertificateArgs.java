@@ -13,7 +13,7 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
     public static final GetServerCertificateArgs Empty = new GetServerCertificateArgs();
 
     @InputImport(name="serverCertificateName", required=true)
-    private final String serverCertificateName;
+        private final String serverCertificateName;
 
     public String getServerCertificateName() {
         return this.serverCertificateName;
@@ -51,7 +51,6 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
             this.serverCertificateName = Objects.requireNonNull(serverCertificateName);
             return this;
         }
-
         public GetServerCertificateArgs build() {
             return new GetServerCertificateArgs(serverCertificateName);
         }

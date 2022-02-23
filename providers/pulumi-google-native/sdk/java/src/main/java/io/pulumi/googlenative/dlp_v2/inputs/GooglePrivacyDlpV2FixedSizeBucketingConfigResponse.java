@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse extends io
      * 
      */
     @InputImport(name="bucketSize", required=true)
-    private final Double bucketSize;
+      private final Double bucketSize;
 
     public Double getBucketSize() {
         return this.bucketSize;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse extends io
      * 
      */
     @InputImport(name="lowerBound", required=true)
-    private final GooglePrivacyDlpV2ValueResponse lowerBound;
+      private final GooglePrivacyDlpV2ValueResponse lowerBound;
 
     public GooglePrivacyDlpV2ValueResponse getLowerBound() {
         return this.lowerBound;
@@ -44,7 +44,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse extends io
      * 
      */
     @InputImport(name="upperBound", required=true)
-    private final GooglePrivacyDlpV2ValueResponse upperBound;
+      private final GooglePrivacyDlpV2ValueResponse upperBound;
 
     public GooglePrivacyDlpV2ValueResponse getUpperBound() {
         return this.upperBound;
@@ -103,7 +103,6 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse extends io
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
         }
-
         public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse build() {
             return new GooglePrivacyDlpV2FixedSizeBucketingConfigResponse(bucketSize, lowerBound, upperBound);
         }

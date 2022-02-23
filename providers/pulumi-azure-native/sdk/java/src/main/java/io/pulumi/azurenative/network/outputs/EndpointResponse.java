@@ -374,7 +374,6 @@ public final class EndpointResponse {
             this.weight = weight;
             return this;
         }
-
         public EndpointResponse build() {
             return new EndpointResponse(customHeaders, endpointLocation, endpointMonitorStatus, endpointStatus, geoMapping, id, minChildEndpoints, minChildEndpointsIPv4, minChildEndpointsIPv6, name, priority, subnets, target, targetResourceId, type, weight);
         }

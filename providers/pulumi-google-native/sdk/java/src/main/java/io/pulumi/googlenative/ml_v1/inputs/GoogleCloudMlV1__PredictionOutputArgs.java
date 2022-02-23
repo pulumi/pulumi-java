@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="errorCount")
-    private final @Nullable Input<String> errorCount;
+      private final @Nullable Input<String> errorCount;
 
     public Input<String> getErrorCount() {
         return this.errorCount == null ? Input.empty() : this.errorCount;
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="nodeHours")
-    private final @Nullable Input<Double> nodeHours;
+      private final @Nullable Input<Double> nodeHours;
 
     public Input<Double> getNodeHours() {
         return this.nodeHours == null ? Input.empty() : this.nodeHours;
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="outputPath")
-    private final @Nullable Input<String> outputPath;
+      private final @Nullable Input<String> outputPath;
 
     public Input<String> getOutputPath() {
         return this.outputPath == null ? Input.empty() : this.outputPath;
@@ -57,7 +57,7 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="predictionCount")
-    private final @Nullable Input<String> predictionCount;
+      private final @Nullable Input<String> predictionCount;
 
     public Input<String> getPredictionCount() {
         return this.predictionCount == null ? Input.empty() : this.predictionCount;
@@ -146,7 +146,6 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
             this.predictionCount = Input.ofNullable(predictionCount);
             return this;
         }
-
         public GoogleCloudMlV1__PredictionOutputArgs build() {
             return new GoogleCloudMlV1__PredictionOutputArgs(errorCount, nodeHours, outputPath, predictionCount);
         }

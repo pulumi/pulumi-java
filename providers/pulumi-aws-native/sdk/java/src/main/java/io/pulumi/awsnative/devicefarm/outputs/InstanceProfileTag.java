@@ -58,7 +58,6 @@ public final class InstanceProfileTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public InstanceProfileTag build() {
             return new InstanceProfileTag(key, value);
         }

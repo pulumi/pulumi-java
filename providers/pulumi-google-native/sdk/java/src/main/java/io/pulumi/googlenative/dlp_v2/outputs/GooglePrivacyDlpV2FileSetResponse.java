@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2FileSetResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GooglePrivacyDlpV2FileSetResponse build() {
             return new GooglePrivacyDlpV2FileSetResponse(regexFileSet, url);
         }

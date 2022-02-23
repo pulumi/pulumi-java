@@ -95,7 +95,6 @@ public final class ScaleCapacityResponse {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
-
         public ScaleCapacityResponse build() {
             return new ScaleCapacityResponse($default, maximum, minimum);
         }

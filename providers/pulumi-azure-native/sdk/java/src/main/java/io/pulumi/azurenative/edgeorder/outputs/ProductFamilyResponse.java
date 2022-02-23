@@ -231,7 +231,6 @@ public final class ProductFamilyResponse {
             this.resourceProviderDetails = resourceProviderDetails;
             return this;
         }
-
         public ProductFamilyResponse build() {
             return new ProductFamilyResponse(availabilityInformation, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation, productLines, resourceProviderDetails);
         }

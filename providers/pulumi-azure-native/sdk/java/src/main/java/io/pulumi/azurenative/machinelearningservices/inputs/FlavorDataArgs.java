@@ -20,7 +20,7 @@ public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<Map<String,String>> data;
+        private final @Nullable Input<Map<String,String>> data;
 
     public Input<Map<String,String>> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -63,7 +63,6 @@ public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
             this.data = Input.ofNullable(data);
             return this;
         }
-
         public FlavorDataArgs build() {
             return new FlavorDataArgs(data);
         }

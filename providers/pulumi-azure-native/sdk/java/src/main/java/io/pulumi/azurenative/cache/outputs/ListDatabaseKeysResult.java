@@ -74,7 +74,6 @@ public final class ListDatabaseKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListDatabaseKeysResult build() {
             return new ListDatabaseKeysResult(primaryKey, secondaryKey);
         }

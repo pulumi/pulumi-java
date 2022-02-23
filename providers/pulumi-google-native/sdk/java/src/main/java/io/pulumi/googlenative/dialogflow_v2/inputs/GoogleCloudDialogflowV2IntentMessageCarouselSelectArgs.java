@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs extend
      * 
      */
     @InputImport(name="items", required=true)
-    private final Input<List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs>> items;
+      private final Input<List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs>> items;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs>> getItems() {
         return this.items;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs extend
             this.items = Input.of(Objects.requireNonNull(items));
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs(items);
         }

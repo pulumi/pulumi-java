@@ -78,7 +78,6 @@ public final class WorkbookTemplateLocalizedGalleryResponse {
             this.templateData = templateData;
             return this;
         }
-
         public WorkbookTemplateLocalizedGalleryResponse build() {
             return new WorkbookTemplateLocalizedGalleryResponse(galleries, templateData);
         }

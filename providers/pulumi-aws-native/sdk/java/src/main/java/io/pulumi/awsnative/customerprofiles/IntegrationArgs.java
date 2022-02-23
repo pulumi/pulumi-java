@@ -23,14 +23,14 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+        private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
     }
 
     @InputImport(name="flowDefinition")
-    private final @Nullable Input<IntegrationFlowDefinitionArgs> flowDefinition;
+        private final @Nullable Input<IntegrationFlowDefinitionArgs> flowDefinition;
 
     public Input<IntegrationFlowDefinitionArgs> getFlowDefinition() {
         return this.flowDefinition == null ? Input.empty() : this.flowDefinition;
@@ -41,7 +41,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectTypeName")
-    private final @Nullable Input<String> objectTypeName;
+        private final @Nullable Input<String> objectTypeName;
 
     public Input<String> getObjectTypeName() {
         return this.objectTypeName == null ? Input.empty() : this.objectTypeName;
@@ -52,7 +52,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectTypeNames")
-    private final @Nullable Input<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
+        private final @Nullable Input<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
 
     public Input<List<IntegrationObjectTypeMappingArgs>> getObjectTypeNames() {
         return this.objectTypeNames == null ? Input.empty() : this.objectTypeNames;
@@ -63,7 +63,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<IntegrationTagArgs>> tags;
+        private final @Nullable Input<List<IntegrationTagArgs>> tags;
 
     public Input<List<IntegrationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -74,7 +74,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+        private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -193,7 +193,6 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public IntegrationArgs build() {
             return new IntegrationArgs(domainName, flowDefinition, objectTypeName, objectTypeNames, tags, uri);
         }

@@ -119,7 +119,6 @@ public final class IoTDeviceInfoResponse {
             this.ioTHostHubId = ioTHostHubId;
             return this;
         }
-
         public IoTDeviceInfoResponse build() {
             return new IoTDeviceInfoResponse(authentication, deviceId, ioTHostHub, ioTHostHubId);
         }

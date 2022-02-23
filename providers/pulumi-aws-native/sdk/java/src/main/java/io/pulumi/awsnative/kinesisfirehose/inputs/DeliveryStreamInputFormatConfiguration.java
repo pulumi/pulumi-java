@@ -15,7 +15,7 @@ public final class DeliveryStreamInputFormatConfiguration extends io.pulumi.reso
     public static final DeliveryStreamInputFormatConfiguration Empty = new DeliveryStreamInputFormatConfiguration();
 
     @InputImport(name="deserializer")
-    private final @Nullable DeliveryStreamDeserializer deserializer;
+        private final @Nullable DeliveryStreamDeserializer deserializer;
 
     public Optional<DeliveryStreamDeserializer> getDeserializer() {
         return this.deserializer == null ? Optional.empty() : Optional.ofNullable(this.deserializer);
@@ -53,7 +53,6 @@ public final class DeliveryStreamInputFormatConfiguration extends io.pulumi.reso
             this.deserializer = deserializer;
             return this;
         }
-
         public DeliveryStreamInputFormatConfiguration build() {
             return new DeliveryStreamInputFormatConfiguration(deserializer);
         }

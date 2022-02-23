@@ -46,7 +46,6 @@ public final class NotificationChannelConfig {
             this.sns = sns;
             return this;
         }
-
         public NotificationChannelConfig build() {
             return new NotificationChannelConfig(sns);
         }

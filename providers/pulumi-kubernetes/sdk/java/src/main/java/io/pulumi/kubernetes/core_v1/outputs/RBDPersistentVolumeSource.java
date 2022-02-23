@@ -205,7 +205,6 @@ public final class RBDPersistentVolumeSource {
             this.user = user;
             return this;
         }
-
         public RBDPersistentVolumeSource build() {
             return new RBDPersistentVolumeSource(fsType, image, keyring, monitors, pool, readOnly, secretRef, user);
         }

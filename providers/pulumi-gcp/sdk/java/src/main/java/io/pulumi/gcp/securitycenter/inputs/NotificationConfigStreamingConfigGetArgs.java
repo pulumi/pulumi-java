@@ -36,7 +36,7 @@ public final class NotificationConfigStreamingConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+        private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -79,7 +79,6 @@ public final class NotificationConfigStreamingConfigGetArgs extends io.pulumi.re
             this.filter = Input.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public NotificationConfigStreamingConfigGetArgs build() {
             return new NotificationConfigStreamingConfigGetArgs(filter);
         }

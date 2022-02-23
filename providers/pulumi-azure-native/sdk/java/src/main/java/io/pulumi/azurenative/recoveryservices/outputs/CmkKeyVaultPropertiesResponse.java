@@ -54,7 +54,6 @@ public final class CmkKeyVaultPropertiesResponse {
             this.keyUri = keyUri;
             return this;
         }
-
         public CmkKeyVaultPropertiesResponse build() {
             return new CmkKeyVaultPropertiesResponse(keyUri);
         }

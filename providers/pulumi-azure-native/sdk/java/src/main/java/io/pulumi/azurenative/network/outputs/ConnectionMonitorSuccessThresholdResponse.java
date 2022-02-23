@@ -77,7 +77,6 @@ public final class ConnectionMonitorSuccessThresholdResponse {
             this.roundTripTimeMs = roundTripTimeMs;
             return this;
         }
-
         public ConnectionMonitorSuccessThresholdResponse build() {
             return new ConnectionMonitorSuccessThresholdResponse(checksFailedPercent, roundTripTimeMs);
         }

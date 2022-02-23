@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="featureConfigs", required=true)
-    private final List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs;
+      private final List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs;
 
     public List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse> getFeatureConfigs() {
         return this.featureConfigs;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="groupSuggestionResponses", required=true)
-    private final Boolean groupSuggestionResponses;
+      private final Boolean groupSuggestionResponses;
 
     public Boolean getGroupSuggestionResponses() {
         return this.groupSuggestionResponses;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             this.groupSuggestionResponses = Objects.requireNonNull(groupSuggestionResponses);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse(featureConfigs, groupSuggestionResponses);
         }

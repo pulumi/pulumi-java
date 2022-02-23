@@ -372,7 +372,6 @@ public final class GetWorkbookResult {
             this.version = version;
             return this;
         }
-
         public GetWorkbookResult build() {
             return new GetWorkbookResult(category, displayName, etag, id, identity, kind, location, name, serializedData, sourceId, storageUri, tags, timeModified, type, userId, version);
         }

@@ -76,7 +76,6 @@ public final class ExportRecurrencePeriodResponse {
             this.to = to;
             return this;
         }
-
         public ExportRecurrencePeriodResponse build() {
             return new ExportRecurrencePeriodResponse(from, to);
         }

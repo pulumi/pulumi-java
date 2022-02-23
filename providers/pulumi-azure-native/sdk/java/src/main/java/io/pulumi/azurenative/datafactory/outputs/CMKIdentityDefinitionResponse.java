@@ -54,7 +54,6 @@ public final class CMKIdentityDefinitionResponse {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public CMKIdentityDefinitionResponse build() {
             return new CMKIdentityDefinitionResponse(userAssignedIdentity);
         }

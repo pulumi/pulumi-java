@@ -54,7 +54,6 @@ public final class BackendPropertiesResponse {
             this.serviceFabricCluster = serviceFabricCluster;
             return this;
         }
-
         public BackendPropertiesResponse build() {
             return new BackendPropertiesResponse(serviceFabricCluster);
         }

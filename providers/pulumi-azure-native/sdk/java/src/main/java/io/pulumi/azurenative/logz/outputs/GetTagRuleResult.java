@@ -139,7 +139,6 @@ public final class GetTagRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTagRuleResult build() {
             return new GetTagRuleResult(id, name, properties, systemData, type);
         }

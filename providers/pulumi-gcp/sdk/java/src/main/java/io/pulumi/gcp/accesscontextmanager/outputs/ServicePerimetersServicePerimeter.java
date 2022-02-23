@@ -296,7 +296,6 @@ public final class ServicePerimetersServicePerimeter {
             this.useExplicitDryRunSpec = useExplicitDryRunSpec;
             return this;
         }
-
         public ServicePerimetersServicePerimeter build() {
             return new ServicePerimetersServicePerimeter(createTime, description, name, perimeterType, spec, status, title, updateTime, useExplicitDryRunSpec);
         }

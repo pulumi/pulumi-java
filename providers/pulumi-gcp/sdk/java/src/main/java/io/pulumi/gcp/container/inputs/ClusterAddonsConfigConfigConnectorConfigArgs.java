@@ -19,7 +19,7 @@ public final class ClusterAddonsConfigConfigConnectorConfigArgs extends io.pulum
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -62,7 +62,6 @@ public final class ClusterAddonsConfigConfigConnectorConfigArgs extends io.pulum
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public ClusterAddonsConfigConfigConnectorConfigArgs build() {
             return new ClusterAddonsConfigConfigConnectorConfigArgs(enabled);
         }

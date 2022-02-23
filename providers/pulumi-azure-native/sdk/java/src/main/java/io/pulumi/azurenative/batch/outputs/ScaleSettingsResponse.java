@@ -77,7 +77,6 @@ public final class ScaleSettingsResponse {
             this.fixedScale = fixedScale;
             return this;
         }
-
         public ScaleSettingsResponse build() {
             return new ScaleSettingsResponse(autoScale, fixedScale);
         }

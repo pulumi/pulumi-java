@@ -45,7 +45,6 @@ public final class GetSecretReplicationUserManaged {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public GetSecretReplicationUserManaged build() {
             return new GetSecretReplicationUserManaged(replicas);
         }

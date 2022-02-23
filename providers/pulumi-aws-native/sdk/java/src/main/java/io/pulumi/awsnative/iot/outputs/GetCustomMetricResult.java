@@ -99,7 +99,6 @@ public final class GetCustomMetricResult {
             this.tags = tags;
             return this;
         }
-
         public GetCustomMetricResult build() {
             return new GetCustomMetricResult(displayName, metricArn, tags);
         }

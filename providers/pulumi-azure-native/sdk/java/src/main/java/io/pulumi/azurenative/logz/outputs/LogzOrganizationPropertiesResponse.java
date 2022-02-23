@@ -118,7 +118,6 @@ public final class LogzOrganizationPropertiesResponse {
             this.singleSignOnUrl = singleSignOnUrl;
             return this;
         }
-
         public LogzOrganizationPropertiesResponse build() {
             return new LogzOrganizationPropertiesResponse(companyName, enterpriseAppId, id, singleSignOnUrl);
         }

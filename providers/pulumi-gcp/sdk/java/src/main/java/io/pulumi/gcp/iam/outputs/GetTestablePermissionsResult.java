@@ -125,7 +125,6 @@ public final class GetTestablePermissionsResult {
             this.stages = stages;
             return this;
         }
-
         public GetTestablePermissionsResult build() {
             return new GetTestablePermissionsResult(customSupportLevel, fullResourceName, id, permissions, stages);
         }

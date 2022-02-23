@@ -117,7 +117,6 @@ public final class GetTagAtScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTagAtScopeResult build() {
             return new GetTagAtScopeResult(id, name, properties, type);
         }

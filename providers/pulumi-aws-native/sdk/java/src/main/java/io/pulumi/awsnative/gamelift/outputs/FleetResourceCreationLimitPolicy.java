@@ -76,7 +76,6 @@ public final class FleetResourceCreationLimitPolicy {
             this.policyPeriodInMinutes = policyPeriodInMinutes;
             return this;
         }
-
         public FleetResourceCreationLimitPolicy build() {
             return new FleetResourceCreationLimitPolicy(newGameSessionsPerCreator, policyPeriodInMinutes);
         }

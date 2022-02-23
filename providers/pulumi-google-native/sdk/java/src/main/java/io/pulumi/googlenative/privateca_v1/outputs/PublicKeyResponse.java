@@ -74,7 +74,6 @@ public final class PublicKeyResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public PublicKeyResponse build() {
             return new PublicKeyResponse(format, key);
         }

@@ -24,7 +24,7 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logs")
-    private final @Nullable Input<List<String>> logs;
+      private final @Nullable Input<List<String>> logs;
 
     public Input<List<String>> getLogs() {
         return this.logs == null ? Input.empty() : this.logs;
@@ -35,7 +35,7 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="monitoredResource")
-    private final @Nullable Input<String> monitoredResource;
+      private final @Nullable Input<String> monitoredResource;
 
     public Input<String> getMonitoredResource() {
         return this.monitoredResource == null ? Input.empty() : this.monitoredResource;
@@ -94,7 +94,6 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
             this.monitoredResource = Input.ofNullable(monitoredResource);
             return this;
         }
-
         public LoggingDestinationArgs build() {
             return new LoggingDestinationArgs(logs, monitoredResource);
         }

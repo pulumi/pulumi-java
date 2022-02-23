@@ -34,7 +34,6 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
         public Builder(AndroidTestLoopArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AndroidTestLoopArgs build() {
             return new AndroidTestLoopArgs();
         }

@@ -398,7 +398,6 @@ public final class GetWorkspaceResult {
             this.workspaceUrl = Objects.requireNonNull(workspaceUrl);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(authorizations, createdBy, createdDateTime, id, location, managedResourceGroupId, name, parameters, provisioningState, sku, storageAccountIdentity, tags, type, uiDefinitionUri, updatedBy, workspaceId, workspaceUrl);
         }

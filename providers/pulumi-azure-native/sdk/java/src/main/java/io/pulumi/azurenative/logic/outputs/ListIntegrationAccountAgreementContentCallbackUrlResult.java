@@ -162,7 +162,6 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListIntegrationAccountAgreementContentCallbackUrlResult build() {
             return new ListIntegrationAccountAgreementContentCallbackUrlResult(basePath, method, queries, relativePath, relativePathParameters, value);
         }

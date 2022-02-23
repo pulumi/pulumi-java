@@ -76,7 +76,6 @@ public final class OrphanedUserInfoResponse {
             this.name = name;
             return this;
         }
-
         public OrphanedUserInfoResponse build() {
             return new OrphanedUserInfoResponse(databaseName, name);
         }

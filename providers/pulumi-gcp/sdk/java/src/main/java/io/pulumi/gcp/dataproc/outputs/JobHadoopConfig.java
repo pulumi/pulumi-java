@@ -197,7 +197,6 @@ public final class JobHadoopConfig {
             this.properties = properties;
             return this;
         }
-
         public JobHadoopConfig build() {
             return new JobHadoopConfig(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }

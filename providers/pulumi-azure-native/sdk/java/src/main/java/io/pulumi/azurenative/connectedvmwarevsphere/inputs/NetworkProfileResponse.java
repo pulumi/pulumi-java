@@ -24,7 +24,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
+        private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
@@ -62,7 +62,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(networkInterfaces);
         }

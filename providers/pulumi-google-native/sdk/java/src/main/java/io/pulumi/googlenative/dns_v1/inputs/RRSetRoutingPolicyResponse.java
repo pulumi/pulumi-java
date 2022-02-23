@@ -19,21 +19,21 @@ public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.Invoke
     public static final RRSetRoutingPolicyResponse Empty = new RRSetRoutingPolicyResponse();
 
     @InputImport(name="geo", required=true)
-    private final RRSetRoutingPolicyGeoPolicyResponse geo;
+      private final RRSetRoutingPolicyGeoPolicyResponse geo;
 
     public RRSetRoutingPolicyGeoPolicyResponse getGeo() {
         return this.geo;
     }
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
     }
 
     @InputImport(name="wrr", required=true)
-    private final RRSetRoutingPolicyWrrPolicyResponse wrr;
+      private final RRSetRoutingPolicyWrrPolicyResponse wrr;
 
     public RRSetRoutingPolicyWrrPolicyResponse getWrr() {
         return this.wrr;
@@ -92,7 +92,6 @@ public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.Invoke
             this.wrr = Objects.requireNonNull(wrr);
             return this;
         }
-
         public RRSetRoutingPolicyResponse build() {
             return new RRSetRoutingPolicyResponse(geo, kind, wrr);
         }

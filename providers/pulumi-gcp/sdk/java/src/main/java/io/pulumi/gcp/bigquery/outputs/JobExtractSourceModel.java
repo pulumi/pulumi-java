@@ -95,7 +95,6 @@ public final class JobExtractSourceModel {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public JobExtractSourceModel build() {
             return new JobExtractSourceModel(datasetId, modelId, projectId);
         }

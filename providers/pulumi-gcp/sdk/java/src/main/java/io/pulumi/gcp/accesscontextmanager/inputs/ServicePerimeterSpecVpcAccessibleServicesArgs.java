@@ -22,7 +22,7 @@ public final class ServicePerimeterSpecVpcAccessibleServicesArgs extends io.pulu
      * 
      */
     @InputImport(name="allowedServices")
-    private final @Nullable Input<List<String>> allowedServices;
+        private final @Nullable Input<List<String>> allowedServices;
 
     public Input<List<String>> getAllowedServices() {
         return this.allowedServices == null ? Input.empty() : this.allowedServices;
@@ -34,7 +34,7 @@ public final class ServicePerimeterSpecVpcAccessibleServicesArgs extends io.pulu
      * 
      */
     @InputImport(name="enableRestriction")
-    private final @Nullable Input<Boolean> enableRestriction;
+        private final @Nullable Input<Boolean> enableRestriction;
 
     public Input<Boolean> getEnableRestriction() {
         return this.enableRestriction == null ? Input.empty() : this.enableRestriction;
@@ -93,7 +93,6 @@ public final class ServicePerimeterSpecVpcAccessibleServicesArgs extends io.pulu
             this.enableRestriction = Input.ofNullable(enableRestriction);
             return this;
         }
-
         public ServicePerimeterSpecVpcAccessibleServicesArgs build() {
             return new ServicePerimeterSpecVpcAccessibleServicesArgs(allowedServices, enableRestriction);
         }

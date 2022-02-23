@@ -77,7 +77,6 @@ public final class AutoscaleResponse {
             this.recurrence = recurrence;
             return this;
         }
-
         public AutoscaleResponse build() {
             return new AutoscaleResponse(capacity, recurrence);
         }

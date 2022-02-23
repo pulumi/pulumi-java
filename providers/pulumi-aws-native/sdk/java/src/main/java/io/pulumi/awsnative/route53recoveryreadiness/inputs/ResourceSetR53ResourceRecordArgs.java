@@ -23,7 +23,7 @@ public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+        private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -34,7 +34,7 @@ public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recordSetId")
-    private final @Nullable Input<String> recordSetId;
+        private final @Nullable Input<String> recordSetId;
 
     public Input<String> getRecordSetId() {
         return this.recordSetId == null ? Input.empty() : this.recordSetId;
@@ -93,7 +93,6 @@ public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.
             this.recordSetId = Input.ofNullable(recordSetId);
             return this;
         }
-
         public ResourceSetR53ResourceRecordArgs build() {
             return new ResourceSetR53ResourceRecordArgs(domainName, recordSetId);
         }

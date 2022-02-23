@@ -17,7 +17,7 @@ public final class ListWebAppAuthSettingsSlotArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class ListWebAppAuthSettingsSlotArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListWebAppAuthSettingsSlotArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="slot", required=true)
-    private final String slot;
+        private final String slot;
 
     public String getSlot() {
         return this.slot;
@@ -98,7 +98,6 @@ public final class ListWebAppAuthSettingsSlotArgs extends io.pulumi.resources.In
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public ListWebAppAuthSettingsSlotArgs build() {
             return new ListWebAppAuthSettingsSlotArgs(name, resourceGroupName, slot);
         }

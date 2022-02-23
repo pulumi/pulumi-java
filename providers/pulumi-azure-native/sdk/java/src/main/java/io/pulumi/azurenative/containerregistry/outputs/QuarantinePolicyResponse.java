@@ -54,7 +54,6 @@ public final class QuarantinePolicyResponse {
             this.status = status;
             return this;
         }
-
         public QuarantinePolicyResponse build() {
             return new QuarantinePolicyResponse(status);
         }

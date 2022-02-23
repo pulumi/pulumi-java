@@ -117,7 +117,6 @@ public final class MoveCollectionPropertiesResponse {
             this.targetRegion = Objects.requireNonNull(targetRegion);
             return this;
         }
-
         public MoveCollectionPropertiesResponse build() {
             return new MoveCollectionPropertiesResponse(errors, provisioningState, sourceRegion, targetRegion);
         }

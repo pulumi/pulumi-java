@@ -23,7 +23,7 @@ public final class CassandraPartitionKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,6 @@ public final class CassandraPartitionKeyArgs extends io.pulumi.resources.Resourc
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public CassandraPartitionKeyArgs build() {
             return new CassandraPartitionKeyArgs(name);
         }

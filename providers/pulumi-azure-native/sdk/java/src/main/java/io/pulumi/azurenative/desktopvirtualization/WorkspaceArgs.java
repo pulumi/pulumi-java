@@ -24,7 +24,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationGroupReferences")
-    private final @Nullable Input<List<String>> applicationGroupReferences;
+        private final @Nullable Input<List<String>> applicationGroupReferences;
 
     public Input<List<String>> getApplicationGroupReferences() {
         return this.applicationGroupReferences == null ? Input.empty() : this.applicationGroupReferences;
@@ -35,7 +35,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,14 +46,14 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
     @InputImport(name="identity")
-    private final @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
+        private final @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
     public Input<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -64,7 +64,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -75,7 +75,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -86,14 +86,14 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedBy")
-    private final @Nullable Input<String> managedBy;
+        private final @Nullable Input<String> managedBy;
 
     public Input<String> getManagedBy() {
         return this.managedBy == null ? Input.empty() : this.managedBy;
     }
 
     @InputImport(name="plan")
-    private final @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
+        private final @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
     public Input<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
@@ -104,14 +104,14 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="sku")
-    private final @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
+        private final @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
     public Input<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -122,7 +122,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -133,7 +133,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName")
-    private final @Nullable Input<String> workspaceName;
+        private final @Nullable Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName == null ? Input.empty() : this.workspaceName;
@@ -342,7 +342,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.ofNullable(workspaceName);
             return this;
         }
-
         public WorkspaceArgs build() {
             return new WorkspaceArgs(applicationGroupReferences, description, friendlyName, identity, kind, location, managedBy, plan, resourceGroupName, sku, tags, workspaceName);
         }

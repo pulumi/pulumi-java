@@ -59,7 +59,6 @@ public final class ResponseHeadersPolicyFrameOptions {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public ResponseHeadersPolicyFrameOptions build() {
             return new ResponseHeadersPolicyFrameOptions(frameOption, override);
         }

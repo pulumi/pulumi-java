@@ -20,7 +20,7 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="authenticationName")
-    private final @Nullable Input<String> authenticationName;
+        private final @Nullable Input<String> authenticationName;
 
     public Input<String> getAuthenticationName() {
         return this.authenticationName == null ? Input.empty() : this.authenticationName;
@@ -31,7 +31,7 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="azureADOnlyAuthentication", required=true)
-    private final Input<Boolean> azureADOnlyAuthentication;
+        private final Input<Boolean> azureADOnlyAuthentication;
 
     public Input<Boolean> getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
@@ -42,7 +42,7 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -142,7 +142,6 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public ServerAzureADOnlyAuthenticationArgs build() {
             return new ServerAzureADOnlyAuthenticationArgs(authenticationName, azureADOnlyAuthentication, resourceGroupName, serverName);
         }

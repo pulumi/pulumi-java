@@ -159,7 +159,6 @@ public final class DistributionResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public DistributionResponse build() {
             return new DistributionResponse(architecture, cpeUri, description, latestVersion, maintainer, url);
         }

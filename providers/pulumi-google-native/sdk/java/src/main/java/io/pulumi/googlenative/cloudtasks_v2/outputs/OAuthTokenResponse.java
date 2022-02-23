@@ -74,7 +74,6 @@ public final class OAuthTokenResponse {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public OAuthTokenResponse build() {
             return new OAuthTokenResponse(scope, serviceAccountEmail);
         }

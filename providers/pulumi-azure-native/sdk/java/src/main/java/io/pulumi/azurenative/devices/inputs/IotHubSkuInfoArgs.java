@@ -26,7 +26,7 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Double> capacity;
+        private final @Nullable Input<Double> capacity;
 
     public Input<Double> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -37,7 +37,7 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,IotHubSku>> name;
+        private final Input<Either<String,IotHubSku>> name;
 
     public Input<Either<String,IotHubSku>> getName() {
         return this.name;
@@ -96,7 +96,6 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public IotHubSkuInfoArgs build() {
             return new IotHubSkuInfoArgs(capacity, name);
         }

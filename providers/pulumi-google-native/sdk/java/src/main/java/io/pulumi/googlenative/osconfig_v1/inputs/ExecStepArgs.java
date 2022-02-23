@@ -23,7 +23,7 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxExecStepConfig")
-    private final @Nullable Input<ExecStepConfigArgs> linuxExecStepConfig;
+      private final @Nullable Input<ExecStepConfigArgs> linuxExecStepConfig;
 
     public Input<ExecStepConfigArgs> getLinuxExecStepConfig() {
         return this.linuxExecStepConfig == null ? Input.empty() : this.linuxExecStepConfig;
@@ -34,7 +34,7 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsExecStepConfig")
-    private final @Nullable Input<ExecStepConfigArgs> windowsExecStepConfig;
+      private final @Nullable Input<ExecStepConfigArgs> windowsExecStepConfig;
 
     public Input<ExecStepConfigArgs> getWindowsExecStepConfig() {
         return this.windowsExecStepConfig == null ? Input.empty() : this.windowsExecStepConfig;
@@ -93,7 +93,6 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
             this.windowsExecStepConfig = Input.ofNullable(windowsExecStepConfig);
             return this;
         }
-
         public ExecStepArgs build() {
             return new ExecStepArgs(linuxExecStepConfig, windowsExecStepConfig);
         }

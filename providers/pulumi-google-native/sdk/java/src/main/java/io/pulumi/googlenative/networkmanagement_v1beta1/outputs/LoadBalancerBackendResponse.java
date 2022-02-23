@@ -138,7 +138,6 @@ public final class LoadBalancerBackendResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public LoadBalancerBackendResponse build() {
             return new LoadBalancerBackendResponse(displayName, healthCheckAllowingFirewallRules, healthCheckBlockingFirewallRules, healthCheckFirewallState, uri);
         }

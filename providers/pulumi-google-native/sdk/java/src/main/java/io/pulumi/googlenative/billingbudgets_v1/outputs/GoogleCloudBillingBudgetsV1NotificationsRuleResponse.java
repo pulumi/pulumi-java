@@ -118,7 +118,6 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleResponse {
             this.schemaVersion = Objects.requireNonNull(schemaVersion);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1NotificationsRuleResponse build() {
             return new GoogleCloudBillingBudgetsV1NotificationsRuleResponse(disableDefaultIamRecipients, monitoringNotificationChannels, pubsubTopic, schemaVersion);
         }

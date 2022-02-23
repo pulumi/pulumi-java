@@ -15,21 +15,21 @@ public final class GetDomainMappingArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDomainMappingArgs Empty = new GetDomainMappingArgs();
 
     @InputImport(name="domainmappingId", required=true)
-    private final String domainmappingId;
+      private final String domainmappingId;
 
     public String getDomainmappingId() {
         return this.domainmappingId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetDomainMappingArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetDomainMappingArgs build() {
             return new GetDomainMappingArgs(domainmappingId, location, project);
         }

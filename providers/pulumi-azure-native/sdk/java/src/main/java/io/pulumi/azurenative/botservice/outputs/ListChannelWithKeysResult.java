@@ -367,7 +367,6 @@ public final class ListChannelWithKeysResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public ListChannelWithKeysResult build() {
             return new ListChannelWithKeysResult(changedTime, entityTag, etag, id, kind, location, name, properties, provisioningState, resource, setting, sku, tags, type, zones);
         }

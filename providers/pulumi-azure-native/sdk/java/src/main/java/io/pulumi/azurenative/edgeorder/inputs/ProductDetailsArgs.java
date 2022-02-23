@@ -22,7 +22,7 @@ public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hierarchyInformation", required=true)
-    private final Input<HierarchyInformationArgs> hierarchyInformation;
+        private final Input<HierarchyInformationArgs> hierarchyInformation;
 
     public Input<HierarchyInformationArgs> getHierarchyInformation() {
         return this.hierarchyInformation;
@@ -65,7 +65,6 @@ public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.hierarchyInformation = Input.of(Objects.requireNonNull(hierarchyInformation));
             return this;
         }
-
         public ProductDetailsArgs build() {
             return new ProductDetailsArgs(hierarchyInformation);
         }

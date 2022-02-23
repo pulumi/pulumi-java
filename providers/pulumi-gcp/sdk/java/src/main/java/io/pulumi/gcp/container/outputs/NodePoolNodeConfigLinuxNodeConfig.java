@@ -45,7 +45,6 @@ public final class NodePoolNodeConfigLinuxNodeConfig {
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }
-
         public NodePoolNodeConfigLinuxNodeConfig build() {
             return new NodePoolNodeConfigLinuxNodeConfig(sysctls);
         }

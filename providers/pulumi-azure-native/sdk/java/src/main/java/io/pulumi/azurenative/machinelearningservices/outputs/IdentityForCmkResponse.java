@@ -52,7 +52,6 @@ public final class IdentityForCmkResponse {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }
-
         public IdentityForCmkResponse build() {
             return new IdentityForCmkResponse(userAssignedIdentity);
         }

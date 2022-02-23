@@ -75,7 +75,6 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfig {
             this.statisticsResource = statisticsResource;
             return this;
         }
-
         public DataQualityJobDefinitionDataQualityBaselineConfig build() {
             return new DataQualityJobDefinitionDataQualityBaselineConfig(baseliningJobName, constraintsResource, statisticsResource);
         }

@@ -24,7 +24,7 @@ public final class BuildpackBindingLaunchPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+        private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -35,7 +35,7 @@ public final class BuildpackBindingLaunchPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable Map<String,String> secrets;
+        private final @Nullable Map<String,String> secrets;
 
     public Map<String,String> getSecrets() {
         return this.secrets == null ? Map.of() : this.secrets;
@@ -84,7 +84,6 @@ public final class BuildpackBindingLaunchPropertiesResponse extends io.pulumi.re
             this.secrets = secrets;
             return this;
         }
-
         public BuildpackBindingLaunchPropertiesResponse build() {
             return new BuildpackBindingLaunchPropertiesResponse(properties, secrets);
         }

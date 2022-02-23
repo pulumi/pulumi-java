@@ -22,7 +22,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="depth", required=true)
-    private final Double depth;
+      private final Double depth;
 
     public Double getDepth() {
         return this.depth;
@@ -33,7 +33,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="height", required=true)
-    private final Double height;
+      private final Double height;
 
     public Double getHeight() {
         return this.height;
@@ -44,7 +44,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="length", required=true)
-    private final Double length;
+      private final Double length;
 
     public Double getLength() {
         return this.length;
@@ -55,7 +55,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lengthHeightUnit", required=true)
-    private final String lengthHeightUnit;
+      private final String lengthHeightUnit;
 
     public String getLengthHeightUnit() {
         return this.lengthHeightUnit;
@@ -66,7 +66,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="weight", required=true)
-    private final Double weight;
+      private final Double weight;
 
     public Double getWeight() {
         return this.weight;
@@ -77,7 +77,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="weightUnit", required=true)
-    private final String weightUnit;
+      private final String weightUnit;
 
     public String getWeightUnit() {
         return this.weightUnit;
@@ -88,7 +88,7 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="width", required=true)
-    private final Double width;
+      private final Double width;
 
     public Double getWidth() {
         return this.width;
@@ -187,7 +187,6 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
             this.width = Objects.requireNonNull(width);
             return this;
         }
-
         public DimensionsResponse build() {
             return new DimensionsResponse(depth, height, length, lengthHeightUnit, weight, weightUnit, width);
         }

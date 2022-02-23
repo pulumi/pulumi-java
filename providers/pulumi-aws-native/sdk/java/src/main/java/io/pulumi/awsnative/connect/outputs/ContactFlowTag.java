@@ -74,7 +74,6 @@ public final class ContactFlowTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ContactFlowTag build() {
             return new ContactFlowTag(key, value);
         }

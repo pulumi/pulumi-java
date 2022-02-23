@@ -120,7 +120,6 @@ public final class ReplicaSetSpec {
             this.template = template;
             return this;
         }
-
         public ReplicaSetSpec build() {
             return new ReplicaSetSpec(minReadySeconds, replicas, selector, template);
         }

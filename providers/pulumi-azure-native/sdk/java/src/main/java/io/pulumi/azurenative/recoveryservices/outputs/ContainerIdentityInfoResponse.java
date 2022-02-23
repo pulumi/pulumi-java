@@ -118,7 +118,6 @@ public final class ContainerIdentityInfoResponse {
             this.uniqueName = uniqueName;
             return this;
         }
-
         public ContainerIdentityInfoResponse build() {
             return new ContainerIdentityInfoResponse(aadTenantId, audience, servicePrincipalClientId, uniqueName);
         }

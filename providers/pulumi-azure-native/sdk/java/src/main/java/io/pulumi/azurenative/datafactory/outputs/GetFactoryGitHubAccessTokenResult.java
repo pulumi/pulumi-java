@@ -54,7 +54,6 @@ public final class GetFactoryGitHubAccessTokenResult {
             this.gitHubAccessToken = gitHubAccessToken;
             return this;
         }
-
         public GetFactoryGitHubAccessTokenResult build() {
             return new GetFactoryGitHubAccessTokenResult(gitHubAccessToken);
         }

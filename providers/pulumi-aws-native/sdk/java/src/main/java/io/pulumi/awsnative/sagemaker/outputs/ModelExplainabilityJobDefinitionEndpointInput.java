@@ -175,7 +175,6 @@ public final class ModelExplainabilityJobDefinitionEndpointInput {
             this.s3InputMode = s3InputMode;
             return this;
         }
-
         public ModelExplainabilityJobDefinitionEndpointInput build() {
             return new ModelExplainabilityJobDefinitionEndpointInput(endpointName, featuresAttribute, inferenceAttribute, localPath, probabilityAttribute, s3DataDistributionType, s3InputMode);
         }

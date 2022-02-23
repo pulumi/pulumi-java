@@ -23,91 +23,91 @@ public final class DeliveryStreamAmazonopensearchserviceDestinationConfiguration
     public static final DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs Empty = new DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs();
 
     @InputImport(name="bufferingHints")
-    private final @Nullable Input<DeliveryStreamAmazonopensearchserviceBufferingHintsArgs> bufferingHints;
+        private final @Nullable Input<DeliveryStreamAmazonopensearchserviceBufferingHintsArgs> bufferingHints;
 
     public Input<DeliveryStreamAmazonopensearchserviceBufferingHintsArgs> getBufferingHints() {
         return this.bufferingHints == null ? Input.empty() : this.bufferingHints;
     }
 
     @InputImport(name="cloudWatchLoggingOptions")
-    private final @Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
+        private final @Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
     public Input<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Input.empty() : this.cloudWatchLoggingOptions;
     }
 
     @InputImport(name="clusterEndpoint")
-    private final @Nullable Input<String> clusterEndpoint;
+        private final @Nullable Input<String> clusterEndpoint;
 
     public Input<String> getClusterEndpoint() {
         return this.clusterEndpoint == null ? Input.empty() : this.clusterEndpoint;
     }
 
     @InputImport(name="domainARN")
-    private final @Nullable Input<String> domainARN;
+        private final @Nullable Input<String> domainARN;
 
     public Input<String> getDomainARN() {
         return this.domainARN == null ? Input.empty() : this.domainARN;
     }
 
     @InputImport(name="indexName", required=true)
-    private final Input<String> indexName;
+        private final Input<String> indexName;
 
     public Input<String> getIndexName() {
         return this.indexName;
     }
 
     @InputImport(name="indexRotationPeriod")
-    private final @Nullable Input<DeliveryStreamAmazonopensearchserviceDestinationConfigurationIndexRotationPeriod> indexRotationPeriod;
+        private final @Nullable Input<DeliveryStreamAmazonopensearchserviceDestinationConfigurationIndexRotationPeriod> indexRotationPeriod;
 
     public Input<DeliveryStreamAmazonopensearchserviceDestinationConfigurationIndexRotationPeriod> getIndexRotationPeriod() {
         return this.indexRotationPeriod == null ? Input.empty() : this.indexRotationPeriod;
     }
 
     @InputImport(name="processingConfiguration")
-    private final @Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
+        private final @Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
     public Input<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
     }
 
     @InputImport(name="retryOptions")
-    private final @Nullable Input<DeliveryStreamAmazonopensearchserviceRetryOptionsArgs> retryOptions;
+        private final @Nullable Input<DeliveryStreamAmazonopensearchserviceRetryOptionsArgs> retryOptions;
 
     public Input<DeliveryStreamAmazonopensearchserviceRetryOptionsArgs> getRetryOptions() {
         return this.retryOptions == null ? Input.empty() : this.retryOptions;
     }
 
     @InputImport(name="roleARN", required=true)
-    private final Input<String> roleARN;
+        private final Input<String> roleARN;
 
     public Input<String> getRoleARN() {
         return this.roleARN;
     }
 
     @InputImport(name="s3BackupMode")
-    private final @Nullable Input<DeliveryStreamAmazonopensearchserviceDestinationConfigurationS3BackupMode> s3BackupMode;
+        private final @Nullable Input<DeliveryStreamAmazonopensearchserviceDestinationConfigurationS3BackupMode> s3BackupMode;
 
     public Input<DeliveryStreamAmazonopensearchserviceDestinationConfigurationS3BackupMode> getS3BackupMode() {
         return this.s3BackupMode == null ? Input.empty() : this.s3BackupMode;
     }
 
     @InputImport(name="s3Configuration", required=true)
-    private final Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
+        private final Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
     public Input<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {
         return this.s3Configuration;
     }
 
     @InputImport(name="typeName")
-    private final @Nullable Input<String> typeName;
+        private final @Nullable Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName == null ? Input.empty() : this.typeName;
     }
 
     @InputImport(name="vpcConfiguration")
-    private final @Nullable Input<DeliveryStreamVpcConfigurationArgs> vpcConfiguration;
+        private final @Nullable Input<DeliveryStreamVpcConfigurationArgs> vpcConfiguration;
 
     public Input<DeliveryStreamVpcConfigurationArgs> getVpcConfiguration() {
         return this.vpcConfiguration == null ? Input.empty() : this.vpcConfiguration;
@@ -331,7 +331,6 @@ public final class DeliveryStreamAmazonopensearchserviceDestinationConfiguration
             this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
             return this;
         }
-
         public DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs build() {
             return new DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs(bufferingHints, cloudWatchLoggingOptions, clusterEndpoint, domainARN, indexName, indexRotationPeriod, processingConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration, typeName, vpcConfiguration);
         }

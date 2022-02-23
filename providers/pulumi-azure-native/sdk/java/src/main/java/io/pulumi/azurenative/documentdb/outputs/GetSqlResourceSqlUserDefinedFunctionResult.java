@@ -154,7 +154,6 @@ public final class GetSqlResourceSqlUserDefinedFunctionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlResourceSqlUserDefinedFunctionResult build() {
             return new GetSqlResourceSqlUserDefinedFunctionResult(id, location, name, resource, tags, type);
         }

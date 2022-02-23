@@ -60,7 +60,6 @@ public final class ExternalDocumentation {
             this.url = url;
             return this;
         }
-
         public ExternalDocumentation build() {
             return new ExternalDocumentation(description, url);
         }

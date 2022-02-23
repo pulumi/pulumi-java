@@ -275,7 +275,6 @@ public final class InformixLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public InformixLinkedServiceResponse build() {
             return new InformixLinkedServiceResponse(annotations, authenticationType, connectVia, connectionString, credential, description, encryptedCredential, parameters, password, type, userName);
         }

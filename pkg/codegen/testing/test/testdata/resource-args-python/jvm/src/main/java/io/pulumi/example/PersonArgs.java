@@ -17,14 +17,14 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
     public static final PersonArgs Empty = new PersonArgs();
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="pets")
-    private final @Nullable Input<List<PetArgs>> pets;
+      private final @Nullable Input<List<PetArgs>> pets;
 
     public Input<List<PetArgs>> getPets() {
         return this.pets == null ? Input.empty() : this.pets;
@@ -83,7 +83,6 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
             this.pets = Input.ofNullable(pets);
             return this;
         }
-
         public PersonArgs build() {
             return new PersonArgs(name, pets);
         }

@@ -18,7 +18,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="endColumn", required=true)
-    private final Integer endColumn;
+      private final Integer endColumn;
 
     public Integer getEndColumn() {
         return this.endColumn;
@@ -29,7 +29,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="endLine", required=true)
-    private final Integer endLine;
+      private final Integer endLine;
 
     public Integer getEndLine() {
         return this.endLine;
@@ -40,7 +40,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="procedureId", required=true)
-    private final String procedureId;
+      private final String procedureId;
 
     public String getProcedureId() {
         return this.procedureId;
@@ -51,7 +51,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="startColumn", required=true)
-    private final Integer startColumn;
+      private final Integer startColumn;
 
     public Integer getStartColumn() {
         return this.startColumn;
@@ -62,7 +62,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="startLine", required=true)
-    private final Integer startLine;
+      private final Integer startLine;
 
     public Integer getStartLine() {
         return this.startLine;
@@ -73,7 +73,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -162,7 +162,6 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public ScriptStackFrameResponse build() {
             return new ScriptStackFrameResponse(endColumn, endLine, procedureId, startColumn, startLine, text);
         }

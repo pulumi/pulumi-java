@@ -159,7 +159,6 @@ public final class StorageLensConfiguration {
             this.storageLensArn = storageLensArn;
             return this;
         }
-
         public StorageLensConfiguration build() {
             return new StorageLensConfiguration(accountLevel, awsOrg, dataExport, exclude, id, include, isEnabled, storageLensArn);
         }

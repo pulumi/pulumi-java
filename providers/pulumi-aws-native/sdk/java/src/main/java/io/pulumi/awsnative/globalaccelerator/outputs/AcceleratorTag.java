@@ -74,7 +74,6 @@ public final class AcceleratorTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AcceleratorTag build() {
             return new AcceleratorTag(key, value);
         }

@@ -15,21 +15,21 @@ public final class GetCertificateTemplateArgs extends io.pulumi.resources.Invoke
     public static final GetCertificateTemplateArgs Empty = new GetCertificateTemplateArgs();
 
     @InputImport(name="certificateTemplateId", required=true)
-    private final String certificateTemplateId;
+      private final String certificateTemplateId;
 
     public String getCertificateTemplateId() {
         return this.certificateTemplateId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetCertificateTemplateArgs extends io.pulumi.resources.Invoke
             this.project = project;
             return this;
         }
-
         public GetCertificateTemplateArgs build() {
             return new GetCertificateTemplateArgs(certificateTemplateId, location, project);
         }

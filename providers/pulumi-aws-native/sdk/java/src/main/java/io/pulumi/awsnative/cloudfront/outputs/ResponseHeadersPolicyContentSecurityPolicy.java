@@ -59,7 +59,6 @@ public final class ResponseHeadersPolicyContentSecurityPolicy {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public ResponseHeadersPolicyContentSecurityPolicy build() {
             return new ResponseHeadersPolicyContentSecurityPolicy(contentSecurityPolicy, override);
         }

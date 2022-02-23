@@ -191,7 +191,6 @@ public final class ClusterClusterConfigMasterConfig {
             this.numInstances = numInstances;
             return this;
         }
-
         public ClusterClusterConfigMasterConfig build() {
             return new ClusterClusterConfigMasterConfig(accelerators, diskConfig, imageUri, instanceNames, machineType, minCpuPlatform, numInstances);
         }

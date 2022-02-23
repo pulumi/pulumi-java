@@ -58,7 +58,6 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek build() {
             return new GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek(day, startTime);
         }

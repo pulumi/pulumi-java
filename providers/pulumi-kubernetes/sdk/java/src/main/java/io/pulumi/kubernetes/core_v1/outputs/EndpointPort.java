@@ -129,7 +129,6 @@ public final class EndpointPort {
             this.protocol = protocol;
             return this;
         }
-
         public EndpointPort build() {
             return new EndpointPort(appProtocol, name, port, protocol);
         }

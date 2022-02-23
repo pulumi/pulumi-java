@@ -98,7 +98,6 @@ public final class GetRegionAutoscalingPolicyIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRegionAutoscalingPolicyIamPolicyResult build() {
             return new GetRegionAutoscalingPolicyIamPolicyResult(bindings, etag, version);
         }

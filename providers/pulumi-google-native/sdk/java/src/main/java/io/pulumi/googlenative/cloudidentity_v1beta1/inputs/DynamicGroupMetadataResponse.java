@@ -23,7 +23,7 @@ public final class DynamicGroupMetadataResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="queries", required=true)
-    private final List<DynamicGroupQueryResponse> queries;
+      private final List<DynamicGroupQueryResponse> queries;
 
     public List<DynamicGroupQueryResponse> getQueries() {
         return this.queries;
@@ -34,7 +34,7 @@ public final class DynamicGroupMetadataResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="status", required=true)
-    private final DynamicGroupStatusResponse status;
+      private final DynamicGroupStatusResponse status;
 
     public DynamicGroupStatusResponse getStatus() {
         return this.status;
@@ -83,7 +83,6 @@ public final class DynamicGroupMetadataResponse extends io.pulumi.resources.Invo
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DynamicGroupMetadataResponse build() {
             return new DynamicGroupMetadataResponse(queries, status);
         }

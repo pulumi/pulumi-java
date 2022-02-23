@@ -76,7 +76,6 @@ public final class IotHubLocationDescriptionResponse {
             this.role = role;
             return this;
         }
-
         public IotHubLocationDescriptionResponse build() {
             return new IotHubLocationDescriptionResponse(location, role);
         }

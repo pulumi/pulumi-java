@@ -16,42 +16,42 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
     public static final FilterPackageFilterArgs Empty = new FilterPackageFilterArgs();
 
     @InputImport(name="architecture")
-    private final @Nullable Input<FilterStringFilterArgs> architecture;
+        private final @Nullable Input<FilterStringFilterArgs> architecture;
 
     public Input<FilterStringFilterArgs> getArchitecture() {
         return this.architecture == null ? Input.empty() : this.architecture;
     }
 
     @InputImport(name="epoch")
-    private final @Nullable Input<FilterNumberFilterArgs> epoch;
+        private final @Nullable Input<FilterNumberFilterArgs> epoch;
 
     public Input<FilterNumberFilterArgs> getEpoch() {
         return this.epoch == null ? Input.empty() : this.epoch;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<FilterStringFilterArgs> name;
+        private final @Nullable Input<FilterStringFilterArgs> name;
 
     public Input<FilterStringFilterArgs> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="release")
-    private final @Nullable Input<FilterStringFilterArgs> release;
+        private final @Nullable Input<FilterStringFilterArgs> release;
 
     public Input<FilterStringFilterArgs> getRelease() {
         return this.release == null ? Input.empty() : this.release;
     }
 
     @InputImport(name="sourceLayerHash")
-    private final @Nullable Input<FilterStringFilterArgs> sourceLayerHash;
+        private final @Nullable Input<FilterStringFilterArgs> sourceLayerHash;
 
     public Input<FilterStringFilterArgs> getSourceLayerHash() {
         return this.sourceLayerHash == null ? Input.empty() : this.sourceLayerHash;
     }
 
     @InputImport(name="version")
-    private final @Nullable Input<FilterStringFilterArgs> version;
+        private final @Nullable Input<FilterStringFilterArgs> version;
 
     public Input<FilterStringFilterArgs> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -170,7 +170,6 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public FilterPackageFilterArgs build() {
             return new FilterPackageFilterArgs(architecture, epoch, name, release, sourceLayerHash, version);
         }

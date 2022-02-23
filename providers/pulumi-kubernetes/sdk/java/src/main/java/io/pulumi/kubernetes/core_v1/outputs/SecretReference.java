@@ -76,7 +76,6 @@ public final class SecretReference {
             this.namespace = namespace;
             return this;
         }
-
         public SecretReference build() {
             return new SecretReference(name, namespace);
         }

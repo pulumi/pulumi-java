@@ -95,7 +95,6 @@ public final class NetworkEndpointGroupAppEngineResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public NetworkEndpointGroupAppEngineResponse build() {
             return new NetworkEndpointGroupAppEngineResponse(service, urlMask, version);
         }

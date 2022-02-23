@@ -155,7 +155,6 @@ public final class GetRepositoryResult {
             this.tags = tags;
             return this;
         }
-
         public GetRepositoryResult build() {
             return new GetRepositoryResult(arn, imageScanningConfiguration, imageTagMutability, lifecyclePolicy, repositoryPolicyText, repositoryUri, tags);
         }

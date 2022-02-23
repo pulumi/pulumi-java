@@ -119,7 +119,6 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentTrainingPhraseResponse build() {
             return new GoogleCloudDialogflowV2IntentTrainingPhraseResponse(name, parts, timesAddedCount, type);
         }

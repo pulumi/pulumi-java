@@ -18,7 +18,7 @@ public final class SSLHealthCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -29,7 +29,7 @@ public final class SSLHealthCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="portName", required=true)
-    private final String portName;
+      private final String portName;
 
     public String getPortName() {
         return this.portName;
@@ -40,7 +40,7 @@ public final class SSLHealthCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="portSpecification", required=true)
-    private final String portSpecification;
+      private final String portSpecification;
 
     public String getPortSpecification() {
         return this.portSpecification;
@@ -51,7 +51,7 @@ public final class SSLHealthCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="proxyHeader", required=true)
-    private final String proxyHeader;
+      private final String proxyHeader;
 
     public String getProxyHeader() {
         return this.proxyHeader;
@@ -62,7 +62,7 @@ public final class SSLHealthCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="request", required=true)
-    private final String request;
+      private final String request;
 
     public String getRequest() {
         return this.request;
@@ -73,7 +73,7 @@ public final class SSLHealthCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="response", required=true)
-    private final String response;
+      private final String response;
 
     public String getResponse() {
         return this.response;
@@ -162,7 +162,6 @@ public final class SSLHealthCheckResponse extends io.pulumi.resources.InvokeArgs
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public SSLHealthCheckResponse build() {
             return new SSLHealthCheckResponse(port, portName, portSpecification, proxyHeader, request, response);
         }

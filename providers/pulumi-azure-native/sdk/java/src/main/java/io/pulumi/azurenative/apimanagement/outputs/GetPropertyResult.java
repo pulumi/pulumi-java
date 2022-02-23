@@ -183,7 +183,6 @@ public final class GetPropertyResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetPropertyResult build() {
             return new GetPropertyResult(displayName, id, name, secret, tags, type, value);
         }

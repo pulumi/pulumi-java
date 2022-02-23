@@ -25,7 +25,7 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse extends
      * 
      */
     @InputImport(name="bypassTrafficSettings")
-    private final @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings;
+        private final @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings;
 
     public List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> getBypassTrafficSettings() {
         return this.bypassTrafficSettings == null ? List.of() : this.bypassTrafficSettings;
@@ -36,7 +36,7 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse extends
      * 
      */
     @InputImport(name="signatureOverrides")
-    private final @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides;
+        private final @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides;
 
     public List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> getSignatureOverrides() {
         return this.signatureOverrides == null ? List.of() : this.signatureOverrides;
@@ -85,7 +85,6 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse extends
             this.signatureOverrides = signatureOverrides;
             return this;
         }
-
         public FirewallPolicyIntrusionDetectionConfigurationResponse build() {
             return new FirewallPolicyIntrusionDetectionConfigurationResponse(bypassTrafficSettings, signatureOverrides);
         }

@@ -26,7 +26,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionPreferences")
-    private final @Nullable Input<EncryptionPreferencesArgs> encryptionPreferences;
+        private final @Nullable Input<EncryptionPreferencesArgs> encryptionPreferences;
 
     public Input<EncryptionPreferencesArgs> getEncryptionPreferences() {
         return this.encryptionPreferences == null ? Input.empty() : this.encryptionPreferences;
@@ -37,7 +37,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredDataCenterRegion")
-    private final @Nullable Input<List<String>> preferredDataCenterRegion;
+        private final @Nullable Input<List<String>> preferredDataCenterRegion;
 
     public Input<List<String>> getPreferredDataCenterRegion() {
         return this.preferredDataCenterRegion == null ? Input.empty() : this.preferredDataCenterRegion;
@@ -48,7 +48,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transportPreferences")
-    private final @Nullable Input<TransportPreferencesArgs> transportPreferences;
+        private final @Nullable Input<TransportPreferencesArgs> transportPreferences;
 
     public Input<TransportPreferencesArgs> getTransportPreferences() {
         return this.transportPreferences == null ? Input.empty() : this.transportPreferences;
@@ -122,7 +122,6 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
             this.transportPreferences = Input.ofNullable(transportPreferences);
             return this;
         }
-
         public PreferencesArgs build() {
             return new PreferencesArgs(encryptionPreferences, preferredDataCenterRegion, transportPreferences);
         }

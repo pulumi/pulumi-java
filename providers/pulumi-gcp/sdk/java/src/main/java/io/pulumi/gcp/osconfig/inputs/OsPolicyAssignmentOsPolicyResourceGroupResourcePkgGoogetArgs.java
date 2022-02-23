@@ -18,7 +18,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -61,7 +61,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs 
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs(name);
         }

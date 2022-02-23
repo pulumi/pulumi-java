@@ -52,7 +52,6 @@ public final class ModelQualityJobDefinitionStoppingCondition {
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
         }
-
         public ModelQualityJobDefinitionStoppingCondition build() {
             return new ModelQualityJobDefinitionStoppingCondition(maxRuntimeInSeconds);
         }

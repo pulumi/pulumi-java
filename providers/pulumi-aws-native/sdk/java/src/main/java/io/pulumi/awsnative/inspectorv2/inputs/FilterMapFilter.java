@@ -16,21 +16,21 @@ public final class FilterMapFilter extends io.pulumi.resources.InvokeArgs {
     public static final FilterMapFilter Empty = new FilterMapFilter();
 
     @InputImport(name="comparison", required=true)
-    private final FilterMapComparison comparison;
+        private final FilterMapComparison comparison;
 
     public FilterMapComparison getComparison() {
         return this.comparison;
     }
 
     @InputImport(name="key")
-    private final @Nullable String key;
+        private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -89,7 +89,6 @@ public final class FilterMapFilter extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public FilterMapFilter build() {
             return new FilterMapFilter(comparison, key, value);
         }

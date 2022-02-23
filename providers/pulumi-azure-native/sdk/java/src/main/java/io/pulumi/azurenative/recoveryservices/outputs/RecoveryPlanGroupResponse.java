@@ -120,7 +120,6 @@ public final class RecoveryPlanGroupResponse {
             this.startGroupActions = startGroupActions;
             return this;
         }
-
         public RecoveryPlanGroupResponse build() {
             return new RecoveryPlanGroupResponse(endGroupActions, groupType, replicationProtectedItems, startGroupActions);
         }

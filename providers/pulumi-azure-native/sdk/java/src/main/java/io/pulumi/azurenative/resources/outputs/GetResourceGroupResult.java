@@ -183,7 +183,6 @@ public final class GetResourceGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceGroupResult build() {
             return new GetResourceGroupResult(id, location, managedBy, name, properties, tags, type);
         }

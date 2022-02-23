@@ -116,7 +116,6 @@ public final class SymptomResponse {
             this.workerId = Objects.requireNonNull(workerId);
             return this;
         }
-
         public SymptomResponse build() {
             return new SymptomResponse(createTime, details, symptomType, workerId);
         }

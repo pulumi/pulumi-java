@@ -76,7 +76,6 @@ public final class ApiDeploymentParameterMetadataSetResponse {
             this.redisCacheConnectionString = redisCacheConnectionString;
             return this;
         }
-
         public ApiDeploymentParameterMetadataSetResponse build() {
             return new ApiDeploymentParameterMetadataSetResponse(packageContentLink, redisCacheConnectionString);
         }

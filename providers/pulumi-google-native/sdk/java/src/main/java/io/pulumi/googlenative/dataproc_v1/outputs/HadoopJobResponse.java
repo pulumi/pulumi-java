@@ -203,7 +203,6 @@ public final class HadoopJobResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public HadoopJobResponse build() {
             return new HadoopJobResponse(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }

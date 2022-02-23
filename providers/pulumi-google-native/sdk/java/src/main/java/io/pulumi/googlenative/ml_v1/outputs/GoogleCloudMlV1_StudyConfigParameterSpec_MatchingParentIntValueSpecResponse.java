@@ -53,7 +53,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse(values);
         }

@@ -76,7 +76,6 @@ public final class TransitGatewayPeeringAttachmentTag {
             this.value = value;
             return this;
         }
-
         public TransitGatewayPeeringAttachmentTag build() {
             return new TransitGatewayPeeringAttachmentTag(key, value);
         }

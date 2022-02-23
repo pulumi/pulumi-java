@@ -24,7 +24,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="cpuHotAddEnabled", required=true)
-    private final Boolean cpuHotAddEnabled;
+        private final Boolean cpuHotAddEnabled;
 
     public Boolean getCpuHotAddEnabled() {
         return this.cpuHotAddEnabled;
@@ -35,7 +35,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="cpuHotRemoveEnabled", required=true)
-    private final Boolean cpuHotRemoveEnabled;
+        private final Boolean cpuHotRemoveEnabled;
 
     public Boolean getCpuHotRemoveEnabled() {
         return this.cpuHotRemoveEnabled;
@@ -46,7 +46,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="memoryHotAddEnabled", required=true)
-    private final Boolean memoryHotAddEnabled;
+        private final Boolean memoryHotAddEnabled;
 
     public Boolean getMemoryHotAddEnabled() {
         return this.memoryHotAddEnabled;
@@ -57,7 +57,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="memorySizeMB")
-    private final @Nullable Integer memorySizeMB;
+        private final @Nullable Integer memorySizeMB;
 
     public Optional<Integer> getMemorySizeMB() {
         return this.memorySizeMB == null ? Optional.empty() : Optional.ofNullable(this.memorySizeMB);
@@ -68,7 +68,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="numCPUs")
-    private final @Nullable Integer numCPUs;
+        private final @Nullable Integer numCPUs;
 
     public Optional<Integer> getNumCPUs() {
         return this.numCPUs == null ? Optional.empty() : Optional.ofNullable(this.numCPUs);
@@ -79,7 +79,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="numCoresPerSocket")
-    private final @Nullable Integer numCoresPerSocket;
+        private final @Nullable Integer numCoresPerSocket;
 
     public Optional<Integer> getNumCoresPerSocket() {
         return this.numCoresPerSocket == null ? Optional.empty() : Optional.ofNullable(this.numCoresPerSocket);
@@ -168,7 +168,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
             this.numCoresPerSocket = numCoresPerSocket;
             return this;
         }
-
         public HardwareProfileResponse build() {
             return new HardwareProfileResponse(cpuHotAddEnabled, cpuHotRemoveEnabled, memoryHotAddEnabled, memorySizeMB, numCPUs, numCoresPerSocket);
         }

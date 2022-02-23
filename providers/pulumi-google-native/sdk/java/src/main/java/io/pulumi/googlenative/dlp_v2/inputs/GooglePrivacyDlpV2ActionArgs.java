@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="jobNotificationEmails")
-    private final @Nullable Input<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails;
+      private final @Nullable Input<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails;
 
     public Input<GooglePrivacyDlpV2JobNotificationEmailsArgs> getJobNotificationEmails() {
         return this.jobNotificationEmails == null ? Input.empty() : this.jobNotificationEmails;
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="pubSub")
-    private final @Nullable Input<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub;
+      private final @Nullable Input<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub;
 
     public Input<GooglePrivacyDlpV2PublishToPubSubArgs> getPubSub() {
         return this.pubSub == null ? Input.empty() : this.pubSub;
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="publishFindingsToCloudDataCatalog")
-    private final @Nullable Input<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog;
+      private final @Nullable Input<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog;
 
     public Input<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> getPublishFindingsToCloudDataCatalog() {
         return this.publishFindingsToCloudDataCatalog == null ? Input.empty() : this.publishFindingsToCloudDataCatalog;
@@ -61,7 +61,7 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="publishSummaryToCscc")
-    private final @Nullable Input<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc;
+      private final @Nullable Input<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc;
 
     public Input<GooglePrivacyDlpV2PublishSummaryToCsccArgs> getPublishSummaryToCscc() {
         return this.publishSummaryToCscc == null ? Input.empty() : this.publishSummaryToCscc;
@@ -72,7 +72,7 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="publishToStackdriver")
-    private final @Nullable Input<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver;
+      private final @Nullable Input<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver;
 
     public Input<GooglePrivacyDlpV2PublishToStackdriverArgs> getPublishToStackdriver() {
         return this.publishToStackdriver == null ? Input.empty() : this.publishToStackdriver;
@@ -83,7 +83,7 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="saveFindings")
-    private final @Nullable Input<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings;
+      private final @Nullable Input<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings;
 
     public Input<GooglePrivacyDlpV2SaveFindingsArgs> getSaveFindings() {
         return this.saveFindings == null ? Input.empty() : this.saveFindings;
@@ -202,7 +202,6 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
             this.saveFindings = Input.ofNullable(saveFindings);
             return this;
         }
-
         public GooglePrivacyDlpV2ActionArgs build() {
             return new GooglePrivacyDlpV2ActionArgs(jobNotificationEmails, pubSub, publishFindingsToCloudDataCatalog, publishSummaryToCscc, publishToStackdriver, saveFindings);
         }

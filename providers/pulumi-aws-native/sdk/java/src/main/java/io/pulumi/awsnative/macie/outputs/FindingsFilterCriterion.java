@@ -30,7 +30,6 @@ public final class FindingsFilterCriterion {
         public Builder(FindingsFilterCriterion defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public FindingsFilterCriterion build() {
             return new FindingsFilterCriterion();
         }

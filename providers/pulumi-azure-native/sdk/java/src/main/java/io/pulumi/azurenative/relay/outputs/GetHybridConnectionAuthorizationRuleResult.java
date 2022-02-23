@@ -117,7 +117,6 @@ public final class GetHybridConnectionAuthorizationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHybridConnectionAuthorizationRuleResult build() {
             return new GetHybridConnectionAuthorizationRuleResult(id, name, rights, type);
         }

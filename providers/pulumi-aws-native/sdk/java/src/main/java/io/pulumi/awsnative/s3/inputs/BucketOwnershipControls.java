@@ -14,7 +14,7 @@ public final class BucketOwnershipControls extends io.pulumi.resources.InvokeArg
     public static final BucketOwnershipControls Empty = new BucketOwnershipControls();
 
     @InputImport(name="rules", required=true)
-    private final List<BucketOwnershipControlsRule> rules;
+        private final List<BucketOwnershipControlsRule> rules;
 
     public List<BucketOwnershipControlsRule> getRules() {
         return this.rules;
@@ -52,7 +52,6 @@ public final class BucketOwnershipControls extends io.pulumi.resources.InvokeArg
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public BucketOwnershipControls build() {
             return new BucketOwnershipControls(rules);
         }

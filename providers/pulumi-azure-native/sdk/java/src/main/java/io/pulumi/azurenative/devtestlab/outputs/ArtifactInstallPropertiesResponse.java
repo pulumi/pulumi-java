@@ -183,7 +183,6 @@ public final class ArtifactInstallPropertiesResponse {
             this.vmExtensionStatusMessage = vmExtensionStatusMessage;
             return this;
         }
-
         public ArtifactInstallPropertiesResponse build() {
             return new ArtifactInstallPropertiesResponse(artifactId, artifactTitle, deploymentStatusMessage, installTime, parameters, status, vmExtensionStatusMessage);
         }

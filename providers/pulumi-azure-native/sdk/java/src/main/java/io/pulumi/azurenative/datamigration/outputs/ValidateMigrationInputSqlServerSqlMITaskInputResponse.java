@@ -186,7 +186,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ValidateMigrationInputSqlServerSqlMITaskInputResponse build() {
             return new ValidateMigrationInputSqlServerSqlMITaskInputResponse(backupBlobShare, backupFileShare, backupMode, selectedDatabases, selectedLogins, sourceConnectionInfo, targetConnectionInfo);
         }

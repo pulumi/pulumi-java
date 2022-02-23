@@ -20,7 +20,7 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cloudFunction")
-    private final @Nullable Input<String> cloudFunction;
+        private final @Nullable Input<String> cloudFunction;
 
     public Input<String> getCloudFunction() {
         return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
@@ -31,7 +31,7 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cloudRunService")
-    private final @Nullable Input<TriggerDestinationCloudRunServiceGetArgs> cloudRunService;
+        private final @Nullable Input<TriggerDestinationCloudRunServiceGetArgs> cloudRunService;
 
     public Input<TriggerDestinationCloudRunServiceGetArgs> getCloudRunService() {
         return this.cloudRunService == null ? Input.empty() : this.cloudRunService;
@@ -90,7 +90,6 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
             this.cloudRunService = Input.ofNullable(cloudRunService);
             return this;
         }
-
         public TriggerDestinationGetArgs build() {
             return new TriggerDestinationGetArgs(cloudFunction, cloudRunService);
         }

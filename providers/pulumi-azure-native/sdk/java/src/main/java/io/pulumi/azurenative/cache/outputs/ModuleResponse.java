@@ -97,7 +97,6 @@ public final class ModuleResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ModuleResponse build() {
             return new ModuleResponse(args, name, version);
         }

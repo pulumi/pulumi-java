@@ -120,7 +120,6 @@ public final class SourceTriggerResponse {
             this.status = status;
             return this;
         }
-
         public SourceTriggerResponse build() {
             return new SourceTriggerResponse(name, sourceRepository, sourceTriggerEvents, status);
         }

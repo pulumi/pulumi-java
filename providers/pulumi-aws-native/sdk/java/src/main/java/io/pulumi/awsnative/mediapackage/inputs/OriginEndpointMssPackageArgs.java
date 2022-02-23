@@ -21,7 +21,7 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
     public static final OriginEndpointMssPackageArgs Empty = new OriginEndpointMssPackageArgs();
 
     @InputImport(name="encryption")
-    private final @Nullable Input<OriginEndpointMssEncryptionArgs> encryption;
+        private final @Nullable Input<OriginEndpointMssEncryptionArgs> encryption;
 
     public Input<OriginEndpointMssEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -32,7 +32,7 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="manifestWindowSeconds")
-    private final @Nullable Input<Integer> manifestWindowSeconds;
+        private final @Nullable Input<Integer> manifestWindowSeconds;
 
     public Input<Integer> getManifestWindowSeconds() {
         return this.manifestWindowSeconds == null ? Input.empty() : this.manifestWindowSeconds;
@@ -43,14 +43,14 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="segmentDurationSeconds")
-    private final @Nullable Input<Integer> segmentDurationSeconds;
+        private final @Nullable Input<Integer> segmentDurationSeconds;
 
     public Input<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Input.empty() : this.segmentDurationSeconds;
     }
 
     @InputImport(name="streamSelection")
-    private final @Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection;
+        private final @Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection;
 
     public Input<OriginEndpointStreamSelectionArgs> getStreamSelection() {
         return this.streamSelection == null ? Input.empty() : this.streamSelection;
@@ -139,7 +139,6 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
             this.streamSelection = Input.ofNullable(streamSelection);
             return this;
         }
-
         public OriginEndpointMssPackageArgs build() {
             return new OriginEndpointMssPackageArgs(encryption, manifestWindowSeconds, segmentDurationSeconds, streamSelection);
         }

@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse {
             this.recordSuppressions = Objects.requireNonNull(recordSuppressions);
             return this;
         }
-
         public GooglePrivacyDlpV2RecordTransformationsResponse build() {
             return new GooglePrivacyDlpV2RecordTransformationsResponse(fieldTransformations, recordSuppressions);
         }

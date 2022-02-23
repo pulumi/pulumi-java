@@ -17,7 +17,7 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -55,7 +55,6 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetContainerArgs build() {
             return new GetContainerArgs(serviceName);
         }

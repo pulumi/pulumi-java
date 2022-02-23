@@ -159,7 +159,6 @@ public final class GetFolderContactResult {
             this.validationState = Objects.requireNonNull(validationState);
             return this;
         }
-
         public GetFolderContactResult build() {
             return new GetFolderContactResult(email, languageTag, name, notificationCategorySubscriptions, validateTime, validationState);
         }

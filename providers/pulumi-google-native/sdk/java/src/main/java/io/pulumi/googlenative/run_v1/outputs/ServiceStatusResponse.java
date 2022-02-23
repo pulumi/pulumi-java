@@ -184,7 +184,6 @@ public final class ServiceStatusResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public ServiceStatusResponse build() {
             return new ServiceStatusResponse(address, conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, traffic, url);
         }

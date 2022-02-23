@@ -52,7 +52,6 @@ public final class GroupSubject {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GroupSubject build() {
             return new GroupSubject(name);
         }

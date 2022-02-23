@@ -61,7 +61,6 @@ public final class ThemeTileLayoutStyle {
             this.margin = margin;
             return this;
         }
-
         public ThemeTileLayoutStyle build() {
             return new ThemeTileLayoutStyle(gutter, margin);
         }

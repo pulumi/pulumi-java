@@ -19,7 +19,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associationName")
-    private final @Nullable Input<String> associationName;
+        private final @Nullable Input<String> associationName;
 
     public Input<String> getAssociationName() {
         return this.associationName == null ? Input.empty() : this.associationName;
@@ -30,7 +30,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -41,7 +41,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceId")
-    private final @Nullable Input<String> targetResourceId;
+        private final @Nullable Input<String> targetResourceId;
 
     public Input<String> getTargetResourceId() {
         return this.targetResourceId == null ? Input.empty() : this.targetResourceId;
@@ -115,7 +115,6 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             this.targetResourceId = Input.ofNullable(targetResourceId);
             return this;
         }
-
         public AssociationArgs build() {
             return new AssociationArgs(associationName, scope, targetResourceId);
         }

@@ -131,7 +131,6 @@ public final class GetPeeredDnsDomainResult {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GetPeeredDnsDomainResult build() {
             return new GetPeeredDnsDomainResult(dnsSuffix, id, name, network, parent, project, service);
         }

@@ -204,7 +204,6 @@ public final class GetModelResult {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
-
         public GetModelResult build() {
             return new GetModelResult(defaultVersion, description, etag, labels, name, onlinePredictionConsoleLogging, onlinePredictionLogging, regions);
         }

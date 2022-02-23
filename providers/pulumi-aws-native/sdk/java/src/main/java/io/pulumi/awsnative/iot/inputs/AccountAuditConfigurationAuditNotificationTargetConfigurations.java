@@ -19,7 +19,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     public static final AccountAuditConfigurationAuditNotificationTargetConfigurations Empty = new AccountAuditConfigurationAuditNotificationTargetConfigurations();
 
     @InputImport(name="sns")
-    private final @Nullable AccountAuditConfigurationAuditNotificationTarget sns;
+        private final @Nullable AccountAuditConfigurationAuditNotificationTarget sns;
 
     public Optional<AccountAuditConfigurationAuditNotificationTarget> getSns() {
         return this.sns == null ? Optional.empty() : Optional.ofNullable(this.sns);
@@ -57,7 +57,6 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
             this.sns = sns;
             return this;
         }
-
         public AccountAuditConfigurationAuditNotificationTargetConfigurations build() {
             return new AccountAuditConfigurationAuditNotificationTargetConfigurations(sns);
         }

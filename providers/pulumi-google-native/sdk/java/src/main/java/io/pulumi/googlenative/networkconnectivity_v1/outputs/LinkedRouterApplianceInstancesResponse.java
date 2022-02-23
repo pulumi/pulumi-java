@@ -76,7 +76,6 @@ public final class LinkedRouterApplianceInstancesResponse {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public LinkedRouterApplianceInstancesResponse build() {
             return new LinkedRouterApplianceInstancesResponse(instances, siteToSiteDataTransfer);
         }

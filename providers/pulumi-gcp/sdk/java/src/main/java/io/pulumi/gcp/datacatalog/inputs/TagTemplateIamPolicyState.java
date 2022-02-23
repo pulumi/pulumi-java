@@ -15,35 +15,35 @@ public final class TagTemplateIamPolicyState extends io.pulumi.resources.Resourc
     public static final TagTemplateIamPolicyState Empty = new TagTemplateIamPolicyState();
 
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+        private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
     }
 
     @InputImport(name="tagTemplate")
-    private final @Nullable Input<String> tagTemplate;
+        private final @Nullable Input<String> tagTemplate;
 
     public Input<String> getTagTemplate() {
         return this.tagTemplate == null ? Input.empty() : this.tagTemplate;
@@ -147,7 +147,6 @@ public final class TagTemplateIamPolicyState extends io.pulumi.resources.Resourc
             this.tagTemplate = Input.ofNullable(tagTemplate);
             return this;
         }
-
         public TagTemplateIamPolicyState build() {
             return new TagTemplateIamPolicyState(etag, policyData, project, region, tagTemplate);
         }

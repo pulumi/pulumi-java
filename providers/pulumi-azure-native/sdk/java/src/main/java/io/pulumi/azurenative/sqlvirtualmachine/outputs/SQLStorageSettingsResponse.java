@@ -78,7 +78,6 @@ public final class SQLStorageSettingsResponse {
             this.luns = luns;
             return this;
         }
-
         public SQLStorageSettingsResponse build() {
             return new SQLStorageSettingsResponse(defaultFilePath, luns);
         }

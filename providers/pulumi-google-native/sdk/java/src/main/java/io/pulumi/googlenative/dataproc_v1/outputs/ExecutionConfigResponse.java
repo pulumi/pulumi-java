@@ -138,7 +138,6 @@ public final class ExecutionConfigResponse {
             this.subnetworkUri = Objects.requireNonNull(subnetworkUri);
             return this;
         }
-
         public ExecutionConfigResponse build() {
             return new ExecutionConfigResponse(kmsKey, networkTags, networkUri, serviceAccount, subnetworkUri);
         }

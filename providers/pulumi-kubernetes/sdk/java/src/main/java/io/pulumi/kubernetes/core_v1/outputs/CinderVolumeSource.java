@@ -120,7 +120,6 @@ public final class CinderVolumeSource {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }
-
         public CinderVolumeSource build() {
             return new CinderVolumeSource(fsType, readOnly, secretRef, volumeID);
         }

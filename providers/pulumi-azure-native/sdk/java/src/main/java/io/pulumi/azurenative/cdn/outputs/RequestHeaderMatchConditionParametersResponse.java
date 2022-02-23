@@ -154,7 +154,6 @@ public final class RequestHeaderMatchConditionParametersResponse {
             this.transforms = transforms;
             return this;
         }
-
         public RequestHeaderMatchConditionParametersResponse build() {
             return new RequestHeaderMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, selector, transforms);
         }

@@ -332,7 +332,6 @@ public final class AzureDataLakeStoreReadSettingsResponse {
             this.wildcardFolderPath = wildcardFolderPath;
             return this;
         }
-
         public AzureDataLakeStoreReadSettingsResponse build() {
             return new AzureDataLakeStoreReadSettingsResponse(deleteFilesAfterCompletion, disableMetricsCollection, enablePartitionDiscovery, fileListPath, listAfter, listBefore, maxConcurrentConnections, modifiedDatetimeEnd, modifiedDatetimeStart, partitionRootPath, recursive, type, wildcardFileName, wildcardFolderPath);
         }

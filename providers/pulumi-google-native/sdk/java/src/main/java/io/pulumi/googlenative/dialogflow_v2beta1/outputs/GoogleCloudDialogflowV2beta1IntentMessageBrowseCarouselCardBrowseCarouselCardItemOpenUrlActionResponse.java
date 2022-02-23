@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
             this.urlTypeHint = Objects.requireNonNull(urlTypeHint);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(url, urlTypeHint);
         }

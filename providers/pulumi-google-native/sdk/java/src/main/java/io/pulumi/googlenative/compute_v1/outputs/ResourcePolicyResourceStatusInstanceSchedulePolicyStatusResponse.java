@@ -74,7 +74,6 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
             this.nextRunStartTime = Objects.requireNonNull(nextRunStartTime);
             return this;
         }
-
         public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse build() {
             return new ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse(lastRunStartTime, nextRunStartTime);
         }

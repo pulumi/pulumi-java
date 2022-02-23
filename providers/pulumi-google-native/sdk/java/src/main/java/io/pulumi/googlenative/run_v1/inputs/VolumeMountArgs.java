@@ -24,7 +24,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountPath")
-    private final @Nullable Input<String> mountPath;
+      private final @Nullable Input<String> mountPath;
 
     public Input<String> getMountPath() {
         return this.mountPath == null ? Input.empty() : this.mountPath;
@@ -35,7 +35,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -57,7 +57,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subPath")
-    private final @Nullable Input<String> subPath;
+      private final @Nullable Input<String> subPath;
 
     public Input<String> getSubPath() {
         return this.subPath == null ? Input.empty() : this.subPath;
@@ -146,7 +146,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
             this.subPath = Input.ofNullable(subPath);
             return this;
         }
-
         public VolumeMountArgs build() {
             return new VolumeMountArgs(mountPath, name, readOnly, subPath);
         }

@@ -23,7 +23,7 @@ public final class CloudServiceVaultCertificateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="certificateUrl")
-    private final @Nullable Input<String> certificateUrl;
+        private final @Nullable Input<String> certificateUrl;
 
     public Input<String> getCertificateUrl() {
         return this.certificateUrl == null ? Input.empty() : this.certificateUrl;
@@ -66,7 +66,6 @@ public final class CloudServiceVaultCertificateArgs extends io.pulumi.resources.
             this.certificateUrl = Input.ofNullable(certificateUrl);
             return this;
         }
-
         public CloudServiceVaultCertificateArgs build() {
             return new CloudServiceVaultCertificateArgs(certificateUrl);
         }

@@ -68,7 +68,6 @@ public final class DatasetFilterExpression {
             this.valuesMap = Objects.requireNonNull(valuesMap);
             return this;
         }
-
         public DatasetFilterExpression build() {
             return new DatasetFilterExpression(expression, valuesMap);
         }

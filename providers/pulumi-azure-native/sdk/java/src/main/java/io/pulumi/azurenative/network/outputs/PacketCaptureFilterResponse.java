@@ -139,7 +139,6 @@ public final class PacketCaptureFilterResponse {
             this.remotePort = remotePort;
             return this;
         }
-
         public PacketCaptureFilterResponse build() {
             return new PacketCaptureFilterResponse(localIPAddress, localPort, protocol, remoteIPAddress, remotePort);
         }

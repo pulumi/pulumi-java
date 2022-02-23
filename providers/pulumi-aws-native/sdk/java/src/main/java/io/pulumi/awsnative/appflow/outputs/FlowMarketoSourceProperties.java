@@ -44,7 +44,6 @@ public final class FlowMarketoSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowMarketoSourceProperties build() {
             return new FlowMarketoSourceProperties(object);
         }

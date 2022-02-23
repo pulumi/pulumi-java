@@ -21,7 +21,7 @@ public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="fixed", required=true)
-    private final Integer fixed;
+      private final Integer fixed;
 
     public Integer getFixed() {
         return this.fixed;
@@ -32,7 +32,7 @@ public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="percent", required=true)
-    private final Integer percent;
+      private final Integer percent;
 
     public Integer getPercent() {
         return this.percent;
@@ -81,7 +81,6 @@ public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
-
         public FixedOrPercentResponse build() {
             return new FixedOrPercentResponse(fixed, percent);
         }

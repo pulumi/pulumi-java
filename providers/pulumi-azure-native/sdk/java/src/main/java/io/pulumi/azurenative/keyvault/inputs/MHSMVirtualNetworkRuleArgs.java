@@ -22,7 +22,7 @@ public final class MHSMVirtualNetworkRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -65,7 +65,6 @@ public final class MHSMVirtualNetworkRuleArgs extends io.pulumi.resources.Resour
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
-
         public MHSMVirtualNetworkRuleArgs build() {
             return new MHSMVirtualNetworkRuleArgs(id);
         }

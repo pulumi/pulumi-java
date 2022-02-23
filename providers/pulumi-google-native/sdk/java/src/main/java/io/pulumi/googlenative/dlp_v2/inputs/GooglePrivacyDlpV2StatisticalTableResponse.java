@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse extends io.pulumi.
      * 
      */
     @InputImport(name="quasiIds", required=true)
-    private final List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds;
+      private final List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds;
 
     public List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> getQuasiIds() {
         return this.quasiIds;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse extends io.pulumi.
      * 
      */
     @InputImport(name="relativeFrequency", required=true)
-    private final GooglePrivacyDlpV2FieldIdResponse relativeFrequency;
+      private final GooglePrivacyDlpV2FieldIdResponse relativeFrequency;
 
     public GooglePrivacyDlpV2FieldIdResponse getRelativeFrequency() {
         return this.relativeFrequency;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse extends io.pulumi.
      * 
      */
     @InputImport(name="table", required=true)
-    private final GooglePrivacyDlpV2BigQueryTableResponse table;
+      private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
     public GooglePrivacyDlpV2BigQueryTableResponse getTable() {
         return this.table;
@@ -105,7 +105,6 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse extends io.pulumi.
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public GooglePrivacyDlpV2StatisticalTableResponse build() {
             return new GooglePrivacyDlpV2StatisticalTableResponse(quasiIds, relativeFrequency, table);
         }

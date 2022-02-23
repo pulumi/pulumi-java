@@ -25,7 +25,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branchName")
-    private final @Nullable Input<String> branchName;
+      private final @Nullable Input<String> branchName;
 
     public Input<String> getBranchName() {
         return this.branchName == null ? Input.empty() : this.branchName;
@@ -36,7 +36,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commitSha")
-    private final @Nullable Input<String> commitSha;
+      private final @Nullable Input<String> commitSha;
 
     public Input<String> getCommitSha() {
         return this.commitSha == null ? Input.empty() : this.commitSha;
@@ -47,7 +47,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dir")
-    private final @Nullable Input<String> dir;
+      private final @Nullable Input<String> dir;
 
     public Input<String> getDir() {
         return this.dir == null ? Input.empty() : this.dir;
@@ -58,7 +58,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invertRegex")
-    private final @Nullable Input<Boolean> invertRegex;
+      private final @Nullable Input<Boolean> invertRegex;
 
     public Input<Boolean> getInvertRegex() {
         return this.invertRegex == null ? Input.empty() : this.invertRegex;
@@ -69,7 +69,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -80,7 +80,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoName")
-    private final @Nullable Input<String> repoName;
+      private final @Nullable Input<String> repoName;
 
     public Input<String> getRepoName() {
         return this.repoName == null ? Input.empty() : this.repoName;
@@ -91,7 +91,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="substitutions")
-    private final @Nullable Input<Map<String,String>> substitutions;
+      private final @Nullable Input<Map<String,String>> substitutions;
 
     public Input<Map<String,String>> getSubstitutions() {
         return this.substitutions == null ? Input.empty() : this.substitutions;
@@ -102,7 +102,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagName")
-    private final @Nullable Input<String> tagName;
+      private final @Nullable Input<String> tagName;
 
     public Input<String> getTagName() {
         return this.tagName == null ? Input.empty() : this.tagName;
@@ -251,7 +251,6 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.tagName = Input.ofNullable(tagName);
             return this;
         }
-
         public RepoSourceArgs build() {
             return new RepoSourceArgs(branchName, commitSha, dir, invertRegex, project, repoName, substitutions, tagName);
         }

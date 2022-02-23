@@ -987,7 +987,6 @@ public final class InMageRcmReplicationDetailsResponse {
             this.vmNics = Objects.requireNonNull(vmNics);
             return this;
         }
-
         public InMageRcmReplicationDetailsResponse build() {
             return new InMageRcmReplicationDetailsResponse(agentUpgradeBlockingErrorDetails, agentUpgradeState, allocatedMemoryInMB, discoveryType, fabricDiscoveryMachineId, failoverRecoveryPointId, firmwareType, initialReplicationProcessedBytes, initialReplicationProgressPercentage, initialReplicationTransferredBytes, instanceType, internalIdentifier, isLastUpgradeSuccessful, lastAgentUpgradeErrorDetails, lastAgentUpgradeFailedJobId, lastAgentUpgradeType, lastRecoveryPointId, lastRecoveryPointReceived, lastRpoCalculatedTime, lastRpoInSeconds, licenseType, mobilityAgentDetails, multiVmGroupName, osType, processServerId, processServerName, processorCoreCount, protectedDisks, resyncProcessedBytes, resyncProgressPercentage, resyncRequired, resyncState, resyncTransferredBytes, runAsAccountId, targetAvailabilitySetId, targetAvailabilityZone, targetBootDiagnosticsStorageAccountId, targetGeneration, targetNetworkId, targetProximityPlacementGroupId, targetResourceGroupId, targetVmName, targetVmSize, testNetworkId, vmNics);
         }

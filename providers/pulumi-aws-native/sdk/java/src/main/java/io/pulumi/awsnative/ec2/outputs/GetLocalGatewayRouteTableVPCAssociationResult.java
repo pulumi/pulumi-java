@@ -120,7 +120,6 @@ public final class GetLocalGatewayRouteTableVPCAssociationResult {
             this.tags = tags;
             return this;
         }
-
         public GetLocalGatewayRouteTableVPCAssociationResult build() {
             return new GetLocalGatewayRouteTableVPCAssociationResult(localGatewayId, localGatewayRouteTableVpcAssociationId, state, tags);
         }

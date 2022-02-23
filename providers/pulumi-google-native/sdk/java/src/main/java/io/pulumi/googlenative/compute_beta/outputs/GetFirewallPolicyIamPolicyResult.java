@@ -142,7 +142,6 @@ public final class GetFirewallPolicyIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetFirewallPolicyIamPolicyResult build() {
             return new GetFirewallPolicyIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

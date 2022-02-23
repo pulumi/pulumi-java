@@ -82,7 +82,6 @@ public final class BotKendraConfiguration {
             this.queryFilterStringEnabled = queryFilterStringEnabled;
             return this;
         }
-
         public BotKendraConfiguration build() {
             return new BotKendraConfiguration(kendraIndex, queryFilterString, queryFilterStringEnabled);
         }

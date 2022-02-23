@@ -97,7 +97,6 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse {
             this.identifier = identifier;
             return this;
         }
-
         public AkamaiSignatureHeaderAuthenticationKeyResponse build() {
             return new AkamaiSignatureHeaderAuthenticationKeyResponse(base64Key, expiration, identifier);
         }

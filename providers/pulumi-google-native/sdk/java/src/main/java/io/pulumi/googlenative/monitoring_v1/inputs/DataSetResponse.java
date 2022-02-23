@@ -22,7 +22,7 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="legendTemplate", required=true)
-    private final String legendTemplate;
+      private final String legendTemplate;
 
     public String getLegendTemplate() {
         return this.legendTemplate;
@@ -33,7 +33,7 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minAlignmentPeriod", required=true)
-    private final String minAlignmentPeriod;
+      private final String minAlignmentPeriod;
 
     public String getMinAlignmentPeriod() {
         return this.minAlignmentPeriod;
@@ -44,7 +44,7 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="plotType", required=true)
-    private final String plotType;
+      private final String plotType;
 
     public String getPlotType() {
         return this.plotType;
@@ -55,7 +55,7 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetAxis", required=true)
-    private final String targetAxis;
+      private final String targetAxis;
 
     public String getTargetAxis() {
         return this.targetAxis;
@@ -66,7 +66,7 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeSeriesQuery", required=true)
-    private final TimeSeriesQueryResponse timeSeriesQuery;
+      private final TimeSeriesQueryResponse timeSeriesQuery;
 
     public TimeSeriesQueryResponse getTimeSeriesQuery() {
         return this.timeSeriesQuery;
@@ -145,7 +145,6 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
-
         public DataSetResponse build() {
             return new DataSetResponse(legendTemplate, minAlignmentPeriod, plotType, targetAxis, timeSeriesQuery);
         }

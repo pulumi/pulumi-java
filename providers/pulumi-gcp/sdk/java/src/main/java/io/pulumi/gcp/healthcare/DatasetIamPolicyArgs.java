@@ -21,7 +21,7 @@ public final class DatasetIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+        private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -33,7 +33,7 @@ public final class DatasetIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -92,7 +92,6 @@ public final class DatasetIamPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public DatasetIamPolicyArgs build() {
             return new DatasetIamPolicyArgs(datasetId, policyData);
         }

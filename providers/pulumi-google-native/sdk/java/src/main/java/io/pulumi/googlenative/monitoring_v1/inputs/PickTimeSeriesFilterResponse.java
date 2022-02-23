@@ -22,7 +22,7 @@ public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="direction", required=true)
-    private final String direction;
+      private final String direction;
 
     public String getDirection() {
         return this.direction;
@@ -33,7 +33,7 @@ public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="numTimeSeries", required=true)
-    private final Integer numTimeSeries;
+      private final Integer numTimeSeries;
 
     public Integer getNumTimeSeries() {
         return this.numTimeSeries;
@@ -44,7 +44,7 @@ public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="rankingMethod", required=true)
-    private final String rankingMethod;
+      private final String rankingMethod;
 
     public String getRankingMethod() {
         return this.rankingMethod;
@@ -103,7 +103,6 @@ public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.Invo
             this.rankingMethod = Objects.requireNonNull(rankingMethod);
             return this;
         }
-
         public PickTimeSeriesFilterResponse build() {
             return new PickTimeSeriesFilterResponse(direction, numTimeSeries, rankingMethod);
         }

@@ -20,7 +20,7 @@ public final class RegistryCredentialGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="publicKeyCertificate", required=true)
-    private final Input<Map<String,Object>> publicKeyCertificate;
+        private final Input<Map<String,Object>> publicKeyCertificate;
 
     public Input<Map<String,Object>> getPublicKeyCertificate() {
         return this.publicKeyCertificate;
@@ -63,7 +63,6 @@ public final class RegistryCredentialGetArgs extends io.pulumi.resources.Resourc
             this.publicKeyCertificate = Input.of(Objects.requireNonNull(publicKeyCertificate));
             return this;
         }
-
         public RegistryCredentialGetArgs build() {
             return new RegistryCredentialGetArgs(publicKeyCertificate);
         }

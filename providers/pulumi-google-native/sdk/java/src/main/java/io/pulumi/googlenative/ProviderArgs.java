@@ -21,7 +21,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appendUserAgent")
-    private final @Nullable Input<String> appendUserAgent;
+      private final @Nullable Input<String> appendUserAgent;
 
     public Input<String> getAppendUserAgent() {
         return this.appendUserAgent == null ? Input.empty() : this.appendUserAgent;
@@ -32,7 +32,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disablePartnerName", json=true)
-    private final @Nullable Input<Boolean> disablePartnerName;
+      private final @Nullable Input<Boolean> disablePartnerName;
 
     public Input<Boolean> getDisablePartnerName() {
         return this.disablePartnerName == null ? Input.empty() : this.disablePartnerName;
@@ -43,7 +43,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerName")
-    private final @Nullable Input<String> partnerName;
+      private final @Nullable Input<String> partnerName;
 
     public Input<String> getPartnerName() {
         return this.partnerName == null ? Input.empty() : this.partnerName;
@@ -54,7 +54,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -65,7 +65,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -76,7 +76,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -195,7 +195,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public ProviderArgs build() {
             return new ProviderArgs(appendUserAgent, disablePartnerName, partnerName, project, region, zone);
         }

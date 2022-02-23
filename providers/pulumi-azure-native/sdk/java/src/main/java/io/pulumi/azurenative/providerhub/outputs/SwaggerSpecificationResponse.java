@@ -61,7 +61,6 @@ public final class SwaggerSpecificationResponse {
             this.swaggerSpecFolderUri = swaggerSpecFolderUri;
             return this;
         }
-
         public SwaggerSpecificationResponse build() {
             return new SwaggerSpecificationResponse(apiVersions, swaggerSpecFolderUri);
         }

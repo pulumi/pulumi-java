@@ -72,7 +72,6 @@ public final class DeliveryStreamVpcConfiguration {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public DeliveryStreamVpcConfiguration build() {
             return new DeliveryStreamVpcConfiguration(roleARN, securityGroupIds, subnetIds);
         }

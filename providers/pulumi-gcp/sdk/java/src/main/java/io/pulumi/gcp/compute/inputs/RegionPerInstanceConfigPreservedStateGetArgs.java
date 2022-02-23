@@ -23,7 +23,7 @@ public final class RegionPerInstanceConfigPreservedStateGetArgs extends io.pulum
      * 
      */
     @InputImport(name="disks")
-    private final @Nullable Input<List<RegionPerInstanceConfigPreservedStateDiskGetArgs>> disks;
+        private final @Nullable Input<List<RegionPerInstanceConfigPreservedStateDiskGetArgs>> disks;
 
     public Input<List<RegionPerInstanceConfigPreservedStateDiskGetArgs>> getDisks() {
         return this.disks == null ? Input.empty() : this.disks;
@@ -34,7 +34,7 @@ public final class RegionPerInstanceConfigPreservedStateGetArgs extends io.pulum
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -93,7 +93,6 @@ public final class RegionPerInstanceConfigPreservedStateGetArgs extends io.pulum
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public RegionPerInstanceConfigPreservedStateGetArgs build() {
             return new RegionPerInstanceConfigPreservedStateGetArgs(disks, metadata);
         }

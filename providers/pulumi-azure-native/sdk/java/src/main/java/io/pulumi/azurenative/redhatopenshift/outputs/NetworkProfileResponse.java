@@ -76,7 +76,6 @@ public final class NetworkProfileResponse {
             this.serviceCidr = serviceCidr;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(podCidr, serviceCidr);
         }

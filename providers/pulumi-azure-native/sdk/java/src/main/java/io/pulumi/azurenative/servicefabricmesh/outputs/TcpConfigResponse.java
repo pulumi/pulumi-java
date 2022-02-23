@@ -97,7 +97,6 @@ public final class TcpConfigResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public TcpConfigResponse build() {
             return new TcpConfigResponse(destination, name, port);
         }

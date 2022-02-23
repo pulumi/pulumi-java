@@ -184,7 +184,6 @@ public final class GetDashboardResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDashboardResult build() {
             return new GetDashboardResult(id, lenses, location, metadata, name, tags, type);
         }

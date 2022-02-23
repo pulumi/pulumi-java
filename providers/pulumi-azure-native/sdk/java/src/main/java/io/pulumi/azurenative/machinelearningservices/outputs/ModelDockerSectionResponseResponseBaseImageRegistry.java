@@ -46,7 +46,6 @@ public final class ModelDockerSectionResponseResponseBaseImageRegistry {
             this.address = address;
             return this;
         }
-
         public ModelDockerSectionResponseResponseBaseImageRegistry build() {
             return new ModelDockerSectionResponseResponseBaseImageRegistry(address);
         }

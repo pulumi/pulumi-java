@@ -22,7 +22,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="containers")
-    private final @Nullable Input<List<String>> containers;
+        private final @Nullable Input<List<String>> containers;
 
     public Input<List<String>> getContainers() {
         return this.containers == null ? Input.empty() : this.containers;
@@ -33,7 +33,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="eTag")
-    private final @Nullable Input<String> eTag;
+        private final @Nullable Input<String> eTag;
 
     public Input<String> getETag() {
         return this.eTag == null ? Input.empty() : this.eTag;
@@ -44,7 +44,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="storageAccount", required=true)
-    private final Input<StorageAccountArgs> storageAccount;
+        private final Input<StorageAccountArgs> storageAccount;
 
     public Input<StorageAccountArgs> getStorageAccount() {
         return this.storageAccount;
@@ -66,7 +66,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="storageInsightName")
-    private final @Nullable Input<String> storageInsightName;
+        private final @Nullable Input<String> storageInsightName;
 
     public Input<String> getStorageInsightName() {
         return this.storageInsightName == null ? Input.empty() : this.storageInsightName;
@@ -77,7 +77,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tables")
-    private final @Nullable Input<List<String>> tables;
+        private final @Nullable Input<List<String>> tables;
 
     public Input<List<String>> getTables() {
         return this.tables == null ? Input.empty() : this.tables;
@@ -88,7 +88,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -99,7 +99,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -248,7 +248,6 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public StorageInsightConfigArgs build() {
             return new StorageInsightConfigArgs(containers, eTag, resourceGroupName, storageAccount, storageInsightName, tables, tags, workspaceName);
         }

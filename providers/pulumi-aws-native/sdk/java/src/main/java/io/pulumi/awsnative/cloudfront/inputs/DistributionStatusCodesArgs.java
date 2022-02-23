@@ -15,14 +15,14 @@ public final class DistributionStatusCodesArgs extends io.pulumi.resources.Resou
     public static final DistributionStatusCodesArgs Empty = new DistributionStatusCodesArgs();
 
     @InputImport(name="items", required=true)
-    private final Input<List<Integer>> items;
+        private final Input<List<Integer>> items;
 
     public Input<List<Integer>> getItems() {
         return this.items;
     }
 
     @InputImport(name="quantity", required=true)
-    private final Input<Integer> quantity;
+        private final Input<Integer> quantity;
 
     public Input<Integer> getQuantity() {
         return this.quantity;
@@ -81,7 +81,6 @@ public final class DistributionStatusCodesArgs extends io.pulumi.resources.Resou
             this.quantity = Input.of(Objects.requireNonNull(quantity));
             return this;
         }
-
         public DistributionStatusCodesArgs build() {
             return new DistributionStatusCodesArgs(items, quantity);
         }

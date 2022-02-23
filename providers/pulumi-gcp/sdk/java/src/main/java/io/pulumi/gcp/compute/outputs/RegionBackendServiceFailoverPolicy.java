@@ -132,7 +132,6 @@ public final class RegionBackendServiceFailoverPolicy {
             this.failoverRatio = failoverRatio;
             return this;
         }
-
         public RegionBackendServiceFailoverPolicy build() {
             return new RegionBackendServiceFailoverPolicy(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
         }

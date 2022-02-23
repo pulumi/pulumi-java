@@ -83,7 +83,6 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelay build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelay(nanos, seconds);
         }

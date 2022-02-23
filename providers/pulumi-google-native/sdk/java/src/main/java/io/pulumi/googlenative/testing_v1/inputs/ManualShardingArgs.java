@@ -23,7 +23,7 @@ public final class ManualShardingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testTargetsForShard", required=true)
-    private final Input<List<TestTargetsForShardArgs>> testTargetsForShard;
+      private final Input<List<TestTargetsForShardArgs>> testTargetsForShard;
 
     public Input<List<TestTargetsForShardArgs>> getTestTargetsForShard() {
         return this.testTargetsForShard;
@@ -66,7 +66,6 @@ public final class ManualShardingArgs extends io.pulumi.resources.ResourceArgs {
             this.testTargetsForShard = Input.of(Objects.requireNonNull(testTargetsForShard));
             return this;
         }
-
         public ManualShardingArgs build() {
             return new ManualShardingArgs(testTargetsForShard);
         }

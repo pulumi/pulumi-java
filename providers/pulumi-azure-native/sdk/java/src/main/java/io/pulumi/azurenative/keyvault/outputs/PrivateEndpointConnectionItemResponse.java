@@ -141,7 +141,6 @@ public final class PrivateEndpointConnectionItemResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PrivateEndpointConnectionItemResponse build() {
             return new PrivateEndpointConnectionItemResponse(etag, id, privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="basicCard", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard;
+      private final GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard;
 
     public GoogleCloudDialogflowV2IntentMessageBasicCardResponse getBasicCard() {
         return this.basicCard;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="browseCarouselCard", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard;
+      private final GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard;
 
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse getBrowseCarouselCard() {
         return this.browseCarouselCard;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="card", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageCardResponse card;
+      private final GoogleCloudDialogflowV2IntentMessageCardResponse card;
 
     public GoogleCloudDialogflowV2IntentMessageCardResponse getCard() {
         return this.card;
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="carouselSelect", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect;
+      private final GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect;
 
     public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse getCarouselSelect() {
         return this.carouselSelect;
@@ -79,7 +79,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="image", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
+      private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
         return this.image;
@@ -90,7 +90,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="linkOutSuggestion", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
+      private final GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
 
     public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse getLinkOutSuggestion() {
         return this.linkOutSuggestion;
@@ -101,7 +101,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="listSelect", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect;
+      private final GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect;
 
     public GoogleCloudDialogflowV2IntentMessageListSelectResponse getListSelect() {
         return this.listSelect;
@@ -112,7 +112,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="mediaContent", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent;
+      private final GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent;
 
     public GoogleCloudDialogflowV2IntentMessageMediaContentResponse getMediaContent() {
         return this.mediaContent;
@@ -123,7 +123,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="payload", required=true)
-    private final Map<String,String> payload;
+      private final Map<String,String> payload;
 
     public Map<String,String> getPayload() {
         return this.payload;
@@ -134,7 +134,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="platform", required=true)
-    private final String platform;
+      private final String platform;
 
     public String getPlatform() {
         return this.platform;
@@ -145,7 +145,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="quickReplies", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies;
+      private final GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies;
 
     public GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse getQuickReplies() {
         return this.quickReplies;
@@ -156,7 +156,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="simpleResponses", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses;
+      private final GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses;
 
     public GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse getSimpleResponses() {
         return this.simpleResponses;
@@ -167,7 +167,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="suggestions", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions;
+      private final GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions;
 
     public GoogleCloudDialogflowV2IntentMessageSuggestionsResponse getSuggestions() {
         return this.suggestions;
@@ -178,7 +178,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="tableCard", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard;
+      private final GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard;
 
     public GoogleCloudDialogflowV2IntentMessageTableCardResponse getTableCard() {
         return this.tableCard;
@@ -189,7 +189,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
      * 
      */
     @InputImport(name="text", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageTextResponse text;
+      private final GoogleCloudDialogflowV2IntentMessageTextResponse text;
 
     public GoogleCloudDialogflowV2IntentMessageTextResponse getText() {
         return this.text;
@@ -368,7 +368,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends io.pulum
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageResponse(basicCard, browseCarouselCard, card, carouselSelect, image, linkOutSuggestion, listSelect, mediaContent, payload, platform, quickReplies, simpleResponses, suggestions, tableCard, text);
         }

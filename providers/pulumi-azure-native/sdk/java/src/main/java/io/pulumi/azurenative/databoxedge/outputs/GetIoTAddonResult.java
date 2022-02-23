@@ -267,7 +267,6 @@ public final class GetIoTAddonResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetIoTAddonResult build() {
             return new GetIoTAddonResult(hostPlatform, hostPlatformType, id, ioTDeviceDetails, ioTEdgeDeviceDetails, kind, name, provisioningState, systemData, type, version);
         }

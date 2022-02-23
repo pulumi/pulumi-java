@@ -179,7 +179,6 @@ public final class HealthAlertResponse {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public HealthAlertResponse build() {
             return new HealthAlertResponse(id, issue, lastDetected, name, raised, resolutionUri, severity);
         }

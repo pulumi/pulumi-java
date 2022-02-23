@@ -95,7 +95,6 @@ public final class TagFilterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TagFilterResponse build() {
             return new TagFilterResponse(name, op, value);
         }

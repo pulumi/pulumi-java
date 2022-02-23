@@ -22,7 +22,7 @@ public final class LoggingConfigurationConditionActionConditionPropertiesArgs ex
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<LoggingConfigurationConditionActionConditionPropertiesAction> action;
+        private final Input<LoggingConfigurationConditionActionConditionPropertiesAction> action;
 
     public Input<LoggingConfigurationConditionActionConditionPropertiesAction> getAction() {
         return this.action;
@@ -65,7 +65,6 @@ public final class LoggingConfigurationConditionActionConditionPropertiesArgs ex
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
-
         public LoggingConfigurationConditionActionConditionPropertiesArgs build() {
             return new LoggingConfigurationConditionActionConditionPropertiesArgs(action);
         }

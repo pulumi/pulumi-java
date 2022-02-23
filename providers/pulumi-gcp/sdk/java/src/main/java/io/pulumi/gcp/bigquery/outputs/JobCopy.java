@@ -173,7 +173,6 @@ public final class JobCopy {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public JobCopy build() {
             return new JobCopy(createDisposition, destinationEncryptionConfiguration, destinationTable, sourceTables, writeDisposition);
         }

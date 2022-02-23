@@ -15,28 +15,28 @@ public final class GetWebhookArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetWebhookArgs Empty = new GetWebhookArgs();
 
     @InputImport(name="agentId", required=true)
-    private final String agentId;
+      private final String agentId;
 
     public String getAgentId() {
         return this.agentId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="webhookId", required=true)
-    private final String webhookId;
+      private final String webhookId;
 
     public String getWebhookId() {
         return this.webhookId;
@@ -105,7 +105,6 @@ public final class GetWebhookArgs extends io.pulumi.resources.InvokeArgs {
             this.webhookId = Objects.requireNonNull(webhookId);
             return this;
         }
-
         public GetWebhookArgs build() {
             return new GetWebhookArgs(agentId, location, project, webhookId);
         }

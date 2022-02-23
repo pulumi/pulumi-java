@@ -390,7 +390,6 @@ public final class GetRolloutResult {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GetRolloutResult build() {
             return new GetRolloutResult(annotations, approvalState, approveTime, createTime, deployEndTime, deployFailureCause, deployStartTime, deployingBuild, description, enqueueTime, etag, failureReason, labels, name, state, targetId, uid);
         }

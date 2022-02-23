@@ -97,7 +97,6 @@ public final class WebIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public WebIamMemberCondition build() {
             return new WebIamMemberCondition(description, expression, title);
         }

@@ -54,7 +54,6 @@ public final class CnameRecordResponse {
             this.cname = cname;
             return this;
         }
-
         public CnameRecordResponse build() {
             return new CnameRecordResponse(cname);
         }

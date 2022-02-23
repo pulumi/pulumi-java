@@ -24,7 +24,7 @@ public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="hoursInCycle")
-    private final @Nullable Input<Integer> hoursInCycle;
+      private final @Nullable Input<Integer> hoursInCycle;
 
     public Input<Integer> getHoursInCycle() {
         return this.hoursInCycle == null ? Input.empty() : this.hoursInCycle;
@@ -35,7 +35,7 @@ public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -94,7 +94,6 @@ public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.Res
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public ResourcePolicyHourlyCycleArgs build() {
             return new ResourcePolicyHourlyCycleArgs(hoursInCycle, startTime);
         }

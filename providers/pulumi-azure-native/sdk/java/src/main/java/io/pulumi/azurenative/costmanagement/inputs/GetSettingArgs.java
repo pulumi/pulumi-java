@@ -17,7 +17,7 @@ public final class GetSettingArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="settingName", required=true)
-    private final String settingName;
+        private final String settingName;
 
     public String getSettingName() {
         return this.settingName;
@@ -55,7 +55,6 @@ public final class GetSettingArgs extends io.pulumi.resources.InvokeArgs {
             this.settingName = Objects.requireNonNull(settingName);
             return this;
         }
-
         public GetSettingArgs build() {
             return new GetSettingArgs(settingName);
         }

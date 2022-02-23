@@ -74,7 +74,6 @@ public final class FlowErrorHandlingConfig {
             this.failOnFirstError = failOnFirstError;
             return this;
         }
-
         public FlowErrorHandlingConfig build() {
             return new FlowErrorHandlingConfig(bucketName, bucketPrefix, failOnFirstError);
         }

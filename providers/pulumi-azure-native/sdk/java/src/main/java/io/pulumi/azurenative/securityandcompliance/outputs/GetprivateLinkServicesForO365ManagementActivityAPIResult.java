@@ -248,7 +248,6 @@ public final class GetprivateLinkServicesForO365ManagementActivityAPIResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetprivateLinkServicesForO365ManagementActivityAPIResult build() {
             return new GetprivateLinkServicesForO365ManagementActivityAPIResult(etag, id, identity, kind, location, name, properties, systemData, tags, type);
         }

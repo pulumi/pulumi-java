@@ -14,7 +14,7 @@ public final class WebACLImmunityTimePropertyArgs extends io.pulumi.resources.Re
     public static final WebACLImmunityTimePropertyArgs Empty = new WebACLImmunityTimePropertyArgs();
 
     @InputImport(name="immunityTime", required=true)
-    private final Input<Integer> immunityTime;
+        private final Input<Integer> immunityTime;
 
     public Input<Integer> getImmunityTime() {
         return this.immunityTime;
@@ -57,7 +57,6 @@ public final class WebACLImmunityTimePropertyArgs extends io.pulumi.resources.Re
             this.immunityTime = Input.of(Objects.requireNonNull(immunityTime));
             return this;
         }
-
         public WebACLImmunityTimePropertyArgs build() {
             return new WebACLImmunityTimePropertyArgs(immunityTime);
         }

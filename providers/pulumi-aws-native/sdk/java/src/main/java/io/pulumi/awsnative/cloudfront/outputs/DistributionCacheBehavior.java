@@ -300,7 +300,6 @@ public final class DistributionCacheBehavior {
             this.viewerProtocolPolicy = Objects.requireNonNull(viewerProtocolPolicy);
             return this;
         }
-
         public DistributionCacheBehavior build() {
             return new DistributionCacheBehavior(allowedMethods, cachePolicyId, cachedMethods, compress, defaultTTL, fieldLevelEncryptionId, forwardedValues, functionAssociations, lambdaFunctionAssociations, maxTTL, minTTL, originRequestPolicyId, pathPattern, realtimeLogConfigArn, responseHeadersPolicyId, smoothStreaming, targetOriginId, trustedKeyGroups, trustedSigners, viewerProtocolPolicy);
         }

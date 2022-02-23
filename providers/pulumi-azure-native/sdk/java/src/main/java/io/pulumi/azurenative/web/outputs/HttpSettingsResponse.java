@@ -99,7 +99,6 @@ public final class HttpSettingsResponse {
             this.routes = routes;
             return this;
         }
-
         public HttpSettingsResponse build() {
             return new HttpSettingsResponse(forwardProxy, requireHttps, routes);
         }

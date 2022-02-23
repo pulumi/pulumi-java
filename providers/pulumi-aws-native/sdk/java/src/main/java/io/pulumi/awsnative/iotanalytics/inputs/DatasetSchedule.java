@@ -13,7 +13,7 @@ public final class DatasetSchedule extends io.pulumi.resources.InvokeArgs {
     public static final DatasetSchedule Empty = new DatasetSchedule();
 
     @InputImport(name="scheduleExpression", required=true)
-    private final String scheduleExpression;
+        private final String scheduleExpression;
 
     public String getScheduleExpression() {
         return this.scheduleExpression;
@@ -51,7 +51,6 @@ public final class DatasetSchedule extends io.pulumi.resources.InvokeArgs {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
-
         public DatasetSchedule build() {
             return new DatasetSchedule(scheduleExpression);
         }

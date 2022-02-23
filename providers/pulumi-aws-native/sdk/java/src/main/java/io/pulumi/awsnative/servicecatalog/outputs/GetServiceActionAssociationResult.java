@@ -30,7 +30,6 @@ public final class GetServiceActionAssociationResult {
         public Builder(GetServiceActionAssociationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetServiceActionAssociationResult build() {
             return new GetServiceActionAssociationResult();
         }

@@ -76,7 +76,6 @@ public final class HttpHeadersResponse {
             this.value = value;
             return this;
         }
-
         public HttpHeadersResponse build() {
             return new HttpHeadersResponse(name, value);
         }

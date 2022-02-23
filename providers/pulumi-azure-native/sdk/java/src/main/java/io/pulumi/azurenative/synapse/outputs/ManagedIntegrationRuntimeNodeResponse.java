@@ -98,7 +98,6 @@ public final class ManagedIntegrationRuntimeNodeResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ManagedIntegrationRuntimeNodeResponse build() {
             return new ManagedIntegrationRuntimeNodeResponse(errors, nodeId, status);
         }

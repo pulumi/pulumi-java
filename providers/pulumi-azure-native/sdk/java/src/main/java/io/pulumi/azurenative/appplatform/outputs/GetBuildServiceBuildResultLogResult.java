@@ -54,7 +54,6 @@ public final class GetBuildServiceBuildResultLogResult {
             this.blobUrl = blobUrl;
             return this;
         }
-
         public GetBuildServiceBuildResultLogResult build() {
             return new GetBuildServiceBuildResultLogResult(blobUrl);
         }

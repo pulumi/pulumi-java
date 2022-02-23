@@ -118,7 +118,6 @@ public final class PublisherInfoResponse {
             this.version = version;
             return this;
         }
-
         public PublisherInfoResponse build() {
             return new PublisherInfoResponse(binaryName, productName, publisherName, version);
         }

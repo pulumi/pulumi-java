@@ -221,7 +221,6 @@ public final class GetExportResult {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public GetExportResult build() {
             return new GetExportResult(created, datastoreName, description, error, executionTime, name, self, state, updated);
         }

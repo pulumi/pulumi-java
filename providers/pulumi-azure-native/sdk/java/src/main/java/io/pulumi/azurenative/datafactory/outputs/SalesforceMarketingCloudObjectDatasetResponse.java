@@ -231,7 +231,6 @@ public final class SalesforceMarketingCloudObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SalesforceMarketingCloudObjectDatasetResponse build() {
             return new SalesforceMarketingCloudObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

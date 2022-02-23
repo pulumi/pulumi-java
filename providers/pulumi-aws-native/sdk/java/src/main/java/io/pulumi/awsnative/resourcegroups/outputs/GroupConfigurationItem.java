@@ -62,7 +62,6 @@ public final class GroupConfigurationItem {
             this.type = type;
             return this;
         }
-
         public GroupConfigurationItem build() {
             return new GroupConfigurationItem(parameters, type);
         }

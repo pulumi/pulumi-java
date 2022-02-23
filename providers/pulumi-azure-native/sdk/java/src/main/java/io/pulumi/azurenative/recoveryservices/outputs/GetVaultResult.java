@@ -249,7 +249,6 @@ public final class GetVaultResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVaultResult build() {
             return new GetVaultResult(etag, id, identity, location, name, properties, sku, systemData, tags, type);
         }

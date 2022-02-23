@@ -77,7 +77,6 @@ public final class MagneticStoreWritePropertiesProperties {
             this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
             return this;
         }
-
         public MagneticStoreWritePropertiesProperties build() {
             return new MagneticStoreWritePropertiesProperties(enableMagneticStoreWrites, magneticStoreRejectedDataLocation);
         }

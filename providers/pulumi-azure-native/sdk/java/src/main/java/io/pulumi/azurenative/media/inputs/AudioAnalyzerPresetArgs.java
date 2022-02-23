@@ -26,7 +26,7 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="audioLanguage")
-    private final @Nullable Input<String> audioLanguage;
+        private final @Nullable Input<String> audioLanguage;
 
     public Input<String> getAudioLanguage() {
         return this.audioLanguage == null ? Input.empty() : this.audioLanguage;
@@ -37,7 +37,7 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="experimentalOptions")
-    private final @Nullable Input<Map<String,String>> experimentalOptions;
+        private final @Nullable Input<Map<String,String>> experimentalOptions;
 
     public Input<Map<String,String>> getExperimentalOptions() {
         return this.experimentalOptions == null ? Input.empty() : this.experimentalOptions;
@@ -48,7 +48,7 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,AudioAnalysisMode>> mode;
+        private final @Nullable Input<Either<String,AudioAnalysisMode>> mode;
 
     public Input<Either<String,AudioAnalysisMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -60,7 +60,7 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -149,7 +149,6 @@ public final class AudioAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public AudioAnalyzerPresetArgs build() {
             return new AudioAnalyzerPresetArgs(audioLanguage, experimentalOptions, mode, odataType);
         }

@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<String> count;
+      private final @Nullable Input<String> count;
 
     public Input<String> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<GoogleCloudMlV1__AcceleratorConfigType> type;
+      private final @Nullable Input<GoogleCloudMlV1__AcceleratorConfigType> type;
 
     public Input<GoogleCloudMlV1__AcceleratorConfigType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -94,7 +94,6 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public GoogleCloudMlV1__AcceleratorConfigArgs build() {
             return new GoogleCloudMlV1__AcceleratorConfigArgs(count, type);
         }

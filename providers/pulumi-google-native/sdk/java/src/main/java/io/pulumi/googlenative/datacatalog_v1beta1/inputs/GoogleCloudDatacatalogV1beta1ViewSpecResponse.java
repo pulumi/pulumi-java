@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1beta1ViewSpecResponse extends io.pulu
      * 
      */
     @InputImport(name="viewQuery", required=true)
-    private final String viewQuery;
+      private final String viewQuery;
 
     public String getViewQuery() {
         return this.viewQuery;
@@ -59,7 +59,6 @@ public final class GoogleCloudDatacatalogV1beta1ViewSpecResponse extends io.pulu
             this.viewQuery = Objects.requireNonNull(viewQuery);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1ViewSpecResponse build() {
             return new GoogleCloudDatacatalogV1beta1ViewSpecResponse(viewQuery);
         }

@@ -16,14 +16,14 @@ public final class GlobalTableTimeToLiveSpecification extends io.pulumi.resource
     public static final GlobalTableTimeToLiveSpecification Empty = new GlobalTableTimeToLiveSpecification();
 
     @InputImport(name="attributeName")
-    private final @Nullable String attributeName;
+        private final @Nullable String attributeName;
 
     public Optional<String> getAttributeName() {
         return this.attributeName == null ? Optional.empty() : Optional.ofNullable(this.attributeName);
     }
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -72,7 +72,6 @@ public final class GlobalTableTimeToLiveSpecification extends io.pulumi.resource
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GlobalTableTimeToLiveSpecification build() {
             return new GlobalTableTimeToLiveSpecification(attributeName, enabled);
         }

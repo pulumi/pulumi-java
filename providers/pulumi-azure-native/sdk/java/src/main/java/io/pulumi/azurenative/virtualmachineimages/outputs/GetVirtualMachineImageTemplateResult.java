@@ -347,7 +347,6 @@ public final class GetVirtualMachineImageTemplateResult {
             this.vmProfile = vmProfile;
             return this;
         }
-
         public GetVirtualMachineImageTemplateResult build() {
             return new GetVirtualMachineImageTemplateResult(buildTimeoutInMinutes, customize, distribute, id, identity, lastRunStatus, location, name, provisioningError, provisioningState, source, tags, type, vmProfile);
         }

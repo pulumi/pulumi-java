@@ -39,7 +39,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureDiskType", required=true)
-    private final Input<Either<String,AzureDiskType>> azureDiskType;
+        private final Input<Either<String,AzureDiskType>> azureDiskType;
 
     public Input<Either<String,AzureDiskType>> getAzureDiskType() {
         return this.azureDiskType;
@@ -50,7 +50,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureHybridUseBenefit", required=true)
-    private final Input<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit;
+        private final Input<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit;
 
     public Input<Either<String,AzureHybridUseBenefit>> getAzureHybridUseBenefit() {
         return this.azureHybridUseBenefit;
@@ -61,7 +61,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureLocation", required=true)
-    private final Input<Either<String,AzureLocation>> azureLocation;
+        private final Input<Either<String,AzureLocation>> azureLocation;
 
     public Input<Either<String,AzureLocation>> getAzureLocation() {
         return this.azureLocation;
@@ -72,7 +72,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureOfferCode", required=true)
-    private final Input<Either<String,AzureOfferCode>> azureOfferCode;
+        private final Input<Either<String,AzureOfferCode>> azureOfferCode;
 
     public Input<Either<String,AzureOfferCode>> getAzureOfferCode() {
         return this.azureOfferCode;
@@ -83,7 +83,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azurePricingTier", required=true)
-    private final Input<Either<String,AzurePricingTier>> azurePricingTier;
+        private final Input<Either<String,AzurePricingTier>> azurePricingTier;
 
     public Input<Either<String,AzurePricingTier>> getAzurePricingTier() {
         return this.azurePricingTier;
@@ -94,7 +94,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureStorageRedundancy", required=true)
-    private final Input<Either<String,AzureStorageRedundancy>> azureStorageRedundancy;
+        private final Input<Either<String,AzureStorageRedundancy>> azureStorageRedundancy;
 
     public Input<Either<String,AzureStorageRedundancy>> getAzureStorageRedundancy() {
         return this.azureStorageRedundancy;
@@ -105,7 +105,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureVmFamilies", required=true)
-    private final Input<List<Either<String,AzureVmFamily>>> azureVmFamilies;
+        private final Input<List<Either<String,AzureVmFamily>>> azureVmFamilies;
 
     public Input<List<Either<String,AzureVmFamily>>> getAzureVmFamilies() {
         return this.azureVmFamilies;
@@ -116,7 +116,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="currency", required=true)
-    private final Input<Either<String,Currency>> currency;
+        private final Input<Either<String,Currency>> currency;
 
     public Input<Either<String,Currency>> getCurrency() {
         return this.currency;
@@ -127,7 +127,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="discountPercentage", required=true)
-    private final Input<Double> discountPercentage;
+        private final Input<Double> discountPercentage;
 
     public Input<Double> getDiscountPercentage() {
         return this.discountPercentage;
@@ -138,7 +138,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="percentile", required=true)
-    private final Input<Either<String,Percentile>> percentile;
+        private final Input<Either<String,Percentile>> percentile;
 
     public Input<Either<String,Percentile>> getPercentile() {
         return this.percentile;
@@ -149,7 +149,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="reservedInstance", required=true)
-    private final Input<Either<String,ReservedInstance>> reservedInstance;
+        private final Input<Either<String,ReservedInstance>> reservedInstance;
 
     public Input<Either<String,ReservedInstance>> getReservedInstance() {
         return this.reservedInstance;
@@ -160,7 +160,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scalingFactor", required=true)
-    private final Input<Double> scalingFactor;
+        private final Input<Double> scalingFactor;
 
     public Input<Double> getScalingFactor() {
         return this.scalingFactor;
@@ -171,7 +171,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sizingCriterion", required=true)
-    private final Input<Either<String,AssessmentSizingCriterion>> sizingCriterion;
+        private final Input<Either<String,AssessmentSizingCriterion>> sizingCriterion;
 
     public Input<Either<String,AssessmentSizingCriterion>> getSizingCriterion() {
         return this.sizingCriterion;
@@ -182,7 +182,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="stage", required=true)
-    private final Input<Either<String,AssessmentStage>> stage;
+        private final Input<Either<String,AssessmentStage>> stage;
 
     public Input<Either<String,AssessmentStage>> getStage() {
         return this.stage;
@@ -193,7 +193,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="timeRange", required=true)
-    private final Input<Either<String,TimeRange>> timeRange;
+        private final Input<Either<String,TimeRange>> timeRange;
 
     public Input<Either<String,TimeRange>> getTimeRange() {
         return this.timeRange;
@@ -204,7 +204,7 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vmUptime", required=true)
-    private final Input<VmUptimeArgs> vmUptime;
+        private final Input<VmUptimeArgs> vmUptime;
 
     public Input<VmUptimeArgs> getVmUptime() {
         return this.vmUptime;
@@ -473,7 +473,6 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
             this.vmUptime = Input.of(Objects.requireNonNull(vmUptime));
             return this;
         }
-
         public AssessmentPropertiesArgs build() {
             return new AssessmentPropertiesArgs(azureDiskType, azureHybridUseBenefit, azureLocation, azureOfferCode, azurePricingTier, azureStorageRedundancy, azureVmFamilies, currency, discountPercentage, percentile, reservedInstance, scalingFactor, sizingCriterion, stage, timeRange, vmUptime);
         }

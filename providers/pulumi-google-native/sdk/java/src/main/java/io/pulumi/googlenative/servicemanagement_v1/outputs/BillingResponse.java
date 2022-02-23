@@ -53,7 +53,6 @@ public final class BillingResponse {
             this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
             return this;
         }
-
         public BillingResponse build() {
             return new BillingResponse(consumerDestinations);
         }

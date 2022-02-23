@@ -99,7 +99,6 @@ public final class GlobalReplicationGroupRegionalConfiguration {
             this.reshardingConfigurations = reshardingConfigurations;
             return this;
         }
-
         public GlobalReplicationGroupRegionalConfiguration build() {
             return new GlobalReplicationGroupRegionalConfiguration(replicationGroupId, replicationGroupRegion, reshardingConfigurations);
         }

@@ -74,7 +74,6 @@ public final class VMInfoResponse {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public VMInfoResponse build() {
             return new VMInfoResponse(id, uuid);
         }

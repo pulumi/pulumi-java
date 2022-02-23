@@ -224,7 +224,6 @@ public final class GetKustoDatabaseDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKustoDatabaseDataSetResult build() {
             return new GetKustoDatabaseDataSetResult(dataSetId, id, kind, kustoDatabaseResourceId, location, name, provisioningState, systemData, type);
         }

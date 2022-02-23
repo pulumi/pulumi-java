@@ -122,7 +122,6 @@ public final class GetProfilingGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetProfilingGroupResult build() {
             return new GetProfilingGroupResult(agentPermissions, anomalyDetectionNotificationConfiguration, arn, tags);
         }

@@ -205,7 +205,6 @@ public final class ServiceNowSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceNowSourceResponse build() {
             return new ServiceNowSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

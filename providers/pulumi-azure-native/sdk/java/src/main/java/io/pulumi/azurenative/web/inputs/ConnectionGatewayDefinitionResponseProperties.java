@@ -22,7 +22,7 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
      * 
      */
     @InputImport(name="backendUri")
-    private final @Nullable String backendUri;
+        private final @Nullable String backendUri;
 
     public Optional<String> getBackendUri() {
         return this.backendUri == null ? Optional.empty() : Optional.ofNullable(this.backendUri);
@@ -33,7 +33,7 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
      * 
      */
     @InputImport(name="connectionGatewayInstallation")
-    private final @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation;
+        private final @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation;
 
     public Optional<ConnectionGatewayReferenceResponse> getConnectionGatewayInstallation() {
         return this.connectionGatewayInstallation == null ? Optional.empty() : Optional.ofNullable(this.connectionGatewayInstallation);
@@ -44,7 +44,7 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
      * 
      */
     @InputImport(name="contactInformation")
-    private final @Nullable List<String> contactInformation;
+        private final @Nullable List<String> contactInformation;
 
     public List<String> getContactInformation() {
         return this.contactInformation == null ? List.of() : this.contactInformation;
@@ -55,7 +55,7 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -66,7 +66,7 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+        private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -77,7 +77,7 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
      * 
      */
     @InputImport(name="machineName")
-    private final @Nullable String machineName;
+        private final @Nullable String machineName;
 
     public Optional<String> getMachineName() {
         return this.machineName == null ? Optional.empty() : Optional.ofNullable(this.machineName);
@@ -88,7 +88,7 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Object status;
+        private final @Nullable Object status;
 
     public Optional<Object> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -187,7 +187,6 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
             this.status = status;
             return this;
         }
-
         public ConnectionGatewayDefinitionResponseProperties build() {
             return new ConnectionGatewayDefinitionResponseProperties(backendUri, connectionGatewayInstallation, contactInformation, description, displayName, machineName, status);
         }

@@ -21,7 +21,7 @@ public final class OSPolicyResourceExecResourceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="enforce", required=true)
-    private final OSPolicyResourceExecResourceExecResponse enforce;
+      private final OSPolicyResourceExecResourceExecResponse enforce;
 
     public OSPolicyResourceExecResourceExecResponse getEnforce() {
         return this.enforce;
@@ -32,7 +32,7 @@ public final class OSPolicyResourceExecResourceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="validate", required=true)
-    private final OSPolicyResourceExecResourceExecResponse validate;
+      private final OSPolicyResourceExecResourceExecResponse validate;
 
     public OSPolicyResourceExecResourceExecResponse getValidate() {
         return this.validate;
@@ -81,7 +81,6 @@ public final class OSPolicyResourceExecResourceResponse extends io.pulumi.resour
             this.validate = Objects.requireNonNull(validate);
             return this;
         }
-
         public OSPolicyResourceExecResourceResponse build() {
             return new OSPolicyResourceExecResourceResponse(enforce, validate);
         }

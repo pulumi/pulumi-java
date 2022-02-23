@@ -44,7 +44,6 @@ public final class WebACLExcludedRule {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WebACLExcludedRule build() {
             return new WebACLExcludedRule(name);
         }

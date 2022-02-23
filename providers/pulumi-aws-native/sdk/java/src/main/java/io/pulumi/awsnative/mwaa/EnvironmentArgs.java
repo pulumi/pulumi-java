@@ -32,119 +32,119 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="airflowConfigurationOptions")
-    private final @Nullable Input<Object> airflowConfigurationOptions;
+        private final @Nullable Input<Object> airflowConfigurationOptions;
 
     public Input<Object> getAirflowConfigurationOptions() {
         return this.airflowConfigurationOptions == null ? Input.empty() : this.airflowConfigurationOptions;
     }
 
     @InputImport(name="airflowVersion")
-    private final @Nullable Input<String> airflowVersion;
+        private final @Nullable Input<String> airflowVersion;
 
     public Input<String> getAirflowVersion() {
         return this.airflowVersion == null ? Input.empty() : this.airflowVersion;
     }
 
     @InputImport(name="dagS3Path")
-    private final @Nullable Input<String> dagS3Path;
+        private final @Nullable Input<String> dagS3Path;
 
     public Input<String> getDagS3Path() {
         return this.dagS3Path == null ? Input.empty() : this.dagS3Path;
     }
 
     @InputImport(name="environmentClass")
-    private final @Nullable Input<String> environmentClass;
+        private final @Nullable Input<String> environmentClass;
 
     public Input<String> getEnvironmentClass() {
         return this.environmentClass == null ? Input.empty() : this.environmentClass;
     }
 
     @InputImport(name="executionRoleArn")
-    private final @Nullable Input<String> executionRoleArn;
+        private final @Nullable Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
     }
 
     @InputImport(name="kmsKey")
-    private final @Nullable Input<String> kmsKey;
+        private final @Nullable Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;
     }
 
     @InputImport(name="loggingConfiguration")
-    private final @Nullable Input<EnvironmentLoggingConfigurationArgs> loggingConfiguration;
+        private final @Nullable Input<EnvironmentLoggingConfigurationArgs> loggingConfiguration;
 
     public Input<EnvironmentLoggingConfigurationArgs> getLoggingConfiguration() {
         return this.loggingConfiguration == null ? Input.empty() : this.loggingConfiguration;
     }
 
     @InputImport(name="maxWorkers")
-    private final @Nullable Input<Integer> maxWorkers;
+        private final @Nullable Input<Integer> maxWorkers;
 
     public Input<Integer> getMaxWorkers() {
         return this.maxWorkers == null ? Input.empty() : this.maxWorkers;
     }
 
     @InputImport(name="minWorkers")
-    private final @Nullable Input<Integer> minWorkers;
+        private final @Nullable Input<Integer> minWorkers;
 
     public Input<Integer> getMinWorkers() {
         return this.minWorkers == null ? Input.empty() : this.minWorkers;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="networkConfiguration")
-    private final @Nullable Input<EnvironmentNetworkConfigurationArgs> networkConfiguration;
+        private final @Nullable Input<EnvironmentNetworkConfigurationArgs> networkConfiguration;
 
     public Input<EnvironmentNetworkConfigurationArgs> getNetworkConfiguration() {
         return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
     }
 
     @InputImport(name="pluginsS3ObjectVersion")
-    private final @Nullable Input<String> pluginsS3ObjectVersion;
+        private final @Nullable Input<String> pluginsS3ObjectVersion;
 
     public Input<String> getPluginsS3ObjectVersion() {
         return this.pluginsS3ObjectVersion == null ? Input.empty() : this.pluginsS3ObjectVersion;
     }
 
     @InputImport(name="pluginsS3Path")
-    private final @Nullable Input<String> pluginsS3Path;
+        private final @Nullable Input<String> pluginsS3Path;
 
     public Input<String> getPluginsS3Path() {
         return this.pluginsS3Path == null ? Input.empty() : this.pluginsS3Path;
     }
 
     @InputImport(name="requirementsS3ObjectVersion")
-    private final @Nullable Input<String> requirementsS3ObjectVersion;
+        private final @Nullable Input<String> requirementsS3ObjectVersion;
 
     public Input<String> getRequirementsS3ObjectVersion() {
         return this.requirementsS3ObjectVersion == null ? Input.empty() : this.requirementsS3ObjectVersion;
     }
 
     @InputImport(name="requirementsS3Path")
-    private final @Nullable Input<String> requirementsS3Path;
+        private final @Nullable Input<String> requirementsS3Path;
 
     public Input<String> getRequirementsS3Path() {
         return this.requirementsS3Path == null ? Input.empty() : this.requirementsS3Path;
     }
 
     @InputImport(name="schedulers")
-    private final @Nullable Input<Integer> schedulers;
+        private final @Nullable Input<Integer> schedulers;
 
     public Input<Integer> getSchedulers() {
         return this.schedulers == null ? Input.empty() : this.schedulers;
     }
 
     @InputImport(name="sourceBucketArn")
-    private final @Nullable Input<String> sourceBucketArn;
+        private final @Nullable Input<String> sourceBucketArn;
 
     public Input<String> getSourceBucketArn() {
         return this.sourceBucketArn == null ? Input.empty() : this.sourceBucketArn;
@@ -155,21 +155,21 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Object> tags;
+        private final @Nullable Input<Object> tags;
 
     public Input<Object> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="webserverAccessMode")
-    private final @Nullable Input<EnvironmentWebserverAccessMode> webserverAccessMode;
+        private final @Nullable Input<EnvironmentWebserverAccessMode> webserverAccessMode;
 
     public Input<EnvironmentWebserverAccessMode> getWebserverAccessMode() {
         return this.webserverAccessMode == null ? Input.empty() : this.webserverAccessMode;
     }
 
     @InputImport(name="weeklyMaintenanceWindowStart")
-    private final @Nullable Input<String> weeklyMaintenanceWindowStart;
+        private final @Nullable Input<String> weeklyMaintenanceWindowStart;
 
     public Input<String> getWeeklyMaintenanceWindowStart() {
         return this.weeklyMaintenanceWindowStart == null ? Input.empty() : this.weeklyMaintenanceWindowStart;
@@ -498,7 +498,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.weeklyMaintenanceWindowStart = Input.ofNullable(weeklyMaintenanceWindowStart);
             return this;
         }
-
         public EnvironmentArgs build() {
             return new EnvironmentArgs(airflowConfigurationOptions, airflowVersion, dagS3Path, environmentClass, executionRoleArn, kmsKey, loggingConfiguration, maxWorkers, minWorkers, name, networkConfiguration, pluginsS3ObjectVersion, pluginsS3Path, requirementsS3ObjectVersion, requirementsS3Path, schedulers, sourceBucketArn, tags, webserverAccessMode, weeklyMaintenanceWindowStart);
         }

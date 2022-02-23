@@ -408,7 +408,6 @@ public final class RouterNatResponse {
             this.udpIdleTimeoutSec = Objects.requireNonNull(udpIdleTimeoutSec);
             return this;
         }
-
         public RouterNatResponse build() {
             return new RouterNatResponse(drainNatIps, enableDynamicPortAllocation, enableEndpointIndependentMapping, icmpIdleTimeoutSec, logConfig, maxPortsPerVm, minPortsPerVm, name, natIpAllocateOption, natIps, rules, sourceSubnetworkIpRangesToNat, subnetworks, tcpEstablishedIdleTimeoutSec, tcpTimeWaitTimeoutSec, tcpTransitoryIdleTimeoutSec, type, udpIdleTimeoutSec);
         }

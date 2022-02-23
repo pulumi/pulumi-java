@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
      * 
      */
     @InputImport(name="issue", required=true)
-    private final String issue;
+      private final String issue;
 
     public String getIssue() {
         return this.issue;
@@ -44,7 +44,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
      * 
      */
     @InputImport(name="score", required=true)
-    private final Double score;
+      private final Double score;
 
     public Double getScore() {
         return this.score;
@@ -103,7 +103,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
             this.score = Objects.requireNonNull(score);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1IssueAssignmentResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueAssignmentResponse(displayName, issue, score);
         }

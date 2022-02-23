@@ -98,7 +98,6 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public EnterpriseKnowledgeGraphPropertiesResponse build() {
             return new EnterpriseKnowledgeGraphPropertiesResponse(description, metadata, provisioningState);
         }

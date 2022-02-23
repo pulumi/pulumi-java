@@ -246,7 +246,6 @@ public final class GetDataExportResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataExportResult build() {
             return new GetDataExportResult(createdDate, dataExportId, enable, eventHubName, id, lastModifiedDate, name, resourceId, tableNames, type);
         }

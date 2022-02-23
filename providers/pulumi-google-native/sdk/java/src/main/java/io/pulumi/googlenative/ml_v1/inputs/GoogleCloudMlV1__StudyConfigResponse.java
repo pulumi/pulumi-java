@@ -25,7 +25,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final String algorithm;
+      private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -36,7 +36,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="automatedStoppingConfig", required=true)
-    private final GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig;
+      private final GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig;
 
     public GoogleCloudMlV1__AutomatedStoppingConfigResponse getAutomatedStoppingConfig() {
         return this.automatedStoppingConfig;
@@ -47,7 +47,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="metrics", required=true)
-    private final List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics;
+      private final List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics;
 
     public List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> getMetrics() {
         return this.metrics;
@@ -58,7 +58,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters;
+      private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters;
 
     public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> getParameters() {
         return this.parameters;
@@ -127,7 +127,6 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public GoogleCloudMlV1__StudyConfigResponse build() {
             return new GoogleCloudMlV1__StudyConfigResponse(algorithm, automatedStoppingConfig, metrics, parameters);
         }

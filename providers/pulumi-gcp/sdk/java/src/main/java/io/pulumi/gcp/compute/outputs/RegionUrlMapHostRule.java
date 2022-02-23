@@ -106,7 +106,6 @@ public final class RegionUrlMapHostRule {
             this.pathMatcher = Objects.requireNonNull(pathMatcher);
             return this;
         }
-
         public RegionUrlMapHostRule build() {
             return new RegionUrlMapHostRule(description, hosts, pathMatcher);
         }

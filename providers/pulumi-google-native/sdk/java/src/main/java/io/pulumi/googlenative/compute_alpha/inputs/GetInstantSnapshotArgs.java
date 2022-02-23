@@ -15,21 +15,21 @@ public final class GetInstantSnapshotArgs extends io.pulumi.resources.InvokeArgs
     public static final GetInstantSnapshotArgs Empty = new GetInstantSnapshotArgs();
 
     @InputImport(name="instantSnapshot", required=true)
-    private final String instantSnapshot;
+      private final String instantSnapshot;
 
     public String getInstantSnapshot() {
         return this.instantSnapshot;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -88,7 +88,6 @@ public final class GetInstantSnapshotArgs extends io.pulumi.resources.InvokeArgs
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetInstantSnapshotArgs build() {
             return new GetInstantSnapshotArgs(instantSnapshot, project, zone);
         }

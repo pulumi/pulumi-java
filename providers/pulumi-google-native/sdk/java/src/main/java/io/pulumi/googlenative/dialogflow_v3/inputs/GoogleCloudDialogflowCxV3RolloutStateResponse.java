@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse extends io.pulu
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse extends io.pulu
      * 
      */
     @InputImport(name="step", required=true)
-    private final String step;
+      private final String step;
 
     public String getStep() {
         return this.step;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse extends io.pulu
      * 
      */
     @InputImport(name="stepIndex", required=true)
-    private final Integer stepIndex;
+      private final Integer stepIndex;
 
     public Integer getStepIndex() {
         return this.stepIndex;
@@ -103,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse extends io.pulu
             this.stepIndex = Objects.requireNonNull(stepIndex);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3RolloutStateResponse build() {
             return new GoogleCloudDialogflowCxV3RolloutStateResponse(startTime, step, stepIndex);
         }

@@ -139,7 +139,6 @@ public final class ScheduleResponse {
             this.startTimeOfDay = Objects.requireNonNull(startTimeOfDay);
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(endTimeOfDay, repeatInterval, scheduleEndDate, scheduleStartDate, startTimeOfDay);
         }

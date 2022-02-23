@@ -32,7 +32,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compatibilityLevel")
-    private final @Nullable Input<Either<String,CompatibilityLevel>> compatibilityLevel;
+        private final @Nullable Input<Either<String,CompatibilityLevel>> compatibilityLevel;
 
     public Input<Either<String,CompatibilityLevel>> getCompatibilityLevel() {
         return this.compatibilityLevel == null ? Input.empty() : this.compatibilityLevel;
@@ -43,7 +43,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataLocale")
-    private final @Nullable Input<String> dataLocale;
+        private final @Nullable Input<String> dataLocale;
 
     public Input<String> getDataLocale() {
         return this.dataLocale == null ? Input.empty() : this.dataLocale;
@@ -54,7 +54,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventsLateArrivalMaxDelayInSeconds")
-    private final @Nullable Input<Integer> eventsLateArrivalMaxDelayInSeconds;
+        private final @Nullable Input<Integer> eventsLateArrivalMaxDelayInSeconds;
 
     public Input<Integer> getEventsLateArrivalMaxDelayInSeconds() {
         return this.eventsLateArrivalMaxDelayInSeconds == null ? Input.empty() : this.eventsLateArrivalMaxDelayInSeconds;
@@ -65,7 +65,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventsOutOfOrderMaxDelayInSeconds")
-    private final @Nullable Input<Integer> eventsOutOfOrderMaxDelayInSeconds;
+        private final @Nullable Input<Integer> eventsOutOfOrderMaxDelayInSeconds;
 
     public Input<Integer> getEventsOutOfOrderMaxDelayInSeconds() {
         return this.eventsOutOfOrderMaxDelayInSeconds == null ? Input.empty() : this.eventsOutOfOrderMaxDelayInSeconds;
@@ -76,7 +76,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventsOutOfOrderPolicy")
-    private final @Nullable Input<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy;
+        private final @Nullable Input<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy;
 
     public Input<Either<String,EventsOutOfOrderPolicy>> getEventsOutOfOrderPolicy() {
         return this.eventsOutOfOrderPolicy == null ? Input.empty() : this.eventsOutOfOrderPolicy;
@@ -87,7 +87,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functions")
-    private final @Nullable Input<List<FunctionArgs>> functions;
+        private final @Nullable Input<List<FunctionArgs>> functions;
 
     public Input<List<FunctionArgs>> getFunctions() {
         return this.functions == null ? Input.empty() : this.functions;
@@ -98,7 +98,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable Input<List<InputArgs>> inputs;
+        private final @Nullable Input<List<InputArgs>> inputs;
 
     public Input<List<InputArgs>> getInputs() {
         return this.inputs == null ? Input.empty() : this.inputs;
@@ -109,7 +109,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName")
-    private final @Nullable Input<String> jobName;
+        private final @Nullable Input<String> jobName;
 
     public Input<String> getJobName() {
         return this.jobName == null ? Input.empty() : this.jobName;
@@ -120,7 +120,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -131,7 +131,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputErrorPolicy")
-    private final @Nullable Input<Either<String,OutputErrorPolicy>> outputErrorPolicy;
+        private final @Nullable Input<Either<String,OutputErrorPolicy>> outputErrorPolicy;
 
     public Input<Either<String,OutputErrorPolicy>> getOutputErrorPolicy() {
         return this.outputErrorPolicy == null ? Input.empty() : this.outputErrorPolicy;
@@ -142,7 +142,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputStartMode")
-    private final @Nullable Input<Either<String,OutputStartMode>> outputStartMode;
+        private final @Nullable Input<Either<String,OutputStartMode>> outputStartMode;
 
     public Input<Either<String,OutputStartMode>> getOutputStartMode() {
         return this.outputStartMode == null ? Input.empty() : this.outputStartMode;
@@ -153,7 +153,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputStartTime")
-    private final @Nullable Input<String> outputStartTime;
+        private final @Nullable Input<String> outputStartTime;
 
     public Input<String> getOutputStartTime() {
         return this.outputStartTime == null ? Input.empty() : this.outputStartTime;
@@ -164,7 +164,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputs")
-    private final @Nullable Input<List<OutputArgs>> outputs;
+        private final @Nullable Input<List<OutputArgs>> outputs;
 
     public Input<List<OutputArgs>> getOutputs() {
         return this.outputs == null ? Input.empty() : this.outputs;
@@ -175,7 +175,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -186,7 +186,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+        private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -197,7 +197,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -208,7 +208,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transformation")
-    private final @Nullable Input<TransformationArgs> transformation;
+        private final @Nullable Input<TransformationArgs> transformation;
 
     public Input<TransformationArgs> getTransformation() {
         return this.transformation == null ? Input.empty() : this.transformation;
@@ -492,7 +492,6 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             this.transformation = Input.ofNullable(transformation);
             return this;
         }
-
         public StreamingJobArgs build() {
             return new StreamingJobArgs(compatibilityLevel, dataLocale, eventsLateArrivalMaxDelayInSeconds, eventsOutOfOrderMaxDelayInSeconds, eventsOutOfOrderPolicy, functions, inputs, jobName, location, outputErrorPolicy, outputStartMode, outputStartTime, outputs, resourceGroupName, sku, tags, transformation);
         }

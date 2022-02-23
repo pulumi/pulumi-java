@@ -430,7 +430,6 @@ public final class ResourceTypeRegistrationResponseProperties {
             this.throttlingRules = throttlingRules;
             return this;
         }
-
         public ResourceTypeRegistrationResponseProperties build() {
             return new ResourceTypeRegistrationResponseProperties(allowedUnauthorizedActions, authorizationActionMappings, checkNameAvailabilitySpecifications, defaultApiVersion, disallowedActionVerbs, enableAsyncOperation, enableThirdPartyS2S, endpoints, extendedLocations, extensionOptions, featuresRule, identityManagement, isPureProxy, linkedAccessChecks, loggingRules, marketplaceType, provisioningState, regionality, requestHeaderOptions, requiredFeatures, resourceDeletionPolicy, resourceMovePolicy, routingType, serviceTreeInfos, subscriptionLifecycleNotificationSpecifications, subscriptionStateRules, swaggerSpecifications, templateDeploymentOptions, throttlingRules);
         }

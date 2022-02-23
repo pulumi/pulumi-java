@@ -21,7 +21,7 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse ext
      * 
      */
     @InputImport(name="labelName", required=true)
-    private final String labelName;
+      private final String labelName;
 
     public String getLabelName() {
         return this.labelName;
@@ -32,7 +32,7 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse ext
      * 
      */
     @InputImport(name="labelValue", required=true)
-    private final String labelValue;
+      private final String labelValue;
 
     public String getLabelValue() {
         return this.labelValue;
@@ -81,7 +81,6 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse ext
             this.labelValue = Objects.requireNonNull(labelValue);
             return this;
         }
-
         public EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse build() {
             return new EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse(labelName, labelValue);
         }

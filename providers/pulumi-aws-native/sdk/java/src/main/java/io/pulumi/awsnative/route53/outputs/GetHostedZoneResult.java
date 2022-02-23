@@ -137,7 +137,6 @@ public final class GetHostedZoneResult {
             this.vPCs = vPCs;
             return this;
         }
-
         public GetHostedZoneResult build() {
             return new GetHostedZoneResult(hostedZoneConfig, hostedZoneTags, id, nameServers, queryLoggingConfig, vPCs);
         }

@@ -27,7 +27,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<Either<AlertingActionArgs,LogToMetricActionArgs>> action;
+        private final Input<Either<AlertingActionArgs,LogToMetricActionArgs>> action;
 
     public Input<Either<AlertingActionArgs,LogToMetricActionArgs>> getAction() {
         return this.action;
@@ -38,7 +38,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="autoMitigate")
-    private final @Nullable Input<Boolean> autoMitigate;
+        private final @Nullable Input<Boolean> autoMitigate;
 
     public Input<Boolean> getAutoMitigate() {
         return this.autoMitigate == null ? Input.empty() : this.autoMitigate;
@@ -49,7 +49,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -71,7 +71,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Either<String,Enabled>> enabled;
+        private final @Nullable Input<Either<String,Enabled>> enabled;
 
     public Input<Either<String,Enabled>> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -82,7 +82,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -93,7 +93,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -104,7 +104,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+        private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -115,7 +115,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<ScheduleArgs> schedule;
+        private final @Nullable Input<ScheduleArgs> schedule;
 
     public Input<ScheduleArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -126,7 +126,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<SourceArgs> source;
+        private final Input<SourceArgs> source;
 
     public Input<SourceArgs> getSource() {
         return this.source;
@@ -137,7 +137,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -331,7 +331,6 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ScheduledQueryRuleArgs build() {
             return new ScheduledQueryRuleArgs(action, autoMitigate, description, displayName, enabled, location, resourceGroupName, ruleName, schedule, source, tags);
         }

@@ -21,7 +21,7 @@ public final class FileIODetailsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="filePattern", required=true)
-    private final String filePattern;
+      private final String filePattern;
 
     public String getFilePattern() {
         return this.filePattern;
@@ -59,7 +59,6 @@ public final class FileIODetailsResponse extends io.pulumi.resources.InvokeArgs 
             this.filePattern = Objects.requireNonNull(filePattern);
             return this;
         }
-
         public FileIODetailsResponse build() {
             return new FileIODetailsResponse(filePattern);
         }

@@ -76,7 +76,6 @@ public final class ClusterNodeConfigShieldedInstanceConfig {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
-
         public ClusterNodeConfigShieldedInstanceConfig build() {
             return new ClusterNodeConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot);
         }

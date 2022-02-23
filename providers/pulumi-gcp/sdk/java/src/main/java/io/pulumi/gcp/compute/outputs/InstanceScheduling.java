@@ -163,7 +163,6 @@ public final class InstanceScheduling {
             this.preemptible = preemptible;
             return this;
         }
-
         public InstanceScheduling build() {
             return new InstanceScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }

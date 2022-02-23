@@ -140,7 +140,6 @@ public final class OperationResponse {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public OperationResponse build() {
             return new OperationResponse(done, error, metadata, name, response);
         }

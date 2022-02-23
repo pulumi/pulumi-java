@@ -134,7 +134,6 @@ public final class GetAnomalyDetectorResult {
             this.metricSetList = metricSetList;
             return this;
         }
-
         public GetAnomalyDetectorResult build() {
             return new GetAnomalyDetectorResult(anomalyDetectorConfig, anomalyDetectorDescription, arn, kmsKeyArn, metricSetList);
         }

@@ -162,7 +162,6 @@ public final class DeploymentSettingsResponse {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public DeploymentSettingsResponse build() {
             return new DeploymentSettingsResponse(cpu, environmentVariables, jvmOptions, memoryInGB, netCoreMainEntryPath, runtimeVersion);
         }

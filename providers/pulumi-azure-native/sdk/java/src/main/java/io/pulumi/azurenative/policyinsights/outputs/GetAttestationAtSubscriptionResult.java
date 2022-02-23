@@ -310,7 +310,6 @@ public final class GetAttestationAtSubscriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAttestationAtSubscriptionResult build() {
             return new GetAttestationAtSubscriptionResult(comments, complianceState, evidence, expiresOn, id, lastComplianceStateChangeAt, name, owner, policyAssignmentId, policyDefinitionReferenceId, provisioningState, systemData, type);
         }

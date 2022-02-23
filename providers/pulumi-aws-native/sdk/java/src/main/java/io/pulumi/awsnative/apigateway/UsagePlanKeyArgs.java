@@ -19,7 +19,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final Input<String> keyId;
+        private final Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId;
@@ -30,7 +30,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyType", required=true)
-    private final Input<UsagePlanKeyKeyType> keyType;
+        private final Input<UsagePlanKeyKeyType> keyType;
 
     public Input<UsagePlanKeyKeyType> getKeyType() {
         return this.keyType;
@@ -41,7 +41,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usagePlanId", required=true)
-    private final Input<String> usagePlanId;
+        private final Input<String> usagePlanId;
 
     public Input<String> getUsagePlanId() {
         return this.usagePlanId;
@@ -115,7 +115,6 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.usagePlanId = Input.of(Objects.requireNonNull(usagePlanId));
             return this;
         }
-
         public UsagePlanKeyArgs build() {
             return new UsagePlanKeyArgs(keyId, keyType, usagePlanId);
         }

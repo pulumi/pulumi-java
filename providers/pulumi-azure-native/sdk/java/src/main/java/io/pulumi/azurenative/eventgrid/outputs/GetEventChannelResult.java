@@ -273,7 +273,6 @@ public final class GetEventChannelResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEventChannelResult build() {
             return new GetEventChannelResult(destination, expirationTimeIfNotActivatedUtc, filter, id, name, partnerTopicFriendlyDescription, partnerTopicReadinessState, provisioningState, source, systemData, type);
         }

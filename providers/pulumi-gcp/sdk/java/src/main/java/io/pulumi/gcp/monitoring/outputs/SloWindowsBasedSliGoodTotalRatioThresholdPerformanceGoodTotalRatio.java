@@ -131,7 +131,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
             this.totalServiceFilter = totalServiceFilter;
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio(badServiceFilter, goodServiceFilter, totalServiceFilter);
         }

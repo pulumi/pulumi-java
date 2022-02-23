@@ -15,21 +15,21 @@ public final class GetDomainIamPolicyArgs extends io.pulumi.resources.InvokeArgs
     public static final GetDomainIamPolicyArgs Empty = new GetDomainIamPolicyArgs();
 
     @InputImport(name="domainId", required=true)
-    private final String domainId;
+      private final String domainId;
 
     public String getDomainId() {
         return this.domainId;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetDomainIamPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.project = project;
             return this;
         }
-
         public GetDomainIamPolicyArgs build() {
             return new GetDomainIamPolicyArgs(domainId, optionsRequestedPolicyVersion, project);
         }

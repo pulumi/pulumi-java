@@ -77,7 +77,6 @@ public final class ListLocalUserKeysResult {
             this.sshAuthorizedKeys = sshAuthorizedKeys;
             return this;
         }
-
         public ListLocalUserKeysResult build() {
             return new ListLocalUserKeysResult(sharedKey, sshAuthorizedKeys);
         }

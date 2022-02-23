@@ -98,7 +98,6 @@ public final class KubernetesClusterInfoResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public KubernetesClusterInfoResponse build() {
             return new KubernetesClusterInfoResponse(etcdInfo, nodes, version);
         }

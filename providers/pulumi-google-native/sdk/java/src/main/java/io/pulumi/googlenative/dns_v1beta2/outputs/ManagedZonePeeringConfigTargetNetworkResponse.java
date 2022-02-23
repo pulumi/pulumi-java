@@ -87,7 +87,6 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
-
         public ManagedZonePeeringConfigTargetNetworkResponse build() {
             return new ManagedZonePeeringConfigTargetNetworkResponse(deactivateTime, kind, networkUrl);
         }

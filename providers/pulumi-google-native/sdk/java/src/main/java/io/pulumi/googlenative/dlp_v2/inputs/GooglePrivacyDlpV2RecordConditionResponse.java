@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2RecordConditionResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="expressions", required=true)
-    private final GooglePrivacyDlpV2ExpressionsResponse expressions;
+      private final GooglePrivacyDlpV2ExpressionsResponse expressions;
 
     public GooglePrivacyDlpV2ExpressionsResponse getExpressions() {
         return this.expressions;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2RecordConditionResponse extends io.pulumi.r
             this.expressions = Objects.requireNonNull(expressions);
             return this;
         }
-
         public GooglePrivacyDlpV2RecordConditionResponse build() {
             return new GooglePrivacyDlpV2RecordConditionResponse(expressions);
         }

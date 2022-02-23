@@ -23,7 +23,7 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -93,7 +93,6 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public InterconnectMacsecPreSharedKeyArgs build() {
             return new InterconnectMacsecPreSharedKeyArgs(name, startTime);
         }

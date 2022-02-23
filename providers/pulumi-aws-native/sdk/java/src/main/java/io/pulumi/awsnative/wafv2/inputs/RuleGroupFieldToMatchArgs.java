@@ -26,7 +26,7 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allQueryArguments")
-    private final @Nullable Input<Object> allQueryArguments;
+        private final @Nullable Input<Object> allQueryArguments;
 
     public Input<Object> getAllQueryArguments() {
         return this.allQueryArguments == null ? Input.empty() : this.allQueryArguments;
@@ -37,14 +37,14 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<Object> body;
+        private final @Nullable Input<Object> body;
 
     public Input<Object> getBody() {
         return this.body == null ? Input.empty() : this.body;
     }
 
     @InputImport(name="jsonBody")
-    private final @Nullable Input<RuleGroupJsonBodyArgs> jsonBody;
+        private final @Nullable Input<RuleGroupJsonBodyArgs> jsonBody;
 
     public Input<RuleGroupJsonBodyArgs> getJsonBody() {
         return this.jsonBody == null ? Input.empty() : this.jsonBody;
@@ -55,7 +55,7 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<Object> method;
+        private final @Nullable Input<Object> method;
 
     public Input<Object> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -66,14 +66,14 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable Input<Object> queryString;
+        private final @Nullable Input<Object> queryString;
 
     public Input<Object> getQueryString() {
         return this.queryString == null ? Input.empty() : this.queryString;
     }
 
     @InputImport(name="singleHeader")
-    private final @Nullable Input<RuleGroupFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
+        private final @Nullable Input<RuleGroupFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
 
     public Input<RuleGroupFieldToMatchSingleHeaderPropertiesArgs> getSingleHeader() {
         return this.singleHeader == null ? Input.empty() : this.singleHeader;
@@ -84,7 +84,7 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="singleQueryArgument")
-    private final @Nullable Input<RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument;
+        private final @Nullable Input<RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument;
 
     public Input<RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs> getSingleQueryArgument() {
         return this.singleQueryArgument == null ? Input.empty() : this.singleQueryArgument;
@@ -95,7 +95,7 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="uriPath")
-    private final @Nullable Input<Object> uriPath;
+        private final @Nullable Input<Object> uriPath;
 
     public Input<Object> getUriPath() {
         return this.uriPath == null ? Input.empty() : this.uriPath;
@@ -244,7 +244,6 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
             this.uriPath = Input.ofNullable(uriPath);
             return this;
         }
-
         public RuleGroupFieldToMatchArgs build() {
             return new RuleGroupFieldToMatchArgs(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }

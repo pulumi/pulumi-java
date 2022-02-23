@@ -25,7 +25,7 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccessType>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -68,7 +68,6 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends io.pulumi
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public HybridComputePrivateLinkScopePropertiesArgs build() {
             return new HybridComputePrivateLinkScopePropertiesArgs(publicNetworkAccess);
         }

@@ -203,7 +203,6 @@ public final class GetTransitGatewayMulticastGroupSourceResult {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-
         public GetTransitGatewayMulticastGroupSourceResult build() {
             return new GetTransitGatewayMulticastGroupSourceResult(groupMember, groupSource, memberType, resourceId, resourceType, sourceType, subnetId, transitGatewayAttachmentId);
         }

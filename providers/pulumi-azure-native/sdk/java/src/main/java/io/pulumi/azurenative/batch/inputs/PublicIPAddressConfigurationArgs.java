@@ -25,7 +25,7 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ipAddressIds")
-    private final @Nullable Input<List<String>> ipAddressIds;
+        private final @Nullable Input<List<String>> ipAddressIds;
 
     public Input<List<String>> getIpAddressIds() {
         return this.ipAddressIds == null ? Input.empty() : this.ipAddressIds;
@@ -36,7 +36,7 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="provision")
-    private final @Nullable Input<IPAddressProvisioningType> provision;
+        private final @Nullable Input<IPAddressProvisioningType> provision;
 
     public Input<IPAddressProvisioningType> getProvision() {
         return this.provision == null ? Input.empty() : this.provision;
@@ -95,7 +95,6 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
             this.provision = Input.ofNullable(provision);
             return this;
         }
-
         public PublicIPAddressConfigurationArgs build() {
             return new PublicIPAddressConfigurationArgs(ipAddressIds, provision);
         }

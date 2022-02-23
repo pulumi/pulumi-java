@@ -266,7 +266,6 @@ public final class GetConnectorResult {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
-
         public GetConnectorResult build() {
             return new GetConnectorResult(connectedProjects, ipCidrRange, machineType, maxInstances, maxThroughput, minInstances, minThroughput, name, network, state, subnet);
         }

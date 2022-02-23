@@ -44,7 +44,6 @@ public final class NodePoolNodeConfigGcfsConfig {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public NodePoolNodeConfigGcfsConfig build() {
             return new NodePoolNodeConfigGcfsConfig(enabled);
         }

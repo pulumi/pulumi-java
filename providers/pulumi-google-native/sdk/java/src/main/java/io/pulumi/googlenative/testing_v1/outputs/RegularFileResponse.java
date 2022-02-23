@@ -75,7 +75,6 @@ public final class RegularFileResponse {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
-
         public RegularFileResponse build() {
             return new RegularFileResponse(content, devicePath);
         }

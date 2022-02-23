@@ -78,7 +78,6 @@ public final class ListMonitorUserRolesResult {
             this.value = value;
             return this;
         }
-
         public ListMonitorUserRolesResult build() {
             return new ListMonitorUserRolesResult(nextLink, value);
         }

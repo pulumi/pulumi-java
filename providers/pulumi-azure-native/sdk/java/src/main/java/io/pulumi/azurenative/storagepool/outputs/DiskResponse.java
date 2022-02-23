@@ -52,7 +52,6 @@ public final class DiskResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public DiskResponse build() {
             return new DiskResponse(id);
         }

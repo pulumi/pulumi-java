@@ -231,7 +231,6 @@ public final class AmazonRdsForSqlServerTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonRdsForSqlServerTableDatasetResponse build() {
             return new AmazonRdsForSqlServerTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, type);
         }

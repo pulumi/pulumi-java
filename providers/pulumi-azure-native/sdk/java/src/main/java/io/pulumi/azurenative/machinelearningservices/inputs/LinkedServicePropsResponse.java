@@ -23,7 +23,7 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable String createdTime;
+        private final @Nullable String createdTime;
 
     public Optional<String> getCreatedTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
@@ -34,7 +34,7 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="linkType")
-    private final @Nullable String linkType;
+        private final @Nullable String linkType;
 
     public Optional<String> getLinkType() {
         return this.linkType == null ? Optional.empty() : Optional.ofNullable(this.linkType);
@@ -45,7 +45,7 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="linkedServiceResourceId", required=true)
-    private final String linkedServiceResourceId;
+        private final String linkedServiceResourceId;
 
     public String getLinkedServiceResourceId() {
         return this.linkedServiceResourceId;
@@ -56,7 +56,7 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="modifiedTime")
-    private final @Nullable String modifiedTime;
+        private final @Nullable String modifiedTime;
 
     public Optional<String> getModifiedTime() {
         return this.modifiedTime == null ? Optional.empty() : Optional.ofNullable(this.modifiedTime);
@@ -125,7 +125,6 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
             this.modifiedTime = modifiedTime;
             return this;
         }
-
         public LinkedServicePropsResponse build() {
             return new LinkedServicePropsResponse(createdTime, linkType, linkedServiceResourceId, modifiedTime);
         }

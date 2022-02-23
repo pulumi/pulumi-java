@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
      * 
      */
     @InputImport(name="parts", required=true)
-    private final List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> parts;
+      private final List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> parts;
 
     public List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> getParts() {
         return this.parts;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
      * 
      */
     @InputImport(name="timesAddedCount", required=true)
-    private final Integer timesAddedCount;
+      private final Integer timesAddedCount;
 
     public Integer getTimesAddedCount() {
         return this.timesAddedCount;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -126,7 +126,6 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse(name, parts, timesAddedCount, type);
         }

@@ -23,7 +23,7 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetName", required=true)
-    private final Input<String> assetName;
+        private final Input<String> assetName;
 
     public Input<String> getAssetName() {
         return this.assetName;
@@ -34,7 +34,7 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+        private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -46,7 +46,7 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -120,7 +120,6 @@ public final class JobOutputAssetArgs extends io.pulumi.resources.ResourceArgs {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public JobOutputAssetArgs build() {
             return new JobOutputAssetArgs(assetName, label, odataType);
         }

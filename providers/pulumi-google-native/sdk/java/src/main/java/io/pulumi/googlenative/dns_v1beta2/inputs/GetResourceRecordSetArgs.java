@@ -15,35 +15,35 @@ public final class GetResourceRecordSetArgs extends io.pulumi.resources.InvokeAr
     public static final GetResourceRecordSetArgs Empty = new GetResourceRecordSetArgs();
 
     @InputImport(name="clientOperationId")
-    private final @Nullable String clientOperationId;
+      private final @Nullable String clientOperationId;
 
     public Optional<String> getClientOperationId() {
         return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
     }
 
     @InputImport(name="managedZone", required=true)
-    private final String managedZone;
+      private final String managedZone;
 
     public String getManagedZone() {
         return this.managedZone;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -122,7 +122,6 @@ public final class GetResourceRecordSetArgs extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceRecordSetArgs build() {
             return new GetResourceRecordSetArgs(clientOperationId, managedZone, name, project, type);
         }

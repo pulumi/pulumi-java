@@ -23,7 +23,7 @@ public final class MigrationEligibilityInfoResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="isEligibleForMigration", required=true)
-    private final Boolean isEligibleForMigration;
+        private final Boolean isEligibleForMigration;
 
     public Boolean getIsEligibleForMigration() {
         return this.isEligibleForMigration;
@@ -34,7 +34,7 @@ public final class MigrationEligibilityInfoResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="validationMessages", required=true)
-    private final List<String> validationMessages;
+        private final List<String> validationMessages;
 
     public List<String> getValidationMessages() {
         return this.validationMessages;
@@ -83,7 +83,6 @@ public final class MigrationEligibilityInfoResponse extends io.pulumi.resources.
             this.validationMessages = Objects.requireNonNull(validationMessages);
             return this;
         }
-
         public MigrationEligibilityInfoResponse build() {
             return new MigrationEligibilityInfoResponse(isEligibleForMigration, validationMessages);
         }

@@ -121,7 +121,6 @@ public final class AliasPathResponse {
             this.pattern = pattern;
             return this;
         }
-
         public AliasPathResponse build() {
             return new AliasPathResponse(apiVersions, metadata, path, pattern);
         }

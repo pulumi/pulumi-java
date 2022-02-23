@@ -231,7 +231,6 @@ public final class MicrosoftAccessTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MicrosoftAccessTableDatasetResponse build() {
             return new MicrosoftAccessTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

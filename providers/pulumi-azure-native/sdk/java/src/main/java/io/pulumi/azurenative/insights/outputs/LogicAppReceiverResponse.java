@@ -119,7 +119,6 @@ public final class LogicAppReceiverResponse {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public LogicAppReceiverResponse build() {
             return new LogicAppReceiverResponse(callbackUrl, name, resourceId, useCommonAlertSchema);
         }

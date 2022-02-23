@@ -14,7 +14,7 @@ public final class ResponseHeadersPolicyArgs extends io.pulumi.resources.Resourc
     public static final ResponseHeadersPolicyArgs Empty = new ResponseHeadersPolicyArgs();
 
     @InputImport(name="responseHeadersPolicyConfig", required=true)
-    private final Input<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig;
+        private final Input<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig;
 
     public Input<ResponseHeadersPolicyConfigArgs> getResponseHeadersPolicyConfig() {
         return this.responseHeadersPolicyConfig;
@@ -57,7 +57,6 @@ public final class ResponseHeadersPolicyArgs extends io.pulumi.resources.Resourc
             this.responseHeadersPolicyConfig = Input.of(Objects.requireNonNull(responseHeadersPolicyConfig));
             return this;
         }
-
         public ResponseHeadersPolicyArgs build() {
             return new ResponseHeadersPolicyArgs(responseHeadersPolicyConfig);
         }

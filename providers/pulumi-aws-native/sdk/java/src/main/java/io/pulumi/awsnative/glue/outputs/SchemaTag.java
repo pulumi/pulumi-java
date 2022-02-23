@@ -74,7 +74,6 @@ public final class SchemaTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SchemaTag build() {
             return new SchemaTag(key, value);
         }

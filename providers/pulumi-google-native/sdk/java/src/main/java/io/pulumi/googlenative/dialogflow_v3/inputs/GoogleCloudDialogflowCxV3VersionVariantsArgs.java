@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsArgs extends io.pulum
      * 
      */
     @InputImport(name="variants")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> variants;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> variants;
 
     public Input<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> getVariants() {
         return this.variants == null ? Input.empty() : this.variants;
@@ -67,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsArgs extends io.pulum
             this.variants = Input.ofNullable(variants);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3VersionVariantsArgs build() {
             return new GoogleCloudDialogflowCxV3VersionVariantsArgs(variants);
         }

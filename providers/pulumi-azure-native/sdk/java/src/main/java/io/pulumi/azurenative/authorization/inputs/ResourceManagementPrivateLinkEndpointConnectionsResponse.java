@@ -20,7 +20,7 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse exte
      * 
      */
     @InputImport(name="privateEndpointConnections")
-    private final @Nullable List<String> privateEndpointConnections;
+        private final @Nullable List<String> privateEndpointConnections;
 
     public List<String> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
@@ -58,7 +58,6 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse exte
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
         public ResourceManagementPrivateLinkEndpointConnectionsResponse build() {
             return new ResourceManagementPrivateLinkEndpointConnectionsResponse(privateEndpointConnections);
         }

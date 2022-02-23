@@ -30,7 +30,6 @@ public final class RecipeParameterMap {
         public Builder(RecipeParameterMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RecipeParameterMap build() {
             return new RecipeParameterMap();
         }

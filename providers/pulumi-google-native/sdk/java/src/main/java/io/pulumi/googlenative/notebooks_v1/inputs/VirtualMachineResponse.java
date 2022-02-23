@@ -22,7 +22,7 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
@@ -33,7 +33,7 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="instanceName", required=true)
-    private final String instanceName;
+      private final String instanceName;
 
     public String getInstanceName() {
         return this.instanceName;
@@ -44,7 +44,7 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="virtualMachineConfig", required=true)
-    private final VirtualMachineConfigResponse virtualMachineConfig;
+      private final VirtualMachineConfigResponse virtualMachineConfig;
 
     public VirtualMachineConfigResponse getVirtualMachineConfig() {
         return this.virtualMachineConfig;
@@ -103,7 +103,6 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
             this.virtualMachineConfig = Objects.requireNonNull(virtualMachineConfig);
             return this;
         }
-
         public VirtualMachineResponse build() {
             return new VirtualMachineResponse(instanceId, instanceName, virtualMachineConfig);
         }

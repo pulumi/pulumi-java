@@ -97,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigRespo
             this.testCases = Objects.requireNonNull(testCases);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse build() {
             return new GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse(enableContinuousRun, enablePredeploymentRun, testCases);
         }

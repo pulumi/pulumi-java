@@ -24,7 +24,7 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="env")
-    private final @Nullable Input<Map<String,String>> env;
+      private final @Nullable Input<Map<String,String>> env;
 
     public Input<Map<String,String>> getEnv() {
         return this.env == null ? Input.empty() : this.env;
@@ -35,7 +35,7 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -94,7 +94,6 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
             this.network = Input.ofNullable(network);
             return this;
         }
-
         public VertexAIParametersArgs build() {
             return new VertexAIParametersArgs(env, network);
         }

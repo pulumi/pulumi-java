@@ -119,7 +119,6 @@ public final class AuthorizationResponse {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public AuthorizationResponse build() {
             return new AuthorizationResponse(delegatedRoleDefinitionIds, principalId, principalIdDisplayName, roleDefinitionId);
         }

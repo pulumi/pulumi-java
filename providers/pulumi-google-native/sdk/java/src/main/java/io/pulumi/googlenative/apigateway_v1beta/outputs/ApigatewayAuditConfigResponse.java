@@ -76,7 +76,6 @@ public final class ApigatewayAuditConfigResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public ApigatewayAuditConfigResponse build() {
             return new ApigatewayAuditConfigResponse(auditLogConfigs, service);
         }

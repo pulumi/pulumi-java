@@ -27,7 +27,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+        private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -38,7 +38,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+        private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -49,7 +49,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="preCopyScript")
-    private final @Nullable Object preCopyScript;
+        private final @Nullable Object preCopyScript;
 
     public Optional<Object> getPreCopyScript() {
         return this.preCopyScript == null ? Optional.empty() : Optional.ofNullable(this.preCopyScript);
@@ -60,7 +60,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sinkRetryCount")
-    private final @Nullable Object sinkRetryCount;
+        private final @Nullable Object sinkRetryCount;
 
     public Optional<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
@@ -71,7 +71,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sinkRetryWait")
-    private final @Nullable Object sinkRetryWait;
+        private final @Nullable Object sinkRetryWait;
 
     public Optional<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
@@ -82,7 +82,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sqlWriterStoredProcedureName")
-    private final @Nullable Object sqlWriterStoredProcedureName;
+        private final @Nullable Object sqlWriterStoredProcedureName;
 
     public Optional<Object> getSqlWriterStoredProcedureName() {
         return this.sqlWriterStoredProcedureName == null ? Optional.empty() : Optional.ofNullable(this.sqlWriterStoredProcedureName);
@@ -93,7 +93,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sqlWriterTableType")
-    private final @Nullable Object sqlWriterTableType;
+        private final @Nullable Object sqlWriterTableType;
 
     public Optional<Object> getSqlWriterTableType() {
         return this.sqlWriterTableType == null ? Optional.empty() : Optional.ofNullable(this.sqlWriterTableType);
@@ -104,7 +104,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sqlWriterUseTableLock")
-    private final @Nullable Object sqlWriterUseTableLock;
+        private final @Nullable Object sqlWriterUseTableLock;
 
     public Optional<Object> getSqlWriterUseTableLock() {
         return this.sqlWriterUseTableLock == null ? Optional.empty() : Optional.ofNullable(this.sqlWriterUseTableLock);
@@ -115,7 +115,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storedProcedureParameters")
-    private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
+        private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
 
     public Map<String,StoredProcedureParameterResponse> getStoredProcedureParameters() {
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
@@ -126,7 +126,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storedProcedureTableTypeParameterName")
-    private final @Nullable Object storedProcedureTableTypeParameterName;
+        private final @Nullable Object storedProcedureTableTypeParameterName;
 
     public Optional<Object> getStoredProcedureTableTypeParameterName() {
         return this.storedProcedureTableTypeParameterName == null ? Optional.empty() : Optional.ofNullable(this.storedProcedureTableTypeParameterName);
@@ -137,7 +137,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tableOption")
-    private final @Nullable Object tableOption;
+        private final @Nullable Object tableOption;
 
     public Optional<Object> getTableOption() {
         return this.tableOption == null ? Optional.empty() : Optional.ofNullable(this.tableOption);
@@ -149,7 +149,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -160,7 +160,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="upsertSettings")
-    private final @Nullable SqlUpsertSettingsResponse upsertSettings;
+        private final @Nullable SqlUpsertSettingsResponse upsertSettings;
 
     public Optional<SqlUpsertSettingsResponse> getUpsertSettings() {
         return this.upsertSettings == null ? Optional.empty() : Optional.ofNullable(this.upsertSettings);
@@ -171,7 +171,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="writeBatchSize")
-    private final @Nullable Object writeBatchSize;
+        private final @Nullable Object writeBatchSize;
 
     public Optional<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
@@ -182,7 +182,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="writeBatchTimeout")
-    private final @Nullable Object writeBatchTimeout;
+        private final @Nullable Object writeBatchTimeout;
 
     public Optional<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
@@ -193,7 +193,7 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="writeBehavior")
-    private final @Nullable Object writeBehavior;
+        private final @Nullable Object writeBehavior;
 
     public Optional<Object> getWriteBehavior() {
         return this.writeBehavior == null ? Optional.empty() : Optional.ofNullable(this.writeBehavior);
@@ -382,7 +382,6 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public AzureSqlSinkResponse build() {
             return new AzureSqlSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, sqlWriterStoredProcedureName, sqlWriterTableType, sqlWriterUseTableLock, storedProcedureParameters, storedProcedureTableTypeParameterName, tableOption, type, upsertSettings, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

@@ -99,7 +99,6 @@ public final class CustomResourceDefinitionStatus {
             this.storedVersions = Objects.requireNonNull(storedVersions);
             return this;
         }
-
         public CustomResourceDefinitionStatus build() {
             return new CustomResourceDefinitionStatus(acceptedNames, conditions, storedVersions);
         }

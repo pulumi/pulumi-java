@@ -53,7 +53,6 @@ public final class ServiceMeshFeatureStateResponse {
             this.analysisMessages = Objects.requireNonNull(analysisMessages);
             return this;
         }
-
         public ServiceMeshFeatureStateResponse build() {
             return new ServiceMeshFeatureStateResponse(analysisMessages);
         }

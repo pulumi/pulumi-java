@@ -110,7 +110,6 @@ public final class GetAutoscalingPolicyResult {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
-
         public GetAutoscalingPolicyResult build() {
             return new GetAutoscalingPolicyResult(basicAlgorithm, name, secondaryWorkerConfig, workerConfig);
         }

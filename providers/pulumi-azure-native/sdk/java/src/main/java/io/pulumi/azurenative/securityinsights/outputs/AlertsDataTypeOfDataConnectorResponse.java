@@ -54,7 +54,6 @@ public final class AlertsDataTypeOfDataConnectorResponse {
             this.alerts = alerts;
             return this;
         }
-
         public AlertsDataTypeOfDataConnectorResponse build() {
             return new AlertsDataTypeOfDataConnectorResponse(alerts);
         }

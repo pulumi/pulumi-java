@@ -244,7 +244,6 @@ public final class GetWorkerPoolResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetWorkerPoolResult build() {
             return new GetWorkerPoolResult(annotations, createTime, deleteTime, displayName, etag, name, privatePoolV1Config, state, uid, updateTime);
         }

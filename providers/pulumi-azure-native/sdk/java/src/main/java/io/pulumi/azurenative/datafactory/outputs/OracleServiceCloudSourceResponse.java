@@ -205,7 +205,6 @@ public final class OracleServiceCloudSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OracleServiceCloudSourceResponse build() {
             return new OracleServiceCloudSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

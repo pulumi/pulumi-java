@@ -140,7 +140,6 @@ public final class GetManagementAssociationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementAssociationResult build() {
             return new GetManagementAssociationResult(id, location, name, properties, type);
         }

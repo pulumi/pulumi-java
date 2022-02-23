@@ -99,7 +99,6 @@ public final class DnsSettingsResponse {
             this.servers = servers;
             return this;
         }
-
         public DnsSettingsResponse build() {
             return new DnsSettingsResponse(enableProxy, requireProxyForNetworkRules, servers);
         }

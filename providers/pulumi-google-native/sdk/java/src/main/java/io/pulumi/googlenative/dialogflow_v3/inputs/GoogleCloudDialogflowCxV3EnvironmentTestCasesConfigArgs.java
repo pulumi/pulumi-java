@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
      * 
      */
     @InputImport(name="enableContinuousRun")
-    private final @Nullable Input<Boolean> enableContinuousRun;
+      private final @Nullable Input<Boolean> enableContinuousRun;
 
     public Input<Boolean> getEnableContinuousRun() {
         return this.enableContinuousRun == null ? Input.empty() : this.enableContinuousRun;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
      * 
      */
     @InputImport(name="enablePredeploymentRun")
-    private final @Nullable Input<Boolean> enablePredeploymentRun;
+      private final @Nullable Input<Boolean> enablePredeploymentRun;
 
     public Input<Boolean> getEnablePredeploymentRun() {
         return this.enablePredeploymentRun == null ? Input.empty() : this.enablePredeploymentRun;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
      * 
      */
     @InputImport(name="testCases")
-    private final @Nullable Input<List<String>> testCases;
+      private final @Nullable Input<List<String>> testCases;
 
     public Input<List<String>> getTestCases() {
         return this.testCases == null ? Input.empty() : this.testCases;
@@ -121,7 +121,6 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs exten
             this.testCases = Input.ofNullable(testCases);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs build() {
             return new GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs(enableContinuousRun, enablePredeploymentRun, testCases);
         }

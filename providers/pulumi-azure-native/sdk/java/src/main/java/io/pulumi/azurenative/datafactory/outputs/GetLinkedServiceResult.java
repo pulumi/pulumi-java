@@ -240,7 +240,6 @@ public final class GetLinkedServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkedServiceResult build() {
             return new GetLinkedServiceResult(etag, id, name, properties, type);
         }

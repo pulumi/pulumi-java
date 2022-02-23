@@ -17,7 +17,7 @@ public final class GetModelQualityJobDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="jobDefinitionArn", required=true)
-    private final String jobDefinitionArn;
+        private final String jobDefinitionArn;
 
     public String getJobDefinitionArn() {
         return this.jobDefinitionArn;
@@ -55,7 +55,6 @@ public final class GetModelQualityJobDefinitionArgs extends io.pulumi.resources.
             this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn);
             return this;
         }
-
         public GetModelQualityJobDefinitionArgs build() {
             return new GetModelQualityJobDefinitionArgs(jobDefinitionArn);
         }

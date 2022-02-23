@@ -118,7 +118,6 @@ public final class GetSerialPortResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSerialPortResult build() {
             return new GetSerialPortResult(id, name, state, type);
         }

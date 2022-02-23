@@ -74,7 +74,6 @@ public final class BranchBasicAuthConfig {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public BranchBasicAuthConfig build() {
             return new BranchBasicAuthConfig(enableBasicAuth, password, username);
         }

@@ -138,7 +138,6 @@ public final class TileResponse {
             this.yPos = Objects.requireNonNull(yPos);
             return this;
         }
-
         public TileResponse build() {
             return new TileResponse(height, widget, width, xPos, yPos);
         }

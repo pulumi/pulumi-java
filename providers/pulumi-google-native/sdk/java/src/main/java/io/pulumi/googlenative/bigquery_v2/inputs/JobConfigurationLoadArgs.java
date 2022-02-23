@@ -31,7 +31,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowJaggedRows")
-    private final @Nullable Input<Boolean> allowJaggedRows;
+      private final @Nullable Input<Boolean> allowJaggedRows;
 
     public Input<Boolean> getAllowJaggedRows() {
         return this.allowJaggedRows == null ? Input.empty() : this.allowJaggedRows;
@@ -42,7 +42,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowQuotedNewlines")
-    private final @Nullable Input<Boolean> allowQuotedNewlines;
+      private final @Nullable Input<Boolean> allowQuotedNewlines;
 
     public Input<Boolean> getAllowQuotedNewlines() {
         return this.allowQuotedNewlines == null ? Input.empty() : this.allowQuotedNewlines;
@@ -53,7 +53,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="autodetect")
-    private final @Nullable Input<Boolean> autodetect;
+      private final @Nullable Input<Boolean> autodetect;
 
     public Input<Boolean> getAutodetect() {
         return this.autodetect == null ? Input.empty() : this.autodetect;
@@ -64,7 +64,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="clustering")
-    private final @Nullable Input<ClusteringArgs> clustering;
+      private final @Nullable Input<ClusteringArgs> clustering;
 
     public Input<ClusteringArgs> getClustering() {
         return this.clustering == null ? Input.empty() : this.clustering;
@@ -75,7 +75,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="createDisposition")
-    private final @Nullable Input<String> createDisposition;
+      private final @Nullable Input<String> createDisposition;
 
     public Input<String> getCreateDisposition() {
         return this.createDisposition == null ? Input.empty() : this.createDisposition;
@@ -86,7 +86,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="decimalTargetTypes")
-    private final @Nullable Input<List<String>> decimalTargetTypes;
+      private final @Nullable Input<List<String>> decimalTargetTypes;
 
     public Input<List<String>> getDecimalTargetTypes() {
         return this.decimalTargetTypes == null ? Input.empty() : this.decimalTargetTypes;
@@ -97,7 +97,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="destinationEncryptionConfiguration")
-    private final @Nullable Input<EncryptionConfigurationArgs> destinationEncryptionConfiguration;
+      private final @Nullable Input<EncryptionConfigurationArgs> destinationEncryptionConfiguration;
 
     public Input<EncryptionConfigurationArgs> getDestinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration == null ? Input.empty() : this.destinationEncryptionConfiguration;
@@ -108,7 +108,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="destinationTable")
-    private final @Nullable Input<TableReferenceArgs> destinationTable;
+      private final @Nullable Input<TableReferenceArgs> destinationTable;
 
     public Input<TableReferenceArgs> getDestinationTable() {
         return this.destinationTable == null ? Input.empty() : this.destinationTable;
@@ -119,7 +119,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="destinationTableProperties")
-    private final @Nullable Input<DestinationTablePropertiesArgs> destinationTableProperties;
+      private final @Nullable Input<DestinationTablePropertiesArgs> destinationTableProperties;
 
     public Input<DestinationTablePropertiesArgs> getDestinationTableProperties() {
         return this.destinationTableProperties == null ? Input.empty() : this.destinationTableProperties;
@@ -130,7 +130,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<String> encoding;
+      private final @Nullable Input<String> encoding;
 
     public Input<String> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -141,7 +141,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="fieldDelimiter")
-    private final @Nullable Input<String> fieldDelimiter;
+      private final @Nullable Input<String> fieldDelimiter;
 
     public Input<String> getFieldDelimiter() {
         return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
@@ -152,7 +152,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="hivePartitioningOptions")
-    private final @Nullable Input<HivePartitioningOptionsArgs> hivePartitioningOptions;
+      private final @Nullable Input<HivePartitioningOptionsArgs> hivePartitioningOptions;
 
     public Input<HivePartitioningOptionsArgs> getHivePartitioningOptions() {
         return this.hivePartitioningOptions == null ? Input.empty() : this.hivePartitioningOptions;
@@ -163,7 +163,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ignoreUnknownValues")
-    private final @Nullable Input<Boolean> ignoreUnknownValues;
+      private final @Nullable Input<Boolean> ignoreUnknownValues;
 
     public Input<Boolean> getIgnoreUnknownValues() {
         return this.ignoreUnknownValues == null ? Input.empty() : this.ignoreUnknownValues;
@@ -174,7 +174,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="jsonExtension")
-    private final @Nullable Input<String> jsonExtension;
+      private final @Nullable Input<String> jsonExtension;
 
     public Input<String> getJsonExtension() {
         return this.jsonExtension == null ? Input.empty() : this.jsonExtension;
@@ -185,7 +185,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxBadRecords")
-    private final @Nullable Input<Integer> maxBadRecords;
+      private final @Nullable Input<Integer> maxBadRecords;
 
     public Input<Integer> getMaxBadRecords() {
         return this.maxBadRecords == null ? Input.empty() : this.maxBadRecords;
@@ -196,7 +196,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="nullMarker")
-    private final @Nullable Input<String> nullMarker;
+      private final @Nullable Input<String> nullMarker;
 
     public Input<String> getNullMarker() {
         return this.nullMarker == null ? Input.empty() : this.nullMarker;
@@ -207,7 +207,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parquetOptions")
-    private final @Nullable Input<ParquetOptionsArgs> parquetOptions;
+      private final @Nullable Input<ParquetOptionsArgs> parquetOptions;
 
     public Input<ParquetOptionsArgs> getParquetOptions() {
         return this.parquetOptions == null ? Input.empty() : this.parquetOptions;
@@ -218,7 +218,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="projectionFields")
-    private final @Nullable Input<List<String>> projectionFields;
+      private final @Nullable Input<List<String>> projectionFields;
 
     public Input<List<String>> getProjectionFields() {
         return this.projectionFields == null ? Input.empty() : this.projectionFields;
@@ -229,7 +229,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="quote")
-    private final @Nullable Input<String> quote;
+      private final @Nullable Input<String> quote;
 
     public Input<String> getQuote() {
         return this.quote == null ? Input.empty() : this.quote;
@@ -240,7 +240,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="rangePartitioning")
-    private final @Nullable Input<RangePartitioningArgs> rangePartitioning;
+      private final @Nullable Input<RangePartitioningArgs> rangePartitioning;
 
     public Input<RangePartitioningArgs> getRangePartitioning() {
         return this.rangePartitioning == null ? Input.empty() : this.rangePartitioning;
@@ -251,7 +251,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<TableSchemaArgs> schema;
+      private final @Nullable Input<TableSchemaArgs> schema;
 
     public Input<TableSchemaArgs> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -262,7 +262,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="schemaUpdateOptions")
-    private final @Nullable Input<List<String>> schemaUpdateOptions;
+      private final @Nullable Input<List<String>> schemaUpdateOptions;
 
     public Input<List<String>> getSchemaUpdateOptions() {
         return this.schemaUpdateOptions == null ? Input.empty() : this.schemaUpdateOptions;
@@ -273,7 +273,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="skipLeadingRows")
-    private final @Nullable Input<Integer> skipLeadingRows;
+      private final @Nullable Input<Integer> skipLeadingRows;
 
     public Input<Integer> getSkipLeadingRows() {
         return this.skipLeadingRows == null ? Input.empty() : this.skipLeadingRows;
@@ -284,7 +284,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceFormat")
-    private final @Nullable Input<String> sourceFormat;
+      private final @Nullable Input<String> sourceFormat;
 
     public Input<String> getSourceFormat() {
         return this.sourceFormat == null ? Input.empty() : this.sourceFormat;
@@ -295,7 +295,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceUris")
-    private final @Nullable Input<List<String>> sourceUris;
+      private final @Nullable Input<List<String>> sourceUris;
 
     public Input<List<String>> getSourceUris() {
         return this.sourceUris == null ? Input.empty() : this.sourceUris;
@@ -306,7 +306,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="timePartitioning")
-    private final @Nullable Input<TimePartitioningArgs> timePartitioning;
+      private final @Nullable Input<TimePartitioningArgs> timePartitioning;
 
     public Input<TimePartitioningArgs> getTimePartitioning() {
         return this.timePartitioning == null ? Input.empty() : this.timePartitioning;
@@ -317,7 +317,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="useAvroLogicalTypes")
-    private final @Nullable Input<Boolean> useAvroLogicalTypes;
+      private final @Nullable Input<Boolean> useAvroLogicalTypes;
 
     public Input<Boolean> getUseAvroLogicalTypes() {
         return this.useAvroLogicalTypes == null ? Input.empty() : this.useAvroLogicalTypes;
@@ -328,7 +328,7 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="writeDisposition")
-    private final @Nullable Input<String> writeDisposition;
+      private final @Nullable Input<String> writeDisposition;
 
     public Input<String> getWriteDisposition() {
         return this.writeDisposition == null ? Input.empty() : this.writeDisposition;
@@ -777,7 +777,6 @@ public final class JobConfigurationLoadArgs extends io.pulumi.resources.Resource
             this.writeDisposition = Input.ofNullable(writeDisposition);
             return this;
         }
-
         public JobConfigurationLoadArgs build() {
             return new JobConfigurationLoadArgs(allowJaggedRows, allowQuotedNewlines, autodetect, clustering, createDisposition, decimalTargetTypes, destinationEncryptionConfiguration, destinationTable, destinationTableProperties, encoding, fieldDelimiter, hivePartitioningOptions, ignoreUnknownValues, jsonExtension, maxBadRecords, nullMarker, parquetOptions, projectionFields, quote, rangePartitioning, schema, schemaUpdateOptions, skipLeadingRows, sourceFormat, sourceUris, timePartitioning, useAvroLogicalTypes, writeDisposition);
         }

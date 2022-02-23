@@ -44,7 +44,6 @@ public final class GetPartitionResult {
             this.partition = Objects.requireNonNull(partition);
             return this;
         }
-
         public GetPartitionResult build() {
             return new GetPartitionResult(partition);
         }

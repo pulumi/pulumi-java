@@ -76,7 +76,6 @@ public final class B2CResourceSKUResponse {
             this.tier = tier;
             return this;
         }
-
         public B2CResourceSKUResponse build() {
             return new B2CResourceSKUResponse(name, tier);
         }

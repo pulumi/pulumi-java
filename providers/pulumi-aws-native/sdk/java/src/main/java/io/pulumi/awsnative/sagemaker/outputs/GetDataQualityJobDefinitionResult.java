@@ -76,7 +76,6 @@ public final class GetDataQualityJobDefinitionResult {
             this.jobDefinitionArn = jobDefinitionArn;
             return this;
         }
-
         public GetDataQualityJobDefinitionResult build() {
             return new GetDataQualityJobDefinitionResult(creationTime, jobDefinitionArn);
         }

@@ -21,42 +21,42 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobOutputArgs Empty = new JobOutputArgs();
 
     @InputImport(name="compressionFormat")
-    private final @Nullable Input<JobOutputCompressionFormat> compressionFormat;
+        private final @Nullable Input<JobOutputCompressionFormat> compressionFormat;
 
     public Input<JobOutputCompressionFormat> getCompressionFormat() {
         return this.compressionFormat == null ? Input.empty() : this.compressionFormat;
     }
 
     @InputImport(name="format")
-    private final @Nullable Input<JobOutputFormat> format;
+        private final @Nullable Input<JobOutputFormat> format;
 
     public Input<JobOutputFormat> getFormat() {
         return this.format == null ? Input.empty() : this.format;
     }
 
     @InputImport(name="formatOptions")
-    private final @Nullable Input<JobOutputFormatOptionsArgs> formatOptions;
+        private final @Nullable Input<JobOutputFormatOptionsArgs> formatOptions;
 
     public Input<JobOutputFormatOptionsArgs> getFormatOptions() {
         return this.formatOptions == null ? Input.empty() : this.formatOptions;
     }
 
     @InputImport(name="location", required=true)
-    private final Input<JobS3LocationArgs> location;
+        private final Input<JobS3LocationArgs> location;
 
     public Input<JobS3LocationArgs> getLocation() {
         return this.location;
     }
 
     @InputImport(name="overwrite")
-    private final @Nullable Input<Boolean> overwrite;
+        private final @Nullable Input<Boolean> overwrite;
 
     public Input<Boolean> getOverwrite() {
         return this.overwrite == null ? Input.empty() : this.overwrite;
     }
 
     @InputImport(name="partitionColumns")
-    private final @Nullable Input<List<String>> partitionColumns;
+        private final @Nullable Input<List<String>> partitionColumns;
 
     public Input<List<String>> getPartitionColumns() {
         return this.partitionColumns == null ? Input.empty() : this.partitionColumns;
@@ -175,7 +175,6 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
             this.partitionColumns = Input.ofNullable(partitionColumns);
             return this;
         }
-
         public JobOutputArgs build() {
             return new JobOutputArgs(compressionFormat, format, formatOptions, location, overwrite, partitionColumns);
         }

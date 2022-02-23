@@ -248,7 +248,6 @@ public final class GetReadWriteDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReadWriteDatabaseResult build() {
             return new GetReadWriteDatabaseResult(hotCachePeriod, id, isFollowed, kind, location, name, provisioningState, softDeletePeriod, statistics, type);
         }

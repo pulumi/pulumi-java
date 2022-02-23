@@ -184,7 +184,6 @@ public final class GetLinkResult {
             this.type = type;
             return this;
         }
-
         public GetLinkResult build() {
             return new GetLinkResult(bandwidth, description, linkArn, linkId, provider, tags, type);
         }

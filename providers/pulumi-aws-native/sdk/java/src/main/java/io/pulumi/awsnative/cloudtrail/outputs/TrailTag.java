@@ -74,7 +74,6 @@ public final class TrailTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TrailTag build() {
             return new TrailTag(key, value);
         }

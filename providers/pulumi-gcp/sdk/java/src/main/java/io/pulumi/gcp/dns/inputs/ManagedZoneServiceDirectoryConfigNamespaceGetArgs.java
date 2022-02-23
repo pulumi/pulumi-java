@@ -22,7 +22,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceGetArgs extends io.
      * 
      */
     @InputImport(name="namespaceUrl", required=true)
-    private final Input<String> namespaceUrl;
+        private final Input<String> namespaceUrl;
 
     public Input<String> getNamespaceUrl() {
         return this.namespaceUrl;
@@ -65,7 +65,6 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceGetArgs extends io.
             this.namespaceUrl = Input.of(Objects.requireNonNull(namespaceUrl));
             return this;
         }
-
         public ManagedZoneServiceDirectoryConfigNamespaceGetArgs build() {
             return new ManagedZoneServiceDirectoryConfigNamespaceGetArgs(namespaceUrl);
         }

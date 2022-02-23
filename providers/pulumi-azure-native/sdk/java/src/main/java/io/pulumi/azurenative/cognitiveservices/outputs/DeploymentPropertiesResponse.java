@@ -99,7 +99,6 @@ public final class DeploymentPropertiesResponse {
             this.scaleSettings = scaleSettings;
             return this;
         }
-
         public DeploymentPropertiesResponse build() {
             return new DeploymentPropertiesResponse(model, provisioningState, scaleSettings);
         }

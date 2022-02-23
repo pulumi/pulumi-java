@@ -81,7 +81,6 @@ public final class PatchDeploymentPatchConfigPreStep {
             this.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }
-
         public PatchDeploymentPatchConfigPreStep build() {
             return new PatchDeploymentPatchConfigPreStep(linuxExecStepConfig, windowsExecStepConfig);
         }

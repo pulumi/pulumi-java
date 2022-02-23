@@ -19,7 +19,7 @@ public final class DiskIamPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -30,7 +30,7 @@ public final class DiskIamPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class DiskIamPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+        private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -54,7 +54,7 @@ public final class DiskIamPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -67,7 +67,7 @@ public final class DiskIamPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -171,7 +171,6 @@ public final class DiskIamPolicyState extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public DiskIamPolicyState build() {
             return new DiskIamPolicyState(etag, name, policyData, project, zone);
         }

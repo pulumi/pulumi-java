@@ -54,7 +54,6 @@ public final class HttpProxyConfigurationResponse {
             this.httpsProxy = httpsProxy;
             return this;
         }
-
         public HttpProxyConfigurationResponse build() {
             return new HttpProxyConfigurationResponse(httpsProxy);
         }

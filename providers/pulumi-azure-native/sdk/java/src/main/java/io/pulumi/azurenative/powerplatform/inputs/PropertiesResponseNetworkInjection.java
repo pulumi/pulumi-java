@@ -23,7 +23,7 @@ public final class PropertiesResponseNetworkInjection extends io.pulumi.resource
      * 
      */
     @InputImport(name="virtualNetworks")
-    private final @Nullable VirtualNetworkPropertiesListResponse virtualNetworks;
+        private final @Nullable VirtualNetworkPropertiesListResponse virtualNetworks;
 
     public Optional<VirtualNetworkPropertiesListResponse> getVirtualNetworks() {
         return this.virtualNetworks == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworks);
@@ -61,7 +61,6 @@ public final class PropertiesResponseNetworkInjection extends io.pulumi.resource
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-
         public PropertiesResponseNetworkInjection build() {
             return new PropertiesResponseNetworkInjection(virtualNetworks);
         }

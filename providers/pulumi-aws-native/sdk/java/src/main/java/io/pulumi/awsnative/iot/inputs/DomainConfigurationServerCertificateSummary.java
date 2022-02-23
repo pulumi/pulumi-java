@@ -16,21 +16,21 @@ public final class DomainConfigurationServerCertificateSummary extends io.pulumi
     public static final DomainConfigurationServerCertificateSummary Empty = new DomainConfigurationServerCertificateSummary();
 
     @InputImport(name="serverCertificateArn")
-    private final @Nullable String serverCertificateArn;
+        private final @Nullable String serverCertificateArn;
 
     public Optional<String> getServerCertificateArn() {
         return this.serverCertificateArn == null ? Optional.empty() : Optional.ofNullable(this.serverCertificateArn);
     }
 
     @InputImport(name="serverCertificateStatus")
-    private final @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus;
+        private final @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus;
 
     public Optional<DomainConfigurationServerCertificateSummaryServerCertificateStatus> getServerCertificateStatus() {
         return this.serverCertificateStatus == null ? Optional.empty() : Optional.ofNullable(this.serverCertificateStatus);
     }
 
     @InputImport(name="serverCertificateStatusDetail")
-    private final @Nullable String serverCertificateStatusDetail;
+        private final @Nullable String serverCertificateStatusDetail;
 
     public Optional<String> getServerCertificateStatusDetail() {
         return this.serverCertificateStatusDetail == null ? Optional.empty() : Optional.ofNullable(this.serverCertificateStatusDetail);
@@ -89,7 +89,6 @@ public final class DomainConfigurationServerCertificateSummary extends io.pulumi
             this.serverCertificateStatusDetail = serverCertificateStatusDetail;
             return this;
         }
-
         public DomainConfigurationServerCertificateSummary build() {
             return new DomainConfigurationServerCertificateSummary(serverCertificateArn, serverCertificateStatus, serverCertificateStatusDetail);
         }

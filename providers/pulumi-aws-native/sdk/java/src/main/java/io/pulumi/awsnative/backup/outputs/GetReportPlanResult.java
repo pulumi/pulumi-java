@@ -143,7 +143,6 @@ public final class GetReportPlanResult {
             this.reportSetting = reportSetting;
             return this;
         }
-
         public GetReportPlanResult build() {
             return new GetReportPlanResult(reportDeliveryChannel, reportPlanArn, reportPlanDescription, reportPlanTags, reportSetting);
         }

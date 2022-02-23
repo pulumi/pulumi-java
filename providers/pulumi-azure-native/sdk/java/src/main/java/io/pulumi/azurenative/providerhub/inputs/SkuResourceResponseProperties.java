@@ -17,14 +17,14 @@ public final class SkuResourceResponseProperties extends io.pulumi.resources.Inv
     public static final SkuResourceResponseProperties Empty = new SkuResourceResponseProperties();
 
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+        private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
     @InputImport(name="skuSettings", required=true)
-    private final List<SkuSettingResponse> skuSettings;
+        private final List<SkuSettingResponse> skuSettings;
 
     public List<SkuSettingResponse> getSkuSettings() {
         return this.skuSettings;
@@ -73,7 +73,6 @@ public final class SkuResourceResponseProperties extends io.pulumi.resources.Inv
             this.skuSettings = Objects.requireNonNull(skuSettings);
             return this;
         }
-
         public SkuResourceResponseProperties build() {
             return new SkuResourceResponseProperties(provisioningState, skuSettings);
         }

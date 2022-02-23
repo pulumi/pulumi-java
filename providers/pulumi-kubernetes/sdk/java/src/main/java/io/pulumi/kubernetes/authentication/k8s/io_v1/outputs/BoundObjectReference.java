@@ -118,7 +118,6 @@ public final class BoundObjectReference {
             this.uid = uid;
             return this;
         }
-
         public BoundObjectReference build() {
             return new BoundObjectReference(apiVersion, kind, name, uid);
         }

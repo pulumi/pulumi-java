@@ -41,7 +41,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apis")
-    private final @Nullable Input<List<ApiArgs>> apis;
+      private final @Nullable Input<List<ApiArgs>> apis;
 
     public Input<List<ApiArgs>> getApis() {
         return this.apis == null ? Input.empty() : this.apis;
@@ -52,7 +52,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Input<AuthenticationArgs> authentication;
+      private final @Nullable Input<AuthenticationArgs> authentication;
 
     public Input<AuthenticationArgs> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -63,7 +63,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backend")
-    private final @Nullable Input<BackendArgs> backend;
+      private final @Nullable Input<BackendArgs> backend;
 
     public Input<BackendArgs> getBackend() {
         return this.backend == null ? Input.empty() : this.backend;
@@ -74,7 +74,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billing")
-    private final @Nullable Input<BillingArgs> billing;
+      private final @Nullable Input<BillingArgs> billing;
 
     public Input<BillingArgs> getBilling() {
         return this.billing == null ? Input.empty() : this.billing;
@@ -85,7 +85,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configVersion")
-    private final @Nullable Input<Integer> configVersion;
+      private final @Nullable Input<Integer> configVersion;
 
     public Input<Integer> getConfigVersion() {
         return this.configVersion == null ? Input.empty() : this.configVersion;
@@ -96,7 +96,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-    private final @Nullable Input<ContextArgs> context;
+      private final @Nullable Input<ContextArgs> context;
 
     public Input<ContextArgs> getContext() {
         return this.context == null ? Input.empty() : this.context;
@@ -107,7 +107,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="control")
-    private final @Nullable Input<ControlArgs> control;
+      private final @Nullable Input<ControlArgs> control;
 
     public Input<ControlArgs> getControl() {
         return this.control == null ? Input.empty() : this.control;
@@ -118,7 +118,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customError")
-    private final @Nullable Input<CustomErrorArgs> customError;
+      private final @Nullable Input<CustomErrorArgs> customError;
 
     public Input<CustomErrorArgs> getCustomError() {
         return this.customError == null ? Input.empty() : this.customError;
@@ -129,7 +129,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentation")
-    private final @Nullable Input<DocumentationArgs> documentation;
+      private final @Nullable Input<DocumentationArgs> documentation;
 
     public Input<DocumentationArgs> getDocumentation() {
         return this.documentation == null ? Input.empty() : this.documentation;
@@ -140,7 +140,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoints")
-    private final @Nullable Input<List<EndpointArgs>> endpoints;
+      private final @Nullable Input<List<EndpointArgs>> endpoints;
 
     public Input<List<EndpointArgs>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
@@ -151,7 +151,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enums")
-    private final @Nullable Input<List<EnumArgs>> enums;
+      private final @Nullable Input<List<EnumArgs>> enums;
 
     public Input<List<EnumArgs>> getEnums() {
         return this.enums == null ? Input.empty() : this.enums;
@@ -162,7 +162,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="http")
-    private final @Nullable Input<HttpArgs> http;
+      private final @Nullable Input<HttpArgs> http;
 
     public Input<HttpArgs> getHttp() {
         return this.http == null ? Input.empty() : this.http;
@@ -173,7 +173,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -184,7 +184,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logging")
-    private final @Nullable Input<LoggingArgs> logging;
+      private final @Nullable Input<LoggingArgs> logging;
 
     public Input<LoggingArgs> getLogging() {
         return this.logging == null ? Input.empty() : this.logging;
@@ -195,7 +195,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logs")
-    private final @Nullable Input<List<LogDescriptorArgs>> logs;
+      private final @Nullable Input<List<LogDescriptorArgs>> logs;
 
     public Input<List<LogDescriptorArgs>> getLogs() {
         return this.logs == null ? Input.empty() : this.logs;
@@ -206,7 +206,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metrics")
-    private final @Nullable Input<List<MetricDescriptorArgs>> metrics;
+      private final @Nullable Input<List<MetricDescriptorArgs>> metrics;
 
     public Input<List<MetricDescriptorArgs>> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
@@ -217,7 +217,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoredResources")
-    private final @Nullable Input<List<MonitoredResourceDescriptorArgs>> monitoredResources;
+      private final @Nullable Input<List<MonitoredResourceDescriptorArgs>> monitoredResources;
 
     public Input<List<MonitoredResourceDescriptorArgs>> getMonitoredResources() {
         return this.monitoredResources == null ? Input.empty() : this.monitoredResources;
@@ -228,7 +228,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoring")
-    private final @Nullable Input<MonitoringArgs> monitoring;
+      private final @Nullable Input<MonitoringArgs> monitoring;
 
     public Input<MonitoringArgs> getMonitoring() {
         return this.monitoring == null ? Input.empty() : this.monitoring;
@@ -239,7 +239,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -250,7 +250,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="producerProjectId")
-    private final @Nullable Input<String> producerProjectId;
+      private final @Nullable Input<String> producerProjectId;
 
     public Input<String> getProducerProjectId() {
         return this.producerProjectId == null ? Input.empty() : this.producerProjectId;
@@ -261,14 +261,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quota")
-    private final @Nullable Input<QuotaArgs> quota;
+      private final @Nullable Input<QuotaArgs> quota;
 
     public Input<QuotaArgs> getQuota() {
         return this.quota == null ? Input.empty() : this.quota;
     }
 
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -279,7 +279,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemParameters")
-    private final @Nullable Input<SystemParametersArgs> systemParameters;
+      private final @Nullable Input<SystemParametersArgs> systemParameters;
 
     public Input<SystemParametersArgs> getSystemParameters() {
         return this.systemParameters == null ? Input.empty() : this.systemParameters;
@@ -290,7 +290,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemTypes")
-    private final @Nullable Input<List<TypeArgs>> systemTypes;
+      private final @Nullable Input<List<TypeArgs>> systemTypes;
 
     public Input<List<TypeArgs>> getSystemTypes() {
         return this.systemTypes == null ? Input.empty() : this.systemTypes;
@@ -301,7 +301,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -312,7 +312,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="types")
-    private final @Nullable Input<List<TypeArgs>> types;
+      private final @Nullable Input<List<TypeArgs>> types;
 
     public Input<List<TypeArgs>> getTypes() {
         return this.types == null ? Input.empty() : this.types;
@@ -323,7 +323,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usage")
-    private final @Nullable Input<UsageArgs> usage;
+      private final @Nullable Input<UsageArgs> usage;
 
     public Input<UsageArgs> getUsage() {
         return this.usage == null ? Input.empty() : this.usage;
@@ -757,7 +757,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.usage = Input.ofNullable(usage);
             return this;
         }
-
         public ConfigArgs build() {
             return new ConfigArgs(apis, authentication, backend, billing, configVersion, context, control, customError, documentation, endpoints, enums, http, id, logging, logs, metrics, monitoredResources, monitoring, name, producerProjectId, quota, serviceName, systemParameters, systemTypes, title, types, usage);
         }

@@ -127,7 +127,6 @@ public final class AuthorityConfigX509ConfigCaOptions {
             this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
             return this;
         }
-
         public AuthorityConfigX509ConfigCaOptions build() {
             return new AuthorityConfigX509ConfigCaOptions(isCa, maxIssuerPathLength, nonCa, zeroMaxIssuerPathLength);
         }

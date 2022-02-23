@@ -120,7 +120,6 @@ public final class AutomationActionEventHubResponse {
             this.sasPolicyName = Objects.requireNonNull(sasPolicyName);
             return this;
         }
-
         public AutomationActionEventHubResponse build() {
             return new AutomationActionEventHubResponse(actionType, connectionString, eventHubResourceId, sasPolicyName);
         }

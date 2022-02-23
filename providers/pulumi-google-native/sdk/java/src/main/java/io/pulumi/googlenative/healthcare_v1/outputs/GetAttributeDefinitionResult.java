@@ -159,7 +159,6 @@ public final class GetAttributeDefinitionResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetAttributeDefinitionResult build() {
             return new GetAttributeDefinitionResult(allowedValues, category, consentDefaultValues, dataMappingDefaultValue, description, name);
         }

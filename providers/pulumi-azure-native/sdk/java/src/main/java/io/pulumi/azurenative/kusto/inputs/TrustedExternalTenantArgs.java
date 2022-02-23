@@ -23,7 +23,7 @@ public final class TrustedExternalTenantArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -66,7 +66,6 @@ public final class TrustedExternalTenantArgs extends io.pulumi.resources.Resourc
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public TrustedExternalTenantArgs build() {
             return new TrustedExternalTenantArgs(value);
         }

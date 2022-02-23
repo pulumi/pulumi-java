@@ -121,7 +121,6 @@ public final class AzureBlobFSLocationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureBlobFSLocationResponse build() {
             return new AzureBlobFSLocationResponse(fileName, fileSystem, folderPath, type);
         }

@@ -74,7 +74,6 @@ public final class ReportTimePeriodResponse {
             this.to = Objects.requireNonNull(to);
             return this;
         }
-
         public ReportTimePeriodResponse build() {
             return new ReportTimePeriodResponse(from, to);
         }

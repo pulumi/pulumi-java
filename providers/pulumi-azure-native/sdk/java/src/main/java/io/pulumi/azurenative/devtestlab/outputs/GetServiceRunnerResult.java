@@ -162,7 +162,6 @@ public final class GetServiceRunnerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceRunnerResult build() {
             return new GetServiceRunnerResult(id, identity, location, name, tags, type);
         }

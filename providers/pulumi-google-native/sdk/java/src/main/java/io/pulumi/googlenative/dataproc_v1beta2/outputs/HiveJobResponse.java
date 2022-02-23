@@ -162,7 +162,6 @@ public final class HiveJobResponse {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
         }
-
         public HiveJobResponse build() {
             return new HiveJobResponse(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);
         }

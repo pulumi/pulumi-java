@@ -21,7 +21,7 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="migrateTraffic")
-    private final @Nullable Input<Boolean> migrateTraffic;
+        private final @Nullable Input<Boolean> migrateTraffic;
 
     public Input<Boolean> getMigrateTraffic() {
         return this.migrateTraffic == null ? Input.empty() : this.migrateTraffic;
@@ -33,7 +33,7 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -44,7 +44,7 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -56,7 +56,7 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="split")
-    private final @Nullable Input<EngineSplitTrafficSplitGetArgs> split;
+        private final @Nullable Input<EngineSplitTrafficSplitGetArgs> split;
 
     public Input<EngineSplitTrafficSplitGetArgs> getSplit() {
         return this.split == null ? Input.empty() : this.split;
@@ -145,7 +145,6 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
             this.split = Input.ofNullable(split);
             return this;
         }
-
         public EngineSplitTrafficState build() {
             return new EngineSplitTrafficState(migrateTraffic, project, service, split);
         }

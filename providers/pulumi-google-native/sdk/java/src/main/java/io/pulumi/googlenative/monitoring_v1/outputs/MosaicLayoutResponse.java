@@ -76,7 +76,6 @@ public final class MosaicLayoutResponse {
             this.tiles = Objects.requireNonNull(tiles);
             return this;
         }
-
         public MosaicLayoutResponse build() {
             return new MosaicLayoutResponse(columns, tiles);
         }

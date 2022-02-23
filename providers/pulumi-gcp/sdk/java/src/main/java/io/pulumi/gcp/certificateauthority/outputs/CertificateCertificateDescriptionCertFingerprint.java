@@ -46,7 +46,6 @@ public final class CertificateCertificateDescriptionCertFingerprint {
             this.sha256Hash = sha256Hash;
             return this;
         }
-
         public CertificateCertificateDescriptionCertFingerprint build() {
             return new CertificateCertificateDescriptionCertFingerprint(sha256Hash);
         }

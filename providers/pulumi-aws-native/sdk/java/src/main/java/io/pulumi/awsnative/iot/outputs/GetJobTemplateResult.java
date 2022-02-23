@@ -61,7 +61,6 @@ public final class GetJobTemplateResult {
             this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
             return this;
         }
-
         public GetJobTemplateResult build() {
             return new GetJobTemplateResult(arn, jobExecutionsRetryConfig);
         }

@@ -27,7 +27,7 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
      * 
      */
     @InputImport(name="operator")
-    private final @Nullable Input<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator;
+        private final @Nullable Input<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator;
 
     public Input<Either<String,AutomationRulePropertyConditionSupportedOperator>> getOperator() {
         return this.operator == null ? Input.empty() : this.operator;
@@ -38,7 +38,7 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
      * 
      */
     @InputImport(name="propertyName")
-    private final @Nullable Input<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName;
+        private final @Nullable Input<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName;
 
     public Input<Either<String,AutomationRulePropertyConditionSupportedProperty>> getPropertyName() {
         return this.propertyName == null ? Input.empty() : this.propertyName;
@@ -49,7 +49,7 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
      * 
      */
     @InputImport(name="propertyValues")
-    private final @Nullable Input<List<String>> propertyValues;
+        private final @Nullable Input<List<String>> propertyValues;
 
     public Input<List<String>> getPropertyValues() {
         return this.propertyValues == null ? Input.empty() : this.propertyValues;
@@ -123,7 +123,6 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
             this.propertyValues = Input.ofNullable(propertyValues);
             return this;
         }
-
         public AutomationRulePropertyValuesConditionConditionPropertiesArgs build() {
             return new AutomationRulePropertyValuesConditionConditionPropertiesArgs(operator, propertyName, propertyValues);
         }

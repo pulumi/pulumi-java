@@ -122,7 +122,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse(errorMessage, events, id, resultType);
         }

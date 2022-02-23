@@ -96,7 +96,6 @@ public final class RouterNatSubnetworkToNatResponse {
             this.sourceIpRangesToNat = Objects.requireNonNull(sourceIpRangesToNat);
             return this;
         }
-
         public RouterNatSubnetworkToNatResponse build() {
             return new RouterNatSubnetworkToNatResponse(name, secondaryIpRangeNames, sourceIpRangesToNat);
         }

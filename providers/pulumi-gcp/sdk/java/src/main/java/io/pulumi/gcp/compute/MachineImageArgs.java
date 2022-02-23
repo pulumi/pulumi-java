@@ -21,7 +21,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="guestFlush")
-    private final @Nullable Input<Boolean> guestFlush;
+        private final @Nullable Input<Boolean> guestFlush;
 
     public Input<Boolean> getGuestFlush() {
         return this.guestFlush == null ? Input.empty() : this.guestFlush;
@@ -48,7 +48,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineImageEncryptionKey")
-    private final @Nullable Input<MachineImageMachineImageEncryptionKeyArgs> machineImageEncryptionKey;
+        private final @Nullable Input<MachineImageMachineImageEncryptionKeyArgs> machineImageEncryptionKey;
 
     public Input<MachineImageMachineImageEncryptionKeyArgs> getMachineImageEncryptionKey() {
         return this.machineImageEncryptionKey == null ? Input.empty() : this.machineImageEncryptionKey;
@@ -59,7 +59,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -71,7 +71,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -82,7 +82,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceInstance", required=true)
-    private final Input<String> sourceInstance;
+        private final Input<String> sourceInstance;
 
     public Input<String> getSourceInstance() {
         return this.sourceInstance;
@@ -201,7 +201,6 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceInstance = Input.of(Objects.requireNonNull(sourceInstance));
             return this;
         }
-
         public MachineImageArgs build() {
             return new MachineImageArgs(description, guestFlush, machineImageEncryptionKey, name, project, sourceInstance);
         }

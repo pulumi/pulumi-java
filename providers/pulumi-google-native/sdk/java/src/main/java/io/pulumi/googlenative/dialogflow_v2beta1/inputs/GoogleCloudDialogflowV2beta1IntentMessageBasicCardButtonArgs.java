@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs 
      * 
      */
     @InputImport(name="openUriAction", required=true)
-    private final Input<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
+      private final Input<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs> getOpenUriAction() {
         return this.openUriAction;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs 
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs 
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs(openUriAction, title);
         }

@@ -74,7 +74,6 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse {
             this.dialogflowConversation = Objects.requireNonNull(dialogflowConversation);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse build() {
             return new GoogleCloudContactcenterinsightsV1DialogflowSourceResponse(audioUri, dialogflowConversation);
         }

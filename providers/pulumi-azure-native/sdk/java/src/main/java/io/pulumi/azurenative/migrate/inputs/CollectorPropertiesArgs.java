@@ -16,7 +16,7 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
     public static final CollectorPropertiesArgs Empty = new CollectorPropertiesArgs();
 
     @InputImport(name="agentProperties")
-    private final @Nullable Input<CollectorAgentPropertiesArgs> agentProperties;
+        private final @Nullable Input<CollectorAgentPropertiesArgs> agentProperties;
 
     public Input<CollectorAgentPropertiesArgs> getAgentProperties() {
         return this.agentProperties == null ? Input.empty() : this.agentProperties;
@@ -27,7 +27,7 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="discoverySiteId")
-    private final @Nullable Input<String> discoverySiteId;
+        private final @Nullable Input<String> discoverySiteId;
 
     public Input<String> getDiscoverySiteId() {
         return this.discoverySiteId == null ? Input.empty() : this.discoverySiteId;
@@ -86,7 +86,6 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
             this.discoverySiteId = Input.ofNullable(discoverySiteId);
             return this;
         }
-
         public CollectorPropertiesArgs build() {
             return new CollectorPropertiesArgs(agentProperties, discoverySiteId);
         }

@@ -357,7 +357,6 @@ public final class InMageRcmFabricSpecificDetailsResponse {
             this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
             return this;
         }
-
         public InMageRcmFabricSpecificDetailsResponse build() {
             return new InMageRcmFabricSpecificDetailsResponse(agentDetails, controlPlaneUri, dataPlaneUri, dras, instanceType, physicalSiteId, processServers, pushInstallers, rcmProxies, replicationAgents, reprotectAgents, serviceContainerId, serviceEndpoint, serviceResourceId, vmwareSiteId);
         }

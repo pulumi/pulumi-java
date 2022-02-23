@@ -44,7 +44,6 @@ public final class RuleGroupNotStatement {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public RuleGroupNotStatement build() {
             return new RuleGroupNotStatement(statement);
         }

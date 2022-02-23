@@ -313,7 +313,6 @@ public final class NetworkSecurityGroupResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NetworkSecurityGroupResponse build() {
             return new NetworkSecurityGroupResponse(defaultSecurityRules, etag, flowLogs, id, location, name, networkInterfaces, provisioningState, resourceGuid, securityRules, subnets, tags, type);
         }

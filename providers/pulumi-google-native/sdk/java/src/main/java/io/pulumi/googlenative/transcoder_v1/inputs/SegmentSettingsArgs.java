@@ -24,7 +24,7 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="individualSegments", required=true)
-    private final Input<Boolean> individualSegments;
+      private final Input<Boolean> individualSegments;
 
     public Input<Boolean> getIndividualSegments() {
         return this.individualSegments;
@@ -35,7 +35,7 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="segmentDuration")
-    private final @Nullable Input<String> segmentDuration;
+      private final @Nullable Input<String> segmentDuration;
 
     public Input<String> getSegmentDuration() {
         return this.segmentDuration == null ? Input.empty() : this.segmentDuration;
@@ -94,7 +94,6 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.segmentDuration = Input.ofNullable(segmentDuration);
             return this;
         }
-
         public SegmentSettingsArgs build() {
             return new SegmentSettingsArgs(individualSegments, segmentDuration);
         }

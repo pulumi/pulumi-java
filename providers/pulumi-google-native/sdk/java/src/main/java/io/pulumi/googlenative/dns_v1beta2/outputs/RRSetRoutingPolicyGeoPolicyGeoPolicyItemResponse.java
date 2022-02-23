@@ -101,7 +101,6 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse {
             this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas);
             return this;
         }
-
         public RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse build() {
             return new RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse(kind, location, rrdatas, signatureRrdatas);
         }

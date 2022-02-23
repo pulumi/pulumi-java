@@ -76,7 +76,6 @@ public final class FirewallPolicyThreatIntelWhitelistResponse {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public FirewallPolicyThreatIntelWhitelistResponse build() {
             return new FirewallPolicyThreatIntelWhitelistResponse(fqdns, ipAddresses);
         }

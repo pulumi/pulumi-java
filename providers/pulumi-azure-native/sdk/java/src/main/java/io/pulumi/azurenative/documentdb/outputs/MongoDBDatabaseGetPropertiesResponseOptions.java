@@ -77,7 +77,6 @@ public final class MongoDBDatabaseGetPropertiesResponseOptions {
             this.throughput = throughput;
             return this;
         }
-
         public MongoDBDatabaseGetPropertiesResponseOptions build() {
             return new MongoDBDatabaseGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }

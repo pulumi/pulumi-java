@@ -23,7 +23,7 @@ public final class SecretEnvSourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="localObjectReference", required=true)
-    private final LocalObjectReferenceResponse localObjectReference;
+      private final LocalObjectReferenceResponse localObjectReference;
 
     public LocalObjectReferenceResponse getLocalObjectReference() {
         return this.localObjectReference;
@@ -34,7 +34,7 @@ public final class SecretEnvSourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class SecretEnvSourceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="optional", required=true)
-    private final Boolean optional;
+      private final Boolean optional;
 
     public Boolean getOptional() {
         return this.optional;
@@ -104,7 +104,6 @@ public final class SecretEnvSourceResponse extends io.pulumi.resources.InvokeArg
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public SecretEnvSourceResponse build() {
             return new SecretEnvSourceResponse(localObjectReference, name, optional);
         }

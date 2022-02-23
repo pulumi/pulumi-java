@@ -23,7 +23,7 @@ public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-    private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
@@ -34,7 +34,7 @@ public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -93,7 +93,6 @@ public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
-
         public CidrBlockArgs build() {
             return new CidrBlockArgs(cidrBlock, displayName);
         }

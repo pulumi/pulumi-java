@@ -24,7 +24,7 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
      * 
      */
     @InputImport(name="stackNames")
-    private final @Nullable Input<List<String>> stackNames;
+        private final @Nullable Input<List<String>> stackNames;
 
     public Input<List<String>> getStackNames() {
         return this.stackNames == null ? Input.empty() : this.stackNames;
@@ -67,7 +67,6 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
             this.stackNames = Input.ofNullable(stackNames);
             return this;
         }
-
         public ResourceCollectionCloudFormationCollectionFilterArgs build() {
             return new ResourceCollectionCloudFormationCollectionFilterArgs(stackNames);
         }

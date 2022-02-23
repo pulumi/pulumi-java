@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="people")
-    private final @Nullable Input<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
+      private final @Nullable Input<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
 
     public Input<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> getPeople() {
         return this.people == null ? Input.empty() : this.people;
@@ -67,7 +67,6 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resour
             this.people = Input.ofNullable(people);
             return this;
         }
-
         public GoogleCloudDatacatalogV1ContactsArgs build() {
             return new GoogleCloudDatacatalogV1ContactsArgs(people);
         }

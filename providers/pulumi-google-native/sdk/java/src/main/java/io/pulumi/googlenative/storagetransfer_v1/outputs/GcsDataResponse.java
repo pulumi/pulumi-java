@@ -74,7 +74,6 @@ public final class GcsDataResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public GcsDataResponse build() {
             return new GcsDataResponse(bucketName, path);
         }

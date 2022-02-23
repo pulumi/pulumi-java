@@ -18,21 +18,21 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConfigArgs Empty = new ConfigArgs();
 
     @InputImport(name="configData", required=true)
-    private final Input<ConfigDataArgs> configData;
+        private final Input<ConfigDataArgs> configData;
 
     public Input<ConfigDataArgs> getConfigData() {
         return this.configData;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<ConfigTagArgs>> tags;
+        private final @Nullable Input<List<ConfigTagArgs>> tags;
 
     public Input<List<ConfigTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -106,7 +106,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ConfigArgs build() {
             return new ConfigArgs(configData, name, tags);
         }

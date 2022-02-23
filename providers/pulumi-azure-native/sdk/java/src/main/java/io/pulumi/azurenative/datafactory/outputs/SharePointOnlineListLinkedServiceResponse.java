@@ -254,7 +254,6 @@ public final class SharePointOnlineListLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SharePointOnlineListLinkedServiceResponse build() {
             return new SharePointOnlineListLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, parameters, servicePrincipalId, servicePrincipalKey, siteUrl, tenantId, type);
         }

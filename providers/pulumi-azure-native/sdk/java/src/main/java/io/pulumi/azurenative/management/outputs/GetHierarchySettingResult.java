@@ -161,7 +161,6 @@ public final class GetHierarchySettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHierarchySettingResult build() {
             return new GetHierarchySettingResult(defaultManagementGroup, id, name, requireAuthorizationForGroupCreation, tenantId, type);
         }

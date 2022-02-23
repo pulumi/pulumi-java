@@ -78,7 +78,6 @@ public final class DataQualityJobDefinitionMonitoringOutputConfig {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
-
         public DataQualityJobDefinitionMonitoringOutputConfig build() {
             return new DataQualityJobDefinitionMonitoringOutputConfig(kmsKeyId, monitoringOutputs);
         }

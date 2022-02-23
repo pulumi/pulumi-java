@@ -98,7 +98,6 @@ public final class AzureMachineLearningWebServiceInputColumnResponse {
             this.name = name;
             return this;
         }
-
         public AzureMachineLearningWebServiceInputColumnResponse build() {
             return new AzureMachineLearningWebServiceInputColumnResponse(dataType, mapTo, name);
         }

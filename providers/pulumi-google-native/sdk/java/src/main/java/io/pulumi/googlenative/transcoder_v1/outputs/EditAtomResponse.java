@@ -117,7 +117,6 @@ public final class EditAtomResponse {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
-
         public EditAtomResponse build() {
             return new EditAtomResponse(endTimeOffset, inputs, key, startTimeOffset);
         }

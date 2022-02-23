@@ -293,7 +293,6 @@ public final class GetStageResult {
             this.variables = variables;
             return this;
         }
-
         public GetStageResult build() {
             return new GetStageResult(accessLogSetting, cacheClusterEnabled, cacheClusterSize, canarySetting, clientCertificateId, deploymentId, description, documentationVersion, methodSettings, tags, tracingEnabled, variables);
         }

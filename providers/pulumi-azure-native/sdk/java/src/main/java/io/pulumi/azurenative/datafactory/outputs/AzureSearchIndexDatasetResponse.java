@@ -231,7 +231,6 @@ public final class AzureSearchIndexDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureSearchIndexDatasetResponse build() {
             return new AzureSearchIndexDatasetResponse(annotations, description, folder, indexName, linkedServiceName, parameters, schema, structure, type);
         }

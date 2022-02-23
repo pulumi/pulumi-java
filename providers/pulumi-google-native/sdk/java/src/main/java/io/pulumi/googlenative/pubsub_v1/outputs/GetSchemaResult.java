@@ -95,7 +95,6 @@ public final class GetSchemaResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSchemaResult build() {
             return new GetSchemaResult(definition, name, type);
         }

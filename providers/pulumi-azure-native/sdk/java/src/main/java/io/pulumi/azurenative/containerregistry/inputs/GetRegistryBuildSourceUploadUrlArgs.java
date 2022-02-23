@@ -17,7 +17,7 @@ public final class GetRegistryBuildSourceUploadUrlArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="registryName", required=true)
-    private final String registryName;
+        private final String registryName;
 
     public String getRegistryName() {
         return this.registryName;
@@ -28,7 +28,7 @@ public final class GetRegistryBuildSourceUploadUrlArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetRegistryBuildSourceUploadUrlArgs extends io.pulumi.resourc
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetRegistryBuildSourceUploadUrlArgs build() {
             return new GetRegistryBuildSourceUploadUrlArgs(registryName, resourceGroupName);
         }

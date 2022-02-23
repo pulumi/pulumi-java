@@ -21,7 +21,7 @@ public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="priority", required=true)
-    private final String priority;
+      private final String priority;
 
     public String getPriority() {
         return this.priority;
@@ -32,7 +32,7 @@ public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -81,7 +81,6 @@ public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public WarningResponse build() {
             return new WarningResponse(priority, text);
         }

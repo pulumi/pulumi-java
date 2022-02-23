@@ -54,7 +54,6 @@ public final class BodyDiagnosticSettingsResponse {
             this.bytes = bytes;
             return this;
         }
-
         public BodyDiagnosticSettingsResponse build() {
             return new BodyDiagnosticSettingsResponse(bytes);
         }

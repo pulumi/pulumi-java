@@ -97,7 +97,6 @@ public final class ManagedClusterResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public ManagedClusterResponse build() {
             return new ManagedClusterResponse(clusterName, config, labels);
         }

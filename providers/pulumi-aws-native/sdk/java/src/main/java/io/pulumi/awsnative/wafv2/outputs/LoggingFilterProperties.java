@@ -76,7 +76,6 @@ public final class LoggingFilterProperties {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-
         public LoggingFilterProperties build() {
             return new LoggingFilterProperties(defaultBehavior, filters);
         }

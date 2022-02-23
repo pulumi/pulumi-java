@@ -118,7 +118,6 @@ public final class AuthorityConfigSubjectConfigSubjectAltName {
             this.uris = uris;
             return this;
         }
-
         public AuthorityConfigSubjectConfigSubjectAltName build() {
             return new AuthorityConfigSubjectConfigSubjectAltName(dnsNames, emailAddresses, ipAddresses, uris);
         }

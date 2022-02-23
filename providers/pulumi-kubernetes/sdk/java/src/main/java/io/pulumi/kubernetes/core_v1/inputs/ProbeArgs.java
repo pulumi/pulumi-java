@@ -27,7 +27,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exec")
-    private final @Nullable Input<ExecActionArgs> exec;
+        private final @Nullable Input<ExecActionArgs> exec;
 
     public Input<ExecActionArgs> getExec() {
         return this.exec == null ? Input.empty() : this.exec;
@@ -38,7 +38,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureThreshold")
-    private final @Nullable Input<Integer> failureThreshold;
+        private final @Nullable Input<Integer> failureThreshold;
 
     public Input<Integer> getFailureThreshold() {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
@@ -49,7 +49,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grpc")
-    private final @Nullable Input<GRPCActionArgs> grpc;
+        private final @Nullable Input<GRPCActionArgs> grpc;
 
     public Input<GRPCActionArgs> getGrpc() {
         return this.grpc == null ? Input.empty() : this.grpc;
@@ -60,7 +60,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpGet")
-    private final @Nullable Input<HTTPGetActionArgs> httpGet;
+        private final @Nullable Input<HTTPGetActionArgs> httpGet;
 
     public Input<HTTPGetActionArgs> getHttpGet() {
         return this.httpGet == null ? Input.empty() : this.httpGet;
@@ -71,7 +71,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialDelaySeconds")
-    private final @Nullable Input<Integer> initialDelaySeconds;
+        private final @Nullable Input<Integer> initialDelaySeconds;
 
     public Input<Integer> getInitialDelaySeconds() {
         return this.initialDelaySeconds == null ? Input.empty() : this.initialDelaySeconds;
@@ -82,7 +82,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="periodSeconds")
-    private final @Nullable Input<Integer> periodSeconds;
+        private final @Nullable Input<Integer> periodSeconds;
 
     public Input<Integer> getPeriodSeconds() {
         return this.periodSeconds == null ? Input.empty() : this.periodSeconds;
@@ -93,7 +93,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successThreshold")
-    private final @Nullable Input<Integer> successThreshold;
+        private final @Nullable Input<Integer> successThreshold;
 
     public Input<Integer> getSuccessThreshold() {
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
@@ -104,7 +104,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tcpSocket")
-    private final @Nullable Input<TCPSocketActionArgs> tcpSocket;
+        private final @Nullable Input<TCPSocketActionArgs> tcpSocket;
 
     public Input<TCPSocketActionArgs> getTcpSocket() {
         return this.tcpSocket == null ? Input.empty() : this.tcpSocket;
@@ -115,7 +115,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminationGracePeriodSeconds")
-    private final @Nullable Input<Integer> terminationGracePeriodSeconds;
+        private final @Nullable Input<Integer> terminationGracePeriodSeconds;
 
     public Input<Integer> getTerminationGracePeriodSeconds() {
         return this.terminationGracePeriodSeconds == null ? Input.empty() : this.terminationGracePeriodSeconds;
@@ -126,7 +126,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutSeconds")
-    private final @Nullable Input<Integer> timeoutSeconds;
+        private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
@@ -305,7 +305,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }
-
         public ProbeArgs build() {
             return new ProbeArgs(exec, failureThreshold, grpc, httpGet, initialDelaySeconds, periodSeconds, successThreshold, tcpSocket, terminationGracePeriodSeconds, timeoutSeconds);
         }

@@ -23,7 +23,7 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="amount")
-    private final @Nullable Input<String> amount;
+      private final @Nullable Input<String> amount;
 
     public Input<String> getAmount() {
         return this.amount == null ? Input.empty() : this.amount;
@@ -34,7 +34,7 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="coresPerLicense")
-    private final @Nullable Input<String> coresPerLicense;
+      private final @Nullable Input<String> coresPerLicense;
 
     public Input<String> getCoresPerLicense() {
         return this.coresPerLicense == null ? Input.empty() : this.coresPerLicense;
@@ -45,7 +45,7 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="license")
-    private final @Nullable Input<String> license;
+      private final @Nullable Input<String> license;
 
     public Input<String> getLicense() {
         return this.license == null ? Input.empty() : this.license;
@@ -119,7 +119,6 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
             this.license = Input.ofNullable(license);
             return this;
         }
-
         public LicenseResourceCommitmentArgs build() {
             return new LicenseResourceCommitmentArgs(amount, coresPerLicense, license);
         }

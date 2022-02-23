@@ -98,7 +98,6 @@ public final class GetEnvironmentConfigWorkloadsConfigWorker {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
         }
-
         public GetEnvironmentConfigWorkloadsConfigWorker build() {
             return new GetEnvironmentConfigWorkloadsConfigWorker(cpu, maxCount, memoryGb, minCount, storageGb);
         }

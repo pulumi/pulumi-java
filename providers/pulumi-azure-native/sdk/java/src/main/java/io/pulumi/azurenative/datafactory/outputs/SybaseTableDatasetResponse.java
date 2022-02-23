@@ -231,7 +231,6 @@ public final class SybaseTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SybaseTableDatasetResponse build() {
             return new SybaseTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

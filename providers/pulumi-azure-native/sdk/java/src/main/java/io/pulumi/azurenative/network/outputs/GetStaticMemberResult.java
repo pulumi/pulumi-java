@@ -161,7 +161,6 @@ public final class GetStaticMemberResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStaticMemberResult build() {
             return new GetStaticMemberResult(etag, id, name, resourceId, systemData, type);
         }

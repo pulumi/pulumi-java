@@ -74,7 +74,6 @@ public final class VolumeDevice {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public VolumeDevice build() {
             return new VolumeDevice(devicePath, name);
         }

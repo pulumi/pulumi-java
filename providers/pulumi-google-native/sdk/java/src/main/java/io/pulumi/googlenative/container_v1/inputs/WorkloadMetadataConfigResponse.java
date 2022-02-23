@@ -21,7 +21,7 @@ public final class WorkloadMetadataConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -59,7 +59,6 @@ public final class WorkloadMetadataConfigResponse extends io.pulumi.resources.In
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public WorkloadMetadataConfigResponse build() {
             return new WorkloadMetadataConfigResponse(mode);
         }

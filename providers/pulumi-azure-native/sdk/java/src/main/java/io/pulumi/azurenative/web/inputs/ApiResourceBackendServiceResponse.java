@@ -23,7 +23,7 @@ public final class ApiResourceBackendServiceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="serviceUrl")
-    private final @Nullable String serviceUrl;
+        private final @Nullable String serviceUrl;
 
     public Optional<String> getServiceUrl() {
         return this.serviceUrl == null ? Optional.empty() : Optional.ofNullable(this.serviceUrl);
@@ -61,7 +61,6 @@ public final class ApiResourceBackendServiceResponse extends io.pulumi.resources
             this.serviceUrl = serviceUrl;
             return this;
         }
-
         public ApiResourceBackendServiceResponse build() {
             return new ApiResourceBackendServiceResponse(serviceUrl);
         }

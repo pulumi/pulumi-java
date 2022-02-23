@@ -24,7 +24,7 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -35,7 +35,7 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceNames")
-    private final @Nullable Input<List<String>> resourceNames;
+      private final @Nullable Input<List<String>> resourceNames;
 
     public Input<List<String>> getResourceNames() {
         return this.resourceNames == null ? Input.empty() : this.resourceNames;
@@ -94,7 +94,6 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceNames = Input.ofNullable(resourceNames);
             return this;
         }
-
         public LogsPanelArgs build() {
             return new LogsPanelArgs(filter, resourceNames);
         }

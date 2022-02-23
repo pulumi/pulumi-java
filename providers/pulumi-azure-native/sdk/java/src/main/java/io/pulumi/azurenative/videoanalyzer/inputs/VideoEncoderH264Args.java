@@ -24,7 +24,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bitrateKbps")
-    private final @Nullable Input<String> bitrateKbps;
+        private final @Nullable Input<String> bitrateKbps;
 
     public Input<String> getBitrateKbps() {
         return this.bitrateKbps == null ? Input.empty() : this.bitrateKbps;
@@ -35,7 +35,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="frameRate")
-    private final @Nullable Input<String> frameRate;
+        private final @Nullable Input<String> frameRate;
 
     public Input<String> getFrameRate() {
         return this.frameRate == null ? Input.empty() : this.frameRate;
@@ -46,7 +46,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scale")
-    private final @Nullable Input<VideoScaleArgs> scale;
+        private final @Nullable Input<VideoScaleArgs> scale;
 
     public Input<VideoScaleArgs> getScale() {
         return this.scale == null ? Input.empty() : this.scale;
@@ -58,7 +58,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -147,7 +147,6 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public VideoEncoderH264Args build() {
             return new VideoEncoderH264Args(bitrateKbps, frameRate, scale, type);
         }

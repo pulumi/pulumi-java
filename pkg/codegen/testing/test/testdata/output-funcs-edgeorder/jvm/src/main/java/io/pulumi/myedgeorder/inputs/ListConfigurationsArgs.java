@@ -22,7 +22,7 @@ public final class ListConfigurationsArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="configurationFilters", required=true)
-    private final List<ConfigurationFilters> configurationFilters;
+      private final List<ConfigurationFilters> configurationFilters;
 
     public List<ConfigurationFilters> getConfigurationFilters() {
         return this.configurationFilters;
@@ -33,7 +33,7 @@ public final class ListConfigurationsArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="customerSubscriptionDetails")
-    private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
+      private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
 
     public Optional<CustomerSubscriptionDetails> getCustomerSubscriptionDetails() {
         return this.customerSubscriptionDetails == null ? Optional.empty() : Optional.ofNullable(this.customerSubscriptionDetails);
@@ -44,7 +44,7 @@ public final class ListConfigurationsArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="skipToken")
-    private final @Nullable String skipToken;
+      private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
@@ -103,7 +103,6 @@ public final class ListConfigurationsArgs extends io.pulumi.resources.InvokeArgs
             this.skipToken = skipToken;
             return this;
         }
-
         public ListConfigurationsArgs build() {
             return new ListConfigurationsArgs(configurationFilters, customerSubscriptionDetails, skipToken);
         }

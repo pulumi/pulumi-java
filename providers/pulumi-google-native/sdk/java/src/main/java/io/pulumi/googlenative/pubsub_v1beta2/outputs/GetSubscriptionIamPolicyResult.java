@@ -98,7 +98,6 @@ public final class GetSubscriptionIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetSubscriptionIamPolicyResult build() {
             return new GetSubscriptionIamPolicyResult(bindings, etag, version);
         }

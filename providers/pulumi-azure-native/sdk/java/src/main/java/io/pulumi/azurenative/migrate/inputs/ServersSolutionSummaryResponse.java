@@ -24,7 +24,7 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="assessedCount")
-    private final @Nullable Integer assessedCount;
+        private final @Nullable Integer assessedCount;
 
     public Optional<Integer> getAssessedCount() {
         return this.assessedCount == null ? Optional.empty() : Optional.ofNullable(this.assessedCount);
@@ -35,7 +35,7 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="discoveredCount")
-    private final @Nullable Integer discoveredCount;
+        private final @Nullable Integer discoveredCount;
 
     public Optional<Integer> getDiscoveredCount() {
         return this.discoveredCount == null ? Optional.empty() : Optional.ofNullable(this.discoveredCount);
@@ -47,7 +47,7 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -58,7 +58,7 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="migratedCount")
-    private final @Nullable Integer migratedCount;
+        private final @Nullable Integer migratedCount;
 
     public Optional<Integer> getMigratedCount() {
         return this.migratedCount == null ? Optional.empty() : Optional.ofNullable(this.migratedCount);
@@ -69,7 +69,7 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="replicatingCount")
-    private final @Nullable Integer replicatingCount;
+        private final @Nullable Integer replicatingCount;
 
     public Optional<Integer> getReplicatingCount() {
         return this.replicatingCount == null ? Optional.empty() : Optional.ofNullable(this.replicatingCount);
@@ -80,7 +80,7 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="testMigratedCount")
-    private final @Nullable Integer testMigratedCount;
+        private final @Nullable Integer testMigratedCount;
 
     public Optional<Integer> getTestMigratedCount() {
         return this.testMigratedCount == null ? Optional.empty() : Optional.ofNullable(this.testMigratedCount);
@@ -169,7 +169,6 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
             this.testMigratedCount = testMigratedCount;
             return this;
         }
-
         public ServersSolutionSummaryResponse build() {
             return new ServersSolutionSummaryResponse(assessedCount, discoveredCount, instanceType, migratedCount, replicatingCount, testMigratedCount);
         }

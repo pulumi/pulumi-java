@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pul
      * 
      */
     @InputImport(name="maxValue", required=true)
-    private final GooglePrivacyDlpV2ValueResponse maxValue;
+      private final GooglePrivacyDlpV2ValueResponse maxValue;
 
     public GooglePrivacyDlpV2ValueResponse getMaxValue() {
         return this.maxValue;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pul
      * 
      */
     @InputImport(name="minValue", required=true)
-    private final GooglePrivacyDlpV2ValueResponse minValue;
+      private final GooglePrivacyDlpV2ValueResponse minValue;
 
     public GooglePrivacyDlpV2ValueResponse getMinValue() {
         return this.minValue;
@@ -44,7 +44,7 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pul
      * 
      */
     @InputImport(name="quantileValues", required=true)
-    private final List<GooglePrivacyDlpV2ValueResponse> quantileValues;
+      private final List<GooglePrivacyDlpV2ValueResponse> quantileValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> getQuantileValues() {
         return this.quantileValues;
@@ -103,7 +103,6 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pul
             this.quantileValues = Objects.requireNonNull(quantileValues);
             return this;
         }
-
         public GooglePrivacyDlpV2NumericalStatsResultResponse build() {
             return new GooglePrivacyDlpV2NumericalStatsResultResponse(maxValue, minValue, quantileValues);
         }

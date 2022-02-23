@@ -184,7 +184,6 @@ public final class DynamicsSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DynamicsSourceResponse build() {
             return new DynamicsSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }

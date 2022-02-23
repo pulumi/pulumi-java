@@ -77,7 +77,6 @@ public final class VirtualNetworkPropertiesResponse {
             this.subnet = subnet;
             return this;
         }
-
         public VirtualNetworkPropertiesResponse build() {
             return new VirtualNetworkPropertiesResponse(id, subnet);
         }

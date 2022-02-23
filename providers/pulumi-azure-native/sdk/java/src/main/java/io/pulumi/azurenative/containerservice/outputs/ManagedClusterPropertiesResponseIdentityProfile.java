@@ -97,7 +97,6 @@ public final class ManagedClusterPropertiesResponseIdentityProfile {
             this.resourceId = resourceId;
             return this;
         }
-
         public ManagedClusterPropertiesResponseIdentityProfile build() {
             return new ManagedClusterPropertiesResponseIdentityProfile(clientId, objectId, resourceId);
         }

@@ -182,7 +182,6 @@ public final class RuleResponse {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public RuleResponse build() {
             return new RuleResponse(action, conditions, description, ins, logConfigs, notIns, permissions);
         }

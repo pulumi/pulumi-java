@@ -24,7 +24,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cpuAverage")
-    private final @Nullable Input<Integer> cpuAverage;
+      private final @Nullable Input<Integer> cpuAverage;
 
     public Input<Integer> getCpuAverage() {
         return this.cpuAverage == null ? Input.empty() : this.cpuAverage;
@@ -35,7 +35,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cpuAveragePercent")
-    private final @Nullable Input<Integer> cpuAveragePercent;
+      private final @Nullable Input<Integer> cpuAveragePercent;
 
     public Input<Integer> getCpuAveragePercent() {
         return this.cpuAveragePercent == null ? Input.empty() : this.cpuAveragePercent;
@@ -46,7 +46,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cpuMax")
-    private final @Nullable Input<Integer> cpuMax;
+      private final @Nullable Input<Integer> cpuMax;
 
     public Input<Integer> getCpuMax() {
         return this.cpuMax == null ? Input.empty() : this.cpuMax;
@@ -57,7 +57,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cpuMaxPercent")
-    private final @Nullable Input<Integer> cpuMaxPercent;
+      private final @Nullable Input<Integer> cpuMaxPercent;
 
     public Input<Integer> getCpuMaxPercent() {
         return this.cpuMaxPercent == null ? Input.empty() : this.cpuMaxPercent;
@@ -68,7 +68,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskIoRateAverage")
-    private final @Nullable Input<String> diskIoRateAverage;
+      private final @Nullable Input<String> diskIoRateAverage;
 
     public Input<String> getDiskIoRateAverage() {
         return this.diskIoRateAverage == null ? Input.empty() : this.diskIoRateAverage;
@@ -79,7 +79,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskIoRateAverageKbps")
-    private final @Nullable Input<String> diskIoRateAverageKbps;
+      private final @Nullable Input<String> diskIoRateAverageKbps;
 
     public Input<String> getDiskIoRateAverageKbps() {
         return this.diskIoRateAverageKbps == null ? Input.empty() : this.diskIoRateAverageKbps;
@@ -90,7 +90,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskIoRateMax")
-    private final @Nullable Input<String> diskIoRateMax;
+      private final @Nullable Input<String> diskIoRateMax;
 
     public Input<String> getDiskIoRateMax() {
         return this.diskIoRateMax == null ? Input.empty() : this.diskIoRateMax;
@@ -101,7 +101,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskIoRateMaxKbps")
-    private final @Nullable Input<String> diskIoRateMaxKbps;
+      private final @Nullable Input<String> diskIoRateMaxKbps;
 
     public Input<String> getDiskIoRateMaxKbps() {
         return this.diskIoRateMaxKbps == null ? Input.empty() : this.diskIoRateMaxKbps;
@@ -112,7 +112,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="memoryAverage")
-    private final @Nullable Input<Integer> memoryAverage;
+      private final @Nullable Input<Integer> memoryAverage;
 
     public Input<Integer> getMemoryAverage() {
         return this.memoryAverage == null ? Input.empty() : this.memoryAverage;
@@ -123,7 +123,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="memoryAveragePercent")
-    private final @Nullable Input<Integer> memoryAveragePercent;
+      private final @Nullable Input<Integer> memoryAveragePercent;
 
     public Input<Integer> getMemoryAveragePercent() {
         return this.memoryAveragePercent == null ? Input.empty() : this.memoryAveragePercent;
@@ -134,7 +134,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="memoryMax")
-    private final @Nullable Input<Integer> memoryMax;
+      private final @Nullable Input<Integer> memoryMax;
 
     public Input<Integer> getMemoryMax() {
         return this.memoryMax == null ? Input.empty() : this.memoryMax;
@@ -145,7 +145,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="memoryMaxPercent")
-    private final @Nullable Input<Integer> memoryMaxPercent;
+      private final @Nullable Input<Integer> memoryMaxPercent;
 
     public Input<Integer> getMemoryMaxPercent() {
         return this.memoryMaxPercent == null ? Input.empty() : this.memoryMaxPercent;
@@ -156,7 +156,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkThroughputAverage")
-    private final @Nullable Input<String> networkThroughputAverage;
+      private final @Nullable Input<String> networkThroughputAverage;
 
     public Input<String> getNetworkThroughputAverage() {
         return this.networkThroughputAverage == null ? Input.empty() : this.networkThroughputAverage;
@@ -167,7 +167,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkThroughputAverageKbps")
-    private final @Nullable Input<String> networkThroughputAverageKbps;
+      private final @Nullable Input<String> networkThroughputAverageKbps;
 
     public Input<String> getNetworkThroughputAverageKbps() {
         return this.networkThroughputAverageKbps == null ? Input.empty() : this.networkThroughputAverageKbps;
@@ -178,7 +178,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkThroughputMax")
-    private final @Nullable Input<String> networkThroughputMax;
+      private final @Nullable Input<String> networkThroughputMax;
 
     public Input<String> getNetworkThroughputMax() {
         return this.networkThroughputMax == null ? Input.empty() : this.networkThroughputMax;
@@ -189,7 +189,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkThroughputMaxKbps")
-    private final @Nullable Input<String> networkThroughputMaxKbps;
+      private final @Nullable Input<String> networkThroughputMaxKbps;
 
     public Input<String> getNetworkThroughputMaxKbps() {
         return this.networkThroughputMaxKbps == null ? Input.empty() : this.networkThroughputMaxKbps;
@@ -458,7 +458,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
             this.networkThroughputMaxKbps = Input.ofNullable(networkThroughputMaxKbps);
             return this;
         }
-
         public VmUtilizationMetricsArgs build() {
             return new VmUtilizationMetricsArgs(cpuAverage, cpuAveragePercent, cpuMax, cpuMaxPercent, diskIoRateAverage, diskIoRateAverageKbps, diskIoRateMax, diskIoRateMaxKbps, memoryAverage, memoryAveragePercent, memoryMax, memoryMaxPercent, networkThroughputAverage, networkThroughputAverageKbps, networkThroughputMax, networkThroughputMaxKbps);
         }

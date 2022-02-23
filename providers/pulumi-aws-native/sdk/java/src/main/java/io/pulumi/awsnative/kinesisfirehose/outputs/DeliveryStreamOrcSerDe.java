@@ -168,7 +168,6 @@ public final class DeliveryStreamOrcSerDe {
             this.stripeSizeBytes = stripeSizeBytes;
             return this;
         }
-
         public DeliveryStreamOrcSerDe build() {
             return new DeliveryStreamOrcSerDe(blockSizeBytes, bloomFilterColumns, bloomFilterFalsePositiveProbability, compression, dictionaryKeyThreshold, enablePadding, formatVersion, paddingTolerance, rowIndexStride, stripeSizeBytes);
         }

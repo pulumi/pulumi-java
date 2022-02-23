@@ -52,7 +52,6 @@ public final class MachineLearningWorkspaceResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public MachineLearningWorkspaceResponse build() {
             return new MachineLearningWorkspaceResponse(id);
         }

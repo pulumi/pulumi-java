@@ -21,7 +21,7 @@ public final class AddressDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="forwardAddress", required=true)
-    private final AddressPropertiesResponse forwardAddress;
+        private final AddressPropertiesResponse forwardAddress;
 
     public AddressPropertiesResponse getForwardAddress() {
         return this.forwardAddress;
@@ -32,7 +32,7 @@ public final class AddressDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="returnAddress", required=true)
-    private final AddressPropertiesResponse returnAddress;
+        private final AddressPropertiesResponse returnAddress;
 
     public AddressPropertiesResponse getReturnAddress() {
         return this.returnAddress;
@@ -81,7 +81,6 @@ public final class AddressDetailsResponse extends io.pulumi.resources.InvokeArgs
             this.returnAddress = Objects.requireNonNull(returnAddress);
             return this;
         }
-
         public AddressDetailsResponse build() {
             return new AddressDetailsResponse(forwardAddress, returnAddress);
         }

@@ -74,7 +74,6 @@ public final class DataIntegrationTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DataIntegrationTag build() {
             return new DataIntegrationTag(key, value);
         }

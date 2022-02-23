@@ -162,7 +162,6 @@ public final class RegistrationDefinitionPropertiesResponse {
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
         }
-
         public RegistrationDefinitionPropertiesResponse build() {
             return new RegistrationDefinitionPropertiesResponse(authorizations, description, managedByTenantId, managedByTenantName, provisioningState, registrationDefinitionName);
         }

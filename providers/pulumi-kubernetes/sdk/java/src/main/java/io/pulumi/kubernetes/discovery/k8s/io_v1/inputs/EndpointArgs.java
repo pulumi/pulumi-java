@@ -28,7 +28,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addresses", required=true)
-    private final Input<List<String>> addresses;
+        private final Input<List<String>> addresses;
 
     public Input<List<String>> getAddresses() {
         return this.addresses;
@@ -39,7 +39,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<EndpointConditionsArgs> conditions;
+        private final @Nullable Input<EndpointConditionsArgs> conditions;
 
     public Input<EndpointConditionsArgs> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -50,7 +50,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deprecatedTopology")
-    private final @Nullable Input<Map<String,String>> deprecatedTopology;
+        private final @Nullable Input<Map<String,String>> deprecatedTopology;
 
     public Input<Map<String,String>> getDeprecatedTopology() {
         return this.deprecatedTopology == null ? Input.empty() : this.deprecatedTopology;
@@ -61,7 +61,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hints")
-    private final @Nullable Input<EndpointHintsArgs> hints;
+        private final @Nullable Input<EndpointHintsArgs> hints;
 
     public Input<EndpointHintsArgs> getHints() {
         return this.hints == null ? Input.empty() : this.hints;
@@ -72,7 +72,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostname")
-    private final @Nullable Input<String> hostname;
+        private final @Nullable Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname == null ? Input.empty() : this.hostname;
@@ -83,7 +83,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeName")
-    private final @Nullable Input<String> nodeName;
+        private final @Nullable Input<String> nodeName;
 
     public Input<String> getNodeName() {
         return this.nodeName == null ? Input.empty() : this.nodeName;
@@ -94,7 +94,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetRef")
-    private final @Nullable Input<ObjectReferenceArgs> targetRef;
+        private final @Nullable Input<ObjectReferenceArgs> targetRef;
 
     public Input<ObjectReferenceArgs> getTargetRef() {
         return this.targetRef == null ? Input.empty() : this.targetRef;
@@ -105,7 +105,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -254,7 +254,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public EndpointArgs build() {
             return new EndpointArgs(addresses, conditions, deprecatedTopology, hints, hostname, nodeName, targetRef, zone);
         }

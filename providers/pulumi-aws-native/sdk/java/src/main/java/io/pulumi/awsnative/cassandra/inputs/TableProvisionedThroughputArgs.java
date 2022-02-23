@@ -18,14 +18,14 @@ public final class TableProvisionedThroughputArgs extends io.pulumi.resources.Re
     public static final TableProvisionedThroughputArgs Empty = new TableProvisionedThroughputArgs();
 
     @InputImport(name="readCapacityUnits", required=true)
-    private final Input<Integer> readCapacityUnits;
+        private final Input<Integer> readCapacityUnits;
 
     public Input<Integer> getReadCapacityUnits() {
         return this.readCapacityUnits;
     }
 
     @InputImport(name="writeCapacityUnits", required=true)
-    private final Input<Integer> writeCapacityUnits;
+        private final Input<Integer> writeCapacityUnits;
 
     public Input<Integer> getWriteCapacityUnits() {
         return this.writeCapacityUnits;
@@ -84,7 +84,6 @@ public final class TableProvisionedThroughputArgs extends io.pulumi.resources.Re
             this.writeCapacityUnits = Input.of(Objects.requireNonNull(writeCapacityUnits));
             return this;
         }
-
         public TableProvisionedThroughputArgs build() {
             return new TableProvisionedThroughputArgs(readCapacityUnits, writeCapacityUnits);
         }

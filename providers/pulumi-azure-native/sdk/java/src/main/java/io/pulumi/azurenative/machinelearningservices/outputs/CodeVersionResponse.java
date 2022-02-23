@@ -162,7 +162,6 @@ public final class CodeVersionResponse {
             this.tags = tags;
             return this;
         }
-
         public CodeVersionResponse build() {
             return new CodeVersionResponse(datastoreId, description, isAnonymous, path, properties, tags);
         }

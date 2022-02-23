@@ -100,7 +100,6 @@ public final class SettingsResponse {
             this.timeZone = timeZone;
             return this;
         }
-
         public SettingsResponse build() {
             return new SettingsResponse(isCompression, issqlcompression, timeZone);
         }

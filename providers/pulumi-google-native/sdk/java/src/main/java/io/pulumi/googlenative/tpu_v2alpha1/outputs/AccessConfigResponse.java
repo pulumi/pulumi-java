@@ -52,7 +52,6 @@ public final class AccessConfigResponse {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }
-
         public AccessConfigResponse build() {
             return new AccessConfigResponse(externalIp);
         }

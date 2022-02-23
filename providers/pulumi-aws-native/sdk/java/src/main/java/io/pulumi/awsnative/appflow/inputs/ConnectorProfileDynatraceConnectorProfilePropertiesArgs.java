@@ -18,7 +18,7 @@ public final class ConnectorProfileDynatraceConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="instanceUrl", required=true)
-    private final Input<String> instanceUrl;
+        private final Input<String> instanceUrl;
 
     public Input<String> getInstanceUrl() {
         return this.instanceUrl;
@@ -61,7 +61,6 @@ public final class ConnectorProfileDynatraceConnectorProfilePropertiesArgs exten
             this.instanceUrl = Input.of(Objects.requireNonNull(instanceUrl));
             return this;
         }
-
         public ConnectorProfileDynatraceConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileDynatraceConnectorProfilePropertiesArgs(instanceUrl);
         }

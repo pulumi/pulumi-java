@@ -13,7 +13,7 @@ public final class GetFunctionSourceRepository extends io.pulumi.resources.Invok
     public static final GetFunctionSourceRepository Empty = new GetFunctionSourceRepository();
 
     @InputImport(name="deployedUrl", required=true)
-    private final String deployedUrl;
+        private final String deployedUrl;
 
     public String getDeployedUrl() {
         return this.deployedUrl;
@@ -24,7 +24,7 @@ public final class GetFunctionSourceRepository extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+        private final String url;
 
     public String getUrl() {
         return this.url;
@@ -73,7 +73,6 @@ public final class GetFunctionSourceRepository extends io.pulumi.resources.Invok
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetFunctionSourceRepository build() {
             return new GetFunctionSourceRepository(deployedUrl, url);
         }

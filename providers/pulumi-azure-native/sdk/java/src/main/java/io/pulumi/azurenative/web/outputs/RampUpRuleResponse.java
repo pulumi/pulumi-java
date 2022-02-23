@@ -210,7 +210,6 @@ public final class RampUpRuleResponse {
             this.reroutePercentage = reroutePercentage;
             return this;
         }
-
         public RampUpRuleResponse build() {
             return new RampUpRuleResponse(actionHostName, changeDecisionCallbackUrl, changeIntervalInMinutes, changeStep, maxReroutePercentage, minReroutePercentage, name, reroutePercentage);
         }

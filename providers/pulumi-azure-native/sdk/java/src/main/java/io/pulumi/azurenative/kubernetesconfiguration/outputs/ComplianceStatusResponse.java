@@ -118,7 +118,6 @@ public final class ComplianceStatusResponse {
             this.messageLevel = messageLevel;
             return this;
         }
-
         public ComplianceStatusResponse build() {
             return new ComplianceStatusResponse(complianceState, lastConfigApplied, message, messageLevel);
         }

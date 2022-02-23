@@ -75,7 +75,6 @@ public final class JobStatistics4Response {
             this.inputBytes = Objects.requireNonNull(inputBytes);
             return this;
         }
-
         public JobStatistics4Response build() {
             return new JobStatistics4Response(destinationUriFileCounts, inputBytes);
         }

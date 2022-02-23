@@ -54,7 +54,6 @@ public final class DFPInstanceAdministratorsResponse {
             this.members = members;
             return this;
         }
-
         public DFPInstanceAdministratorsResponse build() {
             return new DFPInstanceAdministratorsResponse(members);
         }

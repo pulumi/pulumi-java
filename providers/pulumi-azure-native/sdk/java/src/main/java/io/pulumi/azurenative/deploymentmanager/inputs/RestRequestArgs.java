@@ -26,7 +26,7 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication", required=true)
-    private final Input<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication;
+        private final Input<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication;
 
     public Input<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> getAuthentication() {
         return this.authentication;
@@ -37,7 +37,7 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="method", required=true)
-    private final Input<RestRequestMethod> method;
+        private final Input<RestRequestMethod> method;
 
     public Input<RestRequestMethod> getMethod() {
         return this.method;
@@ -48,7 +48,7 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+        private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -122,7 +122,6 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public RestRequestArgs build() {
             return new RestRequestArgs(authentication, method, uri);
         }

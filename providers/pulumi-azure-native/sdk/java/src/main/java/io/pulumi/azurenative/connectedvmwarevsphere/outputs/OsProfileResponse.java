@@ -181,7 +181,6 @@ public final class OsProfileResponse {
             this.toolsVersionStatus = Objects.requireNonNull(toolsVersionStatus);
             return this;
         }
-
         public OsProfileResponse build() {
             return new OsProfileResponse(adminUsername, computerName, osName, osType, toolsRunningStatus, toolsVersion, toolsVersionStatus);
         }

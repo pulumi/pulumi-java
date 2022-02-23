@@ -44,7 +44,6 @@ public final class FlowZendeskSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowZendeskSourceProperties build() {
             return new FlowZendeskSourceProperties(object);
         }

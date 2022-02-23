@@ -204,7 +204,6 @@ public final class JobConfigurationTableCopyResponse {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }
-
         public JobConfigurationTableCopyResponse build() {
             return new JobConfigurationTableCopyResponse(createDisposition, destinationEncryptionConfiguration, destinationExpirationTime, destinationTable, operationType, sourceTable, sourceTables, writeDisposition);
         }

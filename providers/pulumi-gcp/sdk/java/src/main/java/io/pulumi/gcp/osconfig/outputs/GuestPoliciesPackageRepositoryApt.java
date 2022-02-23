@@ -146,7 +146,6 @@ public final class GuestPoliciesPackageRepositoryApt {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GuestPoliciesPackageRepositoryApt build() {
             return new GuestPoliciesPackageRepositoryApt(archiveType, components, distribution, gpgKey, uri);
         }

@@ -23,7 +23,7 @@ public final class ComputeInstanceApplicationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+        private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -34,7 +34,7 @@ public final class ComputeInstanceApplicationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="endpointUri")
-    private final @Nullable String endpointUri;
+        private final @Nullable String endpointUri;
 
     public Optional<String> getEndpointUri() {
         return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
@@ -83,7 +83,6 @@ public final class ComputeInstanceApplicationResponse extends io.pulumi.resource
             this.endpointUri = endpointUri;
             return this;
         }
-
         public ComputeInstanceApplicationResponse build() {
             return new ComputeInstanceApplicationResponse(displayName, endpointUri);
         }

@@ -30,7 +30,6 @@ public final class WebACLCustomResponseBodies {
         public Builder(WebACLCustomResponseBodies defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public WebACLCustomResponseBodies build() {
             return new WebACLCustomResponseBodies();
         }

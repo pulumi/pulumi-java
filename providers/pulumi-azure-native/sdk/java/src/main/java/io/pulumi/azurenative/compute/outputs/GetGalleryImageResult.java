@@ -440,7 +440,6 @@ public final class GetGalleryImageResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGalleryImageResult build() {
             return new GetGalleryImageResult(description, disallowed, endOfLifeDate, eula, features, hyperVGeneration, id, identifier, location, name, osState, osType, privacyStatementUri, provisioningState, purchasePlan, recommended, releaseNoteUri, tags, type);
         }

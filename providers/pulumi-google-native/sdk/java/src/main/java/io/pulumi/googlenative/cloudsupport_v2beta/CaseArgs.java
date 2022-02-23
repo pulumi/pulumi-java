@@ -24,7 +24,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classification")
-    private final @Nullable Input<CaseClassificationArgs> classification;
+      private final @Nullable Input<CaseClassificationArgs> classification;
 
     public Input<CaseClassificationArgs> getClassification() {
         return this.classification == null ? Input.empty() : this.classification;
@@ -35,7 +35,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creator")
-    private final @Nullable Input<ActorArgs> creator;
+      private final @Nullable Input<ActorArgs> creator;
 
     public Input<ActorArgs> getCreator() {
         return this.creator == null ? Input.empty() : this.creator;
@@ -46,7 +46,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -68,7 +68,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="escalated")
-    private final @Nullable Input<Boolean> escalated;
+      private final @Nullable Input<Boolean> escalated;
 
     public Input<Boolean> getEscalated() {
         return this.escalated == null ? Input.empty() : this.escalated;
@@ -79,7 +79,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -90,7 +90,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<CasePriority> priority;
+      private final @Nullable Input<CasePriority> priority;
 
     public Input<CasePriority> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -101,7 +101,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriberEmailAddresses")
-    private final @Nullable Input<List<String>> subscriberEmailAddresses;
+      private final @Nullable Input<List<String>> subscriberEmailAddresses;
 
     public Input<List<String>> getSubscriberEmailAddresses() {
         return this.subscriberEmailAddresses == null ? Input.empty() : this.subscriberEmailAddresses;
@@ -112,7 +112,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testCase")
-    private final @Nullable Input<Boolean> testCase;
+      private final @Nullable Input<Boolean> testCase;
 
     public Input<Boolean> getTestCase() {
         return this.testCase == null ? Input.empty() : this.testCase;
@@ -123,21 +123,21 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
     }
 
     @InputImport(name="v2betaId1", required=true)
-    private final Input<String> v2betaId1;
+      private final Input<String> v2betaId1;
 
     public Input<String> getV2betaId1() {
         return this.v2betaId1;
     }
 
     @InputImport(name="v2betumId", required=true)
-    private final Input<String> v2betumId;
+      private final Input<String> v2betumId;
 
     public Input<String> getV2betumId() {
         return this.v2betumId;
@@ -346,7 +346,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
             this.v2betumId = Input.of(Objects.requireNonNull(v2betumId));
             return this;
         }
-
         public CaseArgs build() {
             return new CaseArgs(classification, creator, description, displayName, escalated, name, priority, subscriberEmailAddresses, testCase, timeZone, v2betaId1, v2betumId);
         }

@@ -100,7 +100,6 @@ public final class NetworkConfigurationResponse {
             this.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
             return this;
         }
-
         public NetworkConfigurationResponse build() {
             return new NetworkConfigurationResponse(accessEndpoint, subnets, virtualNetworkAddressSpace);
         }

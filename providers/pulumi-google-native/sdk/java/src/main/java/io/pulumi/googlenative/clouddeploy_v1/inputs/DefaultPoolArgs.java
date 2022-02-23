@@ -23,7 +23,7 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactStorage")
-    private final @Nullable Input<String> artifactStorage;
+      private final @Nullable Input<String> artifactStorage;
 
     public Input<String> getArtifactStorage() {
         return this.artifactStorage == null ? Input.empty() : this.artifactStorage;
@@ -34,7 +34,7 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -93,7 +93,6 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
-
         public DefaultPoolArgs build() {
             return new DefaultPoolArgs(artifactStorage, serviceAccount);
         }

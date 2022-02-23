@@ -21,7 +21,7 @@ public final class SchedulingConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="preemptible", required=true)
-    private final Boolean preemptible;
+      private final Boolean preemptible;
 
     public Boolean getPreemptible() {
         return this.preemptible;
@@ -32,7 +32,7 @@ public final class SchedulingConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="reserved", required=true)
-    private final Boolean reserved;
+      private final Boolean reserved;
 
     public Boolean getReserved() {
         return this.reserved;
@@ -81,7 +81,6 @@ public final class SchedulingConfigResponse extends io.pulumi.resources.InvokeAr
             this.reserved = Objects.requireNonNull(reserved);
             return this;
         }
-
         public SchedulingConfigResponse build() {
             return new SchedulingConfigResponse(preemptible, reserved);
         }

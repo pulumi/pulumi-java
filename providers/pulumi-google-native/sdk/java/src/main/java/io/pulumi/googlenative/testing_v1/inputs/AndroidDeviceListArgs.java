@@ -23,7 +23,7 @@ public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="androidDevices", required=true)
-    private final Input<List<AndroidDeviceArgs>> androidDevices;
+      private final Input<List<AndroidDeviceArgs>> androidDevices;
 
     public Input<List<AndroidDeviceArgs>> getAndroidDevices() {
         return this.androidDevices;
@@ -66,7 +66,6 @@ public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArg
             this.androidDevices = Input.of(Objects.requireNonNull(androidDevices));
             return this;
         }
-
         public AndroidDeviceListArgs build() {
             return new AndroidDeviceListArgs(androidDevices);
         }

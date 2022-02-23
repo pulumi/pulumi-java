@@ -23,7 +23,7 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable String objectId;
+        private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
@@ -34,7 +34,7 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="parameterName")
-    private final @Nullable String parameterName;
+        private final @Nullable String parameterName;
 
     public Optional<String> getParameterName() {
         return this.parameterName == null ? Optional.empty() : Optional.ofNullable(this.parameterName);
@@ -45,7 +45,7 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="redirectUrl")
-    private final @Nullable String redirectUrl;
+        private final @Nullable String redirectUrl;
 
     public Optional<String> getRedirectUrl() {
         return this.redirectUrl == null ? Optional.empty() : Optional.ofNullable(this.redirectUrl);
@@ -56,7 +56,7 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -125,7 +125,6 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
             this.tenantId = tenantId;
             return this;
         }
-
         public ConsentLinkParameterDefinition build() {
             return new ConsentLinkParameterDefinition(objectId, parameterName, redirectUrl, tenantId);
         }

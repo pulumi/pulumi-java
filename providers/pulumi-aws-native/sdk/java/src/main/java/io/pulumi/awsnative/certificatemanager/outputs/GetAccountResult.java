@@ -61,7 +61,6 @@ public final class GetAccountResult {
             this.expiryEventsConfiguration = expiryEventsConfiguration;
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(accountId, expiryEventsConfiguration);
         }

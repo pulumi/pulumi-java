@@ -52,7 +52,6 @@ public final class FunctionEventTriggerFailurePolicy {
             this.retry = Objects.requireNonNull(retry);
             return this;
         }
-
         public FunctionEventTriggerFailurePolicy build() {
             return new FunctionEventTriggerFailurePolicy(retry);
         }

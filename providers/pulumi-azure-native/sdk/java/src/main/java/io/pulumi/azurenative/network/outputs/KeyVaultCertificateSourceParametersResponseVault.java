@@ -54,7 +54,6 @@ public final class KeyVaultCertificateSourceParametersResponseVault {
             this.id = id;
             return this;
         }
-
         public KeyVaultCertificateSourceParametersResponseVault build() {
             return new KeyVaultCertificateSourceParametersResponseVault(id);
         }

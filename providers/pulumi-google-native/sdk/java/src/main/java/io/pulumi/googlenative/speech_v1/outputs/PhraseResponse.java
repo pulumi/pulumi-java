@@ -75,7 +75,6 @@ public final class PhraseResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PhraseResponse build() {
             return new PhraseResponse(boost, value);
         }

@@ -77,7 +77,6 @@ public final class WorkflowTemplatePlacement {
             this.managedCluster = managedCluster;
             return this;
         }
-
         public WorkflowTemplatePlacement build() {
             return new WorkflowTemplatePlacement(clusterSelector, managedCluster);
         }

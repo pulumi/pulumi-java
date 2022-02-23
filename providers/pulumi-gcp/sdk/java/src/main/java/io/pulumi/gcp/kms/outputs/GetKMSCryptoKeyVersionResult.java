@@ -189,7 +189,6 @@ public final class GetKMSCryptoKeyVersionResult {
             this.version = version;
             return this;
         }
-
         public GetKMSCryptoKeyVersionResult build() {
             return new GetKMSCryptoKeyVersionResult(algorithm, cryptoKey, id, name, protectionLevel, publicKeys, state, version);
         }

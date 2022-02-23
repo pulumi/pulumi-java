@@ -79,7 +79,6 @@ public final class InstanceMemcacheParameters {
             this.params = params;
             return this;
         }
-
         public InstanceMemcacheParameters build() {
             return new InstanceMemcacheParameters(id, params);
         }

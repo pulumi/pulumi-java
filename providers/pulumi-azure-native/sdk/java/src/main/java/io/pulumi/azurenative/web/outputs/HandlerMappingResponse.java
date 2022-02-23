@@ -97,7 +97,6 @@ public final class HandlerMappingResponse {
             this.scriptProcessor = scriptProcessor;
             return this;
         }
-
         public HandlerMappingResponse build() {
             return new HandlerMappingResponse(arguments, extension, scriptProcessor);
         }

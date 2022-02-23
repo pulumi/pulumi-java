@@ -58,7 +58,6 @@ public final class RecordingConfigurationTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RecordingConfigurationTag build() {
             return new RecordingConfigurationTag(key, value);
         }

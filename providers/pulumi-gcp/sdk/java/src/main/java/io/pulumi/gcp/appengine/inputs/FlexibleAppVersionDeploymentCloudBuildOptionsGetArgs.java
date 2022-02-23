@@ -19,7 +19,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs extends 
      * 
      */
     @InputImport(name="appYamlPath", required=true)
-    private final Input<String> appYamlPath;
+        private final Input<String> appYamlPath;
 
     public Input<String> getAppYamlPath() {
         return this.appYamlPath;
@@ -31,7 +31,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs extends 
      * 
      */
     @InputImport(name="cloudBuildTimeout")
-    private final @Nullable Input<String> cloudBuildTimeout;
+        private final @Nullable Input<String> cloudBuildTimeout;
 
     public Input<String> getCloudBuildTimeout() {
         return this.cloudBuildTimeout == null ? Input.empty() : this.cloudBuildTimeout;
@@ -90,7 +90,6 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs extends 
             this.cloudBuildTimeout = Input.ofNullable(cloudBuildTimeout);
             return this;
         }
-
         public FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs build() {
             return new FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs(appYamlPath, cloudBuildTimeout);
         }

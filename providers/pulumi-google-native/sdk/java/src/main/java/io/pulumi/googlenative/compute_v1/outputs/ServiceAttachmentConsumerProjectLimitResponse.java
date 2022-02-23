@@ -75,7 +75,6 @@ public final class ServiceAttachmentConsumerProjectLimitResponse {
             this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
             return this;
         }
-
         public ServiceAttachmentConsumerProjectLimitResponse build() {
             return new ServiceAttachmentConsumerProjectLimitResponse(connectionLimit, projectIdOrNum);
         }

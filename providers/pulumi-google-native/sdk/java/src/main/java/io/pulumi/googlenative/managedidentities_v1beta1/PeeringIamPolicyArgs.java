@@ -22,7 +22,7 @@ public final class PeeringIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -33,21 +33,21 @@ public final class PeeringIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="peeringId", required=true)
-    private final Input<String> peeringId;
+      private final Input<String> peeringId;
 
     public Input<String> getPeeringId() {
         return this.peeringId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -58,7 +58,7 @@ public final class PeeringIamPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -162,7 +162,6 @@ public final class PeeringIamPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public PeeringIamPolicyArgs build() {
             return new PeeringIamPolicyArgs(bindings, etag, peeringId, project, version);
         }

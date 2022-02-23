@@ -94,7 +94,6 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4Config {
             this.ports = ports;
             return this;
         }
-
         public OrganizationSecurityPolicyRuleMatchConfigLayer4Config build() {
             return new OrganizationSecurityPolicyRuleMatchConfigLayer4Config(ipProtocol, ports);
         }

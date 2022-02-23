@@ -532,7 +532,6 @@ public final class InstancePropertiesResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public InstancePropertiesResponse build() {
             return new InstancePropertiesResponse(advancedMachineFeatures, canIpForward, confidentialInstanceConfig, description, disks, displayDevice, guestAccelerators, labels, machineType, metadata, minCpuPlatform, networkInterfaces, networkPerformanceConfig, postKeyRevocationActionType, privateIpv6GoogleAccess, reservationAffinity, resourceManagerTags, resourcePolicies, scheduling, serviceAccounts, shieldedInstanceConfig, shieldedVmConfig, tags);
         }

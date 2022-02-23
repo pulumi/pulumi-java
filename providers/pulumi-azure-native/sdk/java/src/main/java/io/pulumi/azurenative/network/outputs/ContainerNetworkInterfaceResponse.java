@@ -206,7 +206,6 @@ public final class ContainerNetworkInterfaceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ContainerNetworkInterfaceResponse build() {
             return new ContainerNetworkInterfaceResponse(container, containerNetworkInterfaceConfiguration, etag, id, ipConfigurations, name, provisioningState, type);
         }

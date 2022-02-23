@@ -77,7 +77,6 @@ public final class DistributionConfigurationTargetContainerRepository {
             this.service = service;
             return this;
         }
-
         public DistributionConfigurationTargetContainerRepository build() {
             return new DistributionConfigurationTargetContainerRepository(repositoryName, service);
         }

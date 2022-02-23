@@ -201,7 +201,6 @@ public final class GetChannelPartnerLinkResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetChannelPartnerLinkResult build() {
             return new GetChannelPartnerLinkResult(channelPartnerCloudIdentityInfo, createTime, inviteLinkUri, linkState, name, publicId, resellerCloudIdentityId, updateTime);
         }

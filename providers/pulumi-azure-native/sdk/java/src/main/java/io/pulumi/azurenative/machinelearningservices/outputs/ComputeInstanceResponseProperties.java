@@ -317,7 +317,6 @@ public final class ComputeInstanceResponseProperties {
             this.vmSize = vmSize;
             return this;
         }
-
         public ComputeInstanceResponseProperties build() {
             return new ComputeInstanceResponseProperties(applicationSharingPolicy, applications, computeInstanceAuthorizationType, connectivityEndpoints, createdBy, errors, lastOperation, personalComputeInstanceSettings, setupScripts, sshSettings, state, subnet, vmSize);
         }

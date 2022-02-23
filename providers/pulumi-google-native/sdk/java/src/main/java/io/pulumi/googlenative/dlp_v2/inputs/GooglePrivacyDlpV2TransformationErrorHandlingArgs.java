@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
      * 
      */
     @InputImport(name="leaveUntransformed")
-    private final @Nullable Input<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
+      private final @Nullable Input<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
 
     public Input<GooglePrivacyDlpV2LeaveUntransformedArgs> getLeaveUntransformed() {
         return this.leaveUntransformed == null ? Input.empty() : this.leaveUntransformed;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
      * 
      */
     @InputImport(name="throwError")
-    private final @Nullable Input<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
+      private final @Nullable Input<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
 
     public Input<GooglePrivacyDlpV2ThrowErrorArgs> getThrowError() {
         return this.throwError == null ? Input.empty() : this.throwError;
@@ -94,7 +94,6 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
             this.throwError = Input.ofNullable(throwError);
             return this;
         }
-
         public GooglePrivacyDlpV2TransformationErrorHandlingArgs build() {
             return new GooglePrivacyDlpV2TransformationErrorHandlingArgs(leaveUntransformed, throwError);
         }

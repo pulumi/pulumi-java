@@ -99,7 +99,6 @@ public final class AutomationRuleRunPlaybookActionResponse {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public AutomationRuleRunPlaybookActionResponse build() {
             return new AutomationRuleRunPlaybookActionResponse(actionConfiguration, actionType, order);
         }

@@ -74,7 +74,6 @@ public final class GetCachePolicyResult {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public GetCachePolicyResult build() {
             return new GetCachePolicyResult(cachePolicyConfig, id, lastModifiedTime);
         }

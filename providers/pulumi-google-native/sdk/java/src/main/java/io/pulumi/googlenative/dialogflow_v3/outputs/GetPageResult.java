@@ -184,7 +184,6 @@ public final class GetPageResult {
             this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
             return this;
         }
-
         public GetPageResult build() {
             return new GetPageResult(displayName, entryFulfillment, eventHandlers, form, name, transitionRouteGroups, transitionRoutes);
         }

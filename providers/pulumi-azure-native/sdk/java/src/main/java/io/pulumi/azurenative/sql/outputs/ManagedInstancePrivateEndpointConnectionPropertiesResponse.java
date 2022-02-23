@@ -99,7 +99,6 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ManagedInstancePrivateEndpointConnectionPropertiesResponse build() {
             return new ManagedInstancePrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

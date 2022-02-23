@@ -183,7 +183,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskOutputLoginLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputLoginLevelResponse(defaultDatabase, id, isEnabled, loginType, migrationEligibility, name, resultType);
         }

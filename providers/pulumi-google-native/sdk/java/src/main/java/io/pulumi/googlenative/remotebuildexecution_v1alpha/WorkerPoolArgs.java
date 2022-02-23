@@ -21,7 +21,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscale")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> getAutoscale() {
         return this.autoscale == null ? Input.empty() : this.autoscale;
@@ -32,14 +32,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channel")
-    private final @Nullable Input<String> channel;
+      private final @Nullable Input<String> channel;
 
     public Input<String> getChannel() {
         return this.channel == null ? Input.empty() : this.channel;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -50,7 +50,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -61,7 +61,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+      private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -72,14 +72,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolId")
-    private final @Nullable Input<String> poolId;
+      private final @Nullable Input<String> poolId;
 
     public Input<String> getPoolId() {
         return this.poolId == null ? Input.empty() : this.poolId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -90,7 +90,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerConfig")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> getWorkerConfig() {
         return this.workerConfig == null ? Input.empty() : this.workerConfig;
@@ -101,7 +101,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerCount")
-    private final @Nullable Input<String> workerCount;
+      private final @Nullable Input<String> workerCount;
 
     public Input<String> getWorkerCount() {
         return this.workerCount == null ? Input.empty() : this.workerCount;
@@ -265,7 +265,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.workerCount = Input.ofNullable(workerCount);
             return this;
         }
-
         public WorkerPoolArgs build() {
             return new WorkerPoolArgs(autoscale, channel, instanceId, name, parent, poolId, project, workerConfig, workerCount);
         }

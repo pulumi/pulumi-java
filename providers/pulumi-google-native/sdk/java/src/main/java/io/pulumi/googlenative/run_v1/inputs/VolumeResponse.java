@@ -19,7 +19,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
     public static final VolumeResponse Empty = new VolumeResponse();
 
     @InputImport(name="configMap", required=true)
-    private final ConfigMapVolumeSourceResponse configMap;
+      private final ConfigMapVolumeSourceResponse configMap;
 
     public ConfigMapVolumeSourceResponse getConfigMap() {
         return this.configMap;
@@ -30,14 +30,14 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="secret", required=true)
-    private final SecretVolumeSourceResponse secret;
+      private final SecretVolumeSourceResponse secret;
 
     public SecretVolumeSourceResponse getSecret() {
         return this.secret;
@@ -96,7 +96,6 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public VolumeResponse build() {
             return new VolumeResponse(configMap, name, secret);
         }

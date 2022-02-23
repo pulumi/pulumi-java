@@ -53,7 +53,6 @@ public final class TestTargetsForShardResponse {
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }
-
         public TestTargetsForShardResponse build() {
             return new TestTargetsForShardResponse(testTargets);
         }

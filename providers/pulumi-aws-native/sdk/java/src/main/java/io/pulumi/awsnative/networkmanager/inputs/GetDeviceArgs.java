@@ -17,7 +17,7 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deviceId", required=true)
-    private final String deviceId;
+        private final String deviceId;
 
     public String getDeviceId() {
         return this.deviceId;
@@ -28,7 +28,7 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-    private final String globalNetworkId;
+        private final String globalNetworkId;
 
     public String getGlobalNetworkId() {
         return this.globalNetworkId;
@@ -77,7 +77,6 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
-
         public GetDeviceArgs build() {
             return new GetDeviceArgs(deviceId, globalNetworkId);
         }

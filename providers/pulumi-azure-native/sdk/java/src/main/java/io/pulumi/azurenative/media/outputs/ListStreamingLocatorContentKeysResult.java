@@ -54,7 +54,6 @@ public final class ListStreamingLocatorContentKeysResult {
             this.contentKeys = contentKeys;
             return this;
         }
-
         public ListStreamingLocatorContentKeysResult build() {
             return new ListStreamingLocatorContentKeysResult(contentKeys);
         }

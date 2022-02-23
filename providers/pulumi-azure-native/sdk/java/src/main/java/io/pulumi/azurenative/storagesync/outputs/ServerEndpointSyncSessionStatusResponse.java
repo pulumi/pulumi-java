@@ -204,7 +204,6 @@ public final class ServerEndpointSyncSessionStatusResponse {
             this.transientFilesNotSyncingCount = Objects.requireNonNull(transientFilesNotSyncingCount);
             return this;
         }
-
         public ServerEndpointSyncSessionStatusResponse build() {
             return new ServerEndpointSyncSessionStatusResponse(filesNotSyncingErrors, lastSyncMode, lastSyncPerItemErrorCount, lastSyncResult, lastSyncSuccessTimestamp, lastSyncTimestamp, persistentFilesNotSyncingCount, transientFilesNotSyncingCount);
         }

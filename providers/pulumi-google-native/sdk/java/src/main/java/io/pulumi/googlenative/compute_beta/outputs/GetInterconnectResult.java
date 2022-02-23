@@ -542,7 +542,6 @@ public final class GetInterconnectResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetInterconnectResult build() {
             return new GetInterconnectResult(adminEnabled, circuitInfos, creationTimestamp, customerName, description, expectedOutages, googleIpAddress, googleReferenceId, interconnectAttachments, interconnectType, kind, labelFingerprint, labels, linkType, location, name, nocContactEmail, operationalStatus, peerIpAddress, provisionedLinkCount, requestedLinkCount, satisfiesPzs, selfLink, state);
         }

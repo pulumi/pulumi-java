@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
      * 
      */
     @InputImport(name="model")
-    private final @Nullable Input<String> model;
+      private final @Nullable Input<String> model;
 
     public Input<String> getModel() {
         return this.model == null ? Input.empty() : this.model;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
             this.model = Input.ofNullable(model);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs(model);
         }

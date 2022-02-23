@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
      * 
      */
     @InputImport(name="accountNumber", required=true)
-    private final Input<String> accountNumber;
+      private final Input<String> accountNumber;
 
     public Input<String> getAccountNumber() {
         return this.accountNumber;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
             this.accountNumber = Input.of(Objects.requireNonNull(accountNumber));
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs(accountNumber);
         }

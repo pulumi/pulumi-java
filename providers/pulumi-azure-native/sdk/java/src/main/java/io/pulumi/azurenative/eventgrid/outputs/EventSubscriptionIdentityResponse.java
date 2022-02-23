@@ -76,7 +76,6 @@ public final class EventSubscriptionIdentityResponse {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public EventSubscriptionIdentityResponse build() {
             return new EventSubscriptionIdentityResponse(type, userAssignedIdentity);
         }

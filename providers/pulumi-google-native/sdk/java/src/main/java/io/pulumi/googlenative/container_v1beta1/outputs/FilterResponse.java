@@ -53,7 +53,6 @@ public final class FilterResponse {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public FilterResponse build() {
             return new FilterResponse(eventType);
         }

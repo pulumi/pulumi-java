@@ -21,7 +21,7 @@ public final class BigQueryDestinationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
@@ -59,7 +59,6 @@ public final class BigQueryDestinationResponse extends io.pulumi.resources.Invok
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public BigQueryDestinationResponse build() {
             return new BigQueryDestinationResponse(datasetId);
         }

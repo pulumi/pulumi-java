@@ -116,7 +116,6 @@ public final class GetSshPublicKeyResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetSshPublicKeyResult build() {
             return new GetSshPublicKeyResult(expirationTimeUsec, fingerprint, key, name);
         }

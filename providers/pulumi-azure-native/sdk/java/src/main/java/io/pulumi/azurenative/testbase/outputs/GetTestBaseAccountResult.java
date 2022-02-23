@@ -246,7 +246,6 @@ public final class GetTestBaseAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTestBaseAccountResult build() {
             return new GetTestBaseAccountResult(accessLevel, etag, id, location, name, provisioningState, sku, systemData, tags, type);
         }

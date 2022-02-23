@@ -19,7 +19,7 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
      * 
      */
     @InputImport(name="runCommandName", required=true)
-    private final String runCommandName;
+        private final String runCommandName;
 
     public String getRunCommandName() {
         return this.runCommandName;
@@ -52,7 +52,7 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
      * 
      */
     @InputImport(name="vmName", required=true)
-    private final String vmName;
+        private final String vmName;
 
     public String getVmName() {
         return this.vmName;
@@ -121,7 +121,6 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
-
         public GetVirtualMachineRunCommandByVirtualMachineArgs build() {
             return new GetVirtualMachineRunCommandByVirtualMachineArgs(expand, resourceGroupName, runCommandName, vmName);
         }

@@ -13,7 +13,7 @@ public final class LicenseProvisionalConfiguration extends io.pulumi.resources.I
     public static final LicenseProvisionalConfiguration Empty = new LicenseProvisionalConfiguration();
 
     @InputImport(name="maxTimeToLiveInMinutes", required=true)
-    private final Integer maxTimeToLiveInMinutes;
+        private final Integer maxTimeToLiveInMinutes;
 
     public Integer getMaxTimeToLiveInMinutes() {
         return this.maxTimeToLiveInMinutes;
@@ -51,7 +51,6 @@ public final class LicenseProvisionalConfiguration extends io.pulumi.resources.I
             this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
             return this;
         }
-
         public LicenseProvisionalConfiguration build() {
             return new LicenseProvisionalConfiguration(maxTimeToLiveInMinutes);
         }

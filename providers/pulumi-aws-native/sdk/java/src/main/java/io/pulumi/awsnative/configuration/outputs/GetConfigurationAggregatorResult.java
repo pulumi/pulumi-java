@@ -106,7 +106,6 @@ public final class GetConfigurationAggregatorResult {
             this.tags = tags;
             return this;
         }
-
         public GetConfigurationAggregatorResult build() {
             return new GetConfigurationAggregatorResult(accountAggregationSources, configurationAggregatorArn, organizationAggregationSource, tags);
         }

@@ -26,7 +26,7 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identityProperties")
-    private final @Nullable Input<IdentityPropertiesArgs> identityProperties;
+        private final @Nullable Input<IdentityPropertiesArgs> identityProperties;
 
     public Input<IdentityPropertiesArgs> getIdentityProperties() {
         return this.identityProperties == null ? Input.empty() : this.identityProperties;
@@ -37,7 +37,7 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kekType", required=true)
-    private final Input<Either<String,KekType>> kekType;
+        private final Input<Either<String,KekType>> kekType;
 
     public Input<Either<String,KekType>> getKekType() {
         return this.kekType;
@@ -48,7 +48,7 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kekUrl")
-    private final @Nullable Input<String> kekUrl;
+        private final @Nullable Input<String> kekUrl;
 
     public Input<String> getKekUrl() {
         return this.kekUrl == null ? Input.empty() : this.kekUrl;
@@ -59,7 +59,7 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kekVaultResourceID")
-    private final @Nullable Input<String> kekVaultResourceID;
+        private final @Nullable Input<String> kekVaultResourceID;
 
     public Input<String> getKekVaultResourceID() {
         return this.kekVaultResourceID == null ? Input.empty() : this.kekVaultResourceID;
@@ -148,7 +148,6 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
             this.kekVaultResourceID = Input.ofNullable(kekVaultResourceID);
             return this;
         }
-
         public KeyEncryptionKeyArgs build() {
             return new KeyEncryptionKeyArgs(identityProperties, kekType, kekUrl, kekVaultResourceID);
         }

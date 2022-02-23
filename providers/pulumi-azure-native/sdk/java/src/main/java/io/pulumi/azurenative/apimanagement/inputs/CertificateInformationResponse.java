@@ -21,7 +21,7 @@ public final class CertificateInformationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="expiry", required=true)
-    private final String expiry;
+        private final String expiry;
 
     public String getExpiry() {
         return this.expiry;
@@ -32,7 +32,7 @@ public final class CertificateInformationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="subject", required=true)
-    private final String subject;
+        private final String subject;
 
     public String getSubject() {
         return this.subject;
@@ -43,7 +43,7 @@ public final class CertificateInformationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="thumbprint", required=true)
-    private final String thumbprint;
+        private final String thumbprint;
 
     public String getThumbprint() {
         return this.thumbprint;
@@ -102,7 +102,6 @@ public final class CertificateInformationResponse extends io.pulumi.resources.In
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public CertificateInformationResponse build() {
             return new CertificateInformationResponse(expiry, subject, thumbprint);
         }

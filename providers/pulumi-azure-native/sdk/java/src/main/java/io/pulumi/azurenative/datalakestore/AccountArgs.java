@@ -31,7 +31,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+        private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -42,7 +42,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultGroup")
-    private final @Nullable Input<String> defaultGroup;
+        private final @Nullable Input<String> defaultGroup;
 
     public Input<String> getDefaultGroup() {
         return this.defaultGroup == null ? Input.empty() : this.defaultGroup;
@@ -53,7 +53,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
+        private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
     public Input<EncryptionConfigArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
@@ -64,7 +64,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionState")
-    private final @Nullable Input<EncryptionState> encryptionState;
+        private final @Nullable Input<EncryptionState> encryptionState;
 
     public Input<EncryptionState> getEncryptionState() {
         return this.encryptionState == null ? Input.empty() : this.encryptionState;
@@ -75,7 +75,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallAllowAzureIps")
-    private final @Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps;
+        private final @Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
     public Input<FirewallAllowAzureIpsState> getFirewallAllowAzureIps() {
         return this.firewallAllowAzureIps == null ? Input.empty() : this.firewallAllowAzureIps;
@@ -86,7 +86,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallRules")
-    private final @Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
+        private final @Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
     public Input<List<CreateFirewallRuleWithAccountParametersArgs>> getFirewallRules() {
         return this.firewallRules == null ? Input.empty() : this.firewallRules;
@@ -97,7 +97,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallState")
-    private final @Nullable Input<FirewallState> firewallState;
+        private final @Nullable Input<FirewallState> firewallState;
 
     public Input<FirewallState> getFirewallState() {
         return this.firewallState == null ? Input.empty() : this.firewallState;
@@ -108,7 +108,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<EncryptionIdentityArgs> identity;
+        private final @Nullable Input<EncryptionIdentityArgs> identity;
 
     public Input<EncryptionIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -119,7 +119,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -130,7 +130,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="newTier")
-    private final @Nullable Input<TierType> newTier;
+        private final @Nullable Input<TierType> newTier;
 
     public Input<TierType> getNewTier() {
         return this.newTier == null ? Input.empty() : this.newTier;
@@ -141,7 +141,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -152,7 +152,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -163,7 +163,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustedIdProviderState")
-    private final @Nullable Input<TrustedIdProviderState> trustedIdProviderState;
+        private final @Nullable Input<TrustedIdProviderState> trustedIdProviderState;
 
     public Input<TrustedIdProviderState> getTrustedIdProviderState() {
         return this.trustedIdProviderState == null ? Input.empty() : this.trustedIdProviderState;
@@ -174,7 +174,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustedIdProviders")
-    private final @Nullable Input<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders;
+        private final @Nullable Input<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders;
 
     public Input<List<CreateTrustedIdProviderWithAccountParametersArgs>> getTrustedIdProviders() {
         return this.trustedIdProviders == null ? Input.empty() : this.trustedIdProviders;
@@ -185,7 +185,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkRules")
-    private final @Nullable Input<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules;
+        private final @Nullable Input<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules;
 
     public Input<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? Input.empty() : this.virtualNetworkRules;
@@ -439,7 +439,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
             return this;
         }
-
         public AccountArgs build() {
             return new AccountArgs(accountName, defaultGroup, encryptionConfig, encryptionState, firewallAllowAzureIps, firewallRules, firewallState, identity, location, newTier, resourceGroupName, tags, trustedIdProviderState, trustedIdProviders, virtualNetworkRules);
         }

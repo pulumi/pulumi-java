@@ -21,7 +21,7 @@ public final class LoggingConfigurationConditionActionConditionProperties extend
      * 
      */
     @InputImport(name="action", required=true)
-    private final LoggingConfigurationConditionActionConditionPropertiesAction action;
+        private final LoggingConfigurationConditionActionConditionPropertiesAction action;
 
     public LoggingConfigurationConditionActionConditionPropertiesAction getAction() {
         return this.action;
@@ -59,7 +59,6 @@ public final class LoggingConfigurationConditionActionConditionProperties extend
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public LoggingConfigurationConditionActionConditionProperties build() {
             return new LoggingConfigurationConditionActionConditionProperties(action);
         }

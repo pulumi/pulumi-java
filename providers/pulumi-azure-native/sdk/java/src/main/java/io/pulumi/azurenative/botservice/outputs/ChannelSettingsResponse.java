@@ -226,7 +226,6 @@ public final class ChannelSettingsResponse {
             this.sites = sites;
             return this;
         }
-
         public ChannelSettingsResponse build() {
             return new ChannelSettingsResponse(botIconUrl, botId, channelDisplayName, channelId, disableLocalAuth, extensionKey1, extensionKey2, isEnabled, sites);
         }

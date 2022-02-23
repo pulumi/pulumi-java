@@ -138,7 +138,6 @@ public final class GetIotHubResourceEventHubConsumerGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIotHubResourceEventHubConsumerGroupResult build() {
             return new GetIotHubResourceEventHubConsumerGroupResult(etag, id, name, properties, type);
         }

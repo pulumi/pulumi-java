@@ -206,7 +206,6 @@ public final class PathMatcherResponse {
             this.routeRules = Objects.requireNonNull(routeRules);
             return this;
         }
-
         public PathMatcherResponse build() {
             return new PathMatcherResponse(defaultRouteAction, defaultService, defaultUrlRedirect, description, headerAction, name, pathRules, routeRules);
         }

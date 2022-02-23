@@ -23,7 +23,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
      * 
      */
     @InputImport(name="launchParameter", required=true)
-    private final GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter;
+      private final GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter;
 
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse getLaunchParameter() {
         return this.launchParameter;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -45,7 +45,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -56,7 +56,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
      * 
      */
     @InputImport(name="validateOnly", required=true)
-    private final Boolean validateOnly;
+      private final Boolean validateOnly;
 
     public Boolean getValidateOnly() {
         return this.validateOnly;
@@ -125,7 +125,6 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse(launchParameter, location, project, validateOnly);
         }

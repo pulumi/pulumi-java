@@ -181,7 +181,6 @@ public final class ConditionsResponse {
             this.targetResourceType = targetResourceType;
             return this;
         }
-
         public ConditionsResponse build() {
             return new ConditionsResponse(alertContext, alertRuleId, description, monitorCondition, monitorService, severity, targetResourceType);
         }

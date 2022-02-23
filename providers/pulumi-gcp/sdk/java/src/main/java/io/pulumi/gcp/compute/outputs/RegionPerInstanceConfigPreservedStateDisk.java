@@ -136,7 +136,6 @@ public final class RegionPerInstanceConfigPreservedStateDisk {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public RegionPerInstanceConfigPreservedStateDisk build() {
             return new RegionPerInstanceConfigPreservedStateDisk(deleteRule, deviceName, mode, source);
         }

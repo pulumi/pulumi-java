@@ -17,7 +17,7 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="artifactSourceName", required=true)
-    private final String artifactSourceName;
+        private final String artifactSourceName;
 
     public String getArtifactSourceName() {
         return this.artifactSourceName;
@@ -28,7 +28,7 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetArtifactSourceArgs build() {
             return new GetArtifactSourceArgs(artifactSourceName, resourceGroupName);
         }

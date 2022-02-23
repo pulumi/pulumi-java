@@ -21,7 +21,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessType")
-    private final @Nullable Input<String> accessType;
+      private final @Nullable Input<String> accessType;
 
     public Input<String> getAccessType() {
         return this.accessType == null ? Input.empty() : this.accessType;
@@ -32,7 +32,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appFamily")
-    private final @Nullable Input<String> appFamily;
+      private final @Nullable Input<String> appFamily;
 
     public Input<String> getAppFamily() {
         return this.appFamily == null ? Input.empty() : this.appFamily;
@@ -43,7 +43,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apps")
-    private final @Nullable Input<List<String>> apps;
+      private final @Nullable Input<List<String>> apps;
 
     public Input<List<String>> getApps() {
         return this.apps == null ? Input.empty() : this.apps;
@@ -54,7 +54,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+      private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
     public Input<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -65,7 +65,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="companies")
-    private final @Nullable Input<List<String>> companies;
+      private final @Nullable Input<List<String>> companies;
 
     public Input<List<String>> getCompanies() {
         return this.companies == null ? Input.empty() : this.companies;
@@ -76,7 +76,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerId")
-    private final @Nullable Input<String> developerId;
+      private final @Nullable Input<String> developerId;
 
     public Input<String> getDeveloperId() {
         return this.developerId == null ? Input.empty() : this.developerId;
@@ -87,7 +87,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-    private final Input<String> email;
+      private final Input<String> email;
 
     public Input<String> getEmail() {
         return this.email;
@@ -98,7 +98,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstName", required=true)
-    private final Input<String> firstName;
+      private final Input<String> firstName;
 
     public Input<String> getFirstName() {
         return this.firstName;
@@ -109,14 +109,14 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastName", required=true)
-    private final Input<String> lastName;
+      private final Input<String> lastName;
 
     public Input<String> getLastName() {
         return this.lastName;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -127,7 +127,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Input<String> userName;
+      private final Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName;
@@ -321,7 +321,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }
-
         public DeveloperArgs build() {
             return new DeveloperArgs(accessType, appFamily, apps, attributes, companies, developerId, email, firstName, lastName, organizationId, userName);
         }

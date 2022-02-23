@@ -77,7 +77,6 @@ public final class ConnectionMonitorSourceResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public ConnectionMonitorSourceResponse build() {
             return new ConnectionMonitorSourceResponse(port, resourceId);
         }

@@ -267,7 +267,6 @@ public final class FirewallPolicyRuleResponse {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }
-
         public FirewallPolicyRuleResponse build() {
             return new FirewallPolicyRuleResponse(action, description, direction, disabled, enableLogging, kind, match, priority, ruleTupleCount, targetResources, targetServiceAccounts);
         }

@@ -62,7 +62,6 @@ public final class WebACLGeoMatchStatement {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
-
         public WebACLGeoMatchStatement build() {
             return new WebACLGeoMatchStatement(countryCodes, forwardedIPConfig);
         }

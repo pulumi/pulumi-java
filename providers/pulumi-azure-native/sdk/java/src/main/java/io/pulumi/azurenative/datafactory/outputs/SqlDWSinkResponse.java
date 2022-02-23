@@ -376,7 +376,6 @@ public final class SqlDWSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public SqlDWSinkResponse build() {
             return new SqlDWSinkResponse(allowCopyCommand, allowPolyBase, copyCommandSettings, disableMetricsCollection, maxConcurrentConnections, polyBaseSettings, preCopyScript, sinkRetryCount, sinkRetryWait, sqlWriterUseTableLock, tableOption, type, upsertSettings, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

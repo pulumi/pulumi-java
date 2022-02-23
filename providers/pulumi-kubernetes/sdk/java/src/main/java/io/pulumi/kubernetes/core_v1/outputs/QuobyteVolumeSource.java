@@ -161,7 +161,6 @@ public final class QuobyteVolumeSource {
             this.volume = Objects.requireNonNull(volume);
             return this;
         }
-
         public QuobyteVolumeSource build() {
             return new QuobyteVolumeSource(group, readOnly, registry, tenant, user, volume);
         }

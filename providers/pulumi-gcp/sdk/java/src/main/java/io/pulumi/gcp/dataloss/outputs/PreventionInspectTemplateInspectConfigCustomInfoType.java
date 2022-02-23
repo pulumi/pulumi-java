@@ -186,7 +186,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
             this.storedType = storedType;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoType build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoType(dictionary, exclusionType, infoType, likelihood, regex, storedType);
         }

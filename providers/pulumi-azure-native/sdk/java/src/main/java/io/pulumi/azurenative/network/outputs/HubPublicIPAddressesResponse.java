@@ -78,7 +78,6 @@ public final class HubPublicIPAddressesResponse {
             this.count = count;
             return this;
         }
-
         public HubPublicIPAddressesResponse build() {
             return new HubPublicIPAddressesResponse(addresses, count);
         }

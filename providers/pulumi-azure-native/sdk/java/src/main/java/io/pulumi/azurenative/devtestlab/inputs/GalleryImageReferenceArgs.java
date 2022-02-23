@@ -23,7 +23,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="offer")
-    private final @Nullable Input<String> offer;
+        private final @Nullable Input<String> offer;
 
     public Input<String> getOffer() {
         return this.offer == null ? Input.empty() : this.offer;
@@ -34,7 +34,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable Input<String> osType;
+        private final @Nullable Input<String> osType;
 
     public Input<String> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -45,7 +45,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="publisher")
-    private final @Nullable Input<String> publisher;
+        private final @Nullable Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher == null ? Input.empty() : this.publisher;
@@ -56,7 +56,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<String> sku;
+        private final @Nullable Input<String> sku;
 
     public Input<String> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -67,7 +67,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -171,7 +171,6 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public GalleryImageReferenceArgs build() {
             return new GalleryImageReferenceArgs(offer, osType, publisher, sku, version);
         }

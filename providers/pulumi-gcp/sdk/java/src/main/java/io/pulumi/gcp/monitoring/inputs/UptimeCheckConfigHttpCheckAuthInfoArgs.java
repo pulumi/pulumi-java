@@ -19,7 +19,7 @@ public final class UptimeCheckConfigHttpCheckAuthInfoArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+        private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -30,7 +30,7 @@ public final class UptimeCheckConfigHttpCheckAuthInfoArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+        private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -89,7 +89,6 @@ public final class UptimeCheckConfigHttpCheckAuthInfoArgs extends io.pulumi.reso
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public UptimeCheckConfigHttpCheckAuthInfoArgs build() {
             return new UptimeCheckConfigHttpCheckAuthInfoArgs(password, username);
         }

@@ -172,7 +172,6 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public MigrateSqlServerSqlMISyncTaskPropertiesResponse build() {
             return new MigrateSqlServerSqlMISyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

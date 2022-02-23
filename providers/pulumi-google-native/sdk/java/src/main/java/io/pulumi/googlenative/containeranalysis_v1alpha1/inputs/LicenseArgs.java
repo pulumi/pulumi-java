@@ -23,7 +23,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comments")
-    private final @Nullable Input<String> comments;
+      private final @Nullable Input<String> comments;
 
     public Input<String> getComments() {
         return this.comments == null ? Input.empty() : this.comments;
@@ -34,7 +34,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression")
-    private final @Nullable Input<String> expression;
+      private final @Nullable Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression == null ? Input.empty() : this.expression;
@@ -93,7 +93,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             this.expression = Input.ofNullable(expression);
             return this;
         }
-
         public LicenseArgs build() {
             return new LicenseArgs(comments, expression);
         }

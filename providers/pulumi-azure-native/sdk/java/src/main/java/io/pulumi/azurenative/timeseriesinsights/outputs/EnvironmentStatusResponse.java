@@ -75,7 +75,6 @@ public final class EnvironmentStatusResponse {
             this.warmStorage = Objects.requireNonNull(warmStorage);
             return this;
         }
-
         public EnvironmentStatusResponse build() {
             return new EnvironmentStatusResponse(ingress, warmStorage);
         }

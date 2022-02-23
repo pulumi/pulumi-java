@@ -332,7 +332,6 @@ public final class GetIotHubDataConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIotHubDataConnectionResult build() {
             return new GetIotHubDataConnectionResult(consumerGroup, dataFormat, eventSystemProperties, id, iotHubResourceId, kind, location, mappingRuleName, name, provisioningState, sharedAccessPolicyName, systemData, tableName, type);
         }

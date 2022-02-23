@@ -52,7 +52,6 @@ public final class MonitoringScheduleScheduleConfig {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
-
         public MonitoringScheduleScheduleConfig build() {
             return new MonitoringScheduleScheduleConfig(scheduleExpression);
         }

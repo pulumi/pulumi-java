@@ -296,7 +296,6 @@ public final class GetAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAlertRuleResult build() {
             return new GetAlertRuleResult(action, actions, condition, description, id, isEnabled, lastUpdatedTime, location, name, provisioningState, tags, type);
         }

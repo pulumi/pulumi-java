@@ -116,7 +116,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse(buttonId, deploymentId, endpointDomain, organizationId);
         }

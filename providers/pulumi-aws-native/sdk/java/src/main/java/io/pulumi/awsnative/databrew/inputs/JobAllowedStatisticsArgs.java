@@ -15,7 +15,7 @@ public final class JobAllowedStatisticsArgs extends io.pulumi.resources.Resource
     public static final JobAllowedStatisticsArgs Empty = new JobAllowedStatisticsArgs();
 
     @InputImport(name="statistics", required=true)
-    private final Input<List<String>> statistics;
+        private final Input<List<String>> statistics;
 
     public Input<List<String>> getStatistics() {
         return this.statistics;
@@ -58,7 +58,6 @@ public final class JobAllowedStatisticsArgs extends io.pulumi.resources.Resource
             this.statistics = Input.of(Objects.requireNonNull(statistics));
             return this;
         }
-
         public JobAllowedStatisticsArgs build() {
             return new JobAllowedStatisticsArgs(statistics);
         }

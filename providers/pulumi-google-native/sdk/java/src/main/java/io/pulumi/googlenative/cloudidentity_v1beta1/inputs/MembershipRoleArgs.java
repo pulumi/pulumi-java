@@ -25,7 +25,7 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiryDetail")
-    private final @Nullable Input<ExpiryDetailArgs> expiryDetail;
+      private final @Nullable Input<ExpiryDetailArgs> expiryDetail;
 
     public Input<ExpiryDetailArgs> getExpiryDetail() {
         return this.expiryDetail == null ? Input.empty() : this.expiryDetail;
@@ -36,7 +36,7 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restrictionEvaluations")
-    private final @Nullable Input<RestrictionEvaluationsArgs> restrictionEvaluations;
+      private final @Nullable Input<RestrictionEvaluationsArgs> restrictionEvaluations;
 
     public Input<RestrictionEvaluationsArgs> getRestrictionEvaluations() {
         return this.restrictionEvaluations == null ? Input.empty() : this.restrictionEvaluations;
@@ -121,7 +121,6 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
             this.restrictionEvaluations = Input.ofNullable(restrictionEvaluations);
             return this;
         }
-
         public MembershipRoleArgs build() {
             return new MembershipRoleArgs(expiryDetail, name, restrictionEvaluations);
         }

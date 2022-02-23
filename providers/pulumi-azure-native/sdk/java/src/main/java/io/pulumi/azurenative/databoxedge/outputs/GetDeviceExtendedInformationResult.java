@@ -287,7 +287,6 @@ public final class GetDeviceExtendedInformationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeviceExtendedInformationResult build() {
             return new GetDeviceExtendedInformationResult(channelIntegrityKeyName, channelIntegrityKeyVersion, clientSecretStoreId, clientSecretStoreUrl, deviceSecrets, encryptionKey, encryptionKeyThumbprint, id, keyVaultSyncStatus, name, resourceKey, type);
         }

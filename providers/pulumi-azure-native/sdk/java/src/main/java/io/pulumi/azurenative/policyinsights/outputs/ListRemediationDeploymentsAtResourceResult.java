@@ -76,7 +76,6 @@ public final class ListRemediationDeploymentsAtResourceResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListRemediationDeploymentsAtResourceResult build() {
             return new ListRemediationDeploymentsAtResourceResult(nextLink, value);
         }

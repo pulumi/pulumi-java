@@ -32,7 +32,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Input<Map<String,String>> annotations;
 
     public Input<Map<String,String>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -43,7 +43,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="confidential")
-    private final @Nullable Input<Boolean> confidential;
+      private final @Nullable Input<Boolean> confidential;
 
     public Input<Boolean> getConfidential() {
         return this.confidential == null ? Input.empty() : this.confidential;
@@ -54,7 +54,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="containerConcurrency")
-    private final @Nullable Input<Integer> containerConcurrency;
+      private final @Nullable Input<Integer> containerConcurrency;
 
     public Input<Integer> getContainerConcurrency() {
         return this.containerConcurrency == null ? Input.empty() : this.containerConcurrency;
@@ -65,7 +65,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="containers")
-    private final @Nullable Input<List<GoogleCloudRunOpV2ContainerArgs>> containers;
+      private final @Nullable Input<List<GoogleCloudRunOpV2ContainerArgs>> containers;
 
     public Input<List<GoogleCloudRunOpV2ContainerArgs>> getContainers() {
         return this.containers == null ? Input.empty() : this.containers;
@@ -76,7 +76,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="encryptionKey")
-    private final @Nullable Input<String> encryptionKey;
+      private final @Nullable Input<String> encryptionKey;
 
     public Input<String> getEncryptionKey() {
         return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
@@ -87,7 +87,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="executionEnvironment")
-    private final @Nullable Input<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment;
+      private final @Nullable Input<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment;
 
     public Input<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> getExecutionEnvironment() {
         return this.executionEnvironment == null ? Input.empty() : this.executionEnvironment;
@@ -98,7 +98,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -109,7 +109,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<String> revision;
+      private final @Nullable Input<String> revision;
 
     public Input<String> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -120,7 +120,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="scaling")
-    private final @Nullable Input<GoogleCloudRunOpV2RevisionScalingArgs> scaling;
+      private final @Nullable Input<GoogleCloudRunOpV2RevisionScalingArgs> scaling;
 
     public Input<GoogleCloudRunOpV2RevisionScalingArgs> getScaling() {
         return this.scaling == null ? Input.empty() : this.scaling;
@@ -131,7 +131,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -142,7 +142,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -153,7 +153,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<GoogleCloudRunOpV2VolumeArgs>> volumes;
+      private final @Nullable Input<List<GoogleCloudRunOpV2VolumeArgs>> volumes;
 
     public Input<List<GoogleCloudRunOpV2VolumeArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -164,7 +164,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="vpcAccess")
-    private final @Nullable Input<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess;
+      private final @Nullable Input<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess;
 
     public Input<GoogleCloudRunOpV2VpcAccessArgs> getVpcAccess() {
         return this.vpcAccess == null ? Input.empty() : this.vpcAccess;
@@ -388,7 +388,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
             this.vpcAccess = Input.ofNullable(vpcAccess);
             return this;
         }
-
         public GoogleCloudRunOpV2RevisionTemplateArgs build() {
             return new GoogleCloudRunOpV2RevisionTemplateArgs(annotations, confidential, containerConcurrency, containers, encryptionKey, executionEnvironment, labels, revision, scaling, serviceAccount, timeout, volumes, vpcAccess);
         }

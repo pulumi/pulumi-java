@@ -74,7 +74,6 @@ public final class GetConfigResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetConfigResult build() {
             return new GetConfigResult(description, name);
         }

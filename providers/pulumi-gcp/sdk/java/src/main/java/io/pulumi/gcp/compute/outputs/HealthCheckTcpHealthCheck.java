@@ -203,7 +203,6 @@ public final class HealthCheckTcpHealthCheck {
             this.response = response;
             return this;
         }
-
         public HealthCheckTcpHealthCheck build() {
             return new HealthCheckTcpHealthCheck(port, portName, portSpecification, proxyHeader, request, response);
         }

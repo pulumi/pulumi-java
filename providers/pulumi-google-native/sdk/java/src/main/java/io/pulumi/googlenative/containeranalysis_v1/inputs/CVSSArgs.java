@@ -28,7 +28,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
     public static final CVSSArgs Empty = new CVSSArgs();
 
     @InputImport(name="attackComplexity")
-    private final @Nullable Input<CVSSAttackComplexity> attackComplexity;
+      private final @Nullable Input<CVSSAttackComplexity> attackComplexity;
 
     public Input<CVSSAttackComplexity> getAttackComplexity() {
         return this.attackComplexity == null ? Input.empty() : this.attackComplexity;
@@ -39,21 +39,21 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attackVector")
-    private final @Nullable Input<CVSSAttackVector> attackVector;
+      private final @Nullable Input<CVSSAttackVector> attackVector;
 
     public Input<CVSSAttackVector> getAttackVector() {
         return this.attackVector == null ? Input.empty() : this.attackVector;
     }
 
     @InputImport(name="authentication")
-    private final @Nullable Input<CVSSAuthentication> authentication;
+      private final @Nullable Input<CVSSAuthentication> authentication;
 
     public Input<CVSSAuthentication> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
     @InputImport(name="availabilityImpact")
-    private final @Nullable Input<CVSSAvailabilityImpact> availabilityImpact;
+      private final @Nullable Input<CVSSAvailabilityImpact> availabilityImpact;
 
     public Input<CVSSAvailabilityImpact> getAvailabilityImpact() {
         return this.availabilityImpact == null ? Input.empty() : this.availabilityImpact;
@@ -64,56 +64,56 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseScore")
-    private final @Nullable Input<Double> baseScore;
+      private final @Nullable Input<Double> baseScore;
 
     public Input<Double> getBaseScore() {
         return this.baseScore == null ? Input.empty() : this.baseScore;
     }
 
     @InputImport(name="confidentialityImpact")
-    private final @Nullable Input<CVSSConfidentialityImpact> confidentialityImpact;
+      private final @Nullable Input<CVSSConfidentialityImpact> confidentialityImpact;
 
     public Input<CVSSConfidentialityImpact> getConfidentialityImpact() {
         return this.confidentialityImpact == null ? Input.empty() : this.confidentialityImpact;
     }
 
     @InputImport(name="exploitabilityScore")
-    private final @Nullable Input<Double> exploitabilityScore;
+      private final @Nullable Input<Double> exploitabilityScore;
 
     public Input<Double> getExploitabilityScore() {
         return this.exploitabilityScore == null ? Input.empty() : this.exploitabilityScore;
     }
 
     @InputImport(name="impactScore")
-    private final @Nullable Input<Double> impactScore;
+      private final @Nullable Input<Double> impactScore;
 
     public Input<Double> getImpactScore() {
         return this.impactScore == null ? Input.empty() : this.impactScore;
     }
 
     @InputImport(name="integrityImpact")
-    private final @Nullable Input<CVSSIntegrityImpact> integrityImpact;
+      private final @Nullable Input<CVSSIntegrityImpact> integrityImpact;
 
     public Input<CVSSIntegrityImpact> getIntegrityImpact() {
         return this.integrityImpact == null ? Input.empty() : this.integrityImpact;
     }
 
     @InputImport(name="privilegesRequired")
-    private final @Nullable Input<CVSSPrivilegesRequired> privilegesRequired;
+      private final @Nullable Input<CVSSPrivilegesRequired> privilegesRequired;
 
     public Input<CVSSPrivilegesRequired> getPrivilegesRequired() {
         return this.privilegesRequired == null ? Input.empty() : this.privilegesRequired;
     }
 
     @InputImport(name="scope")
-    private final @Nullable Input<CVSSScope> scope;
+      private final @Nullable Input<CVSSScope> scope;
 
     public Input<CVSSScope> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
     @InputImport(name="userInteraction")
-    private final @Nullable Input<CVSSUserInteraction> userInteraction;
+      private final @Nullable Input<CVSSUserInteraction> userInteraction;
 
     public Input<CVSSUserInteraction> getUserInteraction() {
         return this.userInteraction == null ? Input.empty() : this.userInteraction;
@@ -322,7 +322,6 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
             this.userInteraction = Input.ofNullable(userInteraction);
             return this;
         }
-
         public CVSSArgs build() {
             return new CVSSArgs(attackComplexity, attackVector, authentication, availabilityImpact, baseScore, confidentialityImpact, exploitabilityScore, impactScore, integrityImpact, privilegesRequired, scope, userInteraction);
         }

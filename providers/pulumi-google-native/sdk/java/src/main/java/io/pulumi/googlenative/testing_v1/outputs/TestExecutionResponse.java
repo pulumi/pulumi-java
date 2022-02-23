@@ -226,7 +226,6 @@ public final class TestExecutionResponse {
             this.toolResultsStep = Objects.requireNonNull(toolResultsStep);
             return this;
         }
-
         public TestExecutionResponse build() {
             return new TestExecutionResponse(environment, matrixId, project, shard, state, testDetails, testSpecification, timestamp, toolResultsStep);
         }

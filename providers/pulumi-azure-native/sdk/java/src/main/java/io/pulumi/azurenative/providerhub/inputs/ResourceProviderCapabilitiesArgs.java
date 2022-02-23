@@ -18,21 +18,21 @@ public final class ResourceProviderCapabilitiesArgs extends io.pulumi.resources.
     public static final ResourceProviderCapabilitiesArgs Empty = new ResourceProviderCapabilitiesArgs();
 
     @InputImport(name="effect", required=true)
-    private final Input<Either<String,ResourceProviderCapabilitiesEffect>> effect;
+        private final Input<Either<String,ResourceProviderCapabilitiesEffect>> effect;
 
     public Input<Either<String,ResourceProviderCapabilitiesEffect>> getEffect() {
         return this.effect;
     }
 
     @InputImport(name="quotaId", required=true)
-    private final Input<String> quotaId;
+        private final Input<String> quotaId;
 
     public Input<String> getQuotaId() {
         return this.quotaId;
     }
 
     @InputImport(name="requiredFeatures")
-    private final @Nullable Input<List<String>> requiredFeatures;
+        private final @Nullable Input<List<String>> requiredFeatures;
 
     public Input<List<String>> getRequiredFeatures() {
         return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
@@ -106,7 +106,6 @@ public final class ResourceProviderCapabilitiesArgs extends io.pulumi.resources.
             this.requiredFeatures = Input.ofNullable(requiredFeatures);
             return this;
         }
-
         public ResourceProviderCapabilitiesArgs build() {
             return new ResourceProviderCapabilitiesArgs(effect, quotaId, requiredFeatures);
         }

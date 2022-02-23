@@ -75,7 +75,6 @@ public final class ErrorAdditionalInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ErrorAdditionalInfoResponse build() {
             return new ErrorAdditionalInfoResponse(info, type);
         }

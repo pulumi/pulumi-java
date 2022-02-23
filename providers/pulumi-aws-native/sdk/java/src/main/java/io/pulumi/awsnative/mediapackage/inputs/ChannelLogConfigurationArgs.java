@@ -19,7 +19,7 @@ public final class ChannelLogConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="logGroupName")
-    private final @Nullable Input<String> logGroupName;
+        private final @Nullable Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
@@ -62,7 +62,6 @@ public final class ChannelLogConfigurationArgs extends io.pulumi.resources.Resou
             this.logGroupName = Input.ofNullable(logGroupName);
             return this;
         }
-
         public ChannelLogConfigurationArgs build() {
             return new ChannelLogConfigurationArgs(logGroupName);
         }

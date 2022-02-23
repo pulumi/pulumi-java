@@ -130,7 +130,6 @@ public final class TaskDefinitionLinuxParameters {
             this.tmpfs = tmpfs;
             return this;
         }
-
         public TaskDefinitionLinuxParameters build() {
             return new TaskDefinitionLinuxParameters(capabilities, devices, initProcessEnabled, maxSwap, sharedMemorySize, swappiness, tmpfs);
         }

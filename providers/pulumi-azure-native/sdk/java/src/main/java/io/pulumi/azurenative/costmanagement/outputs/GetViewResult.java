@@ -439,7 +439,6 @@ public final class GetViewResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetViewResult build() {
             return new GetViewResult(accumulated, chart, createdOn, currency, dataSet, dateRange, displayName, eTag, id, includeMonetaryCommitment, kpis, metric, modifiedOn, name, pivots, scope, timePeriod, timeframe, type);
         }

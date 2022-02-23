@@ -60,7 +60,6 @@ public final class MissionProfileDataflowEdge {
             this.source = source;
             return this;
         }
-
         public MissionProfileDataflowEdge build() {
             return new MissionProfileDataflowEdge(destination, source);
         }

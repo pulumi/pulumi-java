@@ -74,7 +74,6 @@ public final class IncidentLabelResponse {
             this.labelType = Objects.requireNonNull(labelType);
             return this;
         }
-
         public IncidentLabelResponse build() {
             return new IncidentLabelResponse(labelName, labelType);
         }

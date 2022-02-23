@@ -52,7 +52,6 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse {
             this.maxUnusedVersionsToKeep = Objects.requireNonNull(maxUnusedVersionsToKeep);
             return this;
         }
-
         public ApplicationTypeVersionsCleanupPolicyResponse build() {
             return new ApplicationTypeVersionsCleanupPolicyResponse(maxUnusedVersionsToKeep);
         }

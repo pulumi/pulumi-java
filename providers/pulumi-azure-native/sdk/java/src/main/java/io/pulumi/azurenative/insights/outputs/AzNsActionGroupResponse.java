@@ -98,7 +98,6 @@ public final class AzNsActionGroupResponse {
             this.emailSubject = emailSubject;
             return this;
         }
-
         public AzNsActionGroupResponse build() {
             return new AzNsActionGroupResponse(actionGroup, customWebhookPayload, emailSubject);
         }

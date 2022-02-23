@@ -16,21 +16,21 @@ public final class FlowUpsolverDestinationPropertiesArgs extends io.pulumi.resou
     public static final FlowUpsolverDestinationPropertiesArgs Empty = new FlowUpsolverDestinationPropertiesArgs();
 
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+        private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="bucketPrefix")
-    private final @Nullable Input<String> bucketPrefix;
+        private final @Nullable Input<String> bucketPrefix;
 
     public Input<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
     }
 
     @InputImport(name="s3OutputFormatConfig", required=true)
-    private final Input<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig;
+        private final Input<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig;
 
     public Input<FlowUpsolverS3OutputFormatConfigArgs> getS3OutputFormatConfig() {
         return this.s3OutputFormatConfig;
@@ -104,7 +104,6 @@ public final class FlowUpsolverDestinationPropertiesArgs extends io.pulumi.resou
             this.s3OutputFormatConfig = Input.of(Objects.requireNonNull(s3OutputFormatConfig));
             return this;
         }
-
         public FlowUpsolverDestinationPropertiesArgs build() {
             return new FlowUpsolverDestinationPropertiesArgs(bucketName, bucketPrefix, s3OutputFormatConfig);
         }

@@ -76,7 +76,6 @@ public final class ActionGroupResponse {
             this.webhookProperties = webhookProperties;
             return this;
         }
-
         public ActionGroupResponse build() {
             return new ActionGroupResponse(actionGroupId, webhookProperties);
         }

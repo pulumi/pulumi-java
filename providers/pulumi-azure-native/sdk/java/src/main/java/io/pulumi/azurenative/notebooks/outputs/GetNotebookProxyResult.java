@@ -245,7 +245,6 @@ public final class GetNotebookProxyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNotebookProxyResult build() {
             return new GetNotebookProxyResult(hostname, id, name, publicDns, publicNetworkAccess, region, resourceId, secondaryAppId, systemData, type);
         }

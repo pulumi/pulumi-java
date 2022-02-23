@@ -13,14 +13,14 @@ public final class GetStreamArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetStreamArgs Empty = new GetStreamArgs();
 
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
     }
 
     @InputImport(name="ledgerName", required=true)
-    private final String ledgerName;
+        private final String ledgerName;
 
     public String getLedgerName() {
         return this.ledgerName;
@@ -69,7 +69,6 @@ public final class GetStreamArgs extends io.pulumi.resources.InvokeArgs {
             this.ledgerName = Objects.requireNonNull(ledgerName);
             return this;
         }
-
         public GetStreamArgs build() {
             return new GetStreamArgs(id, ledgerName);
         }

@@ -19,7 +19,7 @@ public final class PatchDeploymentInstanceFilterGroupLabelArgs extends io.pulumi
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Input<Map<String,String>> labels;
+        private final Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels;
@@ -62,7 +62,6 @@ public final class PatchDeploymentInstanceFilterGroupLabelArgs extends io.pulumi
             this.labels = Input.of(Objects.requireNonNull(labels));
             return this;
         }
-
         public PatchDeploymentInstanceFilterGroupLabelArgs build() {
             return new PatchDeploymentInstanceFilterGroupLabelArgs(labels);
         }

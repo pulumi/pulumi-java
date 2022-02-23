@@ -162,7 +162,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse {
             this.textMetadata = Objects.requireNonNull(textMetadata);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1InputConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1InputConfigResponse(annotationType, bigquerySource, classificationMetadata, dataType, gcsSource, textMetadata);
         }

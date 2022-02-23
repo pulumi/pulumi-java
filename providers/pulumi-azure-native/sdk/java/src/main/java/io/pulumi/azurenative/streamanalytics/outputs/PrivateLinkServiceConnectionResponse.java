@@ -120,7 +120,6 @@ public final class PrivateLinkServiceConnectionResponse {
             this.requestMessage = requestMessage;
             return this;
         }
-
         public PrivateLinkServiceConnectionResponse build() {
             return new PrivateLinkServiceConnectionResponse(groupIds, privateLinkServiceConnectionState, privateLinkServiceId, requestMessage);
         }

@@ -310,7 +310,6 @@ public final class GetBucketResult {
             this.websites = Objects.requireNonNull(websites);
             return this;
         }
-
         public GetBucketResult build() {
             return new GetBucketResult(cors, defaultEventBasedHold, encryptions, forceDestroy, id, labels, lifecycleRules, location, loggings, name, project, publicAccessPrevention, requesterPays, retentionPolicies, selfLink, storageClass, uniformBucketLevelAccess, url, versionings, websites);
         }

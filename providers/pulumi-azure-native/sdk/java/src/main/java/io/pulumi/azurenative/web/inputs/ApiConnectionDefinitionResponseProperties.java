@@ -20,7 +20,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
     public static final ApiConnectionDefinitionResponseProperties Empty = new ApiConnectionDefinitionResponseProperties();
 
     @InputImport(name="api")
-    private final @Nullable ApiReferenceResponse api;
+        private final @Nullable ApiReferenceResponse api;
 
     public Optional<ApiReferenceResponse> getApi() {
         return this.api == null ? Optional.empty() : Optional.ofNullable(this.api);
@@ -31,7 +31,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * 
      */
     @InputImport(name="changedTime")
-    private final @Nullable String changedTime;
+        private final @Nullable String changedTime;
 
     public Optional<String> getChangedTime() {
         return this.changedTime == null ? Optional.empty() : Optional.ofNullable(this.changedTime);
@@ -42,7 +42,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable String createdTime;
+        private final @Nullable String createdTime;
 
     public Optional<String> getCreatedTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
@@ -53,7 +53,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * 
      */
     @InputImport(name="customParameterValues")
-    private final @Nullable Map<String,String> customParameterValues;
+        private final @Nullable Map<String,String> customParameterValues;
 
     public Map<String,String> getCustomParameterValues() {
         return this.customParameterValues == null ? Map.of() : this.customParameterValues;
@@ -64,7 +64,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+        private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -75,7 +75,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * 
      */
     @InputImport(name="nonSecretParameterValues")
-    private final @Nullable Map<String,String> nonSecretParameterValues;
+        private final @Nullable Map<String,String> nonSecretParameterValues;
 
     public Map<String,String> getNonSecretParameterValues() {
         return this.nonSecretParameterValues == null ? Map.of() : this.nonSecretParameterValues;
@@ -86,7 +86,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * 
      */
     @InputImport(name="parameterValues")
-    private final @Nullable Map<String,String> parameterValues;
+        private final @Nullable Map<String,String> parameterValues;
 
     public Map<String,String> getParameterValues() {
         return this.parameterValues == null ? Map.of() : this.parameterValues;
@@ -97,7 +97,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable List<ConnectionStatusDefinitionResponse> statuses;
+        private final @Nullable List<ConnectionStatusDefinitionResponse> statuses;
 
     public List<ConnectionStatusDefinitionResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
@@ -108,7 +108,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * 
      */
     @InputImport(name="testLinks")
-    private final @Nullable List<ApiConnectionTestLinkResponse> testLinks;
+        private final @Nullable List<ApiConnectionTestLinkResponse> testLinks;
 
     public List<ApiConnectionTestLinkResponse> getTestLinks() {
         return this.testLinks == null ? List.of() : this.testLinks;
@@ -227,7 +227,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
             this.testLinks = testLinks;
             return this;
         }
-
         public ApiConnectionDefinitionResponseProperties build() {
             return new ApiConnectionDefinitionResponseProperties(api, changedTime, createdTime, customParameterValues, displayName, nonSecretParameterValues, parameterValues, statuses, testLinks);
         }

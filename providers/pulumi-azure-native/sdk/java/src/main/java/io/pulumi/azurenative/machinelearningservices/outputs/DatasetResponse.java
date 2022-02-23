@@ -290,7 +290,6 @@ public final class DatasetResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public DatasetResponse build() {
             return new DatasetResponse(createdTime, datasetId, datasetState, datasetType, defaultCompute, description, etag, isVisible, latest, modifiedTime, name, tags);
         }

@@ -16,7 +16,7 @@ public final class EnvironmentConfigWebServerNetworkAccessControlGetArgs extends
     public static final EnvironmentConfigWebServerNetworkAccessControlGetArgs Empty = new EnvironmentConfigWebServerNetworkAccessControlGetArgs();
 
     @InputImport(name="allowedIpRanges")
-    private final @Nullable Input<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges;
+        private final @Nullable Input<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges;
 
     public Input<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> getAllowedIpRanges() {
         return this.allowedIpRanges == null ? Input.empty() : this.allowedIpRanges;
@@ -59,7 +59,6 @@ public final class EnvironmentConfigWebServerNetworkAccessControlGetArgs extends
             this.allowedIpRanges = Input.ofNullable(allowedIpRanges);
             return this;
         }
-
         public EnvironmentConfigWebServerNetworkAccessControlGetArgs build() {
             return new EnvironmentConfigWebServerNetworkAccessControlGetArgs(allowedIpRanges);
         }

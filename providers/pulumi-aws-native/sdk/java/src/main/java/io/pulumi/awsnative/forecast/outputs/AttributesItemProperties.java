@@ -77,7 +77,6 @@ public final class AttributesItemProperties {
             this.attributeType = attributeType;
             return this;
         }
-
         public AttributesItemProperties build() {
             return new AttributesItemProperties(attributeName, attributeType);
         }

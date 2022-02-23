@@ -142,7 +142,6 @@ public final class ResourceQuota {
             this.status = status;
             return this;
         }
-
         public ResourceQuota build() {
             return new ResourceQuota(apiVersion, kind, metadata, spec, status);
         }

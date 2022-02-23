@@ -18,7 +18,7 @@ public final class BucketReplicaModificationsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<BucketReplicaModificationsStatus> status;
+        private final Input<BucketReplicaModificationsStatus> status;
 
     public Input<BucketReplicaModificationsStatus> getStatus() {
         return this.status;
@@ -61,7 +61,6 @@ public final class BucketReplicaModificationsArgs extends io.pulumi.resources.Re
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public BucketReplicaModificationsArgs build() {
             return new BucketReplicaModificationsArgs(status);
         }

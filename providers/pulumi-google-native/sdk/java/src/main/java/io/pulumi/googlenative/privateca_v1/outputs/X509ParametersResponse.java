@@ -142,7 +142,6 @@ public final class X509ParametersResponse {
             this.policyIds = Objects.requireNonNull(policyIds);
             return this;
         }
-
         public X509ParametersResponse build() {
             return new X509ParametersResponse(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

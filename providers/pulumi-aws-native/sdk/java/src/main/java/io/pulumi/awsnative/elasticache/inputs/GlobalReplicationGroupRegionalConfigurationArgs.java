@@ -21,7 +21,7 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="replicationGroupId")
-    private final @Nullable Input<String> replicationGroupId;
+        private final @Nullable Input<String> replicationGroupId;
 
     public Input<String> getReplicationGroupId() {
         return this.replicationGroupId == null ? Input.empty() : this.replicationGroupId;
@@ -32,7 +32,7 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="replicationGroupRegion")
-    private final @Nullable Input<String> replicationGroupRegion;
+        private final @Nullable Input<String> replicationGroupRegion;
 
     public Input<String> getReplicationGroupRegion() {
         return this.replicationGroupRegion == null ? Input.empty() : this.replicationGroupRegion;
@@ -43,7 +43,7 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="reshardingConfigurations")
-    private final @Nullable Input<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations;
+        private final @Nullable Input<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations;
 
     public Input<List<GlobalReplicationGroupReshardingConfigurationArgs>> getReshardingConfigurations() {
         return this.reshardingConfigurations == null ? Input.empty() : this.reshardingConfigurations;
@@ -117,7 +117,6 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
             this.reshardingConfigurations = Input.ofNullable(reshardingConfigurations);
             return this;
         }
-
         public GlobalReplicationGroupRegionalConfigurationArgs build() {
             return new GlobalReplicationGroupRegionalConfigurationArgs(replicationGroupId, replicationGroupRegion, reshardingConfigurations);
         }

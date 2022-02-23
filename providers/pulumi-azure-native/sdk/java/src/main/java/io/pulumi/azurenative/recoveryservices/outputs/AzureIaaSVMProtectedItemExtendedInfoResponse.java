@@ -99,7 +99,6 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
-
         public AzureIaaSVMProtectedItemExtendedInfoResponse build() {
             return new AzureIaaSVMProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyInconsistent, recoveryPointCount);
         }

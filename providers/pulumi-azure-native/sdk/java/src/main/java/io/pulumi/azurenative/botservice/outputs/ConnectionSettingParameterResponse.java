@@ -76,7 +76,6 @@ public final class ConnectionSettingParameterResponse {
             this.value = value;
             return this;
         }
-
         public ConnectionSettingParameterResponse build() {
             return new ConnectionSettingParameterResponse(key, value);
         }

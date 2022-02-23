@@ -23,7 +23,7 @@ public final class MarkdownPartMetadataSettingsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<MarkdownPartMetadataContentArgs> content;
+        private final @Nullable Input<MarkdownPartMetadataContentArgs> content;
 
     public Input<MarkdownPartMetadataContentArgs> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -66,7 +66,6 @@ public final class MarkdownPartMetadataSettingsArgs extends io.pulumi.resources.
             this.content = Input.ofNullable(content);
             return this;
         }
-
         public MarkdownPartMetadataSettingsArgs build() {
             return new MarkdownPartMetadataSettingsArgs(content);
         }

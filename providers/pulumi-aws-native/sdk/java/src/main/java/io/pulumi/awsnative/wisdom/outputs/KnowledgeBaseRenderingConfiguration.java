@@ -46,7 +46,6 @@ public final class KnowledgeBaseRenderingConfiguration {
             this.templateUri = templateUri;
             return this;
         }
-
         public KnowledgeBaseRenderingConfiguration build() {
             return new KnowledgeBaseRenderingConfiguration(templateUri);
         }

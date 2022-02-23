@@ -119,7 +119,6 @@ public final class ErrorDetailResponse {
             this.target = target;
             return this;
         }
-
         public ErrorDetailResponse build() {
             return new ErrorDetailResponse(code, details, message, target);
         }

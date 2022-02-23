@@ -141,7 +141,6 @@ public final class OutcomeResponse {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }
-
         public OutcomeResponse build() {
             return new OutcomeResponse(failureDetail, inconclusiveDetail, skippedDetail, successDetail, summary);
         }

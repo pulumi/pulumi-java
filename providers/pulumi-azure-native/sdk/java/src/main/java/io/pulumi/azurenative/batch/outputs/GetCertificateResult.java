@@ -284,7 +284,6 @@ public final class GetCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(deleteCertificateError, etag, format, id, name, previousProvisioningState, previousProvisioningStateTransitionTime, provisioningState, provisioningStateTransitionTime, publicData, thumbprint, thumbprintAlgorithm, type);
         }

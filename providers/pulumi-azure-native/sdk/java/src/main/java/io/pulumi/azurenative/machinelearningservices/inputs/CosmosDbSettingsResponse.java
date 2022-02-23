@@ -19,7 +19,7 @@ public final class CosmosDbSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="collectionsThroughput")
-    private final @Nullable Integer collectionsThroughput;
+        private final @Nullable Integer collectionsThroughput;
 
     public Optional<Integer> getCollectionsThroughput() {
         return this.collectionsThroughput == null ? Optional.empty() : Optional.ofNullable(this.collectionsThroughput);
@@ -57,7 +57,6 @@ public final class CosmosDbSettingsResponse extends io.pulumi.resources.InvokeAr
             this.collectionsThroughput = collectionsThroughput;
             return this;
         }
-
         public CosmosDbSettingsResponse build() {
             return new CosmosDbSettingsResponse(collectionsThroughput);
         }

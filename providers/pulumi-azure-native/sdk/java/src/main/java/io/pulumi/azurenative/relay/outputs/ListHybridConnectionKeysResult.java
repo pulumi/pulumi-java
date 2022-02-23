@@ -139,7 +139,6 @@ public final class ListHybridConnectionKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListHybridConnectionKeysResult build() {
             return new ListHybridConnectionKeysResult(keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

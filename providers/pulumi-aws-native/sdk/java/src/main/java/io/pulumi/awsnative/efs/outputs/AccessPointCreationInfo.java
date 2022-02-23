@@ -95,7 +95,6 @@ public final class AccessPointCreationInfo {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public AccessPointCreationInfo build() {
             return new AccessPointCreationInfo(ownerGid, ownerUid, permissions);
         }

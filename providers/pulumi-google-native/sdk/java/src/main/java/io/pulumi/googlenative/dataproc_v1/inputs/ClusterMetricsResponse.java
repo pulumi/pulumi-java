@@ -22,7 +22,7 @@ public final class ClusterMetricsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="hdfsMetrics", required=true)
-    private final Map<String,String> hdfsMetrics;
+      private final Map<String,String> hdfsMetrics;
 
     public Map<String,String> getHdfsMetrics() {
         return this.hdfsMetrics;
@@ -33,7 +33,7 @@ public final class ClusterMetricsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="yarnMetrics", required=true)
-    private final Map<String,String> yarnMetrics;
+      private final Map<String,String> yarnMetrics;
 
     public Map<String,String> getYarnMetrics() {
         return this.yarnMetrics;
@@ -82,7 +82,6 @@ public final class ClusterMetricsResponse extends io.pulumi.resources.InvokeArgs
             this.yarnMetrics = Objects.requireNonNull(yarnMetrics);
             return this;
         }
-
         public ClusterMetricsResponse build() {
             return new ClusterMetricsResponse(hdfsMetrics, yarnMetrics);
         }

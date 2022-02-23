@@ -24,7 +24,7 @@ public final class BuildTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="builderVersion")
-    private final @Nullable Input<String> builderVersion;
+      private final @Nullable Input<String> builderVersion;
 
     public Input<String> getBuilderVersion() {
         return this.builderVersion == null ? Input.empty() : this.builderVersion;
@@ -35,7 +35,7 @@ public final class BuildTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signature")
-    private final @Nullable Input<BuildSignatureArgs> signature;
+      private final @Nullable Input<BuildSignatureArgs> signature;
 
     public Input<BuildSignatureArgs> getSignature() {
         return this.signature == null ? Input.empty() : this.signature;
@@ -94,7 +94,6 @@ public final class BuildTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.signature = Input.ofNullable(signature);
             return this;
         }
-
         public BuildTypeArgs build() {
             return new BuildTypeArgs(builderVersion, signature);
         }

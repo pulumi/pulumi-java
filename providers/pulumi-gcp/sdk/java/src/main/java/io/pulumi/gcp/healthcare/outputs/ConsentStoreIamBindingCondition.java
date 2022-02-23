@@ -73,7 +73,6 @@ public final class ConsentStoreIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ConsentStoreIamBindingCondition build() {
             return new ConsentStoreIamBindingCondition(description, expression, title);
         }

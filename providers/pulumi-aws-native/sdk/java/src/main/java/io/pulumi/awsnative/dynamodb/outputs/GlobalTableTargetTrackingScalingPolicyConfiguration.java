@@ -88,7 +88,6 @@ public final class GlobalTableTargetTrackingScalingPolicyConfiguration {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
-
         public GlobalTableTargetTrackingScalingPolicyConfiguration build() {
             return new GlobalTableTargetTrackingScalingPolicyConfiguration(disableScaleIn, scaleInCooldown, scaleOutCooldown, targetValue);
         }

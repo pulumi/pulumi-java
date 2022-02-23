@@ -99,7 +99,6 @@ public final class GraphParameterResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GraphParameterResponse build() {
             return new GraphParameterResponse(description, links, type);
         }

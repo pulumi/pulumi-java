@@ -89,7 +89,6 @@ public final class GetBasePathMappingResult {
             this.stage = stage;
             return this;
         }
-
         public GetBasePathMappingResult build() {
             return new GetBasePathMappingResult(id, restApiId, stage);
         }

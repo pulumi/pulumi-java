@@ -119,7 +119,6 @@ public final class OSPolicyResourceFileResponse {
             this.remote = Objects.requireNonNull(remote);
             return this;
         }
-
         public OSPolicyResourceFileResponse build() {
             return new OSPolicyResourceFileResponse(allowInsecure, gcs, localPath, remote);
         }

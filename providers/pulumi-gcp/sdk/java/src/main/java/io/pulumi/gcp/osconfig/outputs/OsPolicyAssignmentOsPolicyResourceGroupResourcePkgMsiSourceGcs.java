@@ -98,7 +98,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGc
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcs(bucket, generation, object);
         }

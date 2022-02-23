@@ -26,7 +26,7 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalParameters")
-    private final @Nullable Input<Map<String,Object>> globalParameters;
+        private final @Nullable Input<Map<String,Object>> globalParameters;
 
     public Input<Map<String,Object>> getGlobalParameters() {
         return this.globalParameters == null ? Input.empty() : this.globalParameters;
@@ -37,7 +37,7 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable Input<Map<String,List<List<Object>>>> inputs;
+        private final @Nullable Input<Map<String,List<List<Object>>>> inputs;
 
     public Input<Map<String,List<List<Object>>>> getInputs() {
         return this.inputs == null ? Input.empty() : this.inputs;
@@ -96,7 +96,6 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
             this.inputs = Input.ofNullable(inputs);
             return this;
         }
-
         public ExampleRequestArgs build() {
             return new ExampleRequestArgs(globalParameters, inputs);
         }

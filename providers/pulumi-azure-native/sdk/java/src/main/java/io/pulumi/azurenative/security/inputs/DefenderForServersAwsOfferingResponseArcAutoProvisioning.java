@@ -24,7 +24,7 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning exte
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -35,7 +35,7 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning exte
      * 
      */
     @InputImport(name="servicePrincipalSecretMetadata")
-    private final @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata;
+        private final @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata;
 
     public Optional<DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata> getServicePrincipalSecretMetadata() {
         return this.servicePrincipalSecretMetadata == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalSecretMetadata);
@@ -84,7 +84,6 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning exte
             this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
             return this;
         }
-
         public DefenderForServersAwsOfferingResponseArcAutoProvisioning build() {
             return new DefenderForServersAwsOfferingResponseArcAutoProvisioning(enabled, servicePrincipalSecretMetadata);
         }

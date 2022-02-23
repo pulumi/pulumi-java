@@ -117,7 +117,6 @@ public final class StandardSchedulerSettingsResponse {
             this.targetThroughputUtilization = Objects.requireNonNull(targetThroughputUtilization);
             return this;
         }
-
         public StandardSchedulerSettingsResponse build() {
             return new StandardSchedulerSettingsResponse(maxInstances, minInstances, targetCpuUtilization, targetThroughputUtilization);
         }

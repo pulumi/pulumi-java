@@ -128,7 +128,6 @@ public final class GetSubnetResult {
             this.tags = tags;
             return this;
         }
-
         public GetSubnetResult build() {
             return new GetSubnetResult(assignIpv6AddressOnCreation, ipv6CidrBlock, ipv6CidrBlocks, mapPublicIpOnLaunch, networkAclAssociationId, subnetId, tags);
         }

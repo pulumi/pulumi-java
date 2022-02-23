@@ -24,7 +24,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-    private final @Nullable Input<ExternalRefCategory> category;
+      private final @Nullable Input<ExternalRefCategory> category;
 
     public Input<ExternalRefCategory> getCategory() {
         return this.category == null ? Input.empty() : this.category;
@@ -35,7 +35,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -46,7 +46,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locator")
-    private final @Nullable Input<String> locator;
+      private final @Nullable Input<String> locator;
 
     public Input<String> getLocator() {
         return this.locator == null ? Input.empty() : this.locator;
@@ -57,7 +57,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -146,7 +146,6 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ExternalRefArgs build() {
             return new ExternalRefArgs(category, comment, locator, type);
         }

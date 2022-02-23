@@ -203,7 +203,6 @@ public final class GetPrivateConnectionResult {
             this.vpcPeeringConfig = Objects.requireNonNull(vpcPeeringConfig);
             return this;
         }
-
         public GetPrivateConnectionResult build() {
             return new GetPrivateConnectionResult(createTime, displayName, error, labels, name, state, updateTime, vpcPeeringConfig);
         }

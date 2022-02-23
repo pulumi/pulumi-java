@@ -76,7 +76,6 @@ public final class SoftwareUpdateConfigurationTasksResponse {
             this.preTask = preTask;
             return this;
         }
-
         public SoftwareUpdateConfigurationTasksResponse build() {
             return new SoftwareUpdateConfigurationTasksResponse(postTask, preTask);
         }

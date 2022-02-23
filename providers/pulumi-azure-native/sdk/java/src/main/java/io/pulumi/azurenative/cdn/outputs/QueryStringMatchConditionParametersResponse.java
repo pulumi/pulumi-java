@@ -133,7 +133,6 @@ public final class QueryStringMatchConditionParametersResponse {
             this.transforms = transforms;
             return this;
         }
-
         public QueryStringMatchConditionParametersResponse build() {
             return new QueryStringMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, transforms);
         }

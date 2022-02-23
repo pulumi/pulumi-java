@@ -17,7 +17,7 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final String tableName;
+        private final String tableName;
 
     public String getTableName() {
         return this.tableName;
@@ -39,7 +39,7 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -98,7 +98,6 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetTableArgs build() {
             return new GetTableArgs(resourceGroupName, tableName, workspaceName);
         }

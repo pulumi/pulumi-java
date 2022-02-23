@@ -76,7 +76,6 @@ public final class DatasetExcelOptions {
             this.sheetNames = sheetNames;
             return this;
         }
-
         public DatasetExcelOptions build() {
             return new DatasetExcelOptions(headerRow, sheetIndexes, sheetNames);
         }

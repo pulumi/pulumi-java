@@ -345,7 +345,6 @@ public final class GetAFDOriginResult {
             this.weight = weight;
             return this;
         }
-
         public GetAFDOriginResult build() {
             return new GetAFDOriginResult(azureOrigin, deploymentStatus, enabledState, hostName, httpPort, httpsPort, id, name, originHostHeader, priority, provisioningState, sharedPrivateLinkResource, systemData, type, weight);
         }

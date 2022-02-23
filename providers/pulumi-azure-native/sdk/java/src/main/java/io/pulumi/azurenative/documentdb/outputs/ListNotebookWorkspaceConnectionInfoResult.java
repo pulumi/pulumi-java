@@ -74,7 +74,6 @@ public final class ListNotebookWorkspaceConnectionInfoResult {
             this.notebookServerEndpoint = Objects.requireNonNull(notebookServerEndpoint);
             return this;
         }
-
         public ListNotebookWorkspaceConnectionInfoResult build() {
             return new ListNotebookWorkspaceConnectionInfoResult(authToken, notebookServerEndpoint);
         }

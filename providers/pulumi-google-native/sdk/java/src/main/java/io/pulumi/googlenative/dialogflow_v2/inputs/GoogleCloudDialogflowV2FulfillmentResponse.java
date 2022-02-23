@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
      * 
      */
     @InputImport(name="features", required=true)
-    private final List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features;
+      private final List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features;
 
     public List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> getFeatures() {
         return this.features;
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
      * 
      */
     @InputImport(name="genericWebService", required=true)
-    private final GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService;
+      private final GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService;
 
     public GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse getGenericWebService() {
         return this.genericWebService;
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -148,7 +148,6 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleCloudDialogflowV2FulfillmentResponse build() {
             return new GoogleCloudDialogflowV2FulfillmentResponse(displayName, enabled, features, genericWebService, name);
         }

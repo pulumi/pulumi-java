@@ -76,7 +76,6 @@ public final class ColumnResponse {
             this.type = type;
             return this;
         }
-
         public ColumnResponse build() {
             return new ColumnResponse(name, type);
         }

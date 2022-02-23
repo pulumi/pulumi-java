@@ -181,7 +181,6 @@ public final class LdapsSettingsResponse {
             this.publicCertificate = Objects.requireNonNull(publicCertificate);
             return this;
         }
-
         public LdapsSettingsResponse build() {
             return new LdapsSettingsResponse(certificateNotAfter, certificateThumbprint, externalAccess, ldaps, pfxCertificate, pfxCertificatePassword, publicCertificate);
         }

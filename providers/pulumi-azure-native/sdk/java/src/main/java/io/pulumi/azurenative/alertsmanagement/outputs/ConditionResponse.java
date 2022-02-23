@@ -77,7 +77,6 @@ public final class ConditionResponse {
             this.values = values;
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(operator, values);
         }

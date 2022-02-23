@@ -120,7 +120,6 @@ public final class PSCredentialExecutionParameterResponse {
             this.username = username;
             return this;
         }
-
         public PSCredentialExecutionParameterResponse build() {
             return new PSCredentialExecutionParameterResponse(name, password, type, username);
         }

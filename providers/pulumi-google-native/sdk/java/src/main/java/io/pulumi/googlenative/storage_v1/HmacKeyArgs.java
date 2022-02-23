@@ -15,21 +15,21 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
     public static final HmacKeyArgs Empty = new HmacKeyArgs();
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="serviceAccountEmail", required=true)
-    private final Input<String> serviceAccountEmail;
+      private final Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
     @InputImport(name="userProject")
-    private final @Nullable Input<String> userProject;
+      private final @Nullable Input<String> userProject;
 
     public Input<String> getUserProject() {
         return this.userProject == null ? Input.empty() : this.userProject;
@@ -103,7 +103,6 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.userProject = Input.ofNullable(userProject);
             return this;
         }
-
         public HmacKeyArgs build() {
             return new HmacKeyArgs(project, serviceAccountEmail, userProject);
         }

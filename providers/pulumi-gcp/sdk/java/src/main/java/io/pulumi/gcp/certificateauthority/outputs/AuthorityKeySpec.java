@@ -82,7 +82,6 @@ public final class AuthorityKeySpec {
             this.cloudKmsKeyVersion = cloudKmsKeyVersion;
             return this;
         }
-
         public AuthorityKeySpec build() {
             return new AuthorityKeySpec(algorithm, cloudKmsKeyVersion);
         }

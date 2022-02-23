@@ -23,7 +23,7 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxCompensation")
-    private final @Nullable Input<MoneyArgs> maxCompensation;
+      private final @Nullable Input<MoneyArgs> maxCompensation;
 
     public Input<MoneyArgs> getMaxCompensation() {
         return this.maxCompensation == null ? Input.empty() : this.maxCompensation;
@@ -34,7 +34,7 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minCompensation")
-    private final @Nullable Input<MoneyArgs> minCompensation;
+      private final @Nullable Input<MoneyArgs> minCompensation;
 
     public Input<MoneyArgs> getMinCompensation() {
         return this.minCompensation == null ? Input.empty() : this.minCompensation;
@@ -93,7 +93,6 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
             this.minCompensation = Input.ofNullable(minCompensation);
             return this;
         }
-
         public CompensationRangeArgs build() {
             return new CompensationRangeArgs(maxCompensation, minCompensation);
         }

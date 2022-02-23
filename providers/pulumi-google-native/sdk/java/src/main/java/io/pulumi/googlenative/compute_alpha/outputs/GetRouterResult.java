@@ -333,7 +333,6 @@ public final class GetRouterResult {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public GetRouterResult build() {
             return new GetRouterResult(bgp, bgpPeers, creationTimestamp, description, encryptedInterconnectRouter, interfaces, kind, md5AuthenticationKeys, name, nats, network, region, selfLink, selfLinkWithId);
         }

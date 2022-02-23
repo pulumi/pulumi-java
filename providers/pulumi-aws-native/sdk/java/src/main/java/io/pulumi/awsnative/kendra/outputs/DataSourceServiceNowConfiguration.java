@@ -116,7 +116,6 @@ public final class DataSourceServiceNowConfiguration {
             this.serviceNowBuildVersion = Objects.requireNonNull(serviceNowBuildVersion);
             return this;
         }
-
         public DataSourceServiceNowConfiguration build() {
             return new DataSourceServiceNowConfiguration(authenticationType, hostUrl, knowledgeArticleConfiguration, secretArn, serviceCatalogConfiguration, serviceNowBuildVersion);
         }

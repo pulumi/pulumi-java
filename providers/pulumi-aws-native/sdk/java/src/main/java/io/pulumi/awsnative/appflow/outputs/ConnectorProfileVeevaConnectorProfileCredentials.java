@@ -74,7 +74,6 @@ public final class ConnectorProfileVeevaConnectorProfileCredentials {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ConnectorProfileVeevaConnectorProfileCredentials build() {
             return new ConnectorProfileVeevaConnectorProfileCredentials(password, username);
         }

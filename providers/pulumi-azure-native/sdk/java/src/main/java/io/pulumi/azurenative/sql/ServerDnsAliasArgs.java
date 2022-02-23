@@ -19,7 +19,7 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsAliasName")
-    private final @Nullable Input<String> dnsAliasName;
+        private final @Nullable Input<String> dnsAliasName;
 
     public Input<String> getDnsAliasName() {
         return this.dnsAliasName == null ? Input.empty() : this.dnsAliasName;
@@ -30,7 +30,7 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -115,7 +115,6 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public ServerDnsAliasArgs build() {
             return new ServerDnsAliasArgs(dnsAliasName, resourceGroupName, serverName);
         }

@@ -18,14 +18,14 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
     public static final ResourceStatusResponse Empty = new ResourceStatusResponse();
 
     @InputImport(name="scheduling", required=true)
-    private final ResourceStatusSchedulingResponse scheduling;
+      private final ResourceStatusSchedulingResponse scheduling;
 
     public ResourceStatusSchedulingResponse getScheduling() {
         return this.scheduling;
     }
 
     @InputImport(name="upcomingMaintenance", required=true)
-    private final ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance;
+      private final ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance;
 
     public ResourceStatusUpcomingMaintenanceResponse getUpcomingMaintenance() {
         return this.upcomingMaintenance;
@@ -74,7 +74,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
             this.upcomingMaintenance = Objects.requireNonNull(upcomingMaintenance);
             return this;
         }
-
         public ResourceStatusResponse build() {
             return new ResourceStatusResponse(scheduling, upcomingMaintenance);
         }

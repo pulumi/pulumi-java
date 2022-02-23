@@ -21,7 +21,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs extends
      * 
      */
     @InputImport(name="fixedDelay")
-    private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
+        private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay;
 
     public Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs> getFixedDelay() {
         return this.fixedDelay == null ? Input.empty() : this.fixedDelay;
@@ -33,7 +33,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs extends
      * 
      */
     @InputImport(name="percentage")
-    private final @Nullable Input<Double> percentage;
+        private final @Nullable Input<Double> percentage;
 
     public Input<Double> getPercentage() {
         return this.percentage == null ? Input.empty() : this.percentage;
@@ -92,7 +92,6 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs extends
             this.percentage = Input.ofNullable(percentage);
             return this;
         }
-
         public URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs(fixedDelay, percentage);
         }

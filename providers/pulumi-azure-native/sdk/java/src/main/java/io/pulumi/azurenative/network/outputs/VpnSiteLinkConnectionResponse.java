@@ -481,7 +481,6 @@ public final class VpnSiteLinkConnectionResponse {
             this.vpnSiteLink = vpnSiteLink;
             return this;
         }
-
         public VpnSiteLinkConnectionResponse build() {
             return new VpnSiteLinkConnectionResponse(connectionBandwidth, connectionStatus, egressBytesTransferred, egressNatRules, enableBgp, enableRateLimiting, etag, id, ingressBytesTransferred, ingressNatRules, ipsecPolicies, name, provisioningState, routingWeight, sharedKey, type, useLocalAzureIpAddress, usePolicyBasedTrafficSelectors, vpnConnectionProtocolType, vpnLinkConnectionMode, vpnSiteLink);
         }

@@ -75,7 +75,6 @@ public final class GoogleCloudChannelV1PeriodResponse {
             this.periodType = Objects.requireNonNull(periodType);
             return this;
         }
-
         public GoogleCloudChannelV1PeriodResponse build() {
             return new GoogleCloudChannelV1PeriodResponse(duration, periodType);
         }

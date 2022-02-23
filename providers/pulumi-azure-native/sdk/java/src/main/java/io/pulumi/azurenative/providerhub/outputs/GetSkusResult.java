@@ -109,7 +109,6 @@ public final class GetSkusResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSkusResult build() {
             return new GetSkusResult(id, name, properties, type);
         }

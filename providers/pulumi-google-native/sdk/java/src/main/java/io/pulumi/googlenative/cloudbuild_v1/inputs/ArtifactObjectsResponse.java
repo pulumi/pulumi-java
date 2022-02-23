@@ -23,7 +23,7 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -34,7 +34,7 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="paths", required=true)
-    private final List<String> paths;
+      private final List<String> paths;
 
     public List<String> getPaths() {
         return this.paths;
@@ -45,7 +45,7 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="timing", required=true)
-    private final TimeSpanResponse timing;
+      private final TimeSpanResponse timing;
 
     public TimeSpanResponse getTiming() {
         return this.timing;
@@ -104,7 +104,6 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
             this.timing = Objects.requireNonNull(timing);
             return this;
         }
-
         public ArtifactObjectsResponse build() {
             return new ArtifactObjectsResponse(location, paths, timing);
         }

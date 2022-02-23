@@ -127,7 +127,6 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptions {
             this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesCaOptions build() {
             return new CaPoolIssuancePolicyBaselineValuesCaOptions(isCa, maxIssuerPathLength, nonCa, zeroMaxIssuerPathLength);
         }

@@ -21,7 +21,7 @@ public final class ServiceNetworkSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="networkSettings", required=true)
-    private final Input<ServiceNetworkSettingsNetworkSettingsArgs> networkSettings;
+        private final Input<ServiceNetworkSettingsNetworkSettingsArgs> networkSettings;
 
     public Input<ServiceNetworkSettingsNetworkSettingsArgs> getNetworkSettings() {
         return this.networkSettings;
@@ -33,7 +33,7 @@ public final class ServiceNetworkSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -44,7 +44,7 @@ public final class ServiceNetworkSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+        private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -118,7 +118,6 @@ public final class ServiceNetworkSettingsArgs extends io.pulumi.resources.Resour
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
-
         public ServiceNetworkSettingsArgs build() {
             return new ServiceNetworkSettingsArgs(networkSettings, project, service);
         }

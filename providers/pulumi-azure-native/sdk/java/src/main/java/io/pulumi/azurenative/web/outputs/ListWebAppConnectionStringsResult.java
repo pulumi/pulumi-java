@@ -141,7 +141,6 @@ public final class ListWebAppConnectionStringsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppConnectionStringsResult build() {
             return new ListWebAppConnectionStringsResult(id, kind, name, properties, type);
         }

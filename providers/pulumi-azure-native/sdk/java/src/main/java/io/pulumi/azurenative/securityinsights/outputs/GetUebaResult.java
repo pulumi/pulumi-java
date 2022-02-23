@@ -185,7 +185,6 @@ public final class GetUebaResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetUebaResult build() {
             return new GetUebaResult(dataSources, etag, id, kind, name, systemData, type);
         }

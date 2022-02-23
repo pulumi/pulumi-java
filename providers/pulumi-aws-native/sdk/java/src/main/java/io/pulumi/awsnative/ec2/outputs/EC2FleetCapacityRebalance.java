@@ -61,7 +61,6 @@ public final class EC2FleetCapacityRebalance {
             this.terminationDelay = terminationDelay;
             return this;
         }
-
         public EC2FleetCapacityRebalance build() {
             return new EC2FleetCapacityRebalance(replacementStrategy, terminationDelay);
         }

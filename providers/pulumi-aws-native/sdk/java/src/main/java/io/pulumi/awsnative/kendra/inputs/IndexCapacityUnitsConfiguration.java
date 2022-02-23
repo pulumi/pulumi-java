@@ -13,14 +13,14 @@ public final class IndexCapacityUnitsConfiguration extends io.pulumi.resources.I
     public static final IndexCapacityUnitsConfiguration Empty = new IndexCapacityUnitsConfiguration();
 
     @InputImport(name="queryCapacityUnits", required=true)
-    private final Integer queryCapacityUnits;
+        private final Integer queryCapacityUnits;
 
     public Integer getQueryCapacityUnits() {
         return this.queryCapacityUnits;
     }
 
     @InputImport(name="storageCapacityUnits", required=true)
-    private final Integer storageCapacityUnits;
+        private final Integer storageCapacityUnits;
 
     public Integer getStorageCapacityUnits() {
         return this.storageCapacityUnits;
@@ -69,7 +69,6 @@ public final class IndexCapacityUnitsConfiguration extends io.pulumi.resources.I
             this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits);
             return this;
         }
-
         public IndexCapacityUnitsConfiguration build() {
             return new IndexCapacityUnitsConfiguration(queryCapacityUnits, storageCapacityUnits);
         }

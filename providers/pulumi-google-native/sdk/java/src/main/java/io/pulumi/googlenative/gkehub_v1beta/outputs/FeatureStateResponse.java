@@ -95,7 +95,6 @@ public final class FeatureStateResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public FeatureStateResponse build() {
             return new FeatureStateResponse(code, description, updateTime);
         }

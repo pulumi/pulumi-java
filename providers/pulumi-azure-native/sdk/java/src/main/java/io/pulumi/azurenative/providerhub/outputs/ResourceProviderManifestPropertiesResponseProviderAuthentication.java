@@ -45,7 +45,6 @@ public final class ResourceProviderManifestPropertiesResponseProviderAuthenticat
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }
-
         public ResourceProviderManifestPropertiesResponseProviderAuthentication build() {
             return new ResourceProviderManifestPropertiesResponseProviderAuthentication(allowedAudiences);
         }

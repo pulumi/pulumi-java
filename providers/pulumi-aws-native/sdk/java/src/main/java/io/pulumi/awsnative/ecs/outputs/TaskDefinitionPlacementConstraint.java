@@ -60,7 +60,6 @@ public final class TaskDefinitionPlacementConstraint {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TaskDefinitionPlacementConstraint build() {
             return new TaskDefinitionPlacementConstraint(expression, type);
         }

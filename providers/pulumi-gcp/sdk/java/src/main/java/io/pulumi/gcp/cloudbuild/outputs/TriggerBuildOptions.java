@@ -340,7 +340,6 @@ public final class TriggerBuildOptions {
             this.workerPool = workerPool;
             return this;
         }
-
         public TriggerBuildOptions build() {
             return new TriggerBuildOptions(diskSizeGb, dynamicSubstitutions, envs, logStreamingOption, logging, machineType, requestedVerifyOption, secretEnvs, sourceProvenanceHashes, substitutionOption, volumes, workerPool);
         }

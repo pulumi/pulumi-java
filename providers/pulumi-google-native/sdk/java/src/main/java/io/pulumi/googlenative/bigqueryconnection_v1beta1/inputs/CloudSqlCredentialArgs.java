@@ -23,7 +23,7 @@ public final class CloudSqlCredentialArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -34,7 +34,7 @@ public final class CloudSqlCredentialArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -93,7 +93,6 @@ public final class CloudSqlCredentialArgs extends io.pulumi.resources.ResourceAr
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public CloudSqlCredentialArgs build() {
             return new CloudSqlCredentialArgs(password, username);
         }

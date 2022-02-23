@@ -74,7 +74,6 @@ public final class GetCertificateResult {
             this.status = status;
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(arn, id, status);
         }

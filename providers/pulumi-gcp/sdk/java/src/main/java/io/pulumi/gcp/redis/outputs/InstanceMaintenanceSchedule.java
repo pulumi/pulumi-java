@@ -117,7 +117,6 @@ public final class InstanceMaintenanceSchedule {
             this.startTime = startTime;
             return this;
         }
-
         public InstanceMaintenanceSchedule build() {
             return new InstanceMaintenanceSchedule(endTime, scheduleDeadlineTime, startTime);
         }

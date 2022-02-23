@@ -221,7 +221,6 @@ public final class GetHmacKeyResult {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public GetHmacKeyResult build() {
             return new GetHmacKeyResult(accessId, etag, kind, project, selfLink, serviceAccountEmail, state, timeCreated, updated);
         }

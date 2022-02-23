@@ -21,7 +21,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckConfig", required=true)
-    private final Input<HealthCheckConfigPropertiesArgs> healthCheckConfig;
+        private final Input<HealthCheckConfigPropertiesArgs> healthCheckConfig;
 
     public Input<HealthCheckConfigPropertiesArgs> getHealthCheckConfig() {
         return this.healthCheckConfig;
@@ -32,7 +32,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckTags")
-    private final @Nullable Input<List<HealthCheckTagArgs>> healthCheckTags;
+        private final @Nullable Input<List<HealthCheckTagArgs>> healthCheckTags;
 
     public Input<List<HealthCheckTagArgs>> getHealthCheckTags() {
         return this.healthCheckTags == null ? Input.empty() : this.healthCheckTags;
@@ -91,7 +91,6 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.healthCheckTags = Input.ofNullable(healthCheckTags);
             return this;
         }
-
         public HealthCheckArgs build() {
             return new HealthCheckArgs(healthCheckConfig, healthCheckTags);
         }

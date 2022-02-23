@@ -19,7 +19,7 @@ public final class ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs exten
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -62,7 +62,6 @@ public final class ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs exten
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs build() {
             return new ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs(enabled);
         }

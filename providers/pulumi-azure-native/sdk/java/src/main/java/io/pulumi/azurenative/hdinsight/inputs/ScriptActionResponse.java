@@ -21,7 +21,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final String parameters;
+        private final String parameters;
 
     public String getParameters() {
         return this.parameters;
@@ -43,7 +43,7 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+        private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -102,7 +102,6 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ScriptActionResponse build() {
             return new ScriptActionResponse(name, parameters, uri);
         }

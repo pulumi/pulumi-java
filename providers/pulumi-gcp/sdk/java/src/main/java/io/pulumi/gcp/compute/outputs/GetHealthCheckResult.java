@@ -285,7 +285,6 @@ public final class GetHealthCheckResult {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
-
         public GetHealthCheckResult build() {
             return new GetHealthCheckResult(checkIntervalSec, creationTimestamp, description, grpcHealthChecks, healthyThreshold, http2HealthChecks, httpHealthChecks, httpsHealthChecks, id, logConfigs, name, project, selfLink, sslHealthChecks, tcpHealthChecks, timeoutSec, type, unhealthyThreshold);
         }

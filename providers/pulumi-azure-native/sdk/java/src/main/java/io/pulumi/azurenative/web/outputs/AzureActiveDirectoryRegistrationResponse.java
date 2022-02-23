@@ -178,7 +178,6 @@ public final class AzureActiveDirectoryRegistrationResponse {
             this.openIdIssuer = openIdIssuer;
             return this;
         }
-
         public AzureActiveDirectoryRegistrationResponse build() {
             return new AzureActiveDirectoryRegistrationResponse(clientId, clientSecretCertificateIssuer, clientSecretCertificateSubjectAlternativeName, clientSecretCertificateThumbprint, clientSecretSettingName, openIdIssuer);
         }

@@ -24,7 +24,7 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="allowInsecure", required=true)
-    private final Boolean allowInsecure;
+      private final Boolean allowInsecure;
 
     public Boolean getAllowInsecure() {
         return this.allowInsecure;
@@ -35,7 +35,7 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="gcs", required=true)
-    private final OSPolicyResourceFileGcsResponse gcs;
+      private final OSPolicyResourceFileGcsResponse gcs;
 
     public OSPolicyResourceFileGcsResponse getGcs() {
         return this.gcs;
@@ -46,7 +46,7 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="localPath", required=true)
-    private final String localPath;
+      private final String localPath;
 
     public String getLocalPath() {
         return this.localPath;
@@ -57,7 +57,7 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="remote", required=true)
-    private final OSPolicyResourceFileRemoteResponse remote;
+      private final OSPolicyResourceFileRemoteResponse remote;
 
     public OSPolicyResourceFileRemoteResponse getRemote() {
         return this.remote;
@@ -126,7 +126,6 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
             this.remote = Objects.requireNonNull(remote);
             return this;
         }
-
         public OSPolicyResourceFileResponse build() {
             return new OSPolicyResourceFileResponse(allowInsecure, gcs, localPath, remote);
         }

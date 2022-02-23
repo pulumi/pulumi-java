@@ -96,7 +96,6 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1EntityMentionDataResponse(entityUniqueId, sentiment, type);
         }

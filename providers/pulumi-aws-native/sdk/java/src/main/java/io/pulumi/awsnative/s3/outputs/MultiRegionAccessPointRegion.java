@@ -44,7 +44,6 @@ public final class MultiRegionAccessPointRegion {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public MultiRegionAccessPointRegion build() {
             return new MultiRegionAccessPointRegion(bucket);
         }

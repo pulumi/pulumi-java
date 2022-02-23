@@ -97,7 +97,6 @@ public final class BotS3Location {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-
         public BotS3Location build() {
             return new BotS3Location(s3Bucket, s3ObjectKey, s3ObjectVersion);
         }

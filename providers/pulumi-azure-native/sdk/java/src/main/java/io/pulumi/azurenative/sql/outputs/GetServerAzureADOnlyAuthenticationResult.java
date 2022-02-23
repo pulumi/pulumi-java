@@ -117,7 +117,6 @@ public final class GetServerAzureADOnlyAuthenticationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerAzureADOnlyAuthenticationResult build() {
             return new GetServerAzureADOnlyAuthenticationResult(azureADOnlyAuthentication, id, name, type);
         }

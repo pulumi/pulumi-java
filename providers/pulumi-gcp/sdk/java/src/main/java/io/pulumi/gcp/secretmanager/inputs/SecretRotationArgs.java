@@ -20,7 +20,7 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextRotationTime")
-    private final @Nullable Input<String> nextRotationTime;
+        private final @Nullable Input<String> nextRotationTime;
 
     public Input<String> getNextRotationTime() {
         return this.nextRotationTime == null ? Input.empty() : this.nextRotationTime;
@@ -32,7 +32,7 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotationPeriod")
-    private final @Nullable Input<String> rotationPeriod;
+        private final @Nullable Input<String> rotationPeriod;
 
     public Input<String> getRotationPeriod() {
         return this.rotationPeriod == null ? Input.empty() : this.rotationPeriod;
@@ -91,7 +91,6 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
             this.rotationPeriod = Input.ofNullable(rotationPeriod);
             return this;
         }
-
         public SecretRotationArgs build() {
             return new SecretRotationArgs(nextRotationTime, rotationPeriod);
         }

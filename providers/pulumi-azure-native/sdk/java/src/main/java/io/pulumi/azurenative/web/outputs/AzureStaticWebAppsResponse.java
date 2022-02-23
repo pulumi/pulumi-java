@@ -77,7 +77,6 @@ public final class AzureStaticWebAppsResponse {
             this.registration = registration;
             return this;
         }
-
         public AzureStaticWebAppsResponse build() {
             return new AzureStaticWebAppsResponse(enabled, registration);
         }

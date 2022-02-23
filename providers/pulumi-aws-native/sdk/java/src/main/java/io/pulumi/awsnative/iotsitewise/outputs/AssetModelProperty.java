@@ -163,7 +163,6 @@ public final class AssetModelProperty {
             this.unit = unit;
             return this;
         }
-
         public AssetModelProperty build() {
             return new AssetModelProperty(dataType, dataTypeSpec, logicalId, name, type, unit);
         }

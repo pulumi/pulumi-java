@@ -27,7 +27,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capabilities")
-    private final @Nullable Input<List<CapabilityArgs>> capabilities;
+        private final @Nullable Input<List<CapabilityArgs>> capabilities;
 
     public Input<List<CapabilityArgs>> getCapabilities() {
         return this.capabilities == null ? Input.empty() : this.capabilities;
@@ -38,7 +38,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Integer> capacity;
+        private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -49,7 +49,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family")
-    private final @Nullable Input<String> family;
+        private final @Nullable Input<String> family;
 
     public Input<String> getFamily() {
         return this.family == null ? Input.empty() : this.family;
@@ -60,7 +60,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable Input<List<String>> locations;
+        private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -71,7 +71,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -82,7 +82,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<String> size;
+        private final @Nullable Input<String> size;
 
     public Input<String> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -93,7 +93,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skuCapacity")
-    private final @Nullable Input<SkuCapacityArgs> skuCapacity;
+        private final @Nullable Input<SkuCapacityArgs> skuCapacity;
 
     public Input<SkuCapacityArgs> getSkuCapacity() {
         return this.skuCapacity == null ? Input.empty() : this.skuCapacity;
@@ -104,7 +104,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<String> tier;
+        private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -253,7 +253,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public SkuDescriptionArgs build() {
             return new SkuDescriptionArgs(capabilities, capacity, family, locations, name, size, skuCapacity, tier);
         }

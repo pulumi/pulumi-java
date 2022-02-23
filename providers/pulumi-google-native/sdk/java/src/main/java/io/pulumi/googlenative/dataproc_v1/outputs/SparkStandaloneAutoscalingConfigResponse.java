@@ -138,7 +138,6 @@ public final class SparkStandaloneAutoscalingConfigResponse {
             this.scaleUpMinWorkerFraction = Objects.requireNonNull(scaleUpMinWorkerFraction);
             return this;
         }
-
         public SparkStandaloneAutoscalingConfigResponse build() {
             return new SparkStandaloneAutoscalingConfigResponse(gracefulDecommissionTimeout, scaleDownFactor, scaleDownMinWorkerFraction, scaleUpFactor, scaleUpMinWorkerFraction);
         }

@@ -106,7 +106,6 @@ public final class GetAppMonitorResult {
             this.tags = tags;
             return this;
         }
-
         public GetAppMonitorResult build() {
             return new GetAppMonitorResult(appMonitorConfiguration, cwLogEnabled, domain, tags);
         }

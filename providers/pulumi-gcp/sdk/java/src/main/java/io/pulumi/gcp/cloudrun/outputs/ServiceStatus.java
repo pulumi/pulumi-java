@@ -102,7 +102,6 @@ public final class ServiceStatus {
             this.url = url;
             return this;
         }
-
         public ServiceStatus build() {
             return new ServiceStatus(conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, url);
         }

@@ -17,7 +17,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final String headerName;
+      private final String headerName;
 
     public String getHeaderName() {
         return this.headerName;
@@ -28,7 +28,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
      * 
      */
     @InputImport(name="headerValue", required=true)
-    private final String headerValue;
+      private final String headerValue;
 
     public String getHeaderValue() {
         return this.headerValue;
@@ -77,7 +77,6 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
-
         public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse build() {
             return new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse(headerName, headerValue);
         }

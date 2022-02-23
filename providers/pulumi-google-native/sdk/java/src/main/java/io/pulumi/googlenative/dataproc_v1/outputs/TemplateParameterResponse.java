@@ -118,7 +118,6 @@ public final class TemplateParameterResponse {
             this.validation = Objects.requireNonNull(validation);
             return this;
         }
-
         public TemplateParameterResponse build() {
             return new TemplateParameterResponse(description, fields, name, validation);
         }

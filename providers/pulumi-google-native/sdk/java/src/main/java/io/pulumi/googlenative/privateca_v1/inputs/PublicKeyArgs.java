@@ -23,7 +23,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format", required=true)
-    private final Input<PublicKeyFormat> format;
+      private final Input<PublicKeyFormat> format;
 
     public Input<PublicKeyFormat> getFormat() {
         return this.format;
@@ -34,7 +34,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -93,7 +93,6 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
-
         public PublicKeyArgs build() {
             return new PublicKeyArgs(format, key);
         }

@@ -61,7 +61,6 @@ public final class DeliveryStreamDynamicPartitioningConfiguration {
             this.retryOptions = retryOptions;
             return this;
         }
-
         public DeliveryStreamDynamicPartitioningConfiguration build() {
             return new DeliveryStreamDynamicPartitioningConfiguration(enabled, retryOptions);
         }

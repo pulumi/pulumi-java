@@ -115,7 +115,6 @@ public final class PolicyDefaultAdmissionRule {
             this.requireAttestationsBies = requireAttestationsBies;
             return this;
         }
-
         public PolicyDefaultAdmissionRule build() {
             return new PolicyDefaultAdmissionRule(enforcementMode, evaluationMode, requireAttestationsBies);
         }

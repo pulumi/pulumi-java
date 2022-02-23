@@ -40,7 +40,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activationPolicy")
-    private final @Nullable Input<SettingsActivationPolicy> activationPolicy;
+      private final @Nullable Input<SettingsActivationPolicy> activationPolicy;
 
     public Input<SettingsActivationPolicy> getActivationPolicy() {
         return this.activationPolicy == null ? Input.empty() : this.activationPolicy;
@@ -51,7 +51,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activeDirectoryConfig")
-    private final @Nullable Input<SqlActiveDirectoryConfigArgs> activeDirectoryConfig;
+      private final @Nullable Input<SqlActiveDirectoryConfigArgs> activeDirectoryConfig;
 
     public Input<SqlActiveDirectoryConfigArgs> getActiveDirectoryConfig() {
         return this.activeDirectoryConfig == null ? Input.empty() : this.activeDirectoryConfig;
@@ -62,7 +62,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityType")
-    private final @Nullable Input<SettingsAvailabilityType> availabilityType;
+      private final @Nullable Input<SettingsAvailabilityType> availabilityType;
 
     public Input<SettingsAvailabilityType> getAvailabilityType() {
         return this.availabilityType == null ? Input.empty() : this.availabilityType;
@@ -73,7 +73,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupConfiguration")
-    private final @Nullable Input<BackupConfigurationArgs> backupConfiguration;
+      private final @Nullable Input<BackupConfigurationArgs> backupConfiguration;
 
     public Input<BackupConfigurationArgs> getBackupConfiguration() {
         return this.backupConfiguration == null ? Input.empty() : this.backupConfiguration;
@@ -84,7 +84,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collation")
-    private final @Nullable Input<String> collation;
+      private final @Nullable Input<String> collation;
 
     public Input<String> getCollation() {
         return this.collation == null ? Input.empty() : this.collation;
@@ -95,7 +95,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crashSafeReplicationEnabled")
-    private final @Nullable Input<Boolean> crashSafeReplicationEnabled;
+      private final @Nullable Input<Boolean> crashSafeReplicationEnabled;
 
     public Input<Boolean> getCrashSafeReplicationEnabled() {
         return this.crashSafeReplicationEnabled == null ? Input.empty() : this.crashSafeReplicationEnabled;
@@ -106,7 +106,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDiskSizeGb")
-    private final @Nullable Input<String> dataDiskSizeGb;
+      private final @Nullable Input<String> dataDiskSizeGb;
 
     public Input<String> getDataDiskSizeGb() {
         return this.dataDiskSizeGb == null ? Input.empty() : this.dataDiskSizeGb;
@@ -117,7 +117,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDiskType")
-    private final @Nullable Input<SettingsDataDiskType> dataDiskType;
+      private final @Nullable Input<SettingsDataDiskType> dataDiskType;
 
     public Input<SettingsDataDiskType> getDataDiskType() {
         return this.dataDiskType == null ? Input.empty() : this.dataDiskType;
@@ -128,7 +128,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseFlags")
-    private final @Nullable Input<List<DatabaseFlagsArgs>> databaseFlags;
+      private final @Nullable Input<List<DatabaseFlagsArgs>> databaseFlags;
 
     public Input<List<DatabaseFlagsArgs>> getDatabaseFlags() {
         return this.databaseFlags == null ? Input.empty() : this.databaseFlags;
@@ -139,7 +139,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseReplicationEnabled")
-    private final @Nullable Input<Boolean> databaseReplicationEnabled;
+      private final @Nullable Input<Boolean> databaseReplicationEnabled;
 
     public Input<Boolean> getDatabaseReplicationEnabled() {
         return this.databaseReplicationEnabled == null ? Input.empty() : this.databaseReplicationEnabled;
@@ -150,7 +150,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="denyMaintenancePeriods")
-    private final @Nullable Input<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods;
+      private final @Nullable Input<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods;
 
     public Input<List<DenyMaintenancePeriodArgs>> getDenyMaintenancePeriods() {
         return this.denyMaintenancePeriods == null ? Input.empty() : this.denyMaintenancePeriods;
@@ -161,7 +161,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insightsConfig")
-    private final @Nullable Input<InsightsConfigArgs> insightsConfig;
+      private final @Nullable Input<InsightsConfigArgs> insightsConfig;
 
     public Input<InsightsConfigArgs> getInsightsConfig() {
         return this.insightsConfig == null ? Input.empty() : this.insightsConfig;
@@ -172,7 +172,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipConfiguration")
-    private final @Nullable Input<IpConfigurationArgs> ipConfiguration;
+      private final @Nullable Input<IpConfigurationArgs> ipConfiguration;
 
     public Input<IpConfigurationArgs> getIpConfiguration() {
         return this.ipConfiguration == null ? Input.empty() : this.ipConfiguration;
@@ -183,7 +183,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -194,7 +194,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationPreference")
-    private final @Nullable Input<LocationPreferenceArgs> locationPreference;
+      private final @Nullable Input<LocationPreferenceArgs> locationPreference;
 
     public Input<LocationPreferenceArgs> getLocationPreference() {
         return this.locationPreference == null ? Input.empty() : this.locationPreference;
@@ -205,7 +205,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-    private final @Nullable Input<MaintenanceWindowArgs> maintenanceWindow;
+      private final @Nullable Input<MaintenanceWindowArgs> maintenanceWindow;
 
     public Input<MaintenanceWindowArgs> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -216,7 +216,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passwordValidationPolicy")
-    private final @Nullable Input<PasswordValidationPolicyArgs> passwordValidationPolicy;
+      private final @Nullable Input<PasswordValidationPolicyArgs> passwordValidationPolicy;
 
     public Input<PasswordValidationPolicyArgs> getPasswordValidationPolicy() {
         return this.passwordValidationPolicy == null ? Input.empty() : this.passwordValidationPolicy;
@@ -227,7 +227,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pricingPlan")
-    private final @Nullable Input<SettingsPricingPlan> pricingPlan;
+      private final @Nullable Input<SettingsPricingPlan> pricingPlan;
 
     public Input<SettingsPricingPlan> getPricingPlan() {
         return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
@@ -238,7 +238,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settingsVersion")
-    private final @Nullable Input<String> settingsVersion;
+      private final @Nullable Input<String> settingsVersion;
 
     public Input<String> getSettingsVersion() {
         return this.settingsVersion == null ? Input.empty() : this.settingsVersion;
@@ -249,7 +249,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlServerAuditConfig")
-    private final @Nullable Input<SqlServerAuditConfigArgs> sqlServerAuditConfig;
+      private final @Nullable Input<SqlServerAuditConfigArgs> sqlServerAuditConfig;
 
     public Input<SqlServerAuditConfigArgs> getSqlServerAuditConfig() {
         return this.sqlServerAuditConfig == null ? Input.empty() : this.sqlServerAuditConfig;
@@ -260,7 +260,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAutoResize")
-    private final @Nullable Input<Boolean> storageAutoResize;
+      private final @Nullable Input<Boolean> storageAutoResize;
 
     public Input<Boolean> getStorageAutoResize() {
         return this.storageAutoResize == null ? Input.empty() : this.storageAutoResize;
@@ -271,7 +271,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAutoResizeLimit")
-    private final @Nullable Input<String> storageAutoResizeLimit;
+      private final @Nullable Input<String> storageAutoResizeLimit;
 
     public Input<String> getStorageAutoResizeLimit() {
         return this.storageAutoResizeLimit == null ? Input.empty() : this.storageAutoResizeLimit;
@@ -282,7 +282,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<String> tier;
+      private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -293,7 +293,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userLabels")
-    private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Input<Map<String,String>> userLabels;
 
     public Input<Map<String,String>> getUserLabels() {
         return this.userLabels == null ? Input.empty() : this.userLabels;
@@ -682,7 +682,6 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.userLabels = Input.ofNullable(userLabels);
             return this;
         }
-
         public SettingsArgs build() {
             return new SettingsArgs(activationPolicy, activeDirectoryConfig, availabilityType, backupConfiguration, collation, crashSafeReplicationEnabled, dataDiskSizeGb, dataDiskType, databaseFlags, databaseReplicationEnabled, denyMaintenancePeriods, insightsConfig, ipConfiguration, kind, locationPreference, maintenanceWindow, passwordValidationPolicy, pricingPlan, settingsVersion, sqlServerAuditConfig, storageAutoResize, storageAutoResizeLimit, tier, userLabels);
         }

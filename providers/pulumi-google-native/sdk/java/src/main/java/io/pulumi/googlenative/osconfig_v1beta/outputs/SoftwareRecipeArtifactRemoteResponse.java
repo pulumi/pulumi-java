@@ -74,7 +74,6 @@ public final class SoftwareRecipeArtifactRemoteResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public SoftwareRecipeArtifactRemoteResponse build() {
             return new SoftwareRecipeArtifactRemoteResponse(checksum, uri);
         }

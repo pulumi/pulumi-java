@@ -24,7 +24,7 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable CMKIdentityDefinitionResponse identity;
+        private final @Nullable CMKIdentityDefinitionResponse identity;
 
     public Optional<CMKIdentityDefinitionResponse> getIdentity() {
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
@@ -35,7 +35,7 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="keyName", required=true)
-    private final String keyName;
+        private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
@@ -46,7 +46,7 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="keyVersion")
-    private final @Nullable String keyVersion;
+        private final @Nullable String keyVersion;
 
     public Optional<String> getKeyVersion() {
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
@@ -57,7 +57,7 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="vaultBaseUrl", required=true)
-    private final String vaultBaseUrl;
+        private final String vaultBaseUrl;
 
     public String getVaultBaseUrl() {
         return this.vaultBaseUrl;
@@ -126,7 +126,6 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }
-
         public EncryptionConfigurationResponse build() {
             return new EncryptionConfigurationResponse(identity, keyName, keyVersion, vaultBaseUrl);
         }

@@ -15,28 +15,28 @@ public final class GetAnnotationStoreArgs extends io.pulumi.resources.InvokeArgs
     public static final GetAnnotationStoreArgs Empty = new GetAnnotationStoreArgs();
 
     @InputImport(name="annotationStoreId", required=true)
-    private final String annotationStoreId;
+      private final String annotationStoreId;
 
     public String getAnnotationStoreId() {
         return this.annotationStoreId;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetAnnotationStoreArgs extends io.pulumi.resources.InvokeArgs
             this.project = project;
             return this;
         }
-
         public GetAnnotationStoreArgs build() {
             return new GetAnnotationStoreArgs(annotationStoreId, datasetId, location, project);
         }

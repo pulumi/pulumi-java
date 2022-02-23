@@ -97,7 +97,6 @@ public final class JobStatusResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(errorResult, errors, state);
         }

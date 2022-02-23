@@ -30,7 +30,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(ProviderArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ProviderArgs build() {
             return new ProviderArgs();
         }

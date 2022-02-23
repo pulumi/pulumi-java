@@ -116,7 +116,6 @@ public final class ClusterIstioResponse {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
-
         public ClusterIstioResponse build() {
             return new ClusterIstioResponse(clusterName, location, serviceName, serviceNamespace);
         }

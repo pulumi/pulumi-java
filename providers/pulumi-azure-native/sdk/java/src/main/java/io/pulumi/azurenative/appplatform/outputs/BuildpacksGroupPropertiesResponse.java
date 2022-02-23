@@ -78,7 +78,6 @@ public final class BuildpacksGroupPropertiesResponse {
             this.name = name;
             return this;
         }
-
         public BuildpacksGroupPropertiesResponse build() {
             return new BuildpacksGroupPropertiesResponse(buildpacks, name);
         }

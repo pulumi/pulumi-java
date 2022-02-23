@@ -58,7 +58,6 @@ public final class CertificateAuthorityEdiPartyName {
             this.partyName = Objects.requireNonNull(partyName);
             return this;
         }
-
         public CertificateAuthorityEdiPartyName build() {
             return new CertificateAuthorityEdiPartyName(nameAssigner, partyName);
         }

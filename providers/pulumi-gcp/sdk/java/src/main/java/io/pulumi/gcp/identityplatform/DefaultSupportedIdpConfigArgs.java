@@ -20,7 +20,7 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final Input<String> clientId;
+        private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -31,7 +31,7 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clientSecret", required=true)
-    private final Input<String> clientSecret;
+        private final Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret;
@@ -42,7 +42,7 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -63,7 +63,7 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="idpId", required=true)
-    private final Input<String> idpId;
+        private final Input<String> idpId;
 
     public Input<String> getIdpId() {
         return this.idpId;
@@ -75,7 +75,7 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -179,7 +179,6 @@ public final class DefaultSupportedIdpConfigArgs extends io.pulumi.resources.Res
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public DefaultSupportedIdpConfigArgs build() {
             return new DefaultSupportedIdpConfigArgs(clientId, clientSecret, enabled, idpId, project);
         }

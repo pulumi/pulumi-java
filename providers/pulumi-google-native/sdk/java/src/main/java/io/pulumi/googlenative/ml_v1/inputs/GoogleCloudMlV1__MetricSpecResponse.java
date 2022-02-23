@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__MetricSpecResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1__MetricSpecResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="target", required=true)
-    private final Integer target;
+      private final Integer target;
 
     public Integer getTarget() {
         return this.target;
@@ -82,7 +82,6 @@ public final class GoogleCloudMlV1__MetricSpecResponse extends io.pulumi.resourc
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public GoogleCloudMlV1__MetricSpecResponse build() {
             return new GoogleCloudMlV1__MetricSpecResponse(name, target);
         }

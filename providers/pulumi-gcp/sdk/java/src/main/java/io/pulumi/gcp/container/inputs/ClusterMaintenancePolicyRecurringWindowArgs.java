@@ -14,21 +14,21 @@ public final class ClusterMaintenancePolicyRecurringWindowArgs extends io.pulumi
     public static final ClusterMaintenancePolicyRecurringWindowArgs Empty = new ClusterMaintenancePolicyRecurringWindowArgs();
 
     @InputImport(name="endTime", required=true)
-    private final Input<String> endTime;
+        private final Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime;
     }
 
     @InputImport(name="recurrence", required=true)
-    private final Input<String> recurrence;
+        private final Input<String> recurrence;
 
     public Input<String> getRecurrence() {
         return this.recurrence;
     }
 
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+        private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -102,7 +102,6 @@ public final class ClusterMaintenancePolicyRecurringWindowArgs extends io.pulumi
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public ClusterMaintenancePolicyRecurringWindowArgs build() {
             return new ClusterMaintenancePolicyRecurringWindowArgs(endTime, recurrence, startTime);
         }

@@ -76,7 +76,6 @@ public final class TaskDefinitionLogConfiguration {
             this.secretOptions = secretOptions;
             return this;
         }
-
         public TaskDefinitionLogConfiguration build() {
             return new TaskDefinitionLogConfiguration(logDriver, options, secretOptions);
         }

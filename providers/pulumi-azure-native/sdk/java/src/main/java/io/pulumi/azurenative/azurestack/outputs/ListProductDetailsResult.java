@@ -267,7 +267,6 @@ public final class ListProductDetailsResult {
             this.vmScaleSetEnabled = Objects.requireNonNull(vmScaleSetEnabled);
             return this;
         }
-
         public ListProductDetailsResult build() {
             return new ListProductDetailsResult(computeRole, dataDiskImages, galleryPackageBlobSasUri, isSystemExtension, osDiskImage, productKind, supportMultipleExtensions, uri, version, vmOsType, vmScaleSetEnabled);
         }

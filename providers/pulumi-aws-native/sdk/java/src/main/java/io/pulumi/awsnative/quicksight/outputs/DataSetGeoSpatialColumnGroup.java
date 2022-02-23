@@ -91,7 +91,6 @@ public final class DataSetGeoSpatialColumnGroup {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DataSetGeoSpatialColumnGroup build() {
             return new DataSetGeoSpatialColumnGroup(columns, countryCode, name);
         }

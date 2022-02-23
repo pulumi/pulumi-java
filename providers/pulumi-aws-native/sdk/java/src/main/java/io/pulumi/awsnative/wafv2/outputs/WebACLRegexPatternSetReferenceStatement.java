@@ -74,7 +74,6 @@ public final class WebACLRegexPatternSetReferenceStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public WebACLRegexPatternSetReferenceStatement build() {
             return new WebACLRegexPatternSetReferenceStatement(arn, fieldToMatch, textTransformations);
         }

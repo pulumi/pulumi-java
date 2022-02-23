@@ -37,7 +37,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
      * 
      */
     @InputImport(name="aggregations")
-    private final @Nullable Input<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations;
+        private final @Nullable Input<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations;
 
     public Input<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> getAggregations() {
         return this.aggregations == null ? Input.empty() : this.aggregations;
@@ -56,7 +56,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
      * 
      */
     @InputImport(name="comparison", required=true)
-    private final Input<String> comparison;
+        private final Input<String> comparison;
 
     public Input<String> getComparison() {
         return this.comparison;
@@ -83,7 +83,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
      * 
      */
     @InputImport(name="denominatorAggregations")
-    private final @Nullable Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations;
+        private final @Nullable Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations;
 
     public Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> getDenominatorAggregations() {
         return this.denominatorAggregations == null ? Input.empty() : this.denominatorAggregations;
@@ -108,7 +108,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
      * 
      */
     @InputImport(name="denominatorFilter")
-    private final @Nullable Input<String> denominatorFilter;
+        private final @Nullable Input<String> denominatorFilter;
 
     public Input<String> getDenominatorFilter() {
         return this.denominatorFilter == null ? Input.empty() : this.denominatorFilter;
@@ -133,7 +133,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
      * 
      */
     @InputImport(name="duration", required=true)
-    private final Input<String> duration;
+        private final Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration;
@@ -144,7 +144,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+        private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -156,7 +156,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
      * 
      */
     @InputImport(name="thresholdValue")
-    private final @Nullable Input<Double> thresholdValue;
+        private final @Nullable Input<Double> thresholdValue;
 
     public Input<Double> getThresholdValue() {
         return this.thresholdValue == null ? Input.empty() : this.thresholdValue;
@@ -175,7 +175,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
      * 
      */
     @InputImport(name="trigger")
-    private final @Nullable Input<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger;
+        private final @Nullable Input<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger;
 
     public Input<AlertPolicyConditionConditionThresholdTriggerGetArgs> getTrigger() {
         return this.trigger == null ? Input.empty() : this.trigger;
@@ -324,7 +324,6 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
             this.trigger = Input.ofNullable(trigger);
             return this;
         }
-
         public AlertPolicyConditionConditionThresholdGetArgs build() {
             return new AlertPolicyConditionConditionThresholdGetArgs(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
         }

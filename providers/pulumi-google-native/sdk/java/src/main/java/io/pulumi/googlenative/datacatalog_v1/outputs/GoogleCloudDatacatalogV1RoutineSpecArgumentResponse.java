@@ -95,7 +95,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDatacatalogV1RoutineSpecArgumentResponse build() {
             return new GoogleCloudDatacatalogV1RoutineSpecArgumentResponse(mode, name, type);
         }

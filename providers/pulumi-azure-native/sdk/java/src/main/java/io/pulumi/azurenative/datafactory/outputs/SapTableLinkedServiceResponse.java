@@ -485,7 +485,6 @@ public final class SapTableLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public SapTableLinkedServiceResponse build() {
             return new SapTableLinkedServiceResponse(annotations, clientId, connectVia, description, encryptedCredential, language, logonGroup, messageServer, messageServerService, parameters, password, server, sncLibraryPath, sncMode, sncMyName, sncPartnerName, sncQop, systemId, systemNumber, type, userName);
         }

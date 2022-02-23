@@ -210,7 +210,6 @@ public final class ListConfigurationStoreKeyValueResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListConfigurationStoreKeyValueResult build() {
             return new ListConfigurationStoreKeyValueResult(contentType, eTag, key, label, lastModified, locked, tags, value);
         }

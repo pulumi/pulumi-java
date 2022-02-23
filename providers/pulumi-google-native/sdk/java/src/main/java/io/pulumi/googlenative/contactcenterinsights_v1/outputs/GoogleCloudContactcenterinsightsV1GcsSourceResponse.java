@@ -74,7 +74,6 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
             this.transcriptUri = Objects.requireNonNull(transcriptUri);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1GcsSourceResponse build() {
             return new GoogleCloudContactcenterinsightsV1GcsSourceResponse(audioUri, transcriptUri);
         }

@@ -74,7 +74,6 @@ public final class KeyVaultReferenceResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public KeyVaultReferenceResponse build() {
             return new KeyVaultReferenceResponse(id, url);
         }

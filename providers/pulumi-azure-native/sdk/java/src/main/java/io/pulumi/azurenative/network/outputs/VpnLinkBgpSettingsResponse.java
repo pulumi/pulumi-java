@@ -77,7 +77,6 @@ public final class VpnLinkBgpSettingsResponse {
             this.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
-
         public VpnLinkBgpSettingsResponse build() {
             return new VpnLinkBgpSettingsResponse(asn, bgpPeeringAddress);
         }

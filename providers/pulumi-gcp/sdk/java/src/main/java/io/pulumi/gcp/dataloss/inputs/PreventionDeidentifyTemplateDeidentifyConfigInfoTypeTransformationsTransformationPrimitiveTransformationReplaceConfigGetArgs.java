@@ -19,7 +19,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="newValue", required=true)
-    private final Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueGetArgs> newValue;
+        private final Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueGetArgs> newValue;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueGetArgs> getNewValue() {
         return this.newValue;
@@ -62,7 +62,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.newValue = Input.of(Objects.requireNonNull(newValue));
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs(newValue);
         }

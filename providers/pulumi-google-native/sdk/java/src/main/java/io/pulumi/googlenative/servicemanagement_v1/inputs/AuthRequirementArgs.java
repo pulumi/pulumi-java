@@ -23,7 +23,7 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="audiences")
-    private final @Nullable Input<String> audiences;
+      private final @Nullable Input<String> audiences;
 
     public Input<String> getAudiences() {
         return this.audiences == null ? Input.empty() : this.audiences;
@@ -34,7 +34,7 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="providerId")
-    private final @Nullable Input<String> providerId;
+      private final @Nullable Input<String> providerId;
 
     public Input<String> getProviderId() {
         return this.providerId == null ? Input.empty() : this.providerId;
@@ -93,7 +93,6 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
             this.providerId = Input.ofNullable(providerId);
             return this;
         }
-
         public AuthRequirementArgs build() {
             return new AuthRequirementArgs(audiences, providerId);
         }

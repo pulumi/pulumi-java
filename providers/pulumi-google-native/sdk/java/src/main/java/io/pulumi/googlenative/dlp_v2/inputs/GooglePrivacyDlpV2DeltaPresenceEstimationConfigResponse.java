@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
      * 
      */
     @InputImport(name="auxiliaryTables", required=true)
-    private final List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables;
+      private final List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables;
 
     public List<GooglePrivacyDlpV2StatisticalTableResponse> getAuxiliaryTables() {
         return this.auxiliaryTables;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
      * 
      */
     @InputImport(name="quasiIds", required=true)
-    private final List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds;
+      private final List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds;
 
     public List<GooglePrivacyDlpV2QuasiIdResponse> getQuasiIds() {
         return this.quasiIds;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
      * 
      */
     @InputImport(name="regionCode", required=true)
-    private final String regionCode;
+      private final String regionCode;
 
     public String getRegionCode() {
         return this.regionCode;
@@ -105,7 +105,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
         }
-
         public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse(auxiliaryTables, quasiIds, regionCode);
         }

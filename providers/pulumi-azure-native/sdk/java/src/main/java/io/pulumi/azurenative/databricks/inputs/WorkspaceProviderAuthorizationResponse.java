@@ -21,7 +21,7 @@ public final class WorkspaceProviderAuthorizationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -32,7 +32,7 @@ public final class WorkspaceProviderAuthorizationResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-    private final String roleDefinitionId;
+        private final String roleDefinitionId;
 
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
@@ -81,7 +81,6 @@ public final class WorkspaceProviderAuthorizationResponse extends io.pulumi.reso
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public WorkspaceProviderAuthorizationResponse build() {
             return new WorkspaceProviderAuthorizationResponse(principalId, roleDefinitionId);
         }

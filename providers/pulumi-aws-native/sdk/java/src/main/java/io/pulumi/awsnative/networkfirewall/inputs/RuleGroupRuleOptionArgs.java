@@ -16,14 +16,14 @@ public final class RuleGroupRuleOptionArgs extends io.pulumi.resources.ResourceA
     public static final RuleGroupRuleOptionArgs Empty = new RuleGroupRuleOptionArgs();
 
     @InputImport(name="keyword", required=true)
-    private final Input<String> keyword;
+        private final Input<String> keyword;
 
     public Input<String> getKeyword() {
         return this.keyword;
     }
 
     @InputImport(name="settings")
-    private final @Nullable Input<List<String>> settings;
+        private final @Nullable Input<List<String>> settings;
 
     public Input<List<String>> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -82,7 +82,6 @@ public final class RuleGroupRuleOptionArgs extends io.pulumi.resources.ResourceA
             this.settings = Input.ofNullable(settings);
             return this;
         }
-
         public RuleGroupRuleOptionArgs build() {
             return new RuleGroupRuleOptionArgs(keyword, settings);
         }

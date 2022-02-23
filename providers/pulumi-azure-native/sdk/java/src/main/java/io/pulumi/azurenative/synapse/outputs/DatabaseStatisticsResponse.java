@@ -54,7 +54,6 @@ public final class DatabaseStatisticsResponse {
             this.size = size;
             return this;
         }
-
         public DatabaseStatisticsResponse build() {
             return new DatabaseStatisticsResponse(size);
         }

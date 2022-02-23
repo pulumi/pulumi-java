@@ -21,7 +21,7 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="passwords")
-    private final @Nullable Input<List<String>> passwords;
+        private final @Nullable Input<List<String>> passwords;
 
     public Input<List<String>> getPasswords() {
         return this.passwords == null ? Input.empty() : this.passwords;
@@ -32,7 +32,7 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<UserAuthenticationModePropertiesType> type;
+        private final @Nullable Input<UserAuthenticationModePropertiesType> type;
 
     public Input<UserAuthenticationModePropertiesType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -91,7 +91,6 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public AuthenticationModePropertiesArgs build() {
             return new AuthenticationModePropertiesArgs(passwords, type);
         }

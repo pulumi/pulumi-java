@@ -21,14 +21,14 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     public static final Hl7V2StoreArgs Empty = new Hl7V2StoreArgs();
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="hl7V2StoreId")
-    private final @Nullable Input<String> hl7V2StoreId;
+      private final @Nullable Input<String> hl7V2StoreId;
 
     public Input<String> getHl7V2StoreId() {
         return this.hl7V2StoreId == null ? Input.empty() : this.hl7V2StoreId;
@@ -39,14 +39,14 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -57,7 +57,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -68,7 +68,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfig")
-    private final @Nullable Input<NotificationConfigArgs> notificationConfig;
+      private final @Nullable Input<NotificationConfigArgs> notificationConfig;
 
     public Input<NotificationConfigArgs> getNotificationConfig() {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
@@ -79,7 +79,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfigs")
-    private final @Nullable Input<List<Hl7V2NotificationConfigArgs>> notificationConfigs;
+      private final @Nullable Input<List<Hl7V2NotificationConfigArgs>> notificationConfigs;
 
     public Input<List<Hl7V2NotificationConfigArgs>> getNotificationConfigs() {
         return this.notificationConfigs == null ? Input.empty() : this.notificationConfigs;
@@ -90,14 +90,14 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parserConfig")
-    private final @Nullable Input<ParserConfigArgs> parserConfig;
+      private final @Nullable Input<ParserConfigArgs> parserConfig;
 
     public Input<ParserConfigArgs> getParserConfig() {
         return this.parserConfig == null ? Input.empty() : this.parserConfig;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -108,7 +108,7 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rejectDuplicateMessage")
-    private final @Nullable Input<Boolean> rejectDuplicateMessage;
+      private final @Nullable Input<Boolean> rejectDuplicateMessage;
 
     public Input<Boolean> getRejectDuplicateMessage() {
         return this.rejectDuplicateMessage == null ? Input.empty() : this.rejectDuplicateMessage;
@@ -287,7 +287,6 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
             this.rejectDuplicateMessage = Input.ofNullable(rejectDuplicateMessage);
             return this;
         }
-
         public Hl7V2StoreArgs build() {
             return new Hl7V2StoreArgs(datasetId, hl7V2StoreId, labels, location, name, notificationConfig, notificationConfigs, parserConfig, project, rejectDuplicateMessage);
         }

@@ -161,7 +161,6 @@ public final class GetMeshIstioServiceResult {
             this.telemetries = Objects.requireNonNull(telemetries);
             return this;
         }
-
         public GetMeshIstioServiceResult build() {
             return new GetMeshIstioServiceResult(displayName, id, meshUid, name, project, serviceId, serviceName, serviceNamespace, telemetries);
         }

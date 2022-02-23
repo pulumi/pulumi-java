@@ -155,7 +155,6 @@ public final class GetDatasetResult {
             this.tags = tags;
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(arn, dataFrequency, datasetType, domain, encryptionConfig, schema, tags);
         }

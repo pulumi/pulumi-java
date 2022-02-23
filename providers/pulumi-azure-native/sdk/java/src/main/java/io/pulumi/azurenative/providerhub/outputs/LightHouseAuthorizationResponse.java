@@ -58,7 +58,6 @@ public final class LightHouseAuthorizationResponse {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public LightHouseAuthorizationResponse build() {
             return new LightHouseAuthorizationResponse(principalId, roleDefinitionId);
         }

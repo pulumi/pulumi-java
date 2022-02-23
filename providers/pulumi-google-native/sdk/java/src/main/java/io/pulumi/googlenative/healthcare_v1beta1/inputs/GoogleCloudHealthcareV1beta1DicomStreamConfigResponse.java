@@ -21,7 +21,7 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigResponse extends
      * 
      */
     @InputImport(name="bigqueryDestination", required=true)
-    private final GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination;
+      private final GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination;
 
     public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse getBigqueryDestination() {
         return this.bigqueryDestination;
@@ -59,7 +59,6 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigResponse extends
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
-
         public GoogleCloudHealthcareV1beta1DicomStreamConfigResponse build() {
             return new GoogleCloudHealthcareV1beta1DicomStreamConfigResponse(bigqueryDestination);
         }

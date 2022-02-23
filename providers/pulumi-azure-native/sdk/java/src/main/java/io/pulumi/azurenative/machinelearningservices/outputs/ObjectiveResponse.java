@@ -74,7 +74,6 @@ public final class ObjectiveResponse {
             this.primaryMetric = Objects.requireNonNull(primaryMetric);
             return this;
         }
-
         public ObjectiveResponse build() {
             return new ObjectiveResponse(goal, primaryMetric);
         }

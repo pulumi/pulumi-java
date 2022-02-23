@@ -61,7 +61,6 @@ public final class DatasetTrigger {
             this.triggeringDataset = triggeringDataset;
             return this;
         }
-
         public DatasetTrigger build() {
             return new DatasetTrigger(schedule, triggeringDataset);
         }

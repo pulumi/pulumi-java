@@ -30,7 +30,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-    private final @Nullable Input<String> apiId;
+        private final @Nullable Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId == null ? Input.empty() : this.apiId;
@@ -41,7 +41,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiRevision")
-    private final @Nullable Input<String> apiRevision;
+        private final @Nullable Input<String> apiRevision;
 
     public Input<String> getApiRevision() {
         return this.apiRevision == null ? Input.empty() : this.apiRevision;
@@ -52,7 +52,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiRevisionDescription")
-    private final @Nullable Input<String> apiRevisionDescription;
+        private final @Nullable Input<String> apiRevisionDescription;
 
     public Input<String> getApiRevisionDescription() {
         return this.apiRevisionDescription == null ? Input.empty() : this.apiRevisionDescription;
@@ -63,7 +63,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiType")
-    private final @Nullable Input<Either<String,ApiType>> apiType;
+        private final @Nullable Input<Either<String,ApiType>> apiType;
 
     public Input<Either<String,ApiType>> getApiType() {
         return this.apiType == null ? Input.empty() : this.apiType;
@@ -74,7 +74,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -85,7 +85,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersionDescription")
-    private final @Nullable Input<String> apiVersionDescription;
+        private final @Nullable Input<String> apiVersionDescription;
 
     public Input<String> getApiVersionDescription() {
         return this.apiVersionDescription == null ? Input.empty() : this.apiVersionDescription;
@@ -96,7 +96,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersionSet")
-    private final @Nullable Input<ApiVersionSetContractDetailsArgs> apiVersionSet;
+        private final @Nullable Input<ApiVersionSetContractDetailsArgs> apiVersionSet;
 
     public Input<ApiVersionSetContractDetailsArgs> getApiVersionSet() {
         return this.apiVersionSet == null ? Input.empty() : this.apiVersionSet;
@@ -107,7 +107,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersionSetId")
-    private final @Nullable Input<String> apiVersionSetId;
+        private final @Nullable Input<String> apiVersionSetId;
 
     public Input<String> getApiVersionSetId() {
         return this.apiVersionSetId == null ? Input.empty() : this.apiVersionSetId;
@@ -118,7 +118,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationSettings")
-    private final @Nullable Input<AuthenticationSettingsContractArgs> authenticationSettings;
+        private final @Nullable Input<AuthenticationSettingsContractArgs> authenticationSettings;
 
     public Input<AuthenticationSettingsContractArgs> getAuthenticationSettings() {
         return this.authenticationSettings == null ? Input.empty() : this.authenticationSettings;
@@ -129,7 +129,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -140,7 +140,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -151,7 +151,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<Either<String,ContentFormat>> format;
+        private final @Nullable Input<Either<String,ContentFormat>> format;
 
     public Input<Either<String,ContentFormat>> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -162,7 +162,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCurrent")
-    private final @Nullable Input<Boolean> isCurrent;
+        private final @Nullable Input<Boolean> isCurrent;
 
     public Input<Boolean> getIsCurrent() {
         return this.isCurrent == null ? Input.empty() : this.isCurrent;
@@ -173,7 +173,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+        private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -184,7 +184,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocols")
-    private final @Nullable Input<List<Protocol>> protocols;
+        private final @Nullable Input<List<Protocol>> protocols;
 
     public Input<List<Protocol>> getProtocols() {
         return this.protocols == null ? Input.empty() : this.protocols;
@@ -195,7 +195,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -206,7 +206,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -217,7 +217,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceUrl")
-    private final @Nullable Input<String> serviceUrl;
+        private final @Nullable Input<String> serviceUrl;
 
     public Input<String> getServiceUrl() {
         return this.serviceUrl == null ? Input.empty() : this.serviceUrl;
@@ -230,7 +230,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="soapApiType")
-    private final @Nullable Input<Either<String,SoapApiType>> soapApiType;
+        private final @Nullable Input<Either<String,SoapApiType>> soapApiType;
 
     public Input<Either<String,SoapApiType>> getSoapApiType() {
         return this.soapApiType == null ? Input.empty() : this.soapApiType;
@@ -241,7 +241,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceApiId")
-    private final @Nullable Input<String> sourceApiId;
+        private final @Nullable Input<String> sourceApiId;
 
     public Input<String> getSourceApiId() {
         return this.sourceApiId == null ? Input.empty() : this.sourceApiId;
@@ -252,7 +252,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionKeyParameterNames")
-    private final @Nullable Input<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames;
+        private final @Nullable Input<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames;
 
     public Input<SubscriptionKeyParameterNamesContractArgs> getSubscriptionKeyParameterNames() {
         return this.subscriptionKeyParameterNames == null ? Input.empty() : this.subscriptionKeyParameterNames;
@@ -263,7 +263,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionRequired")
-    private final @Nullable Input<Boolean> subscriptionRequired;
+        private final @Nullable Input<Boolean> subscriptionRequired;
 
     public Input<Boolean> getSubscriptionRequired() {
         return this.subscriptionRequired == null ? Input.empty() : this.subscriptionRequired;
@@ -274,7 +274,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -285,7 +285,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="wsdlSelector")
-    private final @Nullable Input<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector;
+        private final @Nullable Input<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector;
 
     public Input<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> getWsdlSelector() {
         return this.wsdlSelector == null ? Input.empty() : this.wsdlSelector;
@@ -674,7 +674,6 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             this.wsdlSelector = Input.ofNullable(wsdlSelector);
             return this;
         }
-
         public ApiArgs build() {
             return new ApiArgs(apiId, apiRevision, apiRevisionDescription, apiType, apiVersion, apiVersionDescription, apiVersionSet, apiVersionSetId, authenticationSettings, description, displayName, format, isCurrent, path, protocols, resourceGroupName, serviceName, serviceUrl, soapApiType, sourceApiId, subscriptionKeyParameterNames, subscriptionRequired, value, wsdlSelector);
         }

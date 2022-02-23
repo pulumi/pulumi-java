@@ -99,7 +99,6 @@ public final class NamedPartitionSchemeDescriptionResponse {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }
-
         public NamedPartitionSchemeDescriptionResponse build() {
             return new NamedPartitionSchemeDescriptionResponse(count, names, partitionScheme);
         }

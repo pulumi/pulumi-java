@@ -252,7 +252,6 @@ public final class DrillTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DrillTableDatasetResponse build() {
             return new DrillTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

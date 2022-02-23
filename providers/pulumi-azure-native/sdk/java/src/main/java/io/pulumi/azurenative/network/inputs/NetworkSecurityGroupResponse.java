@@ -29,7 +29,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="defaultSecurityRules", required=true)
-    private final List<SecurityRuleResponse> defaultSecurityRules;
+        private final List<SecurityRuleResponse> defaultSecurityRules;
 
     public List<SecurityRuleResponse> getDefaultSecurityRules() {
         return this.defaultSecurityRules;
@@ -40,7 +40,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -51,7 +51,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="flowLogs", required=true)
-    private final List<FlowLogResponse> flowLogs;
+        private final List<FlowLogResponse> flowLogs;
 
     public List<FlowLogResponse> getFlowLogs() {
         return this.flowLogs;
@@ -62,7 +62,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -73,7 +73,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -84,7 +84,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -95,7 +95,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="networkInterfaces", required=true)
-    private final List<NetworkInterfaceResponse> networkInterfaces;
+        private final List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
@@ -106,7 +106,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -117,7 +117,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGuid", required=true)
-    private final String resourceGuid;
+        private final String resourceGuid;
 
     public String getResourceGuid() {
         return this.resourceGuid;
@@ -128,7 +128,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="securityRules")
-    private final @Nullable List<SecurityRuleResponse> securityRules;
+        private final @Nullable List<SecurityRuleResponse> securityRules;
 
     public List<SecurityRuleResponse> getSecurityRules() {
         return this.securityRules == null ? List.of() : this.securityRules;
@@ -139,7 +139,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="subnets", required=true)
-    private final List<SubnetResponse> subnets;
+        private final List<SubnetResponse> subnets;
 
     public List<SubnetResponse> getSubnets() {
         return this.subnets;
@@ -150,7 +150,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -161,7 +161,7 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -320,7 +320,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NetworkSecurityGroupResponse build() {
             return new NetworkSecurityGroupResponse(defaultSecurityRules, etag, flowLogs, id, location, name, networkInterfaces, provisioningState, resourceGuid, securityRules, subnets, tags, type);
         }

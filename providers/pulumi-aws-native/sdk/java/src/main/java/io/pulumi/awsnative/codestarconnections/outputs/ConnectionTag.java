@@ -74,7 +74,6 @@ public final class ConnectionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ConnectionTag build() {
             return new ConnectionTag(key, value);
         }

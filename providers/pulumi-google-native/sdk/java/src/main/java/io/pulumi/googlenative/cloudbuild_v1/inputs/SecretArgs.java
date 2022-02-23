@@ -24,7 +24,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -35,7 +35,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretEnv")
-    private final @Nullable Input<Map<String,String>> secretEnv;
+      private final @Nullable Input<Map<String,String>> secretEnv;
 
     public Input<Map<String,String>> getSecretEnv() {
         return this.secretEnv == null ? Input.empty() : this.secretEnv;
@@ -94,7 +94,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.secretEnv = Input.ofNullable(secretEnv);
             return this;
         }
-
         public SecretArgs build() {
             return new SecretArgs(kmsKeyName, secretEnv);
         }

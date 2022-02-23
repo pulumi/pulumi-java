@@ -246,7 +246,6 @@ public final class ConnectionSettingPropertiesResponse {
             this.settingId = Objects.requireNonNull(settingId);
             return this;
         }
-
         public ConnectionSettingPropertiesResponse build() {
             return new ConnectionSettingPropertiesResponse(clientId, clientSecret, id, name, parameters, provisioningState, scopes, serviceProviderDisplayName, serviceProviderId, settingId);
         }

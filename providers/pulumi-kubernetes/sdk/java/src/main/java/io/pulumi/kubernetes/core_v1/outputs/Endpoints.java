@@ -121,7 +121,6 @@ public final class Endpoints {
             this.subsets = subsets;
             return this;
         }
-
         public Endpoints build() {
             return new Endpoints(apiVersion, kind, metadata, subsets);
         }

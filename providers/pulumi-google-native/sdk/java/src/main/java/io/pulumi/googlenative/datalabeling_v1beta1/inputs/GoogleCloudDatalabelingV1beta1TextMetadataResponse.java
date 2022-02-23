@@ -21,7 +21,7 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse extends io
      * 
      */
     @InputImport(name="languageCode", required=true)
-    private final String languageCode;
+      private final String languageCode;
 
     public String getLanguageCode() {
         return this.languageCode;
@@ -59,7 +59,6 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse extends io
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1TextMetadataResponse build() {
             return new GoogleCloudDatalabelingV1beta1TextMetadataResponse(languageCode);
         }

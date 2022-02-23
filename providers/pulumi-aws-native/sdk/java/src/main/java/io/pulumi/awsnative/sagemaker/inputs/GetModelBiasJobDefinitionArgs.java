@@ -17,7 +17,7 @@ public final class GetModelBiasJobDefinitionArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="jobDefinitionArn", required=true)
-    private final String jobDefinitionArn;
+        private final String jobDefinitionArn;
 
     public String getJobDefinitionArn() {
         return this.jobDefinitionArn;
@@ -55,7 +55,6 @@ public final class GetModelBiasJobDefinitionArgs extends io.pulumi.resources.Inv
             this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn);
             return this;
         }
-
         public GetModelBiasJobDefinitionArgs build() {
             return new GetModelBiasJobDefinitionArgs(jobDefinitionArn);
         }

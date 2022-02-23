@@ -13,7 +13,7 @@ public final class GetAuthorizerArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAuthorizerArgs Empty = new GetAuthorizerArgs();
 
     @InputImport(name="authorizerName", required=true)
-    private final String authorizerName;
+        private final String authorizerName;
 
     public String getAuthorizerName() {
         return this.authorizerName;
@@ -51,7 +51,6 @@ public final class GetAuthorizerArgs extends io.pulumi.resources.InvokeArgs {
             this.authorizerName = Objects.requireNonNull(authorizerName);
             return this;
         }
-
         public GetAuthorizerArgs build() {
             return new GetAuthorizerArgs(authorizerName);
         }

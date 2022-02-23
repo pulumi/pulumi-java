@@ -54,7 +54,6 @@ public final class LiveEventInputAccessControlResponse {
             this.ip = ip;
             return this;
         }
-
         public LiveEventInputAccessControlResponse build() {
             return new LiveEventInputAccessControlResponse(ip);
         }

@@ -24,7 +24,7 @@ public final class EventSourceMappingSourceAccessConfiguration extends io.pulumi
      * 
      */
     @InputImport(name="type")
-    private final @Nullable EventSourceMappingSourceAccessConfigurationType type;
+        private final @Nullable EventSourceMappingSourceAccessConfigurationType type;
 
     public Optional<EventSourceMappingSourceAccessConfigurationType> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -35,7 +35,7 @@ public final class EventSourceMappingSourceAccessConfiguration extends io.pulumi
      * 
      */
     @InputImport(name="uRI")
-    private final @Nullable String uRI;
+        private final @Nullable String uRI;
 
     public Optional<String> getURI() {
         return this.uRI == null ? Optional.empty() : Optional.ofNullable(this.uRI);
@@ -84,7 +84,6 @@ public final class EventSourceMappingSourceAccessConfiguration extends io.pulumi
             this.uRI = uRI;
             return this;
         }
-
         public EventSourceMappingSourceAccessConfiguration build() {
             return new EventSourceMappingSourceAccessConfiguration(type, uRI);
         }

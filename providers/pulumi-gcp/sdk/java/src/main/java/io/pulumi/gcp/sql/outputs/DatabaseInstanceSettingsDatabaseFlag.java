@@ -78,7 +78,6 @@ public final class DatabaseInstanceSettingsDatabaseFlag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DatabaseInstanceSettingsDatabaseFlag build() {
             return new DatabaseInstanceSettingsDatabaseFlag(name, value);
         }

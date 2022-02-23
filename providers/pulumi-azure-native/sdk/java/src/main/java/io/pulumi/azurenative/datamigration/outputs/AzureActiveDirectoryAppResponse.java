@@ -95,7 +95,6 @@ public final class AzureActiveDirectoryAppResponse {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public AzureActiveDirectoryAppResponse build() {
             return new AzureActiveDirectoryAppResponse(appKey, applicationId, tenantId);
         }

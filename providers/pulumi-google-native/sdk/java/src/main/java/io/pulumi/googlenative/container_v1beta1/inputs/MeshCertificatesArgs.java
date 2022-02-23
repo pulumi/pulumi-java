@@ -23,7 +23,7 @@ public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enableCertificates")
-    private final @Nullable Input<Boolean> enableCertificates;
+      private final @Nullable Input<Boolean> enableCertificates;
 
     public Input<Boolean> getEnableCertificates() {
         return this.enableCertificates == null ? Input.empty() : this.enableCertificates;
@@ -66,7 +66,6 @@ public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs
             this.enableCertificates = Input.ofNullable(enableCertificates);
             return this;
         }
-
         public MeshCertificatesArgs build() {
             return new MeshCertificatesArgs(enableCertificates);
         }

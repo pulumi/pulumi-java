@@ -139,7 +139,6 @@ public final class ValidationConfigResponse {
             this.enabledImplementationGuides = Objects.requireNonNull(enabledImplementationGuides);
             return this;
         }
-
         public ValidationConfigResponse build() {
             return new ValidationConfigResponse(disableFhirpathValidation, disableProfileValidation, disableReferenceTypeValidation, disableRequiredFieldValidation, enabledImplementationGuides);
         }

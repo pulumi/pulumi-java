@@ -26,7 +26,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="advancedSchedule")
-    private final @Nullable AdvancedScheduleResponse advancedSchedule;
+        private final @Nullable AdvancedScheduleResponse advancedSchedule;
 
     public Optional<AdvancedScheduleResponse> getAdvancedSchedule() {
         return this.advancedSchedule == null ? Optional.empty() : Optional.ofNullable(this.advancedSchedule);
@@ -37,7 +37,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="creationTime")
-    private final @Nullable String creationTime;
+        private final @Nullable String creationTime;
 
     public Optional<String> getCreationTime() {
         return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
@@ -48,7 +48,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -59,7 +59,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="expiryTime")
-    private final @Nullable String expiryTime;
+        private final @Nullable String expiryTime;
 
     public Optional<String> getExpiryTime() {
         return this.expiryTime == null ? Optional.empty() : Optional.ofNullable(this.expiryTime);
@@ -70,7 +70,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="expiryTimeOffsetMinutes")
-    private final @Nullable Double expiryTimeOffsetMinutes;
+        private final @Nullable Double expiryTimeOffsetMinutes;
 
     public Optional<Double> getExpiryTimeOffsetMinutes() {
         return this.expiryTimeOffsetMinutes == null ? Optional.empty() : Optional.ofNullable(this.expiryTimeOffsetMinutes);
@@ -81,7 +81,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="frequency")
-    private final @Nullable String frequency;
+        private final @Nullable String frequency;
 
     public Optional<String> getFrequency() {
         return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
@@ -92,7 +92,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Double interval;
+        private final @Nullable Double interval;
 
     public Optional<Double> getInterval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
@@ -103,7 +103,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Boolean isEnabled;
+        private final @Nullable Boolean isEnabled;
 
     public Optional<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEnabled);
@@ -114,7 +114,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="lastModifiedTime")
-    private final @Nullable String lastModifiedTime;
+        private final @Nullable String lastModifiedTime;
 
     public Optional<String> getLastModifiedTime() {
         return this.lastModifiedTime == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedTime);
@@ -125,7 +125,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="nextRun")
-    private final @Nullable String nextRun;
+        private final @Nullable String nextRun;
 
     public Optional<String> getNextRun() {
         return this.nextRun == null ? Optional.empty() : Optional.ofNullable(this.nextRun);
@@ -136,7 +136,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="nextRunOffsetMinutes")
-    private final @Nullable Double nextRunOffsetMinutes;
+        private final @Nullable Double nextRunOffsetMinutes;
 
     public Optional<Double> getNextRunOffsetMinutes() {
         return this.nextRunOffsetMinutes == null ? Optional.empty() : Optional.ofNullable(this.nextRunOffsetMinutes);
@@ -147,7 +147,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable String startTime;
+        private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -158,7 +158,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="startTimeOffsetMinutes", required=true)
-    private final Double startTimeOffsetMinutes;
+        private final Double startTimeOffsetMinutes;
 
     public Double getStartTimeOffsetMinutes() {
         return this.startTimeOffsetMinutes;
@@ -169,7 +169,7 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable String timeZone;
+        private final @Nullable String timeZone;
 
     public Optional<String> getTimeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
@@ -338,7 +338,6 @@ public final class SUCSchedulePropertiesResponse extends io.pulumi.resources.Inv
             this.timeZone = timeZone;
             return this;
         }
-
         public SUCSchedulePropertiesResponse build() {
             return new SUCSchedulePropertiesResponse(advancedSchedule, creationTime, description, expiryTime, expiryTimeOffsetMinutes, frequency, interval, isEnabled, lastModifiedTime, nextRun, nextRunOffsetMinutes, startTime, startTimeOffsetMinutes, timeZone);
         }

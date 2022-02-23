@@ -97,7 +97,6 @@ public final class IotEventHubIngestionEndpointConfigurationResponse {
             this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
             return this;
         }
-
         public IotEventHubIngestionEndpointConfigurationResponse build() {
             return new IotEventHubIngestionEndpointConfigurationResponse(consumerGroup, eventHubName, fullyQualifiedEventHubNamespace);
         }

@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public GooglePrivacyDlpV2ExclusionRuleResponse build() {
             return new GooglePrivacyDlpV2ExclusionRuleResponse(dictionary, excludeInfoTypes, matchingType, regex);
         }

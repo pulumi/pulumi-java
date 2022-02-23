@@ -162,7 +162,6 @@ public final class GetVirtualHubRouteTableV2Result {
             this.routes = routes;
             return this;
         }
-
         public GetVirtualHubRouteTableV2Result build() {
             return new GetVirtualHubRouteTableV2Result(attachedConnections, etag, id, name, provisioningState, routes);
         }

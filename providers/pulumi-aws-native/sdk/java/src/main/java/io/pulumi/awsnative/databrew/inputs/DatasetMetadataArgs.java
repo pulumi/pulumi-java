@@ -19,7 +19,7 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceArn")
-    private final @Nullable Input<String> sourceArn;
+        private final @Nullable Input<String> sourceArn;
 
     public Input<String> getSourceArn() {
         return this.sourceArn == null ? Input.empty() : this.sourceArn;
@@ -62,7 +62,6 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
             this.sourceArn = Input.ofNullable(sourceArn);
             return this;
         }
-
         public DatasetMetadataArgs build() {
             return new DatasetMetadataArgs(sourceArn);
         }

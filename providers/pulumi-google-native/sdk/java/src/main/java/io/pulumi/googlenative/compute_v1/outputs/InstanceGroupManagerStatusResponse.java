@@ -119,7 +119,6 @@ public final class InstanceGroupManagerStatusResponse {
             this.versionTarget = Objects.requireNonNull(versionTarget);
             return this;
         }
-
         public InstanceGroupManagerStatusResponse build() {
             return new InstanceGroupManagerStatusResponse(autoscaler, isStable, stateful, versionTarget);
         }

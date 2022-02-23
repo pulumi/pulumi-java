@@ -75,7 +75,6 @@ public final class ApkResponse {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
-
         public ApkResponse build() {
             return new ApkResponse(location, packageName);
         }

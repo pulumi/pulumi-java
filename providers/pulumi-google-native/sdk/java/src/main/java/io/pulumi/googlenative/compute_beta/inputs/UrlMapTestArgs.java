@@ -26,7 +26,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expectedOutputUrl")
-    private final @Nullable Input<String> expectedOutputUrl;
+      private final @Nullable Input<String> expectedOutputUrl;
 
     public Input<String> getExpectedOutputUrl() {
         return this.expectedOutputUrl == null ? Input.empty() : this.expectedOutputUrl;
@@ -48,7 +48,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expectedRedirectResponseCode")
-    private final @Nullable Input<Integer> expectedRedirectResponseCode;
+      private final @Nullable Input<Integer> expectedRedirectResponseCode;
 
     public Input<Integer> getExpectedRedirectResponseCode() {
         return this.expectedRedirectResponseCode == null ? Input.empty() : this.expectedRedirectResponseCode;
@@ -59,7 +59,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<List<UrlMapTestHeaderArgs>> headers;
+      private final @Nullable Input<List<UrlMapTestHeaderArgs>> headers;
 
     public Input<List<UrlMapTestHeaderArgs>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -70,7 +70,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -81,7 +81,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -92,7 +92,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -226,7 +226,6 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public UrlMapTestArgs build() {
             return new UrlMapTestArgs(description, expectedOutputUrl, expectedRedirectResponseCode, headers, host, path, service);
         }

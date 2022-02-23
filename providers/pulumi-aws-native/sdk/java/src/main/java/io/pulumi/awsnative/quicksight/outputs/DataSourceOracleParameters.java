@@ -72,7 +72,6 @@ public final class DataSourceOracleParameters {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceOracleParameters build() {
             return new DataSourceOracleParameters(database, host, port);
         }

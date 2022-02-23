@@ -52,7 +52,6 @@ public final class LatencyCriteriaResponse {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public LatencyCriteriaResponse build() {
             return new LatencyCriteriaResponse(threshold);
         }

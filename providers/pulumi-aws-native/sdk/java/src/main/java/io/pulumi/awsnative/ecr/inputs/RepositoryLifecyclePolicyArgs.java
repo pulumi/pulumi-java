@@ -19,14 +19,14 @@ public final class RepositoryLifecyclePolicyArgs extends io.pulumi.resources.Res
     public static final RepositoryLifecyclePolicyArgs Empty = new RepositoryLifecyclePolicyArgs();
 
     @InputImport(name="lifecyclePolicyText")
-    private final @Nullable Input<String> lifecyclePolicyText;
+        private final @Nullable Input<String> lifecyclePolicyText;
 
     public Input<String> getLifecyclePolicyText() {
         return this.lifecyclePolicyText == null ? Input.empty() : this.lifecyclePolicyText;
     }
 
     @InputImport(name="registryId")
-    private final @Nullable Input<String> registryId;
+        private final @Nullable Input<String> registryId;
 
     public Input<String> getRegistryId() {
         return this.registryId == null ? Input.empty() : this.registryId;
@@ -85,7 +85,6 @@ public final class RepositoryLifecyclePolicyArgs extends io.pulumi.resources.Res
             this.registryId = Input.ofNullable(registryId);
             return this;
         }
-
         public RepositoryLifecyclePolicyArgs build() {
             return new RepositoryLifecyclePolicyArgs(lifecyclePolicyText, registryId);
         }

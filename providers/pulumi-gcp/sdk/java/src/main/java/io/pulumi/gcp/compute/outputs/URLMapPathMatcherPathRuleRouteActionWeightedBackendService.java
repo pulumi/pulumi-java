@@ -117,7 +117,6 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendService {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionWeightedBackendService build() {
             return new URLMapPathMatcherPathRuleRouteActionWeightedBackendService(backendService, headerAction, weight);
         }

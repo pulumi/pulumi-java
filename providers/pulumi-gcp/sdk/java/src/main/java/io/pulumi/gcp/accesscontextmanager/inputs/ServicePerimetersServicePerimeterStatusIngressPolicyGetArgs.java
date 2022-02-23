@@ -22,7 +22,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyGetArgs e
      * 
      */
     @InputImport(name="ingressFrom")
-    private final @Nullable Input<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs> ingressFrom;
+        private final @Nullable Input<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs> ingressFrom;
 
     public Input<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs> getIngressFrom() {
         return this.ingressFrom == null ? Input.empty() : this.ingressFrom;
@@ -35,7 +35,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyGetArgs e
      * 
      */
     @InputImport(name="ingressTo")
-    private final @Nullable Input<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToGetArgs> ingressTo;
+        private final @Nullable Input<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToGetArgs> ingressTo;
 
     public Input<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToGetArgs> getIngressTo() {
         return this.ingressTo == null ? Input.empty() : this.ingressTo;
@@ -94,7 +94,6 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyGetArgs e
             this.ingressTo = Input.ofNullable(ingressTo);
             return this;
         }
-
         public ServicePerimetersServicePerimeterStatusIngressPolicyGetArgs build() {
             return new ServicePerimetersServicePerimeterStatusIngressPolicyGetArgs(ingressFrom, ingressTo);
         }

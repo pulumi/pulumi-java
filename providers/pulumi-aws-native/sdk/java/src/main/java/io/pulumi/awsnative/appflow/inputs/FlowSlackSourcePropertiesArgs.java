@@ -14,7 +14,7 @@ public final class FlowSlackSourcePropertiesArgs extends io.pulumi.resources.Res
     public static final FlowSlackSourcePropertiesArgs Empty = new FlowSlackSourcePropertiesArgs();
 
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+        private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -57,7 +57,6 @@ public final class FlowSlackSourcePropertiesArgs extends io.pulumi.resources.Res
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }
-
         public FlowSlackSourcePropertiesArgs build() {
             return new FlowSlackSourcePropertiesArgs(object);
         }

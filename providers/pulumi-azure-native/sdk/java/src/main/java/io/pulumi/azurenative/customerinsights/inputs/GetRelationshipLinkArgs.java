@@ -17,7 +17,7 @@ public final class GetRelationshipLinkArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="hubName", required=true)
-    private final String hubName;
+        private final String hubName;
 
     public String getHubName() {
         return this.hubName;
@@ -28,7 +28,7 @@ public final class GetRelationshipLinkArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="relationshipLinkName", required=true)
-    private final String relationshipLinkName;
+        private final String relationshipLinkName;
 
     public String getRelationshipLinkName() {
         return this.relationshipLinkName;
@@ -39,7 +39,7 @@ public final class GetRelationshipLinkArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetRelationshipLinkArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetRelationshipLinkArgs build() {
             return new GetRelationshipLinkArgs(hubName, relationshipLinkName, resourceGroupName);
         }

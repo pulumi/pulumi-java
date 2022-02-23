@@ -76,7 +76,6 @@ public final class InstallationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public InstallationResponse build() {
             return new InstallationResponse(location, name);
         }

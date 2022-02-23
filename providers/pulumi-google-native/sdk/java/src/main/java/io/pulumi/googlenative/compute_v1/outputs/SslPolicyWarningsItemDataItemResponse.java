@@ -74,7 +74,6 @@ public final class SslPolicyWarningsItemDataItemResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SslPolicyWarningsItemDataItemResponse build() {
             return new SslPolicyWarningsItemDataItemResponse(key, value);
         }

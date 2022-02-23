@@ -21,7 +21,7 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<String> certificate;
+        private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -32,7 +32,7 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<CertificateSigningRequestConditionArgs>> conditions;
+        private final @Nullable Input<List<CertificateSigningRequestConditionArgs>> conditions;
 
     public Input<List<CertificateSigningRequestConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -91,7 +91,6 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
-
         public CertificateSigningRequestStatusArgs build() {
             return new CertificateSigningRequestStatusArgs(certificate, conditions);
         }

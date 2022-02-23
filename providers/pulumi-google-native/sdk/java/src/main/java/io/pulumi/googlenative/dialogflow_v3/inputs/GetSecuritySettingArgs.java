@@ -15,21 +15,21 @@ public final class GetSecuritySettingArgs extends io.pulumi.resources.InvokeArgs
     public static final GetSecuritySettingArgs Empty = new GetSecuritySettingArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="securitySettingId", required=true)
-    private final String securitySettingId;
+      private final String securitySettingId;
 
     public String getSecuritySettingId() {
         return this.securitySettingId;
@@ -88,7 +88,6 @@ public final class GetSecuritySettingArgs extends io.pulumi.resources.InvokeArgs
             this.securitySettingId = Objects.requireNonNull(securitySettingId);
             return this;
         }
-
         public GetSecuritySettingArgs build() {
             return new GetSecuritySettingArgs(location, project, securitySettingId);
         }

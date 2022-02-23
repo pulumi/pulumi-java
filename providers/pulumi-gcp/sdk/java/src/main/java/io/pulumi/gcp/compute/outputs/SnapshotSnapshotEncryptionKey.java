@@ -128,7 +128,6 @@ public final class SnapshotSnapshotEncryptionKey {
             this.sha256 = sha256;
             return this;
         }
-
         public SnapshotSnapshotEncryptionKey build() {
             return new SnapshotSnapshotEncryptionKey(kmsKeySelfLink, kmsKeyServiceAccount, rawKey, sha256);
         }

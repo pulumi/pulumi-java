@@ -19,7 +19,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -30,7 +30,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recommendationId", required=true)
-    private final Input<String> recommendationId;
+        private final Input<String> recommendationId;
 
     public Input<String> getRecommendationId() {
         return this.recommendationId;
@@ -41,7 +41,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final Input<String> resourceUri;
+        private final Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri;
@@ -52,7 +52,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suppressionId")
-    private final @Nullable Input<String> suppressionId;
+        private final @Nullable Input<String> suppressionId;
 
     public Input<String> getSuppressionId() {
         return this.suppressionId == null ? Input.empty() : this.suppressionId;
@@ -63,7 +63,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<String> ttl;
+        private final @Nullable Input<String> ttl;
 
     public Input<String> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -167,7 +167,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
-
         public SuppressionArgs build() {
             return new SuppressionArgs(name, recommendationId, resourceUri, suppressionId, ttl);
         }

@@ -351,7 +351,6 @@ public final class HealthErrorResponse {
             this.summaryMessage = summaryMessage;
             return this;
         }
-
         public HealthErrorResponse build() {
             return new HealthErrorResponse(creationTimeUtc, customerResolvability, entityId, errorCategory, errorCode, errorId, errorLevel, errorMessage, errorSource, errorType, innerHealthErrors, possibleCauses, recommendedAction, recoveryProviderErrorMessage, summaryMessage);
         }

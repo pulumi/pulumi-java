@@ -25,14 +25,14 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
     public static final RegionSecurityPolicyArgs Empty = new RegionSecurityPolicyArgs();
 
     @InputImport(name="adaptiveProtectionConfig")
-    private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
+      private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
     public Input<SecurityPolicyAdaptiveProtectionConfigArgs> getAdaptiveProtectionConfig() {
         return this.adaptiveProtectionConfig == null ? Input.empty() : this.adaptiveProtectionConfig;
     }
 
     @InputImport(name="advancedOptionsConfig")
-    private final @Nullable Input<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
+      private final @Nullable Input<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
 
     public Input<SecurityPolicyAdvancedOptionsConfigArgs> getAdvancedOptionsConfig() {
         return this.advancedOptionsConfig == null ? Input.empty() : this.advancedOptionsConfig;
@@ -43,21 +43,21 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="associations")
-    private final @Nullable Input<List<SecurityPolicyAssociationArgs>> associations;
+      private final @Nullable Input<List<SecurityPolicyAssociationArgs>> associations;
 
     public Input<List<SecurityPolicyAssociationArgs>> getAssociations() {
         return this.associations == null ? Input.empty() : this.associations;
     }
 
     @InputImport(name="cloudArmorConfig")
-    private final @Nullable Input<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig;
+      private final @Nullable Input<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig;
 
     public Input<SecurityPolicyCloudArmorConfigArgs> getCloudArmorConfig() {
         return this.cloudArmorConfig == null ? Input.empty() : this.cloudArmorConfig;
     }
 
     @InputImport(name="ddosProtectionConfig")
-    private final @Nullable Input<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig;
+      private final @Nullable Input<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig;
 
     public Input<SecurityPolicyDdosProtectionConfigArgs> getDdosProtectionConfig() {
         return this.ddosProtectionConfig == null ? Input.empty() : this.ddosProtectionConfig;
@@ -68,7 +68,7 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -79,7 +79,7 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -90,7 +90,7 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -101,35 +101,35 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="recaptchaOptionsConfig")
-    private final @Nullable Input<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
+      private final @Nullable Input<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
 
     public Input<SecurityPolicyRecaptchaOptionsConfigArgs> getRecaptchaOptionsConfig() {
         return this.recaptchaOptionsConfig == null ? Input.empty() : this.recaptchaOptionsConfig;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -140,7 +140,7 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<SecurityPolicyRuleArgs>> rules;
+      private final @Nullable Input<List<SecurityPolicyRuleArgs>> rules;
 
     public Input<List<SecurityPolicyRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -151,14 +151,14 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<RegionSecurityPolicyType> type;
+      private final @Nullable Input<RegionSecurityPolicyType> type;
 
     public Input<RegionSecurityPolicyType> getType() {
         return this.type == null ? Input.empty() : this.type;
     }
 
     @InputImport(name="validateOnly")
-    private final @Nullable Input<String> validateOnly;
+      private final @Nullable Input<String> validateOnly;
 
     public Input<String> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
@@ -427,7 +427,6 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
-
         public RegionSecurityPolicyArgs build() {
             return new RegionSecurityPolicyArgs(adaptiveProtectionConfig, advancedOptionsConfig, associations, cloudArmorConfig, ddosProtectionConfig, description, displayName, labels, name, project, recaptchaOptionsConfig, region, requestId, rules, type, validateOnly);
         }

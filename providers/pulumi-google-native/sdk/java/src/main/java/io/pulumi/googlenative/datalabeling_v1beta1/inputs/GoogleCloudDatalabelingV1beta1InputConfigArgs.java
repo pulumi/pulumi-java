@@ -28,7 +28,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="annotationType")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType;
 
     public Input<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> getAnnotationType() {
         return this.annotationType == null ? Input.empty() : this.annotationType;
@@ -39,7 +39,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="bigquerySource")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource;
 
     public Input<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> getBigquerySource() {
         return this.bigquerySource == null ? Input.empty() : this.bigquerySource;
@@ -50,7 +50,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="classificationMetadata")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata;
 
     public Input<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> getClassificationMetadata() {
         return this.classificationMetadata == null ? Input.empty() : this.classificationMetadata;
@@ -61,7 +61,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="dataType", required=true)
-    private final Input<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType;
+      private final Input<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType;
 
     public Input<GoogleCloudDatalabelingV1beta1InputConfigDataType> getDataType() {
         return this.dataType;
@@ -72,7 +72,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="gcsSource")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource;
 
     public Input<GoogleCloudDatalabelingV1beta1GcsSourceArgs> getGcsSource() {
         return this.gcsSource == null ? Input.empty() : this.gcsSource;
@@ -83,7 +83,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="textMetadata")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata;
 
     public Input<GoogleCloudDatalabelingV1beta1TextMetadataArgs> getTextMetadata() {
         return this.textMetadata == null ? Input.empty() : this.textMetadata;
@@ -202,7 +202,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
             this.textMetadata = Input.ofNullable(textMetadata);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1InputConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1InputConfigArgs(annotationType, bigquerySource, classificationMetadata, dataType, gcsSource, textMetadata);
         }

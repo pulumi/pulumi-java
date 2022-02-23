@@ -74,7 +74,6 @@ public final class DomainRedirectResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DomainRedirectResponse build() {
             return new DomainRedirectResponse(domainName, type);
         }

@@ -77,7 +77,6 @@ public final class GetUserProfileResult {
             this.userSettings = userSettings;
             return this;
         }
-
         public GetUserProfileResult build() {
             return new GetUserProfileResult(userProfileArn, userSettings);
         }

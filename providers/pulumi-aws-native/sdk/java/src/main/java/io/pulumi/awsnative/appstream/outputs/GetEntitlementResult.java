@@ -101,7 +101,6 @@ public final class GetEntitlementResult {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public GetEntitlementResult build() {
             return new GetEntitlementResult(appVisibility, attributes, createdTime, description, lastModifiedTime);
         }

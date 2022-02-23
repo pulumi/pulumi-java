@@ -54,7 +54,6 @@ public final class FhirServiceAcrConfigurationResponse {
             this.loginServers = loginServers;
             return this;
         }
-
         public FhirServiceAcrConfigurationResponse build() {
             return new FhirServiceAcrConfigurationResponse(loginServers);
         }

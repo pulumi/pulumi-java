@@ -74,7 +74,6 @@ public final class GetTriggerEventSubscriptionStatusResult {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
         }
-
         public GetTriggerEventSubscriptionStatusResult build() {
             return new GetTriggerEventSubscriptionStatusResult(status, triggerName);
         }

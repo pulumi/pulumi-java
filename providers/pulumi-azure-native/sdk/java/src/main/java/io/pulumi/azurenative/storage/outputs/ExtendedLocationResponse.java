@@ -76,7 +76,6 @@ public final class ExtendedLocationResponse {
             this.type = type;
             return this;
         }
-
         public ExtendedLocationResponse build() {
             return new ExtendedLocationResponse(name, type);
         }

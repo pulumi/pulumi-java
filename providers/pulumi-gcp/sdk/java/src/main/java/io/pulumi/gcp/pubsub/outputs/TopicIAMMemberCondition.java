@@ -73,7 +73,6 @@ public final class TopicIAMMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public TopicIAMMemberCondition build() {
             return new TopicIAMMemberCondition(description, expression, title);
         }

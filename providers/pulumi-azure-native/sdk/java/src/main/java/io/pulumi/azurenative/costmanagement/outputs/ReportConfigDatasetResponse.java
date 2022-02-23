@@ -167,7 +167,6 @@ public final class ReportConfigDatasetResponse {
             this.sorting = sorting;
             return this;
         }
-
         public ReportConfigDatasetResponse build() {
             return new ReportConfigDatasetResponse(aggregation, configuration, filter, granularity, grouping, sorting);
         }

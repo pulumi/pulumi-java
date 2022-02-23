@@ -250,7 +250,6 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse {
             this.silenceData = Objects.requireNonNull(silenceData);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1CallAnnotationResponse build() {
             return new GoogleCloudContactcenterinsightsV1CallAnnotationResponse(annotationEndBoundary, annotationStartBoundary, channelTag, entityMentionData, holdData, intentMatchData, interruptionData, phraseMatchData, sentimentData, silenceData);
         }

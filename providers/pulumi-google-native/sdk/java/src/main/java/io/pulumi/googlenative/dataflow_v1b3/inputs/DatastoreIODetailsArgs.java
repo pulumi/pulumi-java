@@ -23,7 +23,7 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -34,7 +34,7 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -93,7 +93,6 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public DatastoreIODetailsArgs build() {
             return new DatastoreIODetailsArgs(namespace, project);
         }

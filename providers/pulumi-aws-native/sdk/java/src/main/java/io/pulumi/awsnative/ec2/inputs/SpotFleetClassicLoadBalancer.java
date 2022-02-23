@@ -13,7 +13,7 @@ public final class SpotFleetClassicLoadBalancer extends io.pulumi.resources.Invo
     public static final SpotFleetClassicLoadBalancer Empty = new SpotFleetClassicLoadBalancer();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -51,7 +51,6 @@ public final class SpotFleetClassicLoadBalancer extends io.pulumi.resources.Invo
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public SpotFleetClassicLoadBalancer build() {
             return new SpotFleetClassicLoadBalancer(name);
         }

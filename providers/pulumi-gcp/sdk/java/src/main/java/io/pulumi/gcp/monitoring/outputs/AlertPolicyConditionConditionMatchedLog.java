@@ -88,7 +88,6 @@ public final class AlertPolicyConditionConditionMatchedLog {
             this.labelExtractors = labelExtractors;
             return this;
         }
-
         public AlertPolicyConditionConditionMatchedLog build() {
             return new AlertPolicyConditionConditionMatchedLog(filter, labelExtractors);
         }

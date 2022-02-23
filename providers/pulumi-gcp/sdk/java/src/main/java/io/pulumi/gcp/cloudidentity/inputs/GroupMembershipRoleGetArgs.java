@@ -19,7 +19,7 @@ public final class GroupMembershipRoleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -62,7 +62,6 @@ public final class GroupMembershipRoleGetArgs extends io.pulumi.resources.Resour
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public GroupMembershipRoleGetArgs build() {
             return new GroupMembershipRoleGetArgs(name);
         }

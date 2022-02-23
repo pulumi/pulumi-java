@@ -14,14 +14,14 @@ public final class AppBlockTagArgs extends io.pulumi.resources.ResourceArgs {
     public static final AppBlockTagArgs Empty = new AppBlockTagArgs();
 
     @InputImport(name="tagKey", required=true)
-    private final Input<String> tagKey;
+        private final Input<String> tagKey;
 
     public Input<String> getTagKey() {
         return this.tagKey;
     }
 
     @InputImport(name="tagValue", required=true)
-    private final Input<String> tagValue;
+        private final Input<String> tagValue;
 
     public Input<String> getTagValue() {
         return this.tagValue;
@@ -80,7 +80,6 @@ public final class AppBlockTagArgs extends io.pulumi.resources.ResourceArgs {
             this.tagValue = Input.of(Objects.requireNonNull(tagValue));
             return this;
         }
-
         public AppBlockTagArgs build() {
             return new AppBlockTagArgs(tagKey, tagValue);
         }

@@ -24,7 +24,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKey")
-    private final @Nullable Input<String> kmsKey;
+      private final @Nullable Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;
@@ -35,7 +35,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkTags")
-    private final @Nullable Input<List<String>> networkTags;
+      private final @Nullable Input<List<String>> networkTags;
 
     public Input<List<String>> getNetworkTags() {
         return this.networkTags == null ? Input.empty() : this.networkTags;
@@ -46,7 +46,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkUri")
-    private final @Nullable Input<String> networkUri;
+      private final @Nullable Input<String> networkUri;
 
     public Input<String> getNetworkUri() {
         return this.networkUri == null ? Input.empty() : this.networkUri;
@@ -57,7 +57,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -68,7 +68,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subnetworkUri")
-    private final @Nullable Input<String> subnetworkUri;
+      private final @Nullable Input<String> subnetworkUri;
 
     public Input<String> getSubnetworkUri() {
         return this.subnetworkUri == null ? Input.empty() : this.subnetworkUri;
@@ -172,7 +172,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.subnetworkUri = Input.ofNullable(subnetworkUri);
             return this;
         }
-
         public ExecutionConfigArgs build() {
             return new ExecutionConfigArgs(kmsKey, networkTags, networkUri, serviceAccount, subnetworkUri);
         }

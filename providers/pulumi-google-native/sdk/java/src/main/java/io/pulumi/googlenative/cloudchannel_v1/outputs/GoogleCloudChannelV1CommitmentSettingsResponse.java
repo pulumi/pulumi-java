@@ -96,7 +96,6 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GoogleCloudChannelV1CommitmentSettingsResponse build() {
             return new GoogleCloudChannelV1CommitmentSettingsResponse(endTime, renewalSettings, startTime);
         }

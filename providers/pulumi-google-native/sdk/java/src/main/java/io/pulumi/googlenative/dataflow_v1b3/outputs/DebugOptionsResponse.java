@@ -52,7 +52,6 @@ public final class DebugOptionsResponse {
             this.enableHotKeyLogging = Objects.requireNonNull(enableHotKeyLogging);
             return this;
         }
-
         public DebugOptionsResponse build() {
             return new DebugOptionsResponse(enableHotKeyLogging);
         }

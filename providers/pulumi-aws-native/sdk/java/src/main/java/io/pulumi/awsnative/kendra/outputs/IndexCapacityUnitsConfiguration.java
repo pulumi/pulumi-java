@@ -58,7 +58,6 @@ public final class IndexCapacityUnitsConfiguration {
             this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits);
             return this;
         }
-
         public IndexCapacityUnitsConfiguration build() {
             return new IndexCapacityUnitsConfiguration(queryCapacityUnits, storageCapacityUnits);
         }

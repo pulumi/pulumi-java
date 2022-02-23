@@ -44,7 +44,6 @@ public final class BotSampleUtterance {
             this.utterance = Objects.requireNonNull(utterance);
             return this;
         }
-
         public BotSampleUtterance build() {
             return new BotSampleUtterance(utterance);
         }

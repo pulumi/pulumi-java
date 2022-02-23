@@ -52,7 +52,6 @@ public final class AzureNodePoolMaxPodsConstraint {
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
         }
-
         public AzureNodePoolMaxPodsConstraint build() {
             return new AzureNodePoolMaxPodsConstraint(maxPodsPerNode);
         }

@@ -102,7 +102,6 @@ public final class DatasetVariable {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
-
         public DatasetVariable build() {
             return new DatasetVariable(datasetContentVersionValue, doubleValue, outputFileUriValue, stringValue, variableName);
         }

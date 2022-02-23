@@ -15,21 +15,21 @@ public final class GetTargetInstanceArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetTargetInstanceArgs Empty = new GetTargetInstanceArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="targetInstance", required=true)
-    private final String targetInstance;
+      private final String targetInstance;
 
     public String getTargetInstance() {
         return this.targetInstance;
     }
 
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -88,7 +88,6 @@ public final class GetTargetInstanceArgs extends io.pulumi.resources.InvokeArgs 
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetTargetInstanceArgs build() {
             return new GetTargetInstanceArgs(project, targetInstance, zone);
         }

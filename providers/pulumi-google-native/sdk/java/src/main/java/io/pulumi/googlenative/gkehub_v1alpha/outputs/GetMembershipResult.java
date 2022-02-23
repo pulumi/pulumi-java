@@ -288,7 +288,6 @@ public final class GetMembershipResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetMembershipResult build() {
             return new GetMembershipResult(authority, createTime, deleteTime, description, endpoint, externalId, labels, lastConnectionTime, name, state, uniqueId, updateTime);
         }

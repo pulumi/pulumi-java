@@ -76,7 +76,6 @@ public final class WsdlServiceResponse {
             this.qualifiedName = Objects.requireNonNull(qualifiedName);
             return this;
         }
-
         public WsdlServiceResponse build() {
             return new WsdlServiceResponse(endpointQualifiedNames, qualifiedName);
         }

@@ -24,7 +24,7 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+        private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -35,7 +35,7 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+        private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -84,7 +84,6 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
             this.protocol = protocol;
             return this;
         }
-
         public ContainerPortResponse build() {
             return new ContainerPortResponse(port, protocol);
         }

@@ -30,7 +30,6 @@ public final class GetAssignmentResult {
         public Builder(GetAssignmentResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetAssignmentResult build() {
             return new GetAssignmentResult();
         }

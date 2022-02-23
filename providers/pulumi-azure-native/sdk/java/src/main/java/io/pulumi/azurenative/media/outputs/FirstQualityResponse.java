@@ -52,7 +52,6 @@ public final class FirstQualityResponse {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
         }
-
         public FirstQualityResponse build() {
             return new FirstQualityResponse(bitrate);
         }

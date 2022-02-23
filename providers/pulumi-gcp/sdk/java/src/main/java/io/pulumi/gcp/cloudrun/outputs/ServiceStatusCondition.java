@@ -86,7 +86,6 @@ public final class ServiceStatusCondition {
             this.type = type;
             return this;
         }
-
         public ServiceStatusCondition build() {
             return new ServiceStatusCondition(message, reason, status, type);
         }

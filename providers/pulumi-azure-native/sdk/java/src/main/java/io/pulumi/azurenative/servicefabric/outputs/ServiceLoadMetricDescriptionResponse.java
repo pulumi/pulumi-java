@@ -140,7 +140,6 @@ public final class ServiceLoadMetricDescriptionResponse {
             this.weight = weight;
             return this;
         }
-
         public ServiceLoadMetricDescriptionResponse build() {
             return new ServiceLoadMetricDescriptionResponse(defaultLoad, name, primaryDefaultLoad, secondaryDefaultLoad, weight);
         }

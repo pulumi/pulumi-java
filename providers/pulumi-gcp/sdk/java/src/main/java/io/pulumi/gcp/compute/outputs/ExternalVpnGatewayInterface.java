@@ -91,7 +91,6 @@ public final class ExternalVpnGatewayInterface {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public ExternalVpnGatewayInterface build() {
             return new ExternalVpnGatewayInterface(id, ipAddress);
         }

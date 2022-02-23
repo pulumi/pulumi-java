@@ -25,7 +25,7 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<String> database;
+      private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -36,7 +36,7 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mysqlTables")
-    private final @Nullable Input<List<MysqlTableArgs>> mysqlTables;
+      private final @Nullable Input<List<MysqlTableArgs>> mysqlTables;
 
     public Input<List<MysqlTableArgs>> getMysqlTables() {
         return this.mysqlTables == null ? Input.empty() : this.mysqlTables;
@@ -95,7 +95,6 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.mysqlTables = Input.ofNullable(mysqlTables);
             return this;
         }
-
         public MysqlDatabaseArgs build() {
             return new MysqlDatabaseArgs(database, mysqlTables);
         }

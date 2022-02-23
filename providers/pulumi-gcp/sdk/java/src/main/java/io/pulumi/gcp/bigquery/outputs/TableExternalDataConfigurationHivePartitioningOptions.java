@@ -130,7 +130,6 @@ public final class TableExternalDataConfigurationHivePartitioningOptions {
             this.sourceUriPrefix = sourceUriPrefix;
             return this;
         }
-
         public TableExternalDataConfigurationHivePartitioningOptions build() {
             return new TableExternalDataConfigurationHivePartitioningOptions(mode, requirePartitionFilter, sourceUriPrefix);
         }

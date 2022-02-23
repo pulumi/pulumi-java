@@ -76,7 +76,6 @@ public final class ManagementGroupPathElementResponse {
             this.name = name;
             return this;
         }
-
         public ManagementGroupPathElementResponse build() {
             return new ManagementGroupPathElementResponse(displayName, name);
         }

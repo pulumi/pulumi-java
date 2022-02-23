@@ -75,7 +75,6 @@ public final class GoogleCloudMlV1__DiskConfigResponse {
             this.bootDiskType = Objects.requireNonNull(bootDiskType);
             return this;
         }
-
         public GoogleCloudMlV1__DiskConfigResponse build() {
             return new GoogleCloudMlV1__DiskConfigResponse(bootDiskSizeGb, bootDiskType);
         }

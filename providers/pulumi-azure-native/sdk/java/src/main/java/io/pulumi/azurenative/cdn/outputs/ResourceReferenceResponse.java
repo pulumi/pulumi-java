@@ -54,7 +54,6 @@ public final class ResourceReferenceResponse {
             this.id = id;
             return this;
         }
-
         public ResourceReferenceResponse build() {
             return new ResourceReferenceResponse(id);
         }

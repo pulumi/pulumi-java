@@ -201,7 +201,6 @@ public final class DocumentOccurrenceResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public DocumentOccurrenceResponse build() {
             return new DocumentOccurrenceResponse(createTime, creatorComment, creators, documentComment, externalDocumentRefs, licenseListVersion, namespace, title);
         }

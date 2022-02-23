@@ -77,7 +77,6 @@ public final class AzureFilesIdentityBasedAuthenticationResponse {
             this.directoryServiceOptions = Objects.requireNonNull(directoryServiceOptions);
             return this;
         }
-
         public AzureFilesIdentityBasedAuthenticationResponse build() {
             return new AzureFilesIdentityBasedAuthenticationResponse(activeDirectoryProperties, directoryServiceOptions);
         }

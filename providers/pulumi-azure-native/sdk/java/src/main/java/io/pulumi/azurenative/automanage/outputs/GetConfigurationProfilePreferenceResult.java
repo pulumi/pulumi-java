@@ -161,7 +161,6 @@ public final class GetConfigurationProfilePreferenceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationProfilePreferenceResult build() {
             return new GetConfigurationProfilePreferenceResult(id, location, name, properties, tags, type);
         }

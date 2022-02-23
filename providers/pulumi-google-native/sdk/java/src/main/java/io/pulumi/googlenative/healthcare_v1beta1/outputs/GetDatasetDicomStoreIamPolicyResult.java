@@ -120,7 +120,6 @@ public final class GetDatasetDicomStoreIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDatasetDicomStoreIamPolicyResult build() {
             return new GetDatasetDicomStoreIamPolicyResult(auditConfigs, bindings, etag, version);
         }

@@ -96,7 +96,6 @@ public final class JobPlacementResponse {
             this.clusterUuid = Objects.requireNonNull(clusterUuid);
             return this;
         }
-
         public JobPlacementResponse build() {
             return new JobPlacementResponse(clusterLabels, clusterName, clusterUuid);
         }

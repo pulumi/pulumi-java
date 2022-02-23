@@ -308,7 +308,6 @@ public final class TableExternalDataConfiguration {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
-
         public TableExternalDataConfiguration build() {
             return new TableExternalDataConfiguration(autodetect, compression, csvOptions, googleSheetsOptions, hivePartitioningOptions, ignoreUnknownValues, maxBadRecords, schema, sourceFormat, sourceUris);
         }

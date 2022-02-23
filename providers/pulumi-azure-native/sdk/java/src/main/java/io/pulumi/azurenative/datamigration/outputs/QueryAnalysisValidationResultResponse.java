@@ -75,7 +75,6 @@ public final class QueryAnalysisValidationResultResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public QueryAnalysisValidationResultResponse build() {
             return new QueryAnalysisValidationResultResponse(queryResults, validationErrors);
         }

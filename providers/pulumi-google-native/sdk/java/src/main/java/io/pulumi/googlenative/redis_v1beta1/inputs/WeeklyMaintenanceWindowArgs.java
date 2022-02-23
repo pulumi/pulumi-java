@@ -23,7 +23,7 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="day", required=true)
-    private final Input<WeeklyMaintenanceWindowDay> day;
+      private final Input<WeeklyMaintenanceWindowDay> day;
 
     public Input<WeeklyMaintenanceWindowDay> getDay() {
         return this.day;
@@ -34,7 +34,7 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<TimeOfDayArgs> startTime;
+      private final Input<TimeOfDayArgs> startTime;
 
     public Input<TimeOfDayArgs> getStartTime() {
         return this.startTime;
@@ -93,7 +93,6 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public WeeklyMaintenanceWindowArgs build() {
             return new WeeklyMaintenanceWindowArgs(day, startTime);
         }

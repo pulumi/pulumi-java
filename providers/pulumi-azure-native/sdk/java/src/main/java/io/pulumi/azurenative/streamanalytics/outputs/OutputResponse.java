@@ -195,7 +195,6 @@ public final class OutputResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OutputResponse build() {
             return new OutputResponse(datasource, diagnostics, etag, id, name, serialization, type);
         }

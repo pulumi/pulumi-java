@@ -117,7 +117,6 @@ public final class GetBrandResult {
             this.supportEmail = Objects.requireNonNull(supportEmail);
             return this;
         }
-
         public GetBrandResult build() {
             return new GetBrandResult(applicationTitle, name, orgInternalOnly, supportEmail);
         }

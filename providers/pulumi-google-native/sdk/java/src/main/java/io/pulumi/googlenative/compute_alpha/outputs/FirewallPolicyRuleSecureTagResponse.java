@@ -74,7 +74,6 @@ public final class FirewallPolicyRuleSecureTagResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public FirewallPolicyRuleSecureTagResponse build() {
             return new FirewallPolicyRuleSecureTagResponse(name, state);
         }

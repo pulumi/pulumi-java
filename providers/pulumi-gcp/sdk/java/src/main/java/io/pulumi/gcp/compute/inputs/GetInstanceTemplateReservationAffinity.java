@@ -15,7 +15,7 @@ public final class GetInstanceTemplateReservationAffinity extends io.pulumi.reso
     public static final GetInstanceTemplateReservationAffinity Empty = new GetInstanceTemplateReservationAffinity();
 
     @InputImport(name="specificReservations", required=true)
-    private final List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations;
+        private final List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations;
 
     public List<GetInstanceTemplateReservationAffinitySpecificReservation> getSpecificReservations() {
         return this.specificReservations;
@@ -26,7 +26,7 @@ public final class GetInstanceTemplateReservationAffinity extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -75,7 +75,6 @@ public final class GetInstanceTemplateReservationAffinity extends io.pulumi.reso
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceTemplateReservationAffinity build() {
             return new GetInstanceTemplateReservationAffinity(specificReservations, type);
         }

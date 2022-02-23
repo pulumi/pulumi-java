@@ -14,14 +14,14 @@ public final class BudgetsActionActionThreshold extends io.pulumi.resources.Invo
     public static final BudgetsActionActionThreshold Empty = new BudgetsActionActionThreshold();
 
     @InputImport(name="type", required=true)
-    private final BudgetsActionActionThresholdType type;
+        private final BudgetsActionActionThresholdType type;
 
     public BudgetsActionActionThresholdType getType() {
         return this.type;
     }
 
     @InputImport(name="value", required=true)
-    private final Double value;
+        private final Double value;
 
     public Double getValue() {
         return this.value;
@@ -70,7 +70,6 @@ public final class BudgetsActionActionThreshold extends io.pulumi.resources.Invo
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BudgetsActionActionThreshold build() {
             return new BudgetsActionActionThreshold(type, value);
         }

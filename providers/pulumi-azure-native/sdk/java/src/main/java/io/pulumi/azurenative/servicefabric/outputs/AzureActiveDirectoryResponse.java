@@ -97,7 +97,6 @@ public final class AzureActiveDirectoryResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public AzureActiveDirectoryResponse build() {
             return new AzureActiveDirectoryResponse(clientApplication, clusterApplication, tenantId);
         }

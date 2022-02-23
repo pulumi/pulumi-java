@@ -19,7 +19,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageGetArgs extends
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<CxFlowTransitionRouteTriggerFulfillmentMessageTextGetArgs> text;
+        private final @Nullable Input<CxFlowTransitionRouteTriggerFulfillmentMessageTextGetArgs> text;
 
     public Input<CxFlowTransitionRouteTriggerFulfillmentMessageTextGetArgs> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -62,7 +62,6 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageGetArgs extends
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public CxFlowTransitionRouteTriggerFulfillmentMessageGetArgs build() {
             return new CxFlowTransitionRouteTriggerFulfillmentMessageGetArgs(text);
         }

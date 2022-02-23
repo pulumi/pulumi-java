@@ -32,7 +32,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bootDiskKmsKey")
-    private final @Nullable Input<String> bootDiskKmsKey;
+        private final @Nullable Input<String> bootDiskKmsKey;
 
     public Input<String> getBootDiskKmsKey() {
         return this.bootDiskKmsKey == null ? Input.empty() : this.bootDiskKmsKey;
@@ -44,7 +44,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<Integer> diskSizeGb;
+        private final @Nullable Input<Integer> diskSizeGb;
 
     public Input<Integer> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -56,7 +56,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<String> diskType;
+        private final @Nullable Input<String> diskType;
 
     public Input<String> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -67,7 +67,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ephemeralStorageConfig")
-    private final @Nullable Input<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig;
+        private final @Nullable Input<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig;
 
     public Input<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> getEphemeralStorageConfig() {
         return this.ephemeralStorageConfig == null ? Input.empty() : this.ephemeralStorageConfig;
@@ -83,7 +83,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="gcfsConfig")
-    private final @Nullable Input<ClusterNodePoolNodeConfigGcfsConfigArgs> gcfsConfig;
+        private final @Nullable Input<ClusterNodePoolNodeConfigGcfsConfigArgs> gcfsConfig;
 
     public Input<ClusterNodePoolNodeConfigGcfsConfigArgs> getGcfsConfig() {
         return this.gcfsConfig == null ? Input.empty() : this.gcfsConfig;
@@ -95,7 +95,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="guestAccelerators")
-    private final @Nullable Input<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators;
+        private final @Nullable Input<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators;
 
     public Input<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> getGuestAccelerators() {
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
@@ -107,7 +107,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="imageType")
-    private final @Nullable Input<String> imageType;
+        private final @Nullable Input<String> imageType;
 
     public Input<String> getImageType() {
         return this.imageType == null ? Input.empty() : this.imageType;
@@ -119,7 +119,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kubeletConfig")
-    private final @Nullable Input<ClusterNodePoolNodeConfigKubeletConfigArgs> kubeletConfig;
+        private final @Nullable Input<ClusterNodePoolNodeConfigKubeletConfigArgs> kubeletConfig;
 
     public Input<ClusterNodePoolNodeConfigKubeletConfigArgs> getKubeletConfig() {
         return this.kubeletConfig == null ? Input.empty() : this.kubeletConfig;
@@ -131,7 +131,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -144,7 +144,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="linuxNodeConfig")
-    private final @Nullable Input<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig;
+        private final @Nullable Input<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig;
 
     public Input<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> getLinuxNodeConfig() {
         return this.linuxNodeConfig == null ? Input.empty() : this.linuxNodeConfig;
@@ -155,7 +155,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="localSsdCount")
-    private final @Nullable Input<Integer> localSsdCount;
+        private final @Nullable Input<Integer> localSsdCount;
 
     public Input<Integer> getLocalSsdCount() {
         return this.localSsdCount == null ? Input.empty() : this.localSsdCount;
@@ -168,7 +168,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+        private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -183,7 +183,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -198,7 +198,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="minCpuPlatform")
-    private final @Nullable Input<String> minCpuPlatform;
+        private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -209,7 +209,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="nodeGroup")
-    private final @Nullable Input<String> nodeGroup;
+        private final @Nullable Input<String> nodeGroup;
 
     public Input<String> getNodeGroup() {
         return this.nodeGroup == null ? Input.empty() : this.nodeGroup;
@@ -222,7 +222,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="oauthScopes")
-    private final @Nullable Input<List<String>> oauthScopes;
+        private final @Nullable Input<List<String>> oauthScopes;
 
     public Input<List<String>> getOauthScopes() {
         return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
@@ -235,7 +235,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="preemptible")
-    private final @Nullable Input<Boolean> preemptible;
+        private final @Nullable Input<Boolean> preemptible;
 
     public Input<Boolean> getPreemptible() {
         return this.preemptible == null ? Input.empty() : this.preemptible;
@@ -247,7 +247,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sandboxConfig")
-    private final @Nullable Input<ClusterNodePoolNodeConfigSandboxConfigArgs> sandboxConfig;
+        private final @Nullable Input<ClusterNodePoolNodeConfigSandboxConfigArgs> sandboxConfig;
 
     public Input<ClusterNodePoolNodeConfigSandboxConfigArgs> getSandboxConfig() {
         return this.sandboxConfig == null ? Input.empty() : this.sandboxConfig;
@@ -259,7 +259,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+        private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -270,7 +270,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-    private final @Nullable Input<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
+        private final @Nullable Input<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Input<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
@@ -283,7 +283,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="spot")
-    private final @Nullable Input<Boolean> spot;
+        private final @Nullable Input<Boolean> spot;
 
     public Input<Boolean> getSpot() {
         return this.spot == null ? Input.empty() : this.spot;
@@ -295,7 +295,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+        private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -313,7 +313,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="taints")
-    private final @Nullable Input<List<ClusterNodePoolNodeConfigTaintArgs>> taints;
+        private final @Nullable Input<List<ClusterNodePoolNodeConfigTaintArgs>> taints;
 
     public Input<List<ClusterNodePoolNodeConfigTaintArgs>> getTaints() {
         return this.taints == null ? Input.empty() : this.taints;
@@ -325,7 +325,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="workloadMetadataConfig")
-    private final @Nullable Input<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig;
+        private final @Nullable Input<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig;
 
     public Input<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> getWorkloadMetadataConfig() {
         return this.workloadMetadataConfig == null ? Input.empty() : this.workloadMetadataConfig;
@@ -714,7 +714,6 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
             this.workloadMetadataConfig = Input.ofNullable(workloadMetadataConfig);
             return this;
         }
-
         public ClusterNodePoolNodeConfigArgs build() {
             return new ClusterNodePoolNodeConfigArgs(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, guestAccelerators, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
         }

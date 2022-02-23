@@ -54,7 +54,6 @@ public final class ScaleInPolicyResponse {
             this.rules = rules;
             return this;
         }
-
         public ScaleInPolicyResponse build() {
             return new ScaleInPolicyResponse(rules);
         }

@@ -77,7 +77,6 @@ public final class CencDrmConfigurationResponse {
             this.widevine = widevine;
             return this;
         }
-
         public CencDrmConfigurationResponse build() {
             return new CencDrmConfigurationResponse(playReady, widevine);
         }

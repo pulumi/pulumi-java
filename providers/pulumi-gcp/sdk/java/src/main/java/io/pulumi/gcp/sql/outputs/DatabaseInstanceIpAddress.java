@@ -73,7 +73,6 @@ public final class DatabaseInstanceIpAddress {
             this.type = type;
             return this;
         }
-
         public DatabaseInstanceIpAddress build() {
             return new DatabaseInstanceIpAddress(ipAddress, timeToRetire, type);
         }

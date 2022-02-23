@@ -285,7 +285,6 @@ public final class GoogleCloudMlV1__PredictionInputResponse {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }
-
         public GoogleCloudMlV1__PredictionInputResponse build() {
             return new GoogleCloudMlV1__PredictionInputResponse(batchSize, dataFormat, inputPaths, maxWorkerCount, modelName, outputDataFormat, outputPath, region, runtimeVersion, signatureName, uri, versionName);
         }

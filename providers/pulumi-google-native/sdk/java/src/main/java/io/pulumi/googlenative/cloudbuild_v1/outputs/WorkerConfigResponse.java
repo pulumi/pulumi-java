@@ -74,7 +74,6 @@ public final class WorkerConfigResponse {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public WorkerConfigResponse build() {
             return new WorkerConfigResponse(diskSizeGb, machineType);
         }

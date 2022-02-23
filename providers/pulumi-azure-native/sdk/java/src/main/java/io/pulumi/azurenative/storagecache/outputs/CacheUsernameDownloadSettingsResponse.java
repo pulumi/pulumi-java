@@ -288,7 +288,6 @@ public final class CacheUsernameDownloadSettingsResponse {
             this.usernameSource = usernameSource;
             return this;
         }
-
         public CacheUsernameDownloadSettingsResponse build() {
             return new CacheUsernameDownloadSettingsResponse(autoDownloadCertificate, caCertificateURI, credentials, encryptLdapConnection, extendedGroups, groupFileURI, ldapBaseDN, ldapServer, requireValidCertificate, userFileURI, usernameDownloaded, usernameSource);
         }

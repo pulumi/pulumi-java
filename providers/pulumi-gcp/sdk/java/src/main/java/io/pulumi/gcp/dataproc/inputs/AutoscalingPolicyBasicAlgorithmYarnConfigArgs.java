@@ -23,7 +23,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="gracefulDecommissionTimeout", required=true)
-    private final Input<String> gracefulDecommissionTimeout;
+        private final Input<String> gracefulDecommissionTimeout;
 
     public Input<String> getGracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
@@ -39,7 +39,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="scaleDownFactor", required=true)
-    private final Input<Double> scaleDownFactor;
+        private final Input<Double> scaleDownFactor;
 
     public Input<Double> getScaleDownFactor() {
         return this.scaleDownFactor;
@@ -54,7 +54,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="scaleDownMinWorkerFraction")
-    private final @Nullable Input<Double> scaleDownMinWorkerFraction;
+        private final @Nullable Input<Double> scaleDownMinWorkerFraction;
 
     public Input<Double> getScaleDownMinWorkerFraction() {
         return this.scaleDownMinWorkerFraction == null ? Input.empty() : this.scaleDownMinWorkerFraction;
@@ -70,7 +70,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="scaleUpFactor", required=true)
-    private final Input<Double> scaleUpFactor;
+        private final Input<Double> scaleUpFactor;
 
     public Input<Double> getScaleUpFactor() {
         return this.scaleUpFactor;
@@ -85,7 +85,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="scaleUpMinWorkerFraction")
-    private final @Nullable Input<Double> scaleUpMinWorkerFraction;
+        private final @Nullable Input<Double> scaleUpMinWorkerFraction;
 
     public Input<Double> getScaleUpMinWorkerFraction() {
         return this.scaleUpMinWorkerFraction == null ? Input.empty() : this.scaleUpMinWorkerFraction;
@@ -189,7 +189,6 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigArgs extends io.pulu
             this.scaleUpMinWorkerFraction = Input.ofNullable(scaleUpMinWorkerFraction);
             return this;
         }
-
         public AutoscalingPolicyBasicAlgorithmYarnConfigArgs build() {
             return new AutoscalingPolicyBasicAlgorithmYarnConfigArgs(gracefulDecommissionTimeout, scaleDownFactor, scaleDownMinWorkerFraction, scaleUpFactor, scaleUpMinWorkerFraction);
         }

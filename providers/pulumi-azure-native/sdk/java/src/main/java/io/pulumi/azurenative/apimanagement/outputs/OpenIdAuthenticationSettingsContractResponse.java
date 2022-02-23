@@ -77,7 +77,6 @@ public final class OpenIdAuthenticationSettingsContractResponse {
             this.openidProviderId = openidProviderId;
             return this;
         }
-
         public OpenIdAuthenticationSettingsContractResponse build() {
             return new OpenIdAuthenticationSettingsContractResponse(bearerTokenSendingMethods, openidProviderId);
         }

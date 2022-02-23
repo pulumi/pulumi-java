@@ -74,7 +74,6 @@ public final class SubnetworkSecondaryRangeResponse {
             this.rangeName = Objects.requireNonNull(rangeName);
             return this;
         }
-
         public SubnetworkSecondaryRangeResponse build() {
             return new SubnetworkSecondaryRangeResponse(ipCidrRange, rangeName);
         }

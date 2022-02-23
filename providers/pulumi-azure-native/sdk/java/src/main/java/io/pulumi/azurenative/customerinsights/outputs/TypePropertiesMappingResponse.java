@@ -97,7 +97,6 @@ public final class TypePropertiesMappingResponse {
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
         }
-
         public TypePropertiesMappingResponse build() {
             return new TypePropertiesMappingResponse(linkType, sourcePropertyName, targetPropertyName);
         }

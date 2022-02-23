@@ -24,7 +24,7 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cluster")
-    private final @Nullable ScopeClusterResponse cluster;
+        private final @Nullable ScopeClusterResponse cluster;
 
     public Optional<ScopeClusterResponse> getCluster() {
         return this.cluster == null ? Optional.empty() : Optional.ofNullable(this.cluster);
@@ -35,7 +35,7 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable ScopeNamespaceResponse namespace;
+        private final @Nullable ScopeNamespaceResponse namespace;
 
     public Optional<ScopeNamespaceResponse> getNamespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
@@ -84,7 +84,6 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
             this.namespace = namespace;
             return this;
         }
-
         public ScopeResponse build() {
             return new ScopeResponse(cluster, namespace);
         }

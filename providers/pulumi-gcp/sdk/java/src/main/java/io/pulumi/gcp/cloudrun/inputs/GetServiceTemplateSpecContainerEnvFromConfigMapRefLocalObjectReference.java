@@ -17,7 +17,7 @@ public final class GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObject
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -55,7 +55,6 @@ public final class GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObject
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference build() {
             return new GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference(name);
         }

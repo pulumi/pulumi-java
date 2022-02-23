@@ -76,7 +76,6 @@ public final class DatasetStateResponseDeprecatedBy {
             this.definitionVersion = definitionVersion;
             return this;
         }
-
         public DatasetStateResponseDeprecatedBy build() {
             return new DatasetStateResponseDeprecatedBy(datasetId, definitionVersion);
         }

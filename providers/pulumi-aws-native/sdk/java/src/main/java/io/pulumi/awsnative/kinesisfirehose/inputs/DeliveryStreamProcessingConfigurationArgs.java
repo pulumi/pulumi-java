@@ -17,14 +17,14 @@ public final class DeliveryStreamProcessingConfigurationArgs extends io.pulumi.r
     public static final DeliveryStreamProcessingConfigurationArgs Empty = new DeliveryStreamProcessingConfigurationArgs();
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="processors")
-    private final @Nullable Input<List<DeliveryStreamProcessorArgs>> processors;
+        private final @Nullable Input<List<DeliveryStreamProcessorArgs>> processors;
 
     public Input<List<DeliveryStreamProcessorArgs>> getProcessors() {
         return this.processors == null ? Input.empty() : this.processors;
@@ -83,7 +83,6 @@ public final class DeliveryStreamProcessingConfigurationArgs extends io.pulumi.r
             this.processors = Input.ofNullable(processors);
             return this;
         }
-
         public DeliveryStreamProcessingConfigurationArgs build() {
             return new DeliveryStreamProcessingConfigurationArgs(enabled, processors);
         }

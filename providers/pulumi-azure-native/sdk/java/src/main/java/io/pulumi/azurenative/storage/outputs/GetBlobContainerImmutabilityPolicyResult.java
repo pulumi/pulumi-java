@@ -183,7 +183,6 @@ public final class GetBlobContainerImmutabilityPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBlobContainerImmutabilityPolicyResult build() {
             return new GetBlobContainerImmutabilityPolicyResult(allowProtectedAppendWrites, etag, id, immutabilityPeriodSinceCreationInDays, name, state, type);
         }

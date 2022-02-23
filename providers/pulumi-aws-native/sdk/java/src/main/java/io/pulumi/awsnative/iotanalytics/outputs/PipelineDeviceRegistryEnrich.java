@@ -99,7 +99,6 @@ public final class PipelineDeviceRegistryEnrich {
             this.thingName = Objects.requireNonNull(thingName);
             return this;
         }
-
         public PipelineDeviceRegistryEnrich build() {
             return new PipelineDeviceRegistryEnrich(attribute, name, next, roleArn, thingName);
         }

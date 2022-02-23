@@ -142,7 +142,6 @@ public final class WebChatChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public WebChatChannelResponse build() {
             return new WebChatChannelResponse(channelName, etag, location, properties, provisioningState);
         }

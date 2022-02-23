@@ -53,7 +53,6 @@ public final class StatefulPolicyPreservedStateResponse {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
         public StatefulPolicyPreservedStateResponse build() {
             return new StatefulPolicyPreservedStateResponse(disks);
         }

@@ -52,7 +52,6 @@ public final class LegacyAbacResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public LegacyAbacResponse build() {
             return new LegacyAbacResponse(enabled);
         }

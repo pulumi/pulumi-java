@@ -22,7 +22,7 @@ public final class TemplateSourceTemplateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+        private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
@@ -65,7 +65,6 @@ public final class TemplateSourceTemplateArgs extends io.pulumi.resources.Resour
             this.arn = Input.of(Objects.requireNonNull(arn));
             return this;
         }
-
         public TemplateSourceTemplateArgs build() {
             return new TemplateSourceTemplateArgs(arn);
         }

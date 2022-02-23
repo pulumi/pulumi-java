@@ -154,7 +154,6 @@ public final class CookiesMatchConditionParametersResponse {
             this.transforms = transforms;
             return this;
         }
-
         public CookiesMatchConditionParametersResponse build() {
             return new CookiesMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, selector, transforms);
         }

@@ -25,7 +25,7 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<String> weight;
+      private final @Nullable Input<String> weight;
 
     public Input<String> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -36,7 +36,7 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="widgets")
-    private final @Nullable Input<List<WidgetArgs>> widgets;
+      private final @Nullable Input<List<WidgetArgs>> widgets;
 
     public Input<List<WidgetArgs>> getWidgets() {
         return this.widgets == null ? Input.empty() : this.widgets;
@@ -95,7 +95,6 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
             this.widgets = Input.ofNullable(widgets);
             return this;
         }
-
         public RowArgs build() {
             return new RowArgs(weight, widgets);
         }

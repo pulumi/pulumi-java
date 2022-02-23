@@ -158,7 +158,6 @@ public final class NodeStateCountsResponse {
             this.unusableNodeCount = Objects.requireNonNull(unusableNodeCount);
             return this;
         }
-
         public NodeStateCountsResponse build() {
             return new NodeStateCountsResponse(idleNodeCount, leavingNodeCount, preemptedNodeCount, preparingNodeCount, runningNodeCount, unusableNodeCount);
         }

@@ -77,7 +77,6 @@ public final class DeliveryRuleCookiesConditionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleCookiesConditionResponse build() {
             return new DeliveryRuleCookiesConditionResponse(name, parameters);
         }

@@ -184,7 +184,6 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
             this.replicationInterval = replicationInterval;
             return this;
         }
-
         public HyperVReplicaAzurePolicyDetailsResponse build() {
             return new HyperVReplicaAzurePolicyDetailsResponse(activeStorageAccountId, applicationConsistentSnapshotFrequencyInHours, encryption, instanceType, onlineReplicationStartTime, recoveryPointHistoryDurationInHours, replicationInterval);
         }

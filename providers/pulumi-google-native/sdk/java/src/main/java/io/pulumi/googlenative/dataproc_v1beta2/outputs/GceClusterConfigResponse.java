@@ -290,7 +290,6 @@ public final class GceClusterConfigResponse {
             this.zoneUri = Objects.requireNonNull(zoneUri);
             return this;
         }
-
         public GceClusterConfigResponse build() {
             return new GceClusterConfigResponse(internalIpOnly, metadata, networkUri, nodeGroupAffinity, privateIpv6GoogleAccess, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetworkUri, tags, zoneUri);
         }

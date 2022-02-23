@@ -44,7 +44,6 @@ public final class GlobalTableStreamSpecification {
             this.streamViewType = Objects.requireNonNull(streamViewType);
             return this;
         }
-
         public GlobalTableStreamSpecification build() {
             return new GlobalTableStreamSpecification(streamViewType);
         }

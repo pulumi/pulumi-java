@@ -174,7 +174,6 @@ public final class ResourceRecordSetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceRecordSetResponse build() {
             return new ResourceRecordSetResponse(kind, name, routingPolicy, rrdatas, signatureRrdatas, ttl, type);
         }

@@ -60,7 +60,6 @@ public final class RRSetRoutingPolicyWrrPolicyResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public RRSetRoutingPolicyWrrPolicyResponse build() {
             return new RRSetRoutingPolicyWrrPolicyResponse(items, kind);
         }

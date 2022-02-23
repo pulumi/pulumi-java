@@ -184,7 +184,6 @@ public final class GetCassandraClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCassandraClusterResult build() {
             return new GetCassandraClusterResult(id, identity, location, name, properties, tags, type);
         }

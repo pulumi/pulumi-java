@@ -123,7 +123,6 @@ public final class CxIntentParameter {
             this.redact = redact;
             return this;
         }
-
         public CxIntentParameter build() {
             return new CxIntentParameter(entityType, id, isList, redact);
         }

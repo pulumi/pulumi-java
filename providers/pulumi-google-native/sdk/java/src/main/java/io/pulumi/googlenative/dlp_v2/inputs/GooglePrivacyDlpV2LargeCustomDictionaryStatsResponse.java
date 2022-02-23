@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse extends 
      * 
      */
     @InputImport(name="approxNumPhrases", required=true)
-    private final String approxNumPhrases;
+      private final String approxNumPhrases;
 
     public String getApproxNumPhrases() {
         return this.approxNumPhrases;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse extends 
             this.approxNumPhrases = Objects.requireNonNull(approxNumPhrases);
             return this;
         }
-
         public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse build() {
             return new GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse(approxNumPhrases);
         }

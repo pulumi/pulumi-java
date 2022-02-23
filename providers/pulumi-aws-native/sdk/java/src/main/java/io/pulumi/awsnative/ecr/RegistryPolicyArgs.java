@@ -18,7 +18,7 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyText", required=true)
-    private final Input<Object> policyText;
+        private final Input<Object> policyText;
 
     public Input<Object> getPolicyText() {
         return this.policyText;
@@ -61,7 +61,6 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.policyText = Input.of(Objects.requireNonNull(policyText));
             return this;
         }
-
         public RegistryPolicyArgs build() {
             return new RegistryPolicyArgs(policyText);
         }

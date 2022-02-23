@@ -26,7 +26,7 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultLoad")
-    private final @Nullable Input<Integer> defaultLoad;
+        private final @Nullable Input<Integer> defaultLoad;
 
     public Input<Integer> getDefaultLoad() {
         return this.defaultLoad == null ? Input.empty() : this.defaultLoad;
@@ -37,7 +37,7 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -48,7 +48,7 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="primaryDefaultLoad")
-    private final @Nullable Input<Integer> primaryDefaultLoad;
+        private final @Nullable Input<Integer> primaryDefaultLoad;
 
     public Input<Integer> getPrimaryDefaultLoad() {
         return this.primaryDefaultLoad == null ? Input.empty() : this.primaryDefaultLoad;
@@ -59,7 +59,7 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secondaryDefaultLoad")
-    private final @Nullable Input<Integer> secondaryDefaultLoad;
+        private final @Nullable Input<Integer> secondaryDefaultLoad;
 
     public Input<Integer> getSecondaryDefaultLoad() {
         return this.secondaryDefaultLoad == null ? Input.empty() : this.secondaryDefaultLoad;
@@ -70,7 +70,7 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Either<String,ServiceLoadMetricWeight>> weight;
+        private final @Nullable Input<Either<String,ServiceLoadMetricWeight>> weight;
 
     public Input<Either<String,ServiceLoadMetricWeight>> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -174,7 +174,6 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public ServiceLoadMetricDescriptionArgs build() {
             return new ServiceLoadMetricDescriptionArgs(defaultLoad, name, primaryDefaultLoad, secondaryDefaultLoad, weight);
         }

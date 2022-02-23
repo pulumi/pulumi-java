@@ -140,7 +140,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt 
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt(archiveType, components, distribution, gpgKey, uri);
         }

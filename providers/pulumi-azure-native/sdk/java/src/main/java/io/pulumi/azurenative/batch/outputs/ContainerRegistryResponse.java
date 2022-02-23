@@ -81,7 +81,6 @@ public final class ContainerRegistryResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public ContainerRegistryResponse build() {
             return new ContainerRegistryResponse(password, registryServer, userName);
         }

@@ -97,7 +97,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse(config, negated, query);
         }

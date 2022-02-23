@@ -97,7 +97,6 @@ public final class LiveEventInputTrackSelectionResponse {
             this.value = value;
             return this;
         }
-
         public LiveEventInputTrackSelectionResponse build() {
             return new LiveEventInputTrackSelectionResponse(operation, property, value);
         }

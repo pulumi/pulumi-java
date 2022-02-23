@@ -22,7 +22,7 @@ public final class BudgetComparisonExpressionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class BudgetComparisonExpressionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="operator", required=true)
-    private final String operator;
+        private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -44,7 +44,7 @@ public final class BudgetComparisonExpressionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="values", required=true)
-    private final List<String> values;
+        private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -103,7 +103,6 @@ public final class BudgetComparisonExpressionResponse extends io.pulumi.resource
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public BudgetComparisonExpressionResponse build() {
             return new BudgetComparisonExpressionResponse(name, operator, values);
         }

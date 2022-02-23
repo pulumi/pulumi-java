@@ -15,28 +15,28 @@ public final class GetCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCryptoKeyArgs Empty = new GetCryptoKeyArgs();
 
     @InputImport(name="cryptoKeyId", required=true)
-    private final String cryptoKeyId;
+      private final String cryptoKeyId;
 
     public String getCryptoKeyId() {
         return this.cryptoKeyId;
     }
 
     @InputImport(name="keyRingId", required=true)
-    private final String keyRingId;
+      private final String keyRingId;
 
     public String getKeyRingId() {
         return this.keyRingId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetCryptoKeyArgs build() {
             return new GetCryptoKeyArgs(cryptoKeyId, keyRingId, location, project);
         }

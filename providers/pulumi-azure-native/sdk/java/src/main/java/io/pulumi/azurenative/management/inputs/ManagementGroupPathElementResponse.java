@@ -23,7 +23,7 @@ public final class ManagementGroupPathElementResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+        private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -34,7 +34,7 @@ public final class ManagementGroupPathElementResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -83,7 +83,6 @@ public final class ManagementGroupPathElementResponse extends io.pulumi.resource
             this.name = name;
             return this;
         }
-
         public ManagementGroupPathElementResponse build() {
             return new ManagementGroupPathElementResponse(displayName, name);
         }

@@ -24,7 +24,7 @@ public final class ApplicationLogPatternSetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="logPatterns", required=true)
-    private final Input<List<ApplicationLogPatternArgs>> logPatterns;
+        private final Input<List<ApplicationLogPatternArgs>> logPatterns;
 
     public Input<List<ApplicationLogPatternArgs>> getLogPatterns() {
         return this.logPatterns;
@@ -35,7 +35,7 @@ public final class ApplicationLogPatternSetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="patternSetName", required=true)
-    private final Input<String> patternSetName;
+        private final Input<String> patternSetName;
 
     public Input<String> getPatternSetName() {
         return this.patternSetName;
@@ -94,7 +94,6 @@ public final class ApplicationLogPatternSetArgs extends io.pulumi.resources.Reso
             this.patternSetName = Input.of(Objects.requireNonNull(patternSetName));
             return this;
         }
-
         public ApplicationLogPatternSetArgs build() {
             return new ApplicationLogPatternSetArgs(logPatterns, patternSetName);
         }

@@ -247,7 +247,6 @@ public final class GetPolicyDefinitionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicyDefinitionResult build() {
             return new GetPolicyDefinitionResult(description, displayName, id, metadata, mode, name, parameters, policyRule, policyType, type);
         }

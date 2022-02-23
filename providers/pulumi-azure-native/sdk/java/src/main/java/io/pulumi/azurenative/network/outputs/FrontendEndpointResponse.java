@@ -268,7 +268,6 @@ public final class FrontendEndpointResponse {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
-
         public FrontendEndpointResponse build() {
             return new FrontendEndpointResponse(customHttpsConfiguration, customHttpsProvisioningState, customHttpsProvisioningSubstate, hostName, id, name, resourceState, sessionAffinityEnabledState, sessionAffinityTtlSeconds, type, webApplicationFirewallPolicyLink);
         }

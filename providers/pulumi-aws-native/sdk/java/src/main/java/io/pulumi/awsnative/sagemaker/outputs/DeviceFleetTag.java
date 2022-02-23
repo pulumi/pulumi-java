@@ -74,7 +74,6 @@ public final class DeviceFleetTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DeviceFleetTag build() {
             return new DeviceFleetTag(key, value);
         }

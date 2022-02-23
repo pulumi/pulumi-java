@@ -46,7 +46,6 @@ public final class ConfigMap {
             this.config = config;
             return this;
         }
-
         public ConfigMap build() {
             return new ConfigMap(config);
         }

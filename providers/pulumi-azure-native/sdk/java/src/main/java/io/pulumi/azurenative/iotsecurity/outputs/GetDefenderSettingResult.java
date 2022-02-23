@@ -203,7 +203,6 @@ public final class GetDefenderSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDefenderSettingResult build() {
             return new GetDefenderSettingResult(deviceQuota, evaluationEndTime, id, mdeIntegration, name, onboardingKind, sentinelWorkspaceResourceIds, type);
         }

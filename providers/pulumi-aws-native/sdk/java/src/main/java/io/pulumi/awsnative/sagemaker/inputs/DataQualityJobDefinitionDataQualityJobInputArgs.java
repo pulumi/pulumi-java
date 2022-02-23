@@ -18,7 +18,7 @@ public final class DataQualityJobDefinitionDataQualityJobInputArgs extends io.pu
     public static final DataQualityJobDefinitionDataQualityJobInputArgs Empty = new DataQualityJobDefinitionDataQualityJobInputArgs();
 
     @InputImport(name="endpointInput", required=true)
-    private final Input<DataQualityJobDefinitionEndpointInputArgs> endpointInput;
+        private final Input<DataQualityJobDefinitionEndpointInputArgs> endpointInput;
 
     public Input<DataQualityJobDefinitionEndpointInputArgs> getEndpointInput() {
         return this.endpointInput;
@@ -61,7 +61,6 @@ public final class DataQualityJobDefinitionDataQualityJobInputArgs extends io.pu
             this.endpointInput = Input.of(Objects.requireNonNull(endpointInput));
             return this;
         }
-
         public DataQualityJobDefinitionDataQualityJobInputArgs build() {
             return new DataQualityJobDefinitionDataQualityJobInputArgs(endpointInput);
         }

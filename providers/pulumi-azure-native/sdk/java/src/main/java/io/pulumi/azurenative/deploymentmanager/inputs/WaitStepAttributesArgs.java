@@ -22,7 +22,7 @@ public final class WaitStepAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="duration", required=true)
-    private final Input<String> duration;
+        private final Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration;
@@ -65,7 +65,6 @@ public final class WaitStepAttributesArgs extends io.pulumi.resources.ResourceAr
             this.duration = Input.of(Objects.requireNonNull(duration));
             return this;
         }
-
         public WaitStepAttributesArgs build() {
             return new WaitStepAttributesArgs(duration);
         }

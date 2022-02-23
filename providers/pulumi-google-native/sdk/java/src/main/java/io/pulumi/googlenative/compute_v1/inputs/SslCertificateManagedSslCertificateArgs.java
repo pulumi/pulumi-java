@@ -24,7 +24,7 @@ public final class SslCertificateManagedSslCertificateArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="domains")
-    private final @Nullable Input<List<String>> domains;
+      private final @Nullable Input<List<String>> domains;
 
     public Input<List<String>> getDomains() {
         return this.domains == null ? Input.empty() : this.domains;
@@ -67,7 +67,6 @@ public final class SslCertificateManagedSslCertificateArgs extends io.pulumi.res
             this.domains = Input.ofNullable(domains);
             return this;
         }
-
         public SslCertificateManagedSslCertificateArgs build() {
             return new SslCertificateManagedSslCertificateArgs(domains);
         }

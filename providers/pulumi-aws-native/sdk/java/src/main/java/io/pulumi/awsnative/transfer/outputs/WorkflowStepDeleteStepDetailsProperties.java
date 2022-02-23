@@ -54,7 +54,6 @@ public final class WorkflowStepDeleteStepDetailsProperties {
             this.name = name;
             return this;
         }
-
         public WorkflowStepDeleteStepDetailsProperties build() {
             return new WorkflowStepDeleteStepDetailsProperties(name);
         }

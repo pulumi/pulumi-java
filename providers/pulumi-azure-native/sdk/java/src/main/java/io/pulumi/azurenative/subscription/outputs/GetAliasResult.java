@@ -117,7 +117,6 @@ public final class GetAliasResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAliasResult build() {
             return new GetAliasResult(id, name, properties, type);
         }

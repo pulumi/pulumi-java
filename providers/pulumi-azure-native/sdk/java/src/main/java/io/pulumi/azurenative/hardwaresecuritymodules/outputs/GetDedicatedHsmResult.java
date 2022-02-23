@@ -269,7 +269,6 @@ public final class GetDedicatedHsmResult {
             this.zones = zones;
             return this;
         }
-
         public GetDedicatedHsmResult build() {
             return new GetDedicatedHsmResult(id, location, name, networkProfile, provisioningState, sku, stampId, statusMessage, tags, type, zones);
         }

@@ -300,7 +300,6 @@ public final class GetSqlPoolSensitivityLabelResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlPoolSensitivityLabelResult build() {
             return new GetSqlPoolSensitivityLabelResult(columnName, id, informationType, informationTypeId, isDisabled, labelId, labelName, managedBy, name, rank, schemaName, tableName, type);
         }

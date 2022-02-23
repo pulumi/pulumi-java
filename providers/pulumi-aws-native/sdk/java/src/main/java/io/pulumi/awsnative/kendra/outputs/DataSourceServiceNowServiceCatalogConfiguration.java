@@ -115,7 +115,6 @@ public final class DataSourceServiceNowServiceCatalogConfiguration {
             this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
-
         public DataSourceServiceNowServiceCatalogConfiguration build() {
             return new DataSourceServiceNowServiceCatalogConfiguration(crawlAttachments, documentDataFieldName, documentTitleFieldName, excludeAttachmentFilePatterns, fieldMappings, includeAttachmentFilePatterns);
         }

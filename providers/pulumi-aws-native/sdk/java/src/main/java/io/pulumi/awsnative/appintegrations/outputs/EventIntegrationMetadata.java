@@ -74,7 +74,6 @@ public final class EventIntegrationMetadata {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EventIntegrationMetadata build() {
             return new EventIntegrationMetadata(key, value);
         }

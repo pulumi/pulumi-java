@@ -58,7 +58,6 @@ public final class ListenerPortRange {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
-
         public ListenerPortRange build() {
             return new ListenerPortRange(fromPort, toPort);
         }

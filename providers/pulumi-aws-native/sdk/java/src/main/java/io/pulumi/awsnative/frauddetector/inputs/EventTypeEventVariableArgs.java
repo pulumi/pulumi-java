@@ -21,7 +21,7 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
     public static final EventTypeEventVariableArgs Empty = new EventTypeEventVariableArgs();
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+        private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,28 +32,28 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+        private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
     }
 
     @InputImport(name="dataSource")
-    private final @Nullable Input<EventTypeEventVariableDataSource> dataSource;
+        private final @Nullable Input<EventTypeEventVariableDataSource> dataSource;
 
     public Input<EventTypeEventVariableDataSource> getDataSource() {
         return this.dataSource == null ? Input.empty() : this.dataSource;
     }
 
     @InputImport(name="dataType")
-    private final @Nullable Input<EventTypeEventVariableDataType> dataType;
+        private final @Nullable Input<EventTypeEventVariableDataType> dataType;
 
     public Input<EventTypeEventVariableDataType> getDataType() {
         return this.dataType == null ? Input.empty() : this.dataType;
     }
 
     @InputImport(name="defaultValue")
-    private final @Nullable Input<String> defaultValue;
+        private final @Nullable Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -64,14 +64,14 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="inline")
-    private final @Nullable Input<Boolean> inline;
+        private final @Nullable Input<Boolean> inline;
 
     public Input<Boolean> getInline() {
         return this.inline == null ? Input.empty() : this.inline;
@@ -82,14 +82,14 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="lastUpdatedTime")
-    private final @Nullable Input<String> lastUpdatedTime;
+        private final @Nullable Input<String> lastUpdatedTime;
 
     public Input<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -100,14 +100,14 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<EventTypeTagArgs>> tags;
+        private final @Nullable Input<List<EventTypeTagArgs>> tags;
 
     public Input<List<EventTypeTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="variableType")
-    private final @Nullable Input<EventTypeEventVariableVariableType> variableType;
+        private final @Nullable Input<EventTypeEventVariableVariableType> variableType;
 
     public Input<EventTypeEventVariableVariableType> getVariableType() {
         return this.variableType == null ? Input.empty() : this.variableType;
@@ -301,7 +301,6 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
             this.variableType = Input.ofNullable(variableType);
             return this;
         }
-
         public EventTypeEventVariableArgs build() {
             return new EventTypeEventVariableArgs(arn, createdTime, dataSource, dataType, defaultValue, description, inline, lastUpdatedTime, name, tags, variableType);
         }

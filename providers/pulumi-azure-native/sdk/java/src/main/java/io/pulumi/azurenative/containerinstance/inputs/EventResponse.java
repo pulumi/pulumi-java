@@ -22,7 +22,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="count", required=true)
-    private final Integer count;
+        private final Integer count;
 
     public Integer getCount() {
         return this.count;
@@ -33,7 +33,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="firstTimestamp", required=true)
-    private final String firstTimestamp;
+        private final String firstTimestamp;
 
     public String getFirstTimestamp() {
         return this.firstTimestamp;
@@ -44,7 +44,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastTimestamp", required=true)
-    private final String lastTimestamp;
+        private final String lastTimestamp;
 
     public String getLastTimestamp() {
         return this.lastTimestamp;
@@ -55,7 +55,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
@@ -66,7 +66,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -77,7 +77,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -166,7 +166,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EventResponse build() {
             return new EventResponse(count, firstTimestamp, lastTimestamp, message, name, type);
         }

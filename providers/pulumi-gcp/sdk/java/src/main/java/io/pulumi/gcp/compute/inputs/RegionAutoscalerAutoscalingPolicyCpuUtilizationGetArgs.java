@@ -22,7 +22,7 @@ public final class RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs extend
      * 
      */
     @InputImport(name="predictiveMethod")
-    private final @Nullable Input<String> predictiveMethod;
+        private final @Nullable Input<String> predictiveMethod;
 
     public Input<String> getPredictiveMethod() {
         return this.predictiveMethod == null ? Input.empty() : this.predictiveMethod;
@@ -35,7 +35,7 @@ public final class RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs extend
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<Double> target;
+        private final Input<Double> target;
 
     public Input<Double> getTarget() {
         return this.target;
@@ -94,7 +94,6 @@ public final class RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs extend
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs build() {
             return new RegionAutoscalerAutoscalingPolicyCpuUtilizationGetArgs(predictiveMethod, target);
         }

@@ -102,7 +102,6 @@ public final class ReservationSpecificReservation {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }
-
         public ReservationSpecificReservation build() {
             return new ReservationSpecificReservation(count, inUseCount, instanceProperties);
         }

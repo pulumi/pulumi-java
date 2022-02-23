@@ -23,7 +23,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="linkedTemplates")
-    private final @Nullable Input<List<LinkedTemplateArtifactArgs>> linkedTemplates;
+        private final @Nullable Input<List<LinkedTemplateArtifactArgs>> linkedTemplates;
 
     public Input<List<LinkedTemplateArtifactArgs>> getLinkedTemplates() {
         return this.linkedTemplates == null ? Input.empty() : this.linkedTemplates;
@@ -45,7 +45,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -56,7 +56,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mainTemplate")
-    private final @Nullable Input<Object> mainTemplate;
+        private final @Nullable Input<Object> mainTemplate;
 
     public Input<Object> getMainTemplate() {
         return this.mainTemplate == null ? Input.empty() : this.mainTemplate;
@@ -67,7 +67,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+        private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -78,7 +78,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -100,7 +100,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="templateSpecName", required=true)
-    private final Input<String> templateSpecName;
+        private final Input<String> templateSpecName;
 
     public Input<String> getTemplateSpecName() {
         return this.templateSpecName;
@@ -111,7 +111,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="templateSpecVersion")
-    private final @Nullable Input<String> templateSpecVersion;
+        private final @Nullable Input<String> templateSpecVersion;
 
     public Input<String> getTemplateSpecVersion() {
         return this.templateSpecVersion == null ? Input.empty() : this.templateSpecVersion;
@@ -122,7 +122,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="uiFormDefinition")
-    private final @Nullable Input<Object> uiFormDefinition;
+        private final @Nullable Input<Object> uiFormDefinition;
 
     public Input<Object> getUiFormDefinition() {
         return this.uiFormDefinition == null ? Input.empty() : this.uiFormDefinition;
@@ -301,7 +301,6 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
             this.uiFormDefinition = Input.ofNullable(uiFormDefinition);
             return this;
         }
-
         public TemplateSpecVersionArgs build() {
             return new TemplateSpecVersionArgs(description, linkedTemplates, location, mainTemplate, metadata, resourceGroupName, tags, templateSpecName, templateSpecVersion, uiFormDefinition);
         }

@@ -80,7 +80,6 @@ public final class CxPageEntryFulfillmentMessageText {
             this.texts = texts;
             return this;
         }
-
         public CxPageEntryFulfillmentMessageText build() {
             return new CxPageEntryFulfillmentMessageText(allowPlaybackInterruption, texts);
         }

@@ -26,7 +26,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @InputImport(name="accelerator")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> getAccelerator() {
         return this.accelerator == null ? Input.empty() : this.accelerator;
@@ -37,7 +37,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final Input<String> diskSizeGb;
+      private final Input<String> diskSizeGb;
 
     public Input<String> getDiskSizeGb() {
         return this.diskSizeGb;
@@ -48,7 +48,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @InputImport(name="diskType", required=true)
-    private final Input<String> diskType;
+      private final Input<String> diskType;
 
     public Input<String> getDiskType() {
         return this.diskType;
@@ -59,7 +59,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -70,7 +70,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final Input<String> machineType;
+      private final Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType;
@@ -81,7 +81,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @InputImport(name="maxConcurrentActions")
-    private final @Nullable Input<String> maxConcurrentActions;
+      private final @Nullable Input<String> maxConcurrentActions;
 
     public Input<String> getMaxConcurrentActions() {
         return this.maxConcurrentActions == null ? Input.empty() : this.maxConcurrentActions;
@@ -92,7 +92,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @InputImport(name="minCpuPlatform")
-    private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -103,7 +103,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @InputImport(name="networkAccess")
-    private final @Nullable Input<String> networkAccess;
+      private final @Nullable Input<String> networkAccess;
 
     public Input<String> getNetworkAccess() {
         return this.networkAccess == null ? Input.empty() : this.networkAccess;
@@ -114,7 +114,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @InputImport(name="reserved")
-    private final @Nullable Input<Boolean> reserved;
+      private final @Nullable Input<Boolean> reserved;
 
     public Input<Boolean> getReserved() {
         return this.reserved == null ? Input.empty() : this.reserved;
@@ -125,7 +125,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @InputImport(name="soleTenantNodeType")
-    private final @Nullable Input<String> soleTenantNodeType;
+      private final @Nullable Input<String> soleTenantNodeType;
 
     public Input<String> getSoleTenantNodeType() {
         return this.soleTenantNodeType == null ? Input.empty() : this.soleTenantNodeType;
@@ -136,7 +136,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @InputImport(name="vmImage")
-    private final @Nullable Input<String> vmImage;
+      private final @Nullable Input<String> vmImage;
 
     public Input<String> getVmImage() {
         return this.vmImage == null ? Input.empty() : this.vmImage;
@@ -330,7 +330,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
             this.vmImage = Input.ofNullable(vmImage);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs(accelerator, diskSizeGb, diskType, labels, machineType, maxConcurrentActions, minCpuPlatform, networkAccess, reserved, soleTenantNodeType, vmImage);
         }

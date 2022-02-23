@@ -15,21 +15,21 @@ public final class ImportCollectorPropertiesResponse extends io.pulumi.resources
     public static final ImportCollectorPropertiesResponse Empty = new ImportCollectorPropertiesResponse();
 
     @InputImport(name="createdTimestamp", required=true)
-    private final String createdTimestamp;
+        private final String createdTimestamp;
 
     public String getCreatedTimestamp() {
         return this.createdTimestamp;
     }
 
     @InputImport(name="discoverySiteId")
-    private final @Nullable String discoverySiteId;
+        private final @Nullable String discoverySiteId;
 
     public Optional<String> getDiscoverySiteId() {
         return this.discoverySiteId == null ? Optional.empty() : Optional.ofNullable(this.discoverySiteId);
     }
 
     @InputImport(name="updatedTimestamp", required=true)
-    private final String updatedTimestamp;
+        private final String updatedTimestamp;
 
     public String getUpdatedTimestamp() {
         return this.updatedTimestamp;
@@ -88,7 +88,6 @@ public final class ImportCollectorPropertiesResponse extends io.pulumi.resources
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }
-
         public ImportCollectorPropertiesResponse build() {
             return new ImportCollectorPropertiesResponse(createdTimestamp, discoverySiteId, updatedTimestamp);
         }

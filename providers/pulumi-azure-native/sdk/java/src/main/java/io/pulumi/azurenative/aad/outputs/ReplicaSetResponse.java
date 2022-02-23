@@ -247,7 +247,6 @@ public final class ReplicaSetResponse {
             this.vnetSiteId = Objects.requireNonNull(vnetSiteId);
             return this;
         }
-
         public ReplicaSetResponse build() {
             return new ReplicaSetResponse(domainControllerIpAddress, externalAccessIpAddress, healthAlerts, healthLastEvaluated, healthMonitors, location, replicaSetId, serviceStatus, subnetId, vnetSiteId);
         }

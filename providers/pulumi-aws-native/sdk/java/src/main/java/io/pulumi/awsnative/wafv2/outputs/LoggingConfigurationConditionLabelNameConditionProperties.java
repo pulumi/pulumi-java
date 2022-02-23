@@ -52,7 +52,6 @@ public final class LoggingConfigurationConditionLabelNameConditionProperties {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
-
         public LoggingConfigurationConditionLabelNameConditionProperties build() {
             return new LoggingConfigurationConditionLabelNameConditionProperties(labelName);
         }

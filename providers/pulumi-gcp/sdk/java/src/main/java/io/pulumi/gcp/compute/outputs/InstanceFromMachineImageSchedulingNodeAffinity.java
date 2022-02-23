@@ -72,7 +72,6 @@ public final class InstanceFromMachineImageSchedulingNodeAffinity {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public InstanceFromMachineImageSchedulingNodeAffinity build() {
             return new InstanceFromMachineImageSchedulingNodeAffinity(key, operator, values);
         }

@@ -46,7 +46,6 @@ public final class DashboardAdHocFilteringOption {
             this.availabilityStatus = availabilityStatus;
             return this;
         }
-
         public DashboardAdHocFilteringOption build() {
             return new DashboardAdHocFilteringOption(availabilityStatus);
         }

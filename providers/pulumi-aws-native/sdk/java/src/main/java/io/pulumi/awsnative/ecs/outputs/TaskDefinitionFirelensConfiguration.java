@@ -61,7 +61,6 @@ public final class TaskDefinitionFirelensConfiguration {
             this.type = type;
             return this;
         }
-
         public TaskDefinitionFirelensConfiguration build() {
             return new TaskDefinitionFirelensConfiguration(options, type);
         }

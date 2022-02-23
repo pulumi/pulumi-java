@@ -29,7 +29,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Input<AuthenticationArgs> authentication;
+      private final @Nullable Input<AuthenticationArgs> authentication;
 
     public Input<AuthenticationArgs> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -40,7 +40,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blacklistPatterns")
-    private final @Nullable Input<List<String>> blacklistPatterns;
+      private final @Nullable Input<List<String>> blacklistPatterns;
 
     public Input<List<String>> getBlacklistPatterns() {
         return this.blacklistPatterns == null ? Input.empty() : this.blacklistPatterns;
@@ -51,7 +51,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -62,7 +62,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exportToSecurityCommandCenter")
-    private final @Nullable Input<ScanConfigExportToSecurityCommandCenter> exportToSecurityCommandCenter;
+      private final @Nullable Input<ScanConfigExportToSecurityCommandCenter> exportToSecurityCommandCenter;
 
     public Input<ScanConfigExportToSecurityCommandCenter> getExportToSecurityCommandCenter() {
         return this.exportToSecurityCommandCenter == null ? Input.empty() : this.exportToSecurityCommandCenter;
@@ -73,7 +73,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreHttpStatusErrors")
-    private final @Nullable Input<Boolean> ignoreHttpStatusErrors;
+      private final @Nullable Input<Boolean> ignoreHttpStatusErrors;
 
     public Input<Boolean> getIgnoreHttpStatusErrors() {
         return this.ignoreHttpStatusErrors == null ? Input.empty() : this.ignoreHttpStatusErrors;
@@ -84,7 +84,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestRun")
-    private final @Nullable Input<ScanRunArgs> latestRun;
+      private final @Nullable Input<ScanRunArgs> latestRun;
 
     public Input<ScanRunArgs> getLatestRun() {
         return this.latestRun == null ? Input.empty() : this.latestRun;
@@ -95,7 +95,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedScan")
-    private final @Nullable Input<Boolean> managedScan;
+      private final @Nullable Input<Boolean> managedScan;
 
     public Input<Boolean> getManagedScan() {
         return this.managedScan == null ? Input.empty() : this.managedScan;
@@ -106,7 +106,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxQps")
-    private final @Nullable Input<Integer> maxQps;
+      private final @Nullable Input<Integer> maxQps;
 
     public Input<Integer> getMaxQps() {
         return this.maxQps == null ? Input.empty() : this.maxQps;
@@ -117,14 +117,14 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -135,7 +135,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="riskLevel")
-    private final @Nullable Input<ScanConfigRiskLevel> riskLevel;
+      private final @Nullable Input<ScanConfigRiskLevel> riskLevel;
 
     public Input<ScanConfigRiskLevel> getRiskLevel() {
         return this.riskLevel == null ? Input.empty() : this.riskLevel;
@@ -146,7 +146,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<ScheduleArgs> schedule;
+      private final @Nullable Input<ScheduleArgs> schedule;
 
     public Input<ScheduleArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -157,7 +157,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startingUrls", required=true)
-    private final Input<List<String>> startingUrls;
+      private final Input<List<String>> startingUrls;
 
     public Input<List<String>> getStartingUrls() {
         return this.startingUrls;
@@ -168,7 +168,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="staticIpScan")
-    private final @Nullable Input<Boolean> staticIpScan;
+      private final @Nullable Input<Boolean> staticIpScan;
 
     public Input<Boolean> getStaticIpScan() {
         return this.staticIpScan == null ? Input.empty() : this.staticIpScan;
@@ -179,7 +179,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetPlatforms")
-    private final @Nullable Input<List<ScanConfigTargetPlatformsItem>> targetPlatforms;
+      private final @Nullable Input<List<ScanConfigTargetPlatformsItem>> targetPlatforms;
 
     public Input<List<ScanConfigTargetPlatformsItem>> getTargetPlatforms() {
         return this.targetPlatforms == null ? Input.empty() : this.targetPlatforms;
@@ -190,7 +190,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAgent")
-    private final @Nullable Input<ScanConfigUserAgent> userAgent;
+      private final @Nullable Input<ScanConfigUserAgent> userAgent;
 
     public Input<ScanConfigUserAgent> getUserAgent() {
         return this.userAgent == null ? Input.empty() : this.userAgent;
@@ -459,7 +459,6 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.userAgent = Input.ofNullable(userAgent);
             return this;
         }
-
         public ScanConfigArgs build() {
             return new ScanConfigArgs(authentication, blacklistPatterns, displayName, exportToSecurityCommandCenter, ignoreHttpStatusErrors, latestRun, managedScan, maxQps, name, project, riskLevel, schedule, startingUrls, staticIpScan, targetPlatforms, userAgent);
         }

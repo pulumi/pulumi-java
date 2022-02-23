@@ -24,7 +24,7 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<ScanConfigErrorCode> code;
+      private final @Nullable Input<ScanConfigErrorCode> code;
 
     public Input<ScanConfigErrorCode> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -35,7 +35,7 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fieldName")
-    private final @Nullable Input<String> fieldName;
+      private final @Nullable Input<String> fieldName;
 
     public Input<String> getFieldName() {
         return this.fieldName == null ? Input.empty() : this.fieldName;
@@ -94,7 +94,6 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
             this.fieldName = Input.ofNullable(fieldName);
             return this;
         }
-
         public ScanConfigErrorArgs build() {
             return new ScanConfigErrorArgs(code, fieldName);
         }

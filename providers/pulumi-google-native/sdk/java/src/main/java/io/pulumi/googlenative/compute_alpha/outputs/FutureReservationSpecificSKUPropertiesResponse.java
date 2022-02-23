@@ -75,7 +75,6 @@ public final class FutureReservationSpecificSKUPropertiesResponse {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
-
         public FutureReservationSpecificSKUPropertiesResponse build() {
             return new FutureReservationSpecificSKUPropertiesResponse(instanceProperties, totalCount);
         }

@@ -78,7 +78,6 @@ public final class AwsClusterFleet {
             this.project = project;
             return this;
         }
-
         public AwsClusterFleet build() {
             return new AwsClusterFleet(membership, project);
         }

@@ -205,7 +205,6 @@ public final class GetDashboardResult {
             this.rowLayout = Objects.requireNonNull(rowLayout);
             return this;
         }
-
         public GetDashboardResult build() {
             return new GetDashboardResult(columnLayout, displayName, etag, gridLayout, labels, mosaicLayout, name, rowLayout);
         }

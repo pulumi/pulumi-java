@@ -81,7 +81,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
             this.partitionId = Objects.requireNonNull(partitionId);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigDatastoreOptions build() {
             return new PreventionJobTriggerInspectJobStorageConfigDatastoreOptions(kind, partitionId);
         }

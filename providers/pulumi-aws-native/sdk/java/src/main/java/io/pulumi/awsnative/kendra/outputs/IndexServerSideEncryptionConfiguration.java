@@ -46,7 +46,6 @@ public final class IndexServerSideEncryptionConfiguration {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public IndexServerSideEncryptionConfiguration build() {
             return new IndexServerSideEncryptionConfiguration(kmsKeyId);
         }

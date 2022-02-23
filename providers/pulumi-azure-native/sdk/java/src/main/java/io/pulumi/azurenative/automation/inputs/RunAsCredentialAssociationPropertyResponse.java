@@ -23,7 +23,7 @@ public final class RunAsCredentialAssociationPropertyResponse extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -61,7 +61,6 @@ public final class RunAsCredentialAssociationPropertyResponse extends io.pulumi.
             this.name = name;
             return this;
         }
-
         public RunAsCredentialAssociationPropertyResponse build() {
             return new RunAsCredentialAssociationPropertyResponse(name);
         }

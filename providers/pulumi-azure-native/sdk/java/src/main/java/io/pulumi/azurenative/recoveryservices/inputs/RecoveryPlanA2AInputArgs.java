@@ -24,7 +24,7 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+        private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -35,7 +35,7 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="primaryZone")
-    private final @Nullable Input<String> primaryZone;
+        private final @Nullable Input<String> primaryZone;
 
     public Input<String> getPrimaryZone() {
         return this.primaryZone == null ? Input.empty() : this.primaryZone;
@@ -46,7 +46,7 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="recoveryZone")
-    private final @Nullable Input<String> recoveryZone;
+        private final @Nullable Input<String> recoveryZone;
 
     public Input<String> getRecoveryZone() {
         return this.recoveryZone == null ? Input.empty() : this.recoveryZone;
@@ -120,7 +120,6 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
             this.recoveryZone = Input.ofNullable(recoveryZone);
             return this;
         }
-
         public RecoveryPlanA2AInputArgs build() {
             return new RecoveryPlanA2AInputArgs(instanceType, primaryZone, recoveryZone);
         }

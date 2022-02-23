@@ -73,7 +73,6 @@ public final class ConfigS3RecordingConfig {
             this.roleArn = roleArn;
             return this;
         }
-
         public ConfigS3RecordingConfig build() {
             return new ConfigS3RecordingConfig(bucketArn, prefix, roleArn);
         }

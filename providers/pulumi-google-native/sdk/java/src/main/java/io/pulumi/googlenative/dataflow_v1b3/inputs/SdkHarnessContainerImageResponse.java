@@ -22,7 +22,7 @@ public final class SdkHarnessContainerImageResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="containerImage", required=true)
-    private final String containerImage;
+      private final String containerImage;
 
     public String getContainerImage() {
         return this.containerImage;
@@ -33,7 +33,7 @@ public final class SdkHarnessContainerImageResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="environmentId", required=true)
-    private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
@@ -44,7 +44,7 @@ public final class SdkHarnessContainerImageResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="useSingleCorePerContainer", required=true)
-    private final Boolean useSingleCorePerContainer;
+      private final Boolean useSingleCorePerContainer;
 
     public Boolean getUseSingleCorePerContainer() {
         return this.useSingleCorePerContainer;
@@ -103,7 +103,6 @@ public final class SdkHarnessContainerImageResponse extends io.pulumi.resources.
             this.useSingleCorePerContainer = Objects.requireNonNull(useSingleCorePerContainer);
             return this;
         }
-
         public SdkHarnessContainerImageResponse build() {
             return new SdkHarnessContainerImageResponse(containerImage, environmentId, useSingleCorePerContainer);
         }

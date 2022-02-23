@@ -52,7 +52,6 @@ public final class AuthorityResponse {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
-
         public AuthorityResponse build() {
             return new AuthorityResponse(hint);
         }

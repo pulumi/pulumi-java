@@ -59,7 +59,6 @@ public final class BudgetsActionSubscriber {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BudgetsActionSubscriber build() {
             return new BudgetsActionSubscriber(address, type);
         }

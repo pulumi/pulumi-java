@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleMatchExprArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="expression", required=true)
-    private final Input<String> expression;
+        private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
@@ -62,7 +62,6 @@ public final class SecurityPolicyRuleMatchExprArgs extends io.pulumi.resources.R
             this.expression = Input.of(Objects.requireNonNull(expression));
             return this;
         }
-
         public SecurityPolicyRuleMatchExprArgs build() {
             return new SecurityPolicyRuleMatchExprArgs(expression);
         }

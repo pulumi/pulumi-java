@@ -97,7 +97,6 @@ public final class AppEngineVersionIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public AppEngineVersionIamBindingCondition build() {
             return new AppEngineVersionIamBindingCondition(description, expression, title);
         }

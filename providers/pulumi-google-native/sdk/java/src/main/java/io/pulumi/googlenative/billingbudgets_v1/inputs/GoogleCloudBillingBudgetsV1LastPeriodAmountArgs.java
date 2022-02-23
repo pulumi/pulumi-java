@@ -34,7 +34,6 @@ public final class GoogleCloudBillingBudgetsV1LastPeriodAmountArgs extends io.pu
         public Builder(GoogleCloudBillingBudgetsV1LastPeriodAmountArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudBillingBudgetsV1LastPeriodAmountArgs build() {
             return new GoogleCloudBillingBudgetsV1LastPeriodAmountArgs();
         }

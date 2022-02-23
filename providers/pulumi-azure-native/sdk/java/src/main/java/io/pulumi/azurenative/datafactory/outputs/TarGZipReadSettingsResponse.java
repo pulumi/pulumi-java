@@ -79,7 +79,6 @@ public final class TarGZipReadSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TarGZipReadSettingsResponse build() {
             return new TarGZipReadSettingsResponse(preserveCompressionFileNameAsFolder, type);
         }

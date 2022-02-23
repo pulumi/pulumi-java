@@ -300,7 +300,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
             this.signedRequestMode = signedRequestMode;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy(cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicy, signedRequestKeyset, signedRequestMode);
         }

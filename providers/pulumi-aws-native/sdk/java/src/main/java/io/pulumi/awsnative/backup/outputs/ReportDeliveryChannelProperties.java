@@ -98,7 +98,6 @@ public final class ReportDeliveryChannelProperties {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public ReportDeliveryChannelProperties build() {
             return new ReportDeliveryChannelProperties(formats, s3BucketName, s3KeyPrefix);
         }

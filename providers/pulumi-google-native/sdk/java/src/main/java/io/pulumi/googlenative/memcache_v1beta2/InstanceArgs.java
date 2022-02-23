@@ -26,7 +26,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-    private final @Nullable Input<String> authorizedNetwork;
+      private final @Nullable Input<String> authorizedNetwork;
 
     public Input<String> getAuthorizedNetwork() {
         return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
@@ -37,14 +37,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -55,7 +55,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceMessages")
-    private final @Nullable Input<List<InstanceMessageArgs>> instanceMessages;
+      private final @Nullable Input<List<InstanceMessageArgs>> instanceMessages;
 
     public Input<List<InstanceMessageArgs>> getInstanceMessages() {
         return this.instanceMessages == null ? Input.empty() : this.instanceMessages;
@@ -66,14 +66,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -84,7 +84,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memcacheVersion")
-    private final @Nullable Input<InstanceMemcacheVersion> memcacheVersion;
+      private final @Nullable Input<InstanceMemcacheVersion> memcacheVersion;
 
     public Input<InstanceMemcacheVersion> getMemcacheVersion() {
         return this.memcacheVersion == null ? Input.empty() : this.memcacheVersion;
@@ -95,7 +95,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -106,7 +106,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeConfig", required=true)
-    private final Input<NodeConfigArgs> nodeConfig;
+      private final Input<NodeConfigArgs> nodeConfig;
 
     public Input<NodeConfigArgs> getNodeConfig() {
         return this.nodeConfig;
@@ -117,7 +117,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeCount", required=true)
-    private final Input<Integer> nodeCount;
+      private final Input<Integer> nodeCount;
 
     public Input<Integer> getNodeCount() {
         return this.nodeCount;
@@ -128,14 +128,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<MemcacheParametersArgs> parameters;
+      private final @Nullable Input<MemcacheParametersArgs> parameters;
 
     public Input<MemcacheParametersArgs> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -146,7 +146,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+      private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -370,7 +370,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public InstanceArgs build() {
             return new InstanceArgs(authorizedNetwork, displayName, instanceId, instanceMessages, labels, location, memcacheVersion, name, nodeConfig, nodeCount, parameters, project, zones);
         }

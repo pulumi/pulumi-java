@@ -121,7 +121,6 @@ public final class GetLogGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetLogGroupResult build() {
             return new GetLogGroupResult(arn, kmsKeyId, retentionInDays, tags);
         }

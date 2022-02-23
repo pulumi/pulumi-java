@@ -21,7 +21,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretVersion", required=true)
-    private final String secretVersion;
+      private final String secretVersion;
 
     public String getSecretVersion() {
         return this.secretVersion;
@@ -59,7 +59,6 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(secretVersion);
         }

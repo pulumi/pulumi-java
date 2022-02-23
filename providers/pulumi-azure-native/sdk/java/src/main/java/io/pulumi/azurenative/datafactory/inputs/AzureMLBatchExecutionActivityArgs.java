@@ -31,7 +31,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -42,7 +42,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -53,7 +53,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="globalParameters")
-    private final @Nullable Input<Map<String,Object>> globalParameters;
+        private final @Nullable Input<Map<String,Object>> globalParameters;
 
     public Input<Map<String,Object>> getGlobalParameters() {
         return this.globalParameters == null ? Input.empty() : this.globalParameters;
@@ -64,7 +64,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -75,7 +75,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -86,7 +86,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<ActivityPolicyArgs> policy;
+        private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -98,7 +98,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -109,7 +109,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -120,7 +120,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="webServiceInputs")
-    private final @Nullable Input<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs;
+        private final @Nullable Input<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs;
 
     public Input<Map<String,AzureMLWebServiceFileArgs>> getWebServiceInputs() {
         return this.webServiceInputs == null ? Input.empty() : this.webServiceInputs;
@@ -131,7 +131,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="webServiceOutputs")
-    private final @Nullable Input<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs;
+        private final @Nullable Input<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs;
 
     public Input<Map<String,AzureMLWebServiceFileArgs>> getWebServiceOutputs() {
         return this.webServiceOutputs == null ? Input.empty() : this.webServiceOutputs;
@@ -310,7 +310,6 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
             this.webServiceOutputs = Input.ofNullable(webServiceOutputs);
             return this;
         }
-
         public AzureMLBatchExecutionActivityArgs build() {
             return new AzureMLBatchExecutionActivityArgs(dependsOn, description, globalParameters, linkedServiceName, name, policy, type, userProperties, webServiceInputs, webServiceOutputs);
         }

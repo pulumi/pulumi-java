@@ -95,7 +95,6 @@ public final class SystemParameterResponse {
             this.urlQueryParameter = Objects.requireNonNull(urlQueryParameter);
             return this;
         }
-
         public SystemParameterResponse build() {
             return new SystemParameterResponse(httpHeader, name, urlQueryParameter);
         }

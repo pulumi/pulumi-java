@@ -225,7 +225,6 @@ public final class RecurringScheduleResponse {
             this.weekly = Objects.requireNonNull(weekly);
             return this;
         }
-
         public RecurringScheduleResponse build() {
             return new RecurringScheduleResponse(endTime, frequency, lastExecuteTime, monthly, nextExecuteTime, startTime, timeOfDay, timeZone, weekly);
         }

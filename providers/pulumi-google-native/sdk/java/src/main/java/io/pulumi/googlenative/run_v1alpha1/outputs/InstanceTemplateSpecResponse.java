@@ -52,7 +52,6 @@ public final class InstanceTemplateSpecResponse {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public InstanceTemplateSpecResponse build() {
             return new InstanceTemplateSpecResponse(spec);
         }

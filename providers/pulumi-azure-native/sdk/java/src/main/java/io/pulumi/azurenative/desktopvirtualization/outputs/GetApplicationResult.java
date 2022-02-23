@@ -393,7 +393,6 @@ public final class GetApplicationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(applicationType, commandLineArguments, commandLineSetting, description, filePath, friendlyName, iconContent, iconHash, iconIndex, iconPath, id, msixPackageApplicationId, msixPackageFamilyName, name, objectId, showInPortal, type);
         }

@@ -76,7 +76,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
             this.windowBefore = windowBefore;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity(windowAfter, windowBefore);
         }

@@ -100,7 +100,6 @@ public final class TopicRuleKafkaAction {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public TopicRuleKafkaAction build() {
             return new TopicRuleKafkaAction(clientProperties, destinationArn, key, partition, topic);
         }

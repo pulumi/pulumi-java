@@ -87,7 +87,6 @@ public final class GetComponentVersionResult {
             this.tags = tags;
             return this;
         }
-
         public GetComponentVersionResult build() {
             return new GetComponentVersionResult(arn, componentName, componentVersion, tags);
         }

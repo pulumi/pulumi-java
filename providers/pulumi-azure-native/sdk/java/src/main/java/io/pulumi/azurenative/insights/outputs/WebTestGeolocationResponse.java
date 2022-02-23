@@ -54,7 +54,6 @@ public final class WebTestGeolocationResponse {
             this.location = location;
             return this;
         }
-
         public WebTestGeolocationResponse build() {
             return new WebTestGeolocationResponse(location);
         }

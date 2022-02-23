@@ -75,7 +75,6 @@ public final class DeblockResponse {
             this.strength = Objects.requireNonNull(strength);
             return this;
         }
-
         public DeblockResponse build() {
             return new DeblockResponse(enabled, strength);
         }

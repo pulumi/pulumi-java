@@ -309,7 +309,6 @@ public final class GetArcSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetArcSettingResult build() {
             return new GetArcSettingResult(aggregateState, arcInstanceResourceGroup, createdAt, createdBy, createdByType, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, name, perNodeDetails, provisioningState, type);
         }

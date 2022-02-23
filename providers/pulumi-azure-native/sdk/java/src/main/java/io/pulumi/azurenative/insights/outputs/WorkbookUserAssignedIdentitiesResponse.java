@@ -95,7 +95,6 @@ public final class WorkbookUserAssignedIdentitiesResponse {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public WorkbookUserAssignedIdentitiesResponse build() {
             return new WorkbookUserAssignedIdentitiesResponse(clientId, principalId, tenantId);
         }

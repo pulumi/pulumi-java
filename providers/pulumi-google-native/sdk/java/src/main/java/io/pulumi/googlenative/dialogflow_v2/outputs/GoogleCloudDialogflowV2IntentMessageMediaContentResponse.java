@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse {
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageMediaContentResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageMediaContentResponse(mediaObjects, mediaType);
         }

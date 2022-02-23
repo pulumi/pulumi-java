@@ -252,7 +252,6 @@ public final class GreenplumTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GreenplumTableDatasetResponse build() {
             return new GreenplumTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

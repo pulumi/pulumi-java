@@ -18,28 +18,28 @@ public final class DatasetContainerActionArgs extends io.pulumi.resources.Resour
     public static final DatasetContainerActionArgs Empty = new DatasetContainerActionArgs();
 
     @InputImport(name="executionRoleArn", required=true)
-    private final Input<String> executionRoleArn;
+        private final Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn;
     }
 
     @InputImport(name="image", required=true)
-    private final Input<String> image;
+        private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
     }
 
     @InputImport(name="resourceConfiguration", required=true)
-    private final Input<DatasetResourceConfigurationArgs> resourceConfiguration;
+        private final Input<DatasetResourceConfigurationArgs> resourceConfiguration;
 
     public Input<DatasetResourceConfigurationArgs> getResourceConfiguration() {
         return this.resourceConfiguration;
     }
 
     @InputImport(name="variables")
-    private final @Nullable Input<List<DatasetVariableArgs>> variables;
+        private final @Nullable Input<List<DatasetVariableArgs>> variables;
 
     public Input<List<DatasetVariableArgs>> getVariables() {
         return this.variables == null ? Input.empty() : this.variables;
@@ -128,7 +128,6 @@ public final class DatasetContainerActionArgs extends io.pulumi.resources.Resour
             this.variables = Input.ofNullable(variables);
             return this;
         }
-
         public DatasetContainerActionArgs build() {
             return new DatasetContainerActionArgs(executionRoleArn, image, resourceConfiguration, variables);
         }

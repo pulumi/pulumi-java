@@ -76,7 +76,6 @@ public final class ElasticPoolPerDatabaseSettingsResponse {
             this.minCapacity = minCapacity;
             return this;
         }
-
         public ElasticPoolPerDatabaseSettingsResponse build() {
             return new ElasticPoolPerDatabaseSettingsResponse(maxCapacity, minCapacity);
         }

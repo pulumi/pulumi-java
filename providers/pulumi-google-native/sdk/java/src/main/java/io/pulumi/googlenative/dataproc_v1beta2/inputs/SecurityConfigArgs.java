@@ -23,7 +23,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosConfig")
-    private final @Nullable Input<KerberosConfigArgs> kerberosConfig;
+      private final @Nullable Input<KerberosConfigArgs> kerberosConfig;
 
     public Input<KerberosConfigArgs> getKerberosConfig() {
         return this.kerberosConfig == null ? Input.empty() : this.kerberosConfig;
@@ -66,7 +66,6 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.kerberosConfig = Input.ofNullable(kerberosConfig);
             return this;
         }
-
         public SecurityConfigArgs build() {
             return new SecurityConfigArgs(kerberosConfig);
         }

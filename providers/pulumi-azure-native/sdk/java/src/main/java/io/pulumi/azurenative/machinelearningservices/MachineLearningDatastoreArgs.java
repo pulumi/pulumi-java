@@ -22,7 +22,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="accountKey")
-    private final @Nullable Input<String> accountKey;
+        private final @Nullable Input<String> accountKey;
 
     public Input<String> getAccountKey() {
         return this.accountKey == null ? Input.empty() : this.accountKey;
@@ -33,7 +33,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+        private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -44,7 +44,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="adlsResourceGroup")
-    private final @Nullable Input<String> adlsResourceGroup;
+        private final @Nullable Input<String> adlsResourceGroup;
 
     public Input<String> getAdlsResourceGroup() {
         return this.adlsResourceGroup == null ? Input.empty() : this.adlsResourceGroup;
@@ -55,7 +55,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="adlsSubscriptionId")
-    private final @Nullable Input<String> adlsSubscriptionId;
+        private final @Nullable Input<String> adlsSubscriptionId;
 
     public Input<String> getAdlsSubscriptionId() {
         return this.adlsSubscriptionId == null ? Input.empty() : this.adlsSubscriptionId;
@@ -66,7 +66,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="authorityUrl")
-    private final @Nullable Input<String> authorityUrl;
+        private final @Nullable Input<String> authorityUrl;
 
     public Input<String> getAuthorityUrl() {
         return this.authorityUrl == null ? Input.empty() : this.authorityUrl;
@@ -77,7 +77,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+        private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -88,7 +88,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Input<String> clientSecret;
+        private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -99,7 +99,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable Input<String> containerName;
+        private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -110,7 +110,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataStoreType", required=true)
-    private final Input<Either<String,DatastoreTypeArm>> dataStoreType;
+        private final Input<Either<String,DatastoreTypeArm>> dataStoreType;
 
     public Input<Either<String,DatastoreTypeArm>> getDataStoreType() {
         return this.dataStoreType;
@@ -121,7 +121,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+        private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -132,7 +132,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="datastoreName")
-    private final @Nullable Input<String> datastoreName;
+        private final @Nullable Input<String> datastoreName;
 
     public Input<String> getDatastoreName() {
         return this.datastoreName == null ? Input.empty() : this.datastoreName;
@@ -143,7 +143,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -154,7 +154,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<String> endpoint;
+        private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -165,7 +165,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enforceSSL")
-    private final @Nullable Input<Boolean> enforceSSL;
+        private final @Nullable Input<Boolean> enforceSSL;
 
     public Input<Boolean> getEnforceSSL() {
         return this.enforceSSL == null ? Input.empty() : this.enforceSSL;
@@ -176,7 +176,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="fileSystem")
-    private final @Nullable Input<String> fileSystem;
+        private final @Nullable Input<String> fileSystem;
 
     public Input<String> getFileSystem() {
         return this.fileSystem == null ? Input.empty() : this.fileSystem;
@@ -187,7 +187,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="includeSecret")
-    private final @Nullable Input<Boolean> includeSecret;
+        private final @Nullable Input<Boolean> includeSecret;
 
     public Input<Boolean> getIncludeSecret() {
         return this.includeSecret == null ? Input.empty() : this.includeSecret;
@@ -198,7 +198,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -209,7 +209,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -220,7 +220,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<String> port;
+        private final @Nullable Input<String> port;
 
     public Input<String> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -231,7 +231,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+        private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -242,7 +242,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -253,7 +253,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceUrl")
-    private final @Nullable Input<String> resourceUrl;
+        private final @Nullable Input<String> resourceUrl;
 
     public Input<String> getResourceUrl() {
         return this.resourceUrl == null ? Input.empty() : this.resourceUrl;
@@ -264,7 +264,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sasToken")
-    private final @Nullable Input<String> sasToken;
+        private final @Nullable Input<String> sasToken;
 
     public Input<String> getSasToken() {
         return this.sasToken == null ? Input.empty() : this.sasToken;
@@ -275,7 +275,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serverName")
-    private final @Nullable Input<String> serverName;
+        private final @Nullable Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName == null ? Input.empty() : this.serverName;
@@ -286,7 +286,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="shareName")
-    private final @Nullable Input<String> shareName;
+        private final @Nullable Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName == null ? Input.empty() : this.shareName;
@@ -297,7 +297,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="skipValidation")
-    private final @Nullable Input<Boolean> skipValidation;
+        private final @Nullable Input<Boolean> skipValidation;
 
     public Input<Boolean> getSkipValidation() {
         return this.skipValidation == null ? Input.empty() : this.skipValidation;
@@ -308,7 +308,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="storageAccountResourceGroup")
-    private final @Nullable Input<String> storageAccountResourceGroup;
+        private final @Nullable Input<String> storageAccountResourceGroup;
 
     public Input<String> getStorageAccountResourceGroup() {
         return this.storageAccountResourceGroup == null ? Input.empty() : this.storageAccountResourceGroup;
@@ -319,7 +319,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="storageAccountSubscriptionId")
-    private final @Nullable Input<String> storageAccountSubscriptionId;
+        private final @Nullable Input<String> storageAccountSubscriptionId;
 
     public Input<String> getStorageAccountSubscriptionId() {
         return this.storageAccountSubscriptionId == null ? Input.empty() : this.storageAccountSubscriptionId;
@@ -330,7 +330,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="storeName")
-    private final @Nullable Input<String> storeName;
+        private final @Nullable Input<String> storeName;
 
     public Input<String> getStoreName() {
         return this.storeName == null ? Input.empty() : this.storeName;
@@ -341,7 +341,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -352,7 +352,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="userId")
-    private final @Nullable Input<String> userId;
+        private final @Nullable Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId == null ? Input.empty() : this.userId;
@@ -363,7 +363,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+        private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -374,7 +374,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -385,7 +385,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="workspaceSystemAssignedIdentity")
-    private final @Nullable Input<Boolean> workspaceSystemAssignedIdentity;
+        private final @Nullable Input<Boolean> workspaceSystemAssignedIdentity;
 
     public Input<Boolean> getWorkspaceSystemAssignedIdentity() {
         return this.workspaceSystemAssignedIdentity == null ? Input.empty() : this.workspaceSystemAssignedIdentity;
@@ -924,7 +924,6 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             this.workspaceSystemAssignedIdentity = Input.ofNullable(workspaceSystemAssignedIdentity);
             return this;
         }
-
         public MachineLearningDatastoreArgs build() {
             return new MachineLearningDatastoreArgs(accountKey, accountName, adlsResourceGroup, adlsSubscriptionId, authorityUrl, clientId, clientSecret, containerName, dataStoreType, databaseName, datastoreName, description, endpoint, enforceSSL, fileSystem, includeSecret, name, password, port, protocol, resourceGroupName, resourceUrl, sasToken, serverName, shareName, skipValidation, storageAccountResourceGroup, storageAccountSubscriptionId, storeName, tenantId, userId, userName, workspaceName, workspaceSystemAssignedIdentity);
         }

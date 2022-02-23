@@ -97,7 +97,6 @@ public final class LibraryRequirementsResponse {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public LibraryRequirementsResponse build() {
             return new LibraryRequirementsResponse(content, filename, time);
         }

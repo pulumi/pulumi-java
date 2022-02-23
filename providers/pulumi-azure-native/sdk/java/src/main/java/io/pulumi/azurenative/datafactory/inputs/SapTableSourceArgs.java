@@ -25,7 +25,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalColumns")
-    private final @Nullable Input<Object> additionalColumns;
+        private final @Nullable Input<Object> additionalColumns;
 
     public Input<Object> getAdditionalColumns() {
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
@@ -36,7 +36,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="batchSize")
-    private final @Nullable Input<Object> batchSize;
+        private final @Nullable Input<Object> batchSize;
 
     public Input<Object> getBatchSize() {
         return this.batchSize == null ? Input.empty() : this.batchSize;
@@ -47,7 +47,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customRfcReadTableFunctionModule")
-    private final @Nullable Input<Object> customRfcReadTableFunctionModule;
+        private final @Nullable Input<Object> customRfcReadTableFunctionModule;
 
     public Input<Object> getCustomRfcReadTableFunctionModule() {
         return this.customRfcReadTableFunctionModule == null ? Input.empty() : this.customRfcReadTableFunctionModule;
@@ -58,7 +58,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Input<Object> disableMetricsCollection;
+        private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -69,7 +69,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Input<Object> maxConcurrentConnections;
+        private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -80,7 +80,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionOption")
-    private final @Nullable Input<Object> partitionOption;
+        private final @Nullable Input<Object> partitionOption;
 
     public Input<Object> getPartitionOption() {
         return this.partitionOption == null ? Input.empty() : this.partitionOption;
@@ -91,7 +91,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionSettings")
-    private final @Nullable Input<SapTablePartitionSettingsArgs> partitionSettings;
+        private final @Nullable Input<SapTablePartitionSettingsArgs> partitionSettings;
 
     public Input<SapTablePartitionSettingsArgs> getPartitionSettings() {
         return this.partitionSettings == null ? Input.empty() : this.partitionSettings;
@@ -102,7 +102,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryTimeout")
-    private final @Nullable Input<Object> queryTimeout;
+        private final @Nullable Input<Object> queryTimeout;
 
     public Input<Object> getQueryTimeout() {
         return this.queryTimeout == null ? Input.empty() : this.queryTimeout;
@@ -113,7 +113,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rfcTableFields")
-    private final @Nullable Input<Object> rfcTableFields;
+        private final @Nullable Input<Object> rfcTableFields;
 
     public Input<Object> getRfcTableFields() {
         return this.rfcTableFields == null ? Input.empty() : this.rfcTableFields;
@@ -124,7 +124,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rfcTableOptions")
-    private final @Nullable Input<Object> rfcTableOptions;
+        private final @Nullable Input<Object> rfcTableOptions;
 
     public Input<Object> getRfcTableOptions() {
         return this.rfcTableOptions == null ? Input.empty() : this.rfcTableOptions;
@@ -135,7 +135,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rowCount")
-    private final @Nullable Input<Object> rowCount;
+        private final @Nullable Input<Object> rowCount;
 
     public Input<Object> getRowCount() {
         return this.rowCount == null ? Input.empty() : this.rowCount;
@@ -146,7 +146,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rowSkips")
-    private final @Nullable Input<Object> rowSkips;
+        private final @Nullable Input<Object> rowSkips;
 
     public Input<Object> getRowSkips() {
         return this.rowSkips == null ? Input.empty() : this.rowSkips;
@@ -157,7 +157,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sapDataColumnDelimiter")
-    private final @Nullable Input<Object> sapDataColumnDelimiter;
+        private final @Nullable Input<Object> sapDataColumnDelimiter;
 
     public Input<Object> getSapDataColumnDelimiter() {
         return this.sapDataColumnDelimiter == null ? Input.empty() : this.sapDataColumnDelimiter;
@@ -168,7 +168,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRetryCount")
-    private final @Nullable Input<Object> sourceRetryCount;
+        private final @Nullable Input<Object> sourceRetryCount;
 
     public Input<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
@@ -179,7 +179,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRetryWait")
-    private final @Nullable Input<Object> sourceRetryWait;
+        private final @Nullable Input<Object> sourceRetryWait;
 
     public Input<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
@@ -191,7 +191,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -460,7 +460,6 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SapTableSourceArgs build() {
             return new SapTableSourceArgs(additionalColumns, batchSize, customRfcReadTableFunctionModule, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, queryTimeout, rfcTableFields, rfcTableOptions, rowCount, rowSkips, sapDataColumnDelimiter, sourceRetryCount, sourceRetryWait, type);
         }

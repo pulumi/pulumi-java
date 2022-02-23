@@ -336,7 +336,6 @@ public final class OriginEndpointDashPackage {
             this.utcTimingUri = utcTimingUri;
             return this;
         }
-
         public OriginEndpointDashPackage build() {
             return new OriginEndpointDashPackage(adTriggers, adsOnDeliveryRestrictions, encryption, manifestLayout, manifestWindowSeconds, minBufferTimeSeconds, minUpdatePeriodSeconds, periodTriggers, profile, segmentDurationSeconds, segmentTemplateFormat, streamSelection, suggestedPresentationDelaySeconds, utcTiming, utcTimingUri);
         }

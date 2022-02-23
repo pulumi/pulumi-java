@@ -226,7 +226,6 @@ public final class GetMulticastGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetMulticastGroupResult build() {
             return new GetMulticastGroupResult(arn, associateWirelessDevice, description, disassociateWirelessDevice, id, loRaWAN, name, status, tags);
         }

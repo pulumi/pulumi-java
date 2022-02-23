@@ -22,7 +22,7 @@ public final class AttestorPublicKeyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="asciiArmoredPgpPublicKey", required=true)
-    private final String asciiArmoredPgpPublicKey;
+      private final String asciiArmoredPgpPublicKey;
 
     public String getAsciiArmoredPgpPublicKey() {
         return this.asciiArmoredPgpPublicKey;
@@ -33,7 +33,7 @@ public final class AttestorPublicKeyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="comment", required=true)
-    private final String comment;
+      private final String comment;
 
     public String getComment() {
         return this.comment;
@@ -44,7 +44,7 @@ public final class AttestorPublicKeyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="pkixPublicKey", required=true)
-    private final PkixPublicKeyResponse pkixPublicKey;
+      private final PkixPublicKeyResponse pkixPublicKey;
 
     public PkixPublicKeyResponse getPkixPublicKey() {
         return this.pkixPublicKey;
@@ -103,7 +103,6 @@ public final class AttestorPublicKeyResponse extends io.pulumi.resources.InvokeA
             this.pkixPublicKey = Objects.requireNonNull(pkixPublicKey);
             return this;
         }
-
         public AttestorPublicKeyResponse build() {
             return new AttestorPublicKeyResponse(asciiArmoredPgpPublicKey, comment, pkixPublicKey);
         }

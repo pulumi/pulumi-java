@@ -67,7 +67,6 @@ public final class BotAliasLocaleSettingsItem {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }
-
         public BotAliasLocaleSettingsItem build() {
             return new BotAliasLocaleSettingsItem(botAliasLocaleSetting, localeId);
         }

@@ -233,7 +233,6 @@ public final class GetDatasetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(etag, id, name, properties, type);
         }

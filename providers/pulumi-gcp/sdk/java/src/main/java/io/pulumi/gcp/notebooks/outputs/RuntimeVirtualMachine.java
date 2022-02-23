@@ -104,7 +104,6 @@ public final class RuntimeVirtualMachine {
             this.virtualMachineConfig = virtualMachineConfig;
             return this;
         }
-
         public RuntimeVirtualMachine build() {
             return new RuntimeVirtualMachine(instanceId, instanceName, virtualMachineConfig);
         }

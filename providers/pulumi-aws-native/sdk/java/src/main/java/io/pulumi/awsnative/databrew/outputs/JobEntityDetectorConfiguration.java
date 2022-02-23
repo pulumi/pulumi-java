@@ -62,7 +62,6 @@ public final class JobEntityDetectorConfiguration {
             this.entityTypes = Objects.requireNonNull(entityTypes);
             return this;
         }
-
         public JobEntityDetectorConfiguration build() {
             return new JobEntityDetectorConfiguration(allowedStatistics, entityTypes);
         }

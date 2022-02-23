@@ -27,7 +27,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
@@ -38,7 +38,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -49,7 +49,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="headerAction", required=true)
-    private final SecurityPolicyRuleHttpHeaderActionResponse headerAction;
+      private final SecurityPolicyRuleHttpHeaderActionResponse headerAction;
 
     public SecurityPolicyRuleHttpHeaderActionResponse getHeaderAction() {
         return this.headerAction;
@@ -60,7 +60,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -71,7 +71,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="match", required=true)
-    private final SecurityPolicyRuleMatcherResponse match;
+      private final SecurityPolicyRuleMatcherResponse match;
 
     public SecurityPolicyRuleMatcherResponse getMatch() {
         return this.match;
@@ -82,7 +82,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="preview", required=true)
-    private final Boolean preview;
+      private final Boolean preview;
 
     public Boolean getPreview() {
         return this.preview;
@@ -93,7 +93,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -104,7 +104,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="rateLimitOptions", required=true)
-    private final SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions;
+      private final SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions;
 
     public SecurityPolicyRuleRateLimitOptionsResponse getRateLimitOptions() {
         return this.rateLimitOptions;
@@ -115,7 +115,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="redirectOptions", required=true)
-    private final SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
+      private final SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
 
     public SecurityPolicyRuleRedirectOptionsResponse getRedirectOptions() {
         return this.redirectOptions;
@@ -234,7 +234,6 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
             this.redirectOptions = Objects.requireNonNull(redirectOptions);
             return this;
         }
-
         public SecurityPolicyRuleResponse build() {
             return new SecurityPolicyRuleResponse(action, description, headerAction, kind, match, preview, priority, rateLimitOptions, redirectOptions);
         }

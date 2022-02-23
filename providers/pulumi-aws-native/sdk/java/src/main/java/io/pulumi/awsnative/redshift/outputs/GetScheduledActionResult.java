@@ -227,7 +227,6 @@ public final class GetScheduledActionResult {
             this.targetAction = targetAction;
             return this;
         }
-
         public GetScheduledActionResult build() {
             return new GetScheduledActionResult(enable, endTime, iamRole, nextInvocations, schedule, scheduledActionDescription, startTime, state, targetAction);
         }

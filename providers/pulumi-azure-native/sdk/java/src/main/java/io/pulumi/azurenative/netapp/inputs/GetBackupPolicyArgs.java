@@ -17,7 +17,7 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backupPolicyName", required=true)
-    private final String backupPolicyName;
+        private final String backupPolicyName;
 
     public String getBackupPolicyName() {
         return this.backupPolicyName;
@@ -39,7 +39,7 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetBackupPolicyArgs build() {
             return new GetBackupPolicyArgs(accountName, backupPolicyName, resourceGroupName);
         }

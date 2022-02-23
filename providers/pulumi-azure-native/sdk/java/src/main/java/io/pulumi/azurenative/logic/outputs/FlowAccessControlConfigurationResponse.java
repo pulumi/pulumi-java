@@ -118,7 +118,6 @@ public final class FlowAccessControlConfigurationResponse {
             this.workflowManagement = workflowManagement;
             return this;
         }
-
         public FlowAccessControlConfigurationResponse build() {
             return new FlowAccessControlConfigurationResponse(actions, contents, triggers, workflowManagement);
         }

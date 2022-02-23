@@ -140,7 +140,6 @@ public final class ListWebAppFunctionKeysResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppFunctionKeysResult build() {
             return new ListWebAppFunctionKeysResult(id, kind, name, properties, type);
         }

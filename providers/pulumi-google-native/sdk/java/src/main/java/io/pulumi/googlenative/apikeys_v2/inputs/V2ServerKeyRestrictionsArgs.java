@@ -24,7 +24,7 @@ public final class V2ServerKeyRestrictionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="allowedIps")
-    private final @Nullable Input<List<String>> allowedIps;
+      private final @Nullable Input<List<String>> allowedIps;
 
     public Input<List<String>> getAllowedIps() {
         return this.allowedIps == null ? Input.empty() : this.allowedIps;
@@ -67,7 +67,6 @@ public final class V2ServerKeyRestrictionsArgs extends io.pulumi.resources.Resou
             this.allowedIps = Input.ofNullable(allowedIps);
             return this;
         }
-
         public V2ServerKeyRestrictionsArgs build() {
             return new V2ServerKeyRestrictionsArgs(allowedIps);
         }

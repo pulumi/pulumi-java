@@ -74,7 +74,6 @@ public final class OSPolicyInventoryFilterResponse {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
-
         public OSPolicyInventoryFilterResponse build() {
             return new OSPolicyInventoryFilterResponse(osShortName, osVersion);
         }

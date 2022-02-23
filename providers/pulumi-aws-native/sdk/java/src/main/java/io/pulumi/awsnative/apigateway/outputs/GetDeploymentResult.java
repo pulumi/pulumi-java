@@ -76,7 +76,6 @@ public final class GetDeploymentResult {
             this.description = description;
             return this;
         }
-
         public GetDeploymentResult build() {
             return new GetDeploymentResult(deploymentId, description);
         }

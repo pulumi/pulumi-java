@@ -74,7 +74,6 @@ public final class WebhookConfigResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public WebhookConfigResponse build() {
             return new WebhookConfigResponse(secret, state);
         }

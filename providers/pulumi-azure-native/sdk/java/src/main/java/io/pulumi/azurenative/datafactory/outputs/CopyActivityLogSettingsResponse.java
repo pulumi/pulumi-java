@@ -76,7 +76,6 @@ public final class CopyActivityLogSettingsResponse {
             this.logLevel = logLevel;
             return this;
         }
-
         public CopyActivityLogSettingsResponse build() {
             return new CopyActivityLogSettingsResponse(enableReliableLogging, logLevel);
         }

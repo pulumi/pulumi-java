@@ -134,7 +134,6 @@ public final class ManagedZoneDnssecConfig {
             this.state = state;
             return this;
         }
-
         public ManagedZoneDnssecConfig build() {
             return new ManagedZoneDnssecConfig(defaultKeySpecs, kind, nonExistence, state);
         }

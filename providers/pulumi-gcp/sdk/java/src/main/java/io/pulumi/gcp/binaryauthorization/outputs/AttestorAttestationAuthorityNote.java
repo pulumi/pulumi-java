@@ -143,7 +143,6 @@ public final class AttestorAttestationAuthorityNote {
             this.publicKeys = publicKeys;
             return this;
         }
-
         public AttestorAttestationAuthorityNote build() {
             return new AttestorAttestationAuthorityNote(delegationServiceAccountEmail, noteReference, publicKeys);
         }

@@ -140,7 +140,6 @@ public final class JobStepExecutionOptionsResponse {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public JobStepExecutionOptionsResponse build() {
             return new JobStepExecutionOptionsResponse(initialRetryIntervalSeconds, maximumRetryIntervalSeconds, retryAttempts, retryIntervalBackoffMultiplier, timeoutSeconds);
         }

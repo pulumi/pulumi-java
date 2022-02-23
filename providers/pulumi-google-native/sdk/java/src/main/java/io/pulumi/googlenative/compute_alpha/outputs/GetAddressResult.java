@@ -434,7 +434,6 @@ public final class GetAddressResult {
             this.users = Objects.requireNonNull(users);
             return this;
         }
-
         public GetAddressResult build() {
             return new GetAddressResult(address, addressType, creationTimestamp, description, ipVersion, kind, labelFingerprint, labels, name, network, networkTier, prefixLength, purpose, region, selfLink, selfLinkWithId, status, subnetwork, users);
         }

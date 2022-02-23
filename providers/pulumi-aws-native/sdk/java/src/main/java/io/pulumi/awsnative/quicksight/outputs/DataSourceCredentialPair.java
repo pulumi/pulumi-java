@@ -114,7 +114,6 @@ public final class DataSourceCredentialPair {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public DataSourceCredentialPair build() {
             return new DataSourceCredentialPair(alternateDataSourceParameters, password, username);
         }

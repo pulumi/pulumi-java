@@ -118,7 +118,6 @@ public final class ParameterDeclarationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ParameterDeclarationResponse build() {
             return new ParameterDeclarationResponse($default, description, name, type);
         }

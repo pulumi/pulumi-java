@@ -394,7 +394,6 @@ public final class GetOrganizationSecurityPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOrganizationSecurityPolicyResult build() {
             return new GetOrganizationSecurityPolicyResult(adaptiveProtectionConfig, advancedOptionsConfig, associations, creationTimestamp, description, displayName, fingerprint, kind, labelFingerprint, labels, name, parent, recaptchaOptionsConfig, ruleTupleCount, rules, selfLink, selfLinkWithId, type);
         }

@@ -98,7 +98,6 @@ public final class EventSeries {
             this.state = state;
             return this;
         }
-
         public EventSeries build() {
             return new EventSeries(count, lastObservedTime, state);
         }

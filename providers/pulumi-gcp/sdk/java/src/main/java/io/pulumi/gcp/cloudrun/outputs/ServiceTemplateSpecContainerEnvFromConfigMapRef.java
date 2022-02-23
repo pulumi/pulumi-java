@@ -79,7 +79,6 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRef {
             this.optional = optional;
             return this;
         }
-
         public ServiceTemplateSpecContainerEnvFromConfigMapRef build() {
             return new ServiceTemplateSpecContainerEnvFromConfigMapRef(localObjectReference, optional);
         }

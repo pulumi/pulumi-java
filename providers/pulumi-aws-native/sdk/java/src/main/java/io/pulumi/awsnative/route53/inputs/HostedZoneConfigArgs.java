@@ -25,7 +25,7 @@ public final class HostedZoneConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+        private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -68,7 +68,6 @@ public final class HostedZoneConfigArgs extends io.pulumi.resources.ResourceArgs
             this.comment = Input.ofNullable(comment);
             return this;
         }
-
         public HostedZoneConfigArgs build() {
             return new HostedZoneConfigArgs(comment);
         }

@@ -17,7 +17,7 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="managementAssociationName", required=true)
-    private final String managementAssociationName;
+        private final String managementAssociationName;
 
     public String getManagementAssociationName() {
         return this.managementAssociationName;
@@ -28,7 +28,7 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="providerName", required=true)
-    private final String providerName;
+        private final String providerName;
 
     public String getProviderName() {
         return this.providerName;
@@ -39,7 +39,7 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+        private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -61,7 +61,7 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+        private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -140,7 +140,6 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public GetManagementAssociationArgs build() {
             return new GetManagementAssociationArgs(managementAssociationName, providerName, resourceGroupName, resourceName, resourceType);
         }

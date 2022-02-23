@@ -69,7 +69,6 @@ public final class GetReplicationConfigurationResult {
             this.replicationConfiguration = replicationConfiguration;
             return this;
         }
-
         public GetReplicationConfigurationResult build() {
             return new GetReplicationConfigurationResult(registryId, replicationConfiguration);
         }

@@ -140,7 +140,6 @@ public final class GroupContractPropertiesResponse {
             this.type = type;
             return this;
         }
-
         public GroupContractPropertiesResponse build() {
             return new GroupContractPropertiesResponse(builtIn, description, displayName, externalId, type);
         }

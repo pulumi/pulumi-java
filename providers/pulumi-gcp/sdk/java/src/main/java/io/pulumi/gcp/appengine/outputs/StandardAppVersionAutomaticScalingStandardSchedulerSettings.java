@@ -119,7 +119,6 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettings {
             this.targetThroughputUtilization = targetThroughputUtilization;
             return this;
         }
-
         public StandardAppVersionAutomaticScalingStandardSchedulerSettings build() {
             return new StandardAppVersionAutomaticScalingStandardSchedulerSettings(maxInstances, minInstances, targetCpuUtilization, targetThroughputUtilization);
         }

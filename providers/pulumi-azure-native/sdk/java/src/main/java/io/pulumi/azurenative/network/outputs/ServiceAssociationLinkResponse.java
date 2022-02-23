@@ -225,7 +225,6 @@ public final class ServiceAssociationLinkResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceAssociationLinkResponse build() {
             return new ServiceAssociationLinkResponse(allowDelete, etag, id, link, linkedResourceType, locations, name, provisioningState, type);
         }

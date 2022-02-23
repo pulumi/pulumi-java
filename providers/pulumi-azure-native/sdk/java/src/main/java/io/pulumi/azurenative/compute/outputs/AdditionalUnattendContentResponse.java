@@ -118,7 +118,6 @@ public final class AdditionalUnattendContentResponse {
             this.settingName = settingName;
             return this;
         }
-
         public AdditionalUnattendContentResponse build() {
             return new AdditionalUnattendContentResponse(componentName, content, passName, settingName);
         }

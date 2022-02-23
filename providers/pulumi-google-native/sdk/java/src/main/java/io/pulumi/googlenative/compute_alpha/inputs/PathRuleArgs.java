@@ -26,7 +26,7 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="paths")
-    private final @Nullable Input<List<String>> paths;
+      private final @Nullable Input<List<String>> paths;
 
     public Input<List<String>> getPaths() {
         return this.paths == null ? Input.empty() : this.paths;
@@ -37,7 +37,7 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeAction")
-    private final @Nullable Input<HttpRouteActionArgs> routeAction;
+      private final @Nullable Input<HttpRouteActionArgs> routeAction;
 
     public Input<HttpRouteActionArgs> getRouteAction() {
         return this.routeAction == null ? Input.empty() : this.routeAction;
@@ -48,7 +48,7 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -59,7 +59,7 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlRedirect")
-    private final @Nullable Input<HttpRedirectActionArgs> urlRedirect;
+      private final @Nullable Input<HttpRedirectActionArgs> urlRedirect;
 
     public Input<HttpRedirectActionArgs> getUrlRedirect() {
         return this.urlRedirect == null ? Input.empty() : this.urlRedirect;
@@ -148,7 +148,6 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.urlRedirect = Input.ofNullable(urlRedirect);
             return this;
         }
-
         public PathRuleArgs build() {
             return new PathRuleArgs(paths, routeAction, service, urlRedirect);
         }

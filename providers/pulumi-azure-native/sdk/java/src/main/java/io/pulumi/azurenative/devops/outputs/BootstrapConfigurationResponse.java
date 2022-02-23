@@ -77,7 +77,6 @@ public final class BootstrapConfigurationResponse {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public BootstrapConfigurationResponse build() {
             return new BootstrapConfigurationResponse(sourceRepository, template);
         }

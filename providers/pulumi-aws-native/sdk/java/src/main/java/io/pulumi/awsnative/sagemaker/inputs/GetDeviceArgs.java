@@ -17,7 +17,7 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deviceFleetName", required=true)
-    private final String deviceFleetName;
+        private final String deviceFleetName;
 
     public String getDeviceFleetName() {
         return this.deviceFleetName;
@@ -55,7 +55,6 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
             this.deviceFleetName = Objects.requireNonNull(deviceFleetName);
             return this;
         }
-
         public GetDeviceArgs build() {
             return new GetDeviceArgs(deviceFleetName);
         }

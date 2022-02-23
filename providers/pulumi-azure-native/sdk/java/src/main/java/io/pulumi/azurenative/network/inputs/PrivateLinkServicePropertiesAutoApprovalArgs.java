@@ -24,7 +24,7 @@ public final class PrivateLinkServicePropertiesAutoApprovalArgs extends io.pulum
      * 
      */
     @InputImport(name="subscriptions")
-    private final @Nullable Input<List<String>> subscriptions;
+        private final @Nullable Input<List<String>> subscriptions;
 
     public Input<List<String>> getSubscriptions() {
         return this.subscriptions == null ? Input.empty() : this.subscriptions;
@@ -67,7 +67,6 @@ public final class PrivateLinkServicePropertiesAutoApprovalArgs extends io.pulum
             this.subscriptions = Input.ofNullable(subscriptions);
             return this;
         }
-
         public PrivateLinkServicePropertiesAutoApprovalArgs build() {
             return new PrivateLinkServicePropertiesAutoApprovalArgs(subscriptions);
         }

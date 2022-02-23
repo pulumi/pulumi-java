@@ -244,7 +244,6 @@ public final class ShippingAddressResponse {
             this.zipExtendedCode = zipExtendedCode;
             return this;
         }
-
         public ShippingAddressResponse build() {
             return new ShippingAddressResponse(addressType, city, companyName, country, postalCode, stateOrProvince, streetAddress1, streetAddress2, streetAddress3, zipExtendedCode);
         }

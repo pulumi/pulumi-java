@@ -34,7 +34,6 @@ public final class RobotApplicationTagsArgs extends io.pulumi.resources.Resource
         public Builder(RobotApplicationTagsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RobotApplicationTagsArgs build() {
             return new RobotApplicationTagsArgs();
         }

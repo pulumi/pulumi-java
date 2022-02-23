@@ -95,7 +95,6 @@ public final class ManagedIdentityConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedIdentityConfigurationResponse build() {
             return new ManagedIdentityConfigurationResponse(principalId, tenantId, type);
         }

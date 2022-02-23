@@ -179,7 +179,6 @@ public final class GetServerCommunicationLinkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerCommunicationLinkResult build() {
             return new GetServerCommunicationLinkResult(id, kind, location, name, partnerServer, state, type);
         }

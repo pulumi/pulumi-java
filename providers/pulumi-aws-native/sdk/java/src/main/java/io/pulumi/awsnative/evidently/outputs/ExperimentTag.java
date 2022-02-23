@@ -74,7 +74,6 @@ public final class ExperimentTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ExperimentTag build() {
             return new ExperimentTag(key, value);
         }

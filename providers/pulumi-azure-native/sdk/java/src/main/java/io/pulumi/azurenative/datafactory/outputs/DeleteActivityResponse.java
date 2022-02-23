@@ -331,7 +331,6 @@ public final class DeleteActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public DeleteActivityResponse build() {
             return new DeleteActivityResponse(dataset, dependsOn, description, enableLogging, linkedServiceName, logStorageSettings, maxConcurrentConnections, name, policy, recursive, storeSettings, type, userProperties);
         }

@@ -69,7 +69,6 @@ public final class DetectorModelLambda {
             this.payload = payload;
             return this;
         }
-
         public DetectorModelLambda build() {
             return new DetectorModelLambda(functionArn, payload);
         }

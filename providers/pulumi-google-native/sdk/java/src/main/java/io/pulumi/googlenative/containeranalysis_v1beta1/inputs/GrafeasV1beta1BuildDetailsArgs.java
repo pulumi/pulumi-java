@@ -24,7 +24,7 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="provenance", required=true)
-    private final Input<BuildProvenanceArgs> provenance;
+      private final Input<BuildProvenanceArgs> provenance;
 
     public Input<BuildProvenanceArgs> getProvenance() {
         return this.provenance;
@@ -35,7 +35,7 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="provenanceBytes")
-    private final @Nullable Input<String> provenanceBytes;
+      private final @Nullable Input<String> provenanceBytes;
 
     public Input<String> getProvenanceBytes() {
         return this.provenanceBytes == null ? Input.empty() : this.provenanceBytes;
@@ -94,7 +94,6 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
             this.provenanceBytes = Input.ofNullable(provenanceBytes);
             return this;
         }
-
         public GrafeasV1beta1BuildDetailsArgs build() {
             return new GrafeasV1beta1BuildDetailsArgs(provenance, provenanceBytes);
         }

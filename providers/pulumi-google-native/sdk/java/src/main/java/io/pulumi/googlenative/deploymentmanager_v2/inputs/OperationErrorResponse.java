@@ -22,7 +22,7 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="errors", required=true)
-    private final List<OperationErrorErrorsItemResponse> errors;
+      private final List<OperationErrorErrorsItemResponse> errors;
 
     public List<OperationErrorErrorsItemResponse> getErrors() {
         return this.errors;
@@ -60,7 +60,6 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
         public OperationErrorResponse build() {
             return new OperationErrorResponse(errors);
         }

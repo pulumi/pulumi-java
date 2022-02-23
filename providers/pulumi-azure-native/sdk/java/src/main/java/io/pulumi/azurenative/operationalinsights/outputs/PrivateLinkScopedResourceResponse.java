@@ -76,7 +76,6 @@ public final class PrivateLinkScopedResourceResponse {
             this.scopeId = scopeId;
             return this;
         }
-
         public PrivateLinkScopedResourceResponse build() {
             return new PrivateLinkScopedResourceResponse(resourceId, scopeId);
         }

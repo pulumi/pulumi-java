@@ -22,7 +22,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
      * 
      */
     @InputImport(name="availabilityDomainCount", required=true)
-    private final Integer availabilityDomainCount;
+      private final Integer availabilityDomainCount;
 
     public Integer getAvailabilityDomainCount() {
         return this.availabilityDomainCount;
@@ -33,7 +33,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
      * 
      */
     @InputImport(name="collocation", required=true)
-    private final String collocation;
+      private final String collocation;
 
     public String getCollocation() {
         return this.collocation;
@@ -44,7 +44,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
      * 
      */
     @InputImport(name="vmCount", required=true)
-    private final Integer vmCount;
+      private final Integer vmCount;
 
     public Integer getVmCount() {
         return this.vmCount;
@@ -103,7 +103,6 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }
-
         public ResourcePolicyGroupPlacementPolicyResponse build() {
             return new ResourcePolicyGroupPlacementPolicyResponse(availabilityDomainCount, collocation, vmCount);
         }

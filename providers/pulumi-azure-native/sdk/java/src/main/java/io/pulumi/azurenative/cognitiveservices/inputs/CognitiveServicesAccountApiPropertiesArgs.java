@@ -24,7 +24,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="aadClientId")
-    private final @Nullable Input<String> aadClientId;
+        private final @Nullable Input<String> aadClientId;
 
     public Input<String> getAadClientId() {
         return this.aadClientId == null ? Input.empty() : this.aadClientId;
@@ -35,7 +35,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="aadTenantId")
-    private final @Nullable Input<String> aadTenantId;
+        private final @Nullable Input<String> aadTenantId;
 
     public Input<String> getAadTenantId() {
         return this.aadTenantId == null ? Input.empty() : this.aadTenantId;
@@ -46,7 +46,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="eventHubConnectionString")
-    private final @Nullable Input<String> eventHubConnectionString;
+        private final @Nullable Input<String> eventHubConnectionString;
 
     public Input<String> getEventHubConnectionString() {
         return this.eventHubConnectionString == null ? Input.empty() : this.eventHubConnectionString;
@@ -57,7 +57,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="qnaAzureSearchEndpointId")
-    private final @Nullable Input<String> qnaAzureSearchEndpointId;
+        private final @Nullable Input<String> qnaAzureSearchEndpointId;
 
     public Input<String> getQnaAzureSearchEndpointId() {
         return this.qnaAzureSearchEndpointId == null ? Input.empty() : this.qnaAzureSearchEndpointId;
@@ -68,7 +68,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="qnaAzureSearchEndpointKey")
-    private final @Nullable Input<String> qnaAzureSearchEndpointKey;
+        private final @Nullable Input<String> qnaAzureSearchEndpointKey;
 
     public Input<String> getQnaAzureSearchEndpointKey() {
         return this.qnaAzureSearchEndpointKey == null ? Input.empty() : this.qnaAzureSearchEndpointKey;
@@ -79,7 +79,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="qnaRuntimeEndpoint")
-    private final @Nullable Input<String> qnaRuntimeEndpoint;
+        private final @Nullable Input<String> qnaRuntimeEndpoint;
 
     public Input<String> getQnaRuntimeEndpoint() {
         return this.qnaRuntimeEndpoint == null ? Input.empty() : this.qnaRuntimeEndpoint;
@@ -90,7 +90,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="statisticsEnabled")
-    private final @Nullable Input<Boolean> statisticsEnabled;
+        private final @Nullable Input<Boolean> statisticsEnabled;
 
     public Input<Boolean> getStatisticsEnabled() {
         return this.statisticsEnabled == null ? Input.empty() : this.statisticsEnabled;
@@ -101,7 +101,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="storageAccountConnectionString")
-    private final @Nullable Input<String> storageAccountConnectionString;
+        private final @Nullable Input<String> storageAccountConnectionString;
 
     public Input<String> getStorageAccountConnectionString() {
         return this.storageAccountConnectionString == null ? Input.empty() : this.storageAccountConnectionString;
@@ -112,7 +112,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="superUser")
-    private final @Nullable Input<String> superUser;
+        private final @Nullable Input<String> superUser;
 
     public Input<String> getSuperUser() {
         return this.superUser == null ? Input.empty() : this.superUser;
@@ -123,7 +123,7 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="websiteName")
-    private final @Nullable Input<String> websiteName;
+        private final @Nullable Input<String> websiteName;
 
     public Input<String> getWebsiteName() {
         return this.websiteName == null ? Input.empty() : this.websiteName;
@@ -302,7 +302,6 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
             this.websiteName = Input.ofNullable(websiteName);
             return this;
         }
-
         public CognitiveServicesAccountApiPropertiesArgs build() {
             return new CognitiveServicesAccountApiPropertiesArgs(aadClientId, aadTenantId, eventHubConnectionString, qnaAzureSearchEndpointId, qnaAzureSearchEndpointKey, qnaRuntimeEndpoint, statisticsEnabled, storageAccountConnectionString, superUser, websiteName);
         }

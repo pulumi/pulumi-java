@@ -96,7 +96,6 @@ public final class MetricDimensionResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public MetricDimensionResponse build() {
             return new MetricDimensionResponse(name, operator, values);
         }

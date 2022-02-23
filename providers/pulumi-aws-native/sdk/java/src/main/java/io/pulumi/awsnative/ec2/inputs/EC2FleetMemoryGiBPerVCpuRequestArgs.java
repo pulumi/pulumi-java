@@ -15,14 +15,14 @@ public final class EC2FleetMemoryGiBPerVCpuRequestArgs extends io.pulumi.resourc
     public static final EC2FleetMemoryGiBPerVCpuRequestArgs Empty = new EC2FleetMemoryGiBPerVCpuRequestArgs();
 
     @InputImport(name="max")
-    private final @Nullable Input<Double> max;
+        private final @Nullable Input<Double> max;
 
     public Input<Double> getMax() {
         return this.max == null ? Input.empty() : this.max;
     }
 
     @InputImport(name="min")
-    private final @Nullable Input<Double> min;
+        private final @Nullable Input<Double> min;
 
     public Input<Double> getMin() {
         return this.min == null ? Input.empty() : this.min;
@@ -81,7 +81,6 @@ public final class EC2FleetMemoryGiBPerVCpuRequestArgs extends io.pulumi.resourc
             this.min = Input.ofNullable(min);
             return this;
         }
-
         public EC2FleetMemoryGiBPerVCpuRequestArgs build() {
             return new EC2FleetMemoryGiBPerVCpuRequestArgs(max, min);
         }

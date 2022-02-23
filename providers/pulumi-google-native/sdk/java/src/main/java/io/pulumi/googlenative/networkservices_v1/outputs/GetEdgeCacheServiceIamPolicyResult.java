@@ -120,7 +120,6 @@ public final class GetEdgeCacheServiceIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetEdgeCacheServiceIamPolicyResult build() {
             return new GetEdgeCacheServiceIamPolicyResult(auditConfigs, bindings, etag, version);
         }

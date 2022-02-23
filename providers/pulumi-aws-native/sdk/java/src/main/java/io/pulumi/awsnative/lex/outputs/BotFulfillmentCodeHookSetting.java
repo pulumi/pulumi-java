@@ -75,7 +75,6 @@ public final class BotFulfillmentCodeHookSetting {
             this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;
             return this;
         }
-
         public BotFulfillmentCodeHookSetting build() {
             return new BotFulfillmentCodeHookSetting(enabled, fulfillmentUpdatesSpecification, postFulfillmentStatusSpecification);
         }

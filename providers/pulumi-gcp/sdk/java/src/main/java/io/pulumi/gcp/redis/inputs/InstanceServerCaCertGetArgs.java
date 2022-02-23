@@ -15,7 +15,7 @@ public final class InstanceServerCaCertGetArgs extends io.pulumi.resources.Resou
     public static final InstanceServerCaCertGetArgs Empty = new InstanceServerCaCertGetArgs();
 
     @InputImport(name="cert")
-    private final @Nullable Input<String> cert;
+        private final @Nullable Input<String> cert;
 
     public Input<String> getCert() {
         return this.cert == null ? Input.empty() : this.cert;
@@ -29,28 +29,28 @@ public final class InstanceServerCaCertGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
     @InputImport(name="expireTime")
-    private final @Nullable Input<String> expireTime;
+        private final @Nullable Input<String> expireTime;
 
     public Input<String> getExpireTime() {
         return this.expireTime == null ? Input.empty() : this.expireTime;
     }
 
     @InputImport(name="serialNumber")
-    private final @Nullable Input<String> serialNumber;
+        private final @Nullable Input<String> serialNumber;
 
     public Input<String> getSerialNumber() {
         return this.serialNumber == null ? Input.empty() : this.serialNumber;
     }
 
     @InputImport(name="sha1Fingerprint")
-    private final @Nullable Input<String> sha1Fingerprint;
+        private final @Nullable Input<String> sha1Fingerprint;
 
     public Input<String> getSha1Fingerprint() {
         return this.sha1Fingerprint == null ? Input.empty() : this.sha1Fingerprint;
@@ -154,7 +154,6 @@ public final class InstanceServerCaCertGetArgs extends io.pulumi.resources.Resou
             this.sha1Fingerprint = Input.ofNullable(sha1Fingerprint);
             return this;
         }
-
         public InstanceServerCaCertGetArgs build() {
             return new InstanceServerCaCertGetArgs(cert, createTime, expireTime, serialNumber, sha1Fingerprint);
         }

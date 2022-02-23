@@ -142,7 +142,6 @@ public final class FhirServiceCorsConfigurationResponse {
             this.origins = origins;
             return this;
         }
-
         public FhirServiceCorsConfigurationResponse build() {
             return new FhirServiceCorsConfigurationResponse(allowCredentials, headers, maxAge, methods, origins);
         }

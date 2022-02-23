@@ -17,7 +17,7 @@ public final class GetManagementConfigurationArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="managementConfigurationName", required=true)
-    private final String managementConfigurationName;
+        private final String managementConfigurationName;
 
     public String getManagementConfigurationName() {
         return this.managementConfigurationName;
@@ -28,7 +28,7 @@ public final class GetManagementConfigurationArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetManagementConfigurationArgs extends io.pulumi.resources.In
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetManagementConfigurationArgs build() {
             return new GetManagementConfigurationArgs(managementConfigurationName, resourceGroupName);
         }

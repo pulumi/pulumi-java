@@ -161,7 +161,6 @@ public final class GetDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(id, kind, location, name, systemData, type);
         }

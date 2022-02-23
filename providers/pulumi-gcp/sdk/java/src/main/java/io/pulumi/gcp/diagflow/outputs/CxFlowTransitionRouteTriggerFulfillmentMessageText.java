@@ -80,7 +80,6 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageText {
             this.texts = texts;
             return this;
         }
-
         public CxFlowTransitionRouteTriggerFulfillmentMessageText build() {
             return new CxFlowTransitionRouteTriggerFulfillmentMessageText(allowPlaybackInterruption, texts);
         }

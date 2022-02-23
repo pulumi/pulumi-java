@@ -17,7 +17,7 @@ public final class GetFailoverGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="failoverGroupName", required=true)
-    private final String failoverGroupName;
+        private final String failoverGroupName;
 
     public String getFailoverGroupName() {
         return this.failoverGroupName;
@@ -28,7 +28,7 @@ public final class GetFailoverGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetFailoverGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -98,7 +98,6 @@ public final class GetFailoverGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public GetFailoverGroupArgs build() {
             return new GetFailoverGroupArgs(failoverGroupName, resourceGroupName, serverName);
         }

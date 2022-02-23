@@ -97,7 +97,6 @@ public final class CustomDomainPropertiesResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public CustomDomainPropertiesResponse build() {
             return new CustomDomainPropertiesResponse(appName, certName, thumbprint);
         }

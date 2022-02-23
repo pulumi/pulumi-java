@@ -162,7 +162,6 @@ public final class AzureRecoveryServiceVaultProtectionIntentResponse {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public AzureRecoveryServiceVaultProtectionIntentResponse build() {
             return new AzureRecoveryServiceVaultProtectionIntentResponse(backupManagementType, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId);
         }

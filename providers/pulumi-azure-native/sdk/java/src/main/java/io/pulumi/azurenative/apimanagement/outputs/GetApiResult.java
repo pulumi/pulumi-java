@@ -480,7 +480,6 @@ public final class GetApiResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApiResult build() {
             return new GetApiResult(apiRevision, apiRevisionDescription, apiType, apiVersion, apiVersionDescription, apiVersionSet, apiVersionSetId, authenticationSettings, description, displayName, id, isCurrent, isOnline, name, path, protocols, serviceUrl, sourceApiId, subscriptionKeyParameterNames, subscriptionRequired, type);
         }

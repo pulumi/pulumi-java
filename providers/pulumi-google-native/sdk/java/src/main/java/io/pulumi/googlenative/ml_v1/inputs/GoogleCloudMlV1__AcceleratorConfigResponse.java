@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="count", required=true)
-    private final String count;
+      private final String count;
 
     public String getCount() {
         return this.count;
@@ -32,7 +32,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends io.pulumi.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudMlV1__AcceleratorConfigResponse build() {
             return new GoogleCloudMlV1__AcceleratorConfigResponse(count, type);
         }

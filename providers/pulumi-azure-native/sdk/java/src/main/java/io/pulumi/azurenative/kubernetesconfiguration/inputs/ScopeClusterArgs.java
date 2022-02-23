@@ -23,7 +23,7 @@ public final class ScopeClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="releaseNamespace")
-    private final @Nullable Input<String> releaseNamespace;
+        private final @Nullable Input<String> releaseNamespace;
 
     public Input<String> getReleaseNamespace() {
         return this.releaseNamespace == null ? Input.empty() : this.releaseNamespace;
@@ -66,7 +66,6 @@ public final class ScopeClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.releaseNamespace = Input.ofNullable(releaseNamespace);
             return this;
         }
-
         public ScopeClusterArgs build() {
             return new ScopeClusterArgs(releaseNamespace);
         }

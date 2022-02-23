@@ -120,7 +120,6 @@ public final class GetPublisherResult {
             this.publisherStatus = publisherStatus;
             return this;
         }
-
         public GetPublisherResult build() {
             return new GetPublisherResult(identityProvider, publisherId, publisherProfile, publisherStatus);
         }

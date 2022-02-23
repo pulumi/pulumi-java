@@ -119,7 +119,6 @@ public final class ApplicationGatewayBackendHealthServerResponse {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
-
         public ApplicationGatewayBackendHealthServerResponse build() {
             return new ApplicationGatewayBackendHealthServerResponse(address, health, healthProbeLog, ipConfiguration);
         }

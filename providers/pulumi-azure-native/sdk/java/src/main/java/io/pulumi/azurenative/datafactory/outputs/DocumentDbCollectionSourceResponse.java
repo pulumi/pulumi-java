@@ -226,7 +226,6 @@ public final class DocumentDbCollectionSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DocumentDbCollectionSourceResponse build() {
             return new DocumentDbCollectionSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, nestingSeparator, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

@@ -30,7 +30,6 @@ public final class StorageLensEncryption {
         public Builder(StorageLensEncryption defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StorageLensEncryption build() {
             return new StorageLensEncryption();
         }

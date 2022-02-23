@@ -32,7 +32,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -43,7 +43,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -54,7 +54,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable CredentialReferenceResponse credential;
+        private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
@@ -65,7 +65,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="database", required=true)
-    private final Object database;
+        private final Object database;
 
     public Object getDatabase() {
         return this.database;
@@ -76,7 +76,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -87,7 +87,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final Object endpoint;
+        private final Object endpoint;
 
     public Object getEndpoint() {
         return this.endpoint;
@@ -98,7 +98,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -109,7 +109,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="servicePrincipalId")
-    private final @Nullable Object servicePrincipalId;
+        private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
@@ -120,7 +120,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="servicePrincipalKey")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
@@ -131,7 +131,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="tenant")
-    private final @Nullable Object tenant;
+        private final @Nullable Object tenant;
 
     public Optional<Object> getTenant() {
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
@@ -143,7 +143,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -282,7 +282,6 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataExplorerLinkedServiceResponse build() {
             return new AzureDataExplorerLinkedServiceResponse(annotations, connectVia, credential, database, description, endpoint, parameters, servicePrincipalId, servicePrincipalKey, tenant, type);
         }

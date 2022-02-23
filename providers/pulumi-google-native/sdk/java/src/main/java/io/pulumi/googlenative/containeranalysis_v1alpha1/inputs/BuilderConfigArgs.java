@@ -15,7 +15,7 @@ public final class BuilderConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final BuilderConfigArgs Empty = new BuilderConfigArgs();
 
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -58,7 +58,6 @@ public final class BuilderConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.id = Input.ofNullable(id);
             return this;
         }
-
         public BuilderConfigArgs build() {
             return new BuilderConfigArgs(id);
         }

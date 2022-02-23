@@ -160,7 +160,6 @@ public final class GetDiskAccessAPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDiskAccessAPrivateEndpointConnectionResult build() {
             return new GetDiskAccessAPrivateEndpointConnectionResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

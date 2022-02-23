@@ -139,7 +139,6 @@ public final class ErrorResponseResponse {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ErrorResponseResponse build() {
             return new ErrorResponseResponse(additionalInfo, code, details, message, target);
         }

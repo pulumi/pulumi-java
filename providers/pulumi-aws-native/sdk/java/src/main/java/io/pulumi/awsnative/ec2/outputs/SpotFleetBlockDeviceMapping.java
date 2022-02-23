@@ -87,7 +87,6 @@ public final class SpotFleetBlockDeviceMapping {
             this.virtualName = virtualName;
             return this;
         }
-
         public SpotFleetBlockDeviceMapping build() {
             return new SpotFleetBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }

@@ -197,7 +197,6 @@ public final class CertificateSigningRequestSpec {
             this.username = username;
             return this;
         }
-
         public CertificateSigningRequestSpec build() {
             return new CertificateSigningRequestSpec(extra, groups, request, signerName, uid, usages, username);
         }

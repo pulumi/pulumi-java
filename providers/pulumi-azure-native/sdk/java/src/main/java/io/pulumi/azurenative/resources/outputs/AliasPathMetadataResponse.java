@@ -74,7 +74,6 @@ public final class AliasPathMetadataResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AliasPathMetadataResponse build() {
             return new AliasPathMetadataResponse(attributes, type);
         }

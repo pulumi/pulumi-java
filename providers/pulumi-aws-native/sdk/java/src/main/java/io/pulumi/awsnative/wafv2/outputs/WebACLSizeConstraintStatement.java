@@ -88,7 +88,6 @@ public final class WebACLSizeConstraintStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public WebACLSizeConstraintStatement build() {
             return new WebACLSizeConstraintStatement(comparisonOperator, fieldToMatch, size, textTransformations);
         }

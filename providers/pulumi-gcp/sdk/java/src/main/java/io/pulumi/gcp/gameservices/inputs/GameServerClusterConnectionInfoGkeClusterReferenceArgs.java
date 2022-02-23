@@ -25,7 +25,7 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceArgs extend
      * 
      */
     @InputImport(name="cluster", required=true)
-    private final Input<String> cluster;
+        private final Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster;
@@ -68,7 +68,6 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceArgs extend
             this.cluster = Input.of(Objects.requireNonNull(cluster));
             return this;
         }
-
         public GameServerClusterConnectionInfoGkeClusterReferenceArgs build() {
             return new GameServerClusterConnectionInfoGkeClusterReferenceArgs(cluster);
         }

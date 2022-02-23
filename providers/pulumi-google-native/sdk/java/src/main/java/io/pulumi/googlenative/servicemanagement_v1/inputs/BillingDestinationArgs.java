@@ -24,7 +24,7 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metrics")
-    private final @Nullable Input<List<String>> metrics;
+      private final @Nullable Input<List<String>> metrics;
 
     public Input<List<String>> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
@@ -35,7 +35,7 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="monitoredResource")
-    private final @Nullable Input<String> monitoredResource;
+      private final @Nullable Input<String> monitoredResource;
 
     public Input<String> getMonitoredResource() {
         return this.monitoredResource == null ? Input.empty() : this.monitoredResource;
@@ -94,7 +94,6 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
             this.monitoredResource = Input.ofNullable(monitoredResource);
             return this;
         }
-
         public BillingDestinationArgs build() {
             return new BillingDestinationArgs(metrics, monitoredResource);
         }

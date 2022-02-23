@@ -183,7 +183,6 @@ public final class GetSecurityContactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSecurityContactResult build() {
             return new GetSecurityContactResult(alertNotifications, emails, id, name, notificationsByRole, phone, type);
         }

@@ -401,7 +401,6 @@ public final class GoogleAdWordsLinkedServiceResponse {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
-
         public GoogleAdWordsLinkedServiceResponse build() {
             return new GoogleAdWordsLinkedServiceResponse(annotations, authenticationType, clientCustomerID, clientId, clientSecret, connectVia, connectionProperties, description, developerToken, email, encryptedCredential, keyFilePath, parameters, refreshToken, trustedCertPath, type, useSystemTrustStore);
         }

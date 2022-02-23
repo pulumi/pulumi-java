@@ -18,14 +18,14 @@ public final class RuleGroupTextTransformation extends io.pulumi.resources.Invok
     public static final RuleGroupTextTransformation Empty = new RuleGroupTextTransformation();
 
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+        private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
     }
 
     @InputImport(name="type", required=true)
-    private final RuleGroupTextTransformationType type;
+        private final RuleGroupTextTransformationType type;
 
     public RuleGroupTextTransformationType getType() {
         return this.type;
@@ -74,7 +74,6 @@ public final class RuleGroupTextTransformation extends io.pulumi.resources.Invok
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RuleGroupTextTransformation build() {
             return new RuleGroupTextTransformation(priority, type);
         }

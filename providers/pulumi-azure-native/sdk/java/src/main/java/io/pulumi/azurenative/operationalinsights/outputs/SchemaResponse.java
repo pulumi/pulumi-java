@@ -311,7 +311,6 @@ public final class SchemaResponse {
             this.tableType = Objects.requireNonNull(tableType);
             return this;
         }
-
         public SchemaResponse build() {
             return new SchemaResponse(categories, columns, description, displayName, labels, name, restoredLogs, searchResults, solutions, source, standardColumns, tableSubType, tableType);
         }

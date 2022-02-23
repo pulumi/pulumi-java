@@ -52,7 +52,6 @@ public final class ConfigurationProfileAssignmentComplianceResponse {
             this.updateStatus = Objects.requireNonNull(updateStatus);
             return this;
         }
-
         public ConfigurationProfileAssignmentComplianceResponse build() {
             return new ConfigurationProfileAssignmentComplianceResponse(updateStatus);
         }

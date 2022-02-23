@@ -104,7 +104,6 @@ public final class PatchDeploymentPatchConfigApt {
             this.type = type;
             return this;
         }
-
         public PatchDeploymentPatchConfigApt build() {
             return new PatchDeploymentPatchConfigApt(excludes, exclusivePackages, type);
         }

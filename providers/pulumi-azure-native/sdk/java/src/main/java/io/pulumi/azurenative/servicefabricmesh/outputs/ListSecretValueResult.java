@@ -54,7 +54,6 @@ public final class ListSecretValueResult {
             this.value = value;
             return this;
         }
-
         public ListSecretValueResult build() {
             return new ListSecretValueResult(value);
         }

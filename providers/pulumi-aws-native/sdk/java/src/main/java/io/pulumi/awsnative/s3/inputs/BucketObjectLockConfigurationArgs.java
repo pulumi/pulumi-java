@@ -16,14 +16,14 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
     public static final BucketObjectLockConfigurationArgs Empty = new BucketObjectLockConfigurationArgs();
 
     @InputImport(name="objectLockEnabled")
-    private final @Nullable Input<String> objectLockEnabled;
+        private final @Nullable Input<String> objectLockEnabled;
 
     public Input<String> getObjectLockEnabled() {
         return this.objectLockEnabled == null ? Input.empty() : this.objectLockEnabled;
     }
 
     @InputImport(name="rule")
-    private final @Nullable Input<BucketObjectLockRuleArgs> rule;
+        private final @Nullable Input<BucketObjectLockRuleArgs> rule;
 
     public Input<BucketObjectLockRuleArgs> getRule() {
         return this.rule == null ? Input.empty() : this.rule;
@@ -82,7 +82,6 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
             this.rule = Input.ofNullable(rule);
             return this;
         }
-
         public BucketObjectLockConfigurationArgs build() {
             return new BucketObjectLockConfigurationArgs(objectLockEnabled, rule);
         }

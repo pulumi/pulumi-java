@@ -213,7 +213,6 @@ public final class GetNetworkEdgeSecurityServiceResult {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public GetNetworkEdgeSecurityServiceResult build() {
             return new GetNetworkEdgeSecurityServiceResult(creationTimestamp, description, fingerprint, kind, name, region, securityPolicy, selfLink, selfLinkWithId);
         }

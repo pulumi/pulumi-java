@@ -27,7 +27,7 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="comparisonOperator")
-    private final @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator;
+        private final @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator;
 
     public Optional<SecurityProfileBehaviorCriteriaComparisonOperator> getComparisonOperator() {
         return this.comparisonOperator == null ? Optional.empty() : Optional.ofNullable(this.comparisonOperator);
@@ -38,7 +38,7 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="consecutiveDatapointsToAlarm")
-    private final @Nullable Integer consecutiveDatapointsToAlarm;
+        private final @Nullable Integer consecutiveDatapointsToAlarm;
 
     public Optional<Integer> getConsecutiveDatapointsToAlarm() {
         return this.consecutiveDatapointsToAlarm == null ? Optional.empty() : Optional.ofNullable(this.consecutiveDatapointsToAlarm);
@@ -49,7 +49,7 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="consecutiveDatapointsToClear")
-    private final @Nullable Integer consecutiveDatapointsToClear;
+        private final @Nullable Integer consecutiveDatapointsToClear;
 
     public Optional<Integer> getConsecutiveDatapointsToClear() {
         return this.consecutiveDatapointsToClear == null ? Optional.empty() : Optional.ofNullable(this.consecutiveDatapointsToClear);
@@ -60,28 +60,28 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="durationSeconds")
-    private final @Nullable Integer durationSeconds;
+        private final @Nullable Integer durationSeconds;
 
     public Optional<Integer> getDurationSeconds() {
         return this.durationSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationSeconds);
     }
 
     @InputImport(name="mlDetectionConfig")
-    private final @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig;
+        private final @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig;
 
     public Optional<SecurityProfileMachineLearningDetectionConfig> getMlDetectionConfig() {
         return this.mlDetectionConfig == null ? Optional.empty() : Optional.ofNullable(this.mlDetectionConfig);
     }
 
     @InputImport(name="statisticalThreshold")
-    private final @Nullable SecurityProfileStatisticalThreshold statisticalThreshold;
+        private final @Nullable SecurityProfileStatisticalThreshold statisticalThreshold;
 
     public Optional<SecurityProfileStatisticalThreshold> getStatisticalThreshold() {
         return this.statisticalThreshold == null ? Optional.empty() : Optional.ofNullable(this.statisticalThreshold);
     }
 
     @InputImport(name="value")
-    private final @Nullable SecurityProfileMetricValue value;
+        private final @Nullable SecurityProfileMetricValue value;
 
     public Optional<SecurityProfileMetricValue> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -180,7 +180,6 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
             this.value = value;
             return this;
         }
-
         public SecurityProfileBehaviorCriteria build() {
             return new SecurityProfileBehaviorCriteria(comparisonOperator, consecutiveDatapointsToAlarm, consecutiveDatapointsToClear, durationSeconds, mlDetectionConfig, statisticalThreshold, value);
         }

@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
      * 
      */
     @InputImport(name="estimatedProbability", required=true)
-    private final Double estimatedProbability;
+      private final Double estimatedProbability;
 
     public Double getEstimatedProbability() {
         return this.estimatedProbability;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
      * 
      */
     @InputImport(name="quasiIdsValues", required=true)
-    private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
+      private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
         return this.quasiIdsValues;
@@ -83,7 +83,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }
-
         public GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse(estimatedProbability, quasiIdsValues);
         }

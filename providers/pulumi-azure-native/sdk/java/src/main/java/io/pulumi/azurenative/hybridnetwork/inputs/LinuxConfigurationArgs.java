@@ -23,7 +23,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ssh")
-    private final @Nullable Input<SshConfigurationArgs> ssh;
+        private final @Nullable Input<SshConfigurationArgs> ssh;
 
     public Input<SshConfigurationArgs> getSsh() {
         return this.ssh == null ? Input.empty() : this.ssh;
@@ -66,7 +66,6 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
             this.ssh = Input.ofNullable(ssh);
             return this;
         }
-
         public LinuxConfigurationArgs build() {
             return new LinuxConfigurationArgs(ssh);
         }

@@ -23,7 +23,7 @@ public final class ReleaseChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channel")
-    private final @Nullable Input<ReleaseChannelChannel> channel;
+      private final @Nullable Input<ReleaseChannelChannel> channel;
 
     public Input<ReleaseChannelChannel> getChannel() {
         return this.channel == null ? Input.empty() : this.channel;
@@ -66,7 +66,6 @@ public final class ReleaseChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.channel = Input.ofNullable(channel);
             return this;
         }
-
         public ReleaseChannelArgs build() {
             return new ReleaseChannelArgs(channel);
         }

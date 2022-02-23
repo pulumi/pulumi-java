@@ -21,7 +21,7 @@ public final class BucketSseKmsEncryptedObjects extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="status", required=true)
-    private final BucketSseKmsEncryptedObjectsStatus status;
+        private final BucketSseKmsEncryptedObjectsStatus status;
 
     public BucketSseKmsEncryptedObjectsStatus getStatus() {
         return this.status;
@@ -59,7 +59,6 @@ public final class BucketSseKmsEncryptedObjects extends io.pulumi.resources.Invo
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BucketSseKmsEncryptedObjects build() {
             return new BucketSseKmsEncryptedObjects(status);
         }

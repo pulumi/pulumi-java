@@ -60,7 +60,6 @@ public final class GetBackupSelectionResult {
             this.selectionId = selectionId;
             return this;
         }
-
         public GetBackupSelectionResult build() {
             return new GetBackupSelectionResult(id, selectionId);
         }

@@ -17,28 +17,28 @@ public final class ServiceApiGetArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServiceApiGetArgs Empty = new ServiceApiGetArgs();
 
     @InputImport(name="methods")
-    private final @Nullable Input<List<ServiceApiMethodGetArgs>> methods;
+        private final @Nullable Input<List<ServiceApiMethodGetArgs>> methods;
 
     public Input<List<ServiceApiMethodGetArgs>> getMethods() {
         return this.methods == null ? Input.empty() : this.methods;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="syntax")
-    private final @Nullable Input<String> syntax;
+        private final @Nullable Input<String> syntax;
 
     public Input<String> getSyntax() {
         return this.syntax == null ? Input.empty() : this.syntax;
     }
 
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -127,7 +127,6 @@ public final class ServiceApiGetArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ServiceApiGetArgs build() {
             return new ServiceApiGetArgs(methods, name, syntax, version);
         }

@@ -74,7 +74,6 @@ public final class FirewallRuleGroupTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FirewallRuleGroupTag build() {
             return new FirewallRuleGroupTag(key, value);
         }

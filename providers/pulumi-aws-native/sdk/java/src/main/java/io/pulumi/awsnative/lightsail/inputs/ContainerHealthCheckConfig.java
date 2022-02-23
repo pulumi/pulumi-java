@@ -24,7 +24,7 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="healthyThreshold")
-    private final @Nullable Integer healthyThreshold;
+        private final @Nullable Integer healthyThreshold;
 
     public Optional<Integer> getHealthyThreshold() {
         return this.healthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.healthyThreshold);
@@ -35,7 +35,7 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="intervalSeconds")
-    private final @Nullable Integer intervalSeconds;
+        private final @Nullable Integer intervalSeconds;
 
     public Optional<Integer> getIntervalSeconds() {
         return this.intervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalSeconds);
@@ -46,7 +46,7 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+        private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -57,7 +57,7 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="successCodes")
-    private final @Nullable String successCodes;
+        private final @Nullable String successCodes;
 
     public Optional<String> getSuccessCodes() {
         return this.successCodes == null ? Optional.empty() : Optional.ofNullable(this.successCodes);
@@ -68,7 +68,7 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="timeoutSeconds")
-    private final @Nullable Integer timeoutSeconds;
+        private final @Nullable Integer timeoutSeconds;
 
     public Optional<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutSeconds);
@@ -79,7 +79,7 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="unhealthyThreshold")
-    private final @Nullable Integer unhealthyThreshold;
+        private final @Nullable Integer unhealthyThreshold;
 
     public Optional<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.unhealthyThreshold);
@@ -168,7 +168,6 @@ public final class ContainerHealthCheckConfig extends io.pulumi.resources.Invoke
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-
         public ContainerHealthCheckConfig build() {
             return new ContainerHealthCheckConfig(healthyThreshold, intervalSeconds, path, successCodes, timeoutSeconds, unhealthyThreshold);
         }

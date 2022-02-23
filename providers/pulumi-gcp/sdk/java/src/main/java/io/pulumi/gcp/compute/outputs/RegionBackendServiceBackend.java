@@ -397,7 +397,6 @@ public final class RegionBackendServiceBackend {
             this.maxUtilization = maxUtilization;
             return this;
         }
-
         public RegionBackendServiceBackend build() {
             return new RegionBackendServiceBackend(balancingMode, capacityScaler, description, failover, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);
         }

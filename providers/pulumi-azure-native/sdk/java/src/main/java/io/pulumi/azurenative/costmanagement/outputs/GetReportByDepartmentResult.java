@@ -206,7 +206,6 @@ public final class GetReportByDepartmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReportByDepartmentResult build() {
             return new GetReportByDepartmentResult(definition, deliveryInfo, format, id, name, schedule, tags, type);
         }

@@ -290,7 +290,6 @@ public final class FtpReadSettingsResponse {
             this.wildcardFolderPath = wildcardFolderPath;
             return this;
         }
-
         public FtpReadSettingsResponse build() {
             return new FtpReadSettingsResponse(deleteFilesAfterCompletion, disableChunking, disableMetricsCollection, enablePartitionDiscovery, fileListPath, maxConcurrentConnections, partitionRootPath, recursive, type, useBinaryTransfer, wildcardFileName, wildcardFolderPath);
         }

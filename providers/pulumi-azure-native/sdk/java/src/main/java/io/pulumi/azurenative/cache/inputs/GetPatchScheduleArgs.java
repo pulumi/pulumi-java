@@ -17,7 +17,7 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="default", required=true)
-    private final String $default;
+        private final String $default;
 
     public String get$default() {
         return this.$default;
@@ -28,7 +28,7 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetPatchScheduleArgs build() {
             return new GetPatchScheduleArgs($default, name, resourceGroupName);
         }

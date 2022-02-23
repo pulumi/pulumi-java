@@ -96,7 +96,6 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse {
             this.terms = Objects.requireNonNull(terms);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse(doNotAssociateTerms, queryTerms, terms);
         }

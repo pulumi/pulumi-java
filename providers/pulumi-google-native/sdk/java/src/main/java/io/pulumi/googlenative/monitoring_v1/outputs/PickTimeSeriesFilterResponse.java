@@ -96,7 +96,6 @@ public final class PickTimeSeriesFilterResponse {
             this.rankingMethod = Objects.requireNonNull(rankingMethod);
             return this;
         }
-
         public PickTimeSeriesFilterResponse build() {
             return new PickTimeSeriesFilterResponse(direction, numTimeSeries, rankingMethod);
         }

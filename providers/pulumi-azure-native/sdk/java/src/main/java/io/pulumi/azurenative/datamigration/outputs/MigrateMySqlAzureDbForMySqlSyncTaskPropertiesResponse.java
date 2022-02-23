@@ -174,7 +174,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

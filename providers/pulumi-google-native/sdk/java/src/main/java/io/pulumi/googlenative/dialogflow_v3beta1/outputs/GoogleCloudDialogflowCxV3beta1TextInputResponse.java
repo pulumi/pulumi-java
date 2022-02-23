@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1TextInputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1TextInputResponse(text);
         }

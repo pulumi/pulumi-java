@@ -56,7 +56,6 @@ public final class ThemeGutterStyle {
             this.show = show;
             return this;
         }
-
         public ThemeGutterStyle build() {
             return new ThemeGutterStyle(show);
         }

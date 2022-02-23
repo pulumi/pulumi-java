@@ -120,7 +120,6 @@ public final class ContainerHttpGetResponse {
             this.scheme = scheme;
             return this;
         }
-
         public ContainerHttpGetResponse build() {
             return new ContainerHttpGetResponse(httpHeaders, path, port, scheme);
         }

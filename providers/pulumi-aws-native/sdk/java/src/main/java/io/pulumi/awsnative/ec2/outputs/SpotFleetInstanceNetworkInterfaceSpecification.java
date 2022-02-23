@@ -182,7 +182,6 @@ public final class SpotFleetInstanceNetworkInterfaceSpecification {
             this.subnetId = subnetId;
             return this;
         }
-
         public SpotFleetInstanceNetworkInterfaceSpecification build() {
             return new SpotFleetInstanceNetworkInterfaceSpecification(associatePublicIpAddress, deleteOnTermination, description, deviceIndex, groups, ipv6AddressCount, ipv6Addresses, networkInterfaceId, privateIpAddresses, secondaryPrivateIpAddressCount, subnetId);
         }

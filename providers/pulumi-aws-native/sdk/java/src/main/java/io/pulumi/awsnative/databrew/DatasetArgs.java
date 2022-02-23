@@ -25,7 +25,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<DatasetFormat> format;
+        private final @Nullable Input<DatasetFormat> format;
 
     public Input<DatasetFormat> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -36,7 +36,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="formatOptions")
-    private final @Nullable Input<DatasetFormatOptionsArgs> formatOptions;
+        private final @Nullable Input<DatasetFormatOptionsArgs> formatOptions;
 
     public Input<DatasetFormatOptionsArgs> getFormatOptions() {
         return this.formatOptions == null ? Input.empty() : this.formatOptions;
@@ -47,7 +47,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="input", required=true)
-    private final Input<DatasetInputArgs> input;
+        private final Input<DatasetInputArgs> input;
 
     public Input<DatasetInputArgs> getInput() {
         return this.input;
@@ -58,7 +58,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -69,14 +69,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathOptions")
-    private final @Nullable Input<DatasetPathOptionsArgs> pathOptions;
+        private final @Nullable Input<DatasetPathOptionsArgs> pathOptions;
 
     public Input<DatasetPathOptionsArgs> getPathOptions() {
         return this.pathOptions == null ? Input.empty() : this.pathOptions;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<DatasetTagArgs>> tags;
+        private final @Nullable Input<List<DatasetTagArgs>> tags;
 
     public Input<List<DatasetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -195,7 +195,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DatasetArgs build() {
             return new DatasetArgs(format, formatOptions, input, name, pathOptions, tags);
         }

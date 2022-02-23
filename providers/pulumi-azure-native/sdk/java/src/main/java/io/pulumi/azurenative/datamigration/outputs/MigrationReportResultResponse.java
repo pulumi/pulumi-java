@@ -74,7 +74,6 @@ public final class MigrationReportResultResponse {
             this.reportUrl = Objects.requireNonNull(reportUrl);
             return this;
         }
-
         public MigrationReportResultResponse build() {
             return new MigrationReportResultResponse(id, reportUrl);
         }

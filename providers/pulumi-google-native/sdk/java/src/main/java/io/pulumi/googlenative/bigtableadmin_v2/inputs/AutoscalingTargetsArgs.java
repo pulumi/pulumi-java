@@ -23,7 +23,7 @@ public final class AutoscalingTargetsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cpuUtilizationPercent")
-    private final @Nullable Input<Integer> cpuUtilizationPercent;
+      private final @Nullable Input<Integer> cpuUtilizationPercent;
 
     public Input<Integer> getCpuUtilizationPercent() {
         return this.cpuUtilizationPercent == null ? Input.empty() : this.cpuUtilizationPercent;
@@ -66,7 +66,6 @@ public final class AutoscalingTargetsArgs extends io.pulumi.resources.ResourceAr
             this.cpuUtilizationPercent = Input.ofNullable(cpuUtilizationPercent);
             return this;
         }
-
         public AutoscalingTargetsArgs build() {
             return new AutoscalingTargetsArgs(cpuUtilizationPercent);
         }

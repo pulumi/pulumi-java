@@ -22,7 +22,7 @@ public final class FilterOptionsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="filter", required=true)
-    private final FilterResponse filter;
+      private final FilterResponse filter;
 
     public FilterResponse getFilter() {
         return this.filter;
@@ -33,7 +33,7 @@ public final class FilterOptionsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+      private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -82,7 +82,6 @@ public final class FilterOptionsResponse extends io.pulumi.resources.InvokeArgs 
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public FilterOptionsResponse build() {
             return new FilterOptionsResponse(filter, objectType);
         }

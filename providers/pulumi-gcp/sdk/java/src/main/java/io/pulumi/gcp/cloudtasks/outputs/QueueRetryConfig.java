@@ -176,7 +176,6 @@ public final class QueueRetryConfig {
             this.minBackoff = minBackoff;
             return this;
         }
-
         public QueueRetryConfig build() {
             return new QueueRetryConfig(maxAttempts, maxBackoff, maxDoublings, maxRetryDuration, minBackoff);
         }

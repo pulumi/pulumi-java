@@ -119,7 +119,6 @@ public final class ScriptActionResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ScriptActionResponse build() {
             return new ScriptActionResponse(name, parameters, roles, uri);
         }

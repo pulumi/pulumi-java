@@ -162,7 +162,6 @@ public final class MonitoredResourceResponse {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public MonitoredResourceResponse build() {
             return new MonitoredResourceResponse(id, reasonForLogsStatus, reasonForMetricsStatus, sendingLogs, sendingMetrics, systemData);
         }

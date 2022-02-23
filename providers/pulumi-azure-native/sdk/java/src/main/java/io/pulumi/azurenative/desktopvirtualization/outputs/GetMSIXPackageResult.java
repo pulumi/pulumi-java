@@ -332,7 +332,6 @@ public final class GetMSIXPackageResult {
             this.version = version;
             return this;
         }
-
         public GetMSIXPackageResult build() {
             return new GetMSIXPackageResult(displayName, id, imagePath, isActive, isRegularRegistration, lastUpdated, name, packageApplications, packageDependencies, packageFamilyName, packageName, packageRelativePath, type, version);
         }

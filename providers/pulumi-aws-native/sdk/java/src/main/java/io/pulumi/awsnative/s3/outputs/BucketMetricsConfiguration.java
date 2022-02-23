@@ -88,7 +88,6 @@ public final class BucketMetricsConfiguration {
             this.tagFilters = tagFilters;
             return this;
         }
-
         public BucketMetricsConfiguration build() {
             return new BucketMetricsConfiguration(accessPointArn, id, prefix, tagFilters);
         }

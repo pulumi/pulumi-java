@@ -24,7 +24,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset", required=true)
-    private final Input<String> dataset;
+        private final Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset;
@@ -42,7 +42,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -54,7 +54,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfig")
-    private final @Nullable Input<DicomStoreNotificationConfigArgs> notificationConfig;
+        private final @Nullable Input<DicomStoreNotificationConfigArgs> notificationConfig;
 
     public Input<DicomStoreNotificationConfigArgs> getNotificationConfig() {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
@@ -79,7 +79,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamConfigs")
-    private final @Nullable Input<List<DicomStoreStreamConfigArgs>> streamConfigs;
+        private final @Nullable Input<List<DicomStoreStreamConfigArgs>> streamConfigs;
 
     public Input<List<DicomStoreStreamConfigArgs>> getStreamConfigs() {
         return this.streamConfigs == null ? Input.empty() : this.streamConfigs;
@@ -183,7 +183,6 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.streamConfigs = Input.ofNullable(streamConfigs);
             return this;
         }
-
         public DicomStoreArgs build() {
             return new DicomStoreArgs(dataset, labels, name, notificationConfig, streamConfigs);
         }

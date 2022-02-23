@@ -99,7 +99,6 @@ public final class DynamicDeliveryAttributeMappingResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DynamicDeliveryAttributeMappingResponse build() {
             return new DynamicDeliveryAttributeMappingResponse(name, sourceField, type);
         }

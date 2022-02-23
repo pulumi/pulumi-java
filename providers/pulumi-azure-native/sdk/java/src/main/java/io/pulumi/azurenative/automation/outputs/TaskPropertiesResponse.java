@@ -77,7 +77,6 @@ public final class TaskPropertiesResponse {
             this.source = source;
             return this;
         }
-
         public TaskPropertiesResponse build() {
             return new TaskPropertiesResponse(parameters, source);
         }

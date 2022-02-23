@@ -75,7 +75,6 @@ public final class MaterialResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public MaterialResponse build() {
             return new MaterialResponse(digest, uri);
         }

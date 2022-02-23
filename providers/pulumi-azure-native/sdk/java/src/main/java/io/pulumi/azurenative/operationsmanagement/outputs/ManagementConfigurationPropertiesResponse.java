@@ -142,7 +142,6 @@ public final class ManagementConfigurationPropertiesResponse {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public ManagementConfigurationPropertiesResponse build() {
             return new ManagementConfigurationPropertiesResponse(applicationId, parameters, parentResourceType, provisioningState, template);
         }

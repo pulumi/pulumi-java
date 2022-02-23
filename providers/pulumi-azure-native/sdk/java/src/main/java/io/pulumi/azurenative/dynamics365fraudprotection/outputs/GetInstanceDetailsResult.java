@@ -205,7 +205,6 @@ public final class GetInstanceDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceDetailsResult build() {
             return new GetInstanceDetailsResult(administration, id, location, name, provisioningState, systemData, tags, type);
         }

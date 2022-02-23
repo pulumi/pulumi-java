@@ -61,7 +61,6 @@ public final class ProjectDataDeliveryObject {
             this.s3 = s3;
             return this;
         }
-
         public ProjectDataDeliveryObject build() {
             return new ProjectDataDeliveryObject(logGroup, s3);
         }

@@ -289,7 +289,6 @@ public final class GetReadOnlyFollowingDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReadOnlyFollowingDatabaseResult build() {
             return new GetReadOnlyFollowingDatabaseResult(attachedDatabaseConfigurationName, hotCachePeriod, id, kind, leaderClusterResourceId, location, name, principalsModificationKind, provisioningState, softDeletePeriod, statistics, type);
         }

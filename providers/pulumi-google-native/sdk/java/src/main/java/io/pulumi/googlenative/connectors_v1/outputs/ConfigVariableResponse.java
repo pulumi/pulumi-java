@@ -139,7 +139,6 @@ public final class ConfigVariableResponse {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
-
         public ConfigVariableResponse build() {
             return new ConfigVariableResponse(boolValue, intValue, key, secretValue, stringValue);
         }

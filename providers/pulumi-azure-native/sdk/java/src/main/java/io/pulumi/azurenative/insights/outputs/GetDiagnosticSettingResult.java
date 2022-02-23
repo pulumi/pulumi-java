@@ -268,7 +268,6 @@ public final class GetDiagnosticSettingResult {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public GetDiagnosticSettingResult build() {
             return new GetDiagnosticSettingResult(eventHubAuthorizationRuleId, eventHubName, id, logAnalyticsDestinationType, logs, metrics, name, serviceBusRuleId, storageAccountId, type, workspaceId);
         }

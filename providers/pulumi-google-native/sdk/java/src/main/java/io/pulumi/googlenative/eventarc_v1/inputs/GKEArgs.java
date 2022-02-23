@@ -23,7 +23,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster", required=true)
-    private final Input<String> cluster;
+      private final Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster;
@@ -34,7 +34,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -45,7 +45,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final Input<String> namespace;
+      private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
@@ -56,7 +56,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -67,7 +67,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -171,7 +171,6 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
-
         public GKEArgs build() {
             return new GKEArgs(cluster, location, namespace, path, service);
         }

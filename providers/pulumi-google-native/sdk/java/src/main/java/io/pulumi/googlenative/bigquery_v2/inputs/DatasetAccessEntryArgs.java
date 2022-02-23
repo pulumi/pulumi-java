@@ -21,14 +21,14 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataset")
-    private final @Nullable Input<DatasetReferenceArgs> dataset;
+      private final @Nullable Input<DatasetReferenceArgs> dataset;
 
     public Input<DatasetReferenceArgs> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
     }
 
     @InputImport(name="targetTypes")
-    private final @Nullable Input<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
+      private final @Nullable Input<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
 
     public Input<List<DatasetAccessEntryTargetTypesItem>> getTargetTypes() {
         return this.targetTypes == null ? Input.empty() : this.targetTypes;
@@ -87,7 +87,6 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
             this.targetTypes = Input.ofNullable(targetTypes);
             return this;
         }
-
         public DatasetAccessEntryArgs build() {
             return new DatasetAccessEntryArgs(dataset, targetTypes);
         }

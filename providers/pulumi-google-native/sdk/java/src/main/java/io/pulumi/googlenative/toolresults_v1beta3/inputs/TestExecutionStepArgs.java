@@ -27,7 +27,7 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="testIssues")
-    private final @Nullable Input<List<TestIssueArgs>> testIssues;
+      private final @Nullable Input<List<TestIssueArgs>> testIssues;
 
     public Input<List<TestIssueArgs>> getTestIssues() {
         return this.testIssues == null ? Input.empty() : this.testIssues;
@@ -38,7 +38,7 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="testSuiteOverviews")
-    private final @Nullable Input<List<TestSuiteOverviewArgs>> testSuiteOverviews;
+      private final @Nullable Input<List<TestSuiteOverviewArgs>> testSuiteOverviews;
 
     public Input<List<TestSuiteOverviewArgs>> getTestSuiteOverviews() {
         return this.testSuiteOverviews == null ? Input.empty() : this.testSuiteOverviews;
@@ -49,7 +49,7 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="testTiming")
-    private final @Nullable Input<TestTimingArgs> testTiming;
+      private final @Nullable Input<TestTimingArgs> testTiming;
 
     public Input<TestTimingArgs> getTestTiming() {
         return this.testTiming == null ? Input.empty() : this.testTiming;
@@ -60,7 +60,7 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="toolExecution")
-    private final @Nullable Input<ToolExecutionArgs> toolExecution;
+      private final @Nullable Input<ToolExecutionArgs> toolExecution;
 
     public Input<ToolExecutionArgs> getToolExecution() {
         return this.toolExecution == null ? Input.empty() : this.toolExecution;
@@ -149,7 +149,6 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
             this.toolExecution = Input.ofNullable(toolExecution);
             return this;
         }
-
         public TestExecutionStepArgs build() {
             return new TestExecutionStepArgs(testIssues, testSuiteOverviews, testTiming, toolExecution);
         }

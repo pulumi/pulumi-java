@@ -111,7 +111,6 @@ public final class DatasetDataCatalogInputDefinition {
             this.tempDirectory = tempDirectory;
             return this;
         }
-
         public DatasetDataCatalogInputDefinition build() {
             return new DatasetDataCatalogInputDefinition(catalogId, databaseName, tableName, tempDirectory);
         }

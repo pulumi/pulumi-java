@@ -76,7 +76,6 @@ public final class LabelingJobImagePropertiesResponse {
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
         }
-
         public LabelingJobImagePropertiesResponse build() {
             return new LabelingJobImagePropertiesResponse(annotationType, mediaType);
         }

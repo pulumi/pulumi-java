@@ -23,7 +23,7 @@ public final class EnterpriseChannelNodeResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="azureLocation", required=true)
-    private final String azureLocation;
+        private final String azureLocation;
 
     public String getAzureLocation() {
         return this.azureLocation;
@@ -34,7 +34,7 @@ public final class EnterpriseChannelNodeResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="azureSku", required=true)
-    private final String azureSku;
+        private final String azureSku;
 
     public String getAzureSku() {
         return this.azureSku;
@@ -45,7 +45,7 @@ public final class EnterpriseChannelNodeResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -56,7 +56,7 @@ public final class EnterpriseChannelNodeResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -67,7 +67,7 @@ public final class EnterpriseChannelNodeResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -146,7 +146,6 @@ public final class EnterpriseChannelNodeResponse extends io.pulumi.resources.Inv
             this.state = state;
             return this;
         }
-
         public EnterpriseChannelNodeResponse build() {
             return new EnterpriseChannelNodeResponse(azureLocation, azureSku, id, name, state);
         }

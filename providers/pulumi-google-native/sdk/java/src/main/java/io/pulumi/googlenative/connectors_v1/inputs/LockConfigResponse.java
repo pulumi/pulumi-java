@@ -22,7 +22,7 @@ public final class LockConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locked", required=true)
-    private final Boolean locked;
+      private final Boolean locked;
 
     public Boolean getLocked() {
         return this.locked;
@@ -33,7 +33,7 @@ public final class LockConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="reason", required=true)
-    private final String reason;
+      private final String reason;
 
     public String getReason() {
         return this.reason;
@@ -82,7 +82,6 @@ public final class LockConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public LockConfigResponse build() {
             return new LockConfigResponse(locked, reason);
         }

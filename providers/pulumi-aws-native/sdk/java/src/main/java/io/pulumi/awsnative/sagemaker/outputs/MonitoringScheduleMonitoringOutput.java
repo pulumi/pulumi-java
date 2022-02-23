@@ -44,7 +44,6 @@ public final class MonitoringScheduleMonitoringOutput {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }
-
         public MonitoringScheduleMonitoringOutput build() {
             return new MonitoringScheduleMonitoringOutput(s3Output);
         }

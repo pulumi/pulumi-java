@@ -13,7 +13,7 @@ public final class GetClusterWorkloadIdentityConfig extends io.pulumi.resources.
     public static final GetClusterWorkloadIdentityConfig Empty = new GetClusterWorkloadIdentityConfig();
 
     @InputImport(name="workloadPool", required=true)
-    private final String workloadPool;
+        private final String workloadPool;
 
     public String getWorkloadPool() {
         return this.workloadPool;
@@ -51,7 +51,6 @@ public final class GetClusterWorkloadIdentityConfig extends io.pulumi.resources.
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
         }
-
         public GetClusterWorkloadIdentityConfig build() {
             return new GetClusterWorkloadIdentityConfig(workloadPool);
         }

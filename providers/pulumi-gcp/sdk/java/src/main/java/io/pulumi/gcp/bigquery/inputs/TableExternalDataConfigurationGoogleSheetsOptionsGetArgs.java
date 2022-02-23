@@ -21,7 +21,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsGetArgs exte
      * 
      */
     @InputImport(name="range")
-    private final @Nullable Input<String> range;
+        private final @Nullable Input<String> range;
 
     public Input<String> getRange() {
         return this.range == null ? Input.empty() : this.range;
@@ -34,7 +34,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsGetArgs exte
      * 
      */
     @InputImport(name="skipLeadingRows")
-    private final @Nullable Input<Integer> skipLeadingRows;
+        private final @Nullable Input<Integer> skipLeadingRows;
 
     public Input<Integer> getSkipLeadingRows() {
         return this.skipLeadingRows == null ? Input.empty() : this.skipLeadingRows;
@@ -93,7 +93,6 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsGetArgs exte
             this.skipLeadingRows = Input.ofNullable(skipLeadingRows);
             return this;
         }
-
         public TableExternalDataConfigurationGoogleSheetsOptionsGetArgs build() {
             return new TableExternalDataConfigurationGoogleSheetsOptionsGetArgs(range, skipLeadingRows);
         }

@@ -14,14 +14,14 @@ public final class CloudFormationProvisionedProductTagArgs extends io.pulumi.res
     public static final CloudFormationProvisionedProductTagArgs Empty = new CloudFormationProvisionedProductTagArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -80,7 +80,6 @@ public final class CloudFormationProvisionedProductTagArgs extends io.pulumi.res
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public CloudFormationProvisionedProductTagArgs build() {
             return new CloudFormationProvisionedProductTagArgs(key, value);
         }

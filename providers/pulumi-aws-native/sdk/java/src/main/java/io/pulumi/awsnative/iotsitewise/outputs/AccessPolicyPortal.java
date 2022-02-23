@@ -54,7 +54,6 @@ public final class AccessPolicyPortal {
             this.id = id;
             return this;
         }
-
         public AccessPolicyPortal build() {
             return new AccessPolicyPortal(id);
         }

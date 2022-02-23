@@ -289,7 +289,6 @@ public final class GetScheduledTriggerResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetScheduledTriggerResult build() {
             return new GetScheduledTriggerResult(createdAt, id, kind, name, provisioningState, recurrenceInterval, synchronizationMode, synchronizationTime, systemData, triggerStatus, type, userName);
         }

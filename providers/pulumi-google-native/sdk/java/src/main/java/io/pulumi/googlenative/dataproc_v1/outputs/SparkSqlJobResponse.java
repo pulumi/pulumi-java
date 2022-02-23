@@ -162,7 +162,6 @@ public final class SparkSqlJobResponse {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
         }
-
         public SparkSqlJobResponse build() {
             return new SparkSqlJobResponse(jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }

@@ -228,7 +228,6 @@ public final class GetPrefixListResult {
             this.version = version;
             return this;
         }
-
         public GetPrefixListResult build() {
             return new GetPrefixListResult(addressFamily, arn, entries, maxEntries, ownerId, prefixListId, prefixListName, tags, version);
         }

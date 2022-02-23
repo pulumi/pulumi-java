@@ -397,7 +397,6 @@ public final class GetPython2PackageResult {
             this.version = version;
             return this;
         }
-
         public GetPython2PackageResult build() {
             return new GetPython2PackageResult(activityCount, contentLink, creationTime, description, error, etag, id, isComposite, isGlobal, lastModifiedTime, location, name, provisioningState, sizeInBytes, tags, type, version);
         }

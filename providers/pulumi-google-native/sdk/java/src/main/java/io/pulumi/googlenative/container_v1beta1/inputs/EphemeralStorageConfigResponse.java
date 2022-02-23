@@ -21,7 +21,7 @@ public final class EphemeralStorageConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="localSsdCount", required=true)
-    private final Integer localSsdCount;
+      private final Integer localSsdCount;
 
     public Integer getLocalSsdCount() {
         return this.localSsdCount;
@@ -59,7 +59,6 @@ public final class EphemeralStorageConfigResponse extends io.pulumi.resources.In
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
-
         public EphemeralStorageConfigResponse build() {
             return new EphemeralStorageConfigResponse(localSsdCount);
         }

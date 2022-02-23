@@ -95,7 +95,6 @@ public final class TableReferenceResponse {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public TableReferenceResponse build() {
             return new TableReferenceResponse(datasetId, project, tableId);
         }

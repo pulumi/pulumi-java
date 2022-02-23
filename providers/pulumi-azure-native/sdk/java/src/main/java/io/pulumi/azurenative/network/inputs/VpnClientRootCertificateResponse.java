@@ -23,7 +23,7 @@ public final class VpnClientRootCertificateResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -34,7 +34,7 @@ public final class VpnClientRootCertificateResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -45,7 +45,7 @@ public final class VpnClientRootCertificateResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -56,7 +56,7 @@ public final class VpnClientRootCertificateResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -67,7 +67,7 @@ public final class VpnClientRootCertificateResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="publicCertData", required=true)
-    private final String publicCertData;
+        private final String publicCertData;
 
     public String getPublicCertData() {
         return this.publicCertData;
@@ -146,7 +146,6 @@ public final class VpnClientRootCertificateResponse extends io.pulumi.resources.
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }
-
         public VpnClientRootCertificateResponse build() {
             return new VpnClientRootCertificateResponse(etag, id, name, provisioningState, publicCertData);
         }

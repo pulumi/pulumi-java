@@ -26,7 +26,7 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hard")
-    private final @Nullable Input<Map<String,String>> hard;
+        private final @Nullable Input<Map<String,String>> hard;
 
     public Input<Map<String,String>> getHard() {
         return this.hard == null ? Input.empty() : this.hard;
@@ -37,7 +37,7 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scopeSelector")
-    private final @Nullable Input<ScopeSelectorArgs> scopeSelector;
+        private final @Nullable Input<ScopeSelectorArgs> scopeSelector;
 
     public Input<ScopeSelectorArgs> getScopeSelector() {
         return this.scopeSelector == null ? Input.empty() : this.scopeSelector;
@@ -48,7 +48,7 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scopes")
-    private final @Nullable Input<List<String>> scopes;
+        private final @Nullable Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;
@@ -122,7 +122,6 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
             this.scopes = Input.ofNullable(scopes);
             return this;
         }
-
         public ResourceQuotaSpecArgs build() {
             return new ResourceQuotaSpecArgs(hard, scopeSelector, scopes);
         }

@@ -74,7 +74,6 @@ public final class DatastoreIODetailsResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public DatastoreIODetailsResponse build() {
             return new DatastoreIODetailsResponse(namespace, project);
         }

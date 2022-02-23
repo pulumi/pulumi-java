@@ -22,7 +22,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable Input<List<BigtableColumnArgs>> columns;
+      private final @Nullable Input<List<BigtableColumnArgs>> columns;
 
     public Input<List<BigtableColumnArgs>> getColumns() {
         return this.columns == null ? Input.empty() : this.columns;
@@ -33,7 +33,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<String> encoding;
+      private final @Nullable Input<String> encoding;
 
     public Input<String> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -44,7 +44,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="familyId")
-    private final @Nullable Input<String> familyId;
+      private final @Nullable Input<String> familyId;
 
     public Input<String> getFamilyId() {
         return this.familyId == null ? Input.empty() : this.familyId;
@@ -55,7 +55,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="onlyReadLatest")
-    private final @Nullable Input<Boolean> onlyReadLatest;
+      private final @Nullable Input<Boolean> onlyReadLatest;
 
     public Input<Boolean> getOnlyReadLatest() {
         return this.onlyReadLatest == null ? Input.empty() : this.onlyReadLatest;
@@ -66,7 +66,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -170,7 +170,6 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public BigtableColumnFamilyArgs build() {
             return new BigtableColumnFamilyArgs(columns, encoding, familyId, onlyReadLatest, type);
         }

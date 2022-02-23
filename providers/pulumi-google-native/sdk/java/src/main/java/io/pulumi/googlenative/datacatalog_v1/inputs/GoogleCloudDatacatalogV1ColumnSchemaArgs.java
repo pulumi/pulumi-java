@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="column", required=true)
-    private final Input<String> column;
+      private final Input<String> column;
 
     public Input<String> getColumn() {
         return this.column;
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -57,7 +57,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="subcolumns")
-    private final @Nullable Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns;
+      private final @Nullable Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns;
 
     public Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> getSubcolumns() {
         return this.subcolumns == null ? Input.empty() : this.subcolumns;
@@ -68,7 +68,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -172,7 +172,6 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public GoogleCloudDatacatalogV1ColumnSchemaArgs build() {
             return new GoogleCloudDatacatalogV1ColumnSchemaArgs(column, description, mode, subcolumns, type);
         }

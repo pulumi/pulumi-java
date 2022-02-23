@@ -118,7 +118,6 @@ public final class TrackingInfoResponse {
             this.trackingUrl = trackingUrl;
             return this;
         }
-
         public TrackingInfoResponse build() {
             return new TrackingInfoResponse(carrierName, serialNumber, trackingId, trackingUrl);
         }

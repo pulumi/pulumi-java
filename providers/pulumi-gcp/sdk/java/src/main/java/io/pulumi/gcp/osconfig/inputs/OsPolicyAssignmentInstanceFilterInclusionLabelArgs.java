@@ -20,7 +20,7 @@ public final class OsPolicyAssignmentInstanceFilterInclusionLabelArgs extends io
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -63,7 +63,6 @@ public final class OsPolicyAssignmentInstanceFilterInclusionLabelArgs extends io
             this.labels = Input.ofNullable(labels);
             return this;
         }
-
         public OsPolicyAssignmentInstanceFilterInclusionLabelArgs build() {
             return new OsPolicyAssignmentInstanceFilterInclusionLabelArgs(labels);
         }

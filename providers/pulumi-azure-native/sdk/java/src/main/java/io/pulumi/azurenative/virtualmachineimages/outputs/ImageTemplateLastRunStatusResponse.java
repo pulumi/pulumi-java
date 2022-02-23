@@ -139,7 +139,6 @@ public final class ImageTemplateLastRunStatusResponse {
             this.startTime = startTime;
             return this;
         }
-
         public ImageTemplateLastRunStatusResponse build() {
             return new ImageTemplateLastRunStatusResponse(endTime, message, runState, runSubState, startTime);
         }

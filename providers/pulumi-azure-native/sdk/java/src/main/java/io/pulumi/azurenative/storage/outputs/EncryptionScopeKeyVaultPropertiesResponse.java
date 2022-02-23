@@ -97,7 +97,6 @@ public final class EncryptionScopeKeyVaultPropertiesResponse {
             this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
             return this;
         }
-
         public EncryptionScopeKeyVaultPropertiesResponse build() {
             return new EncryptionScopeKeyVaultPropertiesResponse(currentVersionedKeyIdentifier, keyUri, lastKeyRotationTimestamp);
         }

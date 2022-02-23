@@ -21,7 +21,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudSecret", required=true)
-    private final String cloudSecret;
+      private final String cloudSecret;
 
     public String getCloudSecret() {
         return this.cloudSecret;
@@ -59,7 +59,6 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
             this.cloudSecret = Objects.requireNonNull(cloudSecret);
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(cloudSecret);
         }

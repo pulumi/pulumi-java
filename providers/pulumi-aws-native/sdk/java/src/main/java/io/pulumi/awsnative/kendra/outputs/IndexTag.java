@@ -74,7 +74,6 @@ public final class IndexTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public IndexTag build() {
             return new IndexTag(key, value);
         }

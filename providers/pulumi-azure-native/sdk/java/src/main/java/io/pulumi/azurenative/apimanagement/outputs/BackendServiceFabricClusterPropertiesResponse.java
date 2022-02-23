@@ -163,7 +163,6 @@ public final class BackendServiceFabricClusterPropertiesResponse {
             this.serverX509Names = serverX509Names;
             return this;
         }
-
         public BackendServiceFabricClusterPropertiesResponse build() {
             return new BackendServiceFabricClusterPropertiesResponse(clientCertificateId, clientCertificatethumbprint, managementEndpoints, maxPartitionResolutionRetries, serverCertificateThumbprints, serverX509Names);
         }

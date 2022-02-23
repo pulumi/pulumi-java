@@ -192,7 +192,6 @@ public final class GuestPoliciesRecipe {
             this.version = version;
             return this;
         }
-
         public GuestPoliciesRecipe build() {
             return new GuestPoliciesRecipe(artifacts, desiredState, installSteps, name, updateSteps, version);
         }

@@ -137,7 +137,6 @@ public final class MachineExtensionInstanceViewResponseStatus {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public MachineExtensionInstanceViewResponseStatus build() {
             return new MachineExtensionInstanceViewResponseStatus(code, displayStatus, level, message, time);
         }

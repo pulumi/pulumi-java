@@ -215,7 +215,6 @@ public final class AccessLevelsAccessLevelBasicCondition {
             this.requiredAccessLevels = requiredAccessLevels;
             return this;
         }
-
         public AccessLevelsAccessLevelBasicCondition build() {
             return new AccessLevelsAccessLevelBasicCondition(devicePolicy, ipSubnetworks, members, negate, regions, requiredAccessLevels);
         }

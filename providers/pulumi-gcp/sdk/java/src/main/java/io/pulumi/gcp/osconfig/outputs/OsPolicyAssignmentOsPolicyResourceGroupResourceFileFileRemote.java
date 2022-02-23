@@ -76,7 +76,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote(sha256Checksum, uri);
         }

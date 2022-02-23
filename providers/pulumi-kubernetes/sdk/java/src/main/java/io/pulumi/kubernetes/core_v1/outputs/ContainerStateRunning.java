@@ -54,7 +54,6 @@ public final class ContainerStateRunning {
             this.startedAt = startedAt;
             return this;
         }
-
         public ContainerStateRunning build() {
             return new ContainerStateRunning(startedAt);
         }

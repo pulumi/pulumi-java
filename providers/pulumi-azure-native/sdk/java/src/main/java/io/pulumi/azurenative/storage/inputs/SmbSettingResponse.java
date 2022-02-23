@@ -24,7 +24,7 @@ public final class SmbSettingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="authenticationMethods")
-    private final @Nullable String authenticationMethods;
+        private final @Nullable String authenticationMethods;
 
     public Optional<String> getAuthenticationMethods() {
         return this.authenticationMethods == null ? Optional.empty() : Optional.ofNullable(this.authenticationMethods);
@@ -35,7 +35,7 @@ public final class SmbSettingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="channelEncryption")
-    private final @Nullable String channelEncryption;
+        private final @Nullable String channelEncryption;
 
     public Optional<String> getChannelEncryption() {
         return this.channelEncryption == null ? Optional.empty() : Optional.ofNullable(this.channelEncryption);
@@ -46,7 +46,7 @@ public final class SmbSettingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kerberosTicketEncryption")
-    private final @Nullable String kerberosTicketEncryption;
+        private final @Nullable String kerberosTicketEncryption;
 
     public Optional<String> getKerberosTicketEncryption() {
         return this.kerberosTicketEncryption == null ? Optional.empty() : Optional.ofNullable(this.kerberosTicketEncryption);
@@ -57,7 +57,7 @@ public final class SmbSettingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="multichannel")
-    private final @Nullable MultichannelResponse multichannel;
+        private final @Nullable MultichannelResponse multichannel;
 
     public Optional<MultichannelResponse> getMultichannel() {
         return this.multichannel == null ? Optional.empty() : Optional.ofNullable(this.multichannel);
@@ -68,7 +68,7 @@ public final class SmbSettingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="versions")
-    private final @Nullable String versions;
+        private final @Nullable String versions;
 
     public Optional<String> getVersions() {
         return this.versions == null ? Optional.empty() : Optional.ofNullable(this.versions);
@@ -147,7 +147,6 @@ public final class SmbSettingResponse extends io.pulumi.resources.InvokeArgs {
             this.versions = versions;
             return this;
         }
-
         public SmbSettingResponse build() {
             return new SmbSettingResponse(authenticationMethods, channelEncryption, kerberosTicketEncryption, multichannel, versions);
         }

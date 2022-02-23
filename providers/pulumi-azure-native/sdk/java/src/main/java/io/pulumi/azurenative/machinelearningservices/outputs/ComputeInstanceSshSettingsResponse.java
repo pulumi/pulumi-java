@@ -119,7 +119,6 @@ public final class ComputeInstanceSshSettingsResponse {
             this.sshPublicAccess = sshPublicAccess;
             return this;
         }
-
         public ComputeInstanceSshSettingsResponse build() {
             return new ComputeInstanceSshSettingsResponse(adminPublicKey, adminUserName, sshPort, sshPublicAccess);
         }

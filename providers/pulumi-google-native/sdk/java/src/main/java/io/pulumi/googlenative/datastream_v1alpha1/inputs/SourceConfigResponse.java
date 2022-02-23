@@ -23,7 +23,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mysqlSourceConfig", required=true)
-    private final MysqlSourceConfigResponse mysqlSourceConfig;
+      private final MysqlSourceConfigResponse mysqlSourceConfig;
 
     public MysqlSourceConfigResponse getMysqlSourceConfig() {
         return this.mysqlSourceConfig;
@@ -34,7 +34,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oracleSourceConfig", required=true)
-    private final OracleSourceConfigResponse oracleSourceConfig;
+      private final OracleSourceConfigResponse oracleSourceConfig;
 
     public OracleSourceConfigResponse getOracleSourceConfig() {
         return this.oracleSourceConfig;
@@ -45,7 +45,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceConnectionProfileName", required=true)
-    private final String sourceConnectionProfileName;
+      private final String sourceConnectionProfileName;
 
     public String getSourceConnectionProfileName() {
         return this.sourceConnectionProfileName;
@@ -104,7 +104,6 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.sourceConnectionProfileName = Objects.requireNonNull(sourceConnectionProfileName);
             return this;
         }
-
         public SourceConfigResponse build() {
             return new SourceConfigResponse(mysqlSourceConfig, oracleSourceConfig, sourceConnectionProfileName);
         }

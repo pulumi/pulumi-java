@@ -74,7 +74,6 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfig_MetricSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfig_MetricSpecResponse(goal, metric);
         }

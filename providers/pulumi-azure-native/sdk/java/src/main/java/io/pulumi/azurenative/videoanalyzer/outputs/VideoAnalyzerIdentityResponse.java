@@ -77,7 +77,6 @@ public final class VideoAnalyzerIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public VideoAnalyzerIdentityResponse build() {
             return new VideoAnalyzerIdentityResponse(type, userAssignedIdentities);
         }

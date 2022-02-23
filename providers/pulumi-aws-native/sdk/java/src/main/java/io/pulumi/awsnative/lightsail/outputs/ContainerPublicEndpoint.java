@@ -99,7 +99,6 @@ public final class ContainerPublicEndpoint {
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }
-
         public ContainerPublicEndpoint build() {
             return new ContainerPublicEndpoint(containerName, containerPort, healthCheckConfig);
         }

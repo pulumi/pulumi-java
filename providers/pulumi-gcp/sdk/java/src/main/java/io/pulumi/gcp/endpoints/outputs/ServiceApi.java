@@ -88,7 +88,6 @@ public final class ServiceApi {
             this.version = version;
             return this;
         }
-
         public ServiceApi build() {
             return new ServiceApi(methods, name, syntax, version);
         }

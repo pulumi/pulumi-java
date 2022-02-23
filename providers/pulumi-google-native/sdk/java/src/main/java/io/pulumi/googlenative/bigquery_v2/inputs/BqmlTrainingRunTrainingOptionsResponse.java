@@ -19,63 +19,63 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
     public static final BqmlTrainingRunTrainingOptionsResponse Empty = new BqmlTrainingRunTrainingOptionsResponse();
 
     @InputImport(name="earlyStop", required=true)
-    private final Boolean earlyStop;
+      private final Boolean earlyStop;
 
     public Boolean getEarlyStop() {
         return this.earlyStop;
     }
 
     @InputImport(name="l1Reg", required=true)
-    private final Double l1Reg;
+      private final Double l1Reg;
 
     public Double getL1Reg() {
         return this.l1Reg;
     }
 
     @InputImport(name="l2Reg", required=true)
-    private final Double l2Reg;
+      private final Double l2Reg;
 
     public Double getL2Reg() {
         return this.l2Reg;
     }
 
     @InputImport(name="learnRate", required=true)
-    private final Double learnRate;
+      private final Double learnRate;
 
     public Double getLearnRate() {
         return this.learnRate;
     }
 
     @InputImport(name="learnRateStrategy", required=true)
-    private final String learnRateStrategy;
+      private final String learnRateStrategy;
 
     public String getLearnRateStrategy() {
         return this.learnRateStrategy;
     }
 
     @InputImport(name="lineSearchInitLearnRate", required=true)
-    private final Double lineSearchInitLearnRate;
+      private final Double lineSearchInitLearnRate;
 
     public Double getLineSearchInitLearnRate() {
         return this.lineSearchInitLearnRate;
     }
 
     @InputImport(name="maxIteration", required=true)
-    private final String maxIteration;
+      private final String maxIteration;
 
     public String getMaxIteration() {
         return this.maxIteration;
     }
 
     @InputImport(name="minRelProgress", required=true)
-    private final Double minRelProgress;
+      private final Double minRelProgress;
 
     public Double getMinRelProgress() {
         return this.minRelProgress;
     }
 
     @InputImport(name="warmStart", required=true)
-    private final Boolean warmStart;
+      private final Boolean warmStart;
 
     public Boolean getWarmStart() {
         return this.warmStart;
@@ -194,7 +194,6 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
             this.warmStart = Objects.requireNonNull(warmStart);
             return this;
         }
-
         public BqmlTrainingRunTrainingOptionsResponse build() {
             return new BqmlTrainingRunTrainingOptionsResponse(earlyStop, l1Reg, l2Reg, learnRate, learnRateStrategy, lineSearchInitLearnRate, maxIteration, minRelProgress, warmStart);
         }

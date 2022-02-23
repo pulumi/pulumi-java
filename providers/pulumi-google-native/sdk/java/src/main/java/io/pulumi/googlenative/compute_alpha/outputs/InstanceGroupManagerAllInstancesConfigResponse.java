@@ -52,7 +52,6 @@ public final class InstanceGroupManagerAllInstancesConfigResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public InstanceGroupManagerAllInstancesConfigResponse build() {
             return new InstanceGroupManagerAllInstancesConfigResponse(properties);
         }

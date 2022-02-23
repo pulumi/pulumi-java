@@ -296,7 +296,6 @@ public final class OracleServiceCloudLinkedServiceResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public OracleServiceCloudLinkedServiceResponse build() {
             return new OracleServiceCloudLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, host, parameters, password, type, useEncryptedEndpoints, useHostVerification, usePeerVerification, username);
         }

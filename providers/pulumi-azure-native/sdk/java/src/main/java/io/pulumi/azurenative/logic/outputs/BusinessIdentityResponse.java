@@ -74,7 +74,6 @@ public final class BusinessIdentityResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BusinessIdentityResponse build() {
             return new BusinessIdentityResponse(qualifier, value);
         }

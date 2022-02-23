@@ -202,7 +202,6 @@ public final class JobStepOutputResponse {
             this.type = type;
             return this;
         }
-
         public JobStepOutputResponse build() {
             return new JobStepOutputResponse(credential, databaseName, resourceGroupName, schemaName, serverName, subscriptionId, tableName, type);
         }

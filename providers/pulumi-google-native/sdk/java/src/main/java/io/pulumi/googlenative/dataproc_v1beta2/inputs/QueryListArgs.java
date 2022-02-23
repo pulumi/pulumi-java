@@ -23,7 +23,7 @@ public final class QueryListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queries", required=true)
-    private final Input<List<String>> queries;
+      private final Input<List<String>> queries;
 
     public Input<List<String>> getQueries() {
         return this.queries;
@@ -66,7 +66,6 @@ public final class QueryListArgs extends io.pulumi.resources.ResourceArgs {
             this.queries = Input.of(Objects.requireNonNull(queries));
             return this;
         }
-
         public QueryListArgs build() {
             return new QueryListArgs(queries);
         }

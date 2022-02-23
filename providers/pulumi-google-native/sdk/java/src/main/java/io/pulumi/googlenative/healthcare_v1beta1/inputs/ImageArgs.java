@@ -23,7 +23,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsUri")
-    private final @Nullable Input<String> gcsUri;
+      private final @Nullable Input<String> gcsUri;
 
     public Input<String> getGcsUri() {
         return this.gcsUri == null ? Input.empty() : this.gcsUri;
@@ -34,7 +34,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rawBytes")
-    private final @Nullable Input<String> rawBytes;
+      private final @Nullable Input<String> rawBytes;
 
     public Input<String> getRawBytes() {
         return this.rawBytes == null ? Input.empty() : this.rawBytes;
@@ -93,7 +93,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             this.rawBytes = Input.ofNullable(rawBytes);
             return this;
         }
-
         public ImageArgs build() {
             return new ImageArgs(gcsUri, rawBytes);
         }

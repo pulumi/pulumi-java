@@ -186,7 +186,6 @@ public final class GetRegionSslCertificateResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetRegionSslCertificateResult build() {
             return new GetRegionSslCertificateResult(certificate, certificateId, creationTimestamp, description, id, name, namePrefix, privateKey, project, region, selfLink);
         }

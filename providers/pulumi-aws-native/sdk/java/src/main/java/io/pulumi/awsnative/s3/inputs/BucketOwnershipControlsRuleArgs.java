@@ -19,7 +19,7 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="objectOwnership")
-    private final @Nullable Input<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
+        private final @Nullable Input<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
 
     public Input<BucketOwnershipControlsRuleObjectOwnership> getObjectOwnership() {
         return this.objectOwnership == null ? Input.empty() : this.objectOwnership;
@@ -62,7 +62,6 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
             this.objectOwnership = Input.ofNullable(objectOwnership);
             return this;
         }
-
         public BucketOwnershipControlsRuleArgs build() {
             return new BucketOwnershipControlsRuleArgs(objectOwnership);
         }

@@ -54,7 +54,6 @@ public final class StorageLensActivityMetrics {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public StorageLensActivityMetrics build() {
             return new StorageLensActivityMetrics(isEnabled);
         }

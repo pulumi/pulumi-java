@@ -46,7 +46,6 @@ public final class ListMediaServiceEdgePoliciesResult {
             this.usageDataCollectionPolicy = usageDataCollectionPolicy;
             return this;
         }
-
         public ListMediaServiceEdgePoliciesResult build() {
             return new ListMediaServiceEdgePoliciesResult(usageDataCollectionPolicy);
         }

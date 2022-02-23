@@ -225,7 +225,6 @@ public final class JobConfigurationExtractResponse {
             this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
             return this;
         }
-
         public JobConfigurationExtractResponse build() {
             return new JobConfigurationExtractResponse(compression, destinationFormat, destinationUri, destinationUris, fieldDelimiter, printHeader, sourceModel, sourceTable, useAvroLogicalTypes);
         }

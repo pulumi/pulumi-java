@@ -52,7 +52,6 @@ public final class PolicyStatusProperties {
             this.isPublic = Objects.requireNonNull(isPublic);
             return this;
         }
-
         public PolicyStatusProperties build() {
             return new PolicyStatusProperties(isPublic);
         }

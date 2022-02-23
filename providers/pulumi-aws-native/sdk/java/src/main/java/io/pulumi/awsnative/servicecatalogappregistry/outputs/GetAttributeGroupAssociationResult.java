@@ -115,7 +115,6 @@ public final class GetAttributeGroupAssociationResult {
             this.id = id;
             return this;
         }
-
         public GetAttributeGroupAssociationResult build() {
             return new GetAttributeGroupAssociationResult(application, applicationArn, attributeGroup, attributeGroupArn, id);
         }

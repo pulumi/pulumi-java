@@ -140,7 +140,6 @@ public final class JobScheduleResponse {
             this.type = type;
             return this;
         }
-
         public JobScheduleResponse build() {
             return new JobScheduleResponse(enabled, endTime, interval, startTime, type);
         }

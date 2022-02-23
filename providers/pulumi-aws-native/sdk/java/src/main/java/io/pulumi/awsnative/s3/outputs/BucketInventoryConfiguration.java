@@ -179,7 +179,6 @@ public final class BucketInventoryConfiguration {
             this.scheduleFrequency = Objects.requireNonNull(scheduleFrequency);
             return this;
         }
-
         public BucketInventoryConfiguration build() {
             return new BucketInventoryConfiguration(destination, enabled, id, includedObjectVersions, optionalFields, prefix, scheduleFrequency);
         }

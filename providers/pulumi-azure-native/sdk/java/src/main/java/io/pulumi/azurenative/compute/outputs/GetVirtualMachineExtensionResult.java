@@ -332,7 +332,6 @@ public final class GetVirtualMachineExtensionResult {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public GetVirtualMachineExtensionResult build() {
             return new GetVirtualMachineExtensionResult(autoUpgradeMinorVersion, enableAutomaticUpgrade, forceUpdateTag, id, instanceView, location, name, protectedSettings, provisioningState, publisher, settings, tags, type, typeHandlerVersion);
         }

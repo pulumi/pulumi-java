@@ -77,7 +77,6 @@ public final class SELinuxStrategyOptions {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
-
         public SELinuxStrategyOptions build() {
             return new SELinuxStrategyOptions(rule, seLinuxOptions);
         }

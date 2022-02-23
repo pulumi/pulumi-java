@@ -17,42 +17,42 @@ public final class FunctionIamBindingArgs extends io.pulumi.resources.ResourceAr
     public static final FunctionIamBindingArgs Empty = new FunctionIamBindingArgs();
 
     @InputImport(name="cloudFunction", required=true)
-    private final Input<String> cloudFunction;
+        private final Input<String> cloudFunction;
 
     public Input<String> getCloudFunction() {
         return this.cloudFunction;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<FunctionIamBindingConditionArgs> condition;
+        private final @Nullable Input<FunctionIamBindingConditionArgs> condition;
 
     public Input<FunctionIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
     }
 
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -171,7 +171,6 @@ public final class FunctionIamBindingArgs extends io.pulumi.resources.ResourceAr
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public FunctionIamBindingArgs build() {
             return new FunctionIamBindingArgs(cloudFunction, condition, members, project, region, role);
         }

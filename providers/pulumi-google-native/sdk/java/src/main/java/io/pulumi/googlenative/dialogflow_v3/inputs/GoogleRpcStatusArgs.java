@@ -26,7 +26,7 @@ public final class GoogleRpcStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<Integer> code;
+      private final @Nullable Input<Integer> code;
 
     public Input<Integer> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -37,7 +37,7 @@ public final class GoogleRpcStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="details")
-    private final @Nullable Input<List<Map<String,String>>> details;
+      private final @Nullable Input<List<Map<String,String>>> details;
 
     public Input<List<Map<String,String>>> getDetails() {
         return this.details == null ? Input.empty() : this.details;
@@ -48,7 +48,7 @@ public final class GoogleRpcStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -122,7 +122,6 @@ public final class GoogleRpcStatusArgs extends io.pulumi.resources.ResourceArgs 
             this.message = Input.ofNullable(message);
             return this;
         }
-
         public GoogleRpcStatusArgs build() {
             return new GoogleRpcStatusArgs(code, details, message);
         }

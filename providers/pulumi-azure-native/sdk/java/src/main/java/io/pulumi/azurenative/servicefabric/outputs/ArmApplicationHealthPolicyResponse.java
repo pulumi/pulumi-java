@@ -128,7 +128,6 @@ public final class ArmApplicationHealthPolicyResponse {
             this.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
             return this;
         }
-
         public ArmApplicationHealthPolicyResponse build() {
             return new ArmApplicationHealthPolicyResponse(considerWarningAsError, defaultServiceTypeHealthPolicy, maxPercentUnhealthyDeployedApplications, serviceTypeHealthPolicyMap);
         }

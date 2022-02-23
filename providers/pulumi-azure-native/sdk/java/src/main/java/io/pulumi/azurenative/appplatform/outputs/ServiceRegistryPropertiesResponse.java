@@ -98,7 +98,6 @@ public final class ServiceRegistryPropertiesResponse {
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
         }
-
         public ServiceRegistryPropertiesResponse build() {
             return new ServiceRegistryPropertiesResponse(instances, provisioningState, resourceRequests);
         }

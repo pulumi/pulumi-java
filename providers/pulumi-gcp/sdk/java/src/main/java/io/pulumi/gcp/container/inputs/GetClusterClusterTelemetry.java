@@ -13,7 +13,7 @@ public final class GetClusterClusterTelemetry extends io.pulumi.resources.Invoke
     public static final GetClusterClusterTelemetry Empty = new GetClusterClusterTelemetry();
 
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -51,7 +51,6 @@ public final class GetClusterClusterTelemetry extends io.pulumi.resources.Invoke
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetClusterClusterTelemetry build() {
             return new GetClusterClusterTelemetry(type);
         }

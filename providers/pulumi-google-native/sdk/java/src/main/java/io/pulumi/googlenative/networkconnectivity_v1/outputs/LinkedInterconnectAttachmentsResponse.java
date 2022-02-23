@@ -76,7 +76,6 @@ public final class LinkedInterconnectAttachmentsResponse {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public LinkedInterconnectAttachmentsResponse build() {
             return new LinkedInterconnectAttachmentsResponse(siteToSiteDataTransfer, uris);
         }

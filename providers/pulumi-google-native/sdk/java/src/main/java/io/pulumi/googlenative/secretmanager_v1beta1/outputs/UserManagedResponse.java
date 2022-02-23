@@ -53,7 +53,6 @@ public final class UserManagedResponse {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public UserManagedResponse build() {
             return new UserManagedResponse(replicas);
         }

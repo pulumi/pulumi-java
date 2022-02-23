@@ -22,7 +22,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+        private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -33,7 +33,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -45,7 +45,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<MetricDescriptorLabelArgs>> labels;
+        private final @Nullable Input<List<MetricDescriptorLabelArgs>> labels;
 
     public Input<List<MetricDescriptorLabelArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -57,7 +57,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="launchStage")
-    private final @Nullable Input<String> launchStage;
+        private final @Nullable Input<String> launchStage;
 
     public Input<String> getLaunchStage() {
         return this.launchStage == null ? Input.empty() : this.launchStage;
@@ -69,7 +69,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<MetricDescriptorMetadataArgs> metadata;
+        private final @Nullable Input<MetricDescriptorMetadataArgs> metadata;
 
     public Input<MetricDescriptorMetadataArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -81,7 +81,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricKind", required=true)
-    private final Input<String> metricKind;
+        private final Input<String> metricKind;
 
     public Input<String> getMetricKind() {
         return this.metricKind;
@@ -93,7 +93,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -104,7 +104,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -131,7 +131,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<String> unit;
+        private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;
@@ -144,7 +144,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="valueType", required=true)
-    private final Input<String> valueType;
+        private final Input<String> valueType;
 
     public Input<String> getValueType() {
         return this.valueType;
@@ -323,7 +323,6 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
             this.valueType = Input.of(Objects.requireNonNull(valueType));
             return this;
         }
-
         public MetricDescriptorArgs build() {
             return new MetricDescriptorArgs(description, displayName, labels, launchStage, metadata, metricKind, project, type, unit, valueType);
         }

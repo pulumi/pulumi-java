@@ -137,7 +137,6 @@ public final class TagPropertyResponse {
             this.upn = Objects.requireNonNull(upn);
             return this;
         }
-
         public TagPropertyResponse build() {
             return new TagPropertyResponse(objectIdentifier, tag, tenantId, timestamp, upn);
         }

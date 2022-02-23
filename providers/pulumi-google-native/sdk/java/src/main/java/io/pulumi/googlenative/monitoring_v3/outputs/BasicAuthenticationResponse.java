@@ -74,7 +74,6 @@ public final class BasicAuthenticationResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public BasicAuthenticationResponse build() {
             return new BasicAuthenticationResponse(password, username);
         }

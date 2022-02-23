@@ -97,7 +97,6 @@ public final class InMageAzureV2ManagedDiskDetailsResponse {
             this.seedManagedDiskId = seedManagedDiskId;
             return this;
         }
-
         public InMageAzureV2ManagedDiskDetailsResponse build() {
             return new InMageAzureV2ManagedDiskDetailsResponse(diskId, replicaDiskType, seedManagedDiskId);
         }

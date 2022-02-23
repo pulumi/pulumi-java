@@ -140,7 +140,6 @@ public final class ConnectivityEndpointResponse {
             this.protocol = protocol;
             return this;
         }
-
         public ConnectivityEndpointResponse build() {
             return new ConnectivityEndpointResponse(location, name, port, privateIPAddress, protocol);
         }

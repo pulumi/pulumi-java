@@ -74,7 +74,6 @@ public final class ServicePrincipalPropertiesResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public ServicePrincipalPropertiesResponse build() {
             return new ServicePrincipalPropertiesResponse(clientId, secret);
         }

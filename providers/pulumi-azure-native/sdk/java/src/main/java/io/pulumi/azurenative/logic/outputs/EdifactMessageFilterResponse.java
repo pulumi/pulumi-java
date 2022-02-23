@@ -52,7 +52,6 @@ public final class EdifactMessageFilterResponse {
             this.messageFilterType = Objects.requireNonNull(messageFilterType);
             return this;
         }
-
         public EdifactMessageFilterResponse build() {
             return new EdifactMessageFilterResponse(messageFilterType);
         }

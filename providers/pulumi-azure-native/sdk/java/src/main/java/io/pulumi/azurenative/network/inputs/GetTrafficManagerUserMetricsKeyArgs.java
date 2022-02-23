@@ -30,7 +30,6 @@ public final class GetTrafficManagerUserMetricsKeyArgs extends io.pulumi.resourc
         public Builder(GetTrafficManagerUserMetricsKeyArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetTrafficManagerUserMetricsKeyArgs build() {
             return new GetTrafficManagerUserMetricsKeyArgs();
         }

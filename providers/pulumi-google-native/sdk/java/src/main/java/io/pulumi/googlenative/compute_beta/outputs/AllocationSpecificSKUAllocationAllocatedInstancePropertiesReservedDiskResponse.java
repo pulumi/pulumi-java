@@ -74,7 +74,6 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }
-
         public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse build() {
             return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(diskSizeGb, $interface);
         }

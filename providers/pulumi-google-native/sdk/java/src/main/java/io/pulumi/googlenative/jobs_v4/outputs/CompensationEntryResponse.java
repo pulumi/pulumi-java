@@ -161,7 +161,6 @@ public final class CompensationEntryResponse {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public CompensationEntryResponse build() {
             return new CompensationEntryResponse(amount, description, expectedUnitsPerYear, range, type, unit);
         }

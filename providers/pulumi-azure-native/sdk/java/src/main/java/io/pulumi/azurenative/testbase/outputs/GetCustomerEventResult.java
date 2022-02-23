@@ -161,7 +161,6 @@ public final class GetCustomerEventResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCustomerEventResult build() {
             return new GetCustomerEventResult(eventName, id, name, receivers, systemData, type);
         }

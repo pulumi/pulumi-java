@@ -97,7 +97,6 @@ public final class RecipeConditionExpression {
             this.value = value;
             return this;
         }
-
         public RecipeConditionExpression build() {
             return new RecipeConditionExpression(condition, targetColumn, value);
         }

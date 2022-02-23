@@ -17,7 +17,7 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
     public static final ReplicationSetArgs Empty = new ReplicationSetArgs();
 
     @InputImport(name="deletionProtected")
-    private final @Nullable Input<Boolean> deletionProtected;
+        private final @Nullable Input<Boolean> deletionProtected;
 
     public Input<Boolean> getDeletionProtected() {
         return this.deletionProtected == null ? Input.empty() : this.deletionProtected;
@@ -28,7 +28,7 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regions", required=true)
-    private final Input<List<ReplicationSetReplicationRegionArgs>> regions;
+        private final Input<List<ReplicationSetReplicationRegionArgs>> regions;
 
     public Input<List<ReplicationSetReplicationRegionArgs>> getRegions() {
         return this.regions;
@@ -87,7 +87,6 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
             this.regions = Input.of(Objects.requireNonNull(regions));
             return this;
         }
-
         public ReplicationSetArgs build() {
             return new ReplicationSetArgs(deletionProtected, regions);
         }

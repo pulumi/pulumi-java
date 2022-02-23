@@ -117,7 +117,6 @@ public final class InitialStateConfigResponse {
             this.pk = Objects.requireNonNull(pk);
             return this;
         }
-
         public InitialStateConfigResponse build() {
             return new InitialStateConfigResponse(dbs, dbxs, keks, pk);
         }

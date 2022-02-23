@@ -22,7 +22,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="adaptiveProtectionConfig")
-    private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig;
+        private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig;
 
     public Input<SecurityPolicyAdaptiveProtectionConfigGetArgs> getAdaptiveProtectionConfig() {
         return this.adaptiveProtectionConfig == null ? Input.empty() : this.adaptiveProtectionConfig;
@@ -33,7 +33,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fingerprint")
-    private final @Nullable Input<String> fingerprint;
+        private final @Nullable Input<String> fingerprint;
 
     public Input<String> getFingerprint() {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
@@ -55,7 +55,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -80,7 +80,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<SecurityPolicyRuleGetArgs>> rules;
+        private final @Nullable Input<List<SecurityPolicyRuleGetArgs>> rules;
 
     public Input<List<SecurityPolicyRuleGetArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -91,7 +91,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+        private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -225,7 +225,6 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
-
         public SecurityPolicyState build() {
             return new SecurityPolicyState(adaptiveProtectionConfig, description, fingerprint, name, project, rules, selfLink);
         }

@@ -273,7 +273,6 @@ public final class GoogleBigQueryObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleBigQueryObjectDatasetResponse build() {
             return new GoogleBigQueryObjectDatasetResponse(annotations, dataset, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

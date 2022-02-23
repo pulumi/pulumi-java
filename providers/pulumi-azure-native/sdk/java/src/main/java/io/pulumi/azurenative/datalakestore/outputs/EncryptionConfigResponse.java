@@ -77,7 +77,6 @@ public final class EncryptionConfigResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EncryptionConfigResponse build() {
             return new EncryptionConfigResponse(keyVaultMetaInfo, type);
         }

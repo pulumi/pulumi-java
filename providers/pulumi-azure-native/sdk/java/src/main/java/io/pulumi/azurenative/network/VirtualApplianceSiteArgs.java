@@ -20,7 +20,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="addressPrefix")
-    private final @Nullable Input<String> addressPrefix;
+        private final @Nullable Input<String> addressPrefix;
 
     public Input<String> getAddressPrefix() {
         return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
@@ -31,7 +31,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -42,7 +42,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkVirtualApplianceName", required=true)
-    private final Input<String> networkVirtualApplianceName;
+        private final Input<String> networkVirtualApplianceName;
 
     public Input<String> getNetworkVirtualApplianceName() {
         return this.networkVirtualApplianceName;
@@ -64,7 +64,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="o365Policy")
-    private final @Nullable Input<Office365PolicyPropertiesArgs> o365Policy;
+        private final @Nullable Input<Office365PolicyPropertiesArgs> o365Policy;
 
     public Input<Office365PolicyPropertiesArgs> getO365Policy() {
         return this.o365Policy == null ? Input.empty() : this.o365Policy;
@@ -75,7 +75,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="siteName")
-    private final @Nullable Input<String> siteName;
+        private final @Nullable Input<String> siteName;
 
     public Input<String> getSiteName() {
         return this.siteName == null ? Input.empty() : this.siteName;
@@ -220,7 +220,6 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
             this.siteName = Input.ofNullable(siteName);
             return this;
         }
-
         public VirtualApplianceSiteArgs build() {
             return new VirtualApplianceSiteArgs(addressPrefix, id, name, networkVirtualApplianceName, o365Policy, resourceGroupName, siteName);
         }

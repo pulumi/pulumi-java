@@ -26,7 +26,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerSecrets")
-    private final @Nullable Input<List<CustomerSecretArgs>> customerSecrets;
+        private final @Nullable Input<List<CustomerSecretArgs>> customerSecrets;
 
     public Input<List<CustomerSecretArgs>> getCustomerSecrets() {
         return this.customerSecrets == null ? Input.empty() : this.customerSecrets;
@@ -37,7 +37,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataManagerName", required=true)
-    private final Input<String> dataManagerName;
+        private final Input<String> dataManagerName;
 
     public Input<String> getDataManagerName() {
         return this.dataManagerName;
@@ -48,7 +48,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataServiceInput")
-    private final @Nullable Input<Object> dataServiceInput;
+        private final @Nullable Input<Object> dataServiceInput;
 
     public Input<Object> getDataServiceInput() {
         return this.dataServiceInput == null ? Input.empty() : this.dataServiceInput;
@@ -59,7 +59,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataServiceName", required=true)
-    private final Input<String> dataServiceName;
+        private final Input<String> dataServiceName;
 
     public Input<String> getDataServiceName() {
         return this.dataServiceName;
@@ -70,7 +70,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSinkId", required=true)
-    private final Input<String> dataSinkId;
+        private final Input<String> dataSinkId;
 
     public Input<String> getDataSinkId() {
         return this.dataSinkId;
@@ -81,7 +81,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceId", required=true)
-    private final Input<String> dataSourceId;
+        private final Input<String> dataSourceId;
 
     public Input<String> getDataSourceId() {
         return this.dataSourceId;
@@ -92,7 +92,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobDefinitionName")
-    private final @Nullable Input<String> jobDefinitionName;
+        private final @Nullable Input<String> jobDefinitionName;
 
     public Input<String> getJobDefinitionName() {
         return this.jobDefinitionName == null ? Input.empty() : this.jobDefinitionName;
@@ -103,7 +103,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedTime")
-    private final @Nullable Input<String> lastModifiedTime;
+        private final @Nullable Input<String> lastModifiedTime;
 
     public Input<String> getLastModifiedTime() {
         return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
@@ -114,7 +114,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -125,7 +125,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runLocation")
-    private final @Nullable Input<RunLocation> runLocation;
+        private final @Nullable Input<RunLocation> runLocation;
 
     public Input<RunLocation> getRunLocation() {
         return this.runLocation == null ? Input.empty() : this.runLocation;
@@ -136,7 +136,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedules")
-    private final @Nullable Input<List<ScheduleArgs>> schedules;
+        private final @Nullable Input<List<ScheduleArgs>> schedules;
 
     public Input<List<ScheduleArgs>> getSchedules() {
         return this.schedules == null ? Input.empty() : this.schedules;
@@ -147,7 +147,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<State> state;
+        private final Input<State> state;
 
     public Input<State> getState() {
         return this.state;
@@ -158,7 +158,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userConfirmation")
-    private final @Nullable Input<UserConfirmation> userConfirmation;
+        private final @Nullable Input<UserConfirmation> userConfirmation;
 
     public Input<UserConfirmation> getUserConfirmation() {
         return this.userConfirmation == null ? Input.empty() : this.userConfirmation;
@@ -382,7 +382,6 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             this.userConfirmation = Input.ofNullable(userConfirmation);
             return this;
         }
-
         public JobDefinitionArgs build() {
             return new JobDefinitionArgs(customerSecrets, dataManagerName, dataServiceInput, dataServiceName, dataSinkId, dataSourceId, jobDefinitionName, lastModifiedTime, resourceGroupName, runLocation, schedules, state, userConfirmation);
         }

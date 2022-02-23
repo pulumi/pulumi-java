@@ -16,7 +16,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
     public static final RulesetArgs Empty = new RulesetArgs();
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -27,7 +27,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<SourceArgs> source;
+      private final Input<SourceArgs> source;
 
     public Input<SourceArgs> getSource() {
         return this.source;
@@ -86,7 +86,6 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
-
         public RulesetArgs build() {
             return new RulesetArgs(project, source);
         }

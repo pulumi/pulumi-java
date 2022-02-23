@@ -19,7 +19,7 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -30,7 +30,7 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metricsScope")
-    private final @Nullable Input<String> metricsScope;
+        private final @Nullable Input<String> metricsScope;
 
     public Input<String> getMetricsScope() {
         return this.metricsScope == null ? Input.empty() : this.metricsScope;
@@ -41,7 +41,7 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -115,7 +115,6 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public MonitoredProjectState build() {
             return new MonitoredProjectState(createTime, metricsScope, name);
         }

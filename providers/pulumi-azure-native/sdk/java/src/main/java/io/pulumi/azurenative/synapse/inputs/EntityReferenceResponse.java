@@ -23,7 +23,7 @@ public final class EntityReferenceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="referenceName")
-    private final @Nullable String referenceName;
+        private final @Nullable String referenceName;
 
     public Optional<String> getReferenceName() {
         return this.referenceName == null ? Optional.empty() : Optional.ofNullable(this.referenceName);
@@ -34,7 +34,7 @@ public final class EntityReferenceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -83,7 +83,6 @@ public final class EntityReferenceResponse extends io.pulumi.resources.InvokeArg
             this.type = type;
             return this;
         }
-
         public EntityReferenceResponse build() {
             return new EntityReferenceResponse(referenceName, type);
         }

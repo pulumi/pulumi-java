@@ -120,7 +120,6 @@ public final class LogRulesResponse {
             this.sendSubscriptionLogs = sendSubscriptionLogs;
             return this;
         }
-
         public LogRulesResponse build() {
             return new LogRulesResponse(filteringTags, sendAadLogs, sendActivityLogs, sendSubscriptionLogs);
         }

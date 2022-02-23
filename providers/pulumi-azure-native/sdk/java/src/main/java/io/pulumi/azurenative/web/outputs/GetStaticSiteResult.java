@@ -505,7 +505,6 @@ public final class GetStaticSiteResult {
             this.userProvidedFunctionApps = Objects.requireNonNull(userProvidedFunctionApps);
             return this;
         }
-
         public GetStaticSiteResult build() {
             return new GetStaticSiteResult(allowConfigFileUpdates, branch, buildProperties, contentDistributionEndpoint, customDomains, defaultHostname, id, identity, keyVaultReferenceIdentity, kind, location, name, privateEndpointConnections, provider, repositoryToken, repositoryUrl, sku, stagingEnvironmentPolicy, tags, templateProperties, type, userProvidedFunctionApps);
         }

@@ -119,7 +119,6 @@ public final class ViewDefinitionResponse {
             this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources);
             return this;
         }
-
         public ViewDefinitionResponse build() {
             return new ViewDefinitionResponse(query, useExplicitColumnNames, useLegacySql, userDefinedFunctionResources);
         }

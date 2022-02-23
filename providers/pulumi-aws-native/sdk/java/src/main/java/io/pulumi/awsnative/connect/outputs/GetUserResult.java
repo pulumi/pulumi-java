@@ -248,7 +248,6 @@ public final class GetUserResult {
             this.username = username;
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(directoryUserId, hierarchyGroupArn, identityInfo, instanceArn, phoneConfig, routingProfileArn, securityProfileArns, tags, userArn, username);
         }

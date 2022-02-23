@@ -98,7 +98,6 @@ public final class WarmStorageEnvironmentStatusResponse {
             this.state = state;
             return this;
         }
-
         public WarmStorageEnvironmentStatusResponse build() {
             return new WarmStorageEnvironmentStatusResponse(currentCount, maxCount, state);
         }

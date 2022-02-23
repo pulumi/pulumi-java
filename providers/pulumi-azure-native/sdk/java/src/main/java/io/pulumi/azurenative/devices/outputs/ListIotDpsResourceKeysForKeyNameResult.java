@@ -118,7 +118,6 @@ public final class ListIotDpsResourceKeysForKeyNameResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListIotDpsResourceKeysForKeyNameResult build() {
             return new ListIotDpsResourceKeysForKeyNameResult(keyName, primaryKey, rights, secondaryKey);
         }

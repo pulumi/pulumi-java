@@ -184,7 +184,6 @@ public final class GetServiceResult {
             this.taskDefinition = taskDefinition;
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(capacityProviderStrategy, deploymentConfiguration, desiredCount, enableExecuteCommand, healthCheckGracePeriodSeconds, name, networkConfiguration, platformVersion, serviceArn, tags, taskDefinition);
         }

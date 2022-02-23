@@ -25,7 +25,7 @@ public final class BlobOutputDataSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="container")
-    private final @Nullable String container;
+        private final @Nullable String container;
 
     public Optional<String> getContainer() {
         return this.container == null ? Optional.empty() : Optional.ofNullable(this.container);
@@ -36,7 +36,7 @@ public final class BlobOutputDataSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="dateFormat")
-    private final @Nullable String dateFormat;
+        private final @Nullable String dateFormat;
 
     public Optional<String> getDateFormat() {
         return this.dateFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFormat);
@@ -47,7 +47,7 @@ public final class BlobOutputDataSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="pathPattern")
-    private final @Nullable String pathPattern;
+        private final @Nullable String pathPattern;
 
     public Optional<String> getPathPattern() {
         return this.pathPattern == null ? Optional.empty() : Optional.ofNullable(this.pathPattern);
@@ -58,7 +58,7 @@ public final class BlobOutputDataSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="storageAccounts")
-    private final @Nullable List<StorageAccountResponse> storageAccounts;
+        private final @Nullable List<StorageAccountResponse> storageAccounts;
 
     public List<StorageAccountResponse> getStorageAccounts() {
         return this.storageAccounts == null ? List.of() : this.storageAccounts;
@@ -69,7 +69,7 @@ public final class BlobOutputDataSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="timeFormat")
-    private final @Nullable String timeFormat;
+        private final @Nullable String timeFormat;
 
     public Optional<String> getTimeFormat() {
         return this.timeFormat == null ? Optional.empty() : Optional.ofNullable(this.timeFormat);
@@ -81,7 +81,7 @@ public final class BlobOutputDataSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -170,7 +170,6 @@ public final class BlobOutputDataSourceResponse extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobOutputDataSourceResponse build() {
             return new BlobOutputDataSourceResponse(container, dateFormat, pathPattern, storageAccounts, timeFormat, type);
         }

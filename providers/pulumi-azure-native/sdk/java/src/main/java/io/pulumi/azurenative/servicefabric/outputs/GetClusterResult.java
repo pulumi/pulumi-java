@@ -718,7 +718,6 @@ public final class GetClusterResult {
             this.vmImage = vmImage;
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(addOnFeatures, applicationTypeVersionsCleanupPolicy, availableClusterVersions, azureActiveDirectory, certificate, certificateCommonNames, clientCertificateCommonNames, clientCertificateThumbprints, clusterCodeVersion, clusterEndpoint, clusterId, clusterState, diagnosticsStorageAccountConfig, etag, eventStoreServiceEnabled, fabricSettings, id, location, managementEndpoint, name, nodeTypes, provisioningState, reliabilityLevel, reverseProxyCertificate, reverseProxyCertificateCommonNames, tags, type, upgradeDescription, upgradeMode, vmImage);
         }

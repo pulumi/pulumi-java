@@ -24,7 +24,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dynamicTagsJson")
-    private final @Nullable String dynamicTagsJson;
+        private final @Nullable String dynamicTagsJson;
 
     public Optional<String> getDynamicTagsJson() {
         return this.dynamicTagsJson == null ? Optional.empty() : Optional.ofNullable(this.dynamicTagsJson);
@@ -35,7 +35,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -46,7 +46,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isPushEnabled", required=true)
-    private final Boolean isPushEnabled;
+        private final Boolean isPushEnabled;
 
     public Boolean getIsPushEnabled() {
         return this.isPushEnabled;
@@ -57,7 +57,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable String kind;
+        private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -68,7 +68,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -79,7 +79,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tagWhitelistJson")
-    private final @Nullable String tagWhitelistJson;
+        private final @Nullable String tagWhitelistJson;
 
     public Optional<String> getTagWhitelistJson() {
         return this.tagWhitelistJson == null ? Optional.empty() : Optional.ofNullable(this.tagWhitelistJson);
@@ -93,7 +93,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tagsRequiringAuth")
-    private final @Nullable String tagsRequiringAuth;
+        private final @Nullable String tagsRequiringAuth;
 
     public Optional<String> getTagsRequiringAuth() {
         return this.tagsRequiringAuth == null ? Optional.empty() : Optional.ofNullable(this.tagsRequiringAuth);
@@ -104,7 +104,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -213,7 +213,6 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PushSettingsResponse build() {
             return new PushSettingsResponse(dynamicTagsJson, id, isPushEnabled, kind, name, tagWhitelistJson, tagsRequiringAuth, type);
         }

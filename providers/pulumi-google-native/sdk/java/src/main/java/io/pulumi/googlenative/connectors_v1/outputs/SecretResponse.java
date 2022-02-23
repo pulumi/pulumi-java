@@ -52,7 +52,6 @@ public final class SecretResponse {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(secretVersion);
         }

@@ -112,7 +112,6 @@ public final class ListenerRedirectConfig {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public ListenerRedirectConfig build() {
             return new ListenerRedirectConfig(host, path, port, protocol, query, statusCode);
         }

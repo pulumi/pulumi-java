@@ -15,35 +15,35 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetVersionArgs Empty = new GetVersionArgs();
 
     @InputImport(name="agentId", required=true)
-    private final String agentId;
+      private final String agentId;
 
     public String getAgentId() {
         return this.agentId;
     }
 
     @InputImport(name="flowId", required=true)
-    private final String flowId;
+      private final String flowId;
 
     public String getFlowId() {
         return this.flowId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="versionId", required=true)
-    private final String versionId;
+      private final String versionId;
 
     public String getVersionId() {
         return this.versionId;
@@ -122,7 +122,6 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
-
         public GetVersionArgs build() {
             return new GetVersionArgs(agentId, flowId, location, project, versionId);
         }

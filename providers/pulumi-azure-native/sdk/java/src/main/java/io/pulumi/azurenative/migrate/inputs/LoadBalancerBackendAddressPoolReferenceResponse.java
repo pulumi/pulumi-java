@@ -23,7 +23,7 @@ public final class LoadBalancerBackendAddressPoolReferenceResponse extends io.pu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class LoadBalancerBackendAddressPoolReferenceResponse extends io.pu
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-    private final String sourceArmResourceId;
+        private final String sourceArmResourceId;
 
     public String getSourceArmResourceId() {
         return this.sourceArmResourceId;
@@ -83,7 +83,6 @@ public final class LoadBalancerBackendAddressPoolReferenceResponse extends io.pu
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public LoadBalancerBackendAddressPoolReferenceResponse build() {
             return new LoadBalancerBackendAddressPoolReferenceResponse(name, sourceArmResourceId);
         }

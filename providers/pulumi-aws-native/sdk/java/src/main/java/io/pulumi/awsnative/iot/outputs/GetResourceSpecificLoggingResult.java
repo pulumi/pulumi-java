@@ -77,7 +77,6 @@ public final class GetResourceSpecificLoggingResult {
             this.targetId = targetId;
             return this;
         }
-
         public GetResourceSpecificLoggingResult build() {
             return new GetResourceSpecificLoggingResult(logLevel, targetId);
         }

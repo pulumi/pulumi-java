@@ -139,7 +139,6 @@ public final class TemplateContentsResponse {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public TemplateContentsResponse build() {
             return new TemplateContentsResponse(imports, interpreter, mainTemplate, schema, template);
         }

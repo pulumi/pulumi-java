@@ -74,7 +74,6 @@ public final class BatchAccountIdentityResponseUserAssignedIdentities {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public BatchAccountIdentityResponseUserAssignedIdentities build() {
             return new BatchAccountIdentityResponseUserAssignedIdentities(clientId, principalId);
         }

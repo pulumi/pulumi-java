@@ -23,7 +23,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
      * 
      */
     @InputImport(name="authorizationType", required=true)
-    private final Input<String> authorizationType;
+        private final Input<String> authorizationType;
 
     public Input<String> getAuthorizationType() {
         return this.authorizationType;
@@ -34,7 +34,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+        private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -93,7 +93,6 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public LinkedIntegrationRuntimeRbacAuthorizationArgs build() {
             return new LinkedIntegrationRuntimeRbacAuthorizationArgs(authorizationType, resourceId);
         }

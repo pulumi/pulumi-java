@@ -21,7 +21,7 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends io.pul
      * 
      */
     @InputImport(name="function")
-    private final @Nullable Input<String> function;
+        private final @Nullable Input<String> function;
 
     public Input<String> getFunction() {
         return this.function == null ? Input.empty() : this.function;
@@ -37,7 +37,7 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends io.pul
      * 
      */
     @InputImport(name="urlMask")
-    private final @Nullable Input<String> urlMask;
+        private final @Nullable Input<String> urlMask;
 
     public Input<String> getUrlMask() {
         return this.urlMask == null ? Input.empty() : this.urlMask;
@@ -96,7 +96,6 @@ public final class RegionNetworkEndpointGroupCloudFunctionGetArgs extends io.pul
             this.urlMask = Input.ofNullable(urlMask);
             return this;
         }
-
         public RegionNetworkEndpointGroupCloudFunctionGetArgs build() {
             return new RegionNetworkEndpointGroupCloudFunctionGetArgs(function, urlMask);
         }

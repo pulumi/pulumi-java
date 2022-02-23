@@ -98,7 +98,6 @@ public final class MigrateSqlServerSqlDbTaskOutputErrorResponse {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskOutputErrorResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputErrorResponse(error, id, resultType);
         }

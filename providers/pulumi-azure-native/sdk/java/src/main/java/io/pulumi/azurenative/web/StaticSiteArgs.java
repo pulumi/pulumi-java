@@ -26,7 +26,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowConfigFileUpdates")
-    private final @Nullable Input<Boolean> allowConfigFileUpdates;
+        private final @Nullable Input<Boolean> allowConfigFileUpdates;
 
     public Input<Boolean> getAllowConfigFileUpdates() {
         return this.allowConfigFileUpdates == null ? Input.empty() : this.allowConfigFileUpdates;
@@ -37,7 +37,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branch")
-    private final @Nullable Input<String> branch;
+        private final @Nullable Input<String> branch;
 
     public Input<String> getBranch() {
         return this.branch == null ? Input.empty() : this.branch;
@@ -48,7 +48,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildProperties")
-    private final @Nullable Input<StaticSiteBuildPropertiesArgs> buildProperties;
+        private final @Nullable Input<StaticSiteBuildPropertiesArgs> buildProperties;
 
     public Input<StaticSiteBuildPropertiesArgs> getBuildProperties() {
         return this.buildProperties == null ? Input.empty() : this.buildProperties;
@@ -59,7 +59,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+        private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
     public Input<ManagedServiceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -70,7 +70,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -81,7 +81,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -92,7 +92,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -103,7 +103,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryToken")
-    private final @Nullable Input<String> repositoryToken;
+        private final @Nullable Input<String> repositoryToken;
 
     public Input<String> getRepositoryToken() {
         return this.repositoryToken == null ? Input.empty() : this.repositoryToken;
@@ -114,7 +114,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryUrl")
-    private final @Nullable Input<String> repositoryUrl;
+        private final @Nullable Input<String> repositoryUrl;
 
     public Input<String> getRepositoryUrl() {
         return this.repositoryUrl == null ? Input.empty() : this.repositoryUrl;
@@ -125,7 +125,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -136,7 +136,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuDescriptionArgs> sku;
+        private final @Nullable Input<SkuDescriptionArgs> sku;
 
     public Input<SkuDescriptionArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -147,7 +147,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stagingEnvironmentPolicy")
-    private final @Nullable Input<StagingEnvironmentPolicy> stagingEnvironmentPolicy;
+        private final @Nullable Input<StagingEnvironmentPolicy> stagingEnvironmentPolicy;
 
     public Input<StagingEnvironmentPolicy> getStagingEnvironmentPolicy() {
         return this.stagingEnvironmentPolicy == null ? Input.empty() : this.stagingEnvironmentPolicy;
@@ -158,7 +158,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -169,7 +169,7 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateProperties")
-    private final @Nullable Input<StaticSiteTemplateOptionsArgs> templateProperties;
+        private final @Nullable Input<StaticSiteTemplateOptionsArgs> templateProperties;
 
     public Input<StaticSiteTemplateOptionsArgs> getTemplateProperties() {
         return this.templateProperties == null ? Input.empty() : this.templateProperties;
@@ -408,7 +408,6 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
             this.templateProperties = Input.ofNullable(templateProperties);
             return this;
         }
-
         public StaticSiteArgs build() {
             return new StaticSiteArgs(allowConfigFileUpdates, branch, buildProperties, identity, kind, location, name, repositoryToken, repositoryUrl, resourceGroupName, sku, stagingEnvironmentPolicy, tags, templateProperties);
         }

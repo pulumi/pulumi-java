@@ -140,7 +140,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
             this.minProbability = Objects.requireNonNull(minProbability);
             return this;
         }
-
         public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, maxProbability, minProbability);
         }

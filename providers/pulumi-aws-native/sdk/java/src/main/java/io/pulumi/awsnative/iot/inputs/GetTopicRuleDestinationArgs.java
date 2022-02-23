@@ -17,7 +17,7 @@ public final class GetTopicRuleDestinationArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="arn", required=true)
-    private final String arn;
+        private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -55,7 +55,6 @@ public final class GetTopicRuleDestinationArgs extends io.pulumi.resources.Invok
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public GetTopicRuleDestinationArgs build() {
             return new GetTopicRuleDestinationArgs(arn);
         }

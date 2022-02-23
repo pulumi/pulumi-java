@@ -74,7 +74,6 @@ public final class OSPolicyResourceFileRemoteResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OSPolicyResourceFileRemoteResponse build() {
             return new OSPolicyResourceFileRemoteResponse(sha256Checksum, uri);
         }

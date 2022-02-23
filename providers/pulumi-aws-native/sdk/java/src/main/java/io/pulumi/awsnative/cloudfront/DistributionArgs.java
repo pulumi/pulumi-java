@@ -17,14 +17,14 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     public static final DistributionArgs Empty = new DistributionArgs();
 
     @InputImport(name="distributionConfig", required=true)
-    private final Input<DistributionConfigArgs> distributionConfig;
+        private final Input<DistributionConfigArgs> distributionConfig;
 
     public Input<DistributionConfigArgs> getDistributionConfig() {
         return this.distributionConfig;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<DistributionTagArgs>> tags;
+        private final @Nullable Input<List<DistributionTagArgs>> tags;
 
     public Input<List<DistributionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -83,7 +83,6 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DistributionArgs build() {
             return new DistributionArgs(distributionConfig, tags);
         }

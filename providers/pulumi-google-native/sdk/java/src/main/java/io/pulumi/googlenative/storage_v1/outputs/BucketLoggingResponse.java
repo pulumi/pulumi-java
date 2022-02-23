@@ -74,7 +74,6 @@ public final class BucketLoggingResponse {
             this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix);
             return this;
         }
-
         public BucketLoggingResponse build() {
             return new BucketLoggingResponse(logBucket, logObjectPrefix);
         }

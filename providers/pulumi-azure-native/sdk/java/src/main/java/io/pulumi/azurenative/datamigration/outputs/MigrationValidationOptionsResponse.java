@@ -97,7 +97,6 @@ public final class MigrationValidationOptionsResponse {
             this.enableSchemaValidation = enableSchemaValidation;
             return this;
         }
-
         public MigrationValidationOptionsResponse build() {
             return new MigrationValidationOptionsResponse(enableDataIntegrityValidation, enableQueryAnalysisValidation, enableSchemaValidation);
         }

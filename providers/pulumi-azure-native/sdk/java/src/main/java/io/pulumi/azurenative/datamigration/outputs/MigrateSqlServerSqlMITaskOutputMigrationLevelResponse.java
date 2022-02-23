@@ -396,7 +396,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public MigrateSqlServerSqlMITaskOutputMigrationLevelResponse build() {
             return new MigrateSqlServerSqlMITaskOutputMigrationLevelResponse(agentJobs, databases, endedOn, exceptionsAndWarnings, id, logins, message, orphanedUsersInfo, resultType, serverRoleResults, sourceServerBrandVersion, sourceServerVersion, startedOn, state, status, targetServerBrandVersion, targetServerVersion);
         }

@@ -75,7 +75,6 @@ public final class LogMatchResponse {
             this.labelExtractors = Objects.requireNonNull(labelExtractors);
             return this;
         }
-
         public LogMatchResponse build() {
             return new LogMatchResponse(filter, labelExtractors);
         }

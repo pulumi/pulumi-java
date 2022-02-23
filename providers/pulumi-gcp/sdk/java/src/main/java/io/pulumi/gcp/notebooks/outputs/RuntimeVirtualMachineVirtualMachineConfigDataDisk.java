@@ -374,7 +374,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
             this.type = type;
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigDataDisk build() {
             return new RuntimeVirtualMachineVirtualMachineConfigDataDisk(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, source, type);
         }

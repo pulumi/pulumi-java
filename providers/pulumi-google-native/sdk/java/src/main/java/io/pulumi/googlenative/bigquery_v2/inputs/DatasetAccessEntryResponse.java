@@ -19,14 +19,14 @@ public final class DatasetAccessEntryResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dataset", required=true)
-    private final DatasetReferenceResponse dataset;
+      private final DatasetReferenceResponse dataset;
 
     public DatasetReferenceResponse getDataset() {
         return this.dataset;
     }
 
     @InputImport(name="targetTypes", required=true)
-    private final List<String> targetTypes;
+      private final List<String> targetTypes;
 
     public List<String> getTargetTypes() {
         return this.targetTypes;
@@ -75,7 +75,6 @@ public final class DatasetAccessEntryResponse extends io.pulumi.resources.Invoke
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }
-
         public DatasetAccessEntryResponse build() {
             return new DatasetAccessEntryResponse(dataset, targetTypes);
         }

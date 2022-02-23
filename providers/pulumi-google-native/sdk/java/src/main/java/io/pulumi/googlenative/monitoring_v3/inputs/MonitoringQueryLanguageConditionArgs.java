@@ -24,7 +24,7 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Input<String> duration;
+      private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -35,7 +35,7 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -46,7 +46,7 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="trigger")
-    private final @Nullable Input<TriggerArgs> trigger;
+      private final @Nullable Input<TriggerArgs> trigger;
 
     public Input<TriggerArgs> getTrigger() {
         return this.trigger == null ? Input.empty() : this.trigger;
@@ -120,7 +120,6 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
             this.trigger = Input.ofNullable(trigger);
             return this;
         }
-
         public MonitoringQueryLanguageConditionArgs build() {
             return new MonitoringQueryLanguageConditionArgs(duration, query, trigger);
         }

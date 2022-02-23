@@ -19,7 +19,7 @@ public final class AddressableArgs extends io.pulumi.resources.ResourceArgs {
     public static final AddressableArgs Empty = new AddressableArgs();
 
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -62,7 +62,6 @@ public final class AddressableArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public AddressableArgs build() {
             return new AddressableArgs(url);
         }

@@ -142,7 +142,6 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
             this.retryConditions = retryConditions;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy(numRetries, perTryTimeout, retryConditions);
         }

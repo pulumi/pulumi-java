@@ -97,7 +97,6 @@ public final class ArmServiceTypeHealthPolicyResponse {
             this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
         }
-
         public ArmServiceTypeHealthPolicyResponse build() {
             return new ArmServiceTypeHealthPolicyResponse(maxPercentUnhealthyPartitionsPerService, maxPercentUnhealthyReplicasPerPartition, maxPercentUnhealthyServices);
         }

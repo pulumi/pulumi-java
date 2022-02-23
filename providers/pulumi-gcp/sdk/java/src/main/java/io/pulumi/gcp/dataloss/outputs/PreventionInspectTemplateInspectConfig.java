@@ -226,7 +226,6 @@ public final class PreventionInspectTemplateInspectConfig {
             this.ruleSets = ruleSets;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfig build() {
             return new PreventionInspectTemplateInspectConfig(contentOptions, customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSets);
         }

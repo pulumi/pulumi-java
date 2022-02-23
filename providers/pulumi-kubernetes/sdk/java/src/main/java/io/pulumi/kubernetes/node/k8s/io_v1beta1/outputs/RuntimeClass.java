@@ -163,7 +163,6 @@ public final class RuntimeClass {
             this.scheduling = scheduling;
             return this;
         }
-
         public RuntimeClass build() {
             return new RuntimeClass(apiVersion, handler, kind, metadata, overhead, scheduling);
         }

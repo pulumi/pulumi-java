@@ -60,7 +60,6 @@ public final class DatastoreTimestampPartition {
             this.timestampFormat = timestampFormat;
             return this;
         }
-
         public DatastoreTimestampPartition build() {
             return new DatastoreTimestampPartition(attributeName, timestampFormat);
         }

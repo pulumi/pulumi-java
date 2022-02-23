@@ -24,7 +24,7 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<FilterArgs> filter;
+      private final @Nullable Input<FilterArgs> filter;
 
     public Input<FilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -35,7 +35,7 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectType")
-    private final @Nullable Input<String> objectType;
+      private final @Nullable Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType == null ? Input.empty() : this.objectType;
@@ -94,7 +94,6 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.objectType = Input.ofNullable(objectType);
             return this;
         }
-
         public FilterOptionsArgs build() {
             return new FilterOptionsArgs(filter, objectType);
         }

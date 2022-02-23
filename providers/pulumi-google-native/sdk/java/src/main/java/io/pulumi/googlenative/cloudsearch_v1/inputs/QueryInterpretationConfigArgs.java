@@ -23,7 +23,7 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="forceDisableSupplementalResults")
-    private final @Nullable Input<Boolean> forceDisableSupplementalResults;
+      private final @Nullable Input<Boolean> forceDisableSupplementalResults;
 
     public Input<Boolean> getForceDisableSupplementalResults() {
         return this.forceDisableSupplementalResults == null ? Input.empty() : this.forceDisableSupplementalResults;
@@ -34,7 +34,7 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="forceVerbatimMode")
-    private final @Nullable Input<Boolean> forceVerbatimMode;
+      private final @Nullable Input<Boolean> forceVerbatimMode;
 
     public Input<Boolean> getForceVerbatimMode() {
         return this.forceVerbatimMode == null ? Input.empty() : this.forceVerbatimMode;
@@ -93,7 +93,6 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
             this.forceVerbatimMode = Input.ofNullable(forceVerbatimMode);
             return this;
         }
-
         public QueryInterpretationConfigArgs build() {
             return new QueryInterpretationConfigArgs(forceDisableSupplementalResults, forceVerbatimMode);
         }

@@ -20,14 +20,14 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityBaselineCo
     public static final ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs Empty = new ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs();
 
     @InputImport(name="baseliningJobName")
-    private final @Nullable Input<String> baseliningJobName;
+        private final @Nullable Input<String> baseliningJobName;
 
     public Input<String> getBaseliningJobName() {
         return this.baseliningJobName == null ? Input.empty() : this.baseliningJobName;
     }
 
     @InputImport(name="constraintsResource")
-    private final @Nullable Input<ModelExplainabilityJobDefinitionConstraintsResourceArgs> constraintsResource;
+        private final @Nullable Input<ModelExplainabilityJobDefinitionConstraintsResourceArgs> constraintsResource;
 
     public Input<ModelExplainabilityJobDefinitionConstraintsResourceArgs> getConstraintsResource() {
         return this.constraintsResource == null ? Input.empty() : this.constraintsResource;
@@ -86,7 +86,6 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityBaselineCo
             this.constraintsResource = Input.ofNullable(constraintsResource);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs build() {
             return new ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs(baseliningJobName, constraintsResource);
         }

@@ -163,7 +163,6 @@ public final class IntegrationRuntimeComputePropertiesResponse {
             this.vNetProperties = vNetProperties;
             return this;
         }
-
         public IntegrationRuntimeComputePropertiesResponse build() {
             return new IntegrationRuntimeComputePropertiesResponse(dataFlowProperties, location, maxParallelExecutionsPerNode, nodeSize, numberOfNodes, vNetProperties);
         }

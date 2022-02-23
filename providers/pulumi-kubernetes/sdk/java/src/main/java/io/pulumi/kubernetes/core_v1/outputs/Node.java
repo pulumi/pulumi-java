@@ -142,7 +142,6 @@ public final class Node {
             this.status = status;
             return this;
         }
-
         public Node build() {
             return new Node(apiVersion, kind, metadata, spec, status);
         }

@@ -315,7 +315,6 @@ public final class RestResourceDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RestResourceDatasetResponse build() {
             return new RestResourceDatasetResponse(additionalHeaders, annotations, description, folder, linkedServiceName, paginationRules, parameters, relativeUrl, requestBody, requestMethod, schema, structure, type);
         }

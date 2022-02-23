@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse 
      * 
      */
     @InputImport(name="suggestions", required=true)
-    private final List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions;
+      private final List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> getSuggestions() {
         return this.suggestions;
@@ -60,7 +60,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse 
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse(suggestions);
         }

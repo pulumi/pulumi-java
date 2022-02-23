@@ -162,7 +162,6 @@ public final class ScheduleTriggerRecurrenceResponse {
             this.timeZone = timeZone;
             return this;
         }
-
         public ScheduleTriggerRecurrenceResponse build() {
             return new ScheduleTriggerRecurrenceResponse(endTime, frequency, interval, schedule, startTime, timeZone);
         }

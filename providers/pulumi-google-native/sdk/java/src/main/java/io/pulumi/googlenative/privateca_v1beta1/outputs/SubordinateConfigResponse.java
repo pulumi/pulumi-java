@@ -75,7 +75,6 @@ public final class SubordinateConfigResponse {
             this.pemIssuerChain = Objects.requireNonNull(pemIssuerChain);
             return this;
         }
-
         public SubordinateConfigResponse build() {
             return new SubordinateConfigResponse(certificateAuthority, pemIssuerChain);
         }

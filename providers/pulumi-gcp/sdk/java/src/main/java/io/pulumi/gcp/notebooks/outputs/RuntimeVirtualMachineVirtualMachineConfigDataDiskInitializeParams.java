@@ -163,7 +163,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
             this.labels = labels;
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams build() {
             return new RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams(description, diskName, diskSizeGb, diskType, labels);
         }

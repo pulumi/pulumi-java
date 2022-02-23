@@ -184,7 +184,6 @@ public final class GroupPropertiesResponse {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }
-
         public GroupPropertiesResponse build() {
             return new GroupPropertiesResponse(areAssessmentsRunning, assessments, createdTimestamp, groupStatus, groupType, machineCount, updatedTimestamp);
         }

@@ -23,7 +23,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="runAsUser")
-    private final @Nullable Input<Integer> runAsUser;
+      private final @Nullable Input<Integer> runAsUser;
 
     public Input<Integer> getRunAsUser() {
         return this.runAsUser == null ? Input.empty() : this.runAsUser;
@@ -66,7 +66,6 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
             this.runAsUser = Input.ofNullable(runAsUser);
             return this;
         }
-
         public SecurityContextArgs build() {
             return new SecurityContextArgs(runAsUser);
         }

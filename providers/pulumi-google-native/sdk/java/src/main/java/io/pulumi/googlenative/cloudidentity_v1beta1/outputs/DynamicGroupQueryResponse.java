@@ -66,7 +66,6 @@ public final class DynamicGroupQueryResponse {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public DynamicGroupQueryResponse build() {
             return new DynamicGroupQueryResponse(query, resourceType);
         }

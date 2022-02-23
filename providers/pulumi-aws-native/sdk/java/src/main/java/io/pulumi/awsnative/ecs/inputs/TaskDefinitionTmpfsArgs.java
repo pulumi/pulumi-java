@@ -17,21 +17,21 @@ public final class TaskDefinitionTmpfsArgs extends io.pulumi.resources.ResourceA
     public static final TaskDefinitionTmpfsArgs Empty = new TaskDefinitionTmpfsArgs();
 
     @InputImport(name="containerPath")
-    private final @Nullable Input<String> containerPath;
+        private final @Nullable Input<String> containerPath;
 
     public Input<String> getContainerPath() {
         return this.containerPath == null ? Input.empty() : this.containerPath;
     }
 
     @InputImport(name="mountOptions")
-    private final @Nullable Input<List<String>> mountOptions;
+        private final @Nullable Input<List<String>> mountOptions;
 
     public Input<List<String>> getMountOptions() {
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
     }
 
     @InputImport(name="size", required=true)
-    private final Input<Integer> size;
+        private final Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size;
@@ -105,7 +105,6 @@ public final class TaskDefinitionTmpfsArgs extends io.pulumi.resources.ResourceA
             this.size = Input.of(Objects.requireNonNull(size));
             return this;
         }
-
         public TaskDefinitionTmpfsArgs build() {
             return new TaskDefinitionTmpfsArgs(containerPath, mountOptions, size);
         }

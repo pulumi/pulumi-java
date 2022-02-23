@@ -21,7 +21,7 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+        private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -32,7 +32,7 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -49,7 +49,7 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -61,7 +61,7 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -72,7 +72,7 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="proxyId")
-    private final @Nullable Input<Integer> proxyId;
+        private final @Nullable Input<Integer> proxyId;
 
     public Input<Integer> getProxyId() {
         return this.proxyId == null ? Input.empty() : this.proxyId;
@@ -84,7 +84,7 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -95,7 +95,7 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+        private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -108,7 +108,7 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sslCertificates")
-    private final @Nullable Input<List<String>> sslCertificates;
+        private final @Nullable Input<List<String>> sslCertificates;
 
     public Input<List<String>> getSslCertificates() {
         return this.sslCertificates == null ? Input.empty() : this.sslCertificates;
@@ -120,7 +120,7 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="urlMap")
-    private final @Nullable Input<String> urlMap;
+        private final @Nullable Input<String> urlMap;
 
     public Input<String> getUrlMap() {
         return this.urlMap == null ? Input.empty() : this.urlMap;
@@ -284,7 +284,6 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
             this.urlMap = Input.ofNullable(urlMap);
             return this;
         }
-
         public RegionTargetHttpsProxyState build() {
             return new RegionTargetHttpsProxyState(creationTimestamp, description, name, project, proxyId, region, selfLink, sslCertificates, urlMap);
         }

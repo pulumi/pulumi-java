@@ -88,7 +88,6 @@ public final class EnergyServicePropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public EnergyServicePropertiesResponse build() {
             return new EnergyServicePropertiesResponse(authAppId, dataPartitionNames, dnsName, provisioningState);
         }

@@ -74,7 +74,6 @@ public final class SqlActiveDirectoryConfigResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public SqlActiveDirectoryConfigResponse build() {
             return new SqlActiveDirectoryConfigResponse(domain, kind);
         }

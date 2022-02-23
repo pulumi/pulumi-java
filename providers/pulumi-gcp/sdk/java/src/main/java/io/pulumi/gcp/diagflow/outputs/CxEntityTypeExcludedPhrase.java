@@ -54,7 +54,6 @@ public final class CxEntityTypeExcludedPhrase {
             this.value = value;
             return this;
         }
-
         public CxEntityTypeExcludedPhrase build() {
             return new CxEntityTypeExcludedPhrase(value);
         }

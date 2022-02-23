@@ -23,7 +23,7 @@ public final class LinkedRouterApplianceInstancesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="instances", required=true)
-    private final List<RouterApplianceInstanceResponse> instances;
+      private final List<RouterApplianceInstanceResponse> instances;
 
     public List<RouterApplianceInstanceResponse> getInstances() {
         return this.instances;
@@ -34,7 +34,7 @@ public final class LinkedRouterApplianceInstancesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="siteToSiteDataTransfer", required=true)
-    private final Boolean siteToSiteDataTransfer;
+      private final Boolean siteToSiteDataTransfer;
 
     public Boolean getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
@@ -83,7 +83,6 @@ public final class LinkedRouterApplianceInstancesResponse extends io.pulumi.reso
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public LinkedRouterApplianceInstancesResponse build() {
             return new LinkedRouterApplianceInstancesResponse(instances, siteToSiteDataTransfer);
         }

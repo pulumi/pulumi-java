@@ -80,7 +80,6 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDow
             this.percent = percent;
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas build() {
             return new RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas(fixed, percent);
         }

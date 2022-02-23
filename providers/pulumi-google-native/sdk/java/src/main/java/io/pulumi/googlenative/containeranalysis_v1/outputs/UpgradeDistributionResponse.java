@@ -117,7 +117,6 @@ public final class UpgradeDistributionResponse {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public UpgradeDistributionResponse build() {
             return new UpgradeDistributionResponse(classification, cpeUri, cve, severity);
         }

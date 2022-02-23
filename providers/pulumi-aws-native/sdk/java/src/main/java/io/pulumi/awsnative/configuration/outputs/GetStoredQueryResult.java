@@ -109,7 +109,6 @@ public final class GetStoredQueryResult {
             this.tags = tags;
             return this;
         }
-
         public GetStoredQueryResult build() {
             return new GetStoredQueryResult(queryArn, queryDescription, queryExpression, queryId, tags);
         }

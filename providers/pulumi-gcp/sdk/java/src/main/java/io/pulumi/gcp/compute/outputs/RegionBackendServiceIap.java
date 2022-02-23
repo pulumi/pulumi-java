@@ -103,7 +103,6 @@ public final class RegionBackendServiceIap {
             this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;
         }
-
         public RegionBackendServiceIap build() {
             return new RegionBackendServiceIap(oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
         }

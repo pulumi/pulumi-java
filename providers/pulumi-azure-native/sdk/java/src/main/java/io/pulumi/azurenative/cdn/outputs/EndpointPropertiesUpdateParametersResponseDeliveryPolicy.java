@@ -78,7 +78,6 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public EndpointPropertiesUpdateParametersResponseDeliveryPolicy build() {
             return new EndpointPropertiesUpdateParametersResponseDeliveryPolicy(description, rules);
         }

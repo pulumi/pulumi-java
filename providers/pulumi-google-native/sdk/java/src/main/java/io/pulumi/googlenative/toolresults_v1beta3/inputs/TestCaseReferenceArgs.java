@@ -23,7 +23,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="className")
-    private final @Nullable Input<String> className;
+      private final @Nullable Input<String> className;
 
     public Input<String> getClassName() {
         return this.className == null ? Input.empty() : this.className;
@@ -34,7 +34,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="testSuiteName")
-    private final @Nullable Input<String> testSuiteName;
+      private final @Nullable Input<String> testSuiteName;
 
     public Input<String> getTestSuiteName() {
         return this.testSuiteName == null ? Input.empty() : this.testSuiteName;
@@ -119,7 +119,6 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
             this.testSuiteName = Input.ofNullable(testSuiteName);
             return this;
         }
-
         public TestCaseReferenceArgs build() {
             return new TestCaseReferenceArgs(className, name, testSuiteName);
         }

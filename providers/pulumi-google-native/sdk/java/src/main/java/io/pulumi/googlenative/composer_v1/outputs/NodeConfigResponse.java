@@ -224,7 +224,6 @@ public final class NodeConfigResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public NodeConfigResponse build() {
             return new NodeConfigResponse(diskSizeGb, ipAllocationPolicy, location, machineType, network, oauthScopes, serviceAccount, subnetwork, tags);
         }

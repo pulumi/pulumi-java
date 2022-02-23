@@ -21,7 +21,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionUrlRewriteArgs extends i
      * 
      */
     @InputImport(name="hostRewrite")
-    private final @Nullable Input<String> hostRewrite;
+        private final @Nullable Input<String> hostRewrite;
 
     public Input<String> getHostRewrite() {
         return this.hostRewrite == null ? Input.empty() : this.hostRewrite;
@@ -34,7 +34,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionUrlRewriteArgs extends i
      * 
      */
     @InputImport(name="pathPrefixRewrite")
-    private final @Nullable Input<String> pathPrefixRewrite;
+        private final @Nullable Input<String> pathPrefixRewrite;
 
     public Input<String> getPathPrefixRewrite() {
         return this.pathPrefixRewrite == null ? Input.empty() : this.pathPrefixRewrite;
@@ -93,7 +93,6 @@ public final class URLMapPathMatcherRouteRuleRouteActionUrlRewriteArgs extends i
             this.pathPrefixRewrite = Input.ofNullable(pathPrefixRewrite);
             return this;
         }
-
         public URLMapPathMatcherRouteRuleRouteActionUrlRewriteArgs build() {
             return new URLMapPathMatcherRouteRuleRouteActionUrlRewriteArgs(hostRewrite, pathPrefixRewrite);
         }

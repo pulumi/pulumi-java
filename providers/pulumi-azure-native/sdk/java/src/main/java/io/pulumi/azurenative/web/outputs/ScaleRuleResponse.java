@@ -121,7 +121,6 @@ public final class ScaleRuleResponse {
             this.name = name;
             return this;
         }
-
         public ScaleRuleResponse build() {
             return new ScaleRuleResponse(azureQueue, custom, http, name);
         }

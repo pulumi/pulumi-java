@@ -54,7 +54,6 @@ public final class CloudServiceRoleProfileResponse {
             this.roles = roles;
             return this;
         }
-
         public CloudServiceRoleProfileResponse build() {
             return new CloudServiceRoleProfileResponse(roles);
         }

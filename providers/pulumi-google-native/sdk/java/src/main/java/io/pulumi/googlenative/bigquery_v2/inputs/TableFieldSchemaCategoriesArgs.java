@@ -24,7 +24,7 @@ public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="names")
-    private final @Nullable Input<List<String>> names;
+      private final @Nullable Input<List<String>> names;
 
     public Input<List<String>> getNames() {
         return this.names == null ? Input.empty() : this.names;
@@ -67,7 +67,6 @@ public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.Re
             this.names = Input.ofNullable(names);
             return this;
         }
-
         public TableFieldSchemaCategoriesArgs build() {
             return new TableFieldSchemaCategoriesArgs(names);
         }

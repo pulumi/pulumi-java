@@ -76,7 +76,6 @@ public final class GraphTag {
             this.value = value;
             return this;
         }
-
         public GraphTag build() {
             return new GraphTag(key, value);
         }

@@ -140,7 +140,6 @@ public final class ProbeSettingsResponse {
             this.timeout = timeout;
             return this;
         }
-
         public ProbeSettingsResponse build() {
             return new ProbeSettingsResponse(failureThreshold, initialDelay, period, successThreshold, timeout);
         }

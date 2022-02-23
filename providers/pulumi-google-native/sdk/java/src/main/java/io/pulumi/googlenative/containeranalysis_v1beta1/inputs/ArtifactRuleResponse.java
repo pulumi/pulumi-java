@@ -18,7 +18,7 @@ public final class ArtifactRuleResponse extends io.pulumi.resources.InvokeArgs {
     public static final ArtifactRuleResponse Empty = new ArtifactRuleResponse();
 
     @InputImport(name="artifactRule", required=true)
-    private final List<String> artifactRule;
+      private final List<String> artifactRule;
 
     public List<String> getArtifactRule() {
         return this.artifactRule;
@@ -56,7 +56,6 @@ public final class ArtifactRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.artifactRule = Objects.requireNonNull(artifactRule);
             return this;
         }
-
         public ArtifactRuleResponse build() {
             return new ArtifactRuleResponse(artifactRule);
         }

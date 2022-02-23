@@ -78,7 +78,6 @@ public final class ExampleRequestResponse {
             this.inputs = inputs;
             return this;
         }
-
         public ExampleRequestResponse build() {
             return new ExampleRequestResponse(globalParameters, inputs);
         }

@@ -569,7 +569,6 @@ public final class GetRedisResult {
             this.zones = zones;
             return this;
         }
-
         public GetRedisResult build() {
             return new GetRedisResult(accessKeys, enableNonSslPort, hostName, id, instances, linkedServers, location, minimumTlsVersion, name, port, privateEndpointConnections, provisioningState, publicNetworkAccess, redisConfiguration, redisVersion, replicasPerMaster, shardCount, sku, sslPort, staticIP, subnetId, tags, tenantSettings, type, zones);
         }

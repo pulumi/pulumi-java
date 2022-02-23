@@ -22,7 +22,7 @@ public final class MetadataLabelsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelName", required=true)
-    private final Input<String> labelName;
+      private final Input<String> labelName;
 
     public Input<String> getLabelName() {
         return this.labelName;
@@ -33,7 +33,7 @@ public final class MetadataLabelsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelValue", required=true)
-    private final Input<String> labelValue;
+      private final Input<String> labelValue;
 
     public Input<String> getLabelValue() {
         return this.labelValue;
@@ -92,7 +92,6 @@ public final class MetadataLabelsArgs extends io.pulumi.resources.ResourceArgs {
             this.labelValue = Input.of(Objects.requireNonNull(labelValue));
             return this;
         }
-
         public MetadataLabelsArgs build() {
             return new MetadataLabelsArgs(labelName, labelValue);
         }

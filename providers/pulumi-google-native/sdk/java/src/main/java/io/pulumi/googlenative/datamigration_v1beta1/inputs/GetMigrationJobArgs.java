@@ -15,21 +15,21 @@ public final class GetMigrationJobArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetMigrationJobArgs Empty = new GetMigrationJobArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="migrationJobId", required=true)
-    private final String migrationJobId;
+      private final String migrationJobId;
 
     public String getMigrationJobId() {
         return this.migrationJobId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetMigrationJobArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetMigrationJobArgs build() {
             return new GetMigrationJobArgs(location, migrationJobId, project);
         }

@@ -52,7 +52,6 @@ public final class ConfigFileResponse {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public ConfigFileResponse build() {
             return new ConfigFileResponse(content);
         }

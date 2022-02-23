@@ -205,7 +205,6 @@ public final class GetPeerAsnResult {
             this.validationState = validationState;
             return this;
         }
-
         public GetPeerAsnResult build() {
             return new GetPeerAsnResult(errorMessage, id, name, peerAsn, peerContactDetail, peerName, type, validationState);
         }

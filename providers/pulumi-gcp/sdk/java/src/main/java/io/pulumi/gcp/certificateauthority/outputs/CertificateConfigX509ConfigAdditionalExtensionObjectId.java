@@ -53,7 +53,6 @@ public final class CertificateConfigX509ConfigAdditionalExtensionObjectId {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public CertificateConfigX509ConfigAdditionalExtensionObjectId build() {
             return new CertificateConfigX509ConfigAdditionalExtensionObjectId(objectIdPaths);
         }

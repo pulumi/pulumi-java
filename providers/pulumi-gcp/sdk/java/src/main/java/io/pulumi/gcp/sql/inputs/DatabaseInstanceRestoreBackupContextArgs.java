@@ -20,7 +20,7 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="backupRunId", required=true)
-    private final Input<Integer> backupRunId;
+        private final Input<Integer> backupRunId;
 
     public Input<Integer> getBackupRunId() {
         return this.backupRunId;
@@ -32,7 +32,7 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+        private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -43,7 +43,7 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -117,7 +117,6 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public DatabaseInstanceRestoreBackupContextArgs build() {
             return new DatabaseInstanceRestoreBackupContextArgs(backupRunId, instanceId, project);
         }

@@ -24,7 +24,7 @@ public final class DeliveryRuleUrlFileExtensionConditionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class DeliveryRuleUrlFileExtensionConditionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Input<UrlFileExtensionMatchConditionParametersArgs> parameters;
+        private final Input<UrlFileExtensionMatchConditionParametersArgs> parameters;
 
     public Input<UrlFileExtensionMatchConditionParametersArgs> getParameters() {
         return this.parameters;
@@ -94,7 +94,6 @@ public final class DeliveryRuleUrlFileExtensionConditionArgs extends io.pulumi.r
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public DeliveryRuleUrlFileExtensionConditionArgs build() {
             return new DeliveryRuleUrlFileExtensionConditionArgs(name, parameters);
         }

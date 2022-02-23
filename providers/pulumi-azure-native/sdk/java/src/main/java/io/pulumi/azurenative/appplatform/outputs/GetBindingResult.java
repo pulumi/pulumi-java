@@ -117,7 +117,6 @@ public final class GetBindingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBindingResult build() {
             return new GetBindingResult(id, name, properties, type);
         }

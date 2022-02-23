@@ -15,14 +15,14 @@ public final class DatasetRetentionPeriodArgs extends io.pulumi.resources.Resour
     public static final DatasetRetentionPeriodArgs Empty = new DatasetRetentionPeriodArgs();
 
     @InputImport(name="numberOfDays", required=true)
-    private final Input<Integer> numberOfDays;
+        private final Input<Integer> numberOfDays;
 
     public Input<Integer> getNumberOfDays() {
         return this.numberOfDays;
     }
 
     @InputImport(name="unlimited", required=true)
-    private final Input<Boolean> unlimited;
+        private final Input<Boolean> unlimited;
 
     public Input<Boolean> getUnlimited() {
         return this.unlimited;
@@ -81,7 +81,6 @@ public final class DatasetRetentionPeriodArgs extends io.pulumi.resources.Resour
             this.unlimited = Input.of(Objects.requireNonNull(unlimited));
             return this;
         }
-
         public DatasetRetentionPeriodArgs build() {
             return new DatasetRetentionPeriodArgs(numberOfDays, unlimited);
         }

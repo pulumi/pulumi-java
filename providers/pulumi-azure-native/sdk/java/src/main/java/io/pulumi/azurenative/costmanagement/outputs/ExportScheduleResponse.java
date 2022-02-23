@@ -98,7 +98,6 @@ public final class ExportScheduleResponse {
             this.status = status;
             return this;
         }
-
         public ExportScheduleResponse build() {
             return new ExportScheduleResponse(recurrence, recurrencePeriod, status);
         }

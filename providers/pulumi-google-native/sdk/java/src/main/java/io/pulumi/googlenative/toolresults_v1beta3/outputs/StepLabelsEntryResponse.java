@@ -58,7 +58,6 @@ public final class StepLabelsEntryResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StepLabelsEntryResponse build() {
             return new StepLabelsEntryResponse(key, value);
         }

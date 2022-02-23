@@ -46,7 +46,6 @@ public final class WorkflowInputFileLocation {
             this.s3FileLocation = s3FileLocation;
             return this;
         }
-
         public WorkflowInputFileLocation build() {
             return new WorkflowInputFileLocation(s3FileLocation);
         }

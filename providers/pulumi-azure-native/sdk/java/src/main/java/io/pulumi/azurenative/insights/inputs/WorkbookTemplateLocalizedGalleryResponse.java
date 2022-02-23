@@ -25,7 +25,7 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="galleries")
-    private final @Nullable List<WorkbookTemplateGalleryResponse> galleries;
+        private final @Nullable List<WorkbookTemplateGalleryResponse> galleries;
 
     public List<WorkbookTemplateGalleryResponse> getGalleries() {
         return this.galleries == null ? List.of() : this.galleries;
@@ -36,7 +36,7 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="templateData")
-    private final @Nullable Object templateData;
+        private final @Nullable Object templateData;
 
     public Optional<Object> getTemplateData() {
         return this.templateData == null ? Optional.empty() : Optional.ofNullable(this.templateData);
@@ -85,7 +85,6 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends io.pulumi.re
             this.templateData = templateData;
             return this;
         }
-
         public WorkbookTemplateLocalizedGalleryResponse build() {
             return new WorkbookTemplateLocalizedGalleryResponse(galleries, templateData);
         }

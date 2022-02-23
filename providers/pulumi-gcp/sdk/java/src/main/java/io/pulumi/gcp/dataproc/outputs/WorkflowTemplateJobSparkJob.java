@@ -205,7 +205,6 @@ public final class WorkflowTemplateJobSparkJob {
             this.properties = properties;
             return this;
         }
-
         public WorkflowTemplateJobSparkJob build() {
             return new WorkflowTemplateJobSparkJob(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }

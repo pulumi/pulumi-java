@@ -78,7 +78,6 @@ public final class ListProductFamiliesResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListProductFamiliesResult build() {
             return new ListProductFamiliesResult(nextLink, value);
         }

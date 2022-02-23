@@ -27,7 +27,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+        private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -43,7 +43,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRouteAction")
-    private final @Nullable Input<URLMapDefaultRouteActionGetArgs> defaultRouteAction;
+        private final @Nullable Input<URLMapDefaultRouteActionGetArgs> defaultRouteAction;
 
     public Input<URLMapDefaultRouteActionGetArgs> getDefaultRouteAction() {
         return this.defaultRouteAction == null ? Input.empty() : this.defaultRouteAction;
@@ -54,7 +54,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultService")
-    private final @Nullable Input<String> defaultService;
+        private final @Nullable Input<String> defaultService;
 
     public Input<String> getDefaultService() {
         return this.defaultService == null ? Input.empty() : this.defaultService;
@@ -68,7 +68,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultUrlRedirect")
-    private final @Nullable Input<URLMapDefaultUrlRedirectGetArgs> defaultUrlRedirect;
+        private final @Nullable Input<URLMapDefaultUrlRedirectGetArgs> defaultUrlRedirect;
 
     public Input<URLMapDefaultUrlRedirectGetArgs> getDefaultUrlRedirect() {
         return this.defaultUrlRedirect == null ? Input.empty() : this.defaultUrlRedirect;
@@ -79,7 +79,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -90,7 +90,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint")
-    private final @Nullable Input<String> fingerprint;
+        private final @Nullable Input<String> fingerprint;
 
     public Input<String> getFingerprint() {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
@@ -105,7 +105,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<URLMapHeaderActionGetArgs> headerAction;
+        private final @Nullable Input<URLMapHeaderActionGetArgs> headerAction;
 
     public Input<URLMapHeaderActionGetArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -117,7 +117,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostRules")
-    private final @Nullable Input<List<URLMapHostRuleGetArgs>> hostRules;
+        private final @Nullable Input<List<URLMapHostRuleGetArgs>> hostRules;
 
     public Input<List<URLMapHostRuleGetArgs>> getHostRules() {
         return this.hostRules == null ? Input.empty() : this.hostRules;
@@ -128,7 +128,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mapId")
-    private final @Nullable Input<Integer> mapId;
+        private final @Nullable Input<Integer> mapId;
 
     public Input<Integer> getMapId() {
         return this.mapId == null ? Input.empty() : this.mapId;
@@ -140,7 +140,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -152,7 +152,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathMatchers")
-    private final @Nullable Input<List<URLMapPathMatcherGetArgs>> pathMatchers;
+        private final @Nullable Input<List<URLMapPathMatcherGetArgs>> pathMatchers;
 
     public Input<List<URLMapPathMatcherGetArgs>> getPathMatchers() {
         return this.pathMatchers == null ? Input.empty() : this.pathMatchers;
@@ -164,7 +164,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -175,7 +175,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+        private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -189,7 +189,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tests")
-    private final @Nullable Input<List<URLMapTestGetArgs>> tests;
+        private final @Nullable Input<List<URLMapTestGetArgs>> tests;
 
     public Input<List<URLMapTestGetArgs>> getTests() {
         return this.tests == null ? Input.empty() : this.tests;
@@ -428,7 +428,6 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
             this.tests = Input.ofNullable(tests);
             return this;
         }
-
         public URLMapState build() {
             return new URLMapState(creationTimestamp, defaultRouteAction, defaultService, defaultUrlRedirect, description, fingerprint, headerAction, hostRules, mapId, name, pathMatchers, project, selfLink, tests);
         }

@@ -209,7 +209,6 @@ public final class ConnectorMappingPropertiesResponse {
             this.structure = Objects.requireNonNull(structure);
             return this;
         }
-
         public ConnectorMappingPropertiesResponse build() {
             return new ConnectorMappingPropertiesResponse(availability, completeOperation, errorManagement, fileFilter, folderPath, format, hasHeader, structure);
         }

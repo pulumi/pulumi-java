@@ -54,7 +54,6 @@ public final class KeyVaultKeyReferenceResponseSourceVault {
             this.id = id;
             return this;
         }
-
         public KeyVaultKeyReferenceResponseSourceVault build() {
             return new KeyVaultKeyReferenceResponseSourceVault(id);
         }

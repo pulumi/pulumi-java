@@ -15,28 +15,28 @@ public final class PipelineMathArgs extends io.pulumi.resources.ResourceArgs {
     public static final PipelineMathArgs Empty = new PipelineMathArgs();
 
     @InputImport(name="attribute", required=true)
-    private final Input<String> attribute;
+        private final Input<String> attribute;
 
     public Input<String> getAttribute() {
         return this.attribute;
     }
 
     @InputImport(name="math", required=true)
-    private final Input<String> math;
+        private final Input<String> math;
 
     public Input<String> getMath() {
         return this.math;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-    private final @Nullable Input<String> next;
+        private final @Nullable Input<String> next;
 
     public Input<String> getNext() {
         return this.next == null ? Input.empty() : this.next;
@@ -125,7 +125,6 @@ public final class PipelineMathArgs extends io.pulumi.resources.ResourceArgs {
             this.next = Input.ofNullable(next);
             return this;
         }
-
         public PipelineMathArgs build() {
             return new PipelineMathArgs(attribute, math, name, next);
         }

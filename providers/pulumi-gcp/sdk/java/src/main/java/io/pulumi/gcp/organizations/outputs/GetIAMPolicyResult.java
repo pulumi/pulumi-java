@@ -106,7 +106,6 @@ public final class GetIAMPolicyResult {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public GetIAMPolicyResult build() {
             return new GetIAMPolicyResult(auditConfigs, bindings, id, policyData);
         }

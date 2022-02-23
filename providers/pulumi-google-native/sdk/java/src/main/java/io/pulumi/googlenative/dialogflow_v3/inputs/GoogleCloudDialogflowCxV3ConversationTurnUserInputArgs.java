@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
      * 
      */
     @InputImport(name="enableSentimentAnalysis")
-    private final @Nullable Input<Boolean> enableSentimentAnalysis;
+      private final @Nullable Input<Boolean> enableSentimentAnalysis;
 
     public Input<Boolean> getEnableSentimentAnalysis() {
         return this.enableSentimentAnalysis == null ? Input.empty() : this.enableSentimentAnalysis;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
      * 
      */
     @InputImport(name="injectedParameters")
-    private final @Nullable Input<Map<String,String>> injectedParameters;
+      private final @Nullable Input<Map<String,String>> injectedParameters;
 
     public Input<Map<String,String>> getInjectedParameters() {
         return this.injectedParameters == null ? Input.empty() : this.injectedParameters;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3QueryInputArgs> input;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3QueryInputArgs> input;
 
     public Input<GoogleCloudDialogflowCxV3QueryInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
      * 
      */
     @InputImport(name="isWebhookEnabled")
-    private final @Nullable Input<Boolean> isWebhookEnabled;
+      private final @Nullable Input<Boolean> isWebhookEnabled;
 
     public Input<Boolean> getIsWebhookEnabled() {
         return this.isWebhookEnabled == null ? Input.empty() : this.isWebhookEnabled;
@@ -148,7 +148,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
             this.isWebhookEnabled = Input.ofNullable(isWebhookEnabled);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs build() {
             return new GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs(enableSentimentAnalysis, injectedParameters, input, isWebhookEnabled);
         }

@@ -16,14 +16,14 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
     public static final SwaggerSpecificationArgs Empty = new SwaggerSpecificationArgs();
 
     @InputImport(name="apiVersions")
-    private final @Nullable Input<List<String>> apiVersions;
+        private final @Nullable Input<List<String>> apiVersions;
 
     public Input<List<String>> getApiVersions() {
         return this.apiVersions == null ? Input.empty() : this.apiVersions;
     }
 
     @InputImport(name="swaggerSpecFolderUri")
-    private final @Nullable Input<String> swaggerSpecFolderUri;
+        private final @Nullable Input<String> swaggerSpecFolderUri;
 
     public Input<String> getSwaggerSpecFolderUri() {
         return this.swaggerSpecFolderUri == null ? Input.empty() : this.swaggerSpecFolderUri;
@@ -82,7 +82,6 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
             this.swaggerSpecFolderUri = Input.ofNullable(swaggerSpecFolderUri);
             return this;
         }
-
         public SwaggerSpecificationArgs build() {
             return new SwaggerSpecificationArgs(apiVersions, swaggerSpecFolderUri);
         }

@@ -155,7 +155,6 @@ public final class GetAddressResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetAddressResult build() {
             return new GetAddressResult(address, id, name, project, region, selfLink, status);
         }

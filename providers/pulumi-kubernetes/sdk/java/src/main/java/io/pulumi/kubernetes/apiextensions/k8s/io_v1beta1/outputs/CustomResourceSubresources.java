@@ -77,7 +77,6 @@ public final class CustomResourceSubresources {
             this.status = status;
             return this;
         }
-
         public CustomResourceSubresources build() {
             return new CustomResourceSubresources(scale, status);
         }

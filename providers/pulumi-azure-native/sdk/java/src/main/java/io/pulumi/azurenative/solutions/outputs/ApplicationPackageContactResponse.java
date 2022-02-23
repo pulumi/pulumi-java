@@ -97,7 +97,6 @@ public final class ApplicationPackageContactResponse {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public ApplicationPackageContactResponse build() {
             return new ApplicationPackageContactResponse(contactName, email, phone);
         }

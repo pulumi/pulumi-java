@@ -31,14 +31,14 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
     }
 
     @InputImport(name="command")
-    private final @Nullable Input<List<String>> command;
+      private final @Nullable Input<List<String>> command;
 
     public Input<List<String>> getCommand() {
         return this.command == null ? Input.empty() : this.command;
@@ -49,7 +49,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="env")
-    private final @Nullable Input<List<EnvVarArgs>> env;
+      private final @Nullable Input<List<EnvVarArgs>> env;
 
     public Input<List<EnvVarArgs>> getEnv() {
         return this.env == null ? Input.empty() : this.env;
@@ -60,7 +60,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="envFrom")
-    private final @Nullable Input<List<EnvFromSourceArgs>> envFrom;
+      private final @Nullable Input<List<EnvFromSourceArgs>> envFrom;
 
     public Input<List<EnvFromSourceArgs>> getEnvFrom() {
         return this.envFrom == null ? Input.empty() : this.envFrom;
@@ -71,7 +71,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -82,7 +82,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imagePullPolicy")
-    private final @Nullable Input<String> imagePullPolicy;
+      private final @Nullable Input<String> imagePullPolicy;
 
     public Input<String> getImagePullPolicy() {
         return this.imagePullPolicy == null ? Input.empty() : this.imagePullPolicy;
@@ -93,7 +93,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="livenessProbe")
-    private final @Nullable Input<ProbeArgs> livenessProbe;
+      private final @Nullable Input<ProbeArgs> livenessProbe;
 
     public Input<ProbeArgs> getLivenessProbe() {
         return this.livenessProbe == null ? Input.empty() : this.livenessProbe;
@@ -104,7 +104,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -115,7 +115,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<ContainerPortArgs>> ports;
+      private final @Nullable Input<List<ContainerPortArgs>> ports;
 
     public Input<List<ContainerPortArgs>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -126,7 +126,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readinessProbe")
-    private final @Nullable Input<ProbeArgs> readinessProbe;
+      private final @Nullable Input<ProbeArgs> readinessProbe;
 
     public Input<ProbeArgs> getReadinessProbe() {
         return this.readinessProbe == null ? Input.empty() : this.readinessProbe;
@@ -137,7 +137,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<ResourceRequirementsArgs> resources;
+      private final @Nullable Input<ResourceRequirementsArgs> resources;
 
     public Input<ResourceRequirementsArgs> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -148,7 +148,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityContext")
-    private final @Nullable Input<SecurityContextArgs> securityContext;
+      private final @Nullable Input<SecurityContextArgs> securityContext;
 
     public Input<SecurityContextArgs> getSecurityContext() {
         return this.securityContext == null ? Input.empty() : this.securityContext;
@@ -159,7 +159,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startupProbe")
-    private final @Nullable Input<ProbeArgs> startupProbe;
+      private final @Nullable Input<ProbeArgs> startupProbe;
 
     public Input<ProbeArgs> getStartupProbe() {
         return this.startupProbe == null ? Input.empty() : this.startupProbe;
@@ -170,7 +170,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminationMessagePath")
-    private final @Nullable Input<String> terminationMessagePath;
+      private final @Nullable Input<String> terminationMessagePath;
 
     public Input<String> getTerminationMessagePath() {
         return this.terminationMessagePath == null ? Input.empty() : this.terminationMessagePath;
@@ -181,7 +181,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminationMessagePolicy")
-    private final @Nullable Input<String> terminationMessagePolicy;
+      private final @Nullable Input<String> terminationMessagePolicy;
 
     public Input<String> getTerminationMessagePolicy() {
         return this.terminationMessagePolicy == null ? Input.empty() : this.terminationMessagePolicy;
@@ -192,7 +192,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeMounts")
-    private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
+      private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
 
     public Input<List<VolumeMountArgs>> getVolumeMounts() {
         return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
@@ -203,7 +203,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workingDir")
-    private final @Nullable Input<String> workingDir;
+      private final @Nullable Input<String> workingDir;
 
     public Input<String> getWorkingDir() {
         return this.workingDir == null ? Input.empty() : this.workingDir;
@@ -487,7 +487,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.workingDir = Input.ofNullable(workingDir);
             return this;
         }
-
         public ContainerArgs build() {
             return new ContainerArgs(args, command, env, envFrom, image, imagePullPolicy, livenessProbe, name, ports, readinessProbe, resources, securityContext, startupProbe, terminationMessagePath, terminationMessagePolicy, volumeMounts, workingDir);
         }

@@ -74,7 +74,6 @@ public final class LiteTopicPartitionConfigCapacity {
             this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec);
             return this;
         }
-
         public LiteTopicPartitionConfigCapacity build() {
             return new LiteTopicPartitionConfigCapacity(publishMibPerSec, subscribeMibPerSec);
         }

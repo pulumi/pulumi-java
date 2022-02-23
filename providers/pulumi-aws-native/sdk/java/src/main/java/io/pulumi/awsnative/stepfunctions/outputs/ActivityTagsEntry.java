@@ -58,7 +58,6 @@ public final class ActivityTagsEntry {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ActivityTagsEntry build() {
             return new ActivityTagsEntry(key, value);
         }

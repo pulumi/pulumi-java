@@ -21,7 +21,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
+        private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
     public PostgreSqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -32,7 +32,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
+        private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
     public PostgreSqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -81,7 +81,6 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse build() {
             return new ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse(sourceConnectionInfo, targetConnectionInfo);
         }

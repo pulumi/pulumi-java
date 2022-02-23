@@ -74,7 +74,6 @@ public final class KeyVaultPropertiesResponse {
             this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(currentKeyIdentifier, keyIdentifier);
         }

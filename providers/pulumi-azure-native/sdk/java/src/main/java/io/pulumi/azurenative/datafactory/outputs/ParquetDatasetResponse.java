@@ -265,7 +265,6 @@ public final class ParquetDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ParquetDatasetResponse build() {
             return new ParquetDatasetResponse(annotations, compressionCodec, description, folder, linkedServiceName, location, parameters, schema, structure, type);
         }

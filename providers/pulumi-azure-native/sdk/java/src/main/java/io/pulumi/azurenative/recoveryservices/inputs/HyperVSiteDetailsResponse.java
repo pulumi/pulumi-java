@@ -22,7 +22,7 @@ public final class HyperVSiteDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -60,7 +60,6 @@ public final class HyperVSiteDetailsResponse extends io.pulumi.resources.InvokeA
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public HyperVSiteDetailsResponse build() {
             return new HyperVSiteDetailsResponse(instanceType);
         }

@@ -67,7 +67,6 @@ public final class ConnectorApacheKafkaCluster {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }
-
         public ConnectorApacheKafkaCluster build() {
             return new ConnectorApacheKafkaCluster(bootstrapServers, vpc);
         }

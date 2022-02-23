@@ -118,7 +118,6 @@ public final class HierarchyInformationResponse {
             this.productName = productName;
             return this;
         }
-
         public HierarchyInformationResponse build() {
             return new HierarchyInformationResponse(configurationName, productFamilyName, productLineName, productName);
         }

@@ -74,7 +74,6 @@ public final class FlowSalesforceSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowSalesforceSourceProperties build() {
             return new FlowSalesforceSourceProperties(enableDynamicFieldUpdate, includeDeletedRecords, object);
         }

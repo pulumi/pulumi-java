@@ -13,7 +13,7 @@ public final class GetMapArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetMapArgs Empty = new GetMapArgs();
 
     @InputImport(name="mapName", required=true)
-    private final String mapName;
+        private final String mapName;
 
     public String getMapName() {
         return this.mapName;
@@ -51,7 +51,6 @@ public final class GetMapArgs extends io.pulumi.resources.InvokeArgs {
             this.mapName = Objects.requireNonNull(mapName);
             return this;
         }
-
         public GetMapArgs build() {
             return new GetMapArgs(mapName);
         }

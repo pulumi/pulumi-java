@@ -78,7 +78,6 @@ public final class PeeringPropertiesExchangeResponse {
             this.peerAsn = peerAsn;
             return this;
         }
-
         public PeeringPropertiesExchangeResponse build() {
             return new PeeringPropertiesExchangeResponse(connections, peerAsn);
         }

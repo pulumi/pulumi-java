@@ -27,7 +27,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="caching")
-    private final @Nullable String caching;
+        private final @Nullable String caching;
 
     public Optional<String> getCaching() {
         return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
@@ -38,7 +38,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="createOption", required=true)
-    private final String createOption;
+        private final String createOption;
 
     public String getCreateOption() {
         return this.createOption;
@@ -49,7 +49,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="diskIOPSReadWrite")
-    private final @Nullable Double diskIOPSReadWrite;
+        private final @Nullable Double diskIOPSReadWrite;
 
     public Optional<Double> getDiskIOPSReadWrite() {
         return this.diskIOPSReadWrite == null ? Optional.empty() : Optional.ofNullable(this.diskIOPSReadWrite);
@@ -60,7 +60,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="diskMBpsReadWrite")
-    private final @Nullable Double diskMBpsReadWrite;
+        private final @Nullable Double diskMBpsReadWrite;
 
     public Optional<Double> getDiskMBpsReadWrite() {
         return this.diskMBpsReadWrite == null ? Optional.empty() : Optional.ofNullable(this.diskMBpsReadWrite);
@@ -71,7 +71,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="diskSizeGB")
-    private final @Nullable Integer diskSizeGB;
+        private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
@@ -82,7 +82,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="lun", required=true)
-    private final Integer lun;
+        private final Integer lun;
 
     public Integer getLun() {
         return this.lun;
@@ -93,7 +93,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="managedDisk")
-    private final @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
+        private final @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
 
     public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> getManagedDisk() {
         return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
@@ -104,7 +104,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -115,7 +115,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="writeAcceleratorEnabled")
-    private final @Nullable Boolean writeAcceleratorEnabled;
+        private final @Nullable Boolean writeAcceleratorEnabled;
 
     public Optional<Boolean> getWriteAcceleratorEnabled() {
         return this.writeAcceleratorEnabled == null ? Optional.empty() : Optional.ofNullable(this.writeAcceleratorEnabled);
@@ -234,7 +234,6 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-
         public VirtualMachineScaleSetDataDiskResponse build() {
             return new VirtualMachineScaleSetDataDiskResponse(caching, createOption, diskIOPSReadWrite, diskMBpsReadWrite, diskSizeGB, lun, managedDisk, name, writeAcceleratorEnabled);
         }

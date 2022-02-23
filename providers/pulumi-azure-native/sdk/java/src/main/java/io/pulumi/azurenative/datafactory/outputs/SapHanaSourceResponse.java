@@ -269,7 +269,6 @@ public final class SapHanaSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapHanaSourceResponse build() {
             return new SapHanaSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, packetSize, partitionOption, partitionSettings, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

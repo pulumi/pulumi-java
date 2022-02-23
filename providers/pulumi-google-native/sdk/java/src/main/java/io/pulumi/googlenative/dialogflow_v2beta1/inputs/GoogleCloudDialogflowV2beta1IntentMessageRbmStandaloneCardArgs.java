@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
      * 
      */
     @InputImport(name="cardContent", required=true)
-    private final Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContent;
+      private final Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContent;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> getCardContent() {
         return this.cardContent;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
      * 
      */
     @InputImport(name="cardOrientation", required=true)
-    private final Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation> cardOrientation;
+      private final Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation> cardOrientation;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation> getCardOrientation() {
         return this.cardOrientation;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
      * 
      */
     @InputImport(name="thumbnailImageAlignment")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> thumbnailImageAlignment;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> thumbnailImageAlignment;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> getThumbnailImageAlignment() {
         return this.thumbnailImageAlignment == null ? Input.empty() : this.thumbnailImageAlignment;
@@ -121,7 +121,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
             this.thumbnailImageAlignment = Input.ofNullable(thumbnailImageAlignment);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs(cardContent, cardOrientation, thumbnailImageAlignment);
         }

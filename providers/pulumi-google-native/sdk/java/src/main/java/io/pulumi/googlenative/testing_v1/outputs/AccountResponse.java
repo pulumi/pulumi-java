@@ -52,7 +52,6 @@ public final class AccountResponse {
             this.googleAuto = Objects.requireNonNull(googleAuto);
             return this;
         }
-
         public AccountResponse build() {
             return new AccountResponse(googleAuto);
         }

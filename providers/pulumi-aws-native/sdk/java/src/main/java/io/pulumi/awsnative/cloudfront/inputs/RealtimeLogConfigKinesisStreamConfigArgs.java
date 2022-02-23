@@ -14,14 +14,14 @@ public final class RealtimeLogConfigKinesisStreamConfigArgs extends io.pulumi.re
     public static final RealtimeLogConfigKinesisStreamConfigArgs Empty = new RealtimeLogConfigKinesisStreamConfigArgs();
 
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="streamArn", required=true)
-    private final Input<String> streamArn;
+        private final Input<String> streamArn;
 
     public Input<String> getStreamArn() {
         return this.streamArn;
@@ -80,7 +80,6 @@ public final class RealtimeLogConfigKinesisStreamConfigArgs extends io.pulumi.re
             this.streamArn = Input.of(Objects.requireNonNull(streamArn));
             return this;
         }
-
         public RealtimeLogConfigKinesisStreamConfigArgs build() {
             return new RealtimeLogConfigKinesisStreamConfigArgs(roleArn, streamArn);
         }

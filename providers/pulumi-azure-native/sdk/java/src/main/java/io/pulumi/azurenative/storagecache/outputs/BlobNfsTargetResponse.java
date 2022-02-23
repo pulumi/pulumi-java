@@ -76,7 +76,6 @@ public final class BlobNfsTargetResponse {
             this.usageModel = usageModel;
             return this;
         }
-
         public BlobNfsTargetResponse build() {
             return new BlobNfsTargetResponse(target, usageModel);
         }

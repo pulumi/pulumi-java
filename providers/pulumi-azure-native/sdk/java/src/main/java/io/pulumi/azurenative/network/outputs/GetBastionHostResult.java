@@ -226,7 +226,6 @@ public final class GetBastionHostResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBastionHostResult build() {
             return new GetBastionHostResult(dnsName, etag, id, ipConfigurations, location, name, provisioningState, tags, type);
         }

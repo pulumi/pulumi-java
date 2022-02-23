@@ -24,7 +24,7 @@ public final class SchedulerAcceleratorConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="coreCount")
-    private final @Nullable Input<String> coreCount;
+      private final @Nullable Input<String> coreCount;
 
     public Input<String> getCoreCount() {
         return this.coreCount == null ? Input.empty() : this.coreCount;
@@ -35,7 +35,7 @@ public final class SchedulerAcceleratorConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<SchedulerAcceleratorConfigType> type;
+      private final @Nullable Input<SchedulerAcceleratorConfigType> type;
 
     public Input<SchedulerAcceleratorConfigType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -94,7 +94,6 @@ public final class SchedulerAcceleratorConfigArgs extends io.pulumi.resources.Re
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public SchedulerAcceleratorConfigArgs build() {
             return new SchedulerAcceleratorConfigArgs(coreCount, type);
         }

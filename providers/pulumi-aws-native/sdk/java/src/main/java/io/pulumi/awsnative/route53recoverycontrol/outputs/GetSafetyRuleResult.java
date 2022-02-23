@@ -118,7 +118,6 @@ public final class GetSafetyRuleResult {
             this.status = status;
             return this;
         }
-
         public GetSafetyRuleResult build() {
             return new GetSafetyRuleResult(assertionRule, gatingRule, name, safetyRuleArn, status);
         }

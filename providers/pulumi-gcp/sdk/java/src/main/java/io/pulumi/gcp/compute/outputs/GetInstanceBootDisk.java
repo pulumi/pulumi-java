@@ -183,7 +183,6 @@ public final class GetInstanceBootDisk {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public GetInstanceBootDisk build() {
             return new GetInstanceBootDisk(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
         }

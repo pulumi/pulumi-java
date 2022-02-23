@@ -21,7 +21,7 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowAll")
-    private final @Nullable Input<String> allowAll;
+        private final @Nullable Input<String> allowAll;
 
     public Input<String> getAllowAll() {
         return this.allowAll == null ? Input.empty() : this.allowAll;
@@ -32,7 +32,7 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<PolicySpecRuleConditionGetArgs> condition;
+        private final @Nullable Input<PolicySpecRuleConditionGetArgs> condition;
 
     public Input<PolicySpecRuleConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -43,7 +43,7 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="denyAll")
-    private final @Nullable Input<String> denyAll;
+        private final @Nullable Input<String> denyAll;
 
     public Input<String> getDenyAll() {
         return this.denyAll == null ? Input.empty() : this.denyAll;
@@ -54,7 +54,7 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enforce")
-    private final @Nullable Input<String> enforce;
+        private final @Nullable Input<String> enforce;
 
     public Input<String> getEnforce() {
         return this.enforce == null ? Input.empty() : this.enforce;
@@ -65,7 +65,7 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<PolicySpecRuleValuesGetArgs> values;
+        private final @Nullable Input<PolicySpecRuleValuesGetArgs> values;
 
     public Input<PolicySpecRuleValuesGetArgs> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -169,7 +169,6 @@ public final class PolicySpecRuleGetArgs extends io.pulumi.resources.ResourceArg
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public PolicySpecRuleGetArgs build() {
             return new PolicySpecRuleGetArgs(allowAll, condition, denyAll, enforce, values);
         }

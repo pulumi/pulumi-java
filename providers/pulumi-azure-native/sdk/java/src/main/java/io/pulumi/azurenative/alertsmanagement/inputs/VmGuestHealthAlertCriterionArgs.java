@@ -25,7 +25,7 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="healthStates", required=true)
-    private final Input<List<HealthStateArgs>> healthStates;
+        private final Input<List<HealthStateArgs>> healthStates;
 
     public Input<List<HealthStateArgs>> getHealthStates() {
         return this.healthStates;
@@ -36,7 +36,7 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="monitorNames")
-    private final @Nullable Input<List<String>> monitorNames;
+        private final @Nullable Input<List<String>> monitorNames;
 
     public Input<List<String>> getMonitorNames() {
         return this.monitorNames == null ? Input.empty() : this.monitorNames;
@@ -47,7 +47,7 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="monitorTypes")
-    private final @Nullable Input<List<String>> monitorTypes;
+        private final @Nullable Input<List<String>> monitorTypes;
 
     public Input<List<String>> getMonitorTypes() {
         return this.monitorTypes == null ? Input.empty() : this.monitorTypes;
@@ -59,7 +59,7 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final Input<String> namespace;
+        private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
@@ -148,7 +148,6 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
             this.namespace = Input.of(Objects.requireNonNull(namespace));
             return this;
         }
-
         public VmGuestHealthAlertCriterionArgs build() {
             return new VmGuestHealthAlertCriterionArgs(healthStates, monitorNames, monitorTypes, namespace);
         }

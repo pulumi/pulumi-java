@@ -77,7 +77,6 @@ public final class FHIRDatastoreKmsEncryptionConfig {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public FHIRDatastoreKmsEncryptionConfig build() {
             return new FHIRDatastoreKmsEncryptionConfig(cmkType, kmsKeyId);
         }

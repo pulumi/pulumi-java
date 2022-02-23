@@ -100,7 +100,6 @@ public final class DiskInstanceViewResponse {
             this.statuses = statuses;
             return this;
         }
-
         public DiskInstanceViewResponse build() {
             return new DiskInstanceViewResponse(encryptionSettings, name, statuses);
         }

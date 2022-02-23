@@ -21,7 +21,7 @@ public final class FhirServiceAccessPolicyEntryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final String objectId;
+        private final String objectId;
 
     public String getObjectId() {
         return this.objectId;
@@ -59,7 +59,6 @@ public final class FhirServiceAccessPolicyEntryResponse extends io.pulumi.resour
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public FhirServiceAccessPolicyEntryResponse build() {
             return new FhirServiceAccessPolicyEntryResponse(objectId);
         }

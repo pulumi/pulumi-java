@@ -100,7 +100,6 @@ public final class NetworkProfileResponse {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(networkApiVersion, networkInterfaceConfigurations, networkInterfaces);
         }

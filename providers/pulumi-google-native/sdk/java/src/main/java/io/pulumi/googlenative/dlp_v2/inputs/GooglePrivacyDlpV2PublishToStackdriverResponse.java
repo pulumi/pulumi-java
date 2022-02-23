@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2PublishToStackdriverResponse extends io.pul
         public Builder(GooglePrivacyDlpV2PublishToStackdriverResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2PublishToStackdriverResponse build() {
             return new GooglePrivacyDlpV2PublishToStackdriverResponse();
         }

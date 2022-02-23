@@ -78,7 +78,6 @@ public final class SharingProfileResponse {
             this.permissions = permissions;
             return this;
         }
-
         public SharingProfileResponse build() {
             return new SharingProfileResponse(groups, permissions);
         }

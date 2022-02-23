@@ -185,7 +185,6 @@ public final class AzureDatabricksDeltaLakeSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDatabricksDeltaLakeSourceResponse build() {
             return new AzureDatabricksDeltaLakeSourceResponse(disableMetricsCollection, exportSettings, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }

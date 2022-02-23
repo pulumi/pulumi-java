@@ -351,7 +351,6 @@ public final class GetLinkedSubscriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkedSubscriptionResult build() {
             return new GetLinkedSubscriptionResult(deviceConnectionStatus, deviceId, deviceLinkState, deviceObjectId, etag, id, kind, lastConnectedTime, linkedSubscriptionId, location, name, registrationResourceId, systemData, tags, type);
         }

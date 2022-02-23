@@ -97,7 +97,6 @@ public final class CacheIdentityResponse {
             this.type = type;
             return this;
         }
-
         public CacheIdentityResponse build() {
             return new CacheIdentityResponse(principalId, tenantId, type);
         }

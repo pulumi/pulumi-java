@@ -25,7 +25,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<PublicKeyArgs> publicKey;
+      private final @Nullable Input<PublicKeyArgs> publicKey;
 
     public Input<PublicKeyArgs> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;
@@ -36,7 +36,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="reusableConfig", required=true)
-    private final Input<ReusableConfigWrapperArgs> reusableConfig;
+      private final Input<ReusableConfigWrapperArgs> reusableConfig;
 
     public Input<ReusableConfigWrapperArgs> getReusableConfig() {
         return this.reusableConfig;
@@ -47,7 +47,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subjectConfig", required=true)
-    private final Input<SubjectConfigArgs> subjectConfig;
+      private final Input<SubjectConfigArgs> subjectConfig;
 
     public Input<SubjectConfigArgs> getSubjectConfig() {
         return this.subjectConfig;
@@ -121,7 +121,6 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
             this.subjectConfig = Input.of(Objects.requireNonNull(subjectConfig));
             return this;
         }
-
         public CertificateConfigArgs build() {
             return new CertificateConfigArgs(publicKey, reusableConfig, subjectConfig);
         }

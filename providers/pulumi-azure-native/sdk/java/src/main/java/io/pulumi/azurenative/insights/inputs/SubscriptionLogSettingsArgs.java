@@ -24,7 +24,7 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="category")
-    private final @Nullable Input<String> category;
+        private final @Nullable Input<String> category;
 
     public Input<String> getCategory() {
         return this.category == null ? Input.empty() : this.category;
@@ -35,7 +35,7 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -94,7 +94,6 @@ public final class SubscriptionLogSettingsArgs extends io.pulumi.resources.Resou
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public SubscriptionLogSettingsArgs build() {
             return new SubscriptionLogSettingsArgs(category, enabled);
         }

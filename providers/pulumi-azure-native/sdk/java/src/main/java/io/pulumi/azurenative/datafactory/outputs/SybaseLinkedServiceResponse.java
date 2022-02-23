@@ -296,7 +296,6 @@ public final class SybaseLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public SybaseLinkedServiceResponse build() {
             return new SybaseLinkedServiceResponse(annotations, authenticationType, connectVia, database, description, encryptedCredential, parameters, password, schema, server, type, username);
         }

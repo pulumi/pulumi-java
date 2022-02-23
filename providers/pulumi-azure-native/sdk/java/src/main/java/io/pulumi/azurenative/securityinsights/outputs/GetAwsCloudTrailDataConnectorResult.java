@@ -184,7 +184,6 @@ public final class GetAwsCloudTrailDataConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAwsCloudTrailDataConnectorResult build() {
             return new GetAwsCloudTrailDataConnectorResult(awsRoleArn, dataTypes, etag, id, kind, name, type);
         }

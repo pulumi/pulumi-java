@@ -26,7 +26,7 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<Either<String,DdosCustomPolicyProtocol>> protocol;
+        private final @Nullable Input<Either<String,DdosCustomPolicyProtocol>> protocol;
 
     public Input<Either<String,DdosCustomPolicyProtocol>> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -37,7 +37,7 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceRateOverride")
-    private final @Nullable Input<String> sourceRateOverride;
+        private final @Nullable Input<String> sourceRateOverride;
 
     public Input<String> getSourceRateOverride() {
         return this.sourceRateOverride == null ? Input.empty() : this.sourceRateOverride;
@@ -48,7 +48,7 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="triggerRateOverride")
-    private final @Nullable Input<String> triggerRateOverride;
+        private final @Nullable Input<String> triggerRateOverride;
 
     public Input<String> getTriggerRateOverride() {
         return this.triggerRateOverride == null ? Input.empty() : this.triggerRateOverride;
@@ -59,7 +59,7 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="triggerSensitivityOverride")
-    private final @Nullable Input<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride;
+        private final @Nullable Input<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride;
 
     public Input<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> getTriggerSensitivityOverride() {
         return this.triggerSensitivityOverride == null ? Input.empty() : this.triggerSensitivityOverride;
@@ -148,7 +148,6 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
             this.triggerSensitivityOverride = Input.ofNullable(triggerSensitivityOverride);
             return this;
         }
-
         public ProtocolCustomSettingsFormatArgs build() {
             return new ProtocolCustomSettingsFormatArgs(protocol, sourceRateOverride, triggerRateOverride, triggerSensitivityOverride);
         }

@@ -118,7 +118,6 @@ public final class TimeSeriesFilterRatioResponse {
             this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation);
             return this;
         }
-
         public TimeSeriesFilterRatioResponse build() {
             return new TimeSeriesFilterRatioResponse(denominator, numerator, pickTimeSeriesFilter, secondaryAggregation);
         }

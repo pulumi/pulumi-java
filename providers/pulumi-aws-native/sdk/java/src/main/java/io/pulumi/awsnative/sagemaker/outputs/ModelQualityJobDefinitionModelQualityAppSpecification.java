@@ -176,7 +176,6 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecification {
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }
-
         public ModelQualityJobDefinitionModelQualityAppSpecification build() {
             return new ModelQualityJobDefinitionModelQualityAppSpecification(containerArguments, containerEntrypoint, environment, imageUri, postAnalyticsProcessorSourceUri, problemType, recordPreprocessorSourceUri);
         }

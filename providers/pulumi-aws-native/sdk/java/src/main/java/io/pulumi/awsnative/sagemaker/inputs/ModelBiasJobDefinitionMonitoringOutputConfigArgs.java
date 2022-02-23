@@ -25,7 +25,7 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends io.p
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+        private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -36,7 +36,7 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends io.p
      * 
      */
     @InputImport(name="monitoringOutputs", required=true)
-    private final Input<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+        private final Input<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
     public Input<List<ModelBiasJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {
         return this.monitoringOutputs;
@@ -95,7 +95,6 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends io.p
             this.monitoringOutputs = Input.of(Objects.requireNonNull(monitoringOutputs));
             return this;
         }
-
         public ModelBiasJobDefinitionMonitoringOutputConfigArgs build() {
             return new ModelBiasJobDefinitionMonitoringOutputConfigArgs(kmsKeyId, monitoringOutputs);
         }

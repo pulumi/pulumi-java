@@ -23,7 +23,7 @@ public final class SecurityProfileStatisticalThreshold extends io.pulumi.resourc
      * 
      */
     @InputImport(name="statistic")
-    private final @Nullable SecurityProfileStatisticalThresholdStatistic statistic;
+        private final @Nullable SecurityProfileStatisticalThresholdStatistic statistic;
 
     public Optional<SecurityProfileStatisticalThresholdStatistic> getStatistic() {
         return this.statistic == null ? Optional.empty() : Optional.ofNullable(this.statistic);
@@ -61,7 +61,6 @@ public final class SecurityProfileStatisticalThreshold extends io.pulumi.resourc
             this.statistic = statistic;
             return this;
         }
-
         public SecurityProfileStatisticalThreshold build() {
             return new SecurityProfileStatisticalThreshold(statistic);
         }

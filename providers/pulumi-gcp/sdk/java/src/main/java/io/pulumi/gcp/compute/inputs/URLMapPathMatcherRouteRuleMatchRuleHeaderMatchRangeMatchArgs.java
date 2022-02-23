@@ -18,7 +18,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs 
      * 
      */
     @InputImport(name="rangeEnd", required=true)
-    private final Input<Integer> rangeEnd;
+        private final Input<Integer> rangeEnd;
 
     public Input<Integer> getRangeEnd() {
         return this.rangeEnd;
@@ -29,7 +29,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs 
      * 
      */
     @InputImport(name="rangeStart", required=true)
-    private final Input<Integer> rangeStart;
+        private final Input<Integer> rangeStart;
 
     public Input<Integer> getRangeStart() {
         return this.rangeStart;
@@ -88,7 +88,6 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs 
             this.rangeStart = Input.of(Objects.requireNonNull(rangeStart));
             return this;
         }
-
         public URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs build() {
             return new URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs(rangeEnd, rangeStart);
         }

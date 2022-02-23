@@ -100,7 +100,6 @@ public final class SelectAudioTrackByIdResponse {
             this.trackId = Objects.requireNonNull(trackId);
             return this;
         }
-
         public SelectAudioTrackByIdResponse build() {
             return new SelectAudioTrackByIdResponse(channelMapping, odataType, trackId);
         }

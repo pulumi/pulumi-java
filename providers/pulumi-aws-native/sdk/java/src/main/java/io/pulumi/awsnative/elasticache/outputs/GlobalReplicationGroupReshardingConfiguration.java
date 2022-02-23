@@ -77,7 +77,6 @@ public final class GlobalReplicationGroupReshardingConfiguration {
             this.preferredAvailabilityZones = preferredAvailabilityZones;
             return this;
         }
-
         public GlobalReplicationGroupReshardingConfiguration build() {
             return new GlobalReplicationGroupReshardingConfiguration(nodeGroupId, preferredAvailabilityZones);
         }

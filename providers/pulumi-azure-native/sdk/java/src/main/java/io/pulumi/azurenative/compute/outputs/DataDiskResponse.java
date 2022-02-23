@@ -333,7 +333,6 @@ public final class DataDiskResponse {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-
         public DataDiskResponse build() {
             return new DataDiskResponse(caching, createOption, deleteOption, detachOption, diskIOPSReadWrite, diskMBpsReadWrite, diskSizeGB, image, lun, managedDisk, name, toBeDetached, vhd, writeAcceleratorEnabled);
         }

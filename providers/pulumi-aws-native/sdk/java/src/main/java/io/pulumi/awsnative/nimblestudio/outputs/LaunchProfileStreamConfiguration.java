@@ -177,7 +177,6 @@ public final class LaunchProfileStreamConfiguration {
             this.streamingImageIds = Objects.requireNonNull(streamingImageIds);
             return this;
         }
-
         public LaunchProfileStreamConfiguration build() {
             return new LaunchProfileStreamConfiguration(clipboardMode, ec2InstanceTypes, maxSessionLengthInMinutes, maxStoppedSessionLengthInMinutes, sessionStorage, streamingImageIds);
         }

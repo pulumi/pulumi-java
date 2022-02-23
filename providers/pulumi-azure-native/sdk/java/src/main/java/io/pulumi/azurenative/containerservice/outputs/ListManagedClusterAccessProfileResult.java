@@ -161,7 +161,6 @@ public final class ListManagedClusterAccessProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListManagedClusterAccessProfileResult build() {
             return new ListManagedClusterAccessProfileResult(id, kubeConfig, location, name, tags, type);
         }

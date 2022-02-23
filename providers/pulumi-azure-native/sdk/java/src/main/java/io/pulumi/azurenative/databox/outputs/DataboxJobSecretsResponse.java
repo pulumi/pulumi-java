@@ -123,7 +123,6 @@ public final class DataboxJobSecretsResponse {
             this.podSecrets = podSecrets;
             return this;
         }
-
         public DataboxJobSecretsResponse build() {
             return new DataboxJobSecretsResponse(dcAccessSecurityCode, error, jobSecretsType, podSecrets);
         }

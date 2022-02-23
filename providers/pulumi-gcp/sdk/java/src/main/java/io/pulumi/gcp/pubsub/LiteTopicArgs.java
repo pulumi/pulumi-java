@@ -22,7 +22,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionConfig")
-    private final @Nullable Input<LiteTopicPartitionConfigArgs> partitionConfig;
+        private final @Nullable Input<LiteTopicPartitionConfigArgs> partitionConfig;
 
     public Input<LiteTopicPartitionConfigArgs> getPartitionConfig() {
         return this.partitionConfig == null ? Input.empty() : this.partitionConfig;
@@ -46,7 +46,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -57,7 +57,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -69,7 +69,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservationConfig")
-    private final @Nullable Input<LiteTopicReservationConfigArgs> reservationConfig;
+        private final @Nullable Input<LiteTopicReservationConfigArgs> reservationConfig;
 
     public Input<LiteTopicReservationConfigArgs> getReservationConfig() {
         return this.reservationConfig == null ? Input.empty() : this.reservationConfig;
@@ -81,7 +81,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionConfig")
-    private final @Nullable Input<LiteTopicRetentionConfigArgs> retentionConfig;
+        private final @Nullable Input<LiteTopicRetentionConfigArgs> retentionConfig;
 
     public Input<LiteTopicRetentionConfigArgs> getRetentionConfig() {
         return this.retentionConfig == null ? Input.empty() : this.retentionConfig;
@@ -92,7 +92,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -226,7 +226,6 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public LiteTopicArgs build() {
             return new LiteTopicArgs(name, partitionConfig, project, region, reservationConfig, retentionConfig, zone);
         }

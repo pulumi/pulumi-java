@@ -74,7 +74,6 @@ public final class OperationWarningsItemDataItemResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public OperationWarningsItemDataItemResponse build() {
             return new OperationWarningsItemDataItemResponse(key, value);
         }

@@ -125,7 +125,6 @@ public final class UserAccountResponse {
             this.windowsUserConfiguration = windowsUserConfiguration;
             return this;
         }
-
         public UserAccountResponse build() {
             return new UserAccountResponse(elevationLevel, linuxUserConfiguration, name, password, windowsUserConfiguration);
         }

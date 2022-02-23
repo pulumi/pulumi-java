@@ -79,7 +79,6 @@ public final class TriggerPipelineReferenceResponse {
             this.pipelineReference = pipelineReference;
             return this;
         }
-
         public TriggerPipelineReferenceResponse build() {
             return new TriggerPipelineReferenceResponse(parameters, pipelineReference);
         }

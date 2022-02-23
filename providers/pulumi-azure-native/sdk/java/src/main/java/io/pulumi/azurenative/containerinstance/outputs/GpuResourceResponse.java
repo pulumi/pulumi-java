@@ -75,7 +75,6 @@ public final class GpuResourceResponse {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public GpuResourceResponse build() {
             return new GpuResourceResponse(count, sku);
         }

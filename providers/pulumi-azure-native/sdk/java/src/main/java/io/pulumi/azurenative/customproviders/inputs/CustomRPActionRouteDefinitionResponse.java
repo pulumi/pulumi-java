@@ -23,7 +23,7 @@ public final class CustomRPActionRouteDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final String endpoint;
+        private final String endpoint;
 
     public String getEndpoint() {
         return this.endpoint;
@@ -34,7 +34,7 @@ public final class CustomRPActionRouteDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class CustomRPActionRouteDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="routingType")
-    private final @Nullable String routingType;
+        private final @Nullable String routingType;
 
     public Optional<String> getRoutingType() {
         return this.routingType == null ? Optional.empty() : Optional.ofNullable(this.routingType);
@@ -104,7 +104,6 @@ public final class CustomRPActionRouteDefinitionResponse extends io.pulumi.resou
             this.routingType = routingType;
             return this;
         }
-
         public CustomRPActionRouteDefinitionResponse build() {
             return new CustomRPActionRouteDefinitionResponse(endpoint, name, routingType);
         }

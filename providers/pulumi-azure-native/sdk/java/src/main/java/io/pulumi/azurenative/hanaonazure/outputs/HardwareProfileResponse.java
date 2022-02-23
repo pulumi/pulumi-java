@@ -74,7 +74,6 @@ public final class HardwareProfileResponse {
             this.hardwareType = Objects.requireNonNull(hardwareType);
             return this;
         }
-
         public HardwareProfileResponse build() {
             return new HardwareProfileResponse(hanaInstanceSize, hardwareType);
         }

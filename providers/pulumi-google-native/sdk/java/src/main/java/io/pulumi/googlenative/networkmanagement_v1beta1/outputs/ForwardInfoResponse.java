@@ -74,7 +74,6 @@ public final class ForwardInfoResponse {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ForwardInfoResponse build() {
             return new ForwardInfoResponse(resourceUri, target);
         }

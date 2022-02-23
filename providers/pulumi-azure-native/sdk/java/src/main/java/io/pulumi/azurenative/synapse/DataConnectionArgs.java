@@ -21,7 +21,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataConnectionName")
-    private final @Nullable Input<String> dataConnectionName;
+        private final @Nullable Input<String> dataConnectionName;
 
     public Input<String> getDataConnectionName() {
         return this.dataConnectionName == null ? Input.empty() : this.dataConnectionName;
@@ -32,7 +32,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+        private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -43,7 +43,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,DataConnectionKind>> kind;
+        private final Input<Either<String,DataConnectionKind>> kind;
 
     public Input<Either<String,DataConnectionKind>> getKind() {
         return this.kind;
@@ -54,7 +54,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kustoPoolName", required=true)
-    private final Input<String> kustoPoolName;
+        private final Input<String> kustoPoolName;
 
     public Input<String> getKustoPoolName() {
         return this.kustoPoolName;
@@ -65,7 +65,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -76,7 +76,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -221,7 +221,6 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public DataConnectionArgs build() {
             return new DataConnectionArgs(dataConnectionName, databaseName, kind, kustoPoolName, location, resourceGroupName, workspaceName);
         }

@@ -23,7 +23,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="repoSource", required=true)
-    private final RepoSourceResponse repoSource;
+      private final RepoSourceResponse repoSource;
 
     public RepoSourceResponse getRepoSource() {
         return this.repoSource;
@@ -34,7 +34,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageSource", required=true)
-    private final StorageSourceResponse storageSource;
+      private final StorageSourceResponse storageSource;
 
     public StorageSourceResponse getStorageSource() {
         return this.storageSource;
@@ -45,7 +45,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageSourceManifest", required=true)
-    private final StorageSourceManifestResponse storageSourceManifest;
+      private final StorageSourceManifestResponse storageSourceManifest;
 
     public StorageSourceManifestResponse getStorageSourceManifest() {
         return this.storageSourceManifest;
@@ -104,7 +104,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
             this.storageSourceManifest = Objects.requireNonNull(storageSourceManifest);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(repoSource, storageSource, storageSourceManifest);
         }

@@ -142,7 +142,6 @@ public final class ContentLinkResponse {
             this.uri = uri;
             return this;
         }
-
         public ContentLinkResponse build() {
             return new ContentLinkResponse(contentHash, contentSize, contentVersion, metadata, uri);
         }

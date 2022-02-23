@@ -81,7 +81,6 @@ public final class URLMapPathMatcherDefaultRouteActionTimeout {
             this.seconds = seconds;
             return this;
         }
-
         public URLMapPathMatcherDefaultRouteActionTimeout build() {
             return new URLMapPathMatcherDefaultRouteActionTimeout(nanos, seconds);
         }

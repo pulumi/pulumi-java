@@ -289,7 +289,6 @@ public final class GetWebAppHybridConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppHybridConnectionResult build() {
             return new GetWebAppHybridConnectionResult(hostname, id, kind, name, port, relayArmUri, relayName, sendKeyName, sendKeyValue, serviceBusNamespace, serviceBusSuffix, type);
         }

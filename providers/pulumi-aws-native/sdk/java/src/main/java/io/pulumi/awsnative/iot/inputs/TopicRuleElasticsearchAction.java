@@ -13,35 +13,35 @@ public final class TopicRuleElasticsearchAction extends io.pulumi.resources.Invo
     public static final TopicRuleElasticsearchAction Empty = new TopicRuleElasticsearchAction();
 
     @InputImport(name="endpoint", required=true)
-    private final String endpoint;
+        private final String endpoint;
 
     public String getEndpoint() {
         return this.endpoint;
     }
 
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
     }
 
     @InputImport(name="index", required=true)
-    private final String index;
+        private final String index;
 
     public String getIndex() {
         return this.index;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+        private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -120,7 +120,6 @@ public final class TopicRuleElasticsearchAction extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TopicRuleElasticsearchAction build() {
             return new TopicRuleElasticsearchAction(endpoint, id, index, roleArn, type);
         }

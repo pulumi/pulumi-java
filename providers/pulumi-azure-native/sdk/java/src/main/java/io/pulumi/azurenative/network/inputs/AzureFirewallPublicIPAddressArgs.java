@@ -23,7 +23,7 @@ public final class AzureFirewallPublicIPAddressArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+        private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -66,7 +66,6 @@ public final class AzureFirewallPublicIPAddressArgs extends io.pulumi.resources.
             this.address = Input.ofNullable(address);
             return this;
         }
-
         public AzureFirewallPublicIPAddressArgs build() {
             return new AzureFirewallPublicIPAddressArgs(address);
         }

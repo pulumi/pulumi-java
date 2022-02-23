@@ -533,7 +533,6 @@ public final class WebServicePropertiesForGraphResponse {
             this.title = title;
             return this;
         }
-
         public WebServicePropertiesForGraphResponse build() {
             return new WebServicePropertiesForGraphResponse(assets, commitmentPlan, createdOn, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, modifiedOn, output, $package, packageType, parameters, payloadsInBlobStorage, payloadsLocation, provisioningState, readOnly, realtimeConfiguration, storageAccount, swaggerLocation, title);
         }

@@ -572,7 +572,6 @@ public final class GetApplicationResult {
             this.updatedBy = Objects.requireNonNull(updatedBy);
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(applicationDefinitionId, artifacts, authorizations, billingDetails, createdBy, customerSupport, id, identity, jitAccessPolicy, kind, location, managedBy, managedResourceGroupId, managementMode, name, outputs, parameters, plan, provisioningState, publisherTenantId, sku, supportUrls, tags, type, updatedBy);
         }

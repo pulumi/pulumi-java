@@ -14,7 +14,7 @@ public final class SpotFleetTargetGroupsConfig extends io.pulumi.resources.Invok
     public static final SpotFleetTargetGroupsConfig Empty = new SpotFleetTargetGroupsConfig();
 
     @InputImport(name="targetGroups", required=true)
-    private final List<SpotFleetTargetGroup> targetGroups;
+        private final List<SpotFleetTargetGroup> targetGroups;
 
     public List<SpotFleetTargetGroup> getTargetGroups() {
         return this.targetGroups;
@@ -52,7 +52,6 @@ public final class SpotFleetTargetGroupsConfig extends io.pulumi.resources.Invok
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
-
         public SpotFleetTargetGroupsConfig build() {
             return new SpotFleetTargetGroupsConfig(targetGroups);
         }

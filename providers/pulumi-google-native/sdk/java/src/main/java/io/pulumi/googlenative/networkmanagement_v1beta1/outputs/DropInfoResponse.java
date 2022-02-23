@@ -74,7 +74,6 @@ public final class DropInfoResponse {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public DropInfoResponse build() {
             return new DropInfoResponse(cause, resourceUri);
         }

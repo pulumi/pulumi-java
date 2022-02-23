@@ -247,7 +247,6 @@ public final class CommonDataServiceForAppsSinkResponse {
             this.writeBehavior = Objects.requireNonNull(writeBehavior);
             return this;
         }
-
         public CommonDataServiceForAppsSinkResponse build() {
             return new CommonDataServiceForAppsSinkResponse(alternateKeyName, disableMetricsCollection, ignoreNullValues, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

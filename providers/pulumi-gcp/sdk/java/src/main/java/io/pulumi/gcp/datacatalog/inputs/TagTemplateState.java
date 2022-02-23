@@ -22,7 +22,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -34,7 +34,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<TagTemplateFieldGetArgs>> fields;
+        private final @Nullable Input<List<TagTemplateFieldGetArgs>> fields;
 
     public Input<List<TagTemplateFieldGetArgs>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -45,7 +45,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDelete")
-    private final @Nullable Input<Boolean> forceDelete;
+        private final @Nullable Input<Boolean> forceDelete;
 
     public Input<Boolean> getForceDelete() {
         return this.forceDelete == null ? Input.empty() : this.forceDelete;
@@ -57,7 +57,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -69,7 +69,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -80,7 +80,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -91,7 +91,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagTemplateId")
-    private final @Nullable Input<String> tagTemplateId;
+        private final @Nullable Input<String> tagTemplateId;
 
     public Input<String> getTagTemplateId() {
         return this.tagTemplateId == null ? Input.empty() : this.tagTemplateId;
@@ -225,7 +225,6 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
             this.tagTemplateId = Input.ofNullable(tagTemplateId);
             return this;
         }
-
         public TagTemplateState build() {
             return new TagTemplateState(displayName, fields, forceDelete, name, project, region, tagTemplateId);
         }

@@ -77,7 +77,6 @@ public final class MxRecordResponse {
             this.preference = preference;
             return this;
         }
-
         public MxRecordResponse build() {
             return new MxRecordResponse(exchange, preference);
         }

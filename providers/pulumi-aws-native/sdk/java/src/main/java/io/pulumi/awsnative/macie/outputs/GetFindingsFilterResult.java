@@ -207,7 +207,6 @@ public final class GetFindingsFilterResult {
             this.position = position;
             return this;
         }
-
         public GetFindingsFilterResult build() {
             return new GetFindingsFilterResult(action, arn, description, findingCriteria, findingsFilterListItems, id, name, position);
         }

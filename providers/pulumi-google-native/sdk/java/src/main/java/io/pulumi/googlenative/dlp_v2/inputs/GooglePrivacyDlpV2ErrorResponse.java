@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="details", required=true)
-    private final GoogleRpcStatusResponse details;
+      private final GoogleRpcStatusResponse details;
 
     public GoogleRpcStatusResponse getDetails() {
         return this.details;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="timestamps", required=true)
-    private final List<String> timestamps;
+      private final List<String> timestamps;
 
     public List<String> getTimestamps() {
         return this.timestamps;
@@ -83,7 +83,6 @@ public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.I
             this.timestamps = Objects.requireNonNull(timestamps);
             return this;
         }
-
         public GooglePrivacyDlpV2ErrorResponse build() {
             return new GooglePrivacyDlpV2ErrorResponse(details, timestamps);
         }

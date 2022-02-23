@@ -23,7 +23,7 @@ public final class EncryptionIdentityResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="encryptionUserAssignedIdentity")
-    private final @Nullable String encryptionUserAssignedIdentity;
+        private final @Nullable String encryptionUserAssignedIdentity;
 
     public Optional<String> getEncryptionUserAssignedIdentity() {
         return this.encryptionUserAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.encryptionUserAssignedIdentity);
@@ -61,7 +61,6 @@ public final class EncryptionIdentityResponse extends io.pulumi.resources.Invoke
             this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
             return this;
         }
-
         public EncryptionIdentityResponse build() {
             return new EncryptionIdentityResponse(encryptionUserAssignedIdentity);
         }

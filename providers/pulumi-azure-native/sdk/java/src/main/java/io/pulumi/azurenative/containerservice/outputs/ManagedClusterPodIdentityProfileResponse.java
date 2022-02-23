@@ -121,7 +121,6 @@ public final class ManagedClusterPodIdentityProfileResponse {
             this.userAssignedIdentityExceptions = userAssignedIdentityExceptions;
             return this;
         }
-
         public ManagedClusterPodIdentityProfileResponse build() {
             return new ManagedClusterPodIdentityProfileResponse(allowNetworkPluginKubenet, enabled, userAssignedIdentities, userAssignedIdentityExceptions);
         }

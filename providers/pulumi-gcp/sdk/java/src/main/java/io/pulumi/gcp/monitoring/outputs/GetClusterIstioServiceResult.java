@@ -174,7 +174,6 @@ public final class GetClusterIstioServiceResult {
             this.telemetries = Objects.requireNonNull(telemetries);
             return this;
         }
-
         public GetClusterIstioServiceResult build() {
             return new GetClusterIstioServiceResult(clusterName, displayName, id, location, name, project, serviceId, serviceName, serviceNamespace, telemetries);
         }

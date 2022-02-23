@@ -219,7 +219,6 @@ public final class DelimitedTextSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DelimitedTextSourceResponse build() {
             return new DelimitedTextSourceResponse(additionalColumns, disableMetricsCollection, formatSettings, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, storeSettings, type);
         }

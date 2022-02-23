@@ -24,7 +24,7 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expandNestedMemberships")
-    private final @Nullable Input<Boolean> expandNestedMemberships;
+        private final @Nullable Input<Boolean> expandNestedMemberships;
 
     public Input<Boolean> getExpandNestedMemberships() {
         return this.expandNestedMemberships == null ? Input.empty() : this.expandNestedMemberships;
@@ -35,7 +35,7 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="inactiveDuration")
-    private final @Nullable Input<String> inactiveDuration;
+        private final @Nullable Input<String> inactiveDuration;
 
     public Input<String> getInactiveDuration() {
         return this.inactiveDuration == null ? Input.empty() : this.inactiveDuration;
@@ -94,7 +94,6 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
             this.inactiveDuration = Input.ofNullable(inactiveDuration);
             return this;
         }
-
         public AccessReviewScopeArgs build() {
             return new AccessReviewScopeArgs(expandNestedMemberships, inactiveDuration);
         }

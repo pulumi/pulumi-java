@@ -21,35 +21,35 @@ public final class ScheduledActionResizeClusterMessage extends io.pulumi.resourc
     public static final ScheduledActionResizeClusterMessage Empty = new ScheduledActionResizeClusterMessage();
 
     @InputImport(name="classic")
-    private final @Nullable Boolean classic;
+        private final @Nullable Boolean classic;
 
     public Optional<Boolean> getClassic() {
         return this.classic == null ? Optional.empty() : Optional.ofNullable(this.classic);
     }
 
     @InputImport(name="clusterIdentifier", required=true)
-    private final String clusterIdentifier;
+        private final String clusterIdentifier;
 
     public String getClusterIdentifier() {
         return this.clusterIdentifier;
     }
 
     @InputImport(name="clusterType")
-    private final @Nullable String clusterType;
+        private final @Nullable String clusterType;
 
     public Optional<String> getClusterType() {
         return this.clusterType == null ? Optional.empty() : Optional.ofNullable(this.clusterType);
     }
 
     @InputImport(name="nodeType")
-    private final @Nullable String nodeType;
+        private final @Nullable String nodeType;
 
     public Optional<String> getNodeType() {
         return this.nodeType == null ? Optional.empty() : Optional.ofNullable(this.nodeType);
     }
 
     @InputImport(name="numberOfNodes")
-    private final @Nullable Integer numberOfNodes;
+        private final @Nullable Integer numberOfNodes;
 
     public Optional<Integer> getNumberOfNodes() {
         return this.numberOfNodes == null ? Optional.empty() : Optional.ofNullable(this.numberOfNodes);
@@ -128,7 +128,6 @@ public final class ScheduledActionResizeClusterMessage extends io.pulumi.resourc
             this.numberOfNodes = numberOfNodes;
             return this;
         }
-
         public ScheduledActionResizeClusterMessage build() {
             return new ScheduledActionResizeClusterMessage(classic, clusterIdentifier, clusterType, nodeType, numberOfNodes);
         }

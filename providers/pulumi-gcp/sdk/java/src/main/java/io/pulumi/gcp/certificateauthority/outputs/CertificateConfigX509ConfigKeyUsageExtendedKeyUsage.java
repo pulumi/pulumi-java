@@ -160,7 +160,6 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsage {
             this.timeStamping = timeStamping;
             return this;
         }
-
         public CertificateConfigX509ConfigKeyUsageExtendedKeyUsage build() {
             return new CertificateConfigX509ConfigKeyUsageExtendedKeyUsage(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);
         }

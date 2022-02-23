@@ -229,7 +229,6 @@ public final class VirtualMachineConfigurationResponse {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
-
         public VirtualMachineConfigurationResponse build() {
             return new VirtualMachineConfigurationResponse(containerConfiguration, dataDisks, diskEncryptionConfiguration, extensions, imageReference, licenseType, nodeAgentSkuId, nodePlacementConfiguration, windowsConfiguration);
         }

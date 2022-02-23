@@ -24,7 +24,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="certificateSource", required=true)
-    private final String certificateSource;
+        private final String certificateSource;
 
     public String getCertificateSource() {
         return this.certificateSource;
@@ -35,7 +35,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="certificateType")
-    private final @Nullable String certificateType;
+        private final @Nullable String certificateType;
 
     public Optional<String> getCertificateType() {
         return this.certificateType == null ? Optional.empty() : Optional.ofNullable(this.certificateType);
@@ -46,7 +46,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="minimumTlsVersion", required=true)
-    private final String minimumTlsVersion;
+        private final String minimumTlsVersion;
 
     public String getMinimumTlsVersion() {
         return this.minimumTlsVersion;
@@ -57,7 +57,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protocolType", required=true)
-    private final String protocolType;
+        private final String protocolType;
 
     public String getProtocolType() {
         return this.protocolType;
@@ -68,7 +68,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretName")
-    private final @Nullable String secretName;
+        private final @Nullable String secretName;
 
     public Optional<String> getSecretName() {
         return this.secretName == null ? Optional.empty() : Optional.ofNullable(this.secretName);
@@ -79,7 +79,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretVersion")
-    private final @Nullable String secretVersion;
+        private final @Nullable String secretVersion;
 
     public Optional<String> getSecretVersion() {
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
@@ -90,7 +90,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vault")
-    private final @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
+        private final @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
 
     public Optional<KeyVaultCertificateSourceParametersResponseVault> getVault() {
         return this.vault == null ? Optional.empty() : Optional.ofNullable(this.vault);
@@ -189,7 +189,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
             this.vault = vault;
             return this;
         }
-
         public CustomHttpsConfigurationResponse build() {
             return new CustomHttpsConfigurationResponse(certificateSource, certificateType, minimumTlsVersion, protocolType, secretName, secretVersion, vault);
         }

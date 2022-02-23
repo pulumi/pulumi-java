@@ -116,7 +116,6 @@ public final class StorageAccountInformationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StorageAccountInformationResponse build() {
             return new StorageAccountInformationResponse(id, name, suffix, type);
         }

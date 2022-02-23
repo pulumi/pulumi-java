@@ -98,7 +98,6 @@ public final class RetryPolicyResponse {
             this.retryType = retryType;
             return this;
         }
-
         public RetryPolicyResponse build() {
             return new RetryPolicyResponse(retryCount, retryInterval, retryType);
         }

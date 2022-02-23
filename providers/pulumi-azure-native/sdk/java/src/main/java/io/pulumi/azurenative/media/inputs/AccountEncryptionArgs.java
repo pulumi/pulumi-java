@@ -22,7 +22,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyVaultProperties")
-    private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+        private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
@@ -33,7 +33,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,AccountEncryptionKeyType>> type;
+        private final Input<Either<String,AccountEncryptionKeyType>> type;
 
     public Input<Either<String,AccountEncryptionKeyType>> getType() {
         return this.type;
@@ -92,7 +92,6 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AccountEncryptionArgs build() {
             return new AccountEncryptionArgs(keyVaultProperties, type);
         }

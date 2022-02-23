@@ -14,14 +14,14 @@ public final class GetInstanceReservationAffinitySpecificReservation extends io.
     public static final GetInstanceReservationAffinitySpecificReservation Empty = new GetInstanceReservationAffinitySpecificReservation();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="values", required=true)
-    private final List<String> values;
+        private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -70,7 +70,6 @@ public final class GetInstanceReservationAffinitySpecificReservation extends io.
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GetInstanceReservationAffinitySpecificReservation build() {
             return new GetInstanceReservationAffinitySpecificReservation(key, values);
         }

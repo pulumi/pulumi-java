@@ -24,7 +24,7 @@ public final class KpiGroupByMetadataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Map<String,String> displayName;
+        private final @Nullable Map<String,String> displayName;
 
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
@@ -35,7 +35,7 @@ public final class KpiGroupByMetadataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fieldName")
-    private final @Nullable String fieldName;
+        private final @Nullable String fieldName;
 
     public Optional<String> getFieldName() {
         return this.fieldName == null ? Optional.empty() : Optional.ofNullable(this.fieldName);
@@ -46,7 +46,7 @@ public final class KpiGroupByMetadataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fieldType")
-    private final @Nullable String fieldType;
+        private final @Nullable String fieldType;
 
     public Optional<String> getFieldType() {
         return this.fieldType == null ? Optional.empty() : Optional.ofNullable(this.fieldType);
@@ -105,7 +105,6 @@ public final class KpiGroupByMetadataResponse extends io.pulumi.resources.Invoke
             this.fieldType = fieldType;
             return this;
         }
-
         public KpiGroupByMetadataResponse build() {
             return new KpiGroupByMetadataResponse(displayName, fieldName, fieldType);
         }

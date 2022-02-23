@@ -165,7 +165,6 @@ public final class GuestPoliciesAssignment {
             this.zones = zones;
             return this;
         }
-
         public GuestPoliciesAssignment build() {
             return new GuestPoliciesAssignment(groupLabels, instanceNamePrefixes, instances, osTypes, zones);
         }

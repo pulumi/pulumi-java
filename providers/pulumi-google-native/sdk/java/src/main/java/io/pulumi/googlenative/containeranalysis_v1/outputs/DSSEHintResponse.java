@@ -52,7 +52,6 @@ public final class DSSEHintResponse {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
-
         public DSSEHintResponse build() {
             return new DSSEHintResponse(humanReadableName);
         }

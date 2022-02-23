@@ -137,7 +137,6 @@ public final class LinkedIntegrationRuntimeResponse {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public LinkedIntegrationRuntimeResponse build() {
             return new LinkedIntegrationRuntimeResponse(createTime, dataFactoryLocation, dataFactoryName, name, subscriptionId);
         }

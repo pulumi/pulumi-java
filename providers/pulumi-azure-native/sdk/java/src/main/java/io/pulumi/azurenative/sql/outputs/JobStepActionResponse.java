@@ -97,7 +97,6 @@ public final class JobStepActionResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public JobStepActionResponse build() {
             return new JobStepActionResponse(source, type, value);
         }

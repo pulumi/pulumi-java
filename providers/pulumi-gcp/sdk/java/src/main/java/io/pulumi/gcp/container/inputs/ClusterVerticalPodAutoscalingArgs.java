@@ -19,7 +19,7 @@ public final class ClusterVerticalPodAutoscalingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -62,7 +62,6 @@ public final class ClusterVerticalPodAutoscalingArgs extends io.pulumi.resources
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public ClusterVerticalPodAutoscalingArgs build() {
             return new ClusterVerticalPodAutoscalingArgs(enabled);
         }

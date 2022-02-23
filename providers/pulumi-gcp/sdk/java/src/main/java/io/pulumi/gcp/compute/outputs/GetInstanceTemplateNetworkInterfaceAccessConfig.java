@@ -93,7 +93,6 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
             this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
             return this;
         }
-
         public GetInstanceTemplateNetworkInterfaceAccessConfig build() {
             return new GetInstanceTemplateNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
         }

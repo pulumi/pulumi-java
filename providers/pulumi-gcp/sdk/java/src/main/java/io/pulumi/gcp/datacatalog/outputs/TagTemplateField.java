@@ -192,7 +192,6 @@ public final class TagTemplateField {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TagTemplateField build() {
             return new TagTemplateField(description, displayName, fieldId, isRequired, name, order, type);
         }

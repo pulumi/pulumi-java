@@ -80,7 +80,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSet build() {
             return new PreventionInspectTemplateInspectConfigRuleSet(infoTypes, rules);
         }

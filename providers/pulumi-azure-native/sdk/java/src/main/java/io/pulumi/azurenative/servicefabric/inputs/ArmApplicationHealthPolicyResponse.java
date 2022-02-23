@@ -27,7 +27,7 @@ public final class ArmApplicationHealthPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="considerWarningAsError")
-    private final @Nullable Boolean considerWarningAsError;
+        private final @Nullable Boolean considerWarningAsError;
 
     public Optional<Boolean> getConsiderWarningAsError() {
         return this.considerWarningAsError == null ? Optional.empty() : Optional.ofNullable(this.considerWarningAsError);
@@ -38,7 +38,7 @@ public final class ArmApplicationHealthPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="defaultServiceTypeHealthPolicy")
-    private final @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
+        private final @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
 
     public Optional<ArmServiceTypeHealthPolicyResponse> getDefaultServiceTypeHealthPolicy() {
         return this.defaultServiceTypeHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
@@ -52,7 +52,7 @@ public final class ArmApplicationHealthPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxPercentUnhealthyDeployedApplications")
-    private final @Nullable Integer maxPercentUnhealthyDeployedApplications;
+        private final @Nullable Integer maxPercentUnhealthyDeployedApplications;
 
     public Optional<Integer> getMaxPercentUnhealthyDeployedApplications() {
         return this.maxPercentUnhealthyDeployedApplications == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyDeployedApplications);
@@ -63,7 +63,7 @@ public final class ArmApplicationHealthPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceTypeHealthPolicyMap")
-    private final @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap;
+        private final @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap;
 
     public Map<String,ArmServiceTypeHealthPolicyResponse> getServiceTypeHealthPolicyMap() {
         return this.serviceTypeHealthPolicyMap == null ? Map.of() : this.serviceTypeHealthPolicyMap;
@@ -132,7 +132,6 @@ public final class ArmApplicationHealthPolicyResponse extends io.pulumi.resource
             this.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
             return this;
         }
-
         public ArmApplicationHealthPolicyResponse build() {
             return new ArmApplicationHealthPolicyResponse(considerWarningAsError, defaultServiceTypeHealthPolicy, maxPercentUnhealthyDeployedApplications, serviceTypeHealthPolicyMap);
         }

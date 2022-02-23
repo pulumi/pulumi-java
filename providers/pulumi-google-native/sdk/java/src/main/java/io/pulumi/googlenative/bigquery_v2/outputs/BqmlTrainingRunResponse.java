@@ -119,7 +119,6 @@ public final class BqmlTrainingRunResponse {
             this.trainingOptions = Objects.requireNonNull(trainingOptions);
             return this;
         }
-
         public BqmlTrainingRunResponse build() {
             return new BqmlTrainingRunResponse(iterationResults, startTime, state, trainingOptions);
         }

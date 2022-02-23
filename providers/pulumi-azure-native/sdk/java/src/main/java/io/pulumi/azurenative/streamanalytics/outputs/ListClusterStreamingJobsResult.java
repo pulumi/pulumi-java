@@ -76,7 +76,6 @@ public final class ListClusterStreamingJobsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListClusterStreamingJobsResult build() {
             return new ListClusterStreamingJobsResult(nextLink, value);
         }

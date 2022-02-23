@@ -23,7 +23,7 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="denylistValues", required=true)
-    private final List<String> denylistValues;
+        private final List<String> denylistValues;
 
     public List<String> getDenylistValues() {
         return this.denylistValues;
@@ -34,7 +34,7 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+        private final String description;
 
     public String getDescription() {
         return this.description;
@@ -45,7 +45,7 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+        private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -56,7 +56,7 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Boolean isEnabled;
+        private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -68,7 +68,7 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="ruleType", required=true)
-    private final String ruleType;
+        private final String ruleType;
 
     public String getRuleType() {
         return this.ruleType;
@@ -79,7 +79,7 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="valueType", required=true)
-    private final String valueType;
+        private final String valueType;
 
     public String getValueType() {
         return this.valueType;
@@ -168,7 +168,6 @@ public final class DenylistCustomAlertRuleResponse extends io.pulumi.resources.I
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public DenylistCustomAlertRuleResponse build() {
             return new DenylistCustomAlertRuleResponse(denylistValues, description, displayName, isEnabled, ruleType, valueType);
         }

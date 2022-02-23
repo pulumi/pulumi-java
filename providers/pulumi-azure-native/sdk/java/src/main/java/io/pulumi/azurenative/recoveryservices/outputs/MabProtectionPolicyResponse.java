@@ -128,7 +128,6 @@ public final class MabProtectionPolicyResponse {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
-
         public MabProtectionPolicyResponse build() {
             return new MabProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy, schedulePolicy);
         }

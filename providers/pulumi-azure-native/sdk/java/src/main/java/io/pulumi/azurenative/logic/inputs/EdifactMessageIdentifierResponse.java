@@ -21,7 +21,7 @@ public final class EdifactMessageIdentifierResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="messageId", required=true)
-    private final String messageId;
+        private final String messageId;
 
     public String getMessageId() {
         return this.messageId;
@@ -59,7 +59,6 @@ public final class EdifactMessageIdentifierResponse extends io.pulumi.resources.
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
-
         public EdifactMessageIdentifierResponse build() {
             return new EdifactMessageIdentifierResponse(messageId);
         }

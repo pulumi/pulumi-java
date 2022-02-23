@@ -46,7 +46,6 @@ public final class ListenerRuleSourceIpConfig {
             this.values = values;
             return this;
         }
-
         public ListenerRuleSourceIpConfig build() {
             return new ListenerRuleSourceIpConfig(values);
         }

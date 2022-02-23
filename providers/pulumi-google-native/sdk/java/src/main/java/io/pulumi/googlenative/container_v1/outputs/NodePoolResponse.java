@@ -356,7 +356,6 @@ public final class NodePoolResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public NodePoolResponse build() {
             return new NodePoolResponse(autoscaling, conditions, config, initialNodeCount, instanceGroupUrls, locations, management, maxPodsConstraint, name, networkConfig, podIpv4CidrSize, selfLink, status, upgradeSettings, version);
         }

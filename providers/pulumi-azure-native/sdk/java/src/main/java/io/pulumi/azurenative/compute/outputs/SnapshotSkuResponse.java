@@ -76,7 +76,6 @@ public final class SnapshotSkuResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public SnapshotSkuResponse build() {
             return new SnapshotSkuResponse(name, tier);
         }

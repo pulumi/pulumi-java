@@ -294,7 +294,6 @@ public final class VirtualMachineScaleSetVMProfileResponse {
             this.userData = userData;
             return this;
         }
-
         public VirtualMachineScaleSetVMProfileResponse build() {
             return new VirtualMachineScaleSetVMProfileResponse(billingProfile, diagnosticsProfile, evictionPolicy, extensionProfile, licenseType, networkProfile, osProfile, priority, scheduledEventsProfile, securityProfile, storageProfile, userData);
         }

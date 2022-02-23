@@ -54,7 +54,6 @@ public final class PriorityLevelConfigurationStatus {
             this.conditions = conditions;
             return this;
         }
-
         public PriorityLevelConfigurationStatus build() {
             return new PriorityLevelConfigurationStatus(conditions);
         }

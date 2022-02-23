@@ -21,7 +21,7 @@ public final class ExtendedLocationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ExtendedLocationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class ExtendedLocationResponse extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExtendedLocationResponse build() {
             return new ExtendedLocationResponse(name, type);
         }

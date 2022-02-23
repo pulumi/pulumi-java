@@ -215,7 +215,6 @@ public final class GetStaticSiteCustomDomainResult {
             this.validationToken = Objects.requireNonNull(validationToken);
             return this;
         }
-
         public GetStaticSiteCustomDomainResult build() {
             return new GetStaticSiteCustomDomainResult(createdOn, domainName, errorMessage, id, kind, name, status, type, validationToken);
         }

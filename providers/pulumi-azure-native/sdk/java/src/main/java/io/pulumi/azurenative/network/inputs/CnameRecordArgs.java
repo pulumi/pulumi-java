@@ -23,7 +23,7 @@ public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cname")
-    private final @Nullable Input<String> cname;
+        private final @Nullable Input<String> cname;
 
     public Input<String> getCname() {
         return this.cname == null ? Input.empty() : this.cname;
@@ -66,7 +66,6 @@ public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.cname = Input.ofNullable(cname);
             return this;
         }
-
         public CnameRecordArgs build() {
             return new CnameRecordArgs(cname);
         }

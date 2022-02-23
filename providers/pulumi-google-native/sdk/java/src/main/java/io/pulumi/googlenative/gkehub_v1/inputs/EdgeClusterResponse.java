@@ -21,7 +21,7 @@ public final class EdgeClusterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceLink", required=true)
-    private final String resourceLink;
+      private final String resourceLink;
 
     public String getResourceLink() {
         return this.resourceLink;
@@ -59,7 +59,6 @@ public final class EdgeClusterResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
-
         public EdgeClusterResponse build() {
             return new EdgeClusterResponse(resourceLink);
         }

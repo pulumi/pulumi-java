@@ -116,7 +116,6 @@ public final class BigQueryIODetailsResponse {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public BigQueryIODetailsResponse build() {
             return new BigQueryIODetailsResponse(dataset, project, query, table);
         }

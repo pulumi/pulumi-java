@@ -253,7 +253,6 @@ public final class DatabricksNotebookActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public DatabricksNotebookActivityResponse build() {
             return new DatabricksNotebookActivityResponse(baseParameters, dependsOn, description, libraries, linkedServiceName, name, notebookPath, policy, type, userProperties);
         }

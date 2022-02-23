@@ -100,7 +100,6 @@ public final class RuleWebhookActionResponse {
             this.serviceUri = serviceUri;
             return this;
         }
-
         public RuleWebhookActionResponse build() {
             return new RuleWebhookActionResponse(odataType, properties, serviceUri);
         }

@@ -25,7 +25,7 @@ public final class ReferenceDataSetKeyPropertyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -36,7 +36,7 @@ public final class ReferenceDataSetKeyPropertyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ReferenceDataKeyPropertyType>> type;
+        private final @Nullable Input<Either<String,ReferenceDataKeyPropertyType>> type;
 
     public Input<Either<String,ReferenceDataKeyPropertyType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -95,7 +95,6 @@ public final class ReferenceDataSetKeyPropertyArgs extends io.pulumi.resources.R
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ReferenceDataSetKeyPropertyArgs build() {
             return new ReferenceDataSetKeyPropertyArgs(name, type);
         }

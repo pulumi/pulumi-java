@@ -13,7 +13,7 @@ public final class GetOrganizationIamPolicyArgs extends io.pulumi.resources.Invo
     public static final GetOrganizationIamPolicyArgs Empty = new GetOrganizationIamPolicyArgs();
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -51,7 +51,6 @@ public final class GetOrganizationIamPolicyArgs extends io.pulumi.resources.Invo
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetOrganizationIamPolicyArgs build() {
             return new GetOrganizationIamPolicyArgs(organizationId);
         }

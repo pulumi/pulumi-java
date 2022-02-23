@@ -95,7 +95,6 @@ public final class NonCompliantFileResponse {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public NonCompliantFileResponse build() {
             return new NonCompliantFileResponse(displayCommand, path, reason);
         }

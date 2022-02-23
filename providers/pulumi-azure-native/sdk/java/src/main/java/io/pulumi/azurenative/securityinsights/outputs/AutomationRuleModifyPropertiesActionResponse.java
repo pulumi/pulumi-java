@@ -99,7 +99,6 @@ public final class AutomationRuleModifyPropertiesActionResponse {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public AutomationRuleModifyPropertiesActionResponse build() {
             return new AutomationRuleModifyPropertiesActionResponse(actionConfiguration, actionType, order);
         }

@@ -15,7 +15,7 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends io.pulumi.reso
     public static final TaskDefinitionHostVolumePropertiesArgs Empty = new TaskDefinitionHostVolumePropertiesArgs();
 
     @InputImport(name="sourcePath")
-    private final @Nullable Input<String> sourcePath;
+        private final @Nullable Input<String> sourcePath;
 
     public Input<String> getSourcePath() {
         return this.sourcePath == null ? Input.empty() : this.sourcePath;
@@ -58,7 +58,6 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends io.pulumi.reso
             this.sourcePath = Input.ofNullable(sourcePath);
             return this;
         }
-
         public TaskDefinitionHostVolumePropertiesArgs build() {
             return new TaskDefinitionHostVolumePropertiesArgs(sourcePath);
         }

@@ -99,7 +99,6 @@ public final class RestHealthCheckResponse {
             this.response = response;
             return this;
         }
-
         public RestHealthCheckResponse build() {
             return new RestHealthCheckResponse(name, request, response);
         }

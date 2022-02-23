@@ -21,7 +21,7 @@ public final class ConfidentialNodesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -59,7 +59,6 @@ public final class ConfidentialNodesResponse extends io.pulumi.resources.InvokeA
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ConfidentialNodesResponse build() {
             return new ConfidentialNodesResponse(enabled);
         }

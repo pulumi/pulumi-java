@@ -163,7 +163,6 @@ public final class BucketCorsRule {
             this.maxAge = maxAge;
             return this;
         }
-
         public BucketCorsRule build() {
             return new BucketCorsRule(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, id, maxAge);
         }

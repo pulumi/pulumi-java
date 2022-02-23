@@ -99,7 +99,6 @@ public final class VolumeBackupsResponse {
             this.volumeName = volumeName;
             return this;
         }
-
         public VolumeBackupsResponse build() {
             return new VolumeBackupsResponse(backupsCount, policyEnabled, volumeName);
         }

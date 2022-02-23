@@ -338,7 +338,6 @@ public final class HttpLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public HttpLinkedServiceResponse build() {
             return new HttpLinkedServiceResponse(annotations, authHeaders, authenticationType, certThumbprint, connectVia, description, embeddedCertData, enableServerCertificateValidation, encryptedCredential, parameters, password, type, url, userName);
         }

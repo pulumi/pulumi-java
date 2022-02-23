@@ -179,7 +179,6 @@ public final class GetResourcePolicyResult {
             this.snapshotSchedulePolicies = Objects.requireNonNull(snapshotSchedulePolicies);
             return this;
         }
-
         public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(description, groupPlacementPolicies, id, instanceSchedulePolicies, name, project, region, selfLink, snapshotSchedulePolicies);
         }

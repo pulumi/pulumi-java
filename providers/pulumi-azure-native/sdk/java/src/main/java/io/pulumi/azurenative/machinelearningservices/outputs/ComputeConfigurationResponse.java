@@ -163,7 +163,6 @@ public final class ComputeConfigurationResponse {
             this.target = target;
             return this;
         }
-
         public ComputeConfigurationResponse build() {
             return new ComputeConfigurationResponse(instanceCount, instanceType, isLocal, location, properties, target);
         }

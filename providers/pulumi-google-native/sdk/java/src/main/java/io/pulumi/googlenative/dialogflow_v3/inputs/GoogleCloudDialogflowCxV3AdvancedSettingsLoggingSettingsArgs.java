@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs 
      * 
      */
     @InputImport(name="enableInteractionLogging")
-    private final @Nullable Input<Boolean> enableInteractionLogging;
+      private final @Nullable Input<Boolean> enableInteractionLogging;
 
     public Input<Boolean> getEnableInteractionLogging() {
         return this.enableInteractionLogging == null ? Input.empty() : this.enableInteractionLogging;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs 
      * 
      */
     @InputImport(name="enableStackdriverLogging")
-    private final @Nullable Input<Boolean> enableStackdriverLogging;
+      private final @Nullable Input<Boolean> enableStackdriverLogging;
 
     public Input<Boolean> getEnableStackdriverLogging() {
         return this.enableStackdriverLogging == null ? Input.empty() : this.enableStackdriverLogging;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs 
             this.enableStackdriverLogging = Input.ofNullable(enableStackdriverLogging);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs(enableInteractionLogging, enableStackdriverLogging);
         }

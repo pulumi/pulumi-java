@@ -74,7 +74,6 @@ public final class LogGroupTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public LogGroupTag build() {
             return new LogGroupTag(key, value);
         }

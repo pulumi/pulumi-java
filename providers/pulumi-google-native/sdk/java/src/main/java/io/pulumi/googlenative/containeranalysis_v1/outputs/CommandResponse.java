@@ -138,7 +138,6 @@ public final class CommandResponse {
             this.waitFor = Objects.requireNonNull(waitFor);
             return this;
         }
-
         public CommandResponse build() {
             return new CommandResponse(args, dir, env, name, waitFor);
         }

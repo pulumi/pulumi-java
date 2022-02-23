@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2QuasiIdResponse {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
-
         public GooglePrivacyDlpV2QuasiIdResponse build() {
             return new GooglePrivacyDlpV2QuasiIdResponse(customTag, field, inferred, infoType);
         }

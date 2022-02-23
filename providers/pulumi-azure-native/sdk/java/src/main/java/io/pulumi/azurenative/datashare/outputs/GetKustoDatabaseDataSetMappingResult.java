@@ -245,7 +245,6 @@ public final class GetKustoDatabaseDataSetMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKustoDatabaseDataSetMappingResult build() {
             return new GetKustoDatabaseDataSetMappingResult(dataSetId, dataSetMappingStatus, id, kind, kustoClusterResourceId, location, name, provisioningState, systemData, type);
         }

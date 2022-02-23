@@ -181,7 +181,6 @@ public final class GetRouteResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetRouteResult build() {
             return new GetRouteResult(createTime, destinationAddress, destinationPort, displayName, labels, name, updateTime);
         }

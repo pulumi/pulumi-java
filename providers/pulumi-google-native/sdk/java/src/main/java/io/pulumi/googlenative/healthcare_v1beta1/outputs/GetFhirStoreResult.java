@@ -270,7 +270,6 @@ public final class GetFhirStoreResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetFhirStoreResult build() {
             return new GetFhirStoreResult(defaultSearchHandlingStrict, disableReferentialIntegrity, disableResourceVersioning, enableUpdateCreate, labels, name, notificationConfig, searchConfig, streamConfigs, validationConfig, version);
         }

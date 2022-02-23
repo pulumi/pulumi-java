@@ -89,7 +89,6 @@ public final class ObjectMetricStatus {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public ObjectMetricStatus build() {
             return new ObjectMetricStatus(current, describedObject, metric);
         }

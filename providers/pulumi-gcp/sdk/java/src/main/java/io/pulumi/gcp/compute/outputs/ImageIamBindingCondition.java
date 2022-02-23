@@ -97,7 +97,6 @@ public final class ImageIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ImageIamBindingCondition build() {
             return new ImageIamBindingCondition(description, expression, title);
         }

@@ -215,7 +215,6 @@ public final class DetectorEventVariable {
             this.variableType = variableType;
             return this;
         }
-
         public DetectorEventVariable build() {
             return new DetectorEventVariable(arn, createdTime, dataSource, dataType, defaultValue, description, inline, lastUpdatedTime, name, tags, variableType);
         }

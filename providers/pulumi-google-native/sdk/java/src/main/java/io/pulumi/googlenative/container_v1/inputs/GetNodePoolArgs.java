@@ -15,28 +15,28 @@ public final class GetNodePoolArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetNodePoolArgs Empty = new GetNodePoolArgs();
 
     @InputImport(name="clusterId", required=true)
-    private final String clusterId;
+      private final String clusterId;
 
     public String getClusterId() {
         return this.clusterId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="nodePoolId", required=true)
-    private final String nodePoolId;
+      private final String nodePoolId;
 
     public String getNodePoolId() {
         return this.nodePoolId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetNodePoolArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetNodePoolArgs build() {
             return new GetNodePoolArgs(clusterId, location, nodePoolId, project);
         }

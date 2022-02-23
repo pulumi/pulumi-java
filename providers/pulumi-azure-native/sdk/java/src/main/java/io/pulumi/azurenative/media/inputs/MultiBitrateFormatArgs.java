@@ -25,7 +25,7 @@ public final class MultiBitrateFormatArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filenamePattern", required=true)
-    private final Input<String> filenamePattern;
+        private final Input<String> filenamePattern;
 
     public Input<String> getFilenamePattern() {
         return this.filenamePattern;
@@ -37,7 +37,7 @@ public final class MultiBitrateFormatArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -48,7 +48,7 @@ public final class MultiBitrateFormatArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="outputFiles")
-    private final @Nullable Input<List<OutputFileArgs>> outputFiles;
+        private final @Nullable Input<List<OutputFileArgs>> outputFiles;
 
     public Input<List<OutputFileArgs>> getOutputFiles() {
         return this.outputFiles == null ? Input.empty() : this.outputFiles;
@@ -122,7 +122,6 @@ public final class MultiBitrateFormatArgs extends io.pulumi.resources.ResourceAr
             this.outputFiles = Input.ofNullable(outputFiles);
             return this;
         }
-
         public MultiBitrateFormatArgs build() {
             return new MultiBitrateFormatArgs(filenamePattern, odataType, outputFiles);
         }

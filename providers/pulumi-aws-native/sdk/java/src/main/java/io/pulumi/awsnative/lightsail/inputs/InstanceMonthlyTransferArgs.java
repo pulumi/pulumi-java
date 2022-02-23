@@ -23,7 +23,7 @@ public final class InstanceMonthlyTransferArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="gbPerMonthAllocated")
-    private final @Nullable Input<String> gbPerMonthAllocated;
+        private final @Nullable Input<String> gbPerMonthAllocated;
 
     public Input<String> getGbPerMonthAllocated() {
         return this.gbPerMonthAllocated == null ? Input.empty() : this.gbPerMonthAllocated;
@@ -66,7 +66,6 @@ public final class InstanceMonthlyTransferArgs extends io.pulumi.resources.Resou
             this.gbPerMonthAllocated = Input.ofNullable(gbPerMonthAllocated);
             return this;
         }
-
         public InstanceMonthlyTransferArgs build() {
             return new InstanceMonthlyTransferArgs(gbPerMonthAllocated);
         }

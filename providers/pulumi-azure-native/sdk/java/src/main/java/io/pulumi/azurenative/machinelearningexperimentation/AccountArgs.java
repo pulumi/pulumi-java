@@ -21,7 +21,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+        private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -32,7 +32,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -54,7 +54,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultId", required=true)
-    private final Input<String> keyVaultId;
+        private final Input<String> keyVaultId;
 
     public Input<String> getKeyVaultId() {
         return this.keyVaultId;
@@ -65,7 +65,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -76,7 +76,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="seats")
-    private final @Nullable Input<String> seats;
+        private final @Nullable Input<String> seats;
 
     public Input<String> getSeats() {
         return this.seats == null ? Input.empty() : this.seats;
@@ -98,7 +98,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccount", required=true)
-    private final Input<StorageAccountPropertiesArgs> storageAccount;
+        private final Input<StorageAccountPropertiesArgs> storageAccount;
 
     public Input<StorageAccountPropertiesArgs> getStorageAccount() {
         return this.storageAccount;
@@ -109,7 +109,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -120,7 +120,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vsoAccountId", required=true)
-    private final Input<String> vsoAccountId;
+        private final Input<String> vsoAccountId;
 
     public Input<String> getVsoAccountId() {
         return this.vsoAccountId;
@@ -299,7 +299,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.vsoAccountId = Input.of(Objects.requireNonNull(vsoAccountId));
             return this;
         }
-
         public AccountArgs build() {
             return new AccountArgs(accountName, description, friendlyName, keyVaultId, location, resourceGroupName, seats, storageAccount, tags, vsoAccountId);
         }

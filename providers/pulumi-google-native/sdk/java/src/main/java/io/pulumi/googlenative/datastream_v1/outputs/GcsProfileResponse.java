@@ -74,7 +74,6 @@ public final class GcsProfileResponse {
             this.rootPath = Objects.requireNonNull(rootPath);
             return this;
         }
-
         public GcsProfileResponse build() {
             return new GcsProfileResponse(bucket, rootPath);
         }

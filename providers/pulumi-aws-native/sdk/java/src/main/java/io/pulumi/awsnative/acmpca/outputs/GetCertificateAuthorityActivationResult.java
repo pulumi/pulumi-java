@@ -76,7 +76,6 @@ public final class GetCertificateAuthorityActivationResult {
             this.status = status;
             return this;
         }
-
         public GetCertificateAuthorityActivationResult build() {
             return new GetCertificateAuthorityActivationResult(completeCertificateChain, status);
         }

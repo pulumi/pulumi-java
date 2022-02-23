@@ -117,7 +117,6 @@ public final class MoveResourceErrorBodyResponse {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public MoveResourceErrorBodyResponse build() {
             return new MoveResourceErrorBodyResponse(code, details, message, target);
         }

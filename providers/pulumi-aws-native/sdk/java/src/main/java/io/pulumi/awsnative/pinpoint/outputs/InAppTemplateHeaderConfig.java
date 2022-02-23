@@ -74,7 +74,6 @@ public final class InAppTemplateHeaderConfig {
             this.textColor = textColor;
             return this;
         }
-
         public InAppTemplateHeaderConfig build() {
             return new InAppTemplateHeaderConfig(alignment, header, textColor);
         }

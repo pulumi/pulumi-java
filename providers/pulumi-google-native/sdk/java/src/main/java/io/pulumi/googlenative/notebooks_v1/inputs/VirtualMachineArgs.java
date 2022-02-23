@@ -23,7 +23,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualMachineConfig")
-    private final @Nullable Input<VirtualMachineConfigArgs> virtualMachineConfig;
+      private final @Nullable Input<VirtualMachineConfigArgs> virtualMachineConfig;
 
     public Input<VirtualMachineConfigArgs> getVirtualMachineConfig() {
         return this.virtualMachineConfig == null ? Input.empty() : this.virtualMachineConfig;
@@ -66,7 +66,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualMachineConfig = Input.ofNullable(virtualMachineConfig);
             return this;
         }
-
         public VirtualMachineArgs build() {
             return new VirtualMachineArgs(virtualMachineConfig);
         }

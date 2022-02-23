@@ -62,7 +62,6 @@ public final class GetCapacityProviderResult {
             this.tags = tags;
             return this;
         }
-
         public GetCapacityProviderResult build() {
             return new GetCapacityProviderResult(autoScalingGroupProvider, tags);
         }

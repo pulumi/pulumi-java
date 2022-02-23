@@ -187,7 +187,6 @@ public final class SetVariableActivityResponse {
             this.variableName = variableName;
             return this;
         }
-
         public SetVariableActivityResponse build() {
             return new SetVariableActivityResponse(dependsOn, description, name, type, userProperties, value, variableName);
         }

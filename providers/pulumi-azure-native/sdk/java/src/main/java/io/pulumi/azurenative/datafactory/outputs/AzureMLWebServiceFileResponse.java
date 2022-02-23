@@ -75,7 +75,6 @@ public final class AzureMLWebServiceFileResponse {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public AzureMLWebServiceFileResponse build() {
             return new AzureMLWebServiceFileResponse(filePath, linkedServiceName);
         }

@@ -141,7 +141,6 @@ public final class BanditPolicyResponse {
             this.slackFactor = slackFactor;
             return this;
         }
-
         public BanditPolicyResponse build() {
             return new BanditPolicyResponse(delayEvaluation, evaluationInterval, policyType, slackAmount, slackFactor);
         }

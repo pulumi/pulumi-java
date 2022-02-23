@@ -298,7 +298,6 @@ public final class AzureBatchLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureBatchLinkedServiceResponse build() {
             return new AzureBatchLinkedServiceResponse(accessKey, accountName, annotations, batchUri, connectVia, credential, description, encryptedCredential, linkedServiceName, parameters, poolName, type);
         }

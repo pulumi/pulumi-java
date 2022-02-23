@@ -285,7 +285,6 @@ public final class VpnClientConnectionHealthDetailResponse {
             this.vpnUserName = Objects.requireNonNull(vpnUserName);
             return this;
         }
-
         public VpnClientConnectionHealthDetailResponse build() {
             return new VpnClientConnectionHealthDetailResponse(egressBytesTransferred, egressPacketsTransferred, ingressBytesTransferred, ingressPacketsTransferred, maxBandwidth, maxPacketsPerSecond, privateIpAddress, publicIpAddress, vpnConnectionDuration, vpnConnectionId, vpnConnectionTime, vpnUserName);
         }

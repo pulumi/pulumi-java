@@ -209,7 +209,6 @@ public final class GetPolicyResult {
             this.tags = tags;
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(arn, excludeMap, excludeResourceTags, id, includeMap, policyName, remediationEnabled, resourceTags, resourceType, resourceTypeList, resourcesCleanUp, securityServicePolicyData, tags);
         }

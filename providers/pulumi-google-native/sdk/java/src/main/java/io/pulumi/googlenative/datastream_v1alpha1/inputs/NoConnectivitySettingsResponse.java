@@ -34,7 +34,6 @@ public final class NoConnectivitySettingsResponse extends io.pulumi.resources.In
         public Builder(NoConnectivitySettingsResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public NoConnectivitySettingsResponse build() {
             return new NoConnectivitySettingsResponse();
         }

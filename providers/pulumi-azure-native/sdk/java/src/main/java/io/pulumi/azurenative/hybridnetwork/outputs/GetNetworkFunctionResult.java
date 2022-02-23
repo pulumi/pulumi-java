@@ -375,7 +375,6 @@ public final class GetNetworkFunctionResult {
             this.vendorProvisioningState = Objects.requireNonNull(vendorProvisioningState);
             return this;
         }
-
         public GetNetworkFunctionResult build() {
             return new GetNetworkFunctionResult(device, etag, id, location, managedApplication, managedApplicationParameters, name, networkFunctionUserConfigurations, provisioningState, serviceKey, skuName, skuType, tags, type, vendorName, vendorProvisioningState);
         }

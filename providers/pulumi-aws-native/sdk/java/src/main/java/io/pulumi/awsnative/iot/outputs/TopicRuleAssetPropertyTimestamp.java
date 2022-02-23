@@ -60,7 +60,6 @@ public final class TopicRuleAssetPropertyTimestamp {
             this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
             return this;
         }
-
         public TopicRuleAssetPropertyTimestamp build() {
             return new TopicRuleAssetPropertyTimestamp(offsetInNanos, timeInSeconds);
         }

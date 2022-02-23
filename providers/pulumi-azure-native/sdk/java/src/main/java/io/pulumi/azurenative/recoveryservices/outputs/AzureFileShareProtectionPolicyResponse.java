@@ -170,7 +170,6 @@ public final class AzureFileShareProtectionPolicyResponse {
             this.workLoadType = workLoadType;
             return this;
         }
-
         public AzureFileShareProtectionPolicyResponse build() {
             return new AzureFileShareProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy, schedulePolicy, timeZone, workLoadType);
         }

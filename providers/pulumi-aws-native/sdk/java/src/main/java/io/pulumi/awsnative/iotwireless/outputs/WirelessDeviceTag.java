@@ -60,7 +60,6 @@ public final class WirelessDeviceTag {
             this.value = value;
             return this;
         }
-
         public WirelessDeviceTag build() {
             return new WirelessDeviceTag(key, value);
         }

@@ -23,7 +23,7 @@ public final class PackagingConfigurationHlsPackage extends io.pulumi.resources.
     public static final PackagingConfigurationHlsPackage Empty = new PackagingConfigurationHlsPackage();
 
     @InputImport(name="encryption")
-    private final @Nullable PackagingConfigurationHlsEncryption encryption;
+        private final @Nullable PackagingConfigurationHlsEncryption encryption;
 
     public Optional<PackagingConfigurationHlsEncryption> getEncryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
@@ -34,14 +34,14 @@ public final class PackagingConfigurationHlsPackage extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hlsManifests", required=true)
-    private final List<PackagingConfigurationHlsManifest> hlsManifests;
+        private final List<PackagingConfigurationHlsManifest> hlsManifests;
 
     public List<PackagingConfigurationHlsManifest> getHlsManifests() {
         return this.hlsManifests;
     }
 
     @InputImport(name="segmentDurationSeconds")
-    private final @Nullable Integer segmentDurationSeconds;
+        private final @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
@@ -52,7 +52,7 @@ public final class PackagingConfigurationHlsPackage extends io.pulumi.resources.
      * 
      */
     @InputImport(name="useAudioRenditionGroup")
-    private final @Nullable Boolean useAudioRenditionGroup;
+        private final @Nullable Boolean useAudioRenditionGroup;
 
     public Optional<Boolean> getUseAudioRenditionGroup() {
         return this.useAudioRenditionGroup == null ? Optional.empty() : Optional.ofNullable(this.useAudioRenditionGroup);
@@ -121,7 +121,6 @@ public final class PackagingConfigurationHlsPackage extends io.pulumi.resources.
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }
-
         public PackagingConfigurationHlsPackage build() {
             return new PackagingConfigurationHlsPackage(encryption, hlsManifests, segmentDurationSeconds, useAudioRenditionGroup);
         }

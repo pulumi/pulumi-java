@@ -22,7 +22,7 @@ public final class DiscoveryNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analysisKind", required=true)
-    private final Input<DiscoveryNoteAnalysisKind> analysisKind;
+      private final Input<DiscoveryNoteAnalysisKind> analysisKind;
 
     public Input<DiscoveryNoteAnalysisKind> getAnalysisKind() {
         return this.analysisKind;
@@ -65,7 +65,6 @@ public final class DiscoveryNoteArgs extends io.pulumi.resources.ResourceArgs {
             this.analysisKind = Input.of(Objects.requireNonNull(analysisKind));
             return this;
         }
-
         public DiscoveryNoteArgs build() {
             return new DiscoveryNoteArgs(analysisKind);
         }

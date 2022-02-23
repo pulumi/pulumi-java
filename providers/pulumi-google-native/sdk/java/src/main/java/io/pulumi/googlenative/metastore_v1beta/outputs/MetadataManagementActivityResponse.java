@@ -76,7 +76,6 @@ public final class MetadataManagementActivityResponse {
             this.restores = Objects.requireNonNull(restores);
             return this;
         }
-
         public MetadataManagementActivityResponse build() {
             return new MetadataManagementActivityResponse(metadataExports, restores);
         }

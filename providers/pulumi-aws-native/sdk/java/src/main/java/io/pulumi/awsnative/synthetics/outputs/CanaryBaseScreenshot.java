@@ -76,7 +76,6 @@ public final class CanaryBaseScreenshot {
             this.screenshotName = Objects.requireNonNull(screenshotName);
             return this;
         }
-
         public CanaryBaseScreenshot build() {
             return new CanaryBaseScreenshot(ignoreCoordinates, screenshotName);
         }

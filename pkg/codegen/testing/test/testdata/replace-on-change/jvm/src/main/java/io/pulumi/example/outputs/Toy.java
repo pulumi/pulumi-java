@@ -74,7 +74,6 @@ public final class Toy {
             this.wear = wear;
             return this;
         }
-
         public Toy build() {
             return new Toy(associated, color, wear);
         }

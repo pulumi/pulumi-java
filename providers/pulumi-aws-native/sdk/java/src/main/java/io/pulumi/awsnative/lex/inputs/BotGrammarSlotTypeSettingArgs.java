@@ -19,7 +19,7 @@ public final class BotGrammarSlotTypeSettingArgs extends io.pulumi.resources.Res
     public static final BotGrammarSlotTypeSettingArgs Empty = new BotGrammarSlotTypeSettingArgs();
 
     @InputImport(name="source")
-    private final @Nullable Input<BotGrammarSlotTypeSourceArgs> source;
+        private final @Nullable Input<BotGrammarSlotTypeSourceArgs> source;
 
     public Input<BotGrammarSlotTypeSourceArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -62,7 +62,6 @@ public final class BotGrammarSlotTypeSettingArgs extends io.pulumi.resources.Res
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public BotGrammarSlotTypeSettingArgs build() {
             return new BotGrammarSlotTypeSettingArgs(source);
         }

@@ -18,7 +18,7 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="ipProtocol", required=true)
-    private final String ipProtocol;
+      private final String ipProtocol;
 
     public String getIpProtocol() {
         return this.ipProtocol;
@@ -29,7 +29,7 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="ports", required=true)
-    private final List<String> ports;
+      private final List<String> ports;
 
     public List<String> getPorts() {
         return this.ports;
@@ -78,7 +78,6 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigResponse extends io.pulu
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public FirewallPolicyRuleMatcherLayer4ConfigResponse build() {
             return new FirewallPolicyRuleMatcherLayer4ConfigResponse(ipProtocol, ports);
         }

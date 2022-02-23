@@ -26,7 +26,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="alsologtostderr")
-    private final @Nullable Input<Boolean> alsologtostderr;
+      private final @Nullable Input<Boolean> alsologtostderr;
 
     public Input<Boolean> getAlsologtostderr() {
         return this.alsologtostderr == null ? Input.empty() : this.alsologtostderr;
@@ -37,7 +37,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="baseTaskDir")
-    private final @Nullable Input<String> baseTaskDir;
+      private final @Nullable Input<String> baseTaskDir;
 
     public Input<String> getBaseTaskDir() {
         return this.baseTaskDir == null ? Input.empty() : this.baseTaskDir;
@@ -48,7 +48,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="baseUrl")
-    private final @Nullable Input<String> baseUrl;
+      private final @Nullable Input<String> baseUrl;
 
     public Input<String> getBaseUrl() {
         return this.baseUrl == null ? Input.empty() : this.baseUrl;
@@ -59,7 +59,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="commandlinesFileName")
-    private final @Nullable Input<String> commandlinesFileName;
+      private final @Nullable Input<String> commandlinesFileName;
 
     public Input<String> getCommandlinesFileName() {
         return this.commandlinesFileName == null ? Input.empty() : this.commandlinesFileName;
@@ -70,7 +70,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="continueOnException")
-    private final @Nullable Input<Boolean> continueOnException;
+      private final @Nullable Input<Boolean> continueOnException;
 
     public Input<Boolean> getContinueOnException() {
         return this.continueOnException == null ? Input.empty() : this.continueOnException;
@@ -81,7 +81,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataflowApiVersion")
-    private final @Nullable Input<String> dataflowApiVersion;
+      private final @Nullable Input<String> dataflowApiVersion;
 
     public Input<String> getDataflowApiVersion() {
         return this.dataflowApiVersion == null ? Input.empty() : this.dataflowApiVersion;
@@ -92,7 +92,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="harnessCommand")
-    private final @Nullable Input<String> harnessCommand;
+      private final @Nullable Input<String> harnessCommand;
 
     public Input<String> getHarnessCommand() {
         return this.harnessCommand == null ? Input.empty() : this.harnessCommand;
@@ -103,7 +103,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="languageHint")
-    private final @Nullable Input<String> languageHint;
+      private final @Nullable Input<String> languageHint;
 
     public Input<String> getLanguageHint() {
         return this.languageHint == null ? Input.empty() : this.languageHint;
@@ -114,7 +114,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logDir")
-    private final @Nullable Input<String> logDir;
+      private final @Nullable Input<String> logDir;
 
     public Input<String> getLogDir() {
         return this.logDir == null ? Input.empty() : this.logDir;
@@ -125,7 +125,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logToSerialconsole")
-    private final @Nullable Input<Boolean> logToSerialconsole;
+      private final @Nullable Input<Boolean> logToSerialconsole;
 
     public Input<Boolean> getLogToSerialconsole() {
         return this.logToSerialconsole == null ? Input.empty() : this.logToSerialconsole;
@@ -136,7 +136,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logUploadLocation")
-    private final @Nullable Input<String> logUploadLocation;
+      private final @Nullable Input<String> logUploadLocation;
 
     public Input<String> getLogUploadLocation() {
         return this.logUploadLocation == null ? Input.empty() : this.logUploadLocation;
@@ -147,7 +147,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="oauthScopes")
-    private final @Nullable Input<List<String>> oauthScopes;
+      private final @Nullable Input<List<String>> oauthScopes;
 
     public Input<List<String>> getOauthScopes() {
         return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
@@ -158,7 +158,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parallelWorkerSettings")
-    private final @Nullable Input<WorkerSettingsArgs> parallelWorkerSettings;
+      private final @Nullable Input<WorkerSettingsArgs> parallelWorkerSettings;
 
     public Input<WorkerSettingsArgs> getParallelWorkerSettings() {
         return this.parallelWorkerSettings == null ? Input.empty() : this.parallelWorkerSettings;
@@ -169,7 +169,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="streamingWorkerMainClass")
-    private final @Nullable Input<String> streamingWorkerMainClass;
+      private final @Nullable Input<String> streamingWorkerMainClass;
 
     public Input<String> getStreamingWorkerMainClass() {
         return this.streamingWorkerMainClass == null ? Input.empty() : this.streamingWorkerMainClass;
@@ -180,7 +180,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="taskGroup")
-    private final @Nullable Input<String> taskGroup;
+      private final @Nullable Input<String> taskGroup;
 
     public Input<String> getTaskGroup() {
         return this.taskGroup == null ? Input.empty() : this.taskGroup;
@@ -191,7 +191,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="taskUser")
-    private final @Nullable Input<String> taskUser;
+      private final @Nullable Input<String> taskUser;
 
     public Input<String> getTaskUser() {
         return this.taskUser == null ? Input.empty() : this.taskUser;
@@ -202,7 +202,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tempStoragePrefix")
-    private final @Nullable Input<String> tempStoragePrefix;
+      private final @Nullable Input<String> tempStoragePrefix;
 
     public Input<String> getTempStoragePrefix() {
         return this.tempStoragePrefix == null ? Input.empty() : this.tempStoragePrefix;
@@ -213,7 +213,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vmId")
-    private final @Nullable Input<String> vmId;
+      private final @Nullable Input<String> vmId;
 
     public Input<String> getVmId() {
         return this.vmId == null ? Input.empty() : this.vmId;
@@ -224,7 +224,7 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workflowFileName")
-    private final @Nullable Input<String> workflowFileName;
+      private final @Nullable Input<String> workflowFileName;
 
     public Input<String> getWorkflowFileName() {
         return this.workflowFileName == null ? Input.empty() : this.workflowFileName;
@@ -538,7 +538,6 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
             this.workflowFileName = Input.ofNullable(workflowFileName);
             return this;
         }
-
         public TaskRunnerSettingsArgs build() {
             return new TaskRunnerSettingsArgs(alsologtostderr, baseTaskDir, baseUrl, commandlinesFileName, continueOnException, dataflowApiVersion, harnessCommand, languageHint, logDir, logToSerialconsole, logUploadLocation, oauthScopes, parallelWorkerSettings, streamingWorkerMainClass, taskGroup, taskUser, tempStoragePrefix, vmId, workflowFileName);
         }

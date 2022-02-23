@@ -15,28 +15,28 @@ public final class GetInterconnectAttachmentIamPolicyArgs extends io.pulumi.reso
     public static final GetInterconnectAttachmentIamPolicyArgs Empty = new GetInterconnectAttachmentIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="resource", required=true)
-    private final String resource;
+      private final String resource;
 
     public String getResource() {
         return this.resource;
@@ -105,7 +105,6 @@ public final class GetInterconnectAttachmentIamPolicyArgs extends io.pulumi.reso
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public GetInterconnectAttachmentIamPolicyArgs build() {
             return new GetInterconnectAttachmentIamPolicyArgs(optionsRequestedPolicyVersion, project, region, resource);
         }

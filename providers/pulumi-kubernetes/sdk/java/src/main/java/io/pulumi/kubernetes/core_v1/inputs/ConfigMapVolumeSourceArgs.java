@@ -29,7 +29,7 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultMode")
-    private final @Nullable Input<Integer> defaultMode;
+        private final @Nullable Input<Integer> defaultMode;
 
     public Input<Integer> getDefaultMode() {
         return this.defaultMode == null ? Input.empty() : this.defaultMode;
@@ -40,7 +40,7 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<List<KeyToPathArgs>> items;
+        private final @Nullable Input<List<KeyToPathArgs>> items;
 
     public Input<List<KeyToPathArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
@@ -51,7 +51,7 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="optional")
-    private final @Nullable Input<Boolean> optional;
+        private final @Nullable Input<Boolean> optional;
 
     public Input<Boolean> getOptional() {
         return this.optional == null ? Input.empty() : this.optional;
@@ -151,7 +151,6 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
             this.optional = Input.ofNullable(optional);
             return this;
         }
-
         public ConfigMapVolumeSourceArgs build() {
             return new ConfigMapVolumeSourceArgs(defaultMode, items, name, optional);
         }

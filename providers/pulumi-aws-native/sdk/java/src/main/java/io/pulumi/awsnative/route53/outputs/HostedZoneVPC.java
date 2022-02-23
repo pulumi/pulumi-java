@@ -74,7 +74,6 @@ public final class HostedZoneVPC {
             this.vPCRegion = Objects.requireNonNull(vPCRegion);
             return this;
         }
-
         public HostedZoneVPC build() {
             return new HostedZoneVPC(vPCId, vPCRegion);
         }

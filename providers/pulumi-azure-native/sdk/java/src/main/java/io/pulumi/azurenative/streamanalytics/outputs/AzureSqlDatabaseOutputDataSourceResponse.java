@@ -162,7 +162,6 @@ public final class AzureSqlDatabaseOutputDataSourceResponse {
             this.user = user;
             return this;
         }
-
         public AzureSqlDatabaseOutputDataSourceResponse build() {
             return new AzureSqlDatabaseOutputDataSourceResponse(database, password, server, table, type, user);
         }

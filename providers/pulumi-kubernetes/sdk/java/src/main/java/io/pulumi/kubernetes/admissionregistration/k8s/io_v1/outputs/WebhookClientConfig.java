@@ -122,7 +122,6 @@ public final class WebhookClientConfig {
             this.url = url;
             return this;
         }
-
         public WebhookClientConfig build() {
             return new WebhookClientConfig(caBundle, service, url);
         }

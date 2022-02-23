@@ -23,7 +23,7 @@ public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="number")
-    private final @Nullable Input<Integer> number;
+      private final @Nullable Input<Integer> number;
 
     public Input<Integer> getNumber() {
         return this.number == null ? Input.empty() : this.number;
@@ -66,7 +66,6 @@ public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
             this.number = Input.ofNullable(number);
             return this;
         }
-
         public ToolExitCodeArgs build() {
             return new ToolExitCodeArgs(number);
         }

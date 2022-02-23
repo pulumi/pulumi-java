@@ -31,7 +31,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="computeName")
-    private final @Nullable Input<String> computeName;
+        private final @Nullable Input<String> computeName;
 
     public Input<String> getComputeName() {
         return this.computeName == null ? Input.empty() : this.computeName;
@@ -42,7 +42,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<IdentityArgs> identity;
+        private final @Nullable Input<IdentityArgs> identity;
 
     public Input<IdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -53,7 +53,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -64,7 +64,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Object> properties;
+        private final @Nullable Input<Object> properties;
 
     public Input<Object> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -75,7 +75,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+        private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -97,7 +97,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -108,7 +108,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -257,7 +257,6 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public MachineLearningComputeArgs build() {
             return new MachineLearningComputeArgs(computeName, identity, location, properties, resourceGroupName, sku, tags, workspaceName);
         }

@@ -160,7 +160,6 @@ public final class GetGroupsGroup {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGroupsGroup build() {
             return new GetGroupsGroup(createTime, description, displayName, groupKeys, initialGroupConfig, labels, name, parent, updateTime);
         }

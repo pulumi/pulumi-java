@@ -225,7 +225,6 @@ public final class GetProviderResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetProviderResult build() {
             return new GetProviderResult(attributeCondition, attributeMapping, aws, description, disabled, displayName, name, oidc, state);
         }

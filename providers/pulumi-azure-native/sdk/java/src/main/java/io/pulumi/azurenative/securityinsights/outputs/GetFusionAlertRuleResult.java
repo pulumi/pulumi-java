@@ -290,7 +290,6 @@ public final class GetFusionAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFusionAlertRuleResult build() {
             return new GetFusionAlertRuleResult(alertRuleTemplateName, description, displayName, enabled, etag, id, kind, lastModifiedUtc, name, severity, tactics, type);
         }

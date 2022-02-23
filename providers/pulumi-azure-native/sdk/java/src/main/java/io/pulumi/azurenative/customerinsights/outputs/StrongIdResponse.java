@@ -119,7 +119,6 @@ public final class StrongIdResponse {
             this.strongIdName = Objects.requireNonNull(strongIdName);
             return this;
         }
-
         public StrongIdResponse build() {
             return new StrongIdResponse(description, displayName, keyPropertyNames, strongIdName);
         }

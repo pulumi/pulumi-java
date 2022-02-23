@@ -74,7 +74,6 @@ public final class DomainValidationPropertiesResponse {
             this.validationToken = Objects.requireNonNull(validationToken);
             return this;
         }
-
         public DomainValidationPropertiesResponse build() {
             return new DomainValidationPropertiesResponse(expirationDate, validationToken);
         }

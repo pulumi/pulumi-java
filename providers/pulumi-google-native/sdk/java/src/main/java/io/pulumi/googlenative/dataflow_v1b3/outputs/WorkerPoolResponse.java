@@ -481,7 +481,6 @@ public final class WorkerPoolResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public WorkerPoolResponse build() {
             return new WorkerPoolResponse(autoscalingSettings, dataDisks, defaultPackageSet, diskSizeGb, diskSourceImage, diskType, ipConfiguration, kind, machineType, metadata, network, numThreadsPerWorker, numWorkers, onHostMaintenance, packages, poolArgs, sdkHarnessContainerImages, subnetwork, taskrunnerSettings, teardownPolicy, zone);
         }

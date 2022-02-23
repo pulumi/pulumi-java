@@ -75,7 +75,6 @@ public final class LogConfigCloudAuditOptionsResponse {
             this.logName = Objects.requireNonNull(logName);
             return this;
         }
-
         public LogConfigCloudAuditOptionsResponse build() {
             return new LogConfigCloudAuditOptionsResponse(authorizationLoggingOptions, logName);
         }

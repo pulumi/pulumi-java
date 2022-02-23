@@ -275,7 +275,6 @@ public final class SapHanaLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public SapHanaLinkedServiceResponse build() {
             return new SapHanaLinkedServiceResponse(annotations, authenticationType, connectVia, connectionString, description, encryptedCredential, parameters, password, server, type, userName);
         }

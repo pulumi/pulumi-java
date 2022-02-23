@@ -23,7 +23,7 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="drivers", required=true)
-    private final Input<List<CSINodeDriverArgs>> drivers;
+        private final Input<List<CSINodeDriverArgs>> drivers;
 
     public Input<List<CSINodeDriverArgs>> getDrivers() {
         return this.drivers;
@@ -66,7 +66,6 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.drivers = Input.of(Objects.requireNonNull(drivers));
             return this;
         }
-
         public CSINodeSpecArgs build() {
             return new CSINodeSpecArgs(drivers);
         }

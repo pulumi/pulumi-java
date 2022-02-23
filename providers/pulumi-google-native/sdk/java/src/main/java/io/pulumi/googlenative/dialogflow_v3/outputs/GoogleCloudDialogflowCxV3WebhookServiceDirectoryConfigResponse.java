@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse build() {
             return new GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse(genericWebService, service);
         }

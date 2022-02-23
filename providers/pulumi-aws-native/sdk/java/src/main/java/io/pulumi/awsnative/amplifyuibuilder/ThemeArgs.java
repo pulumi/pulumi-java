@@ -18,28 +18,28 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     public static final ThemeArgs Empty = new ThemeArgs();
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="overrides")
-    private final @Nullable Input<List<ThemeValuesArgs>> overrides;
+        private final @Nullable Input<List<ThemeValuesArgs>> overrides;
 
     public Input<List<ThemeValuesArgs>> getOverrides() {
         return this.overrides == null ? Input.empty() : this.overrides;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<ThemeTagsArgs> tags;
+        private final @Nullable Input<ThemeTagsArgs> tags;
 
     public Input<ThemeTagsArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="values", required=true)
-    private final Input<List<ThemeValuesArgs>> values;
+        private final Input<List<ThemeValuesArgs>> values;
 
     public Input<List<ThemeValuesArgs>> getValues() {
         return this.values;
@@ -128,7 +128,6 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public ThemeArgs build() {
             return new ThemeArgs(name, overrides, tags, values);
         }

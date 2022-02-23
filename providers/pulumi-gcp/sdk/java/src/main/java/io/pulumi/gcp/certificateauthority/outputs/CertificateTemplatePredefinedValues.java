@@ -144,7 +144,6 @@ public final class CertificateTemplatePredefinedValues {
             this.policyIds = policyIds;
             return this;
         }
-
         public CertificateTemplatePredefinedValues build() {
             return new CertificateTemplatePredefinedValues(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

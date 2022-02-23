@@ -97,7 +97,6 @@ public final class IotHubSettingsResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public IotHubSettingsResponse build() {
             return new IotHubSettingsResponse(eventHubConnectionString, ioTHubConnectionString, resourceId);
         }

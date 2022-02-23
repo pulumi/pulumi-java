@@ -18,14 +18,14 @@ public final class DatasetTagArgs extends io.pulumi.resources.ResourceArgs {
     public static final DatasetTagArgs Empty = new DatasetTagArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -84,7 +84,6 @@ public final class DatasetTagArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public DatasetTagArgs build() {
             return new DatasetTagArgs(key, value);
         }

@@ -203,7 +203,6 @@ public final class GetSecretResult {
             this.value = value;
             return this;
         }
-
         public GetSecretResult build() {
             return new GetSecretResult(id, location, name, provisioningState, tags, type, uniqueIdentifier, value);
         }

@@ -25,7 +25,7 @@ public final class TrafficWeightResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="latestRevision")
-    private final @Nullable Boolean latestRevision;
+        private final @Nullable Boolean latestRevision;
 
     public Optional<Boolean> getLatestRevision() {
         return this.latestRevision == null ? Optional.empty() : Optional.ofNullable(this.latestRevision);
@@ -36,7 +36,7 @@ public final class TrafficWeightResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="revisionName")
-    private final @Nullable String revisionName;
+        private final @Nullable String revisionName;
 
     public Optional<String> getRevisionName() {
         return this.revisionName == null ? Optional.empty() : Optional.ofNullable(this.revisionName);
@@ -47,7 +47,7 @@ public final class TrafficWeightResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Integer weight;
+        private final @Nullable Integer weight;
 
     public Optional<Integer> getWeight() {
         return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
@@ -106,7 +106,6 @@ public final class TrafficWeightResponse extends io.pulumi.resources.InvokeArgs 
             this.weight = weight;
             return this;
         }
-
         public TrafficWeightResponse build() {
             return new TrafficWeightResponse(latestRevision, revisionName, weight);
         }

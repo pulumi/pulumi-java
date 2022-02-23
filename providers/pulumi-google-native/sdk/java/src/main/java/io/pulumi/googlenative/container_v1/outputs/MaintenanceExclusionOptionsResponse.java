@@ -52,7 +52,6 @@ public final class MaintenanceExclusionOptionsResponse {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public MaintenanceExclusionOptionsResponse build() {
             return new MaintenanceExclusionOptionsResponse(scope);
         }

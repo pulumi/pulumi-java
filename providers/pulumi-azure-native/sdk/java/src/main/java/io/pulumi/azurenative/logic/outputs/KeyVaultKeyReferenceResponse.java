@@ -98,7 +98,6 @@ public final class KeyVaultKeyReferenceResponse {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public KeyVaultKeyReferenceResponse build() {
             return new KeyVaultKeyReferenceResponse(keyName, keyVault, keyVersion);
         }

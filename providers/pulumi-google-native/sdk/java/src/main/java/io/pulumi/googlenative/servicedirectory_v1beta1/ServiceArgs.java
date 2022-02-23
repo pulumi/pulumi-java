@@ -16,7 +16,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServiceArgs Empty = new ServiceArgs();
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -27,7 +27,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -38,28 +38,28 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="namespaceId", required=true)
-    private final Input<String> namespaceId;
+      private final Input<String> namespaceId;
 
     public Input<String> getNamespaceId() {
         return this.namespaceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="serviceId", required=true)
-    private final Input<String> serviceId;
+      private final Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId;
@@ -178,7 +178,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceId = Input.of(Objects.requireNonNull(serviceId));
             return this;
         }
-
         public ServiceArgs build() {
             return new ServiceArgs(location, metadata, name, namespaceId, project, serviceId);
         }

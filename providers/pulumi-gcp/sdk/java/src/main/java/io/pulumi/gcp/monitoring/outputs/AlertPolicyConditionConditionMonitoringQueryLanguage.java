@@ -142,7 +142,6 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
             this.trigger = trigger;
             return this;
         }
-
         public AlertPolicyConditionConditionMonitoringQueryLanguage build() {
             return new AlertPolicyConditionConditionMonitoringQueryLanguage(duration, query, trigger);
         }

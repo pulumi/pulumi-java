@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
             this.enableInsightsExport = Objects.requireNonNull(enableInsightsExport);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse(enableInsightsExport);
         }

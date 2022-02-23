@@ -74,7 +74,6 @@ public final class SkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(family, name);
         }

@@ -449,7 +449,6 @@ public final class GetImageResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetImageResult build() {
             return new GetImageResult(archiveSizeBytes, creationTimestamp, description, diskSizeGb, family, filter, id, imageEncryptionKeySha256, imageId, labelFingerprint, labels, licenses, name, project, selfLink, sourceDisk, sourceDiskEncryptionKeySha256, sourceDiskId, sourceImageId, status);
         }

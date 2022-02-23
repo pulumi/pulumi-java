@@ -118,7 +118,6 @@ public final class ExpressRouteLinkMacSecConfigResponse {
             this.sciState = sciState;
             return this;
         }
-
         public ExpressRouteLinkMacSecConfigResponse build() {
             return new ExpressRouteLinkMacSecConfigResponse(cakSecretIdentifier, cipher, cknSecretIdentifier, sciState);
         }

@@ -52,7 +52,6 @@ public final class PodSecurityPolicyConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public PodSecurityPolicyConfigResponse build() {
             return new PodSecurityPolicyConfigResponse(enabled);
         }

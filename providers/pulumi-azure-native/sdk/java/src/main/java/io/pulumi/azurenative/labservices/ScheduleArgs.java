@@ -20,7 +20,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-    private final Input<String> labName;
+        private final Input<String> labName;
 
     public Input<String> getLabName() {
         return this.labName;
@@ -31,7 +31,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notes")
-    private final @Nullable Input<String> notes;
+        private final @Nullable Input<String> notes;
 
     public Input<String> getNotes() {
         return this.notes == null ? Input.empty() : this.notes;
@@ -42,7 +42,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recurrencePattern")
-    private final @Nullable Input<RecurrencePatternArgs> recurrencePattern;
+        private final @Nullable Input<RecurrencePatternArgs> recurrencePattern;
 
     public Input<RecurrencePatternArgs> getRecurrencePattern() {
         return this.recurrencePattern == null ? Input.empty() : this.recurrencePattern;
@@ -53,7 +53,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleName")
-    private final @Nullable Input<String> scheduleName;
+        private final @Nullable Input<String> scheduleName;
 
     public Input<String> getScheduleName() {
         return this.scheduleName == null ? Input.empty() : this.scheduleName;
@@ -75,7 +75,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startAt")
-    private final @Nullable Input<String> startAt;
+        private final @Nullable Input<String> startAt;
 
     public Input<String> getStartAt() {
         return this.startAt == null ? Input.empty() : this.startAt;
@@ -86,7 +86,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stopAt", required=true)
-    private final Input<String> stopAt;
+        private final Input<String> stopAt;
 
     public Input<String> getStopAt() {
         return this.stopAt;
@@ -97,7 +97,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZoneId", required=true)
-    private final Input<String> timeZoneId;
+        private final Input<String> timeZoneId;
 
     public Input<String> getTimeZoneId() {
         return this.timeZoneId;
@@ -246,7 +246,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.timeZoneId = Input.of(Objects.requireNonNull(timeZoneId));
             return this;
         }
-
         public ScheduleArgs build() {
             return new ScheduleArgs(labName, notes, recurrencePattern, resourceGroupName, scheduleName, startAt, stopAt, timeZoneId);
         }

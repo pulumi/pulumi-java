@@ -73,7 +73,6 @@ public final class DiskIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public DiskIamMemberCondition build() {
             return new DiskIamMemberCondition(description, expression, title);
         }

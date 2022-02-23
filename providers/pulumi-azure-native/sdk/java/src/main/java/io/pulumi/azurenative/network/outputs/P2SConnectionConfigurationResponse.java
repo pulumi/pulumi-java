@@ -184,7 +184,6 @@ public final class P2SConnectionConfigurationResponse {
             this.vpnClientAddressPool = vpnClientAddressPool;
             return this;
         }
-
         public P2SConnectionConfigurationResponse build() {
             return new P2SConnectionConfigurationResponse(enableInternetSecurity, etag, id, name, provisioningState, routingConfiguration, vpnClientAddressPool);
         }

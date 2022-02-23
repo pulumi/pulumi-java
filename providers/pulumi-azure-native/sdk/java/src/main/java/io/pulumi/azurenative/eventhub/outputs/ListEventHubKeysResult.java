@@ -179,7 +179,6 @@ public final class ListEventHubKeysResult {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public ListEventHubKeysResult build() {
             return new ListEventHubKeysResult(aliasPrimaryConnectionString, aliasSecondaryConnectionString, keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

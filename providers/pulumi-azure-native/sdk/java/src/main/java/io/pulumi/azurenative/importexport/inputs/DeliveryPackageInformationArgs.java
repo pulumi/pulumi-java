@@ -24,7 +24,7 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="carrierName", required=true)
-    private final Input<String> carrierName;
+        private final Input<String> carrierName;
 
     public Input<String> getCarrierName() {
         return this.carrierName;
@@ -35,7 +35,7 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="driveCount")
-    private final @Nullable Input<Double> driveCount;
+        private final @Nullable Input<Double> driveCount;
 
     public Input<Double> getDriveCount() {
         return this.driveCount == null ? Input.empty() : this.driveCount;
@@ -46,7 +46,7 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="shipDate")
-    private final @Nullable Input<String> shipDate;
+        private final @Nullable Input<String> shipDate;
 
     public Input<String> getShipDate() {
         return this.shipDate == null ? Input.empty() : this.shipDate;
@@ -57,7 +57,7 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="trackingNumber", required=true)
-    private final Input<String> trackingNumber;
+        private final Input<String> trackingNumber;
 
     public Input<String> getTrackingNumber() {
         return this.trackingNumber;
@@ -146,7 +146,6 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
             this.trackingNumber = Input.of(Objects.requireNonNull(trackingNumber));
             return this;
         }
-
         public DeliveryPackageInformationArgs build() {
             return new DeliveryPackageInformationArgs(carrierName, driveCount, shipDate, trackingNumber);
         }

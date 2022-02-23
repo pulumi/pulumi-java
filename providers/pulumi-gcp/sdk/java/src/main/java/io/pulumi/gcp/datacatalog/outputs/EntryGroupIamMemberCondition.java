@@ -73,7 +73,6 @@ public final class EntryGroupIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public EntryGroupIamMemberCondition build() {
             return new EntryGroupIamMemberCondition(description, expression, title);
         }

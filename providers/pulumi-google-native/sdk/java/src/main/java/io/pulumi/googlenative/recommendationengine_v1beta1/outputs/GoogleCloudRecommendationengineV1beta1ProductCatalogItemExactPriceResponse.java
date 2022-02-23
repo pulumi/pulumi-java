@@ -74,7 +74,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
             this.originalPrice = Objects.requireNonNull(originalPrice);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse(displayPrice, originalPrice);
         }

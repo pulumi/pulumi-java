@@ -95,7 +95,6 @@ public final class PrivatePoolResponse {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }
-
         public PrivatePoolResponse build() {
             return new PrivatePoolResponse(artifactStorage, serviceAccount, workerPool);
         }

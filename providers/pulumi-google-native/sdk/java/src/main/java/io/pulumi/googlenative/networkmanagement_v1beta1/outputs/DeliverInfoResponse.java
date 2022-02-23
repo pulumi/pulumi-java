@@ -74,7 +74,6 @@ public final class DeliverInfoResponse {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public DeliverInfoResponse build() {
             return new DeliverInfoResponse(resourceUri, target);
         }

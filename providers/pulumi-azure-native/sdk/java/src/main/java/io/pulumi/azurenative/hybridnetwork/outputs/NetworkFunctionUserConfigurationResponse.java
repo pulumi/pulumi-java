@@ -122,7 +122,6 @@ public final class NetworkFunctionUserConfigurationResponse {
             this.userDataParameters = userDataParameters;
             return this;
         }
-
         public NetworkFunctionUserConfigurationResponse build() {
             return new NetworkFunctionUserConfigurationResponse(networkInterfaces, osProfile, roleName, userDataParameters);
         }

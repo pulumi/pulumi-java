@@ -77,7 +77,6 @@ public final class IngressClassSpec {
             this.parameters = parameters;
             return this;
         }
-
         public IngressClassSpec build() {
             return new IngressClassSpec(controller, parameters);
         }

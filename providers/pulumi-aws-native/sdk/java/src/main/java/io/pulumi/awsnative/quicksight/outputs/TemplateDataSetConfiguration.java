@@ -92,7 +92,6 @@ public final class TemplateDataSetConfiguration {
             this.placeholder = placeholder;
             return this;
         }
-
         public TemplateDataSetConfiguration build() {
             return new TemplateDataSetConfiguration(columnGroupSchemaList, dataSetSchema, placeholder);
         }

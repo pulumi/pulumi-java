@@ -19,7 +19,7 @@ public final class DatadogLogsAgentResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="transport")
-    private final @Nullable String transport;
+        private final @Nullable String transport;
 
     public Optional<String> getTransport() {
         return this.transport == null ? Optional.empty() : Optional.ofNullable(this.transport);
@@ -57,7 +57,6 @@ public final class DatadogLogsAgentResponse extends io.pulumi.resources.InvokeAr
             this.transport = transport;
             return this;
         }
-
         public DatadogLogsAgentResponse build() {
             return new DatadogLogsAgentResponse(transport);
         }

@@ -45,7 +45,6 @@ public final class ByProductsResponse {
             this.customValues = Objects.requireNonNull(customValues);
             return this;
         }
-
         public ByProductsResponse build() {
             return new ByProductsResponse(customValues);
         }

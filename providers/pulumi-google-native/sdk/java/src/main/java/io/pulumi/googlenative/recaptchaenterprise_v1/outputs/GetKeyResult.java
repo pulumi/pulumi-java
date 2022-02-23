@@ -227,7 +227,6 @@ public final class GetKeyResult {
             this.webSettings = Objects.requireNonNull(webSettings);
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(androidSettings, createTime, displayName, iosSettings, labels, name, testingOptions, wafSettings, webSettings);
         }

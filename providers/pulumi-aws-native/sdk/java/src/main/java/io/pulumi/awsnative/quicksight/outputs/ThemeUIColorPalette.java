@@ -390,7 +390,6 @@ public final class ThemeUIColorPalette {
             this.warningForeground = warningForeground;
             return this;
         }
-
         public ThemeUIColorPalette build() {
             return new ThemeUIColorPalette(accent, accentForeground, danger, dangerForeground, dimension, dimensionForeground, measure, measureForeground, primaryBackground, primaryForeground, secondaryBackground, secondaryForeground, success, successForeground, warning, warningForeground);
         }

@@ -24,7 +24,7 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auth")
-    private final @Nullable Input<IstioConfigAuth> auth;
+      private final @Nullable Input<IstioConfigAuth> auth;
 
     public Input<IstioConfigAuth> getAuth() {
         return this.auth == null ? Input.empty() : this.auth;
@@ -35,7 +35,7 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -94,7 +94,6 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
-
         public IstioConfigArgs build() {
             return new IstioConfigArgs(auth, disabled);
         }

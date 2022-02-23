@@ -13,14 +13,14 @@ public final class PipelineDatastore extends io.pulumi.resources.InvokeArgs {
     public static final PipelineDatastore Empty = new PipelineDatastore();
 
     @InputImport(name="datastoreName", required=true)
-    private final String datastoreName;
+        private final String datastoreName;
 
     public String getDatastoreName() {
         return this.datastoreName;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -69,7 +69,6 @@ public final class PipelineDatastore extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PipelineDatastore build() {
             return new PipelineDatastore(datastoreName, name);
         }

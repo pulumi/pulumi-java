@@ -266,7 +266,6 @@ public final class GetWorkerPoolResult {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
-
         public GetWorkerPoolResult build() {
             return new GetWorkerPoolResult(annotations, createTime, deleteTime, displayName, etag, name, networkConfig, state, uid, updateTime, workerConfig);
         }

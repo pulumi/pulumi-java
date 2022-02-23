@@ -74,7 +74,6 @@ public final class GetFluidRelayServerKeysResult {
             this.key2 = Objects.requireNonNull(key2);
             return this;
         }
-
         public GetFluidRelayServerKeysResult build() {
             return new GetFluidRelayServerKeysResult(key1, key2);
         }

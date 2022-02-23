@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse(allowPlaybackInterruption, text);
         }

@@ -23,14 +23,14 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clientCertificate")
-    private final @Nullable Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate;
+      private final @Nullable Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate;
 
     public Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> getClientCertificate() {
         return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
     }
 
     @InputImport(name="clientTlsPolicyId", required=true)
-    private final Input<String> clientTlsPolicyId;
+      private final Input<String> clientTlsPolicyId;
 
     public Input<String> getClientTlsPolicyId() {
         return this.clientTlsPolicyId;
@@ -41,7 +41,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -52,14 +52,14 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -70,14 +70,14 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -88,7 +88,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serverValidationCa")
-    private final @Nullable Input<List<ValidationCAArgs>> serverValidationCa;
+      private final @Nullable Input<List<ValidationCAArgs>> serverValidationCa;
 
     public Input<List<ValidationCAArgs>> getServerValidationCa() {
         return this.serverValidationCa == null ? Input.empty() : this.serverValidationCa;
@@ -99,7 +99,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sni")
-    private final @Nullable Input<String> sni;
+      private final @Nullable Input<String> sni;
 
     public Input<String> getSni() {
         return this.sni == null ? Input.empty() : this.sni;
@@ -263,7 +263,6 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.sni = Input.ofNullable(sni);
             return this;
         }
-
         public ClientTlsPolicyArgs build() {
             return new ClientTlsPolicyArgs(clientCertificate, clientTlsPolicyId, description, labels, location, name, project, serverValidationCa, sni);
         }

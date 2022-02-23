@@ -99,7 +99,6 @@ public final class ConnectionMonitorTcpConfigurationResponse {
             this.port = port;
             return this;
         }
-
         public ConnectionMonitorTcpConfigurationResponse build() {
             return new ConnectionMonitorTcpConfigurationResponse(destinationPortBehavior, disableTraceRoute, port);
         }

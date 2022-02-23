@@ -61,7 +61,6 @@ public final class DatastoreFileFormatConfiguration {
             this.parquetConfiguration = parquetConfiguration;
             return this;
         }
-
         public DatastoreFileFormatConfiguration build() {
             return new DatastoreFileFormatConfiguration(jsonConfiguration, parquetConfiguration);
         }

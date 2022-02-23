@@ -23,7 +23,7 @@ public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enableConfidentialCompute")
-    private final @Nullable Input<Boolean> enableConfidentialCompute;
+      private final @Nullable Input<Boolean> enableConfidentialCompute;
 
     public Input<Boolean> getEnableConfidentialCompute() {
         return this.enableConfidentialCompute == null ? Input.empty() : this.enableConfidentialCompute;
@@ -66,7 +66,6 @@ public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.Re
             this.enableConfidentialCompute = Input.ofNullable(enableConfidentialCompute);
             return this;
         }
-
         public ConfidentialInstanceConfigArgs build() {
             return new ConfidentialInstanceConfigArgs(enableConfidentialCompute);
         }

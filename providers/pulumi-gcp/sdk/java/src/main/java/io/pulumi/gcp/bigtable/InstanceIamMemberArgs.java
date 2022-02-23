@@ -16,7 +16,7 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
     public static final InstanceIamMemberArgs Empty = new InstanceIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<InstanceIamMemberConditionArgs> condition;
+        private final @Nullable Input<InstanceIamMemberConditionArgs> condition;
 
     public Input<InstanceIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instance", required=true)
-    private final Input<String> instance;
+        private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -46,7 +46,7 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -59,7 +59,7 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -163,7 +163,6 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public InstanceIamMemberArgs build() {
             return new InstanceIamMemberArgs(condition, instance, member, project, role);
         }

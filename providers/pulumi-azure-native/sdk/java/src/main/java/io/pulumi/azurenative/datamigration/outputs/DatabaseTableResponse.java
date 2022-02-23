@@ -75,7 +75,6 @@ public final class DatabaseTableResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DatabaseTableResponse build() {
             return new DatabaseTableResponse(hasRows, name);
         }

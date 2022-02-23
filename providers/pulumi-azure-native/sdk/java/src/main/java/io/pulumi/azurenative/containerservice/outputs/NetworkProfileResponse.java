@@ -97,7 +97,6 @@ public final class NetworkProfileResponse {
             this.vnetId = vnetId;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(peerVnetId, vnetCidr, vnetId);
         }

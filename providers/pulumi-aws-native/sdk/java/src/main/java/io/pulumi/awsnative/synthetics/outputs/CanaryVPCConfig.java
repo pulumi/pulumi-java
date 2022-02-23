@@ -74,7 +74,6 @@ public final class CanaryVPCConfig {
             this.vpcId = vpcId;
             return this;
         }
-
         public CanaryVPCConfig build() {
             return new CanaryVPCConfig(securityGroupIds, subnetIds, vpcId);
         }

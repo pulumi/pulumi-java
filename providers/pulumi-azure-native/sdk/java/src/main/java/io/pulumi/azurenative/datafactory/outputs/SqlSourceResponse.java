@@ -313,7 +313,6 @@ public final class SqlSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SqlSourceResponse build() {
             return new SqlSourceResponse(additionalColumns, disableMetricsCollection, isolationLevel, maxConcurrentConnections, partitionOption, partitionSettings, queryTimeout, sourceRetryCount, sourceRetryWait, sqlReaderQuery, sqlReaderStoredProcedureName, storedProcedureParameters, type);
         }

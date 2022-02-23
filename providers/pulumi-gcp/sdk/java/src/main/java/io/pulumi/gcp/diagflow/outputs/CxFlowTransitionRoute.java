@@ -173,7 +173,6 @@ public final class CxFlowTransitionRoute {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }
-
         public CxFlowTransitionRoute build() {
             return new CxFlowTransitionRoute(condition, intent, name, targetFlow, targetPage, triggerFulfillment);
         }

@@ -118,7 +118,6 @@ public final class MountTargetPropertiesResponse {
             this.smbServerFqdn = smbServerFqdn;
             return this;
         }
-
         public MountTargetPropertiesResponse build() {
             return new MountTargetPropertiesResponse(fileSystemId, ipAddress, mountTargetId, smbServerFqdn);
         }

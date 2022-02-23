@@ -150,7 +150,6 @@ public final class GetDefaultServiceAccountResult {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
-
         public GetDefaultServiceAccountResult build() {
             return new GetDefaultServiceAccountResult(displayName, email, id, name, project, uniqueId);
         }

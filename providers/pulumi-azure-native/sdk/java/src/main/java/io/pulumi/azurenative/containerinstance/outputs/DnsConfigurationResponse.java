@@ -98,7 +98,6 @@ public final class DnsConfigurationResponse {
             this.searchDomains = searchDomains;
             return this;
         }
-
         public DnsConfigurationResponse build() {
             return new DnsConfigurationResponse(nameServers, options, searchDomains);
         }

@@ -374,7 +374,6 @@ public final class InstanceTemplateDisk {
             this.type = type;
             return this;
         }
-
         public InstanceTemplateDisk build() {
             return new InstanceTemplateDisk(autoDelete, boot, deviceName, diskEncryptionKey, diskName, diskSizeGb, diskType, $interface, labels, mode, resourcePolicies, source, sourceImage, type);
         }

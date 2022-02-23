@@ -74,7 +74,6 @@ public final class LocationSMBTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public LocationSMBTag build() {
             return new LocationSMBTag(key, value);
         }

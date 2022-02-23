@@ -91,7 +91,6 @@ public final class WorkflowStepCopyStepDetailsProperties {
             this.overwriteExisting = overwriteExisting;
             return this;
         }
-
         public WorkflowStepCopyStepDetailsProperties build() {
             return new WorkflowStepCopyStepDetailsProperties(destinationFileLocation, name, overwriteExisting);
         }

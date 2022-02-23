@@ -52,7 +52,6 @@ public final class SubResourceReadOnlyResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public SubResourceReadOnlyResponse build() {
             return new SubResourceReadOnlyResponse(id);
         }

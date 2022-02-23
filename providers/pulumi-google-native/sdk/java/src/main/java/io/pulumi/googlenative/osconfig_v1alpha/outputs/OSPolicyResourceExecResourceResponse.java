@@ -74,7 +74,6 @@ public final class OSPolicyResourceExecResourceResponse {
             this.validate = Objects.requireNonNull(validate);
             return this;
         }
-
         public OSPolicyResourceExecResourceResponse build() {
             return new OSPolicyResourceExecResourceResponse(enforce, validate);
         }

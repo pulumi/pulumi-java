@@ -24,7 +24,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cpeUri", required=true)
-    private final String cpeUri;
+      private final String cpeUri;
 
     public String getCpeUri() {
         return this.cpeUri;
@@ -35,7 +35,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -46,7 +46,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fixedLocation", required=true)
-    private final VulnerabilityLocationResponse fixedLocation;
+      private final VulnerabilityLocationResponse fixedLocation;
 
     public VulnerabilityLocationResponse getFixedLocation() {
         return this.fixedLocation;
@@ -57,7 +57,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isObsolete", required=true)
-    private final Boolean isObsolete;
+      private final Boolean isObsolete;
 
     public Boolean getIsObsolete() {
         return this.isObsolete;
@@ -68,7 +68,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxAffectedVersion", required=true)
-    private final VersionResponse maxAffectedVersion;
+      private final VersionResponse maxAffectedVersion;
 
     public VersionResponse getMaxAffectedVersion() {
         return this.maxAffectedVersion;
@@ -79,7 +79,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minAffectedVersion", required=true)
-    private final VersionResponse minAffectedVersion;
+      private final VersionResponse minAffectedVersion;
 
     public VersionResponse getMinAffectedVersion() {
         return this.minAffectedVersion;
@@ -90,7 +90,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="package", required=true)
-    private final String $package;
+      private final String $package;
 
     public String get$package() {
         return this.$package;
@@ -101,7 +101,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="packageType", required=true)
-    private final String packageType;
+      private final String packageType;
 
     public String getPackageType() {
         return this.packageType;
@@ -112,7 +112,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="severityName", required=true)
-    private final String severityName;
+      private final String severityName;
 
     public String getSeverityName() {
         return this.severityName;
@@ -123,7 +123,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -134,7 +134,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vendor", required=true)
-    private final String vendor;
+      private final String vendor;
 
     public String getVendor() {
         return this.vendor;
@@ -273,7 +273,6 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
             this.vendor = Objects.requireNonNull(vendor);
             return this;
         }
-
         public DetailResponse build() {
             return new DetailResponse(cpeUri, description, fixedLocation, isObsolete, maxAffectedVersion, minAffectedVersion, $package, packageType, severityName, source, vendor);
         }

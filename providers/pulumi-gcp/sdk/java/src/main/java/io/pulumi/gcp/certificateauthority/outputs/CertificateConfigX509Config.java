@@ -154,7 +154,6 @@ public final class CertificateConfigX509Config {
             this.policyIds = policyIds;
             return this;
         }
-
         public CertificateConfigX509Config build() {
             return new CertificateConfigX509Config(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

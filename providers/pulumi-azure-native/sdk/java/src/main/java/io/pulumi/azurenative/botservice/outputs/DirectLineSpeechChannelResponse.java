@@ -142,7 +142,6 @@ public final class DirectLineSpeechChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public DirectLineSpeechChannelResponse build() {
             return new DirectLineSpeechChannelResponse(channelName, etag, location, properties, provisioningState);
         }

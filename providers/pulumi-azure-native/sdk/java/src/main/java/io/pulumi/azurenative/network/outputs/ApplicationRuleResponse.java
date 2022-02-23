@@ -291,7 +291,6 @@ public final class ApplicationRuleResponse {
             this.webCategories = webCategories;
             return this;
         }
-
         public ApplicationRuleResponse build() {
             return new ApplicationRuleResponse(description, destinationAddresses, fqdnTags, name, protocols, ruleType, sourceAddresses, sourceIpGroups, targetFqdns, targetUrls, terminateTLS, webCategories);
         }

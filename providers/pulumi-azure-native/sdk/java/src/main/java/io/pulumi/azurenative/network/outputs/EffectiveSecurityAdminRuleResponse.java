@@ -440,7 +440,6 @@ public final class EffectiveSecurityAdminRuleResponse {
             this.sources = sources;
             return this;
         }
-
         public EffectiveSecurityAdminRuleResponse build() {
             return new EffectiveSecurityAdminRuleResponse(access, configurationDescription, configurationDisplayName, description, destinationPortRanges, destinations, direction, displayName, id, kind, priority, protocol, provisioningState, ruleCollectionAppliesToGroups, ruleCollectionDescription, ruleCollectionDisplayName, ruleGroups, sourcePortRanges, sources);
         }

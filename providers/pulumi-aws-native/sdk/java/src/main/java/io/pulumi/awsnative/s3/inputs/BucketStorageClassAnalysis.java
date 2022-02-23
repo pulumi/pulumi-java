@@ -19,7 +19,7 @@ public final class BucketStorageClassAnalysis extends io.pulumi.resources.Invoke
     public static final BucketStorageClassAnalysis Empty = new BucketStorageClassAnalysis();
 
     @InputImport(name="dataExport")
-    private final @Nullable BucketDataExport dataExport;
+        private final @Nullable BucketDataExport dataExport;
 
     public Optional<BucketDataExport> getDataExport() {
         return this.dataExport == null ? Optional.empty() : Optional.ofNullable(this.dataExport);
@@ -57,7 +57,6 @@ public final class BucketStorageClassAnalysis extends io.pulumi.resources.Invoke
             this.dataExport = dataExport;
             return this;
         }
-
         public BucketStorageClassAnalysis build() {
             return new BucketStorageClassAnalysis(dataExport);
         }

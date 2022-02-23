@@ -44,7 +44,6 @@ public final class DatasetDeltaTimeSessionWindowConfiguration {
             this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes);
             return this;
         }
-
         public DatasetDeltaTimeSessionWindowConfiguration build() {
             return new DatasetDeltaTimeSessionWindowConfiguration(timeoutInMinutes);
         }

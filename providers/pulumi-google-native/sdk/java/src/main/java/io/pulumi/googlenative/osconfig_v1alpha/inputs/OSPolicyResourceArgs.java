@@ -27,7 +27,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="exec")
-    private final @Nullable Input<OSPolicyResourceExecResourceArgs> exec;
+      private final @Nullable Input<OSPolicyResourceExecResourceArgs> exec;
 
     public Input<OSPolicyResourceExecResourceArgs> getExec() {
         return this.exec == null ? Input.empty() : this.exec;
@@ -38,7 +38,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<OSPolicyResourceFileResourceArgs> file;
+      private final @Nullable Input<OSPolicyResourceFileResourceArgs> file;
 
     public Input<OSPolicyResourceFileResourceArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -49,7 +49,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -60,7 +60,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pkg")
-    private final @Nullable Input<OSPolicyResourcePackageResourceArgs> pkg;
+      private final @Nullable Input<OSPolicyResourcePackageResourceArgs> pkg;
 
     public Input<OSPolicyResourcePackageResourceArgs> getPkg() {
         return this.pkg == null ? Input.empty() : this.pkg;
@@ -71,7 +71,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="repository")
-    private final @Nullable Input<OSPolicyResourceRepositoryResourceArgs> repository;
+      private final @Nullable Input<OSPolicyResourceRepositoryResourceArgs> repository;
 
     public Input<OSPolicyResourceRepositoryResourceArgs> getRepository() {
         return this.repository == null ? Input.empty() : this.repository;
@@ -175,7 +175,6 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
             this.repository = Input.ofNullable(repository);
             return this;
         }
-
         public OSPolicyResourceArgs build() {
             return new OSPolicyResourceArgs(exec, file, id, pkg, repository);
         }

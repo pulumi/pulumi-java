@@ -74,7 +74,6 @@ public final class NodePoolNetworkConfig {
             this.podRange = Objects.requireNonNull(podRange);
             return this;
         }
-
         public NodePoolNetworkConfig build() {
             return new NodePoolNetworkConfig(createPodRange, podIpv4CidrBlock, podRange);
         }

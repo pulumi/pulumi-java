@@ -20,7 +20,7 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final Input<String> automationAccountName;
+        private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -31,7 +31,7 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable Input<RunAsCredentialAssociationPropertyArgs> credential;
+        private final @Nullable Input<RunAsCredentialAssociationPropertyArgs> credential;
 
     public Input<RunAsCredentialAssociationPropertyArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -42,7 +42,7 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="hybridRunbookWorkerGroupName")
-    private final @Nullable Input<String> hybridRunbookWorkerGroupName;
+        private final @Nullable Input<String> hybridRunbookWorkerGroupName;
 
     public Input<String> getHybridRunbookWorkerGroupName() {
         return this.hybridRunbookWorkerGroupName == null ? Input.empty() : this.hybridRunbookWorkerGroupName;
@@ -53,7 +53,7 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public HybridRunbookWorkerGroupArgs build() {
             return new HybridRunbookWorkerGroupArgs(automationAccountName, credential, hybridRunbookWorkerGroupName, resourceGroupName);
         }

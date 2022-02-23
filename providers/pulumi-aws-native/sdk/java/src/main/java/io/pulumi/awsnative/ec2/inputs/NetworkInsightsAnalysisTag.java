@@ -15,14 +15,14 @@ public final class NetworkInsightsAnalysisTag extends io.pulumi.resources.Invoke
     public static final NetworkInsightsAnalysisTag Empty = new NetworkInsightsAnalysisTag();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -71,7 +71,6 @@ public final class NetworkInsightsAnalysisTag extends io.pulumi.resources.Invoke
             this.value = value;
             return this;
         }
-
         public NetworkInsightsAnalysisTag build() {
             return new NetworkInsightsAnalysisTag(key, value);
         }

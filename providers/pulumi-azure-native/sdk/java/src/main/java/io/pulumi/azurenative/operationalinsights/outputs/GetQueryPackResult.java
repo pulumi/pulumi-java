@@ -223,7 +223,6 @@ public final class GetQueryPackResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetQueryPackResult build() {
             return new GetQueryPackResult(id, location, name, provisioningState, queryPackId, tags, timeCreated, timeModified, type);
         }

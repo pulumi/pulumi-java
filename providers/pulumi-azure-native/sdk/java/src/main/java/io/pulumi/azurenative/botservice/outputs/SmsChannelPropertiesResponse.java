@@ -140,7 +140,6 @@ public final class SmsChannelPropertiesResponse {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public SmsChannelPropertiesResponse build() {
             return new SmsChannelPropertiesResponse(accountSID, authToken, isEnabled, isValidated, phone);
         }

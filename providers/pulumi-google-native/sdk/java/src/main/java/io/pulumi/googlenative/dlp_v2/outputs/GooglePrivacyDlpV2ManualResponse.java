@@ -30,7 +30,6 @@ public final class GooglePrivacyDlpV2ManualResponse {
         public Builder(GooglePrivacyDlpV2ManualResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2ManualResponse build() {
             return new GooglePrivacyDlpV2ManualResponse();
         }

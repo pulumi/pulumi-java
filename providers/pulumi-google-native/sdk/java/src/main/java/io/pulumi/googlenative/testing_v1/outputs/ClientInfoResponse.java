@@ -76,7 +76,6 @@ public final class ClientInfoResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ClientInfoResponse build() {
             return new ClientInfoResponse(clientInfoDetails, name);
         }

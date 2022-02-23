@@ -144,7 +144,6 @@ public final class MultiplePipelineTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MultiplePipelineTriggerResponse build() {
             return new MultiplePipelineTriggerResponse(annotations, description, pipelines, runtimeState, type);
         }

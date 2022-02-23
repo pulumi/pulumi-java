@@ -76,7 +76,6 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes {
             this.subscriptions = subscriptions;
             return this;
         }
-
         public NetworkManagerPropertiesResponseNetworkManagerScopes build() {
             return new NetworkManagerPropertiesResponseNetworkManagerScopes(managementGroups, subscriptions);
         }

@@ -13,7 +13,7 @@ public final class GetClusterAddonsConfigHorizontalPodAutoscaling extends io.pul
     public static final GetClusterAddonsConfigHorizontalPodAutoscaling Empty = new GetClusterAddonsConfigHorizontalPodAutoscaling();
 
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+        private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -51,7 +51,6 @@ public final class GetClusterAddonsConfigHorizontalPodAutoscaling extends io.pul
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public GetClusterAddonsConfigHorizontalPodAutoscaling build() {
             return new GetClusterAddonsConfigHorizontalPodAutoscaling(disabled);
         }

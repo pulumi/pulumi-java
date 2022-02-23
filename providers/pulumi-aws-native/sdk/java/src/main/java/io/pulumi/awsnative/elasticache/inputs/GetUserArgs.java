@@ -17,7 +17,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userId", required=true)
-    private final String userId;
+        private final String userId;
 
     public String getUserId() {
         return this.userId;
@@ -55,7 +55,6 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetUserArgs build() {
             return new GetUserArgs(userId);
         }

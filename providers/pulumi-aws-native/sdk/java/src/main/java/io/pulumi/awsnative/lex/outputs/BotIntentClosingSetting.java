@@ -61,7 +61,6 @@ public final class BotIntentClosingSetting {
             this.isActive = isActive;
             return this;
         }
-
         public BotIntentClosingSetting build() {
             return new BotIntentClosingSetting(closingResponse, isActive);
         }

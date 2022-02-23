@@ -21,7 +21,7 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-    private final @Nullable Input<Map<String,Object>> keepers;
+        private final @Nullable Input<Map<String,Object>> keepers;
 
     public Input<Map<String,Object>> getKeepers() {
         return this.keepers == null ? Input.empty() : this.keepers;
@@ -32,7 +32,7 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="result")
-    private final @Nullable Input<String> result;
+        private final @Nullable Input<String> result;
 
     public Input<String> getResult() {
         return this.result == null ? Input.empty() : this.result;
@@ -91,7 +91,6 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
             this.result = Input.ofNullable(result);
             return this;
         }
-
         public RandomUuidState build() {
             return new RandomUuidState(keepers, result);
         }

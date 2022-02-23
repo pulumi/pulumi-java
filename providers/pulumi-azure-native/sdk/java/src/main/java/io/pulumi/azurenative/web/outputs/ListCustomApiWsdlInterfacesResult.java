@@ -54,7 +54,6 @@ public final class ListCustomApiWsdlInterfacesResult {
             this.value = value;
             return this;
         }
-
         public ListCustomApiWsdlInterfacesResult build() {
             return new ListCustomApiWsdlInterfacesResult(value);
         }

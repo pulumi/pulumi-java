@@ -75,7 +75,6 @@ public final class UserDefinedResourcesPropertiesResponse {
             this.querySubscriptions = Objects.requireNonNull(querySubscriptions);
             return this;
         }
-
         public UserDefinedResourcesPropertiesResponse build() {
             return new UserDefinedResourcesPropertiesResponse(query, querySubscriptions);
         }

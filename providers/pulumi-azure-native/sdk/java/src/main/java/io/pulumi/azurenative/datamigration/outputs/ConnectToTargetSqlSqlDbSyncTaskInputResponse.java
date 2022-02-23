@@ -74,7 +74,6 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ConnectToTargetSqlSqlDbSyncTaskInputResponse build() {
             return new ConnectToTargetSqlSqlDbSyncTaskInputResponse(sourceConnectionInfo, targetConnectionInfo);
         }

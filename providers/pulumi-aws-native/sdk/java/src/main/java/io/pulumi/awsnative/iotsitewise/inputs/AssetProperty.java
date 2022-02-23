@@ -24,7 +24,7 @@ public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="alias")
-    private final @Nullable String alias;
+        private final @Nullable String alias;
 
     public Optional<String> getAlias() {
         return this.alias == null ? Optional.empty() : Optional.ofNullable(this.alias);
@@ -35,7 +35,7 @@ public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logicalId", required=true)
-    private final String logicalId;
+        private final String logicalId;
 
     public String getLogicalId() {
         return this.logicalId;
@@ -46,7 +46,7 @@ public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="notificationState")
-    private final @Nullable AssetPropertyNotificationState notificationState;
+        private final @Nullable AssetPropertyNotificationState notificationState;
 
     public Optional<AssetPropertyNotificationState> getNotificationState() {
         return this.notificationState == null ? Optional.empty() : Optional.ofNullable(this.notificationState);
@@ -105,7 +105,6 @@ public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
             this.notificationState = notificationState;
             return this;
         }
-
         public AssetProperty build() {
             return new AssetProperty(alias, logicalId, notificationState);
         }

@@ -157,7 +157,6 @@ public final class BackupPlanBackupRuleResourceType {
             this.targetBackupVault = Objects.requireNonNull(targetBackupVault);
             return this;
         }
-
         public BackupPlanBackupRuleResourceType build() {
             return new BackupPlanBackupRuleResourceType(completionWindowMinutes, copyActions, enableContinuousBackup, lifecycle, recoveryPointTags, ruleName, scheduleExpression, startWindowMinutes, targetBackupVault);
         }

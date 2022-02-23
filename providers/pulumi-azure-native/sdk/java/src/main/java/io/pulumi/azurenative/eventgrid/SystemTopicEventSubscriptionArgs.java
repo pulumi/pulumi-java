@@ -36,7 +36,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deadLetterDestination")
-    private final @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
+        private final @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
     public Input<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
         return this.deadLetterDestination == null ? Input.empty() : this.deadLetterDestination;
@@ -48,7 +48,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deadLetterWithResourceIdentity")
-    private final @Nullable Input<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity;
+        private final @Nullable Input<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity;
 
     public Input<DeadLetterWithResourceIdentityArgs> getDeadLetterWithResourceIdentity() {
         return this.deadLetterWithResourceIdentity == null ? Input.empty() : this.deadLetterWithResourceIdentity;
@@ -60,7 +60,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deliveryWithResourceIdentity")
-    private final @Nullable Input<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity;
+        private final @Nullable Input<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity;
 
     public Input<DeliveryWithResourceIdentityArgs> getDeliveryWithResourceIdentity() {
         return this.deliveryWithResourceIdentity == null ? Input.empty() : this.deliveryWithResourceIdentity;
@@ -72,7 +72,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<Object> destination;
+        private final @Nullable Input<Object> destination;
 
     public Input<Object> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -83,7 +83,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="eventDeliverySchema")
-    private final @Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema;
+        private final @Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema;
 
     public Input<Either<String,EventDeliverySchema>> getEventDeliverySchema() {
         return this.eventDeliverySchema == null ? Input.empty() : this.eventDeliverySchema;
@@ -94,7 +94,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="eventSubscriptionName")
-    private final @Nullable Input<String> eventSubscriptionName;
+        private final @Nullable Input<String> eventSubscriptionName;
 
     public Input<String> getEventSubscriptionName() {
         return this.eventSubscriptionName == null ? Input.empty() : this.eventSubscriptionName;
@@ -105,7 +105,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="expirationTimeUtc")
-    private final @Nullable Input<String> expirationTimeUtc;
+        private final @Nullable Input<String> expirationTimeUtc;
 
     public Input<String> getExpirationTimeUtc() {
         return this.expirationTimeUtc == null ? Input.empty() : this.expirationTimeUtc;
@@ -116,7 +116,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<EventSubscriptionFilterArgs> filter;
+        private final @Nullable Input<EventSubscriptionFilterArgs> filter;
 
     public Input<EventSubscriptionFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -127,7 +127,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<String>> labels;
+        private final @Nullable Input<List<String>> labels;
 
     public Input<List<String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -138,7 +138,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -149,7 +149,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<RetryPolicyArgs> retryPolicy;
+        private final @Nullable Input<RetryPolicyArgs> retryPolicy;
 
     public Input<RetryPolicyArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -160,7 +160,7 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="systemTopicName", required=true)
-    private final Input<String> systemTopicName;
+        private final Input<String> systemTopicName;
 
     public Input<String> getSystemTopicName() {
         return this.systemTopicName;
@@ -369,7 +369,6 @@ public final class SystemTopicEventSubscriptionArgs extends io.pulumi.resources.
             this.systemTopicName = Input.of(Objects.requireNonNull(systemTopicName));
             return this;
         }
-
         public SystemTopicEventSubscriptionArgs build() {
             return new SystemTopicEventSubscriptionArgs(deadLetterDestination, deadLetterWithResourceIdentity, deliveryWithResourceIdentity, destination, eventDeliverySchema, eventSubscriptionName, expirationTimeUtc, filter, labels, resourceGroupName, retryPolicy, systemTopicName);
         }

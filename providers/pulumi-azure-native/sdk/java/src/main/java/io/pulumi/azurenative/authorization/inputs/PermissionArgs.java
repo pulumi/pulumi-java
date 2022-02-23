@@ -24,7 +24,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable Input<List<String>> actions;
+        private final @Nullable Input<List<String>> actions;
 
     public Input<List<String>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -35,7 +35,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataActions")
-    private final @Nullable Input<List<String>> dataActions;
+        private final @Nullable Input<List<String>> dataActions;
 
     public Input<List<String>> getDataActions() {
         return this.dataActions == null ? Input.empty() : this.dataActions;
@@ -46,7 +46,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notActions")
-    private final @Nullable Input<List<String>> notActions;
+        private final @Nullable Input<List<String>> notActions;
 
     public Input<List<String>> getNotActions() {
         return this.notActions == null ? Input.empty() : this.notActions;
@@ -57,7 +57,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notDataActions")
-    private final @Nullable Input<List<String>> notDataActions;
+        private final @Nullable Input<List<String>> notDataActions;
 
     public Input<List<String>> getNotDataActions() {
         return this.notDataActions == null ? Input.empty() : this.notDataActions;
@@ -146,7 +146,6 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             this.notDataActions = Input.ofNullable(notDataActions);
             return this;
         }
-
         public PermissionArgs build() {
             return new PermissionArgs(actions, dataActions, notActions, notDataActions);
         }

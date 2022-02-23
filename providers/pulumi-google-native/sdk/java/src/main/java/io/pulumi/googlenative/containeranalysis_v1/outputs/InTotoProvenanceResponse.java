@@ -112,7 +112,6 @@ public final class InTotoProvenanceResponse {
             this.recipe = Objects.requireNonNull(recipe);
             return this;
         }
-
         public InTotoProvenanceResponse build() {
             return new InTotoProvenanceResponse(builderConfig, materials, metadata, recipe);
         }

@@ -164,7 +164,6 @@ public final class GetGroupMembershipsMembership {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGroupMembershipsMembership build() {
             return new GetGroupMembershipsMembership(createTime, group, memberKeys, name, preferredMemberKeys, roles, type, updateTime);
         }

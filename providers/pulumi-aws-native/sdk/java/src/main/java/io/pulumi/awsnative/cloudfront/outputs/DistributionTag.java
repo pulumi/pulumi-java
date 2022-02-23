@@ -58,7 +58,6 @@ public final class DistributionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DistributionTag build() {
             return new DistributionTag(key, value);
         }

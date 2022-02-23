@@ -127,7 +127,6 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfig {
             this.localPath = localPath;
             return this;
         }
-
         public PatchDeploymentPatchConfigPreStepWindowsExecStepConfig build() {
             return new PatchDeploymentPatchConfigPreStepWindowsExecStepConfig(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }

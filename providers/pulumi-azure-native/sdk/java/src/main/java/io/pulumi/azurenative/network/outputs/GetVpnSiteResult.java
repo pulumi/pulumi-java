@@ -379,7 +379,6 @@ public final class GetVpnSiteResult {
             this.vpnSiteLinks = vpnSiteLinks;
             return this;
         }
-
         public GetVpnSiteResult build() {
             return new GetVpnSiteResult(addressSpace, bgpProperties, deviceProperties, etag, id, ipAddress, isSecuritySite, location, name, o365Policy, provisioningState, siteKey, tags, type, virtualWan, vpnSiteLinks);
         }

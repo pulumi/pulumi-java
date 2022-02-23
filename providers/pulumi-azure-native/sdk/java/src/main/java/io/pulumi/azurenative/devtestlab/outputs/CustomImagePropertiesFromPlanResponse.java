@@ -97,7 +97,6 @@ public final class CustomImagePropertiesFromPlanResponse {
             this.publisher = publisher;
             return this;
         }
-
         public CustomImagePropertiesFromPlanResponse build() {
             return new CustomImagePropertiesFromPlanResponse(id, offer, publisher);
         }

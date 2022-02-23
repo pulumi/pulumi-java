@@ -52,7 +52,6 @@ public final class BucketVersioningResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public BucketVersioningResponse build() {
             return new BucketVersioningResponse(enabled);
         }

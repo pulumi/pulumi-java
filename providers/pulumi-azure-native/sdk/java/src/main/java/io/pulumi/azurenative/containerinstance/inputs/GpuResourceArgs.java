@@ -25,7 +25,7 @@ public final class GpuResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count", required=true)
-    private final Input<Integer> count;
+        private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -36,7 +36,7 @@ public final class GpuResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<Either<String,GpuSku>> sku;
+        private final Input<Either<String,GpuSku>> sku;
 
     public Input<Either<String,GpuSku>> getSku() {
         return this.sku;
@@ -95,7 +95,6 @@ public final class GpuResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public GpuResourceArgs build() {
             return new GpuResourceArgs(count, sku);
         }

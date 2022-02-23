@@ -27,7 +27,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable String action;
+        private final @Nullable String action;
 
     public Optional<String> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -38,7 +38,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="actor")
-    private final @Nullable ActorResponse actor;
+        private final @Nullable ActorResponse actor;
 
     public Optional<ActorResponse> getActor() {
         return this.actor == null ? Optional.empty() : Optional.ofNullable(this.actor);
@@ -49,7 +49,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -60,7 +60,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="request")
-    private final @Nullable RequestResponse request;
+        private final @Nullable RequestResponse request;
 
     public Optional<RequestResponse> getRequest() {
         return this.request == null ? Optional.empty() : Optional.ofNullable(this.request);
@@ -71,7 +71,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable SourceResponse source;
+        private final @Nullable SourceResponse source;
 
     public Optional<SourceResponse> getSource() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
@@ -82,7 +82,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="target")
-    private final @Nullable TargetResponse target;
+        private final @Nullable TargetResponse target;
 
     public Optional<TargetResponse> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -93,7 +93,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timestamp")
-    private final @Nullable String timestamp;
+        private final @Nullable String timestamp;
 
     public Optional<String> getTimestamp() {
         return this.timestamp == null ? Optional.empty() : Optional.ofNullable(this.timestamp);
@@ -192,7 +192,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
             this.timestamp = timestamp;
             return this;
         }
-
         public EventContentResponse build() {
             return new EventContentResponse(action, actor, id, request, source, target, timestamp);
         }

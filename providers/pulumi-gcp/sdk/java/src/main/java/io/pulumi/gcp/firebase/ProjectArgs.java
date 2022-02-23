@@ -20,7 +20,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -63,7 +63,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ProjectArgs build() {
             return new ProjectArgs(project);
         }

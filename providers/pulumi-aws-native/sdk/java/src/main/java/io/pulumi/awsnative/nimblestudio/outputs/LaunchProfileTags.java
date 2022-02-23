@@ -30,7 +30,6 @@ public final class LaunchProfileTags {
         public Builder(LaunchProfileTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public LaunchProfileTags build() {
             return new LaunchProfileTags();
         }

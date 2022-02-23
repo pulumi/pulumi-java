@@ -20,7 +20,7 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+        private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -31,7 +31,7 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="object")
-    private final @Nullable Input<String> object;
+        private final @Nullable Input<String> object;
 
     public Input<String> getObject() {
         return this.object == null ? Input.empty() : this.object;
@@ -42,7 +42,7 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predefinedAcl")
-    private final @Nullable Input<String> predefinedAcl;
+        private final @Nullable Input<String> predefinedAcl;
 
     public Input<String> getPredefinedAcl() {
         return this.predefinedAcl == null ? Input.empty() : this.predefinedAcl;
@@ -54,7 +54,7 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleEntities")
-    private final @Nullable Input<List<String>> roleEntities;
+        private final @Nullable Input<List<String>> roleEntities;
 
     public Input<List<String>> getRoleEntities() {
         return this.roleEntities == null ? Input.empty() : this.roleEntities;
@@ -143,7 +143,6 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
             this.roleEntities = Input.ofNullable(roleEntities);
             return this;
         }
-
         public ObjectACLState build() {
             return new ObjectACLState(bucket, object, predefinedAcl, roleEntities);
         }

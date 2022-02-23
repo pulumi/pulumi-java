@@ -25,7 +25,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="diskName")
-    private final @Nullable Input<String> diskName;
+      private final @Nullable Input<String> diskName;
 
     public Input<String> getDiskName() {
         return this.diskName == null ? Input.empty() : this.diskName;
@@ -47,7 +47,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Input<String> diskSizeGb;
 
     public Input<String> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -58,7 +58,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<LocalDiskInitializeParamsDiskType> diskType;
+      private final @Nullable Input<LocalDiskInitializeParamsDiskType> diskType;
 
     public Input<LocalDiskInitializeParamsDiskType> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -69,7 +69,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -173,7 +173,6 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
             this.labels = Input.ofNullable(labels);
             return this;
         }
-
         public LocalDiskInitializeParamsArgs build() {
             return new LocalDiskInitializeParamsArgs(description, diskName, diskSizeGb, diskType, labels);
         }

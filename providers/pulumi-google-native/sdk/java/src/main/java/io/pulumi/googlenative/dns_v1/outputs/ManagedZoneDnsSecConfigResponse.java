@@ -110,7 +110,6 @@ public final class ManagedZoneDnsSecConfigResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public ManagedZoneDnsSecConfigResponse build() {
             return new ManagedZoneDnsSecConfigResponse(defaultKeySpecs, kind, nonExistence, state);
         }

@@ -275,7 +275,6 @@ public final class OdbcLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public OdbcLinkedServiceResponse build() {
             return new OdbcLinkedServiceResponse(annotations, authenticationType, connectVia, connectionString, credential, description, encryptedCredential, parameters, password, type, userName);
         }

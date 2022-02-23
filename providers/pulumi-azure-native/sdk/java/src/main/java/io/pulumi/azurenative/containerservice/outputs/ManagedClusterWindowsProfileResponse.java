@@ -119,7 +119,6 @@ public final class ManagedClusterWindowsProfileResponse {
             this.licenseType = licenseType;
             return this;
         }
-
         public ManagedClusterWindowsProfileResponse build() {
             return new ManagedClusterWindowsProfileResponse(adminPassword, adminUsername, enableCSIProxy, licenseType);
         }

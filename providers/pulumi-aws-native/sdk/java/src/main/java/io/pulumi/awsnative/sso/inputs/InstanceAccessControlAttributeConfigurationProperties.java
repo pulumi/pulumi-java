@@ -18,7 +18,7 @@ public final class InstanceAccessControlAttributeConfigurationProperties extends
     public static final InstanceAccessControlAttributeConfigurationProperties Empty = new InstanceAccessControlAttributeConfigurationProperties();
 
     @InputImport(name="accessControlAttributes", required=true)
-    private final List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes;
+        private final List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes;
 
     public List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> getAccessControlAttributes() {
         return this.accessControlAttributes;
@@ -56,7 +56,6 @@ public final class InstanceAccessControlAttributeConfigurationProperties extends
             this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes);
             return this;
         }
-
         public InstanceAccessControlAttributeConfigurationProperties build() {
             return new InstanceAccessControlAttributeConfigurationProperties(accessControlAttributes);
         }

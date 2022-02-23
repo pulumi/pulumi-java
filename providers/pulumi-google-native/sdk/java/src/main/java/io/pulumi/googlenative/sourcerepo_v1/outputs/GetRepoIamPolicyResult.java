@@ -120,7 +120,6 @@ public final class GetRepoIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRepoIamPolicyResult build() {
             return new GetRepoIamPolicyResult(auditConfigs, bindings, etag, version);
         }

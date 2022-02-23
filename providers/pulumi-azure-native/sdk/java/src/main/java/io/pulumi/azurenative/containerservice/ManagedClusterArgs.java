@@ -39,7 +39,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aadProfile")
-    private final @Nullable Input<ManagedClusterAADProfileArgs> aadProfile;
+        private final @Nullable Input<ManagedClusterAADProfileArgs> aadProfile;
 
     public Input<ManagedClusterAADProfileArgs> getAadProfile() {
         return this.aadProfile == null ? Input.empty() : this.aadProfile;
@@ -50,7 +50,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonProfiles")
-    private final @Nullable Input<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles;
+        private final @Nullable Input<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles;
 
     public Input<Map<String,ManagedClusterAddonProfileArgs>> getAddonProfiles() {
         return this.addonProfiles == null ? Input.empty() : this.addonProfiles;
@@ -61,7 +61,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentPoolProfiles")
-    private final @Nullable Input<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
+        private final @Nullable Input<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
 
     public Input<List<ManagedClusterAgentPoolProfileArgs>> getAgentPoolProfiles() {
         return this.agentPoolProfiles == null ? Input.empty() : this.agentPoolProfiles;
@@ -72,7 +72,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiServerAccessProfile")
-    private final @Nullable Input<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile;
+        private final @Nullable Input<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile;
 
     public Input<ManagedClusterAPIServerAccessProfileArgs> getApiServerAccessProfile() {
         return this.apiServerAccessProfile == null ? Input.empty() : this.apiServerAccessProfile;
@@ -83,7 +83,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoScalerProfile")
-    private final @Nullable Input<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile;
+        private final @Nullable Input<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile;
 
     public Input<ManagedClusterPropertiesAutoScalerProfileArgs> getAutoScalerProfile() {
         return this.autoScalerProfile == null ? Input.empty() : this.autoScalerProfile;
@@ -94,7 +94,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUpgradeProfile")
-    private final @Nullable Input<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile;
+        private final @Nullable Input<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile;
 
     public Input<ManagedClusterAutoUpgradeProfileArgs> getAutoUpgradeProfile() {
         return this.autoUpgradeProfile == null ? Input.empty() : this.autoUpgradeProfile;
@@ -105,7 +105,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableLocalAccounts")
-    private final @Nullable Input<Boolean> disableLocalAccounts;
+        private final @Nullable Input<Boolean> disableLocalAccounts;
 
     public Input<Boolean> getDisableLocalAccounts() {
         return this.disableLocalAccounts == null ? Input.empty() : this.disableLocalAccounts;
@@ -116,7 +116,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionSetID")
-    private final @Nullable Input<String> diskEncryptionSetID;
+        private final @Nullable Input<String> diskEncryptionSetID;
 
     public Input<String> getDiskEncryptionSetID() {
         return this.diskEncryptionSetID == null ? Input.empty() : this.diskEncryptionSetID;
@@ -127,7 +127,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsPrefix")
-    private final @Nullable Input<String> dnsPrefix;
+        private final @Nullable Input<String> dnsPrefix;
 
     public Input<String> getDnsPrefix() {
         return this.dnsPrefix == null ? Input.empty() : this.dnsPrefix;
@@ -138,7 +138,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enablePodSecurityPolicy")
-    private final @Nullable Input<Boolean> enablePodSecurityPolicy;
+        private final @Nullable Input<Boolean> enablePodSecurityPolicy;
 
     public Input<Boolean> getEnablePodSecurityPolicy() {
         return this.enablePodSecurityPolicy == null ? Input.empty() : this.enablePodSecurityPolicy;
@@ -149,7 +149,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableRBAC")
-    private final @Nullable Input<Boolean> enableRBAC;
+        private final @Nullable Input<Boolean> enableRBAC;
 
     public Input<Boolean> getEnableRBAC() {
         return this.enableRBAC == null ? Input.empty() : this.enableRBAC;
@@ -160,7 +160,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -171,7 +171,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fqdnSubdomain")
-    private final @Nullable Input<String> fqdnSubdomain;
+        private final @Nullable Input<String> fqdnSubdomain;
 
     public Input<String> getFqdnSubdomain() {
         return this.fqdnSubdomain == null ? Input.empty() : this.fqdnSubdomain;
@@ -182,7 +182,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpProxyConfig")
-    private final @Nullable Input<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig;
+        private final @Nullable Input<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig;
 
     public Input<ManagedClusterHTTPProxyConfigArgs> getHttpProxyConfig() {
         return this.httpProxyConfig == null ? Input.empty() : this.httpProxyConfig;
@@ -193,7 +193,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ManagedClusterIdentityArgs> identity;
+        private final @Nullable Input<ManagedClusterIdentityArgs> identity;
 
     public Input<ManagedClusterIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -204,7 +204,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityProfile")
-    private final @Nullable Input<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile;
+        private final @Nullable Input<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile;
 
     public Input<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> getIdentityProfile() {
         return this.identityProfile == null ? Input.empty() : this.identityProfile;
@@ -215,7 +215,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubernetesVersion")
-    private final @Nullable Input<String> kubernetesVersion;
+        private final @Nullable Input<String> kubernetesVersion;
 
     public Input<String> getKubernetesVersion() {
         return this.kubernetesVersion == null ? Input.empty() : this.kubernetesVersion;
@@ -226,7 +226,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxProfile")
-    private final @Nullable Input<ContainerServiceLinuxProfileArgs> linuxProfile;
+        private final @Nullable Input<ContainerServiceLinuxProfileArgs> linuxProfile;
 
     public Input<ContainerServiceLinuxProfileArgs> getLinuxProfile() {
         return this.linuxProfile == null ? Input.empty() : this.linuxProfile;
@@ -237,7 +237,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -248,7 +248,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfile")
-    private final @Nullable Input<ContainerServiceNetworkProfileArgs> networkProfile;
+        private final @Nullable Input<ContainerServiceNetworkProfileArgs> networkProfile;
 
     public Input<ContainerServiceNetworkProfileArgs> getNetworkProfile() {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
@@ -259,7 +259,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeResourceGroup")
-    private final @Nullable Input<String> nodeResourceGroup;
+        private final @Nullable Input<String> nodeResourceGroup;
 
     public Input<String> getNodeResourceGroup() {
         return this.nodeResourceGroup == null ? Input.empty() : this.nodeResourceGroup;
@@ -270,7 +270,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podIdentityProfile")
-    private final @Nullable Input<ManagedClusterPodIdentityProfileArgs> podIdentityProfile;
+        private final @Nullable Input<ManagedClusterPodIdentityProfileArgs> podIdentityProfile;
 
     public Input<ManagedClusterPodIdentityProfileArgs> getPodIdentityProfile() {
         return this.podIdentityProfile == null ? Input.empty() : this.podIdentityProfile;
@@ -281,7 +281,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkResources")
-    private final @Nullable Input<List<PrivateLinkResourceArgs>> privateLinkResources;
+        private final @Nullable Input<List<PrivateLinkResourceArgs>> privateLinkResources;
 
     public Input<List<PrivateLinkResourceArgs>> getPrivateLinkResources() {
         return this.privateLinkResources == null ? Input.empty() : this.privateLinkResources;
@@ -292,7 +292,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -303,7 +303,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+        private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -314,7 +314,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servicePrincipalProfile")
-    private final @Nullable Input<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile;
+        private final @Nullable Input<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile;
 
     public Input<ManagedClusterServicePrincipalProfileArgs> getServicePrincipalProfile() {
         return this.servicePrincipalProfile == null ? Input.empty() : this.servicePrincipalProfile;
@@ -325,7 +325,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<ManagedClusterSKUArgs> sku;
+        private final @Nullable Input<ManagedClusterSKUArgs> sku;
 
     public Input<ManagedClusterSKUArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -336,7 +336,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -347,7 +347,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsProfile")
-    private final @Nullable Input<ManagedClusterWindowsProfileArgs> windowsProfile;
+        private final @Nullable Input<ManagedClusterWindowsProfileArgs> windowsProfile;
 
     public Input<ManagedClusterWindowsProfileArgs> getWindowsProfile() {
         return this.windowsProfile == null ? Input.empty() : this.windowsProfile;
@@ -811,7 +811,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.windowsProfile = Input.ofNullable(windowsProfile);
             return this;
         }
-
         public ManagedClusterArgs build() {
             return new ManagedClusterArgs(aadProfile, addonProfiles, agentPoolProfiles, apiServerAccessProfile, autoScalerProfile, autoUpgradeProfile, disableLocalAccounts, diskEncryptionSetID, dnsPrefix, enablePodSecurityPolicy, enableRBAC, extendedLocation, fqdnSubdomain, httpProxyConfig, identity, identityProfile, kubernetesVersion, linuxProfile, location, networkProfile, nodeResourceGroup, podIdentityProfile, privateLinkResources, resourceGroupName, resourceName, servicePrincipalProfile, sku, tags, windowsProfile);
         }

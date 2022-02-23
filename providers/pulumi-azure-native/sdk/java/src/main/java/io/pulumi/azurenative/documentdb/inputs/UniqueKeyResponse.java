@@ -24,7 +24,7 @@ public final class UniqueKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="paths")
-    private final @Nullable List<String> paths;
+        private final @Nullable List<String> paths;
 
     public List<String> getPaths() {
         return this.paths == null ? List.of() : this.paths;
@@ -62,7 +62,6 @@ public final class UniqueKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.paths = paths;
             return this;
         }
-
         public UniqueKeyResponse build() {
             return new UniqueKeyResponse(paths);
         }

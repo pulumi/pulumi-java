@@ -54,7 +54,6 @@ public final class ControllerDetailsResponse {
             this.id = id;
             return this;
         }
-
         public ControllerDetailsResponse build() {
             return new ControllerDetailsResponse(id);
         }

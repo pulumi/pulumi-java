@@ -22,7 +22,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="androidDevice", required=true)
-    private final AndroidDeviceResponse androidDevice;
+      private final AndroidDeviceResponse androidDevice;
 
     public AndroidDeviceResponse getAndroidDevice() {
         return this.androidDevice;
@@ -33,7 +33,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iosDevice", required=true)
-    private final IosDeviceResponse iosDevice;
+      private final IosDeviceResponse iosDevice;
 
     public IosDeviceResponse getIosDevice() {
         return this.iosDevice;
@@ -82,7 +82,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
             this.iosDevice = Objects.requireNonNull(iosDevice);
             return this;
         }
-
         public EnvironmentResponse build() {
             return new EnvironmentResponse(androidDevice, iosDevice);
         }

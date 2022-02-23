@@ -30,7 +30,6 @@ public final class RecipeParameterMapArgs extends io.pulumi.resources.ResourceAr
         public Builder(RecipeParameterMapArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RecipeParameterMapArgs build() {
             return new RecipeParameterMapArgs();
         }

@@ -161,7 +161,6 @@ public final class GetLifecycleHookResult {
             this.roleARN = roleARN;
             return this;
         }
-
         public GetLifecycleHookResult build() {
             return new GetLifecycleHookResult(defaultResult, heartbeatTimeout, lifecycleTransition, notificationMetadata, notificationTargetARN, roleARN);
         }

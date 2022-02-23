@@ -25,7 +25,7 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxReplicas")
-    private final @Nullable Input<Integer> maxReplicas;
+        private final @Nullable Input<Integer> maxReplicas;
 
     public Input<Integer> getMaxReplicas() {
         return this.maxReplicas == null ? Input.empty() : this.maxReplicas;
@@ -36,7 +36,7 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minReplicas")
-    private final @Nullable Input<Integer> minReplicas;
+        private final @Nullable Input<Integer> minReplicas;
 
     public Input<Integer> getMinReplicas() {
         return this.minReplicas == null ? Input.empty() : this.minReplicas;
@@ -47,7 +47,7 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<ScaleRuleArgs>> rules;
+        private final @Nullable Input<List<ScaleRuleArgs>> rules;
 
     public Input<List<ScaleRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -121,7 +121,6 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public ScaleArgs build() {
             return new ScaleArgs(maxReplicas, minReplicas, rules);
         }

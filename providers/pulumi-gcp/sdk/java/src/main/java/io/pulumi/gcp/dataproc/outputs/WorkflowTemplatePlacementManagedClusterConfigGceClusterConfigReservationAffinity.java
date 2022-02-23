@@ -98,7 +98,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             this.values = values;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity(consumeReservationType, key, values);
         }

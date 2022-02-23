@@ -76,7 +76,6 @@ public final class DetectorModelAssetPropertyTimestamp {
             this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
             return this;
         }
-
         public DetectorModelAssetPropertyTimestamp build() {
             return new DetectorModelAssetPropertyTimestamp(offsetInNanos, timeInSeconds);
         }

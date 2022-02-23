@@ -30,7 +30,6 @@ public final class StudioTagsArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(StudioTagsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StudioTagsArgs build() {
             return new StudioTagsArgs();
         }

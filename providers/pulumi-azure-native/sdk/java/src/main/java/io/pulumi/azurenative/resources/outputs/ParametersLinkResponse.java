@@ -76,7 +76,6 @@ public final class ParametersLinkResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ParametersLinkResponse build() {
             return new ParametersLinkResponse(contentVersion, uri);
         }

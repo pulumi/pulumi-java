@@ -15,14 +15,14 @@ public final class ClusterNodePoolManagementGetArgs extends io.pulumi.resources.
     public static final ClusterNodePoolManagementGetArgs Empty = new ClusterNodePoolManagementGetArgs();
 
     @InputImport(name="autoRepair")
-    private final @Nullable Input<Boolean> autoRepair;
+        private final @Nullable Input<Boolean> autoRepair;
 
     public Input<Boolean> getAutoRepair() {
         return this.autoRepair == null ? Input.empty() : this.autoRepair;
     }
 
     @InputImport(name="autoUpgrade")
-    private final @Nullable Input<Boolean> autoUpgrade;
+        private final @Nullable Input<Boolean> autoUpgrade;
 
     public Input<Boolean> getAutoUpgrade() {
         return this.autoUpgrade == null ? Input.empty() : this.autoUpgrade;
@@ -81,7 +81,6 @@ public final class ClusterNodePoolManagementGetArgs extends io.pulumi.resources.
             this.autoUpgrade = Input.ofNullable(autoUpgrade);
             return this;
         }
-
         public ClusterNodePoolManagementGetArgs build() {
             return new ClusterNodePoolManagementGetArgs(autoRepair, autoUpgrade);
         }

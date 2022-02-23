@@ -74,7 +74,6 @@ public final class DynamicThresholdFailingPeriodsResponse {
             this.numberOfEvaluationPeriods = Objects.requireNonNull(numberOfEvaluationPeriods);
             return this;
         }
-
         public DynamicThresholdFailingPeriodsResponse build() {
             return new DynamicThresholdFailingPeriodsResponse(minFailingPeriodsToAlert, numberOfEvaluationPeriods);
         }

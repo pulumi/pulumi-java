@@ -61,7 +61,6 @@ public final class ConfigEirp {
             this.value = value;
             return this;
         }
-
         public ConfigEirp build() {
             return new ConfigEirp(units, value);
         }

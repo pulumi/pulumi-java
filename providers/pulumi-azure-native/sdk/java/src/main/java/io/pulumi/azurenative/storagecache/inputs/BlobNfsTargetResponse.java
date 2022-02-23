@@ -23,7 +23,7 @@ public final class BlobNfsTargetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="target")
-    private final @Nullable String target;
+        private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -34,7 +34,7 @@ public final class BlobNfsTargetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="usageModel")
-    private final @Nullable String usageModel;
+        private final @Nullable String usageModel;
 
     public Optional<String> getUsageModel() {
         return this.usageModel == null ? Optional.empty() : Optional.ofNullable(this.usageModel);
@@ -83,7 +83,6 @@ public final class BlobNfsTargetResponse extends io.pulumi.resources.InvokeArgs 
             this.usageModel = usageModel;
             return this;
         }
-
         public BlobNfsTargetResponse build() {
             return new BlobNfsTargetResponse(target, usageModel);
         }

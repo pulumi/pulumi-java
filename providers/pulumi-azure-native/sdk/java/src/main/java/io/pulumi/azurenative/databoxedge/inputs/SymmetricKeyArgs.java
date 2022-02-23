@@ -23,7 +23,7 @@ public final class SymmetricKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable Input<AsymmetricEncryptedSecretArgs> connectionString;
+        private final @Nullable Input<AsymmetricEncryptedSecretArgs> connectionString;
 
     public Input<AsymmetricEncryptedSecretArgs> getConnectionString() {
         return this.connectionString == null ? Input.empty() : this.connectionString;
@@ -66,7 +66,6 @@ public final class SymmetricKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.connectionString = Input.ofNullable(connectionString);
             return this;
         }
-
         public SymmetricKeyArgs build() {
             return new SymmetricKeyArgs(connectionString);
         }

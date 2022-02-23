@@ -22,7 +22,7 @@ public final class AssignmentGroupLabelResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -60,7 +60,6 @@ public final class AssignmentGroupLabelResponse extends io.pulumi.resources.Invo
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public AssignmentGroupLabelResponse build() {
             return new AssignmentGroupLabelResponse(labels);
         }

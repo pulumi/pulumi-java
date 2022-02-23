@@ -23,7 +23,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable String appId;
+        private final @Nullable String appId;
 
     public Optional<String> getAppId() {
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
@@ -34,7 +34,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable String objectId;
+        private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
@@ -45,7 +45,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable String principalId;
+        private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
@@ -56,7 +56,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="principalName")
-    private final @Nullable String principalName;
+        private final @Nullable String principalName;
 
     public Optional<String> getPrincipalName() {
         return this.principalName == null ? Optional.empty() : Optional.ofNullable(this.principalName);
@@ -67,7 +67,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -146,7 +146,6 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
             this.tenantId = tenantId;
             return this;
         }
-
         public UserIdentityResponse build() {
             return new UserIdentityResponse(appId, objectId, principalId, principalName, tenantId);
         }

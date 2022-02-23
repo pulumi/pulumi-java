@@ -54,7 +54,6 @@ public final class ListClusterFollowerDatabasesResult {
             this.value = value;
             return this;
         }
-
         public ListClusterFollowerDatabasesResult build() {
             return new ListClusterFollowerDatabasesResult(value);
         }

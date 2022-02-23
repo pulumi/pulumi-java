@@ -54,7 +54,6 @@ public final class DistributionGroupListReceiverValueResponse {
             this.distributionGroups = distributionGroups;
             return this;
         }
-
         public DistributionGroupListReceiverValueResponse build() {
             return new DistributionGroupListReceiverValueResponse(distributionGroups);
         }

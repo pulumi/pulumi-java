@@ -21,7 +21,7 @@ public final class DatastoreIODetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final String namespace;
+      private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
@@ -32,7 +32,7 @@ public final class DatastoreIODetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -81,7 +81,6 @@ public final class DatastoreIODetailsResponse extends io.pulumi.resources.Invoke
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public DatastoreIODetailsResponse build() {
             return new DatastoreIODetailsResponse(namespace, project);
         }

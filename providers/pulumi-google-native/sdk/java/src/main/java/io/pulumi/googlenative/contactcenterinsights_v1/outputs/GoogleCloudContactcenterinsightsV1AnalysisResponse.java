@@ -117,7 +117,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse {
             this.requestTime = Objects.requireNonNull(requestTime);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnalysisResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnalysisResponse(analysisResult, createTime, name, requestTime);
         }

@@ -110,7 +110,6 @@ public final class JobPubsubTarget {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public JobPubsubTarget build() {
             return new JobPubsubTarget(attributes, data, topicName);
         }

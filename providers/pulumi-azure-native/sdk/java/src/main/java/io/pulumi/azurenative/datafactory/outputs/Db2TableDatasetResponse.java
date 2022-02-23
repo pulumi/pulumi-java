@@ -252,7 +252,6 @@ public final class Db2TableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Db2TableDatasetResponse build() {
             return new Db2TableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

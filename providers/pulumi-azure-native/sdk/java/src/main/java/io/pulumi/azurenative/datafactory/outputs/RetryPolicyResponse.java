@@ -77,7 +77,6 @@ public final class RetryPolicyResponse {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public RetryPolicyResponse build() {
             return new RetryPolicyResponse(count, intervalInSeconds);
         }

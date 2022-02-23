@@ -75,7 +75,6 @@ public final class ExternalMetricSource {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ExternalMetricSource build() {
             return new ExternalMetricSource(metric, target);
         }

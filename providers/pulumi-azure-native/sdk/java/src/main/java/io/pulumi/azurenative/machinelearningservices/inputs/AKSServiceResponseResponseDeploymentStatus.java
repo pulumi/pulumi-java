@@ -24,7 +24,7 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
      * 
      */
     @InputImport(name="availableReplicas")
-    private final @Nullable Integer availableReplicas;
+        private final @Nullable Integer availableReplicas;
 
     public Optional<Integer> getAvailableReplicas() {
         return this.availableReplicas == null ? Optional.empty() : Optional.ofNullable(this.availableReplicas);
@@ -35,7 +35,7 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
      * 
      */
     @InputImport(name="desiredReplicas")
-    private final @Nullable Integer desiredReplicas;
+        private final @Nullable Integer desiredReplicas;
 
     public Optional<Integer> getDesiredReplicas() {
         return this.desiredReplicas == null ? Optional.empty() : Optional.ofNullable(this.desiredReplicas);
@@ -46,7 +46,7 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
      * 
      */
     @InputImport(name="error")
-    private final @Nullable AKSReplicaStatusResponseError error;
+        private final @Nullable AKSReplicaStatusResponseError error;
 
     public Optional<AKSReplicaStatusResponseError> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
@@ -57,7 +57,7 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
      * 
      */
     @InputImport(name="updatedReplicas")
-    private final @Nullable Integer updatedReplicas;
+        private final @Nullable Integer updatedReplicas;
 
     public Optional<Integer> getUpdatedReplicas() {
         return this.updatedReplicas == null ? Optional.empty() : Optional.ofNullable(this.updatedReplicas);
@@ -126,7 +126,6 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
             this.updatedReplicas = updatedReplicas;
             return this;
         }
-
         public AKSServiceResponseResponseDeploymentStatus build() {
             return new AKSServiceResponseResponseDeploymentStatus(availableReplicas, desiredReplicas, error, updatedReplicas);
         }

@@ -30,7 +30,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databasesInfo")
-    private final @Nullable Input<List<DatabaseInfoArgs>> databasesInfo;
+        private final @Nullable Input<List<DatabaseInfoArgs>> databasesInfo;
 
     public Input<List<DatabaseInfoArgs>> getDatabasesInfo() {
         return this.databasesInfo == null ? Input.empty() : this.databasesInfo;
@@ -41,7 +41,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-    private final Input<String> groupName;
+        private final Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName;
@@ -52,7 +52,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -63,7 +63,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName")
-    private final @Nullable Input<String> projectName;
+        private final @Nullable Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName == null ? Input.empty() : this.projectName;
@@ -74,7 +74,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -85,7 +85,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceConnectionInfo")
-    private final @Nullable Input<Object> sourceConnectionInfo;
+        private final @Nullable Input<Object> sourceConnectionInfo;
 
     public Input<Object> getSourceConnectionInfo() {
         return this.sourceConnectionInfo == null ? Input.empty() : this.sourceConnectionInfo;
@@ -96,7 +96,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourcePlatform", required=true)
-    private final Input<Either<String,ProjectSourcePlatform>> sourcePlatform;
+        private final Input<Either<String,ProjectSourcePlatform>> sourcePlatform;
 
     public Input<Either<String,ProjectSourcePlatform>> getSourcePlatform() {
         return this.sourcePlatform;
@@ -107,7 +107,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -118,7 +118,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetConnectionInfo")
-    private final @Nullable Input<Object> targetConnectionInfo;
+        private final @Nullable Input<Object> targetConnectionInfo;
 
     public Input<Object> getTargetConnectionInfo() {
         return this.targetConnectionInfo == null ? Input.empty() : this.targetConnectionInfo;
@@ -129,7 +129,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetPlatform", required=true)
-    private final Input<Either<String,ProjectTargetPlatform>> targetPlatform;
+        private final Input<Either<String,ProjectTargetPlatform>> targetPlatform;
 
     public Input<Either<String,ProjectTargetPlatform>> getTargetPlatform() {
         return this.targetPlatform;
@@ -308,7 +308,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.targetPlatform = Input.of(Objects.requireNonNull(targetPlatform));
             return this;
         }
-
         public ProjectArgs build() {
             return new ProjectArgs(databasesInfo, groupName, location, projectName, serviceName, sourceConnectionInfo, sourcePlatform, tags, targetConnectionInfo, targetPlatform);
         }

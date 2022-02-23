@@ -58,7 +58,6 @@ public final class SourceRegistryCredentialsResponse {
             this.loginMode = loginMode;
             return this;
         }
-
         public SourceRegistryCredentialsResponse build() {
             return new SourceRegistryCredentialsResponse(loginMode);
         }

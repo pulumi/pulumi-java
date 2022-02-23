@@ -248,7 +248,6 @@ public final class OracleSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OracleSourceResponse build() {
             return new OracleSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, oracleReaderQuery, partitionOption, partitionSettings, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

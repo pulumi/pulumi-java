@@ -84,7 +84,6 @@ public final class TopicRuleCloudwatchAlarmAction {
             this.stateValue = Objects.requireNonNull(stateValue);
             return this;
         }
-
         public TopicRuleCloudwatchAlarmAction build() {
             return new TopicRuleCloudwatchAlarmAction(alarmName, roleArn, stateReason, stateValue);
         }

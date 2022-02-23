@@ -27,7 +27,7 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ApimIdentityType>> type;
+        private final Input<Either<String,ApimIdentityType>> type;
 
     public Input<Either<String,ApimIdentityType>> getType() {
         return this.type;
@@ -41,7 +41,7 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
+        private final @Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
     public Input<Map<String,UserIdentityPropertiesArgs>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
@@ -100,7 +100,6 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }
-
         public ApiManagementServiceIdentityArgs build() {
             return new ApiManagementServiceIdentityArgs(type, userAssignedIdentities);
         }

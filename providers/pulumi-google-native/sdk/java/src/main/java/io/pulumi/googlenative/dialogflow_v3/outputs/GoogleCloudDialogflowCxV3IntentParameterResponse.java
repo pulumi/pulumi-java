@@ -96,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3IntentParameterResponse {
             this.redact = Objects.requireNonNull(redact);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3IntentParameterResponse build() {
             return new GoogleCloudDialogflowCxV3IntentParameterResponse(entityType, isList, redact);
         }

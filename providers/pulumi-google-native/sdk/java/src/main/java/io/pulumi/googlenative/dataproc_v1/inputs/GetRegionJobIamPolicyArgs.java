@@ -15,21 +15,21 @@ public final class GetRegionJobIamPolicyArgs extends io.pulumi.resources.InvokeA
     public static final GetRegionJobIamPolicyArgs Empty = new GetRegionJobIamPolicyArgs();
 
     @InputImport(name="jobId", required=true)
-    private final String jobId;
+      private final String jobId;
 
     public String getJobId() {
         return this.jobId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="regionId", required=true)
-    private final String regionId;
+      private final String regionId;
 
     public String getRegionId() {
         return this.regionId;
@@ -88,7 +88,6 @@ public final class GetRegionJobIamPolicyArgs extends io.pulumi.resources.InvokeA
             this.regionId = Objects.requireNonNull(regionId);
             return this;
         }
-
         public GetRegionJobIamPolicyArgs build() {
             return new GetRegionJobIamPolicyArgs(jobId, project, regionId);
         }

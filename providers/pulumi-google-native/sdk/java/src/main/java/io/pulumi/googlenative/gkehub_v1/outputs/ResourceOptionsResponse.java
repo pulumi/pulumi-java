@@ -96,7 +96,6 @@ public final class ResourceOptionsResponse {
             this.v1beta1Crd = Objects.requireNonNull(v1beta1Crd);
             return this;
         }
-
         public ResourceOptionsResponse build() {
             return new ResourceOptionsResponse(connectVersion, k8sVersion, v1beta1Crd);
         }

@@ -161,7 +161,6 @@ public final class SparkRJobResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public SparkRJobResponse build() {
             return new SparkRJobResponse(archiveUris, args, fileUris, loggingConfig, mainRFileUri, properties);
         }

@@ -30,7 +30,6 @@ public final class AppTagMap {
         public Builder(AppTagMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AppTagMap build() {
             return new AppTagMap();
         }

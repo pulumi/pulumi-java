@@ -120,7 +120,6 @@ public final class GuestPoliciesRecipeUpdateStepFileExec {
             this.localPath = localPath;
             return this;
         }
-
         public GuestPoliciesRecipeUpdateStepFileExec build() {
             return new GuestPoliciesRecipeUpdateStepFileExec(allowedExitCodes, args, artifactId, localPath);
         }

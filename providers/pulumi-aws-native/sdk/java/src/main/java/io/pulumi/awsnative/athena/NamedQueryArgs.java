@@ -19,7 +19,7 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database", required=true)
-    private final Input<String> database;
+        private final Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database;
@@ -30,7 +30,7 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -52,7 +52,7 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryString", required=true)
-    private final Input<String> queryString;
+        private final Input<String> queryString;
 
     public Input<String> getQueryString() {
         return this.queryString;
@@ -63,7 +63,7 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workGroup")
-    private final @Nullable Input<String> workGroup;
+        private final @Nullable Input<String> workGroup;
 
     public Input<String> getWorkGroup() {
         return this.workGroup == null ? Input.empty() : this.workGroup;
@@ -167,7 +167,6 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
             this.workGroup = Input.ofNullable(workGroup);
             return this;
         }
-
         public NamedQueryArgs build() {
             return new NamedQueryArgs(database, description, name, queryString, workGroup);
         }

@@ -78,7 +78,6 @@ public final class ListScheduleApplicableResult {
             this.value = value;
             return this;
         }
-
         public ListScheduleApplicableResult build() {
             return new ListScheduleApplicableResult(nextLink, value);
         }

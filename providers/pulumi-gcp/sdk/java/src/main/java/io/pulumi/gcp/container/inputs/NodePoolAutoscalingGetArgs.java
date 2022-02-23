@@ -18,7 +18,7 @@ public final class NodePoolAutoscalingGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maxNodeCount", required=true)
-    private final Input<Integer> maxNodeCount;
+        private final Input<Integer> maxNodeCount;
 
     public Input<Integer> getMaxNodeCount() {
         return this.maxNodeCount;
@@ -30,7 +30,7 @@ public final class NodePoolAutoscalingGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="minNodeCount", required=true)
-    private final Input<Integer> minNodeCount;
+        private final Input<Integer> minNodeCount;
 
     public Input<Integer> getMinNodeCount() {
         return this.minNodeCount;
@@ -89,7 +89,6 @@ public final class NodePoolAutoscalingGetArgs extends io.pulumi.resources.Resour
             this.minNodeCount = Input.of(Objects.requireNonNull(minNodeCount));
             return this;
         }
-
         public NodePoolAutoscalingGetArgs build() {
             return new NodePoolAutoscalingGetArgs(maxNodeCount, minNodeCount);
         }

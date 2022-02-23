@@ -15,14 +15,14 @@ public final class ResponseHeadersPolicyReferrerPolicyArgs extends io.pulumi.res
     public static final ResponseHeadersPolicyReferrerPolicyArgs Empty = new ResponseHeadersPolicyReferrerPolicyArgs();
 
     @InputImport(name="override", required=true)
-    private final Input<Boolean> override;
+        private final Input<Boolean> override;
 
     public Input<Boolean> getOverride() {
         return this.override;
     }
 
     @InputImport(name="referrerPolicy", required=true)
-    private final Input<String> referrerPolicy;
+        private final Input<String> referrerPolicy;
 
     public Input<String> getReferrerPolicy() {
         return this.referrerPolicy;
@@ -81,7 +81,6 @@ public final class ResponseHeadersPolicyReferrerPolicyArgs extends io.pulumi.res
             this.referrerPolicy = Input.of(Objects.requireNonNull(referrerPolicy));
             return this;
         }
-
         public ResponseHeadersPolicyReferrerPolicyArgs build() {
             return new ResponseHeadersPolicyReferrerPolicyArgs(override, referrerPolicy);
         }

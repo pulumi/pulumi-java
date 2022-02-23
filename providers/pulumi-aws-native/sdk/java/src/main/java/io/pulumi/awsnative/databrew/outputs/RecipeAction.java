@@ -71,7 +71,6 @@ public final class RecipeAction {
             this.parameters = parameters;
             return this;
         }
-
         public RecipeAction build() {
             return new RecipeAction(operation, parameters);
         }

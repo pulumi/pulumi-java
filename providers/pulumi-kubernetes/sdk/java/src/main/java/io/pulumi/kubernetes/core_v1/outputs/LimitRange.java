@@ -120,7 +120,6 @@ public final class LimitRange {
             this.spec = spec;
             return this;
         }
-
         public LimitRange build() {
             return new LimitRange(apiVersion, kind, metadata, spec);
         }

@@ -24,7 +24,7 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
      * 
      */
     @InputImport(name="privateIPAddress")
-    private final @Nullable String privateIPAddress;
+        private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
@@ -35,7 +35,7 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
      * 
      */
     @InputImport(name="publicIPAddress")
-    private final @Nullable SubResourceResponse publicIPAddress;
+        private final @Nullable SubResourceResponse publicIPAddress;
 
     public Optional<SubResourceResponse> getPublicIPAddress() {
         return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
@@ -46,7 +46,7 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable SubResourceResponse subnet;
+        private final @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
@@ -105,7 +105,6 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
             this.subnet = subnet;
             return this;
         }
-
         public LoadBalancerFrontendIPConfigurationPropertiesResponse build() {
             return new LoadBalancerFrontendIPConfigurationPropertiesResponse(privateIPAddress, publicIPAddress, subnet);
         }

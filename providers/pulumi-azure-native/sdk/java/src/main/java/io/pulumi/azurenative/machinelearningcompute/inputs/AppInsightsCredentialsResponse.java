@@ -23,7 +23,7 @@ public final class AppInsightsCredentialsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable String appId;
+        private final @Nullable String appId;
 
     public Optional<String> getAppId() {
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
@@ -34,7 +34,7 @@ public final class AppInsightsCredentialsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="instrumentationKey")
-    private final @Nullable String instrumentationKey;
+        private final @Nullable String instrumentationKey;
 
     public Optional<String> getInstrumentationKey() {
         return this.instrumentationKey == null ? Optional.empty() : Optional.ofNullable(this.instrumentationKey);
@@ -83,7 +83,6 @@ public final class AppInsightsCredentialsResponse extends io.pulumi.resources.In
             this.instrumentationKey = instrumentationKey;
             return this;
         }
-
         public AppInsightsCredentialsResponse build() {
             return new AppInsightsCredentialsResponse(appId, instrumentationKey);
         }

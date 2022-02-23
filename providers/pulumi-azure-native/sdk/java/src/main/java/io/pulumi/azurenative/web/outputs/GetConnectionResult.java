@@ -175,7 +175,6 @@ public final class GetConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectionResult build() {
             return new GetConnectionResult(etag, id, location, name, properties, tags, type);
         }

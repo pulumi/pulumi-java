@@ -119,7 +119,6 @@ public final class TransferJobTransferSpecObjectConditions {
             this.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
             return this;
         }
-
         public TransferJobTransferSpecObjectConditions build() {
             return new TransferJobTransferSpecObjectConditions(excludePrefixes, includePrefixes, maxTimeElapsedSinceLastModification, minTimeElapsedSinceLastModification);
         }

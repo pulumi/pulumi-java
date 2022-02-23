@@ -164,7 +164,6 @@ public final class VaultPropertiesResponse {
             this.upgradeDetails = upgradeDetails;
             return this;
         }
-
         public VaultPropertiesResponse build() {
             return new VaultPropertiesResponse(encryption, privateEndpointConnections, privateEndpointStateForBackup, privateEndpointStateForSiteRecovery, provisioningState, upgradeDetails);
         }

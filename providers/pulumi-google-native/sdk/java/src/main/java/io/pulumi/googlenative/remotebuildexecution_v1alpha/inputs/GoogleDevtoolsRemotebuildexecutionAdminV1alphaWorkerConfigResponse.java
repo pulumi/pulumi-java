@@ -24,7 +24,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @InputImport(name="accelerator", required=true)
-    private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator;
+      private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse getAccelerator() {
         return this.accelerator;
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final String diskSizeGb;
+      private final String diskSizeGb;
 
     public String getDiskSizeGb() {
         return this.diskSizeGb;
@@ -46,7 +46,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @InputImport(name="diskType", required=true)
-    private final String diskType;
+      private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
@@ -57,7 +57,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -68,7 +68,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -79,7 +79,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @InputImport(name="maxConcurrentActions", required=true)
-    private final String maxConcurrentActions;
+      private final String maxConcurrentActions;
 
     public String getMaxConcurrentActions() {
         return this.maxConcurrentActions;
@@ -90,7 +90,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @InputImport(name="minCpuPlatform", required=true)
-    private final String minCpuPlatform;
+      private final String minCpuPlatform;
 
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
@@ -101,7 +101,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @InputImport(name="networkAccess", required=true)
-    private final String networkAccess;
+      private final String networkAccess;
 
     public String getNetworkAccess() {
         return this.networkAccess;
@@ -112,7 +112,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @InputImport(name="reserved", required=true)
-    private final Boolean reserved;
+      private final Boolean reserved;
 
     public Boolean getReserved() {
         return this.reserved;
@@ -123,7 +123,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @InputImport(name="soleTenantNodeType", required=true)
-    private final String soleTenantNodeType;
+      private final String soleTenantNodeType;
 
     public String getSoleTenantNodeType() {
         return this.soleTenantNodeType;
@@ -134,7 +134,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @InputImport(name="vmImage", required=true)
-    private final String vmImage;
+      private final String vmImage;
 
     public String getVmImage() {
         return this.vmImage;
@@ -273,7 +273,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse(accelerator, diskSizeGb, diskType, labels, machineType, maxConcurrentActions, minCpuPlatform, networkAccess, reserved, soleTenantNodeType, vmImage);
         }

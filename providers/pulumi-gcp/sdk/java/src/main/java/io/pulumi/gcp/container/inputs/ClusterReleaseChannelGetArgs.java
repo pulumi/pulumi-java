@@ -23,7 +23,7 @@ public final class ClusterReleaseChannelGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="channel", required=true)
-    private final Input<String> channel;
+        private final Input<String> channel;
 
     public Input<String> getChannel() {
         return this.channel;
@@ -66,7 +66,6 @@ public final class ClusterReleaseChannelGetArgs extends io.pulumi.resources.Reso
             this.channel = Input.of(Objects.requireNonNull(channel));
             return this;
         }
-
         public ClusterReleaseChannelGetArgs build() {
             return new ClusterReleaseChannelGetArgs(channel);
         }

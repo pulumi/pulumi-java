@@ -22,7 +22,7 @@ public final class LatencyPercentileResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="latencyMicros", required=true)
-    private final String latencyMicros;
+      private final String latencyMicros;
 
     public String getLatencyMicros() {
         return this.latencyMicros;
@@ -33,7 +33,7 @@ public final class LatencyPercentileResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="percent", required=true)
-    private final Integer percent;
+      private final Integer percent;
 
     public Integer getPercent() {
         return this.percent;
@@ -82,7 +82,6 @@ public final class LatencyPercentileResponse extends io.pulumi.resources.InvokeA
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
-
         public LatencyPercentileResponse build() {
             return new LatencyPercentileResponse(latencyMicros, percent);
         }

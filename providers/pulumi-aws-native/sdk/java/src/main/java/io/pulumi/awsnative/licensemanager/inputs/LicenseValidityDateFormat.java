@@ -17,7 +17,7 @@ public final class LicenseValidityDateFormat extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="begin", required=true)
-    private final String begin;
+        private final String begin;
 
     public String getBegin() {
         return this.begin;
@@ -28,7 +28,7 @@ public final class LicenseValidityDateFormat extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="end", required=true)
-    private final String end;
+        private final String end;
 
     public String getEnd() {
         return this.end;
@@ -77,7 +77,6 @@ public final class LicenseValidityDateFormat extends io.pulumi.resources.InvokeA
             this.end = Objects.requireNonNull(end);
             return this;
         }
-
         public LicenseValidityDateFormat build() {
             return new LicenseValidityDateFormat(begin, end);
         }

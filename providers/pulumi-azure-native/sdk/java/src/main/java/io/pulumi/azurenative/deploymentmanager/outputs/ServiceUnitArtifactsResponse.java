@@ -118,7 +118,6 @@ public final class ServiceUnitArtifactsResponse {
             this.templateUri = templateUri;
             return this;
         }
-
         public ServiceUnitArtifactsResponse build() {
             return new ServiceUnitArtifactsResponse(parametersArtifactSourceRelativePath, parametersUri, templateArtifactSourceRelativePath, templateUri);
         }

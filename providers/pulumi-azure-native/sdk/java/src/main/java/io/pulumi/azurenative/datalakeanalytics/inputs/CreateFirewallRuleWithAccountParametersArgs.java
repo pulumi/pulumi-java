@@ -22,7 +22,7 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends io.pulumi
      * 
      */
     @InputImport(name="endIpAddress", required=true)
-    private final Input<String> endIpAddress;
+        private final Input<String> endIpAddress;
 
     public Input<String> getEndIpAddress() {
         return this.endIpAddress;
@@ -33,7 +33,7 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends io.pulumi
      * 
      */
     @InputImport(name="startIpAddress", required=true)
-    private final Input<String> startIpAddress;
+        private final Input<String> startIpAddress;
 
     public Input<String> getStartIpAddress() {
         return this.startIpAddress;
@@ -118,7 +118,6 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends io.pulumi
             this.startIpAddress = Input.of(Objects.requireNonNull(startIpAddress));
             return this;
         }
-
         public CreateFirewallRuleWithAccountParametersArgs build() {
             return new CreateFirewallRuleWithAccountParametersArgs(endIpAddress, name, startIpAddress);
         }

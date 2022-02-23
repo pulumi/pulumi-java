@@ -423,7 +423,6 @@ public final class RestServiceLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public RestServiceLinkedServiceResponse build() {
             return new RestServiceLinkedServiceResponse(aadResourceId, annotations, authHeaders, authenticationType, azureCloudType, connectVia, credential, description, enableServerCertificateValidation, encryptedCredential, parameters, password, servicePrincipalId, servicePrincipalKey, tenant, type, url, userName);
         }

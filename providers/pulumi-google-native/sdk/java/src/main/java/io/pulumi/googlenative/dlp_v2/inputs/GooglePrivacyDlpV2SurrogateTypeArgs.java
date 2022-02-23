@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2SurrogateTypeArgs extends io.pulumi.resourc
         public Builder(GooglePrivacyDlpV2SurrogateTypeArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2SurrogateTypeArgs build() {
             return new GooglePrivacyDlpV2SurrogateTypeArgs();
         }

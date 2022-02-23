@@ -180,7 +180,6 @@ public final class ServiceProviderParameterResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceProviderParameterResponse build() {
             return new ServiceProviderParameterResponse($default, description, displayName, helpUrl, metadata, name, type);
         }

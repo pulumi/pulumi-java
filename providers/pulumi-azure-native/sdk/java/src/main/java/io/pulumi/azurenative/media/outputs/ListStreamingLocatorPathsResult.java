@@ -77,7 +77,6 @@ public final class ListStreamingLocatorPathsResult {
             this.streamingPaths = streamingPaths;
             return this;
         }
-
         public ListStreamingLocatorPathsResult build() {
             return new ListStreamingLocatorPathsResult(downloadPaths, streamingPaths);
         }

@@ -54,7 +54,6 @@ public final class JsonFieldResponse {
             this.sourceField = sourceField;
             return this;
         }
-
         public JsonFieldResponse build() {
             return new JsonFieldResponse(sourceField);
         }

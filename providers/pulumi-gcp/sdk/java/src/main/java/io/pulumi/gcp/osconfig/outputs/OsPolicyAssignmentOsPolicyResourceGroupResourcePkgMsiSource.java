@@ -121,7 +121,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource {
             this.remote = remote;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource(allowInsecure, gcs, localPath, remote);
         }

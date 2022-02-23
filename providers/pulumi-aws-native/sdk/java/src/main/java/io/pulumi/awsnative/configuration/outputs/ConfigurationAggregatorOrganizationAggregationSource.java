@@ -75,7 +75,6 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public ConfigurationAggregatorOrganizationAggregationSource build() {
             return new ConfigurationAggregatorOrganizationAggregationSource(allAwsRegions, awsRegions, roleArn);
         }

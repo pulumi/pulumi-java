@@ -100,7 +100,6 @@ public final class InstanceGroupManagerStatus {
             this.versionTargets = versionTargets;
             return this;
         }
-
         public InstanceGroupManagerStatus build() {
             return new InstanceGroupManagerStatus(isStable, statefuls, versionTargets);
         }

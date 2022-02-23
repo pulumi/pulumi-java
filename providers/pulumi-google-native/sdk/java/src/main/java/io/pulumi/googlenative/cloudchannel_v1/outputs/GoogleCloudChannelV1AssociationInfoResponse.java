@@ -52,7 +52,6 @@ public final class GoogleCloudChannelV1AssociationInfoResponse {
             this.baseEntitlement = Objects.requireNonNull(baseEntitlement);
             return this;
         }
-
         public GoogleCloudChannelV1AssociationInfoResponse build() {
             return new GoogleCloudChannelV1AssociationInfoResponse(baseEntitlement);
         }

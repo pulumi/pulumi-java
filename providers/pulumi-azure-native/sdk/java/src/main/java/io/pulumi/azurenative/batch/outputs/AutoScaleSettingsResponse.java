@@ -68,7 +68,6 @@ public final class AutoScaleSettingsResponse {
             this.formula = Objects.requireNonNull(formula);
             return this;
         }
-
         public AutoScaleSettingsResponse build() {
             return new AutoScaleSettingsResponse(evaluationInterval, formula);
         }

@@ -95,7 +95,6 @@ public final class FilterTrackPropertyConditionResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FilterTrackPropertyConditionResponse build() {
             return new FilterTrackPropertyConditionResponse(operation, property, value);
         }

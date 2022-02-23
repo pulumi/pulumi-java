@@ -21,7 +21,7 @@ public final class KubernetesRoleStorageClassInfoResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class KubernetesRoleStorageClassInfoResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="posixCompliant", required=true)
-    private final String posixCompliant;
+        private final String posixCompliant;
 
     public String getPosixCompliant() {
         return this.posixCompliant;
@@ -43,7 +43,7 @@ public final class KubernetesRoleStorageClassInfoResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -102,7 +102,6 @@ public final class KubernetesRoleStorageClassInfoResponse extends io.pulumi.reso
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public KubernetesRoleStorageClassInfoResponse build() {
             return new KubernetesRoleStorageClassInfoResponse(name, posixCompliant, type);
         }

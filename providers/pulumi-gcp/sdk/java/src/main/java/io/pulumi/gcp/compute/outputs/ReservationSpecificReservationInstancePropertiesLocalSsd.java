@@ -81,7 +81,6 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
             this.$interface = $interface;
             return this;
         }
-
         public ReservationSpecificReservationInstancePropertiesLocalSsd build() {
             return new ReservationSpecificReservationInstancePropertiesLocalSsd(diskSizeGb, $interface);
         }

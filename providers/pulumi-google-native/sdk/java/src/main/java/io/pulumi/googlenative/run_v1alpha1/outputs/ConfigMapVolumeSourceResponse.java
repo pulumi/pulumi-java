@@ -120,7 +120,6 @@ public final class ConfigMapVolumeSourceResponse {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public ConfigMapVolumeSourceResponse build() {
             return new ConfigMapVolumeSourceResponse(defaultMode, items, name, optional);
         }

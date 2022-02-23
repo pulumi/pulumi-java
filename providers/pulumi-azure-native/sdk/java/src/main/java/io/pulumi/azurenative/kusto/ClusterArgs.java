@@ -30,7 +30,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+        private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -41,7 +41,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDiskEncryption")
-    private final @Nullable Input<Boolean> enableDiskEncryption;
+        private final @Nullable Input<Boolean> enableDiskEncryption;
 
     public Input<Boolean> getEnableDiskEncryption() {
         return this.enableDiskEncryption == null ? Input.empty() : this.enableDiskEncryption;
@@ -52,7 +52,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDoubleEncryption")
-    private final @Nullable Input<Boolean> enableDoubleEncryption;
+        private final @Nullable Input<Boolean> enableDoubleEncryption;
 
     public Input<Boolean> getEnableDoubleEncryption() {
         return this.enableDoubleEncryption == null ? Input.empty() : this.enableDoubleEncryption;
@@ -63,7 +63,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enablePurge")
-    private final @Nullable Input<Boolean> enablePurge;
+        private final @Nullable Input<Boolean> enablePurge;
 
     public Input<Boolean> getEnablePurge() {
         return this.enablePurge == null ? Input.empty() : this.enablePurge;
@@ -74,7 +74,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableStreamingIngest")
-    private final @Nullable Input<Boolean> enableStreamingIngest;
+        private final @Nullable Input<Boolean> enableStreamingIngest;
 
     public Input<Boolean> getEnableStreamingIngest() {
         return this.enableStreamingIngest == null ? Input.empty() : this.enableStreamingIngest;
@@ -85,7 +85,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineType")
-    private final @Nullable Input<Either<String,EngineType>> engineType;
+        private final @Nullable Input<Either<String,EngineType>> engineType;
 
     public Input<Either<String,EngineType>> getEngineType() {
         return this.engineType == null ? Input.empty() : this.engineType;
@@ -96,7 +96,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<IdentityArgs> identity;
+        private final @Nullable Input<IdentityArgs> identity;
 
     public Input<IdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -107,7 +107,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultProperties")
-    private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+        private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
@@ -118,7 +118,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -129,7 +129,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optimizedAutoscale")
-    private final @Nullable Input<OptimizedAutoscaleArgs> optimizedAutoscale;
+        private final @Nullable Input<OptimizedAutoscaleArgs> optimizedAutoscale;
 
     public Input<OptimizedAutoscaleArgs> getOptimizedAutoscale() {
         return this.optimizedAutoscale == null ? Input.empty() : this.optimizedAutoscale;
@@ -140,7 +140,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -151,7 +151,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<AzureSkuArgs> sku;
+        private final Input<AzureSkuArgs> sku;
 
     public Input<AzureSkuArgs> getSku() {
         return this.sku;
@@ -162,7 +162,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -173,7 +173,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustedExternalTenants")
-    private final @Nullable Input<List<TrustedExternalTenantArgs>> trustedExternalTenants;
+        private final @Nullable Input<List<TrustedExternalTenantArgs>> trustedExternalTenants;
 
     public Input<List<TrustedExternalTenantArgs>> getTrustedExternalTenants() {
         return this.trustedExternalTenants == null ? Input.empty() : this.trustedExternalTenants;
@@ -184,7 +184,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkConfiguration")
-    private final @Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
+        private final @Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
     public Input<VirtualNetworkConfigurationArgs> getVirtualNetworkConfiguration() {
         return this.virtualNetworkConfiguration == null ? Input.empty() : this.virtualNetworkConfiguration;
@@ -195,7 +195,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+        private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -464,7 +464,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public ClusterArgs build() {
             return new ClusterArgs(clusterName, enableDiskEncryption, enableDoubleEncryption, enablePurge, enableStreamingIngest, engineType, identity, keyVaultProperties, location, optimizedAutoscale, resourceGroupName, sku, tags, trustedExternalTenants, virtualNetworkConfiguration, zones);
         }

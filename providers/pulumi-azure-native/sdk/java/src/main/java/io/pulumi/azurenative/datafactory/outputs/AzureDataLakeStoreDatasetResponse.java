@@ -300,7 +300,6 @@ public final class AzureDataLakeStoreDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataLakeStoreDatasetResponse build() {
             return new AzureDataLakeStoreDatasetResponse(annotations, compression, description, fileName, folder, folderPath, format, linkedServiceName, parameters, schema, structure, type);
         }

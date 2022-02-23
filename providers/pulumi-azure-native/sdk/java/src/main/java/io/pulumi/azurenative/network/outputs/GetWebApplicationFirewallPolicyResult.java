@@ -335,7 +335,6 @@ public final class GetWebApplicationFirewallPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebApplicationFirewallPolicyResult build() {
             return new GetWebApplicationFirewallPolicyResult(applicationGateways, customRules, etag, httpListeners, id, location, managedRules, name, pathBasedRules, policySettings, provisioningState, resourceState, tags, type);
         }

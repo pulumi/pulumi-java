@@ -13,7 +13,7 @@ public final class GetClusterVerticalPodAutoscaling extends io.pulumi.resources.
     public static final GetClusterVerticalPodAutoscaling Empty = new GetClusterVerticalPodAutoscaling();
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -51,7 +51,6 @@ public final class GetClusterVerticalPodAutoscaling extends io.pulumi.resources.
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetClusterVerticalPodAutoscaling build() {
             return new GetClusterVerticalPodAutoscaling(enabled);
         }

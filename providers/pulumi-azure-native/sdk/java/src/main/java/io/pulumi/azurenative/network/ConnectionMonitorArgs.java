@@ -29,7 +29,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="autoStart")
-    private final @Nullable Input<Boolean> autoStart;
+        private final @Nullable Input<Boolean> autoStart;
 
     public Input<Boolean> getAutoStart() {
         return this.autoStart == null ? Input.empty() : this.autoStart;
@@ -40,7 +40,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionMonitorName")
-    private final @Nullable Input<String> connectionMonitorName;
+        private final @Nullable Input<String> connectionMonitorName;
 
     public Input<String> getConnectionMonitorName() {
         return this.connectionMonitorName == null ? Input.empty() : this.connectionMonitorName;
@@ -51,7 +51,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<ConnectionMonitorDestinationArgs> destination;
+        private final @Nullable Input<ConnectionMonitorDestinationArgs> destination;
 
     public Input<ConnectionMonitorDestinationArgs> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -62,7 +62,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endpoints")
-    private final @Nullable Input<List<ConnectionMonitorEndpointArgs>> endpoints;
+        private final @Nullable Input<List<ConnectionMonitorEndpointArgs>> endpoints;
 
     public Input<List<ConnectionMonitorEndpointArgs>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
@@ -73,7 +73,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -84,7 +84,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="migrate")
-    private final @Nullable Input<String> migrate;
+        private final @Nullable Input<String> migrate;
 
     public Input<String> getMigrate() {
         return this.migrate == null ? Input.empty() : this.migrate;
@@ -95,7 +95,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="monitoringIntervalInSeconds")
-    private final @Nullable Input<Integer> monitoringIntervalInSeconds;
+        private final @Nullable Input<Integer> monitoringIntervalInSeconds;
 
     public Input<Integer> getMonitoringIntervalInSeconds() {
         return this.monitoringIntervalInSeconds == null ? Input.empty() : this.monitoringIntervalInSeconds;
@@ -106,7 +106,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="networkWatcherName", required=true)
-    private final Input<String> networkWatcherName;
+        private final Input<String> networkWatcherName;
 
     public Input<String> getNetworkWatcherName() {
         return this.networkWatcherName;
@@ -117,7 +117,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="notes")
-    private final @Nullable Input<String> notes;
+        private final @Nullable Input<String> notes;
 
     public Input<String> getNotes() {
         return this.notes == null ? Input.empty() : this.notes;
@@ -128,7 +128,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="outputs")
-    private final @Nullable Input<List<ConnectionMonitorOutputArgs>> outputs;
+        private final @Nullable Input<List<ConnectionMonitorOutputArgs>> outputs;
 
     public Input<List<ConnectionMonitorOutputArgs>> getOutputs() {
         return this.outputs == null ? Input.empty() : this.outputs;
@@ -139,7 +139,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -150,7 +150,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<ConnectionMonitorSourceArgs> source;
+        private final @Nullable Input<ConnectionMonitorSourceArgs> source;
 
     public Input<ConnectionMonitorSourceArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -161,7 +161,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -172,7 +172,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="testConfigurations")
-    private final @Nullable Input<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations;
+        private final @Nullable Input<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations;
 
     public Input<List<ConnectionMonitorTestConfigurationArgs>> getTestConfigurations() {
         return this.testConfigurations == null ? Input.empty() : this.testConfigurations;
@@ -183,7 +183,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="testGroups")
-    private final @Nullable Input<List<ConnectionMonitorTestGroupArgs>> testGroups;
+        private final @Nullable Input<List<ConnectionMonitorTestGroupArgs>> testGroups;
 
     public Input<List<ConnectionMonitorTestGroupArgs>> getTestGroups() {
         return this.testGroups == null ? Input.empty() : this.testGroups;
@@ -437,7 +437,6 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             this.testGroups = Input.ofNullable(testGroups);
             return this;
         }
-
         public ConnectionMonitorArgs build() {
             return new ConnectionMonitorArgs(autoStart, connectionMonitorName, destination, endpoints, location, migrate, monitoringIntervalInSeconds, networkWatcherName, notes, outputs, resourceGroupName, source, tags, testConfigurations, testGroups);
         }

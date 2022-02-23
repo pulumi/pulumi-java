@@ -165,7 +165,6 @@ public final class MetricStatus {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MetricStatus build() {
             return new MetricStatus(containerResource, external, object, pods, resource, type);
         }

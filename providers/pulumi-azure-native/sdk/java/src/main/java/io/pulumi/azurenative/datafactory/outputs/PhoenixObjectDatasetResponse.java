@@ -252,7 +252,6 @@ public final class PhoenixObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PhoenixObjectDatasetResponse build() {
             return new PhoenixObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

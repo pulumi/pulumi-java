@@ -123,7 +123,6 @@ public final class GetIPSetResult {
             this.tags = tags;
             return this;
         }
-
         public GetIPSetResult build() {
             return new GetIPSetResult(addresses, arn, description, iPAddressVersion, id, tags);
         }

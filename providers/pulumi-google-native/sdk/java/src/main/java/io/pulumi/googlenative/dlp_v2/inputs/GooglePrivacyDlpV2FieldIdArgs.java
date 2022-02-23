@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2FieldIdArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2FieldIdArgs extends io.pulumi.resources.Res
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public GooglePrivacyDlpV2FieldIdArgs build() {
             return new GooglePrivacyDlpV2FieldIdArgs(name);
         }

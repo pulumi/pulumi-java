@@ -264,7 +264,6 @@ public final class GetPredictionModelStatusResult {
             this.validationSetCount = Objects.requireNonNull(validationSetCount);
             return this;
         }
-
         public GetPredictionModelStatusResult build() {
             return new GetPredictionModelStatusResult(message, modelVersion, predictionGuidId, predictionName, signalsUsed, status, tenantId, testSetCount, trainingAccuracy, trainingSetCount, validationSetCount);
         }

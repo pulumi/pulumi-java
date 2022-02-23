@@ -84,7 +84,6 @@ public final class RegistryEventNotificationConfigItem {
             this.subfolderMatches = subfolderMatches;
             return this;
         }
-
         public RegistryEventNotificationConfigItem build() {
             return new RegistryEventNotificationConfigItem(pubsubTopicName, subfolderMatches);
         }

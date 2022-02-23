@@ -76,7 +76,6 @@ public final class IPRuleResponse {
             this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange);
             return this;
         }
-
         public IPRuleResponse build() {
             return new IPRuleResponse(action, iPAddressOrRange);
         }

@@ -24,7 +24,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="fleetAutoscalerSpec", required=true)
-    private final Input<String> fleetAutoscalerSpec;
+        private final Input<String> fleetAutoscalerSpec;
 
     public Input<String> getFleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
@@ -35,7 +35,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="schedules")
-    private final @Nullable Input<List<GameServerConfigScalingConfigScheduleArgs>> schedules;
+        private final @Nullable Input<List<GameServerConfigScalingConfigScheduleArgs>> schedules;
 
     public Input<List<GameServerConfigScalingConfigScheduleArgs>> getSchedules() {
         return this.schedules == null ? Input.empty() : this.schedules;
@@ -61,7 +61,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="selectors")
-    private final @Nullable Input<List<GameServerConfigScalingConfigSelectorArgs>> selectors;
+        private final @Nullable Input<List<GameServerConfigScalingConfigSelectorArgs>> selectors;
 
     public Input<List<GameServerConfigScalingConfigSelectorArgs>> getSelectors() {
         return this.selectors == null ? Input.empty() : this.selectors;
@@ -150,7 +150,6 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
             this.selectors = Input.ofNullable(selectors);
             return this;
         }
-
         public GameServerConfigScalingConfigArgs build() {
             return new GameServerConfigScalingConfigArgs(fleetAutoscalerSpec, name, schedules, selectors);
         }

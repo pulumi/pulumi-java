@@ -97,7 +97,6 @@ public final class DppIdentityDetailsResponse {
             this.type = type;
             return this;
         }
-
         public DppIdentityDetailsResponse build() {
             return new DppIdentityDetailsResponse(principalId, tenantId, type);
         }

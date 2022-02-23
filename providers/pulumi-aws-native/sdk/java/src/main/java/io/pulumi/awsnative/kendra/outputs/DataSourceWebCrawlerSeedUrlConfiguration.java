@@ -62,7 +62,6 @@ public final class DataSourceWebCrawlerSeedUrlConfiguration {
             this.webCrawlerMode = webCrawlerMode;
             return this;
         }
-
         public DataSourceWebCrawlerSeedUrlConfiguration build() {
             return new DataSourceWebCrawlerSeedUrlConfiguration(seedUrls, webCrawlerMode);
         }

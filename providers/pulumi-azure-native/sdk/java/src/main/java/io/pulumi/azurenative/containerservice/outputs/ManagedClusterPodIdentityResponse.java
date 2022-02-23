@@ -154,7 +154,6 @@ public final class ManagedClusterPodIdentityResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ManagedClusterPodIdentityResponse build() {
             return new ManagedClusterPodIdentityResponse(bindingSelector, identity, name, namespace, provisioningInfo, provisioningState);
         }

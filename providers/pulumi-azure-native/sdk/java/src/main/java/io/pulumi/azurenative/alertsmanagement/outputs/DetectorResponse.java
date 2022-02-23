@@ -163,7 +163,6 @@ public final class DetectorResponse {
             this.supportedResourceTypes = supportedResourceTypes;
             return this;
         }
-
         public DetectorResponse build() {
             return new DetectorResponse(description, id, imagePaths, name, parameters, supportedResourceTypes);
         }

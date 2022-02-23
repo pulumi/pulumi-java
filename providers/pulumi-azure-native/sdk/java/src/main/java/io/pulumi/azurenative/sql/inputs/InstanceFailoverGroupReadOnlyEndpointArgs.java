@@ -25,7 +25,7 @@ public final class InstanceFailoverGroupReadOnlyEndpointArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="failoverPolicy")
-    private final @Nullable Input<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy;
+        private final @Nullable Input<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy;
 
     public Input<Either<String,ReadOnlyEndpointFailoverPolicy>> getFailoverPolicy() {
         return this.failoverPolicy == null ? Input.empty() : this.failoverPolicy;
@@ -68,7 +68,6 @@ public final class InstanceFailoverGroupReadOnlyEndpointArgs extends io.pulumi.r
             this.failoverPolicy = Input.ofNullable(failoverPolicy);
             return this;
         }
-
         public InstanceFailoverGroupReadOnlyEndpointArgs build() {
             return new InstanceFailoverGroupReadOnlyEndpointArgs(failoverPolicy);
         }

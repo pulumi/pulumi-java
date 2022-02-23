@@ -77,7 +77,6 @@ public final class GetInsightsResultsMetadataResponse {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
-
         public GetInsightsResultsMetadataResponse build() {
             return new GetInsightsResultsMetadataResponse(errors, totalCount);
         }

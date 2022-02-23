@@ -117,7 +117,6 @@ public final class ProgressMetricsResponse {
             this.totalDatapointCount = Objects.requireNonNull(totalDatapointCount);
             return this;
         }
-
         public ProgressMetricsResponse build() {
             return new ProgressMetricsResponse(completedDatapointCount, incrementalDatasetLastRefreshTime, skippedDatapointCount, totalDatapointCount);
         }

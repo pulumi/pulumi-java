@@ -138,7 +138,6 @@ public final class GetDomainTopicResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDomainTopicResult build() {
             return new GetDomainTopicResult(id, name, provisioningState, systemData, type);
         }

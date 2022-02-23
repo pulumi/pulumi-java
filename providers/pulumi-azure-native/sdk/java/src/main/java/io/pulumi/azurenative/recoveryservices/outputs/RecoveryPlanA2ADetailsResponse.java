@@ -99,7 +99,6 @@ public final class RecoveryPlanA2ADetailsResponse {
             this.recoveryZone = recoveryZone;
             return this;
         }
-
         public RecoveryPlanA2ADetailsResponse build() {
             return new RecoveryPlanA2ADetailsResponse(instanceType, primaryZone, recoveryZone);
         }

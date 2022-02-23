@@ -21,7 +21,7 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -32,7 +32,7 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -43,7 +43,7 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -54,7 +54,7 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceNamespace", required=true)
-    private final String serviceNamespace;
+      private final String serviceNamespace;
 
     public String getServiceNamespace() {
         return this.serviceNamespace;
@@ -123,7 +123,6 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
-
         public ClusterIstioResponse build() {
             return new ClusterIstioResponse(clusterName, location, serviceName, serviceNamespace);
         }

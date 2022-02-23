@@ -248,7 +248,6 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
             this.suffixMatch = suffixMatch;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, rangeMatch, regexMatch, suffixMatch);
         }

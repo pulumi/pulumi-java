@@ -54,7 +54,6 @@ public final class ApplicationHAClusterPrometheusExporter {
             this.prometheusPort = prometheusPort;
             return this;
         }
-
         public ApplicationHAClusterPrometheusExporter build() {
             return new ApplicationHAClusterPrometheusExporter(prometheusPort);
         }

@@ -23,7 +23,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="externalIpv6", required=true)
-    private final String externalIpv6;
+      private final String externalIpv6;
 
     public String getExternalIpv6() {
         return this.externalIpv6;
@@ -34,7 +34,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="externalIpv6PrefixLength", required=true)
-    private final Integer externalIpv6PrefixLength;
+      private final Integer externalIpv6PrefixLength;
 
     public Integer getExternalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength;
@@ -45,7 +45,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -56,7 +56,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -67,7 +67,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="natIP", required=true)
-    private final String natIP;
+      private final String natIP;
 
     public String getNatIP() {
         return this.natIP;
@@ -78,7 +78,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkTier", required=true)
-    private final String networkTier;
+      private final String networkTier;
 
     public String getNetworkTier() {
         return this.networkTier;
@@ -89,7 +89,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publicDnsName", required=true)
-    private final String publicDnsName;
+      private final String publicDnsName;
 
     public String getPublicDnsName() {
         return this.publicDnsName;
@@ -100,7 +100,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publicPtrDomainName", required=true)
-    private final String publicPtrDomainName;
+      private final String publicPtrDomainName;
 
     public String getPublicPtrDomainName() {
         return this.publicPtrDomainName;
@@ -111,7 +111,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="setPublicDns", required=true)
-    private final Boolean setPublicDns;
+      private final Boolean setPublicDns;
 
     public Boolean getSetPublicDns() {
         return this.setPublicDns;
@@ -122,7 +122,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="setPublicPtr", required=true)
-    private final Boolean setPublicPtr;
+      private final Boolean setPublicPtr;
 
     public Boolean getSetPublicPtr() {
         return this.setPublicPtr;
@@ -133,7 +133,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -272,7 +272,6 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AccessConfigResponse build() {
             return new AccessConfigResponse(externalIpv6, externalIpv6PrefixLength, kind, name, natIP, networkTier, publicDnsName, publicPtrDomainName, setPublicDns, setPublicPtr, type);
         }

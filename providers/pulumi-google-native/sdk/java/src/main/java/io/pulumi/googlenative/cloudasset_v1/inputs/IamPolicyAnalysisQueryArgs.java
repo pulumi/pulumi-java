@@ -28,7 +28,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accessSelector")
-    private final @Nullable Input<AccessSelectorArgs> accessSelector;
+      private final @Nullable Input<AccessSelectorArgs> accessSelector;
 
     public Input<AccessSelectorArgs> getAccessSelector() {
         return this.accessSelector == null ? Input.empty() : this.accessSelector;
@@ -39,7 +39,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="conditionContext")
-    private final @Nullable Input<ConditionContextArgs> conditionContext;
+      private final @Nullable Input<ConditionContextArgs> conditionContext;
 
     public Input<ConditionContextArgs> getConditionContext() {
         return this.conditionContext == null ? Input.empty() : this.conditionContext;
@@ -50,7 +50,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="identitySelector")
-    private final @Nullable Input<IdentitySelectorArgs> identitySelector;
+      private final @Nullable Input<IdentitySelectorArgs> identitySelector;
 
     public Input<IdentitySelectorArgs> getIdentitySelector() {
         return this.identitySelector == null ? Input.empty() : this.identitySelector;
@@ -61,7 +61,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<OptionsArgs> options;
+      private final @Nullable Input<OptionsArgs> options;
 
     public Input<OptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -72,7 +72,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceSelector")
-    private final @Nullable Input<ResourceSelectorArgs> resourceSelector;
+      private final @Nullable Input<ResourceSelectorArgs> resourceSelector;
 
     public Input<ResourceSelectorArgs> getResourceSelector() {
         return this.resourceSelector == null ? Input.empty() : this.resourceSelector;
@@ -83,7 +83,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+      private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -202,7 +202,6 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public IamPolicyAnalysisQueryArgs build() {
             return new IamPolicyAnalysisQueryArgs(accessSelector, conditionContext, identitySelector, options, resourceSelector, scope);
         }

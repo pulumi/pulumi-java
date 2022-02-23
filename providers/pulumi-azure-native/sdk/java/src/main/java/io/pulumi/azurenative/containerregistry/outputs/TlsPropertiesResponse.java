@@ -75,7 +75,6 @@ public final class TlsPropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public TlsPropertiesResponse build() {
             return new TlsPropertiesResponse(certificate, status);
         }

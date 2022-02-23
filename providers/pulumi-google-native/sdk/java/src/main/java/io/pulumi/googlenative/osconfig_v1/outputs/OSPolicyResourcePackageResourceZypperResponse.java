@@ -52,7 +52,6 @@ public final class OSPolicyResourcePackageResourceZypperResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public OSPolicyResourcePackageResourceZypperResponse build() {
             return new OSPolicyResourcePackageResourceZypperResponse(name);
         }

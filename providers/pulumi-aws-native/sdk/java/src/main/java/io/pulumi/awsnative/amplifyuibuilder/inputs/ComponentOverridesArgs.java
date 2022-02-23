@@ -30,7 +30,6 @@ public final class ComponentOverridesArgs extends io.pulumi.resources.ResourceAr
         public Builder(ComponentOverridesArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ComponentOverridesArgs build() {
             return new ComponentOverridesArgs();
         }

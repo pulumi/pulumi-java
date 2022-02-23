@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="hotwordRegex", required=true)
-    private final GooglePrivacyDlpV2RegexResponse hotwordRegex;
+      private final GooglePrivacyDlpV2RegexResponse hotwordRegex;
 
     public GooglePrivacyDlpV2RegexResponse getHotwordRegex() {
         return this.hotwordRegex;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="likelihoodAdjustment", required=true)
-    private final GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment;
+      private final GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment;
 
     public GooglePrivacyDlpV2LikelihoodAdjustmentResponse getLikelihoodAdjustment() {
         return this.likelihoodAdjustment;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="proximity", required=true)
-    private final GooglePrivacyDlpV2ProximityResponse proximity;
+      private final GooglePrivacyDlpV2ProximityResponse proximity;
 
     public GooglePrivacyDlpV2ProximityResponse getProximity() {
         return this.proximity;
@@ -104,7 +104,6 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends io.pulumi.resou
             this.proximity = Objects.requireNonNull(proximity);
             return this;
         }
-
         public GooglePrivacyDlpV2HotwordRuleResponse build() {
             return new GooglePrivacyDlpV2HotwordRuleResponse(hotwordRegex, likelihoodAdjustment, proximity);
         }

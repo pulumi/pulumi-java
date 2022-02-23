@@ -223,7 +223,6 @@ public final class RouteInfoResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public RouteInfoResponse build() {
             return new RouteInfoResponse(destIpRange, displayName, instanceTags, networkUri, nextHop, nextHopType, priority, routeType, uri);
         }

@@ -156,7 +156,6 @@ public final class IngressResponse {
             this.transport = transport;
             return this;
         }
-
         public IngressResponse build() {
             return new IngressResponse(allowInsecure, external, fqdn, targetPort, traffic, transport);
         }

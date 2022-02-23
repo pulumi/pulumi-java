@@ -19,7 +19,7 @@ public final class AzureClusterNetworkingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="podAddressCidrBlocks", required=true)
-    private final Input<List<String>> podAddressCidrBlocks;
+        private final Input<List<String>> podAddressCidrBlocks;
 
     public Input<List<String>> getPodAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
@@ -30,7 +30,7 @@ public final class AzureClusterNetworkingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="serviceAddressCidrBlocks", required=true)
-    private final Input<List<String>> serviceAddressCidrBlocks;
+        private final Input<List<String>> serviceAddressCidrBlocks;
 
     public Input<List<String>> getServiceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
@@ -41,7 +41,7 @@ public final class AzureClusterNetworkingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="virtualNetworkId", required=true)
-    private final Input<String> virtualNetworkId;
+        private final Input<String> virtualNetworkId;
 
     public Input<String> getVirtualNetworkId() {
         return this.virtualNetworkId;
@@ -115,7 +115,6 @@ public final class AzureClusterNetworkingArgs extends io.pulumi.resources.Resour
             this.virtualNetworkId = Input.of(Objects.requireNonNull(virtualNetworkId));
             return this;
         }
-
         public AzureClusterNetworkingArgs build() {
             return new AzureClusterNetworkingArgs(podAddressCidrBlocks, serviceAddressCidrBlocks, virtualNetworkId);
         }

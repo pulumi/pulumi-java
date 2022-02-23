@@ -227,7 +227,6 @@ public final class NetworkMappingPropertiesResponse {
             this.state = state;
             return this;
         }
-
         public NetworkMappingPropertiesResponse build() {
             return new NetworkMappingPropertiesResponse(fabricSpecificSettings, primaryFabricFriendlyName, primaryNetworkFriendlyName, primaryNetworkId, recoveryFabricArmId, recoveryFabricFriendlyName, recoveryNetworkFriendlyName, recoveryNetworkId, state);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1ContactsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="people", required=true)
-    private final List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;
+      private final List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;
 
     public List<GoogleCloudDatacatalogV1ContactsPersonResponse> getPeople() {
         return this.people;
@@ -60,7 +60,6 @@ public final class GoogleCloudDatacatalogV1ContactsResponse extends io.pulumi.re
             this.people = Objects.requireNonNull(people);
             return this;
         }
-
         public GoogleCloudDatacatalogV1ContactsResponse build() {
             return new GoogleCloudDatacatalogV1ContactsResponse(people);
         }

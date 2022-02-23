@@ -52,7 +52,6 @@ public final class MHSMIPRuleResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public MHSMIPRuleResponse build() {
             return new MHSMIPRuleResponse(value);
         }

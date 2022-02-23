@@ -106,7 +106,6 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-
         public InstanceNetworkInterfaceIpv6AccessConfig build() {
             return new InstanceNetworkInterfaceIpv6AccessConfig(externalIpv6, externalIpv6PrefixLength, networkTier, publicPtrDomainName);
         }

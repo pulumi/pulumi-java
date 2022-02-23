@@ -24,7 +24,7 @@ public final class ValidationCAArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateProviderInstance")
-    private final @Nullable Input<CertificateProviderInstanceArgs> certificateProviderInstance;
+      private final @Nullable Input<CertificateProviderInstanceArgs> certificateProviderInstance;
 
     public Input<CertificateProviderInstanceArgs> getCertificateProviderInstance() {
         return this.certificateProviderInstance == null ? Input.empty() : this.certificateProviderInstance;
@@ -35,7 +35,7 @@ public final class ValidationCAArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grpcEndpoint")
-    private final @Nullable Input<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint;
+      private final @Nullable Input<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint;
 
     public Input<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> getGrpcEndpoint() {
         return this.grpcEndpoint == null ? Input.empty() : this.grpcEndpoint;
@@ -94,7 +94,6 @@ public final class ValidationCAArgs extends io.pulumi.resources.ResourceArgs {
             this.grpcEndpoint = Input.ofNullable(grpcEndpoint);
             return this;
         }
-
         public ValidationCAArgs build() {
             return new ValidationCAArgs(certificateProviderInstance, grpcEndpoint);
         }

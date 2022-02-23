@@ -396,7 +396,6 @@ public final class ListWebAppBackupStatusSecretsResult {
             this.websiteSizeInBytes = Objects.requireNonNull(websiteSizeInBytes);
             return this;
         }
-
         public ListWebAppBackupStatusSecretsResult build() {
             return new ListWebAppBackupStatusSecretsResult(backupId, blobName, correlationId, created, databases, finishedTimeStamp, id, kind, lastRestoreTimeStamp, log, name, scheduled, sizeInBytes, status, storageAccountUrl, type, websiteSizeInBytes);
         }

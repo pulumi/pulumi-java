@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends io.pul
      * 
      */
     @InputImport(name="goal", required=true)
-    private final String goal;
+      private final String goal;
 
     public String getGoal() {
         return this.goal;
@@ -32,7 +32,7 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends io.pul
      * 
      */
     @InputImport(name="metric", required=true)
-    private final String metric;
+      private final String metric;
 
     public String getMetric() {
         return this.metric;
@@ -81,7 +81,6 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends io.pul
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfig_MetricSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfig_MetricSpecResponse(goal, metric);
         }

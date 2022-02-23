@@ -119,7 +119,6 @@ public final class ServiceReference {
             this.port = port;
             return this;
         }
-
         public ServiceReference build() {
             return new ServiceReference(name, namespace, path, port);
         }

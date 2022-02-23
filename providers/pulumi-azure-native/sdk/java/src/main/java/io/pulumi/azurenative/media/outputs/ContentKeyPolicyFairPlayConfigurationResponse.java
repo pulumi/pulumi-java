@@ -185,7 +185,6 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse {
             this.rentalDuration = Objects.requireNonNull(rentalDuration);
             return this;
         }
-
         public ContentKeyPolicyFairPlayConfigurationResponse build() {
             return new ContentKeyPolicyFairPlayConfigurationResponse(ask, fairPlayPfx, fairPlayPfxPassword, odataType, offlineRentalConfiguration, rentalAndLeaseKeyType, rentalDuration);
         }

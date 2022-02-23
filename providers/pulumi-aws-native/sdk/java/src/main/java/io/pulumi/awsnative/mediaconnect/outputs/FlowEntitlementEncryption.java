@@ -225,7 +225,6 @@ public final class FlowEntitlementEncryption {
             this.url = url;
             return this;
         }
-
         public FlowEntitlementEncryption build() {
             return new FlowEntitlementEncryption(algorithm, constantInitializationVector, deviceId, keyType, region, resourceId, roleArn, secretArn, url);
         }

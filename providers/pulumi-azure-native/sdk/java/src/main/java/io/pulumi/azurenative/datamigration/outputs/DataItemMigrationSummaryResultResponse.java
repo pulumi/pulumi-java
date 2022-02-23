@@ -222,7 +222,6 @@ public final class DataItemMigrationSummaryResultResponse {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public DataItemMigrationSummaryResultResponse build() {
             return new DataItemMigrationSummaryResultResponse(endedOn, errorPrefix, itemsCompletedCount, itemsCount, name, resultPrefix, startedOn, state, statusMessage);
         }

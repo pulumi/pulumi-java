@@ -99,7 +99,6 @@ public final class EmailNotificationResponse {
             this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
             return this;
         }
-
         public EmailNotificationResponse build() {
             return new EmailNotificationResponse(customEmails, sendToSubscriptionAdministrator, sendToSubscriptionCoAdministrators);
         }

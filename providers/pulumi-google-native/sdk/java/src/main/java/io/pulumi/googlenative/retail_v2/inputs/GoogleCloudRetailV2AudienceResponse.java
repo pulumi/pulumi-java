@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2AudienceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ageGroups", required=true)
-    private final List<String> ageGroups;
+      private final List<String> ageGroups;
 
     public List<String> getAgeGroups() {
         return this.ageGroups;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2AudienceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="genders", required=true)
-    private final List<String> genders;
+      private final List<String> genders;
 
     public List<String> getGenders() {
         return this.genders;
@@ -82,7 +82,6 @@ public final class GoogleCloudRetailV2AudienceResponse extends io.pulumi.resourc
             this.genders = Objects.requireNonNull(genders);
             return this;
         }
-
         public GoogleCloudRetailV2AudienceResponse build() {
             return new GoogleCloudRetailV2AudienceResponse(ageGroups, genders);
         }

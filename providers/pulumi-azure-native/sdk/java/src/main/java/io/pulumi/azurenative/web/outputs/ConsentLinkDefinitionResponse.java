@@ -118,7 +118,6 @@ public final class ConsentLinkDefinitionResponse {
             this.status = status;
             return this;
         }
-
         public ConsentLinkDefinitionResponse build() {
             return new ConsentLinkDefinitionResponse(displayName, firstPartyLoginUri, link, status);
         }

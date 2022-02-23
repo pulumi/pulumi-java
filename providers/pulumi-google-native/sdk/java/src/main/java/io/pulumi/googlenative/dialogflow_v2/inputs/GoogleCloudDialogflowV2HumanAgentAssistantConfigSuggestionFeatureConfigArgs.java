@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
      * 
      */
     @InputImport(name="conversationModelConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig;
 
     public Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs> getConversationModelConfig() {
         return this.conversationModelConfig == null ? Input.empty() : this.conversationModelConfig;
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
      * 
      */
     @InputImport(name="conversationProcessConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig;
 
     public Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs> getConversationProcessConfig() {
         return this.conversationProcessConfig == null ? Input.empty() : this.conversationProcessConfig;
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
      * 
      */
     @InputImport(name="enableEventBasedSuggestion")
-    private final @Nullable Input<Boolean> enableEventBasedSuggestion;
+      private final @Nullable Input<Boolean> enableEventBasedSuggestion;
 
     public Input<Boolean> getEnableEventBasedSuggestion() {
         return this.enableEventBasedSuggestion == null ? Input.empty() : this.enableEventBasedSuggestion;
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
      * 
      */
     @InputImport(name="queryConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig;
 
     public Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigArgs> getQueryConfig() {
         return this.queryConfig == null ? Input.empty() : this.queryConfig;
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
      * 
      */
     @InputImport(name="suggestionFeature")
-    private final @Nullable Input<GoogleCloudDialogflowV2SuggestionFeatureArgs> suggestionFeature;
+      private final @Nullable Input<GoogleCloudDialogflowV2SuggestionFeatureArgs> suggestionFeature;
 
     public Input<GoogleCloudDialogflowV2SuggestionFeatureArgs> getSuggestionFeature() {
         return this.suggestionFeature == null ? Input.empty() : this.suggestionFeature;
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
      * 
      */
     @InputImport(name="suggestionTriggerSettings")
-    private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings;
+      private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings;
 
     public Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> getSuggestionTriggerSettings() {
         return this.suggestionTriggerSettings == null ? Input.empty() : this.suggestionTriggerSettings;
@@ -202,7 +202,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
             this.suggestionTriggerSettings = Input.ofNullable(suggestionTriggerSettings);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs(conversationModelConfig, conversationProcessConfig, enableEventBasedSuggestion, queryConfig, suggestionFeature, suggestionTriggerSettings);
         }

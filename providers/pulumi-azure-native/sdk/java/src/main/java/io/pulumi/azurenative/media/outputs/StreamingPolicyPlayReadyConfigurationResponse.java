@@ -76,7 +76,6 @@ public final class StreamingPolicyPlayReadyConfigurationResponse {
             this.playReadyCustomAttributes = playReadyCustomAttributes;
             return this;
         }
-
         public StreamingPolicyPlayReadyConfigurationResponse build() {
             return new StreamingPolicyPlayReadyConfigurationResponse(customLicenseAcquisitionUrlTemplate, playReadyCustomAttributes);
         }

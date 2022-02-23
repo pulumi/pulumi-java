@@ -52,7 +52,6 @@ public final class ResourcePolicyResourceStatusResponse {
             this.instanceSchedulePolicy = Objects.requireNonNull(instanceSchedulePolicy);
             return this;
         }
-
         public ResourcePolicyResourceStatusResponse build() {
             return new ResourcePolicyResourceStatusResponse(instanceSchedulePolicy);
         }

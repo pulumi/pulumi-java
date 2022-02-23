@@ -16,7 +16,7 @@ public final class DataSourceConfluencePageConfigurationArgs extends io.pulumi.r
     public static final DataSourceConfluencePageConfigurationArgs Empty = new DataSourceConfluencePageConfigurationArgs();
 
     @InputImport(name="pageFieldMappings")
-    private final @Nullable Input<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings;
+        private final @Nullable Input<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings;
 
     public Input<List<DataSourceConfluencePageToIndexFieldMappingArgs>> getPageFieldMappings() {
         return this.pageFieldMappings == null ? Input.empty() : this.pageFieldMappings;
@@ -59,7 +59,6 @@ public final class DataSourceConfluencePageConfigurationArgs extends io.pulumi.r
             this.pageFieldMappings = Input.ofNullable(pageFieldMappings);
             return this;
         }
-
         public DataSourceConfluencePageConfigurationArgs build() {
             return new DataSourceConfluencePageConfigurationArgs(pageFieldMappings);
         }

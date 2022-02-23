@@ -29,7 +29,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="algorithm")
-    private final @Nullable Input<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm;
+      private final @Nullable Input<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm;
 
     public Input<GoogleCloudMlV1__HyperparameterSpecAlgorithm> getAlgorithm() {
         return this.algorithm == null ? Input.empty() : this.algorithm;
@@ -40,7 +40,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="enableTrialEarlyStopping")
-    private final @Nullable Input<Boolean> enableTrialEarlyStopping;
+      private final @Nullable Input<Boolean> enableTrialEarlyStopping;
 
     public Input<Boolean> getEnableTrialEarlyStopping() {
         return this.enableTrialEarlyStopping == null ? Input.empty() : this.enableTrialEarlyStopping;
@@ -51,7 +51,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="goal", required=true)
-    private final Input<GoogleCloudMlV1__HyperparameterSpecGoal> goal;
+      private final Input<GoogleCloudMlV1__HyperparameterSpecGoal> goal;
 
     public Input<GoogleCloudMlV1__HyperparameterSpecGoal> getGoal() {
         return this.goal;
@@ -62,7 +62,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="hyperparameterMetricTag")
-    private final @Nullable Input<String> hyperparameterMetricTag;
+      private final @Nullable Input<String> hyperparameterMetricTag;
 
     public Input<String> getHyperparameterMetricTag() {
         return this.hyperparameterMetricTag == null ? Input.empty() : this.hyperparameterMetricTag;
@@ -73,7 +73,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxFailedTrials")
-    private final @Nullable Input<Integer> maxFailedTrials;
+      private final @Nullable Input<Integer> maxFailedTrials;
 
     public Input<Integer> getMaxFailedTrials() {
         return this.maxFailedTrials == null ? Input.empty() : this.maxFailedTrials;
@@ -84,7 +84,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxParallelTrials")
-    private final @Nullable Input<Integer> maxParallelTrials;
+      private final @Nullable Input<Integer> maxParallelTrials;
 
     public Input<Integer> getMaxParallelTrials() {
         return this.maxParallelTrials == null ? Input.empty() : this.maxParallelTrials;
@@ -95,7 +95,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxTrials")
-    private final @Nullable Input<Integer> maxTrials;
+      private final @Nullable Input<Integer> maxTrials;
 
     public Input<Integer> getMaxTrials() {
         return this.maxTrials == null ? Input.empty() : this.maxTrials;
@@ -106,7 +106,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="params", required=true)
-    private final Input<List<GoogleCloudMlV1__ParameterSpecArgs>> params;
+      private final Input<List<GoogleCloudMlV1__ParameterSpecArgs>> params;
 
     public Input<List<GoogleCloudMlV1__ParameterSpecArgs>> getParams() {
         return this.params;
@@ -117,7 +117,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resumePreviousJobId")
-    private final @Nullable Input<String> resumePreviousJobId;
+      private final @Nullable Input<String> resumePreviousJobId;
 
     public Input<String> getResumePreviousJobId() {
         return this.resumePreviousJobId == null ? Input.empty() : this.resumePreviousJobId;
@@ -281,7 +281,6 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
             this.resumePreviousJobId = Input.ofNullable(resumePreviousJobId);
             return this;
         }
-
         public GoogleCloudMlV1__HyperparameterSpecArgs build() {
             return new GoogleCloudMlV1__HyperparameterSpecArgs(algorithm, enableTrialEarlyStopping, goal, hyperparameterMetricTag, maxFailedTrials, maxParallelTrials, maxTrials, params, resumePreviousJobId);
         }

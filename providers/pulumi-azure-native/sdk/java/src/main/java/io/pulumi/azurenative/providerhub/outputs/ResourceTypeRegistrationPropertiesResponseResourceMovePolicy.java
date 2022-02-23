@@ -73,7 +73,6 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
             this.validationRequired = validationRequired;
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesResponseResourceMovePolicy build() {
             return new ResourceTypeRegistrationPropertiesResponseResourceMovePolicy(crossResourceGroupMoveEnabled, crossSubscriptionMoveEnabled, validationRequired);
         }

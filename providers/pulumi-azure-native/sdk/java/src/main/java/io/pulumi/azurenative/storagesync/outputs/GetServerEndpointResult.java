@@ -479,7 +479,6 @@ public final class GetServerEndpointResult {
             this.volumeFreeSpacePercent = volumeFreeSpacePercent;
             return this;
         }
-
         public GetServerEndpointResult build() {
             return new GetServerEndpointResult(cloudTiering, cloudTieringStatus, friendlyName, id, initialDownloadPolicy, lastOperationName, lastWorkflowId, localCacheMode, name, offlineDataTransfer, offlineDataTransferShareName, offlineDataTransferStorageAccountResourceId, offlineDataTransferStorageAccountTenantId, provisioningState, recallStatus, serverLocalPath, serverResourceId, syncStatus, tierFilesOlderThanDays, type, volumeFreeSpacePercent);
         }

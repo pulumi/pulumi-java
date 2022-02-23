@@ -98,7 +98,6 @@ public final class DomainSharingSettings {
             this.s3OutputPath = s3OutputPath;
             return this;
         }
-
         public DomainSharingSettings build() {
             return new DomainSharingSettings(notebookOutputOption, s3KmsKeyId, s3OutputPath);
         }

@@ -54,7 +54,6 @@ public final class GetOnlineDeploymentLogsResult {
             this.content = content;
             return this;
         }
-
         public GetOnlineDeploymentLogsResult build() {
             return new GetOnlineDeploymentLogsResult(content);
         }

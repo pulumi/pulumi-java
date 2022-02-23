@@ -18,14 +18,14 @@ public final class QuickConnectQueueQuickConnectConfigArgs extends io.pulumi.res
     public static final QuickConnectQueueQuickConnectConfigArgs Empty = new QuickConnectQueueQuickConnectConfigArgs();
 
     @InputImport(name="contactFlowArn", required=true)
-    private final Input<String> contactFlowArn;
+        private final Input<String> contactFlowArn;
 
     public Input<String> getContactFlowArn() {
         return this.contactFlowArn;
     }
 
     @InputImport(name="queueArn", required=true)
-    private final Input<String> queueArn;
+        private final Input<String> queueArn;
 
     public Input<String> getQueueArn() {
         return this.queueArn;
@@ -84,7 +84,6 @@ public final class QuickConnectQueueQuickConnectConfigArgs extends io.pulumi.res
             this.queueArn = Input.of(Objects.requireNonNull(queueArn));
             return this;
         }
-
         public QuickConnectQueueQuickConnectConfigArgs build() {
             return new QuickConnectQueueQuickConnectConfigArgs(contactFlowArn, queueArn);
         }

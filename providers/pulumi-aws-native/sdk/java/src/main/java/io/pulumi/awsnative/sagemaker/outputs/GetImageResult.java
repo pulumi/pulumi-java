@@ -109,7 +109,6 @@ public final class GetImageResult {
             this.tags = tags;
             return this;
         }
-
         public GetImageResult build() {
             return new GetImageResult(imageArn, imageDescription, imageDisplayName, imageRoleArn, tags);
         }

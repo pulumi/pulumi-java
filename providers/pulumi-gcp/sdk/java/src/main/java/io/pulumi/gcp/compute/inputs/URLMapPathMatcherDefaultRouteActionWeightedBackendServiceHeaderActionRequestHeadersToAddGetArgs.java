@@ -20,7 +20,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * 
      */
     @InputImport(name="headerName")
-    private final @Nullable Input<String> headerName;
+        private final @Nullable Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName == null ? Input.empty() : this.headerName;
@@ -31,7 +31,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * 
      */
     @InputImport(name="headerValue")
-    private final @Nullable Input<String> headerValue;
+        private final @Nullable Input<String> headerValue;
 
     public Input<String> getHeaderValue() {
         return this.headerValue == null ? Input.empty() : this.headerValue;
@@ -43,7 +43,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * 
      */
     @InputImport(name="replace")
-    private final @Nullable Input<Boolean> replace;
+        private final @Nullable Input<Boolean> replace;
 
     public Input<Boolean> getReplace() {
         return this.replace == null ? Input.empty() : this.replace;
@@ -117,7 +117,6 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
             this.replace = Input.ofNullable(replace);
             return this;
         }
-
         public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs build() {
             return new URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddGetArgs(headerName, headerValue, replace);
         }

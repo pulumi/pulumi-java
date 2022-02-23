@@ -117,7 +117,6 @@ public final class HttpQueryParameterMatchResponse {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
         }
-
         public HttpQueryParameterMatchResponse build() {
             return new HttpQueryParameterMatchResponse(exactMatch, name, presentMatch, regexMatch);
         }

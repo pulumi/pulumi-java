@@ -15,14 +15,14 @@ public final class GetGlobalForwardingRuleMetadataFilter extends io.pulumi.resou
     public static final GetGlobalForwardingRuleMetadataFilter Empty = new GetGlobalForwardingRuleMetadataFilter();
 
     @InputImport(name="filterLabels", required=true)
-    private final List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels;
+        private final List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels;
 
     public List<GetGlobalForwardingRuleMetadataFilterFilterLabel> getFilterLabels() {
         return this.filterLabels;
     }
 
     @InputImport(name="filterMatchCriteria", required=true)
-    private final String filterMatchCriteria;
+        private final String filterMatchCriteria;
 
     public String getFilterMatchCriteria() {
         return this.filterMatchCriteria;
@@ -71,7 +71,6 @@ public final class GetGlobalForwardingRuleMetadataFilter extends io.pulumi.resou
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }
-
         public GetGlobalForwardingRuleMetadataFilter build() {
             return new GetGlobalForwardingRuleMetadataFilter(filterLabels, filterMatchCriteria);
         }

@@ -139,7 +139,6 @@ public final class ImageReferenceResponse {
             this.version = version;
             return this;
         }
-
         public ImageReferenceResponse build() {
             return new ImageReferenceResponse(id, offer, publisher, sku, version);
         }

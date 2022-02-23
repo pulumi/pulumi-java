@@ -110,7 +110,6 @@ public final class TokenCertificateResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public TokenCertificateResponse build() {
             return new TokenCertificateResponse(encodedPemCertificate, expiry, name, thumbprint);
         }

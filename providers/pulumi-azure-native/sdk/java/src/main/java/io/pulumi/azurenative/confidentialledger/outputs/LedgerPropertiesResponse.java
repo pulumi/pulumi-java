@@ -226,7 +226,6 @@ public final class LedgerPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public LedgerPropertiesResponse build() {
             return new LedgerPropertiesResponse(aadBasedSecurityPrincipals, certBasedSecurityPrincipals, identityServiceUri, ledgerInternalNamespace, ledgerName, ledgerStorageAccount, ledgerType, ledgerUri, provisioningState);
         }

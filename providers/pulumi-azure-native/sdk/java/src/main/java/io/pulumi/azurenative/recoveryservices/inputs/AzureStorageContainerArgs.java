@@ -26,7 +26,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+        private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
     public Input<Either<String,BackupManagementType>> getBackupManagementType() {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
@@ -41,7 +41,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="containerType", required=true)
-    private final Input<String> containerType;
+        private final Input<String> containerType;
 
     public Input<String> getContainerType() {
         return this.containerType;
@@ -52,7 +52,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -63,7 +63,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="healthStatus")
-    private final @Nullable Input<String> healthStatus;
+        private final @Nullable Input<String> healthStatus;
 
     public Input<String> getHealthStatus() {
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
@@ -74,7 +74,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="protectedItemCount")
-    private final @Nullable Input<Double> protectedItemCount;
+        private final @Nullable Input<Double> protectedItemCount;
 
     public Input<Double> getProtectedItemCount() {
         return this.protectedItemCount == null ? Input.empty() : this.protectedItemCount;
@@ -85,7 +85,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="registrationStatus")
-    private final @Nullable Input<String> registrationStatus;
+        private final @Nullable Input<String> registrationStatus;
 
     public Input<String> getRegistrationStatus() {
         return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
@@ -96,7 +96,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable Input<String> resourceGroup;
+        private final @Nullable Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
@@ -107,7 +107,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceResourceId")
-    private final @Nullable Input<String> sourceResourceId;
+        private final @Nullable Input<String> sourceResourceId;
 
     public Input<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
@@ -118,7 +118,7 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="storageAccountVersion")
-    private final @Nullable Input<String> storageAccountVersion;
+        private final @Nullable Input<String> storageAccountVersion;
 
     public Input<String> getStorageAccountVersion() {
         return this.storageAccountVersion == null ? Input.empty() : this.storageAccountVersion;
@@ -282,7 +282,6 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
             this.storageAccountVersion = Input.ofNullable(storageAccountVersion);
             return this;
         }
-
         public AzureStorageContainerArgs build() {
             return new AzureStorageContainerArgs(backupManagementType, containerType, friendlyName, healthStatus, protectedItemCount, registrationStatus, resourceGroup, sourceResourceId, storageAccountVersion);
         }

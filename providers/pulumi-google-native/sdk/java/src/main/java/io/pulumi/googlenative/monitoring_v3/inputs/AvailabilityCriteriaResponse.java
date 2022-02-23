@@ -34,7 +34,6 @@ public final class AvailabilityCriteriaResponse extends io.pulumi.resources.Invo
         public Builder(AvailabilityCriteriaResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AvailabilityCriteriaResponse build() {
             return new AvailabilityCriteriaResponse();
         }

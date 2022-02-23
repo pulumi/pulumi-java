@@ -227,7 +227,6 @@ public final class SnowflakeSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public SnowflakeSinkResponse build() {
             return new SnowflakeSinkResponse(disableMetricsCollection, importSettings, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

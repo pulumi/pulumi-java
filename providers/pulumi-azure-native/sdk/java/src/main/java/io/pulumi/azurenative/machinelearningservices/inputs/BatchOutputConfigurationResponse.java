@@ -23,7 +23,7 @@ public final class BatchOutputConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="appendRowFileName")
-    private final @Nullable String appendRowFileName;
+        private final @Nullable String appendRowFileName;
 
     public Optional<String> getAppendRowFileName() {
         return this.appendRowFileName == null ? Optional.empty() : Optional.ofNullable(this.appendRowFileName);
@@ -34,7 +34,7 @@ public final class BatchOutputConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="outputAction")
-    private final @Nullable String outputAction;
+        private final @Nullable String outputAction;
 
     public Optional<String> getOutputAction() {
         return this.outputAction == null ? Optional.empty() : Optional.ofNullable(this.outputAction);
@@ -83,7 +83,6 @@ public final class BatchOutputConfigurationResponse extends io.pulumi.resources.
             this.outputAction = outputAction;
             return this;
         }
-
         public BatchOutputConfigurationResponse build() {
             return new BatchOutputConfigurationResponse(appendRowFileName, outputAction);
         }

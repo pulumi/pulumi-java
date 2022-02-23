@@ -54,7 +54,6 @@ public final class DataFlowResponseFolder {
             this.name = name;
             return this;
         }
-
         public DataFlowResponseFolder build() {
             return new DataFlowResponseFolder(name);
         }

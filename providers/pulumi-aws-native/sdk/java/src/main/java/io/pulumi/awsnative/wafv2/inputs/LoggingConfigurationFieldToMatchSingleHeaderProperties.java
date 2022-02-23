@@ -21,7 +21,7 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties extend
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -59,7 +59,6 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties extend
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public LoggingConfigurationFieldToMatchSingleHeaderProperties build() {
             return new LoggingConfigurationFieldToMatchSingleHeaderProperties(name);
         }

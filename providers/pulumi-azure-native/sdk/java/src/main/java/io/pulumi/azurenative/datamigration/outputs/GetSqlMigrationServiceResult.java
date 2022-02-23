@@ -156,7 +156,6 @@ public final class GetSqlMigrationServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlMigrationServiceResult build() {
             return new GetSqlMigrationServiceResult(id, integrationRuntimeState, location, name, provisioningState, systemData, tags, type);
         }

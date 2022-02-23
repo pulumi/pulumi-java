@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1beta1SchemaResponse extends io.pulumi
      * 
      */
     @InputImport(name="columns", required=true)
-    private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns;
+      private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns;
 
     public List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> getColumns() {
         return this.columns;
@@ -60,7 +60,6 @@ public final class GoogleCloudDatacatalogV1beta1SchemaResponse extends io.pulumi
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1SchemaResponse build() {
             return new GoogleCloudDatacatalogV1beta1SchemaResponse(columns);
         }

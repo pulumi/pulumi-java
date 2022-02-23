@@ -103,7 +103,6 @@ public final class RegionDiskSourceSnapshotEncryptionKey {
             this.sha256 = sha256;
             return this;
         }
-
         public RegionDiskSourceSnapshotEncryptionKey build() {
             return new RegionDiskSourceSnapshotEncryptionKey(kmsKeyName, rawKey, sha256);
         }

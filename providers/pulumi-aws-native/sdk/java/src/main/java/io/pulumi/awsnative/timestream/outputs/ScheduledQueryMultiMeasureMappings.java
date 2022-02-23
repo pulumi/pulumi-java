@@ -62,7 +62,6 @@ public final class ScheduledQueryMultiMeasureMappings {
             this.targetMultiMeasureName = targetMultiMeasureName;
             return this;
         }
-
         public ScheduledQueryMultiMeasureMappings build() {
             return new ScheduledQueryMultiMeasureMappings(multiMeasureAttributeMappings, targetMultiMeasureName);
         }

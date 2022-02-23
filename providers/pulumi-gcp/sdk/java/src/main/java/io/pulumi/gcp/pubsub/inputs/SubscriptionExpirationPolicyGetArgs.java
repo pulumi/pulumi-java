@@ -22,7 +22,7 @@ public final class SubscriptionExpirationPolicyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ttl", required=true)
-    private final Input<String> ttl;
+        private final Input<String> ttl;
 
     public Input<String> getTtl() {
         return this.ttl;
@@ -65,7 +65,6 @@ public final class SubscriptionExpirationPolicyGetArgs extends io.pulumi.resourc
             this.ttl = Input.of(Objects.requireNonNull(ttl));
             return this;
         }
-
         public SubscriptionExpirationPolicyGetArgs build() {
             return new SubscriptionExpirationPolicyGetArgs(ttl);
         }

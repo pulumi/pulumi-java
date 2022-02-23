@@ -120,7 +120,6 @@ public final class ExportDefinitionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExportDefinitionResponse build() {
             return new ExportDefinitionResponse(dataSet, timePeriod, timeframe, type);
         }

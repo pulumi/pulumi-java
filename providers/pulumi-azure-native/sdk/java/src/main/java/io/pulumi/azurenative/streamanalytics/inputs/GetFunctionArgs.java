@@ -17,7 +17,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="functionName", required=true)
-    private final String functionName;
+        private final String functionName;
 
     public String getFunctionName() {
         return this.functionName;
@@ -28,7 +28,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobName", required=true)
-    private final String jobName;
+        private final String jobName;
 
     public String getJobName() {
         return this.jobName;
@@ -39,7 +39,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetFunctionArgs build() {
             return new GetFunctionArgs(functionName, jobName, resourceGroupName);
         }

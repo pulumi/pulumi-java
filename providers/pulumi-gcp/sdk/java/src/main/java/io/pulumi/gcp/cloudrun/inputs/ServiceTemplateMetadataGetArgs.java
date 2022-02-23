@@ -29,7 +29,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<Map<String,String>> annotations;
+        private final @Nullable Input<Map<String,String>> annotations;
 
     public Input<Map<String,String>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -41,7 +41,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="generation")
-    private final @Nullable Input<Integer> generation;
+        private final @Nullable Input<Integer> generation;
 
     public Input<Integer> getGeneration() {
         return this.generation == null ? Input.empty() : this.generation;
@@ -55,7 +55,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -66,7 +66,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+        private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -96,7 +96,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceVersion")
-    private final @Nullable Input<String> resourceVersion;
+        private final @Nullable Input<String> resourceVersion;
 
     public Input<String> getResourceVersion() {
         return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
@@ -108,7 +108,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+        private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -122,7 +122,7 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+        private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -271,7 +271,6 @@ public final class ServiceTemplateMetadataGetArgs extends io.pulumi.resources.Re
             this.uid = Input.ofNullable(uid);
             return this;
         }
-
         public ServiceTemplateMetadataGetArgs build() {
             return new ServiceTemplateMetadataGetArgs(annotations, generation, labels, name, namespace, resourceVersion, selfLink, uid);
         }

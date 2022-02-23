@@ -141,7 +141,6 @@ public final class SelectAudioTrackByAttributeResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public SelectAudioTrackByAttributeResponse build() {
             return new SelectAudioTrackByAttributeResponse(attribute, channelMapping, filter, filterValue, odataType);
         }

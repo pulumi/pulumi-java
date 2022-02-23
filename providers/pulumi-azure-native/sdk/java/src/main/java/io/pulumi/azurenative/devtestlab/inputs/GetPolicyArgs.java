@@ -19,7 +19,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-    private final String labName;
+        private final String labName;
 
     public String getLabName() {
         return this.labName;
@@ -41,7 +41,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -52,7 +52,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policySetName", required=true)
-    private final String policySetName;
+        private final String policySetName;
 
     public String getPolicySetName() {
         return this.policySetName;
@@ -63,7 +63,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetPolicyArgs build() {
             return new GetPolicyArgs(expand, labName, name, policySetName, resourceGroupName);
         }

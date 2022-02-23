@@ -75,7 +75,6 @@ public final class CloudRunConfigResponse {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
-
         public CloudRunConfigResponse build() {
             return new CloudRunConfigResponse(disabled, loadBalancerType);
         }

@@ -87,7 +87,6 @@ public final class SkuSettingResponseCapacity {
             this.scaleType = scaleType;
             return this;
         }
-
         public SkuSettingResponseCapacity build() {
             return new SkuSettingResponseCapacity($default, maximum, minimum, scaleType);
         }

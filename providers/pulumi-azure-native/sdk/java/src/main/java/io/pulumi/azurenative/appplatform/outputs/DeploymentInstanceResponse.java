@@ -137,7 +137,6 @@ public final class DeploymentInstanceResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DeploymentInstanceResponse build() {
             return new DeploymentInstanceResponse(discoveryStatus, name, reason, startTime, status);
         }

@@ -24,7 +24,7 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="catalogAdminPassword")
-    private final @Nullable SecureStringResponse catalogAdminPassword;
+        private final @Nullable SecureStringResponse catalogAdminPassword;
 
     public Optional<SecureStringResponse> getCatalogAdminPassword() {
         return this.catalogAdminPassword == null ? Optional.empty() : Optional.ofNullable(this.catalogAdminPassword);
@@ -35,7 +35,7 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="catalogAdminUserName")
-    private final @Nullable String catalogAdminUserName;
+        private final @Nullable String catalogAdminUserName;
 
     public Optional<String> getCatalogAdminUserName() {
         return this.catalogAdminUserName == null ? Optional.empty() : Optional.ofNullable(this.catalogAdminUserName);
@@ -46,7 +46,7 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="catalogPricingTier")
-    private final @Nullable String catalogPricingTier;
+        private final @Nullable String catalogPricingTier;
 
     public Optional<String> getCatalogPricingTier() {
         return this.catalogPricingTier == null ? Optional.empty() : Optional.ofNullable(this.catalogPricingTier);
@@ -57,7 +57,7 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="catalogServerEndpoint")
-    private final @Nullable String catalogServerEndpoint;
+        private final @Nullable String catalogServerEndpoint;
 
     public Optional<String> getCatalogServerEndpoint() {
         return this.catalogServerEndpoint == null ? Optional.empty() : Optional.ofNullable(this.catalogServerEndpoint);
@@ -126,7 +126,6 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
             this.catalogServerEndpoint = catalogServerEndpoint;
             return this;
         }
-
         public IntegrationRuntimeSsisCatalogInfoResponse build() {
             return new IntegrationRuntimeSsisCatalogInfoResponse(catalogAdminPassword, catalogAdminUserName, catalogPricingTier, catalogServerEndpoint);
         }

@@ -59,7 +59,6 @@ public final class CertificateValidity {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CertificateValidity build() {
             return new CertificateValidity(type, value);
         }

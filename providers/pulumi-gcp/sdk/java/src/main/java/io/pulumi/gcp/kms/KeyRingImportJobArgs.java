@@ -18,7 +18,7 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="importJobId", required=true)
-    private final Input<String> importJobId;
+        private final Input<String> importJobId;
 
     public Input<String> getImportJobId() {
         return this.importJobId;
@@ -30,7 +30,7 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="importMethod", required=true)
-    private final Input<String> importMethod;
+        private final Input<String> importMethod;
 
     public Input<String> getImportMethod() {
         return this.importMethod;
@@ -42,7 +42,7 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyRing", required=true)
-    private final Input<String> keyRing;
+        private final Input<String> keyRing;
 
     public Input<String> getKeyRing() {
         return this.keyRing;
@@ -55,7 +55,7 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="protectionLevel", required=true)
-    private final Input<String> protectionLevel;
+        private final Input<String> protectionLevel;
 
     public Input<String> getProtectionLevel() {
         return this.protectionLevel;
@@ -144,7 +144,6 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
             this.protectionLevel = Input.of(Objects.requireNonNull(protectionLevel));
             return this;
         }
-
         public KeyRingImportJobArgs build() {
             return new KeyRingImportJobArgs(importJobId, importMethod, keyRing, protectionLevel);
         }

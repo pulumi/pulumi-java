@@ -100,7 +100,6 @@ public final class InstanceMemcacheNode {
             this.zone = zone;
             return this;
         }
-
         public InstanceMemcacheNode build() {
             return new InstanceMemcacheNode(host, nodeId, port, state, zone);
         }

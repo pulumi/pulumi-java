@@ -54,7 +54,6 @@ public final class ConnectionMonitorEndpointScopeItemResponse {
             this.address = address;
             return this;
         }
-
         public ConnectionMonitorEndpointScopeItemResponse build() {
             return new ConnectionMonitorEndpointScopeItemResponse(address);
         }

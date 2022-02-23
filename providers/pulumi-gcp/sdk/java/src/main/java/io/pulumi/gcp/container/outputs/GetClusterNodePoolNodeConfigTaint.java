@@ -71,7 +71,6 @@ public final class GetClusterNodePoolNodeConfigTaint {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetClusterNodePoolNodeConfigTaint build() {
             return new GetClusterNodePoolNodeConfigTaint(effect, key, value);
         }

@@ -70,7 +70,6 @@ public final class GetFargateProfileResult {
             this.tags = tags;
             return this;
         }
-
         public GetFargateProfileResult build() {
             return new GetFargateProfileResult(arn, tags);
         }

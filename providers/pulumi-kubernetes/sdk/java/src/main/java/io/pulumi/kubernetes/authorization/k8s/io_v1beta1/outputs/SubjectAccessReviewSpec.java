@@ -164,7 +164,6 @@ public final class SubjectAccessReviewSpec {
             this.user = user;
             return this;
         }
-
         public SubjectAccessReviewSpec build() {
             return new SubjectAccessReviewSpec(extra, group, nonResourceAttributes, resourceAttributes, uid, user);
         }

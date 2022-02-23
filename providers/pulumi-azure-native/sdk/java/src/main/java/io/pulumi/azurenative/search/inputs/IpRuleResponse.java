@@ -23,7 +23,7 @@ public final class IpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -61,7 +61,6 @@ public final class IpRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public IpRuleResponse build() {
             return new IpRuleResponse(value);
         }

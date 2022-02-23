@@ -24,7 +24,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="corsPolicy", required=true)
-    private final CorsPolicyResponse corsPolicy;
+      private final CorsPolicyResponse corsPolicy;
 
     public CorsPolicyResponse getCorsPolicy() {
         return this.corsPolicy;
@@ -35,7 +35,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="faultInjectionPolicy", required=true)
-    private final HttpFaultInjectionResponse faultInjectionPolicy;
+      private final HttpFaultInjectionResponse faultInjectionPolicy;
 
     public HttpFaultInjectionResponse getFaultInjectionPolicy() {
         return this.faultInjectionPolicy;
@@ -46,7 +46,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxStreamDuration", required=true)
-    private final DurationResponse maxStreamDuration;
+      private final DurationResponse maxStreamDuration;
 
     public DurationResponse getMaxStreamDuration() {
         return this.maxStreamDuration;
@@ -57,7 +57,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="requestMirrorPolicy", required=true)
-    private final RequestMirrorPolicyResponse requestMirrorPolicy;
+      private final RequestMirrorPolicyResponse requestMirrorPolicy;
 
     public RequestMirrorPolicyResponse getRequestMirrorPolicy() {
         return this.requestMirrorPolicy;
@@ -68,7 +68,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="retryPolicy", required=true)
-    private final HttpRetryPolicyResponse retryPolicy;
+      private final HttpRetryPolicyResponse retryPolicy;
 
     public HttpRetryPolicyResponse getRetryPolicy() {
         return this.retryPolicy;
@@ -79,7 +79,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="timeout", required=true)
-    private final DurationResponse timeout;
+      private final DurationResponse timeout;
 
     public DurationResponse getTimeout() {
         return this.timeout;
@@ -90,7 +90,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="urlRewrite", required=true)
-    private final UrlRewriteResponse urlRewrite;
+      private final UrlRewriteResponse urlRewrite;
 
     public UrlRewriteResponse getUrlRewrite() {
         return this.urlRewrite;
@@ -101,7 +101,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="weightedBackendServices", required=true)
-    private final List<WeightedBackendServiceResponse> weightedBackendServices;
+      private final List<WeightedBackendServiceResponse> weightedBackendServices;
 
     public List<WeightedBackendServiceResponse> getWeightedBackendServices() {
         return this.weightedBackendServices;
@@ -210,7 +210,6 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
             this.weightedBackendServices = Objects.requireNonNull(weightedBackendServices);
             return this;
         }
-
         public HttpRouteActionResponse build() {
             return new HttpRouteActionResponse(corsPolicy, faultInjectionPolicy, maxStreamDuration, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }

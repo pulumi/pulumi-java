@@ -54,7 +54,6 @@ public final class SessionAffinityConfig {
             this.clientIP = clientIP;
             return this;
         }
-
         public SessionAffinityConfig build() {
             return new SessionAffinityConfig(clientIP);
         }

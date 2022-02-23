@@ -118,7 +118,6 @@ public final class GetMonitoringConfigResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMonitoringConfigResult build() {
             return new GetMonitoringConfigResult(id, metricConfigurations, name, type);
         }

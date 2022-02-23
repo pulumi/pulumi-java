@@ -18,7 +18,7 @@ public final class StorageLensPrefixLevelArgs extends io.pulumi.resources.Resour
     public static final StorageLensPrefixLevelArgs Empty = new StorageLensPrefixLevelArgs();
 
     @InputImport(name="storageMetrics", required=true)
-    private final Input<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics;
+        private final Input<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics;
 
     public Input<StorageLensPrefixLevelStorageMetricsArgs> getStorageMetrics() {
         return this.storageMetrics;
@@ -61,7 +61,6 @@ public final class StorageLensPrefixLevelArgs extends io.pulumi.resources.Resour
             this.storageMetrics = Input.of(Objects.requireNonNull(storageMetrics));
             return this;
         }
-
         public StorageLensPrefixLevelArgs build() {
             return new StorageLensPrefixLevelArgs(storageMetrics);
         }

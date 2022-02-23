@@ -30,7 +30,6 @@ public final class GetModuleDefaultVersionResult {
         public Builder(GetModuleDefaultVersionResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetModuleDefaultVersionResult build() {
             return new GetModuleDefaultVersionResult();
         }

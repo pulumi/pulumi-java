@@ -203,7 +203,6 @@ public final class ApiReferenceResponse {
             this.type = type;
             return this;
         }
-
         public ApiReferenceResponse build() {
             return new ApiReferenceResponse(brandColor, description, displayName, iconUri, id, name, swagger, type);
         }

@@ -98,7 +98,6 @@ public final class RegionInstanceGroupManagerVersion {
             this.targetSize = targetSize;
             return this;
         }
-
         public RegionInstanceGroupManagerVersion build() {
             return new RegionInstanceGroupManagerVersion(instanceTemplate, name, targetSize);
         }

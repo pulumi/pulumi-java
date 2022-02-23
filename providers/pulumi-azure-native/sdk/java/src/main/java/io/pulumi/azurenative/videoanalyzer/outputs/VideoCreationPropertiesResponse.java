@@ -118,7 +118,6 @@ public final class VideoCreationPropertiesResponse {
             this.title = title;
             return this;
         }
-
         public VideoCreationPropertiesResponse build() {
             return new VideoCreationPropertiesResponse(description, retentionPeriod, segmentLength, title);
         }

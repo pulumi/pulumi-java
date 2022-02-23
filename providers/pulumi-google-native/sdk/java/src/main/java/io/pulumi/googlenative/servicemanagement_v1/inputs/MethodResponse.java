@@ -24,7 +24,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="options", required=true)
-    private final List<OptionResponse> options;
+      private final List<OptionResponse> options;
 
     public List<OptionResponse> getOptions() {
         return this.options;
@@ -46,7 +46,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requestStreaming", required=true)
-    private final Boolean requestStreaming;
+      private final Boolean requestStreaming;
 
     public Boolean getRequestStreaming() {
         return this.requestStreaming;
@@ -57,7 +57,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requestTypeUrl", required=true)
-    private final String requestTypeUrl;
+      private final String requestTypeUrl;
 
     public String getRequestTypeUrl() {
         return this.requestTypeUrl;
@@ -68,7 +68,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="responseStreaming", required=true)
-    private final Boolean responseStreaming;
+      private final Boolean responseStreaming;
 
     public Boolean getResponseStreaming() {
         return this.responseStreaming;
@@ -79,7 +79,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="responseTypeUrl", required=true)
-    private final String responseTypeUrl;
+      private final String responseTypeUrl;
 
     public String getResponseTypeUrl() {
         return this.responseTypeUrl;
@@ -90,7 +90,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="syntax", required=true)
-    private final String syntax;
+      private final String syntax;
 
     public String getSyntax() {
         return this.syntax;
@@ -189,7 +189,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }
-
         public MethodResponse build() {
             return new MethodResponse(name, options, requestStreaming, requestTypeUrl, responseStreaming, responseTypeUrl, syntax);
         }

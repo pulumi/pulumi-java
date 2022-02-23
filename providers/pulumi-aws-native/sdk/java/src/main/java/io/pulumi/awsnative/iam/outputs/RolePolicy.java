@@ -74,7 +74,6 @@ public final class RolePolicy {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public RolePolicy build() {
             return new RolePolicy(policyDocument, policyName);
         }

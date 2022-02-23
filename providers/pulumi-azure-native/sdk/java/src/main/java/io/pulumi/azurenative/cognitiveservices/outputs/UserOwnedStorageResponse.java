@@ -54,7 +54,6 @@ public final class UserOwnedStorageResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public UserOwnedStorageResponse build() {
             return new UserOwnedStorageResponse(resourceId);
         }

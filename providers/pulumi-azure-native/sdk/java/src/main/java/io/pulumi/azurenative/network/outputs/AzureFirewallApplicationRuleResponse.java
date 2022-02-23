@@ -183,7 +183,6 @@ public final class AzureFirewallApplicationRuleResponse {
             this.targetFqdns = targetFqdns;
             return this;
         }
-
         public AzureFirewallApplicationRuleResponse build() {
             return new AzureFirewallApplicationRuleResponse(description, fqdnTags, name, protocols, sourceAddresses, sourceIpGroups, targetFqdns);
         }

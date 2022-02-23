@@ -226,7 +226,6 @@ public final class AzureDataExplorerSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataExplorerSourceResponse build() {
             return new AzureDataExplorerSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, noTruncation, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

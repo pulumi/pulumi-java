@@ -26,7 +26,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -37,7 +37,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -48,7 +48,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="privateIPAllocationMethod")
-    private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+        private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Input<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
@@ -59,7 +59,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="publicIPAddress", required=true)
-    private final Input<SubResourceArgs> publicIPAddress;
+        private final Input<SubResourceArgs> publicIPAddress;
 
     public Input<SubResourceArgs> getPublicIPAddress() {
         return this.publicIPAddress;
@@ -70,7 +70,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="subnet", required=true)
-    private final Input<SubResourceArgs> subnet;
+        private final Input<SubResourceArgs> subnet;
 
     public Input<SubResourceArgs> getSubnet() {
         return this.subnet;
@@ -174,7 +174,6 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
             this.subnet = Input.of(Objects.requireNonNull(subnet));
             return this;
         }
-
         public BastionHostIPConfigurationArgs build() {
             return new BastionHostIPConfigurationArgs(id, name, privateIPAllocationMethod, publicIPAddress, subnet);
         }

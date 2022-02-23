@@ -13,14 +13,14 @@ public final class ConnectionApiKeyAuthParameters extends io.pulumi.resources.In
     public static final ConnectionApiKeyAuthParameters Empty = new ConnectionApiKeyAuthParameters();
 
     @InputImport(name="apiKeyName", required=true)
-    private final String apiKeyName;
+        private final String apiKeyName;
 
     public String getApiKeyName() {
         return this.apiKeyName;
     }
 
     @InputImport(name="apiKeyValue", required=true)
-    private final String apiKeyValue;
+        private final String apiKeyValue;
 
     public String getApiKeyValue() {
         return this.apiKeyValue;
@@ -69,7 +69,6 @@ public final class ConnectionApiKeyAuthParameters extends io.pulumi.resources.In
             this.apiKeyValue = Objects.requireNonNull(apiKeyValue);
             return this;
         }
-
         public ConnectionApiKeyAuthParameters build() {
             return new ConnectionApiKeyAuthParameters(apiKeyName, apiKeyValue);
         }

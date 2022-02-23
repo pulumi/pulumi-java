@@ -21,7 +21,7 @@ public final class BucketLoggingResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="logBucket", required=true)
-    private final String logBucket;
+      private final String logBucket;
 
     public String getLogBucket() {
         return this.logBucket;
@@ -32,7 +32,7 @@ public final class BucketLoggingResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="logObjectPrefix", required=true)
-    private final String logObjectPrefix;
+      private final String logObjectPrefix;
 
     public String getLogObjectPrefix() {
         return this.logObjectPrefix;
@@ -81,7 +81,6 @@ public final class BucketLoggingResponse extends io.pulumi.resources.InvokeArgs 
             this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix);
             return this;
         }
-
         public BucketLoggingResponse build() {
             return new BucketLoggingResponse(logBucket, logObjectPrefix);
         }

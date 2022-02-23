@@ -15,14 +15,14 @@ public final class GetAlertPolicyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAlertPolicyArgs Empty = new GetAlertPolicyArgs();
 
     @InputImport(name="alertPolicyId", required=true)
-    private final String alertPolicyId;
+      private final String alertPolicyId;
 
     public String getAlertPolicyId() {
         return this.alertPolicyId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetAlertPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetAlertPolicyArgs build() {
             return new GetAlertPolicyArgs(alertPolicyId, project);
         }

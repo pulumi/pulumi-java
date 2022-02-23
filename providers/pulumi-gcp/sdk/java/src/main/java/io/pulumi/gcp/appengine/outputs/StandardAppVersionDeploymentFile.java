@@ -97,7 +97,6 @@ public final class StandardAppVersionDeploymentFile {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
-
         public StandardAppVersionDeploymentFile build() {
             return new StandardAppVersionDeploymentFile(name, sha1Sum, sourceUrl);
         }

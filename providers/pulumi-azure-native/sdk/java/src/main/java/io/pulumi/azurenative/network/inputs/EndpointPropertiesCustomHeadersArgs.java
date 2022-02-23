@@ -23,7 +23,7 @@ public final class EndpointPropertiesCustomHeadersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class EndpointPropertiesCustomHeadersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -93,7 +93,6 @@ public final class EndpointPropertiesCustomHeadersArgs extends io.pulumi.resourc
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public EndpointPropertiesCustomHeadersArgs build() {
             return new EndpointPropertiesCustomHeadersArgs(name, value);
         }

@@ -24,7 +24,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rollingUpdate")
-    private final @Nullable Input<RollingUpdateDeploymentArgs> rollingUpdate;
+        private final @Nullable Input<RollingUpdateDeploymentArgs> rollingUpdate;
 
     public Input<RollingUpdateDeploymentArgs> getRollingUpdate() {
         return this.rollingUpdate == null ? Input.empty() : this.rollingUpdate;
@@ -35,7 +35,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -94,7 +94,6 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public DeploymentStrategyArgs build() {
             return new DeploymentStrategyArgs(rollingUpdate, type);
         }

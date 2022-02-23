@@ -139,7 +139,6 @@ public final class APIServiceCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public APIServiceCondition build() {
             return new APIServiceCondition(lastTransitionTime, message, reason, status, type);
         }

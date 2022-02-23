@@ -223,7 +223,6 @@ public final class ScanRunResponse {
             this.urlsTestedCount = Objects.requireNonNull(urlsTestedCount);
             return this;
         }
-
         public ScanRunResponse build() {
             return new ScanRunResponse(endTime, executionState, hasVulnerabilities, name, progressPercent, resultState, startTime, urlsCrawledCount, urlsTestedCount);
         }

@@ -97,7 +97,6 @@ public final class FlowZendeskDestinationProperties {
             this.writeOperationType = writeOperationType;
             return this;
         }
-
         public FlowZendeskDestinationProperties build() {
             return new FlowZendeskDestinationProperties(errorHandlingConfig, idFieldNames, object, writeOperationType);
         }

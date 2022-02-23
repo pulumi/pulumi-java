@@ -177,7 +177,6 @@ public final class RevisionSpecResponse {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
         public RevisionSpecResponse build() {
             return new RevisionSpecResponse(containerConcurrency, containers, enableServiceLinks, imagePullSecrets, serviceAccountName, timeoutSeconds, volumes);
         }

@@ -22,7 +22,7 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="errors", required=true)
-    private final MoveCollectionPropertiesResponseErrors errors;
+        private final MoveCollectionPropertiesResponseErrors errors;
 
     public MoveCollectionPropertiesResponseErrors getErrors() {
         return this.errors;
@@ -33,7 +33,7 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -44,7 +44,7 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceRegion", required=true)
-    private final String sourceRegion;
+        private final String sourceRegion;
 
     public String getSourceRegion() {
         return this.sourceRegion;
@@ -55,7 +55,7 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="targetRegion", required=true)
-    private final String targetRegion;
+        private final String targetRegion;
 
     public String getTargetRegion() {
         return this.targetRegion;
@@ -124,7 +124,6 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
             this.targetRegion = Objects.requireNonNull(targetRegion);
             return this;
         }
-
         public MoveCollectionPropertiesResponse build() {
             return new MoveCollectionPropertiesResponse(errors, provisioningState, sourceRegion, targetRegion);
         }

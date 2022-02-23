@@ -25,7 +25,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boolValue")
-    private final @Nullable Input<Boolean> boolValue;
+      private final @Nullable Input<Boolean> boolValue;
 
     public Input<Boolean> getBoolValue() {
         return this.boolValue == null ? Input.empty() : this.boolValue;
@@ -36,7 +36,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intValue")
-    private final @Nullable Input<String> intValue;
+      private final @Nullable Input<String> intValue;
 
     public Input<String> getIntValue() {
         return this.intValue == null ? Input.empty() : this.intValue;
@@ -47,7 +47,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -58,7 +58,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretValue")
-    private final @Nullable Input<SecretArgs> secretValue;
+      private final @Nullable Input<SecretArgs> secretValue;
 
     public Input<SecretArgs> getSecretValue() {
         return this.secretValue == null ? Input.empty() : this.secretValue;
@@ -69,7 +69,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stringValue")
-    private final @Nullable Input<String> stringValue;
+      private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;
@@ -173,7 +173,6 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }
-
         public ConfigVariableArgs build() {
             return new ConfigVariableArgs(boolValue, intValue, key, secretValue, stringValue);
         }

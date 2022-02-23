@@ -19,7 +19,7 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetA
      * 
      */
     @InputImport(name="allEffective")
-    private final @Nullable Input<Boolean> allEffective;
+        private final @Nullable Input<Boolean> allEffective;
 
     public Input<Boolean> getAllEffective() {
         return this.allEffective == null ? Input.empty() : this.allEffective;
@@ -62,7 +62,6 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetA
             this.allEffective = Input.ofNullable(allEffective);
             return this;
         }
-
         public RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs build() {
             return new RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs(allEffective);
         }

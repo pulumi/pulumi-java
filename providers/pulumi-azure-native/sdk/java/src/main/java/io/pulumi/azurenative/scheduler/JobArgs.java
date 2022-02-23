@@ -20,7 +20,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobCollectionName", required=true)
-    private final Input<String> jobCollectionName;
+        private final Input<String> jobCollectionName;
 
     public Input<String> getJobCollectionName() {
         return this.jobCollectionName;
@@ -31,7 +31,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName")
-    private final @Nullable Input<String> jobName;
+        private final @Nullable Input<String> jobName;
 
     public Input<String> getJobName() {
         return this.jobName == null ? Input.empty() : this.jobName;
@@ -42,7 +42,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<JobPropertiesArgs> properties;
+        private final @Nullable Input<JobPropertiesArgs> properties;
 
     public Input<JobPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public JobArgs build() {
             return new JobArgs(jobCollectionName, jobName, properties, resourceGroupName);
         }

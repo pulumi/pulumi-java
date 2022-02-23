@@ -23,7 +23,7 @@ public final class DebugSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detailLevel")
-    private final @Nullable Input<String> detailLevel;
+        private final @Nullable Input<String> detailLevel;
 
     public Input<String> getDetailLevel() {
         return this.detailLevel == null ? Input.empty() : this.detailLevel;
@@ -66,7 +66,6 @@ public final class DebugSettingArgs extends io.pulumi.resources.ResourceArgs {
             this.detailLevel = Input.ofNullable(detailLevel);
             return this;
         }
-
         public DebugSettingArgs build() {
             return new DebugSettingArgs(detailLevel);
         }

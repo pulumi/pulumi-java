@@ -46,7 +46,6 @@ public final class Chew {
             this.owner = owner;
             return this;
         }
-
         public Chew build() {
             return new Chew(owner);
         }

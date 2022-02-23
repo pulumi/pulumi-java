@@ -102,7 +102,6 @@ public final class MarkdownPartMetadataResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MarkdownPartMetadataResponse build() {
             return new MarkdownPartMetadataResponse(inputs, settings, type);
         }

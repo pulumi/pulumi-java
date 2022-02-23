@@ -20,7 +20,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
+        private final @Nullable Input<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
 
     public Input<SecurityPolicyWebApplicationFirewallParametersArgs> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -31,7 +31,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final Input<String> profileName;
+        private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -42,7 +42,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityPolicyName")
-    private final @Nullable Input<String> securityPolicyName;
+        private final @Nullable Input<String> securityPolicyName;
 
     public Input<String> getSecurityPolicyName() {
         return this.securityPolicyName == null ? Input.empty() : this.securityPolicyName;
@@ -142,7 +142,6 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.securityPolicyName = Input.ofNullable(securityPolicyName);
             return this;
         }
-
         public SecurityPolicyArgs build() {
             return new SecurityPolicyArgs(parameters, profileName, resourceGroupName, securityPolicyName);
         }

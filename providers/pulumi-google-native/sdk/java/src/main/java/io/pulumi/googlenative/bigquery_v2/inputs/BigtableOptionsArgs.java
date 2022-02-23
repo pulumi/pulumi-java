@@ -21,7 +21,7 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="columnFamilies")
-    private final @Nullable Input<List<BigtableColumnFamilyArgs>> columnFamilies;
+      private final @Nullable Input<List<BigtableColumnFamilyArgs>> columnFamilies;
 
     public Input<List<BigtableColumnFamilyArgs>> getColumnFamilies() {
         return this.columnFamilies == null ? Input.empty() : this.columnFamilies;
@@ -32,7 +32,7 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ignoreUnspecifiedColumnFamilies")
-    private final @Nullable Input<Boolean> ignoreUnspecifiedColumnFamilies;
+      private final @Nullable Input<Boolean> ignoreUnspecifiedColumnFamilies;
 
     public Input<Boolean> getIgnoreUnspecifiedColumnFamilies() {
         return this.ignoreUnspecifiedColumnFamilies == null ? Input.empty() : this.ignoreUnspecifiedColumnFamilies;
@@ -43,7 +43,7 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readRowkeyAsString")
-    private final @Nullable Input<Boolean> readRowkeyAsString;
+      private final @Nullable Input<Boolean> readRowkeyAsString;
 
     public Input<Boolean> getReadRowkeyAsString() {
         return this.readRowkeyAsString == null ? Input.empty() : this.readRowkeyAsString;
@@ -117,7 +117,6 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
             this.readRowkeyAsString = Input.ofNullable(readRowkeyAsString);
             return this;
         }
-
         public BigtableOptionsArgs build() {
             return new BigtableOptionsArgs(columnFamilies, ignoreUnspecifiedColumnFamilies, readRowkeyAsString);
         }

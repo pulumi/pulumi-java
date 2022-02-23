@@ -99,7 +99,6 @@ public final class LogSettingsResponse {
             this.logLocationSettings = Objects.requireNonNull(logLocationSettings);
             return this;
         }
-
         public LogSettingsResponse build() {
             return new LogSettingsResponse(copyActivityLogSettings, enableCopyActivityLog, logLocationSettings);
         }

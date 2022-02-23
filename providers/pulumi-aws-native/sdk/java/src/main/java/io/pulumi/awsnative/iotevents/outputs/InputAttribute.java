@@ -56,7 +56,6 @@ public final class InputAttribute {
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }
-
         public InputAttribute build() {
             return new InputAttribute(jsonPath);
         }

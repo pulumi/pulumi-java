@@ -497,7 +497,6 @@ public final class GetReportResult {
             this.topk = Objects.requireNonNull(topk);
             return this;
         }
-
         public GetReportResult build() {
             return new GetReportResult(chartType, comments, createdAt, dimensions, displayName, environment, filter, fromTime, lastModifiedAt, lastViewedAt, limit, metrics, name, offset, organization, properties, sortByCols, sortOrder, tags, timeUnit, toTime, topk);
         }

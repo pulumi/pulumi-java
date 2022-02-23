@@ -333,7 +333,6 @@ public final class GetMachineExtensionResult {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public GetMachineExtensionResult build() {
             return new GetMachineExtensionResult(autoUpgradeMinorVersion, forceUpdateTag, id, instanceView, location, name, protectedSettings, provisioningState, publisher, settings, systemData, tags, type, typeHandlerVersion);
         }

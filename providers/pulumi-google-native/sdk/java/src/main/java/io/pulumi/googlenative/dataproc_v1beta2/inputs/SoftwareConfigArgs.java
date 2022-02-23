@@ -26,7 +26,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageVersion")
-    private final @Nullable Input<String> imageVersion;
+      private final @Nullable Input<String> imageVersion;
 
     public Input<String> getImageVersion() {
         return this.imageVersion == null ? Input.empty() : this.imageVersion;
@@ -37,7 +37,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optionalComponents")
-    private final @Nullable Input<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
+      private final @Nullable Input<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
 
     public Input<List<SoftwareConfigOptionalComponentsItem>> getOptionalComponents() {
         return this.optionalComponents == null ? Input.empty() : this.optionalComponents;
@@ -48,7 +48,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -122,7 +122,6 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public SoftwareConfigArgs build() {
             return new SoftwareConfigArgs(imageVersion, optionalComponents, properties);
         }

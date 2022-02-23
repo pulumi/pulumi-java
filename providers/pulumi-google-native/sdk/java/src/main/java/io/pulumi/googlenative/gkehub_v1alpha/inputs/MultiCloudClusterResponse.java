@@ -22,7 +22,7 @@ public final class MultiCloudClusterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="clusterMissing", required=true)
-    private final Boolean clusterMissing;
+      private final Boolean clusterMissing;
 
     public Boolean getClusterMissing() {
         return this.clusterMissing;
@@ -33,7 +33,7 @@ public final class MultiCloudClusterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceLink", required=true)
-    private final String resourceLink;
+      private final String resourceLink;
 
     public String getResourceLink() {
         return this.resourceLink;
@@ -82,7 +82,6 @@ public final class MultiCloudClusterResponse extends io.pulumi.resources.InvokeA
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
-
         public MultiCloudClusterResponse build() {
             return new MultiCloudClusterResponse(clusterMissing, resourceLink);
         }

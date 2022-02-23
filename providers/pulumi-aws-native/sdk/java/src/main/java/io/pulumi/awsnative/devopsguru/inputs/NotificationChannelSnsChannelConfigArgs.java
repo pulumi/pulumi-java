@@ -19,7 +19,7 @@ public final class NotificationChannelSnsChannelConfigArgs extends io.pulumi.res
     public static final NotificationChannelSnsChannelConfigArgs Empty = new NotificationChannelSnsChannelConfigArgs();
 
     @InputImport(name="topicArn")
-    private final @Nullable Input<String> topicArn;
+        private final @Nullable Input<String> topicArn;
 
     public Input<String> getTopicArn() {
         return this.topicArn == null ? Input.empty() : this.topicArn;
@@ -62,7 +62,6 @@ public final class NotificationChannelSnsChannelConfigArgs extends io.pulumi.res
             this.topicArn = Input.ofNullable(topicArn);
             return this;
         }
-
         public NotificationChannelSnsChannelConfigArgs build() {
             return new NotificationChannelSnsChannelConfigArgs(topicArn);
         }

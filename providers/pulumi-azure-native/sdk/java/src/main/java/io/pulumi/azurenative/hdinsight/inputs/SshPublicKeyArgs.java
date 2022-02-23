@@ -23,7 +23,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateData")
-    private final @Nullable Input<String> certificateData;
+        private final @Nullable Input<String> certificateData;
 
     public Input<String> getCertificateData() {
         return this.certificateData == null ? Input.empty() : this.certificateData;
@@ -66,7 +66,6 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateData = Input.ofNullable(certificateData);
             return this;
         }
-
         public SshPublicKeyArgs build() {
             return new SshPublicKeyArgs(certificateData);
         }

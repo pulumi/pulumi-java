@@ -206,7 +206,6 @@ public final class GetDataControllerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataControllerResult build() {
             return new GetDataControllerResult(extendedLocation, id, location, name, properties, systemData, tags, type);
         }

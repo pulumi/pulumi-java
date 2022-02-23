@@ -268,7 +268,6 @@ public final class GetUserResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(email, firstName, groups, id, identities, lastName, name, note, registrationDate, state, type);
         }

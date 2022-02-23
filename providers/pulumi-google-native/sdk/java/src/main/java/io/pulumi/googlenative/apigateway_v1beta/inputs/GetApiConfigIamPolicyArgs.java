@@ -15,35 +15,35 @@ public final class GetApiConfigIamPolicyArgs extends io.pulumi.resources.InvokeA
     public static final GetApiConfigIamPolicyArgs Empty = new GetApiConfigIamPolicyArgs();
 
     @InputImport(name="apiId", required=true)
-    private final String apiId;
+      private final String apiId;
 
     public String getApiId() {
         return this.apiId;
     }
 
     @InputImport(name="configId", required=true)
-    private final String configId;
+      private final String configId;
 
     public String getConfigId() {
         return this.configId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -122,7 +122,6 @@ public final class GetApiConfigIamPolicyArgs extends io.pulumi.resources.InvokeA
             this.project = project;
             return this;
         }
-
         public GetApiConfigIamPolicyArgs build() {
             return new GetApiConfigIamPolicyArgs(apiId, configId, location, optionsRequestedPolicyVersion, project);
         }

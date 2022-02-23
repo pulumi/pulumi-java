@@ -53,7 +53,6 @@ public final class SystemParametersResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public SystemParametersResponse build() {
             return new SystemParametersResponse(rules);
         }

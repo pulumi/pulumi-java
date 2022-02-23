@@ -22,7 +22,7 @@ public final class HostRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -33,7 +33,7 @@ public final class HostRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hosts", required=true)
-    private final List<String> hosts;
+      private final List<String> hosts;
 
     public List<String> getHosts() {
         return this.hosts;
@@ -44,7 +44,7 @@ public final class HostRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pathMatcher", required=true)
-    private final String pathMatcher;
+      private final String pathMatcher;
 
     public String getPathMatcher() {
         return this.pathMatcher;
@@ -103,7 +103,6 @@ public final class HostRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.pathMatcher = Objects.requireNonNull(pathMatcher);
             return this;
         }
-
         public HostRuleResponse build() {
             return new HostRuleResponse(description, hosts, pathMatcher);
         }

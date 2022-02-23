@@ -87,7 +87,6 @@ public final class FlowRedshiftDestinationProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowRedshiftDestinationProperties build() {
             return new FlowRedshiftDestinationProperties(bucketPrefix, errorHandlingConfig, intermediateBucketName, object);
         }

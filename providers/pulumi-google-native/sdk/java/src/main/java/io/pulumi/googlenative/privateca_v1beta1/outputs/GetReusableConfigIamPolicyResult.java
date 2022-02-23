@@ -120,7 +120,6 @@ public final class GetReusableConfigIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetReusableConfigIamPolicyResult build() {
             return new GetReusableConfigIamPolicyResult(auditConfigs, bindings, etag, version);
         }

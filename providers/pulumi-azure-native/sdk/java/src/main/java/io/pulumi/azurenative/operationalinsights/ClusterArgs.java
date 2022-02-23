@@ -26,7 +26,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingType")
-    private final @Nullable Input<Either<String,BillingType>> billingType;
+        private final @Nullable Input<Either<String,BillingType>> billingType;
 
     public Input<Either<String,BillingType>> getBillingType() {
         return this.billingType == null ? Input.empty() : this.billingType;
@@ -37,7 +37,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+        private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -48,7 +48,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<IdentityArgs> identity;
+        private final @Nullable Input<IdentityArgs> identity;
 
     public Input<IdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -59,7 +59,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isAvailabilityZonesEnabled")
-    private final @Nullable Input<Boolean> isAvailabilityZonesEnabled;
+        private final @Nullable Input<Boolean> isAvailabilityZonesEnabled;
 
     public Input<Boolean> getIsAvailabilityZonesEnabled() {
         return this.isAvailabilityZonesEnabled == null ? Input.empty() : this.isAvailabilityZonesEnabled;
@@ -70,7 +70,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isDoubleEncryptionEnabled")
-    private final @Nullable Input<Boolean> isDoubleEncryptionEnabled;
+        private final @Nullable Input<Boolean> isDoubleEncryptionEnabled;
 
     public Input<Boolean> getIsDoubleEncryptionEnabled() {
         return this.isDoubleEncryptionEnabled == null ? Input.empty() : this.isDoubleEncryptionEnabled;
@@ -81,7 +81,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultProperties")
-    private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+        private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
@@ -92,7 +92,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -103,7 +103,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -114,7 +114,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<ClusterSkuArgs> sku;
+        private final @Nullable Input<ClusterSkuArgs> sku;
 
     public Input<ClusterSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -125,7 +125,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -304,7 +304,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ClusterArgs build() {
             return new ClusterArgs(billingType, clusterName, identity, isAvailabilityZonesEnabled, isDoubleEncryptionEnabled, keyVaultProperties, location, resourceGroupName, sku, tags);
         }

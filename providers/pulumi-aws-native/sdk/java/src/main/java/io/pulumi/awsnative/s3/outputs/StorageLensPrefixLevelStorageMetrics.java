@@ -69,7 +69,6 @@ public final class StorageLensPrefixLevelStorageMetrics {
             this.selectionCriteria = selectionCriteria;
             return this;
         }
-
         public StorageLensPrefixLevelStorageMetrics build() {
             return new StorageLensPrefixLevelStorageMetrics(isEnabled, selectionCriteria);
         }

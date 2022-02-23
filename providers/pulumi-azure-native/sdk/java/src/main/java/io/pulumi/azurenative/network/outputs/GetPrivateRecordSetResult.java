@@ -382,7 +382,6 @@ public final class GetPrivateRecordSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateRecordSetResult build() {
             return new GetPrivateRecordSetResult(aRecords, aaaaRecords, cnameRecord, etag, fqdn, id, isAutoRegistered, metadata, mxRecords, name, ptrRecords, soaRecord, srvRecords, ttl, txtRecords, type);
         }

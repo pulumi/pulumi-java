@@ -120,7 +120,6 @@ public final class DaprComponentResponse {
             this.version = version;
             return this;
         }
-
         public DaprComponentResponse build() {
             return new DaprComponentResponse(metadata, name, type, version);
         }

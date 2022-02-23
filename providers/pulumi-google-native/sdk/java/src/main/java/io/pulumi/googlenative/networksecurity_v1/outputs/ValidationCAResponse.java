@@ -75,7 +75,6 @@ public final class ValidationCAResponse {
             this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint);
             return this;
         }
-
         public ValidationCAResponse build() {
             return new ValidationCAResponse(certificateProviderInstance, grpcEndpoint);
         }

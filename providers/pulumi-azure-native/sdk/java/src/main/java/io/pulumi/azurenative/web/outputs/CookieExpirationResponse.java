@@ -76,7 +76,6 @@ public final class CookieExpirationResponse {
             this.timeToExpiration = timeToExpiration;
             return this;
         }
-
         public CookieExpirationResponse build() {
             return new CookieExpirationResponse(convention, timeToExpiration);
         }

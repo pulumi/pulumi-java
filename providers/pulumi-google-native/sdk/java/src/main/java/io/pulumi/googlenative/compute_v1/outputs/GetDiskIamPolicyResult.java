@@ -142,7 +142,6 @@ public final class GetDiskIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDiskIamPolicyResult build() {
             return new GetDiskIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

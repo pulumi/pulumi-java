@@ -77,7 +77,6 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse {
             this.sasToken = sasToken;
             return this;
         }
-
         public IntegrationRuntimeCustomSetupScriptPropertiesResponse build() {
             return new IntegrationRuntimeCustomSetupScriptPropertiesResponse(blobContainerUri, sasToken);
         }

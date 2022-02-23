@@ -97,7 +97,6 @@ public final class CustomRPResourceTypeRouteDefinitionResponse {
             this.routingType = routingType;
             return this;
         }
-
         public CustomRPResourceTypeRouteDefinitionResponse build() {
             return new CustomRPResourceTypeRouteDefinitionResponse(endpoint, name, routingType);
         }

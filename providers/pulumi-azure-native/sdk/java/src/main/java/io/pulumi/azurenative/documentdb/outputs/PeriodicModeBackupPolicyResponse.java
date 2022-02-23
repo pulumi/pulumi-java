@@ -79,7 +79,6 @@ public final class PeriodicModeBackupPolicyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PeriodicModeBackupPolicyResponse build() {
             return new PeriodicModeBackupPolicyResponse(periodicModeProperties, type);
         }

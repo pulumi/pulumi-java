@@ -58,7 +58,6 @@ public final class DevicePoolTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DevicePoolTag build() {
             return new DevicePoolTag(key, value);
         }

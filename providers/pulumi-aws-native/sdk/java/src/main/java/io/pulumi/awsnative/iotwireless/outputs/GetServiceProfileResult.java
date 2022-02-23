@@ -142,7 +142,6 @@ public final class GetServiceProfileResult {
             this.tags = tags;
             return this;
         }
-
         public GetServiceProfileResult build() {
             return new GetServiceProfileResult(arn, id, loRaWAN, name, tags);
         }

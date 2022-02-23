@@ -16,7 +16,7 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
     public static final ArchiveDeploymentArgs Empty = new ArchiveDeploymentArgs();
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -27,7 +27,7 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="gcsUri")
-    private final @Nullable Input<String> gcsUri;
+      private final @Nullable Input<String> gcsUri;
 
     public Input<String> getGcsUri() {
         return this.gcsUri == null ? Input.empty() : this.gcsUri;
@@ -38,7 +38,7 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -49,14 +49,14 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -160,7 +160,6 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public ArchiveDeploymentArgs build() {
             return new ArchiveDeploymentArgs(environmentId, gcsUri, labels, name, organizationId);
         }

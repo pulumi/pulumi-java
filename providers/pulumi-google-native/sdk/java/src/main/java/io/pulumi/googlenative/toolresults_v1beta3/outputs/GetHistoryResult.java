@@ -116,7 +116,6 @@ public final class GetHistoryResult {
             this.testPlatform = Objects.requireNonNull(testPlatform);
             return this;
         }
-
         public GetHistoryResult build() {
             return new GetHistoryResult(displayName, historyId, name, testPlatform);
         }

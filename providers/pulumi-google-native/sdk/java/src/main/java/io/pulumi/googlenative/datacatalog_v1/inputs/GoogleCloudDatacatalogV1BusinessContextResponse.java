@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
      * 
      */
     @InputImport(name="contacts", required=true)
-    private final GoogleCloudDatacatalogV1ContactsResponse contacts;
+      private final GoogleCloudDatacatalogV1ContactsResponse contacts;
 
     public GoogleCloudDatacatalogV1ContactsResponse getContacts() {
         return this.contacts;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
      * 
      */
     @InputImport(name="entryOverview", required=true)
-    private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
+      private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
 
     public GoogleCloudDatacatalogV1EntryOverviewResponse getEntryOverview() {
         return this.entryOverview;
@@ -82,7 +82,6 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
             this.entryOverview = Objects.requireNonNull(entryOverview);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BusinessContextResponse build() {
             return new GoogleCloudDatacatalogV1BusinessContextResponse(contacts, entryOverview);
         }

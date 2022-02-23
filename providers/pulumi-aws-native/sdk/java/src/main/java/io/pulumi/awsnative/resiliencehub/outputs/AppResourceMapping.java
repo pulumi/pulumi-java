@@ -87,7 +87,6 @@ public final class AppResourceMapping {
             this.resourceName = resourceName;
             return this;
         }
-
         public AppResourceMapping build() {
             return new AppResourceMapping(logicalStackName, mappingType, physicalResourceId, resourceName);
         }

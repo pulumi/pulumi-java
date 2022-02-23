@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs extends io
      * 
      */
     @InputImport(name="synonyms", required=true)
-    private final Input<List<String>> synonyms;
+      private final Input<List<String>> synonyms;
 
     public Input<List<String>> getSynonyms() {
         return this.synonyms;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs extends io
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs extends io
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs build() {
             return new GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs(synonyms, value);
         }

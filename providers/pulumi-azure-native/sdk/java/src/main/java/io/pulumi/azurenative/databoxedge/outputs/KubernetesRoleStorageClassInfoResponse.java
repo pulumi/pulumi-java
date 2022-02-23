@@ -95,7 +95,6 @@ public final class KubernetesRoleStorageClassInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public KubernetesRoleStorageClassInfoResponse build() {
             return new KubernetesRoleStorageClassInfoResponse(name, posixCompliant, type);
         }

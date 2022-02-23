@@ -17,7 +17,7 @@ public final class RepositoryIamBindingState extends io.pulumi.resources.Resourc
     public static final RepositoryIamBindingState Empty = new RepositoryIamBindingState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<RepositoryIamBindingConditionGetArgs> condition;
+        private final @Nullable Input<RepositoryIamBindingConditionGetArgs> condition;
 
     public Input<RepositoryIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,14 +28,14 @@ public final class RepositoryIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -47,14 +47,14 @@ public final class RepositoryIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="repository")
-    private final @Nullable Input<String> repository;
+        private final @Nullable Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository == null ? Input.empty() : this.repository;
@@ -67,7 +67,7 @@ public final class RepositoryIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -186,7 +186,6 @@ public final class RepositoryIamBindingState extends io.pulumi.resources.Resourc
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public RepositoryIamBindingState build() {
             return new RepositoryIamBindingState(condition, etag, members, project, repository, role);
         }

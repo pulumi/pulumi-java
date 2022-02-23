@@ -89,7 +89,6 @@ public final class IndexDocumentMetadataConfiguration {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IndexDocumentMetadataConfiguration build() {
             return new IndexDocumentMetadataConfiguration(name, relevance, search, type);
         }

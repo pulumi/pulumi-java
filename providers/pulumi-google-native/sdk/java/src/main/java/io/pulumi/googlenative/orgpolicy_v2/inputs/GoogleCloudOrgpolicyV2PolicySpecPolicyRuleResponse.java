@@ -23,7 +23,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
      * 
      */
     @InputImport(name="allowAll", required=true)
-    private final Boolean allowAll;
+      private final Boolean allowAll;
 
     public Boolean getAllowAll() {
         return this.allowAll;
@@ -34,7 +34,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
      * 
      */
     @InputImport(name="condition", required=true)
-    private final GoogleTypeExprResponse condition;
+      private final GoogleTypeExprResponse condition;
 
     public GoogleTypeExprResponse getCondition() {
         return this.condition;
@@ -45,7 +45,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
      * 
      */
     @InputImport(name="denyAll", required=true)
-    private final Boolean denyAll;
+      private final Boolean denyAll;
 
     public Boolean getDenyAll() {
         return this.denyAll;
@@ -56,7 +56,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
      * 
      */
     @InputImport(name="enforce", required=true)
-    private final Boolean enforce;
+      private final Boolean enforce;
 
     public Boolean getEnforce() {
         return this.enforce;
@@ -67,7 +67,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
      * 
      */
     @InputImport(name="values", required=true)
-    private final GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values;
+      private final GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values;
 
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse getValues() {
         return this.values;
@@ -146,7 +146,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse build() {
             return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse(allowAll, condition, denyAll, enforce, values);
         }

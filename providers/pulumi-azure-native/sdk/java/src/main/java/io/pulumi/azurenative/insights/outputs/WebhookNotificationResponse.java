@@ -77,7 +77,6 @@ public final class WebhookNotificationResponse {
             this.serviceUri = serviceUri;
             return this;
         }
-
         public WebhookNotificationResponse build() {
             return new WebhookNotificationResponse(properties, serviceUri);
         }

@@ -79,7 +79,6 @@ public final class FeatureMembershipConfigmanagementConfigSync {
             this.sourceFormat = sourceFormat;
             return this;
         }
-
         public FeatureMembershipConfigmanagementConfigSync build() {
             return new FeatureMembershipConfigmanagementConfigSync(git, sourceFormat);
         }

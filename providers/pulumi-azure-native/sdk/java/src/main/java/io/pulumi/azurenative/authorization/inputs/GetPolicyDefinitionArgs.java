@@ -17,7 +17,7 @@ public final class GetPolicyDefinitionArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="policyDefinitionName", required=true)
-    private final String policyDefinitionName;
+        private final String policyDefinitionName;
 
     public String getPolicyDefinitionName() {
         return this.policyDefinitionName;
@@ -55,7 +55,6 @@ public final class GetPolicyDefinitionArgs extends io.pulumi.resources.InvokeArg
             this.policyDefinitionName = Objects.requireNonNull(policyDefinitionName);
             return this;
         }
-
         public GetPolicyDefinitionArgs build() {
             return new GetPolicyDefinitionArgs(policyDefinitionName);
         }

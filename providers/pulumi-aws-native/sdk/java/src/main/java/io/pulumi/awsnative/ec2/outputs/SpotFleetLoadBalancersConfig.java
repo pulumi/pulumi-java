@@ -61,7 +61,6 @@ public final class SpotFleetLoadBalancersConfig {
             this.targetGroupsConfig = targetGroupsConfig;
             return this;
         }
-
         public SpotFleetLoadBalancersConfig build() {
             return new SpotFleetLoadBalancersConfig(classicLoadBalancersConfig, targetGroupsConfig);
         }

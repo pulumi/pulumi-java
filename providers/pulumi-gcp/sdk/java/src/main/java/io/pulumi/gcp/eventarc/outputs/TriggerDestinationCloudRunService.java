@@ -97,7 +97,6 @@ public final class TriggerDestinationCloudRunService {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public TriggerDestinationCloudRunService build() {
             return new TriggerDestinationCloudRunService(path, region, service);
         }

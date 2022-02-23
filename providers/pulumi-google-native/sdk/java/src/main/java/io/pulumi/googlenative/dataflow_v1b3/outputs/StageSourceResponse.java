@@ -116,7 +116,6 @@ public final class StageSourceResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public StageSourceResponse build() {
             return new StageSourceResponse(name, originalTransformOrCollection, sizeBytes, userName);
         }

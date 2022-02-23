@@ -21,7 +21,7 @@ public final class GuestPoliciesRecipeArtifactRemoteArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="checkSum")
-    private final @Nullable Input<String> checkSum;
+        private final @Nullable Input<String> checkSum;
 
     public Input<String> getCheckSum() {
         return this.checkSum == null ? Input.empty() : this.checkSum;
@@ -32,7 +32,7 @@ public final class GuestPoliciesRecipeArtifactRemoteArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+        private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -91,7 +91,6 @@ public final class GuestPoliciesRecipeArtifactRemoteArgs extends io.pulumi.resou
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public GuestPoliciesRecipeArtifactRemoteArgs build() {
             return new GuestPoliciesRecipeArtifactRemoteArgs(checkSum, uri);
         }

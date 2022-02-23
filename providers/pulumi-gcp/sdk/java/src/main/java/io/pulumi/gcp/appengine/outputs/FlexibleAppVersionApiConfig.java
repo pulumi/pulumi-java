@@ -149,7 +149,6 @@ public final class FlexibleAppVersionApiConfig {
             this.url = url;
             return this;
         }
-
         public FlexibleAppVersionApiConfig build() {
             return new FlexibleAppVersionApiConfig(authFailAction, login, script, securityLevel, url);
         }

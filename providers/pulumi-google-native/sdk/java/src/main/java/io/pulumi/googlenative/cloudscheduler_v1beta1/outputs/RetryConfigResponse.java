@@ -138,7 +138,6 @@ public final class RetryConfigResponse {
             this.retryCount = Objects.requireNonNull(retryCount);
             return this;
         }
-
         public RetryConfigResponse build() {
             return new RetryConfigResponse(maxBackoffDuration, maxDoublings, maxRetryDuration, minBackoffDuration, retryCount);
         }

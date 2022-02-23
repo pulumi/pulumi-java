@@ -54,7 +54,6 @@ public final class ManagementResourcePreferencesResponse {
             this.preferredManagementResourceId = preferredManagementResourceId;
             return this;
         }
-
         public ManagementResourcePreferencesResponse build() {
             return new ManagementResourcePreferencesResponse(preferredManagementResourceId);
         }

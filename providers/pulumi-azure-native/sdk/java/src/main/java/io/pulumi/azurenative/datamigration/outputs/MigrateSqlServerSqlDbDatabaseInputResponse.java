@@ -120,7 +120,6 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
-
         public MigrateSqlServerSqlDbDatabaseInputResponse build() {
             return new MigrateSqlServerSqlDbDatabaseInputResponse(makeSourceDbReadOnly, name, tableMap, targetDatabaseName);
         }

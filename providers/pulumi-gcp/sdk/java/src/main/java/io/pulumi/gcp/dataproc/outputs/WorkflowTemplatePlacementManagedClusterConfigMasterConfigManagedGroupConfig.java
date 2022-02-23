@@ -60,7 +60,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigMana
             this.instanceTemplateName = instanceTemplateName;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfig(instanceGroupManagerName, instanceTemplateName);
         }

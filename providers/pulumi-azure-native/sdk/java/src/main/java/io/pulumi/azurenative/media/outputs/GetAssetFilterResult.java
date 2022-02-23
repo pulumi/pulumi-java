@@ -186,7 +186,6 @@ public final class GetAssetFilterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssetFilterResult build() {
             return new GetAssetFilterResult(firstQuality, id, name, presentationTimeRange, systemData, tracks, type);
         }

@@ -120,7 +120,6 @@ public final class GetACLResult {
             this.userNames = userNames;
             return this;
         }
-
         public GetACLResult build() {
             return new GetACLResult(arn, status, tags, userNames);
         }

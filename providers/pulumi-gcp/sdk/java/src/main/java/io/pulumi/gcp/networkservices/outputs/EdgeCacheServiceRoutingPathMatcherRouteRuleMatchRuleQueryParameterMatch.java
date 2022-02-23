@@ -98,7 +98,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
             this.presentMatch = presentMatch;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch(exactMatch, name, presentMatch);
         }

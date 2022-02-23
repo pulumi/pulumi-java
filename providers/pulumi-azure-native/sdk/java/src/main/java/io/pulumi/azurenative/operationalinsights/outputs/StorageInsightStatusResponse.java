@@ -76,7 +76,6 @@ public final class StorageInsightStatusResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public StorageInsightStatusResponse build() {
             return new StorageInsightStatusResponse(description, state);
         }

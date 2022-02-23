@@ -89,7 +89,6 @@ public final class InstanceFromMachineImageBootDiskInitializeParams {
             this.type = type;
             return this;
         }
-
         public InstanceFromMachineImageBootDiskInitializeParams build() {
             return new InstanceFromMachineImageBootDiskInitializeParams(image, labels, size, type);
         }

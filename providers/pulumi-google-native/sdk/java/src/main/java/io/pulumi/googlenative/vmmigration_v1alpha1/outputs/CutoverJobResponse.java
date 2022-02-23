@@ -224,7 +224,6 @@ public final class CutoverJobResponse {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }
-
         public CutoverJobResponse build() {
             return new CutoverJobResponse(computeEngineTargetDetails, createTime, error, name, progress, progressPercent, state, stateMessage, stateTime);
         }

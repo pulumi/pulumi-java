@@ -163,7 +163,6 @@ public final class A2APolicyDetailsResponse {
             this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
         }
-
         public A2APolicyDetailsResponse build() {
             return new A2APolicyDetailsResponse(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory, recoveryPointThresholdInMinutes);
         }

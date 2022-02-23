@@ -187,7 +187,6 @@ public final class WranglingDataFlowResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public WranglingDataFlowResponse build() {
             return new WranglingDataFlowResponse(annotations, description, documentLocale, folder, script, sources, type);
         }

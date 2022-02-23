@@ -16,14 +16,14 @@ public final class ObjectTypeFieldMap extends io.pulumi.resources.InvokeArgs {
     public static final ObjectTypeFieldMap Empty = new ObjectTypeFieldMap();
 
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @InputImport(name="objectTypeField")
-    private final @Nullable ObjectTypeField objectTypeField;
+        private final @Nullable ObjectTypeField objectTypeField;
 
     public Optional<ObjectTypeField> getObjectTypeField() {
         return this.objectTypeField == null ? Optional.empty() : Optional.ofNullable(this.objectTypeField);
@@ -72,7 +72,6 @@ public final class ObjectTypeFieldMap extends io.pulumi.resources.InvokeArgs {
             this.objectTypeField = objectTypeField;
             return this;
         }
-
         public ObjectTypeFieldMap build() {
             return new ObjectTypeFieldMap(name, objectTypeField);
         }

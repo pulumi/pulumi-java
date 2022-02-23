@@ -419,7 +419,6 @@ public final class GetScheduledQueryRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScheduledQueryRuleResult build() {
             return new GetScheduledQueryRuleResult(action, autoMitigate, createdWithApiVersion, description, displayName, enabled, etag, id, isLegacyLogAnalyticsRule, kind, lastUpdatedTime, location, name, provisioningState, schedule, source, tags, type);
         }

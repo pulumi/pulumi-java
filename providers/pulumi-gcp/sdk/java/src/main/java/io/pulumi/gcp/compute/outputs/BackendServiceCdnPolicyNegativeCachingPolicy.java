@@ -80,7 +80,6 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy {
             this.ttl = ttl;
             return this;
         }
-
         public BackendServiceCdnPolicyNegativeCachingPolicy build() {
             return new BackendServiceCdnPolicyNegativeCachingPolicy(code, ttl);
         }

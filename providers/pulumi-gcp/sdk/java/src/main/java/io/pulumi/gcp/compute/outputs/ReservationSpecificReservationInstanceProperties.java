@@ -133,7 +133,6 @@ public final class ReservationSpecificReservationInstanceProperties {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public ReservationSpecificReservationInstanceProperties build() {
             return new ReservationSpecificReservationInstanceProperties(guestAccelerators, localSsds, machineType, minCpuPlatform);
         }

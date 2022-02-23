@@ -226,7 +226,6 @@ public final class AzureTableSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureTableSourceResponse build() {
             return new AzureTableSourceResponse(additionalColumns, azureTableSourceIgnoreTableNotFound, azureTableSourceQuery, disableMetricsCollection, maxConcurrentConnections, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

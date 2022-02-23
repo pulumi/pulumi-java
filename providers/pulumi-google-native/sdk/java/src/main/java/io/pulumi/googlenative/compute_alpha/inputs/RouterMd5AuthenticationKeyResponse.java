@@ -17,7 +17,7 @@ public final class RouterMd5AuthenticationKeyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -28,7 +28,7 @@ public final class RouterMd5AuthenticationKeyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -77,7 +77,6 @@ public final class RouterMd5AuthenticationKeyResponse extends io.pulumi.resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public RouterMd5AuthenticationKeyResponse build() {
             return new RouterMd5AuthenticationKeyResponse(key, name);
         }

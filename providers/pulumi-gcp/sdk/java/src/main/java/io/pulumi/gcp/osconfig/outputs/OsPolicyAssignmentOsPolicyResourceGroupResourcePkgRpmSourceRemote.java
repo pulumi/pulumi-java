@@ -76,7 +76,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRe
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemote build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemote(sha256Checksum, uri);
         }

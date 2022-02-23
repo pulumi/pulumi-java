@@ -17,7 +17,7 @@ public final class GetAssessmentMetadataInSubscriptionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="assessmentMetadataName", required=true)
-    private final String assessmentMetadataName;
+        private final String assessmentMetadataName;
 
     public String getAssessmentMetadataName() {
         return this.assessmentMetadataName;
@@ -55,7 +55,6 @@ public final class GetAssessmentMetadataInSubscriptionArgs extends io.pulumi.res
             this.assessmentMetadataName = Objects.requireNonNull(assessmentMetadataName);
             return this;
         }
-
         public GetAssessmentMetadataInSubscriptionArgs build() {
             return new GetAssessmentMetadataInSubscriptionArgs(assessmentMetadataName);
         }

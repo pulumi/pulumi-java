@@ -54,7 +54,6 @@ public final class SourceInfoResponse {
             this.sourceFiles = Objects.requireNonNull(sourceFiles);
             return this;
         }
-
         public SourceInfoResponse build() {
             return new SourceInfoResponse(sourceFiles);
         }

@@ -75,7 +75,6 @@ public final class ApplicationSubComponentTypeConfiguration {
             this.subComponentType = Objects.requireNonNull(subComponentType);
             return this;
         }
-
         public ApplicationSubComponentTypeConfiguration build() {
             return new ApplicationSubComponentTypeConfiguration(subComponentConfigurationDetails, subComponentType);
         }

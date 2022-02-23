@@ -96,7 +96,6 @@ public final class GoogleCloudMlV1__SchedulingResponse {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public GoogleCloudMlV1__SchedulingResponse build() {
             return new GoogleCloudMlV1__SchedulingResponse(maxRunningTime, maxWaitTime, priority);
         }

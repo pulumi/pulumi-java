@@ -76,7 +76,6 @@ public final class RunAsAccountResponse {
             this.accountName = accountName;
             return this;
         }
-
         public RunAsAccountResponse build() {
             return new RunAsAccountResponse(accountId, accountName);
         }

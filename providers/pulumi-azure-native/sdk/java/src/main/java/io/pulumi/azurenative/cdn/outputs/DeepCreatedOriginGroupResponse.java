@@ -144,7 +144,6 @@ public final class DeepCreatedOriginGroupResponse {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
-
         public DeepCreatedOriginGroupResponse build() {
             return new DeepCreatedOriginGroupResponse(healthProbeSettings, name, origins, responseBasedOriginErrorDetectionSettings, trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
         }

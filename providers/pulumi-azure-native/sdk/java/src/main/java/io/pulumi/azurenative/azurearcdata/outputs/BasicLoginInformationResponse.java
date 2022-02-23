@@ -54,7 +54,6 @@ public final class BasicLoginInformationResponse {
             this.username = username;
             return this;
         }
-
         public BasicLoginInformationResponse build() {
             return new BasicLoginInformationResponse(username);
         }

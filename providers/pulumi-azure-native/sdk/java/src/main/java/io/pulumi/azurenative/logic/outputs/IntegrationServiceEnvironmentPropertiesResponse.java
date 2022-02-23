@@ -163,7 +163,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse {
             this.state = state;
             return this;
         }
-
         public IntegrationServiceEnvironmentPropertiesResponse build() {
             return new IntegrationServiceEnvironmentPropertiesResponse(encryptionConfiguration, endpointsConfiguration, integrationServiceEnvironmentId, networkConfiguration, provisioningState, state);
         }

@@ -119,7 +119,6 @@ public final class SlowRequestsBasedTriggerResponse {
             this.timeTaken = timeTaken;
             return this;
         }
-
         public SlowRequestsBasedTriggerResponse build() {
             return new SlowRequestsBasedTriggerResponse(count, path, timeInterval, timeTaken);
         }

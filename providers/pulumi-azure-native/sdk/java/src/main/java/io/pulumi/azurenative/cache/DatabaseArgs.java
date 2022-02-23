@@ -27,7 +27,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientProtocol")
-    private final @Nullable Input<Either<String,Protocol>> clientProtocol;
+        private final @Nullable Input<Either<String,Protocol>> clientProtocol;
 
     public Input<Either<String,Protocol>> getClientProtocol() {
         return this.clientProtocol == null ? Input.empty() : this.clientProtocol;
@@ -38,7 +38,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+        private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -49,7 +49,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusteringPolicy")
-    private final @Nullable Input<Either<String,ClusteringPolicy>> clusteringPolicy;
+        private final @Nullable Input<Either<String,ClusteringPolicy>> clusteringPolicy;
 
     public Input<Either<String,ClusteringPolicy>> getClusteringPolicy() {
         return this.clusteringPolicy == null ? Input.empty() : this.clusteringPolicy;
@@ -60,7 +60,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+        private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -71,7 +71,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evictionPolicy")
-    private final @Nullable Input<Either<String,EvictionPolicy>> evictionPolicy;
+        private final @Nullable Input<Either<String,EvictionPolicy>> evictionPolicy;
 
     public Input<Either<String,EvictionPolicy>> getEvictionPolicy() {
         return this.evictionPolicy == null ? Input.empty() : this.evictionPolicy;
@@ -82,7 +82,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modules")
-    private final @Nullable Input<List<ModuleArgs>> modules;
+        private final @Nullable Input<List<ModuleArgs>> modules;
 
     public Input<List<ModuleArgs>> getModules() {
         return this.modules == null ? Input.empty() : this.modules;
@@ -93,7 +93,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="persistence")
-    private final @Nullable Input<PersistenceArgs> persistence;
+        private final @Nullable Input<PersistenceArgs> persistence;
 
     public Input<PersistenceArgs> getPersistence() {
         return this.persistence == null ? Input.empty() : this.persistence;
@@ -104,7 +104,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+        private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -115,7 +115,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -279,7 +279,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public DatabaseArgs build() {
             return new DatabaseArgs(clientProtocol, clusterName, clusteringPolicy, databaseName, evictionPolicy, modules, persistence, port, resourceGroupName);
         }

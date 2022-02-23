@@ -76,7 +76,6 @@ public final class AnalysisDecimalParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public AnalysisDecimalParameter build() {
             return new AnalysisDecimalParameter(name, values);
         }

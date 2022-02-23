@@ -61,7 +61,6 @@ public final class DatasetCsvOptions {
             this.headerRow = headerRow;
             return this;
         }
-
         public DatasetCsvOptions build() {
             return new DatasetCsvOptions(delimiter, headerRow);
         }

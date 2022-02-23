@@ -142,7 +142,6 @@ public final class ApiErrorResponse {
             this.target = target;
             return this;
         }
-
         public ApiErrorResponse build() {
             return new ApiErrorResponse(code, details, innererror, message, target);
         }

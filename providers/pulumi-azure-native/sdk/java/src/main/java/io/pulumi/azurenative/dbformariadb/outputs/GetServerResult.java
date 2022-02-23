@@ -439,7 +439,6 @@ public final class GetServerResult {
             this.version = version;
             return this;
         }
-
         public GetServerResult build() {
             return new GetServerResult(administratorLogin, earliestRestoreDate, fullyQualifiedDomainName, id, location, masterServerId, minimalTlsVersion, name, privateEndpointConnections, publicNetworkAccess, replicaCapacity, replicationRole, sku, sslEnforcement, storageProfile, tags, type, userVisibleState, version);
         }

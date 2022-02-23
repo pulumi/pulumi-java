@@ -17,7 +17,7 @@ public final class GoogleSheetsOptionsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="range", required=true)
-    private final String range;
+      private final String range;
 
     public String getRange() {
         return this.range;
@@ -28,7 +28,7 @@ public final class GoogleSheetsOptionsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="skipLeadingRows", required=true)
-    private final String skipLeadingRows;
+      private final String skipLeadingRows;
 
     public String getSkipLeadingRows() {
         return this.skipLeadingRows;
@@ -77,7 +77,6 @@ public final class GoogleSheetsOptionsResponse extends io.pulumi.resources.Invok
             this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
             return this;
         }
-
         public GoogleSheetsOptionsResponse build() {
             return new GoogleSheetsOptionsResponse(range, skipLeadingRows);
         }

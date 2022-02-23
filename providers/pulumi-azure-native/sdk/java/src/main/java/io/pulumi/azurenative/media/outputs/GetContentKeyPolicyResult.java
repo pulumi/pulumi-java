@@ -226,7 +226,6 @@ public final class GetContentKeyPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContentKeyPolicyResult build() {
             return new GetContentKeyPolicyResult(created, description, id, lastModified, name, options, policyId, systemData, type);
         }

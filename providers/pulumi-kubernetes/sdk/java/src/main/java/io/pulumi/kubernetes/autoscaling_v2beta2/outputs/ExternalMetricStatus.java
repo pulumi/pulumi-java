@@ -75,7 +75,6 @@ public final class ExternalMetricStatus {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public ExternalMetricStatus build() {
             return new ExternalMetricStatus(current, metric);
         }

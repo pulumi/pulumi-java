@@ -21,7 +21,7 @@ public final class InstanceNetworking extends io.pulumi.resources.InvokeArgs {
     public static final InstanceNetworking Empty = new InstanceNetworking();
 
     @InputImport(name="monthlyTransfer")
-    private final @Nullable InstanceMonthlyTransfer monthlyTransfer;
+        private final @Nullable InstanceMonthlyTransfer monthlyTransfer;
 
     public Optional<InstanceMonthlyTransfer> getMonthlyTransfer() {
         return this.monthlyTransfer == null ? Optional.empty() : Optional.ofNullable(this.monthlyTransfer);
@@ -32,7 +32,7 @@ public final class InstanceNetworking extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ports", required=true)
-    private final List<InstancePort> ports;
+        private final List<InstancePort> ports;
 
     public List<InstancePort> getPorts() {
         return this.ports;
@@ -81,7 +81,6 @@ public final class InstanceNetworking extends io.pulumi.resources.InvokeArgs {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public InstanceNetworking build() {
             return new InstanceNetworking(monthlyTransfer, ports);
         }

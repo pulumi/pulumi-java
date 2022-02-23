@@ -30,7 +30,6 @@ public final class DataSetFieldFolderMapArgs extends io.pulumi.resources.Resourc
         public Builder(DataSetFieldFolderMapArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DataSetFieldFolderMapArgs build() {
             return new DataSetFieldFolderMapArgs();
         }

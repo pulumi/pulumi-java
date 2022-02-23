@@ -74,7 +74,6 @@ public final class LaunchTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public LaunchTag build() {
             return new LaunchTag(key, value);
         }

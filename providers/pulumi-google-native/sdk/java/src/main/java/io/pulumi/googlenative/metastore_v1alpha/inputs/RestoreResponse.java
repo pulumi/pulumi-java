@@ -21,7 +21,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backup", required=true)
-    private final String backup;
+      private final String backup;
 
     public String getBackup() {
         return this.backup;
@@ -32,7 +32,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="details", required=true)
-    private final String details;
+      private final String details;
 
     public String getDetails() {
         return this.details;
@@ -43,7 +43,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -54,7 +54,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -65,7 +65,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -76,7 +76,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -165,7 +165,6 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RestoreResponse build() {
             return new RestoreResponse(backup, details, endTime, startTime, state, type);
         }

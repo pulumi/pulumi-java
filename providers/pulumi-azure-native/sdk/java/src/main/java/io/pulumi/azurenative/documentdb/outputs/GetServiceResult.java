@@ -119,7 +119,6 @@ public final class GetServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(id, name, properties, type);
         }

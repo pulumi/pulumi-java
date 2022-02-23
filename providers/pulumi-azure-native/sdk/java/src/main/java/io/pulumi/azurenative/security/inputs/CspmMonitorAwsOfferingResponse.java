@@ -24,7 +24,7 @@ public final class CspmMonitorAwsOfferingResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+        private final String description;
 
     public String getDescription() {
         return this.description;
@@ -35,7 +35,7 @@ public final class CspmMonitorAwsOfferingResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="nativeCloudConnection")
-    private final @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection;
+        private final @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection;
 
     public Optional<CspmMonitorAwsOfferingResponseNativeCloudConnection> getNativeCloudConnection() {
         return this.nativeCloudConnection == null ? Optional.empty() : Optional.ofNullable(this.nativeCloudConnection);
@@ -47,7 +47,7 @@ public final class CspmMonitorAwsOfferingResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="offeringType", required=true)
-    private final String offeringType;
+        private final String offeringType;
 
     public String getOfferingType() {
         return this.offeringType;
@@ -106,7 +106,6 @@ public final class CspmMonitorAwsOfferingResponse extends io.pulumi.resources.In
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
-
         public CspmMonitorAwsOfferingResponse build() {
             return new CspmMonitorAwsOfferingResponse(description, nativeCloudConnection, offeringType);
         }

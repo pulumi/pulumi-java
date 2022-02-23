@@ -20,14 +20,14 @@ public final class AccessPolicyResourceArgs extends io.pulumi.resources.Resource
     public static final AccessPolicyResourceArgs Empty = new AccessPolicyResourceArgs();
 
     @InputImport(name="portal")
-    private final @Nullable Input<AccessPolicyPortalArgs> portal;
+        private final @Nullable Input<AccessPolicyPortalArgs> portal;
 
     public Input<AccessPolicyPortalArgs> getPortal() {
         return this.portal == null ? Input.empty() : this.portal;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<AccessPolicyProjectArgs> project;
+        private final @Nullable Input<AccessPolicyProjectArgs> project;
 
     public Input<AccessPolicyProjectArgs> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -86,7 +86,6 @@ public final class AccessPolicyResourceArgs extends io.pulumi.resources.Resource
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public AccessPolicyResourceArgs build() {
             return new AccessPolicyResourceArgs(portal, project);
         }

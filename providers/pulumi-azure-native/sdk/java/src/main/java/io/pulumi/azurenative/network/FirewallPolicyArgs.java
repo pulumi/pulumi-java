@@ -31,7 +31,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basePolicy")
-    private final @Nullable Input<SubResourceArgs> basePolicy;
+        private final @Nullable Input<SubResourceArgs> basePolicy;
 
     public Input<SubResourceArgs> getBasePolicy() {
         return this.basePolicy == null ? Input.empty() : this.basePolicy;
@@ -42,7 +42,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsSettings")
-    private final @Nullable Input<DnsSettingsArgs> dnsSettings;
+        private final @Nullable Input<DnsSettingsArgs> dnsSettings;
 
     public Input<DnsSettingsArgs> getDnsSettings() {
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
@@ -53,7 +53,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallPolicyName")
-    private final @Nullable Input<String> firewallPolicyName;
+        private final @Nullable Input<String> firewallPolicyName;
 
     public Input<String> getFirewallPolicyName() {
         return this.firewallPolicyName == null ? Input.empty() : this.firewallPolicyName;
@@ -64,7 +64,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -75,7 +75,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+        private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
     public Input<ManagedServiceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -86,7 +86,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insights")
-    private final @Nullable Input<FirewallPolicyInsightsArgs> insights;
+        private final @Nullable Input<FirewallPolicyInsightsArgs> insights;
 
     public Input<FirewallPolicyInsightsArgs> getInsights() {
         return this.insights == null ? Input.empty() : this.insights;
@@ -97,7 +97,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intrusionDetection")
-    private final @Nullable Input<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
+        private final @Nullable Input<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
 
     public Input<FirewallPolicyIntrusionDetectionArgs> getIntrusionDetection() {
         return this.intrusionDetection == null ? Input.empty() : this.intrusionDetection;
@@ -108,7 +108,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -119,7 +119,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -130,7 +130,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<FirewallPolicySkuArgs> sku;
+        private final @Nullable Input<FirewallPolicySkuArgs> sku;
 
     public Input<FirewallPolicySkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -141,7 +141,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snat")
-    private final @Nullable Input<FirewallPolicySNATArgs> snat;
+        private final @Nullable Input<FirewallPolicySNATArgs> snat;
 
     public Input<FirewallPolicySNATArgs> getSnat() {
         return this.snat == null ? Input.empty() : this.snat;
@@ -152,7 +152,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -163,7 +163,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threatIntelMode")
-    private final @Nullable Input<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
+        private final @Nullable Input<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
 
     public Input<Either<String,AzureFirewallThreatIntelMode>> getThreatIntelMode() {
         return this.threatIntelMode == null ? Input.empty() : this.threatIntelMode;
@@ -174,7 +174,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threatIntelWhitelist")
-    private final @Nullable Input<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
+        private final @Nullable Input<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
 
     public Input<FirewallPolicyThreatIntelWhitelistArgs> getThreatIntelWhitelist() {
         return this.threatIntelWhitelist == null ? Input.empty() : this.threatIntelWhitelist;
@@ -185,7 +185,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transportSecurity")
-    private final @Nullable Input<FirewallPolicyTransportSecurityArgs> transportSecurity;
+        private final @Nullable Input<FirewallPolicyTransportSecurityArgs> transportSecurity;
 
     public Input<FirewallPolicyTransportSecurityArgs> getTransportSecurity() {
         return this.transportSecurity == null ? Input.empty() : this.transportSecurity;
@@ -439,7 +439,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.transportSecurity = Input.ofNullable(transportSecurity);
             return this;
         }
-
         public FirewallPolicyArgs build() {
             return new FirewallPolicyArgs(basePolicy, dnsSettings, firewallPolicyName, id, identity, insights, intrusionDetection, location, resourceGroupName, sku, snat, tags, threatIntelMode, threatIntelWhitelist, transportSecurity);
         }

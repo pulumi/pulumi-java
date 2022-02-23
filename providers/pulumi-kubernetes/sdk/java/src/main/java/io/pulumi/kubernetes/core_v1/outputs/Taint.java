@@ -128,7 +128,6 @@ public final class Taint {
             this.value = value;
             return this;
         }
-
         public Taint build() {
             return new Taint(effect, key, timeAdded, value);
         }

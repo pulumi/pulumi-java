@@ -181,7 +181,6 @@ public final class GetEnvironmentResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(agentVersion, description, fulfillment, name, state, textToSpeechSettings, updateTime);
         }

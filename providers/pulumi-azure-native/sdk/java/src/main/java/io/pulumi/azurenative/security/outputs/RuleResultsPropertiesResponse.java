@@ -54,7 +54,6 @@ public final class RuleResultsPropertiesResponse {
             this.results = results;
             return this;
         }
-
         public RuleResultsPropertiesResponse build() {
             return new RuleResultsPropertiesResponse(results);
         }

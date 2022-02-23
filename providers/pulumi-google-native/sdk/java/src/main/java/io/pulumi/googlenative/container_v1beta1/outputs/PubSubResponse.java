@@ -97,7 +97,6 @@ public final class PubSubResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubSubResponse build() {
             return new PubSubResponse(enabled, filter, topic);
         }

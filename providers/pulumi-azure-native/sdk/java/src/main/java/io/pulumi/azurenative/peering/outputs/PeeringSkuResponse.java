@@ -118,7 +118,6 @@ public final class PeeringSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public PeeringSkuResponse build() {
             return new PeeringSkuResponse(family, name, size, tier);
         }

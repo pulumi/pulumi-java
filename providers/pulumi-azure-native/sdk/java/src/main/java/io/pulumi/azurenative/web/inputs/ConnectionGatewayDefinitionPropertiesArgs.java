@@ -22,7 +22,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="backendUri")
-    private final @Nullable Input<String> backendUri;
+        private final @Nullable Input<String> backendUri;
 
     public Input<String> getBackendUri() {
         return this.backendUri == null ? Input.empty() : this.backendUri;
@@ -33,7 +33,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="connectionGatewayInstallation")
-    private final @Nullable Input<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
+        private final @Nullable Input<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
 
     public Input<ConnectionGatewayReferenceArgs> getConnectionGatewayInstallation() {
         return this.connectionGatewayInstallation == null ? Input.empty() : this.connectionGatewayInstallation;
@@ -44,7 +44,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="contactInformation")
-    private final @Nullable Input<List<String>> contactInformation;
+        private final @Nullable Input<List<String>> contactInformation;
 
     public Input<List<String>> getContactInformation() {
         return this.contactInformation == null ? Input.empty() : this.contactInformation;
@@ -55,7 +55,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -66,7 +66,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -77,7 +77,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="machineName")
-    private final @Nullable Input<String> machineName;
+        private final @Nullable Input<String> machineName;
 
     public Input<String> getMachineName() {
         return this.machineName == null ? Input.empty() : this.machineName;
@@ -88,7 +88,7 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Object> status;
+        private final @Nullable Input<Object> status;
 
     public Input<Object> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -222,7 +222,6 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public ConnectionGatewayDefinitionPropertiesArgs build() {
             return new ConnectionGatewayDefinitionPropertiesArgs(backendUri, connectionGatewayInstallation, contactInformation, description, displayName, machineName, status);
         }

@@ -138,7 +138,6 @@ public final class GetLaunchResult {
             this.tags = tags;
             return this;
         }
-
         public GetLaunchResult build() {
             return new GetLaunchResult(arn, description, groups, metricMonitors, randomizationSalt, scheduledSplitsConfig, tags);
         }

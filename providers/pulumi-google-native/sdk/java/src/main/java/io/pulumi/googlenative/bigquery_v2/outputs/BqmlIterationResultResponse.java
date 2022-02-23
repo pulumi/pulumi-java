@@ -139,7 +139,6 @@ public final class BqmlIterationResultResponse {
             this.trainingLoss = Objects.requireNonNull(trainingLoss);
             return this;
         }
-
         public BqmlIterationResultResponse build() {
             return new BqmlIterationResultResponse(durationMs, evalLoss, index, learnRate, trainingLoss);
         }

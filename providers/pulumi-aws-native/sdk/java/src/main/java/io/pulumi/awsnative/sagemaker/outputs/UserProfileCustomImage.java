@@ -98,7 +98,6 @@ public final class UserProfileCustomImage {
             this.imageVersionNumber = imageVersionNumber;
             return this;
         }
-
         public UserProfileCustomImage build() {
             return new UserProfileCustomImage(appImageConfigName, imageName, imageVersionNumber);
         }

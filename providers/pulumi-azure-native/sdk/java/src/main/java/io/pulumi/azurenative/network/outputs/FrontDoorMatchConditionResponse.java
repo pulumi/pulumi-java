@@ -162,7 +162,6 @@ public final class FrontDoorMatchConditionResponse {
             this.transforms = transforms;
             return this;
         }
-
         public FrontDoorMatchConditionResponse build() {
             return new FrontDoorMatchConditionResponse(matchValue, matchVariable, negateCondition, operator, selector, transforms);
         }

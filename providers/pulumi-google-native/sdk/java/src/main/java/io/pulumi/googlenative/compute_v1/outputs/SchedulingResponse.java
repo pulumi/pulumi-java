@@ -204,7 +204,6 @@ public final class SchedulingResponse {
             this.provisioningModel = Objects.requireNonNull(provisioningModel);
             return this;
         }
-
         public SchedulingResponse build() {
             return new SchedulingResponse(automaticRestart, instanceTerminationAction, locationHint, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel);
         }

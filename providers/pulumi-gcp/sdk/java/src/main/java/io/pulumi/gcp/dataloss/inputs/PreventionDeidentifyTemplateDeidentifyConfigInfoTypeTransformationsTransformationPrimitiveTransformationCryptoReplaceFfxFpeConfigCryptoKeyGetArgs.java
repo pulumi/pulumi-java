@@ -22,7 +22,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="kmsWrapped")
-    private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedGetArgs> kmsWrapped;
+        private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedGetArgs> kmsWrapped;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedGetArgs> getKmsWrapped() {
         return this.kmsWrapped == null ? Input.empty() : this.kmsWrapped;
@@ -34,7 +34,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="transient")
-    private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientGetArgs> $transient;
+        private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientGetArgs> $transient;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientGetArgs> get$transient() {
         return this.$transient == null ? Input.empty() : this.$transient;
@@ -46,7 +46,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="unwrapped")
-    private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedGetArgs> unwrapped;
+        private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedGetArgs> unwrapped;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedGetArgs> getUnwrapped() {
         return this.unwrapped == null ? Input.empty() : this.unwrapped;
@@ -120,7 +120,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.unwrapped = Input.ofNullable(unwrapped);
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs(kmsWrapped, $transient, unwrapped);
         }

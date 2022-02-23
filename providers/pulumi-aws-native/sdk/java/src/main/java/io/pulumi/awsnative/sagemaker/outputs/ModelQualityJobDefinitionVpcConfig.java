@@ -75,7 +75,6 @@ public final class ModelQualityJobDefinitionVpcConfig {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public ModelQualityJobDefinitionVpcConfig build() {
             return new ModelQualityJobDefinitionVpcConfig(securityGroupIds, subnets);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse ext
      * 
      */
     @InputImport(name="allowPlaybackInterruption", required=true)
-    private final Boolean allowPlaybackInterruption;
+      private final Boolean allowPlaybackInterruption;
 
     public Boolean getAllowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse ext
      * 
      */
     @InputImport(name="audioUri", required=true)
-    private final String audioUri;
+      private final String audioUri;
 
     public String getAudioUri() {
         return this.audioUri;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse ext
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse(allowPlaybackInterruption, audioUri);
         }

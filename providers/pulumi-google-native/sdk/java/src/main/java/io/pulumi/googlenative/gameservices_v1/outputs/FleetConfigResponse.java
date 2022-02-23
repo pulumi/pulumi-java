@@ -74,7 +74,6 @@ public final class FleetConfigResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public FleetConfigResponse build() {
             return new FleetConfigResponse(fleetSpec, name);
         }

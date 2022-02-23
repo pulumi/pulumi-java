@@ -210,7 +210,6 @@ public final class IaaSVMContainerResponse {
             this.virtualMachineVersion = virtualMachineVersion;
             return this;
         }
-
         public IaaSVMContainerResponse build() {
             return new IaaSVMContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus, resourceGroup, virtualMachineId, virtualMachineVersion);
         }

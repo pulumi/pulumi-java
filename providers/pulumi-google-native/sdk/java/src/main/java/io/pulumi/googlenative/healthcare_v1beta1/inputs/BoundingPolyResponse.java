@@ -23,7 +23,7 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="label", required=true)
-    private final String label;
+      private final String label;
 
     public String getLabel() {
         return this.label;
@@ -34,7 +34,7 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vertices", required=true)
-    private final List<VertexResponse> vertices;
+      private final List<VertexResponse> vertices;
 
     public List<VertexResponse> getVertices() {
         return this.vertices;
@@ -83,7 +83,6 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
             this.vertices = Objects.requireNonNull(vertices);
             return this;
         }
-
         public BoundingPolyResponse build() {
             return new BoundingPolyResponse(label, vertices);
         }

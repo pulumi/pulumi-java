@@ -52,7 +52,6 @@ public final class DistributionPolicyZoneConfigurationResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public DistributionPolicyZoneConfigurationResponse build() {
             return new DistributionPolicyZoneConfigurationResponse(zone);
         }

@@ -184,7 +184,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
             this.status = status;
             return this;
         }
-
         public AutomationRuleModifyPropertiesActionResponseActionConfiguration build() {
             return new AutomationRuleModifyPropertiesActionResponseActionConfiguration(classification, classificationComment, classificationReason, labels, owner, severity, status);
         }

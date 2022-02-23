@@ -89,7 +89,6 @@ public final class WebACLRateBasedStatement {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
-
         public WebACLRateBasedStatement build() {
             return new WebACLRateBasedStatement(aggregateKeyType, forwardedIPConfig, limit, scopeDownStatement);
         }

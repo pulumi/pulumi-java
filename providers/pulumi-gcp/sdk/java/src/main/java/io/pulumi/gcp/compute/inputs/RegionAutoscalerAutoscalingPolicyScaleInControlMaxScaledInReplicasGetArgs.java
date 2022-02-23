@@ -20,7 +20,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInRep
      * 
      */
     @InputImport(name="fixed")
-    private final @Nullable Input<Integer> fixed;
+        private final @Nullable Input<Integer> fixed;
 
     public Input<Integer> getFixed() {
         return this.fixed == null ? Input.empty() : this.fixed;
@@ -32,7 +32,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInRep
      * 
      */
     @InputImport(name="percent")
-    private final @Nullable Input<Integer> percent;
+        private final @Nullable Input<Integer> percent;
 
     public Input<Integer> getPercent() {
         return this.percent == null ? Input.empty() : this.percent;
@@ -91,7 +91,6 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInRep
             this.percent = Input.ofNullable(percent);
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs build() {
             return new RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs(fixed, percent);
         }

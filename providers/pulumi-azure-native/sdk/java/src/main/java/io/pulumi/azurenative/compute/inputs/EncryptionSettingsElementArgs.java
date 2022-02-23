@@ -24,7 +24,7 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="diskEncryptionKey")
-    private final @Nullable Input<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
+        private final @Nullable Input<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
 
     public Input<KeyVaultAndSecretReferenceArgs> getDiskEncryptionKey() {
         return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
@@ -35,7 +35,7 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="keyEncryptionKey")
-    private final @Nullable Input<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
+        private final @Nullable Input<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
 
     public Input<KeyVaultAndKeyReferenceArgs> getKeyEncryptionKey() {
         return this.keyEncryptionKey == null ? Input.empty() : this.keyEncryptionKey;
@@ -94,7 +94,6 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
             this.keyEncryptionKey = Input.ofNullable(keyEncryptionKey);
             return this;
         }
-
         public EncryptionSettingsElementArgs build() {
             return new EncryptionSettingsElementArgs(diskEncryptionKey, keyEncryptionKey);
         }

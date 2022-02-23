@@ -23,7 +23,7 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="health", required=true)
-    private final String health;
+        private final String health;
 
     public String getHealth() {
         return this.health;
@@ -34,7 +34,7 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="healthErrors", required=true)
-    private final List<HealthErrorResponse> healthErrors;
+        private final List<HealthErrorResponse> healthErrors;
 
     public List<HealthErrorResponse> getHealthErrors() {
         return this.healthErrors;
@@ -45,7 +45,7 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -56,7 +56,7 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="lastHeartbeatUtc", required=true)
-    private final String lastHeartbeatUtc;
+        private final String lastHeartbeatUtc;
 
     public String getLastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
@@ -67,7 +67,7 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -78,7 +78,7 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+        private final String version;
 
     public String getVersion() {
         return this.version;
@@ -167,7 +167,6 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ReprotectAgentDetailsResponse build() {
             return new ReprotectAgentDetailsResponse(health, healthErrors, id, lastHeartbeatUtc, name, version);
         }

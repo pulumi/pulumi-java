@@ -160,7 +160,6 @@ public final class GetDeploymentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeploymentResult build() {
             return new GetDeploymentResult(etag, id, name, properties, systemData, type);
         }

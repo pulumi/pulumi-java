@@ -213,7 +213,6 @@ public final class IntegrationRuntimeSsisPropertiesResponse {
             this.packageStores = packageStores;
             return this;
         }
-
         public IntegrationRuntimeSsisPropertiesResponse build() {
             return new IntegrationRuntimeSsisPropertiesResponse(catalogInfo, credential, customSetupScriptProperties, dataProxyProperties, edition, expressCustomSetupProperties, licenseType, packageStores);
         }

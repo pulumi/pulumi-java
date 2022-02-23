@@ -75,7 +75,6 @@ public final class DeadLetterPolicyResponse {
             this.maxDeliveryAttempts = Objects.requireNonNull(maxDeliveryAttempts);
             return this;
         }
-
         public DeadLetterPolicyResponse build() {
             return new DeadLetterPolicyResponse(deadLetterTopic, maxDeliveryAttempts);
         }

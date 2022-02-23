@@ -120,7 +120,6 @@ public final class GetInternalRangeIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetInternalRangeIamPolicyResult build() {
             return new GetInternalRangeIamPolicyResult(auditConfigs, bindings, etag, version);
         }

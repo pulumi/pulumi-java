@@ -24,7 +24,7 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backupEnabled")
-    private final @Nullable Input<Boolean> backupEnabled;
+        private final @Nullable Input<Boolean> backupEnabled;
 
     public Input<Boolean> getBackupEnabled() {
         return this.backupEnabled == null ? Input.empty() : this.backupEnabled;
@@ -35,7 +35,7 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backupPolicyId")
-    private final @Nullable Input<String> backupPolicyId;
+        private final @Nullable Input<String> backupPolicyId;
 
     public Input<String> getBackupPolicyId() {
         return this.backupPolicyId == null ? Input.empty() : this.backupPolicyId;
@@ -46,7 +46,7 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="policyEnforced")
-    private final @Nullable Input<Boolean> policyEnforced;
+        private final @Nullable Input<Boolean> policyEnforced;
 
     public Input<Boolean> getPolicyEnforced() {
         return this.policyEnforced == null ? Input.empty() : this.policyEnforced;
@@ -57,7 +57,7 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vaultId")
-    private final @Nullable Input<String> vaultId;
+        private final @Nullable Input<String> vaultId;
 
     public Input<String> getVaultId() {
         return this.vaultId == null ? Input.empty() : this.vaultId;
@@ -146,7 +146,6 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
             this.vaultId = Input.ofNullable(vaultId);
             return this;
         }
-
         public VolumeBackupPropertiesArgs build() {
             return new VolumeBackupPropertiesArgs(backupEnabled, backupPolicyId, policyEnforced, vaultId);
         }

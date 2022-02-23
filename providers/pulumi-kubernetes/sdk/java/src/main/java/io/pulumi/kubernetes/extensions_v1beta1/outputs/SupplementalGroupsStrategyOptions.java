@@ -78,7 +78,6 @@ public final class SupplementalGroupsStrategyOptions {
             this.rule = rule;
             return this;
         }
-
         public SupplementalGroupsStrategyOptions build() {
             return new SupplementalGroupsStrategyOptions(ranges, rule);
         }

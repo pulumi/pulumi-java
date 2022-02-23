@@ -287,7 +287,6 @@ public final class EdifactDelimiterOverrideResponse {
             this.targetNamespace = targetNamespace;
             return this;
         }
-
         public EdifactDelimiterOverrideResponse build() {
             return new EdifactDelimiterOverrideResponse(componentSeparator, dataElementSeparator, decimalPointIndicator, messageAssociationAssignedCode, messageId, messageRelease, messageVersion, releaseIndicator, repetitionSeparator, segmentTerminator, segmentTerminatorSuffix, targetNamespace);
         }

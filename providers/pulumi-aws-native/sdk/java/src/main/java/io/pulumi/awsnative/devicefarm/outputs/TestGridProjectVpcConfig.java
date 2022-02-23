@@ -88,7 +88,6 @@ public final class TestGridProjectVpcConfig {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public TestGridProjectVpcConfig build() {
             return new TestGridProjectVpcConfig(securityGroupIds, subnetIds, vpcId);
         }

@@ -30,7 +30,7 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable Input<String> policyId;
+        private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -41,7 +41,7 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectableItemId")
-    private final @Nullable Input<String> protectableItemId;
+        private final @Nullable Input<String> protectableItemId;
 
     public Input<String> getProtectableItemId() {
         return this.protectableItemId == null ? Input.empty() : this.protectableItemId;
@@ -52,7 +52,7 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="providerSpecificDetails")
-    private final @Nullable Input<Object> providerSpecificDetails;
+        private final @Nullable Input<Object> providerSpecificDetails;
 
     public Input<Object> getProviderSpecificDetails() {
         return this.providerSpecificDetails == null ? Input.empty() : this.providerSpecificDetails;
@@ -126,7 +126,6 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
             this.providerSpecificDetails = Input.ofNullable(providerSpecificDetails);
             return this;
         }
-
         public EnableProtectionInputPropertiesArgs build() {
             return new EnableProtectionInputPropertiesArgs(policyId, protectableItemId, providerSpecificDetails);
         }

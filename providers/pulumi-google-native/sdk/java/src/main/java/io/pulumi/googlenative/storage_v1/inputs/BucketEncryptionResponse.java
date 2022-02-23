@@ -21,7 +21,7 @@ public final class BucketEncryptionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="defaultKmsKeyName", required=true)
-    private final String defaultKmsKeyName;
+      private final String defaultKmsKeyName;
 
     public String getDefaultKmsKeyName() {
         return this.defaultKmsKeyName;
@@ -59,7 +59,6 @@ public final class BucketEncryptionResponse extends io.pulumi.resources.InvokeAr
             this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
             return this;
         }
-
         public BucketEncryptionResponse build() {
             return new BucketEncryptionResponse(defaultKmsKeyName);
         }

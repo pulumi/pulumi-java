@@ -312,7 +312,6 @@ public final class GetQueryResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetQueryResult build() {
             return new GetQueryResult(author, body, description, displayName, id, name, properties, related, systemData, tags, timeCreated, timeModified, type);
         }

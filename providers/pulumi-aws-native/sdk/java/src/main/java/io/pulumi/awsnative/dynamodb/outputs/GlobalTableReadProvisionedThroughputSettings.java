@@ -61,7 +61,6 @@ public final class GlobalTableReadProvisionedThroughputSettings {
             this.readCapacityUnits = readCapacityUnits;
             return this;
         }
-
         public GlobalTableReadProvisionedThroughputSettings build() {
             return new GlobalTableReadProvisionedThroughputSettings(readCapacityAutoScalingSettings, readCapacityUnits);
         }

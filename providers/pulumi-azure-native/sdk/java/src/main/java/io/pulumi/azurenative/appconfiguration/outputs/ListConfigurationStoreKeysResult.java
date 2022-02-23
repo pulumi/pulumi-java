@@ -78,7 +78,6 @@ public final class ListConfigurationStoreKeysResult {
             this.value = value;
             return this;
         }
-
         public ListConfigurationStoreKeysResult build() {
             return new ListConfigurationStoreKeysResult(nextLink, value);
         }

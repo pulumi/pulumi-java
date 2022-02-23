@@ -24,7 +24,7 @@ public final class SystemParametersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<SystemParameterRuleArgs>> rules;
+      private final @Nullable Input<List<SystemParameterRuleArgs>> rules;
 
     public Input<List<SystemParameterRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -67,7 +67,6 @@ public final class SystemParametersArgs extends io.pulumi.resources.ResourceArgs
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public SystemParametersArgs build() {
             return new SystemParametersArgs(rules);
         }

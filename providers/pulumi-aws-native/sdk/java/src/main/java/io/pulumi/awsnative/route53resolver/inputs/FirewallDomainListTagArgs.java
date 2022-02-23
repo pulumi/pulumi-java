@@ -22,7 +22,7 @@ public final class FirewallDomainListTagArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -33,7 +33,7 @@ public final class FirewallDomainListTagArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -92,7 +92,6 @@ public final class FirewallDomainListTagArgs extends io.pulumi.resources.Resourc
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public FirewallDomainListTagArgs build() {
             return new FirewallDomainListTagArgs(key, value);
         }

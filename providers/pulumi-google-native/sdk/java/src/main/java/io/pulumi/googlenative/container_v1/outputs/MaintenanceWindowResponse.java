@@ -98,7 +98,6 @@ public final class MaintenanceWindowResponse {
             this.recurringWindow = Objects.requireNonNull(recurringWindow);
             return this;
         }
-
         public MaintenanceWindowResponse build() {
             return new MaintenanceWindowResponse(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);
         }

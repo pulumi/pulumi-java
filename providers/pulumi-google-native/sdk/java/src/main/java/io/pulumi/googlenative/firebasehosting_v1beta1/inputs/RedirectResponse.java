@@ -22,7 +22,7 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="glob", required=true)
-    private final String glob;
+      private final String glob;
 
     public String getGlob() {
         return this.glob;
@@ -33,7 +33,7 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -44,7 +44,7 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="regex", required=true)
-    private final String regex;
+      private final String regex;
 
     public String getRegex() {
         return this.regex;
@@ -55,7 +55,7 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="statusCode", required=true)
-    private final Integer statusCode;
+      private final Integer statusCode;
 
     public Integer getStatusCode() {
         return this.statusCode;
@@ -124,7 +124,6 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public RedirectResponse build() {
             return new RedirectResponse(glob, location, regex, statusCode);
         }

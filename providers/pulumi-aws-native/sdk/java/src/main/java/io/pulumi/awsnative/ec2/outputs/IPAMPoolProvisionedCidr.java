@@ -44,7 +44,6 @@ public final class IPAMPoolProvisionedCidr {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public IPAMPoolProvisionedCidr build() {
             return new IPAMPoolProvisionedCidr(cidr);
         }

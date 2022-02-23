@@ -60,7 +60,6 @@ public final class OriginRequestPolicyHeadersConfig {
             this.headers = headers;
             return this;
         }
-
         public OriginRequestPolicyHeadersConfig build() {
             return new OriginRequestPolicyHeadersConfig(headerBehavior, headers);
         }

@@ -77,7 +77,6 @@ public final class ObjectTypeKey {
             this.standardIdentifiers = standardIdentifiers;
             return this;
         }
-
         public ObjectTypeKey build() {
             return new ObjectTypeKey(fieldNames, standardIdentifiers);
         }

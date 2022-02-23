@@ -77,7 +77,6 @@ public final class KeyVaultPropertiesResponse {
             this.key = key;
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(id, key);
         }

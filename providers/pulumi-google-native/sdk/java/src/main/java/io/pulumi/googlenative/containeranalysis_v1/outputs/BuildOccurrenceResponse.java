@@ -97,7 +97,6 @@ public final class BuildOccurrenceResponse {
             this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
             return this;
         }
-
         public BuildOccurrenceResponse build() {
             return new BuildOccurrenceResponse(intotoStatement, provenance, provenanceBytes);
         }

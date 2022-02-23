@@ -165,7 +165,6 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest {
             this.models = models;
             return this;
         }
-
         public ACIServiceResponseResponseEnvironmentImageRequest build() {
             return new ACIServiceResponseResponseEnvironmentImageRequest(assets, driverProgram, environment, environmentReference, modelIds, models);
         }

@@ -30,7 +30,6 @@ public final class EmptyResponse {
         public Builder(EmptyResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public EmptyResponse build() {
             return new EmptyResponse();
         }

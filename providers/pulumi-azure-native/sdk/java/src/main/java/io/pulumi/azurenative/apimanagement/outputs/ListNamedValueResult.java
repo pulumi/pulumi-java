@@ -54,7 +54,6 @@ public final class ListNamedValueResult {
             this.value = value;
             return this;
         }
-
         public ListNamedValueResult build() {
             return new ListNamedValueResult(value);
         }

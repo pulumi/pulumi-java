@@ -97,7 +97,6 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyRsaTokenKeyResponse build() {
             return new ContentKeyPolicyRsaTokenKeyResponse(exponent, modulus, odataType);
         }

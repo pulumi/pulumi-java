@@ -29,7 +29,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="negateCondition")
-    private final @Nullable Input<Boolean> negateCondition;
+        private final @Nullable Input<Boolean> negateCondition;
 
     public Input<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
@@ -40,7 +40,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rulesEngineMatchValue", required=true)
-    private final Input<List<String>> rulesEngineMatchValue;
+        private final Input<List<String>> rulesEngineMatchValue;
 
     public Input<List<String>> getRulesEngineMatchValue() {
         return this.rulesEngineMatchValue;
@@ -51,7 +51,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rulesEngineMatchVariable", required=true)
-    private final Input<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable;
+        private final Input<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable;
 
     public Input<Either<String,RulesEngineMatchVariable>> getRulesEngineMatchVariable() {
         return this.rulesEngineMatchVariable;
@@ -62,7 +62,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rulesEngineOperator", required=true)
-    private final Input<Either<String,RulesEngineOperator>> rulesEngineOperator;
+        private final Input<Either<String,RulesEngineOperator>> rulesEngineOperator;
 
     public Input<Either<String,RulesEngineOperator>> getRulesEngineOperator() {
         return this.rulesEngineOperator;
@@ -73,7 +73,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<String> selector;
+        private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -84,7 +84,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="transforms")
-    private final @Nullable Input<List<Either<String,Transform>>> transforms;
+        private final @Nullable Input<List<Either<String,Transform>>> transforms;
 
     public Input<List<Either<String,Transform>>> getTransforms() {
         return this.transforms == null ? Input.empty() : this.transforms;
@@ -203,7 +203,6 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
             this.transforms = Input.ofNullable(transforms);
             return this;
         }
-
         public RulesEngineMatchConditionArgs build() {
             return new RulesEngineMatchConditionArgs(negateCondition, rulesEngineMatchValue, rulesEngineMatchVariable, rulesEngineOperator, selector, transforms);
         }

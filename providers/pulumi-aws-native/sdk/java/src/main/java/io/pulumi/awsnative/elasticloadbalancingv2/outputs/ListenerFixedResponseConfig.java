@@ -73,7 +73,6 @@ public final class ListenerFixedResponseConfig {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public ListenerFixedResponseConfig build() {
             return new ListenerFixedResponseConfig(contentType, messageBody, statusCode);
         }

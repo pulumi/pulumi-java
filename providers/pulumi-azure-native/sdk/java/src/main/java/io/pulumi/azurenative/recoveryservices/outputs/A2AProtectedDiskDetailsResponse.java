@@ -479,7 +479,6 @@ public final class A2AProtectedDiskDetailsResponse {
             this.secretIdentifier = secretIdentifier;
             return this;
         }
-
         public A2AProtectedDiskDetailsResponse build() {
             return new A2AProtectedDiskDetailsResponse(allowedDiskLevelOperation, dataPendingAtSourceAgentInMB, dataPendingInStagingStorageAccountInMB, dekKeyVaultArmId, diskCapacityInBytes, diskName, diskState, diskType, diskUri, isDiskEncrypted, isDiskKeyEncrypted, kekKeyVaultArmId, keyIdentifier, monitoringJobType, monitoringPercentageCompletion, primaryDiskAzureStorageAccountId, primaryStagingAzureStorageAccountId, recoveryAzureStorageAccountId, recoveryDiskUri, resyncRequired, secretIdentifier);
         }

@@ -97,7 +97,6 @@ public final class WorkloadsConfigResponse {
             this.worker = Objects.requireNonNull(worker);
             return this;
         }
-
         public WorkloadsConfigResponse build() {
             return new WorkloadsConfigResponse(scheduler, webServer, worker);
         }

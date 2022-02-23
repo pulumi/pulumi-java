@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigResponse {
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1LoggingConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1LoggingConfigResponse(enableStackdriverLogging);
         }

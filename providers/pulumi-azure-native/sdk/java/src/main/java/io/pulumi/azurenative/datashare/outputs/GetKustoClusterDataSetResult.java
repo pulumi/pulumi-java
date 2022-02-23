@@ -224,7 +224,6 @@ public final class GetKustoClusterDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKustoClusterDataSetResult build() {
             return new GetKustoClusterDataSetResult(dataSetId, id, kind, kustoClusterResourceId, location, name, provisioningState, systemData, type);
         }

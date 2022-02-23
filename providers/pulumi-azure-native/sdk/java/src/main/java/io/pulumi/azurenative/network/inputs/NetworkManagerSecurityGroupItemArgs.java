@@ -23,7 +23,7 @@ public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="networkGroupId")
-    private final @Nullable Input<String> networkGroupId;
+        private final @Nullable Input<String> networkGroupId;
 
     public Input<String> getNetworkGroupId() {
         return this.networkGroupId == null ? Input.empty() : this.networkGroupId;
@@ -66,7 +66,6 @@ public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resourc
             this.networkGroupId = Input.ofNullable(networkGroupId);
             return this;
         }
-
         public NetworkManagerSecurityGroupItemArgs build() {
             return new NetworkManagerSecurityGroupItemArgs(networkGroupId);
         }

@@ -19,7 +19,7 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+        private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -30,7 +30,7 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="queueName")
-    private final @Nullable String queueName;
+        private final @Nullable String queueName;
 
     public Optional<String> getQueueName() {
         return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
@@ -41,7 +41,7 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sasToken")
-    private final @Nullable String sasToken;
+        private final @Nullable String sasToken;
 
     public Optional<String> getSasToken() {
         return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
@@ -52,7 +52,7 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="storageAccount")
-    private final @Nullable String storageAccount;
+        private final @Nullable String storageAccount;
 
     public Optional<String> getStorageAccount() {
         return this.storageAccount == null ? Optional.empty() : Optional.ofNullable(this.storageAccount);
@@ -121,7 +121,6 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
             this.storageAccount = storageAccount;
             return this;
         }
-
         public StorageQueueMessageResponse build() {
             return new StorageQueueMessageResponse(message, queueName, sasToken, storageAccount);
         }

@@ -27,7 +27,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<RuleAction> action;
+      private final @Nullable Input<RuleAction> action;
 
     public Input<RuleAction> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -38,7 +38,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<ConditionArgs>> conditions;
+      private final @Nullable Input<List<ConditionArgs>> conditions;
 
     public Input<List<ConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -49,7 +49,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ins")
-    private final @Nullable Input<List<String>> ins;
+      private final @Nullable Input<List<String>> ins;
 
     public Input<List<String>> getIns() {
         return this.ins == null ? Input.empty() : this.ins;
@@ -71,7 +71,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfigs")
-    private final @Nullable Input<List<LogConfigArgs>> logConfigs;
+      private final @Nullable Input<List<LogConfigArgs>> logConfigs;
 
     public Input<List<LogConfigArgs>> getLogConfigs() {
         return this.logConfigs == null ? Input.empty() : this.logConfigs;
@@ -82,7 +82,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notIns")
-    private final @Nullable Input<List<String>> notIns;
+      private final @Nullable Input<List<String>> notIns;
 
     public Input<List<String>> getNotIns() {
         return this.notIns == null ? Input.empty() : this.notIns;
@@ -93,7 +93,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<List<String>> permissions;
+      private final @Nullable Input<List<String>> permissions;
 
     public Input<List<String>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -227,7 +227,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
-
         public RuleArgs build() {
             return new RuleArgs(action, conditions, description, ins, logConfigs, notIns, permissions);
         }

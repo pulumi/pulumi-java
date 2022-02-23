@@ -19,7 +19,7 @@ public final class AutoscaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxThroughput")
-    private final @Nullable Input<Integer> maxThroughput;
+        private final @Nullable Input<Integer> maxThroughput;
 
     public Input<Integer> getMaxThroughput() {
         return this.maxThroughput == null ? Input.empty() : this.maxThroughput;
@@ -62,7 +62,6 @@ public final class AutoscaleSettingsArgs extends io.pulumi.resources.ResourceArg
             this.maxThroughput = Input.ofNullable(maxThroughput);
             return this;
         }
-
         public AutoscaleSettingsArgs build() {
             return new AutoscaleSettingsArgs(maxThroughput);
         }

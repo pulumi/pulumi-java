@@ -156,7 +156,6 @@ public final class PersistentVolumeClaimCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PersistentVolumeClaimCondition build() {
             return new PersistentVolumeClaimCondition(lastProbeTime, lastTransitionTime, message, reason, status, type);
         }

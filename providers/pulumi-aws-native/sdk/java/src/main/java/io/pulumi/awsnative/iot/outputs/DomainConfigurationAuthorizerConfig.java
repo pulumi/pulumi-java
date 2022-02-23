@@ -61,7 +61,6 @@ public final class DomainConfigurationAuthorizerConfig {
             this.defaultAuthorizerName = defaultAuthorizerName;
             return this;
         }
-
         public DomainConfigurationAuthorizerConfig build() {
             return new DomainConfigurationAuthorizerConfig(allowAuthorizerOverride, defaultAuthorizerName);
         }

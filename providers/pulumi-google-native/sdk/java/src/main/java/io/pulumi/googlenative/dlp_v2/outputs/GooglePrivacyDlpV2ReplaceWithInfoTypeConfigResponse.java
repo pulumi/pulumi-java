@@ -30,7 +30,6 @@ public final class GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse {
         public Builder(GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse build() {
             return new GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse();
         }

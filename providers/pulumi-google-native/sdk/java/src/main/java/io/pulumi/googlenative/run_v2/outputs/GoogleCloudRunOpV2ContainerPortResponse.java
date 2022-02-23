@@ -75,7 +75,6 @@ public final class GoogleCloudRunOpV2ContainerPortResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleCloudRunOpV2ContainerPortResponse build() {
             return new GoogleCloudRunOpV2ContainerPortResponse(containerPort, name);
         }

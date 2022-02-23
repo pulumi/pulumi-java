@@ -121,7 +121,6 @@ public final class MutatingWebhookConfiguration {
             this.webhooks = webhooks;
             return this;
         }
-
         public MutatingWebhookConfiguration build() {
             return new MutatingWebhookConfiguration(apiVersion, kind, metadata, webhooks);
         }

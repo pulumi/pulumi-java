@@ -225,7 +225,6 @@ public final class GetHubRouteTableResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHubRouteTableResult build() {
             return new GetHubRouteTableResult(associatedConnections, etag, id, labels, name, propagatingConnections, provisioningState, routes, type);
         }

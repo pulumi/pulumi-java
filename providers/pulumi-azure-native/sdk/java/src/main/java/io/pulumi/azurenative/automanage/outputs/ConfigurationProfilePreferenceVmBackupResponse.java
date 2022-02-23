@@ -119,7 +119,6 @@ public final class ConfigurationProfilePreferenceVmBackupResponse {
             this.timeZone = timeZone;
             return this;
         }
-
         public ConfigurationProfilePreferenceVmBackupResponse build() {
             return new ConfigurationProfilePreferenceVmBackupResponse(instantRpRetentionRangeInDays, retentionPolicy, schedulePolicy, timeZone);
         }

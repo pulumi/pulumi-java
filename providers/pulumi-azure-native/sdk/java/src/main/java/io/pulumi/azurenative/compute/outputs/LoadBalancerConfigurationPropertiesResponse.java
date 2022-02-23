@@ -53,7 +53,6 @@ public final class LoadBalancerConfigurationPropertiesResponse {
             this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations);
             return this;
         }
-
         public LoadBalancerConfigurationPropertiesResponse build() {
             return new LoadBalancerConfigurationPropertiesResponse(frontendIPConfigurations);
         }

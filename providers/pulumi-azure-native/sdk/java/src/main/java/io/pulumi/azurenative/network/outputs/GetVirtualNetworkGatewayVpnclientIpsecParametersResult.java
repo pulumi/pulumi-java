@@ -201,7 +201,6 @@ public final class GetVirtualNetworkGatewayVpnclientIpsecParametersResult {
             this.saLifeTimeSeconds = Objects.requireNonNull(saLifeTimeSeconds);
             return this;
         }
-
         public GetVirtualNetworkGatewayVpnclientIpsecParametersResult build() {
             return new GetVirtualNetworkGatewayVpnclientIpsecParametersResult(dhGroup, ikeEncryption, ikeIntegrity, ipsecEncryption, ipsecIntegrity, pfsGroup, saDataSizeKilobytes, saLifeTimeSeconds);
         }

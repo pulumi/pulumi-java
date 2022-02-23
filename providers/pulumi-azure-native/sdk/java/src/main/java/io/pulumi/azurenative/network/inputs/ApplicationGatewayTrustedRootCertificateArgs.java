@@ -23,7 +23,7 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<String> data;
+        private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -34,7 +34,7 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -45,7 +45,7 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
      * 
      */
     @InputImport(name="keyVaultSecretId")
-    private final @Nullable Input<String> keyVaultSecretId;
+        private final @Nullable Input<String> keyVaultSecretId;
 
     public Input<String> getKeyVaultSecretId() {
         return this.keyVaultSecretId == null ? Input.empty() : this.keyVaultSecretId;
@@ -56,7 +56,7 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -145,7 +145,6 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ApplicationGatewayTrustedRootCertificateArgs build() {
             return new ApplicationGatewayTrustedRootCertificateArgs(data, id, keyVaultSecretId, name);
         }

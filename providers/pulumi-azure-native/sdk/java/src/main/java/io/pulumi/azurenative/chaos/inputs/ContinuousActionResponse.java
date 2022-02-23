@@ -23,7 +23,7 @@ public final class ContinuousActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="duration", required=true)
-    private final String duration;
+        private final String duration;
 
     public String getDuration() {
         return this.duration;
@@ -34,7 +34,7 @@ public final class ContinuousActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class ContinuousActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final List<KeyValuePairResponse> parameters;
+        private final List<KeyValuePairResponse> parameters;
 
     public List<KeyValuePairResponse> getParameters() {
         return this.parameters;
@@ -56,7 +56,7 @@ public final class ContinuousActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="selectorId", required=true)
-    private final String selectorId;
+        private final String selectorId;
 
     public String getSelectorId() {
         return this.selectorId;
@@ -68,7 +68,7 @@ public final class ContinuousActionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -147,7 +147,6 @@ public final class ContinuousActionResponse extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ContinuousActionResponse build() {
             return new ContinuousActionResponse(duration, name, parameters, selectorId, type);
         }

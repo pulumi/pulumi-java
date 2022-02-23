@@ -139,7 +139,6 @@ public final class P2SVpnServerConfigRadiusClientRootCertificateResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public P2SVpnServerConfigRadiusClientRootCertificateResponse build() {
             return new P2SVpnServerConfigRadiusClientRootCertificateResponse(etag, id, name, provisioningState, thumbprint);
         }

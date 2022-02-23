@@ -104,7 +104,6 @@ public final class GetListenerRuleResult {
             this.ruleArn = ruleArn;
             return this;
         }
-
         public GetListenerRuleResult build() {
             return new GetListenerRuleResult(actions, conditions, isDefault, priority, ruleArn);
         }

@@ -139,7 +139,6 @@ public final class PolicyDefinitionGroupResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PolicyDefinitionGroupResponse build() {
             return new PolicyDefinitionGroupResponse(additionalMetadataId, category, description, displayName, name);
         }

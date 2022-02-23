@@ -97,7 +97,6 @@ public final class GoogleCloudRetailV2alphaRatingResponse {
             this.ratingHistogram = Objects.requireNonNull(ratingHistogram);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRatingResponse build() {
             return new GoogleCloudRetailV2alphaRatingResponse(averageRating, ratingCount, ratingHistogram);
         }

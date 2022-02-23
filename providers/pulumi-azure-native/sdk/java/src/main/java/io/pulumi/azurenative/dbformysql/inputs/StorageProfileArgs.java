@@ -27,7 +27,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupRetentionDays")
-    private final @Nullable Input<Integer> backupRetentionDays;
+        private final @Nullable Input<Integer> backupRetentionDays;
 
     public Input<Integer> getBackupRetentionDays() {
         return this.backupRetentionDays == null ? Input.empty() : this.backupRetentionDays;
@@ -38,7 +38,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="geoRedundantBackup")
-    private final @Nullable Input<Either<String,GeoRedundantBackup>> geoRedundantBackup;
+        private final @Nullable Input<Either<String,GeoRedundantBackup>> geoRedundantBackup;
 
     public Input<Either<String,GeoRedundantBackup>> getGeoRedundantBackup() {
         return this.geoRedundantBackup == null ? Input.empty() : this.geoRedundantBackup;
@@ -49,7 +49,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAutogrow")
-    private final @Nullable Input<Either<String,StorageAutogrow>> storageAutogrow;
+        private final @Nullable Input<Either<String,StorageAutogrow>> storageAutogrow;
 
     public Input<Either<String,StorageAutogrow>> getStorageAutogrow() {
         return this.storageAutogrow == null ? Input.empty() : this.storageAutogrow;
@@ -60,7 +60,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageMB")
-    private final @Nullable Input<Integer> storageMB;
+        private final @Nullable Input<Integer> storageMB;
 
     public Input<Integer> getStorageMB() {
         return this.storageMB == null ? Input.empty() : this.storageMB;
@@ -149,7 +149,6 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.storageMB = Input.ofNullable(storageMB);
             return this;
         }
-
         public StorageProfileArgs build() {
             return new StorageProfileArgs(backupRetentionDays, geoRedundantBackup, storageAutogrow, storageMB);
         }

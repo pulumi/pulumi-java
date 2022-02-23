@@ -30,7 +30,6 @@ public final class GooglePrivacyDlpV2PublishToStackdriverResponse {
         public Builder(GooglePrivacyDlpV2PublishToStackdriverResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2PublishToStackdriverResponse build() {
             return new GooglePrivacyDlpV2PublishToStackdriverResponse();
         }

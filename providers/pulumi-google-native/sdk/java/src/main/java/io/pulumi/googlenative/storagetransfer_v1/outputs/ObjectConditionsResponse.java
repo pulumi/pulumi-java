@@ -159,7 +159,6 @@ public final class ObjectConditionsResponse {
             this.minTimeElapsedSinceLastModification = Objects.requireNonNull(minTimeElapsedSinceLastModification);
             return this;
         }
-
         public ObjectConditionsResponse build() {
             return new ObjectConditionsResponse(excludePrefixes, includePrefixes, lastModifiedBefore, lastModifiedSince, maxTimeElapsedSinceLastModification, minTimeElapsedSinceLastModification);
         }

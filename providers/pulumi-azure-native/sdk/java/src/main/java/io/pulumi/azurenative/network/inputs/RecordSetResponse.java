@@ -25,7 +25,7 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fqdn")
-    private final @Nullable String fqdn;
+        private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
@@ -36,7 +36,7 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipAddresses")
-    private final @Nullable List<String> ipAddresses;
+        private final @Nullable List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
@@ -47,7 +47,7 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -58,7 +58,7 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recordSetName")
-    private final @Nullable String recordSetName;
+        private final @Nullable String recordSetName;
 
     public Optional<String> getRecordSetName() {
         return this.recordSetName == null ? Optional.empty() : Optional.ofNullable(this.recordSetName);
@@ -69,7 +69,7 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recordType")
-    private final @Nullable String recordType;
+        private final @Nullable String recordType;
 
     public Optional<String> getRecordType() {
         return this.recordType == null ? Optional.empty() : Optional.ofNullable(this.recordType);
@@ -80,7 +80,7 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Integer ttl;
+        private final @Nullable Integer ttl;
 
     public Optional<Integer> getTtl() {
         return this.ttl == null ? Optional.empty() : Optional.ofNullable(this.ttl);
@@ -169,7 +169,6 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
             this.ttl = ttl;
             return this;
         }
-
         public RecordSetResponse build() {
             return new RecordSetResponse(fqdn, ipAddresses, provisioningState, recordSetName, recordType, ttl);
         }

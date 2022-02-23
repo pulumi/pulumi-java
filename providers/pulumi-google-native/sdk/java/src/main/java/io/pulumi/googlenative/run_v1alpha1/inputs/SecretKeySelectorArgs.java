@@ -25,7 +25,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -36,7 +36,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="localObjectReference")
-    private final @Nullable Input<LocalObjectReferenceArgs> localObjectReference;
+      private final @Nullable Input<LocalObjectReferenceArgs> localObjectReference;
 
     public Input<LocalObjectReferenceArgs> getLocalObjectReference() {
         return this.localObjectReference == null ? Input.empty() : this.localObjectReference;
@@ -47,7 +47,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="optional")
-    private final @Nullable Input<Boolean> optional;
+      private final @Nullable Input<Boolean> optional;
 
     public Input<Boolean> getOptional() {
         return this.optional == null ? Input.empty() : this.optional;
@@ -147,7 +147,6 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
             this.optional = Input.ofNullable(optional);
             return this;
         }
-
         public SecretKeySelectorArgs build() {
             return new SecretKeySelectorArgs(key, localObjectReference, name, optional);
         }

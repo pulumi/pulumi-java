@@ -74,7 +74,6 @@ public final class GoogleSheetsOptionsResponse {
             this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
             return this;
         }
-
         public GoogleSheetsOptionsResponse build() {
             return new GoogleSheetsOptionsResponse(range, skipLeadingRows);
         }

@@ -17,7 +17,7 @@ public final class GetFirewallDomainListArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -55,7 +55,6 @@ public final class GetFirewallDomainListArgs extends io.pulumi.resources.InvokeA
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GetFirewallDomainListArgs build() {
             return new GetFirewallDomainListArgs(id);
         }

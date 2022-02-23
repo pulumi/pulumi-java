@@ -290,7 +290,6 @@ public final class GetConfigResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConfigResult build() {
             return new GetConfigResult(createTime, displayName, gatewayConfig, gatewayServiceAccount, grpcServices, labels, managedServiceConfigs, name, openapiDocuments, serviceConfigId, state, updateTime);
         }

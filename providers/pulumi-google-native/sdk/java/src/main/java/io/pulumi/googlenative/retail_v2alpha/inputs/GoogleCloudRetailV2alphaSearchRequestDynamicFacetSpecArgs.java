@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs ext
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> mode;
+      private final @Nullable Input<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> mode;
 
     public Input<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -66,7 +66,6 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs ext
             this.mode = Input.ofNullable(mode);
             return this;
         }
-
         public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs build() {
             return new GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs(mode);
         }

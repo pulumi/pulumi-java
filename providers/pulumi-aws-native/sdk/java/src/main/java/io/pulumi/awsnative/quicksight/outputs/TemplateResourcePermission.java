@@ -103,7 +103,6 @@ public final class TemplateResourcePermission {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public TemplateResourcePermission build() {
             return new TemplateResourcePermission(actions, principal);
         }

@@ -77,7 +77,6 @@ public final class IntegrationServiceEnvironmentSkuResponse {
             this.name = name;
             return this;
         }
-
         public IntegrationServiceEnvironmentSkuResponse build() {
             return new IntegrationServiceEnvironmentSkuResponse(capacity, name);
         }

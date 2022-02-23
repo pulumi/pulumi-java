@@ -183,7 +183,6 @@ public final class GetDataSourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataSourceResult build() {
             return new GetDataSourceResult(etag, id, kind, name, properties, tags, type);
         }

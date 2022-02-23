@@ -54,7 +54,6 @@ public final class ModelBiasJobDefinitionConstraintsResource {
             this.s3Uri = s3Uri;
             return this;
         }
-
         public ModelBiasJobDefinitionConstraintsResource build() {
             return new ModelBiasJobDefinitionConstraintsResource(s3Uri);
         }

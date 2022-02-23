@@ -167,7 +167,6 @@ public final class MetricMetricDescriptor {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public MetricMetricDescriptor build() {
             return new MetricMetricDescriptor(displayName, labels, metricKind, unit, valueType);
         }

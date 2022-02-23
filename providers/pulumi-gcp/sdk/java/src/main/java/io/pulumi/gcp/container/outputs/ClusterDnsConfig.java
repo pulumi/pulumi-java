@@ -97,7 +97,6 @@ public final class ClusterDnsConfig {
             this.clusterDnsScope = clusterDnsScope;
             return this;
         }
-
         public ClusterDnsConfig build() {
             return new ClusterDnsConfig(clusterDns, clusterDnsDomain, clusterDnsScope);
         }

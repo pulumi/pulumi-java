@@ -54,7 +54,6 @@ public final class MongoIndexKeysResponse {
             this.keys = keys;
             return this;
         }
-
         public MongoIndexKeysResponse build() {
             return new MongoIndexKeysResponse(keys);
         }

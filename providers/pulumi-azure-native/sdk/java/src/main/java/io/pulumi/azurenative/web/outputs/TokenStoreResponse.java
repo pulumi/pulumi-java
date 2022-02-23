@@ -125,7 +125,6 @@ public final class TokenStoreResponse {
             this.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
             return this;
         }
-
         public TokenStoreResponse build() {
             return new TokenStoreResponse(azureBlobStorage, enabled, fileSystem, tokenRefreshExtensionHours);
         }

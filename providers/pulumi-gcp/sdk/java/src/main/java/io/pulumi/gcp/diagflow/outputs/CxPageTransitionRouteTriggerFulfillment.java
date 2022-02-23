@@ -123,7 +123,6 @@ public final class CxPageTransitionRouteTriggerFulfillment {
             this.webhook = webhook;
             return this;
         }
-
         public CxPageTransitionRouteTriggerFulfillment build() {
             return new CxPageTransitionRouteTriggerFulfillment(messages, returnPartialResponses, tag, webhook);
         }

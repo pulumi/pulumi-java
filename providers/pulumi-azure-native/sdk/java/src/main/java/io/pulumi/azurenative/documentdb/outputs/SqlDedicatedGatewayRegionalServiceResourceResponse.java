@@ -116,7 +116,6 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public SqlDedicatedGatewayRegionalServiceResourceResponse build() {
             return new SqlDedicatedGatewayRegionalServiceResourceResponse(location, name, sqlDedicatedGatewayEndpoint, status);
         }

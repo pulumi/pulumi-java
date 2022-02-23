@@ -44,7 +44,6 @@ public final class GetBucketVersioning {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetBucketVersioning build() {
             return new GetBucketVersioning(enabled);
         }

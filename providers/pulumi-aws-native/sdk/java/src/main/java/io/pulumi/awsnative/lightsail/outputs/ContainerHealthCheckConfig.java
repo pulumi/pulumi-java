@@ -161,7 +161,6 @@ public final class ContainerHealthCheckConfig {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-
         public ContainerHealthCheckConfig build() {
             return new ContainerHealthCheckConfig(healthyThreshold, intervalSeconds, path, successCodes, timeoutSeconds, unhealthyThreshold);
         }

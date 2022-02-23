@@ -604,7 +604,6 @@ public final class VMNicDetailsResponse {
             this.vMSubnetName = vMSubnetName;
             return this;
         }
-
         public VMNicDetailsResponse build() {
             return new VMNicDetailsResponse(enableAcceleratedNetworkingOnRecovery, enableAcceleratedNetworkingOnTfo, ipAddressType, nicId, primaryNicStaticIPAddress, recoveryLBBackendAddressPoolIds, recoveryNetworkSecurityGroupId, recoveryNicIpAddressType, recoveryNicName, recoveryNicResourceGroupName, recoveryPublicIpAddressId, recoveryVMNetworkId, recoveryVMSubnetName, replicaNicId, replicaNicStaticIPAddress, reuseExistingNic, selectionType, sourceNicArmId, tfoIPConfigs, tfoNetworkSecurityGroupId, tfoRecoveryNicName, tfoRecoveryNicResourceGroupName, tfoReuseExistingNic, tfoVMNetworkId, tfoVMSubnetName, vMNetworkName, vMSubnetName);
         }

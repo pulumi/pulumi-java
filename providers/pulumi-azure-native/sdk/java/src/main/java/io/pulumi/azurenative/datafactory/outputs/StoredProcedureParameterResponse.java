@@ -77,7 +77,6 @@ public final class StoredProcedureParameterResponse {
             this.value = value;
             return this;
         }
-
         public StoredProcedureParameterResponse build() {
             return new StoredProcedureParameterResponse(type, value);
         }

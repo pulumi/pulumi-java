@@ -117,7 +117,6 @@ public final class MitigationActionActionParams {
             this.updateDeviceCertificateParams = updateDeviceCertificateParams;
             return this;
         }
-
         public MitigationActionActionParams build() {
             return new MitigationActionActionParams(addThingsToThingGroupParams, enableIoTLoggingParams, publishFindingToSnsParams, replaceDefaultPolicyVersionParams, updateCACertificateParams, updateDeviceCertificateParams);
         }

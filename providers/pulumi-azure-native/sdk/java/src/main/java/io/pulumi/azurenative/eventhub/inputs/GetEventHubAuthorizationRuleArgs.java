@@ -17,7 +17,7 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="authorizationRuleName", required=true)
-    private final String authorizationRuleName;
+        private final String authorizationRuleName;
 
     public String getAuthorizationRuleName() {
         return this.authorizationRuleName;
@@ -28,7 +28,7 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="eventHubName", required=true)
-    private final String eventHubName;
+        private final String eventHubName;
 
     public String getEventHubName() {
         return this.eventHubName;
@@ -39,7 +39,7 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+        private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -50,7 +50,7 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetEventHubAuthorizationRuleArgs build() {
             return new GetEventHubAuthorizationRuleArgs(authorizationRuleName, eventHubName, namespaceName, resourceGroupName);
         }

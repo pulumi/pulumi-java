@@ -23,7 +23,7 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="forwardedPorts", required=true)
-    private final List<String> forwardedPorts;
+      private final List<String> forwardedPorts;
 
     public List<String> getForwardedPorts() {
         return this.forwardedPorts;
@@ -34,7 +34,7 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceTag", required=true)
-    private final String instanceTag;
+      private final String instanceTag;
 
     public String getInstanceTag() {
         return this.instanceTag;
@@ -45,7 +45,7 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -56,7 +56,7 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sessionAffinity", required=true)
-    private final Boolean sessionAffinity;
+      private final Boolean sessionAffinity;
 
     public Boolean getSessionAffinity() {
         return this.sessionAffinity;
@@ -67,7 +67,7 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnetworkName", required=true)
-    private final String subnetworkName;
+      private final String subnetworkName;
 
     public String getSubnetworkName() {
         return this.subnetworkName;
@@ -146,7 +146,6 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
             this.subnetworkName = Objects.requireNonNull(subnetworkName);
             return this;
         }
-
         public NetworkResponse build() {
             return new NetworkResponse(forwardedPorts, instanceTag, name, sessionAffinity, subnetworkName);
         }

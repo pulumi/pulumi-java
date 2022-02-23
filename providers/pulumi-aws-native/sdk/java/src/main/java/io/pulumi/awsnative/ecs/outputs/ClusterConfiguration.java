@@ -46,7 +46,6 @@ public final class ClusterConfiguration {
             this.executeCommandConfiguration = executeCommandConfiguration;
             return this;
         }
-
         public ClusterConfiguration build() {
             return new ClusterConfiguration(executeCommandConfiguration);
         }

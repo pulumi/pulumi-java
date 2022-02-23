@@ -76,7 +76,6 @@ public final class GitHubClientSecretResponse {
             this.byoaSecretName = byoaSecretName;
             return this;
         }
-
         public GitHubClientSecretResponse build() {
             return new GitHubClientSecretResponse(byoaSecretAkvUrl, byoaSecretName);
         }

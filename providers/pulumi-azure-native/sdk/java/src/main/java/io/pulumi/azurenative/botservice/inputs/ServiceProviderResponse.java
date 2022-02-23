@@ -23,7 +23,7 @@ public final class ServiceProviderResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable ServiceProviderPropertiesResponse properties;
+        private final @Nullable ServiceProviderPropertiesResponse properties;
 
     public Optional<ServiceProviderPropertiesResponse> getProperties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
@@ -61,7 +61,6 @@ public final class ServiceProviderResponse extends io.pulumi.resources.InvokeArg
             this.properties = properties;
             return this;
         }
-
         public ServiceProviderResponse build() {
             return new ServiceProviderResponse(properties);
         }

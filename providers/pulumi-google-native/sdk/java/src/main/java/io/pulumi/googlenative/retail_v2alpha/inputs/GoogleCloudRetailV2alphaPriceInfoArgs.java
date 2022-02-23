@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="cost")
-    private final @Nullable Input<Double> cost;
+      private final @Nullable Input<Double> cost;
 
     public Input<Double> getCost() {
         return this.cost == null ? Input.empty() : this.cost;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="currencyCode")
-    private final @Nullable Input<String> currencyCode;
+      private final @Nullable Input<String> currencyCode;
 
     public Input<String> getCurrencyCode() {
         return this.currencyCode == null ? Input.empty() : this.currencyCode;
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="originalPrice")
-    private final @Nullable Input<Double> originalPrice;
+      private final @Nullable Input<Double> originalPrice;
 
     public Input<Double> getOriginalPrice() {
         return this.originalPrice == null ? Input.empty() : this.originalPrice;
@@ -57,7 +57,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="price")
-    private final @Nullable Input<Double> price;
+      private final @Nullable Input<Double> price;
 
     public Input<Double> getPrice() {
         return this.price == null ? Input.empty() : this.price;
@@ -68,7 +68,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="priceEffectiveTime")
-    private final @Nullable Input<String> priceEffectiveTime;
+      private final @Nullable Input<String> priceEffectiveTime;
 
     public Input<String> getPriceEffectiveTime() {
         return this.priceEffectiveTime == null ? Input.empty() : this.priceEffectiveTime;
@@ -79,7 +79,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="priceExpireTime")
-    private final @Nullable Input<String> priceExpireTime;
+      private final @Nullable Input<String> priceExpireTime;
 
     public Input<String> getPriceExpireTime() {
         return this.priceExpireTime == null ? Input.empty() : this.priceExpireTime;
@@ -198,7 +198,6 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
             this.priceExpireTime = Input.ofNullable(priceExpireTime);
             return this;
         }
-
         public GoogleCloudRetailV2alphaPriceInfoArgs build() {
             return new GoogleCloudRetailV2alphaPriceInfoArgs(cost, currencyCode, originalPrice, price, priceEffectiveTime, priceExpireTime);
         }

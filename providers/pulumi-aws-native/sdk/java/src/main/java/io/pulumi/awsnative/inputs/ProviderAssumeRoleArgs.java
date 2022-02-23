@@ -26,7 +26,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="durationSeconds")
-    private final @Nullable Input<Integer> durationSeconds;
+        private final @Nullable Input<Integer> durationSeconds;
 
     public Input<Integer> getDurationSeconds() {
         return this.durationSeconds == null ? Input.empty() : this.durationSeconds;
@@ -37,7 +37,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="externalId")
-    private final @Nullable Input<String> externalId;
+        private final @Nullable Input<String> externalId;
 
     public Input<String> getExternalId() {
         return this.externalId == null ? Input.empty() : this.externalId;
@@ -48,7 +48,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+        private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -59,7 +59,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyArns")
-    private final @Nullable Input<List<String>> policyArns;
+        private final @Nullable Input<List<String>> policyArns;
 
     public Input<List<String>> getPolicyArns() {
         return this.policyArns == null ? Input.empty() : this.policyArns;
@@ -70,7 +70,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+        private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -81,7 +81,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sessionName")
-    private final @Nullable Input<String> sessionName;
+        private final @Nullable Input<String> sessionName;
 
     public Input<String> getSessionName() {
         return this.sessionName == null ? Input.empty() : this.sessionName;
@@ -92,7 +92,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -103,7 +103,7 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="transitiveTagKeys")
-    private final @Nullable Input<List<String>> transitiveTagKeys;
+        private final @Nullable Input<List<String>> transitiveTagKeys;
 
     public Input<List<String>> getTransitiveTagKeys() {
         return this.transitiveTagKeys == null ? Input.empty() : this.transitiveTagKeys;
@@ -252,7 +252,6 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
             this.transitiveTagKeys = Input.ofNullable(transitiveTagKeys);
             return this;
         }
-
         public ProviderAssumeRoleArgs build() {
             return new ProviderAssumeRoleArgs(durationSeconds, externalId, policy, policyArns, roleArn, sessionName, tags, transitiveTagKeys);
         }

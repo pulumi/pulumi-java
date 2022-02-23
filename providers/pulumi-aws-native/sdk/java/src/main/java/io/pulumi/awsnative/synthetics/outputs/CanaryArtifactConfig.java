@@ -54,7 +54,6 @@ public final class CanaryArtifactConfig {
             this.s3Encryption = s3Encryption;
             return this;
         }
-
         public CanaryArtifactConfig build() {
             return new CanaryArtifactConfig(s3Encryption);
         }

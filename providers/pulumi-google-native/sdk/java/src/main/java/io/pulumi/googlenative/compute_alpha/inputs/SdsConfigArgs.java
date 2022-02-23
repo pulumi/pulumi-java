@@ -23,7 +23,7 @@ public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grpcServiceConfig")
-    private final @Nullable Input<GrpcServiceConfigArgs> grpcServiceConfig;
+      private final @Nullable Input<GrpcServiceConfigArgs> grpcServiceConfig;
 
     public Input<GrpcServiceConfigArgs> getGrpcServiceConfig() {
         return this.grpcServiceConfig == null ? Input.empty() : this.grpcServiceConfig;
@@ -66,7 +66,6 @@ public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.grpcServiceConfig = Input.ofNullable(grpcServiceConfig);
             return this;
         }
-
         public SdsConfigArgs build() {
             return new SdsConfigArgs(grpcServiceConfig);
         }

@@ -54,7 +54,6 @@ public final class ContainerRecipeComponentConfiguration {
             this.componentArn = componentArn;
             return this;
         }
-
         public ContainerRecipeComponentConfiguration build() {
             return new ContainerRecipeComponentConfiguration(componentArn);
         }

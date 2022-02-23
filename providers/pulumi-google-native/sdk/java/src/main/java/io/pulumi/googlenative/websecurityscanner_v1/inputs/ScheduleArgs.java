@@ -24,7 +24,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intervalDurationDays", required=true)
-    private final Input<Integer> intervalDurationDays;
+      private final Input<Integer> intervalDurationDays;
 
     public Input<Integer> getIntervalDurationDays() {
         return this.intervalDurationDays;
@@ -35,7 +35,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleTime")
-    private final @Nullable Input<String> scheduleTime;
+      private final @Nullable Input<String> scheduleTime;
 
     public Input<String> getScheduleTime() {
         return this.scheduleTime == null ? Input.empty() : this.scheduleTime;
@@ -94,7 +94,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.scheduleTime = Input.ofNullable(scheduleTime);
             return this;
         }
-
         public ScheduleArgs build() {
             return new ScheduleArgs(intervalDurationDays, scheduleTime);
         }

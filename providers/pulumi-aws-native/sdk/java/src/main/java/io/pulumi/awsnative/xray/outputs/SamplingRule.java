@@ -294,7 +294,6 @@ public final class SamplingRule {
             this.version = version;
             return this;
         }
-
         public SamplingRule build() {
             return new SamplingRule(attributes, fixedRate, hTTPMethod, host, priority, reservoirSize, resourceARN, ruleARN, ruleName, serviceName, serviceType, uRLPath, version);
         }

@@ -23,7 +23,7 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="animationEnd", required=true)
-    private final AnimationEndResponse animationEnd;
+      private final AnimationEndResponse animationEnd;
 
     public AnimationEndResponse getAnimationEnd() {
         return this.animationEnd;
@@ -34,7 +34,7 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="animationFade", required=true)
-    private final AnimationFadeResponse animationFade;
+      private final AnimationFadeResponse animationFade;
 
     public AnimationFadeResponse getAnimationFade() {
         return this.animationFade;
@@ -45,7 +45,7 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="animationStatic", required=true)
-    private final AnimationStaticResponse animationStatic;
+      private final AnimationStaticResponse animationStatic;
 
     public AnimationStaticResponse getAnimationStatic() {
         return this.animationStatic;
@@ -104,7 +104,6 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
             this.animationStatic = Objects.requireNonNull(animationStatic);
             return this;
         }
-
         public AnimationResponse build() {
             return new AnimationResponse(animationEnd, animationFade, animationStatic);
         }

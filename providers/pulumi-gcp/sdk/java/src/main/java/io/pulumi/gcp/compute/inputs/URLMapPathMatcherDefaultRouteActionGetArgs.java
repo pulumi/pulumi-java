@@ -28,7 +28,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="corsPolicy")
-    private final @Nullable Input<URLMapPathMatcherDefaultRouteActionCorsPolicyGetArgs> corsPolicy;
+        private final @Nullable Input<URLMapPathMatcherDefaultRouteActionCorsPolicyGetArgs> corsPolicy;
 
     public Input<URLMapPathMatcherDefaultRouteActionCorsPolicyGetArgs> getCorsPolicy() {
         return this.corsPolicy == null ? Input.empty() : this.corsPolicy;
@@ -44,7 +44,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="faultInjectionPolicy")
-    private final @Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy;
+        private final @Nullable Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy;
 
     public Input<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyGetArgs> getFaultInjectionPolicy() {
         return this.faultInjectionPolicy == null ? Input.empty() : this.faultInjectionPolicy;
@@ -58,7 +58,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="requestMirrorPolicy")
-    private final @Nullable Input<URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy;
+        private final @Nullable Input<URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy;
 
     public Input<URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyGetArgs> getRequestMirrorPolicy() {
         return this.requestMirrorPolicy == null ? Input.empty() : this.requestMirrorPolicy;
@@ -70,7 +70,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs> retryPolicy;
+        private final @Nullable Input<URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs> retryPolicy;
 
     public Input<URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -84,7 +84,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<URLMapPathMatcherDefaultRouteActionTimeoutGetArgs> timeout;
+        private final @Nullable Input<URLMapPathMatcherDefaultRouteActionTimeoutGetArgs> timeout;
 
     public Input<URLMapPathMatcherDefaultRouteActionTimeoutGetArgs> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -96,7 +96,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="urlRewrite")
-    private final @Nullable Input<URLMapPathMatcherDefaultRouteActionUrlRewriteGetArgs> urlRewrite;
+        private final @Nullable Input<URLMapPathMatcherDefaultRouteActionUrlRewriteGetArgs> urlRewrite;
 
     public Input<URLMapPathMatcherDefaultRouteActionUrlRewriteGetArgs> getUrlRewrite() {
         return this.urlRewrite == null ? Input.empty() : this.urlRewrite;
@@ -114,7 +114,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="weightedBackendServices")
-    private final @Nullable Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices;
+        private final @Nullable Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices;
 
     public Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs>> getWeightedBackendServices() {
         return this.weightedBackendServices == null ? Input.empty() : this.weightedBackendServices;
@@ -248,7 +248,6 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
             this.weightedBackendServices = Input.ofNullable(weightedBackendServices);
             return this;
         }
-
         public URLMapPathMatcherDefaultRouteActionGetArgs build() {
             return new URLMapPathMatcherDefaultRouteActionGetArgs(corsPolicy, faultInjectionPolicy, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }

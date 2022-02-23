@@ -25,7 +25,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="componentSeparator", required=true)
-    private final Integer componentSeparator;
+        private final Integer componentSeparator;
 
     public Integer getComponentSeparator() {
         return this.componentSeparator;
@@ -36,7 +36,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dataElementSeparator", required=true)
-    private final Integer dataElementSeparator;
+        private final Integer dataElementSeparator;
 
     public Integer getDataElementSeparator() {
         return this.dataElementSeparator;
@@ -47,7 +47,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="messageId")
-    private final @Nullable String messageId;
+        private final @Nullable String messageId;
 
     public Optional<String> getMessageId() {
         return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
@@ -58,7 +58,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="protocolVersion")
-    private final @Nullable String protocolVersion;
+        private final @Nullable String protocolVersion;
 
     public Optional<String> getProtocolVersion() {
         return this.protocolVersion == null ? Optional.empty() : Optional.ofNullable(this.protocolVersion);
@@ -69,7 +69,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="replaceCharacter", required=true)
-    private final Integer replaceCharacter;
+        private final Integer replaceCharacter;
 
     public Integer getReplaceCharacter() {
         return this.replaceCharacter;
@@ -80,7 +80,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="replaceSeparatorsInPayload", required=true)
-    private final Boolean replaceSeparatorsInPayload;
+        private final Boolean replaceSeparatorsInPayload;
 
     public Boolean getReplaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
@@ -91,7 +91,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="segmentTerminator", required=true)
-    private final Integer segmentTerminator;
+        private final Integer segmentTerminator;
 
     public Integer getSegmentTerminator() {
         return this.segmentTerminator;
@@ -102,7 +102,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="segmentTerminatorSuffix", required=true)
-    private final String segmentTerminatorSuffix;
+        private final String segmentTerminatorSuffix;
 
     public String getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
@@ -113,7 +113,7 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="targetNamespace")
-    private final @Nullable String targetNamespace;
+        private final @Nullable String targetNamespace;
 
     public Optional<String> getTargetNamespace() {
         return this.targetNamespace == null ? Optional.empty() : Optional.ofNullable(this.targetNamespace);
@@ -232,7 +232,6 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
             this.targetNamespace = targetNamespace;
             return this;
         }
-
         public X12DelimiterOverridesResponse build() {
             return new X12DelimiterOverridesResponse(componentSeparator, dataElementSeparator, messageId, protocolVersion, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix, targetNamespace);
         }

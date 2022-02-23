@@ -54,7 +54,6 @@ public final class CreationDataResponse {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public CreationDataResponse build() {
             return new CreationDataResponse(sourceResourceId);
         }

@@ -76,7 +76,6 @@ public final class HostPathVolumeSource {
             this.type = type;
             return this;
         }
-
         public HostPathVolumeSource build() {
             return new HostPathVolumeSource(path, type);
         }

@@ -187,7 +187,6 @@ public final class AppendVariableActivityResponse {
             this.variableName = variableName;
             return this;
         }
-
         public AppendVariableActivityResponse build() {
             return new AppendVariableActivityResponse(dependsOn, description, name, type, userProperties, value, variableName);
         }

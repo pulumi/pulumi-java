@@ -60,7 +60,6 @@ public final class SpotFleetTotalLocalStorageGBRequest {
             this.min = min;
             return this;
         }
-
         public SpotFleetTotalLocalStorageGBRequest build() {
             return new SpotFleetTotalLocalStorageGBRequest(max, min);
         }

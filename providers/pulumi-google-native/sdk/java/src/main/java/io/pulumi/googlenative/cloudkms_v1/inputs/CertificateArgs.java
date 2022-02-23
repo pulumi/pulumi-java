@@ -22,7 +22,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rawDer", required=true)
-    private final Input<String> rawDer;
+      private final Input<String> rawDer;
 
     public Input<String> getRawDer() {
         return this.rawDer;
@@ -65,7 +65,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.rawDer = Input.of(Objects.requireNonNull(rawDer));
             return this;
         }
-
         public CertificateArgs build() {
             return new CertificateArgs(rawDer);
         }

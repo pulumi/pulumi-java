@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -66,7 +66,6 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigArgs extends io.pulumi
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public GoogleCloudApigeeV1AdvancedApiOpsConfigArgs build() {
             return new GoogleCloudApigeeV1AdvancedApiOpsConfigArgs(enabled);
         }

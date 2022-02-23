@@ -23,7 +23,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends io.pu
      * 
      */
     @InputImport(name="wafFeature", required=true)
-    private final Input<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature;
+      private final Input<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature;
 
     public Input<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> getWafFeature() {
         return this.wafFeature;
@@ -34,7 +34,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends io.pu
      * 
      */
     @InputImport(name="wafService", required=true)
-    private final Input<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService;
+      private final Input<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService;
 
     public Input<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> getWafService() {
         return this.wafService;
@@ -93,7 +93,6 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends io.pu
             this.wafService = Input.of(Objects.requireNonNull(wafService));
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1WafSettingsArgs build() {
             return new GoogleCloudRecaptchaenterpriseV1WafSettingsArgs(wafFeature, wafService);
         }

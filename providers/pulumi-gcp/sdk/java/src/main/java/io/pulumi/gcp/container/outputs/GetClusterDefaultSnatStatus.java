@@ -44,7 +44,6 @@ public final class GetClusterDefaultSnatStatus {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public GetClusterDefaultSnatStatus build() {
             return new GetClusterDefaultSnatStatus(disabled);
         }

@@ -99,7 +99,6 @@ public final class GetConformancePackResult {
             this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }
-
         public GetConformancePackResult build() {
             return new GetConformancePackResult(conformancePackInputParameters, deliveryS3Bucket, deliveryS3KeyPrefix);
         }

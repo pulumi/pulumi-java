@@ -21,7 +21,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -81,7 +81,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public SubnetResponse build() {
             return new SubnetResponse(name, project);
         }

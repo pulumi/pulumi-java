@@ -253,7 +253,6 @@ public final class DatabricksSparkJarActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public DatabricksSparkJarActivityResponse build() {
             return new DatabricksSparkJarActivityResponse(dependsOn, description, libraries, linkedServiceName, mainClassName, name, parameters, policy, type, userProperties);
         }

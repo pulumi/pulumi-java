@@ -75,7 +75,6 @@ public final class RestoreInfoResponse {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
-
         public RestoreInfoResponse build() {
             return new RestoreInfoResponse(backupInfo, sourceType);
         }

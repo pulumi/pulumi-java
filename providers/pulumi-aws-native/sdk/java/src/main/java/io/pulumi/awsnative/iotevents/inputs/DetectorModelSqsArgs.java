@@ -17,7 +17,7 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
     public static final DetectorModelSqsArgs Empty = new DetectorModelSqsArgs();
 
     @InputImport(name="payload")
-    private final @Nullable Input<DetectorModelPayloadArgs> payload;
+        private final @Nullable Input<DetectorModelPayloadArgs> payload;
 
     public Input<DetectorModelPayloadArgs> getPayload() {
         return this.payload == null ? Input.empty() : this.payload;
@@ -28,7 +28,7 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="queueUrl", required=true)
-    private final Input<String> queueUrl;
+        private final Input<String> queueUrl;
 
     public Input<String> getQueueUrl() {
         return this.queueUrl;
@@ -39,7 +39,7 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="useBase64")
-    private final @Nullable Input<Boolean> useBase64;
+        private final @Nullable Input<Boolean> useBase64;
 
     public Input<Boolean> getUseBase64() {
         return this.useBase64 == null ? Input.empty() : this.useBase64;
@@ -113,7 +113,6 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
             this.useBase64 = Input.ofNullable(useBase64);
             return this;
         }
-
         public DetectorModelSqsArgs build() {
             return new DetectorModelSqsArgs(payload, queueUrl, useBase64);
         }

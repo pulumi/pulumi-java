@@ -54,7 +54,6 @@ public final class FunctionEnvironment {
             this.variables = variables;
             return this;
         }
-
         public FunctionEnvironment build() {
             return new FunctionEnvironment(variables);
         }

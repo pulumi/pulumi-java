@@ -120,7 +120,6 @@ public final class FlowOutputEncryption {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public FlowOutputEncryption build() {
             return new FlowOutputEncryption(algorithm, keyType, roleArn, secretArn);
         }

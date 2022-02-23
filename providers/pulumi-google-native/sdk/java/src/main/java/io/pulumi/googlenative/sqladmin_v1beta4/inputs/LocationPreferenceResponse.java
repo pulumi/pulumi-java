@@ -21,7 +21,7 @@ public final class LocationPreferenceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="followGaeApplication", required=true)
-    private final String followGaeApplication;
+      private final String followGaeApplication;
 
     public String getFollowGaeApplication() {
         return this.followGaeApplication;
@@ -32,7 +32,7 @@ public final class LocationPreferenceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -43,7 +43,7 @@ public final class LocationPreferenceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="secondaryZone", required=true)
-    private final String secondaryZone;
+      private final String secondaryZone;
 
     public String getSecondaryZone() {
         return this.secondaryZone;
@@ -54,7 +54,7 @@ public final class LocationPreferenceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -123,7 +123,6 @@ public final class LocationPreferenceResponse extends io.pulumi.resources.Invoke
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public LocationPreferenceResponse build() {
             return new LocationPreferenceResponse(followGaeApplication, kind, secondaryZone, zone);
         }

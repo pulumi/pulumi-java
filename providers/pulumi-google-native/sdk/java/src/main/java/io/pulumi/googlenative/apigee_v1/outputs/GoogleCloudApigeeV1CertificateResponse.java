@@ -53,7 +53,6 @@ public final class GoogleCloudApigeeV1CertificateResponse {
             this.certInfo = Objects.requireNonNull(certInfo);
             return this;
         }
-
         public GoogleCloudApigeeV1CertificateResponse build() {
             return new GoogleCloudApigeeV1CertificateResponse(certInfo);
         }

@@ -226,7 +226,6 @@ public final class GetAdminRuleCollectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAdminRuleCollectionResult build() {
             return new GetAdminRuleCollectionResult(appliesToGroups, description, displayName, etag, id, name, provisioningState, systemData, type);
         }

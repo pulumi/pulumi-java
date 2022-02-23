@@ -78,7 +78,6 @@ public final class NodeAffinity {
             this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
-
         public NodeAffinity build() {
             return new NodeAffinity(preferredDuringSchedulingIgnoredDuringExecution, requiredDuringSchedulingIgnoredDuringExecution);
         }

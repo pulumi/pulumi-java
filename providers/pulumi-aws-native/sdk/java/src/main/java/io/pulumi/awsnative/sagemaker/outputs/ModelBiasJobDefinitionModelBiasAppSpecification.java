@@ -98,7 +98,6 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecification {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public ModelBiasJobDefinitionModelBiasAppSpecification build() {
             return new ModelBiasJobDefinitionModelBiasAppSpecification(configUri, environment, imageUri);
         }

@@ -184,7 +184,6 @@ public final class GetAADDataConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAADDataConnectorResult build() {
             return new GetAADDataConnectorResult(dataTypes, etag, id, kind, name, tenantId, type);
         }

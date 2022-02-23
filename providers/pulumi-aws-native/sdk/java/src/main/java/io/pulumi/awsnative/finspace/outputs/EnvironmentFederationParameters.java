@@ -161,7 +161,6 @@ public final class EnvironmentFederationParameters {
             this.samlMetadataURL = samlMetadataURL;
             return this;
         }
-
         public EnvironmentFederationParameters build() {
             return new EnvironmentFederationParameters(applicationCallBackURL, attributeMap, federationProviderName, federationURN, samlMetadataDocument, samlMetadataURL);
         }

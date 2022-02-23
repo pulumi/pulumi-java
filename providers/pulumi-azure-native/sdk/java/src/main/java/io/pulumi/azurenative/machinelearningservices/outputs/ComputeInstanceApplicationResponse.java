@@ -76,7 +76,6 @@ public final class ComputeInstanceApplicationResponse {
             this.endpointUri = endpointUri;
             return this;
         }
-
         public ComputeInstanceApplicationResponse build() {
             return new ComputeInstanceApplicationResponse(displayName, endpointUri);
         }

@@ -22,7 +22,7 @@ public final class SystemAssignedIdentityAuthInfoResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="authType", required=true)
-    private final String authType;
+        private final String authType;
 
     public String getAuthType() {
         return this.authType;
@@ -60,7 +60,6 @@ public final class SystemAssignedIdentityAuthInfoResponse extends io.pulumi.reso
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
-
         public SystemAssignedIdentityAuthInfoResponse build() {
             return new SystemAssignedIdentityAuthInfoResponse(authType);
         }

@@ -16,7 +16,7 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
     public static final RepositoryIamMemberState Empty = new RepositoryIamMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<RepositoryIamMemberConditionGetArgs> condition;
+        private final @Nullable Input<RepositoryIamMemberConditionGetArgs> condition;
 
     public Input<RepositoryIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -46,14 +46,14 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="repository")
-    private final @Nullable Input<String> repository;
+        private final @Nullable Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository == null ? Input.empty() : this.repository;
@@ -66,7 +66,7 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -185,7 +185,6 @@ public final class RepositoryIamMemberState extends io.pulumi.resources.Resource
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public RepositoryIamMemberState build() {
             return new RepositoryIamMemberState(condition, etag, member, project, repository, role);
         }

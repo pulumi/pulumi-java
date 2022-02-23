@@ -25,21 +25,21 @@ public final class StudioComponentInitializationScript extends io.pulumi.resourc
      * 
      */
     @InputImport(name="launchProfileProtocolVersion")
-    private final @Nullable String launchProfileProtocolVersion;
+        private final @Nullable String launchProfileProtocolVersion;
 
     public Optional<String> getLaunchProfileProtocolVersion() {
         return this.launchProfileProtocolVersion == null ? Optional.empty() : Optional.ofNullable(this.launchProfileProtocolVersion);
     }
 
     @InputImport(name="platform")
-    private final @Nullable StudioComponentLaunchProfilePlatform platform;
+        private final @Nullable StudioComponentLaunchProfilePlatform platform;
 
     public Optional<StudioComponentLaunchProfilePlatform> getPlatform() {
         return this.platform == null ? Optional.empty() : Optional.ofNullable(this.platform);
     }
 
     @InputImport(name="runContext")
-    private final @Nullable StudioComponentInitializationScriptRunContext runContext;
+        private final @Nullable StudioComponentInitializationScriptRunContext runContext;
 
     public Optional<StudioComponentInitializationScriptRunContext> getRunContext() {
         return this.runContext == null ? Optional.empty() : Optional.ofNullable(this.runContext);
@@ -50,7 +50,7 @@ public final class StudioComponentInitializationScript extends io.pulumi.resourc
      * 
      */
     @InputImport(name="script")
-    private final @Nullable String script;
+        private final @Nullable String script;
 
     public Optional<String> getScript() {
         return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
@@ -119,7 +119,6 @@ public final class StudioComponentInitializationScript extends io.pulumi.resourc
             this.script = script;
             return this;
         }
-
         public StudioComponentInitializationScript build() {
             return new StudioComponentInitializationScript(launchProfileProtocolVersion, platform, runContext, script);
         }

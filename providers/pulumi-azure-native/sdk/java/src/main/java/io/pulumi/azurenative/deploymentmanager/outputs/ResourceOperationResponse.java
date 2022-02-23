@@ -160,7 +160,6 @@ public final class ResourceOperationResponse {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public ResourceOperationResponse build() {
             return new ResourceOperationResponse(operationId, provisioningState, resourceName, resourceType, statusCode, statusMessage);
         }

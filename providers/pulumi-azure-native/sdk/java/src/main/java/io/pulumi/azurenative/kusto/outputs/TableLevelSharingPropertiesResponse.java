@@ -160,7 +160,6 @@ public final class TableLevelSharingPropertiesResponse {
             this.tablesToInclude = tablesToInclude;
             return this;
         }
-
         public TableLevelSharingPropertiesResponse build() {
             return new TableLevelSharingPropertiesResponse(externalTablesToExclude, externalTablesToInclude, materializedViewsToExclude, materializedViewsToInclude, tablesToExclude, tablesToInclude);
         }

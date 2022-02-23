@@ -437,7 +437,6 @@ public final class GetConnectedClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectedClusterResult build() {
             return new GetConnectedClusterResult(agentPublicKeyCertificate, agentVersion, connectivityStatus, distribution, id, identity, infrastructure, kubernetesVersion, lastConnectivityTime, location, managedIdentityCertificateExpirationTime, name, offering, provisioningState, systemData, tags, totalCoreCount, totalNodeCount, type);
         }

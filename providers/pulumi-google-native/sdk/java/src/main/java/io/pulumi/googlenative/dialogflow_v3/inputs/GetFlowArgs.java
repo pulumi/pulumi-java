@@ -15,35 +15,35 @@ public final class GetFlowArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetFlowArgs Empty = new GetFlowArgs();
 
     @InputImport(name="agentId", required=true)
-    private final String agentId;
+      private final String agentId;
 
     public String getAgentId() {
         return this.agentId;
     }
 
     @InputImport(name="flowId", required=true)
-    private final String flowId;
+      private final String flowId;
 
     public String getFlowId() {
         return this.flowId;
     }
 
     @InputImport(name="languageCode")
-    private final @Nullable String languageCode;
+      private final @Nullable String languageCode;
 
     public Optional<String> getLanguageCode() {
         return this.languageCode == null ? Optional.empty() : Optional.ofNullable(this.languageCode);
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -122,7 +122,6 @@ public final class GetFlowArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetFlowArgs build() {
             return new GetFlowArgs(agentId, flowId, languageCode, location, project);
         }

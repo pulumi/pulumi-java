@@ -74,7 +74,6 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch {
             this.rangeStart = Objects.requireNonNull(rangeStart);
             return this;
         }
-
         public URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch build() {
             return new URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch(rangeEnd, rangeStart);
         }

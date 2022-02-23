@@ -14,14 +14,14 @@ public final class WebACLForwardedIPConfiguration extends io.pulumi.resources.In
     public static final WebACLForwardedIPConfiguration Empty = new WebACLForwardedIPConfiguration();
 
     @InputImport(name="fallbackBehavior", required=true)
-    private final WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior;
+        private final WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior;
 
     public WebACLForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @InputImport(name="headerName", required=true)
-    private final String headerName;
+        private final String headerName;
 
     public String getHeaderName() {
         return this.headerName;
@@ -70,7 +70,6 @@ public final class WebACLForwardedIPConfiguration extends io.pulumi.resources.In
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public WebACLForwardedIPConfiguration build() {
             return new WebACLForwardedIPConfiguration(fallbackBehavior, headerName);
         }

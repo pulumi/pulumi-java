@@ -24,7 +24,7 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="enableNRRForInboundDecodedMessages", required=true)
-    private final Boolean enableNRRForInboundDecodedMessages;
+        private final Boolean enableNRRForInboundDecodedMessages;
 
     public Boolean getEnableNRRForInboundDecodedMessages() {
         return this.enableNRRForInboundDecodedMessages;
@@ -35,7 +35,7 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="enableNRRForInboundEncodedMessages", required=true)
-    private final Boolean enableNRRForInboundEncodedMessages;
+        private final Boolean enableNRRForInboundEncodedMessages;
 
     public Boolean getEnableNRRForInboundEncodedMessages() {
         return this.enableNRRForInboundEncodedMessages;
@@ -46,7 +46,7 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="enableNRRForInboundMDN", required=true)
-    private final Boolean enableNRRForInboundMDN;
+        private final Boolean enableNRRForInboundMDN;
 
     public Boolean getEnableNRRForInboundMDN() {
         return this.enableNRRForInboundMDN;
@@ -57,7 +57,7 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="enableNRRForOutboundDecodedMessages", required=true)
-    private final Boolean enableNRRForOutboundDecodedMessages;
+        private final Boolean enableNRRForOutboundDecodedMessages;
 
     public Boolean getEnableNRRForOutboundDecodedMessages() {
         return this.enableNRRForOutboundDecodedMessages;
@@ -68,7 +68,7 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="enableNRRForOutboundEncodedMessages", required=true)
-    private final Boolean enableNRRForOutboundEncodedMessages;
+        private final Boolean enableNRRForOutboundEncodedMessages;
 
     public Boolean getEnableNRRForOutboundEncodedMessages() {
         return this.enableNRRForOutboundEncodedMessages;
@@ -79,7 +79,7 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="enableNRRForOutboundMDN", required=true)
-    private final Boolean enableNRRForOutboundMDN;
+        private final Boolean enableNRRForOutboundMDN;
 
     public Boolean getEnableNRRForOutboundMDN() {
         return this.enableNRRForOutboundMDN;
@@ -90,7 +90,7 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="encryptionCertificateName")
-    private final @Nullable String encryptionCertificateName;
+        private final @Nullable String encryptionCertificateName;
 
     public Optional<String> getEncryptionCertificateName() {
         return this.encryptionCertificateName == null ? Optional.empty() : Optional.ofNullable(this.encryptionCertificateName);
@@ -101,7 +101,7 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="overrideGroupSigningCertificate", required=true)
-    private final Boolean overrideGroupSigningCertificate;
+        private final Boolean overrideGroupSigningCertificate;
 
     public Boolean getOverrideGroupSigningCertificate() {
         return this.overrideGroupSigningCertificate;
@@ -112,7 +112,7 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sha2AlgorithmFormat")
-    private final @Nullable String sha2AlgorithmFormat;
+        private final @Nullable String sha2AlgorithmFormat;
 
     public Optional<String> getSha2AlgorithmFormat() {
         return this.sha2AlgorithmFormat == null ? Optional.empty() : Optional.ofNullable(this.sha2AlgorithmFormat);
@@ -123,7 +123,7 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="signingCertificateName")
-    private final @Nullable String signingCertificateName;
+        private final @Nullable String signingCertificateName;
 
     public Optional<String> getSigningCertificateName() {
         return this.signingCertificateName == null ? Optional.empty() : Optional.ofNullable(this.signingCertificateName);
@@ -252,7 +252,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
             this.signingCertificateName = signingCertificateName;
             return this;
         }
-
         public AS2SecuritySettingsResponse build() {
             return new AS2SecuritySettingsResponse(enableNRRForInboundDecodedMessages, enableNRRForInboundEncodedMessages, enableNRRForInboundMDN, enableNRRForOutboundDecodedMessages, enableNRRForOutboundEncodedMessages, enableNRRForOutboundMDN, encryptionCertificateName, overrideGroupSigningCertificate, sha2AlgorithmFormat, signingCertificateName);
         }

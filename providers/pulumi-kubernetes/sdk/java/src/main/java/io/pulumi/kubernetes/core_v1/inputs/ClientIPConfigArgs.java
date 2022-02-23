@@ -23,7 +23,7 @@ public final class ClientIPConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutSeconds")
-    private final @Nullable Input<Integer> timeoutSeconds;
+        private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
@@ -66,7 +66,6 @@ public final class ClientIPConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }
-
         public ClientIPConfigArgs build() {
             return new ClientIPConfigArgs(timeoutSeconds);
         }

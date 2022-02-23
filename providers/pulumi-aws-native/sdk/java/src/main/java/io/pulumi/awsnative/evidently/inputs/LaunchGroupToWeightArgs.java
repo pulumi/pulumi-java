@@ -15,14 +15,14 @@ public final class LaunchGroupToWeightArgs extends io.pulumi.resources.ResourceA
     public static final LaunchGroupToWeightArgs Empty = new LaunchGroupToWeightArgs();
 
     @InputImport(name="groupName", required=true)
-    private final Input<String> groupName;
+        private final Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName;
     }
 
     @InputImport(name="splitWeight", required=true)
-    private final Input<Integer> splitWeight;
+        private final Input<Integer> splitWeight;
 
     public Input<Integer> getSplitWeight() {
         return this.splitWeight;
@@ -81,7 +81,6 @@ public final class LaunchGroupToWeightArgs extends io.pulumi.resources.ResourceA
             this.splitWeight = Input.of(Objects.requireNonNull(splitWeight));
             return this;
         }
-
         public LaunchGroupToWeightArgs build() {
             return new LaunchGroupToWeightArgs(groupName, splitWeight);
         }

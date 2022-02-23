@@ -21,7 +21,7 @@ public final class BucketLifecycleRuleItemActionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="storageClass", required=true)
-    private final String storageClass;
+      private final String storageClass;
 
     public String getStorageClass() {
         return this.storageClass;
@@ -32,7 +32,7 @@ public final class BucketLifecycleRuleItemActionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class BucketLifecycleRuleItemActionResponse extends io.pulumi.resou
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BucketLifecycleRuleItemActionResponse build() {
             return new BucketLifecycleRuleItemActionResponse(storageClass, type);
         }

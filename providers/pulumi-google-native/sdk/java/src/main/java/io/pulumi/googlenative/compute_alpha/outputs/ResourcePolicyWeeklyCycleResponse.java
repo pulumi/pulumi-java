@@ -53,7 +53,6 @@ public final class ResourcePolicyWeeklyCycleResponse {
             this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
             return this;
         }
-
         public ResourcePolicyWeeklyCycleResponse build() {
             return new ResourcePolicyWeeklyCycleResponse(dayOfWeeks);
         }

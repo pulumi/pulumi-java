@@ -292,7 +292,6 @@ public final class GetVirtualNetworkTapResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualNetworkTapResult build() {
             return new GetVirtualNetworkTapResult(destinationLoadBalancerFrontEndIPConfiguration, destinationNetworkInterfaceIPConfiguration, destinationPort, etag, id, location, name, networkInterfaceTapConfigurations, provisioningState, resourceGuid, tags, type);
         }

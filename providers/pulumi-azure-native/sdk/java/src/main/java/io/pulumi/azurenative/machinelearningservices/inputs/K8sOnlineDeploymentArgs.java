@@ -32,7 +32,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="appInsightsEnabled")
-    private final @Nullable Input<Boolean> appInsightsEnabled;
+        private final @Nullable Input<Boolean> appInsightsEnabled;
 
     public Input<Boolean> getAppInsightsEnabled() {
         return this.appInsightsEnabled == null ? Input.empty() : this.appInsightsEnabled;
@@ -43,7 +43,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="codeConfiguration")
-    private final @Nullable Input<CodeConfigurationArgs> codeConfiguration;
+        private final @Nullable Input<CodeConfigurationArgs> codeConfiguration;
 
     public Input<CodeConfigurationArgs> getCodeConfiguration() {
         return this.codeConfiguration == null ? Input.empty() : this.codeConfiguration;
@@ -54,7 +54,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="containerResourceRequirements")
-    private final @Nullable Input<ContainerResourceRequirementsArgs> containerResourceRequirements;
+        private final @Nullable Input<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
     public Input<ContainerResourceRequirementsArgs> getContainerResourceRequirements() {
         return this.containerResourceRequirements == null ? Input.empty() : this.containerResourceRequirements;
@@ -65,7 +65,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -77,7 +77,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="endpointComputeType", required=true)
-    private final Input<String> endpointComputeType;
+        private final Input<String> endpointComputeType;
 
     public Input<String> getEndpointComputeType() {
         return this.endpointComputeType;
@@ -88,7 +88,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="environmentId")
-    private final @Nullable Input<String> environmentId;
+        private final @Nullable Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId == null ? Input.empty() : this.environmentId;
@@ -99,7 +99,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<Map<String,String>> environmentVariables;
+        private final @Nullable Input<Map<String,String>> environmentVariables;
 
     public Input<Map<String,String>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -110,7 +110,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="livenessProbe")
-    private final @Nullable Input<ProbeSettingsArgs> livenessProbe;
+        private final @Nullable Input<ProbeSettingsArgs> livenessProbe;
 
     public Input<ProbeSettingsArgs> getLivenessProbe() {
         return this.livenessProbe == null ? Input.empty() : this.livenessProbe;
@@ -121,7 +121,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="model")
-    private final @Nullable Input<Object> model;
+        private final @Nullable Input<Object> model;
 
     public Input<Object> getModel() {
         return this.model == null ? Input.empty() : this.model;
@@ -132,7 +132,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -143,7 +143,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="requestSettings")
-    private final @Nullable Input<OnlineRequestSettingsArgs> requestSettings;
+        private final @Nullable Input<OnlineRequestSettingsArgs> requestSettings;
 
     public Input<OnlineRequestSettingsArgs> getRequestSettings() {
         return this.requestSettings == null ? Input.empty() : this.requestSettings;
@@ -154,7 +154,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="scaleSettings")
-    private final @Nullable Input<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings;
+        private final @Nullable Input<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings;
 
     public Input<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> getScaleSettings() {
         return this.scaleSettings == null ? Input.empty() : this.scaleSettings;
@@ -363,7 +363,6 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
             this.scaleSettings = Input.ofNullable(scaleSettings);
             return this;
         }
-
         public K8sOnlineDeploymentArgs build() {
             return new K8sOnlineDeploymentArgs(appInsightsEnabled, codeConfiguration, containerResourceRequirements, description, endpointComputeType, environmentId, environmentVariables, livenessProbe, model, properties, requestSettings, scaleSettings);
         }

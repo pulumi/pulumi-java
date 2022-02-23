@@ -104,7 +104,6 @@ public final class PodPreset {
             this.spec = spec;
             return this;
         }
-
         public PodPreset build() {
             return new PodPreset(apiVersion, kind, metadata, spec);
         }

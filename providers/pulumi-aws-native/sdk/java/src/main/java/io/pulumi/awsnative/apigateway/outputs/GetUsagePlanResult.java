@@ -186,7 +186,6 @@ public final class GetUsagePlanResult {
             this.usagePlanName = usagePlanName;
             return this;
         }
-
         public GetUsagePlanResult build() {
             return new GetUsagePlanResult(apiStages, description, id, quota, tags, throttle, usagePlanName);
         }

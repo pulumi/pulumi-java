@@ -77,7 +77,6 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public LinkedIntegrationRuntimeKeyAuthorizationResponse build() {
             return new LinkedIntegrationRuntimeKeyAuthorizationResponse(authorizationType, key);
         }

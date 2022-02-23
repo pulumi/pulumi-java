@@ -95,7 +95,6 @@ public final class StorageAccountCredentialsResponse {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public StorageAccountCredentialsResponse build() {
             return new StorageAccountCredentialsResponse(primaryKey, resourceId, secondaryKey);
         }

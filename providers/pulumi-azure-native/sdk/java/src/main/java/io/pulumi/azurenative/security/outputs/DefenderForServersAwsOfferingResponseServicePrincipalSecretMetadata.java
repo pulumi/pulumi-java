@@ -97,7 +97,6 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
             this.parameterStoreRegion = parameterStoreRegion;
             return this;
         }
-
         public DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata build() {
             return new DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata(expiryDate, parameterNameInStore, parameterStoreRegion);
         }

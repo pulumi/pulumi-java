@@ -288,7 +288,6 @@ public final class GetPoolResult {
             this.utilizedThroughputMibps = Objects.requireNonNull(utilizedThroughputMibps);
             return this;
         }
-
         public GetPoolResult build() {
             return new GetPoolResult(id, location, name, poolId, provisioningState, qosType, serviceLevel, size, tags, totalThroughputMibps, type, utilizedThroughputMibps);
         }

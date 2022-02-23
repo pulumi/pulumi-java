@@ -17,84 +17,84 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
     public static final AndroidMAMPolicyByNameArgs Empty = new AndroidMAMPolicyByNameArgs();
 
     @InputImport(name="accessRecheckOfflineTimeout")
-    private final @Nullable Input<String> accessRecheckOfflineTimeout;
+        private final @Nullable Input<String> accessRecheckOfflineTimeout;
 
     public Input<String> getAccessRecheckOfflineTimeout() {
         return this.accessRecheckOfflineTimeout == null ? Input.empty() : this.accessRecheckOfflineTimeout;
     }
 
     @InputImport(name="accessRecheckOnlineTimeout")
-    private final @Nullable Input<String> accessRecheckOnlineTimeout;
+        private final @Nullable Input<String> accessRecheckOnlineTimeout;
 
     public Input<String> getAccessRecheckOnlineTimeout() {
         return this.accessRecheckOnlineTimeout == null ? Input.empty() : this.accessRecheckOnlineTimeout;
     }
 
     @InputImport(name="appSharingFromLevel")
-    private final @Nullable Input<String> appSharingFromLevel;
+        private final @Nullable Input<String> appSharingFromLevel;
 
     public Input<String> getAppSharingFromLevel() {
         return this.appSharingFromLevel == null ? Input.empty() : this.appSharingFromLevel;
     }
 
     @InputImport(name="appSharingToLevel")
-    private final @Nullable Input<String> appSharingToLevel;
+        private final @Nullable Input<String> appSharingToLevel;
 
     public Input<String> getAppSharingToLevel() {
         return this.appSharingToLevel == null ? Input.empty() : this.appSharingToLevel;
     }
 
     @InputImport(name="authentication")
-    private final @Nullable Input<String> authentication;
+        private final @Nullable Input<String> authentication;
 
     public Input<String> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
     @InputImport(name="clipboardSharingLevel")
-    private final @Nullable Input<String> clipboardSharingLevel;
+        private final @Nullable Input<String> clipboardSharingLevel;
 
     public Input<String> getClipboardSharingLevel() {
         return this.clipboardSharingLevel == null ? Input.empty() : this.clipboardSharingLevel;
     }
 
     @InputImport(name="dataBackup")
-    private final @Nullable Input<String> dataBackup;
+        private final @Nullable Input<String> dataBackup;
 
     public Input<String> getDataBackup() {
         return this.dataBackup == null ? Input.empty() : this.dataBackup;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="deviceCompliance")
-    private final @Nullable Input<String> deviceCompliance;
+        private final @Nullable Input<String> deviceCompliance;
 
     public Input<String> getDeviceCompliance() {
         return this.deviceCompliance == null ? Input.empty() : this.deviceCompliance;
     }
 
     @InputImport(name="fileEncryption")
-    private final @Nullable Input<String> fileEncryption;
+        private final @Nullable Input<String> fileEncryption;
 
     public Input<String> getFileEncryption() {
         return this.fileEncryption == null ? Input.empty() : this.fileEncryption;
     }
 
     @InputImport(name="fileSharingSaveAs")
-    private final @Nullable Input<String> fileSharingSaveAs;
+        private final @Nullable Input<String> fileSharingSaveAs;
 
     public Input<String> getFileSharingSaveAs() {
         return this.fileSharingSaveAs == null ? Input.empty() : this.fileSharingSaveAs;
     }
 
     @InputImport(name="friendlyName", required=true)
-    private final Input<String> friendlyName;
+        private final Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName;
@@ -105,7 +105,7 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hostName", required=true)
-    private final Input<String> hostName;
+        private final Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName;
@@ -116,35 +116,35 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="managedBrowser")
-    private final @Nullable Input<String> managedBrowser;
+        private final @Nullable Input<String> managedBrowser;
 
     public Input<String> getManagedBrowser() {
         return this.managedBrowser == null ? Input.empty() : this.managedBrowser;
     }
 
     @InputImport(name="offlineWipeTimeout")
-    private final @Nullable Input<String> offlineWipeTimeout;
+        private final @Nullable Input<String> offlineWipeTimeout;
 
     public Input<String> getOfflineWipeTimeout() {
         return this.offlineWipeTimeout == null ? Input.empty() : this.offlineWipeTimeout;
     }
 
     @InputImport(name="pin")
-    private final @Nullable Input<String> pin;
+        private final @Nullable Input<String> pin;
 
     public Input<String> getPin() {
         return this.pin == null ? Input.empty() : this.pin;
     }
 
     @InputImport(name="pinNumRetry")
-    private final @Nullable Input<Integer> pinNumRetry;
+        private final @Nullable Input<Integer> pinNumRetry;
 
     public Input<Integer> getPinNumRetry() {
         return this.pinNumRetry == null ? Input.empty() : this.pinNumRetry;
@@ -155,14 +155,14 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable Input<String> policyName;
+        private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
     }
 
     @InputImport(name="screenCapture")
-    private final @Nullable Input<String> screenCapture;
+        private final @Nullable Input<String> screenCapture;
 
     public Input<String> getScreenCapture() {
         return this.screenCapture == null ? Input.empty() : this.screenCapture;
@@ -173,7 +173,7 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -517,7 +517,6 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AndroidMAMPolicyByNameArgs build() {
             return new AndroidMAMPolicyByNameArgs(accessRecheckOfflineTimeout, accessRecheckOnlineTimeout, appSharingFromLevel, appSharingToLevel, authentication, clipboardSharingLevel, dataBackup, description, deviceCompliance, fileEncryption, fileSharingSaveAs, friendlyName, hostName, location, managedBrowser, offlineWipeTimeout, pin, pinNumRetry, policyName, screenCapture, tags);
         }

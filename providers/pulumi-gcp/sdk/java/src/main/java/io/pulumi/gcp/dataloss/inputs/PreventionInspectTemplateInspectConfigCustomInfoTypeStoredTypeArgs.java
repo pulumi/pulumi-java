@@ -19,7 +19,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTyp
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -62,7 +62,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTyp
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs(name);
         }

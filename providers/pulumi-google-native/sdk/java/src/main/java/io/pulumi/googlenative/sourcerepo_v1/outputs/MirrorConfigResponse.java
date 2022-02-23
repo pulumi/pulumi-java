@@ -95,7 +95,6 @@ public final class MirrorConfigResponse {
             this.webhookId = Objects.requireNonNull(webhookId);
             return this;
         }
-
         public MirrorConfigResponse build() {
             return new MirrorConfigResponse(deployKeyId, url, webhookId);
         }

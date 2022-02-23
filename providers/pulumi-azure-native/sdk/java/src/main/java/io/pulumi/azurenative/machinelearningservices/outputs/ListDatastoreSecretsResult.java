@@ -52,7 +52,6 @@ public final class ListDatastoreSecretsResult {
             this.secretsType = Objects.requireNonNull(secretsType);
             return this;
         }
-
         public ListDatastoreSecretsResult build() {
             return new ListDatastoreSecretsResult(secretsType);
         }

@@ -76,7 +76,6 @@ public final class DiagnosticsConfigurationResponse {
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public DiagnosticsConfigurationResponse build() {
             return new DiagnosticsConfigurationResponse(expiry, level);
         }

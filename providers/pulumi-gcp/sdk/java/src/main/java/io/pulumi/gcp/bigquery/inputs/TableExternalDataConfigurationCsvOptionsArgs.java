@@ -22,7 +22,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * 
      */
     @InputImport(name="allowJaggedRows")
-    private final @Nullable Input<Boolean> allowJaggedRows;
+        private final @Nullable Input<Boolean> allowJaggedRows;
 
     public Input<Boolean> getAllowJaggedRows() {
         return this.allowJaggedRows == null ? Input.empty() : this.allowJaggedRows;
@@ -35,7 +35,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * 
      */
     @InputImport(name="allowQuotedNewlines")
-    private final @Nullable Input<Boolean> allowQuotedNewlines;
+        private final @Nullable Input<Boolean> allowQuotedNewlines;
 
     public Input<Boolean> getAllowQuotedNewlines() {
         return this.allowQuotedNewlines == null ? Input.empty() : this.allowQuotedNewlines;
@@ -47,7 +47,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<String> encoding;
+        private final @Nullable Input<String> encoding;
 
     public Input<String> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -58,7 +58,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * 
      */
     @InputImport(name="fieldDelimiter")
-    private final @Nullable Input<String> fieldDelimiter;
+        private final @Nullable Input<String> fieldDelimiter;
 
     public Input<String> getFieldDelimiter() {
         return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
@@ -75,7 +75,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * 
      */
     @InputImport(name="quote", required=true)
-    private final Input<String> quote;
+        private final Input<String> quote;
 
     public Input<String> getQuote() {
         return this.quote;
@@ -88,7 +88,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * 
      */
     @InputImport(name="skipLeadingRows")
-    private final @Nullable Input<Integer> skipLeadingRows;
+        private final @Nullable Input<Integer> skipLeadingRows;
 
     public Input<Integer> getSkipLeadingRows() {
         return this.skipLeadingRows == null ? Input.empty() : this.skipLeadingRows;
@@ -207,7 +207,6 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
             this.skipLeadingRows = Input.ofNullable(skipLeadingRows);
             return this;
         }
-
         public TableExternalDataConfigurationCsvOptionsArgs build() {
             return new TableExternalDataConfigurationCsvOptionsArgs(allowJaggedRows, allowQuotedNewlines, encoding, fieldDelimiter, quote, skipLeadingRows);
         }

@@ -97,7 +97,6 @@ public final class TopicRuleOpenSearchAction {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TopicRuleOpenSearchAction build() {
             return new TopicRuleOpenSearchAction(endpoint, id, index, roleArn, type);
         }

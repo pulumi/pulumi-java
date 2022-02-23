@@ -287,7 +287,6 @@ public final class GetGlobalPublicDelegatedPrefixResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetGlobalPublicDelegatedPrefixResult build() {
             return new GetGlobalPublicDelegatedPrefixResult(creationTimestamp, description, fingerprint, ipCidrRange, isLiveMigration, kind, name, parentPrefix, publicDelegatedSubPrefixs, region, selfLink, status);
         }

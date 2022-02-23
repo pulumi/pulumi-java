@@ -22,7 +22,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowedRequestExtensions", required=true)
-    private final List<String> allowedRequestExtensions;
+      private final List<String> allowedRequestExtensions;
 
     public List<String> getAllowedRequestExtensions() {
         return this.allowedRequestExtensions;
@@ -33,7 +33,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowedResponseExtensions", required=true)
-    private final List<String> allowedResponseExtensions;
+      private final List<String> allowedResponseExtensions;
 
     public List<String> getAllowedResponseExtensions() {
         return this.allowedResponseExtensions;
@@ -44,7 +44,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provided", required=true)
-    private final List<String> provided;
+      private final List<String> provided;
 
     public List<String> getProvided() {
         return this.provided;
@@ -55,7 +55,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requested", required=true)
-    private final List<String> requested;
+      private final List<String> requested;
 
     public List<String> getRequested() {
         return this.requested;
@@ -66,7 +66,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="selector", required=true)
-    private final String selector;
+      private final String selector;
 
     public String getSelector() {
         return this.selector;
@@ -145,7 +145,6 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public ContextRuleResponse build() {
             return new ContextRuleResponse(allowedRequestExtensions, allowedResponseExtensions, provided, requested, selector);
         }

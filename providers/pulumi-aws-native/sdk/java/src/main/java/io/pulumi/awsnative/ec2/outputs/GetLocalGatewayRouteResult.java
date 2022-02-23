@@ -76,7 +76,6 @@ public final class GetLocalGatewayRouteResult {
             this.type = type;
             return this;
         }
-
         public GetLocalGatewayRouteResult build() {
             return new GetLocalGatewayRouteResult(state, type);
         }

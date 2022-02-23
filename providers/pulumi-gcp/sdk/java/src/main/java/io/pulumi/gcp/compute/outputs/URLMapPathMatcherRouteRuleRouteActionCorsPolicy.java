@@ -215,7 +215,6 @@ public final class URLMapPathMatcherRouteRuleRouteActionCorsPolicy {
             this.maxAge = maxAge;
             return this;
         }
-
         public URLMapPathMatcherRouteRuleRouteActionCorsPolicy build() {
             return new URLMapPathMatcherRouteRuleRouteActionCorsPolicy(allowCredentials, allowHeaders, allowMethods, allowOriginRegexes, allowOrigins, disabled, exposeHeaders, maxAge);
         }

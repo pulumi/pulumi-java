@@ -182,7 +182,6 @@ public final class SoaRecordResponse {
             this.serialNumber = serialNumber;
             return this;
         }
-
         public SoaRecordResponse build() {
             return new SoaRecordResponse(email, expireTime, host, minimumTtl, refreshTime, retryTime, serialNumber);
         }

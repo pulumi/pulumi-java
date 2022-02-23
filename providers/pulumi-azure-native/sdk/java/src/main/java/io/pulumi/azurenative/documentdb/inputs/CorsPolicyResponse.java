@@ -24,7 +24,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowedHeaders")
-    private final @Nullable String allowedHeaders;
+        private final @Nullable String allowedHeaders;
 
     public Optional<String> getAllowedHeaders() {
         return this.allowedHeaders == null ? Optional.empty() : Optional.ofNullable(this.allowedHeaders);
@@ -35,7 +35,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowedMethods")
-    private final @Nullable String allowedMethods;
+        private final @Nullable String allowedMethods;
 
     public Optional<String> getAllowedMethods() {
         return this.allowedMethods == null ? Optional.empty() : Optional.ofNullable(this.allowedMethods);
@@ -46,7 +46,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowedOrigins", required=true)
-    private final String allowedOrigins;
+        private final String allowedOrigins;
 
     public String getAllowedOrigins() {
         return this.allowedOrigins;
@@ -57,7 +57,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="exposedHeaders")
-    private final @Nullable String exposedHeaders;
+        private final @Nullable String exposedHeaders;
 
     public Optional<String> getExposedHeaders() {
         return this.exposedHeaders == null ? Optional.empty() : Optional.ofNullable(this.exposedHeaders);
@@ -68,7 +68,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxAgeInSeconds")
-    private final @Nullable Double maxAgeInSeconds;
+        private final @Nullable Double maxAgeInSeconds;
 
     public Optional<Double> getMaxAgeInSeconds() {
         return this.maxAgeInSeconds == null ? Optional.empty() : Optional.ofNullable(this.maxAgeInSeconds);
@@ -147,7 +147,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.maxAgeInSeconds = maxAgeInSeconds;
             return this;
         }
-
         public CorsPolicyResponse build() {
             return new CorsPolicyResponse(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAgeInSeconds);
         }

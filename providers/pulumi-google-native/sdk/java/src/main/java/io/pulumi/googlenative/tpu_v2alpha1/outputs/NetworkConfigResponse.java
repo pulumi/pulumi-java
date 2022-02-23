@@ -117,7 +117,6 @@ public final class NetworkConfigResponse {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public NetworkConfigResponse build() {
             return new NetworkConfigResponse(canIpForward, enableExternalIps, network, subnetwork);
         }

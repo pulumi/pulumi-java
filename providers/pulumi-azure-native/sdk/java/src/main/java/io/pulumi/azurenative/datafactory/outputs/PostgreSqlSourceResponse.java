@@ -205,7 +205,6 @@ public final class PostgreSqlSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PostgreSqlSourceResponse build() {
             return new PostgreSqlSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

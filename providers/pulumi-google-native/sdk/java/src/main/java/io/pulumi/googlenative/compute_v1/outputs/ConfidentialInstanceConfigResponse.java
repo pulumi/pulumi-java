@@ -52,7 +52,6 @@ public final class ConfidentialInstanceConfigResponse {
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }
-
         public ConfidentialInstanceConfigResponse build() {
             return new ConfidentialInstanceConfigResponse(enableConfidentialCompute);
         }

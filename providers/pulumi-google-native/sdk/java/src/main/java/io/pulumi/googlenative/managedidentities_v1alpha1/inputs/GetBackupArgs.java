@@ -15,21 +15,21 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetBackupArgs Empty = new GetBackupArgs();
 
     @InputImport(name="backupId", required=true)
-    private final String backupId;
+      private final String backupId;
 
     public String getBackupId() {
         return this.backupId;
     }
 
     @InputImport(name="domainId", required=true)
-    private final String domainId;
+      private final String domainId;
 
     public String getDomainId() {
         return this.domainId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetBackupArgs build() {
             return new GetBackupArgs(backupId, domainId, project);
         }

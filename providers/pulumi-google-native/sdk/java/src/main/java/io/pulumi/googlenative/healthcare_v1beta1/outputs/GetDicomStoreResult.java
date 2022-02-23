@@ -120,7 +120,6 @@ public final class GetDicomStoreResult {
             this.streamConfigs = Objects.requireNonNull(streamConfigs);
             return this;
         }
-
         public GetDicomStoreResult build() {
             return new GetDicomStoreResult(labels, name, notificationConfig, streamConfigs);
         }

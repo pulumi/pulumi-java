@@ -18,7 +18,7 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="perimeterName", required=true)
-    private final Input<String> perimeterName;
+        private final Input<String> perimeterName;
 
     public Input<String> getPerimeterName() {
         return this.perimeterName;
@@ -31,7 +31,7 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resource", required=true)
-    private final Input<String> resource;
+        private final Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource;
@@ -90,7 +90,6 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
             this.resource = Input.of(Objects.requireNonNull(resource));
             return this;
         }
-
         public ServicePerimeterResourceArgs build() {
             return new ServicePerimeterResourceArgs(perimeterName, resource);
         }

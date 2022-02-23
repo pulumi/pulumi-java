@@ -54,7 +54,6 @@ public final class SetupScriptsResponse {
             this.scripts = scripts;
             return this;
         }
-
         public SetupScriptsResponse build() {
             return new SetupScriptsResponse(scripts);
         }

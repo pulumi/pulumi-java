@@ -19,21 +19,21 @@ public final class EnvelopeResponse extends io.pulumi.resources.InvokeArgs {
     public static final EnvelopeResponse Empty = new EnvelopeResponse();
 
     @InputImport(name="payload", required=true)
-    private final String payload;
+      private final String payload;
 
     public String getPayload() {
         return this.payload;
     }
 
     @InputImport(name="payloadType", required=true)
-    private final String payloadType;
+      private final String payloadType;
 
     public String getPayloadType() {
         return this.payloadType;
     }
 
     @InputImport(name="signatures", required=true)
-    private final List<EnvelopeSignatureResponse> signatures;
+      private final List<EnvelopeSignatureResponse> signatures;
 
     public List<EnvelopeSignatureResponse> getSignatures() {
         return this.signatures;
@@ -92,7 +92,6 @@ public final class EnvelopeResponse extends io.pulumi.resources.InvokeArgs {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-
         public EnvelopeResponse build() {
             return new EnvelopeResponse(payload, payloadType, signatures);
         }

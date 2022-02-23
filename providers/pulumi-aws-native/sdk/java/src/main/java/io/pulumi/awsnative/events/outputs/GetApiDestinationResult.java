@@ -138,7 +138,6 @@ public final class GetApiDestinationResult {
             this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
             return this;
         }
-
         public GetApiDestinationResult build() {
             return new GetApiDestinationResult(arn, connectionArn, description, httpMethod, invocationEndpoint, invocationRateLimitPerSecond);
         }

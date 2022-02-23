@@ -74,7 +74,6 @@ public final class KeyValueResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public KeyValueResponse build() {
             return new KeyValueResponse(key, value);
         }

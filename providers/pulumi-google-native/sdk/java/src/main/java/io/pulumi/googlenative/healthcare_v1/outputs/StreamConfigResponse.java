@@ -76,7 +76,6 @@ public final class StreamConfigResponse {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
-
         public StreamConfigResponse build() {
             return new StreamConfigResponse(bigqueryDestination, resourceTypes);
         }

@@ -24,7 +24,7 @@ public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<String> parameters;
+        private final @Nullable Input<String> parameters;
 
     public Input<String> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -46,7 +46,7 @@ public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="roles", required=true)
-    private final Input<List<String>> roles;
+        private final Input<List<String>> roles;
 
     public Input<List<String>> getRoles() {
         return this.roles;
@@ -57,7 +57,7 @@ public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+        private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -146,7 +146,6 @@ public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceA
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public RuntimeScriptActionArgs build() {
             return new RuntimeScriptActionArgs(name, parameters, roles, uri);
         }

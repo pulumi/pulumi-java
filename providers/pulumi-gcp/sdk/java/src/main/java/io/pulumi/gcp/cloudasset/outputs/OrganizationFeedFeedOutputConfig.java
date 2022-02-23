@@ -54,7 +54,6 @@ public final class OrganizationFeedFeedOutputConfig {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }
-
         public OrganizationFeedFeedOutputConfig build() {
             return new OrganizationFeedFeedOutputConfig(pubsubDestination);
         }

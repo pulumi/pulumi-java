@@ -23,7 +23,7 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="contactName")
-    private final @Nullable String contactName;
+        private final @Nullable String contactName;
 
     public Optional<String> getContactName() {
         return this.contactName == null ? Optional.empty() : Optional.ofNullable(this.contactName);
@@ -34,7 +34,7 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+        private final String email;
 
     public String getEmail() {
         return this.email;
@@ -45,7 +45,7 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="phone", required=true)
-    private final String phone;
+        private final String phone;
 
     public String getPhone() {
         return this.phone;
@@ -104,7 +104,6 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public ApplicationPackageContactResponse build() {
             return new ApplicationPackageContactResponse(contactName, email, phone);
         }

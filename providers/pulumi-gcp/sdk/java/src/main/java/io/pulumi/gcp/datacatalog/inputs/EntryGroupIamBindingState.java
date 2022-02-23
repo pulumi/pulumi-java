@@ -17,7 +17,7 @@ public final class EntryGroupIamBindingState extends io.pulumi.resources.Resourc
     public static final EntryGroupIamBindingState Empty = new EntryGroupIamBindingState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<EntryGroupIamBindingConditionGetArgs> condition;
+        private final @Nullable Input<EntryGroupIamBindingConditionGetArgs> condition;
 
     public Input<EntryGroupIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,7 +28,7 @@ public final class EntryGroupIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="entryGroup")
-    private final @Nullable Input<String> entryGroup;
+        private final @Nullable Input<String> entryGroup;
 
     public Input<String> getEntryGroup() {
         return this.entryGroup == null ? Input.empty() : this.entryGroup;
@@ -39,14 +39,14 @@ public final class EntryGroupIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -58,14 +58,14 @@ public final class EntryGroupIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -78,7 +78,7 @@ public final class EntryGroupIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -212,7 +212,6 @@ public final class EntryGroupIamBindingState extends io.pulumi.resources.Resourc
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public EntryGroupIamBindingState build() {
             return new EntryGroupIamBindingState(condition, entryGroup, etag, members, project, region, role);
         }

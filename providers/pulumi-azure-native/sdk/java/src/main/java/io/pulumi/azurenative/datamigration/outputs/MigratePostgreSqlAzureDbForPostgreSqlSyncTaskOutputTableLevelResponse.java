@@ -350,7 +350,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
             this.totalChangesApplied = Objects.requireNonNull(totalChangesApplied);
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse(cdcDeleteCounter, cdcInsertCounter, cdcUpdateCounter, dataErrorsCounter, databaseName, fullLoadEndedOn, fullLoadEstFinishTime, fullLoadStartedOn, fullLoadTotalRows, id, lastModifiedTime, resultType, state, tableName, totalChangesApplied);
         }

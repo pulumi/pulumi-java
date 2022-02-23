@@ -74,7 +74,6 @@ public final class VirtualNetworkBgpCommunitiesResponse {
             this.virtualNetworkCommunity = Objects.requireNonNull(virtualNetworkCommunity);
             return this;
         }
-
         public VirtualNetworkBgpCommunitiesResponse build() {
             return new VirtualNetworkBgpCommunitiesResponse(regionalCommunity, virtualNetworkCommunity);
         }

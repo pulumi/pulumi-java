@@ -24,7 +24,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -35,7 +35,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preprocessingConfig")
-    private final @Nullable Input<PreprocessingConfigArgs> preprocessingConfig;
+      private final @Nullable Input<PreprocessingConfigArgs> preprocessingConfig;
 
     public Input<PreprocessingConfigArgs> getPreprocessingConfig() {
         return this.preprocessingConfig == null ? Input.empty() : this.preprocessingConfig;
@@ -46,7 +46,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -120,7 +120,6 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public InputArgs build() {
             return new InputArgs(key, preprocessingConfig, uri);
         }

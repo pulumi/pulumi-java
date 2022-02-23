@@ -53,7 +53,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse {
             this.valueFrequencyHistogramBuckets = Objects.requireNonNull(valueFrequencyHistogramBuckets);
             return this;
         }
-
         public GooglePrivacyDlpV2CategoricalStatsResultResponse build() {
             return new GooglePrivacyDlpV2CategoricalStatsResultResponse(valueFrequencyHistogramBuckets);
         }

@@ -74,7 +74,6 @@ public final class SasPolicyResponse {
             this.sasExpirationPeriod = Objects.requireNonNull(sasExpirationPeriod);
             return this;
         }
-
         public SasPolicyResponse build() {
             return new SasPolicyResponse(expirationAction, sasExpirationPeriod);
         }

@@ -78,7 +78,6 @@ public final class GetParameterGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetParameterGroupResult build() {
             return new GetParameterGroupResult(aRN, tags);
         }

@@ -96,7 +96,6 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse {
             this.index = Objects.requireNonNull(index);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1AnnotationSpecResponse build() {
             return new GoogleCloudDatalabelingV1beta1AnnotationSpecResponse(description, displayName, index);
         }

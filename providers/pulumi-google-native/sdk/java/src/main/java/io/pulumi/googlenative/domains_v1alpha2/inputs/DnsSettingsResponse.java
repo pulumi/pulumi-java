@@ -24,7 +24,7 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="customDns", required=true)
-    private final CustomDnsResponse customDns;
+      private final CustomDnsResponse customDns;
 
     public CustomDnsResponse getCustomDns() {
         return this.customDns;
@@ -35,7 +35,7 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="glueRecords", required=true)
-    private final List<GlueRecordResponse> glueRecords;
+      private final List<GlueRecordResponse> glueRecords;
 
     public List<GlueRecordResponse> getGlueRecords() {
         return this.glueRecords;
@@ -46,7 +46,7 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="googleDomainsDns", required=true)
-    private final GoogleDomainsDnsResponse googleDomainsDns;
+      private final GoogleDomainsDnsResponse googleDomainsDns;
 
     public GoogleDomainsDnsResponse getGoogleDomainsDns() {
         return this.googleDomainsDns;
@@ -105,7 +105,6 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.googleDomainsDns = Objects.requireNonNull(googleDomainsDns);
             return this;
         }
-
         public DnsSettingsResponse build() {
             return new DnsSettingsResponse(customDns, glueRecords, googleDomainsDns);
         }

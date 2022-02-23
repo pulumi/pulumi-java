@@ -73,7 +73,6 @@ public final class TopicRuleStepFunctionsAction {
             this.stateMachineName = Objects.requireNonNull(stateMachineName);
             return this;
         }
-
         public TopicRuleStepFunctionsAction build() {
             return new TopicRuleStepFunctionsAction(executionNamePrefix, roleArn, stateMachineName);
         }

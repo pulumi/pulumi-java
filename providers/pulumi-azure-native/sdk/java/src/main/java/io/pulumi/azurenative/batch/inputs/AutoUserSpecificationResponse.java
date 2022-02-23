@@ -19,7 +19,7 @@ public final class AutoUserSpecificationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="elevationLevel")
-    private final @Nullable String elevationLevel;
+        private final @Nullable String elevationLevel;
 
     public Optional<String> getElevationLevel() {
         return this.elevationLevel == null ? Optional.empty() : Optional.ofNullable(this.elevationLevel);
@@ -30,7 +30,7 @@ public final class AutoUserSpecificationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable String scope;
+        private final @Nullable String scope;
 
     public Optional<String> getScope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
@@ -79,7 +79,6 @@ public final class AutoUserSpecificationResponse extends io.pulumi.resources.Inv
             this.scope = scope;
             return this;
         }
-
         public AutoUserSpecificationResponse build() {
             return new AutoUserSpecificationResponse(elevationLevel, scope);
         }

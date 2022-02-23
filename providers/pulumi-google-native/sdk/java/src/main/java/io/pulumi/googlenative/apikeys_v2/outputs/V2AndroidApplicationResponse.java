@@ -74,7 +74,6 @@ public final class V2AndroidApplicationResponse {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public V2AndroidApplicationResponse build() {
             return new V2AndroidApplicationResponse(packageName, sha1Fingerprint);
         }

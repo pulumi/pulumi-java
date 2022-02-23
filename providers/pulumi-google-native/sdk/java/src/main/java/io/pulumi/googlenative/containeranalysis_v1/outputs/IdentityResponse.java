@@ -75,7 +75,6 @@ public final class IdentityResponse {
             this.updateId = Objects.requireNonNull(updateId);
             return this;
         }
-
         public IdentityResponse build() {
             return new IdentityResponse(revision, updateId);
         }

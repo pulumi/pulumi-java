@@ -96,7 +96,6 @@ public final class GetOverrideResult {
             this.samplingConfig = Objects.requireNonNull(samplingConfig);
             return this;
         }
-
         public GetOverrideResult build() {
             return new GetOverrideResult(apiProxy, name, samplingConfig);
         }

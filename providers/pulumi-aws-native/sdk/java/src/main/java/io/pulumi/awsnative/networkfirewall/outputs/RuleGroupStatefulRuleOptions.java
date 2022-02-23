@@ -46,7 +46,6 @@ public final class RuleGroupStatefulRuleOptions {
             this.ruleOrder = ruleOrder;
             return this;
         }
-
         public RuleGroupStatefulRuleOptions build() {
             return new RuleGroupStatefulRuleOptions(ruleOrder);
         }

@@ -27,7 +27,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="customHeaders")
-    private final @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders;
+        private final @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders;
 
     public List<EndpointPropertiesResponseCustomHeaders> getCustomHeaders() {
         return this.customHeaders == null ? List.of() : this.customHeaders;
@@ -38,7 +38,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointLocation")
-    private final @Nullable String endpointLocation;
+        private final @Nullable String endpointLocation;
 
     public Optional<String> getEndpointLocation() {
         return this.endpointLocation == null ? Optional.empty() : Optional.ofNullable(this.endpointLocation);
@@ -49,7 +49,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointMonitorStatus")
-    private final @Nullable String endpointMonitorStatus;
+        private final @Nullable String endpointMonitorStatus;
 
     public Optional<String> getEndpointMonitorStatus() {
         return this.endpointMonitorStatus == null ? Optional.empty() : Optional.ofNullable(this.endpointMonitorStatus);
@@ -60,7 +60,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointStatus")
-    private final @Nullable String endpointStatus;
+        private final @Nullable String endpointStatus;
 
     public Optional<String> getEndpointStatus() {
         return this.endpointStatus == null ? Optional.empty() : Optional.ofNullable(this.endpointStatus);
@@ -71,7 +71,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="geoMapping")
-    private final @Nullable List<String> geoMapping;
+        private final @Nullable List<String> geoMapping;
 
     public List<String> getGeoMapping() {
         return this.geoMapping == null ? List.of() : this.geoMapping;
@@ -82,7 +82,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -93,7 +93,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minChildEndpoints")
-    private final @Nullable Double minChildEndpoints;
+        private final @Nullable Double minChildEndpoints;
 
     public Optional<Double> getMinChildEndpoints() {
         return this.minChildEndpoints == null ? Optional.empty() : Optional.ofNullable(this.minChildEndpoints);
@@ -104,7 +104,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minChildEndpointsIPv4")
-    private final @Nullable Double minChildEndpointsIPv4;
+        private final @Nullable Double minChildEndpointsIPv4;
 
     public Optional<Double> getMinChildEndpointsIPv4() {
         return this.minChildEndpointsIPv4 == null ? Optional.empty() : Optional.ofNullable(this.minChildEndpointsIPv4);
@@ -115,7 +115,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minChildEndpointsIPv6")
-    private final @Nullable Double minChildEndpointsIPv6;
+        private final @Nullable Double minChildEndpointsIPv6;
 
     public Optional<Double> getMinChildEndpointsIPv6() {
         return this.minChildEndpointsIPv6 == null ? Optional.empty() : Optional.ofNullable(this.minChildEndpointsIPv6);
@@ -126,7 +126,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -137,7 +137,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Double priority;
+        private final @Nullable Double priority;
 
     public Optional<Double> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -148,7 +148,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnets")
-    private final @Nullable List<EndpointPropertiesResponseSubnets> subnets;
+        private final @Nullable List<EndpointPropertiesResponseSubnets> subnets;
 
     public List<EndpointPropertiesResponseSubnets> getSubnets() {
         return this.subnets == null ? List.of() : this.subnets;
@@ -159,7 +159,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="target")
-    private final @Nullable String target;
+        private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -170,7 +170,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetResourceId")
-    private final @Nullable String targetResourceId;
+        private final @Nullable String targetResourceId;
 
     public Optional<String> getTargetResourceId() {
         return this.targetResourceId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceId);
@@ -181,7 +181,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -192,7 +192,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Double weight;
+        private final @Nullable Double weight;
 
     public Optional<Double> getWeight() {
         return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
@@ -381,7 +381,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
             this.weight = weight;
             return this;
         }
-
         public EndpointResponse build() {
             return new EndpointResponse(customHeaders, endpointLocation, endpointMonitorStatus, endpointStatus, geoMapping, id, minChildEndpoints, minChildEndpointsIPv4, minChildEndpointsIPv6, name, priority, subnets, target, targetResourceId, type, weight);
         }

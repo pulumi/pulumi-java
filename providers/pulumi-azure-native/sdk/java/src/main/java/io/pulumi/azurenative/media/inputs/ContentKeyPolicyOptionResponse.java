@@ -32,7 +32,7 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="configuration", required=true)
-    private final Object configuration;
+        private final Object configuration;
 
     public Object getConfiguration() {
         return this.configuration;
@@ -43,7 +43,7 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -54,7 +54,7 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="policyOptionId", required=true)
-    private final String policyOptionId;
+        private final String policyOptionId;
 
     public String getPolicyOptionId() {
         return this.policyOptionId;
@@ -65,7 +65,7 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="restriction", required=true)
-    private final Object restriction;
+        private final Object restriction;
 
     public Object getRestriction() {
         return this.restriction;
@@ -134,7 +134,6 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
             this.restriction = Objects.requireNonNull(restriction);
             return this;
         }
-
         public ContentKeyPolicyOptionResponse build() {
             return new ContentKeyPolicyOptionResponse(configuration, name, policyOptionId, restriction);
         }

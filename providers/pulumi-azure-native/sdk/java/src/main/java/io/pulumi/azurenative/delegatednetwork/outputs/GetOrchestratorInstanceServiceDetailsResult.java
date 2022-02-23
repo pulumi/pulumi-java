@@ -352,7 +352,6 @@ public final class GetOrchestratorInstanceServiceDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOrchestratorInstanceServiceDetailsResult build() {
             return new GetOrchestratorInstanceServiceDetailsResult(apiServerEndpoint, clusterRootCA, controllerDetails, id, identity, kind, location, name, orchestratorAppId, orchestratorTenantId, privateLinkResourceId, provisioningState, resourceGuid, tags, type);
         }

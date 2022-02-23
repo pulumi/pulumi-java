@@ -27,7 +27,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName")
-    private final @Nullable Input<String> applicationName;
+        private final @Nullable Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName == null ? Input.empty() : this.applicationName;
@@ -38,7 +38,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+        private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -49,7 +49,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ManagedIdentityArgs> identity;
+        private final @Nullable Input<ManagedIdentityArgs> identity;
 
     public Input<ManagedIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -60,7 +60,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -71,7 +71,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedIdentities")
-    private final @Nullable Input<List<ApplicationUserAssignedIdentityArgs>> managedIdentities;
+        private final @Nullable Input<List<ApplicationUserAssignedIdentityArgs>> managedIdentities;
 
     public Input<List<ApplicationUserAssignedIdentityArgs>> getManagedIdentities() {
         return this.managedIdentities == null ? Input.empty() : this.managedIdentities;
@@ -82,7 +82,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumNodes")
-    private final @Nullable Input<Double> maximumNodes;
+        private final @Nullable Input<Double> maximumNodes;
 
     public Input<Double> getMaximumNodes() {
         return this.maximumNodes == null ? Input.empty() : this.maximumNodes;
@@ -93,7 +93,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metrics")
-    private final @Nullable Input<List<ApplicationMetricDescriptionArgs>> metrics;
+        private final @Nullable Input<List<ApplicationMetricDescriptionArgs>> metrics;
 
     public Input<List<ApplicationMetricDescriptionArgs>> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
@@ -104,7 +104,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumNodes")
-    private final @Nullable Input<Double> minimumNodes;
+        private final @Nullable Input<Double> minimumNodes;
 
     public Input<Double> getMinimumNodes() {
         return this.minimumNodes == null ? Input.empty() : this.minimumNodes;
@@ -115,7 +115,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+        private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -126,7 +126,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="removeApplicationCapacity")
-    private final @Nullable Input<Boolean> removeApplicationCapacity;
+        private final @Nullable Input<Boolean> removeApplicationCapacity;
 
     public Input<Boolean> getRemoveApplicationCapacity() {
         return this.removeApplicationCapacity == null ? Input.empty() : this.removeApplicationCapacity;
@@ -137,7 +137,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -148,7 +148,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -159,7 +159,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName")
-    private final @Nullable Input<String> typeName;
+        private final @Nullable Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName == null ? Input.empty() : this.typeName;
@@ -170,7 +170,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeVersion")
-    private final @Nullable Input<String> typeVersion;
+        private final @Nullable Input<String> typeVersion;
 
     public Input<String> getTypeVersion() {
         return this.typeVersion == null ? Input.empty() : this.typeVersion;
@@ -181,7 +181,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgradePolicy")
-    private final @Nullable Input<ApplicationUpgradePolicyArgs> upgradePolicy;
+        private final @Nullable Input<ApplicationUpgradePolicyArgs> upgradePolicy;
 
     public Input<ApplicationUpgradePolicyArgs> getUpgradePolicy() {
         return this.upgradePolicy == null ? Input.empty() : this.upgradePolicy;
@@ -435,7 +435,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.upgradePolicy = Input.ofNullable(upgradePolicy);
             return this;
         }
-
         public ApplicationArgs build() {
             return new ApplicationArgs(applicationName, clusterName, identity, location, managedIdentities, maximumNodes, metrics, minimumNodes, parameters, removeApplicationCapacity, resourceGroupName, tags, typeName, typeVersion, upgradePolicy);
         }

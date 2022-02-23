@@ -248,7 +248,6 @@ public final class GetRoleAssignmentArtifactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRoleAssignmentArtifactResult build() {
             return new GetRoleAssignmentArtifactResult(dependsOn, description, displayName, id, kind, name, principalIds, resourceGroup, roleDefinitionId, type);
         }

@@ -15,21 +15,21 @@ public final class ResponseHeadersPolicyCustomHeaderArgs extends io.pulumi.resou
     public static final ResponseHeadersPolicyCustomHeaderArgs Empty = new ResponseHeadersPolicyCustomHeaderArgs();
 
     @InputImport(name="header", required=true)
-    private final Input<String> header;
+        private final Input<String> header;
 
     public Input<String> getHeader() {
         return this.header;
     }
 
     @InputImport(name="override", required=true)
-    private final Input<Boolean> override;
+        private final Input<Boolean> override;
 
     public Input<Boolean> getOverride() {
         return this.override;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -103,7 +103,6 @@ public final class ResponseHeadersPolicyCustomHeaderArgs extends io.pulumi.resou
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public ResponseHeadersPolicyCustomHeaderArgs build() {
             return new ResponseHeadersPolicyCustomHeaderArgs(header, override, value);
         }

@@ -23,7 +23,7 @@ public final class EnvironmentMatrixResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="androidDeviceList", required=true)
-    private final AndroidDeviceListResponse androidDeviceList;
+      private final AndroidDeviceListResponse androidDeviceList;
 
     public AndroidDeviceListResponse getAndroidDeviceList() {
         return this.androidDeviceList;
@@ -34,7 +34,7 @@ public final class EnvironmentMatrixResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="androidMatrix", required=true)
-    private final AndroidMatrixResponse androidMatrix;
+      private final AndroidMatrixResponse androidMatrix;
 
     public AndroidMatrixResponse getAndroidMatrix() {
         return this.androidMatrix;
@@ -45,7 +45,7 @@ public final class EnvironmentMatrixResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="iosDeviceList", required=true)
-    private final IosDeviceListResponse iosDeviceList;
+      private final IosDeviceListResponse iosDeviceList;
 
     public IosDeviceListResponse getIosDeviceList() {
         return this.iosDeviceList;
@@ -104,7 +104,6 @@ public final class EnvironmentMatrixResponse extends io.pulumi.resources.InvokeA
             this.iosDeviceList = Objects.requireNonNull(iosDeviceList);
             return this;
         }
-
         public EnvironmentMatrixResponse build() {
             return new EnvironmentMatrixResponse(androidDeviceList, androidMatrix, iosDeviceList);
         }

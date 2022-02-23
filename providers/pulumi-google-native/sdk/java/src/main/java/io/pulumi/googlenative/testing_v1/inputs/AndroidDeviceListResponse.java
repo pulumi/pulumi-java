@@ -22,7 +22,7 @@ public final class AndroidDeviceListResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="androidDevices", required=true)
-    private final List<AndroidDeviceResponse> androidDevices;
+      private final List<AndroidDeviceResponse> androidDevices;
 
     public List<AndroidDeviceResponse> getAndroidDevices() {
         return this.androidDevices;
@@ -60,7 +60,6 @@ public final class AndroidDeviceListResponse extends io.pulumi.resources.InvokeA
             this.androidDevices = Objects.requireNonNull(androidDevices);
             return this;
         }
-
         public AndroidDeviceListResponse build() {
             return new AndroidDeviceListResponse(androidDevices);
         }

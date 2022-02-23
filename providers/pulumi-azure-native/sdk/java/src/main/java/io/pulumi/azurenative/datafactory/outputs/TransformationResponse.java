@@ -142,7 +142,6 @@ public final class TransformationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public TransformationResponse build() {
             return new TransformationResponse(dataset, description, flowlet, linkedService, name);
         }

@@ -23,7 +23,7 @@ public final class LibraryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class LibraryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -93,7 +93,6 @@ public final class LibraryArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public LibraryArgs build() {
             return new LibraryArgs(name, version);
         }

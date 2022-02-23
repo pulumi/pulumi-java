@@ -15,7 +15,7 @@ public final class ConfigDemodulationConfig extends io.pulumi.resources.InvokeAr
     public static final ConfigDemodulationConfig Empty = new ConfigDemodulationConfig();
 
     @InputImport(name="unvalidatedJSON")
-    private final @Nullable String unvalidatedJSON;
+        private final @Nullable String unvalidatedJSON;
 
     public Optional<String> getUnvalidatedJSON() {
         return this.unvalidatedJSON == null ? Optional.empty() : Optional.ofNullable(this.unvalidatedJSON);
@@ -53,7 +53,6 @@ public final class ConfigDemodulationConfig extends io.pulumi.resources.InvokeAr
             this.unvalidatedJSON = unvalidatedJSON;
             return this;
         }
-
         public ConfigDemodulationConfig build() {
             return new ConfigDemodulationConfig(unvalidatedJSON);
         }

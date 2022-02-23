@@ -74,7 +74,6 @@ public final class ErrorDetailsResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public ErrorDetailsResponse build() {
             return new ErrorDetailsResponse(code, message);
         }

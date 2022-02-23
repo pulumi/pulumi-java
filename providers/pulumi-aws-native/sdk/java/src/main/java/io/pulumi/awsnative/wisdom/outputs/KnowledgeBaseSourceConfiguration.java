@@ -46,7 +46,6 @@ public final class KnowledgeBaseSourceConfiguration {
             this.appIntegrations = appIntegrations;
             return this;
         }
-
         public KnowledgeBaseSourceConfiguration build() {
             return new KnowledgeBaseSourceConfiguration(appIntegrations);
         }

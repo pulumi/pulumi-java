@@ -23,7 +23,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dynamicLinks", required=true)
-    private final Boolean dynamicLinks;
+      private final Boolean dynamicLinks;
 
     public Boolean getDynamicLinks() {
         return this.dynamicLinks;
@@ -34,7 +34,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="function", required=true)
-    private final String function;
+      private final String function;
 
     public String getFunction() {
         return this.function;
@@ -45,7 +45,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="glob", required=true)
-    private final String glob;
+      private final String glob;
 
     public String getGlob() {
         return this.glob;
@@ -56,7 +56,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -67,7 +67,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="regex", required=true)
-    private final String regex;
+      private final String regex;
 
     public String getRegex() {
         return this.regex;
@@ -78,7 +78,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="run", required=true)
-    private final CloudRunRewriteResponse run;
+      private final CloudRunRewriteResponse run;
 
     public CloudRunRewriteResponse getRun() {
         return this.run;
@@ -167,7 +167,6 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
             this.run = Objects.requireNonNull(run);
             return this;
         }
-
         public RewriteResponse build() {
             return new RewriteResponse(dynamicLinks, function, glob, path, regex, run);
         }

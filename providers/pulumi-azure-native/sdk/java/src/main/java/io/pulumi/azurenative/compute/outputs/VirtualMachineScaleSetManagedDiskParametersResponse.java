@@ -77,7 +77,6 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public VirtualMachineScaleSetManagedDiskParametersResponse build() {
             return new VirtualMachineScaleSetManagedDiskParametersResponse(diskEncryptionSet, storageAccountType);
         }

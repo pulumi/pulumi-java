@@ -20,7 +20,7 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockArgs extends io
      * 
      */
     @InputImport(name="cidrBlock", required=true)
-    private final Input<String> cidrBlock;
+        private final Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock;
@@ -31,7 +31,7 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockArgs extends io
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -90,7 +90,6 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockArgs extends io
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
-
         public ClusterMasterAuthorizedNetworksConfigCidrBlockArgs build() {
             return new ClusterMasterAuthorizedNetworksConfigCidrBlockArgs(cidrBlock, displayName);
         }

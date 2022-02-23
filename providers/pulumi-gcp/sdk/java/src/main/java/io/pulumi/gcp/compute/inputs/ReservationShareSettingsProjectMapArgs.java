@@ -19,7 +19,7 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -30,7 +30,7 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+        private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -89,7 +89,6 @@ public final class ReservationShareSettingsProjectMapArgs extends io.pulumi.reso
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
-
         public ReservationShareSettingsProjectMapArgs build() {
             return new ReservationShareSettingsProjectMapArgs(id, projectId);
         }

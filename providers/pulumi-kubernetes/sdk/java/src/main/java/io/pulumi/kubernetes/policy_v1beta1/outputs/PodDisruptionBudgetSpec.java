@@ -100,7 +100,6 @@ public final class PodDisruptionBudgetSpec {
             this.selector = selector;
             return this;
         }
-
         public PodDisruptionBudgetSpec build() {
             return new PodDisruptionBudgetSpec(maxUnavailable, minAvailable, selector);
         }

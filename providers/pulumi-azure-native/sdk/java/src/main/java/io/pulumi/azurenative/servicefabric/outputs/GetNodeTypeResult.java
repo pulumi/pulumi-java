@@ -440,7 +440,6 @@ public final class GetNodeTypeResult {
             this.vmSize = vmSize;
             return this;
         }
-
         public GetNodeTypeResult build() {
             return new GetNodeTypeResult(applicationPorts, capacities, dataDiskSizeGB, ephemeralPorts, id, isPrimary, name, placementProperties, provisioningState, tags, type, vmExtensions, vmImageOffer, vmImagePublisher, vmImageSku, vmImageVersion, vmInstanceCount, vmSecrets, vmSize);
         }

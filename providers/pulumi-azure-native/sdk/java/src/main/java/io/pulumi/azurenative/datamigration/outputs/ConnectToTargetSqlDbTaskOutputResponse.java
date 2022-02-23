@@ -117,7 +117,6 @@ public final class ConnectToTargetSqlDbTaskOutputResponse {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public ConnectToTargetSqlDbTaskOutputResponse build() {
             return new ConnectToTargetSqlDbTaskOutputResponse(databases, id, targetServerBrandVersion, targetServerVersion);
         }

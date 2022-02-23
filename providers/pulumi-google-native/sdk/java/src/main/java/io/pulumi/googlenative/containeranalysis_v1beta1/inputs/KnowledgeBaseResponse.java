@@ -17,7 +17,7 @@ public final class KnowledgeBaseResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class KnowledgeBaseResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -77,7 +77,6 @@ public final class KnowledgeBaseResponse extends io.pulumi.resources.InvokeArgs 
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public KnowledgeBaseResponse build() {
             return new KnowledgeBaseResponse(name, url);
         }

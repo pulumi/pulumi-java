@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse extends io.pulum
      * 
      */
     @InputImport(name="defaultMode", required=true)
-    private final Integer defaultMode;
+      private final Integer defaultMode;
 
     public Integer getDefaultMode() {
         return this.defaultMode;
@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse extends io.pulum
      * 
      */
     @InputImport(name="items", required=true)
-    private final List<GoogleCloudRunOpV2VersionToPathResponse> items;
+      private final List<GoogleCloudRunOpV2VersionToPathResponse> items;
 
     public List<GoogleCloudRunOpV2VersionToPathResponse> getItems() {
         return this.items;
@@ -46,7 +46,7 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse extends io.pulum
      * 
      */
     @InputImport(name="secret", required=true)
-    private final String secret;
+      private final String secret;
 
     public String getSecret() {
         return this.secret;
@@ -105,7 +105,6 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse extends io.pulum
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public GoogleCloudRunOpV2SecretVolumeSourceResponse build() {
             return new GoogleCloudRunOpV2SecretVolumeSourceResponse(defaultMode, items, secret);
         }

@@ -119,7 +119,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypp
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper(baseUrl, displayName, gpgKeys, id);
         }

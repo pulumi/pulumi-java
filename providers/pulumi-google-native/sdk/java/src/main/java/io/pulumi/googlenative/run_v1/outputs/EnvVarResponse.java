@@ -96,7 +96,6 @@ public final class EnvVarResponse {
             this.valueFrom = Objects.requireNonNull(valueFrom);
             return this;
         }
-
         public EnvVarResponse build() {
             return new EnvVarResponse(name, value, valueFrom);
         }

@@ -19,7 +19,7 @@ public final class DatabaseIAMPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="database", required=true)
-    private final Input<String> database;
+        private final Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database;
@@ -30,7 +30,7 @@ public final class DatabaseIAMPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instance", required=true)
-    private final Input<String> instance;
+        private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
@@ -42,7 +42,7 @@ public final class DatabaseIAMPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -54,7 +54,7 @@ public final class DatabaseIAMPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -143,7 +143,6 @@ public final class DatabaseIAMPolicyArgs extends io.pulumi.resources.ResourceArg
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public DatabaseIAMPolicyArgs build() {
             return new DatabaseIAMPolicyArgs(database, instance, policyData, project);
         }

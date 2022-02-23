@@ -135,7 +135,6 @@ public final class GetTableResult {
             this.tags = tags;
             return this;
         }
-
         public GetTableResult build() {
             return new GetTableResult(arn, magneticStoreWriteProperties, name, retentionProperties, tags);
         }

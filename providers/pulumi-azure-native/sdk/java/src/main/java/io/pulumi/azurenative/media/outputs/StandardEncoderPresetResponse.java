@@ -139,7 +139,6 @@ public final class StandardEncoderPresetResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public StandardEncoderPresetResponse build() {
             return new StandardEncoderPresetResponse(codecs, filters, formats, odataType);
         }

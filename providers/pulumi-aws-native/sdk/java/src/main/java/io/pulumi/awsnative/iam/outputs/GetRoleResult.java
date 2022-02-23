@@ -228,7 +228,6 @@ public final class GetRoleResult {
             this.tags = tags;
             return this;
         }
-
         public GetRoleResult build() {
             return new GetRoleResult(arn, assumeRolePolicyDocument, description, managedPolicyArns, maxSessionDuration, permissionsBoundary, policies, roleId, tags);
         }

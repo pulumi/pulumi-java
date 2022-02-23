@@ -53,7 +53,6 @@ public final class ApplicationNotificationPolicyResponse {
             this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
             return this;
         }
-
         public ApplicationNotificationPolicyResponse build() {
             return new ApplicationNotificationPolicyResponse(notificationEndpoints);
         }

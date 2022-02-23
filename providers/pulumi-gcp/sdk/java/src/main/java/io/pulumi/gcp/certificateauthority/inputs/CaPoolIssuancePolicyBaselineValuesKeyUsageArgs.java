@@ -23,7 +23,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageArgs extends io.pul
      * 
      */
     @InputImport(name="baseKeyUsage", required=true)
-    private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage;
+        private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage;
 
     public Input<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs> getBaseKeyUsage() {
         return this.baseKeyUsage;
@@ -35,7 +35,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageArgs extends io.pul
      * 
      */
     @InputImport(name="extendedKeyUsage", required=true)
-    private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
+        private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
 
     public Input<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArgs> getExtendedKeyUsage() {
         return this.extendedKeyUsage;
@@ -47,7 +47,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageArgs extends io.pul
      * 
      */
     @InputImport(name="unknownExtendedKeyUsages")
-    private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
+        private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
 
     public Input<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageArgs>> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? Input.empty() : this.unknownExtendedKeyUsages;
@@ -121,7 +121,6 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageArgs extends io.pul
             this.unknownExtendedKeyUsages = Input.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesKeyUsageArgs build() {
             return new CaPoolIssuancePolicyBaselineValuesKeyUsageArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

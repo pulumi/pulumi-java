@@ -31,7 +31,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="confidentialInstanceConfig")
-    private final @Nullable Input<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
+      private final @Nullable Input<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
     public Input<ConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
         return this.confidentialInstanceConfig == null ? Input.empty() : this.confidentialInstanceConfig;
@@ -42,7 +42,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="internalIpOnly")
-    private final @Nullable Input<Boolean> internalIpOnly;
+      private final @Nullable Input<Boolean> internalIpOnly;
 
     public Input<Boolean> getInternalIpOnly() {
         return this.internalIpOnly == null ? Input.empty() : this.internalIpOnly;
@@ -53,7 +53,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -64,7 +64,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkUri")
-    private final @Nullable Input<String> networkUri;
+      private final @Nullable Input<String> networkUri;
 
     public Input<String> getNetworkUri() {
         return this.networkUri == null ? Input.empty() : this.networkUri;
@@ -75,7 +75,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nodeGroupAffinity")
-    private final @Nullable Input<NodeGroupAffinityArgs> nodeGroupAffinity;
+      private final @Nullable Input<NodeGroupAffinityArgs> nodeGroupAffinity;
 
     public Input<NodeGroupAffinityArgs> getNodeGroupAffinity() {
         return this.nodeGroupAffinity == null ? Input.empty() : this.nodeGroupAffinity;
@@ -86,7 +86,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="privateIpv6GoogleAccess")
-    private final @Nullable Input<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
+      private final @Nullable Input<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
     public Input<GceClusterConfigPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
@@ -97,7 +97,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reservationAffinity")
-    private final @Nullable Input<ReservationAffinityArgs> reservationAffinity;
+      private final @Nullable Input<ReservationAffinityArgs> reservationAffinity;
 
     public Input<ReservationAffinityArgs> getReservationAffinity() {
         return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
@@ -108,7 +108,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -119,7 +119,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceAccountScopes")
-    private final @Nullable Input<List<String>> serviceAccountScopes;
+      private final @Nullable Input<List<String>> serviceAccountScopes;
 
     public Input<List<String>> getServiceAccountScopes() {
         return this.serviceAccountScopes == null ? Input.empty() : this.serviceAccountScopes;
@@ -130,7 +130,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-    private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Input<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
@@ -141,7 +141,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnetworkUri")
-    private final @Nullable Input<String> subnetworkUri;
+      private final @Nullable Input<String> subnetworkUri;
 
     public Input<String> getSubnetworkUri() {
         return this.subnetworkUri == null ? Input.empty() : this.subnetworkUri;
@@ -152,7 +152,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -163,7 +163,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="zoneUri")
-    private final @Nullable Input<String> zoneUri;
+      private final @Nullable Input<String> zoneUri;
 
     public Input<String> getZoneUri() {
         return this.zoneUri == null ? Input.empty() : this.zoneUri;
@@ -387,7 +387,6 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             this.zoneUri = Input.ofNullable(zoneUri);
             return this;
         }
-
         public GceClusterConfigArgs build() {
             return new GceClusterConfigArgs(confidentialInstanceConfig, internalIpOnly, metadata, networkUri, nodeGroupAffinity, privateIpv6GoogleAccess, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetworkUri, tags, zoneUri);
         }

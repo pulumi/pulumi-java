@@ -159,7 +159,6 @@ public final class LogExclusionResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public LogExclusionResponse build() {
             return new LogExclusionResponse(createTime, description, disabled, filter, name, updateTime);
         }

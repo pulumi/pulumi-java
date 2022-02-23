@@ -96,7 +96,6 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse {
             this.gpgKeys = Objects.requireNonNull(gpgKeys);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceYumRepositoryResponse build() {
             return new OSPolicyResourceRepositoryResourceYumRepositoryResponse(baseUrl, displayName, gpgKeys);
         }

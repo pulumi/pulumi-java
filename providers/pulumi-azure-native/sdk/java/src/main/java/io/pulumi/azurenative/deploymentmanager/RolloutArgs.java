@@ -23,7 +23,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactSourceId")
-    private final @Nullable Input<String> artifactSourceId;
+        private final @Nullable Input<String> artifactSourceId;
 
     public Input<String> getArtifactSourceId() {
         return this.artifactSourceId == null ? Input.empty() : this.artifactSourceId;
@@ -34,7 +34,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildVersion", required=true)
-    private final Input<String> buildVersion;
+        private final Input<String> buildVersion;
 
     public Input<String> getBuildVersion() {
         return this.buildVersion;
@@ -45,7 +45,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity", required=true)
-    private final Input<IdentityArgs> identity;
+        private final Input<IdentityArgs> identity;
 
     public Input<IdentityArgs> getIdentity() {
         return this.identity;
@@ -56,7 +56,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -67,7 +67,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rolloutName")
-    private final @Nullable Input<String> rolloutName;
+        private final @Nullable Input<String> rolloutName;
 
     public Input<String> getRolloutName() {
         return this.rolloutName == null ? Input.empty() : this.rolloutName;
@@ -89,7 +89,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepGroups", required=true)
-    private final Input<List<StepGroupArgs>> stepGroups;
+        private final Input<List<StepGroupArgs>> stepGroups;
 
     public Input<List<StepGroupArgs>> getStepGroups() {
         return this.stepGroups;
@@ -100,7 +100,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -111,7 +111,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetServiceTopologyId", required=true)
-    private final Input<String> targetServiceTopologyId;
+        private final Input<String> targetServiceTopologyId;
 
     public Input<String> getTargetServiceTopologyId() {
         return this.targetServiceTopologyId;
@@ -275,7 +275,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             this.targetServiceTopologyId = Input.of(Objects.requireNonNull(targetServiceTopologyId));
             return this;
         }
-
         public RolloutArgs build() {
             return new RolloutArgs(artifactSourceId, buildVersion, identity, location, resourceGroupName, rolloutName, stepGroups, tags, targetServiceTopologyId);
         }

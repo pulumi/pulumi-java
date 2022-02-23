@@ -118,7 +118,6 @@ public final class OutputDataBindingResponse {
             this.pathOnDatastore = pathOnDatastore;
             return this;
         }
-
         public OutputDataBindingResponse build() {
             return new OutputDataBindingResponse(datastoreId, mode, pathOnCompute, pathOnDatastore);
         }

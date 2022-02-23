@@ -60,7 +60,6 @@ public final class DataflowEndpointGroupTag {
             this.value = value;
             return this;
         }
-
         public DataflowEndpointGroupTag build() {
             return new DataflowEndpointGroupTag(key, value);
         }

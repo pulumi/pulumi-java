@@ -139,7 +139,6 @@ public final class DaemonSetCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DaemonSetCondition build() {
             return new DaemonSetCondition(lastTransitionTime, message, reason, status, type);
         }

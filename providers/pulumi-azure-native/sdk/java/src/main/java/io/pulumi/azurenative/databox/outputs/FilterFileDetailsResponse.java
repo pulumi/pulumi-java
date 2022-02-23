@@ -74,7 +74,6 @@ public final class FilterFileDetailsResponse {
             this.filterFileType = Objects.requireNonNull(filterFileType);
             return this;
         }
-
         public FilterFileDetailsResponse build() {
             return new FilterFileDetailsResponse(filterFilePath, filterFileType);
         }

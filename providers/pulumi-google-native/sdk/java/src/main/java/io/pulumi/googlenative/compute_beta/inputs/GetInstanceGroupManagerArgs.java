@@ -15,21 +15,21 @@ public final class GetInstanceGroupManagerArgs extends io.pulumi.resources.Invok
     public static final GetInstanceGroupManagerArgs Empty = new GetInstanceGroupManagerArgs();
 
     @InputImport(name="instanceGroupManager", required=true)
-    private final String instanceGroupManager;
+      private final String instanceGroupManager;
 
     public String getInstanceGroupManager() {
         return this.instanceGroupManager;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -88,7 +88,6 @@ public final class GetInstanceGroupManagerArgs extends io.pulumi.resources.Invok
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetInstanceGroupManagerArgs build() {
             return new GetInstanceGroupManagerArgs(instanceGroupManager, project, zone);
         }

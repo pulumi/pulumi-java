@@ -97,7 +97,6 @@ public final class RestoredLogsResponse {
             this.startRestoreTime = startRestoreTime;
             return this;
         }
-
         public RestoredLogsResponse build() {
             return new RestoredLogsResponse(endRestoreTime, sourceTable, startRestoreTime);
         }

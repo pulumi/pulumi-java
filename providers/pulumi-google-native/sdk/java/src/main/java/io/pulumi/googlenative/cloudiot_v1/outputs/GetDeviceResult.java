@@ -376,7 +376,6 @@ public final class GetDeviceResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetDeviceResult build() {
             return new GetDeviceResult(blocked, config, credentials, gatewayConfig, lastConfigAckTime, lastConfigSendTime, lastErrorStatus, lastErrorTime, lastEventTime, lastHeartbeatTime, lastStateTime, logLevel, metadata, name, numId, state);
         }

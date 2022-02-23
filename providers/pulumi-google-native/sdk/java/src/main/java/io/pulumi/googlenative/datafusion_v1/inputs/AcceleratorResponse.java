@@ -21,7 +21,7 @@ public final class AcceleratorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="acceleratorType", required=true)
-    private final String acceleratorType;
+      private final String acceleratorType;
 
     public String getAcceleratorType() {
         return this.acceleratorType;
@@ -32,7 +32,7 @@ public final class AcceleratorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -81,7 +81,6 @@ public final class AcceleratorResponse extends io.pulumi.resources.InvokeArgs {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public AcceleratorResponse build() {
             return new AcceleratorResponse(acceleratorType, state);
         }

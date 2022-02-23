@@ -353,7 +353,6 @@ public final class H264LayerResponse {
             this.width = width;
             return this;
         }
-
         public H264LayerResponse build() {
             return new H264LayerResponse(adaptiveBFrame, bFrames, bitrate, bufferWindow, entropyMode, frameRate, height, label, level, maxBitrate, odataType, profile, referenceFrames, slices, width);
         }

@@ -186,7 +186,6 @@ public final class ImageTemplateSharedImageDistributorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateSharedImageDistributorResponse build() {
             return new ImageTemplateSharedImageDistributorResponse(artifactTags, excludeFromLatest, galleryImageId, replicationRegions, runOutputName, storageAccountType, type);
         }

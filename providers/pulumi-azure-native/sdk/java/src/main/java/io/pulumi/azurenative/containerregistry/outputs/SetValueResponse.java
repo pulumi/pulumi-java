@@ -98,7 +98,6 @@ public final class SetValueResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SetValueResponse build() {
             return new SetValueResponse(isSecret, name, value);
         }

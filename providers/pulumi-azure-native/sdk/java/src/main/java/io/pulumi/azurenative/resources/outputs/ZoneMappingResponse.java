@@ -69,7 +69,6 @@ public final class ZoneMappingResponse {
             this.zones = zones;
             return this;
         }
-
         public ZoneMappingResponse build() {
             return new ZoneMappingResponse(location, zones);
         }

@@ -22,7 +22,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appEngineHttpRequest")
-    private final @Nullable Input<AppEngineHttpRequestArgs> appEngineHttpRequest;
+      private final @Nullable Input<AppEngineHttpRequestArgs> appEngineHttpRequest;
 
     public Input<AppEngineHttpRequestArgs> getAppEngineHttpRequest() {
         return this.appEngineHttpRequest == null ? Input.empty() : this.appEngineHttpRequest;
@@ -33,7 +33,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dispatchDeadline")
-    private final @Nullable Input<String> dispatchDeadline;
+      private final @Nullable Input<String> dispatchDeadline;
 
     public Input<String> getDispatchDeadline() {
         return this.dispatchDeadline == null ? Input.empty() : this.dispatchDeadline;
@@ -44,14 +44,14 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpRequest")
-    private final @Nullable Input<HttpRequestArgs> httpRequest;
+      private final @Nullable Input<HttpRequestArgs> httpRequest;
 
     public Input<HttpRequestArgs> getHttpRequest() {
         return this.httpRequest == null ? Input.empty() : this.httpRequest;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -62,21 +62,21 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="queueId", required=true)
-    private final Input<String> queueId;
+      private final Input<String> queueId;
 
     public Input<String> getQueueId() {
         return this.queueId;
@@ -87,7 +87,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseView")
-    private final @Nullable Input<TaskResponseView> responseView;
+      private final @Nullable Input<TaskResponseView> responseView;
 
     public Input<TaskResponseView> getResponseView() {
         return this.responseView == null ? Input.empty() : this.responseView;
@@ -98,7 +98,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleTime")
-    private final @Nullable Input<String> scheduleTime;
+      private final @Nullable Input<String> scheduleTime;
 
     public Input<String> getScheduleTime() {
         return this.scheduleTime == null ? Input.empty() : this.scheduleTime;
@@ -262,7 +262,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             this.scheduleTime = Input.ofNullable(scheduleTime);
             return this;
         }
-
         public TaskArgs build() {
             return new TaskArgs(appEngineHttpRequest, dispatchDeadline, httpRequest, location, name, project, queueId, responseView, scheduleTime);
         }

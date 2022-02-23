@@ -17,7 +17,7 @@ public final class GetConfigurationProfileArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final String profileName;
+        private final String profileName;
 
     public String getProfileName() {
         return this.profileName;
@@ -55,7 +55,6 @@ public final class GetConfigurationProfileArgs extends io.pulumi.resources.Invok
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public GetConfigurationProfileArgs build() {
             return new GetConfigurationProfileArgs(profileName);
         }

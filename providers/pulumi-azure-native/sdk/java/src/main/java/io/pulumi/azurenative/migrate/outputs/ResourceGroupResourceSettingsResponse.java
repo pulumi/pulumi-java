@@ -76,7 +76,6 @@ public final class ResourceGroupResourceSettingsResponse {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public ResourceGroupResourceSettingsResponse build() {
             return new ResourceGroupResourceSettingsResponse(resourceType, targetResourceName);
         }

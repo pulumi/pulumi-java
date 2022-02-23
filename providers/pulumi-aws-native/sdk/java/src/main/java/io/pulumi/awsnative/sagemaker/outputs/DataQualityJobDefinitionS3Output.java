@@ -98,7 +98,6 @@ public final class DataQualityJobDefinitionS3Output {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public DataQualityJobDefinitionS3Output build() {
             return new DataQualityJobDefinitionS3Output(localPath, s3UploadMode, s3Uri);
         }

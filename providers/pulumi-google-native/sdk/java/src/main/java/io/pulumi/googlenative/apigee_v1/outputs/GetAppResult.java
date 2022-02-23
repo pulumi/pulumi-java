@@ -308,7 +308,6 @@ public final class GetAppResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(apiProducts, appFamily, appId, attributes, callbackUrl, createdAt, credentials, developerId, keyExpiresIn, lastModifiedAt, name, scopes, status);
         }

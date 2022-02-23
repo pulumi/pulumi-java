@@ -15,21 +15,21 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDatabaseArgs Empty = new GetDatabaseArgs();
 
     @InputImport(name="database", required=true)
-    private final String database;
+      private final String database;
 
     public String getDatabase() {
         return this.database;
     }
 
     @InputImport(name="instance", required=true)
-    private final String instance;
+      private final String instance;
 
     public String getInstance() {
         return this.instance;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetDatabaseArgs build() {
             return new GetDatabaseArgs(database, instance, project);
         }

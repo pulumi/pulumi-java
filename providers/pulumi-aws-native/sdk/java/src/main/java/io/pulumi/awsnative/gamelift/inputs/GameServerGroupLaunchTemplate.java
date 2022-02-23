@@ -19,21 +19,21 @@ public final class GameServerGroupLaunchTemplate extends io.pulumi.resources.Inv
     public static final GameServerGroupLaunchTemplate Empty = new GameServerGroupLaunchTemplate();
 
     @InputImport(name="launchTemplateId")
-    private final @Nullable String launchTemplateId;
+        private final @Nullable String launchTemplateId;
 
     public Optional<String> getLaunchTemplateId() {
         return this.launchTemplateId == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateId);
     }
 
     @InputImport(name="launchTemplateName")
-    private final @Nullable String launchTemplateName;
+        private final @Nullable String launchTemplateName;
 
     public Optional<String> getLaunchTemplateName() {
         return this.launchTemplateName == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateName);
     }
 
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -92,7 +92,6 @@ public final class GameServerGroupLaunchTemplate extends io.pulumi.resources.Inv
             this.version = version;
             return this;
         }
-
         public GameServerGroupLaunchTemplate build() {
             return new GameServerGroupLaunchTemplate(launchTemplateId, launchTemplateName, version);
         }

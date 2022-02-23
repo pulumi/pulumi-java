@@ -21,7 +21,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="crashed", required=true)
-    private final Boolean crashed;
+      private final Boolean crashed;
 
     public Boolean getCrashed() {
         return this.crashed;
@@ -32,7 +32,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="deviceOutOfMemory", required=true)
-    private final Boolean deviceOutOfMemory;
+      private final Boolean deviceOutOfMemory;
 
     public Boolean getDeviceOutOfMemory() {
         return this.deviceOutOfMemory;
@@ -43,7 +43,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="failedRoboscript", required=true)
-    private final Boolean failedRoboscript;
+      private final Boolean failedRoboscript;
 
     public Boolean getFailedRoboscript() {
         return this.failedRoboscript;
@@ -54,7 +54,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="notInstalled", required=true)
-    private final Boolean notInstalled;
+      private final Boolean notInstalled;
 
     public Boolean getNotInstalled() {
         return this.notInstalled;
@@ -65,7 +65,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="otherNativeCrash", required=true)
-    private final Boolean otherNativeCrash;
+      private final Boolean otherNativeCrash;
 
     public Boolean getOtherNativeCrash() {
         return this.otherNativeCrash;
@@ -76,7 +76,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="timedOut", required=true)
-    private final Boolean timedOut;
+      private final Boolean timedOut;
 
     public Boolean getTimedOut() {
         return this.timedOut;
@@ -87,7 +87,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="unableToCrawl", required=true)
-    private final Boolean unableToCrawl;
+      private final Boolean unableToCrawl;
 
     public Boolean getUnableToCrawl() {
         return this.unableToCrawl;
@@ -186,7 +186,6 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
             this.unableToCrawl = Objects.requireNonNull(unableToCrawl);
             return this;
         }
-
         public FailureDetailResponse build() {
             return new FailureDetailResponse(crashed, deviceOutOfMemory, failedRoboscript, notInstalled, otherNativeCrash, timedOut, unableToCrawl);
         }

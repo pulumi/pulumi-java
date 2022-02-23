@@ -140,7 +140,6 @@ public final class WorkspaceFeaturesResponse {
             this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }
-
         public WorkspaceFeaturesResponse build() {
             return new WorkspaceFeaturesResponse(clusterResourceId, disableLocalAuth, enableDataExport, enableLogAccessUsingOnlyResourcePermissions, immediatePurgeDataOn30Days);
         }

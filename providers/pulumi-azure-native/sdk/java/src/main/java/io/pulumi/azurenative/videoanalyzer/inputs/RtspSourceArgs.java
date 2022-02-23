@@ -27,7 +27,7 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final Input<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint;
+        private final Input<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint;
 
     public Input<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> getEndpoint() {
         return this.endpoint;
@@ -38,7 +38,7 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -49,7 +49,7 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transport")
-    private final @Nullable Input<Either<String,RtspTransport>> transport;
+        private final @Nullable Input<Either<String,RtspTransport>> transport;
 
     public Input<Either<String,RtspTransport>> getTransport() {
         return this.transport == null ? Input.empty() : this.transport;
@@ -61,7 +61,7 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -150,7 +150,6 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public RtspSourceArgs build() {
             return new RtspSourceArgs(endpoint, name, transport, type);
         }

@@ -77,7 +77,6 @@ public final class ListIotDpsResourceKeysResult {
             this.value = value;
             return this;
         }
-
         public ListIotDpsResourceKeysResult build() {
             return new ListIotDpsResourceKeysResult(nextLink, value);
         }

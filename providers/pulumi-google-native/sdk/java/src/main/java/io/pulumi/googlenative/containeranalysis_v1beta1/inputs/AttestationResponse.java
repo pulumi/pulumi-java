@@ -18,7 +18,7 @@ public final class AttestationResponse extends io.pulumi.resources.InvokeArgs {
     public static final AttestationResponse Empty = new AttestationResponse();
 
     @InputImport(name="genericSignedAttestation", required=true)
-    private final GenericSignedAttestationResponse genericSignedAttestation;
+      private final GenericSignedAttestationResponse genericSignedAttestation;
 
     public GenericSignedAttestationResponse getGenericSignedAttestation() {
         return this.genericSignedAttestation;
@@ -29,7 +29,7 @@ public final class AttestationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pgpSignedAttestation", required=true)
-    private final PgpSignedAttestationResponse pgpSignedAttestation;
+      private final PgpSignedAttestationResponse pgpSignedAttestation;
 
     public PgpSignedAttestationResponse getPgpSignedAttestation() {
         return this.pgpSignedAttestation;
@@ -78,7 +78,6 @@ public final class AttestationResponse extends io.pulumi.resources.InvokeArgs {
             this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
             return this;
         }
-
         public AttestationResponse build() {
             return new AttestationResponse(genericSignedAttestation, pgpSignedAttestation);
         }

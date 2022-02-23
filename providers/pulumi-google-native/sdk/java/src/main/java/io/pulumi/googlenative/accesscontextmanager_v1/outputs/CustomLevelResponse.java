@@ -52,7 +52,6 @@ public final class CustomLevelResponse {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
-
         public CustomLevelResponse build() {
             return new CustomLevelResponse(expr);
         }

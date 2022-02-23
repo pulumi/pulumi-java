@@ -76,7 +76,6 @@ public final class TimeSeriesIdPropertyResponse {
             this.type = type;
             return this;
         }
-
         public TimeSeriesIdPropertyResponse build() {
             return new TimeSeriesIdPropertyResponse(name, type);
         }

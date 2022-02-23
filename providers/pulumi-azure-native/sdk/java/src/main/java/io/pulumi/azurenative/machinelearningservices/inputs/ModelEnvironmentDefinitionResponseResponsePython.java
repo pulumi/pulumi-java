@@ -21,7 +21,7 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
     public static final ModelEnvironmentDefinitionResponseResponsePython Empty = new ModelEnvironmentDefinitionResponseResponsePython();
 
     @InputImport(name="baseCondaEnvironment")
-    private final @Nullable String baseCondaEnvironment;
+        private final @Nullable String baseCondaEnvironment;
 
     public Optional<String> getBaseCondaEnvironment() {
         return this.baseCondaEnvironment == null ? Optional.empty() : Optional.ofNullable(this.baseCondaEnvironment);
@@ -32,7 +32,7 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
      * 
      */
     @InputImport(name="condaDependencies")
-    private final @Nullable Object condaDependencies;
+        private final @Nullable Object condaDependencies;
 
     public Optional<Object> getCondaDependencies() {
         return this.condaDependencies == null ? Optional.empty() : Optional.ofNullable(this.condaDependencies);
@@ -43,7 +43,7 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
      * 
      */
     @InputImport(name="interpreterPath")
-    private final @Nullable String interpreterPath;
+        private final @Nullable String interpreterPath;
 
     public Optional<String> getInterpreterPath() {
         return this.interpreterPath == null ? Optional.empty() : Optional.ofNullable(this.interpreterPath);
@@ -54,7 +54,7 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
      * 
      */
     @InputImport(name="userManagedDependencies")
-    private final @Nullable Boolean userManagedDependencies;
+        private final @Nullable Boolean userManagedDependencies;
 
     public Optional<Boolean> getUserManagedDependencies() {
         return this.userManagedDependencies == null ? Optional.empty() : Optional.ofNullable(this.userManagedDependencies);
@@ -123,7 +123,6 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
             this.userManagedDependencies = userManagedDependencies;
             return this;
         }
-
         public ModelEnvironmentDefinitionResponseResponsePython build() {
             return new ModelEnvironmentDefinitionResponseResponsePython(baseCondaEnvironment, condaDependencies, interpreterPath, userManagedDependencies);
         }

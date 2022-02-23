@@ -162,7 +162,6 @@ public final class ParameterDefinitionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ParameterDefinitionResponse build() {
             return new ParameterDefinitionResponse(allowedValues, defaultValue, description, displayName, strongType, type);
         }

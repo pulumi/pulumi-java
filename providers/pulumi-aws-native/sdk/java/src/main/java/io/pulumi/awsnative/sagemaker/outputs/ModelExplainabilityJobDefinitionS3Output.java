@@ -98,7 +98,6 @@ public final class ModelExplainabilityJobDefinitionS3Output {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionS3Output build() {
             return new ModelExplainabilityJobDefinitionS3Output(localPath, s3UploadMode, s3Uri);
         }

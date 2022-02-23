@@ -161,7 +161,6 @@ public final class GetUserDataMappingResult {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetUserDataMappingResult build() {
             return new GetUserDataMappingResult(archiveTime, archived, dataId, name, resourceAttributes, userId);
         }

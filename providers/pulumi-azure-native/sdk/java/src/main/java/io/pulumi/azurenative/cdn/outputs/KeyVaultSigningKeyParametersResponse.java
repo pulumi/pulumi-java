@@ -150,7 +150,6 @@ public final class KeyVaultSigningKeyParametersResponse {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public KeyVaultSigningKeyParametersResponse build() {
             return new KeyVaultSigningKeyParametersResponse(odataType, resourceGroupName, secretName, secretVersion, subscriptionId, vaultName);
         }

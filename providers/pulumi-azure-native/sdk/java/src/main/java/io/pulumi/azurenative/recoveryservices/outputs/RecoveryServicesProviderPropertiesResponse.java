@@ -375,7 +375,6 @@ public final class RecoveryServicesProviderPropertiesResponse {
             this.serverVersion = serverVersion;
             return this;
         }
-
         public RecoveryServicesProviderPropertiesResponse build() {
             return new RecoveryServicesProviderPropertiesResponse(allowedScenarios, authenticationIdentityDetails, connectionStatus, draIdentifier, fabricFriendlyName, fabricType, friendlyName, healthErrorDetails, lastHeartBeat, protectedItemCount, providerVersion, providerVersionDetails, providerVersionExpiryDate, providerVersionState, resourceAccessIdentityDetails, serverVersion);
         }

@@ -61,7 +61,6 @@ public final class ServicePlacementConstraint {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServicePlacementConstraint build() {
             return new ServicePlacementConstraint(expression, type);
         }

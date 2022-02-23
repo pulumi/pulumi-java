@@ -78,7 +78,6 @@ public final class CertificateCertificateDescriptionPublicKey {
             this.key = key;
             return this;
         }
-
         public CertificateCertificateDescriptionPublicKey build() {
             return new CertificateCertificateDescriptionPublicKey(format, key);
         }

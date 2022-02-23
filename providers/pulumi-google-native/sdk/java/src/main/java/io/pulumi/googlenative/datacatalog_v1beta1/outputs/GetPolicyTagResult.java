@@ -138,7 +138,6 @@ public final class GetPolicyTagResult {
             this.parentPolicyTag = Objects.requireNonNull(parentPolicyTag);
             return this;
         }
-
         public GetPolicyTagResult build() {
             return new GetPolicyTagResult(childPolicyTags, description, displayName, name, parentPolicyTag);
         }

@@ -95,7 +95,6 @@ public final class AvailabilityInformationResponse {
             this.disabledReasonMessage = Objects.requireNonNull(disabledReasonMessage);
             return this;
         }
-
         public AvailabilityInformationResponse build() {
             return new AvailabilityInformationResponse(availabilityStage, disabledReason, disabledReasonMessage);
         }

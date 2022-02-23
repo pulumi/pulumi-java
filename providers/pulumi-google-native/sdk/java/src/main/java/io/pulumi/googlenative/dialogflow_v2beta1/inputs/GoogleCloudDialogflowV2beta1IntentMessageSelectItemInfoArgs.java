@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs e
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs e
      * 
      */
     @InputImport(name="synonyms")
-    private final @Nullable Input<List<String>> synonyms;
+      private final @Nullable Input<List<String>> synonyms;
 
     public Input<List<String>> getSynonyms() {
         return this.synonyms == null ? Input.empty() : this.synonyms;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs e
             this.synonyms = Input.ofNullable(synonyms);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs(key, synonyms);
         }

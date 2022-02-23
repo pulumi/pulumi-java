@@ -98,7 +98,6 @@ public final class UpgradeNoteResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public UpgradeNoteResponse build() {
             return new UpgradeNoteResponse(distributions, $package, version);
         }

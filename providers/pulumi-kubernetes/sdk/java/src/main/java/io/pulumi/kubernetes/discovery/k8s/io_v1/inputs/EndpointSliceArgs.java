@@ -32,7 +32,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressType", required=true)
-    private final Input<String> addressType;
+        private final Input<String> addressType;
 
     public Input<String> getAddressType() {
         return this.addressType;
@@ -43,7 +43,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -54,7 +54,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoints", required=true)
-    private final Input<List<EndpointArgs>> endpoints;
+        private final Input<List<EndpointArgs>> endpoints;
 
     public Input<List<EndpointArgs>> getEndpoints() {
         return this.endpoints;
@@ -65,7 +65,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -76,7 +76,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -87,7 +87,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<EndpointPortArgs>> ports;
+        private final @Nullable Input<List<EndpointPortArgs>> ports;
 
     public Input<List<EndpointPortArgs>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -206,7 +206,6 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
             this.ports = Input.ofNullable(ports);
             return this;
         }
-
         public EndpointSliceArgs build() {
             return new EndpointSliceArgs(addressType, apiVersion, endpoints, kind, metadata, ports);
         }

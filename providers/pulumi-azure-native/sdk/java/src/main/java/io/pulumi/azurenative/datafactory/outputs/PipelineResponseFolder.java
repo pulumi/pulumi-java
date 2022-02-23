@@ -54,7 +54,6 @@ public final class PipelineResponseFolder {
             this.name = name;
             return this;
         }
-
         public PipelineResponseFolder build() {
             return new PipelineResponseFolder(name);
         }

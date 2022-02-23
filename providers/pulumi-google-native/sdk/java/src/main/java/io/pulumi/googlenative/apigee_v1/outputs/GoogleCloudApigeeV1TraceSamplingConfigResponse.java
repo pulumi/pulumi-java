@@ -75,7 +75,6 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse {
             this.samplingRate = Objects.requireNonNull(samplingRate);
             return this;
         }
-
         public GoogleCloudApigeeV1TraceSamplingConfigResponse build() {
             return new GoogleCloudApigeeV1TraceSamplingConfigResponse(sampler, samplingRate);
         }

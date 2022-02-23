@@ -103,7 +103,6 @@ public final class MetastoreServiceHiveMetastoreConfig {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public MetastoreServiceHiveMetastoreConfig build() {
             return new MetastoreServiceHiveMetastoreConfig(configOverrides, kerberosConfig, version);
         }

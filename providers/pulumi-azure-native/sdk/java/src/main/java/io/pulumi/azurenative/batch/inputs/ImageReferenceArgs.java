@@ -19,7 +19,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -30,7 +30,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offer")
-    private final @Nullable Input<String> offer;
+        private final @Nullable Input<String> offer;
 
     public Input<String> getOffer() {
         return this.offer == null ? Input.empty() : this.offer;
@@ -41,7 +41,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publisher")
-    private final @Nullable Input<String> publisher;
+        private final @Nullable Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher == null ? Input.empty() : this.publisher;
@@ -52,7 +52,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<String> sku;
+        private final @Nullable Input<String> sku;
 
     public Input<String> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -63,7 +63,7 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -167,7 +167,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ImageReferenceArgs build() {
             return new ImageReferenceArgs(id, offer, publisher, sku, version);
         }

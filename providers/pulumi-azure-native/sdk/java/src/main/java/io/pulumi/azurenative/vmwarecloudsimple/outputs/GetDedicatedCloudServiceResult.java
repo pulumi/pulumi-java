@@ -224,7 +224,6 @@ public final class GetDedicatedCloudServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDedicatedCloudServiceResult build() {
             return new GetDedicatedCloudServiceResult(gatewaySubnet, id, isAccountOnboarded, location, name, nodes, serviceURL, tags, type);
         }

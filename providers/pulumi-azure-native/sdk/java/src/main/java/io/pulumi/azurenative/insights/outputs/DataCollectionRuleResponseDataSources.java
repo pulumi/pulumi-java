@@ -121,7 +121,6 @@ public final class DataCollectionRuleResponseDataSources {
             this.windowsEventLogs = windowsEventLogs;
             return this;
         }
-
         public DataCollectionRuleResponseDataSources build() {
             return new DataCollectionRuleResponseDataSources(extensions, performanceCounters, syslog, windowsEventLogs);
         }

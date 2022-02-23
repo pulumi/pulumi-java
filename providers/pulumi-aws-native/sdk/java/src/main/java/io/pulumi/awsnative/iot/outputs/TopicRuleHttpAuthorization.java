@@ -46,7 +46,6 @@ public final class TopicRuleHttpAuthorization {
             this.sigv4 = sigv4;
             return this;
         }
-
         public TopicRuleHttpAuthorization build() {
             return new TopicRuleHttpAuthorization(sigv4);
         }

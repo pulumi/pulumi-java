@@ -19,7 +19,7 @@ public final class GetLabAccountArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetLabAccountArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labAccountName", required=true)
-    private final String labAccountName;
+        private final String labAccountName;
 
     public String getLabAccountName() {
         return this.labAccountName;
@@ -41,7 +41,7 @@ public final class GetLabAccountArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,6 @@ public final class GetLabAccountArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetLabAccountArgs build() {
             return new GetLabAccountArgs(expand, labAccountName, resourceGroupName);
         }

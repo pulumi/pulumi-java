@@ -74,7 +74,6 @@ public final class AccessUrlsResponse {
             this.crlAccessUrl = Objects.requireNonNull(crlAccessUrl);
             return this;
         }
-
         public AccessUrlsResponse build() {
             return new AccessUrlsResponse(caCertificateAccessUrl, crlAccessUrl);
         }

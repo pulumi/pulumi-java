@@ -120,7 +120,6 @@ public final class GetInstanceNamespaceIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetInstanceNamespaceIamPolicyResult build() {
             return new GetInstanceNamespaceIamPolicyResult(auditConfigs, bindings, etag, version);
         }

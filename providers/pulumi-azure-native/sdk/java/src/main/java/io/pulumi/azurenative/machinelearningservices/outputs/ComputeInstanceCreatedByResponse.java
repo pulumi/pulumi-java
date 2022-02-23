@@ -95,7 +95,6 @@ public final class ComputeInstanceCreatedByResponse {
             this.userOrgId = Objects.requireNonNull(userOrgId);
             return this;
         }
-
         public ComputeInstanceCreatedByResponse build() {
             return new ComputeInstanceCreatedByResponse(userId, userName, userOrgId);
         }

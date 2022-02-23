@@ -98,7 +98,6 @@ public final class MigrateSqlServerSqlMITaskOutputErrorResponse {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public MigrateSqlServerSqlMITaskOutputErrorResponse build() {
             return new MigrateSqlServerSqlMITaskOutputErrorResponse(error, id, resultType);
         }

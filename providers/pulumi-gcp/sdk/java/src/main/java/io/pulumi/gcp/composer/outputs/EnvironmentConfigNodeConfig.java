@@ -181,7 +181,6 @@ public final class EnvironmentConfigNodeConfig {
             this.zone = zone;
             return this;
         }
-
         public EnvironmentConfigNodeConfig build() {
             return new EnvironmentConfigNodeConfig(diskSizeGb, enableIpMasqAgent, ipAllocationPolicy, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags, zone);
         }

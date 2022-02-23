@@ -21,7 +21,7 @@ public final class RestrictionEvaluationsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="memberRestrictionEvaluation", required=true)
-    private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
+      private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
 
     public MembershipRoleRestrictionEvaluationResponse getMemberRestrictionEvaluation() {
         return this.memberRestrictionEvaluation;
@@ -59,7 +59,6 @@ public final class RestrictionEvaluationsResponse extends io.pulumi.resources.In
             this.memberRestrictionEvaluation = Objects.requireNonNull(memberRestrictionEvaluation);
             return this;
         }
-
         public RestrictionEvaluationsResponse build() {
             return new RestrictionEvaluationsResponse(memberRestrictionEvaluation);
         }

@@ -21,7 +21,7 @@ public final class GoogleCloudChannelV1AssociationInfoResponse extends io.pulumi
      * 
      */
     @InputImport(name="baseEntitlement", required=true)
-    private final String baseEntitlement;
+      private final String baseEntitlement;
 
     public String getBaseEntitlement() {
         return this.baseEntitlement;
@@ -59,7 +59,6 @@ public final class GoogleCloudChannelV1AssociationInfoResponse extends io.pulumi
             this.baseEntitlement = Objects.requireNonNull(baseEntitlement);
             return this;
         }
-
         public GoogleCloudChannelV1AssociationInfoResponse build() {
             return new GoogleCloudChannelV1AssociationInfoResponse(baseEntitlement);
         }

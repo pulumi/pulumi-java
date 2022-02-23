@@ -61,7 +61,6 @@ public final class RuleGroupStatelessRulesAndCustomActions {
             this.statelessRules = Objects.requireNonNull(statelessRules);
             return this;
         }
-
         public RuleGroupStatelessRulesAndCustomActions build() {
             return new RuleGroupStatelessRulesAndCustomActions(customActions, statelessRules);
         }

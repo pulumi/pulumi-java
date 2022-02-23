@@ -700,7 +700,6 @@ public final class PersistentVolumeSpec {
             this.vsphereVolume = vsphereVolume;
             return this;
         }
-
         public PersistentVolumeSpec build() {
             return new PersistentVolumeSpec(accessModes, awsElasticBlockStore, azureDisk, azureFile, capacity, cephfs, cinder, claimRef, csi, fc, flexVolume, flocker, gcePersistentDisk, glusterfs, hostPath, iscsi, local, mountOptions, nfs, nodeAffinity, persistentVolumeReclaimPolicy, photonPersistentDisk, portworxVolume, quobyte, rbd, scaleIO, storageClassName, storageos, volumeMode, vsphereVolume);
         }

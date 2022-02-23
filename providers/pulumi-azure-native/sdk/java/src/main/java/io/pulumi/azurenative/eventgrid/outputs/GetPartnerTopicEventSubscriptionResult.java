@@ -372,7 +372,6 @@ public final class GetPartnerTopicEventSubscriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPartnerTopicEventSubscriptionResult build() {
             return new GetPartnerTopicEventSubscriptionResult(deadLetterDestination, deadLetterWithResourceIdentity, deliveryWithResourceIdentity, destination, eventDeliverySchema, expirationTimeUtc, filter, id, labels, name, provisioningState, retryPolicy, systemData, topic, type);
         }

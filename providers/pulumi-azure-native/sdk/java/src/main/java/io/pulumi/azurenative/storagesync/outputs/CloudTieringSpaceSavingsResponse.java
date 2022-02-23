@@ -160,7 +160,6 @@ public final class CloudTieringSpaceSavingsResponse {
             this.volumeSizeBytes = Objects.requireNonNull(volumeSizeBytes);
             return this;
         }
-
         public CloudTieringSpaceSavingsResponse build() {
             return new CloudTieringSpaceSavingsResponse(cachedSizeBytes, lastUpdatedTimestamp, spaceSavingsBytes, spaceSavingsPercent, totalSizeCloudBytes, volumeSizeBytes);
         }

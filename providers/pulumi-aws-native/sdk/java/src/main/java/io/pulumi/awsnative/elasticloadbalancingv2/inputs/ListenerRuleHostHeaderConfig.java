@@ -16,7 +16,7 @@ public final class ListenerRuleHostHeaderConfig extends io.pulumi.resources.Invo
     public static final ListenerRuleHostHeaderConfig Empty = new ListenerRuleHostHeaderConfig();
 
     @InputImport(name="values")
-    private final @Nullable List<String> values;
+        private final @Nullable List<String> values;
 
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
@@ -54,7 +54,6 @@ public final class ListenerRuleHostHeaderConfig extends io.pulumi.resources.Invo
             this.values = values;
             return this;
         }
-
         public ListenerRuleHostHeaderConfig build() {
             return new ListenerRuleHostHeaderConfig(values);
         }

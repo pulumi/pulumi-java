@@ -74,7 +74,6 @@ public final class ManagedCertificateResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ManagedCertificateResponse build() {
             return new ManagedCertificateResponse(lastRenewalTime, status);
         }

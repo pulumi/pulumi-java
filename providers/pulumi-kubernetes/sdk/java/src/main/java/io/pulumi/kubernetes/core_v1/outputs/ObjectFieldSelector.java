@@ -76,7 +76,6 @@ public final class ObjectFieldSelector {
             this.fieldPath = Objects.requireNonNull(fieldPath);
             return this;
         }
-
         public ObjectFieldSelector build() {
             return new ObjectFieldSelector(apiVersion, fieldPath);
         }

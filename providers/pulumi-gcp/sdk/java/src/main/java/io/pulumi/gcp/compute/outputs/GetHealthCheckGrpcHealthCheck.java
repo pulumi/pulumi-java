@@ -85,7 +85,6 @@ public final class GetHealthCheckGrpcHealthCheck {
             this.portSpecification = Objects.requireNonNull(portSpecification);
             return this;
         }
-
         public GetHealthCheckGrpcHealthCheck build() {
             return new GetHealthCheckGrpcHealthCheck(grpcServiceName, port, portName, portSpecification);
         }

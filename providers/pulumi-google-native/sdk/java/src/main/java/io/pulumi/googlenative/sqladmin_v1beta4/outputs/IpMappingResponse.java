@@ -95,7 +95,6 @@ public final class IpMappingResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IpMappingResponse build() {
             return new IpMappingResponse(ipAddress, timeToRetire, type);
         }

@@ -24,7 +24,7 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="endpointName")
-    private final @Nullable String endpointName;
+        private final @Nullable String endpointName;
 
     public Optional<String> getEndpointName() {
         return this.endpointName == null ? Optional.empty() : Optional.ofNullable(this.endpointName);
@@ -35,7 +35,7 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="privatePort")
-    private final @Nullable Integer privatePort;
+        private final @Nullable Integer privatePort;
 
     public Optional<Integer> getPrivatePort() {
         return this.privatePort == null ? Optional.empty() : Optional.ofNullable(this.privatePort);
@@ -46,7 +46,7 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+        private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -57,7 +57,7 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="publicPort")
-    private final @Nullable Integer publicPort;
+        private final @Nullable Integer publicPort;
 
     public Optional<Integer> getPublicPort() {
         return this.publicPort == null ? Optional.empty() : Optional.ofNullable(this.publicPort);
@@ -126,7 +126,6 @@ public final class InputEndpointResponse extends io.pulumi.resources.InvokeArgs 
             this.publicPort = publicPort;
             return this;
         }
-
         public InputEndpointResponse build() {
             return new InputEndpointResponse(endpointName, privatePort, protocol, publicPort);
         }

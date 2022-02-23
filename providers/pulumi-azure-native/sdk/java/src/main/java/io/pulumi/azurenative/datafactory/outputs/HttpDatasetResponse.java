@@ -346,7 +346,6 @@ public final class HttpDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HttpDatasetResponse build() {
             return new HttpDatasetResponse(additionalHeaders, annotations, compression, description, folder, format, linkedServiceName, parameters, relativeUrl, requestBody, requestMethod, schema, structure, type);
         }

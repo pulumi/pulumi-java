@@ -24,7 +24,7 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="apt", required=true)
-    private final AptRepositoryResponse apt;
+      private final AptRepositoryResponse apt;
 
     public AptRepositoryResponse getApt() {
         return this.apt;
@@ -35,7 +35,7 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="goo", required=true)
-    private final GooRepositoryResponse goo;
+      private final GooRepositoryResponse goo;
 
     public GooRepositoryResponse getGoo() {
         return this.goo;
@@ -46,7 +46,7 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="yum", required=true)
-    private final YumRepositoryResponse yum;
+      private final YumRepositoryResponse yum;
 
     public YumRepositoryResponse getYum() {
         return this.yum;
@@ -57,7 +57,7 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="zypper", required=true)
-    private final ZypperRepositoryResponse zypper;
+      private final ZypperRepositoryResponse zypper;
 
     public ZypperRepositoryResponse getZypper() {
         return this.zypper;
@@ -126,7 +126,6 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public PackageRepositoryResponse build() {
             return new PackageRepositoryResponse(apt, goo, yum, zypper);
         }

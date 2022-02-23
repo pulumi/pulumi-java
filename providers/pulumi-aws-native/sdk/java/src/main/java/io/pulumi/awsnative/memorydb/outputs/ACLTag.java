@@ -74,7 +74,6 @@ public final class ACLTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ACLTag build() {
             return new ACLTag(key, value);
         }

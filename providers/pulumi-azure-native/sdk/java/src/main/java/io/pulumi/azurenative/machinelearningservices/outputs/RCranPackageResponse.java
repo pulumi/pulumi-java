@@ -76,7 +76,6 @@ public final class RCranPackageResponse {
             this.repository = repository;
             return this;
         }
-
         public RCranPackageResponse build() {
             return new RCranPackageResponse(name, repository);
         }

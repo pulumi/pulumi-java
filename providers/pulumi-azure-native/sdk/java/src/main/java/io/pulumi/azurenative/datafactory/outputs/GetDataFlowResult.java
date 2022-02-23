@@ -141,7 +141,6 @@ public final class GetDataFlowResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataFlowResult build() {
             return new GetDataFlowResult(etag, id, name, properties, type);
         }

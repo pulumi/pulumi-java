@@ -29,7 +29,7 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Object body;
+        private final @Nullable Object body;
 
     public Optional<Object> getBody() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
@@ -40,7 +40,7 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+        private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -51,7 +51,7 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -62,7 +62,7 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="functionName", required=true)
-    private final Object functionName;
+        private final Object functionName;
 
     public Object getFunctionName() {
         return this.functionName;
@@ -73,7 +73,7 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Object headers;
+        private final @Nullable Object headers;
 
     public Optional<Object> getHeaders() {
         return this.headers == null ? Optional.empty() : Optional.ofNullable(this.headers);
@@ -84,7 +84,7 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+        private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
@@ -95,7 +95,7 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="method", required=true)
-    private final String method;
+        private final String method;
 
     public String getMethod() {
         return this.method;
@@ -106,7 +106,7 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -117,7 +117,7 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable ActivityPolicyResponse policy;
+        private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -129,7 +129,7 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -140,7 +140,7 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+        private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -279,7 +279,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
             this.userProperties = userProperties;
             return this;
         }
-
         public AzureFunctionActivityResponse build() {
             return new AzureFunctionActivityResponse(body, dependsOn, description, functionName, headers, linkedServiceName, method, name, policy, type, userProperties);
         }

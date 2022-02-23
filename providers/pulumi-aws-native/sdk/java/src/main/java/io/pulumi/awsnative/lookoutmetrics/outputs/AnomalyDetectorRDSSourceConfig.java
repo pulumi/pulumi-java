@@ -138,7 +138,6 @@ public final class AnomalyDetectorRDSSourceConfig {
             this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration);
             return this;
         }
-
         public AnomalyDetectorRDSSourceConfig build() {
             return new AnomalyDetectorRDSSourceConfig(dBInstanceIdentifier, databaseHost, databaseName, databasePort, roleArn, secretManagerArn, tableName, vpcConfiguration);
         }

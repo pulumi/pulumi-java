@@ -118,7 +118,6 @@ public final class InMageAgentDetailsResponse {
             this.postUpdateRebootStatus = postUpdateRebootStatus;
             return this;
         }
-
         public InMageAgentDetailsResponse build() {
             return new InMageAgentDetailsResponse(agentExpiryDate, agentUpdateStatus, agentVersion, postUpdateRebootStatus);
         }

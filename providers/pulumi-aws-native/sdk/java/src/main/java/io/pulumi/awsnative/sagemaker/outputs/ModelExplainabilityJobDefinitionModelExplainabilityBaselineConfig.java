@@ -61,7 +61,6 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityBaselineCo
             this.constraintsResource = constraintsResource;
             return this;
         }
-
         public ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig build() {
             return new ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig(baseliningJobName, constraintsResource);
         }

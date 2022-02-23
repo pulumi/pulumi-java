@@ -207,7 +207,6 @@ public final class GetFileEventTriggerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFileEventTriggerResult build() {
             return new GetFileEventTriggerResult(customContextTag, id, kind, name, sinkInfo, sourceInfo, systemData, type);
         }

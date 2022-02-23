@@ -96,7 +96,6 @@ public final class PublicKeyCertificateResponse {
             this.x509Details = Objects.requireNonNull(x509Details);
             return this;
         }
-
         public PublicKeyCertificateResponse build() {
             return new PublicKeyCertificateResponse(certificate, format, x509Details);
         }

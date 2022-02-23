@@ -52,7 +52,6 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse {
             this.gcsFileUri = Objects.requireNonNull(gcsFileUri);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1PdfInstructionResponse build() {
             return new GoogleCloudDatalabelingV1beta1PdfInstructionResponse(gcsFileUri);
         }

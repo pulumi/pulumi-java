@@ -121,7 +121,6 @@ public final class VmGuestHealthAlertCriterionResponse {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public VmGuestHealthAlertCriterionResponse build() {
             return new VmGuestHealthAlertCriterionResponse(healthStates, monitorNames, monitorTypes, namespace);
         }

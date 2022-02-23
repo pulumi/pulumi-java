@@ -77,7 +77,6 @@ public final class TokenRequest {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
-
         public TokenRequest build() {
             return new TokenRequest(audience, expirationSeconds);
         }

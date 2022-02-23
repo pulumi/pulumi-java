@@ -161,7 +161,6 @@ public final class TransformationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TransformationResponse build() {
             return new TransformationResponse(etag, id, name, query, streamingUnits, type);
         }

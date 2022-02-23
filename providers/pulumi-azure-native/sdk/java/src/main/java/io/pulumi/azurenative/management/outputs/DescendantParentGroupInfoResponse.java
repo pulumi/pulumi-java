@@ -54,7 +54,6 @@ public final class DescendantParentGroupInfoResponse {
             this.id = id;
             return this;
         }
-
         public DescendantParentGroupInfoResponse build() {
             return new DescendantParentGroupInfoResponse(id);
         }

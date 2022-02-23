@@ -18,7 +18,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
      * 
      */
     @InputImport(name="cloudWatchLogGroupArn", required=true)
-    private final Input<String> cloudWatchLogGroupArn;
+        private final Input<String> cloudWatchLogGroupArn;
 
     public Input<String> getCloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
@@ -29,7 +29,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
      * 
      */
     @InputImport(name="logPrefix", required=true)
-    private final Input<String> logPrefix;
+        private final Input<String> logPrefix;
 
     public Input<String> getLogPrefix() {
         return this.logPrefix;
@@ -88,7 +88,6 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
             this.logPrefix = Input.of(Objects.requireNonNull(logPrefix));
             return this;
         }
-
         public BotAliasCloudWatchLogGroupLogDestinationArgs build() {
             return new BotAliasCloudWatchLogGroupLogDestinationArgs(cloudWatchLogGroupArn, logPrefix);
         }

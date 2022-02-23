@@ -17,7 +17,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountResourceName", required=true)
-    private final String accountResourceName;
+        private final String accountResourceName;
 
     public String getAccountResourceName() {
         return this.accountResourceName;
@@ -28,7 +28,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="extensionResourceName", required=true)
-    private final String extensionResourceName;
+        private final String extensionResourceName;
 
     public String getExtensionResourceName() {
         return this.extensionResourceName;
@@ -39,7 +39,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetExtensionArgs build() {
             return new GetExtensionArgs(accountResourceName, extensionResourceName, resourceGroupName);
         }

@@ -182,7 +182,6 @@ public final class GetLinkedServiceResult {
             this.writeAccessResourceId = writeAccessResourceId;
             return this;
         }
-
         public GetLinkedServiceResult build() {
             return new GetLinkedServiceResult(id, name, provisioningState, resourceId, tags, type, writeAccessResourceId);
         }

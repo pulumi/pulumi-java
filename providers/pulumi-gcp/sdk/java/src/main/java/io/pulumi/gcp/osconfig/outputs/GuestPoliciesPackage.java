@@ -127,7 +127,6 @@ public final class GuestPoliciesPackage {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GuestPoliciesPackage build() {
             return new GuestPoliciesPackage(desiredState, manager, name);
         }

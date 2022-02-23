@@ -141,7 +141,6 @@ public final class EventRequestMessageResponse {
             this.version = version;
             return this;
         }
-
         public EventRequestMessageResponse build() {
             return new EventRequestMessageResponse(content, headers, method, requestUri, version);
         }

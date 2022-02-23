@@ -88,7 +88,6 @@ public final class GetLocationsResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetLocationsResult build() {
             return new GetLocationsResult(id, locations, project);
         }

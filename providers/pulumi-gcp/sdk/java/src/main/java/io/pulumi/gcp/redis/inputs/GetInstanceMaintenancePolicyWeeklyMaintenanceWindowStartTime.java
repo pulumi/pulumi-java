@@ -13,28 +13,28 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime 
     public static final GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime Empty = new GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime();
 
     @InputImport(name="hours", required=true)
-    private final Integer hours;
+        private final Integer hours;
 
     public Integer getHours() {
         return this.hours;
     }
 
     @InputImport(name="minutes", required=true)
-    private final Integer minutes;
+        private final Integer minutes;
 
     public Integer getMinutes() {
         return this.minutes;
     }
 
     @InputImport(name="nanos", required=true)
-    private final Integer nanos;
+        private final Integer nanos;
 
     public Integer getNanos() {
         return this.nanos;
     }
 
     @InputImport(name="seconds", required=true)
-    private final Integer seconds;
+        private final Integer seconds;
 
     public Integer getSeconds() {
         return this.seconds;
@@ -103,7 +103,6 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime 
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime build() {
             return new GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime(hours, minutes, nanos, seconds);
         }

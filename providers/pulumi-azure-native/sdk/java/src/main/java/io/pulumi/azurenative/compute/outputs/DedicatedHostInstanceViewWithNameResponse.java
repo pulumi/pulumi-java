@@ -121,7 +121,6 @@ public final class DedicatedHostInstanceViewWithNameResponse {
             this.statuses = statuses;
             return this;
         }
-
         public DedicatedHostInstanceViewWithNameResponse build() {
             return new DedicatedHostInstanceViewWithNameResponse(assetId, availableCapacity, name, statuses);
         }

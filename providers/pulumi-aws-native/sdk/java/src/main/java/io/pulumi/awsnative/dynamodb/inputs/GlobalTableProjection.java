@@ -16,14 +16,14 @@ public final class GlobalTableProjection extends io.pulumi.resources.InvokeArgs 
     public static final GlobalTableProjection Empty = new GlobalTableProjection();
 
     @InputImport(name="nonKeyAttributes")
-    private final @Nullable List<String> nonKeyAttributes;
+        private final @Nullable List<String> nonKeyAttributes;
 
     public List<String> getNonKeyAttributes() {
         return this.nonKeyAttributes == null ? List.of() : this.nonKeyAttributes;
     }
 
     @InputImport(name="projectionType")
-    private final @Nullable String projectionType;
+        private final @Nullable String projectionType;
 
     public Optional<String> getProjectionType() {
         return this.projectionType == null ? Optional.empty() : Optional.ofNullable(this.projectionType);
@@ -72,7 +72,6 @@ public final class GlobalTableProjection extends io.pulumi.resources.InvokeArgs 
             this.projectionType = projectionType;
             return this;
         }
-
         public GlobalTableProjection build() {
             return new GlobalTableProjection(nonKeyAttributes, projectionType);
         }

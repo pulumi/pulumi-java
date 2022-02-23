@@ -74,7 +74,6 @@ public final class FlowS3DestinationProperties {
             this.s3OutputFormatConfig = s3OutputFormatConfig;
             return this;
         }
-
         public FlowS3DestinationProperties build() {
             return new FlowS3DestinationProperties(bucketName, bucketPrefix, s3OutputFormatConfig);
         }

@@ -30,7 +30,6 @@ public final class StateMachineDefinitionSubstitutions {
         public Builder(StateMachineDefinitionSubstitutions defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StateMachineDefinitionSubstitutions build() {
             return new StateMachineDefinitionSubstitutions();
         }

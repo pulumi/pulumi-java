@@ -99,7 +99,6 @@ public final class PrivateEndpointConnectionResponse {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public PrivateEndpointConnectionResponse build() {
             return new PrivateEndpointConnectionResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

@@ -21,7 +21,7 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inspectJob")
-    private final @Nullable Input<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
+      private final @Nullable Input<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
 
     public Input<GooglePrivacyDlpV2InspectJobConfigArgs> getInspectJob() {
         return this.inspectJob == null ? Input.empty() : this.inspectJob;
@@ -32,21 +32,21 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobId")
-    private final @Nullable Input<String> jobId;
+      private final @Nullable Input<String> jobId;
 
     public Input<String> getJobId() {
         return this.jobId == null ? Input.empty() : this.jobId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -57,7 +57,7 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="riskJob")
-    private final @Nullable Input<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob;
+      private final @Nullable Input<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob;
 
     public Input<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> getRiskJob() {
         return this.riskJob == null ? Input.empty() : this.riskJob;
@@ -161,7 +161,6 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
             this.riskJob = Input.ofNullable(riskJob);
             return this;
         }
-
         public DlpJobArgs build() {
             return new DlpJobArgs(inspectJob, jobId, location, project, riskJob);
         }

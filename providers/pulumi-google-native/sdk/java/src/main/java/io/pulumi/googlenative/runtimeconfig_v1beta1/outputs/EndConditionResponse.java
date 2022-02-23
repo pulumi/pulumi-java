@@ -52,7 +52,6 @@ public final class EndConditionResponse {
             this.cardinality = Objects.requireNonNull(cardinality);
             return this;
         }
-
         public EndConditionResponse build() {
             return new EndConditionResponse(cardinality);
         }

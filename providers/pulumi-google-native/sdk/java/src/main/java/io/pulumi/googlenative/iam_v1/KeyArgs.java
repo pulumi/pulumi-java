@@ -21,7 +21,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyAlgorithm")
-    private final @Nullable Input<KeyKeyAlgorithm> keyAlgorithm;
+      private final @Nullable Input<KeyKeyAlgorithm> keyAlgorithm;
 
     public Input<KeyKeyAlgorithm> getKeyAlgorithm() {
         return this.keyAlgorithm == null ? Input.empty() : this.keyAlgorithm;
@@ -32,21 +32,21 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKeyType")
-    private final @Nullable Input<KeyPrivateKeyType> privateKeyType;
+      private final @Nullable Input<KeyPrivateKeyType> privateKeyType;
 
     public Input<KeyPrivateKeyType> getPrivateKeyType() {
         return this.privateKeyType == null ? Input.empty() : this.privateKeyType;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="serviceAccountId", required=true)
-    private final Input<String> serviceAccountId;
+      private final Input<String> serviceAccountId;
 
     public Input<String> getServiceAccountId() {
         return this.serviceAccountId;
@@ -135,7 +135,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceAccountId = Input.of(Objects.requireNonNull(serviceAccountId));
             return this;
         }
-
         public KeyArgs build() {
             return new KeyArgs(keyAlgorithm, privateKeyType, project, serviceAccountId);
         }

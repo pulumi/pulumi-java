@@ -26,7 +26,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment;
+      private final @Nullable Input<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment;
 
     public Input<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -37,7 +37,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * 
      */
     @InputImport(name="jobName", required=true)
-    private final Input<String> jobName;
+      private final Input<String> jobName;
 
     public Input<String> getJobName() {
         return this.jobName;
@@ -48,7 +48,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -59,7 +59,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * 
      */
     @InputImport(name="transformNameMapping")
-    private final @Nullable Input<Map<String,String>> transformNameMapping;
+      private final @Nullable Input<Map<String,String>> transformNameMapping;
 
     public Input<Map<String,String>> getTransformNameMapping() {
         return this.transformNameMapping == null ? Input.empty() : this.transformNameMapping;
@@ -70,7 +70,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * 
      */
     @InputImport(name="update")
-    private final @Nullable Input<Boolean> update;
+      private final @Nullable Input<Boolean> update;
 
     public Input<Boolean> getUpdate() {
         return this.update == null ? Input.empty() : this.update;
@@ -174,7 +174,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
             this.update = Input.ofNullable(update);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs(environment, jobName, parameters, transformNameMapping, update);
         }

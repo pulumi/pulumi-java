@@ -24,7 +24,7 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="limited")
-    private final @Nullable Input<LimitedPriorityLevelConfigurationArgs> limited;
+        private final @Nullable Input<LimitedPriorityLevelConfigurationArgs> limited;
 
     public Input<LimitedPriorityLevelConfigurationArgs> getLimited() {
         return this.limited == null ? Input.empty() : this.limited;
@@ -35,7 +35,7 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -94,7 +94,6 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public PriorityLevelConfigurationSpecArgs build() {
             return new PriorityLevelConfigurationSpecArgs(limited, type);
         }

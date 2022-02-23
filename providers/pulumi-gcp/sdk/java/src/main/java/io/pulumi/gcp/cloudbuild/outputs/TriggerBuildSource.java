@@ -81,7 +81,6 @@ public final class TriggerBuildSource {
             this.storageSource = storageSource;
             return this;
         }
-
         public TriggerBuildSource build() {
             return new TriggerBuildSource(repoSource, storageSource);
         }

@@ -116,7 +116,6 @@ public final class GetZonesResult {
             this.status = status;
             return this;
         }
-
         public GetZonesResult build() {
             return new GetZonesResult(id, names, project, region, status);
         }

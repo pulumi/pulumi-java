@@ -23,7 +23,7 @@ public final class ApplicationManagementPolicyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+        private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -61,7 +61,6 @@ public final class ApplicationManagementPolicyResponse extends io.pulumi.resourc
             this.mode = mode;
             return this;
         }
-
         public ApplicationManagementPolicyResponse build() {
             return new ApplicationManagementPolicyResponse(mode);
         }

@@ -181,7 +181,6 @@ public final class GetCacheResult {
             this.useFromLocation = Objects.requireNonNull(useFromLocation);
             return this;
         }
-
         public GetCacheResult build() {
             return new GetCacheResult(connectionString, description, id, name, resourceId, type, useFromLocation);
         }

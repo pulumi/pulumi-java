@@ -75,7 +75,6 @@ public final class GetPolicyResult {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(name, spec);
         }

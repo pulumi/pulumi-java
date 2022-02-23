@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemAr
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemAr
      * 
      */
     @InputImport(name="info", required=true)
-    private final Input<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info;
+      private final Input<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> getInfo() {
         return this.info;
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemAr
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -147,7 +147,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemAr
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs(description, image, info, title);
         }

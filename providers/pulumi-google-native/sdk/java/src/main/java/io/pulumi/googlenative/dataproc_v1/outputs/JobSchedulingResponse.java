@@ -74,7 +74,6 @@ public final class JobSchedulingResponse {
             this.maxFailuresTotal = Objects.requireNonNull(maxFailuresTotal);
             return this;
         }
-
         public JobSchedulingResponse build() {
             return new JobSchedulingResponse(maxFailuresPerHour, maxFailuresTotal);
         }

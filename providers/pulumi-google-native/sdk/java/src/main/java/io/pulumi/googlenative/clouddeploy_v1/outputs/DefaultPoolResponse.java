@@ -74,7 +74,6 @@ public final class DefaultPoolResponse {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public DefaultPoolResponse build() {
             return new DefaultPoolResponse(artifactStorage, serviceAccount);
         }

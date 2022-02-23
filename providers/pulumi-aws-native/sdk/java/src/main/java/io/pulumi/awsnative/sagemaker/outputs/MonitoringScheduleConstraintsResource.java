@@ -54,7 +54,6 @@ public final class MonitoringScheduleConstraintsResource {
             this.s3Uri = s3Uri;
             return this;
         }
-
         public MonitoringScheduleConstraintsResource build() {
             return new MonitoringScheduleConstraintsResource(s3Uri);
         }

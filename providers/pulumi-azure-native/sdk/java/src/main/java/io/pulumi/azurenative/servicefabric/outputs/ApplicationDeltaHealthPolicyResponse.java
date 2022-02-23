@@ -78,7 +78,6 @@ public final class ApplicationDeltaHealthPolicyResponse {
             this.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
             return this;
         }
-
         public ApplicationDeltaHealthPolicyResponse build() {
             return new ApplicationDeltaHealthPolicyResponse(defaultServiceTypeDeltaHealthPolicy, serviceTypeDeltaHealthPolicies);
         }

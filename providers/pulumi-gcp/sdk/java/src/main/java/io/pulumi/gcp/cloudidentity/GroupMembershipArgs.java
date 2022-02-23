@@ -23,7 +23,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="group", required=true)
-    private final Input<String> group;
+        private final Input<String> group;
 
     public Input<String> getGroup() {
         return this.group;
@@ -35,7 +35,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="memberKey")
-    private final @Nullable Input<GroupMembershipMemberKeyArgs> memberKey;
+        private final @Nullable Input<GroupMembershipMemberKeyArgs> memberKey;
 
     public Input<GroupMembershipMemberKeyArgs> getMemberKey() {
         return this.memberKey == null ? Input.empty() : this.memberKey;
@@ -47,7 +47,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="preferredMemberKey")
-    private final @Nullable Input<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey;
+        private final @Nullable Input<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey;
 
     public Input<GroupMembershipPreferredMemberKeyArgs> getPreferredMemberKey() {
         return this.preferredMemberKey == null ? Input.empty() : this.preferredMemberKey;
@@ -60,7 +60,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="roles", required=true)
-    private final Input<List<GroupMembershipRoleArgs>> roles;
+        private final Input<List<GroupMembershipRoleArgs>> roles;
 
     public Input<List<GroupMembershipRoleArgs>> getRoles() {
         return this.roles;
@@ -149,7 +149,6 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
             this.roles = Input.of(Objects.requireNonNull(roles));
             return this;
         }
-
         public GroupMembershipArgs build() {
             return new GroupMembershipArgs(group, memberKey, preferredMemberKey, roles);
         }

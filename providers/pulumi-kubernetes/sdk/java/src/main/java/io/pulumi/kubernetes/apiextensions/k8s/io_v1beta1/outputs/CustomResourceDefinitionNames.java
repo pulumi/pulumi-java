@@ -161,7 +161,6 @@ public final class CustomResourceDefinitionNames {
             this.singular = singular;
             return this;
         }
-
         public CustomResourceDefinitionNames build() {
             return new CustomResourceDefinitionNames(categories, kind, listKind, plural, shortNames, singular);
         }

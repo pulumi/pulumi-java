@@ -52,7 +52,6 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
             this.useElapsedTime = Objects.requireNonNull(useElapsedTime);
             return this;
         }
-
         public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse build() {
             return new GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse(useElapsedTime);
         }

@@ -54,7 +54,6 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab {
             this.cloudSecret = Objects.requireNonNull(cloudSecret);
             return this;
         }
-
         public MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab build() {
             return new MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab(cloudSecret);
         }

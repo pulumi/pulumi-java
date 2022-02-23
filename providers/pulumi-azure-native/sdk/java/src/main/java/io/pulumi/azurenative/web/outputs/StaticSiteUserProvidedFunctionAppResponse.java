@@ -181,7 +181,6 @@ public final class StaticSiteUserProvidedFunctionAppResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StaticSiteUserProvidedFunctionAppResponse build() {
             return new StaticSiteUserProvidedFunctionAppResponse(createdOn, functionAppRegion, functionAppResourceId, id, kind, name, type);
         }

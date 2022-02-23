@@ -75,7 +75,6 @@ public final class ValueFilterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ValueFilterResponse build() {
             return new ValueFilterResponse(operatorName, value);
         }

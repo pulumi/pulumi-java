@@ -34,7 +34,6 @@ public final class StaticIpConnectivityArgs extends io.pulumi.resources.Resource
         public Builder(StaticIpConnectivityArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StaticIpConnectivityArgs build() {
             return new StaticIpConnectivityArgs();
         }

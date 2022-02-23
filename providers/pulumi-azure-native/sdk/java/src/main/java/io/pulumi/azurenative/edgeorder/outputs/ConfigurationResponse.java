@@ -230,7 +230,6 @@ public final class ConfigurationResponse {
             this.specifications = Objects.requireNonNull(specifications);
             return this;
         }
-
         public ConfigurationResponse build() {
             return new ConfigurationResponse(availabilityInformation, costInformation, description, dimensions, displayName, filterableProperties, hierarchyInformation, imageInformation, specifications);
         }

@@ -335,7 +335,6 @@ public final class GetLabPlanResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLabPlanResult build() {
             return new GetLabPlanResult(allowedRegions, defaultAutoShutdownProfile, defaultConnectionProfile, defaultNetworkProfile, id, linkedLmsInstance, location, name, provisioningState, sharedGalleryId, supportInfo, systemData, tags, type);
         }

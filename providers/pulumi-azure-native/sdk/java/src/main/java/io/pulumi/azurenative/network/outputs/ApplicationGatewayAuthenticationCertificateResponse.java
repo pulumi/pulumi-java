@@ -160,7 +160,6 @@ public final class ApplicationGatewayAuthenticationCertificateResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayAuthenticationCertificateResponse build() {
             return new ApplicationGatewayAuthenticationCertificateResponse(data, etag, id, name, provisioningState, type);
         }

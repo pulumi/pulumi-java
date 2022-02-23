@@ -116,7 +116,6 @@ public final class ToolResultsStepResponse {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public ToolResultsStepResponse build() {
             return new ToolResultsStepResponse(executionId, historyId, project, stepId);
         }

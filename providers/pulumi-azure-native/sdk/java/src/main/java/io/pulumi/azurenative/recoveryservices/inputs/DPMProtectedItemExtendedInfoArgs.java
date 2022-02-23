@@ -26,7 +26,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskStorageUsedInBytes")
-    private final @Nullable Input<String> diskStorageUsedInBytes;
+        private final @Nullable Input<String> diskStorageUsedInBytes;
 
     public Input<String> getDiskStorageUsedInBytes() {
         return this.diskStorageUsedInBytes == null ? Input.empty() : this.diskStorageUsedInBytes;
@@ -37,7 +37,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="isCollocated")
-    private final @Nullable Input<Boolean> isCollocated;
+        private final @Nullable Input<Boolean> isCollocated;
 
     public Input<Boolean> getIsCollocated() {
         return this.isCollocated == null ? Input.empty() : this.isCollocated;
@@ -48,7 +48,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="isPresentOnCloud")
-    private final @Nullable Input<Boolean> isPresentOnCloud;
+        private final @Nullable Input<Boolean> isPresentOnCloud;
 
     public Input<Boolean> getIsPresentOnCloud() {
         return this.isPresentOnCloud == null ? Input.empty() : this.isPresentOnCloud;
@@ -59,7 +59,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastBackupStatus")
-    private final @Nullable Input<String> lastBackupStatus;
+        private final @Nullable Input<String> lastBackupStatus;
 
     public Input<String> getLastBackupStatus() {
         return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
@@ -70,7 +70,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastRefreshedAt")
-    private final @Nullable Input<String> lastRefreshedAt;
+        private final @Nullable Input<String> lastRefreshedAt;
 
     public Input<String> getLastRefreshedAt() {
         return this.lastRefreshedAt == null ? Input.empty() : this.lastRefreshedAt;
@@ -81,7 +81,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="oldestRecoveryPoint")
-    private final @Nullable Input<String> oldestRecoveryPoint;
+        private final @Nullable Input<String> oldestRecoveryPoint;
 
     public Input<String> getOldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Input.empty() : this.oldestRecoveryPoint;
@@ -92,7 +92,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="onPremiseLatestRecoveryPoint")
-    private final @Nullable Input<String> onPremiseLatestRecoveryPoint;
+        private final @Nullable Input<String> onPremiseLatestRecoveryPoint;
 
     public Input<String> getOnPremiseLatestRecoveryPoint() {
         return this.onPremiseLatestRecoveryPoint == null ? Input.empty() : this.onPremiseLatestRecoveryPoint;
@@ -103,7 +103,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="onPremiseOldestRecoveryPoint")
-    private final @Nullable Input<String> onPremiseOldestRecoveryPoint;
+        private final @Nullable Input<String> onPremiseOldestRecoveryPoint;
 
     public Input<String> getOnPremiseOldestRecoveryPoint() {
         return this.onPremiseOldestRecoveryPoint == null ? Input.empty() : this.onPremiseOldestRecoveryPoint;
@@ -114,7 +114,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="onPremiseRecoveryPointCount")
-    private final @Nullable Input<Integer> onPremiseRecoveryPointCount;
+        private final @Nullable Input<Integer> onPremiseRecoveryPointCount;
 
     public Input<Integer> getOnPremiseRecoveryPointCount() {
         return this.onPremiseRecoveryPointCount == null ? Input.empty() : this.onPremiseRecoveryPointCount;
@@ -125,7 +125,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protectableObjectLoadPath")
-    private final @Nullable Input<Map<String,String>> protectableObjectLoadPath;
+        private final @Nullable Input<Map<String,String>> protectableObjectLoadPath;
 
     public Input<Map<String,String>> getProtectableObjectLoadPath() {
         return this.protectableObjectLoadPath == null ? Input.empty() : this.protectableObjectLoadPath;
@@ -136,7 +136,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protected")
-    private final @Nullable Input<Boolean> $protected;
+        private final @Nullable Input<Boolean> $protected;
 
     public Input<Boolean> get$protected() {
         return this.$protected == null ? Input.empty() : this.$protected;
@@ -147,7 +147,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protectionGroupName")
-    private final @Nullable Input<String> protectionGroupName;
+        private final @Nullable Input<String> protectionGroupName;
 
     public Input<String> getProtectionGroupName() {
         return this.protectionGroupName == null ? Input.empty() : this.protectionGroupName;
@@ -158,7 +158,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryPointCount")
-    private final @Nullable Input<Integer> recoveryPointCount;
+        private final @Nullable Input<Integer> recoveryPointCount;
 
     public Input<Integer> getRecoveryPointCount() {
         return this.recoveryPointCount == null ? Input.empty() : this.recoveryPointCount;
@@ -169,7 +169,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="totalDiskStorageSizeInBytes")
-    private final @Nullable Input<String> totalDiskStorageSizeInBytes;
+        private final @Nullable Input<String> totalDiskStorageSizeInBytes;
 
     public Input<String> getTotalDiskStorageSizeInBytes() {
         return this.totalDiskStorageSizeInBytes == null ? Input.empty() : this.totalDiskStorageSizeInBytes;
@@ -408,7 +408,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
             this.totalDiskStorageSizeInBytes = Input.ofNullable(totalDiskStorageSizeInBytes);
             return this;
         }
-
         public DPMProtectedItemExtendedInfoArgs build() {
             return new DPMProtectedItemExtendedInfoArgs(diskStorageUsedInBytes, isCollocated, isPresentOnCloud, lastBackupStatus, lastRefreshedAt, oldestRecoveryPoint, onPremiseLatestRecoveryPoint, onPremiseOldestRecoveryPoint, onPremiseRecoveryPointCount, protectableObjectLoadPath, $protected, protectionGroupName, recoveryPointCount, totalDiskStorageSizeInBytes);
         }

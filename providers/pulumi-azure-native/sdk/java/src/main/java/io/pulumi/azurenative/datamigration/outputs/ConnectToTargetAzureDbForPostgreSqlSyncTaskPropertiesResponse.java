@@ -169,7 +169,6 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse build() {
             return new ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

@@ -74,7 +74,6 @@ public final class IngressSourceResponse {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public IngressSourceResponse build() {
             return new IngressSourceResponse(accessLevel, resource);
         }

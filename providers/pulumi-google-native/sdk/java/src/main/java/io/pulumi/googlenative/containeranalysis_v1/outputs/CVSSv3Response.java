@@ -192,7 +192,6 @@ public final class CVSSv3Response {
             this.userInteraction = Objects.requireNonNull(userInteraction);
             return this;
         }
-
         public CVSSv3Response build() {
             return new CVSSv3Response(attackComplexity, attackVector, availabilityImpact, baseScore, confidentialityImpact, exploitabilityScore, impactScore, integrityImpact, privilegesRequired, scope, userInteraction);
         }

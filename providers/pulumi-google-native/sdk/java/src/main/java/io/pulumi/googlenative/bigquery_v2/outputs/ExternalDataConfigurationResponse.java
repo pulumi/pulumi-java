@@ -357,7 +357,6 @@ public final class ExternalDataConfigurationResponse {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
-
         public ExternalDataConfigurationResponse build() {
             return new ExternalDataConfigurationResponse(autodetect, avroOptions, bigtableOptions, compression, connectionId, csvOptions, decimalTargetTypes, googleSheetsOptions, hivePartitioningOptions, ignoreUnknownValues, maxBadRecords, parquetOptions, schema, sourceFormat, sourceUris);
         }

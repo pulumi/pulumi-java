@@ -228,7 +228,6 @@ public final class PatchConfigResponse {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public PatchConfigResponse build() {
             return new PatchConfigResponse(apt, goo, migInstancesAllowed, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
         }

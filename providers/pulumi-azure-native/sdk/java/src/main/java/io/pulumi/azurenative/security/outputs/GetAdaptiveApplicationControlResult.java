@@ -267,7 +267,6 @@ public final class GetAdaptiveApplicationControlResult {
             this.vmRecommendations = vmRecommendations;
             return this;
         }
-
         public GetAdaptiveApplicationControlResult build() {
             return new GetAdaptiveApplicationControlResult(configurationStatus, enforcementMode, id, issues, location, name, pathRecommendations, protectionMode, recommendationStatus, sourceSystem, type, vmRecommendations);
         }

@@ -24,42 +24,42 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
     public static final BucketReplicationDestinationArgs Empty = new BucketReplicationDestinationArgs();
 
     @InputImport(name="accessControlTranslation")
-    private final @Nullable Input<BucketAccessControlTranslationArgs> accessControlTranslation;
+        private final @Nullable Input<BucketAccessControlTranslationArgs> accessControlTranslation;
 
     public Input<BucketAccessControlTranslationArgs> getAccessControlTranslation() {
         return this.accessControlTranslation == null ? Input.empty() : this.accessControlTranslation;
     }
 
     @InputImport(name="account")
-    private final @Nullable Input<String> account;
+        private final @Nullable Input<String> account;
 
     public Input<String> getAccount() {
         return this.account == null ? Input.empty() : this.account;
     }
 
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="encryptionConfiguration")
-    private final @Nullable Input<BucketEncryptionConfigurationArgs> encryptionConfiguration;
+        private final @Nullable Input<BucketEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Input<BucketEncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
     }
 
     @InputImport(name="metrics")
-    private final @Nullable Input<BucketMetricsArgs> metrics;
+        private final @Nullable Input<BucketMetricsArgs> metrics;
 
     public Input<BucketMetricsArgs> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
     }
 
     @InputImport(name="replicationTime")
-    private final @Nullable Input<BucketReplicationTimeArgs> replicationTime;
+        private final @Nullable Input<BucketReplicationTimeArgs> replicationTime;
 
     public Input<BucketReplicationTimeArgs> getReplicationTime() {
         return this.replicationTime == null ? Input.empty() : this.replicationTime;
@@ -70,7 +70,7 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storageClass")
-    private final @Nullable Input<BucketReplicationDestinationStorageClass> storageClass;
+        private final @Nullable Input<BucketReplicationDestinationStorageClass> storageClass;
 
     public Input<BucketReplicationDestinationStorageClass> getStorageClass() {
         return this.storageClass == null ? Input.empty() : this.storageClass;
@@ -204,7 +204,6 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
             this.storageClass = Input.ofNullable(storageClass);
             return this;
         }
-
         public BucketReplicationDestinationArgs build() {
             return new BucketReplicationDestinationArgs(accessControlTranslation, account, bucket, encryptionConfiguration, metrics, replicationTime, storageClass);
         }

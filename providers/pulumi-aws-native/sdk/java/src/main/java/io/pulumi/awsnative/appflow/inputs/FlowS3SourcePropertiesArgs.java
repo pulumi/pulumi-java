@@ -16,21 +16,21 @@ public final class FlowS3SourcePropertiesArgs extends io.pulumi.resources.Resour
     public static final FlowS3SourcePropertiesArgs Empty = new FlowS3SourcePropertiesArgs();
 
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+        private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="bucketPrefix", required=true)
-    private final Input<String> bucketPrefix;
+        private final Input<String> bucketPrefix;
 
     public Input<String> getBucketPrefix() {
         return this.bucketPrefix;
     }
 
     @InputImport(name="s3InputFormatConfig")
-    private final @Nullable Input<FlowS3InputFormatConfigArgs> s3InputFormatConfig;
+        private final @Nullable Input<FlowS3InputFormatConfigArgs> s3InputFormatConfig;
 
     public Input<FlowS3InputFormatConfigArgs> getS3InputFormatConfig() {
         return this.s3InputFormatConfig == null ? Input.empty() : this.s3InputFormatConfig;
@@ -104,7 +104,6 @@ public final class FlowS3SourcePropertiesArgs extends io.pulumi.resources.Resour
             this.s3InputFormatConfig = Input.ofNullable(s3InputFormatConfig);
             return this;
         }
-
         public FlowS3SourcePropertiesArgs build() {
             return new FlowS3SourcePropertiesArgs(bucketName, bucketPrefix, s3InputFormatConfig);
         }

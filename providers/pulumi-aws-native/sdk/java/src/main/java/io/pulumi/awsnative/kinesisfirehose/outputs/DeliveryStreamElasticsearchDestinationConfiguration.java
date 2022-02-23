@@ -211,7 +211,6 @@ public final class DeliveryStreamElasticsearchDestinationConfiguration {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public DeliveryStreamElasticsearchDestinationConfiguration build() {
             return new DeliveryStreamElasticsearchDestinationConfiguration(bufferingHints, cloudWatchLoggingOptions, clusterEndpoint, domainARN, indexName, indexRotationPeriod, processingConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration, typeName, vpcConfiguration);
         }

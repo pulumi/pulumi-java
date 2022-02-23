@@ -96,7 +96,6 @@ public final class X12OneWayAgreementResponse {
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
         }
-
         public X12OneWayAgreementResponse build() {
             return new X12OneWayAgreementResponse(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
         }

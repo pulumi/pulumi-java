@@ -24,7 +24,7 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useSystemAssignedIdentity")
-    private final @Nullable Input<Boolean> useSystemAssignedIdentity;
+        private final @Nullable Input<Boolean> useSystemAssignedIdentity;
 
     public Input<Boolean> getUseSystemAssignedIdentity() {
         return this.useSystemAssignedIdentity == null ? Input.empty() : this.useSystemAssignedIdentity;
@@ -35,7 +35,7 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAssignedIdentity")
-    private final @Nullable Input<String> userAssignedIdentity;
+        private final @Nullable Input<String> userAssignedIdentity;
 
     public Input<String> getUserAssignedIdentity() {
         return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;
@@ -94,7 +94,6 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.userAssignedIdentity = Input.ofNullable(userAssignedIdentity);
             return this;
         }
-
         public CmkKekIdentityArgs build() {
             return new CmkKekIdentityArgs(useSystemAssignedIdentity, userAssignedIdentity);
         }

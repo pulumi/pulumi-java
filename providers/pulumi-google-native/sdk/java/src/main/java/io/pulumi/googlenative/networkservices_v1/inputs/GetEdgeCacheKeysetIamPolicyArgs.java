@@ -15,28 +15,28 @@ public final class GetEdgeCacheKeysetIamPolicyArgs extends io.pulumi.resources.I
     public static final GetEdgeCacheKeysetIamPolicyArgs Empty = new GetEdgeCacheKeysetIamPolicyArgs();
 
     @InputImport(name="edgeCacheKeysetId", required=true)
-    private final String edgeCacheKeysetId;
+      private final String edgeCacheKeysetId;
 
     public String getEdgeCacheKeysetId() {
         return this.edgeCacheKeysetId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetEdgeCacheKeysetIamPolicyArgs extends io.pulumi.resources.I
             this.project = project;
             return this;
         }
-
         public GetEdgeCacheKeysetIamPolicyArgs build() {
             return new GetEdgeCacheKeysetIamPolicyArgs(edgeCacheKeysetId, location, optionsRequestedPolicyVersion, project);
         }

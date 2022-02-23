@@ -74,7 +74,6 @@ public final class SortOptionsResponse {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
         }
-
         public SortOptionsResponse build() {
             return new SortOptionsResponse(operatorName, sortOrder);
         }

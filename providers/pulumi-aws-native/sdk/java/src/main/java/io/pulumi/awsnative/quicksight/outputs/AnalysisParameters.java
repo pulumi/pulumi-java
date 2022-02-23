@@ -121,7 +121,6 @@ public final class AnalysisParameters {
             this.stringParameters = stringParameters;
             return this;
         }
-
         public AnalysisParameters build() {
             return new AnalysisParameters(dateTimeParameters, decimalParameters, integerParameters, stringParameters);
         }

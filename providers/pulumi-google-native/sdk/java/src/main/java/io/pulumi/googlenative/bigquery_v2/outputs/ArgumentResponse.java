@@ -117,7 +117,6 @@ public final class ArgumentResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ArgumentResponse build() {
             return new ArgumentResponse(argumentKind, dataType, mode, name);
         }

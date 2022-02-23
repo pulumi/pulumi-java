@@ -61,7 +61,6 @@ public final class NotificationEndpointResponse {
             this.notificationDestination = notificationDestination;
             return this;
         }
-
         public NotificationEndpointResponse build() {
             return new NotificationEndpointResponse(locations, notificationDestination);
         }

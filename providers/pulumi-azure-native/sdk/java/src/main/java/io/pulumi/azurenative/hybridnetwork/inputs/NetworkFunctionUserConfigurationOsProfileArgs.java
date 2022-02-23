@@ -23,7 +23,7 @@ public final class NetworkFunctionUserConfigurationOsProfileArgs extends io.pulu
      * 
      */
     @InputImport(name="customData")
-    private final @Nullable Input<String> customData;
+        private final @Nullable Input<String> customData;
 
     public Input<String> getCustomData() {
         return this.customData == null ? Input.empty() : this.customData;
@@ -66,7 +66,6 @@ public final class NetworkFunctionUserConfigurationOsProfileArgs extends io.pulu
             this.customData = Input.ofNullable(customData);
             return this;
         }
-
         public NetworkFunctionUserConfigurationOsProfileArgs build() {
             return new NetworkFunctionUserConfigurationOsProfileArgs(customData);
         }

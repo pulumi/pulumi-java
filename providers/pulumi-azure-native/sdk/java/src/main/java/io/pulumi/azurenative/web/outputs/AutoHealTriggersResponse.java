@@ -165,7 +165,6 @@ public final class AutoHealTriggersResponse {
             this.statusCodesRange = statusCodesRange;
             return this;
         }
-
         public AutoHealTriggersResponse build() {
             return new AutoHealTriggersResponse(privateBytesInKB, requests, slowRequests, slowRequestsWithPath, statusCodes, statusCodesRange);
         }

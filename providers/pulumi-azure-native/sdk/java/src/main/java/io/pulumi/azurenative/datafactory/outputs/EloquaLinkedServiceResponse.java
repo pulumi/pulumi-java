@@ -296,7 +296,6 @@ public final class EloquaLinkedServiceResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public EloquaLinkedServiceResponse build() {
             return new EloquaLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, endpoint, parameters, password, type, useEncryptedEndpoints, useHostVerification, usePeerVerification, username);
         }

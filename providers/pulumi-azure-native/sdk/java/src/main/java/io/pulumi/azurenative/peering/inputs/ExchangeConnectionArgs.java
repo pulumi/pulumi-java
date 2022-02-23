@@ -25,7 +25,7 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bgpSession")
-    private final @Nullable Input<BgpSessionArgs> bgpSession;
+        private final @Nullable Input<BgpSessionArgs> bgpSession;
 
     public Input<BgpSessionArgs> getBgpSession() {
         return this.bgpSession == null ? Input.empty() : this.bgpSession;
@@ -36,7 +36,7 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectionIdentifier")
-    private final @Nullable Input<String> connectionIdentifier;
+        private final @Nullable Input<String> connectionIdentifier;
 
     public Input<String> getConnectionIdentifier() {
         return this.connectionIdentifier == null ? Input.empty() : this.connectionIdentifier;
@@ -47,7 +47,7 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="peeringDBFacilityId")
-    private final @Nullable Input<Integer> peeringDBFacilityId;
+        private final @Nullable Input<Integer> peeringDBFacilityId;
 
     public Input<Integer> getPeeringDBFacilityId() {
         return this.peeringDBFacilityId == null ? Input.empty() : this.peeringDBFacilityId;
@@ -121,7 +121,6 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
             this.peeringDBFacilityId = Input.ofNullable(peeringDBFacilityId);
             return this;
         }
-
         public ExchangeConnectionArgs build() {
             return new ExchangeConnectionArgs(bgpSession, connectionIdentifier, peeringDBFacilityId);
         }

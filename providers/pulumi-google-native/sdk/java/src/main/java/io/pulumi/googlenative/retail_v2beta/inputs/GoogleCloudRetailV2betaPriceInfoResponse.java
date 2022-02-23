@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="cost", required=true)
-    private final Double cost;
+      private final Double cost;
 
     public Double getCost() {
         return this.cost;
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="currencyCode", required=true)
-    private final String currencyCode;
+      private final String currencyCode;
 
     public String getCurrencyCode() {
         return this.currencyCode;
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="originalPrice", required=true)
-    private final Double originalPrice;
+      private final Double originalPrice;
 
     public Double getOriginalPrice() {
         return this.originalPrice;
@@ -56,7 +56,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="price", required=true)
-    private final Double price;
+      private final Double price;
 
     public Double getPrice() {
         return this.price;
@@ -67,7 +67,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="priceEffectiveTime", required=true)
-    private final String priceEffectiveTime;
+      private final String priceEffectiveTime;
 
     public String getPriceEffectiveTime() {
         return this.priceEffectiveTime;
@@ -78,7 +78,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="priceExpireTime", required=true)
-    private final String priceExpireTime;
+      private final String priceExpireTime;
 
     public String getPriceExpireTime() {
         return this.priceExpireTime;
@@ -89,7 +89,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="priceRange", required=true)
-    private final GoogleCloudRetailV2betaPriceInfoPriceRangeResponse priceRange;
+      private final GoogleCloudRetailV2betaPriceInfoPriceRangeResponse priceRange;
 
     public GoogleCloudRetailV2betaPriceInfoPriceRangeResponse getPriceRange() {
         return this.priceRange;
@@ -188,7 +188,6 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
             this.priceRange = Objects.requireNonNull(priceRange);
             return this;
         }
-
         public GoogleCloudRetailV2betaPriceInfoResponse build() {
             return new GoogleCloudRetailV2betaPriceInfoResponse(cost, currencyCode, originalPrice, price, priceEffectiveTime, priceExpireTime, priceRange);
         }

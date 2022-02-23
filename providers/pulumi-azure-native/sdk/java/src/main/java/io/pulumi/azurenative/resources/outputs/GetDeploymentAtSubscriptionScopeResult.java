@@ -162,7 +162,6 @@ public final class GetDeploymentAtSubscriptionScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeploymentAtSubscriptionScopeResult build() {
             return new GetDeploymentAtSubscriptionScopeResult(id, location, name, properties, tags, type);
         }

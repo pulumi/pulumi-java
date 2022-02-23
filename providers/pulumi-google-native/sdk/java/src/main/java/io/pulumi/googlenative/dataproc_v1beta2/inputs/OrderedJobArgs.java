@@ -34,7 +34,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hadoopJob")
-    private final @Nullable Input<HadoopJobArgs> hadoopJob;
+      private final @Nullable Input<HadoopJobArgs> hadoopJob;
 
     public Input<HadoopJobArgs> getHadoopJob() {
         return this.hadoopJob == null ? Input.empty() : this.hadoopJob;
@@ -45,7 +45,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hiveJob")
-    private final @Nullable Input<HiveJobArgs> hiveJob;
+      private final @Nullable Input<HiveJobArgs> hiveJob;
 
     public Input<HiveJobArgs> getHiveJob() {
         return this.hiveJob == null ? Input.empty() : this.hiveJob;
@@ -56,7 +56,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -67,7 +67,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pigJob")
-    private final @Nullable Input<PigJobArgs> pigJob;
+      private final @Nullable Input<PigJobArgs> pigJob;
 
     public Input<PigJobArgs> getPigJob() {
         return this.pigJob == null ? Input.empty() : this.pigJob;
@@ -78,7 +78,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prerequisiteStepIds")
-    private final @Nullable Input<List<String>> prerequisiteStepIds;
+      private final @Nullable Input<List<String>> prerequisiteStepIds;
 
     public Input<List<String>> getPrerequisiteStepIds() {
         return this.prerequisiteStepIds == null ? Input.empty() : this.prerequisiteStepIds;
@@ -89,7 +89,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prestoJob")
-    private final @Nullable Input<PrestoJobArgs> prestoJob;
+      private final @Nullable Input<PrestoJobArgs> prestoJob;
 
     public Input<PrestoJobArgs> getPrestoJob() {
         return this.prestoJob == null ? Input.empty() : this.prestoJob;
@@ -100,7 +100,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pysparkJob")
-    private final @Nullable Input<PySparkJobArgs> pysparkJob;
+      private final @Nullable Input<PySparkJobArgs> pysparkJob;
 
     public Input<PySparkJobArgs> getPysparkJob() {
         return this.pysparkJob == null ? Input.empty() : this.pysparkJob;
@@ -111,7 +111,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduling")
-    private final @Nullable Input<JobSchedulingArgs> scheduling;
+      private final @Nullable Input<JobSchedulingArgs> scheduling;
 
     public Input<JobSchedulingArgs> getScheduling() {
         return this.scheduling == null ? Input.empty() : this.scheduling;
@@ -122,7 +122,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkJob")
-    private final @Nullable Input<SparkJobArgs> sparkJob;
+      private final @Nullable Input<SparkJobArgs> sparkJob;
 
     public Input<SparkJobArgs> getSparkJob() {
         return this.sparkJob == null ? Input.empty() : this.sparkJob;
@@ -133,7 +133,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkRJob")
-    private final @Nullable Input<SparkRJobArgs> sparkRJob;
+      private final @Nullable Input<SparkRJobArgs> sparkRJob;
 
     public Input<SparkRJobArgs> getSparkRJob() {
         return this.sparkRJob == null ? Input.empty() : this.sparkRJob;
@@ -144,7 +144,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkSqlJob")
-    private final @Nullable Input<SparkSqlJobArgs> sparkSqlJob;
+      private final @Nullable Input<SparkSqlJobArgs> sparkSqlJob;
 
     public Input<SparkSqlJobArgs> getSparkSqlJob() {
         return this.sparkSqlJob == null ? Input.empty() : this.sparkSqlJob;
@@ -155,7 +155,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepId", required=true)
-    private final Input<String> stepId;
+      private final Input<String> stepId;
 
     public Input<String> getStepId() {
         return this.stepId;
@@ -364,7 +364,6 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
             this.stepId = Input.of(Objects.requireNonNull(stepId));
             return this;
         }
-
         public OrderedJobArgs build() {
             return new OrderedJobArgs(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
         }

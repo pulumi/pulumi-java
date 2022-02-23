@@ -206,7 +206,6 @@ public final class KustomizationDefinitionResponse {
             this.validation = validation;
             return this;
         }
-
         public KustomizationDefinitionResponse build() {
             return new KustomizationDefinitionResponse(dependsOn, force, path, prune, retryIntervalInSeconds, syncIntervalInSeconds, timeoutInSeconds, validation);
         }

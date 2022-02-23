@@ -380,7 +380,6 @@ public final class SftpServerLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public SftpServerLinkedServiceResponse build() {
             return new SftpServerLinkedServiceResponse(annotations, authenticationType, connectVia, description, encryptedCredential, host, hostKeyFingerprint, parameters, passPhrase, password, port, privateKeyContent, privateKeyPath, skipHostKeyValidation, type, userName);
         }

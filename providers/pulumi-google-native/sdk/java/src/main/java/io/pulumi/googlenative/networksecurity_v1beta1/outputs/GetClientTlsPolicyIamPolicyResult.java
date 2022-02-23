@@ -120,7 +120,6 @@ public final class GetClientTlsPolicyIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetClientTlsPolicyIamPolicyResult build() {
             return new GetClientTlsPolicyIamPolicyResult(auditConfigs, bindings, etag, version);
         }

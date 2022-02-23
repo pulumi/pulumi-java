@@ -22,7 +22,7 @@ public final class LogMatchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -33,7 +33,7 @@ public final class LogMatchResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labelExtractors", required=true)
-    private final Map<String,String> labelExtractors;
+      private final Map<String,String> labelExtractors;
 
     public Map<String,String> getLabelExtractors() {
         return this.labelExtractors;
@@ -82,7 +82,6 @@ public final class LogMatchResponse extends io.pulumi.resources.InvokeArgs {
             this.labelExtractors = Objects.requireNonNull(labelExtractors);
             return this;
         }
-
         public LogMatchResponse build() {
             return new LogMatchResponse(filter, labelExtractors);
         }

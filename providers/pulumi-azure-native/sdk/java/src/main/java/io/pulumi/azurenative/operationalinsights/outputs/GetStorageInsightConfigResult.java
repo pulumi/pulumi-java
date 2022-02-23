@@ -227,7 +227,6 @@ public final class GetStorageInsightConfigResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStorageInsightConfigResult build() {
             return new GetStorageInsightConfigResult(containers, eTag, id, name, status, storageAccount, tables, tags, type);
         }

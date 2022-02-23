@@ -23,7 +23,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="current", required=true)
-    private final Input<MetricValueStatusArgs> current;
+        private final Input<MetricValueStatusArgs> current;
 
     public Input<MetricValueStatusArgs> getCurrent() {
         return this.current;
@@ -34,7 +34,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metric", required=true)
-    private final Input<MetricIdentifierArgs> metric;
+        private final Input<MetricIdentifierArgs> metric;
 
     public Input<MetricIdentifierArgs> getMetric() {
         return this.metric;
@@ -93,7 +93,6 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
             this.metric = Input.of(Objects.requireNonNull(metric));
             return this;
         }
-
         public ExternalMetricStatusArgs build() {
             return new ExternalMetricStatusArgs(current, metric);
         }

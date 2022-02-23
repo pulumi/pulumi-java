@@ -24,7 +24,7 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxSizeMB")
-    private final @Nullable Double maxSizeMB;
+        private final @Nullable Double maxSizeMB;
 
     public Optional<Double> getMaxSizeMB() {
         return this.maxSizeMB == null ? Optional.empty() : Optional.ofNullable(this.maxSizeMB);
@@ -35,7 +35,7 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vhdId")
-    private final @Nullable String vhdId;
+        private final @Nullable String vhdId;
 
     public Optional<String> getVhdId() {
         return this.vhdId == null ? Optional.empty() : Optional.ofNullable(this.vhdId);
@@ -46,7 +46,7 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vhdName")
-    private final @Nullable String vhdName;
+        private final @Nullable String vhdName;
 
     public Optional<String> getVhdName() {
         return this.vhdName == null ? Optional.empty() : Optional.ofNullable(this.vhdName);
@@ -57,7 +57,7 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vhdType")
-    private final @Nullable String vhdType;
+        private final @Nullable String vhdType;
 
     public Optional<String> getVhdType() {
         return this.vhdType == null ? Optional.empty() : Optional.ofNullable(this.vhdType);
@@ -126,7 +126,6 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.vhdType = vhdType;
             return this;
         }
-
         public DiskDetailsResponse build() {
             return new DiskDetailsResponse(maxSizeMB, vhdId, vhdName, vhdType);
         }

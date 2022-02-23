@@ -116,7 +116,6 @@ public final class AssociatedWorkspaceResponse {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public AssociatedWorkspaceResponse build() {
             return new AssociatedWorkspaceResponse(associateDate, resourceId, workspaceId, workspaceName);
         }

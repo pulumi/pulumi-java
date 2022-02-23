@@ -266,7 +266,6 @@ public final class GetJobResult {
             this.ttlAfterCompletionDays = Objects.requireNonNull(ttlAfterCompletionDays);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(config, createTime, endTime, error, inputUri, name, outputUri, startTime, state, templateId, ttlAfterCompletionDays);
         }

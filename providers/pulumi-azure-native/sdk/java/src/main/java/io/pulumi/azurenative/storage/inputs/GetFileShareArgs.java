@@ -19,7 +19,7 @@ public final class GetFileShareArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class GetFileShareArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -41,7 +41,7 @@ public final class GetFileShareArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class GetFileShareArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="shareName", required=true)
-    private final String shareName;
+        private final String shareName;
 
     public String getShareName() {
         return this.shareName;
@@ -121,7 +121,6 @@ public final class GetFileShareArgs extends io.pulumi.resources.InvokeArgs {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public GetFileShareArgs build() {
             return new GetFileShareArgs(accountName, expand, resourceGroupName, shareName);
         }

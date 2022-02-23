@@ -23,7 +23,7 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="autogenerateFileName", required=true)
-    private final Input<Boolean> autogenerateFileName;
+        private final Input<Boolean> autogenerateFileName;
 
     public Input<Boolean> getAutogenerateFileName() {
         return this.autogenerateFileName;
@@ -34,7 +34,7 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fileNameTemplate", required=true)
-    private final Input<String> fileNameTemplate;
+        private final Input<String> fileNameTemplate;
 
     public Input<String> getFileNameTemplate() {
         return this.fileNameTemplate;
@@ -45,7 +45,7 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="messageContentType", required=true)
-    private final Input<String> messageContentType;
+        private final Input<String> messageContentType;
 
     public Input<String> getMessageContentType() {
         return this.messageContentType;
@@ -56,7 +56,7 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="suspendMessageOnFileNameGenerationError", required=true)
-    private final Input<Boolean> suspendMessageOnFileNameGenerationError;
+        private final Input<Boolean> suspendMessageOnFileNameGenerationError;
 
     public Input<Boolean> getSuspendMessageOnFileNameGenerationError() {
         return this.suspendMessageOnFileNameGenerationError;
@@ -67,7 +67,7 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transmitFileNameInMimeHeader", required=true)
-    private final Input<Boolean> transmitFileNameInMimeHeader;
+        private final Input<Boolean> transmitFileNameInMimeHeader;
 
     public Input<Boolean> getTransmitFileNameInMimeHeader() {
         return this.transmitFileNameInMimeHeader;
@@ -171,7 +171,6 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
             this.transmitFileNameInMimeHeader = Input.of(Objects.requireNonNull(transmitFileNameInMimeHeader));
             return this;
         }
-
         public AS2EnvelopeSettingsArgs build() {
             return new AS2EnvelopeSettingsArgs(autogenerateFileName, fileNameTemplate, messageContentType, suspendMessageOnFileNameGenerationError, transmitFileNameInMimeHeader);
         }

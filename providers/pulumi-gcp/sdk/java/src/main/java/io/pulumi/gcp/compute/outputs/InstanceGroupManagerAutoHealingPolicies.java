@@ -77,7 +77,6 @@ public final class InstanceGroupManagerAutoHealingPolicies {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }
-
         public InstanceGroupManagerAutoHealingPolicies build() {
             return new InstanceGroupManagerAutoHealingPolicies(healthCheck, initialDelaySec);
         }

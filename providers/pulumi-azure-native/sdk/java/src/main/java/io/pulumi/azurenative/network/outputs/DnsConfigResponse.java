@@ -98,7 +98,6 @@ public final class DnsConfigResponse {
             this.ttl = ttl;
             return this;
         }
-
         public DnsConfigResponse build() {
             return new DnsConfigResponse(fqdn, relativeName, ttl);
         }

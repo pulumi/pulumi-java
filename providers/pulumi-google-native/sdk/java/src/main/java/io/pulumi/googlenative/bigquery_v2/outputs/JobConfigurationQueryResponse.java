@@ -528,7 +528,6 @@ public final class JobConfigurationQueryResponse {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }
-
         public JobConfigurationQueryResponse build() {
             return new JobConfigurationQueryResponse(allowLargeResults, clustering, connectionProperties, createDisposition, createSession, defaultDataset, destinationEncryptionConfiguration, destinationTable, flattenResults, maximumBillingTier, maximumBytesBilled, parameterMode, priority, query, queryParameters, rangePartitioning, schemaUpdateOptions, tableDefinitions, timePartitioning, useLegacySql, useQueryCache, userDefinedFunctionResources, writeDisposition);
         }

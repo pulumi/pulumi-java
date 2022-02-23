@@ -18,7 +18,7 @@ public final class NodeGroupMaintenanceWindowGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+        private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -61,7 +61,6 @@ public final class NodeGroupMaintenanceWindowGetArgs extends io.pulumi.resources
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public NodeGroupMaintenanceWindowGetArgs build() {
             return new NodeGroupMaintenanceWindowGetArgs(startTime);
         }

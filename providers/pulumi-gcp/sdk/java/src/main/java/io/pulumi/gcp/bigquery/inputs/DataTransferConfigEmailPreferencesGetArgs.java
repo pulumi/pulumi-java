@@ -18,7 +18,7 @@ public final class DataTransferConfigEmailPreferencesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="enableFailureEmail", required=true)
-    private final Input<Boolean> enableFailureEmail;
+        private final Input<Boolean> enableFailureEmail;
 
     public Input<Boolean> getEnableFailureEmail() {
         return this.enableFailureEmail;
@@ -61,7 +61,6 @@ public final class DataTransferConfigEmailPreferencesGetArgs extends io.pulumi.r
             this.enableFailureEmail = Input.of(Objects.requireNonNull(enableFailureEmail));
             return this;
         }
-
         public DataTransferConfigEmailPreferencesGetArgs build() {
             return new DataTransferConfigEmailPreferencesGetArgs(enableFailureEmail);
         }

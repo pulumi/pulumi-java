@@ -18,7 +18,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
      * 
      */
     @InputImport(name="values", required=true)
-    private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -56,7 +56,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse(values);
         }

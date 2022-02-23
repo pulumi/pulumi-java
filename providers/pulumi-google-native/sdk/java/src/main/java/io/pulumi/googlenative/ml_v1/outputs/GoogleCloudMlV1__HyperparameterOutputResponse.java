@@ -247,7 +247,6 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse {
             this.webAccessUris = Objects.requireNonNull(webAccessUris);
             return this;
         }
-
         public GoogleCloudMlV1__HyperparameterOutputResponse build() {
             return new GoogleCloudMlV1__HyperparameterOutputResponse(allMetrics, builtInAlgorithmOutput, endTime, finalMetric, hyperparameters, isTrialStoppedEarly, startTime, state, trialId, webAccessUris);
         }

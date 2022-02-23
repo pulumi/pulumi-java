@@ -97,7 +97,6 @@ public final class LogConfigResponse {
             this.dataAccess = Objects.requireNonNull(dataAccess);
             return this;
         }
-
         public LogConfigResponse build() {
             return new LogConfigResponse(cloudAudit, counter, dataAccess);
         }

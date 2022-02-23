@@ -75,7 +75,6 @@ public final class OptionResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public OptionResponse build() {
             return new OptionResponse(name, value);
         }

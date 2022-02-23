@@ -24,7 +24,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluatorType")
-    private final @Nullable Input<Either<String,PolicyEvaluatorType>> evaluatorType;
+        private final @Nullable Input<Either<String,PolicyEvaluatorType>> evaluatorType;
 
     public Input<Either<String,PolicyEvaluatorType>> getEvaluatorType() {
         return this.evaluatorType == null ? Input.empty() : this.evaluatorType;
@@ -46,7 +46,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="factData")
-    private final @Nullable Input<String> factData;
+        private final @Nullable Input<String> factData;
 
     public Input<String> getFactData() {
         return this.factData == null ? Input.empty() : this.factData;
@@ -57,7 +57,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="factName")
-    private final @Nullable Input<Either<String,PolicyFactName>> factName;
+        private final @Nullable Input<Either<String,PolicyFactName>> factName;
 
     public Input<Either<String,PolicyFactName>> getFactName() {
         return this.factName == null ? Input.empty() : this.factName;
@@ -68,7 +68,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-    private final Input<String> labName;
+        private final Input<String> labName;
 
     public Input<String> getLabName() {
         return this.labName;
@@ -79,7 +79,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -90,7 +90,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policySetName", required=true)
-    private final Input<String> policySetName;
+        private final Input<String> policySetName;
 
     public Input<String> getPolicySetName() {
         return this.policySetName;
@@ -112,7 +112,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -123,7 +123,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,PolicyStatus>> status;
+        private final @Nullable Input<Either<String,PolicyStatus>> status;
 
     public Input<Either<String,PolicyStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -134,7 +134,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -145,7 +145,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threshold")
-    private final @Nullable Input<String> threshold;
+        private final @Nullable Input<String> threshold;
 
     public Input<String> getThreshold() {
         return this.threshold == null ? Input.empty() : this.threshold;
@@ -354,7 +354,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.threshold = Input.ofNullable(threshold);
             return this;
         }
-
         public PolicyArgs build() {
             return new PolicyArgs(description, evaluatorType, factData, factName, labName, location, name, policySetName, resourceGroupName, status, tags, threshold);
         }

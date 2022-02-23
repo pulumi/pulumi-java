@@ -60,7 +60,6 @@ public final class EC2FleetAcceleratorTotalMemoryMiBRequest {
             this.min = min;
             return this;
         }
-
         public EC2FleetAcceleratorTotalMemoryMiBRequest build() {
             return new EC2FleetAcceleratorTotalMemoryMiBRequest(max, min);
         }

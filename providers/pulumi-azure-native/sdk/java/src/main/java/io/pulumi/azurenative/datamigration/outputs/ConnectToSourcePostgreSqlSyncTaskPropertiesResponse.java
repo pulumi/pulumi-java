@@ -169,7 +169,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ConnectToSourcePostgreSqlSyncTaskPropertiesResponse build() {
             return new ConnectToSourcePostgreSqlSyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

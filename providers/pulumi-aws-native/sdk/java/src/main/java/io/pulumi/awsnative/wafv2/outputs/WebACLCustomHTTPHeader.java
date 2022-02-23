@@ -58,7 +58,6 @@ public final class WebACLCustomHTTPHeader {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WebACLCustomHTTPHeader build() {
             return new WebACLCustomHTTPHeader(name, value);
         }

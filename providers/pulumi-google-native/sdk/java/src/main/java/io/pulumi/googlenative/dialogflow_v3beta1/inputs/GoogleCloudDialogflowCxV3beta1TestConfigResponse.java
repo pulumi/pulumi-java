@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse extends io.p
      * 
      */
     @InputImport(name="flow", required=true)
-    private final String flow;
+      private final String flow;
 
     public String getFlow() {
         return this.flow;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse extends io.p
      * 
      */
     @InputImport(name="trackingParameters", required=true)
-    private final List<String> trackingParameters;
+      private final List<String> trackingParameters;
 
     public List<String> getTrackingParameters() {
         return this.trackingParameters;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse extends io.p
             this.trackingParameters = Objects.requireNonNull(trackingParameters);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1TestConfigResponse build() {
             return new GoogleCloudDialogflowCxV3beta1TestConfigResponse(flow, trackingParameters);
         }

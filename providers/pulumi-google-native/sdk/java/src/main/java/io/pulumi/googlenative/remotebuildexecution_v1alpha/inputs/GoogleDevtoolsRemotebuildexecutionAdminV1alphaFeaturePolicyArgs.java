@@ -24,7 +24,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
      * 
      */
     @InputImport(name="containerImageSources")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> containerImageSources;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> containerImageSources;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getContainerImageSources() {
         return this.containerImageSources == null ? Input.empty() : this.containerImageSources;
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
      * 
      */
     @InputImport(name="dockerAddCapabilities")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerAddCapabilities;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerAddCapabilities;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerAddCapabilities() {
         return this.dockerAddCapabilities == null ? Input.empty() : this.dockerAddCapabilities;
@@ -46,7 +46,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
      * 
      */
     @InputImport(name="dockerChrootPath")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerChrootPath;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerChrootPath;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerChrootPath() {
         return this.dockerChrootPath == null ? Input.empty() : this.dockerChrootPath;
@@ -57,7 +57,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
      * 
      */
     @InputImport(name="dockerNetwork")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerNetwork;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerNetwork;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerNetwork() {
         return this.dockerNetwork == null ? Input.empty() : this.dockerNetwork;
@@ -68,7 +68,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
      * 
      */
     @InputImport(name="dockerPrivileged")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerPrivileged;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerPrivileged;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerPrivileged() {
         return this.dockerPrivileged == null ? Input.empty() : this.dockerPrivileged;
@@ -79,7 +79,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
      * 
      */
     @InputImport(name="dockerRunAsRoot")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRunAsRoot;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRunAsRoot;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerRunAsRoot() {
         return this.dockerRunAsRoot == null ? Input.empty() : this.dockerRunAsRoot;
@@ -90,7 +90,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
      * 
      */
     @InputImport(name="dockerRuntime")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRuntime;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRuntime;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerRuntime() {
         return this.dockerRuntime == null ? Input.empty() : this.dockerRuntime;
@@ -101,7 +101,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
      * 
      */
     @InputImport(name="dockerSiblingContainers")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerSiblingContainers;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerSiblingContainers;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerSiblingContainers() {
         return this.dockerSiblingContainers == null ? Input.empty() : this.dockerSiblingContainers;
@@ -112,7 +112,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
      * 
      */
     @InputImport(name="linuxIsolation")
-    private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation> linuxIsolation;
+      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation> linuxIsolation;
 
     public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation> getLinuxIsolation() {
         return this.linuxIsolation == null ? Input.empty() : this.linuxIsolation;
@@ -276,7 +276,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
             this.linuxIsolation = Input.ofNullable(linuxIsolation);
             return this;
         }
-
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs(containerImageSources, dockerAddCapabilities, dockerChrootPath, dockerNetwork, dockerPrivileged, dockerRunAsRoot, dockerRuntime, dockerSiblingContainers, linuxIsolation);
         }

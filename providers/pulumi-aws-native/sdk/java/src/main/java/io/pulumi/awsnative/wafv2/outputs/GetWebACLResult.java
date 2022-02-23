@@ -193,7 +193,6 @@ public final class GetWebACLResult {
             this.visibilityConfig = visibilityConfig;
             return this;
         }
-
         public GetWebACLResult build() {
             return new GetWebACLResult(arn, capacity, captchaConfig, customResponseBodies, defaultAction, description, id, labelNamespace, rules, tags, visibilityConfig);
         }

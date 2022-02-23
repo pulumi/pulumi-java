@@ -19,21 +19,21 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="topicId", required=true)
-    private final Input<String> topicId;
+      private final Input<String> topicId;
 
     public Input<String> getTopicId() {
         return this.topicId;
@@ -107,7 +107,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             this.topicId = Input.of(Objects.requireNonNull(topicId));
             return this;
         }
-
         public TopicArgs build() {
             return new TopicArgs(name, project, topicId);
         }

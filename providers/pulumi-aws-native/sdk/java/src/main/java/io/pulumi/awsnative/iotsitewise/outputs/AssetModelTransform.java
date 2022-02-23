@@ -76,7 +76,6 @@ public final class AssetModelTransform {
             this.variables = Objects.requireNonNull(variables);
             return this;
         }
-
         public AssetModelTransform build() {
             return new AssetModelTransform(expression, variables);
         }

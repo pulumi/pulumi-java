@@ -19,7 +19,7 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deviceId")
-    private final @Nullable String deviceId;
+        private final @Nullable String deviceId;
 
     public Optional<String> getDeviceId() {
         return this.deviceId == null ? Optional.empty() : Optional.ofNullable(this.deviceId);
@@ -41,7 +41,7 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,6 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListMediaServiceEdgePoliciesArgs build() {
             return new ListMediaServiceEdgePoliciesArgs(accountName, deviceId, resourceGroupName);
         }

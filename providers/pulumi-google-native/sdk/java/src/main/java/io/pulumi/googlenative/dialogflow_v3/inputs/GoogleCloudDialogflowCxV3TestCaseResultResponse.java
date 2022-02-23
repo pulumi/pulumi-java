@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
      * 
      */
     @InputImport(name="conversationTurns", required=true)
-    private final List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns;
+      private final List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns;
 
     public List<GoogleCloudDialogflowCxV3ConversationTurnResponse> getConversationTurns() {
         return this.conversationTurns;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
      * 
      */
     @InputImport(name="environment", required=true)
-    private final String environment;
+      private final String environment;
 
     public String getEnvironment() {
         return this.environment;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
      * 
      */
     @InputImport(name="testResult", required=true)
-    private final String testResult;
+      private final String testResult;
 
     public String getTestResult() {
         return this.testResult;
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
      * 
      */
     @InputImport(name="testTime", required=true)
-    private final String testTime;
+      private final String testTime;
 
     public String getTestTime() {
         return this.testTime;
@@ -146,7 +146,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
             this.testTime = Objects.requireNonNull(testTime);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3TestCaseResultResponse build() {
             return new GoogleCloudDialogflowCxV3TestCaseResultResponse(conversationTurns, environment, name, testResult, testTime);
         }

@@ -96,7 +96,6 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse {
             this.includeRegex = Objects.requireNonNull(includeRegex);
             return this;
         }
-
         public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse build() {
             return new GooglePrivacyDlpV2CloudStorageRegexFileSetResponse(bucketName, excludeRegex, includeRegex);
         }

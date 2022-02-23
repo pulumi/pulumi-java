@@ -353,7 +353,6 @@ public final class GetExperimentResult {
             this.variantsHistory = Objects.requireNonNull(variantsHistory);
             return this;
         }
-
         public GetExperimentResult build() {
             return new GetExperimentResult(createTime, definition, description, displayName, endTime, experimentLength, lastUpdateTime, name, result, rolloutConfig, rolloutFailureReason, rolloutState, startTime, state, variantsHistory);
         }

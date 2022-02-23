@@ -22,7 +22,7 @@ public final class RequestBasedSliResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="distributionCut", required=true)
-    private final DistributionCutResponse distributionCut;
+      private final DistributionCutResponse distributionCut;
 
     public DistributionCutResponse getDistributionCut() {
         return this.distributionCut;
@@ -33,7 +33,7 @@ public final class RequestBasedSliResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="goodTotalRatio", required=true)
-    private final TimeSeriesRatioResponse goodTotalRatio;
+      private final TimeSeriesRatioResponse goodTotalRatio;
 
     public TimeSeriesRatioResponse getGoodTotalRatio() {
         return this.goodTotalRatio;
@@ -82,7 +82,6 @@ public final class RequestBasedSliResponse extends io.pulumi.resources.InvokeArg
             this.goodTotalRatio = Objects.requireNonNull(goodTotalRatio);
             return this;
         }
-
         public RequestBasedSliResponse build() {
             return new RequestBasedSliResponse(distributionCut, goodTotalRatio);
         }

@@ -270,7 +270,6 @@ public final class IotDpsPropertiesDescriptionResponse {
             this.state = state;
             return this;
         }
-
         public IotDpsPropertiesDescriptionResponse build() {
             return new IotDpsPropertiesDescriptionResponse(allocationPolicy, authorizationPolicies, deviceProvisioningHostName, idScope, iotHubs, ipFilterRules, privateEndpointConnections, provisioningState, publicNetworkAccess, serviceOperationsHostName, state);
         }

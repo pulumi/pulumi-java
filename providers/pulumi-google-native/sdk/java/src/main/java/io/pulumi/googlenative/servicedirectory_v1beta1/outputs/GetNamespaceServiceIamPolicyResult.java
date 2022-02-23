@@ -98,7 +98,6 @@ public final class GetNamespaceServiceIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetNamespaceServiceIamPolicyResult build() {
             return new GetNamespaceServiceIamPolicyResult(bindings, etag, version);
         }

@@ -26,7 +26,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enableInternetSecurity")
-    private final @Nullable Input<Boolean> enableInternetSecurity;
+        private final @Nullable Input<Boolean> enableInternetSecurity;
 
     public Input<Boolean> getEnableInternetSecurity() {
         return this.enableInternetSecurity == null ? Input.empty() : this.enableInternetSecurity;
@@ -37,7 +37,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -48,7 +48,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -59,7 +59,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="routingConfiguration")
-    private final @Nullable Input<RoutingConfigurationArgs> routingConfiguration;
+        private final @Nullable Input<RoutingConfigurationArgs> routingConfiguration;
 
     public Input<RoutingConfigurationArgs> getRoutingConfiguration() {
         return this.routingConfiguration == null ? Input.empty() : this.routingConfiguration;
@@ -70,7 +70,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="vpnClientAddressPool")
-    private final @Nullable Input<AddressSpaceArgs> vpnClientAddressPool;
+        private final @Nullable Input<AddressSpaceArgs> vpnClientAddressPool;
 
     public Input<AddressSpaceArgs> getVpnClientAddressPool() {
         return this.vpnClientAddressPool == null ? Input.empty() : this.vpnClientAddressPool;
@@ -174,7 +174,6 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
             this.vpnClientAddressPool = Input.ofNullable(vpnClientAddressPool);
             return this;
         }
-
         public P2SConnectionConfigurationArgs build() {
             return new P2SConnectionConfigurationArgs(enableInternetSecurity, id, name, routingConfiguration, vpnClientAddressPool);
         }

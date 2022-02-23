@@ -97,7 +97,6 @@ public final class VmUtilizationInfoResponse {
             this.vmwareVmDetails = Objects.requireNonNull(vmwareVmDetails);
             return this;
         }
-
         public VmUtilizationInfoResponse build() {
             return new VmUtilizationInfoResponse(utilization, vmId, vmwareVmDetails);
         }

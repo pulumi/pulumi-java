@@ -17,7 +17,7 @@ public final class DatasetTagsItemResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tagKey", required=true)
-    private final String tagKey;
+      private final String tagKey;
 
     public String getTagKey() {
         return this.tagKey;
@@ -28,7 +28,7 @@ public final class DatasetTagsItemResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tagValue", required=true)
-    private final String tagValue;
+      private final String tagValue;
 
     public String getTagValue() {
         return this.tagValue;
@@ -77,7 +77,6 @@ public final class DatasetTagsItemResponse extends io.pulumi.resources.InvokeArg
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
-
         public DatasetTagsItemResponse build() {
             return new DatasetTagsItemResponse(tagKey, tagValue);
         }

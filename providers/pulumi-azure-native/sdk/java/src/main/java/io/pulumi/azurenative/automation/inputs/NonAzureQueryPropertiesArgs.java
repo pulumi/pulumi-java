@@ -23,7 +23,7 @@ public final class NonAzureQueryPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="functionAlias")
-    private final @Nullable Input<String> functionAlias;
+        private final @Nullable Input<String> functionAlias;
 
     public Input<String> getFunctionAlias() {
         return this.functionAlias == null ? Input.empty() : this.functionAlias;
@@ -34,7 +34,7 @@ public final class NonAzureQueryPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="workspaceId")
-    private final @Nullable Input<String> workspaceId;
+        private final @Nullable Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId == null ? Input.empty() : this.workspaceId;
@@ -93,7 +93,6 @@ public final class NonAzureQueryPropertiesArgs extends io.pulumi.resources.Resou
             this.workspaceId = Input.ofNullable(workspaceId);
             return this;
         }
-
         public NonAzureQueryPropertiesArgs build() {
             return new NonAzureQueryPropertiesArgs(functionAlias, workspaceId);
         }

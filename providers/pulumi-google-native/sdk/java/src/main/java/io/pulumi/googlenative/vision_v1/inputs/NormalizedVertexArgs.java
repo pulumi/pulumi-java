@@ -23,7 +23,7 @@ public final class NormalizedVertexArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="x")
-    private final @Nullable Input<Double> x;
+      private final @Nullable Input<Double> x;
 
     public Input<Double> getX() {
         return this.x == null ? Input.empty() : this.x;
@@ -34,7 +34,7 @@ public final class NormalizedVertexArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="y")
-    private final @Nullable Input<Double> y;
+      private final @Nullable Input<Double> y;
 
     public Input<Double> getY() {
         return this.y == null ? Input.empty() : this.y;
@@ -93,7 +93,6 @@ public final class NormalizedVertexArgs extends io.pulumi.resources.ResourceArgs
             this.y = Input.ofNullable(y);
             return this;
         }
-
         public NormalizedVertexArgs build() {
             return new NormalizedVertexArgs(x, y);
         }

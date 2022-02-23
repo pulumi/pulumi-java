@@ -86,7 +86,6 @@ public final class PipelineMath {
             this.next = next;
             return this;
         }
-
         public PipelineMath build() {
             return new PipelineMath(attribute, math, name, next);
         }

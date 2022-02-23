@@ -160,7 +160,6 @@ public final class DataCollectionEndpointResourceResponseSystemData {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public DataCollectionEndpointResourceResponseSystemData build() {
             return new DataCollectionEndpointResourceResponseSystemData(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

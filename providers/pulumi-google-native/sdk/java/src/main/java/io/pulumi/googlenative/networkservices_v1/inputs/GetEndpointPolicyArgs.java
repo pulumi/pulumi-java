@@ -15,21 +15,21 @@ public final class GetEndpointPolicyArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetEndpointPolicyArgs Empty = new GetEndpointPolicyArgs();
 
     @InputImport(name="endpointPolicyId", required=true)
-    private final String endpointPolicyId;
+      private final String endpointPolicyId;
 
     public String getEndpointPolicyId() {
         return this.endpointPolicyId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetEndpointPolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.project = project;
             return this;
         }
-
         public GetEndpointPolicyArgs build() {
             return new GetEndpointPolicyArgs(endpointPolicyId, location, project);
         }

@@ -140,7 +140,6 @@ public final class ListTenantAccessSecretsResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListTenantAccessSecretsResult build() {
             return new ListTenantAccessSecretsResult(enabled, id, primaryKey, principalId, secondaryKey);
         }

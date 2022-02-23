@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
      * 
      */
     @InputImport(name="conversationTurns", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> conversationTurns;
+      private final List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> conversationTurns;
 
     public List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> getConversationTurns() {
         return this.conversationTurns;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
      * 
      */
     @InputImport(name="environment", required=true)
-    private final String environment;
+      private final String environment;
 
     public String getEnvironment() {
         return this.environment;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
      * 
      */
     @InputImport(name="testResult", required=true)
-    private final String testResult;
+      private final String testResult;
 
     public String getTestResult() {
         return this.testResult;
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
      * 
      */
     @InputImport(name="testTime", required=true)
-    private final String testTime;
+      private final String testTime;
 
     public String getTestTime() {
         return this.testTime;
@@ -146,7 +146,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
             this.testTime = Objects.requireNonNull(testTime);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1TestCaseResultResponse build() {
             return new GoogleCloudDialogflowCxV3beta1TestCaseResultResponse(conversationTurns, environment, name, testResult, testTime);
         }

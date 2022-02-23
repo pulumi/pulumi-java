@@ -28,7 +28,7 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="cpuTimeMs", required=true)
-    private final Double cpuTimeMs;
+        private final Double cpuTimeMs;
 
     public Double getCpuTimeMs() {
         return this.cpuTimeMs;
@@ -39,7 +39,7 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="elapsedTimeMs", required=true)
-    private final Double elapsedTimeMs;
+        private final Double elapsedTimeMs;
 
     public Double getElapsedTimeMs() {
         return this.elapsedTimeMs;
@@ -50,7 +50,7 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="executionCount", required=true)
-    private final Double executionCount;
+        private final Double executionCount;
 
     public Double getExecutionCount() {
         return this.executionCount;
@@ -61,7 +61,7 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="hasErrors", required=true)
-    private final Boolean hasErrors;
+        private final Boolean hasErrors;
 
     public Boolean getHasErrors() {
         return this.hasErrors;
@@ -72,7 +72,7 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sqlErrors", required=true)
-    private final List<String> sqlErrors;
+        private final List<String> sqlErrors;
 
     public List<String> getSqlErrors() {
         return this.sqlErrors;
@@ -83,7 +83,7 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="waitStats")
-    private final @Nullable Map<String,WaitStatisticsResponse> waitStats;
+        private final @Nullable Map<String,WaitStatisticsResponse> waitStats;
 
     public Map<String,WaitStatisticsResponse> getWaitStats() {
         return this.waitStats == null ? Map.of() : this.waitStats;
@@ -172,7 +172,6 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
             this.waitStats = waitStats;
             return this;
         }
-
         public ExecutionStatisticsResponse build() {
             return new ExecutionStatisticsResponse(cpuTimeMs, elapsedTimeMs, executionCount, hasErrors, sqlErrors, waitStats);
         }

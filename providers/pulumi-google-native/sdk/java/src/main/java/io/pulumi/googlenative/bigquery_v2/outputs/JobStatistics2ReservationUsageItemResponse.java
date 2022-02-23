@@ -74,7 +74,6 @@ public final class JobStatistics2ReservationUsageItemResponse {
             this.slotMs = Objects.requireNonNull(slotMs);
             return this;
         }
-
         public JobStatistics2ReservationUsageItemResponse build() {
             return new JobStatistics2ReservationUsageItemResponse(name, slotMs);
         }

@@ -22,7 +22,7 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="baseUrl", required=true)
-    private final String baseUrl;
+      private final String baseUrl;
 
     public String getBaseUrl() {
         return this.baseUrl;
@@ -33,7 +33,7 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="reportingEnabled", required=true)
-    private final Boolean reportingEnabled;
+      private final Boolean reportingEnabled;
 
     public Boolean getReportingEnabled() {
         return this.reportingEnabled;
@@ -44,7 +44,7 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="servicePath", required=true)
-    private final String servicePath;
+      private final String servicePath;
 
     public String getServicePath() {
         return this.servicePath;
@@ -55,7 +55,7 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="shuffleServicePath", required=true)
-    private final String shuffleServicePath;
+      private final String shuffleServicePath;
 
     public String getShuffleServicePath() {
         return this.shuffleServicePath;
@@ -66,7 +66,7 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="tempStoragePrefix", required=true)
-    private final String tempStoragePrefix;
+      private final String tempStoragePrefix;
 
     public String getTempStoragePrefix() {
         return this.tempStoragePrefix;
@@ -77,7 +77,7 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="workerId", required=true)
-    private final String workerId;
+      private final String workerId;
 
     public String getWorkerId() {
         return this.workerId;
@@ -166,7 +166,6 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
             this.workerId = Objects.requireNonNull(workerId);
             return this;
         }
-
         public WorkerSettingsResponse build() {
             return new WorkerSettingsResponse(baseUrl, reportingEnabled, servicePath, shuffleServicePath, tempStoragePrefix, workerId);
         }

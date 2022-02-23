@@ -53,7 +53,6 @@ public final class IosDeviceListResponse {
             this.iosDevices = Objects.requireNonNull(iosDevices);
             return this;
         }
-
         public IosDeviceListResponse build() {
             return new IosDeviceListResponse(iosDevices);
         }

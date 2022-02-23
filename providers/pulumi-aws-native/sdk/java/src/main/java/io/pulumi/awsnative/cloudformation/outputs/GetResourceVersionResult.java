@@ -175,7 +175,6 @@ public final class GetResourceVersionResult {
             this.visibility = visibility;
             return this;
         }
-
         public GetResourceVersionResult build() {
             return new GetResourceVersionResult(arn, isDefaultVersion, provisioningType, typeArn, versionId, visibility);
         }

@@ -21,7 +21,7 @@ public final class RevocationDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="revocationState", required=true)
-    private final String revocationState;
+      private final String revocationState;
 
     public String getRevocationState() {
         return this.revocationState;
@@ -32,7 +32,7 @@ public final class RevocationDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="revocationTime", required=true)
-    private final String revocationTime;
+      private final String revocationTime;
 
     public String getRevocationTime() {
         return this.revocationTime;
@@ -81,7 +81,6 @@ public final class RevocationDetailsResponse extends io.pulumi.resources.InvokeA
             this.revocationTime = Objects.requireNonNull(revocationTime);
             return this;
         }
-
         public RevocationDetailsResponse build() {
             return new RevocationDetailsResponse(revocationState, revocationTime);
         }

@@ -22,7 +22,7 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="options", required=true)
-    private final Input<TransitGatewayConnectOptionsArgs> options;
+        private final Input<TransitGatewayConnectOptionsArgs> options;
 
     public Input<TransitGatewayConnectOptionsArgs> getOptions() {
         return this.options;
@@ -33,7 +33,7 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<TransitGatewayConnectTagArgs>> tags;
+        private final @Nullable Input<List<TransitGatewayConnectTagArgs>> tags;
 
     public Input<List<TransitGatewayConnectTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -44,7 +44,7 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transportTransitGatewayAttachmentId", required=true)
-    private final Input<String> transportTransitGatewayAttachmentId;
+        private final Input<String> transportTransitGatewayAttachmentId;
 
     public Input<String> getTransportTransitGatewayAttachmentId() {
         return this.transportTransitGatewayAttachmentId;
@@ -118,7 +118,6 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
             this.transportTransitGatewayAttachmentId = Input.of(Objects.requireNonNull(transportTransitGatewayAttachmentId));
             return this;
         }
-
         public TransitGatewayConnectArgs build() {
             return new TransitGatewayConnectArgs(options, tags, transportTransitGatewayAttachmentId);
         }

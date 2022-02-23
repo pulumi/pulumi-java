@@ -75,7 +75,6 @@ public final class ClusterClusterConfigWorkerConfigAccelerator {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public ClusterClusterConfigWorkerConfigAccelerator build() {
             return new ClusterClusterConfigWorkerConfigAccelerator(acceleratorCount, acceleratorType);
         }

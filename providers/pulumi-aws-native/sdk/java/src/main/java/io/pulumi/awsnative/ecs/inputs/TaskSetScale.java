@@ -20,7 +20,7 @@ public final class TaskSetScale extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable TaskSetScaleUnit unit;
+        private final @Nullable TaskSetScaleUnit unit;
 
     public Optional<TaskSetScaleUnit> getUnit() {
         return this.unit == null ? Optional.empty() : Optional.ofNullable(this.unit);
@@ -31,7 +31,7 @@ public final class TaskSetScale extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Double value;
+        private final @Nullable Double value;
 
     public Optional<Double> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -80,7 +80,6 @@ public final class TaskSetScale extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public TaskSetScale build() {
             return new TaskSetScale(unit, value);
         }

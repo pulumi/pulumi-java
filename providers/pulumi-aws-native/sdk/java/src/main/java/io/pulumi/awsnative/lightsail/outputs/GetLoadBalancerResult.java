@@ -155,7 +155,6 @@ public final class GetLoadBalancerResult {
             this.tags = tags;
             return this;
         }
-
         public GetLoadBalancerResult build() {
             return new GetLoadBalancerResult(attachedInstances, healthCheckPath, loadBalancerArn, sessionStickinessEnabled, sessionStickinessLBCookieDurationSeconds, tags);
         }

@@ -19,7 +19,7 @@ public final class ModelDockerSectionResponseResponseBaseImageRegistry extends i
     public static final ModelDockerSectionResponseResponseBaseImageRegistry Empty = new ModelDockerSectionResponseResponseBaseImageRegistry();
 
     @InputImport(name="address")
-    private final @Nullable String address;
+        private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
@@ -57,7 +57,6 @@ public final class ModelDockerSectionResponseResponseBaseImageRegistry extends i
             this.address = address;
             return this;
         }
-
         public ModelDockerSectionResponseResponseBaseImageRegistry build() {
             return new ModelDockerSectionResponseResponseBaseImageRegistry(address);
         }

@@ -23,7 +23,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -34,7 +34,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -58,7 +58,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileShares")
-    private final @Nullable Input<InstanceFileSharesGetArgs> fileShares;
+        private final @Nullable Input<InstanceFileSharesGetArgs> fileShares;
 
     public Input<InstanceFileSharesGetArgs> getFileShares() {
         return this.fileShares == null ? Input.empty() : this.fileShares;
@@ -69,7 +69,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -80,7 +80,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -91,7 +91,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -104,7 +104,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networks")
-    private final @Nullable Input<List<InstanceNetworkGetArgs>> networks;
+        private final @Nullable Input<List<InstanceNetworkGetArgs>> networks;
 
     public Input<List<InstanceNetworkGetArgs>> getNetworks() {
         return this.networks == null ? Input.empty() : this.networks;
@@ -116,7 +116,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -128,7 +128,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<String> tier;
+        private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -145,7 +145,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Deprecated in favor of location. */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     @Deprecated /* Deprecated in favor of location. */
     public Input<String> getZone() {
@@ -340,7 +340,6 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public InstanceState build() {
             return new InstanceState(createTime, description, etag, fileShares, labels, location, name, networks, project, tier, zone);
         }

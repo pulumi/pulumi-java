@@ -99,7 +99,6 @@ public final class SloWindowsBasedSliMetricSumInRange {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }
-
         public SloWindowsBasedSliMetricSumInRange build() {
             return new SloWindowsBasedSliMetricSumInRange(range, timeSeries);
         }

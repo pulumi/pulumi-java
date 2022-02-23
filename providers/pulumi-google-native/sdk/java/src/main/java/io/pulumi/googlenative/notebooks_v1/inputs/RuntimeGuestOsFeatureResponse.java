@@ -21,7 +21,7 @@ public final class RuntimeGuestOsFeatureResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -59,7 +59,6 @@ public final class RuntimeGuestOsFeatureResponse extends io.pulumi.resources.Inv
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RuntimeGuestOsFeatureResponse build() {
             return new RuntimeGuestOsFeatureResponse(type);
         }

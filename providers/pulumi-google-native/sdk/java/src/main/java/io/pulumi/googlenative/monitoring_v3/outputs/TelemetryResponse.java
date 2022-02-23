@@ -52,7 +52,6 @@ public final class TelemetryResponse {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public TelemetryResponse build() {
             return new TelemetryResponse(resourceName);
         }

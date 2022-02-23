@@ -375,7 +375,6 @@ public final class GetDatastoreResult {
             this.vCenterId = vCenterId;
             return this;
         }
-
         public GetDatastoreResult build() {
             return new GetDatastoreResult(customResourceName, extendedLocation, id, inventoryItemId, kind, location, moName, moRefId, name, provisioningState, statuses, systemData, tags, type, uuid, vCenterId);
         }

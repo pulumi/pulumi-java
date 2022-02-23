@@ -212,7 +212,6 @@ public final class EnvironmentSpecificationVersionResponse {
             this.tags = tags;
             return this;
         }
-
         public EnvironmentSpecificationVersionResponse build() {
             return new EnvironmentSpecificationVersionResponse(condaFile, description, docker, environmentSpecificationType, inferenceContainerProperties, isAnonymous, properties, tags);
         }

@@ -186,7 +186,6 @@ public final class TableExternalDataConfigurationCsvOptions {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
-
         public TableExternalDataConfigurationCsvOptions build() {
             return new TableExternalDataConfigurationCsvOptions(allowJaggedRows, allowQuotedNewlines, encoding, fieldDelimiter, quote, skipLeadingRows);
         }

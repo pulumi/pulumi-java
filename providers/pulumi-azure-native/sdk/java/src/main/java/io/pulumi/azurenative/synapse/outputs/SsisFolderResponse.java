@@ -121,7 +121,6 @@ public final class SsisFolderResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SsisFolderResponse build() {
             return new SsisFolderResponse(description, id, name, type);
         }

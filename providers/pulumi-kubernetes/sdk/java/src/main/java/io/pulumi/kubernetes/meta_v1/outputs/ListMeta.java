@@ -123,7 +123,6 @@ public final class ListMeta {
             this.selfLink = selfLink;
             return this;
         }
-
         public ListMeta build() {
             return new ListMeta($continue, remainingItemCount, resourceVersion, selfLink);
         }

@@ -53,7 +53,6 @@ public final class SearchConfigResponse {
             this.searchParameters = Objects.requireNonNull(searchParameters);
             return this;
         }
-
         public SearchConfigResponse build() {
             return new SearchConfigResponse(searchParameters);
         }

@@ -159,7 +159,6 @@ public final class MysqlSslConfigResponse {
             this.clientKeySet = Objects.requireNonNull(clientKeySet);
             return this;
         }
-
         public MysqlSslConfigResponse build() {
             return new MysqlSslConfigResponse(caCertificate, caCertificateSet, clientCertificate, clientCertificateSet, clientKey, clientKeySet);
         }

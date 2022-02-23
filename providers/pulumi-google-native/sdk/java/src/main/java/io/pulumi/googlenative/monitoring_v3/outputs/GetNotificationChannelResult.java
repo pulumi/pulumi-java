@@ -246,7 +246,6 @@ public final class GetNotificationChannelResult {
             this.verificationStatus = Objects.requireNonNull(verificationStatus);
             return this;
         }
-
         public GetNotificationChannelResult build() {
             return new GetNotificationChannelResult(creationRecord, description, displayName, enabled, labels, mutationRecords, name, type, userLabels, verificationStatus);
         }

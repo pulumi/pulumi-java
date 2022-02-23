@@ -100,7 +100,6 @@ public final class GetResourceSetResult {
             this.tags = tags;
             return this;
         }
-
         public GetResourceSetResult build() {
             return new GetResourceSetResult(resourceSetArn, resources, tags);
         }

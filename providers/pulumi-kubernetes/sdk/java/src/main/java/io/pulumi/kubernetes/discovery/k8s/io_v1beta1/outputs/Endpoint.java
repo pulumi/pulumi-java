@@ -200,7 +200,6 @@ public final class Endpoint {
             this.topology = topology;
             return this;
         }
-
         public Endpoint build() {
             return new Endpoint(addresses, conditions, hints, hostname, nodeName, targetRef, topology);
         }

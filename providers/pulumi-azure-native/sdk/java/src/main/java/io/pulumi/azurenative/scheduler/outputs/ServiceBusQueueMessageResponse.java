@@ -184,7 +184,6 @@ public final class ServiceBusQueueMessageResponse {
             this.transportType = transportType;
             return this;
         }
-
         public ServiceBusQueueMessageResponse build() {
             return new ServiceBusQueueMessageResponse(authentication, brokeredMessageProperties, customMessageProperties, message, namespace, queueName, transportType);
         }

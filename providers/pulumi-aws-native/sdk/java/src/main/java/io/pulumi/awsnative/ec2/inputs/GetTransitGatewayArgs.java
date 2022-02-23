@@ -13,7 +13,7 @@ public final class GetTransitGatewayArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetTransitGatewayArgs Empty = new GetTransitGatewayArgs();
 
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -51,7 +51,6 @@ public final class GetTransitGatewayArgs extends io.pulumi.resources.InvokeArgs 
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GetTransitGatewayArgs build() {
             return new GetTransitGatewayArgs(id);
         }

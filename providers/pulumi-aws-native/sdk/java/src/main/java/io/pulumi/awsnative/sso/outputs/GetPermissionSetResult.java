@@ -168,7 +168,6 @@ public final class GetPermissionSetResult {
             this.tags = tags;
             return this;
         }
-
         public GetPermissionSetResult build() {
             return new GetPermissionSetResult(description, inlinePolicy, managedPolicies, permissionSetArn, relayStateType, sessionDuration, tags);
         }

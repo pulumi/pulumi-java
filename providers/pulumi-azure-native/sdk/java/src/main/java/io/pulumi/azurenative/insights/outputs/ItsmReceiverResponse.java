@@ -137,7 +137,6 @@ public final class ItsmReceiverResponse {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public ItsmReceiverResponse build() {
             return new ItsmReceiverResponse(connectionId, name, region, ticketConfiguration, workspaceId);
         }

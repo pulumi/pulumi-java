@@ -117,7 +117,6 @@ public final class PlanQuantityResponse {
             this.overageMeter = Objects.requireNonNull(overageMeter);
             return this;
         }
-
         public PlanQuantityResponse build() {
             return new PlanQuantityResponse(allowance, amount, includedQuantityMeter, overageMeter);
         }

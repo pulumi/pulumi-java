@@ -96,7 +96,6 @@ public final class RoutingPolicyResponse {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
-
         public RoutingPolicyResponse build() {
             return new RoutingPolicyResponse(destinations, name, nextHop);
         }

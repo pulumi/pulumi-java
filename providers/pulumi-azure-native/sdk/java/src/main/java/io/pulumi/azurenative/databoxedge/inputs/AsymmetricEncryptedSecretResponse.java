@@ -23,7 +23,7 @@ public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="encryptionAlgorithm", required=true)
-    private final String encryptionAlgorithm;
+        private final String encryptionAlgorithm;
 
     public String getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
@@ -34,7 +34,7 @@ public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="encryptionCertThumbprint")
-    private final @Nullable String encryptionCertThumbprint;
+        private final @Nullable String encryptionCertThumbprint;
 
     public Optional<String> getEncryptionCertThumbprint() {
         return this.encryptionCertThumbprint == null ? Optional.empty() : Optional.ofNullable(this.encryptionCertThumbprint);
@@ -45,7 +45,7 @@ public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -104,7 +104,6 @@ public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AsymmetricEncryptedSecretResponse build() {
             return new AsymmetricEncryptedSecretResponse(encryptionAlgorithm, encryptionCertThumbprint, value);
         }

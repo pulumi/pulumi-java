@@ -56,7 +56,6 @@ public final class FeatureSpec {
             this.multiclusteringress = multiclusteringress;
             return this;
         }
-
         public FeatureSpec build() {
             return new FeatureSpec(multiclusteringress);
         }

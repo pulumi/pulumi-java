@@ -74,7 +74,6 @@ public final class OIDCProviderTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public OIDCProviderTag build() {
             return new OIDCProviderTag(key, value);
         }

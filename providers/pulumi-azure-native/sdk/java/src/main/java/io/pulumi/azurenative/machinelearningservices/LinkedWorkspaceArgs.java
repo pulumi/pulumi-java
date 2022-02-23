@@ -20,7 +20,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkName")
-    private final @Nullable Input<String> linkName;
+        private final @Nullable Input<String> linkName;
 
     public Input<String> getLinkName() {
         return this.linkName == null ? Input.empty() : this.linkName;
@@ -31,7 +31,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<LinkedWorkspacePropsArgs> properties;
+        private final @Nullable Input<LinkedWorkspacePropsArgs> properties;
 
     public Input<LinkedWorkspacePropsArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -168,7 +168,6 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public LinkedWorkspaceArgs build() {
             return new LinkedWorkspaceArgs(linkName, name, properties, resourceGroupName, workspaceName);
         }

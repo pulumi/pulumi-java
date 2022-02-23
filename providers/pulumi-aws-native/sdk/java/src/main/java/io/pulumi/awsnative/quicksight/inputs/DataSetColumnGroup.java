@@ -21,7 +21,7 @@ public final class DataSetColumnGroup extends io.pulumi.resources.InvokeArgs {
     public static final DataSetColumnGroup Empty = new DataSetColumnGroup();
 
     @InputImport(name="geoSpatialColumnGroup")
-    private final @Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup;
+        private final @Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup;
 
     public Optional<DataSetGeoSpatialColumnGroup> getGeoSpatialColumnGroup() {
         return this.geoSpatialColumnGroup == null ? Optional.empty() : Optional.ofNullable(this.geoSpatialColumnGroup);
@@ -59,7 +59,6 @@ public final class DataSetColumnGroup extends io.pulumi.resources.InvokeArgs {
             this.geoSpatialColumnGroup = geoSpatialColumnGroup;
             return this;
         }
-
         public DataSetColumnGroup build() {
             return new DataSetColumnGroup(geoSpatialColumnGroup);
         }

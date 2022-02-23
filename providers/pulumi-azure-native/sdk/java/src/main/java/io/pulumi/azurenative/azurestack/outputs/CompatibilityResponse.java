@@ -120,7 +120,6 @@ public final class CompatibilityResponse {
             this.message = message;
             return this;
         }
-
         public CompatibilityResponse build() {
             return new CompatibilityResponse(description, isCompatible, issues, message);
         }

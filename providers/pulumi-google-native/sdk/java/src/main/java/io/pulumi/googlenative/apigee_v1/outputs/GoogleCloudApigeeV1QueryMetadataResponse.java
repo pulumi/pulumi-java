@@ -159,7 +159,6 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
         }
-
         public GoogleCloudApigeeV1QueryMetadataResponse build() {
             return new GoogleCloudApigeeV1QueryMetadataResponse(dimensions, endTimestamp, metrics, outputFormat, startTimestamp, timeUnit);
         }

@@ -24,7 +24,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crontabSpec")
-    private final @Nullable Input<String> crontabSpec;
+      private final @Nullable Input<String> crontabSpec;
 
     public Input<String> getCrontabSpec() {
         return this.crontabSpec == null ? Input.empty() : this.crontabSpec;
@@ -35,7 +35,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -46,7 +46,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionCount")
-    private final @Nullable Input<Integer> retentionCount;
+      private final @Nullable Input<Integer> retentionCount;
 
     public Input<Integer> getRetentionCount() {
         return this.retentionCount == null ? Input.empty() : this.retentionCount;
@@ -120,7 +120,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.retentionCount = Input.ofNullable(retentionCount);
             return this;
         }
-
         public ScheduleArgs build() {
             return new ScheduleArgs(crontabSpec, prefix, retentionCount);
         }

@@ -286,7 +286,6 @@ public final class GetTargetPoolResult {
             this.sessionAffinity = Objects.requireNonNull(sessionAffinity);
             return this;
         }
-
         public GetTargetPoolResult build() {
             return new GetTargetPoolResult(backupPool, creationTimestamp, description, failoverRatio, healthChecks, instances, kind, name, region, selfLink, selfLinkWithId, sessionAffinity);
         }

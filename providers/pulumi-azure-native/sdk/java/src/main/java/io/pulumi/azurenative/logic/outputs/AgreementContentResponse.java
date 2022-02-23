@@ -99,7 +99,6 @@ public final class AgreementContentResponse {
             this.x12 = x12;
             return this;
         }
-
         public AgreementContentResponse build() {
             return new AgreementContentResponse(aS2, edifact, x12);
         }

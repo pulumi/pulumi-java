@@ -120,7 +120,6 @@ public final class DataTransferConfigScheduleOptions {
             this.startTime = startTime;
             return this;
         }
-
         public DataTransferConfigScheduleOptions build() {
             return new DataTransferConfigScheduleOptions(disableAutoScheduling, endTime, startTime);
         }

@@ -119,7 +119,6 @@ public final class KikChannelPropertiesResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public KikChannelPropertiesResponse build() {
             return new KikChannelPropertiesResponse(apiKey, isEnabled, isValidated, userName);
         }

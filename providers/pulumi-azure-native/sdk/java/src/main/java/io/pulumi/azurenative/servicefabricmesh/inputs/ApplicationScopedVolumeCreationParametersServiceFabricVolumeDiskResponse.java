@@ -23,7 +23,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -35,7 +35,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+        private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -46,7 +46,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @InputImport(name="sizeDisk", required=true)
-    private final String sizeDisk;
+        private final String sizeDisk;
 
     public String getSizeDisk() {
         return this.sizeDisk;
@@ -105,7 +105,6 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
             this.sizeDisk = Objects.requireNonNull(sizeDisk);
             return this;
         }
-
         public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse build() {
             return new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse(description, kind, sizeDisk);
         }

@@ -186,7 +186,6 @@ public final class JobMetadataResponse {
             this.spannerDetails = Objects.requireNonNull(spannerDetails);
             return this;
         }
-
         public JobMetadataResponse build() {
             return new JobMetadataResponse(bigTableDetails, bigqueryDetails, datastoreDetails, fileDetails, pubsubDetails, sdkVersion, spannerDetails);
         }

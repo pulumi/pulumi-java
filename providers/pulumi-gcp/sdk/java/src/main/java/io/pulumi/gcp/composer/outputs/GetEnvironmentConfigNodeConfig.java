@@ -179,7 +179,6 @@ public final class GetEnvironmentConfigNodeConfig {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetEnvironmentConfigNodeConfig build() {
             return new GetEnvironmentConfigNodeConfig(diskSizeGb, enableIpMasqAgent, ipAllocationPolicies, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags, zone);
         }

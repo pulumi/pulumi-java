@@ -138,7 +138,6 @@ public final class JobStatusResponse {
             this.nextExecutionTime = Objects.requireNonNull(nextExecutionTime);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(executionCount, failureCount, faultedCount, lastExecutionTime, nextExecutionTime);
         }

@@ -313,7 +313,6 @@ public final class GetTestMatrixResult {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public GetTestMatrixResult build() {
             return new GetTestMatrixResult(clientInfo, environmentMatrix, failFast, flakyTestAttempts, invalidMatrixDetails, outcomeSummary, project, resultStorage, state, testExecutions, testMatrixId, testSpecification, timestamp);
         }

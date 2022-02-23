@@ -119,7 +119,6 @@ public final class WorkflowParameterResponse {
             this.value = value;
             return this;
         }
-
         public WorkflowParameterResponse build() {
             return new WorkflowParameterResponse(description, metadata, type, value);
         }

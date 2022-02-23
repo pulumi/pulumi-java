@@ -266,7 +266,6 @@ public final class GetControllerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetControllerResult build() {
             return new GetControllerResult(dataPlaneFqdn, hostSuffix, id, location, name, provisioningState, sku, tags, targetContainerHostApiServerFqdn, targetContainerHostResourceId, type);
         }

@@ -185,7 +185,6 @@ public final class ObjectStatusDefinitionResponse {
             this.statusConditions = statusConditions;
             return this;
         }
-
         public ObjectStatusDefinitionResponse build() {
             return new ObjectStatusDefinitionResponse(appliedBy, complianceState, helmReleaseProperties, kind, name, namespace, statusConditions);
         }

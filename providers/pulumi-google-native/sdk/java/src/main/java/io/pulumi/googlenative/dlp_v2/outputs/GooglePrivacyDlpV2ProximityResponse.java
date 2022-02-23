@@ -74,7 +74,6 @@ public final class GooglePrivacyDlpV2ProximityResponse {
             this.windowBefore = Objects.requireNonNull(windowBefore);
             return this;
         }
-
         public GooglePrivacyDlpV2ProximityResponse build() {
             return new GooglePrivacyDlpV2ProximityResponse(windowAfter, windowBefore);
         }

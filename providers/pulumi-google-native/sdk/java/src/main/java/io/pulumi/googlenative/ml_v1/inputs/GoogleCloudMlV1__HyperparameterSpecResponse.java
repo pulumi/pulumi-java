@@ -25,7 +25,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final String algorithm;
+      private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -36,7 +36,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="enableTrialEarlyStopping", required=true)
-    private final Boolean enableTrialEarlyStopping;
+      private final Boolean enableTrialEarlyStopping;
 
     public Boolean getEnableTrialEarlyStopping() {
         return this.enableTrialEarlyStopping;
@@ -47,7 +47,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="goal", required=true)
-    private final String goal;
+      private final String goal;
 
     public String getGoal() {
         return this.goal;
@@ -58,7 +58,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="hyperparameterMetricTag", required=true)
-    private final String hyperparameterMetricTag;
+      private final String hyperparameterMetricTag;
 
     public String getHyperparameterMetricTag() {
         return this.hyperparameterMetricTag;
@@ -69,7 +69,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="maxFailedTrials", required=true)
-    private final Integer maxFailedTrials;
+      private final Integer maxFailedTrials;
 
     public Integer getMaxFailedTrials() {
         return this.maxFailedTrials;
@@ -80,7 +80,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="maxParallelTrials", required=true)
-    private final Integer maxParallelTrials;
+      private final Integer maxParallelTrials;
 
     public Integer getMaxParallelTrials() {
         return this.maxParallelTrials;
@@ -91,7 +91,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="maxTrials", required=true)
-    private final Integer maxTrials;
+      private final Integer maxTrials;
 
     public Integer getMaxTrials() {
         return this.maxTrials;
@@ -102,7 +102,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="params", required=true)
-    private final List<GoogleCloudMlV1__ParameterSpecResponse> params;
+      private final List<GoogleCloudMlV1__ParameterSpecResponse> params;
 
     public List<GoogleCloudMlV1__ParameterSpecResponse> getParams() {
         return this.params;
@@ -113,7 +113,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="resumePreviousJobId", required=true)
-    private final String resumePreviousJobId;
+      private final String resumePreviousJobId;
 
     public String getResumePreviousJobId() {
         return this.resumePreviousJobId;
@@ -232,7 +232,6 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends io.pulumi
             this.resumePreviousJobId = Objects.requireNonNull(resumePreviousJobId);
             return this;
         }
-
         public GoogleCloudMlV1__HyperparameterSpecResponse build() {
             return new GoogleCloudMlV1__HyperparameterSpecResponse(algorithm, enableTrialEarlyStopping, goal, hyperparameterMetricTag, maxFailedTrials, maxParallelTrials, maxTrials, params, resumePreviousJobId);
         }

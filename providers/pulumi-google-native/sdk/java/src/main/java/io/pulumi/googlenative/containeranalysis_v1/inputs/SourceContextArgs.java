@@ -27,7 +27,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudRepo")
-    private final @Nullable Input<CloudRepoSourceContextArgs> cloudRepo;
+      private final @Nullable Input<CloudRepoSourceContextArgs> cloudRepo;
 
     public Input<CloudRepoSourceContextArgs> getCloudRepo() {
         return this.cloudRepo == null ? Input.empty() : this.cloudRepo;
@@ -38,7 +38,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gerrit")
-    private final @Nullable Input<GerritSourceContextArgs> gerrit;
+      private final @Nullable Input<GerritSourceContextArgs> gerrit;
 
     public Input<GerritSourceContextArgs> getGerrit() {
         return this.gerrit == null ? Input.empty() : this.gerrit;
@@ -49,7 +49,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="git")
-    private final @Nullable Input<GitSourceContextArgs> git;
+      private final @Nullable Input<GitSourceContextArgs> git;
 
     public Input<GitSourceContextArgs> getGit() {
         return this.git == null ? Input.empty() : this.git;
@@ -60,7 +60,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -149,7 +149,6 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
             this.labels = Input.ofNullable(labels);
             return this;
         }
-
         public SourceContextArgs build() {
             return new SourceContextArgs(cloudRepo, gerrit, git, labels);
         }

@@ -24,7 +24,7 @@ public final class CompensationInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="entries")
-    private final @Nullable Input<List<CompensationEntryArgs>> entries;
+      private final @Nullable Input<List<CompensationEntryArgs>> entries;
 
     public Input<List<CompensationEntryArgs>> getEntries() {
         return this.entries == null ? Input.empty() : this.entries;
@@ -67,7 +67,6 @@ public final class CompensationInfoArgs extends io.pulumi.resources.ResourceArgs
             this.entries = Input.ofNullable(entries);
             return this;
         }
-
         public CompensationInfoArgs build() {
             return new CompensationInfoArgs(entries);
         }

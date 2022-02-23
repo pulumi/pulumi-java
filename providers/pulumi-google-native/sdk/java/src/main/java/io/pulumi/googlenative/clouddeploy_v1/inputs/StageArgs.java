@@ -24,7 +24,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profiles")
-    private final @Nullable Input<List<String>> profiles;
+      private final @Nullable Input<List<String>> profiles;
 
     public Input<List<String>> getProfiles() {
         return this.profiles == null ? Input.empty() : this.profiles;
@@ -35,7 +35,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetId")
-    private final @Nullable Input<String> targetId;
+      private final @Nullable Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId == null ? Input.empty() : this.targetId;
@@ -94,7 +94,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             this.targetId = Input.ofNullable(targetId);
             return this;
         }
-
         public StageArgs build() {
             return new StageArgs(profiles, targetId);
         }

@@ -21,7 +21,7 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameterType")
-    private final @Nullable Input<QueryParameterTypeArgs> parameterType;
+      private final @Nullable Input<QueryParameterTypeArgs> parameterType;
 
     public Input<QueryParameterTypeArgs> getParameterType() {
         return this.parameterType == null ? Input.empty() : this.parameterType;
@@ -43,7 +43,7 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameterValue")
-    private final @Nullable Input<QueryParameterValueArgs> parameterValue;
+      private final @Nullable Input<QueryParameterValueArgs> parameterValue;
 
     public Input<QueryParameterValueArgs> getParameterValue() {
         return this.parameterValue == null ? Input.empty() : this.parameterValue;
@@ -117,7 +117,6 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
             this.parameterValue = Input.ofNullable(parameterValue);
             return this;
         }
-
         public QueryParameterArgs build() {
             return new QueryParameterArgs(name, parameterType, parameterValue);
         }

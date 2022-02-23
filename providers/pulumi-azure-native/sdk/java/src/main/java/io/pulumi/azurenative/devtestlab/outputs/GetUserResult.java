@@ -247,7 +247,6 @@ public final class GetUserResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(createdDate, id, identity, location, name, provisioningState, secretStore, tags, type, uniqueIdentifier);
         }

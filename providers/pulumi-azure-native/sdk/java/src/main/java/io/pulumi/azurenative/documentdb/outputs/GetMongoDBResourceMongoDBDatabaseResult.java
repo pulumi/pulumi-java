@@ -168,7 +168,6 @@ public final class GetMongoDBResourceMongoDBDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMongoDBResourceMongoDBDatabaseResult build() {
             return new GetMongoDBResourceMongoDBDatabaseResult(id, location, name, options, resource, tags, type);
         }

@@ -26,7 +26,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="atomic")
-    private final @Nullable Input<Boolean> atomic;
+        private final @Nullable Input<Boolean> atomic;
 
     public Input<Boolean> getAtomic() {
         return this.atomic == null ? Input.empty() : this.atomic;
@@ -37,7 +37,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="chart", required=true)
-    private final Input<String> chart;
+        private final Input<String> chart;
 
     public Input<String> getChart() {
         return this.chart;
@@ -48,14 +48,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cleanupOnFail")
-    private final @Nullable Input<Boolean> cleanupOnFail;
+        private final @Nullable Input<Boolean> cleanupOnFail;
 
     public Input<Boolean> getCleanupOnFail() {
         return this.cleanupOnFail == null ? Input.empty() : this.cleanupOnFail;
     }
 
     @InputImport(name="compat")
-    private final @Nullable Input<String> compat;
+        private final @Nullable Input<String> compat;
 
     public Input<String> getCompat() {
         return this.compat == null ? Input.empty() : this.compat;
@@ -66,7 +66,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createNamespace")
-    private final @Nullable Input<Boolean> createNamespace;
+        private final @Nullable Input<Boolean> createNamespace;
 
     public Input<Boolean> getCreateNamespace() {
         return this.createNamespace == null ? Input.empty() : this.createNamespace;
@@ -77,7 +77,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependencyUpdate")
-    private final @Nullable Input<Boolean> dependencyUpdate;
+        private final @Nullable Input<Boolean> dependencyUpdate;
 
     public Input<Boolean> getDependencyUpdate() {
         return this.dependencyUpdate == null ? Input.empty() : this.dependencyUpdate;
@@ -88,7 +88,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -99,7 +99,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="devel")
-    private final @Nullable Input<Boolean> devel;
+        private final @Nullable Input<Boolean> devel;
 
     public Input<Boolean> getDevel() {
         return this.devel == null ? Input.empty() : this.devel;
@@ -110,7 +110,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableCRDHooks")
-    private final @Nullable Input<Boolean> disableCRDHooks;
+        private final @Nullable Input<Boolean> disableCRDHooks;
 
     public Input<Boolean> getDisableCRDHooks() {
         return this.disableCRDHooks == null ? Input.empty() : this.disableCRDHooks;
@@ -121,7 +121,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableOpenapiValidation")
-    private final @Nullable Input<Boolean> disableOpenapiValidation;
+        private final @Nullable Input<Boolean> disableOpenapiValidation;
 
     public Input<Boolean> getDisableOpenapiValidation() {
         return this.disableOpenapiValidation == null ? Input.empty() : this.disableOpenapiValidation;
@@ -132,7 +132,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableWebhooks")
-    private final @Nullable Input<Boolean> disableWebhooks;
+        private final @Nullable Input<Boolean> disableWebhooks;
 
     public Input<Boolean> getDisableWebhooks() {
         return this.disableWebhooks == null ? Input.empty() : this.disableWebhooks;
@@ -143,7 +143,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceUpdate")
-    private final @Nullable Input<Boolean> forceUpdate;
+        private final @Nullable Input<Boolean> forceUpdate;
 
     public Input<Boolean> getForceUpdate() {
         return this.forceUpdate == null ? Input.empty() : this.forceUpdate;
@@ -154,7 +154,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyring")
-    private final @Nullable Input<String> keyring;
+        private final @Nullable Input<String> keyring;
 
     public Input<String> getKeyring() {
         return this.keyring == null ? Input.empty() : this.keyring;
@@ -165,7 +165,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lint")
-    private final @Nullable Input<Boolean> lint;
+        private final @Nullable Input<Boolean> lint;
 
     public Input<Boolean> getLint() {
         return this.lint == null ? Input.empty() : this.lint;
@@ -176,7 +176,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manifest")
-    private final @Nullable Input<Map<String,Object>> manifest;
+        private final @Nullable Input<Map<String,Object>> manifest;
 
     public Input<Map<String,Object>> getManifest() {
         return this.manifest == null ? Input.empty() : this.manifest;
@@ -187,7 +187,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxHistory")
-    private final @Nullable Input<Integer> maxHistory;
+        private final @Nullable Input<Integer> maxHistory;
 
     public Input<Integer> getMaxHistory() {
         return this.maxHistory == null ? Input.empty() : this.maxHistory;
@@ -198,7 +198,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -209,7 +209,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+        private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -220,7 +220,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postrender")
-    private final @Nullable Input<String> postrender;
+        private final @Nullable Input<String> postrender;
 
     public Input<String> getPostrender() {
         return this.postrender == null ? Input.empty() : this.postrender;
@@ -231,7 +231,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recreatePods")
-    private final @Nullable Input<Boolean> recreatePods;
+        private final @Nullable Input<Boolean> recreatePods;
 
     public Input<Boolean> getRecreatePods() {
         return this.recreatePods == null ? Input.empty() : this.recreatePods;
@@ -242,7 +242,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="renderSubchartNotes")
-    private final @Nullable Input<Boolean> renderSubchartNotes;
+        private final @Nullable Input<Boolean> renderSubchartNotes;
 
     public Input<Boolean> getRenderSubchartNotes() {
         return this.renderSubchartNotes == null ? Input.empty() : this.renderSubchartNotes;
@@ -253,7 +253,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replace")
-    private final @Nullable Input<Boolean> replace;
+        private final @Nullable Input<Boolean> replace;
 
     public Input<Boolean> getReplace() {
         return this.replace == null ? Input.empty() : this.replace;
@@ -264,7 +264,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryOpts")
-    private final @Nullable Input<RepositoryOptsArgs> repositoryOpts;
+        private final @Nullable Input<RepositoryOptsArgs> repositoryOpts;
 
     public Input<RepositoryOptsArgs> getRepositoryOpts() {
         return this.repositoryOpts == null ? Input.empty() : this.repositoryOpts;
@@ -275,7 +275,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resetValues")
-    private final @Nullable Input<Boolean> resetValues;
+        private final @Nullable Input<Boolean> resetValues;
 
     public Input<Boolean> getResetValues() {
         return this.resetValues == null ? Input.empty() : this.resetValues;
@@ -286,7 +286,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceNames")
-    private final @Nullable Input<Map<String,List<String>>> resourceNames;
+        private final @Nullable Input<Map<String,List<String>>> resourceNames;
 
     public Input<Map<String,List<String>>> getResourceNames() {
         return this.resourceNames == null ? Input.empty() : this.resourceNames;
@@ -297,7 +297,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reuseValues")
-    private final @Nullable Input<Boolean> reuseValues;
+        private final @Nullable Input<Boolean> reuseValues;
 
     public Input<Boolean> getReuseValues() {
         return this.reuseValues == null ? Input.empty() : this.reuseValues;
@@ -308,7 +308,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipAwait")
-    private final @Nullable Input<Boolean> skipAwait;
+        private final @Nullable Input<Boolean> skipAwait;
 
     public Input<Boolean> getSkipAwait() {
         return this.skipAwait == null ? Input.empty() : this.skipAwait;
@@ -319,7 +319,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipCrds")
-    private final @Nullable Input<Boolean> skipCrds;
+        private final @Nullable Input<Boolean> skipCrds;
 
     public Input<Boolean> getSkipCrds() {
         return this.skipCrds == null ? Input.empty() : this.skipCrds;
@@ -330,7 +330,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Integer> timeout;
+        private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -341,7 +341,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="valueYamlFiles")
-    private final @Nullable Input<List<AssetOrArchive>> valueYamlFiles;
+        private final @Nullable Input<List<AssetOrArchive>> valueYamlFiles;
 
     public Input<List<AssetOrArchive>> getValueYamlFiles() {
         return this.valueYamlFiles == null ? Input.empty() : this.valueYamlFiles;
@@ -352,7 +352,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<Map<String,Object>> values;
+        private final @Nullable Input<Map<String,Object>> values;
 
     public Input<Map<String,Object>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -363,7 +363,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="verify")
-    private final @Nullable Input<Boolean> verify;
+        private final @Nullable Input<Boolean> verify;
 
     public Input<Boolean> getVerify() {
         return this.verify == null ? Input.empty() : this.verify;
@@ -374,7 +374,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -385,7 +385,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForJobs")
-    private final @Nullable Input<Boolean> waitForJobs;
+        private final @Nullable Input<Boolean> waitForJobs;
 
     public Input<Boolean> getWaitForJobs() {
         return this.waitForJobs == null ? Input.empty() : this.waitForJobs;
@@ -924,7 +924,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             this.waitForJobs = Input.ofNullable(waitForJobs);
             return this;
         }
-
         public ReleaseArgs build() {
             return new ReleaseArgs(atomic, chart, cleanupOnFail, compat, createNamespace, dependencyUpdate, description, devel, disableCRDHooks, disableOpenapiValidation, disableWebhooks, forceUpdate, keyring, lint, manifest, maxHistory, name, namespace, postrender, recreatePods, renderSubchartNotes, replace, repositoryOpts, resetValues, resourceNames, reuseValues, skipAwait, skipCrds, timeout, valueYamlFiles, values, verify, version, waitForJobs);
         }

@@ -54,7 +54,6 @@ public final class TrafficAnalyticsPropertiesResponse {
             this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
             return this;
         }
-
         public TrafficAnalyticsPropertiesResponse build() {
             return new TrafficAnalyticsPropertiesResponse(networkWatcherFlowAnalyticsConfiguration);
         }

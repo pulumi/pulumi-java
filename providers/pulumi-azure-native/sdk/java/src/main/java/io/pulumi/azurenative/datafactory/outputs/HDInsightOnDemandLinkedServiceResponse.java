@@ -866,7 +866,6 @@ public final class HDInsightOnDemandLinkedServiceResponse {
             this.zookeeperNodeSize = zookeeperNodeSize;
             return this;
         }
-
         public HDInsightOnDemandLinkedServiceResponse build() {
             return new HDInsightOnDemandLinkedServiceResponse(additionalLinkedServiceNames, annotations, clusterNamePrefix, clusterPassword, clusterResourceGroup, clusterSize, clusterSshPassword, clusterSshUserName, clusterType, clusterUserName, connectVia, coreConfiguration, credential, dataNodeSize, description, encryptedCredential, hBaseConfiguration, hcatalogLinkedServiceName, hdfsConfiguration, headNodeSize, hiveConfiguration, hostSubscriptionId, linkedServiceName, mapReduceConfiguration, oozieConfiguration, parameters, scriptActions, servicePrincipalId, servicePrincipalKey, sparkVersion, stormConfiguration, subnetName, tenant, timeToLive, type, version, virtualNetworkId, yarnConfiguration, zookeeperNodeSize);
         }

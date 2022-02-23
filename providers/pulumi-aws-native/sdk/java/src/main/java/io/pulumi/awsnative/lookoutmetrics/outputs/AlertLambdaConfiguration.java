@@ -74,7 +74,6 @@ public final class AlertLambdaConfiguration {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public AlertLambdaConfiguration build() {
             return new AlertLambdaConfiguration(lambdaArn, roleArn);
         }

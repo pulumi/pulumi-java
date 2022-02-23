@@ -74,7 +74,6 @@ public final class FeatureSettingsResponse {
             this.useContainerOptimizedOs = Objects.requireNonNull(useContainerOptimizedOs);
             return this;
         }
-
         public FeatureSettingsResponse build() {
             return new FeatureSettingsResponse(splitHealthChecks, useContainerOptimizedOs);
         }

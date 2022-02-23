@@ -97,7 +97,6 @@ public final class AzureResourceErrorInfoResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public AzureResourceErrorInfoResponse build() {
             return new AzureResourceErrorInfoResponse(code, details, message);
         }

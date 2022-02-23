@@ -18,7 +18,7 @@ public final class ByProductsResponse extends io.pulumi.resources.InvokeArgs {
     public static final ByProductsResponse Empty = new ByProductsResponse();
 
     @InputImport(name="customValues", required=true)
-    private final Map<String,String> customValues;
+      private final Map<String,String> customValues;
 
     public Map<String,String> getCustomValues() {
         return this.customValues;
@@ -56,7 +56,6 @@ public final class ByProductsResponse extends io.pulumi.resources.InvokeArgs {
             this.customValues = Objects.requireNonNull(customValues);
             return this;
         }
-
         public ByProductsResponse build() {
             return new ByProductsResponse(customValues);
         }

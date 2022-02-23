@@ -75,7 +75,6 @@ public final class AccessPolicyIdentity {
             this.user = user;
             return this;
         }
-
         public AccessPolicyIdentity build() {
             return new AccessPolicyIdentity(iamRole, iamUser, user);
         }

@@ -26,7 +26,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectMode")
-    private final @Nullable Input<NetworkConfigConnectMode> connectMode;
+      private final @Nullable Input<NetworkConfigConnectMode> connectMode;
 
     public Input<NetworkConfigConnectMode> getConnectMode() {
         return this.connectMode == null ? Input.empty() : this.connectMode;
@@ -37,7 +37,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modes")
-    private final @Nullable Input<List<NetworkConfigModesItem>> modes;
+      private final @Nullable Input<List<NetworkConfigModesItem>> modes;
 
     public Input<List<NetworkConfigModesItem>> getModes() {
         return this.modes == null ? Input.empty() : this.modes;
@@ -48,7 +48,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -59,7 +59,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedIpRange")
-    private final @Nullable Input<String> reservedIpRange;
+      private final @Nullable Input<String> reservedIpRange;
 
     public Input<String> getReservedIpRange() {
         return this.reservedIpRange == null ? Input.empty() : this.reservedIpRange;
@@ -148,7 +148,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.reservedIpRange = Input.ofNullable(reservedIpRange);
             return this;
         }
-
         public NetworkConfigArgs build() {
             return new NetworkConfigArgs(connectMode, modes, network, reservedIpRange);
         }

@@ -246,7 +246,6 @@ public final class GetAppServiceCertificateOrderCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAppServiceCertificateOrderCertificateResult build() {
             return new GetAppServiceCertificateOrderCertificateResult(id, keyVaultId, keyVaultSecretName, kind, location, name, provisioningState, systemData, tags, type);
         }

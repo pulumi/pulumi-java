@@ -183,7 +183,6 @@ public final class GetConfigResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConfigResult build() {
             return new GetConfigResult(createTime, description, fleetConfigs, labels, name, scalingConfigs, updateTime);
         }

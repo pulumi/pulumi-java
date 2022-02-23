@@ -74,7 +74,6 @@ public final class GetTagResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetTagResult build() {
             return new GetTagResult(name, version);
         }

@@ -32,7 +32,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudRunConfig", required=true)
-    private final CloudRunConfigResponse cloudRunConfig;
+      private final CloudRunConfigResponse cloudRunConfig;
 
     public CloudRunConfigResponse getCloudRunConfig() {
         return this.cloudRunConfig;
@@ -43,7 +43,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="configConnectorConfig", required=true)
-    private final ConfigConnectorConfigResponse configConnectorConfig;
+      private final ConfigConnectorConfigResponse configConnectorConfig;
 
     public ConfigConnectorConfigResponse getConfigConnectorConfig() {
         return this.configConnectorConfig;
@@ -54,7 +54,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dnsCacheConfig", required=true)
-    private final DnsCacheConfigResponse dnsCacheConfig;
+      private final DnsCacheConfigResponse dnsCacheConfig;
 
     public DnsCacheConfigResponse getDnsCacheConfig() {
         return this.dnsCacheConfig;
@@ -65,7 +65,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gcePersistentDiskCsiDriverConfig", required=true)
-    private final GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig;
+      private final GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig;
 
     public GcePersistentDiskCsiDriverConfigResponse getGcePersistentDiskCsiDriverConfig() {
         return this.gcePersistentDiskCsiDriverConfig;
@@ -76,7 +76,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gcpFilestoreCsiDriverConfig", required=true)
-    private final GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig;
+      private final GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig;
 
     public GcpFilestoreCsiDriverConfigResponse getGcpFilestoreCsiDriverConfig() {
         return this.gcpFilestoreCsiDriverConfig;
@@ -87,7 +87,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gkeBackupAgentConfig", required=true)
-    private final GkeBackupAgentConfigResponse gkeBackupAgentConfig;
+      private final GkeBackupAgentConfigResponse gkeBackupAgentConfig;
 
     public GkeBackupAgentConfigResponse getGkeBackupAgentConfig() {
         return this.gkeBackupAgentConfig;
@@ -98,7 +98,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="horizontalPodAutoscaling", required=true)
-    private final HorizontalPodAutoscalingResponse horizontalPodAutoscaling;
+      private final HorizontalPodAutoscalingResponse horizontalPodAutoscaling;
 
     public HorizontalPodAutoscalingResponse getHorizontalPodAutoscaling() {
         return this.horizontalPodAutoscaling;
@@ -109,7 +109,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpLoadBalancing", required=true)
-    private final HttpLoadBalancingResponse httpLoadBalancing;
+      private final HttpLoadBalancingResponse httpLoadBalancing;
 
     public HttpLoadBalancingResponse getHttpLoadBalancing() {
         return this.httpLoadBalancing;
@@ -120,7 +120,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="istioConfig", required=true)
-    private final IstioConfigResponse istioConfig;
+      private final IstioConfigResponse istioConfig;
 
     public IstioConfigResponse getIstioConfig() {
         return this.istioConfig;
@@ -131,7 +131,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kalmConfig", required=true)
-    private final KalmConfigResponse kalmConfig;
+      private final KalmConfigResponse kalmConfig;
 
     public KalmConfigResponse getKalmConfig() {
         return this.kalmConfig;
@@ -142,7 +142,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kubernetesDashboard", required=true)
-    private final KubernetesDashboardResponse kubernetesDashboard;
+      private final KubernetesDashboardResponse kubernetesDashboard;
 
     public KubernetesDashboardResponse getKubernetesDashboard() {
         return this.kubernetesDashboard;
@@ -153,7 +153,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkPolicyConfig", required=true)
-    private final NetworkPolicyConfigResponse networkPolicyConfig;
+      private final NetworkPolicyConfigResponse networkPolicyConfig;
 
     public NetworkPolicyConfigResponse getNetworkPolicyConfig() {
         return this.networkPolicyConfig;
@@ -302,7 +302,6 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.networkPolicyConfig = Objects.requireNonNull(networkPolicyConfig);
             return this;
         }
-
         public AddonsConfigResponse build() {
             return new AddonsConfigResponse(cloudRunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, gkeBackupAgentConfig, horizontalPodAutoscaling, httpLoadBalancing, istioConfig, kalmConfig, kubernetesDashboard, networkPolicyConfig);
         }

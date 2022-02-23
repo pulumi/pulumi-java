@@ -133,7 +133,6 @@ public final class JobRecurrenceResponse {
             this.schedule = schedule;
             return this;
         }
-
         public JobRecurrenceResponse build() {
             return new JobRecurrenceResponse(count, endTime, frequency, interval, schedule);
         }

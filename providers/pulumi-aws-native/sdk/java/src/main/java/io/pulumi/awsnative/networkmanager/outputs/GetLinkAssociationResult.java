@@ -30,7 +30,6 @@ public final class GetLinkAssociationResult {
         public Builder(GetLinkAssociationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetLinkAssociationResult build() {
             return new GetLinkAssociationResult();
         }

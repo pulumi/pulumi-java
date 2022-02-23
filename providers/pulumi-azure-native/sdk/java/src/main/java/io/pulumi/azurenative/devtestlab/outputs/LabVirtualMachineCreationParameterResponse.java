@@ -610,7 +610,6 @@ public final class LabVirtualMachineCreationParameterResponse {
             this.userName = userName;
             return this;
         }
-
         public LabVirtualMachineCreationParameterResponse build() {
             return new LabVirtualMachineCreationParameterResponse(allowClaim, artifacts, bulkCreationParameters, createdDate, customImageId, dataDiskParameters, disallowPublicIpAddress, environmentId, expirationDate, galleryImageReference, isAuthenticationWithSshKey, labSubnetName, labVirtualNetworkId, location, name, networkInterface, notes, ownerObjectId, ownerUserPrincipalName, password, planId, scheduleParameters, size, sshKey, storageType, tags, userName);
         }

@@ -97,7 +97,6 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse {
             this.viewSpec = Objects.requireNonNull(viewSpec);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BigQueryTableSpecResponse build() {
             return new GoogleCloudDatacatalogV1BigQueryTableSpecResponse(tableSourceType, tableSpec, viewSpec);
         }

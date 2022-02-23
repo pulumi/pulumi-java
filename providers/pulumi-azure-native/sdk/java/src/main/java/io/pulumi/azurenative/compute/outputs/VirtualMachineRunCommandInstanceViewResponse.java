@@ -205,7 +205,6 @@ public final class VirtualMachineRunCommandInstanceViewResponse {
             this.statuses = statuses;
             return this;
         }
-
         public VirtualMachineRunCommandInstanceViewResponse build() {
             return new VirtualMachineRunCommandInstanceViewResponse(endTime, error, executionMessage, executionState, exitCode, output, startTime, statuses);
         }

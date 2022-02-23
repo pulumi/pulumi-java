@@ -141,7 +141,6 @@ public final class GetDomainResult {
             this.subDomainSettings = subDomainSettings;
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(arn, autoSubDomainCreationPatterns, autoSubDomainIAMRole, certificateRecord, domainStatus, enableAutoSubDomain, statusReason, subDomainSettings);
         }

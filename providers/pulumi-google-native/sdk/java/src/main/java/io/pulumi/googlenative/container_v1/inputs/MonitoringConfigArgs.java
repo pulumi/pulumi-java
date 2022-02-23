@@ -23,7 +23,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="componentConfig")
-    private final @Nullable Input<MonitoringComponentConfigArgs> componentConfig;
+      private final @Nullable Input<MonitoringComponentConfigArgs> componentConfig;
 
     public Input<MonitoringComponentConfigArgs> getComponentConfig() {
         return this.componentConfig == null ? Input.empty() : this.componentConfig;
@@ -66,7 +66,6 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
             this.componentConfig = Input.ofNullable(componentConfig);
             return this;
         }
-
         public MonitoringConfigArgs build() {
             return new MonitoringConfigArgs(componentConfig);
         }

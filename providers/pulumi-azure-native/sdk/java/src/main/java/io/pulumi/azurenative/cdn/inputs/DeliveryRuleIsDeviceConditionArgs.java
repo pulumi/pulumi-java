@@ -24,7 +24,7 @@ public final class DeliveryRuleIsDeviceConditionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class DeliveryRuleIsDeviceConditionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Input<IsDeviceMatchConditionParametersArgs> parameters;
+        private final Input<IsDeviceMatchConditionParametersArgs> parameters;
 
     public Input<IsDeviceMatchConditionParametersArgs> getParameters() {
         return this.parameters;
@@ -94,7 +94,6 @@ public final class DeliveryRuleIsDeviceConditionArgs extends io.pulumi.resources
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public DeliveryRuleIsDeviceConditionArgs build() {
             return new DeliveryRuleIsDeviceConditionArgs(name, parameters);
         }

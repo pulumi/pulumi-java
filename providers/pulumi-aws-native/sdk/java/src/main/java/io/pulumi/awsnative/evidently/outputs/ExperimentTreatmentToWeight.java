@@ -59,7 +59,6 @@ public final class ExperimentTreatmentToWeight {
             this.treatment = Objects.requireNonNull(treatment);
             return this;
         }
-
         public ExperimentTreatmentToWeight build() {
             return new ExperimentTreatmentToWeight(splitWeight, treatment);
         }

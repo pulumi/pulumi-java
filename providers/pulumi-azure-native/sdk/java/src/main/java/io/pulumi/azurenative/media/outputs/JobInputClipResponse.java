@@ -170,7 +170,6 @@ public final class JobInputClipResponse {
             this.start = start;
             return this;
         }
-
         public JobInputClipResponse build() {
             return new JobInputClipResponse(end, files, inputDefinitions, label, odataType, start);
         }

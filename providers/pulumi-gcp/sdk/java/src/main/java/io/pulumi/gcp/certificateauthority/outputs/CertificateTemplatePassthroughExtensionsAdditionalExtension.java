@@ -53,7 +53,6 @@ public final class CertificateTemplatePassthroughExtensionsAdditionalExtension {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public CertificateTemplatePassthroughExtensionsAdditionalExtension build() {
             return new CertificateTemplatePassthroughExtensionsAdditionalExtension(objectIdPaths);
         }

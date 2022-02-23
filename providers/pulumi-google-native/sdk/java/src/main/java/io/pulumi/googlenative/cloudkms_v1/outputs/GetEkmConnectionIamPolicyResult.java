@@ -120,7 +120,6 @@ public final class GetEkmConnectionIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetEkmConnectionIamPolicyResult build() {
             return new GetEkmConnectionIamPolicyResult(auditConfigs, bindings, etag, version);
         }

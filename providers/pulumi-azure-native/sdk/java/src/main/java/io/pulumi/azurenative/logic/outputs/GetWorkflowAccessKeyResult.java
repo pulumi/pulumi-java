@@ -139,7 +139,6 @@ public final class GetWorkflowAccessKeyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkflowAccessKeyResult build() {
             return new GetWorkflowAccessKeyResult(id, name, notAfter, notBefore, type);
         }

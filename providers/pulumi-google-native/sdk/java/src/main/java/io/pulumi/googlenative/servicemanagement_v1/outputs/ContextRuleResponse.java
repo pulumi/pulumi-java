@@ -138,7 +138,6 @@ public final class ContextRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public ContextRuleResponse build() {
             return new ContextRuleResponse(allowedRequestExtensions, allowedResponseExtensions, provided, requested, selector);
         }

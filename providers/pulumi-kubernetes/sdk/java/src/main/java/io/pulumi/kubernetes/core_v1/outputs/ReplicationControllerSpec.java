@@ -121,7 +121,6 @@ public final class ReplicationControllerSpec {
             this.template = template;
             return this;
         }
-
         public ReplicationControllerSpec build() {
             return new ReplicationControllerSpec(minReadySeconds, replicas, selector, template);
         }

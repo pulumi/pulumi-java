@@ -98,7 +98,6 @@ public final class DataDisksGroupsResponse {
             this.storageAccountType = Objects.requireNonNull(storageAccountType);
             return this;
         }
-
         public DataDisksGroupsResponse build() {
             return new DataDisksGroupsResponse(diskSizeGB, disksPerNode, storageAccountType);
         }

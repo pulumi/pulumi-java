@@ -142,7 +142,6 @@ public final class DirectLineChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public DirectLineChannelResponse build() {
             return new DirectLineChannelResponse(channelName, etag, location, properties, provisioningState);
         }

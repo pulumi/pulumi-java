@@ -74,7 +74,6 @@ public final class GatewayInstanceResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GatewayInstanceResponse build() {
             return new GatewayInstanceResponse(name, status);
         }

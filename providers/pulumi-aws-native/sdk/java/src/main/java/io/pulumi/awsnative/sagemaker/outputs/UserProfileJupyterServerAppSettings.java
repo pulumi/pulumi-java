@@ -46,7 +46,6 @@ public final class UserProfileJupyterServerAppSettings {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public UserProfileJupyterServerAppSettings build() {
             return new UserProfileJupyterServerAppSettings(defaultResourceSpec);
         }

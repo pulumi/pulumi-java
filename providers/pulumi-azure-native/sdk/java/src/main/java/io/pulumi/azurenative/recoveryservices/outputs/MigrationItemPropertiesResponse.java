@@ -311,7 +311,6 @@ public final class MigrationItemPropertiesResponse {
             this.testMigrateStateDescription = Objects.requireNonNull(testMigrateStateDescription);
             return this;
         }
-
         public MigrationItemPropertiesResponse build() {
             return new MigrationItemPropertiesResponse(allowedOperations, currentJob, health, healthErrors, machineName, migrationState, migrationStateDescription, policyFriendlyName, policyId, providerSpecificDetails, recoveryServicesProviderId, testMigrateState, testMigrateStateDescription);
         }

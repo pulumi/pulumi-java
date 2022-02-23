@@ -736,7 +736,6 @@ public final class VMwareDetailsResponse {
             this.webLoadStatus = webLoadStatus;
             return this;
         }
-
         public VMwareDetailsResponse build() {
             return new VMwareDetailsResponse(agentCount, agentExpiryDate, agentVersion, agentVersionDetails, availableMemoryInBytes, availableSpaceInBytes, cpuLoad, cpuLoadStatus, csServiceStatus, databaseServerLoad, databaseServerLoadStatus, hostName, instanceType, ipAddress, lastHeartbeat, masterTargetServers, memoryUsageStatus, processServerCount, processServers, protectedServers, psTemplateVersion, replicationPairCount, runAsAccounts, spaceUsageStatus, sslCertExpiryDate, sslCertExpiryRemainingDays, systemLoad, systemLoadStatus, totalMemoryInBytes, totalSpaceInBytes, versionStatus, webLoad, webLoadStatus);
         }

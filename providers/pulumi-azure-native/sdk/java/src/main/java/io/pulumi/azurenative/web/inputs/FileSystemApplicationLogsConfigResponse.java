@@ -23,7 +23,7 @@ public final class FileSystemApplicationLogsConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="level")
-    private final @Nullable String level;
+        private final @Nullable String level;
 
     public Optional<String> getLevel() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
@@ -61,7 +61,6 @@ public final class FileSystemApplicationLogsConfigResponse extends io.pulumi.res
             this.level = level;
             return this;
         }
-
         public FileSystemApplicationLogsConfigResponse build() {
             return new FileSystemApplicationLogsConfigResponse(level);
         }

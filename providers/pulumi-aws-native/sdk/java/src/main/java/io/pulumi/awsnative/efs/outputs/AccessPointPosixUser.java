@@ -97,7 +97,6 @@ public final class AccessPointPosixUser {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public AccessPointPosixUser build() {
             return new AccessPointPosixUser(gid, secondaryGids, uid);
         }

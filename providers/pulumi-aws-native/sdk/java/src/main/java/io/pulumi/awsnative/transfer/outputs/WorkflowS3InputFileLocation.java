@@ -76,7 +76,6 @@ public final class WorkflowS3InputFileLocation {
             this.key = key;
             return this;
         }
-
         public WorkflowS3InputFileLocation build() {
             return new WorkflowS3InputFileLocation(bucket, key);
         }

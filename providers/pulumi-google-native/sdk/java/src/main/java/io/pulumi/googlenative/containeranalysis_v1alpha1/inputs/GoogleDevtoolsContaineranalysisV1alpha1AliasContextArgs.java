@@ -24,7 +24,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind;
+      private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind;
 
     public Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -94,7 +94,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs(kind, name);
         }

@@ -67,7 +67,6 @@ public final class DSSEAttestationOccurrenceResponse {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
-
         public DSSEAttestationOccurrenceResponse build() {
             return new DSSEAttestationOccurrenceResponse(envelope, statement);
         }

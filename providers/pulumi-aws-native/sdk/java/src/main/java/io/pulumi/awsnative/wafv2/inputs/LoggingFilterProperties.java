@@ -23,7 +23,7 @@ public final class LoggingFilterProperties extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="defaultBehavior", required=true)
-    private final LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior;
+        private final LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior;
 
     public LoggingConfigurationLoggingFilterPropertiesDefaultBehavior getDefaultBehavior() {
         return this.defaultBehavior;
@@ -34,7 +34,7 @@ public final class LoggingFilterProperties extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="filters", required=true)
-    private final List<LoggingConfigurationFilter> filters;
+        private final List<LoggingConfigurationFilter> filters;
 
     public List<LoggingConfigurationFilter> getFilters() {
         return this.filters;
@@ -83,7 +83,6 @@ public final class LoggingFilterProperties extends io.pulumi.resources.InvokeArg
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-
         public LoggingFilterProperties build() {
             return new LoggingFilterProperties(defaultBehavior, filters);
         }

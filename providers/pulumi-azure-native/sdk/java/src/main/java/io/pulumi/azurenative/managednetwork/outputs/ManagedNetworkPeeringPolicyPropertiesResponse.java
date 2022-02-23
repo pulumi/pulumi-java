@@ -162,7 +162,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedNetworkPeeringPolicyPropertiesResponse build() {
             return new ManagedNetworkPeeringPolicyPropertiesResponse(etag, hub, mesh, provisioningState, spokes, type);
         }

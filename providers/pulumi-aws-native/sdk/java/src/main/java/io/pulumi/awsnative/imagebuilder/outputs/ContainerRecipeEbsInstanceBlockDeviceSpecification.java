@@ -205,7 +205,6 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecification {
             this.volumeType = volumeType;
             return this;
         }
-
         public ContainerRecipeEbsInstanceBlockDeviceSpecification build() {
             return new ContainerRecipeEbsInstanceBlockDeviceSpecification(deleteOnTermination, encrypted, iops, kmsKeyId, snapshotId, throughput, volumeSize, volumeType);
         }

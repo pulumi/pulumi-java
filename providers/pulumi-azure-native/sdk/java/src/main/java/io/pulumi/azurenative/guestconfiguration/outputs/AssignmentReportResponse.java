@@ -227,7 +227,6 @@ public final class AssignmentReportResponse {
             this.vm = vm;
             return this;
         }
-
         public AssignmentReportResponse build() {
             return new AssignmentReportResponse(assignment, complianceStatus, endTime, id, operationType, reportId, resources, startTime, vm);
         }

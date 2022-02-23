@@ -119,7 +119,6 @@ public final class InputEndpointResponse {
             this.publicPort = publicPort;
             return this;
         }
-
         public InputEndpointResponse build() {
             return new InputEndpointResponse(endpointName, privatePort, protocol, publicPort);
         }

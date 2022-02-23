@@ -19,7 +19,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs extends i
      * 
      */
     @InputImport(name="signatureAlgorithm", required=true)
-    private final Input<String> signatureAlgorithm;
+        private final Input<String> signatureAlgorithm;
 
     public Input<String> getSignatureAlgorithm() {
         return this.signatureAlgorithm;
@@ -62,7 +62,6 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs extends i
             this.signatureAlgorithm = Input.of(Objects.requireNonNull(signatureAlgorithm));
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs(signatureAlgorithm);
         }

@@ -22,7 +22,7 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="firewallRules")
-    private final @Nullable Input<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
+        private final @Nullable Input<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
 
     public Input<List<FirewallRuleGroupFirewallRuleArgs>> getFirewallRules() {
         return this.firewallRules == null ? Input.empty() : this.firewallRules;
@@ -33,7 +33,7 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<FirewallRuleGroupTagArgs>> tags;
+        private final @Nullable Input<List<FirewallRuleGroupTagArgs>> tags;
 
     public Input<List<FirewallRuleGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -118,7 +118,6 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public FirewallRuleGroupArgs build() {
             return new FirewallRuleGroupArgs(firewallRules, name, tags);
         }

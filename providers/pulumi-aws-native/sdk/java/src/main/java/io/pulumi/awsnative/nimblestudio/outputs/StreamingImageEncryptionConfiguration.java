@@ -69,7 +69,6 @@ public final class StreamingImageEncryptionConfiguration {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
-
         public StreamingImageEncryptionConfiguration build() {
             return new StreamingImageEncryptionConfiguration(keyArn, keyType);
         }

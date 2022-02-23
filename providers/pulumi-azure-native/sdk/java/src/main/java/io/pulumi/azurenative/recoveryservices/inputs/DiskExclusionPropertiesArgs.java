@@ -21,7 +21,7 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="diskLunList")
-    private final @Nullable Input<List<Integer>> diskLunList;
+        private final @Nullable Input<List<Integer>> diskLunList;
 
     public Input<List<Integer>> getDiskLunList() {
         return this.diskLunList == null ? Input.empty() : this.diskLunList;
@@ -32,7 +32,7 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="isInclusionList")
-    private final @Nullable Input<Boolean> isInclusionList;
+        private final @Nullable Input<Boolean> isInclusionList;
 
     public Input<Boolean> getIsInclusionList() {
         return this.isInclusionList == null ? Input.empty() : this.isInclusionList;
@@ -91,7 +91,6 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
             this.isInclusionList = Input.ofNullable(isInclusionList);
             return this;
         }
-
         public DiskExclusionPropertiesArgs build() {
             return new DiskExclusionPropertiesArgs(diskLunList, isInclusionList);
         }

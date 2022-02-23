@@ -52,7 +52,6 @@ public final class ServiceResponseBaseResponseError {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public ServiceResponseBaseResponseError build() {
             return new ServiceResponseBaseResponseError(error);
         }

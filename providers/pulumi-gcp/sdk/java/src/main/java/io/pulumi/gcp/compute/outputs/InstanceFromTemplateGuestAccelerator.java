@@ -59,7 +59,6 @@ public final class InstanceFromTemplateGuestAccelerator {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InstanceFromTemplateGuestAccelerator build() {
             return new InstanceFromTemplateGuestAccelerator(count, type);
         }

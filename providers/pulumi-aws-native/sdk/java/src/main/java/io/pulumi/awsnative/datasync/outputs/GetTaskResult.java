@@ -265,7 +265,6 @@ public final class GetTaskResult {
             this.taskArn = taskArn;
             return this;
         }
-
         public GetTaskResult build() {
             return new GetTaskResult(cloudWatchLogGroupArn, destinationNetworkInterfaceArns, errorCode, errorDetail, excludes, includes, name, options, schedule, sourceNetworkInterfaceArns, status, tags, taskArn);
         }

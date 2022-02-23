@@ -119,7 +119,6 @@ public final class DailyScheduleResponse {
             this.usedBytes = usedBytes;
             return this;
         }
-
         public DailyScheduleResponse build() {
             return new DailyScheduleResponse(hour, minute, snapshotsToKeep, usedBytes);
         }

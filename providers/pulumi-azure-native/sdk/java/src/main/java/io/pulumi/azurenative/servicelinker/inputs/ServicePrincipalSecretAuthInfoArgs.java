@@ -23,7 +23,7 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="authType", required=true)
-    private final Input<String> authType;
+        private final Input<String> authType;
 
     public Input<String> getAuthType() {
         return this.authType;
@@ -34,7 +34,7 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final Input<String> clientId;
+        private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -45,7 +45,7 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final Input<String> principalId;
+        private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -56,7 +56,7 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="secret", required=true)
-    private final Input<String> secret;
+        private final Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret;
@@ -145,7 +145,6 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
             this.secret = Input.of(Objects.requireNonNull(secret));
             return this;
         }
-
         public ServicePrincipalSecretAuthInfoArgs build() {
             return new ServicePrincipalSecretAuthInfoArgs(authType, clientId, principalId, secret);
         }

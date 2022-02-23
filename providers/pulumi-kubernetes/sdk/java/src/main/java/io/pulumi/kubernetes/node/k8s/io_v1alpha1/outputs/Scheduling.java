@@ -78,7 +78,6 @@ public final class Scheduling {
             this.tolerations = tolerations;
             return this;
         }
-
         public Scheduling build() {
             return new Scheduling(nodeSelector, tolerations);
         }

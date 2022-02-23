@@ -185,7 +185,6 @@ public final class SolutionPropertiesResponse {
             this.tool = tool;
             return this;
         }
-
         public SolutionPropertiesResponse build() {
             return new SolutionPropertiesResponse(cleanupState, details, goal, purpose, status, summary, tool);
         }

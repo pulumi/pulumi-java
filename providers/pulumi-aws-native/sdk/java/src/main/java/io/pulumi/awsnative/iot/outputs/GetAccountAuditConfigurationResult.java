@@ -83,7 +83,6 @@ public final class GetAccountAuditConfigurationResult {
             this.roleArn = roleArn;
             return this;
         }
-
         public GetAccountAuditConfigurationResult build() {
             return new GetAccountAuditConfigurationResult(auditCheckConfigurations, auditNotificationTargetConfigurations, roleArn);
         }

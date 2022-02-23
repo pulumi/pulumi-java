@@ -398,7 +398,6 @@ public final class GetActivityCustomEntityQueryResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetActivityCustomEntityQueryResult build() {
             return new GetActivityCustomEntityQueryResult(content, createdTimeUtc, description, enabled, entitiesFilter, etag, id, inputEntityType, kind, lastModifiedTimeUtc, name, queryDefinitions, requiredInputFieldsSets, systemData, templateName, title, type);
         }

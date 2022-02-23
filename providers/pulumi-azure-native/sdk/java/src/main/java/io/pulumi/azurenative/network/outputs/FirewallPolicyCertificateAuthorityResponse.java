@@ -76,7 +76,6 @@ public final class FirewallPolicyCertificateAuthorityResponse {
             this.name = name;
             return this;
         }
-
         public FirewallPolicyCertificateAuthorityResponse build() {
             return new FirewallPolicyCertificateAuthorityResponse(keyVaultSecretId, name);
         }

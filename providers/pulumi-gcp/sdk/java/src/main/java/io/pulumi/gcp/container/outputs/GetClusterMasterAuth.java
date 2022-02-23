@@ -86,7 +86,6 @@ public final class GetClusterMasterAuth {
             this.clusterCaCertificate = Objects.requireNonNull(clusterCaCertificate);
             return this;
         }
-
         public GetClusterMasterAuth build() {
             return new GetClusterMasterAuth(clientCertificate, clientCertificateConfigs, clientKey, clusterCaCertificate);
         }

@@ -20,14 +20,14 @@ public final class WebACLDefaultAction extends io.pulumi.resources.InvokeArgs {
     public static final WebACLDefaultAction Empty = new WebACLDefaultAction();
 
     @InputImport(name="allow")
-    private final @Nullable WebACLAllowAction allow;
+        private final @Nullable WebACLAllowAction allow;
 
     public Optional<WebACLAllowAction> getAllow() {
         return this.allow == null ? Optional.empty() : Optional.ofNullable(this.allow);
     }
 
     @InputImport(name="block")
-    private final @Nullable WebACLBlockAction block;
+        private final @Nullable WebACLBlockAction block;
 
     public Optional<WebACLBlockAction> getBlock() {
         return this.block == null ? Optional.empty() : Optional.ofNullable(this.block);
@@ -76,7 +76,6 @@ public final class WebACLDefaultAction extends io.pulumi.resources.InvokeArgs {
             this.block = block;
             return this;
         }
-
         public WebACLDefaultAction build() {
             return new WebACLDefaultAction(allow, block);
         }

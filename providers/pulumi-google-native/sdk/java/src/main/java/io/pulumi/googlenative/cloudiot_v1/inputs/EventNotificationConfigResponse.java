@@ -21,7 +21,7 @@ public final class EventNotificationConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="pubsubTopicName", required=true)
-    private final String pubsubTopicName;
+      private final String pubsubTopicName;
 
     public String getPubsubTopicName() {
         return this.pubsubTopicName;
@@ -32,7 +32,7 @@ public final class EventNotificationConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="subfolderMatches", required=true)
-    private final String subfolderMatches;
+      private final String subfolderMatches;
 
     public String getSubfolderMatches() {
         return this.subfolderMatches;
@@ -81,7 +81,6 @@ public final class EventNotificationConfigResponse extends io.pulumi.resources.I
             this.subfolderMatches = Objects.requireNonNull(subfolderMatches);
             return this;
         }
-
         public EventNotificationConfigResponse build() {
             return new EventNotificationConfigResponse(pubsubTopicName, subfolderMatches);
         }

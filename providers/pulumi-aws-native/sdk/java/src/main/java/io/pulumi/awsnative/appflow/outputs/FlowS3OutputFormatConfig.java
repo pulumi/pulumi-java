@@ -75,7 +75,6 @@ public final class FlowS3OutputFormatConfig {
             this.prefixConfig = prefixConfig;
             return this;
         }
-
         public FlowS3OutputFormatConfig build() {
             return new FlowS3OutputFormatConfig(aggregationConfig, fileType, prefixConfig);
         }

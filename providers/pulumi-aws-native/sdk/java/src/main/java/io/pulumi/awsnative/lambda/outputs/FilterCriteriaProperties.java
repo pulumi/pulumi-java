@@ -54,7 +54,6 @@ public final class FilterCriteriaProperties {
             this.filters = filters;
             return this;
         }
-
         public FilterCriteriaProperties build() {
             return new FilterCriteriaProperties(filters);
         }

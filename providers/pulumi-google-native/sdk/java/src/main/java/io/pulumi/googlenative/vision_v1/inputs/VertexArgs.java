@@ -23,7 +23,7 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="x")
-    private final @Nullable Input<Integer> x;
+      private final @Nullable Input<Integer> x;
 
     public Input<Integer> getX() {
         return this.x == null ? Input.empty() : this.x;
@@ -34,7 +34,7 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="y")
-    private final @Nullable Input<Integer> y;
+      private final @Nullable Input<Integer> y;
 
     public Input<Integer> getY() {
         return this.y == null ? Input.empty() : this.y;
@@ -93,7 +93,6 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
             this.y = Input.ofNullable(y);
             return this;
         }
-
         public VertexArgs build() {
             return new VertexArgs(x, y);
         }

@@ -96,7 +96,6 @@ public final class ApplicationLogPattern {
             this.rank = Objects.requireNonNull(rank);
             return this;
         }
-
         public ApplicationLogPattern build() {
             return new ApplicationLogPattern(pattern, patternName, rank);
         }

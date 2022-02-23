@@ -24,7 +24,7 @@ public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="certificates")
-    private final @Nullable List<String> certificates;
+        private final @Nullable List<String> certificates;
 
     public List<String> getCertificates() {
         return this.certificates == null ? List.of() : this.certificates;
@@ -35,7 +35,7 @@ public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable List<String> keys;
+        private final @Nullable List<String> keys;
 
     public List<String> getKeys() {
         return this.keys == null ? List.of() : this.keys;
@@ -46,7 +46,7 @@ public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable List<String> secrets;
+        private final @Nullable List<String> secrets;
 
     public List<String> getSecrets() {
         return this.secrets == null ? List.of() : this.secrets;
@@ -57,7 +57,7 @@ public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storage")
-    private final @Nullable List<String> storage;
+        private final @Nullable List<String> storage;
 
     public List<String> getStorage() {
         return this.storage == null ? List.of() : this.storage;
@@ -126,7 +126,6 @@ public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
             this.storage = storage;
             return this;
         }
-
         public PermissionsResponse build() {
             return new PermissionsResponse(certificates, keys, secrets, storage);
         }

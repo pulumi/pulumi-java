@@ -76,7 +76,6 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus {
             this.message = message;
             return this;
         }
-
         public TransitGatewayPeeringAttachmentPeeringAttachmentStatus build() {
             return new TransitGatewayPeeringAttachmentPeeringAttachmentStatus(code, message);
         }

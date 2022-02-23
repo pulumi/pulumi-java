@@ -98,7 +98,6 @@ public final class ScheduleEntryResponse {
             this.startHourUtc = Objects.requireNonNull(startHourUtc);
             return this;
         }
-
         public ScheduleEntryResponse build() {
             return new ScheduleEntryResponse(dayOfWeek, maintenanceWindow, startHourUtc);
         }

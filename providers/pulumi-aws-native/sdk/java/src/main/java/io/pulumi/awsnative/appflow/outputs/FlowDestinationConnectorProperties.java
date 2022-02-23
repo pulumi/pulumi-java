@@ -145,7 +145,6 @@ public final class FlowDestinationConnectorProperties {
             this.zendesk = zendesk;
             return this;
         }
-
         public FlowDestinationConnectorProperties build() {
             return new FlowDestinationConnectorProperties(eventBridge, lookoutMetrics, redshift, s3, salesforce, snowflake, upsolver, zendesk);
         }

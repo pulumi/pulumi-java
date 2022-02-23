@@ -27,7 +27,7 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-    private final @Nullable Input<Integer> diskSizeGB;
+        private final @Nullable Input<Integer> diskSizeGB;
 
     public Input<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
@@ -38,7 +38,7 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -49,7 +49,7 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable Input<Either<String,OperatingSystemTypes>> osType;
+        private final @Nullable Input<Either<String,OperatingSystemTypes>> osType;
 
     public Input<Either<String,OperatingSystemTypes>> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -60,7 +60,7 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vhd")
-    private final @Nullable Input<VirtualHardDiskArgs> vhd;
+        private final @Nullable Input<VirtualHardDiskArgs> vhd;
 
     public Input<VirtualHardDiskArgs> getVhd() {
         return this.vhd == null ? Input.empty() : this.vhd;
@@ -149,7 +149,6 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.vhd = Input.ofNullable(vhd);
             return this;
         }
-
         public OsDiskArgs build() {
             return new OsDiskArgs(diskSizeGB, name, osType, vhd);
         }

@@ -270,7 +270,6 @@ public final class RouteTableResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RouteTableResponse build() {
             return new RouteTableResponse(disableBgpRoutePropagation, etag, id, location, name, provisioningState, resourceGuid, routes, subnets, tags, type);
         }

@@ -20,7 +20,7 @@ public final class GameServerConfigScalingConfigSelectorGetArgs extends io.pulum
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -63,7 +63,6 @@ public final class GameServerConfigScalingConfigSelectorGetArgs extends io.pulum
             this.labels = Input.ofNullable(labels);
             return this;
         }
-
         public GameServerConfigScalingConfigSelectorGetArgs build() {
             return new GameServerConfigScalingConfigSelectorGetArgs(labels);
         }

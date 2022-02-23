@@ -23,7 +23,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clusterId")
-    private final @Nullable Input<String> clusterId;
+        private final @Nullable Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId == null ? Input.empty() : this.clusterId;
@@ -34,7 +34,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="datastoreId")
-    private final @Nullable Input<String> datastoreId;
+        private final @Nullable Input<String> datastoreId;
 
     public Input<String> getDatastoreId() {
         return this.datastoreId == null ? Input.empty() : this.datastoreId;
@@ -45,7 +45,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hostId")
-    private final @Nullable Input<String> hostId;
+        private final @Nullable Input<String> hostId;
 
     public Input<String> getHostId() {
         return this.hostId == null ? Input.empty() : this.hostId;
@@ -56,7 +56,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourcePoolId")
-    private final @Nullable Input<String> resourcePoolId;
+        private final @Nullable Input<String> resourcePoolId;
 
     public Input<String> getResourcePoolId() {
         return this.resourcePoolId == null ? Input.empty() : this.resourcePoolId;
@@ -145,7 +145,6 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
             this.resourcePoolId = Input.ofNullable(resourcePoolId);
             return this;
         }
-
         public PlacementProfileArgs build() {
             return new PlacementProfileArgs(clusterId, datastoreId, hostId, resourcePoolId);
         }

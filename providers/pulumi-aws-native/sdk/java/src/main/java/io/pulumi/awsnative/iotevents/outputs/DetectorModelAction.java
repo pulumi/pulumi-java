@@ -215,7 +215,6 @@ public final class DetectorModelAction {
             this.sqs = sqs;
             return this;
         }
-
         public DetectorModelAction build() {
             return new DetectorModelAction(clearTimer, dynamoDB, dynamoDBv2, firehose, iotEvents, iotSiteWise, iotTopicPublish, lambda, resetTimer, setTimer, setVariable, sns, sqs);
         }

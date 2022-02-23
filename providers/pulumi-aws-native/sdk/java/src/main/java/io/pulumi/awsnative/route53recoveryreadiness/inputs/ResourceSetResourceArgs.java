@@ -25,14 +25,14 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="componentId")
-    private final @Nullable Input<String> componentId;
+        private final @Nullable Input<String> componentId;
 
     public Input<String> getComponentId() {
         return this.componentId == null ? Input.empty() : this.componentId;
     }
 
     @InputImport(name="dnsTargetResource")
-    private final @Nullable Input<ResourceSetDNSTargetResourceArgs> dnsTargetResource;
+        private final @Nullable Input<ResourceSetDNSTargetResourceArgs> dnsTargetResource;
 
     public Input<ResourceSetDNSTargetResourceArgs> getDnsTargetResource() {
         return this.dnsTargetResource == null ? Input.empty() : this.dnsTargetResource;
@@ -43,7 +43,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="readinessScopes")
-    private final @Nullable Input<List<String>> readinessScopes;
+        private final @Nullable Input<List<String>> readinessScopes;
 
     public Input<List<String>> getReadinessScopes() {
         return this.readinessScopes == null ? Input.empty() : this.readinessScopes;
@@ -54,7 +54,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceArn")
-    private final @Nullable Input<String> resourceArn;
+        private final @Nullable Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn == null ? Input.empty() : this.resourceArn;
@@ -143,7 +143,6 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
             this.resourceArn = Input.ofNullable(resourceArn);
             return this;
         }
-
         public ResourceSetResourceArgs build() {
             return new ResourceSetResourceArgs(componentId, dnsTargetResource, readinessScopes, resourceArn);
         }

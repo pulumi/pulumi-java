@@ -99,7 +99,6 @@ public final class GetGeofenceCollectionResult {
             this.updateTime = updateTime;
             return this;
         }
-
         public GetGeofenceCollectionResult build() {
             return new GetGeofenceCollectionResult(arn, collectionArn, createTime, kmsKeyId, updateTime);
         }

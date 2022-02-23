@@ -15,14 +15,14 @@ public final class GetMuteConfigArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetMuteConfigArgs Empty = new GetMuteConfigArgs();
 
     @InputImport(name="muteConfigId", required=true)
-    private final String muteConfigId;
+      private final String muteConfigId;
 
     public String getMuteConfigId() {
         return this.muteConfigId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetMuteConfigArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetMuteConfigArgs build() {
             return new GetMuteConfigArgs(muteConfigId, project);
         }

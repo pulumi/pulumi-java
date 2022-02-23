@@ -180,7 +180,6 @@ public final class GetMetadataImportResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetMetadataImportResult build() {
             return new GetMetadataImportResult(createTime, databaseDump, description, endTime, name, state, updateTime);
         }

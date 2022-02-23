@@ -52,7 +52,6 @@ public final class SuccessDetailResponse {
             this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
             return this;
         }
-
         public SuccessDetailResponse build() {
             return new SuccessDetailResponse(otherNativeCrash);
         }

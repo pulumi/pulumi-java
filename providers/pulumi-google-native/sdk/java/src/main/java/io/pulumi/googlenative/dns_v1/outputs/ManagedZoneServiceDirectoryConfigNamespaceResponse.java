@@ -87,7 +87,6 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse {
             this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
             return this;
         }
-
         public ManagedZoneServiceDirectoryConfigNamespaceResponse build() {
             return new ManagedZoneServiceDirectoryConfigNamespaceResponse(deletionTime, kind, namespaceUrl);
         }

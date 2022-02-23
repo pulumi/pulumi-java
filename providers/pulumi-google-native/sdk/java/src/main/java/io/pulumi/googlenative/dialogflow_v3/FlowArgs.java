@@ -19,7 +19,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     public static final FlowArgs Empty = new FlowArgs();
 
     @InputImport(name="agentId", required=true)
-    private final Input<String> agentId;
+      private final Input<String> agentId;
 
     public Input<String> getAgentId() {
         return this.agentId;
@@ -30,7 +30,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -52,21 +52,21 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHandlers")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers;
 
     public Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> getEventHandlers() {
         return this.eventHandlers == null ? Input.empty() : this.eventHandlers;
     }
 
     @InputImport(name="languageCode")
-    private final @Nullable Input<String> languageCode;
+      private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -77,7 +77,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,14 +88,14 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nluSettings")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3NluSettingsArgs> nluSettings;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3NluSettingsArgs> nluSettings;
 
     public Input<GoogleCloudDialogflowCxV3NluSettingsArgs> getNluSettings() {
         return this.nluSettings == null ? Input.empty() : this.nluSettings;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -106,7 +106,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitionRouteGroups")
-    private final @Nullable Input<List<String>> transitionRouteGroups;
+      private final @Nullable Input<List<String>> transitionRouteGroups;
 
     public Input<List<String>> getTransitionRouteGroups() {
         return this.transitionRouteGroups == null ? Input.empty() : this.transitionRouteGroups;
@@ -117,7 +117,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitionRoutes")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
 
     public Input<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> getTransitionRoutes() {
         return this.transitionRoutes == null ? Input.empty() : this.transitionRoutes;
@@ -311,7 +311,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
             this.transitionRoutes = Input.ofNullable(transitionRoutes);
             return this;
         }
-
         public FlowArgs build() {
             return new FlowArgs(agentId, description, displayName, eventHandlers, languageCode, location, name, nluSettings, project, transitionRouteGroups, transitionRoutes);
         }

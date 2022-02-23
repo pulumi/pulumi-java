@@ -75,7 +75,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse(dialogflowSource, gcsSource);
         }

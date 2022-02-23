@@ -54,7 +54,6 @@ public final class GetPartnerTopicEventSubscriptionFullUrlResult {
             this.endpointUrl = endpointUrl;
             return this;
         }
-
         public GetPartnerTopicEventSubscriptionFullUrlResult build() {
             return new GetPartnerTopicEventSubscriptionFullUrlResult(endpointUrl);
         }

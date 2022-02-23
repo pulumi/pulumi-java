@@ -120,7 +120,6 @@ public final class RunbookParameterResponse {
             this.type = type;
             return this;
         }
-
         public RunbookParameterResponse build() {
             return new RunbookParameterResponse(defaultValue, isMandatory, position, type);
         }

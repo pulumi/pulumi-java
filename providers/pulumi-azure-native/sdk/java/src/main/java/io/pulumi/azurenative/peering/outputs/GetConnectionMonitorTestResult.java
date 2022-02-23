@@ -247,7 +247,6 @@ public final class GetConnectionMonitorTestResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectionMonitorTestResult build() {
             return new GetConnectionMonitorTestResult(destination, destinationPort, id, isTestSuccessful, name, path, provisioningState, sourceAgent, testFrequencyInSec, type);
         }

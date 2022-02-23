@@ -76,7 +76,6 @@ public final class GalleryArtifactVersionSourceResponse {
             this.uri = uri;
             return this;
         }
-
         public GalleryArtifactVersionSourceResponse build() {
             return new GalleryArtifactVersionSourceResponse(id, uri);
         }

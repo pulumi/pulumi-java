@@ -23,7 +23,7 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="hint")
-    private final @Nullable Input<DSSEHintArgs> hint;
+      private final @Nullable Input<DSSEHintArgs> hint;
 
     public Input<DSSEHintArgs> getHint() {
         return this.hint == null ? Input.empty() : this.hint;
@@ -66,7 +66,6 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
             this.hint = Input.ofNullable(hint);
             return this;
         }
-
         public DSSEAttestationNoteArgs build() {
             return new DSSEAttestationNoteArgs(hint);
         }

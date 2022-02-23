@@ -96,7 +96,6 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionResponse {
             this.term = Objects.requireNonNull(term);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleReplacementActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleReplacementActionResponse(queryTerms, replacementTerm, term);
         }

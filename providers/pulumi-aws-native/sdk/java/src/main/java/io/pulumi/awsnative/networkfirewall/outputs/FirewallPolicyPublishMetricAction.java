@@ -45,7 +45,6 @@ public final class FirewallPolicyPublishMetricAction {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-
         public FirewallPolicyPublishMetricAction build() {
             return new FirewallPolicyPublishMetricAction(dimensions);
         }

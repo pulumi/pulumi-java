@@ -226,7 +226,6 @@ public final class DocumentDbCollectionSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public DocumentDbCollectionSinkResponse build() {
             return new DocumentDbCollectionSinkResponse(disableMetricsCollection, maxConcurrentConnections, nestingSeparator, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

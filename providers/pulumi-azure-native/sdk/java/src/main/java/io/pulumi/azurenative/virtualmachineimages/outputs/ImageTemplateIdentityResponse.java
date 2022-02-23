@@ -78,7 +78,6 @@ public final class ImageTemplateIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ImageTemplateIdentityResponse build() {
             return new ImageTemplateIdentityResponse(type, userAssignedIdentities);
         }

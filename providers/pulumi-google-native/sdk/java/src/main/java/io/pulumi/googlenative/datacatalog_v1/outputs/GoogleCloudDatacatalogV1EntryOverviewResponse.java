@@ -52,7 +52,6 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse {
             this.overview = Objects.requireNonNull(overview);
             return this;
         }
-
         public GoogleCloudDatacatalogV1EntryOverviewResponse build() {
             return new GoogleCloudDatacatalogV1EntryOverviewResponse(overview);
         }

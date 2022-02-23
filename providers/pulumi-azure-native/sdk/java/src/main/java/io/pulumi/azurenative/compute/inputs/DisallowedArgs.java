@@ -24,7 +24,7 @@ public final class DisallowedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskTypes")
-    private final @Nullable Input<List<String>> diskTypes;
+        private final @Nullable Input<List<String>> diskTypes;
 
     public Input<List<String>> getDiskTypes() {
         return this.diskTypes == null ? Input.empty() : this.diskTypes;
@@ -67,7 +67,6 @@ public final class DisallowedArgs extends io.pulumi.resources.ResourceArgs {
             this.diskTypes = Input.ofNullable(diskTypes);
             return this;
         }
-
         public DisallowedArgs build() {
             return new DisallowedArgs(diskTypes);
         }

@@ -77,7 +77,6 @@ public final class BucketRetentionPolicy {
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }
-
         public BucketRetentionPolicy build() {
             return new BucketRetentionPolicy(isLocked, retentionPeriod);
         }

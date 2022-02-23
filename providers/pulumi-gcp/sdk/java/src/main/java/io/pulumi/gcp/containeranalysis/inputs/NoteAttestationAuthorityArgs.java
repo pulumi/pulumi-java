@@ -26,7 +26,7 @@ public final class NoteAttestationAuthorityArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="hint", required=true)
-    private final Input<NoteAttestationAuthorityHintArgs> hint;
+        private final Input<NoteAttestationAuthorityHintArgs> hint;
 
     public Input<NoteAttestationAuthorityHintArgs> getHint() {
         return this.hint;
@@ -69,7 +69,6 @@ public final class NoteAttestationAuthorityArgs extends io.pulumi.resources.Reso
             this.hint = Input.of(Objects.requireNonNull(hint));
             return this;
         }
-
         public NoteAttestationAuthorityArgs build() {
             return new NoteAttestationAuthorityArgs(hint);
         }

@@ -30,7 +30,6 @@ public final class DeleteServiceStrategyResponse {
         public Builder(DeleteServiceStrategyResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DeleteServiceStrategyResponse build() {
             return new DeleteServiceStrategyResponse();
         }

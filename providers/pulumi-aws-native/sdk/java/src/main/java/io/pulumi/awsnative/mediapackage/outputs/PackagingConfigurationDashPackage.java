@@ -150,7 +150,6 @@ public final class PackagingConfigurationDashPackage {
             this.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }
-
         public PackagingConfigurationDashPackage build() {
             return new PackagingConfigurationDashPackage(dashManifests, encryption, includeEncoderConfigurationInSegments, periodTriggers, segmentDurationSeconds, segmentTemplateFormat);
         }

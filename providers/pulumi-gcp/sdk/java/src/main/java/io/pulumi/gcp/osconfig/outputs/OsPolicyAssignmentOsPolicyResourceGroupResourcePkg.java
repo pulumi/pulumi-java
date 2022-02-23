@@ -209,7 +209,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
             this.zypper = zypper;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkg build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkg(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
         }

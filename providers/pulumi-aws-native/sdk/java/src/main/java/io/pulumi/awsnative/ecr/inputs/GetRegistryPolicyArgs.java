@@ -13,7 +13,7 @@ public final class GetRegistryPolicyArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetRegistryPolicyArgs Empty = new GetRegistryPolicyArgs();
 
     @InputImport(name="registryId", required=true)
-    private final String registryId;
+        private final String registryId;
 
     public String getRegistryId() {
         return this.registryId;
@@ -51,7 +51,6 @@ public final class GetRegistryPolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
-
         public GetRegistryPolicyArgs build() {
             return new GetRegistryPolicyArgs(registryId);
         }

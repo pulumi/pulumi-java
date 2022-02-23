@@ -247,7 +247,6 @@ public final class GetDicomServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDicomServiceResult build() {
             return new GetDicomServiceResult(authenticationConfiguration, etag, id, location, name, provisioningState, serviceUrl, systemData, tags, type);
         }

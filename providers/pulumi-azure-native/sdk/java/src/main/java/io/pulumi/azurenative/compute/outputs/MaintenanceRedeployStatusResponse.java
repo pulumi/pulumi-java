@@ -182,7 +182,6 @@ public final class MaintenanceRedeployStatusResponse {
             this.preMaintenanceWindowStartTime = preMaintenanceWindowStartTime;
             return this;
         }
-
         public MaintenanceRedeployStatusResponse build() {
             return new MaintenanceRedeployStatusResponse(isCustomerInitiatedMaintenanceAllowed, lastOperationMessage, lastOperationResultCode, maintenanceWindowEndTime, maintenanceWindowStartTime, preMaintenanceWindowEndTime, preMaintenanceWindowStartTime);
         }

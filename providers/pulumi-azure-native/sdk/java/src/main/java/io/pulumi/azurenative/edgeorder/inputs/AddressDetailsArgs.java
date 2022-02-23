@@ -22,7 +22,7 @@ public final class AddressDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardAddress", required=true)
-    private final Input<AddressPropertiesArgs> forwardAddress;
+        private final Input<AddressPropertiesArgs> forwardAddress;
 
     public Input<AddressPropertiesArgs> getForwardAddress() {
         return this.forwardAddress;
@@ -65,7 +65,6 @@ public final class AddressDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.forwardAddress = Input.of(Objects.requireNonNull(forwardAddress));
             return this;
         }
-
         public AddressDetailsArgs build() {
             return new AddressDetailsArgs(forwardAddress);
         }

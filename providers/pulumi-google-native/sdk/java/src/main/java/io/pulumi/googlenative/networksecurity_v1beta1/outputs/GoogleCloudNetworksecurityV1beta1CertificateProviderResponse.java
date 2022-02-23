@@ -75,7 +75,6 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderResponse 
             this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint);
             return this;
         }
-
         public GoogleCloudNetworksecurityV1beta1CertificateProviderResponse build() {
             return new GoogleCloudNetworksecurityV1beta1CertificateProviderResponse(certificateProviderInstance, grpcEndpoint);
         }

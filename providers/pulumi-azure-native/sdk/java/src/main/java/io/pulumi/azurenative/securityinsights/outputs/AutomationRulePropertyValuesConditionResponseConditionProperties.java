@@ -98,7 +98,6 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
             this.propertyValues = propertyValues;
             return this;
         }
-
         public AutomationRulePropertyValuesConditionResponseConditionProperties build() {
             return new AutomationRulePropertyValuesConditionResponseConditionProperties(operator, propertyName, propertyValues);
         }

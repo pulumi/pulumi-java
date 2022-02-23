@@ -23,7 +23,7 @@ public final class AzureFirewallRCActionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -61,7 +61,6 @@ public final class AzureFirewallRCActionResponse extends io.pulumi.resources.Inv
             this.type = type;
             return this;
         }
-
         public AzureFirewallRCActionResponse build() {
             return new AzureFirewallRCActionResponse(type);
         }

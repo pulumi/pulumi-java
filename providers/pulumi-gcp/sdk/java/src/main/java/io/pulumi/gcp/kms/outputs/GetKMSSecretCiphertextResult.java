@@ -100,7 +100,6 @@ public final class GetKMSSecretCiphertextResult {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }
-
         public GetKMSSecretCiphertextResult build() {
             return new GetKMSSecretCiphertextResult(ciphertext, cryptoKey, id, plaintext);
         }

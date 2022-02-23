@@ -18,7 +18,7 @@ public final class StackSetParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameterKey", required=true)
-    private final Input<String> parameterKey;
+        private final Input<String> parameterKey;
 
     public Input<String> getParameterKey() {
         return this.parameterKey;
@@ -29,7 +29,7 @@ public final class StackSetParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameterValue", required=true)
-    private final Input<String> parameterValue;
+        private final Input<String> parameterValue;
 
     public Input<String> getParameterValue() {
         return this.parameterValue;
@@ -88,7 +88,6 @@ public final class StackSetParameterArgs extends io.pulumi.resources.ResourceArg
             this.parameterValue = Input.of(Objects.requireNonNull(parameterValue));
             return this;
         }
-
         public StackSetParameterArgs build() {
             return new StackSetParameterArgs(parameterKey, parameterValue);
         }

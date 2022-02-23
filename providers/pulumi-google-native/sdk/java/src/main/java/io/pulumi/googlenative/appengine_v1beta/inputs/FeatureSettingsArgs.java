@@ -23,7 +23,7 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="splitHealthChecks")
-    private final @Nullable Input<Boolean> splitHealthChecks;
+      private final @Nullable Input<Boolean> splitHealthChecks;
 
     public Input<Boolean> getSplitHealthChecks() {
         return this.splitHealthChecks == null ? Input.empty() : this.splitHealthChecks;
@@ -34,7 +34,7 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="useContainerOptimizedOs")
-    private final @Nullable Input<Boolean> useContainerOptimizedOs;
+      private final @Nullable Input<Boolean> useContainerOptimizedOs;
 
     public Input<Boolean> getUseContainerOptimizedOs() {
         return this.useContainerOptimizedOs == null ? Input.empty() : this.useContainerOptimizedOs;
@@ -93,7 +93,6 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.useContainerOptimizedOs = Input.ofNullable(useContainerOptimizedOs);
             return this;
         }
-
         public FeatureSettingsArgs build() {
             return new FeatureSettingsArgs(splitHealthChecks, useContainerOptimizedOs);
         }

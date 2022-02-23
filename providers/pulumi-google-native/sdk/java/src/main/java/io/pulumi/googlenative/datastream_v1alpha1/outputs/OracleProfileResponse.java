@@ -160,7 +160,6 @@ public final class OracleProfileResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public OracleProfileResponse build() {
             return new OracleProfileResponse(connectionAttributes, databaseService, hostname, password, port, username);
         }

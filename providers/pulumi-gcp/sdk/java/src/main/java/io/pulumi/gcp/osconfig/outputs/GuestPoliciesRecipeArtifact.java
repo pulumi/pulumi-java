@@ -131,7 +131,6 @@ public final class GuestPoliciesRecipeArtifact {
             this.remote = remote;
             return this;
         }
-
         public GuestPoliciesRecipeArtifact build() {
             return new GuestPoliciesRecipeArtifact(allowInsecure, gcs, id, remote);
         }

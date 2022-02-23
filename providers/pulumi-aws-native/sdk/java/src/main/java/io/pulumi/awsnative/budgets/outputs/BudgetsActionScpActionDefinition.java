@@ -59,7 +59,6 @@ public final class BudgetsActionScpActionDefinition {
             this.targetIds = Objects.requireNonNull(targetIds);
             return this;
         }
-
         public BudgetsActionScpActionDefinition build() {
             return new BudgetsActionScpActionDefinition(policyId, targetIds);
         }

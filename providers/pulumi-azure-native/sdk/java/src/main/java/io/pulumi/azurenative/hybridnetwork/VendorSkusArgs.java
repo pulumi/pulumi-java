@@ -25,7 +25,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentMode")
-    private final @Nullable Input<Either<String,SkuDeploymentMode>> deploymentMode;
+        private final @Nullable Input<Either<String,SkuDeploymentMode>> deploymentMode;
 
     public Input<Either<String,SkuDeploymentMode>> getDeploymentMode() {
         return this.deploymentMode == null ? Input.empty() : this.deploymentMode;
@@ -36,7 +36,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedApplicationParameters")
-    private final @Nullable Input<Object> managedApplicationParameters;
+        private final @Nullable Input<Object> managedApplicationParameters;
 
     public Input<Object> getManagedApplicationParameters() {
         return this.managedApplicationParameters == null ? Input.empty() : this.managedApplicationParameters;
@@ -47,7 +47,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedApplicationTemplate")
-    private final @Nullable Input<Object> managedApplicationTemplate;
+        private final @Nullable Input<Object> managedApplicationTemplate;
 
     public Input<Object> getManagedApplicationTemplate() {
         return this.managedApplicationTemplate == null ? Input.empty() : this.managedApplicationTemplate;
@@ -58,7 +58,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkFunctionTemplate")
-    private final @Nullable Input<NetworkFunctionTemplateArgs> networkFunctionTemplate;
+        private final @Nullable Input<NetworkFunctionTemplateArgs> networkFunctionTemplate;
 
     public Input<NetworkFunctionTemplateArgs> getNetworkFunctionTemplate() {
         return this.networkFunctionTemplate == null ? Input.empty() : this.networkFunctionTemplate;
@@ -69,7 +69,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preview")
-    private final @Nullable Input<Boolean> preview;
+        private final @Nullable Input<Boolean> preview;
 
     public Input<Boolean> getPreview() {
         return this.preview == null ? Input.empty() : this.preview;
@@ -80,7 +80,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skuName")
-    private final @Nullable Input<String> skuName;
+        private final @Nullable Input<String> skuName;
 
     public Input<String> getSkuName() {
         return this.skuName == null ? Input.empty() : this.skuName;
@@ -91,7 +91,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skuType")
-    private final @Nullable Input<Either<String,SkuType>> skuType;
+        private final @Nullable Input<Either<String,SkuType>> skuType;
 
     public Input<Either<String,SkuType>> getSkuType() {
         return this.skuType == null ? Input.empty() : this.skuType;
@@ -102,7 +102,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vendorName", required=true)
-    private final Input<String> vendorName;
+        private final Input<String> vendorName;
 
     public Input<String> getVendorName() {
         return this.vendorName;
@@ -251,7 +251,6 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
             this.vendorName = Input.of(Objects.requireNonNull(vendorName));
             return this;
         }
-
         public VendorSkusArgs build() {
             return new VendorSkusArgs(deploymentMode, managedApplicationParameters, managedApplicationTemplate, networkFunctionTemplate, preview, skuName, skuType, vendorName);
         }

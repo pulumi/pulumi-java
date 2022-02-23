@@ -54,7 +54,6 @@ public final class ListKeyByAutomationAccountResult {
             this.keys = keys;
             return this;
         }
-
         public ListKeyByAutomationAccountResult build() {
             return new ListKeyByAutomationAccountResult(keys);
         }

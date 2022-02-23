@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputResponse {
             this.intent = Objects.requireNonNull(intent);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1IntentInputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1IntentInputResponse(intent);
         }

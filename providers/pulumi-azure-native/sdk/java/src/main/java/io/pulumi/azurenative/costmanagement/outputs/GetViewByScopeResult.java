@@ -439,7 +439,6 @@ public final class GetViewByScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetViewByScopeResult build() {
             return new GetViewByScopeResult(accumulated, chart, createdOn, currency, dataSet, dateRange, displayName, eTag, id, includeMonetaryCommitment, kpis, metric, modifiedOn, name, pivots, scope, timePeriod, timeframe, type);
         }

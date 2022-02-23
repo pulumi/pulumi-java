@@ -24,7 +24,7 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<String> count;
+      private final @Nullable Input<String> count;
 
     public Input<String> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="instanceProperties")
-    private final @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
+      private final @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
     public Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> getInstanceProperties() {
         return this.instanceProperties == null ? Input.empty() : this.instanceProperties;
@@ -94,7 +94,6 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
             this.instanceProperties = Input.ofNullable(instanceProperties);
             return this;
         }
-
         public AllocationSpecificSKUReservationArgs build() {
             return new AllocationSpecificSKUReservationArgs(count, instanceProperties);
         }

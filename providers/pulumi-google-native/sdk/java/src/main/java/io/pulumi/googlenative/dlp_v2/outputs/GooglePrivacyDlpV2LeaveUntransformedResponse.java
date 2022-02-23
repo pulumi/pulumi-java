@@ -30,7 +30,6 @@ public final class GooglePrivacyDlpV2LeaveUntransformedResponse {
         public Builder(GooglePrivacyDlpV2LeaveUntransformedResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2LeaveUntransformedResponse build() {
             return new GooglePrivacyDlpV2LeaveUntransformedResponse();
         }

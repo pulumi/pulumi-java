@@ -23,7 +23,7 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="increasingKpi", required=true)
-    private final Input<Boolean> increasingKpi;
+        private final Input<Boolean> increasingKpi;
 
     public Input<Boolean> getIncreasingKpi() {
         return this.increasingKpi;
@@ -34,7 +34,7 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lowerLimit", required=true)
-    private final Input<Double> lowerLimit;
+        private final Input<Double> lowerLimit;
 
     public Input<Double> getLowerLimit() {
         return this.lowerLimit;
@@ -45,7 +45,7 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upperLimit", required=true)
-    private final Input<Double> upperLimit;
+        private final Input<Double> upperLimit;
 
     public Input<Double> getUpperLimit() {
         return this.upperLimit;
@@ -119,7 +119,6 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
             this.upperLimit = Input.of(Objects.requireNonNull(upperLimit));
             return this;
         }
-
         public KpiThresholdsArgs build() {
             return new KpiThresholdsArgs(increasingKpi, lowerLimit, upperLimit);
         }

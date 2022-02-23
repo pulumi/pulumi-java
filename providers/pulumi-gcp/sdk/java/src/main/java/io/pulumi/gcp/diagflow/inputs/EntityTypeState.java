@@ -22,7 +22,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -33,7 +33,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableFuzzyExtraction")
-    private final @Nullable Input<Boolean> enableFuzzyExtraction;
+        private final @Nullable Input<Boolean> enableFuzzyExtraction;
 
     public Input<Boolean> getEnableFuzzyExtraction() {
         return this.enableFuzzyExtraction == null ? Input.empty() : this.enableFuzzyExtraction;
@@ -45,7 +45,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entities")
-    private final @Nullable Input<List<EntityTypeEntityGetArgs>> entities;
+        private final @Nullable Input<List<EntityTypeEntityGetArgs>> entities;
 
     public Input<List<EntityTypeEntityGetArgs>> getEntities() {
         return this.entities == null ? Input.empty() : this.entities;
@@ -61,7 +61,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -72,7 +72,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -84,7 +84,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -203,7 +203,6 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public EntityTypeState build() {
             return new EntityTypeState(displayName, enableFuzzyExtraction, entities, kind, name, project);
         }

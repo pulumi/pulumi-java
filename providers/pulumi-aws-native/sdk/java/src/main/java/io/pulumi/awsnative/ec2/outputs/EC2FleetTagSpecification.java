@@ -62,7 +62,6 @@ public final class EC2FleetTagSpecification {
             this.tags = tags;
             return this;
         }
-
         public EC2FleetTagSpecification build() {
             return new EC2FleetTagSpecification(resourceType, tags);
         }

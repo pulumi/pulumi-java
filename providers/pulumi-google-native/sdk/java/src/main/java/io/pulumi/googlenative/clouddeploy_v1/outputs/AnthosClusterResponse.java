@@ -52,7 +52,6 @@ public final class AnthosClusterResponse {
             this.membership = Objects.requireNonNull(membership);
             return this;
         }
-
         public AnthosClusterResponse build() {
             return new AnthosClusterResponse(membership);
         }

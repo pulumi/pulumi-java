@@ -61,7 +61,6 @@ public final class ObjectTypeFieldMap {
             this.objectTypeField = objectTypeField;
             return this;
         }
-
         public ObjectTypeFieldMap build() {
             return new ObjectTypeFieldMap(name, objectTypeField);
         }

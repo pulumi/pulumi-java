@@ -54,7 +54,6 @@ public final class PodIP {
             this.ip = ip;
             return this;
         }
-
         public PodIP build() {
             return new PodIP(ip);
         }

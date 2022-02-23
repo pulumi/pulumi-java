@@ -44,7 +44,6 @@ public final class DetectorModelClearTimer {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }
-
         public DetectorModelClearTimer build() {
             return new DetectorModelClearTimer(timerName);
         }

@@ -13,7 +13,7 @@ public final class GetClusterAddonsConfigHttpLoadBalancing extends io.pulumi.res
     public static final GetClusterAddonsConfigHttpLoadBalancing Empty = new GetClusterAddonsConfigHttpLoadBalancing();
 
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+        private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -51,7 +51,6 @@ public final class GetClusterAddonsConfigHttpLoadBalancing extends io.pulumi.res
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public GetClusterAddonsConfigHttpLoadBalancing build() {
             return new GetClusterAddonsConfigHttpLoadBalancing(disabled);
         }

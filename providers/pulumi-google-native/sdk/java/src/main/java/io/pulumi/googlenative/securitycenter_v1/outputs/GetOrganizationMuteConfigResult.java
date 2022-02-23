@@ -179,7 +179,6 @@ public final class GetOrganizationMuteConfigResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetOrganizationMuteConfigResult build() {
             return new GetOrganizationMuteConfigResult(createTime, description, displayName, filter, mostRecentEditor, name, updateTime);
         }

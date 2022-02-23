@@ -159,7 +159,6 @@ public final class JobAppEngineHttpTarget {
             this.relativeUri = Objects.requireNonNull(relativeUri);
             return this;
         }
-
         public JobAppEngineHttpTarget build() {
             return new JobAppEngineHttpTarget(appEngineRouting, body, headers, httpMethod, relativeUri);
         }

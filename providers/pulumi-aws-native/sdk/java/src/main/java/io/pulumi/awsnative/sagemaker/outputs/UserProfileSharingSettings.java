@@ -98,7 +98,6 @@ public final class UserProfileSharingSettings {
             this.s3OutputPath = s3OutputPath;
             return this;
         }
-
         public UserProfileSharingSettings build() {
             return new UserProfileSharingSettings(notebookOutputOption, s3KmsKeyId, s3OutputPath);
         }

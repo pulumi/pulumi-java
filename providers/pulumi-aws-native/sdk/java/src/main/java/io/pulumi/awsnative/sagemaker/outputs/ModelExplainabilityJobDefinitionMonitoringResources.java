@@ -44,7 +44,6 @@ public final class ModelExplainabilityJobDefinitionMonitoringResources {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionMonitoringResources build() {
             return new ModelExplainabilityJobDefinitionMonitoringResources(clusterConfig);
         }

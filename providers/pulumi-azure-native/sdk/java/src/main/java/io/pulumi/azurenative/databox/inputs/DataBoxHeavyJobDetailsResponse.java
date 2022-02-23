@@ -38,7 +38,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="chainOfCustodySasKey", required=true)
-    private final String chainOfCustodySasKey;
+        private final String chainOfCustodySasKey;
 
     public String getChainOfCustodySasKey() {
         return this.chainOfCustodySasKey;
@@ -49,7 +49,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="contactDetails", required=true)
-    private final ContactDetailsResponse contactDetails;
+        private final ContactDetailsResponse contactDetails;
 
     public ContactDetailsResponse getContactDetails() {
         return this.contactDetails;
@@ -60,7 +60,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="copyLogDetails", required=true)
-    private final List<Object> copyLogDetails;
+        private final List<Object> copyLogDetails;
 
     public List<Object> getCopyLogDetails() {
         return this.copyLogDetails;
@@ -71,7 +71,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="copyProgress", required=true)
-    private final List<CopyProgressResponse> copyProgress;
+        private final List<CopyProgressResponse> copyProgress;
 
     public List<CopyProgressResponse> getCopyProgress() {
         return this.copyProgress;
@@ -82,7 +82,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="dataExportDetails")
-    private final @Nullable List<DataExportDetailsResponse> dataExportDetails;
+        private final @Nullable List<DataExportDetailsResponse> dataExportDetails;
 
     public List<DataExportDetailsResponse> getDataExportDetails() {
         return this.dataExportDetails == null ? List.of() : this.dataExportDetails;
@@ -93,7 +93,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="dataImportDetails")
-    private final @Nullable List<DataImportDetailsResponse> dataImportDetails;
+        private final @Nullable List<DataImportDetailsResponse> dataImportDetails;
 
     public List<DataImportDetailsResponse> getDataImportDetails() {
         return this.dataImportDetails == null ? List.of() : this.dataImportDetails;
@@ -104,7 +104,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="deliveryPackage", required=true)
-    private final PackageShippingDetailsResponse deliveryPackage;
+        private final PackageShippingDetailsResponse deliveryPackage;
 
     public PackageShippingDetailsResponse getDeliveryPackage() {
         return this.deliveryPackage;
@@ -115,7 +115,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="devicePassword")
-    private final @Nullable String devicePassword;
+        private final @Nullable String devicePassword;
 
     public Optional<String> getDevicePassword() {
         return this.devicePassword == null ? Optional.empty() : Optional.ofNullable(this.devicePassword);
@@ -126,7 +126,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="expectedDataSizeInTeraBytes")
-    private final @Nullable Integer expectedDataSizeInTeraBytes;
+        private final @Nullable Integer expectedDataSizeInTeraBytes;
 
     public Optional<Integer> getExpectedDataSizeInTeraBytes() {
         return this.expectedDataSizeInTeraBytes == null ? Optional.empty() : Optional.ofNullable(this.expectedDataSizeInTeraBytes);
@@ -138,7 +138,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="jobDetailsType", required=true)
-    private final String jobDetailsType;
+        private final String jobDetailsType;
 
     public String getJobDetailsType() {
         return this.jobDetailsType;
@@ -149,7 +149,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="jobStages", required=true)
-    private final List<JobStagesResponse> jobStages;
+        private final List<JobStagesResponse> jobStages;
 
     public List<JobStagesResponse> getJobStages() {
         return this.jobStages;
@@ -160,7 +160,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="keyEncryptionKey")
-    private final @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
+        private final @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
 
     public Optional<KeyEncryptionKeyResponse> getKeyEncryptionKey() {
         return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);
@@ -171,7 +171,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="preferences")
-    private final @Nullable PreferencesResponse preferences;
+        private final @Nullable PreferencesResponse preferences;
 
     public Optional<PreferencesResponse> getPreferences() {
         return this.preferences == null ? Optional.empty() : Optional.ofNullable(this.preferences);
@@ -182,7 +182,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="returnPackage", required=true)
-    private final PackageShippingDetailsResponse returnPackage;
+        private final PackageShippingDetailsResponse returnPackage;
 
     public PackageShippingDetailsResponse getReturnPackage() {
         return this.returnPackage;
@@ -193,7 +193,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="reverseShipmentLabelSasKey", required=true)
-    private final String reverseShipmentLabelSasKey;
+        private final String reverseShipmentLabelSasKey;
 
     public String getReverseShipmentLabelSasKey() {
         return this.reverseShipmentLabelSasKey;
@@ -204,7 +204,7 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="shippingAddress")
-    private final @Nullable ShippingAddressResponse shippingAddress;
+        private final @Nullable ShippingAddressResponse shippingAddress;
 
     public Optional<ShippingAddressResponse> getShippingAddress() {
         return this.shippingAddress == null ? Optional.empty() : Optional.ofNullable(this.shippingAddress);
@@ -393,7 +393,6 @@ public final class DataBoxHeavyJobDetailsResponse extends io.pulumi.resources.In
             this.shippingAddress = shippingAddress;
             return this;
         }
-
         public DataBoxHeavyJobDetailsResponse build() {
             return new DataBoxHeavyJobDetailsResponse(chainOfCustodySasKey, contactDetails, copyLogDetails, copyProgress, dataExportDetails, dataImportDetails, deliveryPackage, devicePassword, expectedDataSizeInTeraBytes, jobDetailsType, jobStages, keyEncryptionKey, preferences, returnPackage, reverseShipmentLabelSasKey, shippingAddress);
         }

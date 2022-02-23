@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputArgs extends io.pulum
      * 
      */
     @InputImport(name="audio")
-    private final @Nullable Input<String> audio;
+      private final @Nullable Input<String> audio;
 
     public Input<String> getAudio() {
         return this.audio == null ? Input.empty() : this.audio;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputArgs extends io.pulum
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs> config;
+      private final Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs> config;
 
     public Input<GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs> getConfig() {
         return this.config;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputArgs extends io.pulum
             this.config = Input.of(Objects.requireNonNull(config));
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1AudioInputArgs build() {
             return new GoogleCloudDialogflowCxV3beta1AudioInputArgs(audio, config);
         }

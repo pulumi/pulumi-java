@@ -98,7 +98,6 @@ public final class LabelingDatasetConfigurationResponse {
             this.enableIncrementalDatasetRefresh = enableIncrementalDatasetRefresh;
             return this;
         }
-
         public LabelingDatasetConfigurationResponse build() {
             return new LabelingDatasetConfigurationResponse(assetName, datasetVersion, enableIncrementalDatasetRefresh);
         }

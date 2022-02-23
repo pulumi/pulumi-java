@@ -23,7 +23,7 @@ public final class BackendPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="serviceFabricCluster")
-    private final @Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster;
+        private final @Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster;
 
     public Optional<BackendServiceFabricClusterPropertiesResponse> getServiceFabricCluster() {
         return this.serviceFabricCluster == null ? Optional.empty() : Optional.ofNullable(this.serviceFabricCluster);
@@ -61,7 +61,6 @@ public final class BackendPropertiesResponse extends io.pulumi.resources.InvokeA
             this.serviceFabricCluster = serviceFabricCluster;
             return this;
         }
-
         public BackendPropertiesResponse build() {
             return new BackendPropertiesResponse(serviceFabricCluster);
         }

@@ -58,7 +58,6 @@ public final class ContactListTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ContactListTag build() {
             return new ContactListTag(key, value);
         }

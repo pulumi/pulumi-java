@@ -18,7 +18,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
      * 
      */
     @InputImport(name="currentRevision", required=true)
-    private final String currentRevision;
+      private final String currentRevision;
 
     public String getCurrentRevision() {
         return this.currentRevision;
@@ -29,7 +29,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
      * 
      */
     @InputImport(name="effective", required=true)
-    private final Boolean effective;
+      private final Boolean effective;
 
     public Boolean getEffective() {
         return this.effective;
@@ -78,7 +78,6 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
             this.effective = Objects.requireNonNull(effective);
             return this;
         }
-
         public InstanceGroupManagerStatusAllInstancesConfigResponse build() {
             return new InstanceGroupManagerStatusAllInstancesConfigResponse(currentRevision, effective);
         }

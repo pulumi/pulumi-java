@@ -184,7 +184,6 @@ public final class GetRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRuleResult build() {
             return new GetRuleResult(action, correlationFilter, filterType, id, name, sqlFilter, type);
         }

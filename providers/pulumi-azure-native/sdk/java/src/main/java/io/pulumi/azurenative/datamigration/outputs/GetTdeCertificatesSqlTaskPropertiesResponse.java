@@ -169,7 +169,6 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public GetTdeCertificatesSqlTaskPropertiesResponse build() {
             return new GetTdeCertificatesSqlTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

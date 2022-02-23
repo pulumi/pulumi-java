@@ -179,7 +179,6 @@ public final class GetIosAppResult {
             this.teamId = Objects.requireNonNull(teamId);
             return this;
         }
-
         public GetIosAppResult build() {
             return new GetIosAppResult(appId, appStoreId, bundleId, displayName, name, project, teamId);
         }

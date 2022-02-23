@@ -44,7 +44,6 @@ public final class ConnectorKafkaClusterClientAuthentication {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public ConnectorKafkaClusterClientAuthentication build() {
             return new ConnectorKafkaClusterClientAuthentication(authenticationType);
         }

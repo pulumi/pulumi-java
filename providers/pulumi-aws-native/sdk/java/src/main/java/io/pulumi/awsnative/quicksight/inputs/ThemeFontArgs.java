@@ -15,7 +15,7 @@ public final class ThemeFontArgs extends io.pulumi.resources.ResourceArgs {
     public static final ThemeFontArgs Empty = new ThemeFontArgs();
 
     @InputImport(name="fontFamily")
-    private final @Nullable Input<String> fontFamily;
+        private final @Nullable Input<String> fontFamily;
 
     public Input<String> getFontFamily() {
         return this.fontFamily == null ? Input.empty() : this.fontFamily;
@@ -58,7 +58,6 @@ public final class ThemeFontArgs extends io.pulumi.resources.ResourceArgs {
             this.fontFamily = Input.ofNullable(fontFamily);
             return this;
         }
-
         public ThemeFontArgs build() {
             return new ThemeFontArgs(fontFamily);
         }

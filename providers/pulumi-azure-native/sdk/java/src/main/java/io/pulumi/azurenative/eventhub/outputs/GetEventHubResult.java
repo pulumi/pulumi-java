@@ -247,7 +247,6 @@ public final class GetEventHubResult {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public GetEventHubResult build() {
             return new GetEventHubResult(captureDescription, createdAt, id, messageRetentionInDays, name, partitionCount, partitionIds, status, type, updatedAt);
         }

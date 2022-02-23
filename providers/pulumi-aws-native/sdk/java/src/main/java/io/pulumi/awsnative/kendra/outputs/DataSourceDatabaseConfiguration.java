@@ -117,7 +117,6 @@ public final class DataSourceDatabaseConfiguration {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public DataSourceDatabaseConfiguration build() {
             return new DataSourceDatabaseConfiguration(aclConfiguration, columnConfiguration, connectionConfiguration, databaseEngineType, sqlConfiguration, vpcConfiguration);
         }

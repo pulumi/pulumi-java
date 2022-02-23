@@ -22,7 +22,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -65,7 +65,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
-
         public CommitmentPlanArgs build() {
             return new CommitmentPlanArgs(id);
         }

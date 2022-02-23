@@ -74,7 +74,6 @@ public final class ContentMatcherResponse {
             this.matcher = Objects.requireNonNull(matcher);
             return this;
         }
-
         public ContentMatcherResponse build() {
             return new ContentMatcherResponse(content, matcher);
         }

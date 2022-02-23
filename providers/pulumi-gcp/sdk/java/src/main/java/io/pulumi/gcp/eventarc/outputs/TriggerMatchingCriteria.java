@@ -74,7 +74,6 @@ public final class TriggerMatchingCriteria {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TriggerMatchingCriteria build() {
             return new TriggerMatchingCriteria(attribute, value);
         }

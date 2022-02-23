@@ -35,7 +35,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingConfig")
-    private final @Nullable Input<AutoscalingConfigArgs> autoscalingConfig;
+      private final @Nullable Input<AutoscalingConfigArgs> autoscalingConfig;
 
     public Input<AutoscalingConfigArgs> getAutoscalingConfig() {
         return this.autoscalingConfig == null ? Input.empty() : this.autoscalingConfig;
@@ -46,7 +46,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configBucket")
-    private final @Nullable Input<String> configBucket;
+      private final @Nullable Input<String> configBucket;
 
     public Input<String> getConfigBucket() {
         return this.configBucket == null ? Input.empty() : this.configBucket;
@@ -57,7 +57,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
     public Input<EncryptionConfigArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
@@ -68,7 +68,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointConfig")
-    private final @Nullable Input<EndpointConfigArgs> endpointConfig;
+      private final @Nullable Input<EndpointConfigArgs> endpointConfig;
 
     public Input<EndpointConfigArgs> getEndpointConfig() {
         return this.endpointConfig == null ? Input.empty() : this.endpointConfig;
@@ -79,7 +79,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gceClusterConfig")
-    private final @Nullable Input<GceClusterConfigArgs> gceClusterConfig;
+      private final @Nullable Input<GceClusterConfigArgs> gceClusterConfig;
 
     public Input<GceClusterConfigArgs> getGceClusterConfig() {
         return this.gceClusterConfig == null ? Input.empty() : this.gceClusterConfig;
@@ -90,7 +90,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gkeClusterConfig")
-    private final @Nullable Input<GkeClusterConfigArgs> gkeClusterConfig;
+      private final @Nullable Input<GkeClusterConfigArgs> gkeClusterConfig;
 
     public Input<GkeClusterConfigArgs> getGkeClusterConfig() {
         return this.gkeClusterConfig == null ? Input.empty() : this.gkeClusterConfig;
@@ -101,7 +101,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initializationActions")
-    private final @Nullable Input<List<NodeInitializationActionArgs>> initializationActions;
+      private final @Nullable Input<List<NodeInitializationActionArgs>> initializationActions;
 
     public Input<List<NodeInitializationActionArgs>> getInitializationActions() {
         return this.initializationActions == null ? Input.empty() : this.initializationActions;
@@ -112,7 +112,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecycleConfig")
-    private final @Nullable Input<LifecycleConfigArgs> lifecycleConfig;
+      private final @Nullable Input<LifecycleConfigArgs> lifecycleConfig;
 
     public Input<LifecycleConfigArgs> getLifecycleConfig() {
         return this.lifecycleConfig == null ? Input.empty() : this.lifecycleConfig;
@@ -123,7 +123,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterConfig")
-    private final @Nullable Input<InstanceGroupConfigArgs> masterConfig;
+      private final @Nullable Input<InstanceGroupConfigArgs> masterConfig;
 
     public Input<InstanceGroupConfigArgs> getMasterConfig() {
         return this.masterConfig == null ? Input.empty() : this.masterConfig;
@@ -134,7 +134,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metastoreConfig")
-    private final @Nullable Input<MetastoreConfigArgs> metastoreConfig;
+      private final @Nullable Input<MetastoreConfigArgs> metastoreConfig;
 
     public Input<MetastoreConfigArgs> getMetastoreConfig() {
         return this.metastoreConfig == null ? Input.empty() : this.metastoreConfig;
@@ -145,7 +145,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryWorkerConfig")
-    private final @Nullable Input<InstanceGroupConfigArgs> secondaryWorkerConfig;
+      private final @Nullable Input<InstanceGroupConfigArgs> secondaryWorkerConfig;
 
     public Input<InstanceGroupConfigArgs> getSecondaryWorkerConfig() {
         return this.secondaryWorkerConfig == null ? Input.empty() : this.secondaryWorkerConfig;
@@ -156,7 +156,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityConfig")
-    private final @Nullable Input<SecurityConfigArgs> securityConfig;
+      private final @Nullable Input<SecurityConfigArgs> securityConfig;
 
     public Input<SecurityConfigArgs> getSecurityConfig() {
         return this.securityConfig == null ? Input.empty() : this.securityConfig;
@@ -167,7 +167,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="softwareConfig")
-    private final @Nullable Input<SoftwareConfigArgs> softwareConfig;
+      private final @Nullable Input<SoftwareConfigArgs> softwareConfig;
 
     public Input<SoftwareConfigArgs> getSoftwareConfig() {
         return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
@@ -178,7 +178,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tempBucket")
-    private final @Nullable Input<String> tempBucket;
+      private final @Nullable Input<String> tempBucket;
 
     public Input<String> getTempBucket() {
         return this.tempBucket == null ? Input.empty() : this.tempBucket;
@@ -189,7 +189,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerConfig")
-    private final @Nullable Input<InstanceGroupConfigArgs> workerConfig;
+      private final @Nullable Input<InstanceGroupConfigArgs> workerConfig;
 
     public Input<InstanceGroupConfigArgs> getWorkerConfig() {
         return this.workerConfig == null ? Input.empty() : this.workerConfig;
@@ -443,7 +443,6 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.workerConfig = Input.ofNullable(workerConfig);
             return this;
         }
-
         public ClusterConfigArgs build() {
             return new ClusterConfigArgs(autoscalingConfig, configBucket, encryptionConfig, endpointConfig, gceClusterConfig, gkeClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, secondaryWorkerConfig, securityConfig, softwareConfig, tempBucket, workerConfig);
         }

@@ -25,7 +25,7 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="backendPool")
-    private final @Nullable SubResourceResponse backendPool;
+        private final @Nullable SubResourceResponse backendPool;
 
     public Optional<SubResourceResponse> getBackendPool() {
         return this.backendPool == null ? Optional.empty() : Optional.ofNullable(this.backendPool);
@@ -36,7 +36,7 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="cacheConfiguration")
-    private final @Nullable CacheConfigurationResponse cacheConfiguration;
+        private final @Nullable CacheConfigurationResponse cacheConfiguration;
 
     public Optional<CacheConfigurationResponse> getCacheConfiguration() {
         return this.cacheConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cacheConfiguration);
@@ -47,7 +47,7 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="customForwardingPath")
-    private final @Nullable String customForwardingPath;
+        private final @Nullable String customForwardingPath;
 
     public Optional<String> getCustomForwardingPath() {
         return this.customForwardingPath == null ? Optional.empty() : Optional.ofNullable(this.customForwardingPath);
@@ -58,7 +58,7 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="forwardingProtocol")
-    private final @Nullable String forwardingProtocol;
+        private final @Nullable String forwardingProtocol;
 
     public Optional<String> getForwardingProtocol() {
         return this.forwardingProtocol == null ? Optional.empty() : Optional.ofNullable(this.forwardingProtocol);
@@ -69,7 +69,7 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -148,7 +148,6 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ForwardingConfigurationResponse build() {
             return new ForwardingConfigurationResponse(backendPool, cacheConfiguration, customForwardingPath, forwardingProtocol, odataType);
         }

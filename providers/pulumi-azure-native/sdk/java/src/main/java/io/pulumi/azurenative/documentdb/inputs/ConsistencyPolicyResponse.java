@@ -25,7 +25,7 @@ public final class ConsistencyPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="defaultConsistencyLevel", required=true)
-    private final String defaultConsistencyLevel;
+        private final String defaultConsistencyLevel;
 
     public String getDefaultConsistencyLevel() {
         return this.defaultConsistencyLevel;
@@ -36,7 +36,7 @@ public final class ConsistencyPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="maxIntervalInSeconds")
-    private final @Nullable Integer maxIntervalInSeconds;
+        private final @Nullable Integer maxIntervalInSeconds;
 
     public Optional<Integer> getMaxIntervalInSeconds() {
         return this.maxIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.maxIntervalInSeconds);
@@ -47,7 +47,7 @@ public final class ConsistencyPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="maxStalenessPrefix")
-    private final @Nullable Double maxStalenessPrefix;
+        private final @Nullable Double maxStalenessPrefix;
 
     public Optional<Double> getMaxStalenessPrefix() {
         return this.maxStalenessPrefix == null ? Optional.empty() : Optional.ofNullable(this.maxStalenessPrefix);
@@ -106,7 +106,6 @@ public final class ConsistencyPolicyResponse extends io.pulumi.resources.InvokeA
             this.maxStalenessPrefix = maxStalenessPrefix;
             return this;
         }
-
         public ConsistencyPolicyResponse build() {
             return new ConsistencyPolicyResponse(defaultConsistencyLevel, maxIntervalInSeconds, maxStalenessPrefix);
         }

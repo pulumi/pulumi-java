@@ -17,7 +17,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     public static final CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs Empty = new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs();
 
     @InputImport(name="customSans")
-    private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> customSans;
+        private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> customSans;
 
     public Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs>> getCustomSans() {
         return this.customSans == null ? Input.empty() : this.customSans;
@@ -28,7 +28,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="dnsNames")
-    private final @Nullable Input<List<String>> dnsNames;
+        private final @Nullable Input<List<String>> dnsNames;
 
     public Input<List<String>> getDnsNames() {
         return this.dnsNames == null ? Input.empty() : this.dnsNames;
@@ -39,7 +39,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="emailAddresses")
-    private final @Nullable Input<List<String>> emailAddresses;
+        private final @Nullable Input<List<String>> emailAddresses;
 
     public Input<List<String>> getEmailAddresses() {
         return this.emailAddresses == null ? Input.empty() : this.emailAddresses;
@@ -50,7 +50,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="ipAddresses")
-    private final @Nullable Input<List<String>> ipAddresses;
+        private final @Nullable Input<List<String>> ipAddresses;
 
     public Input<List<String>> getIpAddresses() {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
@@ -61,7 +61,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="uris")
-    private final @Nullable Input<List<String>> uris;
+        private final @Nullable Input<List<String>> uris;
 
     public Input<List<String>> getUris() {
         return this.uris == null ? Input.empty() : this.uris;
@@ -165,7 +165,6 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             this.uris = Input.ofNullable(uris);
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs(customSans, dnsNames, emailAddresses, ipAddresses, uris);
         }

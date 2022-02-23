@@ -23,7 +23,7 @@ public final class ReplicaSetConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="lastTransitionTime")
-    private final @Nullable Input<String> lastTransitionTime;
+        private final @Nullable Input<String> lastTransitionTime;
 
     public Input<String> getLastTransitionTime() {
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
@@ -34,7 +34,7 @@ public final class ReplicaSetConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+        private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -45,7 +45,7 @@ public final class ReplicaSetConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="reason")
-    private final @Nullable Input<String> reason;
+        private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -56,7 +56,7 @@ public final class ReplicaSetConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<String> status;
+        private final Input<String> status;
 
     public Input<String> getStatus() {
         return this.status;
@@ -67,7 +67,7 @@ public final class ReplicaSetConditionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -171,7 +171,6 @@ public final class ReplicaSetConditionArgs extends io.pulumi.resources.ResourceA
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ReplicaSetConditionArgs build() {
             return new ReplicaSetConditionArgs(lastTransitionTime, message, reason, status, type);
         }

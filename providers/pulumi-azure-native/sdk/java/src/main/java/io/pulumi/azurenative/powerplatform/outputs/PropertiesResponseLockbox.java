@@ -54,7 +54,6 @@ public final class PropertiesResponseLockbox {
             this.state = state;
             return this;
         }
-
         public PropertiesResponseLockbox build() {
             return new PropertiesResponseLockbox(state);
         }

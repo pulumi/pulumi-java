@@ -77,7 +77,6 @@ public final class ClusterSkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ClusterSkuResponse build() {
             return new ClusterSkuResponse(capacity, name);
         }

@@ -54,7 +54,6 @@ public final class SecretResponse {
             this.name = name;
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(name);
         }

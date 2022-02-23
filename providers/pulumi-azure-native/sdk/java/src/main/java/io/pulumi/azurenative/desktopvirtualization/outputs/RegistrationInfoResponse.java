@@ -97,7 +97,6 @@ public final class RegistrationInfoResponse {
             this.token = token;
             return this;
         }
-
         public RegistrationInfoResponse build() {
             return new RegistrationInfoResponse(expirationTime, registrationTokenOperation, token);
         }

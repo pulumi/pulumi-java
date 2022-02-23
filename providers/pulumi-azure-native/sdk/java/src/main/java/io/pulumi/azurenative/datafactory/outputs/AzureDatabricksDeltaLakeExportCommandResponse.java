@@ -100,7 +100,6 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDatabricksDeltaLakeExportCommandResponse build() {
             return new AzureDatabricksDeltaLakeExportCommandResponse(dateFormat, timestampFormat, type);
         }

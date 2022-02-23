@@ -109,7 +109,6 @@ public final class DnsKeySpecResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public DnsKeySpecResponse build() {
             return new DnsKeySpecResponse(algorithm, keyLength, keyType, kind);
         }

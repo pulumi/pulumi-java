@@ -77,7 +77,6 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
             this.value = value;
             return this;
         }
-
         public ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult build() {
             return new ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult(nextLink, value);
         }

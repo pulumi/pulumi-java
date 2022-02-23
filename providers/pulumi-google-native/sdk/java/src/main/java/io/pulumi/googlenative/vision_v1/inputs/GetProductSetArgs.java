@@ -15,21 +15,21 @@ public final class GetProductSetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetProductSetArgs Empty = new GetProductSetArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="productSetId", required=true)
-    private final String productSetId;
+      private final String productSetId;
 
     public String getProductSetId() {
         return this.productSetId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetProductSetArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetProductSetArgs build() {
             return new GetProductSetArgs(location, productSetId, project);
         }

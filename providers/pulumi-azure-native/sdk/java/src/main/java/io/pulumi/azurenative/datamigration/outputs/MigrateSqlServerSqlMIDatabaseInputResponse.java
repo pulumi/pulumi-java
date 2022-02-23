@@ -120,7 +120,6 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse {
             this.restoreDatabaseName = Objects.requireNonNull(restoreDatabaseName);
             return this;
         }
-
         public MigrateSqlServerSqlMIDatabaseInputResponse build() {
             return new MigrateSqlServerSqlMIDatabaseInputResponse(backupFilePaths, backupFileShare, name, restoreDatabaseName);
         }

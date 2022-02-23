@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse exten
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse exten
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse exten
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse build() {
             return new GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse(description, type);
         }

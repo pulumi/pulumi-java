@@ -118,7 +118,6 @@ public final class ExpressRouteCircuitStatsResponse {
             this.secondarybytesOut = secondarybytesOut;
             return this;
         }
-
         public ExpressRouteCircuitStatsResponse build() {
             return new ExpressRouteCircuitStatsResponse(primarybytesIn, primarybytesOut, secondarybytesIn, secondarybytesOut);
         }

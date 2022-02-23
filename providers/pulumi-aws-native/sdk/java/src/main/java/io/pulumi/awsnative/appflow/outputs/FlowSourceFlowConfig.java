@@ -121,7 +121,6 @@ public final class FlowSourceFlowConfig {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
         }
-
         public FlowSourceFlowConfig build() {
             return new FlowSourceFlowConfig(connectorProfileName, connectorType, incrementalPullConfig, sourceConnectorProperties);
         }

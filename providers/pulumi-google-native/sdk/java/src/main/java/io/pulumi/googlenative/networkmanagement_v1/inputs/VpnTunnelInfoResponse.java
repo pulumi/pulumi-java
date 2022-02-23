@@ -21,7 +21,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="networkUri", required=true)
-    private final String networkUri;
+      private final String networkUri;
 
     public String getNetworkUri() {
         return this.networkUri;
@@ -43,7 +43,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -54,7 +54,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="remoteGateway", required=true)
-    private final String remoteGateway;
+      private final String remoteGateway;
 
     public String getRemoteGateway() {
         return this.remoteGateway;
@@ -65,7 +65,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="remoteGatewayIp", required=true)
-    private final String remoteGatewayIp;
+      private final String remoteGatewayIp;
 
     public String getRemoteGatewayIp() {
         return this.remoteGatewayIp;
@@ -76,7 +76,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="routingType", required=true)
-    private final String routingType;
+      private final String routingType;
 
     public String getRoutingType() {
         return this.routingType;
@@ -87,7 +87,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="sourceGateway", required=true)
-    private final String sourceGateway;
+      private final String sourceGateway;
 
     public String getSourceGateway() {
         return this.sourceGateway;
@@ -98,7 +98,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="sourceGatewayIp", required=true)
-    private final String sourceGatewayIp;
+      private final String sourceGatewayIp;
 
     public String getSourceGatewayIp() {
         return this.sourceGatewayIp;
@@ -109,7 +109,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -228,7 +228,6 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public VpnTunnelInfoResponse build() {
             return new VpnTunnelInfoResponse(displayName, networkUri, region, remoteGateway, remoteGatewayIp, routingType, sourceGateway, sourceGatewayIp, uri);
         }

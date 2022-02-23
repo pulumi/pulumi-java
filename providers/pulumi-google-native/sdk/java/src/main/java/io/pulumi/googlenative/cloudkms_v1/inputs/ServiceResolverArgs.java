@@ -25,7 +25,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="endpointFilter")
-    private final @Nullable Input<String> endpointFilter;
+      private final @Nullable Input<String> endpointFilter;
 
     public Input<String> getEndpointFilter() {
         return this.endpointFilter == null ? Input.empty() : this.endpointFilter;
@@ -36,7 +36,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="hostname", required=true)
-    private final Input<String> hostname;
+      private final Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname;
@@ -47,7 +47,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serverCertificates", required=true)
-    private final Input<List<CertificateArgs>> serverCertificates;
+      private final Input<List<CertificateArgs>> serverCertificates;
 
     public Input<List<CertificateArgs>> getServerCertificates() {
         return this.serverCertificates;
@@ -58,7 +58,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceDirectoryService", required=true)
-    private final Input<String> serviceDirectoryService;
+      private final Input<String> serviceDirectoryService;
 
     public Input<String> getServiceDirectoryService() {
         return this.serviceDirectoryService;
@@ -147,7 +147,6 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
             this.serviceDirectoryService = Input.of(Objects.requireNonNull(serviceDirectoryService));
             return this;
         }
-
         public ServiceResolverArgs build() {
             return new ServiceResolverArgs(endpointFilter, hostname, serverCertificates, serviceDirectoryService);
         }

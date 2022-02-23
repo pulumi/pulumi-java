@@ -120,7 +120,6 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse {
             this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
             return this;
         }
-
         public GooglePrivacyDlpV2FieldTransformationResponse build() {
             return new GooglePrivacyDlpV2FieldTransformationResponse(condition, fields, infoTypeTransformations, primitiveTransformation);
         }

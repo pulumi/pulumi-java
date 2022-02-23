@@ -74,7 +74,6 @@ public final class GlusterFsSectionResponse {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }
-
         public GlusterFsSectionResponse build() {
             return new GlusterFsSectionResponse(serverAddress, volumeName);
         }

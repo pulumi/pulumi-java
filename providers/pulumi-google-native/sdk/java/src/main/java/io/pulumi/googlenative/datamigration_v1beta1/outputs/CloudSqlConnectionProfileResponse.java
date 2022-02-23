@@ -117,7 +117,6 @@ public final class CloudSqlConnectionProfileResponse {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }
-
         public CloudSqlConnectionProfileResponse build() {
             return new CloudSqlConnectionProfileResponse(cloudSqlId, privateIp, publicIp, settings);
         }

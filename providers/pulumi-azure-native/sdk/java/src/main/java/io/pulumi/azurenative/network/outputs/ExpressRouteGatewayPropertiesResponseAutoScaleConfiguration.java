@@ -54,7 +54,6 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
             this.bounds = bounds;
             return this;
         }
-
         public ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration build() {
             return new ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(bounds);
         }

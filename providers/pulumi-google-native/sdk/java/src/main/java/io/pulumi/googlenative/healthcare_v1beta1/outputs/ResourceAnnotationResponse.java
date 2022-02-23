@@ -52,7 +52,6 @@ public final class ResourceAnnotationResponse {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public ResourceAnnotationResponse build() {
             return new ResourceAnnotationResponse(label);
         }

@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputResponse {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1AudioInputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1AudioInputResponse(audio, config);
         }

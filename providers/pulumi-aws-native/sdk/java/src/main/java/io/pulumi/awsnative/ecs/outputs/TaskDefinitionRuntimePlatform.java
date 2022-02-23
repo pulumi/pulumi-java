@@ -60,7 +60,6 @@ public final class TaskDefinitionRuntimePlatform {
             this.operatingSystemFamily = operatingSystemFamily;
             return this;
         }
-
         public TaskDefinitionRuntimePlatform build() {
             return new TaskDefinitionRuntimePlatform(cpuArchitecture, operatingSystemFamily);
         }

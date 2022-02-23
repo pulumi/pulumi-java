@@ -130,7 +130,6 @@ public final class TableTimePartitioning {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TableTimePartitioning build() {
             return new TableTimePartitioning(expirationMs, field, requirePartitionFilter, type);
         }

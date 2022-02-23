@@ -142,7 +142,6 @@ public final class AudioResponse {
             this.samplingRate = samplingRate;
             return this;
         }
-
         public AudioResponse build() {
             return new AudioResponse(bitrate, channels, label, odataType, samplingRate);
         }

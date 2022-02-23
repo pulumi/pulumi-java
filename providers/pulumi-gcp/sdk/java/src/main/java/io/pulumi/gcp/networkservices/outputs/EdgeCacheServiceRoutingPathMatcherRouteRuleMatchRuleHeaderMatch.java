@@ -165,7 +165,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
             this.suffixMatch = suffixMatch;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, suffixMatch);
         }

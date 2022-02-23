@@ -228,7 +228,6 @@ public final class CustomEventsTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CustomEventsTriggerResponse build() {
             return new CustomEventsTriggerResponse(annotations, description, events, pipelines, runtimeState, scope, subjectBeginsWith, subjectEndsWith, type);
         }

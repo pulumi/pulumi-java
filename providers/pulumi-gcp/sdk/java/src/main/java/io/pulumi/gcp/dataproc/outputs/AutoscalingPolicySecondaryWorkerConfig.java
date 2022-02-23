@@ -123,7 +123,6 @@ public final class AutoscalingPolicySecondaryWorkerConfig {
             this.weight = weight;
             return this;
         }
-
         public AutoscalingPolicySecondaryWorkerConfig build() {
             return new AutoscalingPolicySecondaryWorkerConfig(maxInstances, minInstances, weight);
         }

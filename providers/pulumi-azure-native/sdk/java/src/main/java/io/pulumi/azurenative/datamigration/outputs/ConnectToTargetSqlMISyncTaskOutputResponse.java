@@ -97,7 +97,6 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToTargetSqlMISyncTaskOutputResponse build() {
             return new ConnectToTargetSqlMISyncTaskOutputResponse(targetServerBrandVersion, targetServerVersion, validationErrors);
         }

@@ -23,7 +23,7 @@ public final class HourDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minute")
-    private final @Nullable Input<Integer> minute;
+        private final @Nullable Input<Integer> minute;
 
     public Input<Integer> getMinute() {
         return this.minute == null ? Input.empty() : this.minute;
@@ -66,7 +66,6 @@ public final class HourDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.minute = Input.ofNullable(minute);
             return this;
         }
-
         public HourDetailsArgs build() {
             return new HourDetailsArgs(minute);
         }

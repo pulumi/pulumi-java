@@ -52,7 +52,6 @@ public final class ExpirationPolicyResponse {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public ExpirationPolicyResponse build() {
             return new ExpirationPolicyResponse(ttl);
         }

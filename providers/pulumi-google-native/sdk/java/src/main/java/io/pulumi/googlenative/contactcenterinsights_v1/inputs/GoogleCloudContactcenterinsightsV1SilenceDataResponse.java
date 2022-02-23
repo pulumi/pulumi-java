@@ -34,7 +34,6 @@ public final class GoogleCloudContactcenterinsightsV1SilenceDataResponse extends
         public Builder(GoogleCloudContactcenterinsightsV1SilenceDataResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudContactcenterinsightsV1SilenceDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1SilenceDataResponse();
         }

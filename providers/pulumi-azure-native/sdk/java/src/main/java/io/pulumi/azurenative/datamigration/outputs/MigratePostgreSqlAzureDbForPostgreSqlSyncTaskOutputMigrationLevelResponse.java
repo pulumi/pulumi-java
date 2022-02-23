@@ -202,7 +202,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse(endedOn, id, resultType, sourceServer, sourceServerVersion, startedOn, targetServer, targetServerVersion);
         }

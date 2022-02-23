@@ -20,14 +20,14 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetTag")
-    private final @Nullable Input<String> assetTag;
+      private final @Nullable Input<String> assetTag;
 
     public Input<String> getAssetTag() {
         return this.assetTag == null ? Input.empty() : this.assetTag;
     }
 
     @InputImport(name="customer")
-    private final @Nullable Input<String> customer;
+      private final @Nullable Input<String> customer;
 
     public Input<String> getCustomer() {
         return this.customer == null ? Input.empty() : this.customer;
@@ -38,7 +38,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastSyncTime")
-    private final @Nullable Input<String> lastSyncTime;
+      private final @Nullable Input<String> lastSyncTime;
 
     public Input<String> getLastSyncTime() {
         return this.lastSyncTime == null ? Input.empty() : this.lastSyncTime;
@@ -49,7 +49,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serialNumber")
-    private final @Nullable Input<String> serialNumber;
+      private final @Nullable Input<String> serialNumber;
 
     public Input<String> getSerialNumber() {
         return this.serialNumber == null ? Input.empty() : this.serialNumber;
@@ -60,7 +60,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="wifiMacAddresses")
-    private final @Nullable Input<List<String>> wifiMacAddresses;
+      private final @Nullable Input<List<String>> wifiMacAddresses;
 
     public Input<List<String>> getWifiMacAddresses() {
         return this.wifiMacAddresses == null ? Input.empty() : this.wifiMacAddresses;
@@ -164,7 +164,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.wifiMacAddresses = Input.ofNullable(wifiMacAddresses);
             return this;
         }
-
         public DeviceArgs build() {
             return new DeviceArgs(assetTag, customer, lastSyncTime, serialNumber, wifiMacAddresses);
         }

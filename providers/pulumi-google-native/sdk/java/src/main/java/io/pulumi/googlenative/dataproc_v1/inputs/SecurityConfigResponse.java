@@ -22,7 +22,7 @@ public final class SecurityConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="identityConfig", required=true)
-    private final IdentityConfigResponse identityConfig;
+      private final IdentityConfigResponse identityConfig;
 
     public IdentityConfigResponse getIdentityConfig() {
         return this.identityConfig;
@@ -33,7 +33,7 @@ public final class SecurityConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="kerberosConfig", required=true)
-    private final KerberosConfigResponse kerberosConfig;
+      private final KerberosConfigResponse kerberosConfig;
 
     public KerberosConfigResponse getKerberosConfig() {
         return this.kerberosConfig;
@@ -82,7 +82,6 @@ public final class SecurityConfigResponse extends io.pulumi.resources.InvokeArgs
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }
-
         public SecurityConfigResponse build() {
             return new SecurityConfigResponse(identityConfig, kerberosConfig);
         }

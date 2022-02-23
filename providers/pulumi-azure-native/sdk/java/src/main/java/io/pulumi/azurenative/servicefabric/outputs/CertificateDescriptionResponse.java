@@ -97,7 +97,6 @@ public final class CertificateDescriptionResponse {
             this.x509StoreName = x509StoreName;
             return this;
         }
-
         public CertificateDescriptionResponse build() {
             return new CertificateDescriptionResponse(thumbprint, thumbprintSecondary, x509StoreName);
         }

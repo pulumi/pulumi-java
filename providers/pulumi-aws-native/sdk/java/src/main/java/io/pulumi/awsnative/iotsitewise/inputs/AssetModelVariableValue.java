@@ -15,14 +15,14 @@ public final class AssetModelVariableValue extends io.pulumi.resources.InvokeArg
     public static final AssetModelVariableValue Empty = new AssetModelVariableValue();
 
     @InputImport(name="hierarchyLogicalId")
-    private final @Nullable String hierarchyLogicalId;
+        private final @Nullable String hierarchyLogicalId;
 
     public Optional<String> getHierarchyLogicalId() {
         return this.hierarchyLogicalId == null ? Optional.empty() : Optional.ofNullable(this.hierarchyLogicalId);
     }
 
     @InputImport(name="propertyLogicalId", required=true)
-    private final String propertyLogicalId;
+        private final String propertyLogicalId;
 
     public String getPropertyLogicalId() {
         return this.propertyLogicalId;
@@ -71,7 +71,6 @@ public final class AssetModelVariableValue extends io.pulumi.resources.InvokeArg
             this.propertyLogicalId = Objects.requireNonNull(propertyLogicalId);
             return this;
         }
-
         public AssetModelVariableValue build() {
             return new AssetModelVariableValue(hierarchyLogicalId, propertyLogicalId);
         }

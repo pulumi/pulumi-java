@@ -227,7 +227,6 @@ public final class GetLivePipelineResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLivePipelineResult build() {
             return new GetLivePipelineResult(bitrateKbps, description, id, name, parameters, state, systemData, topologyName, type);
         }

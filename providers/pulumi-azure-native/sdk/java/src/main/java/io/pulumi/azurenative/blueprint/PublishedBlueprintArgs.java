@@ -24,7 +24,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="blueprintName", required=true)
-    private final Input<String> blueprintName;
+        private final Input<String> blueprintName;
 
     public Input<String> getBlueprintName() {
         return this.blueprintName;
@@ -35,7 +35,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="changeNotes")
-    private final @Nullable Input<String> changeNotes;
+        private final @Nullable Input<String> changeNotes;
 
     public Input<String> getChangeNotes() {
         return this.changeNotes == null ? Input.empty() : this.changeNotes;
@@ -46,7 +46,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -68,7 +68,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterDefinitionArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterDefinitionArgs>> parameters;
 
     public Input<Map<String,ParameterDefinitionArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -79,7 +79,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroups")
-    private final @Nullable Input<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
+        private final @Nullable Input<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
 
     public Input<Map<String,ResourceGroupDefinitionArgs>> getResourceGroups() {
         return this.resourceGroups == null ? Input.empty() : this.resourceGroups;
@@ -90,7 +90,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceScope", required=true)
-    private final Input<String> resourceScope;
+        private final Input<String> resourceScope;
 
     public Input<String> getResourceScope() {
         return this.resourceScope;
@@ -101,7 +101,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetScope")
-    private final @Nullable Input<Either<String,BlueprintTargetScope>> targetScope;
+        private final @Nullable Input<Either<String,BlueprintTargetScope>> targetScope;
 
     public Input<Either<String,BlueprintTargetScope>> getTargetScope() {
         return this.targetScope == null ? Input.empty() : this.targetScope;
@@ -112,7 +112,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable Input<String> versionId;
+        private final @Nullable Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;
@@ -276,7 +276,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
             this.versionId = Input.ofNullable(versionId);
             return this;
         }
-
         public PublishedBlueprintArgs build() {
             return new PublishedBlueprintArgs(blueprintName, changeNotes, description, displayName, parameters, resourceGroups, resourceScope, targetScope, versionId);
         }

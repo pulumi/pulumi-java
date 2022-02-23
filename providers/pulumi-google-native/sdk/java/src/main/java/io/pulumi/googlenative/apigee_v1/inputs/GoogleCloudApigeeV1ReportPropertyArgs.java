@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="property")
-    private final @Nullable Input<String> property;
+      private final @Nullable Input<String> property;
 
     public Input<String> getProperty() {
         return this.property == null ? Input.empty() : this.property;
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> value;
+      private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> value;
 
     public Input<List<GoogleCloudApigeeV1AttributeArgs>> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -91,7 +91,6 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public GoogleCloudApigeeV1ReportPropertyArgs build() {
             return new GoogleCloudApigeeV1ReportPropertyArgs(property, value);
         }

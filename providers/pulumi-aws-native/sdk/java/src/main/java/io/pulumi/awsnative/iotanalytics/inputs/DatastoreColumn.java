@@ -13,14 +13,14 @@ public final class DatastoreColumn extends io.pulumi.resources.InvokeArgs {
     public static final DatastoreColumn Empty = new DatastoreColumn();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -69,7 +69,6 @@ public final class DatastoreColumn extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DatastoreColumn build() {
             return new DatastoreColumn(name, type);
         }

@@ -60,7 +60,6 @@ public final class TaskDefinitionInferenceAccelerator {
             this.deviceType = deviceType;
             return this;
         }
-
         public TaskDefinitionInferenceAccelerator build() {
             return new TaskDefinitionInferenceAccelerator(deviceName, deviceType);
         }

@@ -102,7 +102,6 @@ public final class SelfHostedIntegrationRuntimeResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SelfHostedIntegrationRuntimeResponse build() {
             return new SelfHostedIntegrationRuntimeResponse(description, linkedInfo, type);
         }

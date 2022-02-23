@@ -14,7 +14,7 @@ public final class ResponseHeadersPolicyAccessControlAllowMethods extends io.pul
     public static final ResponseHeadersPolicyAccessControlAllowMethods Empty = new ResponseHeadersPolicyAccessControlAllowMethods();
 
     @InputImport(name="items", required=true)
-    private final List<String> items;
+        private final List<String> items;
 
     public List<String> getItems() {
         return this.items;
@@ -52,7 +52,6 @@ public final class ResponseHeadersPolicyAccessControlAllowMethods extends io.pul
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public ResponseHeadersPolicyAccessControlAllowMethods build() {
             return new ResponseHeadersPolicyAccessControlAllowMethods(items);
         }

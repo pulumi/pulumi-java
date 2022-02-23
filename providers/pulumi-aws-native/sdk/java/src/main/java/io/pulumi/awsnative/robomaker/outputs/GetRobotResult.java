@@ -61,7 +61,6 @@ public final class GetRobotResult {
             this.tags = tags;
             return this;
         }
-
         public GetRobotResult build() {
             return new GetRobotResult(arn, tags);
         }

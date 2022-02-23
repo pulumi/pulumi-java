@@ -139,7 +139,6 @@ public final class GetIPv6FirewallRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIPv6FirewallRuleResult build() {
             return new GetIPv6FirewallRuleResult(endIPv6Address, id, name, startIPv6Address, type);
         }

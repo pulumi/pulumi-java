@@ -98,7 +98,6 @@ public final class VolumeReferenceResponse {
             this.readOnly = readOnly;
             return this;
         }
-
         public VolumeReferenceResponse build() {
             return new VolumeReferenceResponse(destinationPath, name, readOnly);
         }

@@ -24,7 +24,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipBlocks")
-    private final @Nullable Input<List<String>> ipBlocks;
+      private final @Nullable Input<List<String>> ipBlocks;
 
     public Input<List<String>> getIpBlocks() {
         return this.ipBlocks == null ? Input.empty() : this.ipBlocks;
@@ -35,7 +35,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principals")
-    private final @Nullable Input<List<String>> principals;
+      private final @Nullable Input<List<String>> principals;
 
     public Input<List<String>> getPrincipals() {
         return this.principals == null ? Input.empty() : this.principals;
@@ -94,7 +94,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.principals = Input.ofNullable(principals);
             return this;
         }
-
         public SourceArgs build() {
             return new SourceArgs(ipBlocks, principals);
         }

@@ -117,7 +117,6 @@ public final class GetAgentPoolResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetAgentPoolResult build() {
             return new GetAgentPoolResult(bandwidthLimit, displayName, name, state);
         }

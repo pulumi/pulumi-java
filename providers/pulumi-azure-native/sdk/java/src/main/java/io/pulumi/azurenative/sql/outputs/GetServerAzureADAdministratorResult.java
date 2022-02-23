@@ -203,7 +203,6 @@ public final class GetServerAzureADAdministratorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerAzureADAdministratorResult build() {
             return new GetServerAzureADAdministratorResult(administratorType, azureADOnlyAuthentication, id, login, name, sid, tenantId, type);
         }

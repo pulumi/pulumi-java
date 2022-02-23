@@ -309,7 +309,6 @@ public final class GetWebAppDeploymentSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppDeploymentSlotResult build() {
             return new GetWebAppDeploymentSlotResult(active, author, authorEmail, deployer, details, endTime, id, kind, message, name, startTime, status, type);
         }

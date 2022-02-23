@@ -52,7 +52,6 @@ public final class TopicResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public TopicResponse build() {
             return new TopicResponse(name);
         }

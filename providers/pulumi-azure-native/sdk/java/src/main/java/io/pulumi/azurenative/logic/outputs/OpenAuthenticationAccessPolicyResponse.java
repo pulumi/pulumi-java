@@ -78,7 +78,6 @@ public final class OpenAuthenticationAccessPolicyResponse {
             this.type = type;
             return this;
         }
-
         public OpenAuthenticationAccessPolicyResponse build() {
             return new OpenAuthenticationAccessPolicyResponse(claims, type);
         }

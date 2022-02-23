@@ -123,7 +123,6 @@ public final class CxPageEventHandlerTriggerFulfillment {
             this.webhook = webhook;
             return this;
         }
-
         public CxPageEventHandlerTriggerFulfillment build() {
             return new CxPageEventHandlerTriggerFulfillment(messages, returnPartialResponses, tag, webhook);
         }

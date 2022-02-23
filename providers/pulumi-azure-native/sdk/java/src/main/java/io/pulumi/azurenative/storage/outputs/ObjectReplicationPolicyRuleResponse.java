@@ -119,7 +119,6 @@ public final class ObjectReplicationPolicyRuleResponse {
             this.sourceContainer = Objects.requireNonNull(sourceContainer);
             return this;
         }
-
         public ObjectReplicationPolicyRuleResponse build() {
             return new ObjectReplicationPolicyRuleResponse(destinationContainer, filters, ruleId, sourceContainer);
         }

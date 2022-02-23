@@ -184,7 +184,6 @@ public final class VmHostPlacementPolicyPropertiesResponse {
             this.vmMembers = Objects.requireNonNull(vmMembers);
             return this;
         }
-
         public VmHostPlacementPolicyPropertiesResponse build() {
             return new VmHostPlacementPolicyPropertiesResponse(affinityType, displayName, hostMembers, provisioningState, state, type, vmMembers);
         }

@@ -145,7 +145,6 @@ public final class JwtAuthenticationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JwtAuthenticationResponse build() {
             return new JwtAuthenticationResponse(audiences, claims, issuers, keys, type);
         }

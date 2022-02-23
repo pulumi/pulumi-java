@@ -22,7 +22,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dataSources")
-    private final @Nullable Input<List<DataSourceArgs>> dataSources;
+        private final @Nullable Input<List<DataSourceArgs>> dataSources;
 
     public Input<List<DataSourceArgs>> getDataSources() {
         return this.dataSources == null ? Input.empty() : this.dataSources;
@@ -33,7 +33,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="diagnosticSettingsName")
-    private final @Nullable Input<String> diagnosticSettingsName;
+        private final @Nullable Input<String> diagnosticSettingsName;
 
     public Input<String> getDiagnosticSettingsName() {
         return this.diagnosticSettingsName == null ? Input.empty() : this.diagnosticSettingsName;
@@ -44,7 +44,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,14 +55,14 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable Input<String> osType;
+        private final @Nullable Input<String> osType;
 
     public Input<String> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
     }
 
     @InputImport(name="proxySetting")
-    private final @Nullable Input<String> proxySetting;
+        private final @Nullable Input<String> proxySetting;
 
     public Input<String> getProxySetting() {
         return this.proxySetting == null ? Input.empty() : this.proxySetting;
@@ -73,7 +73,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -84,7 +84,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -218,7 +218,6 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public GuestDiagnosticsSettingArgs build() {
             return new GuestDiagnosticsSettingArgs(dataSources, diagnosticSettingsName, location, osType, proxySetting, resourceGroupName, tags);
         }

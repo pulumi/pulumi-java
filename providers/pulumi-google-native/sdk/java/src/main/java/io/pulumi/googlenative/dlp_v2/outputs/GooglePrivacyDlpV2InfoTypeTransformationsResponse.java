@@ -53,7 +53,6 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse {
             this.transformations = Objects.requireNonNull(transformations);
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeTransformationsResponse build() {
             return new GooglePrivacyDlpV2InfoTypeTransformationsResponse(transformations);
         }

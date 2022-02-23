@@ -77,7 +77,6 @@ public final class GetLoggingResult {
             this.roleArn = roleArn;
             return this;
         }
-
         public GetLoggingResult build() {
             return new GetLoggingResult(defaultLogLevel, roleArn);
         }

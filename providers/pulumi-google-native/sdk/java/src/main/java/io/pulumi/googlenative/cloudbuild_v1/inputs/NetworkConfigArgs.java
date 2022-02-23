@@ -24,7 +24,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egressOption")
-    private final @Nullable Input<NetworkConfigEgressOption> egressOption;
+      private final @Nullable Input<NetworkConfigEgressOption> egressOption;
 
     public Input<NetworkConfigEgressOption> getEgressOption() {
         return this.egressOption == null ? Input.empty() : this.egressOption;
@@ -35,7 +35,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeredNetwork", required=true)
-    private final Input<String> peeredNetwork;
+      private final Input<String> peeredNetwork;
 
     public Input<String> getPeeredNetwork() {
         return this.peeredNetwork;
@@ -94,7 +94,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.peeredNetwork = Input.of(Objects.requireNonNull(peeredNetwork));
             return this;
         }
-
         public NetworkConfigArgs build() {
             return new NetworkConfigArgs(egressOption, peeredNetwork);
         }

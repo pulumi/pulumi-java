@@ -17,7 +17,7 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="datasetName", required=true)
-    private final String datasetName;
+        private final String datasetName;
 
     public String getDatasetName() {
         return this.datasetName;
@@ -28,7 +28,7 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="factoryName", required=true)
-    private final String factoryName;
+        private final String factoryName;
 
     public String getFactoryName() {
         return this.factoryName;
@@ -39,7 +39,7 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetDatasetArgs build() {
             return new GetDatasetArgs(datasetName, factoryName, resourceGroupName);
         }

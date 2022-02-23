@@ -118,7 +118,6 @@ public final class LiveEventEncodingResponse {
             this.stretchMode = stretchMode;
             return this;
         }
-
         public LiveEventEncodingResponse build() {
             return new LiveEventEncodingResponse(encodingType, keyFrameInterval, presetName, stretchMode);
         }

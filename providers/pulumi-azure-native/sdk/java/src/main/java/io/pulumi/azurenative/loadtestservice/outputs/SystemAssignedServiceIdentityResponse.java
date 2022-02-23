@@ -95,7 +95,6 @@ public final class SystemAssignedServiceIdentityResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SystemAssignedServiceIdentityResponse build() {
             return new SystemAssignedServiceIdentityResponse(principalId, tenantId, type);
         }

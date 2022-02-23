@@ -60,7 +60,6 @@ public final class LaunchStepConfig {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public LaunchStepConfig build() {
             return new LaunchStepConfig(groupWeights, startTime);
         }

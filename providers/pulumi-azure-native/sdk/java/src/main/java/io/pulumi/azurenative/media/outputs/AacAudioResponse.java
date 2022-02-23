@@ -163,7 +163,6 @@ public final class AacAudioResponse {
             this.samplingRate = samplingRate;
             return this;
         }
-
         public AacAudioResponse build() {
             return new AacAudioResponse(bitrate, channels, label, odataType, profile, samplingRate);
         }

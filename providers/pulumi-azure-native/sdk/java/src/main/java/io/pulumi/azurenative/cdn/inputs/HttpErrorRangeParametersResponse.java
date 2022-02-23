@@ -23,7 +23,7 @@ public final class HttpErrorRangeParametersResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="begin")
-    private final @Nullable Integer begin;
+        private final @Nullable Integer begin;
 
     public Optional<Integer> getBegin() {
         return this.begin == null ? Optional.empty() : Optional.ofNullable(this.begin);
@@ -34,7 +34,7 @@ public final class HttpErrorRangeParametersResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="end")
-    private final @Nullable Integer end;
+        private final @Nullable Integer end;
 
     public Optional<Integer> getEnd() {
         return this.end == null ? Optional.empty() : Optional.ofNullable(this.end);
@@ -83,7 +83,6 @@ public final class HttpErrorRangeParametersResponse extends io.pulumi.resources.
             this.end = end;
             return this;
         }
-
         public HttpErrorRangeParametersResponse build() {
             return new HttpErrorRangeParametersResponse(begin, end);
         }

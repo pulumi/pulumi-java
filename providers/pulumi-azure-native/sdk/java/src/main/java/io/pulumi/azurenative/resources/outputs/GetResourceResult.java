@@ -270,7 +270,6 @@ public final class GetResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceResult build() {
             return new GetResourceResult(id, identity, kind, location, managedBy, name, plan, properties, sku, tags, type);
         }

@@ -163,7 +163,6 @@ public final class WebApplicationFirewallCustomRuleResponse {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public WebApplicationFirewallCustomRuleResponse build() {
             return new WebApplicationFirewallCustomRuleResponse(action, etag, matchConditions, name, priority, ruleType);
         }

@@ -19,7 +19,7 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -30,7 +30,7 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="labels", required=true)
-    private final List<DeploymentUpdateLabelEntryResponse> labels;
+      private final List<DeploymentUpdateLabelEntryResponse> labels;
 
     public List<DeploymentUpdateLabelEntryResponse> getLabels() {
         return this.labels;
@@ -41,7 +41,7 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="manifest", required=true)
-    private final String manifest;
+      private final String manifest;
 
     public String getManifest() {
         return this.manifest;
@@ -100,7 +100,6 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
             this.manifest = Objects.requireNonNull(manifest);
             return this;
         }
-
         public DeploymentUpdateResponse build() {
             return new DeploymentUpdateResponse(description, labels, manifest);
         }

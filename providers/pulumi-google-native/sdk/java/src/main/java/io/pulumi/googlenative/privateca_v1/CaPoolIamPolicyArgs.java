@@ -23,7 +23,7 @@ public final class CaPoolIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="auditConfigs")
-    private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
 
     public Input<List<AuditConfigArgs>> getAuditConfigs() {
         return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
@@ -34,14 +34,14 @@ public final class CaPoolIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
     }
 
     @InputImport(name="caPoolId", required=true)
-    private final Input<String> caPoolId;
+      private final Input<String> caPoolId;
 
     public Input<String> getCaPoolId() {
         return this.caPoolId;
@@ -52,21 +52,21 @@ public final class CaPoolIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -77,7 +77,7 @@ public final class CaPoolIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="updateMask")
-    private final @Nullable Input<String> updateMask;
+      private final @Nullable Input<String> updateMask;
 
     public Input<String> getUpdateMask() {
         return this.updateMask == null ? Input.empty() : this.updateMask;
@@ -88,7 +88,7 @@ public final class CaPoolIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -237,7 +237,6 @@ public final class CaPoolIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public CaPoolIamPolicyArgs build() {
             return new CaPoolIamPolicyArgs(auditConfigs, bindings, caPoolId, etag, location, project, updateMask, version);
         }

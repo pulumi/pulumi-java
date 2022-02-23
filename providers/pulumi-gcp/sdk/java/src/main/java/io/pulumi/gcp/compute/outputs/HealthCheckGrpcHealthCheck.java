@@ -153,7 +153,6 @@ public final class HealthCheckGrpcHealthCheck {
             this.portSpecification = portSpecification;
             return this;
         }
-
         public HealthCheckGrpcHealthCheck build() {
             return new HealthCheckGrpcHealthCheck(grpcServiceName, port, portName, portSpecification);
         }

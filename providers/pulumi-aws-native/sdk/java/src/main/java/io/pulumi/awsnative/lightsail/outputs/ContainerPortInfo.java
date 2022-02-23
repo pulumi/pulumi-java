@@ -60,7 +60,6 @@ public final class ContainerPortInfo {
             this.protocol = protocol;
             return this;
         }
-
         public ContainerPortInfo build() {
             return new ContainerPortInfo(port, protocol);
         }

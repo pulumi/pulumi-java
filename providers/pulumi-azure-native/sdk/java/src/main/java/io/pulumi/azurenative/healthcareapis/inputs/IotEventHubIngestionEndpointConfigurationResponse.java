@@ -23,7 +23,7 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends io.
      * 
      */
     @InputImport(name="consumerGroup")
-    private final @Nullable String consumerGroup;
+        private final @Nullable String consumerGroup;
 
     public Optional<String> getConsumerGroup() {
         return this.consumerGroup == null ? Optional.empty() : Optional.ofNullable(this.consumerGroup);
@@ -34,7 +34,7 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends io.
      * 
      */
     @InputImport(name="eventHubName")
-    private final @Nullable String eventHubName;
+        private final @Nullable String eventHubName;
 
     public Optional<String> getEventHubName() {
         return this.eventHubName == null ? Optional.empty() : Optional.ofNullable(this.eventHubName);
@@ -45,7 +45,7 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends io.
      * 
      */
     @InputImport(name="fullyQualifiedEventHubNamespace")
-    private final @Nullable String fullyQualifiedEventHubNamespace;
+        private final @Nullable String fullyQualifiedEventHubNamespace;
 
     public Optional<String> getFullyQualifiedEventHubNamespace() {
         return this.fullyQualifiedEventHubNamespace == null ? Optional.empty() : Optional.ofNullable(this.fullyQualifiedEventHubNamespace);
@@ -104,7 +104,6 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends io.
             this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
             return this;
         }
-
         public IotEventHubIngestionEndpointConfigurationResponse build() {
             return new IotEventHubIngestionEndpointConfigurationResponse(consumerGroup, eventHubName, fullyQualifiedEventHubNamespace);
         }

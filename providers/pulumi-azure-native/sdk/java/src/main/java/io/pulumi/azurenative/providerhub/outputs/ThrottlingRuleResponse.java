@@ -74,7 +74,6 @@ public final class ThrottlingRuleResponse {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-
         public ThrottlingRuleResponse build() {
             return new ThrottlingRuleResponse(action, metrics, requiredFeatures);
         }

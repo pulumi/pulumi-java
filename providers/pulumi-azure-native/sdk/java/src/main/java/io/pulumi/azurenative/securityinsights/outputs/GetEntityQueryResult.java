@@ -161,7 +161,6 @@ public final class GetEntityQueryResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEntityQueryResult build() {
             return new GetEntityQueryResult(etag, id, kind, name, systemData, type);
         }

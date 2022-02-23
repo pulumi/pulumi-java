@@ -121,7 +121,6 @@ public final class GoogleResponse {
             this.validation = validation;
             return this;
         }
-
         public GoogleResponse build() {
             return new GoogleResponse(enabled, login, registration, validation);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends io.
      * 
      */
     @InputImport(name="classificationThreshold", required=true)
-    private final Double classificationThreshold;
+      private final Double classificationThreshold;
 
     public Double getClassificationThreshold() {
         return this.classificationThreshold;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends io.
      * 
      */
     @InputImport(name="modelTrainingMode", required=true)
-    private final String modelTrainingMode;
+      private final String modelTrainingMode;
 
     public String getModelTrainingMode() {
         return this.modelTrainingMode;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends io.
      * 
      */
     @InputImport(name="modelType", required=true)
-    private final String modelType;
+      private final String modelType;
 
     public String getModelType() {
         return this.modelType;
@@ -103,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsResponse extends io.
             this.modelType = Objects.requireNonNull(modelType);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1NluSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3beta1NluSettingsResponse(classificationThreshold, modelTrainingMode, modelType);
         }

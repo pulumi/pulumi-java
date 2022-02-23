@@ -24,7 +24,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encryptedSecret")
-    private final @Nullable AsymmetricEncryptedSecretResponse encryptedSecret;
+        private final @Nullable AsymmetricEncryptedSecretResponse encryptedSecret;
 
     public Optional<AsymmetricEncryptedSecretResponse> getEncryptedSecret() {
         return this.encryptedSecret == null ? Optional.empty() : Optional.ofNullable(this.encryptedSecret);
@@ -35,7 +35,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyVaultId")
-    private final @Nullable String keyVaultId;
+        private final @Nullable String keyVaultId;
 
     public Optional<String> getKeyVaultId() {
         return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
@@ -84,7 +84,6 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
             this.keyVaultId = keyVaultId;
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(encryptedSecret, keyVaultId);
         }

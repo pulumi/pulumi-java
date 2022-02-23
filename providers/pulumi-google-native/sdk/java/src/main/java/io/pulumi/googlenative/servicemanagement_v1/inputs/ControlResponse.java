@@ -21,7 +21,7 @@ public final class ControlResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environment", required=true)
-    private final String environment;
+      private final String environment;
 
     public String getEnvironment() {
         return this.environment;
@@ -59,7 +59,6 @@ public final class ControlResponse extends io.pulumi.resources.InvokeArgs {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public ControlResponse build() {
             return new ControlResponse(environment);
         }

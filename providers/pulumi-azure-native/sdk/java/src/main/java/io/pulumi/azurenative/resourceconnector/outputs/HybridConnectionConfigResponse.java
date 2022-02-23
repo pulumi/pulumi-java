@@ -117,7 +117,6 @@ public final class HybridConnectionConfigResponse {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public HybridConnectionConfigResponse build() {
             return new HybridConnectionConfigResponse(expirationTime, hybridConnectionName, relay, token);
         }

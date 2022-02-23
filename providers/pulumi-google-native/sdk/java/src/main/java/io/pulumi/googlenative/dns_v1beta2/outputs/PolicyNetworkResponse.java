@@ -66,7 +66,6 @@ public final class PolicyNetworkResponse {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
-
         public PolicyNetworkResponse build() {
             return new PolicyNetworkResponse(kind, networkUrl);
         }

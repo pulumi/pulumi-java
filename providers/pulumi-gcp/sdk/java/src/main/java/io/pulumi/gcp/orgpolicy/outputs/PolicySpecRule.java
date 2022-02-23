@@ -141,7 +141,6 @@ public final class PolicySpecRule {
             this.values = values;
             return this;
         }
-
         public PolicySpecRule build() {
             return new PolicySpecRule(allowAll, condition, denyAll, enforce, values);
         }

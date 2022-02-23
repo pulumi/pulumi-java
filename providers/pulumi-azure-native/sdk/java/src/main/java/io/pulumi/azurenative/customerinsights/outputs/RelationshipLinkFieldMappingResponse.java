@@ -97,7 +97,6 @@ public final class RelationshipLinkFieldMappingResponse {
             this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName);
             return this;
         }
-
         public RelationshipLinkFieldMappingResponse build() {
             return new RelationshipLinkFieldMappingResponse(interactionFieldName, linkType, relationshipFieldName);
         }

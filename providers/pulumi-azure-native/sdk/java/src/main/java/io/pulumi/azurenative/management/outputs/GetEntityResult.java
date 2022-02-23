@@ -99,7 +99,6 @@ public final class GetEntityResult {
             this.value = value;
             return this;
         }
-
         public GetEntityResult build() {
             return new GetEntityResult(count, nextLink, value);
         }

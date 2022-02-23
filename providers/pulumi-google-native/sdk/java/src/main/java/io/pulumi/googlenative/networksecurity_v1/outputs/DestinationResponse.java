@@ -119,7 +119,6 @@ public final class DestinationResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(hosts, httpHeaderMatch, methods, ports);
         }

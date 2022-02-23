@@ -73,7 +73,6 @@ public final class FhirStoreIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public FhirStoreIamBindingCondition build() {
             return new FhirStoreIamBindingCondition(description, expression, title);
         }

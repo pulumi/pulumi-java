@@ -207,7 +207,6 @@ public final class Endpoint {
             this.zone = zone;
             return this;
         }
-
         public Endpoint build() {
             return new Endpoint(addresses, conditions, deprecatedTopology, hints, hostname, nodeName, targetRef, zone);
         }

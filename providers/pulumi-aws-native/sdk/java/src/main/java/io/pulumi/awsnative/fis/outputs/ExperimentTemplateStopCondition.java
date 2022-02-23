@@ -60,7 +60,6 @@ public final class ExperimentTemplateStopCondition {
             this.value = value;
             return this;
         }
-
         public ExperimentTemplateStopCondition build() {
             return new ExperimentTemplateStopCondition(source, value);
         }

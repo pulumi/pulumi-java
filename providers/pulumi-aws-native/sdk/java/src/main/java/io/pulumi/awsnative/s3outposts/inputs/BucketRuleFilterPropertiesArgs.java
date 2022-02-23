@@ -25,7 +25,7 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="andOperator")
-    private final @Nullable Input<BucketFilterAndOperatorArgs> andOperator;
+        private final @Nullable Input<BucketFilterAndOperatorArgs> andOperator;
 
     public Input<BucketFilterAndOperatorArgs> getAndOperator() {
         return this.andOperator == null ? Input.empty() : this.andOperator;
@@ -36,7 +36,7 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+        private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -47,7 +47,7 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<BucketFilterTagArgs> tag;
+        private final @Nullable Input<BucketFilterTagArgs> tag;
 
     public Input<BucketFilterTagArgs> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -121,7 +121,6 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
             this.tag = Input.ofNullable(tag);
             return this;
         }
-
         public BucketRuleFilterPropertiesArgs build() {
             return new BucketRuleFilterPropertiesArgs(andOperator, prefix, tag);
         }

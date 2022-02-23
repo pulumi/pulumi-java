@@ -21,28 +21,28 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
     public static final WorkGroupResultConfigurationUpdatesArgs Empty = new WorkGroupResultConfigurationUpdatesArgs();
 
     @InputImport(name="encryptionConfiguration")
-    private final @Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
+        private final @Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Input<WorkGroupEncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
     }
 
     @InputImport(name="outputLocation")
-    private final @Nullable Input<String> outputLocation;
+        private final @Nullable Input<String> outputLocation;
 
     public Input<String> getOutputLocation() {
         return this.outputLocation == null ? Input.empty() : this.outputLocation;
     }
 
     @InputImport(name="removeEncryptionConfiguration")
-    private final @Nullable Input<Boolean> removeEncryptionConfiguration;
+        private final @Nullable Input<Boolean> removeEncryptionConfiguration;
 
     public Input<Boolean> getRemoveEncryptionConfiguration() {
         return this.removeEncryptionConfiguration == null ? Input.empty() : this.removeEncryptionConfiguration;
     }
 
     @InputImport(name="removeOutputLocation")
-    private final @Nullable Input<Boolean> removeOutputLocation;
+        private final @Nullable Input<Boolean> removeOutputLocation;
 
     public Input<Boolean> getRemoveOutputLocation() {
         return this.removeOutputLocation == null ? Input.empty() : this.removeOutputLocation;
@@ -131,7 +131,6 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
             this.removeOutputLocation = Input.ofNullable(removeOutputLocation);
             return this;
         }
-
         public WorkGroupResultConfigurationUpdatesArgs build() {
             return new WorkGroupResultConfigurationUpdatesArgs(encryptionConfiguration, outputLocation, removeEncryptionConfiguration, removeOutputLocation);
         }

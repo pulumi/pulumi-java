@@ -350,7 +350,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse {
             this.totalChangesApplied = Objects.requireNonNull(totalChangesApplied);
             return this;
         }
-
         public MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse build() {
             return new MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse(cdcDeleteCounter, cdcInsertCounter, cdcUpdateCounter, dataErrorsCounter, databaseName, fullLoadEndedOn, fullLoadEstFinishTime, fullLoadStartedOn, fullLoadTotalRows, id, lastModifiedTime, resultType, state, tableName, totalChangesApplied);
         }

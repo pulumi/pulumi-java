@@ -528,7 +528,6 @@ public final class GetAzurePowerShellScriptResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAzurePowerShellScriptResult build() {
             return new GetAzurePowerShellScriptResult(arguments, azPowerShellVersion, cleanupPreference, containerSettings, environmentVariables, forceUpdateTag, id, identity, kind, location, name, outputs, primaryScriptUri, provisioningState, retentionInterval, scriptContent, status, storageAccountSettings, supportingScriptUris, systemData, tags, timeout, type);
         }

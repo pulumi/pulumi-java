@@ -13,7 +13,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
     public static final ReplicationConfigurationArgs Empty = new ReplicationConfigurationArgs();
 
     @InputImport(name="replicationConfiguration", required=true)
-    private final Input<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration;
+        private final Input<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration;
 
     public Input<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> getReplicationConfiguration() {
         return this.replicationConfiguration;
@@ -56,7 +56,6 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
             this.replicationConfiguration = Input.of(Objects.requireNonNull(replicationConfiguration));
             return this;
         }
-
         public ReplicationConfigurationArgs build() {
             return new ReplicationConfigurationArgs(replicationConfiguration);
         }

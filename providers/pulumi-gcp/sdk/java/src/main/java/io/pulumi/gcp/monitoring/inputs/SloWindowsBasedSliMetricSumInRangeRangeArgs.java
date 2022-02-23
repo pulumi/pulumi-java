@@ -21,7 +21,7 @@ public final class SloWindowsBasedSliMetricSumInRangeRangeArgs extends io.pulumi
      * 
      */
     @InputImport(name="max")
-    private final @Nullable Input<Double> max;
+        private final @Nullable Input<Double> max;
 
     public Input<Double> getMax() {
         return this.max == null ? Input.empty() : this.max;
@@ -34,7 +34,7 @@ public final class SloWindowsBasedSliMetricSumInRangeRangeArgs extends io.pulumi
      * 
      */
     @InputImport(name="min")
-    private final @Nullable Input<Double> min;
+        private final @Nullable Input<Double> min;
 
     public Input<Double> getMin() {
         return this.min == null ? Input.empty() : this.min;
@@ -93,7 +93,6 @@ public final class SloWindowsBasedSliMetricSumInRangeRangeArgs extends io.pulumi
             this.min = Input.ofNullable(min);
             return this;
         }
-
         public SloWindowsBasedSliMetricSumInRangeRangeArgs build() {
             return new SloWindowsBasedSliMetricSumInRangeRangeArgs(max, min);
         }

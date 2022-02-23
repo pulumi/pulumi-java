@@ -23,7 +23,7 @@ public final class ParameterValuesValueResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Object value;
+        private final @Nullable Object value;
 
     public Optional<Object> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -61,7 +61,6 @@ public final class ParameterValuesValueResponse extends io.pulumi.resources.Invo
             this.value = value;
             return this;
         }
-
         public ParameterValuesValueResponse build() {
             return new ParameterValuesValueResponse(value);
         }

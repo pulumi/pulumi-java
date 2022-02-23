@@ -120,7 +120,6 @@ public final class BudgetFilterResponse {
             this.tags = tags;
             return this;
         }
-
         public BudgetFilterResponse build() {
             return new BudgetFilterResponse(and, dimensions, not, tags);
         }

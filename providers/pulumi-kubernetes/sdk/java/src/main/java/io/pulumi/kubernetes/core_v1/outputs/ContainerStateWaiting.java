@@ -76,7 +76,6 @@ public final class ContainerStateWaiting {
             this.reason = reason;
             return this;
         }
-
         public ContainerStateWaiting build() {
             return new ContainerStateWaiting(message, reason);
         }

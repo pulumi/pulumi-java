@@ -74,7 +74,6 @@ public final class AliasContextResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AliasContextResponse build() {
             return new AliasContextResponse(kind, name);
         }

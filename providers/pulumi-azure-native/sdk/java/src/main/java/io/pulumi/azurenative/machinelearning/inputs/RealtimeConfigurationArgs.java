@@ -23,7 +23,7 @@ public final class RealtimeConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxConcurrentCalls")
-    private final @Nullable Input<Integer> maxConcurrentCalls;
+        private final @Nullable Input<Integer> maxConcurrentCalls;
 
     public Input<Integer> getMaxConcurrentCalls() {
         return this.maxConcurrentCalls == null ? Input.empty() : this.maxConcurrentCalls;
@@ -66,7 +66,6 @@ public final class RealtimeConfigurationArgs extends io.pulumi.resources.Resourc
             this.maxConcurrentCalls = Input.ofNullable(maxConcurrentCalls);
             return this;
         }
-
         public RealtimeConfigurationArgs build() {
             return new RealtimeConfigurationArgs(maxConcurrentCalls);
         }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
      * 
      */
     @InputImport(name="allowedCaCerts", required=true)
-    private final List<String> allowedCaCerts;
+      private final List<String> allowedCaCerts;
 
     public List<String> getAllowedCaCerts() {
         return this.allowedCaCerts;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
      * 
      */
     @InputImport(name="requestHeaders", required=true)
-    private final Map<String,String> requestHeaders;
+      private final Map<String,String> requestHeaders;
 
     public Map<String,String> getRequestHeaders() {
         return this.requestHeaders;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -146,7 +146,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse build() {
             return new GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse(allowedCaCerts, password, requestHeaders, uri, username);
         }

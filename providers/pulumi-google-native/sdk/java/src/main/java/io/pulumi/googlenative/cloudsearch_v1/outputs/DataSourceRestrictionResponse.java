@@ -76,7 +76,6 @@ public final class DataSourceRestrictionResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public DataSourceRestrictionResponse build() {
             return new DataSourceRestrictionResponse(filterOptions, source);
         }

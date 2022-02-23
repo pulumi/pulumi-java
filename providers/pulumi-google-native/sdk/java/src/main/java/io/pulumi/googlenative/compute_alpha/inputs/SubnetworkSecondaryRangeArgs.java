@@ -23,7 +23,7 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ipCidrRange")
-    private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
@@ -34,7 +34,7 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rangeName")
-    private final @Nullable Input<String> rangeName;
+      private final @Nullable Input<String> rangeName;
 
     public Input<String> getRangeName() {
         return this.rangeName == null ? Input.empty() : this.rangeName;
@@ -45,7 +45,7 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="reservedInternalRange")
-    private final @Nullable Input<String> reservedInternalRange;
+      private final @Nullable Input<String> reservedInternalRange;
 
     public Input<String> getReservedInternalRange() {
         return this.reservedInternalRange == null ? Input.empty() : this.reservedInternalRange;
@@ -119,7 +119,6 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
             this.reservedInternalRange = Input.ofNullable(reservedInternalRange);
             return this;
         }
-
         public SubnetworkSecondaryRangeArgs build() {
             return new SubnetworkSecondaryRangeArgs(ipCidrRange, rangeName, reservedInternalRange);
         }

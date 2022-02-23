@@ -23,7 +23,7 @@ public final class CacheUsernameDownloadSettingsResponseCredentials extends io.p
      * 
      */
     @InputImport(name="bindDn")
-    private final @Nullable String bindDn;
+        private final @Nullable String bindDn;
 
     public Optional<String> getBindDn() {
         return this.bindDn == null ? Optional.empty() : Optional.ofNullable(this.bindDn);
@@ -34,7 +34,7 @@ public final class CacheUsernameDownloadSettingsResponseCredentials extends io.p
      * 
      */
     @InputImport(name="bindPassword")
-    private final @Nullable String bindPassword;
+        private final @Nullable String bindPassword;
 
     public Optional<String> getBindPassword() {
         return this.bindPassword == null ? Optional.empty() : Optional.ofNullable(this.bindPassword);
@@ -83,7 +83,6 @@ public final class CacheUsernameDownloadSettingsResponseCredentials extends io.p
             this.bindPassword = bindPassword;
             return this;
         }
-
         public CacheUsernameDownloadSettingsResponseCredentials build() {
             return new CacheUsernameDownloadSettingsResponseCredentials(bindDn, bindPassword);
         }

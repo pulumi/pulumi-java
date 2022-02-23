@@ -163,7 +163,6 @@ public final class CephFSPersistentVolumeSource {
             this.user = user;
             return this;
         }
-
         public CephFSPersistentVolumeSource build() {
             return new CephFSPersistentVolumeSource(monitors, path, readOnly, secretFile, secretRef, user);
         }

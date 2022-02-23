@@ -97,7 +97,6 @@ public final class OrganizationResourcePropertiesResponseUserDetail {
             this.lastName = lastName;
             return this;
         }
-
         public OrganizationResourcePropertiesResponseUserDetail build() {
             return new OrganizationResourcePropertiesResponseUserDetail(emailAddress, firstName, lastName);
         }

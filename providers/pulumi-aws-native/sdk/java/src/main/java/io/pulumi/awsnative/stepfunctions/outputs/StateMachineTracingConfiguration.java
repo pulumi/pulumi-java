@@ -46,7 +46,6 @@ public final class StateMachineTracingConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public StateMachineTracingConfiguration build() {
             return new StateMachineTracingConfiguration(enabled);
         }

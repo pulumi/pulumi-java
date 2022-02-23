@@ -183,7 +183,6 @@ public final class GetCompositeAlarmResult {
             this.oKActions = oKActions;
             return this;
         }
-
         public GetCompositeAlarmResult build() {
             return new GetCompositeAlarmResult(actionsEnabled, alarmActions, alarmDescription, alarmRule, arn, insufficientDataActions, oKActions);
         }

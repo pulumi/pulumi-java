@@ -24,7 +24,7 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends io.pulumi
      * 
      */
     @InputImport(name="region")
-    private final @Nullable String region;
+        private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
@@ -35,7 +35,7 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends io.pulumi
      * 
      */
     @InputImport(name="workspaceId")
-    private final @Nullable SubResourceResponse workspaceId;
+        private final @Nullable SubResourceResponse workspaceId;
 
     public Optional<SubResourceResponse> getWorkspaceId() {
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
@@ -84,7 +84,6 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends io.pulumi
             this.workspaceId = workspaceId;
             return this;
         }
-
         public FirewallPolicyLogAnalyticsWorkspaceResponse build() {
             return new FirewallPolicyLogAnalyticsWorkspaceResponse(region, workspaceId);
         }

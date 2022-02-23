@@ -74,7 +74,6 @@ public final class ScanConfigErrorResponse {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
-
         public ScanConfigErrorResponse build() {
             return new ScanConfigErrorResponse(code, fieldName);
         }

@@ -139,7 +139,6 @@ public final class InstanceViewStatusResponse {
             this.time = time;
             return this;
         }
-
         public InstanceViewStatusResponse build() {
             return new InstanceViewStatusResponse(code, displayStatus, level, message, time);
         }

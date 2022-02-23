@@ -76,7 +76,6 @@ public final class LinkedVpnTunnelsResponse {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public LinkedVpnTunnelsResponse build() {
             return new LinkedVpnTunnelsResponse(siteToSiteDataTransfer, uris);
         }

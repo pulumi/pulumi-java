@@ -25,7 +25,7 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends i
      * 
      */
     @InputImport(name="backendHttpSettings")
-    private final @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings;
+        private final @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings;
 
     public Optional<ApplicationGatewayBackendHttpSettingsResponse> getBackendHttpSettings() {
         return this.backendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.backendHttpSettings);
@@ -36,7 +36,7 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends i
      * 
      */
     @InputImport(name="servers")
-    private final @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;
+        private final @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;
 
     public List<ApplicationGatewayBackendHealthServerResponse> getServers() {
         return this.servers == null ? List.of() : this.servers;
@@ -85,7 +85,6 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends i
             this.servers = servers;
             return this;
         }
-
         public ApplicationGatewayBackendHealthHttpSettingsResponse build() {
             return new ApplicationGatewayBackendHealthHttpSettingsResponse(backendHttpSettings, servers);
         }

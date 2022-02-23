@@ -95,7 +95,6 @@ public final class JobReferenceResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public JobReferenceResponse build() {
             return new JobReferenceResponse(jobId, location, project);
         }

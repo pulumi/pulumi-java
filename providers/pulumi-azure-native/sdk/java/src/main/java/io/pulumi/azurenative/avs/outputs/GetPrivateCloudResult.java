@@ -461,7 +461,6 @@ public final class GetPrivateCloudResult {
             this.vmotionNetwork = Objects.requireNonNull(vmotionNetwork);
             return this;
         }
-
         public GetPrivateCloudResult build() {
             return new GetPrivateCloudResult(circuit, endpoints, id, identitySources, internet, location, managementCluster, managementNetwork, name, networkBlock, nsxtCertificateThumbprint, nsxtPassword, provisioningNetwork, provisioningState, sku, tags, type, vcenterCertificateThumbprint, vcenterPassword, vmotionNetwork);
         }

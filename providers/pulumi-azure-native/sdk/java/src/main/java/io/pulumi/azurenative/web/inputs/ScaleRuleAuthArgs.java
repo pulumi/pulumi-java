@@ -23,7 +23,7 @@ public final class ScaleRuleAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretRef")
-    private final @Nullable Input<String> secretRef;
+        private final @Nullable Input<String> secretRef;
 
     public Input<String> getSecretRef() {
         return this.secretRef == null ? Input.empty() : this.secretRef;
@@ -34,7 +34,7 @@ public final class ScaleRuleAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggerParameter")
-    private final @Nullable Input<String> triggerParameter;
+        private final @Nullable Input<String> triggerParameter;
 
     public Input<String> getTriggerParameter() {
         return this.triggerParameter == null ? Input.empty() : this.triggerParameter;
@@ -93,7 +93,6 @@ public final class ScaleRuleAuthArgs extends io.pulumi.resources.ResourceArgs {
             this.triggerParameter = Input.ofNullable(triggerParameter);
             return this;
         }
-
         public ScaleRuleAuthArgs build() {
             return new ScaleRuleAuthArgs(secretRef, triggerParameter);
         }

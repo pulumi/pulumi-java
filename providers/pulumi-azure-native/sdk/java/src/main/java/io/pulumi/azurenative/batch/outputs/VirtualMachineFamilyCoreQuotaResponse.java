@@ -75,7 +75,6 @@ public final class VirtualMachineFamilyCoreQuotaResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public VirtualMachineFamilyCoreQuotaResponse build() {
             return new VirtualMachineFamilyCoreQuotaResponse(coreQuota, name);
         }

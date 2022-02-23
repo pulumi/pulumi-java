@@ -119,7 +119,6 @@ public final class VolumeBackupPropertiesResponse {
             this.vaultId = vaultId;
             return this;
         }
-
         public VolumeBackupPropertiesResponse build() {
             return new VolumeBackupPropertiesResponse(backupEnabled, backupPolicyId, policyEnforced, vaultId);
         }

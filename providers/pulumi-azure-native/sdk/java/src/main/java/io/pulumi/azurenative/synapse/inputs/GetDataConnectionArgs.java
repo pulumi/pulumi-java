@@ -17,7 +17,7 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dataConnectionName", required=true)
-    private final String dataConnectionName;
+        private final String dataConnectionName;
 
     public String getDataConnectionName() {
         return this.dataConnectionName;
@@ -28,7 +28,7 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="kustoPoolName", required=true)
-    private final String kustoPoolName;
+        private final String kustoPoolName;
 
     public String getKustoPoolName() {
         return this.kustoPoolName;
@@ -50,7 +50,7 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -140,7 +140,6 @@ public final class GetDataConnectionArgs extends io.pulumi.resources.InvokeArgs 
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetDataConnectionArgs build() {
             return new GetDataConnectionArgs(dataConnectionName, databaseName, kustoPoolName, resourceGroupName, workspaceName);
         }

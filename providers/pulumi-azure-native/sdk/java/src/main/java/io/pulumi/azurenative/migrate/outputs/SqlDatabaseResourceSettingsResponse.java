@@ -99,7 +99,6 @@ public final class SqlDatabaseResourceSettingsResponse {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
-
         public SqlDatabaseResourceSettingsResponse build() {
             return new SqlDatabaseResourceSettingsResponse(resourceType, targetResourceName, zoneRedundant);
         }

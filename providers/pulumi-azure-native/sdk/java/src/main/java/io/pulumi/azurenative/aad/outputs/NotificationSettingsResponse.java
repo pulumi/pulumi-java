@@ -98,7 +98,6 @@ public final class NotificationSettingsResponse {
             this.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
         }
-
         public NotificationSettingsResponse build() {
             return new NotificationSettingsResponse(additionalRecipients, notifyDcAdmins, notifyGlobalAdmins);
         }

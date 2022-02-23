@@ -103,7 +103,6 @@ public final class JobLoadTimePartitioning {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JobLoadTimePartitioning build() {
             return new JobLoadTimePartitioning(expirationMs, field, type);
         }

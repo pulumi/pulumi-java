@@ -98,7 +98,6 @@ public final class AdditionalWorkspacesPropertiesResponse {
             this.workspace = workspace;
             return this;
         }
-
         public AdditionalWorkspacesPropertiesResponse build() {
             return new AdditionalWorkspacesPropertiesResponse(dataTypes, type, workspace);
         }

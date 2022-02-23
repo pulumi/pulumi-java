@@ -225,7 +225,6 @@ public final class PatchDeploymentPatchConfig {
             this.zypper = zypper;
             return this;
         }
-
         public PatchDeploymentPatchConfig build() {
             return new PatchDeploymentPatchConfig(apt, goo, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
         }

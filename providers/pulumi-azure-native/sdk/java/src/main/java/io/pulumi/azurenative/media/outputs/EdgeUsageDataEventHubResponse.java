@@ -97,7 +97,6 @@ public final class EdgeUsageDataEventHubResponse {
             this.token = token;
             return this;
         }
-
         public EdgeUsageDataEventHubResponse build() {
             return new EdgeUsageDataEventHubResponse(name, namespace, token);
         }

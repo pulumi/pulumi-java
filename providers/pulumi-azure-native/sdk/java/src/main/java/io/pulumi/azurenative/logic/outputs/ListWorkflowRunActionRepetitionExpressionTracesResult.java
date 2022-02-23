@@ -46,7 +46,6 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesResult {
             this.inputs = inputs;
             return this;
         }
-
         public ListWorkflowRunActionRepetitionExpressionTracesResult build() {
             return new ListWorkflowRunActionRepetitionExpressionTracesResult(inputs);
         }

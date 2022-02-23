@@ -20,7 +20,7 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends io.pulum
      * 
      */
     @InputImport(name="growthFactor")
-    private final @Nullable Input<Double> growthFactor;
+        private final @Nullable Input<Double> growthFactor;
 
     public Input<Double> getGrowthFactor() {
         return this.growthFactor == null ? Input.empty() : this.growthFactor;
@@ -31,7 +31,7 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends io.pulum
      * 
      */
     @InputImport(name="numFiniteBuckets")
-    private final @Nullable Input<Integer> numFiniteBuckets;
+        private final @Nullable Input<Integer> numFiniteBuckets;
 
     public Input<Integer> getNumFiniteBuckets() {
         return this.numFiniteBuckets == null ? Input.empty() : this.numFiniteBuckets;
@@ -42,7 +42,7 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends io.pulum
      * 
      */
     @InputImport(name="scale")
-    private final @Nullable Input<Double> scale;
+        private final @Nullable Input<Double> scale;
 
     public Input<Double> getScale() {
         return this.scale == null ? Input.empty() : this.scale;
@@ -116,7 +116,6 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends io.pulum
             this.scale = Input.ofNullable(scale);
             return this;
         }
-
         public MetricBucketOptionsExponentialBucketsGetArgs build() {
             return new MetricBucketOptionsExponentialBucketsGetArgs(growthFactor, numFiniteBuckets, scale);
         }

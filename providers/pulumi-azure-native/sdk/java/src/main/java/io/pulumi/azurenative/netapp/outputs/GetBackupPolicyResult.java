@@ -312,7 +312,6 @@ public final class GetBackupPolicyResult {
             this.yearlyBackupsToKeep = yearlyBackupsToKeep;
             return this;
         }
-
         public GetBackupPolicyResult build() {
             return new GetBackupPolicyResult(dailyBackupsToKeep, enabled, id, location, monthlyBackupsToKeep, name, provisioningState, tags, type, volumeBackups, volumesAssigned, weeklyBackupsToKeep, yearlyBackupsToKeep);
         }

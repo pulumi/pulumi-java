@@ -74,7 +74,6 @@ public final class OperationBatchStatusResponseItemResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public OperationBatchStatusResponseItemResponse build() {
             return new OperationBatchStatusResponseItemResponse(operationUrl, status);
         }

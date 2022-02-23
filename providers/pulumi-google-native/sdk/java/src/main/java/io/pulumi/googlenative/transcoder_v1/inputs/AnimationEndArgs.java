@@ -23,7 +23,7 @@ public final class AnimationEndArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTimeOffset")
-    private final @Nullable Input<String> startTimeOffset;
+      private final @Nullable Input<String> startTimeOffset;
 
     public Input<String> getStartTimeOffset() {
         return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;
@@ -66,7 +66,6 @@ public final class AnimationEndArgs extends io.pulumi.resources.ResourceArgs {
             this.startTimeOffset = Input.ofNullable(startTimeOffset);
             return this;
         }
-
         public AnimationEndArgs build() {
             return new AnimationEndArgs(startTimeOffset);
         }

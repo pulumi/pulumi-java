@@ -54,7 +54,6 @@ public final class InstanceAutoSnapshotAddOn {
             this.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
         }
-
         public InstanceAutoSnapshotAddOn build() {
             return new InstanceAutoSnapshotAddOn(snapshotTimeOfDay);
         }

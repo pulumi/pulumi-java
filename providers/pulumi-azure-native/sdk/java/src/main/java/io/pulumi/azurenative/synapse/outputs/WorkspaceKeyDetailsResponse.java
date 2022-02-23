@@ -76,7 +76,6 @@ public final class WorkspaceKeyDetailsResponse {
             this.name = name;
             return this;
         }
-
         public WorkspaceKeyDetailsResponse build() {
             return new WorkspaceKeyDetailsResponse(keyVaultUrl, name);
         }

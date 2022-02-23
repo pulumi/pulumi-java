@@ -21,7 +21,7 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -32,7 +32,7 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -81,7 +81,6 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PackageResponse build() {
             return new PackageResponse(location, name);
         }

@@ -116,7 +116,6 @@ public final class PadResponse {
             this.topPixels = Objects.requireNonNull(topPixels);
             return this;
         }
-
         public PadResponse build() {
             return new PadResponse(bottomPixels, leftPixels, rightPixels, topPixels);
         }

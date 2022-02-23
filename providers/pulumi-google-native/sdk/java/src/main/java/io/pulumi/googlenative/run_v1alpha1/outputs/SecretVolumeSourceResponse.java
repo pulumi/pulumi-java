@@ -120,7 +120,6 @@ public final class SecretVolumeSourceResponse {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public SecretVolumeSourceResponse build() {
             return new SecretVolumeSourceResponse(defaultMode, items, optional, secretName);
         }

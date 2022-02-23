@@ -103,7 +103,6 @@ public final class AzureSqlProtectionPolicyResponse {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public AzureSqlProtectionPolicyResponse build() {
             return new AzureSqlProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy);
         }

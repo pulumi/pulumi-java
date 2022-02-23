@@ -142,7 +142,6 @@ public final class GetNodeTemplateIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetNodeTemplateIamPolicyResult build() {
             return new GetNodeTemplateIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

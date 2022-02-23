@@ -22,7 +22,7 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends io.pulu
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -33,7 +33,7 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends io.pulu
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+        private final String password;
 
     public String getPassword() {
         return this.password;
@@ -44,7 +44,7 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends io.pulu
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+        private final String username;
 
     public String getUsername() {
         return this.username;
@@ -103,7 +103,6 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends io.pulu
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public MediaGraphUsernamePasswordCredentialsResponse build() {
             return new MediaGraphUsernamePasswordCredentialsResponse(odataType, password, username);
         }

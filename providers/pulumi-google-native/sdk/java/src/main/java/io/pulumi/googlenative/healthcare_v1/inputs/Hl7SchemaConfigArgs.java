@@ -26,7 +26,7 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="messageSchemaConfigs")
-    private final @Nullable Input<Map<String,String>> messageSchemaConfigs;
+      private final @Nullable Input<Map<String,String>> messageSchemaConfigs;
 
     public Input<Map<String,String>> getMessageSchemaConfigs() {
         return this.messageSchemaConfigs == null ? Input.empty() : this.messageSchemaConfigs;
@@ -37,7 +37,7 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<List<VersionSourceArgs>> version;
+      private final @Nullable Input<List<VersionSourceArgs>> version;
 
     public Input<List<VersionSourceArgs>> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -96,7 +96,6 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public Hl7SchemaConfigArgs build() {
             return new Hl7SchemaConfigArgs(messageSchemaConfigs, version);
         }

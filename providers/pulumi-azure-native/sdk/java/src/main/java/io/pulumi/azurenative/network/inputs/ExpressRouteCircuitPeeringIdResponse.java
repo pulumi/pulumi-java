@@ -23,7 +23,7 @@ public final class ExpressRouteCircuitPeeringIdResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -61,7 +61,6 @@ public final class ExpressRouteCircuitPeeringIdResponse extends io.pulumi.resour
             this.id = id;
             return this;
         }
-
         public ExpressRouteCircuitPeeringIdResponse build() {
             return new ExpressRouteCircuitPeeringIdResponse(id);
         }

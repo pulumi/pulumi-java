@@ -74,7 +74,6 @@ public final class ConnectorProfileDatadogConnectorProfileCredentials {
             this.applicationKey = Objects.requireNonNull(applicationKey);
             return this;
         }
-
         public ConnectorProfileDatadogConnectorProfileCredentials build() {
             return new ConnectorProfileDatadogConnectorProfileCredentials(apiKey, applicationKey);
         }

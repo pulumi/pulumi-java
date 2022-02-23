@@ -17,7 +17,7 @@ public final class GetAlertRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetAlertRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleName", required=true)
-    private final String ruleName;
+        private final String ruleName;
 
     public String getRuleName() {
         return this.ruleName;
@@ -77,7 +77,6 @@ public final class GetAlertRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public GetAlertRuleArgs build() {
             return new GetAlertRuleArgs(resourceGroupName, ruleName);
         }

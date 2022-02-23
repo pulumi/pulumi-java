@@ -98,7 +98,6 @@ public final class ArgumentResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ArgumentResponse build() {
             return new ArgumentResponse(isSecret, name, value);
         }

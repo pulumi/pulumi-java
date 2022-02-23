@@ -76,7 +76,6 @@ public final class CostInformationResponse {
             this.billingMeterDetails = Objects.requireNonNull(billingMeterDetails);
             return this;
         }
-
         public CostInformationResponse build() {
             return new CostInformationResponse(billingInfoUrl, billingMeterDetails);
         }

@@ -66,7 +66,6 @@ public final class DatasetFilterValue {
             this.valueReference = Objects.requireNonNull(valueReference);
             return this;
         }
-
         public DatasetFilterValue build() {
             return new DatasetFilterValue(value, valueReference);
         }

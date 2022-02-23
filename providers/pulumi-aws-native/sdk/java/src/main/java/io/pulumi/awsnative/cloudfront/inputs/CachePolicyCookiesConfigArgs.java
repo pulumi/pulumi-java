@@ -16,14 +16,14 @@ public final class CachePolicyCookiesConfigArgs extends io.pulumi.resources.Reso
     public static final CachePolicyCookiesConfigArgs Empty = new CachePolicyCookiesConfigArgs();
 
     @InputImport(name="cookieBehavior", required=true)
-    private final Input<String> cookieBehavior;
+        private final Input<String> cookieBehavior;
 
     public Input<String> getCookieBehavior() {
         return this.cookieBehavior;
     }
 
     @InputImport(name="cookies")
-    private final @Nullable Input<List<String>> cookies;
+        private final @Nullable Input<List<String>> cookies;
 
     public Input<List<String>> getCookies() {
         return this.cookies == null ? Input.empty() : this.cookies;
@@ -82,7 +82,6 @@ public final class CachePolicyCookiesConfigArgs extends io.pulumi.resources.Reso
             this.cookies = Input.ofNullable(cookies);
             return this;
         }
-
         public CachePolicyCookiesConfigArgs build() {
             return new CachePolicyCookiesConfigArgs(cookieBehavior, cookies);
         }

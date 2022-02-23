@@ -141,7 +141,6 @@ public final class GetChannelResult {
             this.ingressAccessLogs = ingressAccessLogs;
             return this;
         }
-
         public GetChannelResult build() {
             return new GetChannelResult(arn, description, egressAccessLogs, hlsIngest, ingressAccessLogs);
         }

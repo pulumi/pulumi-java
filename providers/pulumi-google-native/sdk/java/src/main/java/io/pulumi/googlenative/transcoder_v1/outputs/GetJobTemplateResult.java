@@ -75,7 +75,6 @@ public final class GetJobTemplateResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetJobTemplateResult build() {
             return new GetJobTemplateResult(config, name);
         }

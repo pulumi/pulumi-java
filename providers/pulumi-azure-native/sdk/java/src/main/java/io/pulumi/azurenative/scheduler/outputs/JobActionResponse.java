@@ -187,7 +187,6 @@ public final class JobActionResponse {
             this.type = type;
             return this;
         }
-
         public JobActionResponse build() {
             return new JobActionResponse(errorAction, queueMessage, request, retryPolicy, serviceBusQueueMessage, serviceBusTopicMessage, type);
         }

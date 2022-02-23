@@ -139,7 +139,6 @@ public final class GetApiPortalCustomDomainResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApiPortalCustomDomainResult build() {
             return new GetApiPortalCustomDomainResult(id, name, properties, systemData, type);
         }

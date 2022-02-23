@@ -121,7 +121,6 @@ public final class RequestContractResponse {
             this.representations = representations;
             return this;
         }
-
         public RequestContractResponse build() {
             return new RequestContractResponse(description, headers, queryParameters, representations);
         }

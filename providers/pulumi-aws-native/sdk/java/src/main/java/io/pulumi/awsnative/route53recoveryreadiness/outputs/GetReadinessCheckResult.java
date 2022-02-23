@@ -99,7 +99,6 @@ public final class GetReadinessCheckResult {
             this.tags = tags;
             return this;
         }
-
         public GetReadinessCheckResult build() {
             return new GetReadinessCheckResult(readinessCheckArn, resourceSetName, tags);
         }

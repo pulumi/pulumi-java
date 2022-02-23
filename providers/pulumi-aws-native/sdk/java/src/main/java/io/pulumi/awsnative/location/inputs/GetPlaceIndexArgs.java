@@ -13,7 +13,7 @@ public final class GetPlaceIndexArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetPlaceIndexArgs Empty = new GetPlaceIndexArgs();
 
     @InputImport(name="indexName", required=true)
-    private final String indexName;
+        private final String indexName;
 
     public String getIndexName() {
         return this.indexName;
@@ -51,7 +51,6 @@ public final class GetPlaceIndexArgs extends io.pulumi.resources.InvokeArgs {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
-
         public GetPlaceIndexArgs build() {
             return new GetPlaceIndexArgs(indexName);
         }

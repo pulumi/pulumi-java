@@ -141,7 +141,6 @@ public final class A2AProtectionContainerMappingDetailsResponse {
             this.scheduleName = scheduleName;
             return this;
         }
-
         public A2AProtectionContainerMappingDetailsResponse build() {
             return new A2AProtectionContainerMappingDetailsResponse(agentAutoUpdateStatus, automationAccountArmId, instanceType, jobScheduleName, scheduleName);
         }

@@ -247,7 +247,6 @@ public final class GetOrderItemByNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOrderItemByNameResult build() {
             return new GetOrderItemByNameResult(addressDetails, id, location, name, orderId, orderItemDetails, startTime, systemData, tags, type);
         }

@@ -28,7 +28,7 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
      * 
      */
     @InputImport(name="assets")
-    private final @Nullable List<ImageAssetResponse> assets;
+        private final @Nullable List<ImageAssetResponse> assets;
 
     public List<ImageAssetResponse> getAssets() {
         return this.assets == null ? List.of() : this.assets;
@@ -39,7 +39,7 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
      * 
      */
     @InputImport(name="driverProgram")
-    private final @Nullable String driverProgram;
+        private final @Nullable String driverProgram;
 
     public Optional<String> getDriverProgram() {
         return this.driverProgram == null ? Optional.empty() : Optional.ofNullable(this.driverProgram);
@@ -50,7 +50,7 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable EnvironmentImageResponseResponseEnvironment environment;
+        private final @Nullable EnvironmentImageResponseResponseEnvironment environment;
 
     public Optional<EnvironmentImageResponseResponseEnvironment> getEnvironment() {
         return this.environment == null ? Optional.empty() : Optional.ofNullable(this.environment);
@@ -61,7 +61,7 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
      * 
      */
     @InputImport(name="environmentReference")
-    private final @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference;
+        private final @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference;
 
     public Optional<EnvironmentImageResponseResponseEnvironmentReference> getEnvironmentReference() {
         return this.environmentReference == null ? Optional.empty() : Optional.ofNullable(this.environmentReference);
@@ -72,7 +72,7 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
      * 
      */
     @InputImport(name="modelIds")
-    private final @Nullable List<String> modelIds;
+        private final @Nullable List<String> modelIds;
 
     public List<String> getModelIds() {
         return this.modelIds == null ? List.of() : this.modelIds;
@@ -83,7 +83,7 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
      * 
      */
     @InputImport(name="models")
-    private final @Nullable List<ModelResponse> models;
+        private final @Nullable List<ModelResponse> models;
 
     public List<ModelResponse> getModels() {
         return this.models == null ? List.of() : this.models;
@@ -172,7 +172,6 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
             this.models = models;
             return this;
         }
-
         public ACIServiceResponseResponseEnvironmentImageRequest build() {
             return new ACIServiceResponseResponseEnvironmentImageRequest(assets, driverProgram, environment, environmentReference, modelIds, models);
         }

@@ -184,7 +184,6 @@ public final class GetMCASDataConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMCASDataConnectorResult build() {
             return new GetMCASDataConnectorResult(dataTypes, etag, id, kind, name, tenantId, type);
         }

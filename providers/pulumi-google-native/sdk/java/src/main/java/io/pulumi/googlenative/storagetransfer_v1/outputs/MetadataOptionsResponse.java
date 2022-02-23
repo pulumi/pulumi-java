@@ -200,7 +200,6 @@ public final class MetadataOptionsResponse {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public MetadataOptionsResponse build() {
             return new MetadataOptionsResponse(acl, gid, kmsKey, mode, storageClass, symlink, temporaryHold, uid);
         }

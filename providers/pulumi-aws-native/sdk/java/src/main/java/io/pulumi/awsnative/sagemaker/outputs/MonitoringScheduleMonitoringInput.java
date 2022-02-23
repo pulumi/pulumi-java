@@ -44,7 +44,6 @@ public final class MonitoringScheduleMonitoringInput {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
-
         public MonitoringScheduleMonitoringInput build() {
             return new MonitoringScheduleMonitoringInput(endpointInput);
         }

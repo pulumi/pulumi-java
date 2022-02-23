@@ -25,7 +25,7 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="branch")
-    private final @Nullable Input<String> branch;
+      private final @Nullable Input<String> branch;
 
     public Input<String> getBranch() {
         return this.branch == null ? Input.empty() : this.branch;
@@ -36,7 +36,7 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="commentControl")
-    private final @Nullable Input<PullRequestFilterCommentControl> commentControl;
+      private final @Nullable Input<PullRequestFilterCommentControl> commentControl;
 
     public Input<PullRequestFilterCommentControl> getCommentControl() {
         return this.commentControl == null ? Input.empty() : this.commentControl;
@@ -47,7 +47,7 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="invertRegex")
-    private final @Nullable Input<Boolean> invertRegex;
+      private final @Nullable Input<Boolean> invertRegex;
 
     public Input<Boolean> getInvertRegex() {
         return this.invertRegex == null ? Input.empty() : this.invertRegex;
@@ -121,7 +121,6 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
             this.invertRegex = Input.ofNullable(invertRegex);
             return this;
         }
-
         public PullRequestFilterArgs build() {
             return new PullRequestFilterArgs(branch, commentControl, invertRegex);
         }

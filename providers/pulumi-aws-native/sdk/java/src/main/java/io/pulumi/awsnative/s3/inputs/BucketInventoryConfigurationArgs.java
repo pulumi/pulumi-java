@@ -21,7 +21,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     public static final BucketInventoryConfigurationArgs Empty = new BucketInventoryConfigurationArgs();
 
     @InputImport(name="destination", required=true)
-    private final Input<BucketDestinationArgs> destination;
+        private final Input<BucketDestinationArgs> destination;
 
     public Input<BucketDestinationArgs> getDestination() {
         return this.destination;
@@ -32,7 +32,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -43,7 +43,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -54,7 +54,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="includedObjectVersions", required=true)
-    private final Input<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions;
+        private final Input<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions;
 
     public Input<BucketInventoryConfigurationIncludedObjectVersions> getIncludedObjectVersions() {
         return this.includedObjectVersions;
@@ -65,7 +65,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="optionalFields")
-    private final @Nullable Input<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields;
+        private final @Nullable Input<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields;
 
     public Input<List<BucketInventoryConfigurationOptionalFieldsItem>> getOptionalFields() {
         return this.optionalFields == null ? Input.empty() : this.optionalFields;
@@ -76,7 +76,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+        private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -87,7 +87,7 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scheduleFrequency", required=true)
-    private final Input<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency;
+        private final Input<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency;
 
     public Input<BucketInventoryConfigurationScheduleFrequency> getScheduleFrequency() {
         return this.scheduleFrequency;
@@ -221,7 +221,6 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
             this.scheduleFrequency = Input.of(Objects.requireNonNull(scheduleFrequency));
             return this;
         }
-
         public BucketInventoryConfigurationArgs build() {
             return new BucketInventoryConfigurationArgs(destination, enabled, id, includedObjectVersions, optionalFields, prefix, scheduleFrequency);
         }

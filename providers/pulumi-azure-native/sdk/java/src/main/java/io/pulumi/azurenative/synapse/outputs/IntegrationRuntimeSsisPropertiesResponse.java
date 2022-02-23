@@ -168,7 +168,6 @@ public final class IntegrationRuntimeSsisPropertiesResponse {
             this.licenseType = licenseType;
             return this;
         }
-
         public IntegrationRuntimeSsisPropertiesResponse build() {
             return new IntegrationRuntimeSsisPropertiesResponse(catalogInfo, customSetupScriptProperties, dataProxyProperties, edition, expressCustomSetupProperties, licenseType);
         }

@@ -141,7 +141,6 @@ public final class MethodIntegrationResponse {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public MethodIntegrationResponse build() {
             return new MethodIntegrationResponse(contentHandling, responseParameters, responseTemplates, selectionPattern, statusCode);
         }

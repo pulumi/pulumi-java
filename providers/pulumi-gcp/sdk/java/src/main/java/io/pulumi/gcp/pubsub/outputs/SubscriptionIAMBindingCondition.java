@@ -73,7 +73,6 @@ public final class SubscriptionIAMBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public SubscriptionIAMBindingCondition build() {
             return new SubscriptionIAMBindingCondition(description, expression, title);
         }

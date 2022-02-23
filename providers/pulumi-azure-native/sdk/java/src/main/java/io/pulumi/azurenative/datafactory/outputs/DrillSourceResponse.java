@@ -205,7 +205,6 @@ public final class DrillSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DrillSourceResponse build() {
             return new DrillSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

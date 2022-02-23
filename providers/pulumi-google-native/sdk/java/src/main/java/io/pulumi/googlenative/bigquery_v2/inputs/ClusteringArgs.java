@@ -20,7 +20,7 @@ public final class ClusteringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<String>> fields;
+      private final @Nullable Input<List<String>> fields;
 
     public Input<List<String>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -63,7 +63,6 @@ public final class ClusteringArgs extends io.pulumi.resources.ResourceArgs {
             this.fields = Input.ofNullable(fields);
             return this;
         }
-
         public ClusteringArgs build() {
             return new ClusteringArgs(fields);
         }

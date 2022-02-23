@@ -142,7 +142,6 @@ public final class DaemonSetSpec {
             this.updateStrategy = updateStrategy;
             return this;
         }
-
         public DaemonSetSpec build() {
             return new DaemonSetSpec(minReadySeconds, revisionHistoryLimit, selector, template, updateStrategy);
         }

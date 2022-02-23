@@ -313,7 +313,6 @@ public final class AmazonRdsForSqlServerSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonRdsForSqlServerSourceResponse build() {
             return new AmazonRdsForSqlServerSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, produceAdditionalTypes, queryTimeout, sourceRetryCount, sourceRetryWait, sqlReaderQuery, sqlReaderStoredProcedureName, storedProcedureParameters, type);
         }

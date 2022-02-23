@@ -100,7 +100,6 @@ public final class GetClusterResult {
             this.status = status;
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(clusterArn, clusterEndpoints, status);
         }

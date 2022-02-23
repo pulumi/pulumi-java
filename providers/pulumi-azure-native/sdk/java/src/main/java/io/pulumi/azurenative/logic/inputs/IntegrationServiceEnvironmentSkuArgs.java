@@ -26,7 +26,7 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Integer> capacity;
+        private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -37,7 +37,7 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<Either<String,IntegrationServiceEnvironmentSkuName>> name;
+        private final @Nullable Input<Either<String,IntegrationServiceEnvironmentSkuName>> name;
 
     public Input<Either<String,IntegrationServiceEnvironmentSkuName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -96,7 +96,6 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public IntegrationServiceEnvironmentSkuArgs build() {
             return new IntegrationServiceEnvironmentSkuArgs(capacity, name);
         }

@@ -24,7 +24,7 @@ public final class DeliveryRuleRequestBodyConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class DeliveryRuleRequestBodyConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Input<RequestBodyMatchConditionParametersArgs> parameters;
+        private final Input<RequestBodyMatchConditionParametersArgs> parameters;
 
     public Input<RequestBodyMatchConditionParametersArgs> getParameters() {
         return this.parameters;
@@ -94,7 +94,6 @@ public final class DeliveryRuleRequestBodyConditionArgs extends io.pulumi.resour
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public DeliveryRuleRequestBodyConditionArgs build() {
             return new DeliveryRuleRequestBodyConditionArgs(name, parameters);
         }

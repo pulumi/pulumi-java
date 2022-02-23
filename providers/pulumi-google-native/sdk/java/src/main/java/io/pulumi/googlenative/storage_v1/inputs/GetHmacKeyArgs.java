@@ -15,21 +15,21 @@ public final class GetHmacKeyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetHmacKeyArgs Empty = new GetHmacKeyArgs();
 
     @InputImport(name="accessId", required=true)
-    private final String accessId;
+      private final String accessId;
 
     public String getAccessId() {
         return this.accessId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="userProject")
-    private final @Nullable String userProject;
+      private final @Nullable String userProject;
 
     public Optional<String> getUserProject() {
         return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
@@ -88,7 +88,6 @@ public final class GetHmacKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.userProject = userProject;
             return this;
         }
-
         public GetHmacKeyArgs build() {
             return new GetHmacKeyArgs(accessId, project, userProject);
         }

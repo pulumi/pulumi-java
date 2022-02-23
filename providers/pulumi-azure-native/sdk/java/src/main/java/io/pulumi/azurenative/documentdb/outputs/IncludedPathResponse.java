@@ -78,7 +78,6 @@ public final class IncludedPathResponse {
             this.path = path;
             return this;
         }
-
         public IncludedPathResponse build() {
             return new IncludedPathResponse(indexes, path);
         }

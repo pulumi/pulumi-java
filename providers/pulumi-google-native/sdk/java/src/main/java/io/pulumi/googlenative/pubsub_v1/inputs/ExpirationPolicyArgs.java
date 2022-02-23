@@ -23,7 +23,7 @@ public final class ExpirationPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<String> ttl;
+      private final @Nullable Input<String> ttl;
 
     public Input<String> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -66,7 +66,6 @@ public final class ExpirationPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
-
         public ExpirationPolicyArgs build() {
             return new ExpirationPolicyArgs(ttl);
         }

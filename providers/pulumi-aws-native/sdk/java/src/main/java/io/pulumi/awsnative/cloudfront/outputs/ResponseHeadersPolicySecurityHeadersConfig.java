@@ -117,7 +117,6 @@ public final class ResponseHeadersPolicySecurityHeadersConfig {
             this.xSSProtection = xSSProtection;
             return this;
         }
-
         public ResponseHeadersPolicySecurityHeadersConfig build() {
             return new ResponseHeadersPolicySecurityHeadersConfig(contentSecurityPolicy, contentTypeOptions, frameOptions, referrerPolicy, strictTransportSecurity, xSSProtection);
         }

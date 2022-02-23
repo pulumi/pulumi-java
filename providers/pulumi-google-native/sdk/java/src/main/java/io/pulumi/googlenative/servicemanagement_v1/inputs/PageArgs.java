@@ -24,7 +24,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -35,7 +35,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subpages")
-    private final @Nullable Input<List<PageArgs>> subpages;
+      private final @Nullable Input<List<PageArgs>> subpages;
 
     public Input<List<PageArgs>> getSubpages() {
         return this.subpages == null ? Input.empty() : this.subpages;
@@ -120,7 +120,6 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             this.subpages = Input.ofNullable(subpages);
             return this;
         }
-
         public PageArgs build() {
             return new PageArgs(content, name, subpages);
         }

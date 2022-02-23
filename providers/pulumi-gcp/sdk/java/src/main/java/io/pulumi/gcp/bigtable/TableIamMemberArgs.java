@@ -16,7 +16,7 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
     public static final TableIamMemberArgs Empty = new TableIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<TableIamMemberConditionArgs> condition;
+        private final @Nullable Input<TableIamMemberConditionArgs> condition;
 
     public Input<TableIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-    private final Input<String> instance;
+        private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -46,7 +46,7 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -59,7 +59,7 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -70,7 +70,7 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="table", required=true)
-    private final Input<String> table;
+        private final Input<String> table;
 
     public Input<String> getTable() {
         return this.table;
@@ -189,7 +189,6 @@ public final class TableIamMemberArgs extends io.pulumi.resources.ResourceArgs {
             this.table = Input.of(Objects.requireNonNull(table));
             return this;
         }
-
         public TableIamMemberArgs build() {
             return new TableIamMemberArgs(condition, instance, member, project, role, table);
         }

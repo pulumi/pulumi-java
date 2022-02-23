@@ -76,7 +76,6 @@ public final class SpokeLinkedRouterApplianceInstances {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public SpokeLinkedRouterApplianceInstances build() {
             return new SpokeLinkedRouterApplianceInstances(instances, siteToSiteDataTransfer);
         }

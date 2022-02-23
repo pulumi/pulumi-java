@@ -15,14 +15,14 @@ public final class SuiteDefinitionDeviceUnderTest extends io.pulumi.resources.In
     public static final SuiteDefinitionDeviceUnderTest Empty = new SuiteDefinitionDeviceUnderTest();
 
     @InputImport(name="certificateArn")
-    private final @Nullable String certificateArn;
+        private final @Nullable String certificateArn;
 
     public Optional<String> getCertificateArn() {
         return this.certificateArn == null ? Optional.empty() : Optional.ofNullable(this.certificateArn);
     }
 
     @InputImport(name="thingArn")
-    private final @Nullable String thingArn;
+        private final @Nullable String thingArn;
 
     public Optional<String> getThingArn() {
         return this.thingArn == null ? Optional.empty() : Optional.ofNullable(this.thingArn);
@@ -71,7 +71,6 @@ public final class SuiteDefinitionDeviceUnderTest extends io.pulumi.resources.In
             this.thingArn = thingArn;
             return this;
         }
-
         public SuiteDefinitionDeviceUnderTest build() {
             return new SuiteDefinitionDeviceUnderTest(certificateArn, thingArn);
         }

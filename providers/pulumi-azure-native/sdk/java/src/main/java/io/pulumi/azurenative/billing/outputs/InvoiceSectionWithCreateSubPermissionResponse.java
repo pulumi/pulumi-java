@@ -245,7 +245,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse {
             this.invoiceSectionSystemId = Objects.requireNonNull(invoiceSectionSystemId);
             return this;
         }
-
         public InvoiceSectionWithCreateSubPermissionResponse build() {
             return new InvoiceSectionWithCreateSubPermissionResponse(billingProfileDisplayName, billingProfileId, billingProfileSpendingLimit, billingProfileStatus, billingProfileStatusReasonCode, billingProfileSystemId, enabledAzurePlans, invoiceSectionDisplayName, invoiceSectionId, invoiceSectionSystemId);
         }

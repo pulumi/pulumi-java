@@ -23,7 +23,7 @@ public final class NotificationRateLimitArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="period")
-    private final @Nullable Input<String> period;
+      private final @Nullable Input<String> period;
 
     public Input<String> getPeriod() {
         return this.period == null ? Input.empty() : this.period;
@@ -66,7 +66,6 @@ public final class NotificationRateLimitArgs extends io.pulumi.resources.Resourc
             this.period = Input.ofNullable(period);
             return this;
         }
-
         public NotificationRateLimitArgs build() {
             return new NotificationRateLimitArgs(period);
         }

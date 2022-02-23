@@ -29,7 +29,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<Map<String,String>> annotations;
+        private final @Nullable Input<Map<String,String>> annotations;
 
     public Input<Map<String,String>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -41,7 +41,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="generation")
-    private final @Nullable Input<Integer> generation;
+        private final @Nullable Input<Integer> generation;
 
     public Input<Integer> getGeneration() {
         return this.generation == null ? Input.empty() : this.generation;
@@ -55,7 +55,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -67,7 +67,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+        private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -85,7 +85,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceVersion")
-    private final @Nullable Input<String> resourceVersion;
+        private final @Nullable Input<String> resourceVersion;
 
     public Input<String> getResourceVersion() {
         return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
@@ -97,7 +97,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+        private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -111,7 +111,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+        private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -245,7 +245,6 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
             this.uid = Input.ofNullable(uid);
             return this;
         }
-
         public ServiceMetadataGetArgs build() {
             return new ServiceMetadataGetArgs(annotations, generation, labels, namespace, resourceVersion, selfLink, uid);
         }

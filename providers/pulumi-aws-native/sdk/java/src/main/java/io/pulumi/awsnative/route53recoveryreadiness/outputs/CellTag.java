@@ -59,7 +59,6 @@ public final class CellTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CellTag build() {
             return new CellTag(key, value);
         }

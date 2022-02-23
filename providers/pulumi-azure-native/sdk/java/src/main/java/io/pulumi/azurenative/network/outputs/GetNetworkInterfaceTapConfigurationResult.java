@@ -161,7 +161,6 @@ public final class GetNetworkInterfaceTapConfigurationResult {
             this.virtualNetworkTap = virtualNetworkTap;
             return this;
         }
-
         public GetNetworkInterfaceTapConfigurationResult build() {
             return new GetNetworkInterfaceTapConfigurationResult(etag, id, name, provisioningState, type, virtualNetworkTap);
         }

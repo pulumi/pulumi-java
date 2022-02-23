@@ -54,7 +54,6 @@ public final class TrackSelectionResponse {
             this.trackSelections = trackSelections;
             return this;
         }
-
         public TrackSelectionResponse build() {
             return new TrackSelectionResponse(trackSelections);
         }

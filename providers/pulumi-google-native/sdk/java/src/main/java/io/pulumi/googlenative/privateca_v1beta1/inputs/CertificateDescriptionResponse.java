@@ -27,7 +27,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="aiaIssuingCertificateUrls", required=true)
-    private final List<String> aiaIssuingCertificateUrls;
+      private final List<String> aiaIssuingCertificateUrls;
 
     public List<String> getAiaIssuingCertificateUrls() {
         return this.aiaIssuingCertificateUrls;
@@ -38,7 +38,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="authorityKeyId", required=true)
-    private final KeyIdResponse authorityKeyId;
+      private final KeyIdResponse authorityKeyId;
 
     public KeyIdResponse getAuthorityKeyId() {
         return this.authorityKeyId;
@@ -49,7 +49,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="certFingerprint", required=true)
-    private final CertificateFingerprintResponse certFingerprint;
+      private final CertificateFingerprintResponse certFingerprint;
 
     public CertificateFingerprintResponse getCertFingerprint() {
         return this.certFingerprint;
@@ -60,7 +60,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="configValues", required=true)
-    private final ReusableConfigValuesResponse configValues;
+      private final ReusableConfigValuesResponse configValues;
 
     public ReusableConfigValuesResponse getConfigValues() {
         return this.configValues;
@@ -71,7 +71,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="crlDistributionPoints", required=true)
-    private final List<String> crlDistributionPoints;
+      private final List<String> crlDistributionPoints;
 
     public List<String> getCrlDistributionPoints() {
         return this.crlDistributionPoints;
@@ -82,7 +82,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final PublicKeyResponse publicKey;
+      private final PublicKeyResponse publicKey;
 
     public PublicKeyResponse getPublicKey() {
         return this.publicKey;
@@ -93,7 +93,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="subjectDescription", required=true)
-    private final SubjectDescriptionResponse subjectDescription;
+      private final SubjectDescriptionResponse subjectDescription;
 
     public SubjectDescriptionResponse getSubjectDescription() {
         return this.subjectDescription;
@@ -104,7 +104,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="subjectKeyId", required=true)
-    private final KeyIdResponse subjectKeyId;
+      private final KeyIdResponse subjectKeyId;
 
     public KeyIdResponse getSubjectKeyId() {
         return this.subjectKeyId;
@@ -213,7 +213,6 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
             this.subjectKeyId = Objects.requireNonNull(subjectKeyId);
             return this;
         }
-
         public CertificateDescriptionResponse build() {
             return new CertificateDescriptionResponse(aiaIssuingCertificateUrls, authorityKeyId, certFingerprint, configValues, crlDistributionPoints, publicKey, subjectDescription, subjectKeyId);
         }

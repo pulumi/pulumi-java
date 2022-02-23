@@ -78,7 +78,6 @@ public final class ServiceStatus {
             this.loadBalancer = loadBalancer;
             return this;
         }
-
         public ServiceStatus build() {
             return new ServiceStatus(conditions, loadBalancer);
         }

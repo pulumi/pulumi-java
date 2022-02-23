@@ -140,7 +140,6 @@ public final class SqlStoredProcedureGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public SqlStoredProcedureGetPropertiesResponseResource build() {
             return new SqlStoredProcedureGetPropertiesResponseResource(body, etag, id, rid, ts);
         }

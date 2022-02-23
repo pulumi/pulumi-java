@@ -97,7 +97,6 @@ public final class CurrentScenarioDetailsResponse {
             this.startTime = startTime;
             return this;
         }
-
         public CurrentScenarioDetailsResponse build() {
             return new CurrentScenarioDetailsResponse(jobId, scenarioName, startTime);
         }

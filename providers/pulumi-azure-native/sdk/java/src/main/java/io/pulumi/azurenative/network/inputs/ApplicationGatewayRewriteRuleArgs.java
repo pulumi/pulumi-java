@@ -27,7 +27,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="actionSet")
-    private final @Nullable Input<ApplicationGatewayRewriteRuleActionSetArgs> actionSet;
+        private final @Nullable Input<ApplicationGatewayRewriteRuleActionSetArgs> actionSet;
 
     public Input<ApplicationGatewayRewriteRuleActionSetArgs> getActionSet() {
         return this.actionSet == null ? Input.empty() : this.actionSet;
@@ -38,7 +38,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions;
+        private final @Nullable Input<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions;
 
     public Input<List<ApplicationGatewayRewriteRuleConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -49,7 +49,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -60,7 +60,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ruleSequence")
-    private final @Nullable Input<Integer> ruleSequence;
+        private final @Nullable Input<Integer> ruleSequence;
 
     public Input<Integer> getRuleSequence() {
         return this.ruleSequence == null ? Input.empty() : this.ruleSequence;
@@ -149,7 +149,6 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
             this.ruleSequence = Input.ofNullable(ruleSequence);
             return this;
         }
-
         public ApplicationGatewayRewriteRuleArgs build() {
             return new ApplicationGatewayRewriteRuleArgs(actionSet, conditions, name, ruleSequence);
         }

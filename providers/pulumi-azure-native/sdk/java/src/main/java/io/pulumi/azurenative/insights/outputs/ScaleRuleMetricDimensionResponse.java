@@ -96,7 +96,6 @@ public final class ScaleRuleMetricDimensionResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ScaleRuleMetricDimensionResponse build() {
             return new ScaleRuleMetricDimensionResponse(dimensionName, operator, values);
         }

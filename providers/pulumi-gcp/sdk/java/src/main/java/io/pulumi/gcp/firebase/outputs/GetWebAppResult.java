@@ -105,7 +105,6 @@ public final class GetWebAppResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetWebAppResult build() {
             return new GetWebAppResult(appId, displayName, id, name, project);
         }

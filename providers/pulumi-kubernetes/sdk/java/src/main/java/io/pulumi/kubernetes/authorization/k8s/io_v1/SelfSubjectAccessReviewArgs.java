@@ -21,7 +21,7 @@ public final class SelfSubjectAccessReviewArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -32,7 +32,7 @@ public final class SelfSubjectAccessReviewArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -43,7 +43,7 @@ public final class SelfSubjectAccessReviewArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -54,7 +54,7 @@ public final class SelfSubjectAccessReviewArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="spec", required=true)
-    private final Input<SelfSubjectAccessReviewSpecArgs> spec;
+        private final Input<SelfSubjectAccessReviewSpecArgs> spec;
 
     public Input<SelfSubjectAccessReviewSpecArgs> getSpec() {
         return this.spec;
@@ -143,7 +143,6 @@ public final class SelfSubjectAccessReviewArgs extends io.pulumi.resources.Resou
             this.spec = Input.of(Objects.requireNonNull(spec));
             return this;
         }
-
         public SelfSubjectAccessReviewArgs build() {
             return new SelfSubjectAccessReviewArgs(apiVersion, kind, metadata, spec);
         }

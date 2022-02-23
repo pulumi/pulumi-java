@@ -17,7 +17,7 @@ public final class GetNetworkGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkGroupName", required=true)
-    private final String networkGroupName;
+        private final String networkGroupName;
 
     public String getNetworkGroupName() {
         return this.networkGroupName;
@@ -28,7 +28,7 @@ public final class GetNetworkGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-    private final String networkManagerName;
+        private final String networkManagerName;
 
     public String getNetworkManagerName() {
         return this.networkManagerName;
@@ -39,7 +39,7 @@ public final class GetNetworkGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetNetworkGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetNetworkGroupArgs build() {
             return new GetNetworkGroupArgs(networkGroupName, networkManagerName, resourceGroupName);
         }

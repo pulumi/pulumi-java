@@ -24,7 +24,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="currentAverageValue")
-    private final @Nullable Input<String> currentAverageValue;
+        private final @Nullable Input<String> currentAverageValue;
 
     public Input<String> getCurrentAverageValue() {
         return this.currentAverageValue == null ? Input.empty() : this.currentAverageValue;
@@ -35,7 +35,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="currentValue", required=true)
-    private final Input<String> currentValue;
+        private final Input<String> currentValue;
 
     public Input<String> getCurrentValue() {
         return this.currentValue;
@@ -46,7 +46,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+        private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -57,7 +57,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metricSelector")
-    private final @Nullable Input<LabelSelectorArgs> metricSelector;
+        private final @Nullable Input<LabelSelectorArgs> metricSelector;
 
     public Input<LabelSelectorArgs> getMetricSelector() {
         return this.metricSelector == null ? Input.empty() : this.metricSelector;
@@ -146,7 +146,6 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
             this.metricSelector = Input.ofNullable(metricSelector);
             return this;
         }
-
         public ExternalMetricStatusArgs build() {
             return new ExternalMetricStatusArgs(currentAverageValue, currentValue, metricName, metricSelector);
         }

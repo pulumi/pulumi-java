@@ -137,7 +137,6 @@ public final class GKEResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GKEResponse build() {
             return new GKEResponse(cluster, location, namespace, path, service);
         }

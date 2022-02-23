@@ -75,7 +75,6 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public FirewallPolicyRuleMatcherLayer4ConfigResponse build() {
             return new FirewallPolicyRuleMatcherLayer4ConfigResponse(ipProtocol, ports);
         }

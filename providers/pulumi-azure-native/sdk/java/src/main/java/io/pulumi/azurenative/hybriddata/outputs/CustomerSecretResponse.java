@@ -95,7 +95,6 @@ public final class CustomerSecretResponse {
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }
-
         public CustomerSecretResponse build() {
             return new CustomerSecretResponse(algorithm, keyIdentifier, keyValue);
         }

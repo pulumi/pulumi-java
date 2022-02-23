@@ -210,7 +210,6 @@ public final class AzurePostgreSqlLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzurePostgreSqlLinkedServiceResponse build() {
             return new AzurePostgreSqlLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type);
         }

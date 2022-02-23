@@ -120,7 +120,6 @@ public final class LinuxOSConfigResponse {
             this.transparentHugePageEnabled = transparentHugePageEnabled;
             return this;
         }
-
         public LinuxOSConfigResponse build() {
             return new LinuxOSConfigResponse(swapFileSizeMB, sysctls, transparentHugePageDefrag, transparentHugePageEnabled);
         }

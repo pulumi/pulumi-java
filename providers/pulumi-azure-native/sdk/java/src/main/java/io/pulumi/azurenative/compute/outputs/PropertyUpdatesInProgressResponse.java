@@ -54,7 +54,6 @@ public final class PropertyUpdatesInProgressResponse {
             this.targetTier = targetTier;
             return this;
         }
-
         public PropertyUpdatesInProgressResponse build() {
             return new PropertyUpdatesInProgressResponse(targetTier);
         }

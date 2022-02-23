@@ -23,7 +23,7 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="h264", required=true)
-    private final H264CodecSettingsResponse h264;
+      private final H264CodecSettingsResponse h264;
 
     public H264CodecSettingsResponse getH264() {
         return this.h264;
@@ -34,7 +34,7 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="h265", required=true)
-    private final H265CodecSettingsResponse h265;
+      private final H265CodecSettingsResponse h265;
 
     public H265CodecSettingsResponse getH265() {
         return this.h265;
@@ -45,7 +45,7 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vp9", required=true)
-    private final Vp9CodecSettingsResponse vp9;
+      private final Vp9CodecSettingsResponse vp9;
 
     public Vp9CodecSettingsResponse getVp9() {
         return this.vp9;
@@ -104,7 +104,6 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
             this.vp9 = Objects.requireNonNull(vp9);
             return this;
         }
-
         public VideoStreamResponse build() {
             return new VideoStreamResponse(h264, h265, vp9);
         }

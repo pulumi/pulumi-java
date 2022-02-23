@@ -15,14 +15,14 @@ public final class TaskDefinitionHostEntryArgs extends io.pulumi.resources.Resou
     public static final TaskDefinitionHostEntryArgs Empty = new TaskDefinitionHostEntryArgs();
 
     @InputImport(name="hostname")
-    private final @Nullable Input<String> hostname;
+        private final @Nullable Input<String> hostname;
 
     public Input<String> getHostname() {
         return this.hostname == null ? Input.empty() : this.hostname;
     }
 
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+        private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -81,7 +81,6 @@ public final class TaskDefinitionHostEntryArgs extends io.pulumi.resources.Resou
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
-
         public TaskDefinitionHostEntryArgs build() {
             return new TaskDefinitionHostEntryArgs(hostname, ipAddress);
         }

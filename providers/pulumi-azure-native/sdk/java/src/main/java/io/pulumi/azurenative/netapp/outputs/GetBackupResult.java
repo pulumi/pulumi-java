@@ -287,7 +287,6 @@ public final class GetBackupResult {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(backupId, backupType, creationDate, failureReason, id, label, location, name, provisioningState, size, type, volumeName);
         }

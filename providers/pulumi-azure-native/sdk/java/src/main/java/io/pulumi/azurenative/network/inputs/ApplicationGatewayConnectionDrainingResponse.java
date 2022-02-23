@@ -22,7 +22,7 @@ public final class ApplicationGatewayConnectionDrainingResponse extends io.pulum
      * 
      */
     @InputImport(name="drainTimeoutInSec", required=true)
-    private final Integer drainTimeoutInSec;
+        private final Integer drainTimeoutInSec;
 
     public Integer getDrainTimeoutInSec() {
         return this.drainTimeoutInSec;
@@ -33,7 +33,7 @@ public final class ApplicationGatewayConnectionDrainingResponse extends io.pulum
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -82,7 +82,6 @@ public final class ApplicationGatewayConnectionDrainingResponse extends io.pulum
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ApplicationGatewayConnectionDrainingResponse build() {
             return new ApplicationGatewayConnectionDrainingResponse(drainTimeoutInSec, enabled);
         }

@@ -98,7 +98,6 @@ public final class AccountAuditConfigurationAuditNotificationTarget {
             this.targetArn = targetArn;
             return this;
         }
-
         public AccountAuditConfigurationAuditNotificationTarget build() {
             return new AccountAuditConfigurationAuditNotificationTarget(enabled, roleArn, targetArn);
         }

@@ -118,7 +118,6 @@ public final class ListIotHubResourceKeysForKeyNameResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListIotHubResourceKeysForKeyNameResult build() {
             return new ListIotHubResourceKeysForKeyNameResult(keyName, primaryKey, rights, secondaryKey);
         }

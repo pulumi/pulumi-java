@@ -204,7 +204,6 @@ public final class GetJobAgentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobAgentResult build() {
             return new GetJobAgentResult(databaseId, id, location, name, sku, state, tags, type);
         }

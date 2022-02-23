@@ -76,7 +76,6 @@ public final class LabSupportPropertiesResponse {
             this.markdown = markdown;
             return this;
         }
-
         public LabSupportPropertiesResponse build() {
             return new LabSupportPropertiesResponse(enabled, markdown);
         }

@@ -99,7 +99,6 @@ public final class MHSMPrivateEndpointConnectionItemResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public MHSMPrivateEndpointConnectionItemResponse build() {
             return new MHSMPrivateEndpointConnectionItemResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

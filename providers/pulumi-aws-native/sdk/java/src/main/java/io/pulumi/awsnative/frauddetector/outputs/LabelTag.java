@@ -58,7 +58,6 @@ public final class LabelTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public LabelTag build() {
             return new LabelTag(key, value);
         }

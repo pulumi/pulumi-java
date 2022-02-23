@@ -249,7 +249,6 @@ public final class GetAutoscaleSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutoscaleSettingResult build() {
             return new GetAutoscaleSettingResult(enabled, id, location, name, notifications, profiles, tags, targetResourceLocation, targetResourceUri, type);
         }

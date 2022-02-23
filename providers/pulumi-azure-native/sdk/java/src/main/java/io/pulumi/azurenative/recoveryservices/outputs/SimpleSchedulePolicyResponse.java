@@ -143,7 +143,6 @@ public final class SimpleSchedulePolicyResponse {
             this.scheduleWeeklyFrequency = scheduleWeeklyFrequency;
             return this;
         }
-
         public SimpleSchedulePolicyResponse build() {
             return new SimpleSchedulePolicyResponse(schedulePolicyType, scheduleRunDays, scheduleRunFrequency, scheduleRunTimes, scheduleWeeklyFrequency);
         }

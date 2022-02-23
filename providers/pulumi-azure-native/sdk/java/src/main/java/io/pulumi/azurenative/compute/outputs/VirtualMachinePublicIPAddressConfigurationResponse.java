@@ -229,7 +229,6 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse {
             this.sku = sku;
             return this;
         }
-
         public VirtualMachinePublicIPAddressConfigurationResponse build() {
             return new VirtualMachinePublicIPAddressConfigurationResponse(deleteOption, dnsSettings, idleTimeoutInMinutes, ipTags, name, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, sku);
         }

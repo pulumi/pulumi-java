@@ -296,7 +296,6 @@ public final class ZohoLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public ZohoLinkedServiceResponse build() {
             return new ZohoLinkedServiceResponse(accessToken, annotations, connectVia, connectionProperties, description, encryptedCredential, endpoint, parameters, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

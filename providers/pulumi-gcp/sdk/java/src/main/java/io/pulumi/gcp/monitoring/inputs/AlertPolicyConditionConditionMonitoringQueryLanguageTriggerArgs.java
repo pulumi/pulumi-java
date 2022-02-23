@@ -22,7 +22,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTriggerAr
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+        private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTriggerAr
      * 
      */
     @InputImport(name="percent")
-    private final @Nullable Input<Double> percent;
+        private final @Nullable Input<Double> percent;
 
     public Input<Double> getPercent() {
         return this.percent == null ? Input.empty() : this.percent;
@@ -94,7 +94,6 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTriggerAr
             this.percent = Input.ofNullable(percent);
             return this;
         }
-
         public AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs build() {
             return new AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs(count, percent);
         }

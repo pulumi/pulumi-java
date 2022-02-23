@@ -244,7 +244,6 @@ public final class FirewallInfoResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public FirewallInfoResponse build() {
             return new FirewallInfoResponse(action, direction, displayName, firewallRuleType, networkUri, policy, priority, targetServiceAccounts, targetTags, uri);
         }

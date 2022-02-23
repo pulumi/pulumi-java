@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1OperationGroupResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="operationConfigType", required=true)
-    private final String operationConfigType;
+      private final String operationConfigType;
 
     public String getOperationConfigType() {
         return this.operationConfigType;
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1OperationGroupResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="operationConfigs", required=true)
-    private final List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs;
+      private final List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs;
 
     public List<GoogleCloudApigeeV1OperationConfigResponse> getOperationConfigs() {
         return this.operationConfigs;
@@ -83,7 +83,6 @@ public final class GoogleCloudApigeeV1OperationGroupResponse extends io.pulumi.r
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }
-
         public GoogleCloudApigeeV1OperationGroupResponse build() {
             return new GoogleCloudApigeeV1OperationGroupResponse(operationConfigType, operationConfigs);
         }

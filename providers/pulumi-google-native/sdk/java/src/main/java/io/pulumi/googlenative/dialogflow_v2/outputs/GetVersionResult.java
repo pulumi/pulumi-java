@@ -138,7 +138,6 @@ public final class GetVersionResult {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
         }
-
         public GetVersionResult build() {
             return new GetVersionResult(createTime, description, name, status, versionNumber);
         }

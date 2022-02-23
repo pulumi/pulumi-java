@@ -20,7 +20,7 @@ public final class TableSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<TableFieldSchemaArgs>> fields;
+      private final @Nullable Input<List<TableFieldSchemaArgs>> fields;
 
     public Input<List<TableFieldSchemaArgs>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -63,7 +63,6 @@ public final class TableSchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.fields = Input.ofNullable(fields);
             return this;
         }
-
         public TableSchemaArgs build() {
             return new TableSchemaArgs(fields);
         }

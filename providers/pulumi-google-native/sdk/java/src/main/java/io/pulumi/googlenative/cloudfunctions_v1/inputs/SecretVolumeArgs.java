@@ -25,7 +25,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountPath")
-    private final @Nullable Input<String> mountPath;
+      private final @Nullable Input<String> mountPath;
 
     public Input<String> getMountPath() {
         return this.mountPath == null ? Input.empty() : this.mountPath;
@@ -36,7 +36,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -47,7 +47,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<String> secret;
+      private final @Nullable Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -58,7 +58,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versions")
-    private final @Nullable Input<List<SecretVersionArgs>> versions;
+      private final @Nullable Input<List<SecretVersionArgs>> versions;
 
     public Input<List<SecretVersionArgs>> getVersions() {
         return this.versions == null ? Input.empty() : this.versions;
@@ -147,7 +147,6 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.versions = Input.ofNullable(versions);
             return this;
         }
-
         public SecretVolumeArgs build() {
             return new SecretVolumeArgs(mountPath, project, secret, versions);
         }

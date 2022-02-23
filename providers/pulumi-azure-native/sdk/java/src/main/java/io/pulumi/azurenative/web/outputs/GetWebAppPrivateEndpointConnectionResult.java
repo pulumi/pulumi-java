@@ -197,7 +197,6 @@ public final class GetWebAppPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppPrivateEndpointConnectionResult build() {
             return new GetWebAppPrivateEndpointConnectionResult(id, ipAddresses, kind, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

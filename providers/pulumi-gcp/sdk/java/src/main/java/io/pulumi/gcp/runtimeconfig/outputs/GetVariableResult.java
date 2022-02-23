@@ -133,7 +133,6 @@ public final class GetVariableResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetVariableResult build() {
             return new GetVariableResult(id, name, parent, project, text, updateTime, value);
         }

@@ -18,7 +18,7 @@ public final class AzureClusterControlPlaneDatabaseEncryptionGetArgs extends io.
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final Input<String> keyId;
+        private final Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId;
@@ -61,7 +61,6 @@ public final class AzureClusterControlPlaneDatabaseEncryptionGetArgs extends io.
             this.keyId = Input.of(Objects.requireNonNull(keyId));
             return this;
         }
-
         public AzureClusterControlPlaneDatabaseEncryptionGetArgs build() {
             return new AzureClusterControlPlaneDatabaseEncryptionGetArgs(keyId);
         }

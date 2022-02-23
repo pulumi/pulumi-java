@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse extends io.pulumi
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse extends io.pulumi
      * 
      */
     @InputImport(name="usageWithinTimeRange", required=true)
-    private final Map<String,String> usageWithinTimeRange;
+      private final Map<String,String> usageWithinTimeRange;
 
     public Map<String,String> getUsageWithinTimeRange() {
         return this.usageWithinTimeRange;
@@ -82,7 +82,6 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse extends io.pulumi
             this.usageWithinTimeRange = Objects.requireNonNull(usageWithinTimeRange);
             return this;
         }
-
         public GoogleCloudDatacatalogV1UsageSignalResponse build() {
             return new GoogleCloudDatacatalogV1UsageSignalResponse(updateTime, usageWithinTimeRange);
         }

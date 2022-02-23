@@ -54,7 +54,6 @@ public final class RunAsCredentialAssociationPropertyResponse {
             this.name = name;
             return this;
         }
-
         public RunAsCredentialAssociationPropertyResponse build() {
             return new RunAsCredentialAssociationPropertyResponse(name);
         }

@@ -92,7 +92,6 @@ public final class GetReplicationSetResult {
             this.regions = regions;
             return this;
         }
-
         public GetReplicationSetResult build() {
             return new GetReplicationSetResult(arn, deletionProtected, regions);
         }

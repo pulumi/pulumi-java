@@ -142,7 +142,6 @@ public final class GoogleCloudStorageLocationResponse {
             this.version = version;
             return this;
         }
-
         public GoogleCloudStorageLocationResponse build() {
             return new GoogleCloudStorageLocationResponse(bucketName, fileName, folderPath, type, version);
         }

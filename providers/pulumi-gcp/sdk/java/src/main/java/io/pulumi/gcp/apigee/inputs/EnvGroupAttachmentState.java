@@ -20,7 +20,7 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="envgroupId")
-    private final @Nullable Input<String> envgroupId;
+        private final @Nullable Input<String> envgroupId;
 
     public Input<String> getEnvgroupId() {
         return this.envgroupId == null ? Input.empty() : this.envgroupId;
@@ -31,7 +31,7 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<String> environment;
+        private final @Nullable Input<String> environment;
 
     public Input<String> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -42,7 +42,7 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -116,7 +116,6 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public EnvGroupAttachmentState build() {
             return new EnvGroupAttachmentState(envgroupId, environment, name);
         }

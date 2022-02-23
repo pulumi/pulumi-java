@@ -54,7 +54,6 @@ public final class DiskAutoSnapshotAddOn {
             this.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
         }
-
         public DiskAutoSnapshotAddOn build() {
             return new DiskAutoSnapshotAddOn(snapshotTimeOfDay);
         }

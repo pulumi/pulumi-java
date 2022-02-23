@@ -142,7 +142,6 @@ public final class GetIntegrationResult {
             this.tags = tags;
             return this;
         }
-
         public GetIntegrationResult build() {
             return new GetIntegrationResult(createdAt, lastUpdatedAt, objectTypeName, objectTypeNames, tags);
         }

@@ -77,7 +77,6 @@ public final class DiskPoolVolumeResponse {
             this.lunName = lunName;
             return this;
         }
-
         public DiskPoolVolumeResponse build() {
             return new DiskPoolVolumeResponse(endpoints, lunName);
         }

@@ -224,7 +224,6 @@ public final class GetManagedPrivateEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedPrivateEndpointResult build() {
             return new GetManagedPrivateEndpointResult(groupId, id, name, privateLinkResourceId, privateLinkResourceRegion, provisioningState, requestMessage, systemData, type);
         }

@@ -100,7 +100,6 @@ public final class FrameworkControl {
             this.controlScope = controlScope;
             return this;
         }
-
         public FrameworkControl build() {
             return new FrameworkControl(controlInputParameters, controlName, controlScope);
         }

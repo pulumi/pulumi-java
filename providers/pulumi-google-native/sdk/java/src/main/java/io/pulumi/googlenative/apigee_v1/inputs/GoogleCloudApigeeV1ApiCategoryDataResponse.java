@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
      * 
      */
     @InputImport(name="siteId", required=true)
-    private final String siteId;
+      private final String siteId;
 
     public String getSiteId() {
         return this.siteId;
@@ -43,7 +43,7 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -102,7 +102,6 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GoogleCloudApigeeV1ApiCategoryDataResponse build() {
             return new GoogleCloudApigeeV1ApiCategoryDataResponse(name, siteId, updateTime);
         }

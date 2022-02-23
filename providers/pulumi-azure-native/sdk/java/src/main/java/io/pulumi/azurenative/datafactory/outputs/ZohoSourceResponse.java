@@ -205,7 +205,6 @@ public final class ZohoSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ZohoSourceResponse build() {
             return new ZohoSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

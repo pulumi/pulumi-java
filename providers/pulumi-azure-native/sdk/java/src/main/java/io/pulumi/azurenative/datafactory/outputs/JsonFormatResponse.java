@@ -205,7 +205,6 @@ public final class JsonFormatResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JsonFormatResponse build() {
             return new JsonFormatResponse(deserializer, encodingName, filePattern, jsonNodeReference, jsonPathDefinition, nestingSeparator, serializer, type);
         }

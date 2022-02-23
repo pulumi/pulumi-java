@@ -97,7 +97,6 @@ public final class MultiStepResponse {
             this.primaryStepId = Objects.requireNonNull(primaryStepId);
             return this;
         }
-
         public MultiStepResponse build() {
             return new MultiStepResponse(multistepNumber, primaryStep, primaryStepId);
         }

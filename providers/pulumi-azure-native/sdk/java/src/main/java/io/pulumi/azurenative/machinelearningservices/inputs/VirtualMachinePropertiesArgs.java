@@ -21,7 +21,7 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+        private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -32,7 +32,7 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="administratorAccount")
-    private final @Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount;
+        private final @Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount;
 
     public Input<VirtualMachineSshCredentialsArgs> getAdministratorAccount() {
         return this.administratorAccount == null ? Input.empty() : this.administratorAccount;
@@ -43,7 +43,7 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sshPort")
-    private final @Nullable Input<Integer> sshPort;
+        private final @Nullable Input<Integer> sshPort;
 
     public Input<Integer> getSshPort() {
         return this.sshPort == null ? Input.empty() : this.sshPort;
@@ -54,7 +54,7 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="virtualMachineSize")
-    private final @Nullable Input<String> virtualMachineSize;
+        private final @Nullable Input<String> virtualMachineSize;
 
     public Input<String> getVirtualMachineSize() {
         return this.virtualMachineSize == null ? Input.empty() : this.virtualMachineSize;
@@ -143,7 +143,6 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
             this.virtualMachineSize = Input.ofNullable(virtualMachineSize);
             return this;
         }
-
         public VirtualMachinePropertiesArgs build() {
             return new VirtualMachinePropertiesArgs(address, administratorAccount, sshPort, virtualMachineSize);
         }

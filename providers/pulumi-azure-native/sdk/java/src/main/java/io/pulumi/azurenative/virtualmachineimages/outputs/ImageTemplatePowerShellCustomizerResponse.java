@@ -207,7 +207,6 @@ public final class ImageTemplatePowerShellCustomizerResponse {
             this.validExitCodes = validExitCodes;
             return this;
         }
-
         public ImageTemplatePowerShellCustomizerResponse build() {
             return new ImageTemplatePowerShellCustomizerResponse(inline, name, runAsSystem, runElevated, scriptUri, sha256Checksum, type, validExitCodes);
         }

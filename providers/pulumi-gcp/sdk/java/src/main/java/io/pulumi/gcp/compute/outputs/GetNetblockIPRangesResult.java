@@ -132,7 +132,6 @@ public final class GetNetblockIPRangesResult {
             this.rangeType = rangeType;
             return this;
         }
-
         public GetNetblockIPRangesResult build() {
             return new GetNetblockIPRangesResult(cidrBlocks, cidrBlocksIpv4s, cidrBlocksIpv6s, id, rangeType);
         }

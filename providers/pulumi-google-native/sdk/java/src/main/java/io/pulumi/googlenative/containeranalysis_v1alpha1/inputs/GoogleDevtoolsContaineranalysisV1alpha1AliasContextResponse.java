@@ -21,7 +21,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse e
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -32,7 +32,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse e
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -81,7 +81,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse e
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse(kind, name);
         }

@@ -226,7 +226,6 @@ public final class GetEmailTemplateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEmailTemplateResult build() {
             return new GetEmailTemplateResult(body, description, id, isDefault, name, parameters, subject, title, type);
         }

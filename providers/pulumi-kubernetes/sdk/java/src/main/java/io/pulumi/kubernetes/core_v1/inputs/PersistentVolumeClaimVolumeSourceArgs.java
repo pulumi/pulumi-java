@@ -24,7 +24,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="claimName", required=true)
-    private final Input<String> claimName;
+        private final Input<String> claimName;
 
     public Input<String> getClaimName() {
         return this.claimName;
@@ -35,7 +35,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -94,7 +94,6 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
-
         public PersistentVolumeClaimVolumeSourceArgs build() {
             return new PersistentVolumeClaimVolumeSourceArgs(claimName, readOnly);
         }

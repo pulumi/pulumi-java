@@ -73,7 +73,6 @@ public final class UserIdentityInfo {
             this.lastName = lastName;
             return this;
         }
-
         public UserIdentityInfo build() {
             return new UserIdentityInfo(email, firstName, lastName);
         }

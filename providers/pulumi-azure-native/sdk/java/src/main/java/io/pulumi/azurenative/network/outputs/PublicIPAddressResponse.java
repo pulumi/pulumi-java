@@ -549,7 +549,6 @@ public final class PublicIPAddressResponse {
             this.zones = zones;
             return this;
         }
-
         public PublicIPAddressResponse build() {
             return new PublicIPAddressResponse(ddosSettings, dnsSettings, etag, extendedLocation, id, idleTimeoutInMinutes, ipAddress, ipConfiguration, ipTags, linkedPublicIPAddress, location, migrationPhase, name, natGateway, provisioningState, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, resourceGuid, servicePublicIPAddress, sku, tags, type, zones);
         }

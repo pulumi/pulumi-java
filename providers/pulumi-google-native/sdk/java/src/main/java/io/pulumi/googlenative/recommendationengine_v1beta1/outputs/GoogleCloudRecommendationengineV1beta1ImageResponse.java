@@ -96,7 +96,6 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse {
             this.width = Objects.requireNonNull(width);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ImageResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ImageResponse(height, uri, width);
         }

@@ -73,7 +73,6 @@ public final class TaxonomyIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public TaxonomyIamMemberCondition build() {
             return new TaxonomyIamMemberCondition(description, expression, title);
         }

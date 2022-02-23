@@ -185,7 +185,6 @@ public final class SnowflakeSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SnowflakeSourceResponse build() {
             return new SnowflakeSourceResponse(disableMetricsCollection, exportSettings, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
         }

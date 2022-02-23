@@ -59,7 +59,6 @@ public final class KnowledgeBaseAppIntegrationsConfiguration {
             this.objectFields = Objects.requireNonNull(objectFields);
             return this;
         }
-
         public KnowledgeBaseAppIntegrationsConfiguration build() {
             return new KnowledgeBaseAppIntegrationsConfiguration(appIntegrationArn, objectFields);
         }

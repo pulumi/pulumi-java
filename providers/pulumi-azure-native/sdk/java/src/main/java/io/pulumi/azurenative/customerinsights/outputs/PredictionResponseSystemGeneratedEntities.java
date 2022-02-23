@@ -98,7 +98,6 @@ public final class PredictionResponseSystemGeneratedEntities {
             this.generatedLinks = generatedLinks;
             return this;
         }
-
         public PredictionResponseSystemGeneratedEntities build() {
             return new PredictionResponseSystemGeneratedEntities(generatedInteractionTypes, generatedKpis, generatedLinks);
         }

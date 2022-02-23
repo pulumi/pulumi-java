@@ -120,7 +120,6 @@ public final class BotWaitAndContinueSpecification {
             this.waitingResponse = Objects.requireNonNull(waitingResponse);
             return this;
         }
-
         public BotWaitAndContinueSpecification build() {
             return new BotWaitAndContinueSpecification(continueResponse, isActive, stillWaitingResponse, waitingResponse);
         }

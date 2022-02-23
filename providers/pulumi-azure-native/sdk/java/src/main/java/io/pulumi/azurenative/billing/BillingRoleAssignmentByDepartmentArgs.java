@@ -19,7 +19,7 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="billingAccountName", required=true)
-    private final Input<String> billingAccountName;
+        private final Input<String> billingAccountName;
 
     public Input<String> getBillingAccountName() {
         return this.billingAccountName;
@@ -30,7 +30,7 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="billingRoleAssignmentName")
-    private final @Nullable Input<String> billingRoleAssignmentName;
+        private final @Nullable Input<String> billingRoleAssignmentName;
 
     public Input<String> getBillingRoleAssignmentName() {
         return this.billingRoleAssignmentName == null ? Input.empty() : this.billingRoleAssignmentName;
@@ -41,7 +41,7 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="departmentName", required=true)
-    private final Input<String> departmentName;
+        private final Input<String> departmentName;
 
     public Input<String> getDepartmentName() {
         return this.departmentName;
@@ -52,7 +52,7 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable Input<String> principalId;
+        private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;
@@ -63,7 +63,7 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="principalTenantId")
-    private final @Nullable Input<String> principalTenantId;
+        private final @Nullable Input<String> principalTenantId;
 
     public Input<String> getPrincipalTenantId() {
         return this.principalTenantId == null ? Input.empty() : this.principalTenantId;
@@ -74,7 +74,7 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="roleDefinitionId")
-    private final @Nullable Input<String> roleDefinitionId;
+        private final @Nullable Input<String> roleDefinitionId;
 
     public Input<String> getRoleDefinitionId() {
         return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
@@ -85,7 +85,7 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="userAuthenticationType")
-    private final @Nullable Input<String> userAuthenticationType;
+        private final @Nullable Input<String> userAuthenticationType;
 
     public Input<String> getUserAuthenticationType() {
         return this.userAuthenticationType == null ? Input.empty() : this.userAuthenticationType;
@@ -96,7 +96,7 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="userEmailAddress")
-    private final @Nullable Input<String> userEmailAddress;
+        private final @Nullable Input<String> userEmailAddress;
 
     public Input<String> getUserEmailAddress() {
         return this.userEmailAddress == null ? Input.empty() : this.userEmailAddress;
@@ -245,7 +245,6 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
             this.userEmailAddress = Input.ofNullable(userEmailAddress);
             return this;
         }
-
         public BillingRoleAssignmentByDepartmentArgs build() {
             return new BillingRoleAssignmentByDepartmentArgs(billingAccountName, billingRoleAssignmentName, departmentName, principalId, principalTenantId, roleDefinitionId, userAuthenticationType, userEmailAddress);
         }

@@ -52,7 +52,6 @@ public final class BucketEncryptionConfiguration {
             this.replicaKmsKeyID = Objects.requireNonNull(replicaKmsKeyID);
             return this;
         }
-
         public BucketEncryptionConfiguration build() {
             return new BucketEncryptionConfiguration(replicaKmsKeyID);
         }

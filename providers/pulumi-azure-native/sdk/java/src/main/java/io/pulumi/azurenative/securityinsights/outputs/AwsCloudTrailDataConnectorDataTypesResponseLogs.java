@@ -54,7 +54,6 @@ public final class AwsCloudTrailDataConnectorDataTypesResponseLogs {
             this.state = state;
             return this;
         }
-
         public AwsCloudTrailDataConnectorDataTypesResponseLogs build() {
             return new AwsCloudTrailDataConnectorDataTypesResponseLogs(state);
         }

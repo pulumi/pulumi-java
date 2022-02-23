@@ -21,7 +21,7 @@ public final class ValidationOptionsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="schemaValidation", required=true)
-    private final String schemaValidation;
+      private final String schemaValidation;
 
     public String getSchemaValidation() {
         return this.schemaValidation;
@@ -32,7 +32,7 @@ public final class ValidationOptionsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="undeclaredProperties", required=true)
-    private final String undeclaredProperties;
+      private final String undeclaredProperties;
 
     public String getUndeclaredProperties() {
         return this.undeclaredProperties;
@@ -81,7 +81,6 @@ public final class ValidationOptionsResponse extends io.pulumi.resources.InvokeA
             this.undeclaredProperties = Objects.requireNonNull(undeclaredProperties);
             return this;
         }
-
         public ValidationOptionsResponse build() {
             return new ValidationOptionsResponse(schemaValidation, undeclaredProperties);
         }

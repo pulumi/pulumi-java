@@ -203,7 +203,6 @@ public final class GetMaintenanceConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMaintenanceConfigurationResult build() {
             return new GetMaintenanceConfigurationResult(extensionProperties, id, location, maintenanceScope, name, namespace, tags, type);
         }

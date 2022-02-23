@@ -206,7 +206,6 @@ public final class OnlineEndpointResponse {
             this.traffic = traffic;
             return this;
         }
-
         public OnlineEndpointResponse build() {
             return new OnlineEndpointResponse(authMode, description, properties, provisioningState, scoringUri, swaggerUri, target, traffic);
         }

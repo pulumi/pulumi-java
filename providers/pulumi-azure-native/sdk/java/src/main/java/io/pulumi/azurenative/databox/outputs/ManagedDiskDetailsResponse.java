@@ -97,7 +97,6 @@ public final class ManagedDiskDetailsResponse {
             this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId);
             return this;
         }
-
         public ManagedDiskDetailsResponse build() {
             return new ManagedDiskDetailsResponse(dataAccountType, resourceGroupId, stagingStorageAccountId);
         }

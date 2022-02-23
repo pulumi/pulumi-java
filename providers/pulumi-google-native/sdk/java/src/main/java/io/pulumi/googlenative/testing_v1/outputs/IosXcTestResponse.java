@@ -139,7 +139,6 @@ public final class IosXcTestResponse {
             this.xctestrun = Objects.requireNonNull(xctestrun);
             return this;
         }
-
         public IosXcTestResponse build() {
             return new IosXcTestResponse(appBundleId, testSpecialEntitlements, testsZip, xcodeVersion, xctestrun);
         }

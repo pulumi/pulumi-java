@@ -76,7 +76,6 @@ public final class ResourceLimitsResponse {
             this.memoryInGB = memoryInGB;
             return this;
         }
-
         public ResourceLimitsResponse build() {
             return new ResourceLimitsResponse(cpu, memoryInGB);
         }

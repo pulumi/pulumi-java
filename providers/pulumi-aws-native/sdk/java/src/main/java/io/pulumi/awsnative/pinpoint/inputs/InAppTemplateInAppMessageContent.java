@@ -18,42 +18,42 @@ public final class InAppTemplateInAppMessageContent extends io.pulumi.resources.
     public static final InAppTemplateInAppMessageContent Empty = new InAppTemplateInAppMessageContent();
 
     @InputImport(name="backgroundColor")
-    private final @Nullable String backgroundColor;
+        private final @Nullable String backgroundColor;
 
     public Optional<String> getBackgroundColor() {
         return this.backgroundColor == null ? Optional.empty() : Optional.ofNullable(this.backgroundColor);
     }
 
     @InputImport(name="bodyConfig")
-    private final @Nullable InAppTemplateBodyConfig bodyConfig;
+        private final @Nullable InAppTemplateBodyConfig bodyConfig;
 
     public Optional<InAppTemplateBodyConfig> getBodyConfig() {
         return this.bodyConfig == null ? Optional.empty() : Optional.ofNullable(this.bodyConfig);
     }
 
     @InputImport(name="headerConfig")
-    private final @Nullable InAppTemplateHeaderConfig headerConfig;
+        private final @Nullable InAppTemplateHeaderConfig headerConfig;
 
     public Optional<InAppTemplateHeaderConfig> getHeaderConfig() {
         return this.headerConfig == null ? Optional.empty() : Optional.ofNullable(this.headerConfig);
     }
 
     @InputImport(name="imageUrl")
-    private final @Nullable String imageUrl;
+        private final @Nullable String imageUrl;
 
     public Optional<String> getImageUrl() {
         return this.imageUrl == null ? Optional.empty() : Optional.ofNullable(this.imageUrl);
     }
 
     @InputImport(name="primaryBtn")
-    private final @Nullable InAppTemplateButtonConfig primaryBtn;
+        private final @Nullable InAppTemplateButtonConfig primaryBtn;
 
     public Optional<InAppTemplateButtonConfig> getPrimaryBtn() {
         return this.primaryBtn == null ? Optional.empty() : Optional.ofNullable(this.primaryBtn);
     }
 
     @InputImport(name="secondaryBtn")
-    private final @Nullable InAppTemplateButtonConfig secondaryBtn;
+        private final @Nullable InAppTemplateButtonConfig secondaryBtn;
 
     public Optional<InAppTemplateButtonConfig> getSecondaryBtn() {
         return this.secondaryBtn == null ? Optional.empty() : Optional.ofNullable(this.secondaryBtn);
@@ -142,7 +142,6 @@ public final class InAppTemplateInAppMessageContent extends io.pulumi.resources.
             this.secondaryBtn = secondaryBtn;
             return this;
         }
-
         public InAppTemplateInAppMessageContent build() {
             return new InAppTemplateInAppMessageContent(backgroundColor, bodyConfig, headerConfig, imageUrl, primaryBtn, secondaryBtn);
         }

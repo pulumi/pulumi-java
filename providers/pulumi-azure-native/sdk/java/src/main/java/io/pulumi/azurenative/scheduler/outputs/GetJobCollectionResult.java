@@ -162,7 +162,6 @@ public final class GetJobCollectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobCollectionResult build() {
             return new GetJobCollectionResult(id, location, name, properties, tags, type);
         }

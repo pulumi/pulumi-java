@@ -44,7 +44,6 @@ public final class MembershipAuthority {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public MembershipAuthority build() {
             return new MembershipAuthority(issuer);
         }

@@ -163,7 +163,6 @@ public final class VmVmPlacementPolicyPropertiesResponse {
             this.vmMembers = Objects.requireNonNull(vmMembers);
             return this;
         }
-
         public VmVmPlacementPolicyPropertiesResponse build() {
             return new VmVmPlacementPolicyPropertiesResponse(affinityType, displayName, provisioningState, state, type, vmMembers);
         }

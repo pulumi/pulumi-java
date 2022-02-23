@@ -24,7 +24,7 @@ public final class TemplateSourceAnalysisArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+        private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
@@ -36,7 +36,7 @@ public final class TemplateSourceAnalysisArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataSetReferences", required=true)
-    private final Input<List<TemplateDataSetReferenceArgs>> dataSetReferences;
+        private final Input<List<TemplateDataSetReferenceArgs>> dataSetReferences;
 
     public Input<List<TemplateDataSetReferenceArgs>> getDataSetReferences() {
         return this.dataSetReferences;
@@ -95,7 +95,6 @@ public final class TemplateSourceAnalysisArgs extends io.pulumi.resources.Resour
             this.dataSetReferences = Input.of(Objects.requireNonNull(dataSetReferences));
             return this;
         }
-
         public TemplateSourceAnalysisArgs build() {
             return new TemplateSourceAnalysisArgs(arn, dataSetReferences);
         }

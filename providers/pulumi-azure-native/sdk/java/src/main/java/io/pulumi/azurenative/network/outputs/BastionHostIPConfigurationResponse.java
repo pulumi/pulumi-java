@@ -203,7 +203,6 @@ public final class BastionHostIPConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BastionHostIPConfigurationResponse build() {
             return new BastionHostIPConfigurationResponse(etag, id, name, privateIPAllocationMethod, provisioningState, publicIPAddress, subnet, type);
         }

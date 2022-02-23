@@ -96,7 +96,6 @@ public final class AzureClusterNetworking {
             this.virtualNetworkId = Objects.requireNonNull(virtualNetworkId);
             return this;
         }
-
         public AzureClusterNetworking build() {
             return new AzureClusterNetworking(podAddressCidrBlocks, serviceAddressCidrBlocks, virtualNetworkId);
         }

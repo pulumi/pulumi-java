@@ -160,7 +160,6 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse {
             this.upgradeTimeout = upgradeTimeout;
             return this;
         }
-
         public ArmRollingUpgradeMonitoringPolicyResponse build() {
             return new ArmRollingUpgradeMonitoringPolicyResponse(failureAction, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, upgradeDomainTimeout, upgradeTimeout);
         }

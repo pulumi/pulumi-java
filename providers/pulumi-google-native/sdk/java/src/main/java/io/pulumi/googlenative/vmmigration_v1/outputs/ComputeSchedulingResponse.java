@@ -119,7 +119,6 @@ public final class ComputeSchedulingResponse {
             this.restartType = Objects.requireNonNull(restartType);
             return this;
         }
-
         public ComputeSchedulingResponse build() {
             return new ComputeSchedulingResponse(minNodeCpus, nodeAffinities, onHostMaintenance, restartType);
         }

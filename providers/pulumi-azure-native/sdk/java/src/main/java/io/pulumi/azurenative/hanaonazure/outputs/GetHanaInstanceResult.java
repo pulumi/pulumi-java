@@ -354,7 +354,6 @@ public final class GetHanaInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHanaInstanceResult build() {
             return new GetHanaInstanceResult(hanaInstanceId, hardwareProfile, hwRevision, id, location, name, networkProfile, osProfile, partnerNodeId, powerState, provisioningState, proximityPlacementGroup, storageProfile, tags, type);
         }

@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureResponse extends io.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureResponse extends io.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowV2FulfillmentFeatureResponse build() {
             return new GoogleCloudDialogflowV2FulfillmentFeatureResponse(type);
         }

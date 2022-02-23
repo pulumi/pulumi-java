@@ -19,7 +19,7 @@ public final class PipelineTriggerDescriptorResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="sourceTrigger")
-    private final @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;
+        private final @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;
 
     public Optional<PipelineSourceTriggerDescriptorResponse> getSourceTrigger() {
         return this.sourceTrigger == null ? Optional.empty() : Optional.ofNullable(this.sourceTrigger);
@@ -57,7 +57,6 @@ public final class PipelineTriggerDescriptorResponse extends io.pulumi.resources
             this.sourceTrigger = sourceTrigger;
             return this;
         }
-
         public PipelineTriggerDescriptorResponse build() {
             return new PipelineTriggerDescriptorResponse(sourceTrigger);
         }

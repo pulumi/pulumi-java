@@ -84,7 +84,6 @@ public final class SloWindowsBasedSliMetricSumInRangeRange {
             this.min = min;
             return this;
         }
-
         public SloWindowsBasedSliMetricSumInRangeRange build() {
             return new SloWindowsBasedSliMetricSumInRangeRange(max, min);
         }

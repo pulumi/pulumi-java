@@ -15,14 +15,14 @@ public final class GetRulesetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRulesetArgs Empty = new GetRulesetArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="rulesetId", required=true)
-    private final String rulesetId;
+      private final String rulesetId;
 
     public String getRulesetId() {
         return this.rulesetId;
@@ -71,7 +71,6 @@ public final class GetRulesetArgs extends io.pulumi.resources.InvokeArgs {
             this.rulesetId = Objects.requireNonNull(rulesetId);
             return this;
         }
-
         public GetRulesetArgs build() {
             return new GetRulesetArgs(project, rulesetId);
         }

@@ -100,7 +100,6 @@ public final class TokenRequestSpec {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
-
         public TokenRequestSpec build() {
             return new TokenRequestSpec(audiences, boundObjectRef, expirationSeconds);
         }

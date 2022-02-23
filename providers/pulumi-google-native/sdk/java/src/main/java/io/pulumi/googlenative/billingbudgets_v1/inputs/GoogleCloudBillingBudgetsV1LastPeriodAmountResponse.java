@@ -34,7 +34,6 @@ public final class GoogleCloudBillingBudgetsV1LastPeriodAmountResponse extends i
         public Builder(GoogleCloudBillingBudgetsV1LastPeriodAmountResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudBillingBudgetsV1LastPeriodAmountResponse build() {
             return new GoogleCloudBillingBudgetsV1LastPeriodAmountResponse();
         }

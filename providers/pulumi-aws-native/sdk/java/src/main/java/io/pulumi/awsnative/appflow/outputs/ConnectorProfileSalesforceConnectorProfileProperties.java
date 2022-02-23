@@ -69,7 +69,6 @@ public final class ConnectorProfileSalesforceConnectorProfileProperties {
             this.isSandboxEnvironment = isSandboxEnvironment;
             return this;
         }
-
         public ConnectorProfileSalesforceConnectorProfileProperties build() {
             return new ConnectorProfileSalesforceConnectorProfileProperties(instanceUrl, isSandboxEnvironment);
         }

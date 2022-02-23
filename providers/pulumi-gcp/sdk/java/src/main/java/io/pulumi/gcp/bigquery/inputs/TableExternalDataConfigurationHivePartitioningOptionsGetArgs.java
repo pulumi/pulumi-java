@@ -27,7 +27,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsGetArgs 
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+        private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -40,7 +40,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsGetArgs 
      * 
      */
     @InputImport(name="requirePartitionFilter")
-    private final @Nullable Input<Boolean> requirePartitionFilter;
+        private final @Nullable Input<Boolean> requirePartitionFilter;
 
     public Input<Boolean> getRequirePartitionFilter() {
         return this.requirePartitionFilter == null ? Input.empty() : this.requirePartitionFilter;
@@ -58,7 +58,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsGetArgs 
      * 
      */
     @InputImport(name="sourceUriPrefix")
-    private final @Nullable Input<String> sourceUriPrefix;
+        private final @Nullable Input<String> sourceUriPrefix;
 
     public Input<String> getSourceUriPrefix() {
         return this.sourceUriPrefix == null ? Input.empty() : this.sourceUriPrefix;
@@ -132,7 +132,6 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsGetArgs 
             this.sourceUriPrefix = Input.ofNullable(sourceUriPrefix);
             return this;
         }
-
         public TableExternalDataConfigurationHivePartitioningOptionsGetArgs build() {
             return new TableExternalDataConfigurationHivePartitioningOptionsGetArgs(mode, requirePartitionFilter, sourceUriPrefix);
         }

@@ -58,7 +58,6 @@ public final class PortalTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PortalTag build() {
             return new PortalTag(key, value);
         }

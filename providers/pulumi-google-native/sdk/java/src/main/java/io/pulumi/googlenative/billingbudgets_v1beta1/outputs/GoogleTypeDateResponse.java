@@ -95,7 +95,6 @@ public final class GoogleTypeDateResponse {
             this.year = Objects.requireNonNull(year);
             return this;
         }
-
         public GoogleTypeDateResponse build() {
             return new GoogleTypeDateResponse(day, month, year);
         }

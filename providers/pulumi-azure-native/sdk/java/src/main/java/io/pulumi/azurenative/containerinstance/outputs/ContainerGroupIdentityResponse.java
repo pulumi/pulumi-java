@@ -120,7 +120,6 @@ public final class ContainerGroupIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ContainerGroupIdentityResponse build() {
             return new ContainerGroupIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

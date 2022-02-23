@@ -128,7 +128,6 @@ public final class MultiRegionAccessPointPublicAccessBlockConfiguration {
             this.restrictPublicBuckets = restrictPublicBuckets;
             return this;
         }
-
         public MultiRegionAccessPointPublicAccessBlockConfiguration build() {
             return new MultiRegionAccessPointPublicAccessBlockConfiguration(blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
         }

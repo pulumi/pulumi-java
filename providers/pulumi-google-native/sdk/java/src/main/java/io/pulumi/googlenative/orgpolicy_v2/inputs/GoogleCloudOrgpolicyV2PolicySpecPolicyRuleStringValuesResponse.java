@@ -22,7 +22,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
      * 
      */
     @InputImport(name="allowedValues", required=true)
-    private final List<String> allowedValues;
+      private final List<String> allowedValues;
 
     public List<String> getAllowedValues() {
         return this.allowedValues;
@@ -33,7 +33,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
      * 
      */
     @InputImport(name="deniedValues", required=true)
-    private final List<String> deniedValues;
+      private final List<String> deniedValues;
 
     public List<String> getDeniedValues() {
         return this.deniedValues;
@@ -82,7 +82,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
             this.deniedValues = Objects.requireNonNull(deniedValues);
             return this;
         }
-
         public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse build() {
             return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse(allowedValues, deniedValues);
         }

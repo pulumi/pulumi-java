@@ -25,7 +25,7 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -36,7 +36,7 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dir")
-    private final @Nullable Input<String> dir;
+      private final @Nullable Input<String> dir;
 
     public Input<String> getDir() {
         return this.dir == null ? Input.empty() : this.dir;
@@ -47,7 +47,7 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entrypoint")
-    private final @Nullable Input<String> entrypoint;
+      private final @Nullable Input<String> entrypoint;
 
     public Input<String> getEntrypoint() {
         return this.entrypoint == null ? Input.empty() : this.entrypoint;
@@ -58,7 +58,7 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="env")
-    private final @Nullable Input<List<String>> env;
+      private final @Nullable Input<List<String>> env;
 
     public Input<List<String>> getEnv() {
         return this.env == null ? Input.empty() : this.env;
@@ -69,7 +69,7 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -80,7 +80,7 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -91,7 +91,7 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<String> script;
+      private final @Nullable Input<String> script;
 
     public Input<String> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -102,7 +102,7 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretEnv")
-    private final @Nullable Input<List<String>> secretEnv;
+      private final @Nullable Input<List<String>> secretEnv;
 
     public Input<List<String>> getSecretEnv() {
         return this.secretEnv == null ? Input.empty() : this.secretEnv;
@@ -113,7 +113,7 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -124,7 +124,7 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<VolumeArgs>> volumes;
+      private final @Nullable Input<List<VolumeArgs>> volumes;
 
     public Input<List<VolumeArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;
@@ -135,7 +135,7 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitFor")
-    private final @Nullable Input<List<String>> waitFor;
+      private final @Nullable Input<List<String>> waitFor;
 
     public Input<List<String>> getWaitFor() {
         return this.waitFor == null ? Input.empty() : this.waitFor;
@@ -329,7 +329,6 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
             this.waitFor = Input.ofNullable(waitFor);
             return this;
         }
-
         public BuildStepArgs build() {
             return new BuildStepArgs(args, dir, entrypoint, env, id, name, script, secretEnv, timeout, volumes, waitFor);
         }

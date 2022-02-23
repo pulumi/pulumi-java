@@ -21,7 +21,7 @@ public final class SystemParameterResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="httpHeader", required=true)
-    private final String httpHeader;
+      private final String httpHeader;
 
     public String getHttpHeader() {
         return this.httpHeader;
@@ -32,7 +32,7 @@ public final class SystemParameterResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class SystemParameterResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="urlQueryParameter", required=true)
-    private final String urlQueryParameter;
+      private final String urlQueryParameter;
 
     public String getUrlQueryParameter() {
         return this.urlQueryParameter;
@@ -102,7 +102,6 @@ public final class SystemParameterResponse extends io.pulumi.resources.InvokeArg
             this.urlQueryParameter = Objects.requireNonNull(urlQueryParameter);
             return this;
         }
-
         public SystemParameterResponse build() {
             return new SystemParameterResponse(httpHeader, name, urlQueryParameter);
         }

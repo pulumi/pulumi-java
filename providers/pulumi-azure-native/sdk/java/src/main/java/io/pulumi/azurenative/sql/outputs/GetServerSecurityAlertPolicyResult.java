@@ -290,7 +290,6 @@ public final class GetServerSecurityAlertPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerSecurityAlertPolicyResult build() {
             return new GetServerSecurityAlertPolicyResult(creationTime, disabledAlerts, emailAccountAdmins, emailAddresses, id, name, retentionDays, state, storageAccountAccessKey, storageEndpoint, systemData, type);
         }

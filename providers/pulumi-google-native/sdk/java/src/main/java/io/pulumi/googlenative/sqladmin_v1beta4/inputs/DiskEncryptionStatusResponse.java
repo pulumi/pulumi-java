@@ -21,7 +21,7 @@ public final class DiskEncryptionStatusResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -32,7 +32,7 @@ public final class DiskEncryptionStatusResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="kmsKeyVersionName", required=true)
-    private final String kmsKeyVersionName;
+      private final String kmsKeyVersionName;
 
     public String getKmsKeyVersionName() {
         return this.kmsKeyVersionName;
@@ -81,7 +81,6 @@ public final class DiskEncryptionStatusResponse extends io.pulumi.resources.Invo
             this.kmsKeyVersionName = Objects.requireNonNull(kmsKeyVersionName);
             return this;
         }
-
         public DiskEncryptionStatusResponse build() {
             return new DiskEncryptionStatusResponse(kind, kmsKeyVersionName);
         }

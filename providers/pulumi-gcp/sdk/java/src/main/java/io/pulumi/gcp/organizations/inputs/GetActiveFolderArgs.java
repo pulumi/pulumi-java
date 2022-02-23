@@ -17,7 +17,7 @@ public final class GetActiveFolderArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+        private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -28,7 +28,7 @@ public final class GetActiveFolderArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-    private final String parent;
+        private final String parent;
 
     public String getParent() {
         return this.parent;
@@ -77,7 +77,6 @@ public final class GetActiveFolderArgs extends io.pulumi.resources.InvokeArgs {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public GetActiveFolderArgs build() {
             return new GetActiveFolderArgs(displayName, parent);
         }

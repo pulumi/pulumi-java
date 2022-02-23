@@ -22,7 +22,7 @@ public final class ContainerServiceSshConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="publicKeys", required=true)
-    private final List<ContainerServiceSshPublicKeyResponse> publicKeys;
+        private final List<ContainerServiceSshPublicKeyResponse> publicKeys;
 
     public List<ContainerServiceSshPublicKeyResponse> getPublicKeys() {
         return this.publicKeys;
@@ -60,7 +60,6 @@ public final class ContainerServiceSshConfigurationResponse extends io.pulumi.re
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
-
         public ContainerServiceSshConfigurationResponse build() {
             return new ContainerServiceSshConfigurationResponse(publicKeys);
         }

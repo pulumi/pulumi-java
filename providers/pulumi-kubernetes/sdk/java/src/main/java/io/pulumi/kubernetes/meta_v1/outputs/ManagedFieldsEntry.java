@@ -182,7 +182,6 @@ public final class ManagedFieldsEntry {
             this.time = time;
             return this;
         }
-
         public ManagedFieldsEntry build() {
             return new ManagedFieldsEntry(apiVersion, fieldsType, fieldsV1, manager, operation, subresource, time);
         }

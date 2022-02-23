@@ -181,7 +181,6 @@ public final class GetServerKeyResult {
             this.uri = uri;
             return this;
         }
-
         public GetServerKeyResult build() {
             return new GetServerKeyResult(creationDate, id, kind, name, serverKeyType, type, uri);
         }

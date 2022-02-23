@@ -13,14 +13,14 @@ public final class EnvelopeSignatureResponse extends io.pulumi.resources.InvokeA
     public static final EnvelopeSignatureResponse Empty = new EnvelopeSignatureResponse();
 
     @InputImport(name="keyid", required=true)
-    private final String keyid;
+      private final String keyid;
 
     public String getKeyid() {
         return this.keyid;
     }
 
     @InputImport(name="sig", required=true)
-    private final String sig;
+      private final String sig;
 
     public String getSig() {
         return this.sig;
@@ -69,7 +69,6 @@ public final class EnvelopeSignatureResponse extends io.pulumi.resources.InvokeA
             this.sig = Objects.requireNonNull(sig);
             return this;
         }
-
         public EnvelopeSignatureResponse build() {
             return new EnvelopeSignatureResponse(keyid, sig);
         }

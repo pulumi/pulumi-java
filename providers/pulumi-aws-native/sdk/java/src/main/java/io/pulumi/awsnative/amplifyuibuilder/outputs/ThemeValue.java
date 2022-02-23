@@ -62,7 +62,6 @@ public final class ThemeValue {
             this.value = value;
             return this;
         }
-
         public ThemeValue build() {
             return new ThemeValue(children, value);
         }

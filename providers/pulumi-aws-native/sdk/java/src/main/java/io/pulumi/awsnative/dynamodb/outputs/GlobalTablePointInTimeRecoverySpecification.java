@@ -46,7 +46,6 @@ public final class GlobalTablePointInTimeRecoverySpecification {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
-
         public GlobalTablePointInTimeRecoverySpecification build() {
             return new GlobalTablePointInTimeRecoverySpecification(pointInTimeRecoveryEnabled);
         }

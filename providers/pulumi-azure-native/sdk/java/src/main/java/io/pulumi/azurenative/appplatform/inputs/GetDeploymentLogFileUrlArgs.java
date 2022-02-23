@@ -17,7 +17,7 @@ public final class GetDeploymentLogFileUrlArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="appName", required=true)
-    private final String appName;
+        private final String appName;
 
     public String getAppName() {
         return this.appName;
@@ -28,7 +28,7 @@ public final class GetDeploymentLogFileUrlArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="deploymentName", required=true)
-    private final String deploymentName;
+        private final String deploymentName;
 
     public String getDeploymentName() {
         return this.deploymentName;
@@ -39,7 +39,7 @@ public final class GetDeploymentLogFileUrlArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetDeploymentLogFileUrlArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -119,7 +119,6 @@ public final class GetDeploymentLogFileUrlArgs extends io.pulumi.resources.Invok
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetDeploymentLogFileUrlArgs build() {
             return new GetDeploymentLogFileUrlArgs(appName, deploymentName, resourceGroupName, serviceName);
         }

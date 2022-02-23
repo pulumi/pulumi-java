@@ -19,7 +19,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="identityName", required=true)
-    private final Input<String> identityName;
+        private final Input<String> identityName;
 
     public Input<String> getIdentityName() {
         return this.identityName;
@@ -30,7 +30,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="identityType", required=true)
-    private final Input<StudioSessionMappingIdentityType> identityType;
+        private final Input<StudioSessionMappingIdentityType> identityType;
 
     public Input<StudioSessionMappingIdentityType> getIdentityType() {
         return this.identityType;
@@ -41,7 +41,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sessionPolicyArn", required=true)
-    private final Input<String> sessionPolicyArn;
+        private final Input<String> sessionPolicyArn;
 
     public Input<String> getSessionPolicyArn() {
         return this.sessionPolicyArn;
@@ -52,7 +52,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="studioId", required=true)
-    private final Input<String> studioId;
+        private final Input<String> studioId;
 
     public Input<String> getStudioId() {
         return this.studioId;
@@ -141,7 +141,6 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
             this.studioId = Input.of(Objects.requireNonNull(studioId));
             return this;
         }
-
         public StudioSessionMappingArgs build() {
             return new StudioSessionMappingArgs(identityName, identityType, sessionPolicyArn, studioId);
         }

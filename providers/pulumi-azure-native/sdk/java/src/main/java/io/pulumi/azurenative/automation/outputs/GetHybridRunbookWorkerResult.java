@@ -245,7 +245,6 @@ public final class GetHybridRunbookWorkerResult {
             this.workerType = workerType;
             return this;
         }
-
         public GetHybridRunbookWorkerResult build() {
             return new GetHybridRunbookWorkerResult(id, ip, lastSeenDateTime, name, registeredDateTime, systemData, type, vmResourceId, workerName, workerType);
         }

@@ -78,7 +78,6 @@ public final class ListListTenantConfigurationViolationResult {
             this.value = value;
             return this;
         }
-
         public ListListTenantConfigurationViolationResult build() {
             return new ListListTenantConfigurationViolationResult(nextLink, value);
         }

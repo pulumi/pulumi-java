@@ -74,7 +74,6 @@ public final class AxisResponse {
             this.scale = Objects.requireNonNull(scale);
             return this;
         }
-
         public AxisResponse build() {
             return new AxisResponse(label, scale);
         }

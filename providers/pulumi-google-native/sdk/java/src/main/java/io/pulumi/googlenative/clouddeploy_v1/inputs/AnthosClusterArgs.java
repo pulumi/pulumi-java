@@ -23,7 +23,7 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="membership")
-    private final @Nullable Input<String> membership;
+      private final @Nullable Input<String> membership;
 
     public Input<String> getMembership() {
         return this.membership == null ? Input.empty() : this.membership;
@@ -66,7 +66,6 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.membership = Input.ofNullable(membership);
             return this;
         }
-
         public AnthosClusterArgs build() {
             return new AnthosClusterArgs(membership);
         }

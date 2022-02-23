@@ -21,7 +21,7 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -59,7 +59,6 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public ServiceAccountResponse build() {
             return new ServiceAccountResponse(email);
         }

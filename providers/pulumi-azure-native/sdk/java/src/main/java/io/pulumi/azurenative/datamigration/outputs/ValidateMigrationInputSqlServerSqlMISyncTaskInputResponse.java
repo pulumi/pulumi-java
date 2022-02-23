@@ -166,7 +166,6 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse build() {
             return new ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse(azureApp, backupFileShare, selectedDatabases, sourceConnectionInfo, storageResourceId, targetConnectionInfo);
         }

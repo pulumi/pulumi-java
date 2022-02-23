@@ -58,7 +58,6 @@ public final class GetBackendBucketCdnPolicyNegativeCachingPolicy {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public GetBackendBucketCdnPolicyNegativeCachingPolicy build() {
             return new GetBackendBucketCdnPolicyNegativeCachingPolicy(code, ttl);
         }

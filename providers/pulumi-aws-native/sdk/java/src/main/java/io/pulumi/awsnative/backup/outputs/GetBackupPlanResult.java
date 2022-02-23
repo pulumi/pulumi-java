@@ -101,7 +101,6 @@ public final class GetBackupPlanResult {
             this.versionId = versionId;
             return this;
         }
-
         public GetBackupPlanResult build() {
             return new GetBackupPlanResult(backupPlan, backupPlanArn, backupPlanId, backupPlanTags, versionId);
         }

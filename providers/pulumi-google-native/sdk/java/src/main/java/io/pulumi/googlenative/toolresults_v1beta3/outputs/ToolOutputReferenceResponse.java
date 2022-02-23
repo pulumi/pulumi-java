@@ -97,7 +97,6 @@ public final class ToolOutputReferenceResponse {
             this.testCase = Objects.requireNonNull(testCase);
             return this;
         }
-
         public ToolOutputReferenceResponse build() {
             return new ToolOutputReferenceResponse(creationTime, output, testCase);
         }

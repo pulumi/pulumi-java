@@ -96,7 +96,6 @@ public final class StandardSqlDataTypeResponse {
             this.typeKind = Objects.requireNonNull(typeKind);
             return this;
         }
-
         public StandardSqlDataTypeResponse build() {
             return new StandardSqlDataTypeResponse(arrayElementType, structType, typeKind);
         }

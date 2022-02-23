@@ -205,7 +205,6 @@ public final class HubspotSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HubspotSourceResponse build() {
             return new HubspotSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

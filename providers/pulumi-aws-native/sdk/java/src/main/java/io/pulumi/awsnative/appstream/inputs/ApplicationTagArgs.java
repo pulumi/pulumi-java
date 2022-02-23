@@ -14,14 +14,14 @@ public final class ApplicationTagArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApplicationTagArgs Empty = new ApplicationTagArgs();
 
     @InputImport(name="tagKey", required=true)
-    private final Input<String> tagKey;
+        private final Input<String> tagKey;
 
     public Input<String> getTagKey() {
         return this.tagKey;
     }
 
     @InputImport(name="tagValue", required=true)
-    private final Input<String> tagValue;
+        private final Input<String> tagValue;
 
     public Input<String> getTagValue() {
         return this.tagValue;
@@ -80,7 +80,6 @@ public final class ApplicationTagArgs extends io.pulumi.resources.ResourceArgs {
             this.tagValue = Input.of(Objects.requireNonNull(tagValue));
             return this;
         }
-
         public ApplicationTagArgs build() {
             return new ApplicationTagArgs(tagKey, tagValue);
         }

@@ -97,7 +97,6 @@ public final class SoftwareRecipeStepInstallMsiResponse {
             this.flags = Objects.requireNonNull(flags);
             return this;
         }
-
         public SoftwareRecipeStepInstallMsiResponse build() {
             return new SoftwareRecipeStepInstallMsiResponse(allowedExitCodes, artifactId, flags);
         }

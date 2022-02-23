@@ -74,7 +74,6 @@ public final class UrlMapTestHeaderResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public UrlMapTestHeaderResponse build() {
             return new UrlMapTestHeaderResponse(name, value);
         }

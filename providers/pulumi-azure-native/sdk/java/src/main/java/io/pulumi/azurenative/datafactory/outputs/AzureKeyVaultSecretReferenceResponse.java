@@ -122,7 +122,6 @@ public final class AzureKeyVaultSecretReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureKeyVaultSecretReferenceResponse build() {
             return new AzureKeyVaultSecretReferenceResponse(secretName, secretVersion, store, type);
         }

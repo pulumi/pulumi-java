@@ -52,7 +52,6 @@ public final class AzureCredentialsResponse {
             this.sasToken = Objects.requireNonNull(sasToken);
             return this;
         }
-
         public AzureCredentialsResponse build() {
             return new AzureCredentialsResponse(sasToken);
         }

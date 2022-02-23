@@ -30,7 +30,6 @@ public final class StreamingImageTags {
         public Builder(StreamingImageTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StreamingImageTags build() {
             return new StreamingImageTags();
         }

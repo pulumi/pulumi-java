@@ -138,7 +138,6 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public OSPolicyResourceRepositoryResourceAptRepositoryResponse build() {
             return new OSPolicyResourceRepositoryResourceAptRepositoryResponse(archiveType, components, distribution, gpgKey, uri);
         }

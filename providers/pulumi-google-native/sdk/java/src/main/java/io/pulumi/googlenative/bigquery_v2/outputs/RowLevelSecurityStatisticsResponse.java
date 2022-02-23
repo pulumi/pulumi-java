@@ -52,7 +52,6 @@ public final class RowLevelSecurityStatisticsResponse {
             this.rowLevelSecurityApplied = Objects.requireNonNull(rowLevelSecurityApplied);
             return this;
         }
-
         public RowLevelSecurityStatisticsResponse build() {
             return new RowLevelSecurityStatisticsResponse(rowLevelSecurityApplied);
         }

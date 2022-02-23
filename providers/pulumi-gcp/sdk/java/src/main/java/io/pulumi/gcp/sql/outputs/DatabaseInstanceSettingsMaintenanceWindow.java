@@ -100,7 +100,6 @@ public final class DatabaseInstanceSettingsMaintenanceWindow {
             this.updateTrack = updateTrack;
             return this;
         }
-
         public DatabaseInstanceSettingsMaintenanceWindow build() {
             return new DatabaseInstanceSettingsMaintenanceWindow(day, hour, updateTrack);
         }

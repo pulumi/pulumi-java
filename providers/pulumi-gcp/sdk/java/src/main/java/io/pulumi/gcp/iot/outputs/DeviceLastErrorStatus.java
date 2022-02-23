@@ -77,7 +77,6 @@ public final class DeviceLastErrorStatus {
             this.number = number;
             return this;
         }
-
         public DeviceLastErrorStatus build() {
             return new DeviceLastErrorStatus(details, message, number);
         }

@@ -24,7 +24,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+        private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -35,7 +35,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="loadBalancerFrontendIPConfiguration")
-    private final @Nullable Input<SubResourceArgs> loadBalancerFrontendIPConfiguration;
+        private final @Nullable Input<SubResourceArgs> loadBalancerFrontendIPConfiguration;
 
     public Input<SubResourceArgs> getLoadBalancerFrontendIPConfiguration() {
         return this.loadBalancerFrontendIPConfiguration == null ? Input.empty() : this.loadBalancerFrontendIPConfiguration;
@@ -46,7 +46,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubResourceArgs> subnet;
+        private final @Nullable Input<SubResourceArgs> subnet;
 
     public Input<SubResourceArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -68,7 +68,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="virtualNetwork")
-    private final @Nullable Input<SubResourceArgs> virtualNetwork;
+        private final @Nullable Input<SubResourceArgs> virtualNetwork;
 
     public Input<SubResourceArgs> getVirtualNetwork() {
         return this.virtualNetwork == null ? Input.empty() : this.virtualNetwork;
@@ -172,7 +172,6 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
             this.virtualNetwork = Input.ofNullable(virtualNetwork);
             return this;
         }
-
         public LoadBalancerBackendAddressArgs build() {
             return new LoadBalancerBackendAddressArgs(ipAddress, loadBalancerFrontendIPConfiguration, name, subnet, virtualNetwork);
         }

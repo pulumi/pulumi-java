@@ -58,7 +58,6 @@ public final class TableTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TableTag build() {
             return new TableTag(key, value);
         }

@@ -88,7 +88,6 @@ public final class GetClusterClusterAutoscaling {
             this.resourceLimits = Objects.requireNonNull(resourceLimits);
             return this;
         }
-
         public GetClusterClusterAutoscaling build() {
             return new GetClusterClusterAutoscaling(autoProvisioningDefaults, autoscalingProfile, enabled, resourceLimits);
         }

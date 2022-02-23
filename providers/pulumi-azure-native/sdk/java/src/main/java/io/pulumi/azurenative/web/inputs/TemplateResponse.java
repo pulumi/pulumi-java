@@ -29,7 +29,7 @@ public final class TemplateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="containers")
-    private final @Nullable List<ContainerResponse> containers;
+        private final @Nullable List<ContainerResponse> containers;
 
     public List<ContainerResponse> getContainers() {
         return this.containers == null ? List.of() : this.containers;
@@ -40,7 +40,7 @@ public final class TemplateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dapr")
-    private final @Nullable DaprResponse dapr;
+        private final @Nullable DaprResponse dapr;
 
     public Optional<DaprResponse> getDapr() {
         return this.dapr == null ? Optional.empty() : Optional.ofNullable(this.dapr);
@@ -51,7 +51,7 @@ public final class TemplateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="revisionSuffix")
-    private final @Nullable String revisionSuffix;
+        private final @Nullable String revisionSuffix;
 
     public Optional<String> getRevisionSuffix() {
         return this.revisionSuffix == null ? Optional.empty() : Optional.ofNullable(this.revisionSuffix);
@@ -62,7 +62,7 @@ public final class TemplateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scale")
-    private final @Nullable ScaleResponse scale;
+        private final @Nullable ScaleResponse scale;
 
     public Optional<ScaleResponse> getScale() {
         return this.scale == null ? Optional.empty() : Optional.ofNullable(this.scale);
@@ -131,7 +131,6 @@ public final class TemplateResponse extends io.pulumi.resources.InvokeArgs {
             this.scale = scale;
             return this;
         }
-
         public TemplateResponse build() {
             return new TemplateResponse(containers, dapr, revisionSuffix, scale);
         }

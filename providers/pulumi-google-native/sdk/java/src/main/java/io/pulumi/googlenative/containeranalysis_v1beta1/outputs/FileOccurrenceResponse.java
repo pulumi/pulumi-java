@@ -181,7 +181,6 @@ public final class FileOccurrenceResponse {
             this.notice = Objects.requireNonNull(notice);
             return this;
         }
-
         public FileOccurrenceResponse build() {
             return new FileOccurrenceResponse(attributions, comment, contributors, copyright, filesLicenseInfo, licenseConcluded, notice);
         }

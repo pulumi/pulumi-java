@@ -97,7 +97,6 @@ public final class GoogleCloudDialogflowV2ContextResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public GoogleCloudDialogflowV2ContextResponse build() {
             return new GoogleCloudDialogflowV2ContextResponse(lifespanCount, name, parameters);
         }

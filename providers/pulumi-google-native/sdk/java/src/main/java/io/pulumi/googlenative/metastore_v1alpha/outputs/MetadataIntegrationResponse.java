@@ -75,7 +75,6 @@ public final class MetadataIntegrationResponse {
             this.dataplexConfig = Objects.requireNonNull(dataplexConfig);
             return this;
         }
-
         public MetadataIntegrationResponse build() {
             return new MetadataIntegrationResponse(dataCatalogConfig, dataplexConfig);
         }

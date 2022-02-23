@@ -21,7 +21,7 @@ public final class DateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="day", required=true)
-    private final Integer day;
+      private final Integer day;
 
     public Integer getDay() {
         return this.day;
@@ -32,7 +32,7 @@ public final class DateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="month", required=true)
-    private final Integer month;
+      private final Integer month;
 
     public Integer getMonth() {
         return this.month;
@@ -43,7 +43,7 @@ public final class DateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="year", required=true)
-    private final Integer year;
+      private final Integer year;
 
     public Integer getYear() {
         return this.year;
@@ -102,7 +102,6 @@ public final class DateResponse extends io.pulumi.resources.InvokeArgs {
             this.year = Objects.requireNonNull(year);
             return this;
         }
-
         public DateResponse build() {
             return new DateResponse(day, month, year);
         }

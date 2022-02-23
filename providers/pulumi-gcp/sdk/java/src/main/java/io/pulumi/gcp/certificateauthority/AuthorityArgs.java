@@ -23,7 +23,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthorityId", required=true)
-    private final Input<String> certificateAuthorityId;
+        private final Input<String> certificateAuthorityId;
 
     public Input<String> getCertificateAuthorityId() {
         return this.certificateAuthorityId;
@@ -35,7 +35,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<AuthorityConfigArgs> config;
+        private final Input<AuthorityConfigArgs> config;
 
     public Input<AuthorityConfigArgs> getConfig() {
         return this.config;
@@ -50,7 +50,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsBucket")
-    private final @Nullable Input<String> gcsBucket;
+        private final @Nullable Input<String> gcsBucket;
 
     public Input<String> getGcsBucket() {
         return this.gcsBucket == null ? Input.empty() : this.gcsBucket;
@@ -62,7 +62,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreActiveCertificatesOnDeletion")
-    private final @Nullable Input<Boolean> ignoreActiveCertificatesOnDeletion;
+        private final @Nullable Input<Boolean> ignoreActiveCertificatesOnDeletion;
 
     public Input<Boolean> getIgnoreActiveCertificatesOnDeletion() {
         return this.ignoreActiveCertificatesOnDeletion == null ? Input.empty() : this.ignoreActiveCertificatesOnDeletion;
@@ -76,7 +76,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keySpec", required=true)
-    private final Input<AuthorityKeySpecArgs> keySpec;
+        private final Input<AuthorityKeySpecArgs> keySpec;
 
     public Input<AuthorityKeySpecArgs> getKeySpec() {
         return this.keySpec;
@@ -89,7 +89,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -102,7 +102,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifetime")
-    private final @Nullable Input<String> lifetime;
+        private final @Nullable Input<String> lifetime;
 
     public Input<String> getLifetime() {
         return this.lifetime == null ? Input.empty() : this.lifetime;
@@ -114,7 +114,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+        private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -125,7 +125,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pool", required=true)
-    private final Input<String> pool;
+        private final Input<String> pool;
 
     public Input<String> getPool() {
         return this.pool;
@@ -137,7 +137,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -153,7 +153,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -347,7 +347,6 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public AuthorityArgs build() {
             return new AuthorityArgs(certificateAuthorityId, config, gcsBucket, ignoreActiveCertificatesOnDeletion, keySpec, labels, lifetime, location, pool, project, type);
         }

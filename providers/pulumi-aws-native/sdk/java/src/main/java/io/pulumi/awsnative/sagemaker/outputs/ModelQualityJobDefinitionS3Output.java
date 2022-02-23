@@ -98,7 +98,6 @@ public final class ModelQualityJobDefinitionS3Output {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public ModelQualityJobDefinitionS3Output build() {
             return new ModelQualityJobDefinitionS3Output(localPath, s3UploadMode, s3Uri);
         }

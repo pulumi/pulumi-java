@@ -74,7 +74,6 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleDatastoreAdminV1IndexedPropertyResponse build() {
             return new GoogleDatastoreAdminV1IndexedPropertyResponse(direction, name);
         }

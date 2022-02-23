@@ -75,7 +75,6 @@ public final class InstanceFailoverReplicaResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public InstanceFailoverReplicaResponse build() {
             return new InstanceFailoverReplicaResponse(available, name);
         }

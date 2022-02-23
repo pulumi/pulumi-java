@@ -181,7 +181,6 @@ public final class RedirectConfigurationResponse {
             this.redirectType = redirectType;
             return this;
         }
-
         public RedirectConfigurationResponse build() {
             return new RedirectConfigurationResponse(customFragment, customHost, customPath, customQueryString, odataType, redirectProtocol, redirectType);
         }

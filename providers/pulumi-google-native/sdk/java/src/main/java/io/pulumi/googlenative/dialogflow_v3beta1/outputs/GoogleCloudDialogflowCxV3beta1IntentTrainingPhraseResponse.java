@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse {
             this.repeatCount = Objects.requireNonNull(repeatCount);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse build() {
             return new GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse(parts, repeatCount);
         }

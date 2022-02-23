@@ -25,7 +25,7 @@ public final class OriginEndpointCmafEncryption extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="constantInitializationVector")
-    private final @Nullable String constantInitializationVector;
+        private final @Nullable String constantInitializationVector;
 
     public Optional<String> getConstantInitializationVector() {
         return this.constantInitializationVector == null ? Optional.empty() : Optional.ofNullable(this.constantInitializationVector);
@@ -36,14 +36,14 @@ public final class OriginEndpointCmafEncryption extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="keyRotationIntervalSeconds")
-    private final @Nullable Integer keyRotationIntervalSeconds;
+        private final @Nullable Integer keyRotationIntervalSeconds;
 
     public Optional<Integer> getKeyRotationIntervalSeconds() {
         return this.keyRotationIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
 
     @InputImport(name="spekeKeyProvider", required=true)
-    private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
+        private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
     public OriginEndpointSpekeKeyProvider getSpekeKeyProvider() {
         return this.spekeKeyProvider;
@@ -102,7 +102,6 @@ public final class OriginEndpointCmafEncryption extends io.pulumi.resources.Invo
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public OriginEndpointCmafEncryption build() {
             return new OriginEndpointCmafEncryption(constantInitializationVector, keyRotationIntervalSeconds, spekeKeyProvider);
         }

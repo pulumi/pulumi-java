@@ -265,7 +265,6 @@ public final class GetEndpointResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(createTime, description, endpointForwardingRule, endpointIp, labels, name, network, severity, state, trafficLogs, updateTime);
         }

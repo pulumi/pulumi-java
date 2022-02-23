@@ -18,7 +18,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKi
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -61,7 +61,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKi
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs(name);
         }

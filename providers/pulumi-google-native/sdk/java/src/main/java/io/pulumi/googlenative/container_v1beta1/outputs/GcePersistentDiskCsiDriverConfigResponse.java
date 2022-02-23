@@ -52,7 +52,6 @@ public final class GcePersistentDiskCsiDriverConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GcePersistentDiskCsiDriverConfigResponse build() {
             return new GcePersistentDiskCsiDriverConfigResponse(enabled);
         }

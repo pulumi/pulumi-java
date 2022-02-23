@@ -54,7 +54,6 @@ public final class MarkdownPartMetadataResponseSettings {
             this.content = content;
             return this;
         }
-
         public MarkdownPartMetadataResponseSettings build() {
             return new MarkdownPartMetadataResponseSettings(content);
         }

@@ -74,7 +74,6 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudRunOpV2SecretKeySelectorResponse build() {
             return new GoogleCloudRunOpV2SecretKeySelectorResponse(secret, version);
         }

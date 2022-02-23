@@ -74,7 +74,6 @@ public final class RetryPolicyResponse {
             this.minimumBackoff = Objects.requireNonNull(minimumBackoff);
             return this;
         }
-
         public RetryPolicyResponse build() {
             return new RetryPolicyResponse(maximumBackoff, minimumBackoff);
         }

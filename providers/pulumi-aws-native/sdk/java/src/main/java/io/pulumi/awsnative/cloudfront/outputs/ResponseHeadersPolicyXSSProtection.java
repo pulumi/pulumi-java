@@ -87,7 +87,6 @@ public final class ResponseHeadersPolicyXSSProtection {
             this.reportUri = reportUri;
             return this;
         }
-
         public ResponseHeadersPolicyXSSProtection build() {
             return new ResponseHeadersPolicyXSSProtection(modeBlock, override, protection, reportUri);
         }

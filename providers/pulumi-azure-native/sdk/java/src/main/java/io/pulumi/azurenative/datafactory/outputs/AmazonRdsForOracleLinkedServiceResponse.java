@@ -212,7 +212,6 @@ public final class AmazonRdsForOracleLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonRdsForOracleLinkedServiceResponse build() {
             return new AmazonRdsForOracleLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type);
         }

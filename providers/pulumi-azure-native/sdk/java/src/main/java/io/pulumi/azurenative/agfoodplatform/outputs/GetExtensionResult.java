@@ -243,7 +243,6 @@ public final class GetExtensionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExtensionResult build() {
             return new GetExtensionResult(eTag, extensionApiDocsLink, extensionAuthLink, extensionCategory, extensionId, id, installedExtensionVersion, name, systemData, type);
         }

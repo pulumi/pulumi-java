@@ -53,7 +53,6 @@ public final class WorkflowTemplateJobSparkSqlJobQueryList {
             this.queries = Objects.requireNonNull(queries);
             return this;
         }
-
         public WorkflowTemplateJobSparkSqlJobQueryList build() {
             return new WorkflowTemplateJobSparkSqlJobQueryList(queries);
         }

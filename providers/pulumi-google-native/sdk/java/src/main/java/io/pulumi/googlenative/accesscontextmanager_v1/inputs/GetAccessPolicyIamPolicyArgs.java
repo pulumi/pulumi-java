@@ -13,7 +13,7 @@ public final class GetAccessPolicyIamPolicyArgs extends io.pulumi.resources.Invo
     public static final GetAccessPolicyIamPolicyArgs Empty = new GetAccessPolicyIamPolicyArgs();
 
     @InputImport(name="accessPolicyId", required=true)
-    private final String accessPolicyId;
+      private final String accessPolicyId;
 
     public String getAccessPolicyId() {
         return this.accessPolicyId;
@@ -51,7 +51,6 @@ public final class GetAccessPolicyIamPolicyArgs extends io.pulumi.resources.Invo
             this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
             return this;
         }
-
         public GetAccessPolicyIamPolicyArgs build() {
             return new GetAccessPolicyIamPolicyArgs(accessPolicyId);
         }

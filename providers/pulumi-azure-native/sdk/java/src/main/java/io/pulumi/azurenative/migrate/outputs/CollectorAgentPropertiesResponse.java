@@ -87,7 +87,6 @@ public final class CollectorAgentPropertiesResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public CollectorAgentPropertiesResponse build() {
             return new CollectorAgentPropertiesResponse(id, lastHeartbeatUtc, spnDetails, version);
         }

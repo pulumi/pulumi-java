@@ -21,7 +21,7 @@ public final class DeliveryConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="deliveryRequirement", required=true)
-    private final String deliveryRequirement;
+      private final String deliveryRequirement;
 
     public String getDeliveryRequirement() {
         return this.deliveryRequirement;
@@ -59,7 +59,6 @@ public final class DeliveryConfigResponse extends io.pulumi.resources.InvokeArgs
             this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
             return this;
         }
-
         public DeliveryConfigResponse build() {
             return new DeliveryConfigResponse(deliveryRequirement);
         }

@@ -20,7 +20,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customerManagedKey")
-    private final @Nullable Input<Boolean> customerManagedKey;
+        private final @Nullable Input<Boolean> customerManagedKey;
 
     public Input<Boolean> getCustomerManagedKey() {
         return this.customerManagedKey == null ? Input.empty() : this.customerManagedKey;
@@ -31,7 +31,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final Input<String> operationalInsightsResourceProvider;
+        private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -42,7 +42,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sentinelOnboardingStateName")
-    private final @Nullable Input<String> sentinelOnboardingStateName;
+        private final @Nullable Input<String> sentinelOnboardingStateName;
 
     public Input<String> getSentinelOnboardingStateName() {
         return this.sentinelOnboardingStateName == null ? Input.empty() : this.sentinelOnboardingStateName;
@@ -64,7 +64,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -168,7 +168,6 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public SentinelOnboardingStateArgs build() {
             return new SentinelOnboardingStateArgs(customerManagedKey, operationalInsightsResourceProvider, resourceGroupName, sentinelOnboardingStateName, workspaceName);
         }

@@ -60,7 +60,6 @@ public final class SigningProfileTag {
             this.value = value;
             return this;
         }
-
         public SigningProfileTag build() {
             return new SigningProfileTag(key, value);
         }

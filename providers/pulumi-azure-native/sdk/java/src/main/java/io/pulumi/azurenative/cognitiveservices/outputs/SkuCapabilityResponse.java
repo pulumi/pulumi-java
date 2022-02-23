@@ -76,7 +76,6 @@ public final class SkuCapabilityResponse {
             this.value = value;
             return this;
         }
-
         public SkuCapabilityResponse build() {
             return new SkuCapabilityResponse(name, value);
         }

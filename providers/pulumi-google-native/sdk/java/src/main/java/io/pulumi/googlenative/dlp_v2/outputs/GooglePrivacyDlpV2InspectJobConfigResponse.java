@@ -120,7 +120,6 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse {
             this.storageConfig = Objects.requireNonNull(storageConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectJobConfigResponse build() {
             return new GooglePrivacyDlpV2InspectJobConfigResponse(actions, inspectConfig, inspectTemplateName, storageConfig);
         }

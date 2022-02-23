@@ -25,7 +25,7 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<List<AutoscaleScheduleArgs>> schedule;
+        private final @Nullable Input<List<AutoscaleScheduleArgs>> schedule;
 
     public Input<List<AutoscaleScheduleArgs>> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -36,7 +36,7 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+        private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -95,7 +95,6 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
-
         public AutoscaleRecurrenceArgs build() {
             return new AutoscaleRecurrenceArgs(schedule, timeZone);
         }

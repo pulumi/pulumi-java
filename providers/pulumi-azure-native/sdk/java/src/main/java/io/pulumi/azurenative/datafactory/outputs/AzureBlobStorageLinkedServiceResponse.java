@@ -402,7 +402,6 @@ public final class AzureBlobStorageLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureBlobStorageLinkedServiceResponse build() {
             return new AzureBlobStorageLinkedServiceResponse(accountKey, accountKind, annotations, azureCloudType, connectVia, connectionString, credential, description, encryptedCredential, parameters, sasToken, sasUri, serviceEndpoint, servicePrincipalId, servicePrincipalKey, tenant, type);
         }

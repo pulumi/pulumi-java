@@ -633,7 +633,6 @@ public final class GetBuildResult {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-
         public GetBuildResult build() {
             return new GetBuildResult(approval, artifacts, availableSecrets, buildTriggerId, createTime, failureInfo, finishTime, images, logUrl, logsBucket, name, options, project, queueTtl, results, secrets, serviceAccount, source, sourceProvenance, startTime, status, statusDetail, steps, substitutions, tags, timeout, timing, warnings);
         }

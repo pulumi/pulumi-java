@@ -23,7 +23,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -45,7 +45,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="versionHeaderName")
-    private final @Nullable Input<String> versionHeaderName;
+        private final @Nullable Input<String> versionHeaderName;
 
     public Input<String> getVersionHeaderName() {
         return this.versionHeaderName == null ? Input.empty() : this.versionHeaderName;
@@ -67,7 +67,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="versionQueryName")
-    private final @Nullable Input<String> versionQueryName;
+        private final @Nullable Input<String> versionQueryName;
 
     public Input<String> getVersionQueryName() {
         return this.versionQueryName == null ? Input.empty() : this.versionQueryName;
@@ -78,7 +78,7 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="versioningScheme")
-    private final @Nullable Input<String> versioningScheme;
+        private final @Nullable Input<String> versioningScheme;
 
     public Input<String> getVersioningScheme() {
         return this.versioningScheme == null ? Input.empty() : this.versioningScheme;
@@ -197,7 +197,6 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
             this.versioningScheme = Input.ofNullable(versioningScheme);
             return this;
         }
-
         public ApiVersionSetContractDetailsArgs build() {
             return new ApiVersionSetContractDetailsArgs(description, id, name, versionHeaderName, versionQueryName, versioningScheme);
         }

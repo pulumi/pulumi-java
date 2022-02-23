@@ -23,7 +23,7 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userServiceAccountMapping", required=true)
-    private final Input<Map<String,String>> userServiceAccountMapping;
+      private final Input<Map<String,String>> userServiceAccountMapping;
 
     public Input<Map<String,String>> getUserServiceAccountMapping() {
         return this.userServiceAccountMapping;
@@ -66,7 +66,6 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.userServiceAccountMapping = Input.of(Objects.requireNonNull(userServiceAccountMapping));
             return this;
         }
-
         public IdentityConfigArgs build() {
             return new IdentityConfigArgs(userServiceAccountMapping);
         }

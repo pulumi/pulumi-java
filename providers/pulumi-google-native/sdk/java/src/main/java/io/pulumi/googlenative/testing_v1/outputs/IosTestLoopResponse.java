@@ -98,7 +98,6 @@ public final class IosTestLoopResponse {
             this.scenarios = Objects.requireNonNull(scenarios);
             return this;
         }
-
         public IosTestLoopResponse build() {
             return new IosTestLoopResponse(appBundleId, appIpa, scenarios);
         }

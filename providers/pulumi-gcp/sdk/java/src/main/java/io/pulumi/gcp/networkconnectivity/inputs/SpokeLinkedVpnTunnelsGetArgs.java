@@ -20,7 +20,7 @@ public final class SpokeLinkedVpnTunnelsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="siteToSiteDataTransfer", required=true)
-    private final Input<Boolean> siteToSiteDataTransfer;
+        private final Input<Boolean> siteToSiteDataTransfer;
 
     public Input<Boolean> getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
@@ -31,7 +31,7 @@ public final class SpokeLinkedVpnTunnelsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="uris", required=true)
-    private final Input<List<String>> uris;
+        private final Input<List<String>> uris;
 
     public Input<List<String>> getUris() {
         return this.uris;
@@ -90,7 +90,6 @@ public final class SpokeLinkedVpnTunnelsGetArgs extends io.pulumi.resources.Reso
             this.uris = Input.of(Objects.requireNonNull(uris));
             return this;
         }
-
         public SpokeLinkedVpnTunnelsGetArgs build() {
             return new SpokeLinkedVpnTunnelsGetArgs(siteToSiteDataTransfer, uris);
         }

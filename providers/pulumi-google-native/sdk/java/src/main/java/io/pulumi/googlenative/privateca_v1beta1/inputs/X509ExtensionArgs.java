@@ -24,7 +24,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="critical", required=true)
-    private final Input<Boolean> critical;
+      private final Input<Boolean> critical;
 
     public Input<Boolean> getCritical() {
         return this.critical;
@@ -35,7 +35,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<ObjectIdArgs> objectId;
+      private final Input<ObjectIdArgs> objectId;
 
     public Input<ObjectIdArgs> getObjectId() {
         return this.objectId;
@@ -46,7 +46,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -120,7 +120,6 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public X509ExtensionArgs build() {
             return new X509ExtensionArgs(critical, objectId, value);
         }

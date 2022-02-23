@@ -44,7 +44,6 @@ public final class GetClusterVerticalPodAutoscaling {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetClusterVerticalPodAutoscaling build() {
             return new GetClusterVerticalPodAutoscaling(enabled);
         }

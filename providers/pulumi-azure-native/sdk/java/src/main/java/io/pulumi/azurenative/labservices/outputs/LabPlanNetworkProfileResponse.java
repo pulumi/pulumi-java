@@ -54,7 +54,6 @@ public final class LabPlanNetworkProfileResponse {
             this.subnetId = subnetId;
             return this;
         }
-
         public LabPlanNetworkProfileResponse build() {
             return new LabPlanNetworkProfileResponse(subnetId);
         }

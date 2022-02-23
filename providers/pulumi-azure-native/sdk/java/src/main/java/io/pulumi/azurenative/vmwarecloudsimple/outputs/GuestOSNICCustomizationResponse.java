@@ -182,7 +182,6 @@ public final class GuestOSNICCustomizationResponse {
             this.secondaryWinsServer = secondaryWinsServer;
             return this;
         }
-
         public GuestOSNICCustomizationResponse build() {
             return new GuestOSNICCustomizationResponse(allocation, dnsServers, gateway, ipAddress, mask, primaryWinsServer, secondaryWinsServer);
         }

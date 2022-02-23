@@ -100,7 +100,6 @@ public final class DistributionViewerCertificate {
             this.sslSupportMethod = sslSupportMethod;
             return this;
         }
-
         public DistributionViewerCertificate build() {
             return new DistributionViewerCertificate(acmCertificateArn, cloudFrontDefaultCertificate, iamCertificateId, minimumProtocolVersion, sslSupportMethod);
         }

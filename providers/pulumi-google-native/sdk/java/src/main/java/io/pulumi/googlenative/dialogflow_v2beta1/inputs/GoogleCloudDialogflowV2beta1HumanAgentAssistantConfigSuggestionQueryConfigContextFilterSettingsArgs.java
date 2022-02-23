@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="dropHandoffMessages")
-    private final @Nullable Input<Boolean> dropHandoffMessages;
+      private final @Nullable Input<Boolean> dropHandoffMessages;
 
     public Input<Boolean> getDropHandoffMessages() {
         return this.dropHandoffMessages == null ? Input.empty() : this.dropHandoffMessages;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="dropIvrMessages")
-    private final @Nullable Input<Boolean> dropIvrMessages;
+      private final @Nullable Input<Boolean> dropIvrMessages;
 
     public Input<Boolean> getDropIvrMessages() {
         return this.dropIvrMessages == null ? Input.empty() : this.dropIvrMessages;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="dropVirtualAgentMessages")
-    private final @Nullable Input<Boolean> dropVirtualAgentMessages;
+      private final @Nullable Input<Boolean> dropVirtualAgentMessages;
 
     public Input<Boolean> getDropVirtualAgentMessages() {
         return this.dropVirtualAgentMessages == null ? Input.empty() : this.dropVirtualAgentMessages;
@@ -119,7 +119,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             this.dropVirtualAgentMessages = Input.ofNullable(dropVirtualAgentMessages);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs(dropHandoffMessages, dropIvrMessages, dropVirtualAgentMessages);
         }

@@ -25,7 +25,7 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+        private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -36,7 +36,7 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -47,7 +47,7 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="secretRef")
-    private final @Nullable Input<LocalObjectReferenceArgs> secretRef;
+        private final @Nullable Input<LocalObjectReferenceArgs> secretRef;
 
     public Input<LocalObjectReferenceArgs> getSecretRef() {
         return this.secretRef == null ? Input.empty() : this.secretRef;
@@ -58,7 +58,7 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="volumeID", required=true)
-    private final Input<String> volumeID;
+        private final Input<String> volumeID;
 
     public Input<String> getVolumeID() {
         return this.volumeID;
@@ -147,7 +147,6 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
             this.volumeID = Input.of(Objects.requireNonNull(volumeID));
             return this;
         }
-
         public CinderVolumeSourceArgs build() {
             return new CinderVolumeSourceArgs(fsType, readOnly, secretRef, volumeID);
         }

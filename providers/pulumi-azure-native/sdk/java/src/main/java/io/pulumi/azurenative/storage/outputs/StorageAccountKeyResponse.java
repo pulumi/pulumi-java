@@ -116,7 +116,6 @@ public final class StorageAccountKeyResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StorageAccountKeyResponse build() {
             return new StorageAccountKeyResponse(creationTime, keyName, permissions, value);
         }

@@ -61,7 +61,6 @@ public final class JobColumnStatisticsConfiguration {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }
-
         public JobColumnStatisticsConfiguration build() {
             return new JobColumnStatisticsConfiguration(selectors, statistics);
         }

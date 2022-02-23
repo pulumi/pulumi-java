@@ -222,7 +222,6 @@ public final class GetServerKeyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerKeyResult build() {
             return new GetServerKeyResult(autoRotationEnabled, creationDate, id, kind, location, name, subregion, thumbprint, type);
         }

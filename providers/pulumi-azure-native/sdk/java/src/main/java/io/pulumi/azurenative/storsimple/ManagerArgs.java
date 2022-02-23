@@ -22,7 +22,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cisIntrinsicSettings")
-    private final @Nullable Input<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings;
+        private final @Nullable Input<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings;
 
     public Input<ManagerIntrinsicSettingsArgs> getCisIntrinsicSettings() {
         return this.cisIntrinsicSettings == null ? Input.empty() : this.cisIntrinsicSettings;
@@ -33,7 +33,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -44,7 +44,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managerName")
-    private final @Nullable Input<String> managerName;
+        private final @Nullable Input<String> managerName;
 
     public Input<String> getManagerName() {
         return this.managerName == null ? Input.empty() : this.managerName;
@@ -55,7 +55,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<String> provisioningState;
+        private final @Nullable Input<String> provisioningState;
 
     public Input<String> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -66,7 +66,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<ManagerSkuArgs> sku;
+        private final @Nullable Input<ManagerSkuArgs> sku;
 
     public Input<ManagerSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -88,7 +88,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -222,7 +222,6 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ManagerArgs build() {
             return new ManagerArgs(cisIntrinsicSettings, location, managerName, provisioningState, resourceGroupName, sku, tags);
         }

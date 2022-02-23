@@ -30,7 +30,6 @@ public final class GooglePrivacyDlpV2SurrogateTypeResponse {
         public Builder(GooglePrivacyDlpV2SurrogateTypeResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2SurrogateTypeResponse build() {
             return new GooglePrivacyDlpV2SurrogateTypeResponse();
         }

@@ -21,7 +21,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupArgs extends io.pulumi
      * 
      */
     @InputImport(name="inventoryFilters")
-    private final @Nullable Input<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs>> inventoryFilters;
+        private final @Nullable Input<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs>> inventoryFilters;
 
     public Input<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs>> getInventoryFilters() {
         return this.inventoryFilters == null ? Input.empty() : this.inventoryFilters;
@@ -32,7 +32,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupArgs extends io.pulumi
      * 
      */
     @InputImport(name="resources", required=true)
-    private final Input<List<OsPolicyAssignmentOsPolicyResourceGroupResourceArgs>> resources;
+        private final Input<List<OsPolicyAssignmentOsPolicyResourceGroupResourceArgs>> resources;
 
     public Input<List<OsPolicyAssignmentOsPolicyResourceGroupResourceArgs>> getResources() {
         return this.resources;
@@ -91,7 +91,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupArgs extends io.pulumi
             this.resources = Input.of(Objects.requireNonNull(resources));
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupArgs(inventoryFilters, resources);
         }

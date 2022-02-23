@@ -21,7 +21,7 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -37,7 +37,7 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="urlMask")
-    private final @Nullable Input<String> urlMask;
+        private final @Nullable Input<String> urlMask;
 
     public Input<String> getUrlMask() {
         return this.urlMask == null ? Input.empty() : this.urlMask;
@@ -50,7 +50,7 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -124,7 +124,6 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public RegionNetworkEndpointGroupAppEngineArgs build() {
             return new RegionNetworkEndpointGroupAppEngineArgs(service, urlMask, version);
         }

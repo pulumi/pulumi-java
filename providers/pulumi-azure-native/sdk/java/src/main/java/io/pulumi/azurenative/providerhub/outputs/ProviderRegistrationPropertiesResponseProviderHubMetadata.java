@@ -76,7 +76,6 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata {
             this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
             return this;
         }
-
         public ProviderRegistrationPropertiesResponseProviderHubMetadata build() {
             return new ProviderRegistrationPropertiesResponseProviderHubMetadata(providerAuthentication, providerAuthorizations, thirdPartyProviderAuthorization);
         }

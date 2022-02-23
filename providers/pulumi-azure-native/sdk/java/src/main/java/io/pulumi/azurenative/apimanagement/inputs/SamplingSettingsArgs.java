@@ -26,7 +26,7 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="percentage")
-    private final @Nullable Input<Double> percentage;
+        private final @Nullable Input<Double> percentage;
 
     public Input<Double> getPercentage() {
         return this.percentage == null ? Input.empty() : this.percentage;
@@ -37,7 +37,7 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="samplingType")
-    private final @Nullable Input<Either<String,SamplingType>> samplingType;
+        private final @Nullable Input<Either<String,SamplingType>> samplingType;
 
     public Input<Either<String,SamplingType>> getSamplingType() {
         return this.samplingType == null ? Input.empty() : this.samplingType;
@@ -96,7 +96,6 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.samplingType = Input.ofNullable(samplingType);
             return this;
         }
-
         public SamplingSettingsArgs build() {
             return new SamplingSettingsArgs(percentage, samplingType);
         }

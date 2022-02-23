@@ -84,7 +84,6 @@ public final class OperationsDefinitionResponseDisplay {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public OperationsDefinitionResponseDisplay build() {
             return new OperationsDefinitionResponseDisplay(description, operation, provider, resource);
         }

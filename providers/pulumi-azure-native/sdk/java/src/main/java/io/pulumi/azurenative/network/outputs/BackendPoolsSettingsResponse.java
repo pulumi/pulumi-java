@@ -77,7 +77,6 @@ public final class BackendPoolsSettingsResponse {
             this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
             return this;
         }
-
         public BackendPoolsSettingsResponse build() {
             return new BackendPoolsSettingsResponse(enforceCertificateNameCheck, sendRecvTimeoutSeconds);
         }

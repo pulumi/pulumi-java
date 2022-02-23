@@ -24,7 +24,7 @@ public final class ManagedIdentitySettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable String resource;
+        private final @Nullable String resource;
 
     public Optional<String> getResource() {
         return this.resource == null ? Optional.empty() : Optional.ofNullable(this.resource);
@@ -62,7 +62,6 @@ public final class ManagedIdentitySettingsResponse extends io.pulumi.resources.I
             this.resource = resource;
             return this;
         }
-
         public ManagedIdentitySettingsResponse build() {
             return new ManagedIdentitySettingsResponse(resource);
         }

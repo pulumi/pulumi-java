@@ -15,7 +15,7 @@ public final class RuleGroupLabelSummary extends io.pulumi.resources.InvokeArgs 
     public static final RuleGroupLabelSummary Empty = new RuleGroupLabelSummary();
 
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -53,7 +53,6 @@ public final class RuleGroupLabelSummary extends io.pulumi.resources.InvokeArgs 
             this.name = name;
             return this;
         }
-
         public RuleGroupLabelSummary build() {
             return new RuleGroupLabelSummary(name);
         }

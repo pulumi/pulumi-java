@@ -21,7 +21,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="importance")
-    private final @Nullable Input<String> importance;
+        private final @Nullable Input<String> importance;
 
     public Input<String> getImportance() {
         return this.importance == null ? Input.empty() : this.importance;
@@ -32,7 +32,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxResourcePercent", required=true)
-    private final Input<Integer> maxResourcePercent;
+        private final Input<Integer> maxResourcePercent;
 
     public Input<Integer> getMaxResourcePercent() {
         return this.maxResourcePercent;
@@ -43,7 +43,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxResourcePercentPerRequest")
-    private final @Nullable Input<Double> maxResourcePercentPerRequest;
+        private final @Nullable Input<Double> maxResourcePercentPerRequest;
 
     public Input<Double> getMaxResourcePercentPerRequest() {
         return this.maxResourcePercentPerRequest == null ? Input.empty() : this.maxResourcePercentPerRequest;
@@ -54,7 +54,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="minResourcePercent", required=true)
-    private final Input<Integer> minResourcePercent;
+        private final Input<Integer> minResourcePercent;
 
     public Input<Integer> getMinResourcePercent() {
         return this.minResourcePercent;
@@ -65,7 +65,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="minResourcePercentPerRequest", required=true)
-    private final Input<Double> minResourcePercentPerRequest;
+        private final Input<Double> minResourcePercentPerRequest;
 
     public Input<Double> getMinResourcePercentPerRequest() {
         return this.minResourcePercentPerRequest;
@@ -76,7 +76,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queryExecutionTimeout")
-    private final @Nullable Input<Integer> queryExecutionTimeout;
+        private final @Nullable Input<Integer> queryExecutionTimeout;
 
     public Input<Integer> getQueryExecutionTimeout() {
         return this.queryExecutionTimeout == null ? Input.empty() : this.queryExecutionTimeout;
@@ -87,7 +87,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sqlPoolName", required=true)
-    private final Input<String> sqlPoolName;
+        private final Input<String> sqlPoolName;
 
     public Input<String> getSqlPoolName() {
         return this.sqlPoolName;
@@ -109,7 +109,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="workloadGroupName")
-    private final @Nullable Input<String> workloadGroupName;
+        private final @Nullable Input<String> workloadGroupName;
 
     public Input<String> getWorkloadGroupName() {
         return this.workloadGroupName == null ? Input.empty() : this.workloadGroupName;
@@ -120,7 +120,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -299,7 +299,6 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public SqlPoolWorkloadGroupArgs build() {
             return new SqlPoolWorkloadGroupArgs(importance, maxResourcePercent, maxResourcePercentPerRequest, minResourcePercent, minResourcePercentPerRequest, queryExecutionTimeout, resourceGroupName, sqlPoolName, workloadGroupName, workspaceName);
         }

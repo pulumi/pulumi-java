@@ -77,7 +77,6 @@ public final class HubIPAddressesResponse {
             this.publicIPs = publicIPs;
             return this;
         }
-
         public HubIPAddressesResponse build() {
             return new HubIPAddressesResponse(privateIPAddress, publicIPs);
         }

@@ -142,7 +142,6 @@ public final class MLAssistConfigurationResponse {
             this.trainingComputeBinding = Objects.requireNonNull(trainingComputeBinding);
             return this;
         }
-
         public MLAssistConfigurationResponse build() {
             return new MLAssistConfigurationResponse(inferencingComputeBinding, mlAssistEnabled, modelNamePrefix, prelabelAccuracyThreshold, trainingComputeBinding);
         }

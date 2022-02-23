@@ -227,7 +227,6 @@ public final class MonitorConfigResponse {
             this.toleratedNumberOfFailures = toleratedNumberOfFailures;
             return this;
         }
-
         public MonitorConfigResponse build() {
             return new MonitorConfigResponse(customHeaders, expectedStatusCodeRanges, intervalInSeconds, path, port, profileMonitorStatus, protocol, timeoutInSeconds, toleratedNumberOfFailures);
         }

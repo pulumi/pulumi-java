@@ -162,7 +162,6 @@ public final class ServiceHealthCheckConfiguration {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-
         public ServiceHealthCheckConfiguration build() {
             return new ServiceHealthCheckConfiguration(healthyThreshold, interval, path, protocol, timeout, unhealthyThreshold);
         }

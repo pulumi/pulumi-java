@@ -21,7 +21,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipCidrRange")
-    private final @Nullable Input<String> ipCidrRange;
+        private final @Nullable Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
@@ -32,7 +32,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+        private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -43,7 +43,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxInstances")
-    private final @Nullable Input<Integer> maxInstances;
+        private final @Nullable Input<Integer> maxInstances;
 
     public Input<Integer> getMaxInstances() {
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
@@ -54,7 +54,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxThroughput")
-    private final @Nullable Input<Integer> maxThroughput;
+        private final @Nullable Input<Integer> maxThroughput;
 
     public Input<Integer> getMaxThroughput() {
         return this.maxThroughput == null ? Input.empty() : this.maxThroughput;
@@ -65,7 +65,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minInstances")
-    private final @Nullable Input<Integer> minInstances;
+        private final @Nullable Input<Integer> minInstances;
 
     public Input<Integer> getMinInstances() {
         return this.minInstances == null ? Input.empty() : this.minInstances;
@@ -76,7 +76,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minThroughput")
-    private final @Nullable Input<Integer> minThroughput;
+        private final @Nullable Input<Integer> minThroughput;
 
     public Input<Integer> getMinThroughput() {
         return this.minThroughput == null ? Input.empty() : this.minThroughput;
@@ -88,7 +88,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -99,7 +99,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+        private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -111,7 +111,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -122,7 +122,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -133,7 +133,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+        private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -144,7 +144,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+        private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -156,7 +156,7 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<ConnectorSubnetGetArgs> subnet;
+        private final @Nullable Input<ConnectorSubnetGetArgs> subnet;
 
     public Input<ConnectorSubnetGetArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -380,7 +380,6 @@ public final class ConnectorState extends io.pulumi.resources.ResourceArgs {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
-
         public ConnectorState build() {
             return new ConnectorState(ipCidrRange, machineType, maxInstances, maxThroughput, minInstances, minThroughput, name, network, project, region, selfLink, state, subnet);
         }

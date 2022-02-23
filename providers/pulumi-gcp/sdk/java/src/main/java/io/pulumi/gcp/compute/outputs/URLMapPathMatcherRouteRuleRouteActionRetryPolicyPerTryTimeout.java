@@ -81,7 +81,6 @@ public final class URLMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public URLMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout build() {
             return new URLMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout(nanos, seconds);
         }

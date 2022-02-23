@@ -76,7 +76,6 @@ public final class MysqlDatabaseResponse {
             this.mysqlTables = Objects.requireNonNull(mysqlTables);
             return this;
         }
-
         public MysqlDatabaseResponse build() {
             return new MysqlDatabaseResponse(databaseName, mysqlTables);
         }

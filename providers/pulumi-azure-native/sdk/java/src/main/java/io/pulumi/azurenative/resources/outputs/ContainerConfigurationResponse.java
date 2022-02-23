@@ -54,7 +54,6 @@ public final class ContainerConfigurationResponse {
             this.containerGroupName = containerGroupName;
             return this;
         }
-
         public ContainerConfigurationResponse build() {
             return new ContainerConfigurationResponse(containerGroupName);
         }

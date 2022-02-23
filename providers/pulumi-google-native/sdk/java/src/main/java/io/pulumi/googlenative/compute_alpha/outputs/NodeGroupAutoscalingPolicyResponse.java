@@ -96,7 +96,6 @@ public final class NodeGroupAutoscalingPolicyResponse {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public NodeGroupAutoscalingPolicyResponse build() {
             return new NodeGroupAutoscalingPolicyResponse(maxNodes, minNodes, mode);
         }

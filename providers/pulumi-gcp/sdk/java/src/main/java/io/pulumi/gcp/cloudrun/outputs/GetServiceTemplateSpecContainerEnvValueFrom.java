@@ -45,7 +45,6 @@ public final class GetServiceTemplateSpecContainerEnvValueFrom {
             this.secretKeyReves = Objects.requireNonNull(secretKeyReves);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvValueFrom build() {
             return new GetServiceTemplateSpecContainerEnvValueFrom(secretKeyReves);
         }

@@ -222,7 +222,6 @@ public final class ClusterNodeResponse {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public ClusterNodeResponse build() {
             return new ClusterNodeResponse(coreCount, id, manufacturer, memoryInGiB, model, name, osName, osVersion, serialNumber);
         }

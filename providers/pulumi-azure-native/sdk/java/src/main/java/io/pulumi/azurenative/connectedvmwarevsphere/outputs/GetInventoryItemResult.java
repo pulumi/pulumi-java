@@ -245,7 +245,6 @@ public final class GetInventoryItemResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInventoryItemResult build() {
             return new GetInventoryItemResult(id, inventoryType, kind, managedResourceId, moName, moRefId, name, provisioningState, systemData, type);
         }

@@ -54,7 +54,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
             this.gcePdKmsKeyName = gcePdKmsKeyName;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig(gcePdKmsKeyName);
         }

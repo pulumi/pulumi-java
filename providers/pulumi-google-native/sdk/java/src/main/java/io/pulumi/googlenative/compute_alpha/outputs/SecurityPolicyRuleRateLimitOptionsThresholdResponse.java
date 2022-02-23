@@ -74,7 +74,6 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse {
             this.intervalSec = Objects.requireNonNull(intervalSec);
             return this;
         }
-
         public SecurityPolicyRuleRateLimitOptionsThresholdResponse build() {
             return new SecurityPolicyRuleRateLimitOptionsThresholdResponse(count, intervalSec);
         }

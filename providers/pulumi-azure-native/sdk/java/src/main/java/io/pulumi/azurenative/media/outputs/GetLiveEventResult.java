@@ -442,7 +442,6 @@ public final class GetLiveEventResult {
             this.useStaticHostname = useStaticHostname;
             return this;
         }
-
         public GetLiveEventResult build() {
             return new GetLiveEventResult(created, crossSiteAccessPolicies, description, encoding, hostnamePrefix, id, input, lastModified, location, name, preview, provisioningState, resourceState, streamOptions, systemData, tags, transcriptions, type, useStaticHostname);
         }

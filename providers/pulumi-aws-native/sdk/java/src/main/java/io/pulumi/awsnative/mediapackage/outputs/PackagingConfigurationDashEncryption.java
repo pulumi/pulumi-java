@@ -44,7 +44,6 @@ public final class PackagingConfigurationDashEncryption {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public PackagingConfigurationDashEncryption build() {
             return new PackagingConfigurationDashEncryption(spekeKeyProvider);
         }

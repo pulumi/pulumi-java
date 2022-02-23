@@ -16,14 +16,14 @@ public final class LaunchStepConfigArgs extends io.pulumi.resources.ResourceArgs
     public static final LaunchStepConfigArgs Empty = new LaunchStepConfigArgs();
 
     @InputImport(name="groupWeights", required=true)
-    private final Input<List<LaunchGroupToWeightArgs>> groupWeights;
+        private final Input<List<LaunchGroupToWeightArgs>> groupWeights;
 
     public Input<List<LaunchGroupToWeightArgs>> getGroupWeights() {
         return this.groupWeights;
     }
 
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+        private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -82,7 +82,6 @@ public final class LaunchStepConfigArgs extends io.pulumi.resources.ResourceArgs
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public LaunchStepConfigArgs build() {
             return new LaunchStepConfigArgs(groupWeights, startTime);
         }

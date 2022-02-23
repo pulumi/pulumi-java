@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GooglePrivacyDlpV2TransientCryptoKeyResponse build() {
             return new GooglePrivacyDlpV2TransientCryptoKeyResponse(name);
         }

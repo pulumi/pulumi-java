@@ -74,7 +74,6 @@ public final class StageTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public StageTag build() {
             return new StageTag(key, value);
         }

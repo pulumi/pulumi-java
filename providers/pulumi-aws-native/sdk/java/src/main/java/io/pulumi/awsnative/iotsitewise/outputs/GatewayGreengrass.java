@@ -52,7 +52,6 @@ public final class GatewayGreengrass {
             this.groupArn = Objects.requireNonNull(groupArn);
             return this;
         }
-
         public GatewayGreengrass build() {
             return new GatewayGreengrass(groupArn);
         }

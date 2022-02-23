@@ -61,7 +61,6 @@ public final class StorageLensAccountLevel {
             this.bucketLevel = Objects.requireNonNull(bucketLevel);
             return this;
         }
-
         public StorageLensAccountLevel build() {
             return new StorageLensAccountLevel(activityMetrics, bucketLevel);
         }

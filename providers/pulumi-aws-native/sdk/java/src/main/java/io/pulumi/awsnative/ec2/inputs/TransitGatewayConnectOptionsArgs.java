@@ -19,7 +19,7 @@ public final class TransitGatewayConnectOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+        private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -62,7 +62,6 @@ public final class TransitGatewayConnectOptionsArgs extends io.pulumi.resources.
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
-
         public TransitGatewayConnectOptionsArgs build() {
             return new TransitGatewayConnectOptionsArgs(protocol);
         }

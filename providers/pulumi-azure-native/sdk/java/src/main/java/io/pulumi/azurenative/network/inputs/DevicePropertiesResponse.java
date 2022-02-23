@@ -24,7 +24,7 @@ public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="deviceModel")
-    private final @Nullable String deviceModel;
+        private final @Nullable String deviceModel;
 
     public Optional<String> getDeviceModel() {
         return this.deviceModel == null ? Optional.empty() : Optional.ofNullable(this.deviceModel);
@@ -35,7 +35,7 @@ public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="deviceVendor")
-    private final @Nullable String deviceVendor;
+        private final @Nullable String deviceVendor;
 
     public Optional<String> getDeviceVendor() {
         return this.deviceVendor == null ? Optional.empty() : Optional.ofNullable(this.deviceVendor);
@@ -46,7 +46,7 @@ public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="linkSpeedInMbps")
-    private final @Nullable Integer linkSpeedInMbps;
+        private final @Nullable Integer linkSpeedInMbps;
 
     public Optional<Integer> getLinkSpeedInMbps() {
         return this.linkSpeedInMbps == null ? Optional.empty() : Optional.ofNullable(this.linkSpeedInMbps);
@@ -105,7 +105,6 @@ public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeAr
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
-
         public DevicePropertiesResponse build() {
             return new DevicePropertiesResponse(deviceModel, deviceVendor, linkSpeedInMbps);
         }

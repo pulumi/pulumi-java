@@ -161,7 +161,6 @@ public final class GetBackupRunResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetBackupRunResult build() {
             return new GetBackupRunResult(backupId, id, instance, location, mostRecent, startTime, status);
         }

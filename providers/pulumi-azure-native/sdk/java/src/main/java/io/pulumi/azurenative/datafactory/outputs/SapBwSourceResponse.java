@@ -205,7 +205,6 @@ public final class SapBwSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapBwSourceResponse build() {
             return new SapBwSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

@@ -126,7 +126,6 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequest {
             this.sourcePrefixLists = sourcePrefixLists;
             return this;
         }
-
         public NetworkInsightsAccessScopePacketHeaderStatementRequest build() {
             return new NetworkInsightsAccessScopePacketHeaderStatementRequest(destinationAddresses, destinationPorts, destinationPrefixLists, protocols, sourceAddresses, sourcePorts, sourcePrefixLists);
         }

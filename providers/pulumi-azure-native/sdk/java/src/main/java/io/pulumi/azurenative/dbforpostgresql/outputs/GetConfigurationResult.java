@@ -223,7 +223,6 @@ public final class GetConfigurationResult {
             this.value = value;
             return this;
         }
-
         public GetConfigurationResult build() {
             return new GetConfigurationResult(allowedValues, dataType, defaultValue, description, id, name, source, type, value);
         }

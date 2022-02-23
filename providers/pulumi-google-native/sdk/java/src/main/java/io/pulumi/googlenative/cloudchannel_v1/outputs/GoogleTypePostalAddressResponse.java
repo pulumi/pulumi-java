@@ -265,7 +265,6 @@ public final class GoogleTypePostalAddressResponse {
             this.sublocality = Objects.requireNonNull(sublocality);
             return this;
         }
-
         public GoogleTypePostalAddressResponse build() {
             return new GoogleTypePostalAddressResponse(addressLines, administrativeArea, languageCode, locality, organization, postalCode, recipients, regionCode, revision, sortingCode, sublocality);
         }

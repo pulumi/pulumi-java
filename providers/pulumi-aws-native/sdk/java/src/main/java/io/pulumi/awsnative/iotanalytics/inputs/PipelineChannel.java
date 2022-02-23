@@ -15,21 +15,21 @@ public final class PipelineChannel extends io.pulumi.resources.InvokeArgs {
     public static final PipelineChannel Empty = new PipelineChannel();
 
     @InputImport(name="channelName", required=true)
-    private final String channelName;
+        private final String channelName;
 
     public String getChannelName() {
         return this.channelName;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-    private final @Nullable String next;
+        private final @Nullable String next;
 
     public Optional<String> getNext() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
@@ -88,7 +88,6 @@ public final class PipelineChannel extends io.pulumi.resources.InvokeArgs {
             this.next = next;
             return this;
         }
-
         public PipelineChannel build() {
             return new PipelineChannel(channelName, name, next);
         }

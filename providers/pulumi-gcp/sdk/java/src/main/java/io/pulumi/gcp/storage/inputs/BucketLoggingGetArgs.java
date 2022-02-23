@@ -19,7 +19,7 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="logBucket", required=true)
-    private final Input<String> logBucket;
+        private final Input<String> logBucket;
 
     public Input<String> getLogBucket() {
         return this.logBucket;
@@ -31,7 +31,7 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="logObjectPrefix")
-    private final @Nullable Input<String> logObjectPrefix;
+        private final @Nullable Input<String> logObjectPrefix;
 
     public Input<String> getLogObjectPrefix() {
         return this.logObjectPrefix == null ? Input.empty() : this.logObjectPrefix;
@@ -90,7 +90,6 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
             this.logObjectPrefix = Input.ofNullable(logObjectPrefix);
             return this;
         }
-
         public BucketLoggingGetArgs build() {
             return new BucketLoggingGetArgs(logBucket, logObjectPrefix);
         }

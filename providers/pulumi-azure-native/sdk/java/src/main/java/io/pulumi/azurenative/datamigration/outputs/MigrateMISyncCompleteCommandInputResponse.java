@@ -52,7 +52,6 @@ public final class MigrateMISyncCompleteCommandInputResponse {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }
-
         public MigrateMISyncCompleteCommandInputResponse build() {
             return new MigrateMISyncCompleteCommandInputResponse(sourceDatabaseName);
         }

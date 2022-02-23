@@ -121,7 +121,6 @@ public final class AudioAnalyzerPresetResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public AudioAnalyzerPresetResponse build() {
             return new AudioAnalyzerPresetResponse(audioLanguage, experimentalOptions, mode, odataType);
         }

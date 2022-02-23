@@ -95,7 +95,6 @@ public final class PackageShippingDetailsResponse {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }
-
         public PackageShippingDetailsResponse build() {
             return new PackageShippingDetailsResponse(carrierName, trackingId, trackingUrl);
         }

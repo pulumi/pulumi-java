@@ -97,7 +97,6 @@ public final class JobTemplateExponentialRolloutRate {
             this.rateIncreaseCriteria = Objects.requireNonNull(rateIncreaseCriteria);
             return this;
         }
-
         public JobTemplateExponentialRolloutRate build() {
             return new JobTemplateExponentialRolloutRate(baseRatePerMinute, incrementFactor, rateIncreaseCriteria);
         }

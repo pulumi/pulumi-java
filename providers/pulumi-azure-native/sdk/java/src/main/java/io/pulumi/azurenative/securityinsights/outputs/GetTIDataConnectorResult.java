@@ -205,7 +205,6 @@ public final class GetTIDataConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTIDataConnectorResult build() {
             return new GetTIDataConnectorResult(dataTypes, etag, id, kind, name, tenantId, tipLookbackPeriod, type);
         }

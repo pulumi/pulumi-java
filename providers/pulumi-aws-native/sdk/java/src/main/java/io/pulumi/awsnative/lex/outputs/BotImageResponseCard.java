@@ -120,7 +120,6 @@ public final class BotImageResponseCard {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public BotImageResponseCard build() {
             return new BotImageResponseCard(buttons, imageUrl, subtitle, title);
         }

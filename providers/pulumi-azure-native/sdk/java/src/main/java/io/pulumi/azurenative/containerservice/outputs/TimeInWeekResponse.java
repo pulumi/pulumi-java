@@ -78,7 +78,6 @@ public final class TimeInWeekResponse {
             this.hourSlots = hourSlots;
             return this;
         }
-
         public TimeInWeekResponse build() {
             return new TimeInWeekResponse(day, hourSlots);
         }

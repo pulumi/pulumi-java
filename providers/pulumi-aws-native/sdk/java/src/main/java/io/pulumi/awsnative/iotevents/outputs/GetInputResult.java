@@ -96,7 +96,6 @@ public final class GetInputResult {
             this.tags = tags;
             return this;
         }
-
         public GetInputResult build() {
             return new GetInputResult(inputDefinition, inputDescription, tags);
         }

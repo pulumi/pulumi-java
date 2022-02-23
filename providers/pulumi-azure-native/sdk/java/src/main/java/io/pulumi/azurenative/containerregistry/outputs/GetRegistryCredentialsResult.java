@@ -76,7 +76,6 @@ public final class GetRegistryCredentialsResult {
             this.username = username;
             return this;
         }
-
         public GetRegistryCredentialsResult build() {
             return new GetRegistryCredentialsResult(password, username);
         }

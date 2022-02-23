@@ -77,7 +77,6 @@ public final class CertificateTemplatePassthroughExtensions {
             this.knownExtensions = knownExtensions;
             return this;
         }
-
         public CertificateTemplatePassthroughExtensions build() {
             return new CertificateTemplatePassthroughExtensions(additionalExtensions, knownExtensions);
         }

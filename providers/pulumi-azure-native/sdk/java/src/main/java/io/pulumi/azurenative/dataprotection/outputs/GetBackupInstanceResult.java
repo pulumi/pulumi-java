@@ -139,7 +139,6 @@ public final class GetBackupInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBackupInstanceResult build() {
             return new GetBackupInstanceResult(id, name, properties, systemData, type);
         }

@@ -226,7 +226,6 @@ public final class GetDscNodeConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDscNodeConfigurationResult build() {
             return new GetDscNodeConfigurationResult(configuration, creationTime, id, incrementNodeConfigurationBuild, lastModifiedTime, name, nodeCount, source, type);
         }

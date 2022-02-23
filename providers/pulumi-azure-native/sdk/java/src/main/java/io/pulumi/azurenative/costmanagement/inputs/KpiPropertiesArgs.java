@@ -26,7 +26,7 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -37,7 +37,7 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -48,7 +48,7 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,KpiTypeType>> type;
+        private final @Nullable Input<Either<String,KpiTypeType>> type;
 
     public Input<Either<String,KpiTypeType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -122,7 +122,6 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public KpiPropertiesArgs build() {
             return new KpiPropertiesArgs(enabled, id, type);
         }

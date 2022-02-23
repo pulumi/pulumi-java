@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
      * 
      */
     @InputImport(name="caseSensitive")
-    private final @Nullable Input<Boolean> caseSensitive;
+      private final @Nullable Input<Boolean> caseSensitive;
 
     public Input<Boolean> getCaseSensitive() {
         return this.caseSensitive == null ? Input.empty() : this.caseSensitive;
@@ -66,7 +66,6 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
             this.caseSensitive = Input.ofNullable(caseSensitive);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs build() {
             return new GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs(caseSensitive);
         }

@@ -160,7 +160,6 @@ public final class SyncPropertiesResponse {
             this.tokenId = Objects.requireNonNull(tokenId);
             return this;
         }
-
         public SyncPropertiesResponse build() {
             return new SyncPropertiesResponse(gatewayEndpoint, lastSyncTime, messageTtl, schedule, syncWindow, tokenId);
         }

@@ -120,7 +120,6 @@ public final class PngLayerResponse {
             this.width = width;
             return this;
         }
-
         public PngLayerResponse build() {
             return new PngLayerResponse(height, label, odataType, width);
         }

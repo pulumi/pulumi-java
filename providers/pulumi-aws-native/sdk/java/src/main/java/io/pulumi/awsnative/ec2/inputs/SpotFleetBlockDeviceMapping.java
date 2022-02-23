@@ -16,28 +16,28 @@ public final class SpotFleetBlockDeviceMapping extends io.pulumi.resources.Invok
     public static final SpotFleetBlockDeviceMapping Empty = new SpotFleetBlockDeviceMapping();
 
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+        private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
     }
 
     @InputImport(name="ebs")
-    private final @Nullable SpotFleetEbsBlockDevice ebs;
+        private final @Nullable SpotFleetEbsBlockDevice ebs;
 
     public Optional<SpotFleetEbsBlockDevice> getEbs() {
         return this.ebs == null ? Optional.empty() : Optional.ofNullable(this.ebs);
     }
 
     @InputImport(name="noDevice")
-    private final @Nullable String noDevice;
+        private final @Nullable String noDevice;
 
     public Optional<String> getNoDevice() {
         return this.noDevice == null ? Optional.empty() : Optional.ofNullable(this.noDevice);
     }
 
     @InputImport(name="virtualName")
-    private final @Nullable String virtualName;
+        private final @Nullable String virtualName;
 
     public Optional<String> getVirtualName() {
         return this.virtualName == null ? Optional.empty() : Optional.ofNullable(this.virtualName);
@@ -106,7 +106,6 @@ public final class SpotFleetBlockDeviceMapping extends io.pulumi.resources.Invok
             this.virtualName = virtualName;
             return this;
         }
-
         public SpotFleetBlockDeviceMapping build() {
             return new SpotFleetBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }

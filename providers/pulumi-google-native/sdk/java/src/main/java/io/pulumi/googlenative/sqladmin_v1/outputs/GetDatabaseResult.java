@@ -193,7 +193,6 @@ public final class GetDatabaseResult {
             this.sqlserverDatabaseDetails = Objects.requireNonNull(sqlserverDatabaseDetails);
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(charset, collation, instance, kind, name, project, selfLink, sqlserverDatabaseDetails);
         }

@@ -20,7 +20,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="destIpRanges", required=true)
-    private final List<String> destIpRanges;
+      private final List<String> destIpRanges;
 
     public List<String> getDestIpRanges() {
         return this.destIpRanges;
@@ -31,7 +31,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="destPorts", required=true)
-    private final List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts;
+      private final List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts;
 
     public List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> getDestPorts() {
         return this.destPorts;
@@ -42,7 +42,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="layer4Configs", required=true)
-    private final List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs;
+      private final List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs;
 
     public List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> getLayer4Configs() {
         return this.layer4Configs;
@@ -53,7 +53,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="srcIpRanges", required=true)
-    private final List<String> srcIpRanges;
+      private final List<String> srcIpRanges;
 
     public List<String> getSrcIpRanges() {
         return this.srcIpRanges;
@@ -122,7 +122,6 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
-
         public SecurityPolicyRuleMatcherConfigResponse build() {
             return new SecurityPolicyRuleMatcherConfigResponse(destIpRanges, destPorts, layer4Configs, srcIpRanges);
         }

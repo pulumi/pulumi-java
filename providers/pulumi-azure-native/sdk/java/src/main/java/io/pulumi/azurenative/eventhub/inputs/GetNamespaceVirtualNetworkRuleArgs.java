@@ -17,7 +17,7 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+        private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -28,7 +28,7 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="virtualNetworkRuleName", required=true)
-    private final String virtualNetworkRuleName;
+        private final String virtualNetworkRuleName;
 
     public String getVirtualNetworkRuleName() {
         return this.virtualNetworkRuleName;
@@ -98,7 +98,6 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends io.pulumi.resource
             this.virtualNetworkRuleName = Objects.requireNonNull(virtualNetworkRuleName);
             return this;
         }
-
         public GetNamespaceVirtualNetworkRuleArgs build() {
             return new GetNamespaceVirtualNetworkRuleArgs(namespaceName, resourceGroupName, virtualNetworkRuleName);
         }

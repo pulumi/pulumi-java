@@ -113,7 +113,6 @@ public final class NetworkInsightsAnalysisAnalysisSecurityGroupRule {
             this.securityGroupId = securityGroupId;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisSecurityGroupRule build() {
             return new NetworkInsightsAnalysisAnalysisSecurityGroupRule(cidr, direction, portRange, prefixListId, protocol, securityGroupId);
         }

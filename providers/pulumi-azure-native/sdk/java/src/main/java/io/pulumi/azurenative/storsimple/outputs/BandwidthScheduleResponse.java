@@ -119,7 +119,6 @@ public final class BandwidthScheduleResponse {
             this.stop = Objects.requireNonNull(stop);
             return this;
         }
-
         public BandwidthScheduleResponse build() {
             return new BandwidthScheduleResponse(days, rateInMbps, start, stop);
         }

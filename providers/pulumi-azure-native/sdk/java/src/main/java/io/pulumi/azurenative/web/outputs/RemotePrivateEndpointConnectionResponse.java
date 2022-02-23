@@ -197,7 +197,6 @@ public final class RemotePrivateEndpointConnectionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RemotePrivateEndpointConnectionResponse build() {
             return new RemotePrivateEndpointConnectionResponse(id, ipAddresses, kind, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

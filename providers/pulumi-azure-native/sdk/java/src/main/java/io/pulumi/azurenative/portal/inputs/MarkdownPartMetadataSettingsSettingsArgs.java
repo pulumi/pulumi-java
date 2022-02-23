@@ -24,7 +24,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+        private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -35,7 +35,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="markdownSource")
-    private final @Nullable Input<Integer> markdownSource;
+        private final @Nullable Input<Integer> markdownSource;
 
     public Input<Integer> getMarkdownSource() {
         return this.markdownSource == null ? Input.empty() : this.markdownSource;
@@ -46,7 +46,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="markdownUri")
-    private final @Nullable Input<String> markdownUri;
+        private final @Nullable Input<String> markdownUri;
 
     public Input<String> getMarkdownUri() {
         return this.markdownUri == null ? Input.empty() : this.markdownUri;
@@ -57,7 +57,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="subtitle")
-    private final @Nullable Input<String> subtitle;
+        private final @Nullable Input<String> subtitle;
 
     public Input<String> getSubtitle() {
         return this.subtitle == null ? Input.empty() : this.subtitle;
@@ -68,7 +68,7 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+        private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -172,7 +172,6 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public MarkdownPartMetadataSettingsSettingsArgs build() {
             return new MarkdownPartMetadataSettingsSettingsArgs(content, markdownSource, markdownUri, subtitle, title);
         }

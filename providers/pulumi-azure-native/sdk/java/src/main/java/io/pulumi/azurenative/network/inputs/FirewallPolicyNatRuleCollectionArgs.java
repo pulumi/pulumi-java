@@ -30,7 +30,7 @@ public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<FirewallPolicyNatRuleCollectionActionArgs> action;
+        private final @Nullable Input<FirewallPolicyNatRuleCollectionActionArgs> action;
 
     public Input<FirewallPolicyNatRuleCollectionActionArgs> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -41,7 +41,7 @@ public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -52,7 +52,7 @@ public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+        private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -64,7 +64,7 @@ public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ruleCollectionType", required=true)
-    private final Input<String> ruleCollectionType;
+        private final Input<String> ruleCollectionType;
 
     public Input<String> getRuleCollectionType() {
         return this.ruleCollectionType;
@@ -75,7 +75,7 @@ public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<Object>> rules;
+        private final @Nullable Input<List<Object>> rules;
 
     public Input<List<Object>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -179,7 +179,6 @@ public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resourc
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public FirewallPolicyNatRuleCollectionArgs build() {
             return new FirewallPolicyNatRuleCollectionArgs(action, name, priority, ruleCollectionType, rules);
         }

@@ -97,7 +97,6 @@ public final class SiteLimitsResponse {
             this.maxPercentageCpu = maxPercentageCpu;
             return this;
         }
-
         public SiteLimitsResponse build() {
             return new SiteLimitsResponse(maxDiskSizeInMb, maxMemoryInMb, maxPercentageCpu);
         }

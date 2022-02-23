@@ -375,7 +375,6 @@ public final class GetServiceFabricScheduleResult {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
         }
-
         public GetServiceFabricScheduleResult build() {
             return new GetServiceFabricScheduleResult(createdDate, dailyRecurrence, hourlyRecurrence, id, location, name, notificationSettings, provisioningState, status, tags, targetResourceId, taskType, timeZoneId, type, uniqueIdentifier, weeklyRecurrence);
         }

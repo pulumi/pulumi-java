@@ -112,7 +112,6 @@ public final class TopicRuleCloudwatchMetricAction {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public TopicRuleCloudwatchMetricAction build() {
             return new TopicRuleCloudwatchMetricAction(metricName, metricNamespace, metricTimestamp, metricUnit, metricValue, roleArn);
         }

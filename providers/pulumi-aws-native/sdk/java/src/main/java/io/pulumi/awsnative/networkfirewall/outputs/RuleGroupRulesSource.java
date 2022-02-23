@@ -90,7 +90,6 @@ public final class RuleGroupRulesSource {
             this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
             return this;
         }
-
         public RuleGroupRulesSource build() {
             return new RuleGroupRulesSource(rulesSourceList, rulesString, statefulRules, statelessRulesAndCustomActions);
         }

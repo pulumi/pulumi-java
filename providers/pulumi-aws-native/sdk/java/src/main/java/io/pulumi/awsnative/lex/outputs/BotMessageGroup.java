@@ -68,7 +68,6 @@ public final class BotMessageGroup {
             this.variations = variations;
             return this;
         }
-
         public BotMessageGroup build() {
             return new BotMessageGroup(message, variations);
         }

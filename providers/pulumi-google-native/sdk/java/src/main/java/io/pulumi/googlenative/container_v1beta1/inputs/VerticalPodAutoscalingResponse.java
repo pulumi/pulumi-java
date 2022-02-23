@@ -21,7 +21,7 @@ public final class VerticalPodAutoscalingResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -59,7 +59,6 @@ public final class VerticalPodAutoscalingResponse extends io.pulumi.resources.In
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public VerticalPodAutoscalingResponse build() {
             return new VerticalPodAutoscalingResponse(enabled);
         }

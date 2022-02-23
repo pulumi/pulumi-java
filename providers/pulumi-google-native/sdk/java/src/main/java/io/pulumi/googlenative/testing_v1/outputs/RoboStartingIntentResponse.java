@@ -97,7 +97,6 @@ public final class RoboStartingIntentResponse {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public RoboStartingIntentResponse build() {
             return new RoboStartingIntentResponse(launcherActivity, startActivity, timeout);
         }

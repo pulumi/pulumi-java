@@ -98,7 +98,6 @@ public final class ManagedRuleSetResponse {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
-
         public ManagedRuleSetResponse build() {
             return new ManagedRuleSetResponse(ruleGroupOverrides, ruleSetType, ruleSetVersion);
         }

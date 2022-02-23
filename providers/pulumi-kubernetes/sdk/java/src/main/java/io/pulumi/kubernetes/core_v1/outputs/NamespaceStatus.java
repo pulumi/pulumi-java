@@ -86,7 +86,6 @@ public final class NamespaceStatus {
             this.phase = phase;
             return this;
         }
-
         public NamespaceStatus build() {
             return new NamespaceStatus(conditions, phase);
         }

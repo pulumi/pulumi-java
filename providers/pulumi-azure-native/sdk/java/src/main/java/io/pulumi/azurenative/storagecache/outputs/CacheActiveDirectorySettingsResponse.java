@@ -182,7 +182,6 @@ public final class CacheActiveDirectorySettingsResponse {
             this.secondaryDnsIpAddress = secondaryDnsIpAddress;
             return this;
         }
-
         public CacheActiveDirectorySettingsResponse build() {
             return new CacheActiveDirectorySettingsResponse(cacheNetBiosName, credentials, domainJoined, domainName, domainNetBiosName, primaryDnsIpAddress, secondaryDnsIpAddress);
         }

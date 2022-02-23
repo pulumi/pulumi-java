@@ -21,7 +21,7 @@ public final class TriggerBuildOptionsVolumeGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class TriggerBuildOptionsVolumeGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -93,7 +93,6 @@ public final class TriggerBuildOptionsVolumeGetArgs extends io.pulumi.resources.
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public TriggerBuildOptionsVolumeGetArgs build() {
             return new TriggerBuildOptionsVolumeGetArgs(name, path);
         }

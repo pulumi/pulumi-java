@@ -210,7 +210,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
             this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
             return this;
         }
-
         public ContentKeyPolicyTokenRestrictionResponse build() {
             return new ContentKeyPolicyTokenRestrictionResponse(alternateVerificationKeys, audience, issuer, odataType, openIdConnectDiscoveryDocument, primaryVerificationKey, requiredClaims, restrictionTokenType);
         }

@@ -22,7 +22,7 @@ public final class DataSourceSparkParameters extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+        private final String host;
 
     public String getHost() {
         return this.host;
@@ -33,7 +33,7 @@ public final class DataSourceSparkParameters extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="port", required=true)
-    private final Double port;
+        private final Double port;
 
     public Double getPort() {
         return this.port;
@@ -82,7 +82,6 @@ public final class DataSourceSparkParameters extends io.pulumi.resources.InvokeA
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceSparkParameters build() {
             return new DataSourceSparkParameters(host, port);
         }

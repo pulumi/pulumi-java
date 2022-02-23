@@ -44,7 +44,6 @@ public final class DataSourceAclConfiguration {
             this.allowedGroupsColumnName = Objects.requireNonNull(allowedGroupsColumnName);
             return this;
         }
-
         public DataSourceAclConfiguration build() {
             return new DataSourceAclConfiguration(allowedGroupsColumnName);
         }

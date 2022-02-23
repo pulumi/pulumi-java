@@ -20,14 +20,14 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -38,7 +38,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
+      private final @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
 
     public Input<GoogleCloudOrgpolicyV2PolicySpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -112,7 +112,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public PolicyArgs build() {
             return new PolicyArgs(name, project, spec);
         }

@@ -190,7 +190,6 @@ public final class SloWindowsBasedSli {
             this.windowPeriod = windowPeriod;
             return this;
         }
-
         public SloWindowsBasedSli build() {
             return new SloWindowsBasedSli(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);
         }

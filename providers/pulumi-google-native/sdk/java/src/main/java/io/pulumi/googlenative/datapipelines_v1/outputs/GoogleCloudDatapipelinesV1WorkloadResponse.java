@@ -75,7 +75,6 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse {
             this.dataflowLaunchTemplateRequest = Objects.requireNonNull(dataflowLaunchTemplateRequest);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1WorkloadResponse build() {
             return new GoogleCloudDatapipelinesV1WorkloadResponse(dataflowFlexTemplateRequest, dataflowLaunchTemplateRequest);
         }

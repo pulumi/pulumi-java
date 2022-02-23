@@ -60,7 +60,6 @@ public final class SpotFleetNetworkInterfaceCountRequest {
             this.min = min;
             return this;
         }
-
         public SpotFleetNetworkInterfaceCountRequest build() {
             return new SpotFleetNetworkInterfaceCountRequest(max, min);
         }

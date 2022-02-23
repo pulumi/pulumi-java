@@ -119,7 +119,6 @@ public final class EmailReceiverResponse {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public EmailReceiverResponse build() {
             return new EmailReceiverResponse(emailAddress, name, status, useCommonAlertSchema);
         }

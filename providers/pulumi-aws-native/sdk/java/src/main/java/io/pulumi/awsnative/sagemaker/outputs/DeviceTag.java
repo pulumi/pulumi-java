@@ -74,7 +74,6 @@ public final class DeviceTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DeviceTag build() {
             return new DeviceTag(key, value);
         }

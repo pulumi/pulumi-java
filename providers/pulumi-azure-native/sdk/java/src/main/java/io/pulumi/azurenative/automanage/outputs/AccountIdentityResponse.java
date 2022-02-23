@@ -97,7 +97,6 @@ public final class AccountIdentityResponse {
             this.type = type;
             return this;
         }
-
         public AccountIdentityResponse build() {
             return new AccountIdentityResponse(principalId, tenantId, type);
         }

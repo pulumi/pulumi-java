@@ -54,7 +54,6 @@ public final class GetDocumentationVersionResult {
             this.description = description;
             return this;
         }
-
         public GetDocumentationVersionResult build() {
             return new GetDocumentationVersionResult(description);
         }

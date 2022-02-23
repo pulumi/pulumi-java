@@ -185,7 +185,6 @@ public final class ApiOAuthSettingsResponse {
             this.scopes = scopes;
             return this;
         }
-
         public ApiOAuthSettingsResponse build() {
             return new ApiOAuthSettingsResponse(clientId, clientSecret, customParameters, identityProvider, properties, redirectUrl, scopes);
         }

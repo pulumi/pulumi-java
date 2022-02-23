@@ -22,28 +22,28 @@ public final class AccessPointObjectLambdaConfiguration extends io.pulumi.resour
     public static final AccessPointObjectLambdaConfiguration Empty = new AccessPointObjectLambdaConfiguration();
 
     @InputImport(name="allowedFeatures")
-    private final @Nullable List<String> allowedFeatures;
+        private final @Nullable List<String> allowedFeatures;
 
     public List<String> getAllowedFeatures() {
         return this.allowedFeatures == null ? List.of() : this.allowedFeatures;
     }
 
     @InputImport(name="cloudWatchMetricsEnabled")
-    private final @Nullable Boolean cloudWatchMetricsEnabled;
+        private final @Nullable Boolean cloudWatchMetricsEnabled;
 
     public Optional<Boolean> getCloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchMetricsEnabled);
     }
 
     @InputImport(name="supportingAccessPoint", required=true)
-    private final String supportingAccessPoint;
+        private final String supportingAccessPoint;
 
     public String getSupportingAccessPoint() {
         return this.supportingAccessPoint;
     }
 
     @InputImport(name="transformationConfigurations", required=true)
-    private final List<AccessPointTransformationConfiguration> transformationConfigurations;
+        private final List<AccessPointTransformationConfiguration> transformationConfigurations;
 
     public List<AccessPointTransformationConfiguration> getTransformationConfigurations() {
         return this.transformationConfigurations;
@@ -112,7 +112,6 @@ public final class AccessPointObjectLambdaConfiguration extends io.pulumi.resour
             this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
             return this;
         }
-
         public AccessPointObjectLambdaConfiguration build() {
             return new AccessPointObjectLambdaConfiguration(allowedFeatures, cloudWatchMetricsEnabled, supportingAccessPoint, transformationConfigurations);
         }

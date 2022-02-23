@@ -98,7 +98,6 @@ public final class CodeContainerResponse {
             this.tags = tags;
             return this;
         }
-
         public CodeContainerResponse build() {
             return new CodeContainerResponse(description, properties, tags);
         }

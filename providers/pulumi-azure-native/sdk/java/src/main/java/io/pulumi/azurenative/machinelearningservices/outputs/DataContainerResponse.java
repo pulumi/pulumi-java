@@ -98,7 +98,6 @@ public final class DataContainerResponse {
             this.tags = tags;
             return this;
         }
-
         public DataContainerResponse build() {
             return new DataContainerResponse(description, properties, tags);
         }

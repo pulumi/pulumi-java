@@ -394,7 +394,6 @@ public final class GetRegionCommitmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegionCommitmentResult build() {
             return new GetRegionCommitmentResult(autoRenew, category, creationTimestamp, description, endTimestamp, kind, licenseResource, name, plan, region, reservations, resources, selfLink, startTimestamp, status, statusMessage, type);
         }

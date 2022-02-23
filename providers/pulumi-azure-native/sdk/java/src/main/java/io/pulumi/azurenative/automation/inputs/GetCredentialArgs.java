@@ -17,7 +17,7 @@ public final class GetCredentialArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final String automationAccountName;
+        private final String automationAccountName;
 
     public String getAutomationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetCredentialArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="credentialName", required=true)
-    private final String credentialName;
+        private final String credentialName;
 
     public String getCredentialName() {
         return this.credentialName;
@@ -39,7 +39,7 @@ public final class GetCredentialArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetCredentialArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetCredentialArgs build() {
             return new GetCredentialArgs(automationAccountName, credentialName, resourceGroupName);
         }

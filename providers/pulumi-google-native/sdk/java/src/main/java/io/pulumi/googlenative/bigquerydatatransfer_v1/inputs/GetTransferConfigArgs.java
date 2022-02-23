@@ -15,21 +15,21 @@ public final class GetTransferConfigArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetTransferConfigArgs Empty = new GetTransferConfigArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="transferConfigId", required=true)
-    private final String transferConfigId;
+      private final String transferConfigId;
 
     public String getTransferConfigId() {
         return this.transferConfigId;
@@ -88,7 +88,6 @@ public final class GetTransferConfigArgs extends io.pulumi.resources.InvokeArgs 
             this.transferConfigId = Objects.requireNonNull(transferConfigId);
             return this;
         }
-
         public GetTransferConfigArgs build() {
             return new GetTransferConfigArgs(location, project, transferConfigId);
         }

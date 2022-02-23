@@ -22,7 +22,7 @@ public final class ResourceSelectorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fullResourceName", required=true)
-    private final Input<String> fullResourceName;
+      private final Input<String> fullResourceName;
 
     public Input<String> getFullResourceName() {
         return this.fullResourceName;
@@ -65,7 +65,6 @@ public final class ResourceSelectorArgs extends io.pulumi.resources.ResourceArgs
             this.fullResourceName = Input.of(Objects.requireNonNull(fullResourceName));
             return this;
         }
-
         public ResourceSelectorArgs build() {
             return new ResourceSelectorArgs(fullResourceName);
         }

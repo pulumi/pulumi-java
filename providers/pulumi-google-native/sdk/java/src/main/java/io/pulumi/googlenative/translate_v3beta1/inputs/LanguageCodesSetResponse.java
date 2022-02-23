@@ -22,7 +22,7 @@ public final class LanguageCodesSetResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="languageCodes", required=true)
-    private final List<String> languageCodes;
+      private final List<String> languageCodes;
 
     public List<String> getLanguageCodes() {
         return this.languageCodes;
@@ -60,7 +60,6 @@ public final class LanguageCodesSetResponse extends io.pulumi.resources.InvokeAr
             this.languageCodes = Objects.requireNonNull(languageCodes);
             return this;
         }
-
         public LanguageCodesSetResponse build() {
             return new LanguageCodesSetResponse(languageCodes);
         }

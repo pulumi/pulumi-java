@@ -139,7 +139,6 @@ public final class ReplicationObjectResponse {
             this.replicationSchedule = Objects.requireNonNull(replicationSchedule);
             return this;
         }
-
         public ReplicationObjectResponse build() {
             return new ReplicationObjectResponse(endpointType, remoteVolumeRegion, remoteVolumeResourceId, replicationId, replicationSchedule);
         }

@@ -78,7 +78,6 @@ public final class LabelSelector {
             this.matchLabels = matchLabels;
             return this;
         }
-
         public LabelSelector build() {
             return new LabelSelector(matchExpressions, matchLabels);
         }

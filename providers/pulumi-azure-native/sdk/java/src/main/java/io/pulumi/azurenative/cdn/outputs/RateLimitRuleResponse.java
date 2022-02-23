@@ -184,7 +184,6 @@ public final class RateLimitRuleResponse {
             this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
             return this;
         }
-
         public RateLimitRuleResponse build() {
             return new RateLimitRuleResponse(action, enabledState, matchConditions, name, priority, rateLimitDurationInMinutes, rateLimitThreshold);
         }

@@ -72,7 +72,6 @@ public final class InstanceFromTemplateSchedulingNodeAffinity {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public InstanceFromTemplateSchedulingNodeAffinity build() {
             return new InstanceFromTemplateSchedulingNodeAffinity(key, operator, values);
         }

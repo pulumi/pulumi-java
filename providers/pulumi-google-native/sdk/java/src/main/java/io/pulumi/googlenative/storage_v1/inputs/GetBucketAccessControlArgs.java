@@ -15,28 +15,28 @@ public final class GetBucketAccessControlArgs extends io.pulumi.resources.Invoke
     public static final GetBucketAccessControlArgs Empty = new GetBucketAccessControlArgs();
 
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="entity", required=true)
-    private final String entity;
+      private final String entity;
 
     public String getEntity() {
         return this.entity;
     }
 
     @InputImport(name="provisionalUserProject")
-    private final @Nullable String provisionalUserProject;
+      private final @Nullable String provisionalUserProject;
 
     public Optional<String> getProvisionalUserProject() {
         return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
     }
 
     @InputImport(name="userProject")
-    private final @Nullable String userProject;
+      private final @Nullable String userProject;
 
     public Optional<String> getUserProject() {
         return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
@@ -105,7 +105,6 @@ public final class GetBucketAccessControlArgs extends io.pulumi.resources.Invoke
             this.userProject = userProject;
             return this;
         }
-
         public GetBucketAccessControlArgs build() {
             return new GetBucketAccessControlArgs(bucket, entity, provisionalUserProject, userProject);
         }

@@ -60,7 +60,6 @@ public final class ObjectAccessControlProjectTeam {
             this.team = team;
             return this;
         }
-
         public ObjectAccessControlProjectTeam build() {
             return new ObjectAccessControlProjectTeam(projectNumber, team);
         }

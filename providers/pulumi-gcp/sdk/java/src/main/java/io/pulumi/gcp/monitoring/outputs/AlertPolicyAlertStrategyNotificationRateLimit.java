@@ -54,7 +54,6 @@ public final class AlertPolicyAlertStrategyNotificationRateLimit {
             this.period = period;
             return this;
         }
-
         public AlertPolicyAlertStrategyNotificationRateLimit build() {
             return new AlertPolicyAlertStrategyNotificationRateLimit(period);
         }

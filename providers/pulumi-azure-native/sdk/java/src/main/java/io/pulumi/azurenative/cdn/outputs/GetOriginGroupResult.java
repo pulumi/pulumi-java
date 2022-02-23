@@ -250,7 +250,6 @@ public final class GetOriginGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOriginGroupResult build() {
             return new GetOriginGroupResult(healthProbeSettings, id, name, origins, provisioningState, resourceState, responseBasedOriginErrorDetectionSettings, systemData, trafficRestorationTimeToHealedOrNewEndpointsInMinutes, type);
         }

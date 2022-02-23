@@ -119,7 +119,6 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
             this.stacksetName = stacksetName;
             return this;
         }
-
         public SecurityConnectorPropertiesResponseOrganizationalData build() {
             return new SecurityConnectorPropertiesResponseOrganizationalData(excludedAccountIds, organizationMembershipType, parentHierarchyId, stacksetName);
         }

@@ -76,7 +76,6 @@ public final class FirewallPolicyRuleMatchLayer4Config {
             this.ports = ports;
             return this;
         }
-
         public FirewallPolicyRuleMatchLayer4Config build() {
             return new FirewallPolicyRuleMatchLayer4Config(ipProtocol, ports);
         }

@@ -23,7 +23,7 @@ public final class UploadWatermarkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="logs")
-    private final @Nullable String logs;
+        private final @Nullable String logs;
 
     public Optional<String> getLogs() {
         return this.logs == null ? Optional.empty() : Optional.ofNullable(this.logs);
@@ -34,7 +34,7 @@ public final class UploadWatermarkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="metrics")
-    private final @Nullable String metrics;
+        private final @Nullable String metrics;
 
     public Optional<String> getMetrics() {
         return this.metrics == null ? Optional.empty() : Optional.ofNullable(this.metrics);
@@ -45,7 +45,7 @@ public final class UploadWatermarkResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="usages")
-    private final @Nullable String usages;
+        private final @Nullable String usages;
 
     public Optional<String> getUsages() {
         return this.usages == null ? Optional.empty() : Optional.ofNullable(this.usages);
@@ -104,7 +104,6 @@ public final class UploadWatermarkResponse extends io.pulumi.resources.InvokeArg
             this.usages = usages;
             return this;
         }
-
         public UploadWatermarkResponse build() {
             return new UploadWatermarkResponse(logs, metrics, usages);
         }

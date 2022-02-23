@@ -95,7 +95,6 @@ public final class SslSettingsResponse {
             this.sslManagementType = Objects.requireNonNull(sslManagementType);
             return this;
         }
-
         public SslSettingsResponse build() {
             return new SslSettingsResponse(certificateId, pendingManagedCertificateId, sslManagementType);
         }

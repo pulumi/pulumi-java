@@ -185,7 +185,6 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
             this.ruleSet = Objects.requireNonNull(ruleSet);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectConfigResponse build() {
             return new GooglePrivacyDlpV2InspectConfigResponse(customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSet);
         }

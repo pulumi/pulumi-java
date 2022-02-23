@@ -13,14 +13,14 @@ public final class TableColumn extends io.pulumi.resources.InvokeArgs {
     public static final TableColumn Empty = new TableColumn();
 
     @InputImport(name="columnName", required=true)
-    private final String columnName;
+        private final String columnName;
 
     public String getColumnName() {
         return this.columnName;
     }
 
     @InputImport(name="columnType", required=true)
-    private final String columnType;
+        private final String columnType;
 
     public String getColumnType() {
         return this.columnType;
@@ -69,7 +69,6 @@ public final class TableColumn extends io.pulumi.resources.InvokeArgs {
             this.columnType = Objects.requireNonNull(columnType);
             return this;
         }
-
         public TableColumn build() {
             return new TableColumn(columnName, columnType);
         }

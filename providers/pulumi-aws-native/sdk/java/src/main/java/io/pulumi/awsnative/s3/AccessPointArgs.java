@@ -23,7 +23,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -34,14 +34,14 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<Object> policy;
+        private final @Nullable Input<Object> policy;
 
     public Input<Object> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
     }
 
     @InputImport(name="policyStatus")
-    private final @Nullable Input<PolicyStatusPropertiesArgs> policyStatus;
+        private final @Nullable Input<PolicyStatusPropertiesArgs> policyStatus;
 
     public Input<PolicyStatusPropertiesArgs> getPolicyStatus() {
         return this.policyStatus == null ? Input.empty() : this.policyStatus;
@@ -52,7 +52,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicAccessBlockConfiguration")
-    private final @Nullable Input<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
+        private final @Nullable Input<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
     public Input<AccessPointPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration == null ? Input.empty() : this.publicAccessBlockConfiguration;
@@ -63,7 +63,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfiguration")
-    private final @Nullable Input<AccessPointVpcConfigurationArgs> vpcConfiguration;
+        private final @Nullable Input<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
     public Input<AccessPointVpcConfigurationArgs> getVpcConfiguration() {
         return this.vpcConfiguration == null ? Input.empty() : this.vpcConfiguration;
@@ -167,7 +167,6 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
             return this;
         }
-
         public AccessPointArgs build() {
             return new AccessPointArgs(bucket, policy, policyStatus, publicAccessBlockConfiguration, vpcConfiguration);
         }

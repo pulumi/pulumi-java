@@ -100,7 +100,6 @@ public final class StorageProfileResponse {
             this.osDisk = osDisk;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(dataDisks, imageReference, osDisk);
         }

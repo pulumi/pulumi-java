@@ -96,7 +96,6 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse(onewayTerms, queryTerms, synonyms);
         }

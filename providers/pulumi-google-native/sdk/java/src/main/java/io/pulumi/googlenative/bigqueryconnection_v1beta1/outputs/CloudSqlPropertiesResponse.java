@@ -117,7 +117,6 @@ public final class CloudSqlPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CloudSqlPropertiesResponse build() {
             return new CloudSqlPropertiesResponse(credential, database, instanceId, type);
         }

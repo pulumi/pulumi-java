@@ -77,7 +77,6 @@ public final class KubernetesRoleStorageResponse {
             this.storageClasses = Objects.requireNonNull(storageClasses);
             return this;
         }
-
         public KubernetesRoleStorageResponse build() {
             return new KubernetesRoleStorageResponse(endpoints, storageClasses);
         }

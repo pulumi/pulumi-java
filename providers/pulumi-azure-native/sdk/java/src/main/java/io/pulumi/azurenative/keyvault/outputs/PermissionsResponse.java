@@ -118,7 +118,6 @@ public final class PermissionsResponse {
             this.storage = storage;
             return this;
         }
-
         public PermissionsResponse build() {
             return new PermissionsResponse(certificates, keys, secrets, storage);
         }

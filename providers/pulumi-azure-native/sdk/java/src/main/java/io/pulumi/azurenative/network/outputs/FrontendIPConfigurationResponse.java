@@ -374,7 +374,6 @@ public final class FrontendIPConfigurationResponse {
             this.zones = zones;
             return this;
         }
-
         public FrontendIPConfigurationResponse build() {
             return new FrontendIPConfigurationResponse(etag, id, inboundNatPools, inboundNatRules, loadBalancingRules, name, outboundRules, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, provisioningState, publicIPAddress, publicIPPrefix, subnet, type, zones);
         }

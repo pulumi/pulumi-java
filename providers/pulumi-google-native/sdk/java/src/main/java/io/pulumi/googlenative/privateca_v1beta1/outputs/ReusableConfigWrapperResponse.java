@@ -75,7 +75,6 @@ public final class ReusableConfigWrapperResponse {
             this.reusableConfigValues = Objects.requireNonNull(reusableConfigValues);
             return this;
         }
-
         public ReusableConfigWrapperResponse build() {
             return new ReusableConfigWrapperResponse(reusableConfig, reusableConfigValues);
         }

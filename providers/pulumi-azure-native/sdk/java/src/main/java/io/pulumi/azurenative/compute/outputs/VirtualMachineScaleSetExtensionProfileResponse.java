@@ -78,7 +78,6 @@ public final class VirtualMachineScaleSetExtensionProfileResponse {
             this.extensionsTimeBudget = extensionsTimeBudget;
             return this;
         }
-
         public VirtualMachineScaleSetExtensionProfileResponse build() {
             return new VirtualMachineScaleSetExtensionProfileResponse(extensions, extensionsTimeBudget);
         }

@@ -30,7 +30,6 @@ public final class BucketFilterAndOperator extends io.pulumi.resources.InvokeArg
         public Builder(BucketFilterAndOperator defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public BucketFilterAndOperator build() {
             return new BucketFilterAndOperator();
         }

@@ -22,7 +22,7 @@ public final class GoogleIamV1__AuditLogConfigResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="exemptedMembers", required=true)
-    private final List<String> exemptedMembers;
+      private final List<String> exemptedMembers;
 
     public List<String> getExemptedMembers() {
         return this.exemptedMembers;
@@ -33,7 +33,7 @@ public final class GoogleIamV1__AuditLogConfigResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="logType", required=true)
-    private final String logType;
+      private final String logType;
 
     public String getLogType() {
         return this.logType;
@@ -82,7 +82,6 @@ public final class GoogleIamV1__AuditLogConfigResponse extends io.pulumi.resourc
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public GoogleIamV1__AuditLogConfigResponse build() {
             return new GoogleIamV1__AuditLogConfigResponse(exemptedMembers, logType);
         }

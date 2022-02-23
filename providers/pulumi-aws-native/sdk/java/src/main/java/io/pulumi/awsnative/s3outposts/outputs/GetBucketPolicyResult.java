@@ -54,7 +54,6 @@ public final class GetBucketPolicyResult {
             this.policyDocument = policyDocument;
             return this;
         }
-
         public GetBucketPolicyResult build() {
             return new GetBucketPolicyResult(policyDocument);
         }

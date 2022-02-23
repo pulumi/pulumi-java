@@ -120,7 +120,6 @@ public final class PodAffinityTerm {
             this.topologyKey = Objects.requireNonNull(topologyKey);
             return this;
         }
-
         public PodAffinityTerm build() {
             return new PodAffinityTerm(labelSelector, namespaceSelector, namespaces, topologyKey);
         }

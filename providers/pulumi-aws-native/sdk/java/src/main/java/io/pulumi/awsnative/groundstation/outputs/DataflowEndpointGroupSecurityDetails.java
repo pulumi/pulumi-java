@@ -74,7 +74,6 @@ public final class DataflowEndpointGroupSecurityDetails {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public DataflowEndpointGroupSecurityDetails build() {
             return new DataflowEndpointGroupSecurityDetails(roleArn, securityGroupIds, subnetIds);
         }

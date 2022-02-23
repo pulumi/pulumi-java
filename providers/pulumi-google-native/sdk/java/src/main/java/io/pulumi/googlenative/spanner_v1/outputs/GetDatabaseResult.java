@@ -246,7 +246,6 @@ public final class GetDatabaseResult {
             this.versionRetentionPeriod = Objects.requireNonNull(versionRetentionPeriod);
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(createTime, databaseDialect, defaultLeader, earliestVersionTime, encryptionConfig, encryptionInfo, name, restoreInfo, state, versionRetentionPeriod);
         }

@@ -76,7 +76,6 @@ public final class BackupVaultResponse {
             this.storageSettings = Objects.requireNonNull(storageSettings);
             return this;
         }
-
         public BackupVaultResponse build() {
             return new BackupVaultResponse(provisioningState, storageSettings);
         }

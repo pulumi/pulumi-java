@@ -24,7 +24,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
     public static final ComputeSchedulingArgs Empty = new ComputeSchedulingArgs();
 
     @InputImport(name="automaticRestart")
-    private final @Nullable Input<Boolean> automaticRestart;
+      private final @Nullable Input<Boolean> automaticRestart;
 
     public Input<Boolean> getAutomaticRestart() {
         return this.automaticRestart == null ? Input.empty() : this.automaticRestart;
@@ -35,7 +35,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minNodeCpus")
-    private final @Nullable Input<Integer> minNodeCpus;
+      private final @Nullable Input<Integer> minNodeCpus;
 
     public Input<Integer> getMinNodeCpus() {
         return this.minNodeCpus == null ? Input.empty() : this.minNodeCpus;
@@ -46,7 +46,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nodeAffinities")
-    private final @Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities;
+      private final @Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities;
 
     public Input<List<SchedulingNodeAffinityArgs>> getNodeAffinities() {
         return this.nodeAffinities == null ? Input.empty() : this.nodeAffinities;
@@ -57,7 +57,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="onHostMaintenance")
-    private final @Nullable Input<ComputeSchedulingOnHostMaintenance> onHostMaintenance;
+      private final @Nullable Input<ComputeSchedulingOnHostMaintenance> onHostMaintenance;
 
     public Input<ComputeSchedulingOnHostMaintenance> getOnHostMaintenance() {
         return this.onHostMaintenance == null ? Input.empty() : this.onHostMaintenance;
@@ -68,7 +68,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="restartType")
-    private final @Nullable Input<ComputeSchedulingRestartType> restartType;
+      private final @Nullable Input<ComputeSchedulingRestartType> restartType;
 
     public Input<ComputeSchedulingRestartType> getRestartType() {
         return this.restartType == null ? Input.empty() : this.restartType;
@@ -172,7 +172,6 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
             this.restartType = Input.ofNullable(restartType);
             return this;
         }
-
         public ComputeSchedulingArgs build() {
             return new ComputeSchedulingArgs(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, restartType);
         }

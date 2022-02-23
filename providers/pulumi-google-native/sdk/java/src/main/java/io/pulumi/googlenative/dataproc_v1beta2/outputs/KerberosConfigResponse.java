@@ -349,7 +349,6 @@ public final class KerberosConfigResponse {
             this.truststoreUri = Objects.requireNonNull(truststoreUri);
             return this;
         }
-
         public KerberosConfigResponse build() {
             return new KerberosConfigResponse(crossRealmTrustAdminServer, crossRealmTrustKdc, crossRealmTrustRealm, crossRealmTrustSharedPasswordUri, enableKerberos, kdcDbKeyUri, keyPasswordUri, keystorePasswordUri, keystoreUri, kmsKeyUri, realm, rootPrincipalPasswordUri, tgtLifetimeHours, truststorePasswordUri, truststoreUri);
         }

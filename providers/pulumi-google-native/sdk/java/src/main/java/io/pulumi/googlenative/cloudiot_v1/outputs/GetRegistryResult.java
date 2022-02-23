@@ -185,7 +185,6 @@ public final class GetRegistryResult {
             this.stateNotificationConfig = Objects.requireNonNull(stateNotificationConfig);
             return this;
         }
-
         public GetRegistryResult build() {
             return new GetRegistryResult(credentials, eventNotificationConfigs, httpConfig, logLevel, mqttConfig, name, stateNotificationConfig);
         }

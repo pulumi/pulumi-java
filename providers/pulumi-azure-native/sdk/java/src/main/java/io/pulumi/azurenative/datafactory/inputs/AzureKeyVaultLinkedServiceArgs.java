@@ -29,7 +29,7 @@ public final class AzureKeyVaultLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -40,7 +40,7 @@ public final class AzureKeyVaultLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="baseUrl", required=true)
-    private final Input<Object> baseUrl;
+        private final Input<Object> baseUrl;
 
     public Input<Object> getBaseUrl() {
         return this.baseUrl;
@@ -51,7 +51,7 @@ public final class AzureKeyVaultLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -62,7 +62,7 @@ public final class AzureKeyVaultLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable Input<CredentialReferenceArgs> credential;
+        private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -73,7 +73,7 @@ public final class AzureKeyVaultLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -84,7 +84,7 @@ public final class AzureKeyVaultLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -96,7 +96,7 @@ public final class AzureKeyVaultLinkedServiceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -230,7 +230,6 @@ public final class AzureKeyVaultLinkedServiceArgs extends io.pulumi.resources.Re
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AzureKeyVaultLinkedServiceArgs build() {
             return new AzureKeyVaultLinkedServiceArgs(annotations, baseUrl, connectVia, credential, description, parameters, type);
         }

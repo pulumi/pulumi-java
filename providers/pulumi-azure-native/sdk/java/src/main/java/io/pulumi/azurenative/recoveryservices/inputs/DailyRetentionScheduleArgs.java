@@ -25,7 +25,7 @@ public final class DailyRetentionScheduleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="retentionDuration")
-    private final @Nullable Input<RetentionDurationArgs> retentionDuration;
+        private final @Nullable Input<RetentionDurationArgs> retentionDuration;
 
     public Input<RetentionDurationArgs> getRetentionDuration() {
         return this.retentionDuration == null ? Input.empty() : this.retentionDuration;
@@ -36,7 +36,7 @@ public final class DailyRetentionScheduleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="retentionTimes")
-    private final @Nullable Input<List<String>> retentionTimes;
+        private final @Nullable Input<List<String>> retentionTimes;
 
     public Input<List<String>> getRetentionTimes() {
         return this.retentionTimes == null ? Input.empty() : this.retentionTimes;
@@ -95,7 +95,6 @@ public final class DailyRetentionScheduleArgs extends io.pulumi.resources.Resour
             this.retentionTimes = Input.ofNullable(retentionTimes);
             return this;
         }
-
         public DailyRetentionScheduleArgs build() {
             return new DailyRetentionScheduleArgs(retentionDuration, retentionTimes);
         }

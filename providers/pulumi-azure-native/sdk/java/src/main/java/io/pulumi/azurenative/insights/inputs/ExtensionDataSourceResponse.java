@@ -26,7 +26,7 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="extensionName", required=true)
-    private final String extensionName;
+        private final String extensionName;
 
     public String getExtensionName() {
         return this.extensionName;
@@ -37,7 +37,7 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="extensionSettings")
-    private final @Nullable Object extensionSettings;
+        private final @Nullable Object extensionSettings;
 
     public Optional<Object> getExtensionSettings() {
         return this.extensionSettings == null ? Optional.empty() : Optional.ofNullable(this.extensionSettings);
@@ -48,7 +48,7 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="inputDataSources")
-    private final @Nullable List<String> inputDataSources;
+        private final @Nullable List<String> inputDataSources;
 
     public List<String> getInputDataSources() {
         return this.inputDataSources == null ? List.of() : this.inputDataSources;
@@ -60,7 +60,7 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -72,7 +72,7 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="streams")
-    private final @Nullable List<String> streams;
+        private final @Nullable List<String> streams;
 
     public List<String> getStreams() {
         return this.streams == null ? List.of() : this.streams;
@@ -151,7 +151,6 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
             this.streams = streams;
             return this;
         }
-
         public ExtensionDataSourceResponse build() {
             return new ExtensionDataSourceResponse(extensionName, extensionSettings, inputDataSources, name, streams);
         }

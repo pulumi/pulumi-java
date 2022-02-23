@@ -30,7 +30,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="azureVmDiskDetails")
-    private final @Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails;
+        private final @Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails;
 
     public List<AzureVmDiskDetailsResponse> getAzureVmDiskDetails() {
         return this.azureVmDiskDetails == null ? List.of() : this.azureVmDiskDetails;
@@ -41,7 +41,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="enableRdpOnTargetOption")
-    private final @Nullable String enableRdpOnTargetOption;
+        private final @Nullable String enableRdpOnTargetOption;
 
     public Optional<String> getEnableRdpOnTargetOption() {
         return this.enableRdpOnTargetOption == null ? Optional.empty() : Optional.ofNullable(this.enableRdpOnTargetOption);
@@ -52,7 +52,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable String encryption;
+        private final @Nullable String encryption;
 
     public Optional<String> getEncryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
@@ -63,7 +63,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="initialReplicationDetails")
-    private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
+        private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
 
     public Optional<InitialReplicationDetailsResponse> getInitialReplicationDetails() {
         return this.initialReplicationDetails == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationDetails);
@@ -75,7 +75,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -86,7 +86,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="lastReplicatedTime")
-    private final @Nullable String lastReplicatedTime;
+        private final @Nullable String lastReplicatedTime;
 
     public Optional<String> getLastReplicatedTime() {
         return this.lastReplicatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastReplicatedTime);
@@ -97,7 +97,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="lastRpoCalculatedTime")
-    private final @Nullable String lastRpoCalculatedTime;
+        private final @Nullable String lastRpoCalculatedTime;
 
     public Optional<String> getLastRpoCalculatedTime() {
         return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
@@ -108,7 +108,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="licenseType")
-    private final @Nullable String licenseType;
+        private final @Nullable String licenseType;
 
     public Optional<String> getLicenseType() {
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
@@ -119,7 +119,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="oSDetails")
-    private final @Nullable OSDetailsResponse oSDetails;
+        private final @Nullable OSDetailsResponse oSDetails;
 
     public Optional<OSDetailsResponse> getOSDetails() {
         return this.oSDetails == null ? Optional.empty() : Optional.ofNullable(this.oSDetails);
@@ -130,7 +130,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="recoveryAvailabilitySetId")
-    private final @Nullable String recoveryAvailabilitySetId;
+        private final @Nullable String recoveryAvailabilitySetId;
 
     public Optional<String> getRecoveryAvailabilitySetId() {
         return this.recoveryAvailabilitySetId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAvailabilitySetId);
@@ -141,7 +141,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="recoveryAzureLogStorageAccountId")
-    private final @Nullable String recoveryAzureLogStorageAccountId;
+        private final @Nullable String recoveryAzureLogStorageAccountId;
 
     public Optional<String> getRecoveryAzureLogStorageAccountId() {
         return this.recoveryAzureLogStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureLogStorageAccountId);
@@ -152,7 +152,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="recoveryAzureResourceGroupId")
-    private final @Nullable String recoveryAzureResourceGroupId;
+        private final @Nullable String recoveryAzureResourceGroupId;
 
     public Optional<String> getRecoveryAzureResourceGroupId() {
         return this.recoveryAzureResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureResourceGroupId);
@@ -163,7 +163,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="recoveryAzureStorageAccount")
-    private final @Nullable String recoveryAzureStorageAccount;
+        private final @Nullable String recoveryAzureStorageAccount;
 
     public Optional<String> getRecoveryAzureStorageAccount() {
         return this.recoveryAzureStorageAccount == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureStorageAccount);
@@ -174,7 +174,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="recoveryAzureVMSize")
-    private final @Nullable String recoveryAzureVMSize;
+        private final @Nullable String recoveryAzureVMSize;
 
     public Optional<String> getRecoveryAzureVMSize() {
         return this.recoveryAzureVMSize == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMSize);
@@ -185,7 +185,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="recoveryAzureVmName")
-    private final @Nullable String recoveryAzureVmName;
+        private final @Nullable String recoveryAzureVmName;
 
     public Optional<String> getRecoveryAzureVmName() {
         return this.recoveryAzureVmName == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVmName);
@@ -196,7 +196,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="rpoInSeconds")
-    private final @Nullable Double rpoInSeconds;
+        private final @Nullable Double rpoInSeconds;
 
     public Optional<Double> getRpoInSeconds() {
         return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
@@ -207,7 +207,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="selectedRecoveryAzureNetworkId")
-    private final @Nullable String selectedRecoveryAzureNetworkId;
+        private final @Nullable String selectedRecoveryAzureNetworkId;
 
     public Optional<String> getSelectedRecoveryAzureNetworkId() {
         return this.selectedRecoveryAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
@@ -218,7 +218,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="selectedSourceNicId")
-    private final @Nullable String selectedSourceNicId;
+        private final @Nullable String selectedSourceNicId;
 
     public Optional<String> getSelectedSourceNicId() {
         return this.selectedSourceNicId == null ? Optional.empty() : Optional.ofNullable(this.selectedSourceNicId);
@@ -229,7 +229,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="sourceVmCpuCount")
-    private final @Nullable Integer sourceVmCpuCount;
+        private final @Nullable Integer sourceVmCpuCount;
 
     public Optional<Integer> getSourceVmCpuCount() {
         return this.sourceVmCpuCount == null ? Optional.empty() : Optional.ofNullable(this.sourceVmCpuCount);
@@ -240,7 +240,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="sourceVmRamSizeInMB")
-    private final @Nullable Integer sourceVmRamSizeInMB;
+        private final @Nullable Integer sourceVmRamSizeInMB;
 
     public Optional<Integer> getSourceVmRamSizeInMB() {
         return this.sourceVmRamSizeInMB == null ? Optional.empty() : Optional.ofNullable(this.sourceVmRamSizeInMB);
@@ -251,7 +251,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="targetAvailabilityZone")
-    private final @Nullable String targetAvailabilityZone;
+        private final @Nullable String targetAvailabilityZone;
 
     public Optional<String> getTargetAvailabilityZone() {
         return this.targetAvailabilityZone == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilityZone);
@@ -262,7 +262,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="targetProximityPlacementGroupId")
-    private final @Nullable String targetProximityPlacementGroupId;
+        private final @Nullable String targetProximityPlacementGroupId;
 
     public Optional<String> getTargetProximityPlacementGroupId() {
         return this.targetProximityPlacementGroupId == null ? Optional.empty() : Optional.ofNullable(this.targetProximityPlacementGroupId);
@@ -273,7 +273,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="useManagedDisks")
-    private final @Nullable String useManagedDisks;
+        private final @Nullable String useManagedDisks;
 
     public Optional<String> getUseManagedDisks() {
         return this.useManagedDisks == null ? Optional.empty() : Optional.ofNullable(this.useManagedDisks);
@@ -284,7 +284,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="vmId")
-    private final @Nullable String vmId;
+        private final @Nullable String vmId;
 
     public Optional<String> getVmId() {
         return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
@@ -295,7 +295,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="vmNics")
-    private final @Nullable List<VMNicDetailsResponse> vmNics;
+        private final @Nullable List<VMNicDetailsResponse> vmNics;
 
     public List<VMNicDetailsResponse> getVmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
@@ -306,7 +306,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="vmProtectionState")
-    private final @Nullable String vmProtectionState;
+        private final @Nullable String vmProtectionState;
 
     public Optional<String> getVmProtectionState() {
         return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
@@ -317,7 +317,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
      * 
      */
     @InputImport(name="vmProtectionStateDescription")
-    private final @Nullable String vmProtectionStateDescription;
+        private final @Nullable String vmProtectionStateDescription;
 
     public Optional<String> getVmProtectionStateDescription() {
         return this.vmProtectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionStateDescription);
@@ -616,7 +616,6 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends io.pulum
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }
-
         public HyperVReplicaAzureReplicationDetailsResponse build() {
             return new HyperVReplicaAzureReplicationDetailsResponse(azureVmDiskDetails, enableRdpOnTargetOption, encryption, initialReplicationDetails, instanceType, lastReplicatedTime, lastRpoCalculatedTime, licenseType, oSDetails, recoveryAvailabilitySetId, recoveryAzureLogStorageAccountId, recoveryAzureResourceGroupId, recoveryAzureStorageAccount, recoveryAzureVMSize, recoveryAzureVmName, rpoInSeconds, selectedRecoveryAzureNetworkId, selectedSourceNicId, sourceVmCpuCount, sourceVmRamSizeInMB, targetAvailabilityZone, targetProximityPlacementGroupId, useManagedDisks, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }

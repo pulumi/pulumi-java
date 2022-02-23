@@ -140,7 +140,6 @@ public final class CostAllocationRulePropertiesResponse {
             this.updatedDate = Objects.requireNonNull(updatedDate);
             return this;
         }
-
         public CostAllocationRulePropertiesResponse build() {
             return new CostAllocationRulePropertiesResponse(createdDate, description, details, status, updatedDate);
         }

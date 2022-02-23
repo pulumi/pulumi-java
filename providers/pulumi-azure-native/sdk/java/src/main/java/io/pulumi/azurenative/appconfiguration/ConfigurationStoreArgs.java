@@ -25,7 +25,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configStoreName")
-    private final @Nullable Input<String> configStoreName;
+        private final @Nullable Input<String> configStoreName;
 
     public Input<String> getConfigStoreName() {
         return this.configStoreName == null ? Input.empty() : this.configStoreName;
@@ -36,7 +36,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<EncryptionPropertiesArgs> encryption;
+        private final @Nullable Input<EncryptionPropertiesArgs> encryption;
 
     public Input<EncryptionPropertiesArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -47,7 +47,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ResourceIdentityArgs> identity;
+        private final @Nullable Input<ResourceIdentityArgs> identity;
 
     public Input<ResourceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -58,7 +58,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -69,7 +69,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -80,7 +80,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -91,7 +91,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<SkuArgs> sku;
+        private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -102,7 +102,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -251,7 +251,6 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ConfigurationStoreArgs build() {
             return new ConfigurationStoreArgs(configStoreName, encryption, identity, location, publicNetworkAccess, resourceGroupName, sku, tags);
         }

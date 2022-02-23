@@ -269,7 +269,6 @@ public final class GetTypeProviderResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetTypeProviderResult build() {
             return new GetTypeProviderResult(collectionOverrides, credential, customCertificateAuthorityRoots, description, descriptorUrl, insertTime, labels, name, operation, options, selfLink);
         }

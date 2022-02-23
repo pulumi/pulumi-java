@@ -169,7 +169,6 @@ public final class GetAccountResult {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(accountId, displayName, email, id, name, project, uniqueId);
         }

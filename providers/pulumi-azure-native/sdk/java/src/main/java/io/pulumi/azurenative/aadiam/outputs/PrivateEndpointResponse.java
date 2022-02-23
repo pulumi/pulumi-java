@@ -54,7 +54,6 @@ public final class PrivateEndpointResponse {
             this.id = id;
             return this;
         }
-
         public PrivateEndpointResponse build() {
             return new PrivateEndpointResponse(id);
         }

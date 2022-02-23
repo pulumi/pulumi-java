@@ -100,7 +100,6 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
             this.refreshToken = refreshToken;
             return this;
         }
-
         public ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties build() {
             return new ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties(accessToken, clientId, clientSecret, connectorOAuthRequest, refreshToken);
         }

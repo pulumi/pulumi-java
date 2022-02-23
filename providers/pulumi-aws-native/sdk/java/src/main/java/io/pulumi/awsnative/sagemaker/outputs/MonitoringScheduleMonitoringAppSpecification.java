@@ -140,7 +140,6 @@ public final class MonitoringScheduleMonitoringAppSpecification {
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }
-
         public MonitoringScheduleMonitoringAppSpecification build() {
             return new MonitoringScheduleMonitoringAppSpecification(containerArguments, containerEntrypoint, imageUri, postAnalyticsProcessorSourceUri, recordPreprocessorSourceUri);
         }

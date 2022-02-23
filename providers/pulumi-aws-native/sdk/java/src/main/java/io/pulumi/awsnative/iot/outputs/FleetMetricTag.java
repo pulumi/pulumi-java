@@ -74,7 +74,6 @@ public final class FleetMetricTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FleetMetricTag build() {
             return new FleetMetricTag(key, value);
         }

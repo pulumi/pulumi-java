@@ -26,7 +26,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
      * 
      */
     @InputImport(name="associations")
-    private final @Nullable Input<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations;
+        private final @Nullable Input<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations;
 
     public Input<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> getAssociations() {
         return this.associations == null ? Input.empty() : this.associations;
@@ -38,7 +38,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -49,7 +49,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
      * 
      */
     @InputImport(name="wafPolicy")
-    private final @Nullable Input<ResourceReferenceArgs> wafPolicy;
+        private final @Nullable Input<ResourceReferenceArgs> wafPolicy;
 
     public Input<ResourceReferenceArgs> getWafPolicy() {
         return this.wafPolicy == null ? Input.empty() : this.wafPolicy;
@@ -123,7 +123,6 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
             this.wafPolicy = Input.ofNullable(wafPolicy);
             return this;
         }
-
         public SecurityPolicyWebApplicationFirewallParametersArgs build() {
             return new SecurityPolicyWebApplicationFirewallParametersArgs(associations, type, wafPolicy);
         }

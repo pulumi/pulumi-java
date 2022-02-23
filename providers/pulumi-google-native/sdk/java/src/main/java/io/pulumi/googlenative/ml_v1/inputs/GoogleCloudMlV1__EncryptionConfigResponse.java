@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1__EncryptionConfigResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final String kmsKeyName;
+      private final String kmsKeyName;
 
     public String getKmsKeyName() {
         return this.kmsKeyName;
@@ -59,7 +59,6 @@ public final class GoogleCloudMlV1__EncryptionConfigResponse extends io.pulumi.r
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public GoogleCloudMlV1__EncryptionConfigResponse build() {
             return new GoogleCloudMlV1__EncryptionConfigResponse(kmsKeyName);
         }

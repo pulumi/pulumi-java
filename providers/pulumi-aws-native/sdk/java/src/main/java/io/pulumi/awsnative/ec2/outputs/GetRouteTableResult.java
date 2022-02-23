@@ -78,7 +78,6 @@ public final class GetRouteTableResult {
             this.tags = tags;
             return this;
         }
-
         public GetRouteTableResult build() {
             return new GetRouteTableResult(routeTableId, tags);
         }

@@ -17,7 +17,7 @@ public final class GetSecurityUserConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="configurationName", required=true)
-    private final String configurationName;
+        private final String configurationName;
 
     public String getConfigurationName() {
         return this.configurationName;
@@ -28,7 +28,7 @@ public final class GetSecurityUserConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-    private final String networkManagerName;
+        private final String networkManagerName;
 
     public String getNetworkManagerName() {
         return this.networkManagerName;
@@ -39,7 +39,7 @@ public final class GetSecurityUserConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetSecurityUserConfigurationArgs extends io.pulumi.resources.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetSecurityUserConfigurationArgs build() {
             return new GetSecurityUserConfigurationArgs(configurationName, networkManagerName, resourceGroupName);
         }

@@ -46,7 +46,6 @@ public final class DeliveryStreamSplunkRetryOptions {
             this.durationInSeconds = durationInSeconds;
             return this;
         }
-
         public DeliveryStreamSplunkRetryOptions build() {
             return new DeliveryStreamSplunkRetryOptions(durationInSeconds);
         }

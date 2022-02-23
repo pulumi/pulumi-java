@@ -54,7 +54,6 @@ public final class FirewallPolicySNATResponse {
             this.privateRanges = privateRanges;
             return this;
         }
-
         public FirewallPolicySNATResponse build() {
             return new FirewallPolicySNATResponse(privateRanges);
         }

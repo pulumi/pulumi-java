@@ -265,7 +265,6 @@ public final class GetSslPolicyResult {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-
         public GetSslPolicyResult build() {
             return new GetSslPolicyResult(creationTimestamp, customFeatures, description, enabledFeatures, fingerprint, kind, minTlsVersion, name, profile, selfLink, warnings);
         }

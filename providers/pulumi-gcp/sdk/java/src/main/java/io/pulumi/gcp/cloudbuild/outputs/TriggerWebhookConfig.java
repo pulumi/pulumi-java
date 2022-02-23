@@ -82,7 +82,6 @@ public final class TriggerWebhookConfig {
             this.state = state;
             return this;
         }
-
         public TriggerWebhookConfig build() {
             return new TriggerWebhookConfig(secret, state);
         }

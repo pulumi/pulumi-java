@@ -52,7 +52,6 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }
-
         public GrafeasV1beta1DiscoveryDetailsResponse build() {
             return new GrafeasV1beta1DiscoveryDetailsResponse(discovered);
         }

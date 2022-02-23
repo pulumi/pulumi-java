@@ -99,7 +99,6 @@ public final class DiskEncryptionSettingsResponse {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
-
         public DiskEncryptionSettingsResponse build() {
             return new DiskEncryptionSettingsResponse(diskEncryptionKey, enabled, keyEncryptionKey);
         }

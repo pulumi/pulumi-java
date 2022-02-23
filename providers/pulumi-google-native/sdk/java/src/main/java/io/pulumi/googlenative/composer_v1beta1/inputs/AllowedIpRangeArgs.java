@@ -23,7 +23,7 @@ public final class AllowedIpRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class AllowedIpRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -93,7 +93,6 @@ public final class AllowedIpRangeArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public AllowedIpRangeArgs build() {
             return new AllowedIpRangeArgs(description, value);
         }

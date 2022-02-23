@@ -91,7 +91,6 @@ public final class UrlSigningActionParametersResponse {
             this.parameterNameOverride = parameterNameOverride;
             return this;
         }
-
         public UrlSigningActionParametersResponse build() {
             return new UrlSigningActionParametersResponse(algorithm, odataType, parameterNameOverride);
         }

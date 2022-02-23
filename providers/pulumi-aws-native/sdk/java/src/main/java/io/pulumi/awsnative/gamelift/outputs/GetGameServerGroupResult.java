@@ -315,7 +315,6 @@ public final class GetGameServerGroupResult {
             this.vpcSubnets = vpcSubnets;
             return this;
         }
-
         public GetGameServerGroupResult build() {
             return new GetGameServerGroupResult(autoScalingGroupArn, autoScalingPolicy, balancingStrategy, gameServerGroupArn, gameServerGroupName, gameServerProtectionPolicy, instanceDefinitions, launchTemplate, maxSize, minSize, roleArn, tags, vpcSubnets);
         }

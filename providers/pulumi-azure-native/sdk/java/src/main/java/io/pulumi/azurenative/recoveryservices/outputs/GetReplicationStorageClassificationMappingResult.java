@@ -140,7 +140,6 @@ public final class GetReplicationStorageClassificationMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationStorageClassificationMappingResult build() {
             return new GetReplicationStorageClassificationMappingResult(id, location, name, properties, type);
         }

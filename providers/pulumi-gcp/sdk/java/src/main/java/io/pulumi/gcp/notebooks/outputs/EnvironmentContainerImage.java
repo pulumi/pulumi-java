@@ -78,7 +78,6 @@ public final class EnvironmentContainerImage {
             this.tag = tag;
             return this;
         }
-
         public EnvironmentContainerImage build() {
             return new EnvironmentContainerImage(repository, tag);
         }

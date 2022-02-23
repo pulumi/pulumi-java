@@ -16,14 +16,14 @@ public final class SigningProfileSignatureValidityPeriodArgs extends io.pulumi.r
     public static final SigningProfileSignatureValidityPeriodArgs Empty = new SigningProfileSignatureValidityPeriodArgs();
 
     @InputImport(name="type")
-    private final @Nullable Input<SigningProfileSignatureValidityPeriodType> type;
+        private final @Nullable Input<SigningProfileSignatureValidityPeriodType> type;
 
     public Input<SigningProfileSignatureValidityPeriodType> getType() {
         return this.type == null ? Input.empty() : this.type;
     }
 
     @InputImport(name="value")
-    private final @Nullable Input<Integer> value;
+        private final @Nullable Input<Integer> value;
 
     public Input<Integer> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -82,7 +82,6 @@ public final class SigningProfileSignatureValidityPeriodArgs extends io.pulumi.r
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public SigningProfileSignatureValidityPeriodArgs build() {
             return new SigningProfileSignatureValidityPeriodArgs(type, value);
         }

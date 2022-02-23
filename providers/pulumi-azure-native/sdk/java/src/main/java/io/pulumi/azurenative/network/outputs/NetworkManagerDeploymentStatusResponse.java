@@ -161,7 +161,6 @@ public final class NetworkManagerDeploymentStatusResponse {
             this.region = region;
             return this;
         }
-
         public NetworkManagerDeploymentStatusResponse build() {
             return new NetworkManagerDeploymentStatusResponse(commitTime, configurationIds, deploymentStatus, deploymentType, errorMessage, region);
         }

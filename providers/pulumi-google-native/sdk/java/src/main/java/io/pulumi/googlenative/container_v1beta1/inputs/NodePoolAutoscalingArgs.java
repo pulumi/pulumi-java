@@ -24,7 +24,7 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="autoprovisioned")
-    private final @Nullable Input<Boolean> autoprovisioned;
+      private final @Nullable Input<Boolean> autoprovisioned;
 
     public Input<Boolean> getAutoprovisioned() {
         return this.autoprovisioned == null ? Input.empty() : this.autoprovisioned;
@@ -35,7 +35,7 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -46,7 +46,7 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxNodeCount")
-    private final @Nullable Input<Integer> maxNodeCount;
+      private final @Nullable Input<Integer> maxNodeCount;
 
     public Input<Integer> getMaxNodeCount() {
         return this.maxNodeCount == null ? Input.empty() : this.maxNodeCount;
@@ -57,7 +57,7 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="minNodeCount")
-    private final @Nullable Input<Integer> minNodeCount;
+      private final @Nullable Input<Integer> minNodeCount;
 
     public Input<Integer> getMinNodeCount() {
         return this.minNodeCount == null ? Input.empty() : this.minNodeCount;
@@ -146,7 +146,6 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
             this.minNodeCount = Input.ofNullable(minNodeCount);
             return this;
         }
-
         public NodePoolAutoscalingArgs build() {
             return new NodePoolAutoscalingArgs(autoprovisioned, enabled, maxNodeCount, minNodeCount);
         }

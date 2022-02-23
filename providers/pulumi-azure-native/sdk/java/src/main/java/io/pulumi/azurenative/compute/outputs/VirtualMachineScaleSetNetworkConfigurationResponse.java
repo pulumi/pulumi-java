@@ -249,7 +249,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse {
             this.primary = primary;
             return this;
         }
-
         public VirtualMachineScaleSetNetworkConfigurationResponse build() {
             return new VirtualMachineScaleSetNetworkConfigurationResponse(deleteOption, dnsSettings, enableAcceleratedNetworking, enableFpga, enableIPForwarding, id, ipConfigurations, name, networkSecurityGroup, primary);
         }

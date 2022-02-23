@@ -21,7 +21,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -32,7 +32,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -81,7 +81,6 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public StatusResponse build() {
             return new StatusResponse(code, description);
         }

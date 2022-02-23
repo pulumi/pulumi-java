@@ -21,7 +21,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<NetworkAclTagArgs>> tags;
+        private final @Nullable Input<List<NetworkAclTagArgs>> tags;
 
     public Input<List<NetworkAclTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -32,7 +32,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+        private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;
@@ -91,7 +91,6 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }
-
         public NetworkAclArgs build() {
             return new NetworkAclArgs(tags, vpcId);
         }

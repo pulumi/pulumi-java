@@ -52,7 +52,6 @@ public final class ResourceStatusUpcomingMaintenanceResponse {
             this.canReschedule = Objects.requireNonNull(canReschedule);
             return this;
         }
-
         public ResourceStatusUpcomingMaintenanceResponse build() {
             return new ResourceStatusUpcomingMaintenanceResponse(canReschedule);
         }

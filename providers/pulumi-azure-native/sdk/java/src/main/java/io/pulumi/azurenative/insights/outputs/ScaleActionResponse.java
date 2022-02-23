@@ -118,7 +118,6 @@ public final class ScaleActionResponse {
             this.value = value;
             return this;
         }
-
         public ScaleActionResponse build() {
             return new ScaleActionResponse(cooldown, direction, type, value);
         }

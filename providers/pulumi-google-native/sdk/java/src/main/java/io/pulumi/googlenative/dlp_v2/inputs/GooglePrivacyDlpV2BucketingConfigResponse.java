@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="buckets", required=true)
-    private final List<GooglePrivacyDlpV2BucketResponse> buckets;
+      private final List<GooglePrivacyDlpV2BucketResponse> buckets;
 
     public List<GooglePrivacyDlpV2BucketResponse> getBuckets() {
         return this.buckets;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse extends io.pulumi.r
             this.buckets = Objects.requireNonNull(buckets);
             return this;
         }
-
         public GooglePrivacyDlpV2BucketingConfigResponse build() {
             return new GooglePrivacyDlpV2BucketingConfigResponse(buckets);
         }

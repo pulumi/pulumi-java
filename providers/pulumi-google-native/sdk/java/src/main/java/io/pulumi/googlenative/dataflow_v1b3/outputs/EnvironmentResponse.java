@@ -393,7 +393,6 @@ public final class EnvironmentResponse {
             this.workerZone = Objects.requireNonNull(workerZone);
             return this;
         }
-
         public EnvironmentResponse build() {
             return new EnvironmentResponse(clusterManagerApiService, dataset, debugOptions, experiments, flexResourceSchedulingGoal, internalExperiments, sdkPipelineOptions, serviceAccountEmail, serviceKmsKeyName, serviceOptions, shuffleMode, tempStoragePrefix, userAgent, version, workerPools, workerRegion, workerZone);
         }

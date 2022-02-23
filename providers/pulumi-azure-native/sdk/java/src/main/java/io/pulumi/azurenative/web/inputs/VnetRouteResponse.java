@@ -23,7 +23,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endAddress")
-    private final @Nullable String endAddress;
+        private final @Nullable String endAddress;
 
     public Optional<String> getEndAddress() {
         return this.endAddress == null ? Optional.empty() : Optional.ofNullable(this.endAddress);
@@ -34,7 +34,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -45,7 +45,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable String kind;
+        private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -56,7 +56,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -72,7 +72,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeType")
-    private final @Nullable String routeType;
+        private final @Nullable String routeType;
 
     public Optional<String> getRouteType() {
         return this.routeType == null ? Optional.empty() : Optional.ofNullable(this.routeType);
@@ -83,7 +83,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startAddress")
-    private final @Nullable String startAddress;
+        private final @Nullable String startAddress;
 
     public Optional<String> getStartAddress() {
         return this.startAddress == null ? Optional.empty() : Optional.ofNullable(this.startAddress);
@@ -94,7 +94,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -193,7 +193,6 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VnetRouteResponse build() {
             return new VnetRouteResponse(endAddress, id, kind, name, routeType, startAddress, type);
         }

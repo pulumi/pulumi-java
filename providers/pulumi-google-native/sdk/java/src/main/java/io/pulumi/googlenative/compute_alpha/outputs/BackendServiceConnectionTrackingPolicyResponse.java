@@ -118,7 +118,6 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
             this.trackingMode = Objects.requireNonNull(trackingMode);
             return this;
         }
-
         public BackendServiceConnectionTrackingPolicyResponse build() {
             return new BackendServiceConnectionTrackingPolicyResponse(connectionPersistenceOnUnhealthyBackends, enableStrongAffinity, idleTimeoutSec, trackingMode);
         }

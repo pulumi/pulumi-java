@@ -54,7 +54,6 @@ public final class AccessPointVpcConfiguration {
             this.vpcId = vpcId;
             return this;
         }
-
         public AccessPointVpcConfiguration build() {
             return new AccessPointVpcConfiguration(vpcId);
         }

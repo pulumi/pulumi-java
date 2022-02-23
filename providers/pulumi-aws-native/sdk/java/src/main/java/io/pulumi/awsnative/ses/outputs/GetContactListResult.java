@@ -100,7 +100,6 @@ public final class GetContactListResult {
             this.topics = topics;
             return this;
         }
-
         public GetContactListResult build() {
             return new GetContactListResult(description, tags, topics);
         }

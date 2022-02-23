@@ -224,7 +224,6 @@ public final class GetKeyResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(apiProducts, attributes, consumerKey, consumerSecret, expiresAt, expiresInSeconds, issuedAt, scopes, status);
         }

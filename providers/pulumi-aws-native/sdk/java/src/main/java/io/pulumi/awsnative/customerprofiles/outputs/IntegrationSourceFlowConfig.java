@@ -89,7 +89,6 @@ public final class IntegrationSourceFlowConfig {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
         }
-
         public IntegrationSourceFlowConfig build() {
             return new IntegrationSourceFlowConfig(connectorProfileName, connectorType, incrementalPullConfig, sourceConnectorProperties);
         }

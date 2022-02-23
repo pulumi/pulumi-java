@@ -104,7 +104,6 @@ public final class SubProtectionPolicyResponse {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
-
         public SubProtectionPolicyResponse build() {
             return new SubProtectionPolicyResponse(policyType, retentionPolicy, schedulePolicy);
         }

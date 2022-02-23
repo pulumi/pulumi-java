@@ -91,7 +91,6 @@ public final class DetectorModelSqs {
             this.useBase64 = useBase64;
             return this;
         }
-
         public DetectorModelSqs build() {
             return new DetectorModelSqs(payload, queueUrl, useBase64);
         }

@@ -74,7 +74,6 @@ public final class EdifactAgreementContentResponse {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }
-
         public EdifactAgreementContentResponse build() {
             return new EdifactAgreementContentResponse(receiveAgreement, sendAgreement);
         }

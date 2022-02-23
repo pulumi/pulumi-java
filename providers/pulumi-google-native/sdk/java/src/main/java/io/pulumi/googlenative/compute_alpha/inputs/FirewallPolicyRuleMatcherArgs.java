@@ -26,7 +26,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="destAddressGroups")
-    private final @Nullable Input<List<String>> destAddressGroups;
+      private final @Nullable Input<List<String>> destAddressGroups;
 
     public Input<List<String>> getDestAddressGroups() {
         return this.destAddressGroups == null ? Input.empty() : this.destAddressGroups;
@@ -37,7 +37,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="destFqdns")
-    private final @Nullable Input<List<String>> destFqdns;
+      private final @Nullable Input<List<String>> destFqdns;
 
     public Input<List<String>> getDestFqdns() {
         return this.destFqdns == null ? Input.empty() : this.destFqdns;
@@ -48,7 +48,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="destIpRanges")
-    private final @Nullable Input<List<String>> destIpRanges;
+      private final @Nullable Input<List<String>> destIpRanges;
 
     public Input<List<String>> getDestIpRanges() {
         return this.destIpRanges == null ? Input.empty() : this.destIpRanges;
@@ -59,7 +59,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="destRegionCodes")
-    private final @Nullable Input<List<String>> destRegionCodes;
+      private final @Nullable Input<List<String>> destRegionCodes;
 
     public Input<List<String>> getDestRegionCodes() {
         return this.destRegionCodes == null ? Input.empty() : this.destRegionCodes;
@@ -70,7 +70,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="layer4Configs")
-    private final @Nullable Input<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> layer4Configs;
+      private final @Nullable Input<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> layer4Configs;
 
     public Input<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> getLayer4Configs() {
         return this.layer4Configs == null ? Input.empty() : this.layer4Configs;
@@ -81,7 +81,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="srcAddressGroups")
-    private final @Nullable Input<List<String>> srcAddressGroups;
+      private final @Nullable Input<List<String>> srcAddressGroups;
 
     public Input<List<String>> getSrcAddressGroups() {
         return this.srcAddressGroups == null ? Input.empty() : this.srcAddressGroups;
@@ -92,7 +92,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="srcFqdns")
-    private final @Nullable Input<List<String>> srcFqdns;
+      private final @Nullable Input<List<String>> srcFqdns;
 
     public Input<List<String>> getSrcFqdns() {
         return this.srcFqdns == null ? Input.empty() : this.srcFqdns;
@@ -103,7 +103,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="srcIpRanges")
-    private final @Nullable Input<List<String>> srcIpRanges;
+      private final @Nullable Input<List<String>> srcIpRanges;
 
     public Input<List<String>> getSrcIpRanges() {
         return this.srcIpRanges == null ? Input.empty() : this.srcIpRanges;
@@ -114,7 +114,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="srcRegionCodes")
-    private final @Nullable Input<List<String>> srcRegionCodes;
+      private final @Nullable Input<List<String>> srcRegionCodes;
 
     public Input<List<String>> getSrcRegionCodes() {
         return this.srcRegionCodes == null ? Input.empty() : this.srcRegionCodes;
@@ -125,7 +125,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="srcSecureTags")
-    private final @Nullable Input<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags;
+      private final @Nullable Input<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags;
 
     public Input<List<FirewallPolicyRuleSecureTagArgs>> getSrcSecureTags() {
         return this.srcSecureTags == null ? Input.empty() : this.srcSecureTags;
@@ -304,7 +304,6 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
             this.srcSecureTags = Input.ofNullable(srcSecureTags);
             return this;
         }
-
         public FirewallPolicyRuleMatcherArgs build() {
             return new FirewallPolicyRuleMatcherArgs(destAddressGroups, destFqdns, destIpRanges, destRegionCodes, layer4Configs, srcAddressGroups, srcFqdns, srcIpRanges, srcRegionCodes, srcSecureTags);
         }

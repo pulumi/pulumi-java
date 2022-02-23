@@ -139,7 +139,6 @@ public final class GetCustomerSubscriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCustomerSubscriptionResult build() {
             return new GetCustomerSubscriptionResult(etag, id, name, tenantId, type);
         }

@@ -77,7 +77,6 @@ public final class ImagePipelineImageTestsConfiguration {
             this.timeoutMinutes = timeoutMinutes;
             return this;
         }
-
         public ImagePipelineImageTestsConfiguration build() {
             return new ImagePipelineImageTestsConfiguration(imageTestsEnabled, timeoutMinutes);
         }

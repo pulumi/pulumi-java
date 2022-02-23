@@ -161,7 +161,6 @@ public final class GetCreatorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCreatorResult build() {
             return new GetCreatorResult(id, location, name, properties, tags, type);
         }

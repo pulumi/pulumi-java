@@ -17,21 +17,21 @@ public final class ScheduledActionType extends io.pulumi.resources.InvokeArgs {
     public static final ScheduledActionType Empty = new ScheduledActionType();
 
     @InputImport(name="pauseCluster")
-    private final @Nullable ScheduledActionPauseClusterMessage pauseCluster;
+        private final @Nullable ScheduledActionPauseClusterMessage pauseCluster;
 
     public Optional<ScheduledActionPauseClusterMessage> getPauseCluster() {
         return this.pauseCluster == null ? Optional.empty() : Optional.ofNullable(this.pauseCluster);
     }
 
     @InputImport(name="resizeCluster")
-    private final @Nullable ScheduledActionResizeClusterMessage resizeCluster;
+        private final @Nullable ScheduledActionResizeClusterMessage resizeCluster;
 
     public Optional<ScheduledActionResizeClusterMessage> getResizeCluster() {
         return this.resizeCluster == null ? Optional.empty() : Optional.ofNullable(this.resizeCluster);
     }
 
     @InputImport(name="resumeCluster")
-    private final @Nullable ScheduledActionResumeClusterMessage resumeCluster;
+        private final @Nullable ScheduledActionResumeClusterMessage resumeCluster;
 
     public Optional<ScheduledActionResumeClusterMessage> getResumeCluster() {
         return this.resumeCluster == null ? Optional.empty() : Optional.ofNullable(this.resumeCluster);
@@ -90,7 +90,6 @@ public final class ScheduledActionType extends io.pulumi.resources.InvokeArgs {
             this.resumeCluster = resumeCluster;
             return this;
         }
-
         public ScheduledActionType build() {
             return new ScheduledActionType(pauseCluster, resizeCluster, resumeCluster);
         }

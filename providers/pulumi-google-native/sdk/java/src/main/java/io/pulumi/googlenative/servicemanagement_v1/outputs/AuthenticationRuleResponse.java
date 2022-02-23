@@ -120,7 +120,6 @@ public final class AuthenticationRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public AuthenticationRuleResponse build() {
             return new AuthenticationRuleResponse(allowWithoutCredential, oauth, requirements, selector);
         }

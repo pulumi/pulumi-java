@@ -20,7 +20,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -31,7 +31,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="historyId")
-    private final @Nullable Input<String> historyId;
+      private final @Nullable Input<String> historyId;
 
     public Input<String> getHistoryId() {
         return this.historyId == null ? Input.empty() : this.historyId;
@@ -42,21 +42,21 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -67,7 +67,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testPlatform")
-    private final @Nullable Input<HistoryTestPlatform> testPlatform;
+      private final @Nullable Input<HistoryTestPlatform> testPlatform;
 
     public Input<HistoryTestPlatform> getTestPlatform() {
         return this.testPlatform == null ? Input.empty() : this.testPlatform;
@@ -186,7 +186,6 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
             this.testPlatform = Input.ofNullable(testPlatform);
             return this;
         }
-
         public HistoryArgs build() {
             return new HistoryArgs(displayName, historyId, name, project, requestId, testPlatform);
         }

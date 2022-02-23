@@ -161,7 +161,6 @@ public final class ResultsResponse {
             this.numArtifacts = Objects.requireNonNull(numArtifacts);
             return this;
         }
-
         public ResultsResponse build() {
             return new ResultsResponse(artifactManifest, artifactTiming, buildStepImages, buildStepOutputs, images, numArtifacts);
         }

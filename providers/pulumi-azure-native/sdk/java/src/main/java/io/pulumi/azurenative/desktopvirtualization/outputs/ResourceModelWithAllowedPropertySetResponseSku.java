@@ -140,7 +140,6 @@ public final class ResourceModelWithAllowedPropertySetResponseSku {
             this.tier = tier;
             return this;
         }
-
         public ResourceModelWithAllowedPropertySetResponseSku build() {
             return new ResourceModelWithAllowedPropertySetResponseSku(capacity, family, name, size, tier);
         }

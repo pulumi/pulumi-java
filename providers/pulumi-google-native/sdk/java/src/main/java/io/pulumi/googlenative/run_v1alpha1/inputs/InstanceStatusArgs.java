@@ -25,7 +25,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completionTime")
-    private final @Nullable Input<String> completionTime;
+      private final @Nullable Input<String> completionTime;
 
     public Input<String> getCompletionTime() {
         return this.completionTime == null ? Input.empty() : this.completionTime;
@@ -36,7 +36,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failed")
-    private final @Nullable Input<Integer> failed;
+      private final @Nullable Input<Integer> failed;
 
     public Input<Integer> getFailed() {
         return this.failed == null ? Input.empty() : this.failed;
@@ -47,7 +47,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="index", required=true)
-    private final Input<Integer> index;
+      private final Input<Integer> index;
 
     public Input<Integer> getIndex() {
         return this.index;
@@ -58,7 +58,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastAttemptResult")
-    private final @Nullable Input<InstanceAttemptResultArgs> lastAttemptResult;
+      private final @Nullable Input<InstanceAttemptResultArgs> lastAttemptResult;
 
     public Input<InstanceAttemptResultArgs> getLastAttemptResult() {
         return this.lastAttemptResult == null ? Input.empty() : this.lastAttemptResult;
@@ -69,7 +69,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastExitCode")
-    private final @Nullable Input<Integer> lastExitCode;
+      private final @Nullable Input<Integer> lastExitCode;
 
     public Input<Integer> getLastExitCode() {
         return this.lastExitCode == null ? Input.empty() : this.lastExitCode;
@@ -80,7 +80,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restarted")
-    private final @Nullable Input<Integer> restarted;
+      private final @Nullable Input<Integer> restarted;
 
     public Input<Integer> getRestarted() {
         return this.restarted == null ? Input.empty() : this.restarted;
@@ -91,7 +91,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -102,7 +102,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="succeeded")
-    private final @Nullable Input<Integer> succeeded;
+      private final @Nullable Input<Integer> succeeded;
 
     public Input<Integer> getSucceeded() {
         return this.succeeded == null ? Input.empty() : this.succeeded;
@@ -251,7 +251,6 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.succeeded = Input.ofNullable(succeeded);
             return this;
         }
-
         public InstanceStatusArgs build() {
             return new InstanceStatusArgs(completionTime, failed, index, lastAttemptResult, lastExitCode, restarted, startTime, succeeded);
         }

@@ -21,7 +21,7 @@ public final class RuntimeVirtualMachineGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+        private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -33,7 +33,7 @@ public final class RuntimeVirtualMachineGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instanceName")
-    private final @Nullable Input<String> instanceName;
+        private final @Nullable Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName == null ? Input.empty() : this.instanceName;
@@ -45,7 +45,7 @@ public final class RuntimeVirtualMachineGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="virtualMachineConfig")
-    private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigGetArgs> virtualMachineConfig;
+        private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigGetArgs> virtualMachineConfig;
 
     public Input<RuntimeVirtualMachineVirtualMachineConfigGetArgs> getVirtualMachineConfig() {
         return this.virtualMachineConfig == null ? Input.empty() : this.virtualMachineConfig;
@@ -119,7 +119,6 @@ public final class RuntimeVirtualMachineGetArgs extends io.pulumi.resources.Reso
             this.virtualMachineConfig = Input.ofNullable(virtualMachineConfig);
             return this;
         }
-
         public RuntimeVirtualMachineGetArgs build() {
             return new RuntimeVirtualMachineGetArgs(instanceId, instanceName, virtualMachineConfig);
         }

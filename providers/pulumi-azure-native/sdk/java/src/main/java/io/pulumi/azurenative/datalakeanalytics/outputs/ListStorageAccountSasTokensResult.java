@@ -76,7 +76,6 @@ public final class ListStorageAccountSasTokensResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListStorageAccountSasTokensResult build() {
             return new ListStorageAccountSasTokensResult(nextLink, value);
         }

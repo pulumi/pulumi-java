@@ -487,7 +487,6 @@ public final class GetApplicationDefinitionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApplicationDefinitionResult build() {
             return new GetApplicationDefinitionResult(artifacts, authorizations, createUiDefinition, deploymentPolicy, description, displayName, id, isEnabled, location, lockLevel, lockingPolicy, mainTemplate, managedBy, managementPolicy, name, notificationPolicy, packageFileUri, policies, sku, tags, type);
         }

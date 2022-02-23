@@ -118,7 +118,6 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
             this.suggestion = Objects.requireNonNull(suggestion);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse(confidenceScore, metadata, queryRecord, suggestion);
         }

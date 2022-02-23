@@ -123,7 +123,6 @@ public final class AzureFileShareConfigurationResponse {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
-
         public AzureFileShareConfigurationResponse build() {
             return new AzureFileShareConfigurationResponse(accountKey, accountName, azureFileUrl, mountOptions, relativeMountPath);
         }

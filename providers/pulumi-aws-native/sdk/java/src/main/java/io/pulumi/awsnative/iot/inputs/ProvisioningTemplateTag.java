@@ -13,14 +13,14 @@ public final class ProvisioningTemplateTag extends io.pulumi.resources.InvokeArg
     public static final ProvisioningTemplateTag Empty = new ProvisioningTemplateTag();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -69,7 +69,6 @@ public final class ProvisioningTemplateTag extends io.pulumi.resources.InvokeArg
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ProvisioningTemplateTag build() {
             return new ProvisioningTemplateTag(key, value);
         }

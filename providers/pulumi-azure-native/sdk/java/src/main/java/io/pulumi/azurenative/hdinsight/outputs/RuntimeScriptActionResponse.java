@@ -140,7 +140,6 @@ public final class RuntimeScriptActionResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public RuntimeScriptActionResponse build() {
             return new RuntimeScriptActionResponse(applicationName, name, parameters, roles, uri);
         }

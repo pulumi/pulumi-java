@@ -205,7 +205,6 @@ public final class GetDeploymentScriptResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeploymentScriptResult build() {
             return new GetDeploymentScriptResult(id, identity, kind, location, name, systemData, tags, type);
         }

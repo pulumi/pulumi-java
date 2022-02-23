@@ -23,7 +23,7 @@ public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="onlyExcludeIfSingleVolume")
-    private final @Nullable Input<String> onlyExcludeIfSingleVolume;
+        private final @Nullable Input<String> onlyExcludeIfSingleVolume;
 
     public Input<String> getOnlyExcludeIfSingleVolume() {
         return this.onlyExcludeIfSingleVolume == null ? Input.empty() : this.onlyExcludeIfSingleVolume;
@@ -34,7 +34,7 @@ public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="volumeLabel")
-    private final @Nullable Input<String> volumeLabel;
+        private final @Nullable Input<String> volumeLabel;
 
     public Input<String> getVolumeLabel() {
         return this.volumeLabel == null ? Input.empty() : this.volumeLabel;
@@ -93,7 +93,6 @@ public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.
             this.volumeLabel = Input.ofNullable(volumeLabel);
             return this;
         }
-
         public InMageVolumeExclusionOptionsArgs build() {
             return new InMageVolumeExclusionOptionsArgs(onlyExcludeIfSingleVolume, volumeLabel);
         }

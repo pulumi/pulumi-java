@@ -76,7 +76,6 @@ public final class ContainerGroupResponseInstanceView {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public ContainerGroupResponseInstanceView build() {
             return new ContainerGroupResponseInstanceView(events, state);
         }

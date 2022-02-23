@@ -77,7 +77,6 @@ public final class FirewallPolicyRuleConditionApplicationProtocolResponse {
             this.protocolType = protocolType;
             return this;
         }
-
         public FirewallPolicyRuleConditionApplicationProtocolResponse build() {
             return new FirewallPolicyRuleConditionApplicationProtocolResponse(port, protocolType);
         }

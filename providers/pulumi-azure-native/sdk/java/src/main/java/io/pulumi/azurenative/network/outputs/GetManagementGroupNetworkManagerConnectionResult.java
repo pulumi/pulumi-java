@@ -182,7 +182,6 @@ public final class GetManagementGroupNetworkManagerConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementGroupNetworkManagerConnectionResult build() {
             return new GetManagementGroupNetworkManagerConnectionResult(description, etag, id, name, networkManagerId, systemData, type);
         }

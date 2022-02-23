@@ -386,7 +386,6 @@ public final class GetRegionNetworkResult {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
         }
-
         public GetRegionNetworkResult build() {
             return new GetRegionNetworkResult(autoCreateSubnetworks, creationTimestamp, description, enableUlaInternalIpv6, firewallPolicy, gatewayIPv4, internalIpv6Range, kind, mtu, name, networkFirewallPolicyEnforcementOrder, peerings, region, routingConfig, selfLink, selfLinkWithId, subnetworks);
         }

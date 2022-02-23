@@ -100,7 +100,6 @@ public final class NumberGreaterThanAdvancedFilterResponse {
             this.value = value;
             return this;
         }
-
         public NumberGreaterThanAdvancedFilterResponse build() {
             return new NumberGreaterThanAdvancedFilterResponse(key, operatorType, value);
         }

@@ -26,7 +26,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Input<Map<String,String>> annotations;
 
     public Input<Map<String,String>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -37,7 +37,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="binaryAuthorization")
-    private final @Nullable Input<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization;
+      private final @Nullable Input<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization;
 
     public Input<GoogleCloudRunOpV2BinaryAuthorizationArgs> getBinaryAuthorization() {
         return this.binaryAuthorization == null ? Input.empty() : this.binaryAuthorization;
@@ -48,7 +48,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="client")
-    private final @Nullable Input<String> client;
+      private final @Nullable Input<String> client;
 
     public Input<String> getClient() {
         return this.client == null ? Input.empty() : this.client;
@@ -59,7 +59,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientVersion")
-    private final @Nullable Input<String> clientVersion;
+      private final @Nullable Input<String> clientVersion;
 
     public Input<String> getClientVersion() {
         return this.clientVersion == null ? Input.empty() : this.clientVersion;
@@ -70,7 +70,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -81,7 +81,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingress")
-    private final @Nullable Input<ServiceIngress> ingress;
+      private final @Nullable Input<ServiceIngress> ingress;
 
     public Input<ServiceIngress> getIngress() {
         return this.ingress == null ? Input.empty() : this.ingress;
@@ -92,7 +92,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -103,14 +103,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchStage")
-    private final @Nullable Input<ServiceLaunchStage> launchStage;
+      private final @Nullable Input<ServiceLaunchStage> launchStage;
 
     public Input<ServiceLaunchStage> getLaunchStage() {
         return this.launchStage == null ? Input.empty() : this.launchStage;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -121,21 +121,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="serviceId", required=true)
-    private final Input<String> serviceId;
+      private final Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId;
@@ -146,7 +146,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template", required=true)
-    private final Input<GoogleCloudRunOpV2RevisionTemplateArgs> template;
+      private final Input<GoogleCloudRunOpV2RevisionTemplateArgs> template;
 
     public Input<GoogleCloudRunOpV2RevisionTemplateArgs> getTemplate() {
         return this.template;
@@ -157,14 +157,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="traffic")
-    private final @Nullable Input<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic;
+      private final @Nullable Input<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic;
 
     public Input<List<GoogleCloudRunOpV2TrafficTargetArgs>> getTraffic() {
         return this.traffic == null ? Input.empty() : this.traffic;
     }
 
     @InputImport(name="validateOnly")
-    private final @Nullable Input<String> validateOnly;
+      private final @Nullable Input<String> validateOnly;
 
     public Input<String> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
@@ -418,7 +418,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
-
         public ServiceArgs build() {
             return new ServiceArgs(annotations, binaryAuthorization, client, clientVersion, description, ingress, labels, launchStage, location, name, project, serviceId, template, traffic, validateOnly);
         }

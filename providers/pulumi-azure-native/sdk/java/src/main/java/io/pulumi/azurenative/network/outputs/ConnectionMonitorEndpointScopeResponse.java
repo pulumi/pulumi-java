@@ -76,7 +76,6 @@ public final class ConnectionMonitorEndpointScopeResponse {
             this.include = include;
             return this;
         }
-
         public ConnectionMonitorEndpointScopeResponse build() {
             return new ConnectionMonitorEndpointScopeResponse(exclude, include);
         }

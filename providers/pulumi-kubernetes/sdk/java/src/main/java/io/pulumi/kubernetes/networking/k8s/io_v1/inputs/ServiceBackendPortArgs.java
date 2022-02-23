@@ -24,7 +24,7 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="number")
-    private final @Nullable Input<Integer> number;
+        private final @Nullable Input<Integer> number;
 
     public Input<Integer> getNumber() {
         return this.number == null ? Input.empty() : this.number;
@@ -94,7 +94,6 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
             this.number = Input.ofNullable(number);
             return this;
         }
-
         public ServiceBackendPortArgs build() {
             return new ServiceBackendPortArgs(name, number);
         }

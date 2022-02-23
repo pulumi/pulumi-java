@@ -119,7 +119,6 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse {
             this.monetizationConfig = Objects.requireNonNull(monetizationConfig);
             return this;
         }
-
         public GoogleCloudApigeeV1AddonsConfigResponse build() {
             return new GoogleCloudApigeeV1AddonsConfigResponse(advancedApiOpsConfig, connectorsPlatformConfig, integrationConfig, monetizationConfig);
         }

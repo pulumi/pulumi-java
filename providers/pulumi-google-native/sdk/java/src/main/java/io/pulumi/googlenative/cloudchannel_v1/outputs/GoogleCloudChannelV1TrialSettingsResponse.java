@@ -75,7 +75,6 @@ public final class GoogleCloudChannelV1TrialSettingsResponse {
             this.trial = Objects.requireNonNull(trial);
             return this;
         }
-
         public GoogleCloudChannelV1TrialSettingsResponse build() {
             return new GoogleCloudChannelV1TrialSettingsResponse(endTime, trial);
         }

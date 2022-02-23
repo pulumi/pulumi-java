@@ -77,7 +77,6 @@ public final class PodAntiAffinity {
             this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
-
         public PodAntiAffinity build() {
             return new PodAntiAffinity(preferredDuringSchedulingIgnoredDuringExecution, requiredDuringSchedulingIgnoredDuringExecution);
         }

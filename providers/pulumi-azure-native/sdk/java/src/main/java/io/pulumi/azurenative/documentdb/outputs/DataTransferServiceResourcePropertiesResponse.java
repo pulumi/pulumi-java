@@ -165,7 +165,6 @@ public final class DataTransferServiceResourcePropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DataTransferServiceResourcePropertiesResponse build() {
             return new DataTransferServiceResourcePropertiesResponse(creationTime, instanceCount, instanceSize, locations, serviceType, status);
         }

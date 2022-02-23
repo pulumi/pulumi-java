@@ -77,7 +77,6 @@ public final class PortResponse {
             this.transportProtocol = transportProtocol;
             return this;
         }
-
         public PortResponse build() {
             return new PortResponse(backendPort, transportProtocol);
         }

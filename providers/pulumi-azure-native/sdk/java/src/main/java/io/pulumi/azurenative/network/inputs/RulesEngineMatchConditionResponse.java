@@ -25,7 +25,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="negateCondition")
-    private final @Nullable Boolean negateCondition;
+        private final @Nullable Boolean negateCondition;
 
     public Optional<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
@@ -36,7 +36,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="rulesEngineMatchValue", required=true)
-    private final List<String> rulesEngineMatchValue;
+        private final List<String> rulesEngineMatchValue;
 
     public List<String> getRulesEngineMatchValue() {
         return this.rulesEngineMatchValue;
@@ -47,7 +47,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="rulesEngineMatchVariable", required=true)
-    private final String rulesEngineMatchVariable;
+        private final String rulesEngineMatchVariable;
 
     public String getRulesEngineMatchVariable() {
         return this.rulesEngineMatchVariable;
@@ -58,7 +58,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="rulesEngineOperator", required=true)
-    private final String rulesEngineOperator;
+        private final String rulesEngineOperator;
 
     public String getRulesEngineOperator() {
         return this.rulesEngineOperator;
@@ -69,7 +69,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable String selector;
+        private final @Nullable String selector;
 
     public Optional<String> getSelector() {
         return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
@@ -80,7 +80,7 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="transforms")
-    private final @Nullable List<String> transforms;
+        private final @Nullable List<String> transforms;
 
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
@@ -169,7 +169,6 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
             this.transforms = transforms;
             return this;
         }
-
         public RulesEngineMatchConditionResponse build() {
             return new RulesEngineMatchConditionResponse(negateCondition, rulesEngineMatchValue, rulesEngineMatchVariable, rulesEngineOperator, selector, transforms);
         }

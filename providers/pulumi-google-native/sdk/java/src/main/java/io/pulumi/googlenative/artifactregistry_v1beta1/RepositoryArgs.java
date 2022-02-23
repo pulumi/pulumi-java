@@ -21,7 +21,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -32,7 +32,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<RepositoryFormat> format;
+      private final @Nullable Input<RepositoryFormat> format;
 
     public Input<RepositoryFormat> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -54,7 +54,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -65,14 +65,14 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -83,21 +83,21 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="repositoryId")
-    private final @Nullable Input<String> repositoryId;
+      private final @Nullable Input<String> repositoryId;
 
     public Input<String> getRepositoryId() {
         return this.repositoryId == null ? Input.empty() : this.repositoryId;
@@ -108,7 +108,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -287,7 +287,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public RepositoryArgs build() {
             return new RepositoryArgs(createTime, description, format, kmsKeyName, labels, location, name, project, repositoryId, updateTime);
         }

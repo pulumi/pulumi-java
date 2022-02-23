@@ -78,7 +78,6 @@ public final class CustomCopyOptionResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public CustomCopyOptionResponse build() {
             return new CustomCopyOptionResponse(duration, objectType);
         }

@@ -23,91 +23,91 @@ public final class DeliveryStreamElasticsearchDestinationConfiguration extends i
     public static final DeliveryStreamElasticsearchDestinationConfiguration Empty = new DeliveryStreamElasticsearchDestinationConfiguration();
 
     @InputImport(name="bufferingHints")
-    private final @Nullable DeliveryStreamElasticsearchBufferingHints bufferingHints;
+        private final @Nullable DeliveryStreamElasticsearchBufferingHints bufferingHints;
 
     public Optional<DeliveryStreamElasticsearchBufferingHints> getBufferingHints() {
         return this.bufferingHints == null ? Optional.empty() : Optional.ofNullable(this.bufferingHints);
     }
 
     @InputImport(name="cloudWatchLoggingOptions")
-    private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
+        private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
 
     public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
 
     @InputImport(name="clusterEndpoint")
-    private final @Nullable String clusterEndpoint;
+        private final @Nullable String clusterEndpoint;
 
     public Optional<String> getClusterEndpoint() {
         return this.clusterEndpoint == null ? Optional.empty() : Optional.ofNullable(this.clusterEndpoint);
     }
 
     @InputImport(name="domainARN")
-    private final @Nullable String domainARN;
+        private final @Nullable String domainARN;
 
     public Optional<String> getDomainARN() {
         return this.domainARN == null ? Optional.empty() : Optional.ofNullable(this.domainARN);
     }
 
     @InputImport(name="indexName", required=true)
-    private final String indexName;
+        private final String indexName;
 
     public String getIndexName() {
         return this.indexName;
     }
 
     @InputImport(name="indexRotationPeriod")
-    private final @Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod;
+        private final @Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod;
 
     public Optional<DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod> getIndexRotationPeriod() {
         return this.indexRotationPeriod == null ? Optional.empty() : Optional.ofNullable(this.indexRotationPeriod);
     }
 
     @InputImport(name="processingConfiguration")
-    private final @Nullable DeliveryStreamProcessingConfiguration processingConfiguration;
+        private final @Nullable DeliveryStreamProcessingConfiguration processingConfiguration;
 
     public Optional<DeliveryStreamProcessingConfiguration> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.processingConfiguration);
     }
 
     @InputImport(name="retryOptions")
-    private final @Nullable DeliveryStreamElasticsearchRetryOptions retryOptions;
+        private final @Nullable DeliveryStreamElasticsearchRetryOptions retryOptions;
 
     public Optional<DeliveryStreamElasticsearchRetryOptions> getRetryOptions() {
         return this.retryOptions == null ? Optional.empty() : Optional.ofNullable(this.retryOptions);
     }
 
     @InputImport(name="roleARN", required=true)
-    private final String roleARN;
+        private final String roleARN;
 
     public String getRoleARN() {
         return this.roleARN;
     }
 
     @InputImport(name="s3BackupMode")
-    private final @Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode;
+        private final @Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode;
 
     public Optional<DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode> getS3BackupMode() {
         return this.s3BackupMode == null ? Optional.empty() : Optional.ofNullable(this.s3BackupMode);
     }
 
     @InputImport(name="s3Configuration", required=true)
-    private final DeliveryStreamS3DestinationConfiguration s3Configuration;
+        private final DeliveryStreamS3DestinationConfiguration s3Configuration;
 
     public DeliveryStreamS3DestinationConfiguration getS3Configuration() {
         return this.s3Configuration;
     }
 
     @InputImport(name="typeName")
-    private final @Nullable String typeName;
+        private final @Nullable String typeName;
 
     public Optional<String> getTypeName() {
         return this.typeName == null ? Optional.empty() : Optional.ofNullable(this.typeName);
     }
 
     @InputImport(name="vpcConfiguration")
-    private final @Nullable DeliveryStreamVpcConfiguration vpcConfiguration;
+        private final @Nullable DeliveryStreamVpcConfiguration vpcConfiguration;
 
     public Optional<DeliveryStreamVpcConfiguration> getVpcConfiguration() {
         return this.vpcConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vpcConfiguration);
@@ -266,7 +266,6 @@ public final class DeliveryStreamElasticsearchDestinationConfiguration extends i
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public DeliveryStreamElasticsearchDestinationConfiguration build() {
             return new DeliveryStreamElasticsearchDestinationConfiguration(bufferingHints, cloudWatchLoggingOptions, clusterEndpoint, domainARN, indexName, indexRotationPeriod, processingConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration, typeName, vpcConfiguration);
         }

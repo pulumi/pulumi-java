@@ -22,7 +22,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyIdentifier", required=true)
-    private final Input<String> keyIdentifier;
+        private final Input<String> keyIdentifier;
 
     public Input<String> getKeyIdentifier() {
         return this.keyIdentifier;
@@ -65,7 +65,6 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.keyIdentifier = Input.of(Objects.requireNonNull(keyIdentifier));
             return this;
         }
-
         public KeyVaultPropertiesArgs build() {
             return new KeyVaultPropertiesArgs(keyIdentifier);
         }

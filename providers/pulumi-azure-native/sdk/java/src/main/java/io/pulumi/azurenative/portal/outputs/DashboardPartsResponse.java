@@ -77,7 +77,6 @@ public final class DashboardPartsResponse {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public DashboardPartsResponse build() {
             return new DashboardPartsResponse(metadata, position);
         }

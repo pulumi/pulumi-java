@@ -17,28 +17,28 @@ public final class ComponentChild extends io.pulumi.resources.InvokeArgs {
     public static final ComponentChild Empty = new ComponentChild();
 
     @InputImport(name="children")
-    private final @Nullable List<ComponentChild> children;
+        private final @Nullable List<ComponentChild> children;
 
     public List<ComponentChild> getChildren() {
         return this.children == null ? List.of() : this.children;
     }
 
     @InputImport(name="componentType", required=true)
-    private final String componentType;
+        private final String componentType;
 
     public String getComponentType() {
         return this.componentType;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="properties", required=true)
-    private final ComponentProperties properties;
+        private final ComponentProperties properties;
 
     public ComponentProperties getProperties() {
         return this.properties;
@@ -107,7 +107,6 @@ public final class ComponentChild extends io.pulumi.resources.InvokeArgs {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public ComponentChild build() {
             return new ComponentChild(children, componentType, name, properties);
         }

@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyResponse extends io.pulum
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyResponse extends io.pulum
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GooglePrivacyDlpV2TransientCryptoKeyResponse build() {
             return new GooglePrivacyDlpV2TransientCryptoKeyResponse(name);
         }

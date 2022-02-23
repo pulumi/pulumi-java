@@ -17,7 +17,7 @@ public final class ListIntegrationRuntimeAuthKeysArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="factoryName", required=true)
-    private final String factoryName;
+        private final String factoryName;
 
     public String getFactoryName() {
         return this.factoryName;
@@ -28,7 +28,7 @@ public final class ListIntegrationRuntimeAuthKeysArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="integrationRuntimeName", required=true)
-    private final String integrationRuntimeName;
+        private final String integrationRuntimeName;
 
     public String getIntegrationRuntimeName() {
         return this.integrationRuntimeName;
@@ -39,7 +39,7 @@ public final class ListIntegrationRuntimeAuthKeysArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class ListIntegrationRuntimeAuthKeysArgs extends io.pulumi.resource
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListIntegrationRuntimeAuthKeysArgs build() {
             return new ListIntegrationRuntimeAuthKeysArgs(factoryName, integrationRuntimeName, resourceGroupName);
         }

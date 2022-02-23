@@ -120,7 +120,6 @@ public final class OptionsResponse {
             this.validationOptions = Objects.requireNonNull(validationOptions);
             return this;
         }
-
         public OptionsResponse build() {
             return new OptionsResponse(asyncOptions, inputMappings, nameProperty, validationOptions);
         }

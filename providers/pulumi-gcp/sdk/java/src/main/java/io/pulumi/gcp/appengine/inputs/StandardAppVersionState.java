@@ -31,7 +31,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="automaticScaling")
-    private final @Nullable Input<StandardAppVersionAutomaticScalingGetArgs> automaticScaling;
+        private final @Nullable Input<StandardAppVersionAutomaticScalingGetArgs> automaticScaling;
 
     public Input<StandardAppVersionAutomaticScalingGetArgs> getAutomaticScaling() {
         return this.automaticScaling == null ? Input.empty() : this.automaticScaling;
@@ -43,7 +43,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="basicScaling")
-    private final @Nullable Input<StandardAppVersionBasicScalingGetArgs> basicScaling;
+        private final @Nullable Input<StandardAppVersionBasicScalingGetArgs> basicScaling;
 
     public Input<StandardAppVersionBasicScalingGetArgs> getBasicScaling() {
         return this.basicScaling == null ? Input.empty() : this.basicScaling;
@@ -54,7 +54,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deleteServiceOnDestroy")
-    private final @Nullable Input<Boolean> deleteServiceOnDestroy;
+        private final @Nullable Input<Boolean> deleteServiceOnDestroy;
 
     public Input<Boolean> getDeleteServiceOnDestroy() {
         return this.deleteServiceOnDestroy == null ? Input.empty() : this.deleteServiceOnDestroy;
@@ -66,7 +66,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deployment")
-    private final @Nullable Input<StandardAppVersionDeploymentGetArgs> deployment;
+        private final @Nullable Input<StandardAppVersionDeploymentGetArgs> deployment;
 
     public Input<StandardAppVersionDeploymentGetArgs> getDeployment() {
         return this.deployment == null ? Input.empty() : this.deployment;
@@ -78,7 +78,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entrypoint")
-    private final @Nullable Input<StandardAppVersionEntrypointGetArgs> entrypoint;
+        private final @Nullable Input<StandardAppVersionEntrypointGetArgs> entrypoint;
 
     public Input<StandardAppVersionEntrypointGetArgs> getEntrypoint() {
         return this.entrypoint == null ? Input.empty() : this.entrypoint;
@@ -89,7 +89,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="envVariables")
-    private final @Nullable Input<Map<String,String>> envVariables;
+        private final @Nullable Input<Map<String,String>> envVariables;
 
     public Input<Map<String,String>> getEnvVariables() {
         return this.envVariables == null ? Input.empty() : this.envVariables;
@@ -102,7 +102,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="handlers")
-    private final @Nullable Input<List<StandardAppVersionHandlerGetArgs>> handlers;
+        private final @Nullable Input<List<StandardAppVersionHandlerGetArgs>> handlers;
 
     public Input<List<StandardAppVersionHandlerGetArgs>> getHandlers() {
         return this.handlers == null ? Input.empty() : this.handlers;
@@ -114,7 +114,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="inboundServices")
-    private final @Nullable Input<List<String>> inboundServices;
+        private final @Nullable Input<List<String>> inboundServices;
 
     public Input<List<String>> getInboundServices() {
         return this.inboundServices == null ? Input.empty() : this.inboundServices;
@@ -128,7 +128,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceClass")
-    private final @Nullable Input<String> instanceClass;
+        private final @Nullable Input<String> instanceClass;
 
     public Input<String> getInstanceClass() {
         return this.instanceClass == null ? Input.empty() : this.instanceClass;
@@ -140,7 +140,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="libraries")
-    private final @Nullable Input<List<StandardAppVersionLibraryGetArgs>> libraries;
+        private final @Nullable Input<List<StandardAppVersionLibraryGetArgs>> libraries;
 
     public Input<List<StandardAppVersionLibraryGetArgs>> getLibraries() {
         return this.libraries == null ? Input.empty() : this.libraries;
@@ -152,7 +152,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="manualScaling")
-    private final @Nullable Input<StandardAppVersionManualScalingGetArgs> manualScaling;
+        private final @Nullable Input<StandardAppVersionManualScalingGetArgs> manualScaling;
 
     public Input<StandardAppVersionManualScalingGetArgs> getManualScaling() {
         return this.manualScaling == null ? Input.empty() : this.manualScaling;
@@ -163,7 +163,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -174,7 +174,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="noopOnDestroy")
-    private final @Nullable Input<Boolean> noopOnDestroy;
+        private final @Nullable Input<Boolean> noopOnDestroy;
 
     public Input<Boolean> getNoopOnDestroy() {
         return this.noopOnDestroy == null ? Input.empty() : this.noopOnDestroy;
@@ -186,7 +186,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -197,7 +197,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="runtime")
-    private final @Nullable Input<String> runtime;
+        private final @Nullable Input<String> runtime;
 
     public Input<String> getRuntime() {
         return this.runtime == null ? Input.empty() : this.runtime;
@@ -210,7 +210,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="runtimeApiVersion")
-    private final @Nullable Input<String> runtimeApiVersion;
+        private final @Nullable Input<String> runtimeApiVersion;
 
     public Input<String> getRuntimeApiVersion() {
         return this.runtimeApiVersion == null ? Input.empty() : this.runtimeApiVersion;
@@ -221,7 +221,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -232,7 +232,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="threadsafe")
-    private final @Nullable Input<Boolean> threadsafe;
+        private final @Nullable Input<Boolean> threadsafe;
 
     public Input<Boolean> getThreadsafe() {
         return this.threadsafe == null ? Input.empty() : this.threadsafe;
@@ -243,7 +243,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable Input<String> versionId;
+        private final @Nullable Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;
@@ -255,7 +255,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="vpcAccessConnector")
-    private final @Nullable Input<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
+        private final @Nullable Input<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
 
     public Input<StandardAppVersionVpcAccessConnectorGetArgs> getVpcAccessConnector() {
         return this.vpcAccessConnector == null ? Input.empty() : this.vpcAccessConnector;
@@ -584,7 +584,6 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
             this.vpcAccessConnector = Input.ofNullable(vpcAccessConnector);
             return this;
         }
-
         public StandardAppVersionState build() {
             return new StandardAppVersionState(automaticScaling, basicScaling, deleteServiceOnDestroy, deployment, entrypoint, envVariables, handlers, inboundServices, instanceClass, libraries, manualScaling, name, noopOnDestroy, project, runtime, runtimeApiVersion, service, threadsafe, versionId, vpcAccessConnector);
         }

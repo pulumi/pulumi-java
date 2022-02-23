@@ -267,7 +267,6 @@ public final class GetRemediationAtSubscriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRemediationAtSubscriptionResult build() {
             return new GetRemediationAtSubscriptionResult(createdOn, deploymentStatus, filters, id, lastUpdatedOn, name, policyAssignmentId, policyDefinitionReferenceId, provisioningState, resourceDiscoveryMode, type);
         }

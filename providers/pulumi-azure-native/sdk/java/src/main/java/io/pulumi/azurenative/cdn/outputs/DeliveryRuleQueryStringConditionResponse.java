@@ -77,7 +77,6 @@ public final class DeliveryRuleQueryStringConditionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public DeliveryRuleQueryStringConditionResponse build() {
             return new DeliveryRuleQueryStringConditionResponse(name, parameters);
         }

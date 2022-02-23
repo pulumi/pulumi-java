@@ -23,7 +23,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="direction", required=true)
-    private final Input<GoogleDatastoreAdminV1IndexedPropertyDirection> direction;
+      private final Input<GoogleDatastoreAdminV1IndexedPropertyDirection> direction;
 
     public Input<GoogleDatastoreAdminV1IndexedPropertyDirection> getDirection() {
         return this.direction;
@@ -34,7 +34,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -93,7 +93,6 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public GoogleDatastoreAdminV1IndexedPropertyArgs build() {
             return new GoogleDatastoreAdminV1IndexedPropertyArgs(direction, name);
         }

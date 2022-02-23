@@ -436,7 +436,6 @@ public final class GetDedicatedCloudNodeResult {
             this.vmwareClusterName = Objects.requireNonNull(vmwareClusterName);
             return this;
         }
-
         public GetDedicatedCloudNodeResult build() {
             return new GetDedicatedCloudNodeResult(availabilityZoneId, availabilityZoneName, cloudRackName, created, id, location, name, nodesCount, placementGroupId, placementGroupName, privateCloudId, privateCloudName, provisioningState, purchaseId, sku, status, tags, type, vmwareClusterName);
         }

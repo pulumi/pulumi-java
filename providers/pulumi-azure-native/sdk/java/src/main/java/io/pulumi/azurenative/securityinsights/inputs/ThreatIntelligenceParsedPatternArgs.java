@@ -25,7 +25,7 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="patternTypeKey")
-    private final @Nullable Input<String> patternTypeKey;
+        private final @Nullable Input<String> patternTypeKey;
 
     public Input<String> getPatternTypeKey() {
         return this.patternTypeKey == null ? Input.empty() : this.patternTypeKey;
@@ -36,7 +36,7 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="patternTypeValues")
-    private final @Nullable Input<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues;
+        private final @Nullable Input<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues;
 
     public Input<List<ThreatIntelligenceParsedPatternTypeValueArgs>> getPatternTypeValues() {
         return this.patternTypeValues == null ? Input.empty() : this.patternTypeValues;
@@ -95,7 +95,6 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
             this.patternTypeValues = Input.ofNullable(patternTypeValues);
             return this;
         }
-
         public ThreatIntelligenceParsedPatternArgs build() {
             return new ThreatIntelligenceParsedPatternArgs(patternTypeKey, patternTypeValues);
         }

@@ -52,7 +52,6 @@ public final class RequestMirrorPolicyResponse {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
-
         public RequestMirrorPolicyResponse build() {
             return new RequestMirrorPolicyResponse(backendService);
         }

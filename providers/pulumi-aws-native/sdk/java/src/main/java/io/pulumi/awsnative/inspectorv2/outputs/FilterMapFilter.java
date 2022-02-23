@@ -74,7 +74,6 @@ public final class FilterMapFilter {
             this.value = value;
             return this;
         }
-
         public FilterMapFilter build() {
             return new FilterMapFilter(comparison, key, value);
         }

@@ -265,7 +265,6 @@ public final class BastionActiveSessionResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public BastionActiveSessionResponse build() {
             return new BastionActiveSessionResponse(protocol, resourceType, sessionDurationInMins, sessionId, startTime, targetHostName, targetIpAddress, targetResourceGroup, targetResourceId, targetSubscriptionId, userName);
         }

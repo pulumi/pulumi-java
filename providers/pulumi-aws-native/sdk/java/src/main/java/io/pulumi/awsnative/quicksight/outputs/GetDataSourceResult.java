@@ -270,7 +270,6 @@ public final class GetDataSourceResult {
             this.vpcConnectionProperties = vpcConnectionProperties;
             return this;
         }
-
         public GetDataSourceResult build() {
             return new GetDataSourceResult(alternateDataSourceParameters, arn, createdTime, dataSourceParameters, errorInfo, lastUpdatedTime, name, permissions, sslProperties, status, tags, vpcConnectionProperties);
         }

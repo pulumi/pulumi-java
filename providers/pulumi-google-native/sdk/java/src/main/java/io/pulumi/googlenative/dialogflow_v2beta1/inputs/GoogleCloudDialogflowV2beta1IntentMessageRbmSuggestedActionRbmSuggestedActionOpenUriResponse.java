@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse(uri);
         }

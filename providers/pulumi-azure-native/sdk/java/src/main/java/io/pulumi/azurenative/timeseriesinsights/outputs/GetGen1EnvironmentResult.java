@@ -356,7 +356,6 @@ public final class GetGen1EnvironmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGen1EnvironmentResult build() {
             return new GetGen1EnvironmentResult(creationTime, dataAccessFqdn, dataAccessId, dataRetentionTime, id, kind, location, name, partitionKeyProperties, provisioningState, sku, status, storageLimitExceededBehavior, tags, type);
         }

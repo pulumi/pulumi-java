@@ -158,7 +158,6 @@ public final class VpnGatewayInfoResponse {
             this.vpnTunnelUri = Objects.requireNonNull(vpnTunnelUri);
             return this;
         }
-
         public VpnGatewayInfoResponse build() {
             return new VpnGatewayInfoResponse(displayName, ipAddress, networkUri, region, uri, vpnTunnelUri);
         }

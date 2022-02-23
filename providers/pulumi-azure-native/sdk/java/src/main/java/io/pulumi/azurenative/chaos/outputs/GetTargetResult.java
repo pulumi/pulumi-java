@@ -162,7 +162,6 @@ public final class GetTargetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTargetResult build() {
             return new GetTargetResult(id, location, name, properties, systemData, type);
         }

@@ -74,7 +74,6 @@ public final class MysqlSourceConfigResponse {
             this.includeObjects = Objects.requireNonNull(includeObjects);
             return this;
         }
-
         public MysqlSourceConfigResponse build() {
             return new MysqlSourceConfigResponse(excludeObjects, includeObjects);
         }

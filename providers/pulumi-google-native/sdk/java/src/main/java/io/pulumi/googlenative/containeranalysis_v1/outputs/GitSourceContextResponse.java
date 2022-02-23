@@ -74,7 +74,6 @@ public final class GitSourceContextResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GitSourceContextResponse build() {
             return new GitSourceContextResponse(revisionId, url);
         }

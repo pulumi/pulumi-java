@@ -75,7 +75,6 @@ public final class FilterOptionsResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public FilterOptionsResponse build() {
             return new FilterOptionsResponse(filter, objectType);
         }

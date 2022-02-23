@@ -25,7 +25,7 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="endDate")
-    private final @Nullable String endDate;
+        private final @Nullable String endDate;
 
     public Optional<String> getEndDate() {
         return this.endDate == null ? Optional.empty() : Optional.ofNullable(this.endDate);
@@ -36,7 +36,7 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable String endTime;
+        private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
@@ -47,7 +47,7 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="recurrenceValues")
-    private final @Nullable List<Integer> recurrenceValues;
+        private final @Nullable List<Integer> recurrenceValues;
 
     public List<Integer> getRecurrenceValues() {
         return this.recurrenceValues == null ? List.of() : this.recurrenceValues;
@@ -58,7 +58,7 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="startDate")
-    private final @Nullable String startDate;
+        private final @Nullable String startDate;
 
     public Optional<String> getStartDate() {
         return this.startDate == null ? Optional.empty() : Optional.ofNullable(this.startDate);
@@ -69,7 +69,7 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable String startTime;
+        private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -148,7 +148,6 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
             this.startTime = startTime;
             return this;
         }
-
         public SuppressionScheduleResponse build() {
             return new SuppressionScheduleResponse(endDate, endTime, recurrenceValues, startDate, startTime);
         }

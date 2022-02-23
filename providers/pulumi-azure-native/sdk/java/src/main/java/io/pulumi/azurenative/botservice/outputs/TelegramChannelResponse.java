@@ -142,7 +142,6 @@ public final class TelegramChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public TelegramChannelResponse build() {
             return new TelegramChannelResponse(channelName, etag, location, properties, provisioningState);
         }

@@ -17,7 +17,7 @@ public final class InstanceGroupManagerAllInstancesConfigResponse extends io.pul
      * 
      */
     @InputImport(name="properties", required=true)
-    private final InstancePropertiesPatchResponse properties;
+      private final InstancePropertiesPatchResponse properties;
 
     public InstancePropertiesPatchResponse getProperties() {
         return this.properties;
@@ -55,7 +55,6 @@ public final class InstanceGroupManagerAllInstancesConfigResponse extends io.pul
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public InstanceGroupManagerAllInstancesConfigResponse build() {
             return new InstanceGroupManagerAllInstancesConfigResponse(properties);
         }

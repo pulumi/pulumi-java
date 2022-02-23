@@ -17,14 +17,14 @@ public final class RuleGroupStatelessRulesAndCustomActionsArgs extends io.pulumi
     public static final RuleGroupStatelessRulesAndCustomActionsArgs Empty = new RuleGroupStatelessRulesAndCustomActionsArgs();
 
     @InputImport(name="customActions")
-    private final @Nullable Input<List<RuleGroupCustomActionArgs>> customActions;
+        private final @Nullable Input<List<RuleGroupCustomActionArgs>> customActions;
 
     public Input<List<RuleGroupCustomActionArgs>> getCustomActions() {
         return this.customActions == null ? Input.empty() : this.customActions;
     }
 
     @InputImport(name="statelessRules", required=true)
-    private final Input<List<RuleGroupStatelessRuleArgs>> statelessRules;
+        private final Input<List<RuleGroupStatelessRuleArgs>> statelessRules;
 
     public Input<List<RuleGroupStatelessRuleArgs>> getStatelessRules() {
         return this.statelessRules;
@@ -83,7 +83,6 @@ public final class RuleGroupStatelessRulesAndCustomActionsArgs extends io.pulumi
             this.statelessRules = Input.of(Objects.requireNonNull(statelessRules));
             return this;
         }
-
         public RuleGroupStatelessRulesAndCustomActionsArgs build() {
             return new RuleGroupStatelessRulesAndCustomActionsArgs(customActions, statelessRules);
         }

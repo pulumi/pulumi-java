@@ -75,7 +75,6 @@ public final class LocationEFSEc2Config {
             this.subnetArn = Objects.requireNonNull(subnetArn);
             return this;
         }
-
         public LocationEFSEc2Config build() {
             return new LocationEFSEc2Config(securityGroupArns, subnetArn);
         }

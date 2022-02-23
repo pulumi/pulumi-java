@@ -74,7 +74,6 @@ public final class ModelPackageGroupTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ModelPackageGroupTag build() {
             return new ModelPackageGroupTag(key, value);
         }

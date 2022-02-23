@@ -14,7 +14,7 @@ public final class InstanceFromTemplateScratchDiskArgs extends io.pulumi.resourc
     public static final InstanceFromTemplateScratchDiskArgs Empty = new InstanceFromTemplateScratchDiskArgs();
 
     @InputImport(name="interface", required=true)
-    private final Input<String> $interface;
+        private final Input<String> $interface;
 
     public Input<String> get$interface() {
         return this.$interface;
@@ -57,7 +57,6 @@ public final class InstanceFromTemplateScratchDiskArgs extends io.pulumi.resourc
             this.$interface = Input.of(Objects.requireNonNull($interface));
             return this;
         }
-
         public InstanceFromTemplateScratchDiskArgs build() {
             return new InstanceFromTemplateScratchDiskArgs($interface);
         }

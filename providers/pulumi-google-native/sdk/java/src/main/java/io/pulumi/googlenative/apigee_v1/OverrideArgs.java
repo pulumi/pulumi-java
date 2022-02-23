@@ -20,14 +20,14 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiProxy")
-    private final @Nullable Input<String> apiProxy;
+      private final @Nullable Input<String> apiProxy;
 
     public Input<String> getApiProxy() {
         return this.apiProxy == null ? Input.empty() : this.apiProxy;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -38,14 +38,14 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -56,7 +56,7 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="samplingConfig")
-    private final @Nullable Input<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig;
+      private final @Nullable Input<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig;
 
     public Input<GoogleCloudApigeeV1TraceSamplingConfigArgs> getSamplingConfig() {
         return this.samplingConfig == null ? Input.empty() : this.samplingConfig;
@@ -160,7 +160,6 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
             this.samplingConfig = Input.ofNullable(samplingConfig);
             return this;
         }
-
         public OverrideArgs build() {
             return new OverrideArgs(apiProxy, environmentId, name, organizationId, samplingConfig);
         }

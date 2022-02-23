@@ -24,7 +24,7 @@ public final class B2BPartnerContentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="businessIdentities")
-    private final @Nullable Input<List<BusinessIdentityArgs>> businessIdentities;
+        private final @Nullable Input<List<BusinessIdentityArgs>> businessIdentities;
 
     public Input<List<BusinessIdentityArgs>> getBusinessIdentities() {
         return this.businessIdentities == null ? Input.empty() : this.businessIdentities;
@@ -67,7 +67,6 @@ public final class B2BPartnerContentArgs extends io.pulumi.resources.ResourceArg
             this.businessIdentities = Input.ofNullable(businessIdentities);
             return this;
         }
-
         public B2BPartnerContentArgs build() {
             return new B2BPartnerContentArgs(businessIdentities);
         }

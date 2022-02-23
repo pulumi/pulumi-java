@@ -17,14 +17,14 @@ public final class BucketFilterRule extends io.pulumi.resources.InvokeArgs {
     public static final BucketFilterRule Empty = new BucketFilterRule();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -73,7 +73,6 @@ public final class BucketFilterRule extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BucketFilterRule build() {
             return new BucketFilterRule(name, value);
         }

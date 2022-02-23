@@ -23,7 +23,7 @@ public final class ConnectionGatewayReferenceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class ConnectionGatewayReferenceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -45,7 +45,7 @@ public final class ConnectionGatewayReferenceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class ConnectionGatewayReferenceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -145,7 +145,6 @@ public final class ConnectionGatewayReferenceArgs extends io.pulumi.resources.Re
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ConnectionGatewayReferenceArgs build() {
             return new ConnectionGatewayReferenceArgs(id, location, name, type);
         }

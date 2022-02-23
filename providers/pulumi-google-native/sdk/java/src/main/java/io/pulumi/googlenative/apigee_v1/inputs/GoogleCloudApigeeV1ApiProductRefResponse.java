@@ -17,7 +17,7 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="apiproduct", required=true)
-    private final String apiproduct;
+      private final String apiproduct;
 
     public String getApiproduct() {
         return this.apiproduct;
@@ -28,7 +28,7 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -77,7 +77,6 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends io.pulumi.re
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GoogleCloudApigeeV1ApiProductRefResponse build() {
             return new GoogleCloudApigeeV1ApiProductRefResponse(apiproduct, status);
         }

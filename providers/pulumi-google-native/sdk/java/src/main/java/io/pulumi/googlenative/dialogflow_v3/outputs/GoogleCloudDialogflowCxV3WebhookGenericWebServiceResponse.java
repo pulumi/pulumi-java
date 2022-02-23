@@ -139,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse build() {
             return new GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse(allowedCaCerts, password, requestHeaders, uri, username);
         }

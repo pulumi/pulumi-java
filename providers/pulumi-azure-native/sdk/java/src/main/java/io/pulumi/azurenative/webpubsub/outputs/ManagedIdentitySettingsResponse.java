@@ -56,7 +56,6 @@ public final class ManagedIdentitySettingsResponse {
             this.resource = resource;
             return this;
         }
-
         public ManagedIdentitySettingsResponse build() {
             return new ManagedIdentitySettingsResponse(resource);
         }

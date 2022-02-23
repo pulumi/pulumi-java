@@ -135,7 +135,6 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch {
             this.regexMatch = regexMatch;
             return this;
         }
-
         public URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch build() {
             return new URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch(exactMatch, name, presentMatch, regexMatch);
         }

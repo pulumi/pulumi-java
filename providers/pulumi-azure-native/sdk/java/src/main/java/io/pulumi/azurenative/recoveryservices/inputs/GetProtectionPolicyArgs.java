@@ -17,7 +17,7 @@ public final class GetProtectionPolicyArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="policyName", required=true)
-    private final String policyName;
+        private final String policyName;
 
     public String getPolicyName() {
         return this.policyName;
@@ -28,7 +28,7 @@ public final class GetProtectionPolicyArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetProtectionPolicyArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final String vaultName;
+        private final String vaultName;
 
     public String getVaultName() {
         return this.vaultName;
@@ -98,7 +98,6 @@ public final class GetProtectionPolicyArgs extends io.pulumi.resources.InvokeArg
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public GetProtectionPolicyArgs build() {
             return new GetProtectionPolicyArgs(policyName, resourceGroupName, vaultName);
         }

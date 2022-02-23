@@ -77,7 +77,6 @@ public final class ExtensionResponse {
             this.properties = properties;
             return this;
         }
-
         public ExtensionResponse build() {
             return new ExtensionResponse(name, properties);
         }

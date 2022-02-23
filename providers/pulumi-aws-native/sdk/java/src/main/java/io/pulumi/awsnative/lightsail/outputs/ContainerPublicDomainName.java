@@ -69,7 +69,6 @@ public final class ContainerPublicDomainName {
             this.domainNames = domainNames;
             return this;
         }
-
         public ContainerPublicDomainName build() {
             return new ContainerPublicDomainName(certificateName, domainNames);
         }

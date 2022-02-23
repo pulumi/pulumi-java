@@ -24,7 +24,7 @@ public final class AzureDatabricksDeltaLakeImportCommandArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="dateFormat")
-    private final @Nullable Input<Object> dateFormat;
+        private final @Nullable Input<Object> dateFormat;
 
     public Input<Object> getDateFormat() {
         return this.dateFormat == null ? Input.empty() : this.dateFormat;
@@ -35,7 +35,7 @@ public final class AzureDatabricksDeltaLakeImportCommandArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="timestampFormat")
-    private final @Nullable Input<Object> timestampFormat;
+        private final @Nullable Input<Object> timestampFormat;
 
     public Input<Object> getTimestampFormat() {
         return this.timestampFormat == null ? Input.empty() : this.timestampFormat;
@@ -47,7 +47,7 @@ public final class AzureDatabricksDeltaLakeImportCommandArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -121,7 +121,6 @@ public final class AzureDatabricksDeltaLakeImportCommandArgs extends io.pulumi.r
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AzureDatabricksDeltaLakeImportCommandArgs build() {
             return new AzureDatabricksDeltaLakeImportCommandArgs(dateFormat, timestampFormat, type);
         }

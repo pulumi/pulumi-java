@@ -34,7 +34,6 @@ public final class AutoUpgradeOptionsArgs extends io.pulumi.resources.ResourceAr
         public Builder(AutoUpgradeOptionsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AutoUpgradeOptionsArgs build() {
             return new AutoUpgradeOptionsArgs();
         }

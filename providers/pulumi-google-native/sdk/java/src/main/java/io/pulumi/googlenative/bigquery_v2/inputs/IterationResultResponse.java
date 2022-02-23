@@ -19,7 +19,7 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="durationMs", required=true)
-    private final String durationMs;
+      private final String durationMs;
 
     public String getDurationMs() {
         return this.durationMs;
@@ -30,7 +30,7 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="evalLoss", required=true)
-    private final Double evalLoss;
+      private final Double evalLoss;
 
     public Double getEvalLoss() {
         return this.evalLoss;
@@ -41,7 +41,7 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="index", required=true)
-    private final Integer index;
+      private final Integer index;
 
     public Integer getIndex() {
         return this.index;
@@ -52,7 +52,7 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="learnRate", required=true)
-    private final Double learnRate;
+      private final Double learnRate;
 
     public Double getLearnRate() {
         return this.learnRate;
@@ -63,7 +63,7 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="trainingLoss", required=true)
-    private final Double trainingLoss;
+      private final Double trainingLoss;
 
     public Double getTrainingLoss() {
         return this.trainingLoss;
@@ -142,7 +142,6 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
             this.trainingLoss = Objects.requireNonNull(trainingLoss);
             return this;
         }
-
         public IterationResultResponse build() {
             return new IterationResultResponse(durationMs, evalLoss, index, learnRate, trainingLoss);
         }

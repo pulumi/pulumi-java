@@ -76,7 +76,6 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudApigeeV1ReportPropertyResponse build() {
             return new GoogleCloudApigeeV1ReportPropertyResponse(property, value);
         }

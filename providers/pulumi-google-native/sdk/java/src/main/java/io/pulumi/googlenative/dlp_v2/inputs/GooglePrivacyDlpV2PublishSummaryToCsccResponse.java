@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2PublishSummaryToCsccResponse extends io.pul
         public Builder(GooglePrivacyDlpV2PublishSummaryToCsccResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2PublishSummaryToCsccResponse build() {
             return new GooglePrivacyDlpV2PublishSummaryToCsccResponse();
         }

@@ -46,7 +46,6 @@ public final class TopicRuleLambdaAction {
             this.functionArn = functionArn;
             return this;
         }
-
         public TopicRuleLambdaAction build() {
             return new TopicRuleLambdaAction(functionArn);
         }

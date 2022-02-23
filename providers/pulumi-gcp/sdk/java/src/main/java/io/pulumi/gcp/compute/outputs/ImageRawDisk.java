@@ -113,7 +113,6 @@ public final class ImageRawDisk {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public ImageRawDisk build() {
             return new ImageRawDisk(containerType, sha1, source);
         }

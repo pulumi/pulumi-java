@@ -251,7 +251,6 @@ public final class GetResourcePolicyResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(creationTimestamp, description, groupPlacementPolicy, instanceSchedulePolicy, kind, name, region, resourceStatus, selfLink, snapshotSchedulePolicy, status);
         }

@@ -164,7 +164,6 @@ public final class ExecutionStatisticsResponse {
             this.waitStats = waitStats;
             return this;
         }
-
         public ExecutionStatisticsResponse build() {
             return new ExecutionStatisticsResponse(cpuTimeMs, elapsedTimeMs, executionCount, hasErrors, sqlErrors, waitStats);
         }

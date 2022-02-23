@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse extends io.p
      * 
      */
     @InputImport(name="filePath", required=true)
-    private final String filePath;
+      private final String filePath;
 
     public String getFilePath() {
         return this.filePath;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse extends io.p
      * 
      */
     @InputImport(name="gcsTimestamps", required=true)
-    private final GoogleCloudDatacatalogV1beta1SystemTimestampsResponse gcsTimestamps;
+      private final GoogleCloudDatacatalogV1beta1SystemTimestampsResponse gcsTimestamps;
 
     public GoogleCloudDatacatalogV1beta1SystemTimestampsResponse getGcsTimestamps() {
         return this.gcsTimestamps;
@@ -44,7 +44,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse extends io.p
      * 
      */
     @InputImport(name="sizeBytes", required=true)
-    private final String sizeBytes;
+      private final String sizeBytes;
 
     public String getSizeBytes() {
         return this.sizeBytes;
@@ -103,7 +103,6 @@ public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse extends io.p
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1GcsFileSpecResponse build() {
             return new GoogleCloudDatacatalogV1beta1GcsFileSpecResponse(filePath, gcsTimestamps, sizeBytes);
         }

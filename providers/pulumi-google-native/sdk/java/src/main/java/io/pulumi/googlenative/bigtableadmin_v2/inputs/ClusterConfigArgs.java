@@ -23,7 +23,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterAutoscalingConfig")
-    private final @Nullable Input<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig;
+      private final @Nullable Input<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig;
 
     public Input<ClusterAutoscalingConfigArgs> getClusterAutoscalingConfig() {
         return this.clusterAutoscalingConfig == null ? Input.empty() : this.clusterAutoscalingConfig;
@@ -66,7 +66,6 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterAutoscalingConfig = Input.ofNullable(clusterAutoscalingConfig);
             return this;
         }
-
         public ClusterConfigArgs build() {
             return new ClusterConfigArgs(clusterAutoscalingConfig);
         }

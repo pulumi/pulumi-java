@@ -24,7 +24,7 @@ public final class ParameterSpecificationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Object defaultValue;
+        private final @Nullable Object defaultValue;
 
     public Optional<Object> getDefaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
@@ -35,7 +35,7 @@ public final class ParameterSpecificationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -84,7 +84,6 @@ public final class ParameterSpecificationResponse extends io.pulumi.resources.In
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ParameterSpecificationResponse build() {
             return new ParameterSpecificationResponse(defaultValue, type);
         }

@@ -121,7 +121,6 @@ public final class Subject {
             this.user = user;
             return this;
         }
-
         public Subject build() {
             return new Subject(group, kind, serviceAccount, user);
         }

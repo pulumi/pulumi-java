@@ -58,7 +58,6 @@ public final class WirelessDeviceSessionKeysAbpV10x {
             this.nwkSKey = Objects.requireNonNull(nwkSKey);
             return this;
         }
-
         public WirelessDeviceSessionKeysAbpV10x build() {
             return new WirelessDeviceSessionKeysAbpV10x(appSKey, nwkSKey);
         }

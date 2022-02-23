@@ -77,7 +77,6 @@ public final class AdditionalErrorInfoResponse {
             this.type = type;
             return this;
         }
-
         public AdditionalErrorInfoResponse build() {
             return new AdditionalErrorInfoResponse(info, type);
         }

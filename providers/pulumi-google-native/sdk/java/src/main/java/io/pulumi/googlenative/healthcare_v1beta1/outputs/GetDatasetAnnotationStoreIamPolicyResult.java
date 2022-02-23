@@ -120,7 +120,6 @@ public final class GetDatasetAnnotationStoreIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDatasetAnnotationStoreIamPolicyResult build() {
             return new GetDatasetAnnotationStoreIamPolicyResult(auditConfigs, bindings, etag, version);
         }

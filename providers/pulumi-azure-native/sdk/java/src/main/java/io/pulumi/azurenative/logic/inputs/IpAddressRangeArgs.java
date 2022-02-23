@@ -23,7 +23,7 @@ public final class IpAddressRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressRange")
-    private final @Nullable Input<String> addressRange;
+        private final @Nullable Input<String> addressRange;
 
     public Input<String> getAddressRange() {
         return this.addressRange == null ? Input.empty() : this.addressRange;
@@ -66,7 +66,6 @@ public final class IpAddressRangeArgs extends io.pulumi.resources.ResourceArgs {
             this.addressRange = Input.ofNullable(addressRange);
             return this;
         }
-
         public IpAddressRangeArgs build() {
             return new IpAddressRangeArgs(addressRange);
         }

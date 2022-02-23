@@ -200,7 +200,6 @@ public final class DataLakeAnalyticsResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public DataLakeAnalyticsResponse build() {
             return new DataLakeAnalyticsResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
         }

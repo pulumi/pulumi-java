@@ -74,7 +74,6 @@ public final class SslCertificateSelfManagedSslCertificateResponse {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
-
         public SslCertificateSelfManagedSslCertificateResponse build() {
             return new SslCertificateSelfManagedSslCertificateResponse(certificate, privateKey);
         }

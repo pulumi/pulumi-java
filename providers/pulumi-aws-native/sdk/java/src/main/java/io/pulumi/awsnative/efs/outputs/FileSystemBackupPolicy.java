@@ -44,7 +44,6 @@ public final class FileSystemBackupPolicy {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public FileSystemBackupPolicy build() {
             return new FileSystemBackupPolicy(status);
         }

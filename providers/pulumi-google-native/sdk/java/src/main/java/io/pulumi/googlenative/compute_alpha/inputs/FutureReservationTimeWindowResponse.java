@@ -14,14 +14,14 @@ public final class FutureReservationTimeWindowResponse extends io.pulumi.resourc
     public static final FutureReservationTimeWindowResponse Empty = new FutureReservationTimeWindowResponse();
 
     @InputImport(name="duration", required=true)
-    private final DurationResponse duration;
+      private final DurationResponse duration;
 
     public DurationResponse getDuration() {
         return this.duration;
     }
 
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -32,7 +32,7 @@ public final class FutureReservationTimeWindowResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -91,7 +91,6 @@ public final class FutureReservationTimeWindowResponse extends io.pulumi.resourc
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public FutureReservationTimeWindowResponse build() {
             return new FutureReservationTimeWindowResponse(duration, endTime, startTime);
         }

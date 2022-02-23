@@ -226,7 +226,6 @@ public final class CassandraSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CassandraSourceResponse build() {
             return new CassandraSourceResponse(additionalColumns, consistencyLevel, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

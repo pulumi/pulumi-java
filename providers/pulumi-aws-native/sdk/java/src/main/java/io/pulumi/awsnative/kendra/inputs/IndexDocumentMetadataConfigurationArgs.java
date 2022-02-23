@@ -18,28 +18,28 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
     public static final IndexDocumentMetadataConfigurationArgs Empty = new IndexDocumentMetadataConfigurationArgs();
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="relevance")
-    private final @Nullable Input<IndexRelevanceArgs> relevance;
+        private final @Nullable Input<IndexRelevanceArgs> relevance;
 
     public Input<IndexRelevanceArgs> getRelevance() {
         return this.relevance == null ? Input.empty() : this.relevance;
     }
 
     @InputImport(name="search")
-    private final @Nullable Input<IndexSearchArgs> search;
+        private final @Nullable Input<IndexSearchArgs> search;
 
     public Input<IndexSearchArgs> getSearch() {
         return this.search == null ? Input.empty() : this.search;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<IndexDocumentAttributeValueType> type;
+        private final Input<IndexDocumentAttributeValueType> type;
 
     public Input<IndexDocumentAttributeValueType> getType() {
         return this.type;
@@ -128,7 +128,6 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public IndexDocumentMetadataConfigurationArgs build() {
             return new IndexDocumentMetadataConfigurationArgs(name, relevance, search, type);
         }

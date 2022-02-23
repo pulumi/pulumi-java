@@ -140,7 +140,6 @@ public final class OriginEndpointSpekeKeyProvider {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public OriginEndpointSpekeKeyProvider build() {
             return new OriginEndpointSpekeKeyProvider(certificateArn, resourceId, roleArn, systemIds, url);
         }

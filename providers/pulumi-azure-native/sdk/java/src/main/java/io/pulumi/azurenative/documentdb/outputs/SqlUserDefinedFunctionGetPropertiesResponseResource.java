@@ -140,7 +140,6 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public SqlUserDefinedFunctionGetPropertiesResponseResource build() {
             return new SqlUserDefinedFunctionGetPropertiesResponseResource(body, etag, id, rid, ts);
         }

@@ -61,7 +61,6 @@ public final class SubscriptionStateRuleResponse {
             this.state = state;
             return this;
         }
-
         public SubscriptionStateRuleResponse build() {
             return new SubscriptionStateRuleResponse(allowedActions, state);
         }

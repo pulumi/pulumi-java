@@ -24,7 +24,7 @@ public final class ConnectToTargetSqlMITaskPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<ConnectToTargetSqlMITaskInputArgs> input;
+        private final @Nullable Input<ConnectToTargetSqlMITaskInputArgs> input;
 
     public Input<ConnectToTargetSqlMITaskInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -36,7 +36,7 @@ public final class ConnectToTargetSqlMITaskPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="taskType", required=true)
-    private final Input<String> taskType;
+        private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;
@@ -95,7 +95,6 @@ public final class ConnectToTargetSqlMITaskPropertiesArgs extends io.pulumi.reso
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }
-
         public ConnectToTargetSqlMITaskPropertiesArgs build() {
             return new ConnectToTargetSqlMITaskPropertiesArgs(input, taskType);
         }

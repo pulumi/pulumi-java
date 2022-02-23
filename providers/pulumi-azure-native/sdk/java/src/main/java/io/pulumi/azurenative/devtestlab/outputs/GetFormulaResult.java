@@ -310,7 +310,6 @@ public final class GetFormulaResult {
             this.vm = vm;
             return this;
         }
-
         public GetFormulaResult build() {
             return new GetFormulaResult(author, creationDate, description, formulaContent, id, location, name, osType, provisioningState, tags, type, uniqueIdentifier, vm);
         }

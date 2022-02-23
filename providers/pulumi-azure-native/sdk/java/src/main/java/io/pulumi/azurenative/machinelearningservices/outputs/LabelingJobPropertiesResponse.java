@@ -295,7 +295,6 @@ public final class LabelingJobPropertiesResponse {
             this.tags = tags;
             return this;
         }
-
         public LabelingJobPropertiesResponse build() {
             return new LabelingJobPropertiesResponse(createdTimeUtc, datasetConfiguration, jobInstructions, labelCategories, labelingJobMediaProperties, mlAssistConfiguration, progressMetrics, projectId, properties, status, statusMessages, tags);
         }

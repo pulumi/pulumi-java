@@ -15,7 +15,7 @@ public final class DeliveryStreamElasticsearchRetryOptionsArgs extends io.pulumi
     public static final DeliveryStreamElasticsearchRetryOptionsArgs Empty = new DeliveryStreamElasticsearchRetryOptionsArgs();
 
     @InputImport(name="durationInSeconds")
-    private final @Nullable Input<Integer> durationInSeconds;
+        private final @Nullable Input<Integer> durationInSeconds;
 
     public Input<Integer> getDurationInSeconds() {
         return this.durationInSeconds == null ? Input.empty() : this.durationInSeconds;
@@ -58,7 +58,6 @@ public final class DeliveryStreamElasticsearchRetryOptionsArgs extends io.pulumi
             this.durationInSeconds = Input.ofNullable(durationInSeconds);
             return this;
         }
-
         public DeliveryStreamElasticsearchRetryOptionsArgs build() {
             return new DeliveryStreamElasticsearchRetryOptionsArgs(durationInSeconds);
         }

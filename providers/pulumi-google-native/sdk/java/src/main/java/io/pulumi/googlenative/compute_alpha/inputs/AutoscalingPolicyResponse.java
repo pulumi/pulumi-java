@@ -29,7 +29,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="coolDownPeriodSec", required=true)
-    private final Integer coolDownPeriodSec;
+      private final Integer coolDownPeriodSec;
 
     public Integer getCoolDownPeriodSec() {
         return this.coolDownPeriodSec;
@@ -40,7 +40,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="cpuUtilization", required=true)
-    private final AutoscalingPolicyCpuUtilizationResponse cpuUtilization;
+      private final AutoscalingPolicyCpuUtilizationResponse cpuUtilization;
 
     public AutoscalingPolicyCpuUtilizationResponse getCpuUtilization() {
         return this.cpuUtilization;
@@ -51,7 +51,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="customMetricUtilizations", required=true)
-    private final List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations;
+      private final List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations;
 
     public List<AutoscalingPolicyCustomMetricUtilizationResponse> getCustomMetricUtilizations() {
         return this.customMetricUtilizations;
@@ -62,7 +62,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="loadBalancingUtilization", required=true)
-    private final AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization;
+      private final AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization;
 
     public AutoscalingPolicyLoadBalancingUtilizationResponse getLoadBalancingUtilization() {
         return this.loadBalancingUtilization;
@@ -73,7 +73,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="maxNumReplicas", required=true)
-    private final Integer maxNumReplicas;
+      private final Integer maxNumReplicas;
 
     public Integer getMaxNumReplicas() {
         return this.maxNumReplicas;
@@ -84,7 +84,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="minNumReplicas", required=true)
-    private final Integer minNumReplicas;
+      private final Integer minNumReplicas;
 
     public Integer getMinNumReplicas() {
         return this.minNumReplicas;
@@ -95,21 +95,21 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
     }
 
     @InputImport(name="scaleDownControl", required=true)
-    private final AutoscalingPolicyScaleDownControlResponse scaleDownControl;
+      private final AutoscalingPolicyScaleDownControlResponse scaleDownControl;
 
     public AutoscalingPolicyScaleDownControlResponse getScaleDownControl() {
         return this.scaleDownControl;
     }
 
     @InputImport(name="scaleInControl", required=true)
-    private final AutoscalingPolicyScaleInControlResponse scaleInControl;
+      private final AutoscalingPolicyScaleInControlResponse scaleInControl;
 
     public AutoscalingPolicyScaleInControlResponse getScaleInControl() {
         return this.scaleInControl;
@@ -120,7 +120,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="scalingSchedules", required=true)
-    private final Map<String,String> scalingSchedules;
+      private final Map<String,String> scalingSchedules;
 
     public Map<String,String> getScalingSchedules() {
         return this.scalingSchedules;
@@ -249,7 +249,6 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
             this.scalingSchedules = Objects.requireNonNull(scalingSchedules);
             return this;
         }
-
         public AutoscalingPolicyResponse build() {
             return new AutoscalingPolicyResponse(coolDownPeriodSec, cpuUtilization, customMetricUtilizations, loadBalancingUtilization, maxNumReplicas, minNumReplicas, mode, scaleDownControl, scaleInControl, scalingSchedules);
         }

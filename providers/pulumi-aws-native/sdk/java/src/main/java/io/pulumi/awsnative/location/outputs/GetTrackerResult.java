@@ -86,7 +86,6 @@ public final class GetTrackerResult {
             this.updateTime = updateTime;
             return this;
         }
-
         public GetTrackerResult build() {
             return new GetTrackerResult(arn, createTime, trackerArn, updateTime);
         }

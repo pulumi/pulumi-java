@@ -24,7 +24,7 @@ public final class PolybaseSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="rejectSampleValue")
-    private final @Nullable Object rejectSampleValue;
+        private final @Nullable Object rejectSampleValue;
 
     public Optional<Object> getRejectSampleValue() {
         return this.rejectSampleValue == null ? Optional.empty() : Optional.ofNullable(this.rejectSampleValue);
@@ -35,7 +35,7 @@ public final class PolybaseSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="rejectType")
-    private final @Nullable String rejectType;
+        private final @Nullable String rejectType;
 
     public Optional<String> getRejectType() {
         return this.rejectType == null ? Optional.empty() : Optional.ofNullable(this.rejectType);
@@ -46,7 +46,7 @@ public final class PolybaseSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="rejectValue")
-    private final @Nullable Object rejectValue;
+        private final @Nullable Object rejectValue;
 
     public Optional<Object> getRejectValue() {
         return this.rejectValue == null ? Optional.empty() : Optional.ofNullable(this.rejectValue);
@@ -57,7 +57,7 @@ public final class PolybaseSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="useTypeDefault")
-    private final @Nullable Object useTypeDefault;
+        private final @Nullable Object useTypeDefault;
 
     public Optional<Object> getUseTypeDefault() {
         return this.useTypeDefault == null ? Optional.empty() : Optional.ofNullable(this.useTypeDefault);
@@ -126,7 +126,6 @@ public final class PolybaseSettingsResponse extends io.pulumi.resources.InvokeAr
             this.useTypeDefault = useTypeDefault;
             return this;
         }
-
         public PolybaseSettingsResponse build() {
             return new PolybaseSettingsResponse(rejectSampleValue, rejectType, rejectValue, useTypeDefault);
         }

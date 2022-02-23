@@ -18,7 +18,7 @@ public final class ProjectFeedFeedOutputConfigPubsubDestinationGetArgs extends i
      * 
      */
     @InputImport(name="topic", required=true)
-    private final Input<String> topic;
+        private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;
@@ -61,7 +61,6 @@ public final class ProjectFeedFeedOutputConfigPubsubDestinationGetArgs extends i
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }
-
         public ProjectFeedFeedOutputConfigPubsubDestinationGetArgs build() {
             return new ProjectFeedFeedOutputConfigPubsubDestinationGetArgs(topic);
         }

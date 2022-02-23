@@ -78,7 +78,6 @@ public final class GetSubnetworkSecondaryIpRange {
             this.rangeName = Objects.requireNonNull(rangeName);
             return this;
         }
-
         public GetSubnetworkSecondaryIpRange build() {
             return new GetSubnetworkSecondaryIpRange(ipCidrRange, rangeName);
         }

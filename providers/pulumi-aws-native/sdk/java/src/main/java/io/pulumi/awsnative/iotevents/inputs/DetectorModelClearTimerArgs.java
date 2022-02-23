@@ -18,7 +18,7 @@ public final class DetectorModelClearTimerArgs extends io.pulumi.resources.Resou
     public static final DetectorModelClearTimerArgs Empty = new DetectorModelClearTimerArgs();
 
     @InputImport(name="timerName", required=true)
-    private final Input<String> timerName;
+        private final Input<String> timerName;
 
     public Input<String> getTimerName() {
         return this.timerName;
@@ -61,7 +61,6 @@ public final class DetectorModelClearTimerArgs extends io.pulumi.resources.Resou
             this.timerName = Input.of(Objects.requireNonNull(timerName));
             return this;
         }
-
         public DetectorModelClearTimerArgs build() {
             return new DetectorModelClearTimerArgs(timerName);
         }

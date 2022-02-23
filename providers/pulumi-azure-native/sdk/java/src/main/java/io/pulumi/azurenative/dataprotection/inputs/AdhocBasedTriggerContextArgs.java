@@ -24,7 +24,7 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final Input<String> objectType;
+        private final Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType;
@@ -35,7 +35,7 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="taggingCriteria", required=true)
-    private final Input<AdhocBasedTaggingCriteriaArgs> taggingCriteria;
+        private final Input<AdhocBasedTaggingCriteriaArgs> taggingCriteria;
 
     public Input<AdhocBasedTaggingCriteriaArgs> getTaggingCriteria() {
         return this.taggingCriteria;
@@ -94,7 +94,6 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
             this.taggingCriteria = Input.of(Objects.requireNonNull(taggingCriteria));
             return this;
         }
-
         public AdhocBasedTriggerContextArgs build() {
             return new AdhocBasedTriggerContextArgs(objectType, taggingCriteria);
         }

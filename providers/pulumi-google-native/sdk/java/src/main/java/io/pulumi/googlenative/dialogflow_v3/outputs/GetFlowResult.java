@@ -183,7 +183,6 @@ public final class GetFlowResult {
             this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
             return this;
         }
-
         public GetFlowResult build() {
             return new GetFlowResult(description, displayName, eventHandlers, name, nluSettings, transitionRouteGroups, transitionRoutes);
         }

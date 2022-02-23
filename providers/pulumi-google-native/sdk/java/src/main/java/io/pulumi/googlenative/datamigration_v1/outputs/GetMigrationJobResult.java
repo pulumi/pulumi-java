@@ -437,7 +437,6 @@ public final class GetMigrationJobResult {
             this.vpcPeeringConnectivity = Objects.requireNonNull(vpcPeeringConnectivity);
             return this;
         }
-
         public GetMigrationJobResult build() {
             return new GetMigrationJobResult(createTime, destination, destinationDatabase, displayName, dumpPath, duration, endTime, error, labels, name, phase, reverseSshConnectivity, source, sourceDatabase, state, staticIpConnectivity, type, updateTime, vpcPeeringConnectivity);
         }

@@ -56,7 +56,6 @@ public final class QueueStackdriverLoggingConfig {
             this.samplingRatio = Objects.requireNonNull(samplingRatio);
             return this;
         }
-
         public QueueStackdriverLoggingConfig build() {
             return new QueueStackdriverLoggingConfig(samplingRatio);
         }

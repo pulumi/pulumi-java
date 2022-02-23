@@ -311,7 +311,6 @@ public final class FileServerReadSettingsResponse {
             this.wildcardFolderPath = wildcardFolderPath;
             return this;
         }
-
         public FileServerReadSettingsResponse build() {
             return new FileServerReadSettingsResponse(deleteFilesAfterCompletion, disableMetricsCollection, enablePartitionDiscovery, fileFilter, fileListPath, maxConcurrentConnections, modifiedDatetimeEnd, modifiedDatetimeStart, partitionRootPath, recursive, type, wildcardFileName, wildcardFolderPath);
         }

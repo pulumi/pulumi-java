@@ -147,7 +147,6 @@ public final class ScalarFunctionPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ScalarFunctionPropertiesResponse build() {
             return new ScalarFunctionPropertiesResponse(binding, etag, inputs, output, type);
         }

@@ -97,7 +97,6 @@ public final class VirtualMachineRunCommandScriptSourceResponse {
             this.scriptUri = scriptUri;
             return this;
         }
-
         public VirtualMachineRunCommandScriptSourceResponse build() {
             return new VirtualMachineRunCommandScriptSourceResponse(commandId, script, scriptUri);
         }

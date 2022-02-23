@@ -25,7 +25,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="characterMaskConfig")
-    private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs> characterMaskConfig;
+        private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs> characterMaskConfig;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs> getCharacterMaskConfig() {
         return this.characterMaskConfig == null ? Input.empty() : this.characterMaskConfig;
@@ -37,7 +37,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="cryptoDeterministicConfig")
-    private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs> cryptoDeterministicConfig;
+        private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs> cryptoDeterministicConfig;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs> getCryptoDeterministicConfig() {
         return this.cryptoDeterministicConfig == null ? Input.empty() : this.cryptoDeterministicConfig;
@@ -50,7 +50,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="cryptoReplaceFfxFpeConfig")
-    private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs> cryptoReplaceFfxFpeConfig;
+        private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs> cryptoReplaceFfxFpeConfig;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs> getCryptoReplaceFfxFpeConfig() {
         return this.cryptoReplaceFfxFpeConfig == null ? Input.empty() : this.cryptoReplaceFfxFpeConfig;
@@ -62,7 +62,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="replaceConfig")
-    private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs> replaceConfig;
+        private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs> replaceConfig;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs> getReplaceConfig() {
         return this.replaceConfig == null ? Input.empty() : this.replaceConfig;
@@ -73,7 +73,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="replaceWithInfoTypeConfig")
-    private final @Nullable Input<Boolean> replaceWithInfoTypeConfig;
+        private final @Nullable Input<Boolean> replaceWithInfoTypeConfig;
 
     public Input<Boolean> getReplaceWithInfoTypeConfig() {
         return this.replaceWithInfoTypeConfig == null ? Input.empty() : this.replaceWithInfoTypeConfig;
@@ -177,7 +177,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.replaceWithInfoTypeConfig = Input.ofNullable(replaceWithInfoTypeConfig);
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs(characterMaskConfig, cryptoDeterministicConfig, cryptoReplaceFfxFpeConfig, replaceConfig, replaceWithInfoTypeConfig);
         }

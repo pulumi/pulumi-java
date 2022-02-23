@@ -22,7 +22,7 @@ public final class MonitoringScheduleConfig extends io.pulumi.resources.InvokeAr
     public static final MonitoringScheduleConfig Empty = new MonitoringScheduleConfig();
 
     @InputImport(name="monitoringJobDefinition")
-    private final @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition;
+        private final @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition;
 
     public Optional<MonitoringScheduleMonitoringJobDefinition> getMonitoringJobDefinition() {
         return this.monitoringJobDefinition == null ? Optional.empty() : Optional.ofNullable(this.monitoringJobDefinition);
@@ -33,21 +33,21 @@ public final class MonitoringScheduleConfig extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="monitoringJobDefinitionName")
-    private final @Nullable String monitoringJobDefinitionName;
+        private final @Nullable String monitoringJobDefinitionName;
 
     public Optional<String> getMonitoringJobDefinitionName() {
         return this.monitoringJobDefinitionName == null ? Optional.empty() : Optional.ofNullable(this.monitoringJobDefinitionName);
     }
 
     @InputImport(name="monitoringType")
-    private final @Nullable MonitoringScheduleMonitoringType monitoringType;
+        private final @Nullable MonitoringScheduleMonitoringType monitoringType;
 
     public Optional<MonitoringScheduleMonitoringType> getMonitoringType() {
         return this.monitoringType == null ? Optional.empty() : Optional.ofNullable(this.monitoringType);
     }
 
     @InputImport(name="scheduleConfig")
-    private final @Nullable MonitoringScheduleScheduleConfig scheduleConfig;
+        private final @Nullable MonitoringScheduleScheduleConfig scheduleConfig;
 
     public Optional<MonitoringScheduleScheduleConfig> getScheduleConfig() {
         return this.scheduleConfig == null ? Optional.empty() : Optional.ofNullable(this.scheduleConfig);
@@ -116,7 +116,6 @@ public final class MonitoringScheduleConfig extends io.pulumi.resources.InvokeAr
             this.scheduleConfig = scheduleConfig;
             return this;
         }
-
         public MonitoringScheduleConfig build() {
             return new MonitoringScheduleConfig(monitoringJobDefinition, monitoringJobDefinitionName, monitoringType, scheduleConfig);
         }

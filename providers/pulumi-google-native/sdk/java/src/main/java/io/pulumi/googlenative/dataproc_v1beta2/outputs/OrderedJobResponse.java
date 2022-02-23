@@ -295,7 +295,6 @@ public final class OrderedJobResponse {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public OrderedJobResponse build() {
             return new OrderedJobResponse(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
         }

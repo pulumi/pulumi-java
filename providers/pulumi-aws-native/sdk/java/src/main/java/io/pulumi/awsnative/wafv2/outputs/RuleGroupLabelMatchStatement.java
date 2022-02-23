@@ -59,7 +59,6 @@ public final class RuleGroupLabelMatchStatement {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public RuleGroupLabelMatchStatement build() {
             return new RuleGroupLabelMatchStatement(key, scope);
         }

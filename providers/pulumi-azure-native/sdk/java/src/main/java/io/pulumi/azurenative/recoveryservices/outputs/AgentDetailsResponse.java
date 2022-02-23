@@ -139,7 +139,6 @@ public final class AgentDetailsResponse {
             this.machineId = Objects.requireNonNull(machineId);
             return this;
         }
-
         public AgentDetailsResponse build() {
             return new AgentDetailsResponse(agentId, biosId, disks, fqdn, machineId);
         }

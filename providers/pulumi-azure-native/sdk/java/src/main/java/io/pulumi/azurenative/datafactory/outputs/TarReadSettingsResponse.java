@@ -79,7 +79,6 @@ public final class TarReadSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TarReadSettingsResponse build() {
             return new TarReadSettingsResponse(preserveCompressionFileNameAsFolder, type);
         }

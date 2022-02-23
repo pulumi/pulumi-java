@@ -98,7 +98,6 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
-
         public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse build() {
             return new GooglePrivacyDlpV2RiskAnalysisJobConfigResponse(actions, privacyMetric, sourceTable);
         }

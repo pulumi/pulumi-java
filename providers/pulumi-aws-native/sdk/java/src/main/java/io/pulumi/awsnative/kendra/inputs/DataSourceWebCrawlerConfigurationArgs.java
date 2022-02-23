@@ -21,63 +21,63 @@ public final class DataSourceWebCrawlerConfigurationArgs extends io.pulumi.resou
     public static final DataSourceWebCrawlerConfigurationArgs Empty = new DataSourceWebCrawlerConfigurationArgs();
 
     @InputImport(name="authenticationConfiguration")
-    private final @Nullable Input<DataSourceWebCrawlerAuthenticationConfigurationArgs> authenticationConfiguration;
+        private final @Nullable Input<DataSourceWebCrawlerAuthenticationConfigurationArgs> authenticationConfiguration;
 
     public Input<DataSourceWebCrawlerAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
         return this.authenticationConfiguration == null ? Input.empty() : this.authenticationConfiguration;
     }
 
     @InputImport(name="crawlDepth")
-    private final @Nullable Input<Integer> crawlDepth;
+        private final @Nullable Input<Integer> crawlDepth;
 
     public Input<Integer> getCrawlDepth() {
         return this.crawlDepth == null ? Input.empty() : this.crawlDepth;
     }
 
     @InputImport(name="maxContentSizePerPageInMegaBytes")
-    private final @Nullable Input<Double> maxContentSizePerPageInMegaBytes;
+        private final @Nullable Input<Double> maxContentSizePerPageInMegaBytes;
 
     public Input<Double> getMaxContentSizePerPageInMegaBytes() {
         return this.maxContentSizePerPageInMegaBytes == null ? Input.empty() : this.maxContentSizePerPageInMegaBytes;
     }
 
     @InputImport(name="maxLinksPerPage")
-    private final @Nullable Input<Integer> maxLinksPerPage;
+        private final @Nullable Input<Integer> maxLinksPerPage;
 
     public Input<Integer> getMaxLinksPerPage() {
         return this.maxLinksPerPage == null ? Input.empty() : this.maxLinksPerPage;
     }
 
     @InputImport(name="maxUrlsPerMinuteCrawlRate")
-    private final @Nullable Input<Integer> maxUrlsPerMinuteCrawlRate;
+        private final @Nullable Input<Integer> maxUrlsPerMinuteCrawlRate;
 
     public Input<Integer> getMaxUrlsPerMinuteCrawlRate() {
         return this.maxUrlsPerMinuteCrawlRate == null ? Input.empty() : this.maxUrlsPerMinuteCrawlRate;
     }
 
     @InputImport(name="proxyConfiguration")
-    private final @Nullable Input<DataSourceProxyConfigurationArgs> proxyConfiguration;
+        private final @Nullable Input<DataSourceProxyConfigurationArgs> proxyConfiguration;
 
     public Input<DataSourceProxyConfigurationArgs> getProxyConfiguration() {
         return this.proxyConfiguration == null ? Input.empty() : this.proxyConfiguration;
     }
 
     @InputImport(name="urlExclusionPatterns")
-    private final @Nullable Input<List<String>> urlExclusionPatterns;
+        private final @Nullable Input<List<String>> urlExclusionPatterns;
 
     public Input<List<String>> getUrlExclusionPatterns() {
         return this.urlExclusionPatterns == null ? Input.empty() : this.urlExclusionPatterns;
     }
 
     @InputImport(name="urlInclusionPatterns")
-    private final @Nullable Input<List<String>> urlInclusionPatterns;
+        private final @Nullable Input<List<String>> urlInclusionPatterns;
 
     public Input<List<String>> getUrlInclusionPatterns() {
         return this.urlInclusionPatterns == null ? Input.empty() : this.urlInclusionPatterns;
     }
 
     @InputImport(name="urls", required=true)
-    private final Input<DataSourceWebCrawlerUrlsArgs> urls;
+        private final Input<DataSourceWebCrawlerUrlsArgs> urls;
 
     public Input<DataSourceWebCrawlerUrlsArgs> getUrls() {
         return this.urls;
@@ -241,7 +241,6 @@ public final class DataSourceWebCrawlerConfigurationArgs extends io.pulumi.resou
             this.urls = Input.of(Objects.requireNonNull(urls));
             return this;
         }
-
         public DataSourceWebCrawlerConfigurationArgs build() {
             return new DataSourceWebCrawlerConfigurationArgs(authenticationConfiguration, crawlDepth, maxContentSizePerPageInMegaBytes, maxLinksPerPage, maxUrlsPerMinuteCrawlRate, proxyConfiguration, urlExclusionPatterns, urlInclusionPatterns, urls);
         }

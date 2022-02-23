@@ -59,7 +59,6 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public InstanceAccessControlAttributeConfigurationAccessControlAttribute build() {
             return new InstanceAccessControlAttributeConfigurationAccessControlAttribute(key, value);
         }

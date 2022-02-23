@@ -162,7 +162,6 @@ public final class FeatureMembershipConfigmanagementPolicyController {
             this.templateLibraryInstalled = templateLibraryInstalled;
             return this;
         }
-
         public FeatureMembershipConfigmanagementPolicyController build() {
             return new FeatureMembershipConfigmanagementPolicyController(auditIntervalSeconds, enabled, exemptableNamespaces, logDeniesEnabled, referentialRulesEnabled, templateLibraryInstalled);
         }

@@ -601,7 +601,6 @@ public final class GetConfigResult {
             this.usage = Objects.requireNonNull(usage);
             return this;
         }
-
         public GetConfigResult build() {
             return new GetConfigResult(apis, authentication, backend, billing, configVersion, context, control, customError, documentation, endpoints, enums, http, logging, logs, metrics, monitoredResources, monitoring, name, producerProjectId, quota, sourceInfo, systemParameters, systemTypes, title, types, usage);
         }

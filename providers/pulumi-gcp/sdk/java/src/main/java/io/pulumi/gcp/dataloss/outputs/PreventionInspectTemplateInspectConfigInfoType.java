@@ -54,7 +54,6 @@ public final class PreventionInspectTemplateInspectConfigInfoType {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigInfoType build() {
             return new PreventionInspectTemplateInspectConfigInfoType(name);
         }

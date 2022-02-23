@@ -77,7 +77,6 @@ public final class UrlRewriteActionResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public UrlRewriteActionResponse build() {
             return new UrlRewriteActionResponse(name, parameters);
         }

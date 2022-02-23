@@ -182,7 +182,6 @@ public final class GetSubAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSubAccountResult build() {
             return new GetSubAccountResult(id, identity, location, name, properties, systemData, tags, type);
         }

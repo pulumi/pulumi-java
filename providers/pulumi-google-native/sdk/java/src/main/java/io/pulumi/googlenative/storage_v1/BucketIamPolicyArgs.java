@@ -22,14 +22,14 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BucketIamPolicyBindingsItemArgs>> bindings;
+      private final @Nullable Input<List<BucketIamPolicyBindingsItemArgs>> bindings;
 
     public Input<List<BucketIamPolicyBindingsItemArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
     }
 
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -40,7 +40,7 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -51,14 +51,14 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="provisionalUserProject")
-    private final @Nullable Input<String> provisionalUserProject;
+      private final @Nullable Input<String> provisionalUserProject;
 
     public Input<String> getProvisionalUserProject() {
         return this.provisionalUserProject == null ? Input.empty() : this.provisionalUserProject;
@@ -69,14 +69,14 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
     @InputImport(name="userProject")
-    private final @Nullable Input<String> userProject;
+      private final @Nullable Input<String> userProject;
 
     public Input<String> getUserProject() {
         return this.userProject == null ? Input.empty() : this.userProject;
@@ -87,7 +87,7 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -236,7 +236,6 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public BucketIamPolicyArgs build() {
             return new BucketIamPolicyArgs(bindings, bucket, etag, kind, provisionalUserProject, resourceId, userProject, version);
         }

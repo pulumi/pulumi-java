@@ -52,7 +52,6 @@ public final class HintResponse {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
-
         public HintResponse build() {
             return new HintResponse(humanReadableName);
         }

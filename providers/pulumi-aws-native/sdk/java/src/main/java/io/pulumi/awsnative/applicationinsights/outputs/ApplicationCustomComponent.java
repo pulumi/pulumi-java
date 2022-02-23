@@ -75,7 +75,6 @@ public final class ApplicationCustomComponent {
             this.resourceList = Objects.requireNonNull(resourceList);
             return this;
         }
-
         public ApplicationCustomComponent build() {
             return new ApplicationCustomComponent(componentName, resourceList);
         }

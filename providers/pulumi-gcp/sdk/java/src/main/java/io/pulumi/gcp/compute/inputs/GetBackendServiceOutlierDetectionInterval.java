@@ -13,14 +13,14 @@ public final class GetBackendServiceOutlierDetectionInterval extends io.pulumi.r
     public static final GetBackendServiceOutlierDetectionInterval Empty = new GetBackendServiceOutlierDetectionInterval();
 
     @InputImport(name="nanos", required=true)
-    private final Integer nanos;
+        private final Integer nanos;
 
     public Integer getNanos() {
         return this.nanos;
     }
 
     @InputImport(name="seconds", required=true)
-    private final Integer seconds;
+        private final Integer seconds;
 
     public Integer getSeconds() {
         return this.seconds;
@@ -69,7 +69,6 @@ public final class GetBackendServiceOutlierDetectionInterval extends io.pulumi.r
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public GetBackendServiceOutlierDetectionInterval build() {
             return new GetBackendServiceOutlierDetectionInterval(nanos, seconds);
         }

@@ -438,7 +438,6 @@ public final class GetScheduledAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScheduledAlertRuleResult build() {
             return new GetScheduledAlertRuleResult(alertRuleTemplateName, description, displayName, enabled, etag, id, kind, lastModifiedUtc, name, query, queryFrequency, queryPeriod, severity, suppressionDuration, suppressionEnabled, tactics, triggerOperator, triggerThreshold, type);
         }

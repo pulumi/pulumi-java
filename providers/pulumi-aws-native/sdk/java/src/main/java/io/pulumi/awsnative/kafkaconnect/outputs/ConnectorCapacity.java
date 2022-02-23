@@ -61,7 +61,6 @@ public final class ConnectorCapacity {
             this.provisionedCapacity = provisionedCapacity;
             return this;
         }
-
         public ConnectorCapacity build() {
             return new ConnectorCapacity(autoScaling, provisionedCapacity);
         }

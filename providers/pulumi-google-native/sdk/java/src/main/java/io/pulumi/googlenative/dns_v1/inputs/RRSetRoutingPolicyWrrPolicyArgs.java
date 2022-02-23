@@ -21,14 +21,14 @@ public final class RRSetRoutingPolicyWrrPolicyArgs extends io.pulumi.resources.R
     public static final RRSetRoutingPolicyWrrPolicyArgs Empty = new RRSetRoutingPolicyWrrPolicyArgs();
 
     @InputImport(name="items")
-    private final @Nullable Input<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items;
+      private final @Nullable Input<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items;
 
     public Input<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -87,7 +87,6 @@ public final class RRSetRoutingPolicyWrrPolicyArgs extends io.pulumi.resources.R
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public RRSetRoutingPolicyWrrPolicyArgs build() {
             return new RRSetRoutingPolicyWrrPolicyArgs(items, kind);
         }

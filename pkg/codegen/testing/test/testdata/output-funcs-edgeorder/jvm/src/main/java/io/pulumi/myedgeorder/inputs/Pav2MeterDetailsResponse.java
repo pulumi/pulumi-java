@@ -23,7 +23,7 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="billingType", required=true)
-    private final String billingType;
+      private final String billingType;
 
     public String getBillingType() {
         return this.billingType;
@@ -34,7 +34,7 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="chargingType", required=true)
-    private final String chargingType;
+      private final String chargingType;
 
     public String getChargingType() {
         return this.chargingType;
@@ -45,7 +45,7 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="meterGuid", required=true)
-    private final String meterGuid;
+      private final String meterGuid;
 
     public String getMeterGuid() {
         return this.meterGuid;
@@ -56,7 +56,7 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="multiplier", required=true)
-    private final Double multiplier;
+      private final Double multiplier;
 
     public Double getMultiplier() {
         return this.multiplier;
@@ -125,7 +125,6 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
         }
-
         public Pav2MeterDetailsResponse build() {
             return new Pav2MeterDetailsResponse(billingType, chargingType, meterGuid, multiplier);
         }

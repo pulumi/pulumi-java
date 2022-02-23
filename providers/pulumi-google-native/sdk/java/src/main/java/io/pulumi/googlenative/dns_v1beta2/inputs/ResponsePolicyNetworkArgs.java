@@ -15,7 +15,7 @@ public final class ResponsePolicyNetworkArgs extends io.pulumi.resources.Resourc
     public static final ResponsePolicyNetworkArgs Empty = new ResponsePolicyNetworkArgs();
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -26,7 +26,7 @@ public final class ResponsePolicyNetworkArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="networkUrl")
-    private final @Nullable Input<String> networkUrl;
+      private final @Nullable Input<String> networkUrl;
 
     public Input<String> getNetworkUrl() {
         return this.networkUrl == null ? Input.empty() : this.networkUrl;
@@ -85,7 +85,6 @@ public final class ResponsePolicyNetworkArgs extends io.pulumi.resources.Resourc
             this.networkUrl = Input.ofNullable(networkUrl);
             return this;
         }
-
         public ResponsePolicyNetworkArgs build() {
             return new ResponsePolicyNetworkArgs(kind, networkUrl);
         }

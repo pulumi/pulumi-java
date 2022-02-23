@@ -117,7 +117,6 @@ public final class GetSharedPrivateLinkResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSharedPrivateLinkResourceResult build() {
             return new GetSharedPrivateLinkResourceResult(id, name, properties, type);
         }

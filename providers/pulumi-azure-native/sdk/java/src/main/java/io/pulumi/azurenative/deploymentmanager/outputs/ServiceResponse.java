@@ -120,7 +120,6 @@ public final class ServiceResponse {
             this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
             return this;
         }
-
         public ServiceResponse build() {
             return new ServiceResponse(name, serviceUnits, targetLocation, targetSubscriptionId);
         }

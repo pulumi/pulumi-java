@@ -117,7 +117,6 @@ public final class ContactDetailsResponse {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public ContactDetailsResponse build() {
             return new ContactDetailsResponse(companyName, contactPerson, emailList, phone);
         }

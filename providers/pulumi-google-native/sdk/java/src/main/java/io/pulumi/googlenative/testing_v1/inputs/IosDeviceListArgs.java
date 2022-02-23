@@ -23,7 +23,7 @@ public final class IosDeviceListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosDevices", required=true)
-    private final Input<List<IosDeviceArgs>> iosDevices;
+      private final Input<List<IosDeviceArgs>> iosDevices;
 
     public Input<List<IosDeviceArgs>> getIosDevices() {
         return this.iosDevices;
@@ -66,7 +66,6 @@ public final class IosDeviceListArgs extends io.pulumi.resources.ResourceArgs {
             this.iosDevices = Input.of(Objects.requireNonNull(iosDevices));
             return this;
         }
-
         public IosDeviceListArgs build() {
             return new IosDeviceListArgs(iosDevices);
         }

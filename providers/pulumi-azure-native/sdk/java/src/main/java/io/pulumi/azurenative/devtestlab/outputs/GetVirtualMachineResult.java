@@ -885,7 +885,6 @@ public final class GetVirtualMachineResult {
             this.virtualMachineCreationSource = Objects.requireNonNull(virtualMachineCreationSource);
             return this;
         }
-
         public GetVirtualMachineResult build() {
             return new GetVirtualMachineResult(allowClaim, applicableSchedule, artifactDeploymentStatus, artifacts, computeId, computeVm, createdByUser, createdByUserId, createdDate, customImageId, dataDiskParameters, disallowPublicIpAddress, environmentId, expirationDate, fqdn, galleryImageReference, id, isAuthenticationWithSshKey, labSubnetName, labVirtualNetworkId, lastKnownPowerState, location, name, networkInterface, notes, osType, ownerObjectId, ownerUserPrincipalName, password, planId, provisioningState, scheduleParameters, size, sshKey, storageType, tags, type, uniqueIdentifier, userName, virtualMachineCreationSource);
         }

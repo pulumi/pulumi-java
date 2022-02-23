@@ -61,7 +61,6 @@ public final class GetTemplateResult {
             this.template = template;
             return this;
         }
-
         public GetTemplateResult build() {
             return new GetTemplateResult(id, template);
         }

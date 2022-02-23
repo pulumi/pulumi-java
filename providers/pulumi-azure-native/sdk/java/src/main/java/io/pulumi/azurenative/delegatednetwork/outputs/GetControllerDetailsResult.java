@@ -245,7 +245,6 @@ public final class GetControllerDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetControllerDetailsResult build() {
             return new GetControllerDetailsResult(dncAppId, dncEndpoint, dncTenantId, id, location, name, provisioningState, resourceGuid, tags, type);
         }

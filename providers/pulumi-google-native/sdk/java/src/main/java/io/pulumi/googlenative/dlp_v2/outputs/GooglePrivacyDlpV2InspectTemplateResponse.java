@@ -159,7 +159,6 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectTemplateResponse build() {
             return new GooglePrivacyDlpV2InspectTemplateResponse(createTime, description, displayName, inspectConfig, name, updateTime);
         }

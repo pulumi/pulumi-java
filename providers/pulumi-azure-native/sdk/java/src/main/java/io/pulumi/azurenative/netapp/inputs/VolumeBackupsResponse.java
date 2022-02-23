@@ -25,7 +25,7 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="backupsCount")
-    private final @Nullable Integer backupsCount;
+        private final @Nullable Integer backupsCount;
 
     public Optional<Integer> getBackupsCount() {
         return this.backupsCount == null ? Optional.empty() : Optional.ofNullable(this.backupsCount);
@@ -36,7 +36,7 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="policyEnabled")
-    private final @Nullable Boolean policyEnabled;
+        private final @Nullable Boolean policyEnabled;
 
     public Optional<Boolean> getPolicyEnabled() {
         return this.policyEnabled == null ? Optional.empty() : Optional.ofNullable(this.policyEnabled);
@@ -47,7 +47,7 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="volumeName")
-    private final @Nullable String volumeName;
+        private final @Nullable String volumeName;
 
     public Optional<String> getVolumeName() {
         return this.volumeName == null ? Optional.empty() : Optional.ofNullable(this.volumeName);
@@ -106,7 +106,6 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
             this.volumeName = volumeName;
             return this;
         }
-
         public VolumeBackupsResponse build() {
             return new VolumeBackupsResponse(backupsCount, policyEnabled, volumeName);
         }

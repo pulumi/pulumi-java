@@ -204,7 +204,6 @@ public final class RegistrationAssignmentPropertiesResponseProperties {
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
         }
-
         public RegistrationAssignmentPropertiesResponseProperties build() {
             return new RegistrationAssignmentPropertiesResponseProperties(authorizations, description, managedByTenantId, managedByTenantName, manageeTenantId, manageeTenantName, provisioningState, registrationDefinitionName);
         }

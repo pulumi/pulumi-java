@@ -74,7 +74,6 @@ public final class GooglePrivacyDlpV2StoredTypeResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GooglePrivacyDlpV2StoredTypeResponse build() {
             return new GooglePrivacyDlpV2StoredTypeResponse(createTime, name);
         }

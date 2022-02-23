@@ -118,7 +118,6 @@ public final class X12SecuritySettingsResponse {
             this.securityQualifier = Objects.requireNonNull(securityQualifier);
             return this;
         }
-
         public X12SecuritySettingsResponse build() {
             return new X12SecuritySettingsResponse(authorizationQualifier, authorizationValue, passwordValue, securityQualifier);
         }

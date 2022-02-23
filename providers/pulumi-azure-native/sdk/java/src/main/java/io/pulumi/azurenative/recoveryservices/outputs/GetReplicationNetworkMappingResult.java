@@ -140,7 +140,6 @@ public final class GetReplicationNetworkMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationNetworkMappingResult build() {
             return new GetReplicationNetworkMappingResult(id, location, name, properties, type);
         }

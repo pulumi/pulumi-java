@@ -75,7 +75,6 @@ public final class RepoIdResponse {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public RepoIdResponse build() {
             return new RepoIdResponse(projectRepoId, uid);
         }

@@ -17,7 +17,7 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final String kmsKeyName;
+      private final String kmsKeyName;
 
     public String getKmsKeyName() {
         return this.kmsKeyName;
@@ -55,7 +55,6 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public EncryptionConfigurationResponse build() {
             return new EncryptionConfigurationResponse(kmsKeyName);
         }

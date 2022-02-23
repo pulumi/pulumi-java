@@ -183,7 +183,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(description, id, location, name, systemData, tags, type);
         }

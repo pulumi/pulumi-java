@@ -444,7 +444,6 @@ public final class GetOccurrenceResult {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
         }
-
         public GetOccurrenceResult build() {
             return new GetOccurrenceResult(attestation, build, createTime, deployment, derivedImage, discovered, installation, intoto, kind, name, noteName, remediation, resource, sbom, spdxFile, spdxPackage, spdxRelationship, updateTime, vulnerability);
         }

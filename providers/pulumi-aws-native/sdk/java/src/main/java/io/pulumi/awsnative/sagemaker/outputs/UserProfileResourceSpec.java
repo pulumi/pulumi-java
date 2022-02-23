@@ -98,7 +98,6 @@ public final class UserProfileResourceSpec {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }
-
         public UserProfileResourceSpec build() {
             return new UserProfileResourceSpec(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
         }

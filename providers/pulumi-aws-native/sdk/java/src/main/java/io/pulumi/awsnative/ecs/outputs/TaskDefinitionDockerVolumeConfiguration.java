@@ -101,7 +101,6 @@ public final class TaskDefinitionDockerVolumeConfiguration {
             this.scope = scope;
             return this;
         }
-
         public TaskDefinitionDockerVolumeConfiguration build() {
             return new TaskDefinitionDockerVolumeConfiguration(autoprovision, driver, driverOpts, labels, scope);
         }

@@ -59,7 +59,6 @@ public final class ManagedZoneForwardingConfig {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
-
         public ManagedZoneForwardingConfig build() {
             return new ManagedZoneForwardingConfig(targetNameServers);
         }

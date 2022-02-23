@@ -86,7 +86,6 @@ public final class PublicKeyConfig {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PublicKeyConfig build() {
             return new PublicKeyConfig(callerReference, comment, encodedKey, name);
         }

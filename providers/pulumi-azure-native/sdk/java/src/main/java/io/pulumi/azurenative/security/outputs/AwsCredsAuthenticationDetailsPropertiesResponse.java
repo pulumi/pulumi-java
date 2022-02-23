@@ -161,7 +161,6 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
             this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
             return this;
         }
-
         public AwsCredsAuthenticationDetailsPropertiesResponse build() {
             return new AwsCredsAuthenticationDetailsPropertiesResponse(accountId, authenticationProvisioningState, authenticationType, awsAccessKeyId, awsSecretAccessKey, grantedPermissions);
         }

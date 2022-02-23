@@ -114,7 +114,6 @@ public final class InAppTemplateDefaultButtonConfiguration {
             this.textColor = textColor;
             return this;
         }
-
         public InAppTemplateDefaultButtonConfiguration build() {
             return new InAppTemplateDefaultButtonConfiguration(backgroundColor, borderRadius, buttonAction, link, text, textColor);
         }

@@ -76,7 +76,6 @@ public final class GetKeysZoneSigningKeyDigest {
             this.type = type;
             return this;
         }
-
         public GetKeysZoneSigningKeyDigest build() {
             return new GetKeysZoneSigningKeyDigest(digest, type);
         }

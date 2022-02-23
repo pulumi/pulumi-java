@@ -69,7 +69,6 @@ public final class TemplateError {
             this.type = type;
             return this;
         }
-
         public TemplateError build() {
             return new TemplateError(message, type);
         }

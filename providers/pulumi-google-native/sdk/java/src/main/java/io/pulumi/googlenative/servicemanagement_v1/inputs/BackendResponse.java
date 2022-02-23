@@ -22,7 +22,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<BackendRuleResponse> rules;
+      private final List<BackendRuleResponse> rules;
 
     public List<BackendRuleResponse> getRules() {
         return this.rules;
@@ -60,7 +60,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public BackendResponse build() {
             return new BackendResponse(rules);
         }

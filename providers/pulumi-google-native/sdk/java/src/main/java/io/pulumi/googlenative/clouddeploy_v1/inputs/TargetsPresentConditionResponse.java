@@ -23,7 +23,7 @@ public final class TargetsPresentConditionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="missingTargets", required=true)
-    private final List<String> missingTargets;
+      private final List<String> missingTargets;
 
     public List<String> getMissingTargets() {
         return this.missingTargets;
@@ -34,7 +34,7 @@ public final class TargetsPresentConditionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="status", required=true)
-    private final Boolean status;
+      private final Boolean status;
 
     public Boolean getStatus() {
         return this.status;
@@ -45,7 +45,7 @@ public final class TargetsPresentConditionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -104,7 +104,6 @@ public final class TargetsPresentConditionResponse extends io.pulumi.resources.I
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public TargetsPresentConditionResponse build() {
             return new TargetsPresentConditionResponse(missingTargets, status, updateTime);
         }

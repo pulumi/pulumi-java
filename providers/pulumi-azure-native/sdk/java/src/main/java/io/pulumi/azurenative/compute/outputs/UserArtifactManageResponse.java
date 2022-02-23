@@ -97,7 +97,6 @@ public final class UserArtifactManageResponse {
             this.update = update;
             return this;
         }
-
         public UserArtifactManageResponse build() {
             return new UserArtifactManageResponse(install, remove, update);
         }

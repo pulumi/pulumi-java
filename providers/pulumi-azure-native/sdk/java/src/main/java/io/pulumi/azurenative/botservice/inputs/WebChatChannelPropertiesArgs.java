@@ -24,7 +24,7 @@ public final class WebChatChannelPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sites")
-    private final @Nullable Input<List<WebChatSiteArgs>> sites;
+        private final @Nullable Input<List<WebChatSiteArgs>> sites;
 
     public Input<List<WebChatSiteArgs>> getSites() {
         return this.sites == null ? Input.empty() : this.sites;
@@ -67,7 +67,6 @@ public final class WebChatChannelPropertiesArgs extends io.pulumi.resources.Reso
             this.sites = Input.ofNullable(sites);
             return this;
         }
-
         public WebChatChannelPropertiesArgs build() {
             return new WebChatChannelPropertiesArgs(sites);
         }

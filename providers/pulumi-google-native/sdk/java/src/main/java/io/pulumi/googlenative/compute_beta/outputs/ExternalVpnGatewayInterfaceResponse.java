@@ -52,7 +52,6 @@ public final class ExternalVpnGatewayInterfaceResponse {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public ExternalVpnGatewayInterfaceResponse build() {
             return new ExternalVpnGatewayInterfaceResponse(ipAddress);
         }

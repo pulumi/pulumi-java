@@ -74,7 +74,6 @@ public final class PatientIdResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PatientIdResponse build() {
             return new PatientIdResponse(type, value);
         }

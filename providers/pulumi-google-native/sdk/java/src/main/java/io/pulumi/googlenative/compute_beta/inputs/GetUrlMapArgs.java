@@ -15,14 +15,14 @@ public final class GetUrlMapArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetUrlMapArgs Empty = new GetUrlMapArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="urlMap", required=true)
-    private final String urlMap;
+      private final String urlMap;
 
     public String getUrlMap() {
         return this.urlMap;
@@ -71,7 +71,6 @@ public final class GetUrlMapArgs extends io.pulumi.resources.InvokeArgs {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }
-
         public GetUrlMapArgs build() {
             return new GetUrlMapArgs(project, urlMap);
         }

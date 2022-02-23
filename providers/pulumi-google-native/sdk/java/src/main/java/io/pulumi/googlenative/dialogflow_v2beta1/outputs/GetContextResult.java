@@ -97,7 +97,6 @@ public final class GetContextResult {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public GetContextResult build() {
             return new GetContextResult(lifespanCount, name, parameters);
         }

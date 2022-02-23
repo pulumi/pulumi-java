@@ -58,7 +58,6 @@ public final class GetBackendServiceOutlierDetectionBaseEjectionTime {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public GetBackendServiceOutlierDetectionBaseEjectionTime build() {
             return new GetBackendServiceOutlierDetectionBaseEjectionTime(nanos, seconds);
         }

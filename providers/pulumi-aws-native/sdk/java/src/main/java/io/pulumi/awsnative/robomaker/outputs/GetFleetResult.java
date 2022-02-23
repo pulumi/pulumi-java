@@ -61,7 +61,6 @@ public final class GetFleetResult {
             this.tags = tags;
             return this;
         }
-
         public GetFleetResult build() {
             return new GetFleetResult(arn, tags);
         }

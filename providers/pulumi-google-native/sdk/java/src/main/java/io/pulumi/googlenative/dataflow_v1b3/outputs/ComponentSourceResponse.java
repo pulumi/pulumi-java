@@ -95,7 +95,6 @@ public final class ComponentSourceResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public ComponentSourceResponse build() {
             return new ComponentSourceResponse(name, originalTransformOrCollection, userName);
         }

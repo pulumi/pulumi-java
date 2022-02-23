@@ -351,7 +351,6 @@ public final class GetAccountResult {
             this.vsoAccountId = Objects.requireNonNull(vsoAccountId);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(accountId, creationDate, description, discoveryUri, friendlyName, id, keyVaultId, location, name, provisioningState, seats, storageAccount, tags, type, vsoAccountId);
         }

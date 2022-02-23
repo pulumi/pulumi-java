@@ -26,7 +26,7 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureBlobStorage")
-    private final @Nullable Input<BlobStorageTokenStoreArgs> azureBlobStorage;
+        private final @Nullable Input<BlobStorageTokenStoreArgs> azureBlobStorage;
 
     public Input<BlobStorageTokenStoreArgs> getAzureBlobStorage() {
         return this.azureBlobStorage == null ? Input.empty() : this.azureBlobStorage;
@@ -38,7 +38,7 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -49,7 +49,7 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystem")
-    private final @Nullable Input<FileSystemTokenStoreArgs> fileSystem;
+        private final @Nullable Input<FileSystemTokenStoreArgs> fileSystem;
 
     public Input<FileSystemTokenStoreArgs> getFileSystem() {
         return this.fileSystem == null ? Input.empty() : this.fileSystem;
@@ -61,7 +61,7 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenRefreshExtensionHours")
-    private final @Nullable Input<Double> tokenRefreshExtensionHours;
+        private final @Nullable Input<Double> tokenRefreshExtensionHours;
 
     public Input<Double> getTokenRefreshExtensionHours() {
         return this.tokenRefreshExtensionHours == null ? Input.empty() : this.tokenRefreshExtensionHours;
@@ -150,7 +150,6 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.tokenRefreshExtensionHours = Input.ofNullable(tokenRefreshExtensionHours);
             return this;
         }
-
         public TokenStoreArgs build() {
             return new TokenStoreArgs(azureBlobStorage, enabled, fileSystem, tokenRefreshExtensionHours);
         }

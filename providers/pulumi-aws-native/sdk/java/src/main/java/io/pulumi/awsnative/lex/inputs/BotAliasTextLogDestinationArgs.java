@@ -19,7 +19,7 @@ public final class BotAliasTextLogDestinationArgs extends io.pulumi.resources.Re
     public static final BotAliasTextLogDestinationArgs Empty = new BotAliasTextLogDestinationArgs();
 
     @InputImport(name="cloudWatch")
-    private final @Nullable Input<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
+        private final @Nullable Input<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
 
     public Input<BotAliasCloudWatchLogGroupLogDestinationArgs> getCloudWatch() {
         return this.cloudWatch == null ? Input.empty() : this.cloudWatch;
@@ -62,7 +62,6 @@ public final class BotAliasTextLogDestinationArgs extends io.pulumi.resources.Re
             this.cloudWatch = Input.ofNullable(cloudWatch);
             return this;
         }
-
         public BotAliasTextLogDestinationArgs build() {
             return new BotAliasTextLogDestinationArgs(cloudWatch);
         }

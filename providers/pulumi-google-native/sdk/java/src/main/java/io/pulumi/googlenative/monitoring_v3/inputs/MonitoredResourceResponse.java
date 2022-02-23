@@ -22,7 +22,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -33,7 +33,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -82,7 +82,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MonitoredResourceResponse build() {
             return new MonitoredResourceResponse(labels, type);
         }

@@ -23,7 +23,7 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="agentVersion")
-    private final @Nullable String agentVersion;
+        private final @Nullable String agentVersion;
 
     public Optional<String> getAgentVersion() {
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
@@ -34,7 +34,7 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -83,7 +83,6 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
             this.id = id;
             return this;
         }
-
         public VMResourcesResponse build() {
             return new VMResourcesResponse(agentVersion, id);
         }

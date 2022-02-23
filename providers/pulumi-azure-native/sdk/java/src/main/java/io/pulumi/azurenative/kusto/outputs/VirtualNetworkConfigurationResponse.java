@@ -95,7 +95,6 @@ public final class VirtualNetworkConfigurationResponse {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public VirtualNetworkConfigurationResponse build() {
             return new VirtualNetworkConfigurationResponse(dataManagementPublicIpId, enginePublicIpId, subnetId);
         }

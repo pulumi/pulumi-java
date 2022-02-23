@@ -221,7 +221,6 @@ public final class HiveMetastoreResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public HiveMetastoreResponse build() {
             return new HiveMetastoreResponse(databaseName, id, name, nestedResourceProvisioningState, password, runtimeVersion, serverUri, type, userName);
         }

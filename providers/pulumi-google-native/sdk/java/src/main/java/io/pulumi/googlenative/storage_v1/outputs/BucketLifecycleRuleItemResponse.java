@@ -75,7 +75,6 @@ public final class BucketLifecycleRuleItemResponse {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public BucketLifecycleRuleItemResponse build() {
             return new BucketLifecycleRuleItemResponse(action, condition);
         }

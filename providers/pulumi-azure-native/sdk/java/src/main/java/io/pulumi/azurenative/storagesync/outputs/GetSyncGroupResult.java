@@ -137,7 +137,6 @@ public final class GetSyncGroupResult {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
-
         public GetSyncGroupResult build() {
             return new GetSyncGroupResult(id, name, syncGroupStatus, type, uniqueId);
         }

@@ -60,7 +60,6 @@ public final class GatewayCapabilitySummary {
             this.capabilityNamespace = Objects.requireNonNull(capabilityNamespace);
             return this;
         }
-
         public GatewayCapabilitySummary build() {
             return new GatewayCapabilitySummary(capabilityConfiguration, capabilityNamespace);
         }

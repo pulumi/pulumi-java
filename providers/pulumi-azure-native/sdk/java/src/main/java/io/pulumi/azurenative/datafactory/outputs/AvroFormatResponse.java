@@ -100,7 +100,6 @@ public final class AvroFormatResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AvroFormatResponse build() {
             return new AvroFormatResponse(deserializer, serializer, type);
         }

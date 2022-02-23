@@ -98,7 +98,6 @@ public final class UsagePlanApiStage {
             this.throttle = throttle;
             return this;
         }
-
         public UsagePlanApiStage build() {
             return new UsagePlanApiStage(apiId, stage, throttle);
         }

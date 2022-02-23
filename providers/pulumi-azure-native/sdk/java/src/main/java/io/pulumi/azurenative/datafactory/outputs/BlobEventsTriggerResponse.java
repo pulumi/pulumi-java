@@ -250,7 +250,6 @@ public final class BlobEventsTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobEventsTriggerResponse build() {
             return new BlobEventsTriggerResponse(annotations, blobPathBeginsWith, blobPathEndsWith, description, events, ignoreEmptyBlobs, pipelines, runtimeState, scope, type);
         }

@@ -60,7 +60,6 @@ public final class NetworkInsightsAccessScopeResourceStatementRequest {
             this.resources = resources;
             return this;
         }
-
         public NetworkInsightsAccessScopeResourceStatementRequest build() {
             return new NetworkInsightsAccessScopeResourceStatementRequest(resourceTypes, resources);
         }

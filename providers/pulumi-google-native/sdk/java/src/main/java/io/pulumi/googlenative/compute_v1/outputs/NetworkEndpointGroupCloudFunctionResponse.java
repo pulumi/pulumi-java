@@ -74,7 +74,6 @@ public final class NetworkEndpointGroupCloudFunctionResponse {
             this.urlMask = Objects.requireNonNull(urlMask);
             return this;
         }
-
         public NetworkEndpointGroupCloudFunctionResponse build() {
             return new NetworkEndpointGroupCloudFunctionResponse(function, urlMask);
         }

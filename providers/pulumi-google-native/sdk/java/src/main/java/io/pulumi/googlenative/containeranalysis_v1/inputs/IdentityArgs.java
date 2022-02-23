@@ -24,7 +24,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<Integer> revision;
+      private final @Nullable Input<Integer> revision;
 
     public Input<Integer> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -35,7 +35,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateId")
-    private final @Nullable Input<String> updateId;
+      private final @Nullable Input<String> updateId;
 
     public Input<String> getUpdateId() {
         return this.updateId == null ? Input.empty() : this.updateId;
@@ -94,7 +94,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.updateId = Input.ofNullable(updateId);
             return this;
         }
-
         public IdentityArgs build() {
             return new IdentityArgs(revision, updateId);
         }

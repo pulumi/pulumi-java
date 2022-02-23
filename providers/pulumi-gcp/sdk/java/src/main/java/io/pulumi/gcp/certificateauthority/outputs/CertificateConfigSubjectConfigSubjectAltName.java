@@ -118,7 +118,6 @@ public final class CertificateConfigSubjectConfigSubjectAltName {
             this.uris = uris;
             return this;
         }
-
         public CertificateConfigSubjectConfigSubjectAltName build() {
             return new CertificateConfigSubjectConfigSubjectAltName(dnsNames, emailAddresses, ipAddresses, uris);
         }

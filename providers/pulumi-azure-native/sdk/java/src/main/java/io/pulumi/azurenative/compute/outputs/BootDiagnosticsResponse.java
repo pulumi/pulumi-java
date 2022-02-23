@@ -77,7 +77,6 @@ public final class BootDiagnosticsResponse {
             this.storageUri = storageUri;
             return this;
         }
-
         public BootDiagnosticsResponse build() {
             return new BootDiagnosticsResponse(enabled, storageUri);
         }

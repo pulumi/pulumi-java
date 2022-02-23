@@ -77,7 +77,6 @@ public final class ImageDiskReferenceResponse {
             this.lun = lun;
             return this;
         }
-
         public ImageDiskReferenceResponse build() {
             return new ImageDiskReferenceResponse(id, lun);
         }

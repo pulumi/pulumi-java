@@ -337,7 +337,6 @@ public final class GetElasticPoolResult {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
-
         public GetElasticPoolResult build() {
             return new GetElasticPoolResult(creationDate, id, kind, licenseType, location, maintenanceConfigurationId, maxSizeBytes, name, perDatabaseSettings, sku, state, tags, type, zoneRedundant);
         }

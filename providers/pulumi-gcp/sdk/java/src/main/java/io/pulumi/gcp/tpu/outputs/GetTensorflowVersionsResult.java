@@ -101,7 +101,6 @@ public final class GetTensorflowVersionsResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetTensorflowVersionsResult build() {
             return new GetTensorflowVersionsResult(id, project, versions, zone);
         }

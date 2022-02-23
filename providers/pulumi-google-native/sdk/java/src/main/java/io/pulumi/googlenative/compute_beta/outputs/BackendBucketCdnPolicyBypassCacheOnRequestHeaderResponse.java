@@ -52,7 +52,6 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse build() {
             return new BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse(headerName);
         }

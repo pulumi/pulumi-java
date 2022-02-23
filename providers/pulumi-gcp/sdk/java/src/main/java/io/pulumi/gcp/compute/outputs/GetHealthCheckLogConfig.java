@@ -44,7 +44,6 @@ public final class GetHealthCheckLogConfig {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public GetHealthCheckLogConfig build() {
             return new GetHealthCheckLogConfig(enable);
         }

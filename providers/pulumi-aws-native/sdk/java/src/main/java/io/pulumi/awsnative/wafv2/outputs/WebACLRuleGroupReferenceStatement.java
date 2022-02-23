@@ -61,7 +61,6 @@ public final class WebACLRuleGroupReferenceStatement {
             this.excludedRules = excludedRules;
             return this;
         }
-
         public WebACLRuleGroupReferenceStatement build() {
             return new WebACLRuleGroupReferenceStatement(arn, excludedRules);
         }

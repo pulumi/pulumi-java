@@ -25,7 +25,7 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mysqlColumns")
-    private final @Nullable Input<List<MysqlColumnArgs>> mysqlColumns;
+      private final @Nullable Input<List<MysqlColumnArgs>> mysqlColumns;
 
     public Input<List<MysqlColumnArgs>> getMysqlColumns() {
         return this.mysqlColumns == null ? Input.empty() : this.mysqlColumns;
@@ -36,7 +36,7 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-    private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
@@ -95,7 +95,6 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }
-
         public MysqlTableArgs build() {
             return new MysqlTableArgs(mysqlColumns, tableName);
         }

@@ -397,7 +397,6 @@ public final class GetWebTestResult {
             this.webTestName = Objects.requireNonNull(webTestName);
             return this;
         }
-
         public GetWebTestResult build() {
             return new GetWebTestResult(configuration, description, enabled, frequency, id, kind, location, locations, name, provisioningState, retryEnabled, syntheticMonitorId, tags, timeout, type, webTestKind, webTestName);
         }

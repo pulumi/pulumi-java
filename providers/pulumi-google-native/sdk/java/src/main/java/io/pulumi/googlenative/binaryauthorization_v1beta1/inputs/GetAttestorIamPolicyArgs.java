@@ -15,21 +15,21 @@ public final class GetAttestorIamPolicyArgs extends io.pulumi.resources.InvokeAr
     public static final GetAttestorIamPolicyArgs Empty = new GetAttestorIamPolicyArgs();
 
     @InputImport(name="attestorId", required=true)
-    private final String attestorId;
+      private final String attestorId;
 
     public String getAttestorId() {
         return this.attestorId;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetAttestorIamPolicyArgs extends io.pulumi.resources.InvokeAr
             this.project = project;
             return this;
         }
-
         public GetAttestorIamPolicyArgs build() {
             return new GetAttestorIamPolicyArgs(attestorId, optionsRequestedPolicyVersion, project);
         }

@@ -46,7 +46,6 @@ public final class DistributionS3OriginConfig {
             this.originAccessIdentity = originAccessIdentity;
             return this;
         }
-
         public DistributionS3OriginConfig build() {
             return new DistributionS3OriginConfig(originAccessIdentity);
         }

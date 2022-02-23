@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="property")
-    private final @Nullable Input<List<GoogleCloudApigeeV1PropertyArgs>> property;
+      private final @Nullable Input<List<GoogleCloudApigeeV1PropertyArgs>> property;
 
     public Input<List<GoogleCloudApigeeV1PropertyArgs>> getProperty() {
         return this.property == null ? Input.empty() : this.property;
@@ -67,7 +67,6 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends io.pulumi.resources
             this.property = Input.ofNullable(property);
             return this;
         }
-
         public GoogleCloudApigeeV1PropertiesArgs build() {
             return new GoogleCloudApigeeV1PropertiesArgs(property);
         }

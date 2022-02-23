@@ -28,7 +28,7 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="backupParameters")
-    private final @Nullable AzureBackupParamsResponse backupParameters;
+        private final @Nullable AzureBackupParamsResponse backupParameters;
 
     public Optional<AzureBackupParamsResponse> getBackupParameters() {
         return this.backupParameters == null ? Optional.empty() : Optional.ofNullable(this.backupParameters);
@@ -39,14 +39,14 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="dataStore", required=true)
-    private final DataStoreInfoBaseResponse dataStore;
+        private final DataStoreInfoBaseResponse dataStore;
 
     public DataStoreInfoBaseResponse getDataStore() {
         return this.dataStore;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -57,7 +57,7 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+        private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -68,7 +68,7 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="trigger", required=true)
-    private final Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;
+        private final Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;
 
     public Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> getTrigger() {
         return this.trigger;
@@ -147,7 +147,6 @@ public final class AzureBackupRuleResponse extends io.pulumi.resources.InvokeArg
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public AzureBackupRuleResponse build() {
             return new AzureBackupRuleResponse(backupParameters, dataStore, name, objectType, trigger);
         }

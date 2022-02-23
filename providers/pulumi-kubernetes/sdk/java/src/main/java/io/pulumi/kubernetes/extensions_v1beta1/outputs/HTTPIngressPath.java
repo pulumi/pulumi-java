@@ -118,7 +118,6 @@ public final class HTTPIngressPath {
             this.pathType = pathType;
             return this;
         }
-
         public HTTPIngressPath build() {
             return new HTTPIngressPath(backend, path, pathType);
         }

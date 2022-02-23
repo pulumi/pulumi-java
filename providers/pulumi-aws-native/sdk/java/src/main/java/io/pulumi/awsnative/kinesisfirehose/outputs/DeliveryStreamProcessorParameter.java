@@ -58,7 +58,6 @@ public final class DeliveryStreamProcessorParameter {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
-
         public DeliveryStreamProcessorParameter build() {
             return new DeliveryStreamProcessorParameter(parameterName, parameterValue);
         }

@@ -23,7 +23,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable String backupManagementType;
+        private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
@@ -34,7 +34,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
      * 
      */
     @InputImport(name="itemId")
-    private final @Nullable String itemId;
+        private final @Nullable String itemId;
 
     public Optional<String> getItemId() {
         return this.itemId == null ? Optional.empty() : Optional.ofNullable(this.itemId);
@@ -45,7 +45,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable String policyId;
+        private final @Nullable String policyId;
 
     public Optional<String> getPolicyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
@@ -57,7 +57,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
      * 
      */
     @InputImport(name="protectionIntentItemType", required=true)
-    private final String protectionIntentItemType;
+        private final String protectionIntentItemType;
 
     public String getProtectionIntentItemType() {
         return this.protectionIntentItemType;
@@ -68,7 +68,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
      * 
      */
     @InputImport(name="protectionState")
-    private final @Nullable String protectionState;
+        private final @Nullable String protectionState;
 
     public Optional<String> getProtectionState() {
         return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
@@ -79,7 +79,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
      * 
      */
     @InputImport(name="sourceResourceId")
-    private final @Nullable String sourceResourceId;
+        private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
@@ -90,7 +90,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
      * 
      */
     @InputImport(name="workloadItemType")
-    private final @Nullable String workloadItemType;
+        private final @Nullable String workloadItemType;
 
     public Optional<String> getWorkloadItemType() {
         return this.workloadItemType == null ? Optional.empty() : Optional.ofNullable(this.workloadItemType);
@@ -189,7 +189,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends io.pulum
             this.workloadItemType = workloadItemType;
             return this;
         }
-
         public AzureWorkloadSQLAutoProtectionIntentResponse build() {
             return new AzureWorkloadSQLAutoProtectionIntentResponse(backupManagementType, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId, workloadItemType);
         }

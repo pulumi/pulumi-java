@@ -140,7 +140,6 @@ public final class GetRobotApplicationResult {
             this.tags = tags;
             return this;
         }
-
         public GetRobotApplicationResult build() {
             return new GetRobotApplicationResult(arn, currentRevisionId, environment, robotSoftwareSuite, sources, tags);
         }

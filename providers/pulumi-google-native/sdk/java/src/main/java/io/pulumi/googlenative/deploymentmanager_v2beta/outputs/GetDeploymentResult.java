@@ -268,7 +268,6 @@ public final class GetDeploymentResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetDeploymentResult build() {
             return new GetDeploymentResult(description, fingerprint, insertTime, labels, manifest, name, operation, selfLink, target, update, updateTime);
         }

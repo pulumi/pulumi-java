@@ -26,7 +26,7 @@ public final class PublicIPAddressSkuArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<Either<String,PublicIPAddressSkuName>> name;
+        private final @Nullable Input<Either<String,PublicIPAddressSkuName>> name;
 
     public Input<Either<String,PublicIPAddressSkuName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -37,7 +37,7 @@ public final class PublicIPAddressSkuArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<Either<String,PublicIPAddressSkuTier>> tier;
+        private final @Nullable Input<Either<String,PublicIPAddressSkuTier>> tier;
 
     public Input<Either<String,PublicIPAddressSkuTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -96,7 +96,6 @@ public final class PublicIPAddressSkuArgs extends io.pulumi.resources.ResourceAr
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public PublicIPAddressSkuArgs build() {
             return new PublicIPAddressSkuArgs(name, tier);
         }

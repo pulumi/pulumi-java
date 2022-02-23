@@ -24,7 +24,7 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+        private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -35,7 +35,7 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
      * 
      */
     @InputImport(name="statusCodes")
-    private final @Nullable Input<List<String>> statusCodes;
+        private final @Nullable Input<List<String>> statusCodes;
 
     public Input<List<String>> getStatusCodes() {
         return this.statusCodes == null ? Input.empty() : this.statusCodes;
@@ -94,7 +94,6 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
             this.statusCodes = Input.ofNullable(statusCodes);
             return this;
         }
-
         public ApplicationGatewayProbeHealthResponseMatchArgs build() {
             return new ApplicationGatewayProbeHealthResponseMatchArgs(body, statusCodes);
         }

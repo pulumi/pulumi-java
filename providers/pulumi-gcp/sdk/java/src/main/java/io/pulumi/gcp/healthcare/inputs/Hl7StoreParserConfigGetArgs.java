@@ -20,7 +20,7 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="allowNullHeader")
-    private final @Nullable Input<Boolean> allowNullHeader;
+        private final @Nullable Input<Boolean> allowNullHeader;
 
     public Input<Boolean> getAllowNullHeader() {
         return this.allowNullHeader == null ? Input.empty() : this.allowNullHeader;
@@ -32,7 +32,7 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<String> schema;
+        private final @Nullable Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -44,7 +44,7 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="segmentTerminator")
-    private final @Nullable Input<String> segmentTerminator;
+        private final @Nullable Input<String> segmentTerminator;
 
     public Input<String> getSegmentTerminator() {
         return this.segmentTerminator == null ? Input.empty() : this.segmentTerminator;
@@ -57,7 +57,7 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -146,7 +146,6 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public Hl7StoreParserConfigGetArgs build() {
             return new Hl7StoreParserConfigGetArgs(allowNullHeader, schema, segmentTerminator, version);
         }

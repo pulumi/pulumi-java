@@ -119,7 +119,6 @@ public final class ClientCertificateResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public ClientCertificateResponse build() {
             return new ClientCertificateResponse(commonName, isAdmin, issuerThumbprint, thumbprint);
         }

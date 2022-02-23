@@ -335,7 +335,6 @@ public final class GetDedicatedHostResult {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-
         public GetDedicatedHostResult build() {
             return new GetDedicatedHostResult(autoReplaceOnFailure, hostId, id, instanceView, licenseType, location, name, platformFaultDomain, provisioningState, provisioningTime, sku, tags, type, virtualMachines);
         }

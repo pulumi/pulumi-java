@@ -246,7 +246,6 @@ public final class GetScheduleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScheduleResult build() {
             return new GetScheduleResult(id, name, notes, provisioningState, recurrencePattern, startAt, stopAt, systemData, timeZoneId, type);
         }

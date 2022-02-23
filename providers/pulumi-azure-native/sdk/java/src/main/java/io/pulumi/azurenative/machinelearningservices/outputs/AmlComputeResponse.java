@@ -208,7 +208,6 @@ public final class AmlComputeResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public AmlComputeResponse build() {
             return new AmlComputeResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
         }

@@ -74,7 +74,6 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GoogleCloudDatacatalogV1DataSourceResponse build() {
             return new GoogleCloudDatacatalogV1DataSourceResponse(resource, service);
         }

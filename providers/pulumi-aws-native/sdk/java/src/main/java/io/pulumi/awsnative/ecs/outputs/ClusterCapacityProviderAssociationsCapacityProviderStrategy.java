@@ -74,7 +74,6 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategy {
             this.weight = weight;
             return this;
         }
-
         public ClusterCapacityProviderAssociationsCapacityProviderStrategy build() {
             return new ClusterCapacityProviderAssociationsCapacityProviderStrategy(base, capacityProvider, weight);
         }

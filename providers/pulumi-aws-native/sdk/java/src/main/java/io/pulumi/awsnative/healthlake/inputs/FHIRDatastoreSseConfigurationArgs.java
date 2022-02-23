@@ -18,7 +18,7 @@ public final class FHIRDatastoreSseConfigurationArgs extends io.pulumi.resources
     public static final FHIRDatastoreSseConfigurationArgs Empty = new FHIRDatastoreSseConfigurationArgs();
 
     @InputImport(name="kmsEncryptionConfig", required=true)
-    private final Input<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig;
+        private final Input<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig;
 
     public Input<FHIRDatastoreKmsEncryptionConfigArgs> getKmsEncryptionConfig() {
         return this.kmsEncryptionConfig;
@@ -61,7 +61,6 @@ public final class FHIRDatastoreSseConfigurationArgs extends io.pulumi.resources
             this.kmsEncryptionConfig = Input.of(Objects.requireNonNull(kmsEncryptionConfig));
             return this;
         }
-
         public FHIRDatastoreSseConfigurationArgs build() {
             return new FHIRDatastoreSseConfigurationArgs(kmsEncryptionConfig);
         }

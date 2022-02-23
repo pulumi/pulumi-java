@@ -161,7 +161,6 @@ public final class GetEntityTypeResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetEntityTypeResult build() {
             return new GetEntityTypeResult(autoExpansionMode, displayName, enableFuzzyExtraction, entities, kind, name);
         }

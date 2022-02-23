@@ -21,7 +21,7 @@ public final class MonitoringScheduleScheduleConfig extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scheduleExpression", required=true)
-    private final String scheduleExpression;
+        private final String scheduleExpression;
 
     public String getScheduleExpression() {
         return this.scheduleExpression;
@@ -59,7 +59,6 @@ public final class MonitoringScheduleScheduleConfig extends io.pulumi.resources.
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
-
         public MonitoringScheduleScheduleConfig build() {
             return new MonitoringScheduleScheduleConfig(scheduleExpression);
         }

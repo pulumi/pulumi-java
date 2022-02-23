@@ -145,7 +145,6 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MigrateMISyncCompleteCommandPropertiesResponse build() {
             return new MigrateMISyncCompleteCommandPropertiesResponse(commandType, errors, input, output, state);
         }

@@ -101,7 +101,6 @@ public final class CertificateAuthorityCrlConfiguration {
             this.s3ObjectAcl = s3ObjectAcl;
             return this;
         }
-
         public CertificateAuthorityCrlConfiguration build() {
             return new CertificateAuthorityCrlConfiguration(customCname, enabled, expirationInDays, s3BucketName, s3ObjectAcl);
         }

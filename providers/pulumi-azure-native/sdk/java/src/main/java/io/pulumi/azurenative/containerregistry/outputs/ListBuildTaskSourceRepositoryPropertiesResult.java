@@ -120,7 +120,6 @@ public final class ListBuildTaskSourceRepositoryPropertiesResult {
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
         }
-
         public ListBuildTaskSourceRepositoryPropertiesResult build() {
             return new ListBuildTaskSourceRepositoryPropertiesResult(isCommitTriggerEnabled, repositoryUrl, sourceControlAuthProperties, sourceControlType);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="containerPort", required=true)
-    private final Integer containerPort;
+      private final Integer containerPort;
 
     public Integer getContainerPort() {
         return this.containerPort;
@@ -33,7 +33,7 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -82,7 +82,6 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends io.pulumi.res
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleCloudRunOpV2ContainerPortResponse build() {
             return new GoogleCloudRunOpV2ContainerPortResponse(containerPort, name);
         }

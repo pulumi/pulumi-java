@@ -435,7 +435,6 @@ public final class GetRouteResult {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-
         public GetRouteResult build() {
             return new GetRouteResult(asPaths, creationTimestamp, description, destRange, kind, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopIp, nextHopNetwork, nextHopPeering, nextHopVpnTunnel, priority, routeType, selfLink, tags, warnings);
         }

@@ -251,7 +251,6 @@ public final class BucketRule {
             this.transitions = transitions;
             return this;
         }
-
         public BucketRule build() {
             return new BucketRule(abortIncompleteMultipartUpload, expirationDate, expirationInDays, expiredObjectDeleteMarker, id, noncurrentVersionExpiration, noncurrentVersionExpirationInDays, noncurrentVersionTransition, noncurrentVersionTransitions, objectSizeGreaterThan, objectSizeLessThan, prefix, status, tagFilters, transition, transitions);
         }

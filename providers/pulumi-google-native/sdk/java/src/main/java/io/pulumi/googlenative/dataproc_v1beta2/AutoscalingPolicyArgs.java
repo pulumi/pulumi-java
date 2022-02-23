@@ -17,7 +17,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
     public static final AutoscalingPolicyArgs Empty = new AutoscalingPolicyArgs();
 
     @InputImport(name="basicAlgorithm")
-    private final @Nullable Input<BasicAutoscalingAlgorithmArgs> basicAlgorithm;
+      private final @Nullable Input<BasicAutoscalingAlgorithmArgs> basicAlgorithm;
 
     public Input<BasicAutoscalingAlgorithmArgs> getBasicAlgorithm() {
         return this.basicAlgorithm == null ? Input.empty() : this.basicAlgorithm;
@@ -28,21 +28,21 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -53,7 +53,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="secondaryWorkerConfig")
-    private final @Nullable Input<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig;
+      private final @Nullable Input<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig;
 
     public Input<InstanceGroupAutoscalingPolicyConfigArgs> getSecondaryWorkerConfig() {
         return this.secondaryWorkerConfig == null ? Input.empty() : this.secondaryWorkerConfig;
@@ -64,7 +64,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="workerConfig", required=true)
-    private final Input<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig;
+      private final Input<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig;
 
     public Input<InstanceGroupAutoscalingPolicyConfigArgs> getWorkerConfig() {
         return this.workerConfig;
@@ -183,7 +183,6 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
             this.workerConfig = Input.of(Objects.requireNonNull(workerConfig));
             return this;
         }
-
         public AutoscalingPolicyArgs build() {
             return new AutoscalingPolicyArgs(basicAlgorithm, id, location, project, secondaryWorkerConfig, workerConfig);
         }

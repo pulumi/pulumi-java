@@ -74,7 +74,6 @@ public final class GetServiceTemplateSpecVolumeSecret {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public GetServiceTemplateSpecVolumeSecret build() {
             return new GetServiceTemplateSpecVolumeSecret(defaultMode, items, secretName);
         }

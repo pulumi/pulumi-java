@@ -18,35 +18,35 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     public static final FunctionArgs Empty = new FunctionArgs();
 
     @InputImport(name="autoPublish")
-    private final @Nullable Input<Boolean> autoPublish;
+        private final @Nullable Input<Boolean> autoPublish;
 
     public Input<Boolean> getAutoPublish() {
         return this.autoPublish == null ? Input.empty() : this.autoPublish;
     }
 
     @InputImport(name="functionCode")
-    private final @Nullable Input<String> functionCode;
+        private final @Nullable Input<String> functionCode;
 
     public Input<String> getFunctionCode() {
         return this.functionCode == null ? Input.empty() : this.functionCode;
     }
 
     @InputImport(name="functionConfig")
-    private final @Nullable Input<FunctionConfigArgs> functionConfig;
+        private final @Nullable Input<FunctionConfigArgs> functionConfig;
 
     public Input<FunctionConfigArgs> getFunctionConfig() {
         return this.functionConfig == null ? Input.empty() : this.functionConfig;
     }
 
     @InputImport(name="functionMetadata")
-    private final @Nullable Input<FunctionMetadataArgs> functionMetadata;
+        private final @Nullable Input<FunctionMetadataArgs> functionMetadata;
 
     public Input<FunctionMetadataArgs> getFunctionMetadata() {
         return this.functionMetadata == null ? Input.empty() : this.functionMetadata;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -150,7 +150,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public FunctionArgs build() {
             return new FunctionArgs(autoPublish, functionCode, functionConfig, functionMetadata, name);
         }

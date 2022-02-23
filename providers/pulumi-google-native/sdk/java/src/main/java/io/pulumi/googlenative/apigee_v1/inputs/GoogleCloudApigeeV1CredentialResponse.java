@@ -20,7 +20,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="apiProducts", required=true)
-    private final List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts;
+      private final List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts;
 
     public List<GoogleCloudApigeeV1ApiProductRefResponse> getApiProducts() {
         return this.apiProducts;
@@ -31,7 +31,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="attributes", required=true)
-    private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
+      private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
     public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
         return this.attributes;
@@ -42,7 +42,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="consumerKey", required=true)
-    private final String consumerKey;
+      private final String consumerKey;
 
     public String getConsumerKey() {
         return this.consumerKey;
@@ -53,7 +53,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="consumerSecret", required=true)
-    private final String consumerSecret;
+      private final String consumerSecret;
 
     public String getConsumerSecret() {
         return this.consumerSecret;
@@ -64,7 +64,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="expiresAt", required=true)
-    private final String expiresAt;
+      private final String expiresAt;
 
     public String getExpiresAt() {
         return this.expiresAt;
@@ -75,7 +75,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="issuedAt", required=true)
-    private final String issuedAt;
+      private final String issuedAt;
 
     public String getIssuedAt() {
         return this.issuedAt;
@@ -86,7 +86,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="scopes", required=true)
-    private final List<String> scopes;
+      private final List<String> scopes;
 
     public List<String> getScopes() {
         return this.scopes;
@@ -97,7 +97,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -206,7 +206,6 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GoogleCloudApigeeV1CredentialResponse build() {
             return new GoogleCloudApigeeV1CredentialResponse(apiProducts, attributes, consumerKey, consumerSecret, expiresAt, issuedAt, scopes, status);
         }

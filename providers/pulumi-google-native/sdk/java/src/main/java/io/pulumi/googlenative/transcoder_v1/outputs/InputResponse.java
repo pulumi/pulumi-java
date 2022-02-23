@@ -96,7 +96,6 @@ public final class InputResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public InputResponse build() {
             return new InputResponse(key, preprocessingConfig, uri);
         }

@@ -119,7 +119,6 @@ public final class CertificateConfigurationResponse {
             this.storeName = Objects.requireNonNull(storeName);
             return this;
         }
-
         public CertificateConfigurationResponse build() {
             return new CertificateConfigurationResponse(certificate, certificatePassword, encodedCertificate, storeName);
         }

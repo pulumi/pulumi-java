@@ -54,7 +54,6 @@ public final class SecurityProfileMachineLearningDetectionConfig {
             this.confidenceLevel = confidenceLevel;
             return this;
         }
-
         public SecurityProfileMachineLearningDetectionConfig build() {
             return new SecurityProfileMachineLearningDetectionConfig(confidenceLevel);
         }

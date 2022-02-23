@@ -124,7 +124,6 @@ public final class PatchDeploymentPatchConfigYum {
             this.security = security;
             return this;
         }
-
         public PatchDeploymentPatchConfigYum build() {
             return new PatchDeploymentPatchConfigYum(excludes, exclusivePackages, minimal, security);
         }

@@ -54,7 +54,6 @@ public final class DataSourceAthenaParameters {
             this.workGroup = workGroup;
             return this;
         }
-
         public DataSourceAthenaParameters build() {
             return new DataSourceAthenaParameters(workGroup);
         }

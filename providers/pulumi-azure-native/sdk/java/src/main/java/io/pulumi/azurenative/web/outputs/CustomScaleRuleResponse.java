@@ -102,7 +102,6 @@ public final class CustomScaleRuleResponse {
             this.type = type;
             return this;
         }
-
         public CustomScaleRuleResponse build() {
             return new CustomScaleRuleResponse(auth, metadata, type);
         }

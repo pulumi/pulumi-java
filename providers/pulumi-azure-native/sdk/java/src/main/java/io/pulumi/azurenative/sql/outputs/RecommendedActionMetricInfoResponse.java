@@ -138,7 +138,6 @@ public final class RecommendedActionMetricInfoResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RecommendedActionMetricInfoResponse build() {
             return new RecommendedActionMetricInfoResponse(metricName, startTime, timeGrain, unit, value);
         }

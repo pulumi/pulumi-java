@@ -23,7 +23,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+        private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -34,7 +34,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="direction")
-    private final @Nullable Input<String> direction;
+        private final @Nullable Input<String> direction;
 
     public Input<String> getDirection() {
         return this.direction == null ? Input.empty() : this.direction;
@@ -56,7 +56,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -67,7 +67,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableLogging")
-    private final @Nullable Input<Boolean> enableLogging;
+        private final @Nullable Input<Boolean> enableLogging;
 
     public Input<Boolean> getEnableLogging() {
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
@@ -78,7 +78,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="firewallPolicy")
-    private final @Nullable Input<String> firewallPolicy;
+        private final @Nullable Input<String> firewallPolicy;
 
     public Input<String> getFirewallPolicy() {
         return this.firewallPolicy == null ? Input.empty() : this.firewallPolicy;
@@ -89,7 +89,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -100,7 +100,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="match")
-    private final @Nullable Input<FirewallPolicyRuleMatchGetArgs> match;
+        private final @Nullable Input<FirewallPolicyRuleMatchGetArgs> match;
 
     public Input<FirewallPolicyRuleMatchGetArgs> getMatch() {
         return this.match == null ? Input.empty() : this.match;
@@ -111,7 +111,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+        private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -122,7 +122,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ruleTupleCount")
-    private final @Nullable Input<Integer> ruleTupleCount;
+        private final @Nullable Input<Integer> ruleTupleCount;
 
     public Input<Integer> getRuleTupleCount() {
         return this.ruleTupleCount == null ? Input.empty() : this.ruleTupleCount;
@@ -133,7 +133,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="targetResources")
-    private final @Nullable Input<List<String>> targetResources;
+        private final @Nullable Input<List<String>> targetResources;
 
     public Input<List<String>> getTargetResources() {
         return this.targetResources == null ? Input.empty() : this.targetResources;
@@ -144,7 +144,7 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="targetServiceAccounts")
-    private final @Nullable Input<List<String>> targetServiceAccounts;
+        private final @Nullable Input<List<String>> targetServiceAccounts;
 
     public Input<List<String>> getTargetServiceAccounts() {
         return this.targetServiceAccounts == null ? Input.empty() : this.targetServiceAccounts;
@@ -353,7 +353,6 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
             this.targetServiceAccounts = Input.ofNullable(targetServiceAccounts);
             return this;
         }
-
         public FirewallPolicyRuleState build() {
             return new FirewallPolicyRuleState(action, description, direction, disabled, enableLogging, firewallPolicy, kind, match, priority, ruleTupleCount, targetResources, targetServiceAccounts);
         }

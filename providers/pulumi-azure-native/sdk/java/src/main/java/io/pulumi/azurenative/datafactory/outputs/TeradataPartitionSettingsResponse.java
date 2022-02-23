@@ -97,7 +97,6 @@ public final class TeradataPartitionSettingsResponse {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public TeradataPartitionSettingsResponse build() {
             return new TeradataPartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionUpperBound);
         }

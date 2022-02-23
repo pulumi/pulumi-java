@@ -74,7 +74,6 @@ public final class CertHttpChallengeResponse {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public CertHttpChallengeResponse build() {
             return new CertHttpChallengeResponse(path, token);
         }

@@ -23,7 +23,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -45,7 +45,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="exemptionCategory", required=true)
-    private final Input<Either<String,ExemptionCategory>> exemptionCategory;
+        private final Input<Either<String,ExemptionCategory>> exemptionCategory;
 
     public Input<Either<String,ExemptionCategory>> getExemptionCategory() {
         return this.exemptionCategory;
@@ -56,7 +56,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="expiresOn")
-    private final @Nullable Input<String> expiresOn;
+        private final @Nullable Input<String> expiresOn;
 
     public Input<String> getExpiresOn() {
         return this.expiresOn == null ? Input.empty() : this.expiresOn;
@@ -67,7 +67,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+        private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -78,7 +78,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyAssignmentId", required=true)
-    private final Input<String> policyAssignmentId;
+        private final Input<String> policyAssignmentId;
 
     public Input<String> getPolicyAssignmentId() {
         return this.policyAssignmentId;
@@ -89,7 +89,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyDefinitionReferenceIds")
-    private final @Nullable Input<List<String>> policyDefinitionReferenceIds;
+        private final @Nullable Input<List<String>> policyDefinitionReferenceIds;
 
     public Input<List<String>> getPolicyDefinitionReferenceIds() {
         return this.policyDefinitionReferenceIds == null ? Input.empty() : this.policyDefinitionReferenceIds;
@@ -100,7 +100,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyExemptionName")
-    private final @Nullable Input<String> policyExemptionName;
+        private final @Nullable Input<String> policyExemptionName;
 
     public Input<String> getPolicyExemptionName() {
         return this.policyExemptionName == null ? Input.empty() : this.policyExemptionName;
@@ -111,7 +111,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -275,7 +275,6 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public PolicyExemptionArgs build() {
             return new PolicyExemptionArgs(description, displayName, exemptionCategory, expiresOn, metadata, policyAssignmentId, policyDefinitionReferenceIds, policyExemptionName, scope);
         }

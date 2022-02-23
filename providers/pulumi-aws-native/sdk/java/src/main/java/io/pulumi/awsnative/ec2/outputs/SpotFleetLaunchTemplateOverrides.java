@@ -114,7 +114,6 @@ public final class SpotFleetLaunchTemplateOverrides {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
-
         public SpotFleetLaunchTemplateOverrides build() {
             return new SpotFleetLaunchTemplateOverrides(availabilityZone, instanceRequirements, instanceType, spotPrice, subnetId, weightedCapacity);
         }

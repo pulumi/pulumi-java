@@ -82,7 +82,6 @@ public final class RegionBackendServiceOutlierDetectionInterval {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public RegionBackendServiceOutlierDetectionInterval build() {
             return new RegionBackendServiceOutlierDetectionInterval(nanos, seconds);
         }

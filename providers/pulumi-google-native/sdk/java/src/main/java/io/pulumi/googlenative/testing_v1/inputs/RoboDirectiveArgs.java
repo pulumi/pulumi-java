@@ -24,7 +24,7 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionType", required=true)
-    private final Input<RoboDirectiveActionType> actionType;
+      private final Input<RoboDirectiveActionType> actionType;
 
     public Input<RoboDirectiveActionType> getActionType() {
         return this.actionType;
@@ -35,7 +35,7 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputText")
-    private final @Nullable Input<String> inputText;
+      private final @Nullable Input<String> inputText;
 
     public Input<String> getInputText() {
         return this.inputText == null ? Input.empty() : this.inputText;
@@ -46,7 +46,7 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+      private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -120,7 +120,6 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public RoboDirectiveArgs build() {
             return new RoboDirectiveArgs(actionType, inputText, resourceName);
         }

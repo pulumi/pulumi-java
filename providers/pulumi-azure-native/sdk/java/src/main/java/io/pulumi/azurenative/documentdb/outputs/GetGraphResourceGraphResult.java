@@ -190,7 +190,6 @@ public final class GetGraphResourceGraphResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGraphResourceGraphResult build() {
             return new GetGraphResourceGraphResult(id, identity, location, name, options, resource, tags, type);
         }

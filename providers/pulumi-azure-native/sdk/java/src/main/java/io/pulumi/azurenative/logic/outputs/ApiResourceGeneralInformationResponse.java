@@ -160,7 +160,6 @@ public final class ApiResourceGeneralInformationResponse {
             this.tier = tier;
             return this;
         }
-
         public ApiResourceGeneralInformationResponse build() {
             return new ApiResourceGeneralInformationResponse(description, displayName, iconUrl, releaseTag, termsOfUseUrl, tier);
         }

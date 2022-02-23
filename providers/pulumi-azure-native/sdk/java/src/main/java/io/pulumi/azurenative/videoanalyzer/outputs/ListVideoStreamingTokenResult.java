@@ -74,7 +74,6 @@ public final class ListVideoStreamingTokenResult {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public ListVideoStreamingTokenResult build() {
             return new ListVideoStreamingTokenResult(expirationDate, token);
         }

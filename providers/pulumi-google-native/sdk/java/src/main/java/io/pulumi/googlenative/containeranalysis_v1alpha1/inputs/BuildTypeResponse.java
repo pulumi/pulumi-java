@@ -22,7 +22,7 @@ public final class BuildTypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="builderVersion", required=true)
-    private final String builderVersion;
+      private final String builderVersion;
 
     public String getBuilderVersion() {
         return this.builderVersion;
@@ -33,7 +33,7 @@ public final class BuildTypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="signature", required=true)
-    private final BuildSignatureResponse signature;
+      private final BuildSignatureResponse signature;
 
     public BuildSignatureResponse getSignature() {
         return this.signature;
@@ -82,7 +82,6 @@ public final class BuildTypeResponse extends io.pulumi.resources.InvokeArgs {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }
-
         public BuildTypeResponse build() {
             return new BuildTypeResponse(builderVersion, signature);
         }

@@ -84,7 +84,6 @@ public final class GetServiceStatusCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceStatusCondition build() {
             return new GetServiceStatusCondition(message, reason, status, type);
         }

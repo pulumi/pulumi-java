@@ -97,7 +97,6 @@ public final class ConflictResolutionPolicyResponse {
             this.mode = mode;
             return this;
         }
-
         public ConflictResolutionPolicyResponse build() {
             return new ConflictResolutionPolicyResponse(conflictResolutionPath, conflictResolutionProcedure, mode);
         }

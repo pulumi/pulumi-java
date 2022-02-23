@@ -17,7 +17,7 @@ public final class ListNamedValueArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="namedValueId", required=true)
-    private final String namedValueId;
+        private final String namedValueId;
 
     public String getNamedValueId() {
         return this.namedValueId;
@@ -28,7 +28,7 @@ public final class ListNamedValueArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class ListNamedValueArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -98,7 +98,6 @@ public final class ListNamedValueArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public ListNamedValueArgs build() {
             return new ListNamedValueArgs(namedValueId, resourceGroupName, serviceName);
         }

@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
      * 
      */
     @InputImport(name="commonAlphabet")
-    private final @Nullable Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet> commonAlphabet;
+      private final @Nullable Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet> commonAlphabet;
 
     public Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet> getCommonAlphabet() {
         return this.commonAlphabet == null ? Input.empty() : this.commonAlphabet;
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
      * 
      */
     @InputImport(name="context")
-    private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context;
+      private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context;
 
     public Input<GooglePrivacyDlpV2FieldIdArgs> getContext() {
         return this.context == null ? Input.empty() : this.context;
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
      * 
      */
     @InputImport(name="cryptoKey", required=true)
-    private final Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
+      private final Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
     public Input<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
         return this.cryptoKey;
@@ -61,7 +61,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
      * 
      */
     @InputImport(name="customAlphabet")
-    private final @Nullable Input<String> customAlphabet;
+      private final @Nullable Input<String> customAlphabet;
 
     public Input<String> getCustomAlphabet() {
         return this.customAlphabet == null ? Input.empty() : this.customAlphabet;
@@ -72,7 +72,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
      * 
      */
     @InputImport(name="radix")
-    private final @Nullable Input<Integer> radix;
+      private final @Nullable Input<Integer> radix;
 
     public Input<Integer> getRadix() {
         return this.radix == null ? Input.empty() : this.radix;
@@ -83,7 +83,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
      * 
      */
     @InputImport(name="surrogateInfoType")
-    private final @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
+      private final @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
 
     public Input<GooglePrivacyDlpV2InfoTypeArgs> getSurrogateInfoType() {
         return this.surrogateInfoType == null ? Input.empty() : this.surrogateInfoType;
@@ -202,7 +202,6 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
             this.surrogateInfoType = Input.ofNullable(surrogateInfoType);
             return this;
         }
-
         public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs build() {
             return new GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs(commonAlphabet, context, cryptoKey, customAlphabet, radix, surrogateInfoType);
         }

@@ -91,7 +91,6 @@ public final class StackSetStackInstances {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
-
         public StackSetStackInstances build() {
             return new StackSetStackInstances(deploymentTargets, parameterOverrides, regions);
         }

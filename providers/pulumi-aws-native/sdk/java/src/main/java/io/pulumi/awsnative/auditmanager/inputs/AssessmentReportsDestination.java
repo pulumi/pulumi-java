@@ -20,14 +20,14 @@ public final class AssessmentReportsDestination extends io.pulumi.resources.Invo
     public static final AssessmentReportsDestination Empty = new AssessmentReportsDestination();
 
     @InputImport(name="destination")
-    private final @Nullable String destination;
+        private final @Nullable String destination;
 
     public Optional<String> getDestination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
     }
 
     @InputImport(name="destinationType")
-    private final @Nullable AssessmentReportDestinationType destinationType;
+        private final @Nullable AssessmentReportDestinationType destinationType;
 
     public Optional<AssessmentReportDestinationType> getDestinationType() {
         return this.destinationType == null ? Optional.empty() : Optional.ofNullable(this.destinationType);
@@ -76,7 +76,6 @@ public final class AssessmentReportsDestination extends io.pulumi.resources.Invo
             this.destinationType = destinationType;
             return this;
         }
-
         public AssessmentReportsDestination build() {
             return new AssessmentReportsDestination(destination, destinationType);
         }

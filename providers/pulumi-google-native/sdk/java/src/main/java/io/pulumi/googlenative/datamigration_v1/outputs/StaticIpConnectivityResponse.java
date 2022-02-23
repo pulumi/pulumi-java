@@ -30,7 +30,6 @@ public final class StaticIpConnectivityResponse {
         public Builder(StaticIpConnectivityResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StaticIpConnectivityResponse build() {
             return new StaticIpConnectivityResponse();
         }

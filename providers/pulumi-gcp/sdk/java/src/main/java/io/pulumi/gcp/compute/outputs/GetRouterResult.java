@@ -175,7 +175,6 @@ public final class GetRouterResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetRouterResult build() {
             return new GetRouterResult(bgps, creationTimestamp, description, encryptedInterconnectRouter, id, name, network, project, region, selfLink);
         }

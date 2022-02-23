@@ -75,7 +75,6 @@ public final class ModelExplainabilityJobDefinitionVpcConfig {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionVpcConfig build() {
             return new ModelExplainabilityJobDefinitionVpcConfig(securityGroupIds, subnets);
         }

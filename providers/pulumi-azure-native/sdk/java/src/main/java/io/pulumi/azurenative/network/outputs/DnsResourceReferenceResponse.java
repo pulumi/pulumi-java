@@ -77,7 +77,6 @@ public final class DnsResourceReferenceResponse {
             this.targetResource = targetResource;
             return this;
         }
-
         public DnsResourceReferenceResponse build() {
             return new DnsResourceReferenceResponse(dnsResources, targetResource);
         }

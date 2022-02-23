@@ -32,7 +32,7 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<Object> destination;
+        private final @Nullable Input<Object> destination;
 
     public Input<Object> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -43,7 +43,7 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<EventSubscriptionIdentityArgs> identity;
+        private final @Nullable Input<EventSubscriptionIdentityArgs> identity;
 
     public Input<EventSubscriptionIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -102,7 +102,6 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
             this.identity = Input.ofNullable(identity);
             return this;
         }
-
         public DeliveryWithResourceIdentityArgs build() {
             return new DeliveryWithResourceIdentityArgs(destination, identity);
         }

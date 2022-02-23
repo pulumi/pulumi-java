@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse extends io.pulumi.
      * 
      */
     @InputImport(name="digits", required=true)
-    private final String digits;
+      private final String digits;
 
     public String getDigits() {
         return this.digits;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse extends io.pulumi.
      * 
      */
     @InputImport(name="finishDigit", required=true)
-    private final String finishDigit;
+      private final String finishDigit;
 
     public String getFinishDigit() {
         return this.finishDigit;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse extends io.pulumi.
             this.finishDigit = Objects.requireNonNull(finishDigit);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3DtmfInputResponse build() {
             return new GoogleCloudDialogflowCxV3DtmfInputResponse(digits, finishDigit);
         }

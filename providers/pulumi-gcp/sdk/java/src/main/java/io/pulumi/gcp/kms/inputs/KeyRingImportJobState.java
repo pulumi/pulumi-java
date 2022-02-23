@@ -24,7 +24,7 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="attestations")
-    private final @Nullable Input<List<KeyRingImportJobAttestationGetArgs>> attestations;
+        private final @Nullable Input<List<KeyRingImportJobAttestationGetArgs>> attestations;
 
     public Input<List<KeyRingImportJobAttestationGetArgs>> getAttestations() {
         return this.attestations == null ? Input.empty() : this.attestations;
@@ -35,7 +35,7 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable Input<String> expireTime;
+        private final @Nullable Input<String> expireTime;
 
     public Input<String> getExpireTime() {
         return this.expireTime == null ? Input.empty() : this.expireTime;
@@ -46,7 +46,7 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="importJobId")
-    private final @Nullable Input<String> importJobId;
+        private final @Nullable Input<String> importJobId;
 
     public Input<String> getImportJobId() {
         return this.importJobId == null ? Input.empty() : this.importJobId;
@@ -58,7 +58,7 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="importMethod")
-    private final @Nullable Input<String> importMethod;
+        private final @Nullable Input<String> importMethod;
 
     public Input<String> getImportMethod() {
         return this.importMethod == null ? Input.empty() : this.importMethod;
@@ -70,7 +70,7 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyRing")
-    private final @Nullable Input<String> keyRing;
+        private final @Nullable Input<String> keyRing;
 
     public Input<String> getKeyRing() {
         return this.keyRing == null ? Input.empty() : this.keyRing;
@@ -81,7 +81,7 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -94,7 +94,7 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protectionLevel")
-    private final @Nullable Input<String> protectionLevel;
+        private final @Nullable Input<String> protectionLevel;
 
     public Input<String> getProtectionLevel() {
         return this.protectionLevel == null ? Input.empty() : this.protectionLevel;
@@ -105,7 +105,7 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicKeys")
-    private final @Nullable Input<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys;
+        private final @Nullable Input<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys;
 
     public Input<List<KeyRingImportJobPublicKeyGetArgs>> getPublicKeys() {
         return this.publicKeys == null ? Input.empty() : this.publicKeys;
@@ -116,7 +116,7 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+        private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -280,7 +280,6 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public KeyRingImportJobState build() {
             return new KeyRingImportJobState(attestations, expireTime, importJobId, importMethod, keyRing, name, protectionLevel, publicKeys, state);
         }

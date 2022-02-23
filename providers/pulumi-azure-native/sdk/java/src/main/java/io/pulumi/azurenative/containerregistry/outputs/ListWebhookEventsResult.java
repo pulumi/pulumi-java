@@ -78,7 +78,6 @@ public final class ListWebhookEventsResult {
             this.value = value;
             return this;
         }
-
         public ListWebhookEventsResult build() {
             return new ListWebhookEventsResult(nextLink, value);
         }

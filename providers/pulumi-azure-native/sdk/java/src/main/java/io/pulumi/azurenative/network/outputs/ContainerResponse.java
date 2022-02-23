@@ -54,7 +54,6 @@ public final class ContainerResponse {
             this.id = id;
             return this;
         }
-
         public ContainerResponse build() {
             return new ContainerResponse(id);
         }

@@ -738,7 +738,6 @@ public final class GetRegionBackendServiceResult {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }
-
         public GetRegionBackendServiceResult build() {
             return new GetRegionBackendServiceResult(affinityCookieTtlSec, backends, cdnPolicy, circuitBreakers, connectionDraining, connectionTrackingPolicy, consistentHash, creationTimestamp, customRequestHeaders, customResponseHeaders, description, edgeSecurityPolicy, enableCDN, failoverPolicy, fingerprint, healthChecks, iap, kind, loadBalancingScheme, localityLbPolicy, logConfig, maxStreamDuration, name, network, outlierDetection, portName, protocol, region, securityPolicy, securitySettings, selfLink, sessionAffinity, subsetting, timeoutSec);
         }

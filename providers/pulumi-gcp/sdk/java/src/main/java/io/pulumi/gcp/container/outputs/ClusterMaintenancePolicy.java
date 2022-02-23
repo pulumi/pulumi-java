@@ -104,7 +104,6 @@ public final class ClusterMaintenancePolicy {
             this.recurringWindow = recurringWindow;
             return this;
         }
-
         public ClusterMaintenancePolicy build() {
             return new ClusterMaintenancePolicy(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);
         }

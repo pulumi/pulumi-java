@@ -35,7 +35,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -46,7 +46,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<Object> bucketName;
+        private final Input<Object> bucketName;
 
     public Input<Object> getBucketName() {
         return this.bucketName;
@@ -57,7 +57,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="compression")
-    private final @Nullable Input<DatasetCompressionArgs> compression;
+        private final @Nullable Input<DatasetCompressionArgs> compression;
 
     public Input<DatasetCompressionArgs> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
@@ -68,7 +68,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -79,7 +79,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="folder")
-    private final @Nullable Input<DatasetFolderArgs> folder;
+        private final @Nullable Input<DatasetFolderArgs> folder;
 
     public Input<DatasetFolderArgs> getFolder() {
         return this.folder == null ? Input.empty() : this.folder;
@@ -90,7 +90,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<Object> format;
+        private final @Nullable Input<Object> format;
 
     public Input<Object> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -101,7 +101,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<Object> key;
+        private final @Nullable Input<Object> key;
 
     public Input<Object> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -112,7 +112,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
@@ -123,7 +123,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="modifiedDatetimeEnd")
-    private final @Nullable Input<Object> modifiedDatetimeEnd;
+        private final @Nullable Input<Object> modifiedDatetimeEnd;
 
     public Input<Object> getModifiedDatetimeEnd() {
         return this.modifiedDatetimeEnd == null ? Input.empty() : this.modifiedDatetimeEnd;
@@ -134,7 +134,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="modifiedDatetimeStart")
-    private final @Nullable Input<Object> modifiedDatetimeStart;
+        private final @Nullable Input<Object> modifiedDatetimeStart;
 
     public Input<Object> getModifiedDatetimeStart() {
         return this.modifiedDatetimeStart == null ? Input.empty() : this.modifiedDatetimeStart;
@@ -145,7 +145,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -156,7 +156,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<Object> prefix;
+        private final @Nullable Input<Object> prefix;
 
     public Input<Object> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -167,7 +167,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<Object> schema;
+        private final @Nullable Input<Object> schema;
 
     public Input<Object> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -178,7 +178,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="structure")
-    private final @Nullable Input<Object> structure;
+        private final @Nullable Input<Object> structure;
 
     public Input<Object> getStructure() {
         return this.structure == null ? Input.empty() : this.structure;
@@ -190,7 +190,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -201,7 +201,7 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Object> version;
+        private final @Nullable Input<Object> version;
 
     public Input<Object> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -470,7 +470,6 @@ public final class AmazonS3DatasetArgs extends io.pulumi.resources.ResourceArgs 
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public AmazonS3DatasetArgs build() {
             return new AmazonS3DatasetArgs(annotations, bucketName, compression, description, folder, format, key, linkedServiceName, modifiedDatetimeEnd, modifiedDatetimeStart, parameters, prefix, schema, structure, type, version);
         }

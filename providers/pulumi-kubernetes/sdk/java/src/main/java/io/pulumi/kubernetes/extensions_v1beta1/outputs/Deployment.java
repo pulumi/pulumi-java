@@ -142,7 +142,6 @@ public final class Deployment {
             this.status = status;
             return this;
         }
-
         public Deployment build() {
             return new Deployment(apiVersion, kind, metadata, spec, status);
         }

@@ -54,7 +54,6 @@ public final class DataConnectorDataTypeCommonResponse {
             this.state = state;
             return this;
         }
-
         public DataConnectorDataTypeCommonResponse build() {
             return new DataConnectorDataTypeCommonResponse(state);
         }

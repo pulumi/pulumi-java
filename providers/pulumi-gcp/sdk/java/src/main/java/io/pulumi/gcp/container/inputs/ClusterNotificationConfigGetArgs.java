@@ -18,7 +18,7 @@ public final class ClusterNotificationConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="pubsub", required=true)
-    private final Input<ClusterNotificationConfigPubsubGetArgs> pubsub;
+        private final Input<ClusterNotificationConfigPubsubGetArgs> pubsub;
 
     public Input<ClusterNotificationConfigPubsubGetArgs> getPubsub() {
         return this.pubsub;
@@ -61,7 +61,6 @@ public final class ClusterNotificationConfigGetArgs extends io.pulumi.resources.
             this.pubsub = Input.of(Objects.requireNonNull(pubsub));
             return this;
         }
-
         public ClusterNotificationConfigGetArgs build() {
             return new ClusterNotificationConfigGetArgs(pubsub);
         }

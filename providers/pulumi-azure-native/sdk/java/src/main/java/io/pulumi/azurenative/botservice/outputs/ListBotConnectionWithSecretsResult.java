@@ -248,7 +248,6 @@ public final class ListBotConnectionWithSecretsResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public ListBotConnectionWithSecretsResult build() {
             return new ListBotConnectionWithSecretsResult(etag, id, kind, location, name, properties, sku, tags, type, zones);
         }

@@ -141,7 +141,6 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse {
             this.state = state;
             return this;
         }
-
         public Ipv6ExpressRouteCircuitPeeringConfigResponse build() {
             return new Ipv6ExpressRouteCircuitPeeringConfigResponse(microsoftPeeringConfig, primaryPeerAddressPrefix, routeFilter, secondaryPeerAddressPrefix, state);
         }

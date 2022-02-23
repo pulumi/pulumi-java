@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends io.pulumi.
      * 
      */
     @InputImport(name="kind", required=true)
-    private final GooglePrivacyDlpV2KindExpressionResponse kind;
+      private final GooglePrivacyDlpV2KindExpressionResponse kind;
 
     public GooglePrivacyDlpV2KindExpressionResponse getKind() {
         return this.kind;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends io.pulumi.
      * 
      */
     @InputImport(name="partitionId", required=true)
-    private final GooglePrivacyDlpV2PartitionIdResponse partitionId;
+      private final GooglePrivacyDlpV2PartitionIdResponse partitionId;
 
     public GooglePrivacyDlpV2PartitionIdResponse getPartitionId() {
         return this.partitionId;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends io.pulumi.
             this.partitionId = Objects.requireNonNull(partitionId);
             return this;
         }
-
         public GooglePrivacyDlpV2DatastoreOptionsResponse build() {
             return new GooglePrivacyDlpV2DatastoreOptionsResponse(kind, partitionId);
         }

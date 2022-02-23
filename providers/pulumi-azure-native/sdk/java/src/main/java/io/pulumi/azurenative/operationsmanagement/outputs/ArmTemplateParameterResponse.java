@@ -76,7 +76,6 @@ public final class ArmTemplateParameterResponse {
             this.value = value;
             return this;
         }
-
         public ArmTemplateParameterResponse build() {
             return new ArmTemplateParameterResponse(name, value);
         }

@@ -23,7 +23,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="destIpRanges", required=true)
-    private final List<String> destIpRanges;
+      private final List<String> destIpRanges;
 
     public List<String> getDestIpRanges() {
         return this.destIpRanges;
@@ -34,7 +34,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="layer4Configs", required=true)
-    private final List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
+      private final List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
 
     public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> getLayer4Configs() {
         return this.layer4Configs;
@@ -45,7 +45,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="srcIpRanges", required=true)
-    private final List<String> srcIpRanges;
+      private final List<String> srcIpRanges;
 
     public List<String> getSrcIpRanges() {
         return this.srcIpRanges;
@@ -104,7 +104,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
-
         public FirewallPolicyRuleMatcherResponse build() {
             return new FirewallPolicyRuleMatcherResponse(destIpRanges, layer4Configs, srcIpRanges);
         }

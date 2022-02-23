@@ -17,7 +17,7 @@ public final class GetPackagingConfigurationArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -55,7 +55,6 @@ public final class GetPackagingConfigurationArgs extends io.pulumi.resources.Inv
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GetPackagingConfigurationArgs build() {
             return new GetPackagingConfigurationArgs(id);
         }

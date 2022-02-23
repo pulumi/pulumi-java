@@ -95,7 +95,6 @@ public final class EndpointsResponse {
             this.vcsa = Objects.requireNonNull(vcsa);
             return this;
         }
-
         public EndpointsResponse build() {
             return new EndpointsResponse(hcxCloudManager, nsxtManager, vcsa);
         }

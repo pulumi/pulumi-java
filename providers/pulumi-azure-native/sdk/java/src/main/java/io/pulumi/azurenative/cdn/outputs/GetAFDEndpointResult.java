@@ -260,7 +260,6 @@ public final class GetAFDEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAFDEndpointResult build() {
             return new GetAFDEndpointResult(deploymentStatus, enabledState, hostName, id, location, name, originResponseTimeoutSeconds, provisioningState, systemData, tags, type);
         }

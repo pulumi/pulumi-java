@@ -224,7 +224,6 @@ public final class DatasetAccessItemResponse {
             this.view = Objects.requireNonNull(view);
             return this;
         }
-
         public DatasetAccessItemResponse build() {
             return new DatasetAccessItemResponse(dataset, domain, groupByEmail, iamMember, role, routine, specialGroup, userByEmail, view);
         }

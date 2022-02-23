@@ -205,7 +205,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
             this.restoreDatabaseNameErrors = Objects.requireNonNull(restoreDatabaseNameErrors);
             return this;
         }
-
         public ValidateMigrationInputSqlServerSqlMITaskOutputResponse build() {
             return new ValidateMigrationInputSqlServerSqlMITaskOutputResponse(backupFolderErrors, backupShareCredentialsErrors, backupStorageAccountErrors, databaseBackupInfo, existingBackupErrors, id, name, restoreDatabaseNameErrors);
         }

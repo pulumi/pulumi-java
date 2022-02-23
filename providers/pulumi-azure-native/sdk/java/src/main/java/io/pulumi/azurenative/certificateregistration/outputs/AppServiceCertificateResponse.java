@@ -97,7 +97,6 @@ public final class AppServiceCertificateResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public AppServiceCertificateResponse build() {
             return new AppServiceCertificateResponse(keyVaultId, keyVaultSecretName, provisioningState);
         }

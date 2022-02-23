@@ -23,7 +23,7 @@ public final class MaxPodsConstraintArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxPodsPerNode")
-    private final @Nullable Input<String> maxPodsPerNode;
+      private final @Nullable Input<String> maxPodsPerNode;
 
     public Input<String> getMaxPodsPerNode() {
         return this.maxPodsPerNode == null ? Input.empty() : this.maxPodsPerNode;
@@ -66,7 +66,6 @@ public final class MaxPodsConstraintArgs extends io.pulumi.resources.ResourceArg
             this.maxPodsPerNode = Input.ofNullable(maxPodsPerNode);
             return this;
         }
-
         public MaxPodsConstraintArgs build() {
             return new MaxPodsConstraintArgs(maxPodsPerNode);
         }

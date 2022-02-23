@@ -21,7 +21,7 @@ public final class AutoscalarAutoscalingPolicyScaleDownControlArgs extends io.pu
      * 
      */
     @InputImport(name="maxScaledDownReplicas")
-    private final @Nullable Input<AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> maxScaledDownReplicas;
+        private final @Nullable Input<AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> maxScaledDownReplicas;
 
     public Input<AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> getMaxScaledDownReplicas() {
         return this.maxScaledDownReplicas == null ? Input.empty() : this.maxScaledDownReplicas;
@@ -33,7 +33,7 @@ public final class AutoscalarAutoscalingPolicyScaleDownControlArgs extends io.pu
      * 
      */
     @InputImport(name="timeWindowSec")
-    private final @Nullable Input<Integer> timeWindowSec;
+        private final @Nullable Input<Integer> timeWindowSec;
 
     public Input<Integer> getTimeWindowSec() {
         return this.timeWindowSec == null ? Input.empty() : this.timeWindowSec;
@@ -92,7 +92,6 @@ public final class AutoscalarAutoscalingPolicyScaleDownControlArgs extends io.pu
             this.timeWindowSec = Input.ofNullable(timeWindowSec);
             return this;
         }
-
         public AutoscalarAutoscalingPolicyScaleDownControlArgs build() {
             return new AutoscalarAutoscalingPolicyScaleDownControlArgs(maxScaledDownReplicas, timeWindowSec);
         }

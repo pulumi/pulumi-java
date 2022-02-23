@@ -44,7 +44,6 @@ public final class RuleGroupDimension {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RuleGroupDimension build() {
             return new RuleGroupDimension(value);
         }

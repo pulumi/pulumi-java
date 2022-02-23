@@ -19,7 +19,7 @@ public final class AssetModelTransform extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-    private final String expression;
+        private final String expression;
 
     public String getExpression() {
         return this.expression;
@@ -30,7 +30,7 @@ public final class AssetModelTransform extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="variables", required=true)
-    private final List<AssetModelExpressionVariable> variables;
+        private final List<AssetModelExpressionVariable> variables;
 
     public List<AssetModelExpressionVariable> getVariables() {
         return this.variables;
@@ -79,7 +79,6 @@ public final class AssetModelTransform extends io.pulumi.resources.InvokeArgs {
             this.variables = Objects.requireNonNull(variables);
             return this;
         }
-
         public AssetModelTransform build() {
             return new AssetModelTransform(expression, variables);
         }

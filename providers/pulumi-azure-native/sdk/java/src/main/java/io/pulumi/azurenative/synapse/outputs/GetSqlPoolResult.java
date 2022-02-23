@@ -389,7 +389,6 @@ public final class GetSqlPoolResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlPoolResult build() {
             return new GetSqlPoolResult(collation, createMode, creationDate, id, location, maxSizeBytes, name, provisioningState, recoverableDatabaseId, restorePointInTime, sku, sourceDatabaseId, status, storageAccountType, tags, type);
         }

@@ -104,7 +104,6 @@ public final class InquiryInfoResponse {
             this.status = status;
             return this;
         }
-
         public InquiryInfoResponse build() {
             return new InquiryInfoResponse(errorDetail, inquiryDetails, status);
         }

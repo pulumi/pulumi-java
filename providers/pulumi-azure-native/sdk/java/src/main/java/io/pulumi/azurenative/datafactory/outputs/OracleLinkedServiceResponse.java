@@ -210,7 +210,6 @@ public final class OracleLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OracleLinkedServiceResponse build() {
             return new OracleLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type);
         }

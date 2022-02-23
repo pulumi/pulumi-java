@@ -76,7 +76,6 @@ public final class HookVersionLoggingConfig {
             this.logRoleArn = logRoleArn;
             return this;
         }
-
         public HookVersionLoggingConfig build() {
             return new HookVersionLoggingConfig(logGroupName, logRoleArn);
         }

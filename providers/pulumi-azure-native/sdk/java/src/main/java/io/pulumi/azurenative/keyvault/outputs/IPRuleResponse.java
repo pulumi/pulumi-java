@@ -52,7 +52,6 @@ public final class IPRuleResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public IPRuleResponse build() {
             return new IPRuleResponse(value);
         }

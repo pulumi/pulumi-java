@@ -45,7 +45,6 @@ public final class GetClusterLoggingConfig {
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-
         public GetClusterLoggingConfig build() {
             return new GetClusterLoggingConfig(enableComponents);
         }

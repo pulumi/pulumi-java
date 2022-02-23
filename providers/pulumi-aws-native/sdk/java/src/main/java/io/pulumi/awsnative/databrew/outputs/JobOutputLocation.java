@@ -73,7 +73,6 @@ public final class JobOutputLocation {
             this.key = key;
             return this;
         }
-
         public JobOutputLocation build() {
             return new JobOutputLocation(bucket, bucketOwner, key);
         }

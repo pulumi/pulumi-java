@@ -455,7 +455,6 @@ public final class H264CodecSettingsResponse {
             this.widthPixels = Objects.requireNonNull(widthPixels);
             return this;
         }
-
         public H264CodecSettingsResponse build() {
             return new H264CodecSettingsResponse(allowOpenGop, aqStrength, bFrameCount, bPyramid, bitrateBps, crfLevel, enableTwoPass, entropyCoder, frameRate, gopDuration, gopFrameCount, heightPixels, pixelFormat, preset, profile, rateControlMode, tune, vbvFullnessBits, vbvSizeBits, widthPixels);
         }

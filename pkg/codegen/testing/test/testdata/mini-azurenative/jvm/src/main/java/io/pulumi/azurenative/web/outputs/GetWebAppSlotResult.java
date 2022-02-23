@@ -54,7 +54,6 @@ public final class GetWebAppSlotResult {
             this.siteConfig = siteConfig;
             return this;
         }
-
         public GetWebAppSlotResult build() {
             return new GetWebAppSlotResult(siteConfig);
         }

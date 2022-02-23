@@ -60,7 +60,6 @@ public final class GetBotVersionResult {
             this.description = description;
             return this;
         }
-
         public GetBotVersionResult build() {
             return new GetBotVersionResult(botVersion, description);
         }

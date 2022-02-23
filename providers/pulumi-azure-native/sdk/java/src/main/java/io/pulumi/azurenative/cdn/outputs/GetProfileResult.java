@@ -246,7 +246,6 @@ public final class GetProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProfileResult build() {
             return new GetProfileResult(frontdoorId, id, location, name, provisioningState, resourceState, sku, systemData, tags, type);
         }

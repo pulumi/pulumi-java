@@ -201,7 +201,6 @@ public final class GuestPoliciesRecipeInstallStep {
             this.scriptRun = scriptRun;
             return this;
         }
-
         public GuestPoliciesRecipeInstallStep build() {
             return new GuestPoliciesRecipeInstallStep(archiveExtraction, dpkgInstallation, fileCopy, fileExec, msiInstallation, rpmInstallation, scriptRun);
         }

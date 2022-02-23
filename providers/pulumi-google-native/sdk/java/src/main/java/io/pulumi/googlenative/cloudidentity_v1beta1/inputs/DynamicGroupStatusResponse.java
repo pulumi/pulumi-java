@@ -21,7 +21,7 @@ public final class DynamicGroupStatusResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -32,7 +32,7 @@ public final class DynamicGroupStatusResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="statusTime", required=true)
-    private final String statusTime;
+      private final String statusTime;
 
     public String getStatusTime() {
         return this.statusTime;
@@ -81,7 +81,6 @@ public final class DynamicGroupStatusResponse extends io.pulumi.resources.Invoke
             this.statusTime = Objects.requireNonNull(statusTime);
             return this;
         }
-
         public DynamicGroupStatusResponse build() {
             return new DynamicGroupStatusResponse(status, statusTime);
         }

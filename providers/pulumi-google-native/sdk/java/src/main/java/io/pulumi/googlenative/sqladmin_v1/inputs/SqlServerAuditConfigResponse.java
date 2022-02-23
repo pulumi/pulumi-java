@@ -21,7 +21,7 @@ public final class SqlServerAuditConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
@@ -32,7 +32,7 @@ public final class SqlServerAuditConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -81,7 +81,6 @@ public final class SqlServerAuditConfigResponse extends io.pulumi.resources.Invo
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public SqlServerAuditConfigResponse build() {
             return new SqlServerAuditConfigResponse(bucket, kind);
         }

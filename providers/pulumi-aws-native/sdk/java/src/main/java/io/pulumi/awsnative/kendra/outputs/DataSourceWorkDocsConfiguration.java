@@ -115,7 +115,6 @@ public final class DataSourceWorkDocsConfiguration {
             this.useChangeLog = useChangeLog;
             return this;
         }
-
         public DataSourceWorkDocsConfiguration build() {
             return new DataSourceWorkDocsConfiguration(crawlComments, exclusionPatterns, fieldMappings, inclusionPatterns, organizationId, useChangeLog);
         }

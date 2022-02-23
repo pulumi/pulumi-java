@@ -75,7 +75,6 @@ public final class AutoscalingPolicyScaleInControlResponse {
             this.timeWindowSec = Objects.requireNonNull(timeWindowSec);
             return this;
         }
-
         public AutoscalingPolicyScaleInControlResponse build() {
             return new AutoscalingPolicyScaleInControlResponse(maxScaledInReplicas, timeWindowSec);
         }

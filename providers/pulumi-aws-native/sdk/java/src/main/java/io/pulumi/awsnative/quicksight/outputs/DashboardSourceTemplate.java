@@ -76,7 +76,6 @@ public final class DashboardSourceTemplate {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }
-
         public DashboardSourceTemplate build() {
             return new DashboardSourceTemplate(arn, dataSetReferences);
         }

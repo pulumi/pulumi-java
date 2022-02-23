@@ -219,7 +219,6 @@ public final class JsonSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JsonSourceResponse build() {
             return new JsonSourceResponse(additionalColumns, disableMetricsCollection, formatSettings, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, storeSettings, type);
         }

@@ -16,14 +16,14 @@ public final class InstanceFromMachineImageAdvancedMachineFeaturesGetArgs extend
     public static final InstanceFromMachineImageAdvancedMachineFeaturesGetArgs Empty = new InstanceFromMachineImageAdvancedMachineFeaturesGetArgs();
 
     @InputImport(name="enableNestedVirtualization")
-    private final @Nullable Input<Boolean> enableNestedVirtualization;
+        private final @Nullable Input<Boolean> enableNestedVirtualization;
 
     public Input<Boolean> getEnableNestedVirtualization() {
         return this.enableNestedVirtualization == null ? Input.empty() : this.enableNestedVirtualization;
     }
 
     @InputImport(name="threadsPerCore")
-    private final @Nullable Input<Integer> threadsPerCore;
+        private final @Nullable Input<Integer> threadsPerCore;
 
     public Input<Integer> getThreadsPerCore() {
         return this.threadsPerCore == null ? Input.empty() : this.threadsPerCore;
@@ -82,7 +82,6 @@ public final class InstanceFromMachineImageAdvancedMachineFeaturesGetArgs extend
             this.threadsPerCore = Input.ofNullable(threadsPerCore);
             return this;
         }
-
         public InstanceFromMachineImageAdvancedMachineFeaturesGetArgs build() {
             return new InstanceFromMachineImageAdvancedMachineFeaturesGetArgs(enableNestedVirtualization, threadsPerCore);
         }

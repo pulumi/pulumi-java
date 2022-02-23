@@ -60,7 +60,6 @@ public final class RegexPatternSetTag {
             this.value = value;
             return this;
         }
-
         public RegexPatternSetTag build() {
             return new RegexPatternSetTag(key, value);
         }

@@ -26,7 +26,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @InputImport(name="availableQuantity", required=true)
-    private final String availableQuantity;
+      private final String availableQuantity;
 
     public String getAvailableQuantity() {
         return this.availableQuantity;
@@ -37,7 +37,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @InputImport(name="canonicalProductUri", required=true)
-    private final String canonicalProductUri;
+      private final String canonicalProductUri;
 
     public String getCanonicalProductUri() {
         return this.canonicalProductUri;
@@ -48,7 +48,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @InputImport(name="costs", required=true)
-    private final Map<String,String> costs;
+      private final Map<String,String> costs;
 
     public Map<String,String> getCosts() {
         return this.costs;
@@ -59,7 +59,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @InputImport(name="currencyCode", required=true)
-    private final String currencyCode;
+      private final String currencyCode;
 
     public String getCurrencyCode() {
         return this.currencyCode;
@@ -70,7 +70,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @InputImport(name="exactPrice", required=true)
-    private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice;
+      private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice;
 
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse getExactPrice() {
         return this.exactPrice;
@@ -81,7 +81,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @InputImport(name="images", required=true)
-    private final List<GoogleCloudRecommendationengineV1beta1ImageResponse> images;
+      private final List<GoogleCloudRecommendationengineV1beta1ImageResponse> images;
 
     public List<GoogleCloudRecommendationengineV1beta1ImageResponse> getImages() {
         return this.images;
@@ -92,7 +92,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @InputImport(name="priceRange", required=true)
-    private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange;
+      private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange;
 
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse getPriceRange() {
         return this.priceRange;
@@ -103,7 +103,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @InputImport(name="stockState", required=true)
-    private final String stockState;
+      private final String stockState;
 
     public String getStockState() {
         return this.stockState;
@@ -212,7 +212,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
             this.stockState = Objects.requireNonNull(stockState);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse(availableQuantity, canonicalProductUri, costs, currencyCode, exactPrice, images, priceRange, stockState);
         }

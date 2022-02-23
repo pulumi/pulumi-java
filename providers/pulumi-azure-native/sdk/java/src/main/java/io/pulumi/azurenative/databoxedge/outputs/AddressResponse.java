@@ -181,7 +181,6 @@ public final class AddressResponse {
             this.state = state;
             return this;
         }
-
         public AddressResponse build() {
             return new AddressResponse(addressLine1, addressLine2, addressLine3, city, country, postalCode, state);
         }

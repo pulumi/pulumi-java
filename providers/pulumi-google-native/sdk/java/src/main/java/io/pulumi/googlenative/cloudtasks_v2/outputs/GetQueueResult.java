@@ -183,7 +183,6 @@ public final class GetQueueResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetQueueResult build() {
             return new GetQueueResult(appEngineRoutingOverride, name, purgeTime, rateLimits, retryConfig, stackdriverLoggingConfig, state);
         }

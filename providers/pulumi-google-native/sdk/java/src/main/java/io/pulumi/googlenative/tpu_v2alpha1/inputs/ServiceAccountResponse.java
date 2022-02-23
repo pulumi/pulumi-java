@@ -22,7 +22,7 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -33,7 +33,7 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="scope", required=true)
-    private final List<String> scope;
+      private final List<String> scope;
 
     public List<String> getScope() {
         return this.scope;
@@ -82,7 +82,6 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public ServiceAccountResponse build() {
             return new ServiceAccountResponse(email, scope);
         }

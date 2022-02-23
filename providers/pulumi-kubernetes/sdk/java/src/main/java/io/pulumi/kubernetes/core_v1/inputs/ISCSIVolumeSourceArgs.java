@@ -27,7 +27,7 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="chapAuthDiscovery")
-    private final @Nullable Input<Boolean> chapAuthDiscovery;
+        private final @Nullable Input<Boolean> chapAuthDiscovery;
 
     public Input<Boolean> getChapAuthDiscovery() {
         return this.chapAuthDiscovery == null ? Input.empty() : this.chapAuthDiscovery;
@@ -38,7 +38,7 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="chapAuthSession")
-    private final @Nullable Input<Boolean> chapAuthSession;
+        private final @Nullable Input<Boolean> chapAuthSession;
 
     public Input<Boolean> getChapAuthSession() {
         return this.chapAuthSession == null ? Input.empty() : this.chapAuthSession;
@@ -49,7 +49,7 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+        private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -60,7 +60,7 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="initiatorName")
-    private final @Nullable Input<String> initiatorName;
+        private final @Nullable Input<String> initiatorName;
 
     public Input<String> getInitiatorName() {
         return this.initiatorName == null ? Input.empty() : this.initiatorName;
@@ -71,7 +71,7 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iqn", required=true)
-    private final Input<String> iqn;
+        private final Input<String> iqn;
 
     public Input<String> getIqn() {
         return this.iqn;
@@ -82,7 +82,7 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iscsiInterface")
-    private final @Nullable Input<String> iscsiInterface;
+        private final @Nullable Input<String> iscsiInterface;
 
     public Input<String> getIscsiInterface() {
         return this.iscsiInterface == null ? Input.empty() : this.iscsiInterface;
@@ -93,7 +93,7 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="lun", required=true)
-    private final Input<Integer> lun;
+        private final Input<Integer> lun;
 
     public Input<Integer> getLun() {
         return this.lun;
@@ -104,7 +104,7 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="portals")
-    private final @Nullable Input<List<String>> portals;
+        private final @Nullable Input<List<String>> portals;
 
     public Input<List<String>> getPortals() {
         return this.portals == null ? Input.empty() : this.portals;
@@ -115,7 +115,7 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -126,7 +126,7 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="secretRef")
-    private final @Nullable Input<LocalObjectReferenceArgs> secretRef;
+        private final @Nullable Input<LocalObjectReferenceArgs> secretRef;
 
     public Input<LocalObjectReferenceArgs> getSecretRef() {
         return this.secretRef == null ? Input.empty() : this.secretRef;
@@ -137,7 +137,7 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetPortal", required=true)
-    private final Input<String> targetPortal;
+        private final Input<String> targetPortal;
 
     public Input<String> getTargetPortal() {
         return this.targetPortal;
@@ -331,7 +331,6 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
             this.targetPortal = Input.of(Objects.requireNonNull(targetPortal));
             return this;
         }
-
         public ISCSIVolumeSourceArgs build() {
             return new ISCSIVolumeSourceArgs(chapAuthDiscovery, chapAuthSession, fsType, initiatorName, iqn, iscsiInterface, lun, portals, readOnly, secretRef, targetPortal);
         }

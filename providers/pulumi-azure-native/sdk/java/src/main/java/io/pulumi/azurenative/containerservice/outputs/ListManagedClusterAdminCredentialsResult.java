@@ -53,7 +53,6 @@ public final class ListManagedClusterAdminCredentialsResult {
             this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
             return this;
         }
-
         public ListManagedClusterAdminCredentialsResult build() {
             return new ListManagedClusterAdminCredentialsResult(kubeconfigs);
         }

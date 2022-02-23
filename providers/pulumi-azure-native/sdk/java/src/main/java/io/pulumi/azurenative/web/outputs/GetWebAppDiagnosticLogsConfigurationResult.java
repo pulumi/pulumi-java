@@ -205,7 +205,6 @@ public final class GetWebAppDiagnosticLogsConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppDiagnosticLogsConfigurationResult build() {
             return new GetWebAppDiagnosticLogsConfigurationResult(applicationLogs, detailedErrorMessages, failedRequestsTracing, httpLogs, id, kind, name, type);
         }

@@ -269,7 +269,6 @@ public final class GetHealthAlertResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHealthAlertResult build() {
             return new GetHealthAlertResult(actions, criteria, description, enabled, id, lastUpdatedTime, location, name, scopes, tags, type);
         }

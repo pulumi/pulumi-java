@@ -182,7 +182,6 @@ public final class GetMetricsSourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMetricsSourceResult build() {
             return new GetMetricsSourceResult(id, identity, location, name, properties, systemData, tags, type);
         }

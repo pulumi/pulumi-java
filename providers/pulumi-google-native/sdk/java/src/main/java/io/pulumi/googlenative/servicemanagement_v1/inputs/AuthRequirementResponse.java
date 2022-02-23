@@ -21,7 +21,7 @@ public final class AuthRequirementResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="audiences", required=true)
-    private final String audiences;
+      private final String audiences;
 
     public String getAudiences() {
         return this.audiences;
@@ -32,7 +32,7 @@ public final class AuthRequirementResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="providerId", required=true)
-    private final String providerId;
+      private final String providerId;
 
     public String getProviderId() {
         return this.providerId;
@@ -81,7 +81,6 @@ public final class AuthRequirementResponse extends io.pulumi.resources.InvokeArg
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }
-
         public AuthRequirementResponse build() {
             return new AuthRequirementResponse(audiences, providerId);
         }

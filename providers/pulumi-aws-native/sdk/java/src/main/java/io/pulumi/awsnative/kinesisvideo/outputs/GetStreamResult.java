@@ -163,7 +163,6 @@ public final class GetStreamResult {
             this.tags = tags;
             return this;
         }
-
         public GetStreamResult build() {
             return new GetStreamResult(arn, dataRetentionInHours, deviceName, kmsKeyId, mediaType, tags);
         }

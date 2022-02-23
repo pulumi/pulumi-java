@@ -97,7 +97,6 @@ public final class GoogleIamV1__BindingResponse {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public GoogleIamV1__BindingResponse build() {
             return new GoogleIamV1__BindingResponse(condition, members, role);
         }

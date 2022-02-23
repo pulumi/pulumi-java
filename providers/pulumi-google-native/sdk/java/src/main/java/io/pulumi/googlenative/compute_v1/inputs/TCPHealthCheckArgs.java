@@ -22,7 +22,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -33,7 +33,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portName")
-    private final @Nullable Input<String> portName;
+      private final @Nullable Input<String> portName;
 
     public Input<String> getPortName() {
         return this.portName == null ? Input.empty() : this.portName;
@@ -44,7 +44,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portSpecification")
-    private final @Nullable Input<TCPHealthCheckPortSpecification> portSpecification;
+      private final @Nullable Input<TCPHealthCheckPortSpecification> portSpecification;
 
     public Input<TCPHealthCheckPortSpecification> getPortSpecification() {
         return this.portSpecification == null ? Input.empty() : this.portSpecification;
@@ -55,7 +55,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proxyHeader")
-    private final @Nullable Input<TCPHealthCheckProxyHeader> proxyHeader;
+      private final @Nullable Input<TCPHealthCheckProxyHeader> proxyHeader;
 
     public Input<TCPHealthCheckProxyHeader> getProxyHeader() {
         return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
@@ -66,7 +66,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="request")
-    private final @Nullable Input<String> request;
+      private final @Nullable Input<String> request;
 
     public Input<String> getRequest() {
         return this.request == null ? Input.empty() : this.request;
@@ -77,7 +77,7 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="response")
-    private final @Nullable Input<String> response;
+      private final @Nullable Input<String> response;
 
     public Input<String> getResponse() {
         return this.response == null ? Input.empty() : this.response;
@@ -196,7 +196,6 @@ public final class TCPHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.response = Input.ofNullable(response);
             return this;
         }
-
         public TCPHealthCheckArgs build() {
             return new TCPHealthCheckArgs(port, portName, portSpecification, proxyHeader, request, response);
         }

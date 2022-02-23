@@ -223,7 +223,6 @@ public final class OracleColumnResponse {
             this.scale = Objects.requireNonNull(scale);
             return this;
         }
-
         public OracleColumnResponse build() {
             return new OracleColumnResponse(column, dataType, encoding, length, nullable, ordinalPosition, precision, primaryKey, scale);
         }

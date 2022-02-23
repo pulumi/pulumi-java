@@ -76,7 +76,6 @@ public final class VirtualNetworkProfileResponse {
             this.subnet = subnet;
             return this;
         }
-
         public VirtualNetworkProfileResponse build() {
             return new VirtualNetworkProfileResponse(id, subnet);
         }

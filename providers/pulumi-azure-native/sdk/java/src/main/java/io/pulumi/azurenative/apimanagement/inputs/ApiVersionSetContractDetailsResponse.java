@@ -23,7 +23,7 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -34,7 +34,7 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -45,7 +45,7 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -56,7 +56,7 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="versionHeaderName")
-    private final @Nullable String versionHeaderName;
+        private final @Nullable String versionHeaderName;
 
     public Optional<String> getVersionHeaderName() {
         return this.versionHeaderName == null ? Optional.empty() : Optional.ofNullable(this.versionHeaderName);
@@ -67,7 +67,7 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="versionQueryName")
-    private final @Nullable String versionQueryName;
+        private final @Nullable String versionQueryName;
 
     public Optional<String> getVersionQueryName() {
         return this.versionQueryName == null ? Optional.empty() : Optional.ofNullable(this.versionQueryName);
@@ -78,7 +78,7 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="versioningScheme")
-    private final @Nullable String versioningScheme;
+        private final @Nullable String versioningScheme;
 
     public Optional<String> getVersioningScheme() {
         return this.versioningScheme == null ? Optional.empty() : Optional.ofNullable(this.versioningScheme);
@@ -167,7 +167,6 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
             this.versioningScheme = versioningScheme;
             return this;
         }
-
         public ApiVersionSetContractDetailsResponse build() {
             return new ApiVersionSetContractDetailsResponse(description, id, name, versionHeaderName, versionQueryName, versioningScheme);
         }

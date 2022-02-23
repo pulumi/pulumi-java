@@ -118,7 +118,6 @@ public final class GetSharedflowResult {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public GetSharedflowResult build() {
             return new GetSharedflowResult(latestRevisionId, metaData, name, revision);
         }

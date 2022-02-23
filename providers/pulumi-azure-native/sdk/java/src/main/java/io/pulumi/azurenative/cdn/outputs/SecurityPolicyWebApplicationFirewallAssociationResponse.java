@@ -77,7 +77,6 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
-
         public SecurityPolicyWebApplicationFirewallAssociationResponse build() {
             return new SecurityPolicyWebApplicationFirewallAssociationResponse(domains, patternsToMatch);
         }

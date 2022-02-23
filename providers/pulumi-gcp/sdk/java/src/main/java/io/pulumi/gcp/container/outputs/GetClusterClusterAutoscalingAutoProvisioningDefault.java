@@ -85,7 +85,6 @@ public final class GetClusterClusterAutoscalingAutoProvisioningDefault {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public GetClusterClusterAutoscalingAutoProvisioningDefault build() {
             return new GetClusterClusterAutoscalingAutoProvisioningDefault(imageType, minCpuPlatform, oauthScopes, serviceAccount);
         }

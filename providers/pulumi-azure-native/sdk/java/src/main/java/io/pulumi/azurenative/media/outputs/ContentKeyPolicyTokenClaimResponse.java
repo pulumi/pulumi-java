@@ -76,7 +76,6 @@ public final class ContentKeyPolicyTokenClaimResponse {
             this.claimValue = claimValue;
             return this;
         }
-
         public ContentKeyPolicyTokenClaimResponse build() {
             return new ContentKeyPolicyTokenClaimResponse(claimType, claimValue);
         }

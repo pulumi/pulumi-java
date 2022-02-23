@@ -21,7 +21,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdateGetArgs extends io.pul
      * 
      */
     @InputImport(name="classifications")
-    private final @Nullable Input<List<String>> classifications;
+        private final @Nullable Input<List<String>> classifications;
 
     public Input<List<String>> getClassifications() {
         return this.classifications == null ? Input.empty() : this.classifications;
@@ -32,7 +32,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdateGetArgs extends io.pul
      * 
      */
     @InputImport(name="excludes")
-    private final @Nullable Input<List<String>> excludes;
+        private final @Nullable Input<List<String>> excludes;
 
     public Input<List<String>> getExcludes() {
         return this.excludes == null ? Input.empty() : this.excludes;
@@ -44,7 +44,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdateGetArgs extends io.pul
      * 
      */
     @InputImport(name="exclusivePatches")
-    private final @Nullable Input<List<String>> exclusivePatches;
+        private final @Nullable Input<List<String>> exclusivePatches;
 
     public Input<List<String>> getExclusivePatches() {
         return this.exclusivePatches == null ? Input.empty() : this.exclusivePatches;
@@ -118,7 +118,6 @@ public final class PatchDeploymentPatchConfigWindowsUpdateGetArgs extends io.pul
             this.exclusivePatches = Input.ofNullable(exclusivePatches);
             return this;
         }
-
         public PatchDeploymentPatchConfigWindowsUpdateGetArgs build() {
             return new PatchDeploymentPatchConfigWindowsUpdateGetArgs(classifications, excludes, exclusivePatches);
         }

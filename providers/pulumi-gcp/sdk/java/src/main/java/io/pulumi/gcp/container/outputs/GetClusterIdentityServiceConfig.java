@@ -44,7 +44,6 @@ public final class GetClusterIdentityServiceConfig {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetClusterIdentityServiceConfig build() {
             return new GetClusterIdentityServiceConfig(enabled);
         }

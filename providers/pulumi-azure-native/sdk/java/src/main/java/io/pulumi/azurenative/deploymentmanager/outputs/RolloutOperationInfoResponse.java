@@ -140,7 +140,6 @@ public final class RolloutOperationInfoResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public RolloutOperationInfoResponse build() {
             return new RolloutOperationInfoResponse(endTime, error, retryAttempt, skipSucceededOnRetry, startTime);
         }

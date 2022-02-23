@@ -83,7 +83,6 @@ public final class BackendServiceSecuritySettings {
             this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
             return this;
         }
-
         public BackendServiceSecuritySettings build() {
             return new BackendServiceSecuritySettings(clientTlsPolicy, subjectAltNames);
         }

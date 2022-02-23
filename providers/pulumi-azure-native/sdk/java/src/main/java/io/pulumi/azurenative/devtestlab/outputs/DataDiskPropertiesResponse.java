@@ -98,7 +98,6 @@ public final class DataDiskPropertiesResponse {
             this.hostCaching = hostCaching;
             return this;
         }
-
         public DataDiskPropertiesResponse build() {
             return new DataDiskPropertiesResponse(attachNewDataDiskOptions, existingLabDiskId, hostCaching);
         }

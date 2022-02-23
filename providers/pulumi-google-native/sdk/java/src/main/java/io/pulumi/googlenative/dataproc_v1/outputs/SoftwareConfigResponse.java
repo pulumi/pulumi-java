@@ -97,7 +97,6 @@ public final class SoftwareConfigResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public SoftwareConfigResponse build() {
             return new SoftwareConfigResponse(imageVersion, optionalComponents, properties);
         }

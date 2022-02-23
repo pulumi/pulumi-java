@@ -23,7 +23,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="categories", required=true)
-    private final List<String> categories;
+      private final List<String> categories;
 
     public List<String> getCategories() {
         return this.categories;
@@ -34,7 +34,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="excludes", required=true)
-    private final List<String> excludes;
+      private final List<String> excludes;
 
     public List<String> getExcludes() {
         return this.excludes;
@@ -45,7 +45,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="exclusivePatches", required=true)
-    private final List<String> exclusivePatches;
+      private final List<String> exclusivePatches;
 
     public List<String> getExclusivePatches() {
         return this.exclusivePatches;
@@ -56,7 +56,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="severities", required=true)
-    private final List<String> severities;
+      private final List<String> severities;
 
     public List<String> getSeverities() {
         return this.severities;
@@ -67,7 +67,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="withOptional", required=true)
-    private final Boolean withOptional;
+      private final Boolean withOptional;
 
     public Boolean getWithOptional() {
         return this.withOptional;
@@ -78,7 +78,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="withUpdate", required=true)
-    private final Boolean withUpdate;
+      private final Boolean withUpdate;
 
     public Boolean getWithUpdate() {
         return this.withUpdate;
@@ -167,7 +167,6 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
             this.withUpdate = Objects.requireNonNull(withUpdate);
             return this;
         }
-
         public ZypperSettingsResponse build() {
             return new ZypperSettingsResponse(categories, excludes, exclusivePatches, severities, withOptional, withUpdate);
         }

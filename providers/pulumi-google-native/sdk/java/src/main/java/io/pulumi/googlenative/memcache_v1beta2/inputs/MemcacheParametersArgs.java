@@ -20,7 +20,7 @@ public final class MemcacheParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="params")
-    private final @Nullable Input<Map<String,String>> params;
+      private final @Nullable Input<Map<String,String>> params;
 
     public Input<Map<String,String>> getParams() {
         return this.params == null ? Input.empty() : this.params;
@@ -63,7 +63,6 @@ public final class MemcacheParametersArgs extends io.pulumi.resources.ResourceAr
             this.params = Input.ofNullable(params);
             return this;
         }
-
         public MemcacheParametersArgs build() {
             return new MemcacheParametersArgs(params);
         }

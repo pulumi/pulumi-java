@@ -74,7 +74,6 @@ public final class ConditionResponse {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(message, timestamp);
         }

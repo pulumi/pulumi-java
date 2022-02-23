@@ -139,7 +139,6 @@ public final class ExtensionResourcePlanResponse {
             this.version = version;
             return this;
         }
-
         public ExtensionResourcePlanResponse build() {
             return new ExtensionResourcePlanResponse(name, product, promotionCode, publisher, version);
         }

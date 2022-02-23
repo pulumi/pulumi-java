@@ -122,7 +122,6 @@ public final class TemplateResponse {
             this.scale = scale;
             return this;
         }
-
         public TemplateResponse build() {
             return new TemplateResponse(containers, dapr, revisionSuffix, scale);
         }

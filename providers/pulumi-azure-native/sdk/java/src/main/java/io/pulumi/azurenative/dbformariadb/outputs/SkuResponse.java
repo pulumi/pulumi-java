@@ -140,7 +140,6 @@ public final class SkuResponse {
             this.tier = tier;
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(capacity, family, name, size, tier);
         }

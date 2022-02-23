@@ -74,7 +74,6 @@ public final class WorkflowS3Tag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WorkflowS3Tag build() {
             return new WorkflowS3Tag(key, value);
         }

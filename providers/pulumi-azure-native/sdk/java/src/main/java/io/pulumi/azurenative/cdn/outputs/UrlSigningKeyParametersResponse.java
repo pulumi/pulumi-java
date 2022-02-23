@@ -121,7 +121,6 @@ public final class UrlSigningKeyParametersResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public UrlSigningKeyParametersResponse build() {
             return new UrlSigningKeyParametersResponse(keyId, secretSource, secretVersion, type);
         }

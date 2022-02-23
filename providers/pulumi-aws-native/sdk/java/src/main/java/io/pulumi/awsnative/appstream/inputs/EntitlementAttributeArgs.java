@@ -14,14 +14,14 @@ public final class EntitlementAttributeArgs extends io.pulumi.resources.Resource
     public static final EntitlementAttributeArgs Empty = new EntitlementAttributeArgs();
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -80,7 +80,6 @@ public final class EntitlementAttributeArgs extends io.pulumi.resources.Resource
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public EntitlementAttributeArgs build() {
             return new EntitlementAttributeArgs(name, value);
         }

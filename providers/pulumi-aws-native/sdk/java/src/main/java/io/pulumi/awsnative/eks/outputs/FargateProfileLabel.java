@@ -74,7 +74,6 @@ public final class FargateProfileLabel {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FargateProfileLabel build() {
             return new FargateProfileLabel(key, value);
         }

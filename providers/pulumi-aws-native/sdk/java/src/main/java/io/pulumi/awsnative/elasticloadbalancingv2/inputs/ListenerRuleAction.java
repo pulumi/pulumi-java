@@ -21,56 +21,56 @@ public final class ListenerRuleAction extends io.pulumi.resources.InvokeArgs {
     public static final ListenerRuleAction Empty = new ListenerRuleAction();
 
     @InputImport(name="authenticateCognitoConfig")
-    private final @Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig;
+        private final @Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig;
 
     public Optional<ListenerRuleAuthenticateCognitoConfig> getAuthenticateCognitoConfig() {
         return this.authenticateCognitoConfig == null ? Optional.empty() : Optional.ofNullable(this.authenticateCognitoConfig);
     }
 
     @InputImport(name="authenticateOidcConfig")
-    private final @Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig;
+        private final @Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig;
 
     public Optional<ListenerRuleAuthenticateOidcConfig> getAuthenticateOidcConfig() {
         return this.authenticateOidcConfig == null ? Optional.empty() : Optional.ofNullable(this.authenticateOidcConfig);
     }
 
     @InputImport(name="fixedResponseConfig")
-    private final @Nullable ListenerRuleFixedResponseConfig fixedResponseConfig;
+        private final @Nullable ListenerRuleFixedResponseConfig fixedResponseConfig;
 
     public Optional<ListenerRuleFixedResponseConfig> getFixedResponseConfig() {
         return this.fixedResponseConfig == null ? Optional.empty() : Optional.ofNullable(this.fixedResponseConfig);
     }
 
     @InputImport(name="forwardConfig")
-    private final @Nullable ListenerRuleForwardConfig forwardConfig;
+        private final @Nullable ListenerRuleForwardConfig forwardConfig;
 
     public Optional<ListenerRuleForwardConfig> getForwardConfig() {
         return this.forwardConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardConfig);
     }
 
     @InputImport(name="order")
-    private final @Nullable Integer order;
+        private final @Nullable Integer order;
 
     public Optional<Integer> getOrder() {
         return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
     }
 
     @InputImport(name="redirectConfig")
-    private final @Nullable ListenerRuleRedirectConfig redirectConfig;
+        private final @Nullable ListenerRuleRedirectConfig redirectConfig;
 
     public Optional<ListenerRuleRedirectConfig> getRedirectConfig() {
         return this.redirectConfig == null ? Optional.empty() : Optional.ofNullable(this.redirectConfig);
     }
 
     @InputImport(name="targetGroupArn")
-    private final @Nullable String targetGroupArn;
+        private final @Nullable String targetGroupArn;
 
     public Optional<String> getTargetGroupArn() {
         return this.targetGroupArn == null ? Optional.empty() : Optional.ofNullable(this.targetGroupArn);
     }
 
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -179,7 +179,6 @@ public final class ListenerRuleAction extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListenerRuleAction build() {
             return new ListenerRuleAction(authenticateCognitoConfig, authenticateOidcConfig, fixedResponseConfig, forwardConfig, order, redirectConfig, targetGroupArn, type);
         }

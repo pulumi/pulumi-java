@@ -100,7 +100,6 @@ public final class CapacityProviderManagedScaling {
             this.targetCapacity = targetCapacity;
             return this;
         }
-
         public CapacityProviderManagedScaling build() {
             return new CapacityProviderManagedScaling(instanceWarmupPeriod, maximumScalingStepSize, minimumScalingStepSize, status, targetCapacity);
         }

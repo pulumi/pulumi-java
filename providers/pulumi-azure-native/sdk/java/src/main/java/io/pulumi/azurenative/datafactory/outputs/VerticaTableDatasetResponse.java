@@ -252,7 +252,6 @@ public final class VerticaTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VerticaTableDatasetResponse build() {
             return new VerticaTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

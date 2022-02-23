@@ -54,7 +54,6 @@ public final class GetEgressOnlyInternetGatewayResult {
             this.id = id;
             return this;
         }
-
         public GetEgressOnlyInternetGatewayResult build() {
             return new GetEgressOnlyInternetGatewayResult(id);
         }

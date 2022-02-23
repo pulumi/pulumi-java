@@ -53,7 +53,6 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionObjectId {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public AuthorityConfigX509ConfigAdditionalExtensionObjectId build() {
             return new AuthorityConfigX509ConfigAdditionalExtensionObjectId(objectIdPaths);
         }

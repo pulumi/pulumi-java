@@ -182,7 +182,6 @@ public final class GetServiceLevelObjectiveResult {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
-
         public GetServiceLevelObjectiveResult build() {
             return new GetServiceLevelObjectiveResult(calendarPeriod, displayName, goal, name, rollingPeriod, serviceLevelIndicator, userLabels);
         }

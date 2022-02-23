@@ -181,7 +181,6 @@ public final class GetConnectionResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetConnectionResult build() {
             return new GetConnectionResult(cloudSql, creationTime, description, friendlyName, hasCredential, lastModifiedTime, name);
         }

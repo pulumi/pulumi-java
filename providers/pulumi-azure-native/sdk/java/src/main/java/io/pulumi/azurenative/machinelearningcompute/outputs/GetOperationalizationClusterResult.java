@@ -378,7 +378,6 @@ public final class GetOperationalizationClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOperationalizationClusterResult build() {
             return new GetOperationalizationClusterResult(appInsights, clusterType, containerRegistry, containerService, createdOn, description, globalServiceConfiguration, id, location, modifiedOn, name, provisioningErrors, provisioningState, storageAccount, tags, type);
         }

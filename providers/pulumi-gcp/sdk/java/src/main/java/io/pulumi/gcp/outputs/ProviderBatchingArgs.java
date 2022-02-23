@@ -61,7 +61,6 @@ public final class ProviderBatchingArgs {
             this.sendAfter = sendAfter;
             return this;
         }
-
         public ProviderBatchingArgs build() {
             return new ProviderBatchingArgs(enableBatching, sendAfter);
         }

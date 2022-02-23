@@ -17,21 +17,21 @@ public final class SAMLProviderArgs extends io.pulumi.resources.ResourceArgs {
     public static final SAMLProviderArgs Empty = new SAMLProviderArgs();
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="samlMetadataDocument", required=true)
-    private final Input<String> samlMetadataDocument;
+        private final Input<String> samlMetadataDocument;
 
     public Input<String> getSamlMetadataDocument() {
         return this.samlMetadataDocument;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<SAMLProviderTagArgs>> tags;
+        private final @Nullable Input<List<SAMLProviderTagArgs>> tags;
 
     public Input<List<SAMLProviderTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -105,7 +105,6 @@ public final class SAMLProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public SAMLProviderArgs build() {
             return new SAMLProviderArgs(name, samlMetadataDocument, tags);
         }

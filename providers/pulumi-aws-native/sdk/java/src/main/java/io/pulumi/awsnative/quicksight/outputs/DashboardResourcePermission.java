@@ -103,7 +103,6 @@ public final class DashboardResourcePermission {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public DashboardResourcePermission build() {
             return new DashboardResourcePermission(actions, principal);
         }

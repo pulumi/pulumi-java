@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse {
             this.proximity = Objects.requireNonNull(proximity);
             return this;
         }
-
         public GooglePrivacyDlpV2HotwordRuleResponse build() {
             return new GooglePrivacyDlpV2HotwordRuleResponse(hotwordRegex, likelihoodAdjustment, proximity);
         }

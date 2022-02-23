@@ -22,7 +22,7 @@ public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="receiveAgreement", required=true)
-    private final Input<X12OneWayAgreementArgs> receiveAgreement;
+        private final Input<X12OneWayAgreementArgs> receiveAgreement;
 
     public Input<X12OneWayAgreementArgs> getReceiveAgreement() {
         return this.receiveAgreement;
@@ -33,7 +33,7 @@ public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sendAgreement", required=true)
-    private final Input<X12OneWayAgreementArgs> sendAgreement;
+        private final Input<X12OneWayAgreementArgs> sendAgreement;
 
     public Input<X12OneWayAgreementArgs> getSendAgreement() {
         return this.sendAgreement;
@@ -92,7 +92,6 @@ public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceA
             this.sendAgreement = Input.of(Objects.requireNonNull(sendAgreement));
             return this;
         }
-
         public X12AgreementContentArgs build() {
             return new X12AgreementContentArgs(receiveAgreement, sendAgreement);
         }

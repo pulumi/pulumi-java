@@ -53,7 +53,6 @@ public final class TrafficPortSelectorResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public TrafficPortSelectorResponse build() {
             return new TrafficPortSelectorResponse(ports);
         }

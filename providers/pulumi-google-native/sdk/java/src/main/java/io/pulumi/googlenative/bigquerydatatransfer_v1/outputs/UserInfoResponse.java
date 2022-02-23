@@ -52,7 +52,6 @@ public final class UserInfoResponse {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public UserInfoResponse build() {
             return new UserInfoResponse(email);
         }

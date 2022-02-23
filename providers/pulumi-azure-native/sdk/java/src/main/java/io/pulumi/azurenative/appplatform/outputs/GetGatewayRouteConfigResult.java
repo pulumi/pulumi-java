@@ -139,7 +139,6 @@ public final class GetGatewayRouteConfigResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGatewayRouteConfigResult build() {
             return new GetGatewayRouteConfigResult(id, name, properties, systemData, type);
         }

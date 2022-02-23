@@ -223,7 +223,6 @@ public final class ReturnAddressResponse {
             this.streetAddress2 = streetAddress2;
             return this;
         }
-
         public ReturnAddressResponse build() {
             return new ReturnAddressResponse(city, countryOrRegion, email, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
         }

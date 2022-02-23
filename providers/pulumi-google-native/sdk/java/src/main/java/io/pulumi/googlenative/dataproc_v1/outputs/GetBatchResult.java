@@ -399,7 +399,6 @@ public final class GetBatchResult {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public GetBatchResult build() {
             return new GetBatchResult(createTime, creator, environmentConfig, labels, name, operation, pysparkBatch, runtimeConfig, runtimeInfo, sparkBatch, sparkRBatch, sparkSqlBatch, state, stateHistory, stateMessage, stateTime, uuid);
         }

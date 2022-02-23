@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2RegexResponse {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public GooglePrivacyDlpV2RegexResponse build() {
             return new GooglePrivacyDlpV2RegexResponse(groupIndexes, pattern);
         }

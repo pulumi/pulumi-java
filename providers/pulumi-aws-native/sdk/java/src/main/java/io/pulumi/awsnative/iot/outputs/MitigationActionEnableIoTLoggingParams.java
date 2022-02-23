@@ -75,7 +75,6 @@ public final class MitigationActionEnableIoTLoggingParams {
             this.roleArnForLogging = Objects.requireNonNull(roleArnForLogging);
             return this;
         }
-
         public MitigationActionEnableIoTLoggingParams build() {
             return new MitigationActionEnableIoTLoggingParams(logLevel, roleArnForLogging);
         }

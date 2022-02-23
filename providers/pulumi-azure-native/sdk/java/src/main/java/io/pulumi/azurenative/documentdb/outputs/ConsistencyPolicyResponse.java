@@ -99,7 +99,6 @@ public final class ConsistencyPolicyResponse {
             this.maxStalenessPrefix = maxStalenessPrefix;
             return this;
         }
-
         public ConsistencyPolicyResponse build() {
             return new ConsistencyPolicyResponse(defaultConsistencyLevel, maxIntervalInSeconds, maxStalenessPrefix);
         }

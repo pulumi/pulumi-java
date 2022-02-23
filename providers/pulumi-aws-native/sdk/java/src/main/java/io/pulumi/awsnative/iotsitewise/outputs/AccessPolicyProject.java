@@ -54,7 +54,6 @@ public final class AccessPolicyProject {
             this.id = id;
             return this;
         }
-
         public AccessPolicyProject build() {
             return new AccessPolicyProject(id);
         }

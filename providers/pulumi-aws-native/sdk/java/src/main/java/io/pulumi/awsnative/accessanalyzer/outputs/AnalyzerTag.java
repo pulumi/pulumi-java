@@ -74,7 +74,6 @@ public final class AnalyzerTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AnalyzerTag build() {
             return new AnalyzerTag(key, value);
         }

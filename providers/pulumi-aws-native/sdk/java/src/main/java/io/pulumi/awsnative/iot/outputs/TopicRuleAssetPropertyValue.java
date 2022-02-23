@@ -75,7 +75,6 @@ public final class TopicRuleAssetPropertyValue {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TopicRuleAssetPropertyValue build() {
             return new TopicRuleAssetPropertyValue(quality, timestamp, value);
         }

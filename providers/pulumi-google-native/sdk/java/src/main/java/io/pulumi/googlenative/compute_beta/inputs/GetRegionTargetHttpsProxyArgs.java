@@ -15,21 +15,21 @@ public final class GetRegionTargetHttpsProxyArgs extends io.pulumi.resources.Inv
     public static final GetRegionTargetHttpsProxyArgs Empty = new GetRegionTargetHttpsProxyArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="targetHttpsProxy", required=true)
-    private final String targetHttpsProxy;
+      private final String targetHttpsProxy;
 
     public String getTargetHttpsProxy() {
         return this.targetHttpsProxy;
@@ -88,7 +88,6 @@ public final class GetRegionTargetHttpsProxyArgs extends io.pulumi.resources.Inv
             this.targetHttpsProxy = Objects.requireNonNull(targetHttpsProxy);
             return this;
         }
-
         public GetRegionTargetHttpsProxyArgs build() {
             return new GetRegionTargetHttpsProxyArgs(project, region, targetHttpsProxy);
         }

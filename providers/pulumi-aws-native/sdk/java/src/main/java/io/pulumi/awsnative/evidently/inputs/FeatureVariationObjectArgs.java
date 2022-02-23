@@ -17,35 +17,35 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
     public static final FeatureVariationObjectArgs Empty = new FeatureVariationObjectArgs();
 
     @InputImport(name="booleanValue")
-    private final @Nullable Input<Boolean> booleanValue;
+        private final @Nullable Input<Boolean> booleanValue;
 
     public Input<Boolean> getBooleanValue() {
         return this.booleanValue == null ? Input.empty() : this.booleanValue;
     }
 
     @InputImport(name="doubleValue")
-    private final @Nullable Input<Double> doubleValue;
+        private final @Nullable Input<Double> doubleValue;
 
     public Input<Double> getDoubleValue() {
         return this.doubleValue == null ? Input.empty() : this.doubleValue;
     }
 
     @InputImport(name="longValue")
-    private final @Nullable Input<Double> longValue;
+        private final @Nullable Input<Double> longValue;
 
     public Input<Double> getLongValue() {
         return this.longValue == null ? Input.empty() : this.longValue;
     }
 
     @InputImport(name="stringValue")
-    private final @Nullable Input<String> stringValue;
+        private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;
     }
 
     @InputImport(name="variationName")
-    private final @Nullable Input<String> variationName;
+        private final @Nullable Input<String> variationName;
 
     public Input<String> getVariationName() {
         return this.variationName == null ? Input.empty() : this.variationName;
@@ -149,7 +149,6 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
             this.variationName = Input.ofNullable(variationName);
             return this;
         }
-
         public FeatureVariationObjectArgs build() {
             return new FeatureVariationObjectArgs(booleanValue, doubleValue, longValue, stringValue, variationName);
         }

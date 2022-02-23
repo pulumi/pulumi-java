@@ -314,7 +314,6 @@ public final class PrivateEndpointResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateEndpointResponse build() {
             return new PrivateEndpointResponse(customDnsConfigs, etag, extendedLocation, id, location, manualPrivateLinkServiceConnections, name, networkInterfaces, privateLinkServiceConnections, provisioningState, subnet, tags, type);
         }

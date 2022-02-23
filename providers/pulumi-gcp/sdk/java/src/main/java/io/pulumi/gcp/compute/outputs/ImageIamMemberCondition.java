@@ -97,7 +97,6 @@ public final class ImageIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ImageIamMemberCondition build() {
             return new ImageIamMemberCondition(description, expression, title);
         }

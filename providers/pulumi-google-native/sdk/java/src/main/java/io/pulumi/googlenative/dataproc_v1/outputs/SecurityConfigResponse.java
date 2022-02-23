@@ -75,7 +75,6 @@ public final class SecurityConfigResponse {
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }
-
         public SecurityConfigResponse build() {
             return new SecurityConfigResponse(identityConfig, kerberosConfig);
         }

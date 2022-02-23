@@ -74,7 +74,6 @@ public final class CategoryResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public CategoryResponse build() {
             return new CategoryResponse(categoryId, name);
         }

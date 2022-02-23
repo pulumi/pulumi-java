@@ -60,7 +60,6 @@ public final class ServiceProfileTag {
             this.value = value;
             return this;
         }
-
         public ServiceProfileTag build() {
             return new ServiceProfileTag(key, value);
         }

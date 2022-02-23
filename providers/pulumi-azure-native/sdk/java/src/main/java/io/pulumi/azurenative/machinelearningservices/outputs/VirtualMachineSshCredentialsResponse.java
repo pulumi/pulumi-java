@@ -118,7 +118,6 @@ public final class VirtualMachineSshCredentialsResponse {
             this.username = username;
             return this;
         }
-
         public VirtualMachineSshCredentialsResponse build() {
             return new VirtualMachineSshCredentialsResponse(password, privateKeyData, publicKeyData, username);
         }

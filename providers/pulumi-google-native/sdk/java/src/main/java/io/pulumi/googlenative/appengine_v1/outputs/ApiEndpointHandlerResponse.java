@@ -52,7 +52,6 @@ public final class ApiEndpointHandlerResponse {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }
-
         public ApiEndpointHandlerResponse build() {
             return new ApiEndpointHandlerResponse(scriptPath);
         }

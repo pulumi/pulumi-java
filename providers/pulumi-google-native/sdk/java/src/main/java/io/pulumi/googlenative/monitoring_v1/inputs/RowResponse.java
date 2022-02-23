@@ -23,7 +23,7 @@ public final class RowResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="weight", required=true)
-    private final String weight;
+      private final String weight;
 
     public String getWeight() {
         return this.weight;
@@ -34,7 +34,7 @@ public final class RowResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="widgets", required=true)
-    private final List<WidgetResponse> widgets;
+      private final List<WidgetResponse> widgets;
 
     public List<WidgetResponse> getWidgets() {
         return this.widgets;
@@ -83,7 +83,6 @@ public final class RowResponse extends io.pulumi.resources.InvokeArgs {
             this.widgets = Objects.requireNonNull(widgets);
             return this;
         }
-
         public RowResponse build() {
             return new RowResponse(weight, widgets);
         }

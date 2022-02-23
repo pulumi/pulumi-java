@@ -96,7 +96,6 @@ public final class DataSourceSqlServerParameters {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceSqlServerParameters build() {
             return new DataSourceSqlServerParameters(database, host, port);
         }

@@ -97,7 +97,6 @@ public final class OrchestratorIdentityResponse {
             this.type = type;
             return this;
         }
-
         public OrchestratorIdentityResponse build() {
             return new OrchestratorIdentityResponse(principalId, tenantId, type);
         }

@@ -203,7 +203,6 @@ public final class ProbeResponse {
             this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
             return this;
         }
-
         public ProbeResponse build() {
             return new ProbeResponse(exec, failureThreshold, httpGet, initialDelaySeconds, periodSeconds, successThreshold, tcpSocket, timeoutSeconds);
         }

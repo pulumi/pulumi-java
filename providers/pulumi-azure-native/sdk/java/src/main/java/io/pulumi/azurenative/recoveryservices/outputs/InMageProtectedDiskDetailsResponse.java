@@ -351,7 +351,6 @@ public final class InMageProtectedDiskDetailsResponse {
             this.targetDataInMB = targetDataInMB;
             return this;
         }
-
         public InMageProtectedDiskDetailsResponse build() {
             return new InMageProtectedDiskDetailsResponse(diskCapacityInBytes, diskId, diskName, diskResized, fileSystemCapacityInBytes, healthErrorCode, lastRpoCalculatedTime, protectionStage, psDataInMB, resyncDurationInSeconds, resyncProgressPercentage, resyncRequired, rpoInSeconds, sourceDataInMB, targetDataInMB);
         }

@@ -52,7 +52,6 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse
             this.domainNameLabel = Objects.requireNonNull(domainNameLabel);
             return this;
         }
-
         public VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse build() {
             return new VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse(domainNameLabel);
         }

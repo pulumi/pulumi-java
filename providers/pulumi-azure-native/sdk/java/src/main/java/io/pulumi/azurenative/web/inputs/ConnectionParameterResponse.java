@@ -24,7 +24,7 @@ public final class ConnectionParameterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="oAuthSettings")
-    private final @Nullable ApiOAuthSettingsResponse oAuthSettings;
+        private final @Nullable ApiOAuthSettingsResponse oAuthSettings;
 
     public Optional<ApiOAuthSettingsResponse> getOAuthSettings() {
         return this.oAuthSettings == null ? Optional.empty() : Optional.ofNullable(this.oAuthSettings);
@@ -35,7 +35,7 @@ public final class ConnectionParameterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -84,7 +84,6 @@ public final class ConnectionParameterResponse extends io.pulumi.resources.Invok
             this.type = type;
             return this;
         }
-
         public ConnectionParameterResponse build() {
             return new ConnectionParameterResponse(oAuthSettings, type);
         }

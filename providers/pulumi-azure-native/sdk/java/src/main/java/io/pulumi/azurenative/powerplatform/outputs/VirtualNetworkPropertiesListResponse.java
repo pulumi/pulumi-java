@@ -78,7 +78,6 @@ public final class VirtualNetworkPropertiesListResponse {
             this.value = value;
             return this;
         }
-
         public VirtualNetworkPropertiesListResponse build() {
             return new VirtualNetworkPropertiesListResponse(nextLink, value);
         }

@@ -73,7 +73,6 @@ public final class ResourceProviderAuthorizationResponse {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
-
         public ResourceProviderAuthorizationResponse build() {
             return new ResourceProviderAuthorizationResponse(applicationId, managedByRoleDefinitionId, roleDefinitionId);
         }

@@ -23,7 +23,7 @@ public final class PatientIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -34,7 +34,7 @@ public final class PatientIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -93,7 +93,6 @@ public final class PatientIdArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public PatientIdArgs build() {
             return new PatientIdArgs(type, value);
         }

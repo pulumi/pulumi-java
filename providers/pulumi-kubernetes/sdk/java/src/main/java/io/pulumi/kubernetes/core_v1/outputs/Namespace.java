@@ -142,7 +142,6 @@ public final class Namespace {
             this.status = status;
             return this;
         }
-
         public Namespace build() {
             return new Namespace(apiVersion, kind, metadata, spec, status);
         }

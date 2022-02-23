@@ -90,7 +90,6 @@ public final class DetectorModelFirehose {
             this.separator = separator;
             return this;
         }
-
         public DetectorModelFirehose build() {
             return new DetectorModelFirehose(deliveryStreamName, payload, separator);
         }

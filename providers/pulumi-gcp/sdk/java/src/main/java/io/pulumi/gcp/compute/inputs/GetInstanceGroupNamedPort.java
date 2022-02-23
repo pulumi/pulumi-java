@@ -18,14 +18,14 @@ public final class GetInstanceGroupNamedPort extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="port", required=true)
-    private final Integer port;
+        private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -74,7 +74,6 @@ public final class GetInstanceGroupNamedPort extends io.pulumi.resources.InvokeA
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public GetInstanceGroupNamedPort build() {
             return new GetInstanceGroupNamedPort(name, port);
         }

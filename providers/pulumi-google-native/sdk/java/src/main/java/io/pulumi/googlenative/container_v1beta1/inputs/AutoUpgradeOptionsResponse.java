@@ -21,7 +21,7 @@ public final class AutoUpgradeOptionsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="autoUpgradeStartTime", required=true)
-    private final String autoUpgradeStartTime;
+      private final String autoUpgradeStartTime;
 
     public String getAutoUpgradeStartTime() {
         return this.autoUpgradeStartTime;
@@ -32,7 +32,7 @@ public final class AutoUpgradeOptionsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -81,7 +81,6 @@ public final class AutoUpgradeOptionsResponse extends io.pulumi.resources.Invoke
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public AutoUpgradeOptionsResponse build() {
             return new AutoUpgradeOptionsResponse(autoUpgradeStartTime, description);
         }

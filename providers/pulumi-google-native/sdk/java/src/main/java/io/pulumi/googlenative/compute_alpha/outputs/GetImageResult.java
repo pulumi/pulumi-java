@@ -776,7 +776,6 @@ public final class GetImageResult {
             this.userLicenses = Objects.requireNonNull(userLicenses);
             return this;
         }
-
         public GetImageResult build() {
             return new GetImageResult(architecture, archiveSizeBytes, creationTimestamp, deprecated, description, diskSizeGb, family, guestOsFeatures, imageEncryptionKey, kind, labelFingerprint, labels, licenseCodes, licenses, locked, name, rawDisk, rolloutOverride, satisfiesPzs, selfLink, selfLinkWithId, shieldedInstanceInitialState, sourceDisk, sourceDiskEncryptionKey, sourceDiskId, sourceImage, sourceImageEncryptionKey, sourceImageId, sourceSnapshot, sourceSnapshotEncryptionKey, sourceSnapshotId, sourceType, status, storageLocations, userLicenses);
         }

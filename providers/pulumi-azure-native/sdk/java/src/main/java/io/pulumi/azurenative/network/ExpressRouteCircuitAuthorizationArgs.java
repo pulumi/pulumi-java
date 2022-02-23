@@ -21,7 +21,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizationKey")
-    private final @Nullable Input<String> authorizationKey;
+        private final @Nullable Input<String> authorizationKey;
 
     public Input<String> getAuthorizationKey() {
         return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
@@ -32,7 +32,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizationName")
-    private final @Nullable Input<String> authorizationName;
+        private final @Nullable Input<String> authorizationName;
 
     public Input<String> getAuthorizationName() {
         return this.authorizationName == null ? Input.empty() : this.authorizationName;
@@ -43,7 +43,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizationUseStatus")
-    private final @Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
+        private final @Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
 
     public Input<Either<String,AuthorizationUseStatus>> getAuthorizationUseStatus() {
         return this.authorizationUseStatus == null ? Input.empty() : this.authorizationUseStatus;
@@ -54,7 +54,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="circuitName", required=true)
-    private final Input<String> circuitName;
+        private final Input<String> circuitName;
 
     public Input<String> getCircuitName() {
         return this.circuitName;
@@ -65,7 +65,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -76,7 +76,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -221,7 +221,6 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ExpressRouteCircuitAuthorizationArgs build() {
             return new ExpressRouteCircuitAuthorizationArgs(authorizationKey, authorizationName, authorizationUseStatus, circuitName, id, name, resourceGroupName);
         }

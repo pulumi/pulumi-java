@@ -140,7 +140,6 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
             this.dualStandbyPairName = dualStandbyPairName;
             return this;
         }
-
         public IntegrationRuntimeSsisCatalogInfoResponse build() {
             return new IntegrationRuntimeSsisCatalogInfoResponse(catalogAdminPassword, catalogAdminUserName, catalogPricingTier, catalogServerEndpoint, dualStandbyPairName);
         }

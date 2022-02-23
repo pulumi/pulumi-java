@@ -308,7 +308,6 @@ public final class GetArcAddonResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetArcAddonResult build() {
             return new GetArcAddonResult(hostPlatform, hostPlatformType, id, kind, name, provisioningState, resourceGroupName, resourceLocation, resourceName, subscriptionId, systemData, type, version);
         }

@@ -18,7 +18,7 @@ public final class HTTPHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
@@ -29,7 +29,7 @@ public final class HTTPHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -40,7 +40,7 @@ public final class HTTPHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="portName", required=true)
-    private final String portName;
+      private final String portName;
 
     public String getPortName() {
         return this.portName;
@@ -51,7 +51,7 @@ public final class HTTPHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="portSpecification", required=true)
-    private final String portSpecification;
+      private final String portSpecification;
 
     public String getPortSpecification() {
         return this.portSpecification;
@@ -62,7 +62,7 @@ public final class HTTPHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="proxyHeader", required=true)
-    private final String proxyHeader;
+      private final String proxyHeader;
 
     public String getProxyHeader() {
         return this.proxyHeader;
@@ -73,7 +73,7 @@ public final class HTTPHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="requestPath", required=true)
-    private final String requestPath;
+      private final String requestPath;
 
     public String getRequestPath() {
         return this.requestPath;
@@ -84,7 +84,7 @@ public final class HTTPHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="response", required=true)
-    private final String response;
+      private final String response;
 
     public String getResponse() {
         return this.response;
@@ -95,7 +95,7 @@ public final class HTTPHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="weightReportMode", required=true)
-    private final String weightReportMode;
+      private final String weightReportMode;
 
     public String getWeightReportMode() {
         return this.weightReportMode;
@@ -204,7 +204,6 @@ public final class HTTPHealthCheckResponse extends io.pulumi.resources.InvokeArg
             this.weightReportMode = Objects.requireNonNull(weightReportMode);
             return this;
         }
-
         public HTTPHealthCheckResponse build() {
             return new HTTPHealthCheckResponse(host, port, portName, portSpecification, proxyHeader, requestPath, response, weightReportMode);
         }

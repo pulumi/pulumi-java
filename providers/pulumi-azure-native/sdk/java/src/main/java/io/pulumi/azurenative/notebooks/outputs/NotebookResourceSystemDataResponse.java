@@ -112,7 +112,6 @@ public final class NotebookResourceSystemDataResponse {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public NotebookResourceSystemDataResponse build() {
             return new NotebookResourceSystemDataResponse(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

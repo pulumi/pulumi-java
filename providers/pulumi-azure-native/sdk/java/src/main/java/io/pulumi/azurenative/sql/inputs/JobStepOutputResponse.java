@@ -23,7 +23,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="credential", required=true)
-    private final String credential;
+        private final String credential;
 
     public String getCredential() {
         return this.credential;
@@ -34,7 +34,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -45,7 +45,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName")
-    private final @Nullable String resourceGroupName;
+        private final @Nullable String resourceGroupName;
 
     public Optional<String> getResourceGroupName() {
         return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
@@ -56,7 +56,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="schemaName")
-    private final @Nullable String schemaName;
+        private final @Nullable String schemaName;
 
     public Optional<String> getSchemaName() {
         return this.schemaName == null ? Optional.empty() : Optional.ofNullable(this.schemaName);
@@ -67,7 +67,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -78,7 +78,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable String subscriptionId;
+        private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
@@ -89,7 +89,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final String tableName;
+        private final String tableName;
 
     public String getTableName() {
         return this.tableName;
@@ -100,7 +100,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -209,7 +209,6 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
             this.type = type;
             return this;
         }
-
         public JobStepOutputResponse build() {
             return new JobStepOutputResponse(credential, databaseName, resourceGroupName, schemaName, serverName, subscriptionId, tableName, type);
         }

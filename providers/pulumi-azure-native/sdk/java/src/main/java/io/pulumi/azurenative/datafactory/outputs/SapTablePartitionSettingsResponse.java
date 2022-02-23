@@ -118,7 +118,6 @@ public final class SapTablePartitionSettingsResponse {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public SapTablePartitionSettingsResponse build() {
             return new SapTablePartitionSettingsResponse(maxPartitionsNumber, partitionColumnName, partitionLowerBound, partitionUpperBound);
         }

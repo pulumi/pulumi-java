@@ -52,7 +52,6 @@ public final class BuildNoteResponse {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
         }
-
         public BuildNoteResponse build() {
             return new BuildNoteResponse(builderVersion);
         }

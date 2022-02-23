@@ -148,7 +148,6 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
             this.rules = rules;
             return this;
         }
-
         public FirewallPolicyFilterRuleCollectionResponse build() {
             return new FirewallPolicyFilterRuleCollectionResponse(action, name, priority, ruleCollectionType, rules);
         }

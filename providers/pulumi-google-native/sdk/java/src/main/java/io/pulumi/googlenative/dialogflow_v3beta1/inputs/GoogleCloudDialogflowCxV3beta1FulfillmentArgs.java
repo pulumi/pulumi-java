@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
      * 
      */
     @InputImport(name="conditionalCases")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs>> conditionalCases;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs>> conditionalCases;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs>> getConditionalCases() {
         return this.conditionalCases == null ? Input.empty() : this.conditionalCases;
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
      * 
      */
     @InputImport(name="messages")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs>> messages;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs>> messages;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs>> getMessages() {
         return this.messages == null ? Input.empty() : this.messages;
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
      * 
      */
     @InputImport(name="returnPartialResponses")
-    private final @Nullable Input<Boolean> returnPartialResponses;
+      private final @Nullable Input<Boolean> returnPartialResponses;
 
     public Input<Boolean> getReturnPartialResponses() {
         return this.returnPartialResponses == null ? Input.empty() : this.returnPartialResponses;
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
      * 
      */
     @InputImport(name="setParameterActions")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs>> setParameterActions;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs>> setParameterActions;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs>> getSetParameterActions() {
         return this.setParameterActions == null ? Input.empty() : this.setParameterActions;
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
      * 
      */
     @InputImport(name="webhook")
-    private final @Nullable Input<String> webhook;
+      private final @Nullable Input<String> webhook;
 
     public Input<String> getWebhook() {
         return this.webhook == null ? Input.empty() : this.webhook;
@@ -202,7 +202,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
             this.webhook = Input.ofNullable(webhook);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1FulfillmentArgs build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentArgs(conditionalCases, messages, returnPartialResponses, setParameterActions, tag, webhook);
         }

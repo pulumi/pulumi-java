@@ -76,7 +76,6 @@ public final class SubnetReferenceResponse {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public SubnetReferenceResponse build() {
             return new SubnetReferenceResponse(name, sourceArmResourceId);
         }

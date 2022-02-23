@@ -140,7 +140,6 @@ public final class GetGuestConfigurationAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGuestConfigurationAssignmentResult build() {
             return new GetGuestConfigurationAssignmentResult(id, location, name, properties, type);
         }

@@ -142,7 +142,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceFile build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceFile(content, file, path, permissions, state);
         }

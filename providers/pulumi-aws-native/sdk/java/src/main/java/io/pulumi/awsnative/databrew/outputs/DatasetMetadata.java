@@ -54,7 +54,6 @@ public final class DatasetMetadata {
             this.sourceArn = sourceArn;
             return this;
         }
-
         public DatasetMetadata build() {
             return new DatasetMetadata(sourceArn);
         }

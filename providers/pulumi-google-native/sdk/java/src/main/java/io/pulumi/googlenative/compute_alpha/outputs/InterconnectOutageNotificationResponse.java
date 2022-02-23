@@ -201,7 +201,6 @@ public final class InterconnectOutageNotificationResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public InterconnectOutageNotificationResponse build() {
             return new InterconnectOutageNotificationResponse(affectedCircuits, description, endTime, issueType, name, source, startTime, state);
         }

@@ -18,7 +18,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
     @InputImport(name="properties", required=true)
-    private final Input<PrivateEndpointConnectionPropertiesArgs> properties;
+        private final Input<PrivateEndpointConnectionPropertiesArgs> properties;
 
     public Input<PrivateEndpointConnectionPropertiesArgs> getProperties() {
         return this.properties;
@@ -61,7 +61,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(properties);
         }

@@ -61,7 +61,6 @@ public final class DataflowEndpointGroupEndpointDetails {
             this.securityDetails = securityDetails;
             return this;
         }
-
         public DataflowEndpointGroupEndpointDetails build() {
             return new DataflowEndpointGroupEndpointDetails(endpoint, securityDetails);
         }

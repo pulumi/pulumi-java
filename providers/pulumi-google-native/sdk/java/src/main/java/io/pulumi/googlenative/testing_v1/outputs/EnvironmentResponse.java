@@ -75,7 +75,6 @@ public final class EnvironmentResponse {
             this.iosDevice = Objects.requireNonNull(iosDevice);
             return this;
         }
-
         public EnvironmentResponse build() {
             return new EnvironmentResponse(androidDevice, iosDevice);
         }

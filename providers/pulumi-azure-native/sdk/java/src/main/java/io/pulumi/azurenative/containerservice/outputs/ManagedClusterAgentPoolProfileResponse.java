@@ -799,7 +799,6 @@ public final class ManagedClusterAgentPoolProfileResponse {
             this.vnetSubnetID = vnetSubnetID;
             return this;
         }
-
         public ManagedClusterAgentPoolProfileResponse build() {
             return new ManagedClusterAgentPoolProfileResponse(availabilityZones, count, enableAutoScaling, enableEncryptionAtHost, enableFIPS, enableNodePublicIP, gpuInstanceProfile, kubeletConfig, kubeletDiskType, linuxOSConfig, maxCount, maxPods, minCount, mode, name, nodeImageVersion, nodeLabels, nodePublicIPPrefixID, nodeTaints, orchestratorVersion, osDiskSizeGB, osDiskType, osSKU, osType, podSubnetID, powerState, provisioningState, proximityPlacementGroupID, scaleSetEvictionPolicy, scaleSetPriority, spotMaxPrice, tags, type, upgradeSettings, vmSize, vnetSubnetID);
         }

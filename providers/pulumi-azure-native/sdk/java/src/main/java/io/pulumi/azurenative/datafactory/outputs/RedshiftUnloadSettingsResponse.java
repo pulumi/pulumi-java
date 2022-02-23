@@ -75,7 +75,6 @@ public final class RedshiftUnloadSettingsResponse {
             this.s3LinkedServiceName = Objects.requireNonNull(s3LinkedServiceName);
             return this;
         }
-
         public RedshiftUnloadSettingsResponse build() {
             return new RedshiftUnloadSettingsResponse(bucketName, s3LinkedServiceName);
         }

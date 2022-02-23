@@ -25,7 +25,7 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="batchGroupName", required=true)
-    private final Input<String> batchGroupName;
+        private final Input<String> batchGroupName;
 
     public Input<String> getBatchGroupName() {
         return this.batchGroupName;
@@ -36,7 +36,7 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="changedTime")
-    private final @Nullable Input<String> changedTime;
+        private final @Nullable Input<String> changedTime;
 
     public Input<String> getChangedTime() {
         return this.changedTime == null ? Input.empty() : this.changedTime;
@@ -47,14 +47,14 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+        private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
     }
 
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+        private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -65,7 +65,7 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="releaseCriteria", required=true)
-    private final Input<BatchReleaseCriteriaArgs> releaseCriteria;
+        private final Input<BatchReleaseCriteriaArgs> releaseCriteria;
 
     public Input<BatchReleaseCriteriaArgs> getReleaseCriteria() {
         return this.releaseCriteria;
@@ -169,7 +169,6 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
             this.releaseCriteria = Input.of(Objects.requireNonNull(releaseCriteria));
             return this;
         }
-
         public BatchConfigurationPropertiesArgs build() {
             return new BatchConfigurationPropertiesArgs(batchGroupName, changedTime, createdTime, metadata, releaseCriteria);
         }

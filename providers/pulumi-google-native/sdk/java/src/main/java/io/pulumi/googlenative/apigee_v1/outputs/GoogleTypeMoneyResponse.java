@@ -96,7 +96,6 @@ public final class GoogleTypeMoneyResponse {
             this.units = Objects.requireNonNull(units);
             return this;
         }
-
         public GoogleTypeMoneyResponse build() {
             return new GoogleTypeMoneyResponse(currencyCode, nanos, units);
         }

@@ -75,7 +75,6 @@ public final class ApiManagementServiceSkuPropertiesResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ApiManagementServiceSkuPropertiesResponse build() {
             return new ApiManagementServiceSkuPropertiesResponse(capacity, name);
         }

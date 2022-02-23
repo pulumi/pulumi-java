@@ -252,7 +252,6 @@ public final class GatewayPropertiesResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GatewayPropertiesResponse build() {
             return new GatewayPropertiesResponse(apiMetadataProperties, corsProperties, httpsOnly, instances, operatorProperties, provisioningState, $public, resourceRequests, ssoProperties, url);
         }

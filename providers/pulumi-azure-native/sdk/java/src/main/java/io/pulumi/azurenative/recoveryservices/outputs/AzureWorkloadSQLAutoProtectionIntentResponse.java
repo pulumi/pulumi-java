@@ -183,7 +183,6 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse {
             this.workloadItemType = workloadItemType;
             return this;
         }
-
         public AzureWorkloadSQLAutoProtectionIntentResponse build() {
             return new AzureWorkloadSQLAutoProtectionIntentResponse(backupManagementType, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId, workloadItemType);
         }

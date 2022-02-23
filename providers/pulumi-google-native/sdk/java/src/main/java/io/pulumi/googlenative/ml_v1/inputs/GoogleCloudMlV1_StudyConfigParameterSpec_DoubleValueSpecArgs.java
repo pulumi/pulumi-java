@@ -19,7 +19,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
      * 
      */
     @InputImport(name="maxValue")
-    private final @Nullable Input<Double> maxValue;
+      private final @Nullable Input<Double> maxValue;
 
     public Input<Double> getMaxValue() {
         return this.maxValue == null ? Input.empty() : this.maxValue;
@@ -30,7 +30,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
      * 
      */
     @InputImport(name="minValue")
-    private final @Nullable Input<Double> minValue;
+      private final @Nullable Input<Double> minValue;
 
     public Input<Double> getMinValue() {
         return this.minValue == null ? Input.empty() : this.minValue;
@@ -89,7 +89,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
             this.minValue = Input.ofNullable(minValue);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs(maxValue, minValue);
         }

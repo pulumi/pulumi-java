@@ -142,7 +142,6 @@ public final class PodDisruptionBudget {
             this.status = status;
             return this;
         }
-
         public PodDisruptionBudget build() {
             return new PodDisruptionBudget(apiVersion, kind, metadata, spec, status);
         }

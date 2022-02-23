@@ -97,7 +97,6 @@ public final class FlowSalesforceDestinationProperties {
             this.writeOperationType = writeOperationType;
             return this;
         }
-
         public FlowSalesforceDestinationProperties build() {
             return new FlowSalesforceDestinationProperties(errorHandlingConfig, idFieldNames, object, writeOperationType);
         }

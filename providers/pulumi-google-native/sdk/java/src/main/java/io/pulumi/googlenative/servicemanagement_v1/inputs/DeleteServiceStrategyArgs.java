@@ -34,7 +34,6 @@ public final class DeleteServiceStrategyArgs extends io.pulumi.resources.Resourc
         public Builder(DeleteServiceStrategyArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DeleteServiceStrategyArgs build() {
             return new DeleteServiceStrategyArgs();
         }

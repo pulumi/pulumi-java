@@ -81,7 +81,6 @@ public final class GameServerClusterConnectionInfo {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public GameServerClusterConnectionInfo build() {
             return new GameServerClusterConnectionInfo(gkeClusterReference, namespace);
         }

@@ -166,7 +166,6 @@ public final class TlsEndpointResponse {
             this.validationOptions = validationOptions;
             return this;
         }
-
         public TlsEndpointResponse build() {
             return new TlsEndpointResponse(credentials, trustedCertificates, tunnel, type, url, validationOptions);
         }

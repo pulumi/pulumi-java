@@ -118,7 +118,6 @@ public final class AksNetworkingConfigurationResponse {
             this.subnetId = subnetId;
             return this;
         }
-
         public AksNetworkingConfigurationResponse build() {
             return new AksNetworkingConfigurationResponse(dnsServiceIP, dockerBridgeCidr, serviceCidr, subnetId);
         }

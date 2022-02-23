@@ -23,7 +23,7 @@ public final class MoveResourceErrorResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable MoveResourceErrorBodyResponse properties;
+        private final @Nullable MoveResourceErrorBodyResponse properties;
 
     public Optional<MoveResourceErrorBodyResponse> getProperties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
@@ -61,7 +61,6 @@ public final class MoveResourceErrorResponse extends io.pulumi.resources.InvokeA
             this.properties = properties;
             return this;
         }
-
         public MoveResourceErrorResponse build() {
             return new MoveResourceErrorResponse(properties);
         }

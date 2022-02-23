@@ -295,7 +295,6 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse {
             this.timePartConfig = Objects.requireNonNull(timePartConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2PrimitiveTransformationResponse build() {
             return new GooglePrivacyDlpV2PrimitiveTransformationResponse(bucketingConfig, characterMaskConfig, cryptoDeterministicConfig, cryptoHashConfig, cryptoReplaceFfxFpeConfig, dateShiftConfig, fixedSizeBucketingConfig, redactConfig, replaceConfig, replaceDictionaryConfig, replaceWithInfoTypeConfig, timePartConfig);
         }

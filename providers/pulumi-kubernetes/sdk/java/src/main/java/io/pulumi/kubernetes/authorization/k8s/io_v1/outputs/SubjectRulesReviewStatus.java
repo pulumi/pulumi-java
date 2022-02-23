@@ -122,7 +122,6 @@ public final class SubjectRulesReviewStatus {
             this.resourceRules = Objects.requireNonNull(resourceRules);
             return this;
         }
-
         public SubjectRulesReviewStatus build() {
             return new SubjectRulesReviewStatus(evaluationError, incomplete, nonResourceRules, resourceRules);
         }

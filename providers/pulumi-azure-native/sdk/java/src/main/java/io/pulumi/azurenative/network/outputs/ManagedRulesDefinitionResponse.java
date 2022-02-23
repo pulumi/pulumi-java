@@ -77,7 +77,6 @@ public final class ManagedRulesDefinitionResponse {
             this.managedRuleSets = Objects.requireNonNull(managedRuleSets);
             return this;
         }
-
         public ManagedRulesDefinitionResponse build() {
             return new ManagedRulesDefinitionResponse(exclusions, managedRuleSets);
         }

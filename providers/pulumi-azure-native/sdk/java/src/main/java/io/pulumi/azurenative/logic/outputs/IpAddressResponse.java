@@ -54,7 +54,6 @@ public final class IpAddressResponse {
             this.address = address;
             return this;
         }
-
         public IpAddressResponse build() {
             return new IpAddressResponse(address);
         }

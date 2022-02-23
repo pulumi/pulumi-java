@@ -74,7 +74,6 @@ public final class RouteWarningsItemDataItemResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RouteWarningsItemDataItemResponse build() {
             return new RouteWarningsItemDataItemResponse(key, value);
         }

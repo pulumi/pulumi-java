@@ -182,7 +182,6 @@ public final class ParameterMetadataResponse {
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
-
         public ParameterMetadataResponse build() {
             return new ParameterMetadataResponse(customMetadata, helpText, isOptional, label, name, paramType, regexes);
         }

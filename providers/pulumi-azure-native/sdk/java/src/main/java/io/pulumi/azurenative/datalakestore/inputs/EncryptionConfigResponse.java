@@ -24,7 +24,7 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="keyVaultMetaInfo")
-    private final @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo;
+        private final @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo;
 
     public Optional<KeyVaultMetaInfoResponse> getKeyVaultMetaInfo() {
         return this.keyVaultMetaInfo == null ? Optional.empty() : Optional.ofNullable(this.keyVaultMetaInfo);
@@ -35,7 +35,7 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -84,7 +84,6 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EncryptionConfigResponse build() {
             return new EncryptionConfigResponse(keyVaultMetaInfo, type);
         }

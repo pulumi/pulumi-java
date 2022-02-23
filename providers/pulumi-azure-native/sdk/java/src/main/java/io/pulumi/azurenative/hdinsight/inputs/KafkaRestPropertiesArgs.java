@@ -25,7 +25,7 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientGroupInfo")
-    private final @Nullable Input<ClientGroupInfoArgs> clientGroupInfo;
+        private final @Nullable Input<ClientGroupInfoArgs> clientGroupInfo;
 
     public Input<ClientGroupInfoArgs> getClientGroupInfo() {
         return this.clientGroupInfo == null ? Input.empty() : this.clientGroupInfo;
@@ -36,7 +36,7 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configurationOverride")
-    private final @Nullable Input<Map<String,String>> configurationOverride;
+        private final @Nullable Input<Map<String,String>> configurationOverride;
 
     public Input<Map<String,String>> getConfigurationOverride() {
         return this.configurationOverride == null ? Input.empty() : this.configurationOverride;
@@ -95,7 +95,6 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
             this.configurationOverride = Input.ofNullable(configurationOverride);
             return this;
         }
-
         public KafkaRestPropertiesArgs build() {
             return new KafkaRestPropertiesArgs(clientGroupInfo, configurationOverride);
         }

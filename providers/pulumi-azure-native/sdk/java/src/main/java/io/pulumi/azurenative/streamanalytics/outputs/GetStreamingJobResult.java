@@ -546,7 +546,6 @@ public final class GetStreamingJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStreamingJobResult build() {
             return new GetStreamingJobResult(compatibilityLevel, createdDate, dataLocale, etag, eventsLateArrivalMaxDelayInSeconds, eventsOutOfOrderMaxDelayInSeconds, eventsOutOfOrderPolicy, functions, id, inputs, jobId, jobState, lastOutputEventTime, location, name, outputErrorPolicy, outputStartMode, outputStartTime, outputs, provisioningState, sku, tags, transformation, type);
         }

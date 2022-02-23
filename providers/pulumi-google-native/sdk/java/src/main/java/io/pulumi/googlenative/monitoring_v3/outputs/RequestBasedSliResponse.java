@@ -75,7 +75,6 @@ public final class RequestBasedSliResponse {
             this.goodTotalRatio = Objects.requireNonNull(goodTotalRatio);
             return this;
         }
-
         public RequestBasedSliResponse build() {
             return new RequestBasedSliResponse(distributionCut, goodTotalRatio);
         }

@@ -21,7 +21,7 @@ public final class UserAssignedResourceIdentityResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -32,7 +32,7 @@ public final class UserAssignedResourceIdentityResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+        private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -81,7 +81,6 @@ public final class UserAssignedResourceIdentityResponse extends io.pulumi.resour
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public UserAssignedResourceIdentityResponse build() {
             return new UserAssignedResourceIdentityResponse(principalId, tenantId);
         }

@@ -25,7 +25,7 @@ public final class ServiceManagedIdentityIdentityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ManagedServiceIdentityType>> type;
+        private final @Nullable Input<Either<String,ManagedServiceIdentityType>> type;
 
     public Input<Either<String,ManagedServiceIdentityType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -68,7 +68,6 @@ public final class ServiceManagedIdentityIdentityArgs extends io.pulumi.resource
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ServiceManagedIdentityIdentityArgs build() {
             return new ServiceManagedIdentityIdentityArgs(type);
         }

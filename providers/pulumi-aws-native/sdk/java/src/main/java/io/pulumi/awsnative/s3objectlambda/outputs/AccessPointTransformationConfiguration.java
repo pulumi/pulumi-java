@@ -60,7 +60,6 @@ public final class AccessPointTransformationConfiguration {
             this.contentTransformation = Objects.requireNonNull(contentTransformation);
             return this;
         }
-
         public AccessPointTransformationConfiguration build() {
             return new AccessPointTransformationConfiguration(actions, contentTransformation);
         }

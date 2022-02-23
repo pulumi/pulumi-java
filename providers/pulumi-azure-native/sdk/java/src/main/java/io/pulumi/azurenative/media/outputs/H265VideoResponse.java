@@ -207,7 +207,6 @@ public final class H265VideoResponse {
             this.syncMode = syncMode;
             return this;
         }
-
         public H265VideoResponse build() {
             return new H265VideoResponse(complexity, keyFrameInterval, label, layers, odataType, sceneChangeDetection, stretchMode, syncMode);
         }

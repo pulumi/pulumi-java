@@ -76,7 +76,6 @@ public final class GetAccountResult {
             this.id = id;
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(cloudWatchRoleArn, id);
         }

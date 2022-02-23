@@ -25,7 +25,7 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="request", required=true)
-    private final Input<RestRequestArgs> request;
+        private final Input<RestRequestArgs> request;
 
     public Input<RestRequestArgs> getRequest() {
         return this.request;
@@ -47,7 +47,7 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="response")
-    private final @Nullable Input<RestResponseArgs> response;
+        private final @Nullable Input<RestResponseArgs> response;
 
     public Input<RestResponseArgs> getResponse() {
         return this.response == null ? Input.empty() : this.response;
@@ -121,7 +121,6 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
             this.response = Input.ofNullable(response);
             return this;
         }
-
         public RestHealthCheckArgs build() {
             return new RestHealthCheckArgs(name, request, response);
         }

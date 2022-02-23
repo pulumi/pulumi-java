@@ -137,7 +137,6 @@ public final class EdifactProcessingSettingsResponse {
             this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator);
             return this;
         }
-
         public EdifactProcessingSettingsResponse build() {
             return new EdifactProcessingSettingsResponse(createEmptyXmlTagsForTrailingSeparators, maskSecurityInfo, preserveInterchange, suspendInterchangeOnError, useDotAsDecimalSeparator);
         }

@@ -54,7 +54,6 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessage {
             this.text = text;
             return this;
         }
-
         public CxPageTransitionRouteTriggerFulfillmentMessage build() {
             return new CxPageTransitionRouteTriggerFulfillmentMessage(text);
         }

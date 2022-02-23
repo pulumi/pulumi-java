@@ -247,7 +247,6 @@ public final class GetIpGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIpGroupResult build() {
             return new GetIpGroupResult(etag, firewallPolicies, firewalls, id, ipAddresses, location, name, provisioningState, tags, type);
         }

@@ -14,14 +14,14 @@ public final class FirewallPolicyCustomAction extends io.pulumi.resources.Invoke
     public static final FirewallPolicyCustomAction Empty = new FirewallPolicyCustomAction();
 
     @InputImport(name="actionDefinition", required=true)
-    private final FirewallPolicyActionDefinition actionDefinition;
+        private final FirewallPolicyActionDefinition actionDefinition;
 
     public FirewallPolicyActionDefinition getActionDefinition() {
         return this.actionDefinition;
     }
 
     @InputImport(name="actionName", required=true)
-    private final String actionName;
+        private final String actionName;
 
     public String getActionName() {
         return this.actionName;
@@ -70,7 +70,6 @@ public final class FirewallPolicyCustomAction extends io.pulumi.resources.Invoke
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
-
         public FirewallPolicyCustomAction build() {
             return new FirewallPolicyCustomAction(actionDefinition, actionName);
         }

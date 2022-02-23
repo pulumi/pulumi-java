@@ -15,7 +15,7 @@ public final class EntryBigqueryTableSpecViewSpecGetArgs extends io.pulumi.resou
     public static final EntryBigqueryTableSpecViewSpecGetArgs Empty = new EntryBigqueryTableSpecViewSpecGetArgs();
 
     @InputImport(name="viewQuery")
-    private final @Nullable Input<String> viewQuery;
+        private final @Nullable Input<String> viewQuery;
 
     public Input<String> getViewQuery() {
         return this.viewQuery == null ? Input.empty() : this.viewQuery;
@@ -58,7 +58,6 @@ public final class EntryBigqueryTableSpecViewSpecGetArgs extends io.pulumi.resou
             this.viewQuery = Input.ofNullable(viewQuery);
             return this;
         }
-
         public EntryBigqueryTableSpecViewSpecGetArgs build() {
             return new EntryBigqueryTableSpecViewSpecGetArgs(viewQuery);
         }

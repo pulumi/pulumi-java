@@ -17,7 +17,7 @@ public final class MonitoringScheduleMonitoringOutput extends io.pulumi.resource
     public static final MonitoringScheduleMonitoringOutput Empty = new MonitoringScheduleMonitoringOutput();
 
     @InputImport(name="s3Output", required=true)
-    private final MonitoringScheduleS3Output s3Output;
+        private final MonitoringScheduleS3Output s3Output;
 
     public MonitoringScheduleS3Output getS3Output() {
         return this.s3Output;
@@ -55,7 +55,6 @@ public final class MonitoringScheduleMonitoringOutput extends io.pulumi.resource
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }
-
         public MonitoringScheduleMonitoringOutput build() {
             return new MonitoringScheduleMonitoringOutput(s3Output);
         }

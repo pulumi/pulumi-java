@@ -76,7 +76,6 @@ public final class RestorePointCollectionSourcePropertiesResponse {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public RestorePointCollectionSourcePropertiesResponse build() {
             return new RestorePointCollectionSourcePropertiesResponse(id, location);
         }

@@ -19,7 +19,7 @@ public final class RegionInstanceGroupManagerStatefulDiskGetArgs extends io.pulu
      * 
      */
     @InputImport(name="deleteRule")
-    private final @Nullable Input<String> deleteRule;
+        private final @Nullable Input<String> deleteRule;
 
     public Input<String> getDeleteRule() {
         return this.deleteRule == null ? Input.empty() : this.deleteRule;
@@ -30,7 +30,7 @@ public final class RegionInstanceGroupManagerStatefulDiskGetArgs extends io.pulu
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+        private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -89,7 +89,6 @@ public final class RegionInstanceGroupManagerStatefulDiskGetArgs extends io.pulu
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public RegionInstanceGroupManagerStatefulDiskGetArgs build() {
             return new RegionInstanceGroupManagerStatefulDiskGetArgs(deleteRule, deviceName);
         }

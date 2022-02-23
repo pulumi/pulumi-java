@@ -74,7 +74,6 @@ public final class OracleSourceConfigResponse {
             this.includeObjects = Objects.requireNonNull(includeObjects);
             return this;
         }
-
         public OracleSourceConfigResponse build() {
             return new OracleSourceConfigResponse(excludeObjects, includeObjects);
         }

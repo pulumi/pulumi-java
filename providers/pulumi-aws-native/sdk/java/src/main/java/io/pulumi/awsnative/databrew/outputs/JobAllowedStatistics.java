@@ -45,7 +45,6 @@ public final class JobAllowedStatistics {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }
-
         public JobAllowedStatistics build() {
             return new JobAllowedStatistics(statistics);
         }

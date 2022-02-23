@@ -74,7 +74,6 @@ public final class DynamicGroupStatusResponse {
             this.statusTime = Objects.requireNonNull(statusTime);
             return this;
         }
-
         public DynamicGroupStatusResponse build() {
             return new DynamicGroupStatusResponse(status, statusTime);
         }

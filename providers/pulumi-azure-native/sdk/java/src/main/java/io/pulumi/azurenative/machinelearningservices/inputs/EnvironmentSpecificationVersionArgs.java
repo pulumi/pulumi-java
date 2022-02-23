@@ -31,7 +31,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="condaFile")
-    private final @Nullable Input<String> condaFile;
+        private final @Nullable Input<String> condaFile;
 
     public Input<String> getCondaFile() {
         return this.condaFile == null ? Input.empty() : this.condaFile;
@@ -42,7 +42,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -53,7 +53,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="docker")
-    private final @Nullable Input<Either<DockerBuildArgs,DockerImageArgs>> docker;
+        private final @Nullable Input<Either<DockerBuildArgs,DockerImageArgs>> docker;
 
     public Input<Either<DockerBuildArgs,DockerImageArgs>> getDocker() {
         return this.docker == null ? Input.empty() : this.docker;
@@ -64,7 +64,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="inferenceContainerProperties")
-    private final @Nullable Input<InferenceContainerPropertiesArgs> inferenceContainerProperties;
+        private final @Nullable Input<InferenceContainerPropertiesArgs> inferenceContainerProperties;
 
     public Input<InferenceContainerPropertiesArgs> getInferenceContainerProperties() {
         return this.inferenceContainerProperties == null ? Input.empty() : this.inferenceContainerProperties;
@@ -75,7 +75,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isAnonymous")
-    private final @Nullable Input<Boolean> isAnonymous;
+        private final @Nullable Input<Boolean> isAnonymous;
 
     public Input<Boolean> getIsAnonymous() {
         return this.isAnonymous == null ? Input.empty() : this.isAnonymous;
@@ -86,7 +86,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -97,7 +97,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -231,7 +231,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public EnvironmentSpecificationVersionArgs build() {
             return new EnvironmentSpecificationVersionArgs(condaFile, description, docker, inferenceContainerProperties, isAnonymous, properties, tags);
         }

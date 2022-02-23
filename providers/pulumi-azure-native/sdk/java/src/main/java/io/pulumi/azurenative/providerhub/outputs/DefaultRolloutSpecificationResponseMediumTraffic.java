@@ -61,7 +61,6 @@ public final class DefaultRolloutSpecificationResponseMediumTraffic {
             this.waitDuration = waitDuration;
             return this;
         }
-
         public DefaultRolloutSpecificationResponseMediumTraffic build() {
             return new DefaultRolloutSpecificationResponseMediumTraffic(regions, waitDuration);
         }

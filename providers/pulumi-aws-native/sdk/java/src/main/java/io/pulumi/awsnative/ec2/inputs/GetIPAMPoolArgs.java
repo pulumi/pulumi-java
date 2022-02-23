@@ -17,7 +17,7 @@ public final class GetIPAMPoolArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipamPoolId", required=true)
-    private final String ipamPoolId;
+        private final String ipamPoolId;
 
     public String getIpamPoolId() {
         return this.ipamPoolId;
@@ -55,7 +55,6 @@ public final class GetIPAMPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
         }
-
         public GetIPAMPoolArgs build() {
             return new GetIPAMPoolArgs(ipamPoolId);
         }

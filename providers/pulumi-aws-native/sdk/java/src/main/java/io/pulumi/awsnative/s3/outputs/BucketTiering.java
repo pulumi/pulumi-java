@@ -75,7 +75,6 @@ public final class BucketTiering {
             this.days = Objects.requireNonNull(days);
             return this;
         }
-
         public BucketTiering build() {
             return new BucketTiering(accessTier, days);
         }

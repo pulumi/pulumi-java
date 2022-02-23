@@ -30,7 +30,6 @@ public final class ComponentVariantValuesArgs extends io.pulumi.resources.Resour
         public Builder(ComponentVariantValuesArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ComponentVariantValuesArgs build() {
             return new ComponentVariantValuesArgs();
         }

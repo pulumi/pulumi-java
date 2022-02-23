@@ -19,7 +19,7 @@ public final class ModelDefinitionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="modelOptions", required=true)
-    private final ModelDefinitionModelOptionsResponse modelOptions;
+      private final ModelDefinitionModelOptionsResponse modelOptions;
 
     public ModelDefinitionModelOptionsResponse getModelOptions() {
         return this.modelOptions;
@@ -30,7 +30,7 @@ public final class ModelDefinitionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="trainingRuns", required=true)
-    private final List<BqmlTrainingRunResponse> trainingRuns;
+      private final List<BqmlTrainingRunResponse> trainingRuns;
 
     public List<BqmlTrainingRunResponse> getTrainingRuns() {
         return this.trainingRuns;
@@ -79,7 +79,6 @@ public final class ModelDefinitionResponse extends io.pulumi.resources.InvokeArg
             this.trainingRuns = Objects.requireNonNull(trainingRuns);
             return this;
         }
-
         public ModelDefinitionResponse build() {
             return new ModelDefinitionResponse(modelOptions, trainingRuns);
         }

@@ -119,7 +119,6 @@ public final class GetTenantConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTenantConfigurationResult build() {
             return new GetTenantConfigurationResult(enforcePrivateMarkdownStorage, id, name, type);
         }

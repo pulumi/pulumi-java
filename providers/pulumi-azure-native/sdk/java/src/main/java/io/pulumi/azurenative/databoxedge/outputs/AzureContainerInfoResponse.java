@@ -95,7 +95,6 @@ public final class AzureContainerInfoResponse {
             this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
             return this;
         }
-
         public AzureContainerInfoResponse build() {
             return new AzureContainerInfoResponse(containerName, dataFormat, storageAccountCredentialId);
         }

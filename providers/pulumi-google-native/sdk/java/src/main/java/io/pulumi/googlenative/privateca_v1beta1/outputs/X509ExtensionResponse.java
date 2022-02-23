@@ -97,7 +97,6 @@ public final class X509ExtensionResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public X509ExtensionResponse build() {
             return new X509ExtensionResponse(critical, objectId, value);
         }

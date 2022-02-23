@@ -17,7 +17,7 @@ public final class GetQuickConnectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="quickConnectArn", required=true)
-    private final String quickConnectArn;
+        private final String quickConnectArn;
 
     public String getQuickConnectArn() {
         return this.quickConnectArn;
@@ -55,7 +55,6 @@ public final class GetQuickConnectArgs extends io.pulumi.resources.InvokeArgs {
             this.quickConnectArn = Objects.requireNonNull(quickConnectArn);
             return this;
         }
-
         public GetQuickConnectArgs build() {
             return new GetQuickConnectArgs(quickConnectArn);
         }

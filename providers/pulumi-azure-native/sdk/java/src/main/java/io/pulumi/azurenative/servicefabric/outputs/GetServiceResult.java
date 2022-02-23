@@ -400,7 +400,6 @@ public final class GetServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(correlationScheme, defaultMoveCost, etag, id, location, name, partitionDescription, placementConstraints, provisioningState, serviceDnsName, serviceKind, serviceLoadMetrics, servicePackageActivationMode, servicePlacementPolicies, serviceTypeName, tags, type);
         }

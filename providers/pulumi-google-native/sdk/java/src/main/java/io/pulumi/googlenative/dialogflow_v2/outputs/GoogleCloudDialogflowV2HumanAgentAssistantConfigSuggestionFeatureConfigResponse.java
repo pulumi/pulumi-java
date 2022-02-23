@@ -163,7 +163,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
             this.suggestionTriggerSettings = Objects.requireNonNull(suggestionTriggerSettings);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse(conversationModelConfig, conversationProcessConfig, enableEventBasedSuggestion, queryConfig, suggestionFeature, suggestionTriggerSettings);
         }

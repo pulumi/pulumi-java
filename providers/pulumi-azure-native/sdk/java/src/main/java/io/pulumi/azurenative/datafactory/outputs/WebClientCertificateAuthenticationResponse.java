@@ -122,7 +122,6 @@ public final class WebClientCertificateAuthenticationResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public WebClientCertificateAuthenticationResponse build() {
             return new WebClientCertificateAuthenticationResponse(authenticationType, password, pfx, url);
         }

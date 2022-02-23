@@ -53,7 +53,6 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyU
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage build() {
             return new CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage(objectIdPaths);
         }

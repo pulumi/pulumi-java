@@ -14,14 +14,14 @@ public final class AppBlockS3LocationArgs extends io.pulumi.resources.ResourceAr
     public static final AppBlockS3LocationArgs Empty = new AppBlockS3LocationArgs();
 
     @InputImport(name="s3Bucket", required=true)
-    private final Input<String> s3Bucket;
+        private final Input<String> s3Bucket;
 
     public Input<String> getS3Bucket() {
         return this.s3Bucket;
     }
 
     @InputImport(name="s3Key", required=true)
-    private final Input<String> s3Key;
+        private final Input<String> s3Key;
 
     public Input<String> getS3Key() {
         return this.s3Key;
@@ -80,7 +80,6 @@ public final class AppBlockS3LocationArgs extends io.pulumi.resources.ResourceAr
             this.s3Key = Input.of(Objects.requireNonNull(s3Key));
             return this;
         }
-
         public AppBlockS3LocationArgs build() {
             return new AppBlockS3LocationArgs(s3Bucket, s3Key);
         }

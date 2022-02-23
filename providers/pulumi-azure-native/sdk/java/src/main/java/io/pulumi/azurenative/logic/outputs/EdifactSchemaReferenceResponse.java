@@ -181,7 +181,6 @@ public final class EdifactSchemaReferenceResponse {
             this.senderApplicationQualifier = senderApplicationQualifier;
             return this;
         }
-
         public EdifactSchemaReferenceResponse build() {
             return new EdifactSchemaReferenceResponse(associationAssignedCode, messageId, messageRelease, messageVersion, schemaName, senderApplicationId, senderApplicationQualifier);
         }

@@ -56,7 +56,6 @@ public final class InboundSamlConfigIdpConfigIdpCertificate {
             this.x509Certificate = x509Certificate;
             return this;
         }
-
         public InboundSamlConfigIdpConfigIdpCertificate build() {
             return new InboundSamlConfigIdpConfigIdpCertificate(x509Certificate);
         }

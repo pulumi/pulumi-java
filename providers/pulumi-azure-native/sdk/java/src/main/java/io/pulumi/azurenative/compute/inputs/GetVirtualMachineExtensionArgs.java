@@ -19,7 +19,7 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vmExtensionName", required=true)
-    private final String vmExtensionName;
+        private final String vmExtensionName;
 
     public String getVmExtensionName() {
         return this.vmExtensionName;
@@ -52,7 +52,7 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vmName", required=true)
-    private final String vmName;
+        private final String vmName;
 
     public String getVmName() {
         return this.vmName;
@@ -121,7 +121,6 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
-
         public GetVirtualMachineExtensionArgs build() {
             return new GetVirtualMachineExtensionArgs(expand, resourceGroupName, vmExtensionName, vmName);
         }

@@ -163,7 +163,6 @@ public final class ManagedPrivateEndpointResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ManagedPrivateEndpointResponse build() {
             return new ManagedPrivateEndpointResponse(connectionState, fqdns, groupId, isReserved, privateLinkResourceId, provisioningState);
         }

@@ -179,7 +179,6 @@ public final class GetGeoBackupPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGeoBackupPolicyResult build() {
             return new GetGeoBackupPolicyResult(id, kind, location, name, state, storageType, type);
         }

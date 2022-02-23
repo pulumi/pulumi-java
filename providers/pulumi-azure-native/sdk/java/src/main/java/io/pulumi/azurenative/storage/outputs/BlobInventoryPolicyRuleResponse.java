@@ -97,7 +97,6 @@ public final class BlobInventoryPolicyRuleResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public BlobInventoryPolicyRuleResponse build() {
             return new BlobInventoryPolicyRuleResponse(definition, enabled, name);
         }

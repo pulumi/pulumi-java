@@ -183,7 +183,6 @@ public final class GetExtensionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExtensionResult build() {
             return new GetExtensionResult(id, location, name, plan, properties, tags, type);
         }

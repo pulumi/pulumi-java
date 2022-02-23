@@ -82,7 +82,6 @@ public final class RegionBackendServiceOutlierDetectionBaseEjectionTime {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public RegionBackendServiceOutlierDetectionBaseEjectionTime build() {
             return new RegionBackendServiceOutlierDetectionBaseEjectionTime(nanos, seconds);
         }

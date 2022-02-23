@@ -21,7 +21,7 @@ public final class SoftwareRecipeStepInstallDpkgResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="artifactId", required=true)
-    private final String artifactId;
+      private final String artifactId;
 
     public String getArtifactId() {
         return this.artifactId;
@@ -59,7 +59,6 @@ public final class SoftwareRecipeStepInstallDpkgResponse extends io.pulumi.resou
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public SoftwareRecipeStepInstallDpkgResponse build() {
             return new SoftwareRecipeStepInstallDpkgResponse(artifactId);
         }

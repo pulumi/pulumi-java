@@ -58,7 +58,6 @@ public final class PolicyTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PolicyTag build() {
             return new PolicyTag(key, value);
         }

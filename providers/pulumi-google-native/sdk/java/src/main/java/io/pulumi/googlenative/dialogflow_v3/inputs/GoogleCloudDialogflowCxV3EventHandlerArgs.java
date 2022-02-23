@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="event", required=true)
-    private final Input<String> event;
+      private final Input<String> event;
 
     public Input<String> getEvent() {
         return this.event;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="targetFlow")
-    private final @Nullable Input<String> targetFlow;
+      private final @Nullable Input<String> targetFlow;
 
     public Input<String> getTargetFlow() {
         return this.targetFlow == null ? Input.empty() : this.targetFlow;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="targetPage")
-    private final @Nullable Input<String> targetPage;
+      private final @Nullable Input<String> targetPage;
 
     public Input<String> getTargetPage() {
         return this.targetPage == null ? Input.empty() : this.targetPage;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="triggerFulfillment")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment;
 
     public Input<GoogleCloudDialogflowCxV3FulfillmentArgs> getTriggerFulfillment() {
         return this.triggerFulfillment == null ? Input.empty() : this.triggerFulfillment;
@@ -146,7 +146,6 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
             this.triggerFulfillment = Input.ofNullable(triggerFulfillment);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3EventHandlerArgs build() {
             return new GoogleCloudDialogflowCxV3EventHandlerArgs(event, targetFlow, targetPage, triggerFulfillment);
         }

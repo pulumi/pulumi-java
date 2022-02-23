@@ -99,7 +99,6 @@ public final class GetMapResult {
             this.updateTime = updateTime;
             return this;
         }
-
         public GetMapResult build() {
             return new GetMapResult(arn, createTime, dataSource, mapArn, updateTime);
         }

@@ -251,7 +251,6 @@ public final class ValidationActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public ValidationActivityResponse build() {
             return new ValidationActivityResponse(childItems, dataset, dependsOn, description, minimumSize, name, sleep, timeout, type, userProperties);
         }

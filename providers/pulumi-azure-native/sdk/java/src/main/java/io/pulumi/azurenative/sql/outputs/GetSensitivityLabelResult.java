@@ -300,7 +300,6 @@ public final class GetSensitivityLabelResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSensitivityLabelResult build() {
             return new GetSensitivityLabelResult(columnName, id, informationType, informationTypeId, isDisabled, labelId, labelName, managedBy, name, rank, schemaName, tableName, type);
         }

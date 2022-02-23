@@ -97,7 +97,6 @@ public final class GetStoredInfoTypeResult {
             this.pendingVersions = Objects.requireNonNull(pendingVersions);
             return this;
         }
-
         public GetStoredInfoTypeResult build() {
             return new GetStoredInfoTypeResult(currentVersion, name, pendingVersions);
         }

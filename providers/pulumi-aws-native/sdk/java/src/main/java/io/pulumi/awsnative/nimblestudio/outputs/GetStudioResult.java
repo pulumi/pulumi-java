@@ -187,7 +187,6 @@ public final class GetStudioResult {
             this.userRoleArn = userRoleArn;
             return this;
         }
-
         public GetStudioResult build() {
             return new GetStudioResult(adminRoleArn, displayName, homeRegion, ssoClientId, studioEncryptionConfiguration, studioId, studioUrl, userRoleArn);
         }

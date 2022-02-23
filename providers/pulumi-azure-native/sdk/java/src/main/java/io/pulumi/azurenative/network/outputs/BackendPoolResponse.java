@@ -184,7 +184,6 @@ public final class BackendPoolResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BackendPoolResponse build() {
             return new BackendPoolResponse(backends, healthProbeSettings, id, loadBalancingSettings, name, resourceState, type);
         }

@@ -142,7 +142,6 @@ public final class ResponsePlanIncidentTemplate {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ResponsePlanIncidentTemplate build() {
             return new ResponsePlanIncidentTemplate(dedupeString, impact, notificationTargets, summary, title);
         }

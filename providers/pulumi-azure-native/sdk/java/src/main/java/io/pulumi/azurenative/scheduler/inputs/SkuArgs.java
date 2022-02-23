@@ -19,7 +19,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<SkuDefinition> name;
+        private final @Nullable Input<SkuDefinition> name;
 
     public Input<SkuDefinition> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public SkuArgs build() {
             return new SkuArgs(name);
         }

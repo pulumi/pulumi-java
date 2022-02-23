@@ -17,7 +17,7 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final String containerName;
+        private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -28,7 +28,7 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+        private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -39,7 +39,7 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageAccountName", required=true)
-    private final String storageAccountName;
+        private final String storageAccountName;
 
     public String getStorageAccountName() {
         return this.storageAccountName;
@@ -119,7 +119,6 @@ public final class GetContainerArgs extends io.pulumi.resources.InvokeArgs {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
-
         public GetContainerArgs build() {
             return new GetContainerArgs(containerName, deviceName, resourceGroupName, storageAccountName);
         }

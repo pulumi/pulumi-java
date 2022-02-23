@@ -243,7 +243,6 @@ public final class QuotaLimitResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public QuotaLimitResponse build() {
             return new QuotaLimitResponse(defaultLimit, description, displayName, duration, freeTier, maxLimit, metric, name, unit, values);
         }

@@ -21,7 +21,7 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="complianceStatus", required=true)
-    private final String complianceStatus;
+        private final String complianceStatus;
 
     public String getComplianceStatus() {
         return this.complianceStatus;
@@ -32,7 +32,7 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastComplianceChecked", required=true)
-    private final String lastComplianceChecked;
+        private final String lastComplianceChecked;
 
     public String getLastComplianceChecked() {
         return this.lastComplianceChecked;
@@ -43,7 +43,7 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="latestReportId", required=true)
-    private final String latestReportId;
+        private final String latestReportId;
 
     public String getLatestReportId() {
         return this.latestReportId;
@@ -54,7 +54,7 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vmId", required=true)
-    private final String vmId;
+        private final String vmId;
 
     public String getVmId() {
         return this.vmId;
@@ -65,7 +65,7 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vmResourceId", required=true)
-    private final String vmResourceId;
+        private final String vmResourceId;
 
     public String getVmResourceId() {
         return this.vmResourceId;
@@ -144,7 +144,6 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.vmResourceId = Objects.requireNonNull(vmResourceId);
             return this;
         }
-
         public VMSSVMInfoResponse build() {
             return new VMSSVMInfoResponse(complianceStatus, lastComplianceChecked, latestReportId, vmId, vmResourceId);
         }

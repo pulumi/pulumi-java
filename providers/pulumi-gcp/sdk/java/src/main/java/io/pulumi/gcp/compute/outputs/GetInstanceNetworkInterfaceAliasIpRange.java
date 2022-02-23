@@ -78,7 +78,6 @@ public final class GetInstanceNetworkInterfaceAliasIpRange {
             this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
             return this;
         }
-
         public GetInstanceNetworkInterfaceAliasIpRange build() {
             return new GetInstanceNetworkInterfaceAliasIpRange(ipCidrRange, subnetworkRangeName);
         }

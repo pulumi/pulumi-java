@@ -96,7 +96,6 @@ public final class GetGcpUserAccessBindingResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetGcpUserAccessBindingResult build() {
             return new GetGcpUserAccessBindingResult(accessLevels, groupKey, name);
         }

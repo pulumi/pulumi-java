@@ -20,7 +20,7 @@ public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="localDatas")
-    private final @Nullable Input<List<ResourceRecordSetArgs>> localDatas;
+      private final @Nullable Input<List<ResourceRecordSetArgs>> localDatas;
 
     public Input<List<ResourceRecordSetArgs>> getLocalDatas() {
         return this.localDatas == null ? Input.empty() : this.localDatas;
@@ -63,7 +63,6 @@ public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.R
             this.localDatas = Input.ofNullable(localDatas);
             return this;
         }
-
         public ResponsePolicyRuleLocalDataArgs build() {
             return new ResponsePolicyRuleLocalDataArgs(localDatas);
         }

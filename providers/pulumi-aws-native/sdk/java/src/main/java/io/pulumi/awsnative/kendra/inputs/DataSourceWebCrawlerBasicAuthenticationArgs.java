@@ -15,21 +15,21 @@ public final class DataSourceWebCrawlerBasicAuthenticationArgs extends io.pulumi
     public static final DataSourceWebCrawlerBasicAuthenticationArgs Empty = new DataSourceWebCrawlerBasicAuthenticationArgs();
 
     @InputImport(name="credentials", required=true)
-    private final Input<String> credentials;
+        private final Input<String> credentials;
 
     public Input<String> getCredentials() {
         return this.credentials;
     }
 
     @InputImport(name="host", required=true)
-    private final Input<String> host;
+        private final Input<String> host;
 
     public Input<String> getHost() {
         return this.host;
     }
 
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -103,7 +103,6 @@ public final class DataSourceWebCrawlerBasicAuthenticationArgs extends io.pulumi
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
-
         public DataSourceWebCrawlerBasicAuthenticationArgs build() {
             return new DataSourceWebCrawlerBasicAuthenticationArgs(credentials, host, port);
         }

@@ -119,7 +119,6 @@ public final class ExecStepConfigResponse {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public ExecStepConfigResponse build() {
             return new ExecStepConfigResponse(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }

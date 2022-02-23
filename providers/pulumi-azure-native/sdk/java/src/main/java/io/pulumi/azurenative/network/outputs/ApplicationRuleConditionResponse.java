@@ -227,7 +227,6 @@ public final class ApplicationRuleConditionResponse {
             this.targetFqdns = targetFqdns;
             return this;
         }
-
         public ApplicationRuleConditionResponse build() {
             return new ApplicationRuleConditionResponse(description, destinationAddresses, fqdnTags, name, protocols, ruleConditionType, sourceAddresses, sourceIpGroups, targetFqdns);
         }

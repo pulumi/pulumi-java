@@ -24,7 +24,7 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleTimeout")
-    private final @Nullable Input<String> idleTimeout;
+      private final @Nullable Input<String> idleTimeout;
 
     public Input<String> getIdleTimeout() {
         return this.idleTimeout == null ? Input.empty() : this.idleTimeout;
@@ -35,7 +35,7 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxInstances")
-    private final @Nullable Input<Integer> maxInstances;
+      private final @Nullable Input<Integer> maxInstances;
 
     public Input<Integer> getMaxInstances() {
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
@@ -94,7 +94,6 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
             this.maxInstances = Input.ofNullable(maxInstances);
             return this;
         }
-
         public BasicScalingArgs build() {
             return new BasicScalingArgs(idleTimeout, maxInstances);
         }

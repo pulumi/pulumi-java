@@ -90,7 +90,6 @@ public final class ModelExplainabilityJobDefinitionNetworkConfig {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public ModelExplainabilityJobDefinitionNetworkConfig build() {
             return new ModelExplainabilityJobDefinitionNetworkConfig(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }

@@ -231,7 +231,6 @@ public final class AzureMariaDBTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureMariaDBTableDatasetResponse build() {
             return new AzureMariaDBTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

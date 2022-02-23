@@ -230,7 +230,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageResponse(conversationSuccess, endInteraction, liveAgentHandoff, mixedAudio, outputAudioText, payload, playAudio, telephonyTransferCall, text);
         }

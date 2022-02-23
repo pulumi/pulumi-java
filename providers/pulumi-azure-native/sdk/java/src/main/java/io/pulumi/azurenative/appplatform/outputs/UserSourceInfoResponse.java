@@ -120,7 +120,6 @@ public final class UserSourceInfoResponse {
             this.version = version;
             return this;
         }
-
         public UserSourceInfoResponse build() {
             return new UserSourceInfoResponse(artifactSelector, relativePath, type, version);
         }

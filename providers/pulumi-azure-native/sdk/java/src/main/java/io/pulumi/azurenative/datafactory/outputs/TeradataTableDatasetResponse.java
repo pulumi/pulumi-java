@@ -252,7 +252,6 @@ public final class TeradataTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TeradataTableDatasetResponse build() {
             return new TeradataTableDatasetResponse(annotations, database, description, folder, linkedServiceName, parameters, schema, structure, table, type);
         }

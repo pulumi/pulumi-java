@@ -137,7 +137,6 @@ public final class MethodMapResponse {
             this.update = Objects.requireNonNull(update);
             return this;
         }
-
         public MethodMapResponse build() {
             return new MethodMapResponse(create, delete, get, setIamPolicy, update);
         }

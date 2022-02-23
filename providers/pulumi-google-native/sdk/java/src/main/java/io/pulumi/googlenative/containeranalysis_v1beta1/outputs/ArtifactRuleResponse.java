@@ -45,7 +45,6 @@ public final class ArtifactRuleResponse {
             this.artifactRule = Objects.requireNonNull(artifactRule);
             return this;
         }
-
         public ArtifactRuleResponse build() {
             return new ArtifactRuleResponse(artifactRule);
         }

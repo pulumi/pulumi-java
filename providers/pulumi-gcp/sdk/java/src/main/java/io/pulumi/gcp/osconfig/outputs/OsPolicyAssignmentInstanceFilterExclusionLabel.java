@@ -54,7 +54,6 @@ public final class OsPolicyAssignmentInstanceFilterExclusionLabel {
             this.labels = labels;
             return this;
         }
-
         public OsPolicyAssignmentInstanceFilterExclusionLabel build() {
             return new OsPolicyAssignmentInstanceFilterExclusionLabel(labels);
         }

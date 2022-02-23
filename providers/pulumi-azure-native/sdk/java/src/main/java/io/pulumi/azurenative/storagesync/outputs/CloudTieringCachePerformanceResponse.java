@@ -118,7 +118,6 @@ public final class CloudTieringCachePerformanceResponse {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
-
         public CloudTieringCachePerformanceResponse build() {
             return new CloudTieringCachePerformanceResponse(cacheHitBytes, cacheHitBytesPercent, cacheMissBytes, lastUpdatedTimestamp);
         }

@@ -17,14 +17,14 @@ public final class ProviderRegistrationPropertiesSubscriptionLifecycleNotificati
     public static final ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs Empty = new ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs();
 
     @InputImport(name="softDeleteTTL")
-    private final @Nullable Input<String> softDeleteTTL;
+        private final @Nullable Input<String> softDeleteTTL;
 
     public Input<String> getSoftDeleteTTL() {
         return this.softDeleteTTL == null ? Input.empty() : this.softDeleteTTL;
     }
 
     @InputImport(name="subscriptionStateOverrideActions")
-    private final @Nullable Input<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions;
+        private final @Nullable Input<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions;
 
     public Input<List<SubscriptionStateOverrideActionArgs>> getSubscriptionStateOverrideActions() {
         return this.subscriptionStateOverrideActions == null ? Input.empty() : this.subscriptionStateOverrideActions;
@@ -83,7 +83,6 @@ public final class ProviderRegistrationPropertiesSubscriptionLifecycleNotificati
             this.subscriptionStateOverrideActions = Input.ofNullable(subscriptionStateOverrideActions);
             return this;
         }
-
         public ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs build() {
             return new ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs(softDeleteTTL, subscriptionStateOverrideActions);
         }

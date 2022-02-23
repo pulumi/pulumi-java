@@ -24,7 +24,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="disks")
-    private final @Nullable Input<Map<String,String>> disks;
+      private final @Nullable Input<Map<String,String>> disks;
 
     public Input<Map<String,String>> getDisks() {
         return this.disks == null ? Input.empty() : this.disks;
@@ -67,7 +67,6 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
             this.disks = Input.ofNullable(disks);
             return this;
         }
-
         public StatefulPolicyPreservedStateArgs build() {
             return new StatefulPolicyPreservedStateArgs(disks);
         }

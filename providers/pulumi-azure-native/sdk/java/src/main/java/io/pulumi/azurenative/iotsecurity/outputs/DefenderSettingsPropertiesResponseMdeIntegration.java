@@ -52,7 +52,6 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DefenderSettingsPropertiesResponseMdeIntegration build() {
             return new DefenderSettingsPropertiesResponseMdeIntegration(status);
         }

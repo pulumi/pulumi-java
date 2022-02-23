@@ -24,7 +24,7 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -43,7 +43,7 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<String> operator;
+        private final Input<String> operator;
 
     public Input<String> getOperator() {
         return this.operator;
@@ -54,7 +54,7 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+        private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -128,7 +128,6 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public NodeSelectorRequirementArgs build() {
             return new NodeSelectorRequirementArgs(key, operator, values);
         }

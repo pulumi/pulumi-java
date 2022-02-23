@@ -24,7 +24,7 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="effectiveTime")
-    private final @Nullable Input<String> effectiveTime;
+      private final @Nullable Input<String> effectiveTime;
 
     public Input<String> getEffectiveTime() {
         return this.effectiveTime == null ? Input.empty() : this.effectiveTime;
@@ -35,7 +35,7 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isLocked")
-    private final @Nullable Input<Boolean> isLocked;
+      private final @Nullable Input<Boolean> isLocked;
 
     public Input<Boolean> getIsLocked() {
         return this.isLocked == null ? Input.empty() : this.isLocked;
@@ -46,7 +46,7 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retentionPeriod")
-    private final @Nullable Input<String> retentionPeriod;
+      private final @Nullable Input<String> retentionPeriod;
 
     public Input<String> getRetentionPeriod() {
         return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
@@ -120,7 +120,6 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
             this.retentionPeriod = Input.ofNullable(retentionPeriod);
             return this;
         }
-
         public BucketRetentionPolicyArgs build() {
             return new BucketRetentionPolicyArgs(effectiveTime, isLocked, retentionPeriod);
         }

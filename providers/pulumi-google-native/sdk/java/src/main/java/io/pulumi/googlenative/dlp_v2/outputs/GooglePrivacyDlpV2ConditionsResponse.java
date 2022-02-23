@@ -53,7 +53,6 @@ public final class GooglePrivacyDlpV2ConditionsResponse {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public GooglePrivacyDlpV2ConditionsResponse build() {
             return new GooglePrivacyDlpV2ConditionsResponse(conditions);
         }

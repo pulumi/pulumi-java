@@ -97,7 +97,6 @@ public final class ObjectAnchorsAccountResponseIdentity {
             this.type = type;
             return this;
         }
-
         public ObjectAnchorsAccountResponseIdentity build() {
             return new ObjectAnchorsAccountResponseIdentity(principalId, tenantId, type);
         }

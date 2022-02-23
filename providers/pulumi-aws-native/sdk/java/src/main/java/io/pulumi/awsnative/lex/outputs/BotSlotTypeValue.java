@@ -60,7 +60,6 @@ public final class BotSlotTypeValue {
             this.synonyms = synonyms;
             return this;
         }
-
         public BotSlotTypeValue build() {
             return new BotSlotTypeValue(sampleValue, synonyms);
         }

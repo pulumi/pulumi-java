@@ -17,7 +17,7 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="channelName", required=true)
-    private final String channelName;
+        private final String channelName;
 
     public String getChannelName() {
         return this.channelName;
@@ -28,7 +28,7 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+        private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -98,7 +98,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public GetChannelArgs build() {
             return new GetChannelArgs(channelName, resourceGroupName, resourceName);
         }

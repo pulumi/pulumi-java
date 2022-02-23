@@ -23,7 +23,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
      * 
      */
     @InputImport(name="revisionId", required=true)
-    private final Input<String> revisionId;
+      private final Input<String> revisionId;
 
     public Input<String> getRevisionId() {
         return this.revisionId;
@@ -34,7 +34,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -93,7 +93,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs(revisionId, url);
         }

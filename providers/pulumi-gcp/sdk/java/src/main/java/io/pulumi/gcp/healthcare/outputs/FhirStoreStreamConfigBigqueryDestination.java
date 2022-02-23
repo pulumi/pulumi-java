@@ -77,7 +77,6 @@ public final class FhirStoreStreamConfigBigqueryDestination {
             this.schemaConfig = Objects.requireNonNull(schemaConfig);
             return this;
         }
-
         public FhirStoreStreamConfigBigqueryDestination build() {
             return new FhirStoreStreamConfigBigqueryDestination(datasetUri, schemaConfig);
         }

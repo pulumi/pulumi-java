@@ -184,7 +184,6 @@ public final class GetPrivateEndpointConnectionByWorkspaceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionByWorkspaceResult build() {
             return new GetPrivateEndpointConnectionByWorkspaceResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
         }

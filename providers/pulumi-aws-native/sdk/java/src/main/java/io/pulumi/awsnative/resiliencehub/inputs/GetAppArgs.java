@@ -17,7 +17,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appArn", required=true)
-    private final String appArn;
+        private final String appArn;
 
     public String getAppArn() {
         return this.appArn;
@@ -55,7 +55,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
             this.appArn = Objects.requireNonNull(appArn);
             return this;
         }
-
         public GetAppArgs build() {
             return new GetAppArgs(appArn);
         }

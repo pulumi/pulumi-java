@@ -60,7 +60,6 @@ public final class DatastoreCustomerManagedS3Storage {
             this.keyPrefix = keyPrefix;
             return this;
         }
-
         public DatastoreCustomerManagedS3Storage build() {
             return new DatastoreCustomerManagedS3Storage(bucket, keyPrefix);
         }

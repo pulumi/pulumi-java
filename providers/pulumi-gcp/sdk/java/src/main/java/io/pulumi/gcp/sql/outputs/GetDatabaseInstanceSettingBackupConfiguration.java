@@ -127,7 +127,6 @@ public final class GetDatabaseInstanceSettingBackupConfiguration {
             this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays);
             return this;
         }
-
         public GetDatabaseInstanceSettingBackupConfiguration build() {
             return new GetDatabaseInstanceSettingBackupConfiguration(backupRetentionSettings, binaryLogEnabled, enabled, location, pointInTimeRecoveryEnabled, startTime, transactionLogRetentionDays);
         }

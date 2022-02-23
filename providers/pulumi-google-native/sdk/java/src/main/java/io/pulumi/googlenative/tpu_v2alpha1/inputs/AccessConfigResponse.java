@@ -21,7 +21,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="externalIp", required=true)
-    private final String externalIp;
+      private final String externalIp;
 
     public String getExternalIp() {
         return this.externalIp;
@@ -59,7 +59,6 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }
-
         public AccessConfigResponse build() {
             return new AccessConfigResponse(externalIp);
         }

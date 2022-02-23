@@ -141,7 +141,6 @@ public final class GetCodeSigningConfigResult {
             this.description = description;
             return this;
         }
-
         public GetCodeSigningConfigResult build() {
             return new GetCodeSigningConfigResult(allowedPublishers, codeSigningConfigArn, codeSigningConfigId, codeSigningPolicies, description);
         }

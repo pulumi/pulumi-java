@@ -332,7 +332,6 @@ public final class GetSpacecraftResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSpacecraftResult build() {
             return new GetSpacecraftResult(authorizationStatus, authorizationStatusExtended, etag, id, links, location, name, noradId, systemData, tags, titleLine, tleLine1, tleLine2, type);
         }

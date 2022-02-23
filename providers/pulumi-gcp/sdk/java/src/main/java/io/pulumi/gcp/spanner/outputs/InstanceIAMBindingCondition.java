@@ -73,7 +73,6 @@ public final class InstanceIAMBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public InstanceIAMBindingCondition build() {
             return new InstanceIAMBindingCondition(description, expression, title);
         }

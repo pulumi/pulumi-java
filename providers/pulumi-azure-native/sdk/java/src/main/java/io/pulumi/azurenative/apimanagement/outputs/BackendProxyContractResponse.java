@@ -97,7 +97,6 @@ public final class BackendProxyContractResponse {
             this.username = username;
             return this;
         }
-
         public BackendProxyContractResponse build() {
             return new BackendProxyContractResponse(password, url, username);
         }

@@ -95,7 +95,6 @@ public final class RemediationDeploymentSummaryResponse {
             this.totalDeployments = Objects.requireNonNull(totalDeployments);
             return this;
         }
-
         public RemediationDeploymentSummaryResponse build() {
             return new RemediationDeploymentSummaryResponse(failedDeployments, successfulDeployments, totalDeployments);
         }

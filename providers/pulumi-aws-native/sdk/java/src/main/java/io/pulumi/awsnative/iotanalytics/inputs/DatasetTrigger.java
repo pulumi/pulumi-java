@@ -16,14 +16,14 @@ public final class DatasetTrigger extends io.pulumi.resources.InvokeArgs {
     public static final DatasetTrigger Empty = new DatasetTrigger();
 
     @InputImport(name="schedule")
-    private final @Nullable DatasetSchedule schedule;
+        private final @Nullable DatasetSchedule schedule;
 
     public Optional<DatasetSchedule> getSchedule() {
         return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
     }
 
     @InputImport(name="triggeringDataset")
-    private final @Nullable DatasetTriggeringDataset triggeringDataset;
+        private final @Nullable DatasetTriggeringDataset triggeringDataset;
 
     public Optional<DatasetTriggeringDataset> getTriggeringDataset() {
         return this.triggeringDataset == null ? Optional.empty() : Optional.ofNullable(this.triggeringDataset);
@@ -72,7 +72,6 @@ public final class DatasetTrigger extends io.pulumi.resources.InvokeArgs {
             this.triggeringDataset = triggeringDataset;
             return this;
         }
-
         public DatasetTrigger build() {
             return new DatasetTrigger(schedule, triggeringDataset);
         }

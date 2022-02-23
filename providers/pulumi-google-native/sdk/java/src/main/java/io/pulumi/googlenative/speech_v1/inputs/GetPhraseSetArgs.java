@@ -15,21 +15,21 @@ public final class GetPhraseSetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetPhraseSetArgs Empty = new GetPhraseSetArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="phraseSetId", required=true)
-    private final String phraseSetId;
+      private final String phraseSetId;
 
     public String getPhraseSetId() {
         return this.phraseSetId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetPhraseSetArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetPhraseSetArgs build() {
             return new GetPhraseSetArgs(location, phraseSetId, project);
         }

@@ -461,7 +461,6 @@ public final class EffectiveDefaultSecurityAdminRuleResponse {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public EffectiveDefaultSecurityAdminRuleResponse build() {
             return new EffectiveDefaultSecurityAdminRuleResponse(access, configurationDescription, configurationDisplayName, description, destinationPortRanges, destinations, direction, displayName, flag, id, kind, priority, protocol, provisioningState, ruleCollectionAppliesToGroups, ruleCollectionDescription, ruleCollectionDisplayName, ruleGroups, sourcePortRanges, sources);
         }

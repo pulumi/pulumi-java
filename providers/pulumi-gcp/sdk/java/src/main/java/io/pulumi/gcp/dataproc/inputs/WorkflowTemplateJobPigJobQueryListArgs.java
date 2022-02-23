@@ -19,7 +19,7 @@ public final class WorkflowTemplateJobPigJobQueryListArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="queries", required=true)
-    private final Input<List<String>> queries;
+        private final Input<List<String>> queries;
 
     public Input<List<String>> getQueries() {
         return this.queries;
@@ -62,7 +62,6 @@ public final class WorkflowTemplateJobPigJobQueryListArgs extends io.pulumi.reso
             this.queries = Input.of(Objects.requireNonNull(queries));
             return this;
         }
-
         public WorkflowTemplateJobPigJobQueryListArgs build() {
             return new WorkflowTemplateJobPigJobQueryListArgs(queries);
         }

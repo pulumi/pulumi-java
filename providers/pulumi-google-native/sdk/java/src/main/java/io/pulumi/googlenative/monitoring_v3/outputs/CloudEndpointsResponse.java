@@ -52,7 +52,6 @@ public final class CloudEndpointsResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public CloudEndpointsResponse build() {
             return new CloudEndpointsResponse(service);
         }

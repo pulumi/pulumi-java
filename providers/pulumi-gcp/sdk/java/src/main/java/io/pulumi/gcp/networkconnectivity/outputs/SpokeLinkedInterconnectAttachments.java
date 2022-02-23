@@ -76,7 +76,6 @@ public final class SpokeLinkedInterconnectAttachments {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public SpokeLinkedInterconnectAttachments build() {
             return new SpokeLinkedInterconnectAttachments(siteToSiteDataTransfer, uris);
         }

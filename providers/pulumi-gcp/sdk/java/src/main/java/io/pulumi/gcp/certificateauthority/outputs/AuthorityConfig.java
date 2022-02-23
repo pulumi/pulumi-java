@@ -79,7 +79,6 @@ public final class AuthorityConfig {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }
-
         public AuthorityConfig build() {
             return new AuthorityConfig(subjectConfig, x509Config);
         }

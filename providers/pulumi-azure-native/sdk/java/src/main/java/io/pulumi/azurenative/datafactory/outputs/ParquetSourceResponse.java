@@ -197,7 +197,6 @@ public final class ParquetSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ParquetSourceResponse build() {
             return new ParquetSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, storeSettings, type);
         }

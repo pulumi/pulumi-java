@@ -224,7 +224,6 @@ public final class GetChannelResult {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetChannelResult build() {
             return new GetChannelResult(createTime, expireTime, labels, name, release, retainedReleaseCount, ttl, updateTime, url);
         }

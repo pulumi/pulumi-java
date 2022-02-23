@@ -19,7 +19,7 @@ public final class GetVirtualMachineScheduleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetVirtualMachineScheduleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="labName", required=true)
-    private final String labName;
+        private final String labName;
 
     public String getLabName() {
         return this.labName;
@@ -41,7 +41,7 @@ public final class GetVirtualMachineScheduleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -52,7 +52,7 @@ public final class GetVirtualMachineScheduleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class GetVirtualMachineScheduleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="virtualMachineName", required=true)
-    private final String virtualMachineName;
+        private final String virtualMachineName;
 
     public String getVirtualMachineName() {
         return this.virtualMachineName;
@@ -142,7 +142,6 @@ public final class GetVirtualMachineScheduleArgs extends io.pulumi.resources.Inv
             this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
             return this;
         }
-
         public GetVirtualMachineScheduleArgs build() {
             return new GetVirtualMachineScheduleArgs(expand, labName, name, resourceGroupName, virtualMachineName);
         }

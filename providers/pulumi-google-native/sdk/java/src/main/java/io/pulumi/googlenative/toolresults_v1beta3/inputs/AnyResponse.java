@@ -21,7 +21,7 @@ public final class AnyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="typeUrl", required=true)
-    private final String typeUrl;
+      private final String typeUrl;
 
     public String getTypeUrl() {
         return this.typeUrl;
@@ -32,7 +32,7 @@ public final class AnyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class AnyResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AnyResponse build() {
             return new AnyResponse(typeUrl, value);
         }

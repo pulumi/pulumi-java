@@ -205,7 +205,6 @@ public final class GetBotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBotResult build() {
             return new GetBotResult(id, location, name, properties, sku, systemData, tags, type);
         }

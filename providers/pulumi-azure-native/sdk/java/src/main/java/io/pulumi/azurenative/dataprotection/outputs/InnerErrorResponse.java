@@ -98,7 +98,6 @@ public final class InnerErrorResponse {
             this.embeddedInnerError = embeddedInnerError;
             return this;
         }
-
         public InnerErrorResponse build() {
             return new InnerErrorResponse(additionalInfo, code, embeddedInnerError);
         }

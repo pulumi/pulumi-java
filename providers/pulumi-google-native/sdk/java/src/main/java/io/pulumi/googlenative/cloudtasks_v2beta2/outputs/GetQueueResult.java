@@ -247,7 +247,6 @@ public final class GetQueueResult {
             this.tombstoneTtl = Objects.requireNonNull(tombstoneTtl);
             return this;
         }
-
         public GetQueueResult build() {
             return new GetQueueResult(appEngineHttpTarget, name, pullTarget, purgeTime, rateLimits, retryConfig, state, stats, taskTtl, tombstoneTtl);
         }

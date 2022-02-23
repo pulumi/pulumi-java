@@ -75,7 +75,6 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ConnectToTargetSqlMISyncTaskInputResponse build() {
             return new ConnectToTargetSqlMISyncTaskInputResponse(azureApp, targetConnectionInfo);
         }

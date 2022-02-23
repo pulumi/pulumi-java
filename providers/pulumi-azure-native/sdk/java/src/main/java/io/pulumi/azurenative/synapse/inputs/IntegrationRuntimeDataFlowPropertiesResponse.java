@@ -24,7 +24,7 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="computeType")
-    private final @Nullable String computeType;
+        private final @Nullable String computeType;
 
     public Optional<String> getComputeType() {
         return this.computeType == null ? Optional.empty() : Optional.ofNullable(this.computeType);
@@ -35,7 +35,7 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="coreCount")
-    private final @Nullable Integer coreCount;
+        private final @Nullable Integer coreCount;
 
     public Optional<Integer> getCoreCount() {
         return this.coreCount == null ? Optional.empty() : Optional.ofNullable(this.coreCount);
@@ -46,7 +46,7 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends io.pulum
      * 
      */
     @InputImport(name="timeToLive")
-    private final @Nullable Integer timeToLive;
+        private final @Nullable Integer timeToLive;
 
     public Optional<Integer> getTimeToLive() {
         return this.timeToLive == null ? Optional.empty() : Optional.ofNullable(this.timeToLive);
@@ -105,7 +105,6 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends io.pulum
             this.timeToLive = timeToLive;
             return this;
         }
-
         public IntegrationRuntimeDataFlowPropertiesResponse build() {
             return new IntegrationRuntimeDataFlowPropertiesResponse(computeType, coreCount, timeToLive);
         }

@@ -52,7 +52,6 @@ public final class TransactionInfoResponse {
             this.transactionId = Objects.requireNonNull(transactionId);
             return this;
         }
-
         public TransactionInfoResponse build() {
             return new TransactionInfoResponse(transactionId);
         }

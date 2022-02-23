@@ -76,7 +76,6 @@ public final class SafetyRuleAssertionRule {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }
-
         public SafetyRuleAssertionRule build() {
             return new SafetyRuleAssertionRule(assertedControls, waitPeriodMs);
         }

@@ -26,7 +26,7 @@ public final class DedicatedHostInstanceViewWithNameResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="assetId", required=true)
-    private final String assetId;
+        private final String assetId;
 
     public String getAssetId() {
         return this.assetId;
@@ -37,7 +37,7 @@ public final class DedicatedHostInstanceViewWithNameResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="availableCapacity")
-    private final @Nullable DedicatedHostAvailableCapacityResponse availableCapacity;
+        private final @Nullable DedicatedHostAvailableCapacityResponse availableCapacity;
 
     public Optional<DedicatedHostAvailableCapacityResponse> getAvailableCapacity() {
         return this.availableCapacity == null ? Optional.empty() : Optional.ofNullable(this.availableCapacity);
@@ -48,7 +48,7 @@ public final class DedicatedHostInstanceViewWithNameResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -59,7 +59,7 @@ public final class DedicatedHostInstanceViewWithNameResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable List<InstanceViewStatusResponse> statuses;
+        private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
@@ -128,7 +128,6 @@ public final class DedicatedHostInstanceViewWithNameResponse extends io.pulumi.r
             this.statuses = statuses;
             return this;
         }
-
         public DedicatedHostInstanceViewWithNameResponse build() {
             return new DedicatedHostInstanceViewWithNameResponse(assetId, availableCapacity, name, statuses);
         }

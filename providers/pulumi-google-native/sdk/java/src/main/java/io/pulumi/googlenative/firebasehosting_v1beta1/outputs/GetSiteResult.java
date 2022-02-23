@@ -138,7 +138,6 @@ public final class GetSiteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSiteResult build() {
             return new GetSiteResult(appId, defaultUrl, labels, name, type);
         }

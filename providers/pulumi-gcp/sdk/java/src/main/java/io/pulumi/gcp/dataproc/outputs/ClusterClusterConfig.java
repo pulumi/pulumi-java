@@ -404,7 +404,6 @@ public final class ClusterClusterConfig {
             this.workerConfig = workerConfig;
             return this;
         }
-
         public ClusterClusterConfig build() {
             return new ClusterClusterConfig(autoscalingConfig, bucket, encryptionConfig, endpointConfig, gceClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, preemptibleWorkerConfig, securityConfig, softwareConfig, stagingBucket, tempBucket, workerConfig);
         }

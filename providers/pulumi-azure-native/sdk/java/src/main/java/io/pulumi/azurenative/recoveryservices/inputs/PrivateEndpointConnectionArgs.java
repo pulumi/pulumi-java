@@ -27,7 +27,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
+        private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
 
     public Input<PrivateEndpointArgs> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
@@ -38,7 +38,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+        private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -49,7 +49,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+        private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
     public Input<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -123,7 +123,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
-
         public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

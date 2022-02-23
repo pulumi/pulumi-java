@@ -310,7 +310,6 @@ public final class GetFuotaTaskResult {
             this.tags = tags;
             return this;
         }
-
         public GetFuotaTaskResult build() {
             return new GetFuotaTaskResult(arn, associateMulticastGroup, associateWirelessDevice, description, disassociateMulticastGroup, disassociateWirelessDevice, firmwareUpdateImage, firmwareUpdateRole, fuotaTaskStatus, id, loRaWAN, name, tags);
         }

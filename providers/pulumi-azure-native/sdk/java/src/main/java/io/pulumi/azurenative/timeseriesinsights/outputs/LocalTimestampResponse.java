@@ -77,7 +77,6 @@ public final class LocalTimestampResponse {
             this.timeZoneOffset = timeZoneOffset;
             return this;
         }
-
         public LocalTimestampResponse build() {
             return new LocalTimestampResponse(format, timeZoneOffset);
         }

@@ -76,7 +76,6 @@ public final class MCASDataConnectorDataTypesResponse {
             this.discoveryLogs = discoveryLogs;
             return this;
         }
-
         public MCASDataConnectorDataTypesResponse build() {
             return new MCASDataConnectorDataTypesResponse(alerts, discoveryLogs);
         }

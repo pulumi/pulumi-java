@@ -72,7 +72,6 @@ public final class DestinationOptionsProperties {
             this.perHourPartition = Objects.requireNonNull(perHourPartition);
             return this;
         }
-
         public DestinationOptionsProperties build() {
             return new DestinationOptionsProperties(fileFormat, hiveCompatiblePartitions, perHourPartition);
         }

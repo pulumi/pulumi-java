@@ -119,7 +119,6 @@ public final class TruncationSelectionPolicyResponse {
             this.truncationPercentage = truncationPercentage;
             return this;
         }
-
         public TruncationSelectionPolicyResponse build() {
             return new TruncationSelectionPolicyResponse(delayEvaluation, evaluationInterval, policyType, truncationPercentage);
         }

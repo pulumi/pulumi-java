@@ -28,7 +28,7 @@ public final class UrlPathMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="matchValues")
-    private final @Nullable Input<List<String>> matchValues;
+        private final @Nullable Input<List<String>> matchValues;
 
     public Input<List<String>> getMatchValues() {
         return this.matchValues == null ? Input.empty() : this.matchValues;
@@ -39,14 +39,14 @@ public final class UrlPathMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="negateCondition")
-    private final @Nullable Input<Boolean> negateCondition;
+        private final @Nullable Input<Boolean> negateCondition;
 
     public Input<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
     }
 
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -57,7 +57,7 @@ public final class UrlPathMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<Either<String,UrlPathOperator>> operator;
+        private final Input<Either<String,UrlPathOperator>> operator;
 
     public Input<Either<String,UrlPathOperator>> getOperator() {
         return this.operator;
@@ -68,7 +68,7 @@ public final class UrlPathMatchConditionParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="transforms")
-    private final @Nullable Input<List<Either<String,Transform>>> transforms;
+        private final @Nullable Input<List<Either<String,Transform>>> transforms;
 
     public Input<List<Either<String,Transform>>> getTransforms() {
         return this.transforms == null ? Input.empty() : this.transforms;
@@ -172,7 +172,6 @@ public final class UrlPathMatchConditionParametersArgs extends io.pulumi.resourc
             this.transforms = Input.ofNullable(transforms);
             return this;
         }
-
         public UrlPathMatchConditionParametersArgs build() {
             return new UrlPathMatchConditionParametersArgs(matchValues, negateCondition, odataType, operator, transforms);
         }

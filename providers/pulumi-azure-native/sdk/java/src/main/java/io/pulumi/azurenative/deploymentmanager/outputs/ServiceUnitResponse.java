@@ -142,7 +142,6 @@ public final class ServiceUnitResponse {
             this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
             return this;
         }
-
         public ServiceUnitResponse build() {
             return new ServiceUnitResponse(artifacts, deploymentMode, name, steps, targetResourceGroup);
         }

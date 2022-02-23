@@ -118,7 +118,6 @@ public final class ProtocolCustomSettingsFormatResponse {
             this.triggerSensitivityOverride = triggerSensitivityOverride;
             return this;
         }
-
         public ProtocolCustomSettingsFormatResponse build() {
             return new ProtocolCustomSettingsFormatResponse(protocol, sourceRateOverride, triggerRateOverride, triggerSensitivityOverride);
         }

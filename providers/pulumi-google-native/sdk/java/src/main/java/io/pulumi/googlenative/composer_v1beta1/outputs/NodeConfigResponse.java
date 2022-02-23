@@ -267,7 +267,6 @@ public final class NodeConfigResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public NodeConfigResponse build() {
             return new NodeConfigResponse(diskSizeGb, enableIpMasqAgent, ipAllocationPolicy, location, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags);
         }

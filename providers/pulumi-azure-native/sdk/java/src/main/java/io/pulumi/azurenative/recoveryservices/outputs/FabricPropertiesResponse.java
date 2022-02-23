@@ -212,7 +212,6 @@ public final class FabricPropertiesResponse {
             this.rolloverEncryptionDetails = rolloverEncryptionDetails;
             return this;
         }
-
         public FabricPropertiesResponse build() {
             return new FabricPropertiesResponse(bcdrState, customDetails, encryptionDetails, friendlyName, health, healthErrorDetails, internalIdentifier, rolloverEncryptionDetails);
         }

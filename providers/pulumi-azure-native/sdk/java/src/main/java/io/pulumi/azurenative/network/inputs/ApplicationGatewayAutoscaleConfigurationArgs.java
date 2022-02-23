@@ -23,7 +23,7 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="maxCapacity")
-    private final @Nullable Input<Integer> maxCapacity;
+        private final @Nullable Input<Integer> maxCapacity;
 
     public Input<Integer> getMaxCapacity() {
         return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
@@ -34,7 +34,7 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="minCapacity", required=true)
-    private final Input<Integer> minCapacity;
+        private final Input<Integer> minCapacity;
 
     public Input<Integer> getMinCapacity() {
         return this.minCapacity;
@@ -93,7 +93,6 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends io.pulum
             this.minCapacity = Input.of(Objects.requireNonNull(minCapacity));
             return this;
         }
-
         public ApplicationGatewayAutoscaleConfigurationArgs build() {
             return new ApplicationGatewayAutoscaleConfigurationArgs(maxCapacity, minCapacity);
         }

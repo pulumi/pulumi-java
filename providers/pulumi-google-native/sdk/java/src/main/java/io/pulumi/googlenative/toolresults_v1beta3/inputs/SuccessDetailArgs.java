@@ -23,7 +23,7 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="otherNativeCrash")
-    private final @Nullable Input<Boolean> otherNativeCrash;
+      private final @Nullable Input<Boolean> otherNativeCrash;
 
     public Input<Boolean> getOtherNativeCrash() {
         return this.otherNativeCrash == null ? Input.empty() : this.otherNativeCrash;
@@ -66,7 +66,6 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.otherNativeCrash = Input.ofNullable(otherNativeCrash);
             return this;
         }
-
         public SuccessDetailArgs build() {
             return new SuccessDetailArgs(otherNativeCrash);
         }

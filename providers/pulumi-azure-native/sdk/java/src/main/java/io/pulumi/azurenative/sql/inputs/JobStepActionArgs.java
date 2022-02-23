@@ -26,7 +26,7 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<Either<String,JobStepActionSource>> source;
+        private final @Nullable Input<Either<String,JobStepActionSource>> source;
 
     public Input<Either<String,JobStepActionSource>> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -37,7 +37,7 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,JobStepActionType>> type;
+        private final @Nullable Input<Either<String,JobStepActionType>> type;
 
     public Input<Either<String,JobStepActionType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -48,7 +48,7 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -122,7 +122,6 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public JobStepActionArgs build() {
             return new JobStepActionArgs(source, type, value);
         }

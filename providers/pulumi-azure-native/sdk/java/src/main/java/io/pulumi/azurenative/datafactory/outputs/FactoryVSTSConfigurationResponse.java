@@ -204,7 +204,6 @@ public final class FactoryVSTSConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FactoryVSTSConfigurationResponse build() {
             return new FactoryVSTSConfigurationResponse(accountName, collaborationBranch, lastCommitId, projectName, repositoryName, rootFolder, tenantId, type);
         }

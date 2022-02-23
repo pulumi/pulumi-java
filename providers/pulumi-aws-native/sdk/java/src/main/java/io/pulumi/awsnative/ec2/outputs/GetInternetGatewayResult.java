@@ -78,7 +78,6 @@ public final class GetInternetGatewayResult {
             this.tags = tags;
             return this;
         }
-
         public GetInternetGatewayResult build() {
             return new GetInternetGatewayResult(internetGatewayId, tags);
         }

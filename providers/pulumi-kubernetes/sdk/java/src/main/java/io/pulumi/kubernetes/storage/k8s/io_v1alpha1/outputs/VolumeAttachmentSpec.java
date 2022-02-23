@@ -96,7 +96,6 @@ public final class VolumeAttachmentSpec {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public VolumeAttachmentSpec build() {
             return new VolumeAttachmentSpec(attacher, nodeName, source);
         }

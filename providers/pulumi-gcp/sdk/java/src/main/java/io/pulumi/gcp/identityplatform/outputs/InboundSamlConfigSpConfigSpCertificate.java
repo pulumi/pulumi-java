@@ -56,7 +56,6 @@ public final class InboundSamlConfigSpConfigSpCertificate {
             this.x509Certificate = x509Certificate;
             return this;
         }
-
         public InboundSamlConfigSpConfigSpCertificate build() {
             return new InboundSamlConfigSpConfigSpCertificate(x509Certificate);
         }

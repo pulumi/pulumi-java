@@ -18,42 +18,42 @@ public final class DataSourceWorkDocsConfiguration extends io.pulumi.resources.I
     public static final DataSourceWorkDocsConfiguration Empty = new DataSourceWorkDocsConfiguration();
 
     @InputImport(name="crawlComments")
-    private final @Nullable Boolean crawlComments;
+        private final @Nullable Boolean crawlComments;
 
     public Optional<Boolean> getCrawlComments() {
         return this.crawlComments == null ? Optional.empty() : Optional.ofNullable(this.crawlComments);
     }
 
     @InputImport(name="exclusionPatterns")
-    private final @Nullable List<String> exclusionPatterns;
+        private final @Nullable List<String> exclusionPatterns;
 
     public List<String> getExclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
 
     @InputImport(name="fieldMappings")
-    private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+        private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
     public List<DataSourceToIndexFieldMapping> getFieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
     @InputImport(name="inclusionPatterns")
-    private final @Nullable List<String> inclusionPatterns;
+        private final @Nullable List<String> inclusionPatterns;
 
     public List<String> getInclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+        private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="useChangeLog")
-    private final @Nullable Boolean useChangeLog;
+        private final @Nullable Boolean useChangeLog;
 
     public Optional<Boolean> getUseChangeLog() {
         return this.useChangeLog == null ? Optional.empty() : Optional.ofNullable(this.useChangeLog);
@@ -142,7 +142,6 @@ public final class DataSourceWorkDocsConfiguration extends io.pulumi.resources.I
             this.useChangeLog = useChangeLog;
             return this;
         }
-
         public DataSourceWorkDocsConfiguration build() {
             return new DataSourceWorkDocsConfiguration(crawlComments, exclusionPatterns, fieldMappings, inclusionPatterns, organizationId, useChangeLog);
         }

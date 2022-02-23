@@ -95,7 +95,6 @@ public final class RuntimeAccessConfigResponse {
             this.runtimeOwner = Objects.requireNonNull(runtimeOwner);
             return this;
         }
-
         public RuntimeAccessConfigResponse build() {
             return new RuntimeAccessConfigResponse(accessType, proxyUri, runtimeOwner);
         }

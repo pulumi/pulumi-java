@@ -23,7 +23,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<String> schedule;
+      private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -66,7 +66,6 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicyScheduleArgs build() {
             return new ResourcePolicyInstanceSchedulePolicyScheduleArgs(schedule);
         }

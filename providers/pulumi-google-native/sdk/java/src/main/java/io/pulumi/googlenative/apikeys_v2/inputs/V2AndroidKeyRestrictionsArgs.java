@@ -24,7 +24,7 @@ public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowedApplications")
-    private final @Nullable Input<List<V2AndroidApplicationArgs>> allowedApplications;
+      private final @Nullable Input<List<V2AndroidApplicationArgs>> allowedApplications;
 
     public Input<List<V2AndroidApplicationArgs>> getAllowedApplications() {
         return this.allowedApplications == null ? Input.empty() : this.allowedApplications;
@@ -67,7 +67,6 @@ public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.Reso
             this.allowedApplications = Input.ofNullable(allowedApplications);
             return this;
         }
-
         public V2AndroidKeyRestrictionsArgs build() {
             return new V2AndroidKeyRestrictionsArgs(allowedApplications);
         }

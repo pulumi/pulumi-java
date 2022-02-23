@@ -20,7 +20,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="configmanagement", required=true)
-    private final Input<FeatureMembershipConfigmanagementArgs> configmanagement;
+        private final Input<FeatureMembershipConfigmanagementArgs> configmanagement;
 
     public Input<FeatureMembershipConfigmanagementArgs> getConfigmanagement() {
         return this.configmanagement;
@@ -31,7 +31,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="feature", required=true)
-    private final Input<String> feature;
+        private final Input<String> feature;
 
     public Input<String> getFeature() {
         return this.feature;
@@ -42,7 +42,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+        private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -53,7 +53,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="membership", required=true)
-    private final Input<String> membership;
+        private final Input<String> membership;
 
     public Input<String> getMembership() {
         return this.membership;
@@ -64,7 +64,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -168,7 +168,6 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public FeatureMembershipArgs build() {
             return new FeatureMembershipArgs(configmanagement, feature, location, membership, project);
         }

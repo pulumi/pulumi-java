@@ -72,7 +72,6 @@ public final class GetServiceTemplateSpecVolumeSecretItem {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public GetServiceTemplateSpecVolumeSecretItem build() {
             return new GetServiceTemplateSpecVolumeSecretItem(key, mode, path);
         }

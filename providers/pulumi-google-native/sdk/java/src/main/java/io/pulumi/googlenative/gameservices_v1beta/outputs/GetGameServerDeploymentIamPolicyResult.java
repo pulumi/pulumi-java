@@ -142,7 +142,6 @@ public final class GetGameServerDeploymentIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetGameServerDeploymentIamPolicyResult build() {
             return new GetGameServerDeploymentIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

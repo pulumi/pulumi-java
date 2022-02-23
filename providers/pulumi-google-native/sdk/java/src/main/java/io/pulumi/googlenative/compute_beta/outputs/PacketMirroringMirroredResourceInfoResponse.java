@@ -98,7 +98,6 @@ public final class PacketMirroringMirroredResourceInfoResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public PacketMirroringMirroredResourceInfoResponse build() {
             return new PacketMirroringMirroredResourceInfoResponse(instances, subnetworks, tags);
         }

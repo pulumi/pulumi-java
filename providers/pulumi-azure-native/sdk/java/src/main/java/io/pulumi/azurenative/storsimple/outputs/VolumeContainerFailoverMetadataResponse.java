@@ -78,7 +78,6 @@ public final class VolumeContainerFailoverMetadataResponse {
             this.volumes = volumes;
             return this;
         }
-
         public VolumeContainerFailoverMetadataResponse build() {
             return new VolumeContainerFailoverMetadataResponse(volumeContainerId, volumes);
         }

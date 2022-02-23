@@ -75,7 +75,6 @@ public final class DataQualityJobDefinitionVpcConfig {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public DataQualityJobDefinitionVpcConfig build() {
             return new DataQualityJobDefinitionVpcConfig(securityGroupIds, subnets);
         }

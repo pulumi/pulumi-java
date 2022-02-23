@@ -116,7 +116,6 @@ public final class LifecycleConfigResponse {
             this.idleStartTime = Objects.requireNonNull(idleStartTime);
             return this;
         }
-
         public LifecycleConfigResponse build() {
             return new LifecycleConfigResponse(autoDeleteTime, autoDeleteTtl, idleDeleteTtl, idleStartTime);
         }

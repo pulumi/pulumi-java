@@ -181,7 +181,6 @@ public final class GetDataCollectionRuleAssociationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataCollectionRuleAssociationResult build() {
             return new GetDataCollectionRuleAssociationResult(dataCollectionRuleId, description, etag, id, name, provisioningState, type);
         }

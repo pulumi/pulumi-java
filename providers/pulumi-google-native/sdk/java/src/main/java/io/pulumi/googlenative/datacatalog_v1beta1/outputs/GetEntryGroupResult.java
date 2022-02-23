@@ -117,7 +117,6 @@ public final class GetEntryGroupResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetEntryGroupResult build() {
             return new GetEntryGroupResult(dataCatalogTimestamps, description, displayName, name);
         }

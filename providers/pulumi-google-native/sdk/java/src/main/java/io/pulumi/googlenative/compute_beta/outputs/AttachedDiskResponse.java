@@ -396,7 +396,6 @@ public final class AttachedDiskResponse {
             this.userLicenses = Objects.requireNonNull(userLicenses);
             return this;
         }
-
         public AttachedDiskResponse build() {
             return new AttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, guestOsFeatures, index, initializeParams, $interface, kind, licenses, locked, mode, shieldedInstanceInitialState, source, type, userLicenses);
         }

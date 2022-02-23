@@ -193,7 +193,6 @@ public final class ListenerRuleAuthenticateOidcConfig {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
         }
-
         public ListenerRuleAuthenticateOidcConfig build() {
             return new ListenerRuleAuthenticateOidcConfig(authenticationRequestExtraParams, authorizationEndpoint, clientId, clientSecret, issuer, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, tokenEndpoint, useExistingClientSecret, userInfoEndpoint);
         }

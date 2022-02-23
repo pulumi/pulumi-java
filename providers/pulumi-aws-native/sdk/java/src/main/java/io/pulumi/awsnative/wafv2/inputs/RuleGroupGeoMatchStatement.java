@@ -17,14 +17,14 @@ public final class RuleGroupGeoMatchStatement extends io.pulumi.resources.Invoke
     public static final RuleGroupGeoMatchStatement Empty = new RuleGroupGeoMatchStatement();
 
     @InputImport(name="countryCodes")
-    private final @Nullable List<String> countryCodes;
+        private final @Nullable List<String> countryCodes;
 
     public List<String> getCountryCodes() {
         return this.countryCodes == null ? List.of() : this.countryCodes;
     }
 
     @InputImport(name="forwardedIPConfig")
-    private final @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig;
+        private final @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig;
 
     public Optional<RuleGroupForwardedIPConfiguration> getForwardedIPConfig() {
         return this.forwardedIPConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardedIPConfig);
@@ -73,7 +73,6 @@ public final class RuleGroupGeoMatchStatement extends io.pulumi.resources.Invoke
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
-
         public RuleGroupGeoMatchStatement build() {
             return new RuleGroupGeoMatchStatement(countryCodes, forwardedIPConfig);
         }

@@ -45,7 +45,6 @@ public final class DataSourceWebCrawlerSiteMapsConfiguration {
             this.siteMaps = Objects.requireNonNull(siteMaps);
             return this;
         }
-
         public DataSourceWebCrawlerSiteMapsConfiguration build() {
             return new DataSourceWebCrawlerSiteMapsConfiguration(siteMaps);
         }

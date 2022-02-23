@@ -89,7 +89,6 @@ public final class AccessPointObjectLambdaConfiguration {
             this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
             return this;
         }
-
         public AccessPointObjectLambdaConfiguration build() {
             return new AccessPointObjectLambdaConfiguration(allowedFeatures, cloudWatchMetricsEnabled, supportingAccessPoint, transformationConfigurations);
         }

@@ -20,7 +20,7 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucketId", required=true)
-    private final Input<String> bucketId;
+        private final Input<String> bucketId;
 
     public Input<String> getBucketId() {
         return this.bucketId;
@@ -31,7 +31,7 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -42,7 +42,7 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+        private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -53,7 +53,7 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+        private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
@@ -64,7 +64,7 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="retentionDays")
-    private final @Nullable Input<Integer> retentionDays;
+        private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
@@ -168,7 +168,6 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
             this.retentionDays = Input.ofNullable(retentionDays);
             return this;
         }
-
         public ProjectBucketConfigArgs build() {
             return new ProjectBucketConfigArgs(bucketId, description, location, project, retentionDays);
         }

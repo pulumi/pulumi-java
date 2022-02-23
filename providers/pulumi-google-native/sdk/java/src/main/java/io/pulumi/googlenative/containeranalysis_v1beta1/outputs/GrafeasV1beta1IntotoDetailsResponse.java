@@ -60,7 +60,6 @@ public final class GrafeasV1beta1IntotoDetailsResponse {
             this.signed = Objects.requireNonNull(signed);
             return this;
         }
-
         public GrafeasV1beta1IntotoDetailsResponse build() {
             return new GrafeasV1beta1IntotoDetailsResponse(signatures, signed);
         }

@@ -54,7 +54,6 @@ public final class DataTransferConfigSensitiveParams {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
-
         public DataTransferConfigSensitiveParams build() {
             return new DataTransferConfigSensitiveParams(secretAccessKey);
         }

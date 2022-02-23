@@ -225,7 +225,6 @@ public final class AzureDataLakeStoreOutputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataLakeStoreOutputDataSourceResponse build() {
             return new AzureDataLakeStoreOutputDataSourceResponse(accountName, dateFormat, filePathPrefix, refreshToken, tenantId, timeFormat, tokenUserDisplayName, tokenUserPrincipalName, type);
         }

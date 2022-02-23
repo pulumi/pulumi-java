@@ -46,7 +46,6 @@ public final class GetLoggingConfigurationResult {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
-
         public GetLoggingConfigurationResult build() {
             return new GetLoggingConfigurationResult(loggingConfiguration);
         }

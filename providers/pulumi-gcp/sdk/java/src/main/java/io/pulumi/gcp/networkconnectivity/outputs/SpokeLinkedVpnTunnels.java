@@ -76,7 +76,6 @@ public final class SpokeLinkedVpnTunnels {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public SpokeLinkedVpnTunnels build() {
             return new SpokeLinkedVpnTunnels(siteToSiteDataTransfer, uris);
         }

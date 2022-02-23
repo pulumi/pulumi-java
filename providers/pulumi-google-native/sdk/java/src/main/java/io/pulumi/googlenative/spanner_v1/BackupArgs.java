@@ -15,7 +15,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     public static final BackupArgs Empty = new BackupArgs();
 
     @InputImport(name="backupId", required=true)
-    private final Input<String> backupId;
+      private final Input<String> backupId;
 
     public Input<String> getBackupId() {
         return this.backupId;
@@ -26,21 +26,21 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<String> database;
+      private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
     }
 
     @InputImport(name="encryptionConfigEncryptionType", required=true)
-    private final Input<String> encryptionConfigEncryptionType;
+      private final Input<String> encryptionConfigEncryptionType;
 
     public Input<String> getEncryptionConfigEncryptionType() {
         return this.encryptionConfigEncryptionType;
     }
 
     @InputImport(name="encryptionConfigKmsKeyName")
-    private final @Nullable Input<String> encryptionConfigKmsKeyName;
+      private final @Nullable Input<String> encryptionConfigKmsKeyName;
 
     public Input<String> getEncryptionConfigKmsKeyName() {
         return this.encryptionConfigKmsKeyName == null ? Input.empty() : this.encryptionConfigKmsKeyName;
@@ -51,14 +51,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable Input<String> expireTime;
+      private final @Nullable Input<String> expireTime;
 
     public Input<String> getExpireTime() {
         return this.expireTime == null ? Input.empty() : this.expireTime;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -69,14 +69,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -87,7 +87,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionTime")
-    private final @Nullable Input<String> versionTime;
+      private final @Nullable Input<String> versionTime;
 
     public Input<String> getVersionTime() {
         return this.versionTime == null ? Input.empty() : this.versionTime;
@@ -251,7 +251,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             this.versionTime = Input.ofNullable(versionTime);
             return this;
         }
-
         public BackupArgs build() {
             return new BackupArgs(backupId, database, encryptionConfigEncryptionType, encryptionConfigKmsKeyName, expireTime, instanceId, name, project, versionTime);
         }

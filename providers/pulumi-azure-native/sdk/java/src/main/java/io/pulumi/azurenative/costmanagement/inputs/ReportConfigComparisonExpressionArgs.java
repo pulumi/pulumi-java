@@ -25,7 +25,7 @@ public final class ReportConfigComparisonExpressionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class ReportConfigComparisonExpressionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<Either<String,OperatorType>> operator;
+        private final Input<Either<String,OperatorType>> operator;
 
     public Input<Either<String,OperatorType>> getOperator() {
         return this.operator;
@@ -47,7 +47,7 @@ public final class ReportConfigComparisonExpressionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="values", required=true)
-    private final Input<List<String>> values;
+        private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;
@@ -121,7 +121,6 @@ public final class ReportConfigComparisonExpressionArgs extends io.pulumi.resour
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public ReportConfigComparisonExpressionArgs build() {
             return new ReportConfigComparisonExpressionArgs(name, operator, values);
         }

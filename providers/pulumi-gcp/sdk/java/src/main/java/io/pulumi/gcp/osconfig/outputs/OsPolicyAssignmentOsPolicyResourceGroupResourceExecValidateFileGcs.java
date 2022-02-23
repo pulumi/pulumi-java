@@ -98,7 +98,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcs(bucket, generation, object);
         }

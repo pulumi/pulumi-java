@@ -15,14 +15,14 @@ public final class DomainNameMutualTlsAuthenticationArgs extends io.pulumi.resou
     public static final DomainNameMutualTlsAuthenticationArgs Empty = new DomainNameMutualTlsAuthenticationArgs();
 
     @InputImport(name="truststoreUri")
-    private final @Nullable Input<String> truststoreUri;
+        private final @Nullable Input<String> truststoreUri;
 
     public Input<String> getTruststoreUri() {
         return this.truststoreUri == null ? Input.empty() : this.truststoreUri;
     }
 
     @InputImport(name="truststoreVersion")
-    private final @Nullable Input<String> truststoreVersion;
+        private final @Nullable Input<String> truststoreVersion;
 
     public Input<String> getTruststoreVersion() {
         return this.truststoreVersion == null ? Input.empty() : this.truststoreVersion;
@@ -81,7 +81,6 @@ public final class DomainNameMutualTlsAuthenticationArgs extends io.pulumi.resou
             this.truststoreVersion = Input.ofNullable(truststoreVersion);
             return this;
         }
-
         public DomainNameMutualTlsAuthenticationArgs build() {
             return new DomainNameMutualTlsAuthenticationArgs(truststoreUri, truststoreVersion);
         }

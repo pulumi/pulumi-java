@@ -74,7 +74,6 @@ public final class FlowS3SourceProperties {
             this.s3InputFormatConfig = s3InputFormatConfig;
             return this;
         }
-
         public FlowS3SourceProperties build() {
             return new FlowS3SourceProperties(bucketName, bucketPrefix, s3InputFormatConfig);
         }

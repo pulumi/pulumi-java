@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends i
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends i
      * 
      */
     @InputImport(name="expiresAt", required=true)
-    private final String expiresAt;
+      private final String expiresAt;
 
     public String getExpiresAt() {
         return this.expiresAt;
@@ -82,7 +82,6 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends i
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }
-
         public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse build() {
             return new GoogleCloudApigeeV1ConnectorsPlatformConfigResponse(enabled, expiresAt);
         }

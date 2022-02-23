@@ -246,7 +246,6 @@ public final class GetStorageAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStorageAccountResult build() {
             return new GetStorageAccountResult(blobEndpoint, containerCount, dataPolicy, description, id, name, storageAccountCredentialId, storageAccountStatus, systemData, type);
         }

@@ -23,7 +23,7 @@ public final class AppEngineHttpQueueArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="appEngineRoutingOverride")
-    private final @Nullable Input<AppEngineRoutingArgs> appEngineRoutingOverride;
+      private final @Nullable Input<AppEngineRoutingArgs> appEngineRoutingOverride;
 
     public Input<AppEngineRoutingArgs> getAppEngineRoutingOverride() {
         return this.appEngineRoutingOverride == null ? Input.empty() : this.appEngineRoutingOverride;
@@ -66,7 +66,6 @@ public final class AppEngineHttpQueueArgs extends io.pulumi.resources.ResourceAr
             this.appEngineRoutingOverride = Input.ofNullable(appEngineRoutingOverride);
             return this;
         }
-
         public AppEngineHttpQueueArgs build() {
             return new AppEngineHttpQueueArgs(appEngineRoutingOverride);
         }

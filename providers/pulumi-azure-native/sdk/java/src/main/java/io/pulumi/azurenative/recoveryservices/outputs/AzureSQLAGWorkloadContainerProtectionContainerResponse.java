@@ -253,7 +253,6 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public AzureSQLAGWorkloadContainerProtectionContainerResponse build() {
             return new AzureSQLAGWorkloadContainerProtectionContainerResponse(backupManagementType, containerType, extendedInfo, friendlyName, healthStatus, lastUpdatedTime, operationType, registrationStatus, sourceResourceId, workloadType);
         }

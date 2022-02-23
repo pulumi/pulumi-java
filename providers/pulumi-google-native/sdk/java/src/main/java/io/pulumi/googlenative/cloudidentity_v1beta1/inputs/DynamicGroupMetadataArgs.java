@@ -24,7 +24,7 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queries")
-    private final @Nullable Input<List<DynamicGroupQueryArgs>> queries;
+      private final @Nullable Input<List<DynamicGroupQueryArgs>> queries;
 
     public Input<List<DynamicGroupQueryArgs>> getQueries() {
         return this.queries == null ? Input.empty() : this.queries;
@@ -67,7 +67,6 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
             this.queries = Input.ofNullable(queries);
             return this;
         }
-
         public DynamicGroupMetadataArgs build() {
             return new DynamicGroupMetadataArgs(queries);
         }

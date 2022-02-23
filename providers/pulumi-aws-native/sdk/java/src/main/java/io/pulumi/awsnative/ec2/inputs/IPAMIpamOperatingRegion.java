@@ -21,7 +21,7 @@ public final class IPAMIpamOperatingRegion extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="regionName", required=true)
-    private final String regionName;
+        private final String regionName;
 
     public String getRegionName() {
         return this.regionName;
@@ -59,7 +59,6 @@ public final class IPAMIpamOperatingRegion extends io.pulumi.resources.InvokeArg
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }
-
         public IPAMIpamOperatingRegion build() {
             return new IPAMIpamOperatingRegion(regionName);
         }

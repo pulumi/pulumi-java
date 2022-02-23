@@ -158,7 +158,6 @@ public final class ActiveDirectoryPropertiesResponse {
             this.netBiosDomainName = Objects.requireNonNull(netBiosDomainName);
             return this;
         }
-
         public ActiveDirectoryPropertiesResponse build() {
             return new ActiveDirectoryPropertiesResponse(azureStorageSid, domainGuid, domainName, domainSid, forestName, netBiosDomainName);
         }

@@ -98,7 +98,6 @@ public final class DevicePropertiesResponse {
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
-
         public DevicePropertiesResponse build() {
             return new DevicePropertiesResponse(deviceModel, deviceVendor, linkSpeedInMbps);
         }

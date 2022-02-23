@@ -16,21 +16,21 @@ public final class ServiceCapacityProviderStrategyItemArgs extends io.pulumi.res
     public static final ServiceCapacityProviderStrategyItemArgs Empty = new ServiceCapacityProviderStrategyItemArgs();
 
     @InputImport(name="base")
-    private final @Nullable Input<Integer> base;
+        private final @Nullable Input<Integer> base;
 
     public Input<Integer> getBase() {
         return this.base == null ? Input.empty() : this.base;
     }
 
     @InputImport(name="capacityProvider")
-    private final @Nullable Input<String> capacityProvider;
+        private final @Nullable Input<String> capacityProvider;
 
     public Input<String> getCapacityProvider() {
         return this.capacityProvider == null ? Input.empty() : this.capacityProvider;
     }
 
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+        private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -104,7 +104,6 @@ public final class ServiceCapacityProviderStrategyItemArgs extends io.pulumi.res
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public ServiceCapacityProviderStrategyItemArgs build() {
             return new ServiceCapacityProviderStrategyItemArgs(base, capacityProvider, weight);
         }

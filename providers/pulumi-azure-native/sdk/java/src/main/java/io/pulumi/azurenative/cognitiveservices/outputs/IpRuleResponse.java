@@ -52,7 +52,6 @@ public final class IpRuleResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public IpRuleResponse build() {
             return new IpRuleResponse(value);
         }

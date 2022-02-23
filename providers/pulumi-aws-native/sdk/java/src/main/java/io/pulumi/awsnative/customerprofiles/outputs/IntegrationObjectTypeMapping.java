@@ -58,7 +58,6 @@ public final class IntegrationObjectTypeMapping {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public IntegrationObjectTypeMapping build() {
             return new IntegrationObjectTypeMapping(key, value);
         }

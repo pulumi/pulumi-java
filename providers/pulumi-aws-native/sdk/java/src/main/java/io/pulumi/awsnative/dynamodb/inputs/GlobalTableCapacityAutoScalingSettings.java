@@ -16,28 +16,28 @@ public final class GlobalTableCapacityAutoScalingSettings extends io.pulumi.reso
     public static final GlobalTableCapacityAutoScalingSettings Empty = new GlobalTableCapacityAutoScalingSettings();
 
     @InputImport(name="maxCapacity", required=true)
-    private final Integer maxCapacity;
+        private final Integer maxCapacity;
 
     public Integer getMaxCapacity() {
         return this.maxCapacity;
     }
 
     @InputImport(name="minCapacity", required=true)
-    private final Integer minCapacity;
+        private final Integer minCapacity;
 
     public Integer getMinCapacity() {
         return this.minCapacity;
     }
 
     @InputImport(name="seedCapacity")
-    private final @Nullable Integer seedCapacity;
+        private final @Nullable Integer seedCapacity;
 
     public Optional<Integer> getSeedCapacity() {
         return this.seedCapacity == null ? Optional.empty() : Optional.ofNullable(this.seedCapacity);
     }
 
     @InputImport(name="targetTrackingScalingPolicyConfiguration", required=true)
-    private final GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration;
+        private final GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration;
 
     public GlobalTableTargetTrackingScalingPolicyConfiguration getTargetTrackingScalingPolicyConfiguration() {
         return this.targetTrackingScalingPolicyConfiguration;
@@ -106,7 +106,6 @@ public final class GlobalTableCapacityAutoScalingSettings extends io.pulumi.reso
             this.targetTrackingScalingPolicyConfiguration = Objects.requireNonNull(targetTrackingScalingPolicyConfiguration);
             return this;
         }
-
         public GlobalTableCapacityAutoScalingSettings build() {
             return new GlobalTableCapacityAutoScalingSettings(maxCapacity, minCapacity, seedCapacity, targetTrackingScalingPolicyConfiguration);
         }

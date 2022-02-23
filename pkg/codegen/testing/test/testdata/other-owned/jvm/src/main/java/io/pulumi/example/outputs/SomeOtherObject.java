@@ -46,7 +46,6 @@ public final class SomeOtherObject {
             this.baz = baz;
             return this;
         }
-
         public SomeOtherObject build() {
             return new SomeOtherObject(baz);
         }

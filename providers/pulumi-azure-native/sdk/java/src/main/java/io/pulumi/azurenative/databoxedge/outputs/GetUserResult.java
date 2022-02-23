@@ -185,7 +185,6 @@ public final class GetUserResult {
             this.userType = Objects.requireNonNull(userType);
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(encryptedPassword, id, name, shareAccessRights, systemData, type, userType);
         }

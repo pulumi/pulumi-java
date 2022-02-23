@@ -24,7 +24,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="latLng", required=true)
-    private final LatLngResponse latLng;
+      private final LatLngResponse latLng;
 
     public LatLngResponse getLatLng() {
         return this.latLng;
@@ -35,7 +35,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locationType", required=true)
-    private final String locationType;
+      private final String locationType;
 
     public String getLocationType() {
         return this.locationType;
@@ -46,7 +46,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="postalAddress", required=true)
-    private final PostalAddressResponse postalAddress;
+      private final PostalAddressResponse postalAddress;
 
     public PostalAddressResponse getPostalAddress() {
         return this.postalAddress;
@@ -57,7 +57,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="radiusInMiles", required=true)
-    private final Double radiusInMiles;
+      private final Double radiusInMiles;
 
     public Double getRadiusInMiles() {
         return this.radiusInMiles;
@@ -126,7 +126,6 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
             this.radiusInMiles = Objects.requireNonNull(radiusInMiles);
             return this;
         }
-
         public LocationResponse build() {
             return new LocationResponse(latLng, locationType, postalAddress, radiusInMiles);
         }

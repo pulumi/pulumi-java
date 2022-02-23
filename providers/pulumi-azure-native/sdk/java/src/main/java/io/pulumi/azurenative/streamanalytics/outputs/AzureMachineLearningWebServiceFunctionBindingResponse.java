@@ -166,7 +166,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureMachineLearningWebServiceFunctionBindingResponse build() {
             return new AzureMachineLearningWebServiceFunctionBindingResponse(apiKey, batchSize, endpoint, inputs, outputs, type);
         }

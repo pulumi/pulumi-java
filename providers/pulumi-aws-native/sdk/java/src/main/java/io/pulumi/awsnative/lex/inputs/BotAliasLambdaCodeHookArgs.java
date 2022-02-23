@@ -22,7 +22,7 @@ public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="codeHookInterfaceVersion", required=true)
-    private final Input<String> codeHookInterfaceVersion;
+        private final Input<String> codeHookInterfaceVersion;
 
     public Input<String> getCodeHookInterfaceVersion() {
         return this.codeHookInterfaceVersion;
@@ -33,7 +33,7 @@ public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="lambdaArn", required=true)
-    private final Input<String> lambdaArn;
+        private final Input<String> lambdaArn;
 
     public Input<String> getLambdaArn() {
         return this.lambdaArn;
@@ -92,7 +92,6 @@ public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.Resour
             this.lambdaArn = Input.of(Objects.requireNonNull(lambdaArn));
             return this;
         }
-
         public BotAliasLambdaCodeHookArgs build() {
             return new BotAliasLambdaCodeHookArgs(codeHookInterfaceVersion, lambdaArn);
         }

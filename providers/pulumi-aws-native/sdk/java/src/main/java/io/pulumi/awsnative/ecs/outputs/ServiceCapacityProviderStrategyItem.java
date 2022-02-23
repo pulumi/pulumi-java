@@ -74,7 +74,6 @@ public final class ServiceCapacityProviderStrategyItem {
             this.weight = weight;
             return this;
         }
-
         public ServiceCapacityProviderStrategyItem build() {
             return new ServiceCapacityProviderStrategyItem(base, capacityProvider, weight);
         }

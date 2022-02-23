@@ -205,7 +205,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
             this.stockState = Objects.requireNonNull(stockState);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse(availableQuantity, canonicalProductUri, costs, currencyCode, exactPrice, images, priceRange, stockState);
         }

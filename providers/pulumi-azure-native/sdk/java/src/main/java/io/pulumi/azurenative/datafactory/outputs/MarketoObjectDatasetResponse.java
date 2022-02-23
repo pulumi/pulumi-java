@@ -231,7 +231,6 @@ public final class MarketoObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MarketoObjectDatasetResponse build() {
             return new MarketoObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

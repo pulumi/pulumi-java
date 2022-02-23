@@ -20,7 +20,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends io.pulumi.
      * 
      */
     @InputImport(name="awsAccessKey")
-    private final @Nullable Input<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs> awsAccessKey;
+        private final @Nullable Input<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs> awsAccessKey;
 
     public Input<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs> getAwsAccessKey() {
         return this.awsAccessKey == null ? Input.empty() : this.awsAccessKey;
@@ -31,7 +31,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends io.pulumi.
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+        private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -42,7 +42,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends io.pulumi.
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+        private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -116,7 +116,6 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends io.pulumi.
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
-
         public TransferJobTransferSpecAwsS3DataSourceArgs build() {
             return new TransferJobTransferSpecAwsS3DataSourceArgs(awsAccessKey, bucketName, roleArn);
         }

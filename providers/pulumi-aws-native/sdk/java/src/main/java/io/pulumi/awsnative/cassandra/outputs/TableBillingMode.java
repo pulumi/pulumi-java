@@ -61,7 +61,6 @@ public final class TableBillingMode {
             this.provisionedThroughput = provisionedThroughput;
             return this;
         }
-
         public TableBillingMode build() {
             return new TableBillingMode(mode, provisionedThroughput);
         }

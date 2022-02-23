@@ -53,7 +53,6 @@ public final class EndpointVerificationSpecificAttributesResponse {
             this.certificateAttributes = Objects.requireNonNull(certificateAttributes);
             return this;
         }
-
         public EndpointVerificationSpecificAttributesResponse build() {
             return new EndpointVerificationSpecificAttributesResponse(certificateAttributes);
         }

@@ -85,7 +85,6 @@ public final class GCPolicyMaxAge {
             this.duration = duration;
             return this;
         }
-
         public GCPolicyMaxAge build() {
             return new GCPolicyMaxAge(days, duration);
         }

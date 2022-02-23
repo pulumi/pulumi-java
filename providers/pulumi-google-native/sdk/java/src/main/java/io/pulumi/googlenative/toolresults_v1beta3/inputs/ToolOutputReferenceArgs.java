@@ -25,7 +25,7 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="creationTime")
-    private final @Nullable Input<TimestampArgs> creationTime;
+      private final @Nullable Input<TimestampArgs> creationTime;
 
     public Input<TimestampArgs> getCreationTime() {
         return this.creationTime == null ? Input.empty() : this.creationTime;
@@ -36,7 +36,7 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="output")
-    private final @Nullable Input<FileReferenceArgs> output;
+      private final @Nullable Input<FileReferenceArgs> output;
 
     public Input<FileReferenceArgs> getOutput() {
         return this.output == null ? Input.empty() : this.output;
@@ -47,7 +47,7 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="testCase")
-    private final @Nullable Input<TestCaseReferenceArgs> testCase;
+      private final @Nullable Input<TestCaseReferenceArgs> testCase;
 
     public Input<TestCaseReferenceArgs> getTestCase() {
         return this.testCase == null ? Input.empty() : this.testCase;
@@ -121,7 +121,6 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
             this.testCase = Input.ofNullable(testCase);
             return this;
         }
-
         public ToolOutputReferenceArgs build() {
             return new ToolOutputReferenceArgs(creationTime, output, testCase);
         }

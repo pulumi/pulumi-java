@@ -227,7 +227,6 @@ public final class VirtualMachineScaleSetDataDiskResponse {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-
         public VirtualMachineScaleSetDataDiskResponse build() {
             return new VirtualMachineScaleSetDataDiskResponse(caching, createOption, diskIOPSReadWrite, diskMBpsReadWrite, diskSizeGB, lun, managedDisk, name, writeAcceleratorEnabled);
         }

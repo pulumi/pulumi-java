@@ -13,7 +13,7 @@ public final class GetClusterConfidentialNode extends io.pulumi.resources.Invoke
     public static final GetClusterConfidentialNode Empty = new GetClusterConfidentialNode();
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -51,7 +51,6 @@ public final class GetClusterConfidentialNode extends io.pulumi.resources.Invoke
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetClusterConfidentialNode build() {
             return new GetClusterConfidentialNode(enabled);
         }

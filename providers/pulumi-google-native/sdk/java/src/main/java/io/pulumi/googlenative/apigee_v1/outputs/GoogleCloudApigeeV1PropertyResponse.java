@@ -74,7 +74,6 @@ public final class GoogleCloudApigeeV1PropertyResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudApigeeV1PropertyResponse build() {
             return new GoogleCloudApigeeV1PropertyResponse(name, value);
         }

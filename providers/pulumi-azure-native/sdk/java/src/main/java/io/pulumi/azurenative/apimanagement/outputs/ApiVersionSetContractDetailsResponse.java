@@ -160,7 +160,6 @@ public final class ApiVersionSetContractDetailsResponse {
             this.versioningScheme = versioningScheme;
             return this;
         }
-
         public ApiVersionSetContractDetailsResponse build() {
             return new ApiVersionSetContractDetailsResponse(description, id, name, versionHeaderName, versionQueryName, versioningScheme);
         }

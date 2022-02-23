@@ -24,7 +24,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
      * 
      */
     @InputImport(name="migrationSetting")
-    private final @Nullable Input<Map<String,String>> migrationSetting;
+        private final @Nullable Input<Map<String,String>> migrationSetting;
 
     public Input<Map<String,String>> getMigrationSetting() {
         return this.migrationSetting == null ? Input.empty() : this.migrationSetting;
@@ -35,7 +35,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
      * 
      */
     @InputImport(name="sourceSetting")
-    private final @Nullable Input<Map<String,String>> sourceSetting;
+        private final @Nullable Input<Map<String,String>> sourceSetting;
 
     public Input<Map<String,String>> getSourceSetting() {
         return this.sourceSetting == null ? Input.empty() : this.sourceSetting;
@@ -57,7 +57,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
      * 
      */
     @InputImport(name="targetDatabaseName")
-    private final @Nullable Input<String> targetDatabaseName;
+        private final @Nullable Input<String> targetDatabaseName;
 
     public Input<String> getTargetDatabaseName() {
         return this.targetDatabaseName == null ? Input.empty() : this.targetDatabaseName;
@@ -68,7 +68,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
      * 
      */
     @InputImport(name="targetSetting")
-    private final @Nullable Input<Map<String,String>> targetSetting;
+        private final @Nullable Input<Map<String,String>> targetSetting;
 
     public Input<Map<String,String>> getTargetSetting() {
         return this.targetSetting == null ? Input.empty() : this.targetSetting;
@@ -172,7 +172,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
             this.targetSetting = Input.ofNullable(targetSetting);
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs(migrationSetting, name, sourceSetting, targetDatabaseName, targetSetting);
         }

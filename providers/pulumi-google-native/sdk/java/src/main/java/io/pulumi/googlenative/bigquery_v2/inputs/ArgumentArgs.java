@@ -26,7 +26,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="argumentKind")
-    private final @Nullable Input<ArgumentArgumentKind> argumentKind;
+      private final @Nullable Input<ArgumentArgumentKind> argumentKind;
 
     public Input<ArgumentArgumentKind> getArgumentKind() {
         return this.argumentKind == null ? Input.empty() : this.argumentKind;
@@ -37,7 +37,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataType")
-    private final @Nullable Input<StandardSqlDataTypeArgs> dataType;
+      private final @Nullable Input<StandardSqlDataTypeArgs> dataType;
 
     public Input<StandardSqlDataTypeArgs> getDataType() {
         return this.dataType == null ? Input.empty() : this.dataType;
@@ -48,7 +48,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<ArgumentMode> mode;
+      private final @Nullable Input<ArgumentMode> mode;
 
     public Input<ArgumentMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -59,7 +59,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -148,7 +148,6 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ArgumentArgs build() {
             return new ArgumentArgs(argumentKind, dataType, mode, name);
         }

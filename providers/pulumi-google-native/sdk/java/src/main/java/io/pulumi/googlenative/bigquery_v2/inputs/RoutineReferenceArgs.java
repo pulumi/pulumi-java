@@ -19,7 +19,7 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="datasetId")
-    private final @Nullable Input<String> datasetId;
+      private final @Nullable Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId == null ? Input.empty() : this.datasetId;
@@ -30,7 +30,7 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -41,7 +41,7 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="routineId")
-    private final @Nullable Input<String> routineId;
+      private final @Nullable Input<String> routineId;
 
     public Input<String> getRoutineId() {
         return this.routineId == null ? Input.empty() : this.routineId;
@@ -115,7 +115,6 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
             this.routineId = Input.ofNullable(routineId);
             return this;
         }
-
         public RoutineReferenceArgs build() {
             return new RoutineReferenceArgs(datasetId, project, routineId);
         }

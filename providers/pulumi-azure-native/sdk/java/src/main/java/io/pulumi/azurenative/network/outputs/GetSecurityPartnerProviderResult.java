@@ -246,7 +246,6 @@ public final class GetSecurityPartnerProviderResult {
             this.virtualHub = virtualHub;
             return this;
         }
-
         public GetSecurityPartnerProviderResult build() {
             return new GetSecurityPartnerProviderResult(connectionStatus, etag, id, location, name, provisioningState, securityProviderName, tags, type, virtualHub);
         }

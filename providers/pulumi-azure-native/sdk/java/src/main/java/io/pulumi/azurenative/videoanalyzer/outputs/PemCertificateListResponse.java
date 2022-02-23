@@ -77,7 +77,6 @@ public final class PemCertificateListResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PemCertificateListResponse build() {
             return new PemCertificateListResponse(certificates, type);
         }

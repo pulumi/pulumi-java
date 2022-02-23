@@ -120,7 +120,6 @@ public final class SSISLogLocationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SSISLogLocationResponse build() {
             return new SSISLogLocationResponse(accessCredential, logPath, logRefreshInterval, type);
         }

@@ -74,7 +74,6 @@ public final class StatusConditionResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public StatusConditionResponse build() {
             return new StatusConditionResponse(canonicalCode, message);
         }

@@ -52,7 +52,6 @@ public final class LocalObjectReferenceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public LocalObjectReferenceResponse build() {
             return new LocalObjectReferenceResponse(name);
         }

@@ -77,7 +77,6 @@ public final class NotificationSettingsResponse {
             this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
             return this;
         }
-
         public NotificationSettingsResponse build() {
             return new NotificationSettingsResponse(activationState, azureMonitorWorkspaceProperties);
         }

@@ -317,7 +317,6 @@ public final class ConcurLinkedServiceResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ConcurLinkedServiceResponse build() {
             return new ConcurLinkedServiceResponse(annotations, clientId, connectVia, connectionProperties, description, encryptedCredential, parameters, password, type, useEncryptedEndpoints, useHostVerification, usePeerVerification, username);
         }

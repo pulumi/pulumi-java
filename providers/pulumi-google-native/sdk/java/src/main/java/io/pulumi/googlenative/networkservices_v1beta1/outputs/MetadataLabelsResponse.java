@@ -74,7 +74,6 @@ public final class MetadataLabelsResponse {
             this.labelValue = Objects.requireNonNull(labelValue);
             return this;
         }
-
         public MetadataLabelsResponse build() {
             return new MetadataLabelsResponse(labelName, labelValue);
         }

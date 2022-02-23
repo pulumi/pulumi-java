@@ -261,7 +261,6 @@ public final class GetAFDCustomDomainResult {
             this.validationProperties = Objects.requireNonNull(validationProperties);
             return this;
         }
-
         public GetAFDCustomDomainResult build() {
             return new GetAFDCustomDomainResult(azureDnsZone, deploymentStatus, domainValidationState, hostName, id, name, provisioningState, systemData, tlsSettings, type, validationProperties);
         }

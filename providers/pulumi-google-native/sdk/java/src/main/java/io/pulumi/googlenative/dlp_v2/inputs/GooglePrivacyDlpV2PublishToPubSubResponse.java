@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="topic", required=true)
-    private final String topic;
+      private final String topic;
 
     public String getTopic() {
         return this.topic;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse extends io.pulumi.r
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GooglePrivacyDlpV2PublishToPubSubResponse build() {
             return new GooglePrivacyDlpV2PublishToPubSubResponse(topic);
         }

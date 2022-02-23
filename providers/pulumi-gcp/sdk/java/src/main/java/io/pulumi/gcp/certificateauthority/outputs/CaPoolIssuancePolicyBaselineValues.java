@@ -153,7 +153,6 @@ public final class CaPoolIssuancePolicyBaselineValues {
             this.policyIds = policyIds;
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValues build() {
             return new CaPoolIssuancePolicyBaselineValues(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

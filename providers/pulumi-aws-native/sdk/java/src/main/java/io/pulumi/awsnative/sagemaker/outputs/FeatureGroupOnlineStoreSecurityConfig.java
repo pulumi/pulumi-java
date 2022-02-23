@@ -46,7 +46,6 @@ public final class FeatureGroupOnlineStoreSecurityConfig {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public FeatureGroupOnlineStoreSecurityConfig build() {
             return new FeatureGroupOnlineStoreSecurityConfig(kmsKeyId);
         }

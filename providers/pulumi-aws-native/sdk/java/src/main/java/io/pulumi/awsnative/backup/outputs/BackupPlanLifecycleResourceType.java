@@ -60,7 +60,6 @@ public final class BackupPlanLifecycleResourceType {
             this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
             return this;
         }
-
         public BackupPlanLifecycleResourceType build() {
             return new BackupPlanLifecycleResourceType(deleteAfterDays, moveToColdStorageAfterDays);
         }

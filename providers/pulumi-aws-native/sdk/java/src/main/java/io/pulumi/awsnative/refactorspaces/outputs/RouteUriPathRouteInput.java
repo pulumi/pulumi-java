@@ -90,7 +90,6 @@ public final class RouteUriPathRouteInput {
             this.sourcePath = sourcePath;
             return this;
         }
-
         public RouteUriPathRouteInput build() {
             return new RouteUriPathRouteInput(activationState, includeChildPaths, methods, sourcePath);
         }

@@ -44,7 +44,6 @@ public final class ConnectorLogDelivery {
             this.workerLogDelivery = Objects.requireNonNull(workerLogDelivery);
             return this;
         }
-
         public ConnectorLogDelivery build() {
             return new ConnectorLogDelivery(workerLogDelivery);
         }

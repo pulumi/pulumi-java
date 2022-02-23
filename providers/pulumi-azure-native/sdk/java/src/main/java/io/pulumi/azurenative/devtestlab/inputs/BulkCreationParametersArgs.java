@@ -23,7 +23,7 @@ public final class BulkCreationParametersArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="instanceCount")
-    private final @Nullable Input<Integer> instanceCount;
+        private final @Nullable Input<Integer> instanceCount;
 
     public Input<Integer> getInstanceCount() {
         return this.instanceCount == null ? Input.empty() : this.instanceCount;
@@ -66,7 +66,6 @@ public final class BulkCreationParametersArgs extends io.pulumi.resources.Resour
             this.instanceCount = Input.ofNullable(instanceCount);
             return this;
         }
-
         public BulkCreationParametersArgs build() {
             return new BulkCreationParametersArgs(instanceCount);
         }

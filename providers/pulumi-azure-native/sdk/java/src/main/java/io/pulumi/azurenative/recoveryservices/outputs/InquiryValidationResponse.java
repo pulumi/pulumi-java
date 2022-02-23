@@ -98,7 +98,6 @@ public final class InquiryValidationResponse {
             this.status = status;
             return this;
         }
-
         public InquiryValidationResponse build() {
             return new InquiryValidationResponse(additionalDetail, errorDetail, status);
         }

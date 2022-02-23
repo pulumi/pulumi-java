@@ -90,7 +90,6 @@ public final class BucketNotificationConfiguration {
             this.topicConfigurations = topicConfigurations;
             return this;
         }
-
         public BucketNotificationConfiguration build() {
             return new BucketNotificationConfiguration(eventBridgeConfiguration, lambdaConfigurations, queueConfigurations, topicConfigurations);
         }

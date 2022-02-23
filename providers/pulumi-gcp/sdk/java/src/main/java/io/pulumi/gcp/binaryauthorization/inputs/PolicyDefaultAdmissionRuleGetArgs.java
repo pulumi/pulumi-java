@@ -21,7 +21,7 @@ public final class PolicyDefaultAdmissionRuleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="enforcementMode", required=true)
-    private final Input<String> enforcementMode;
+        private final Input<String> enforcementMode;
 
     public Input<String> getEnforcementMode() {
         return this.enforcementMode;
@@ -33,7 +33,7 @@ public final class PolicyDefaultAdmissionRuleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="evaluationMode", required=true)
-    private final Input<String> evaluationMode;
+        private final Input<String> evaluationMode;
 
     public Input<String> getEvaluationMode() {
         return this.evaluationMode;
@@ -51,7 +51,7 @@ public final class PolicyDefaultAdmissionRuleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="requireAttestationsBies")
-    private final @Nullable Input<List<String>> requireAttestationsBies;
+        private final @Nullable Input<List<String>> requireAttestationsBies;
 
     public Input<List<String>> getRequireAttestationsBies() {
         return this.requireAttestationsBies == null ? Input.empty() : this.requireAttestationsBies;
@@ -125,7 +125,6 @@ public final class PolicyDefaultAdmissionRuleGetArgs extends io.pulumi.resources
             this.requireAttestationsBies = Input.ofNullable(requireAttestationsBies);
             return this;
         }
-
         public PolicyDefaultAdmissionRuleGetArgs build() {
             return new PolicyDefaultAdmissionRuleGetArgs(enforcementMode, evaluationMode, requireAttestationsBies);
         }

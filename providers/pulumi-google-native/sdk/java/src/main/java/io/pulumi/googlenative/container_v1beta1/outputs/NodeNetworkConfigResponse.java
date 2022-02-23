@@ -96,7 +96,6 @@ public final class NodeNetworkConfigResponse {
             this.podRange = Objects.requireNonNull(podRange);
             return this;
         }
-
         public NodeNetworkConfigResponse build() {
             return new NodeNetworkConfigResponse(createPodRange, podIpv4CidrBlock, podRange);
         }

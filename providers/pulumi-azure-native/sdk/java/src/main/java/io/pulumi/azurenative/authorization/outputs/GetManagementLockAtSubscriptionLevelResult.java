@@ -162,7 +162,6 @@ public final class GetManagementLockAtSubscriptionLevelResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementLockAtSubscriptionLevelResult build() {
             return new GetManagementLockAtSubscriptionLevelResult(id, level, name, notes, owners, type);
         }

@@ -95,7 +95,6 @@ public final class OperationErrorErrorsItemResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public OperationErrorErrorsItemResponse build() {
             return new OperationErrorErrorsItemResponse(code, location, message);
         }

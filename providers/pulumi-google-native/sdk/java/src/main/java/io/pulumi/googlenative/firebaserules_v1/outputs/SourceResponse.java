@@ -53,7 +53,6 @@ public final class SourceResponse {
             this.files = Objects.requireNonNull(files);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(files);
         }

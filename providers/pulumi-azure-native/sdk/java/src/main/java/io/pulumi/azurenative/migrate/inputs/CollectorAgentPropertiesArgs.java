@@ -15,7 +15,7 @@ public final class CollectorAgentPropertiesArgs extends io.pulumi.resources.Reso
     public static final CollectorAgentPropertiesArgs Empty = new CollectorAgentPropertiesArgs();
 
     @InputImport(name="spnDetails")
-    private final @Nullable Input<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
+        private final @Nullable Input<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
 
     public Input<CollectorBodyAgentSpnPropertiesArgs> getSpnDetails() {
         return this.spnDetails == null ? Input.empty() : this.spnDetails;
@@ -58,7 +58,6 @@ public final class CollectorAgentPropertiesArgs extends io.pulumi.resources.Reso
             this.spnDetails = Input.ofNullable(spnDetails);
             return this;
         }
-
         public CollectorAgentPropertiesArgs build() {
             return new CollectorAgentPropertiesArgs(spnDetails);
         }

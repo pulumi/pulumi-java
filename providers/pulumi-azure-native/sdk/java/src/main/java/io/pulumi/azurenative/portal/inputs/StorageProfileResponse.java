@@ -24,7 +24,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="diskSizeInGB")
-    private final @Nullable Integer diskSizeInGB;
+        private final @Nullable Integer diskSizeInGB;
 
     public Optional<Integer> getDiskSizeInGB() {
         return this.diskSizeInGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeInGB);
@@ -35,7 +35,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="fileShareName")
-    private final @Nullable String fileShareName;
+        private final @Nullable String fileShareName;
 
     public Optional<String> getFileShareName() {
         return this.fileShareName == null ? Optional.empty() : Optional.ofNullable(this.fileShareName);
@@ -46,7 +46,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="storageAccountResourceId")
-    private final @Nullable String storageAccountResourceId;
+        private final @Nullable String storageAccountResourceId;
 
     public Optional<String> getStorageAccountResourceId() {
         return this.storageAccountResourceId == null ? Optional.empty() : Optional.ofNullable(this.storageAccountResourceId);
@@ -105,7 +105,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(diskSizeInGB, fileShareName, storageAccountResourceId);
         }

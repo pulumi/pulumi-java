@@ -273,7 +273,6 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
             this.userImpact = userImpact;
             return this;
         }
-
         public SecurityAssessmentMetadataPropertiesResponse build() {
             return new SecurityAssessmentMetadataPropertiesResponse(assessmentType, categories, description, displayName, implementationEffort, partnerData, policyDefinitionId, preview, remediationDescription, severity, threats, userImpact);
         }

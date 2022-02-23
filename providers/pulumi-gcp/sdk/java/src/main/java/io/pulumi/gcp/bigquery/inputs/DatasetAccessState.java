@@ -22,7 +22,7 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiUpdatedMember")
-    private final @Nullable Input<Boolean> apiUpdatedMember;
+        private final @Nullable Input<Boolean> apiUpdatedMember;
 
     public Input<Boolean> getApiUpdatedMember() {
         return this.apiUpdatedMember == null ? Input.empty() : this.apiUpdatedMember;
@@ -33,7 +33,7 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetId")
-    private final @Nullable Input<String> datasetId;
+        private final @Nullable Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId == null ? Input.empty() : this.datasetId;
@@ -45,7 +45,7 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+        private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -56,7 +56,7 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupByEmail")
-    private final @Nullable Input<String> groupByEmail;
+        private final @Nullable Input<String> groupByEmail;
 
     public Input<String> getGroupByEmail() {
         return this.groupByEmail == null ? Input.empty() : this.groupByEmail;
@@ -68,7 +68,7 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamMember")
-    private final @Nullable Input<String> iamMember;
+        private final @Nullable Input<String> iamMember;
 
     public Input<String> getIamMember() {
         return this.iamMember == null ? Input.empty() : this.iamMember;
@@ -80,7 +80,7 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -96,7 +96,7 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -107,7 +107,7 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="specialGroup")
-    private final @Nullable Input<String> specialGroup;
+        private final @Nullable Input<String> specialGroup;
 
     public Input<String> getSpecialGroup() {
         return this.specialGroup == null ? Input.empty() : this.specialGroup;
@@ -119,7 +119,7 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userByEmail")
-    private final @Nullable Input<String> userByEmail;
+        private final @Nullable Input<String> userByEmail;
 
     public Input<String> getUserByEmail() {
         return this.userByEmail == null ? Input.empty() : this.userByEmail;
@@ -135,7 +135,7 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="view")
-    private final @Nullable Input<DatasetAccessViewGetArgs> view;
+        private final @Nullable Input<DatasetAccessViewGetArgs> view;
 
     public Input<DatasetAccessViewGetArgs> getView() {
         return this.view == null ? Input.empty() : this.view;
@@ -314,7 +314,6 @@ public final class DatasetAccessState extends io.pulumi.resources.ResourceArgs {
             this.view = Input.ofNullable(view);
             return this;
         }
-
         public DatasetAccessState build() {
             return new DatasetAccessState(apiUpdatedMember, datasetId, domain, groupByEmail, iamMember, project, role, specialGroup, userByEmail, view);
         }

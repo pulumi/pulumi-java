@@ -97,7 +97,6 @@ public final class MHSMPrivateLinkServiceConnectionStateResponse {
             this.status = status;
             return this;
         }
-
         public MHSMPrivateLinkServiceConnectionStateResponse build() {
             return new MHSMPrivateLinkServiceConnectionStateResponse(actionsRequired, description, status);
         }

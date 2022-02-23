@@ -20,7 +20,7 @@ public final class ProjectSample extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Integer size;
+        private final @Nullable Integer size;
 
     public Optional<Integer> getSize() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
@@ -31,7 +31,7 @@ public final class ProjectSample extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final ProjectSampleType type;
+        private final ProjectSampleType type;
 
     public ProjectSampleType getType() {
         return this.type;
@@ -80,7 +80,6 @@ public final class ProjectSample extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ProjectSample build() {
             return new ProjectSample(size, type);
         }

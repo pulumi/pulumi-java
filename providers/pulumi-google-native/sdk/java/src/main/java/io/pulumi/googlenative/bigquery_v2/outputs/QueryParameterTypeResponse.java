@@ -97,7 +97,6 @@ public final class QueryParameterTypeResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public QueryParameterTypeResponse build() {
             return new QueryParameterTypeResponse(arrayType, structTypes, type);
         }

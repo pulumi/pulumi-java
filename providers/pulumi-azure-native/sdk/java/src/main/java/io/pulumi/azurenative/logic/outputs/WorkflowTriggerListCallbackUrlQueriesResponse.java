@@ -139,7 +139,6 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse {
             this.sv = sv;
             return this;
         }
-
         public WorkflowTriggerListCallbackUrlQueriesResponse build() {
             return new WorkflowTriggerListCallbackUrlQueriesResponse(apiVersion, se, sig, sp, sv);
         }

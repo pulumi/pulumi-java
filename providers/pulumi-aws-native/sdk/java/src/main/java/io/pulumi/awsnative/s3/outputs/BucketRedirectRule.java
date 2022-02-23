@@ -140,7 +140,6 @@ public final class BucketRedirectRule {
             this.replaceKeyWith = replaceKeyWith;
             return this;
         }
-
         public BucketRedirectRule build() {
             return new BucketRedirectRule(hostName, httpRedirectCode, protocol, replaceKeyPrefixWith, replaceKeyWith);
         }

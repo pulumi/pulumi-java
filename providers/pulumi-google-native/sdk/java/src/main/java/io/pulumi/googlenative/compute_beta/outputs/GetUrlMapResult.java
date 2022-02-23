@@ -333,7 +333,6 @@ public final class GetUrlMapResult {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
-
         public GetUrlMapResult build() {
             return new GetUrlMapResult(creationTimestamp, defaultRouteAction, defaultService, defaultUrlRedirect, description, fingerprint, headerAction, hostRules, kind, name, pathMatchers, region, selfLink, tests);
         }

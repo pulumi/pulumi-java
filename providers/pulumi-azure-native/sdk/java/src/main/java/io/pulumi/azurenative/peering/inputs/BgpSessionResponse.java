@@ -24,7 +24,7 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxPrefixesAdvertisedV4")
-    private final @Nullable Integer maxPrefixesAdvertisedV4;
+        private final @Nullable Integer maxPrefixesAdvertisedV4;
 
     public Optional<Integer> getMaxPrefixesAdvertisedV4() {
         return this.maxPrefixesAdvertisedV4 == null ? Optional.empty() : Optional.ofNullable(this.maxPrefixesAdvertisedV4);
@@ -35,7 +35,7 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxPrefixesAdvertisedV6")
-    private final @Nullable Integer maxPrefixesAdvertisedV6;
+        private final @Nullable Integer maxPrefixesAdvertisedV6;
 
     public Optional<Integer> getMaxPrefixesAdvertisedV6() {
         return this.maxPrefixesAdvertisedV6 == null ? Optional.empty() : Optional.ofNullable(this.maxPrefixesAdvertisedV6);
@@ -46,7 +46,7 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="md5AuthenticationKey")
-    private final @Nullable String md5AuthenticationKey;
+        private final @Nullable String md5AuthenticationKey;
 
     public Optional<String> getMd5AuthenticationKey() {
         return this.md5AuthenticationKey == null ? Optional.empty() : Optional.ofNullable(this.md5AuthenticationKey);
@@ -57,7 +57,7 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="microsoftSessionIPv4Address")
-    private final @Nullable String microsoftSessionIPv4Address;
+        private final @Nullable String microsoftSessionIPv4Address;
 
     public Optional<String> getMicrosoftSessionIPv4Address() {
         return this.microsoftSessionIPv4Address == null ? Optional.empty() : Optional.ofNullable(this.microsoftSessionIPv4Address);
@@ -68,7 +68,7 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="microsoftSessionIPv6Address")
-    private final @Nullable String microsoftSessionIPv6Address;
+        private final @Nullable String microsoftSessionIPv6Address;
 
     public Optional<String> getMicrosoftSessionIPv6Address() {
         return this.microsoftSessionIPv6Address == null ? Optional.empty() : Optional.ofNullable(this.microsoftSessionIPv6Address);
@@ -79,7 +79,7 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="peerSessionIPv4Address")
-    private final @Nullable String peerSessionIPv4Address;
+        private final @Nullable String peerSessionIPv4Address;
 
     public Optional<String> getPeerSessionIPv4Address() {
         return this.peerSessionIPv4Address == null ? Optional.empty() : Optional.ofNullable(this.peerSessionIPv4Address);
@@ -90,7 +90,7 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="peerSessionIPv6Address")
-    private final @Nullable String peerSessionIPv6Address;
+        private final @Nullable String peerSessionIPv6Address;
 
     public Optional<String> getPeerSessionIPv6Address() {
         return this.peerSessionIPv6Address == null ? Optional.empty() : Optional.ofNullable(this.peerSessionIPv6Address);
@@ -101,7 +101,7 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sessionPrefixV4")
-    private final @Nullable String sessionPrefixV4;
+        private final @Nullable String sessionPrefixV4;
 
     public Optional<String> getSessionPrefixV4() {
         return this.sessionPrefixV4 == null ? Optional.empty() : Optional.ofNullable(this.sessionPrefixV4);
@@ -112,7 +112,7 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sessionPrefixV6")
-    private final @Nullable String sessionPrefixV6;
+        private final @Nullable String sessionPrefixV6;
 
     public Optional<String> getSessionPrefixV6() {
         return this.sessionPrefixV6 == null ? Optional.empty() : Optional.ofNullable(this.sessionPrefixV6);
@@ -123,7 +123,7 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sessionStateV4", required=true)
-    private final String sessionStateV4;
+        private final String sessionStateV4;
 
     public String getSessionStateV4() {
         return this.sessionStateV4;
@@ -134,7 +134,7 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sessionStateV6", required=true)
-    private final String sessionStateV6;
+        private final String sessionStateV6;
 
     public String getSessionStateV6() {
         return this.sessionStateV6;
@@ -273,7 +273,6 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
             this.sessionStateV6 = Objects.requireNonNull(sessionStateV6);
             return this;
         }
-
         public BgpSessionResponse build() {
             return new BgpSessionResponse(maxPrefixesAdvertisedV4, maxPrefixesAdvertisedV6, md5AuthenticationKey, microsoftSessionIPv4Address, microsoftSessionIPv6Address, peerSessionIPv4Address, peerSessionIPv6Address, sessionPrefixV4, sessionPrefixV6, sessionStateV4, sessionStateV6);
         }

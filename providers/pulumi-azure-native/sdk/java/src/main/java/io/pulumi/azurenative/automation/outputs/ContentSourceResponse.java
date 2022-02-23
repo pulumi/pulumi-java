@@ -119,7 +119,6 @@ public final class ContentSourceResponse {
             this.version = version;
             return this;
         }
-
         public ContentSourceResponse build() {
             return new ContentSourceResponse(hash, type, value, version);
         }

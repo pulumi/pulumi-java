@@ -61,7 +61,6 @@ public final class PresignedUrlConfigProperties {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public PresignedUrlConfigProperties build() {
             return new PresignedUrlConfigProperties(expiresInSec, roleArn);
         }

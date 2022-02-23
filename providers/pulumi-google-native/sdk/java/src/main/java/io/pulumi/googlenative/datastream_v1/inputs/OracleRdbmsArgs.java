@@ -24,7 +24,7 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oracleSchemas")
-    private final @Nullable Input<List<OracleSchemaArgs>> oracleSchemas;
+      private final @Nullable Input<List<OracleSchemaArgs>> oracleSchemas;
 
     public Input<List<OracleSchemaArgs>> getOracleSchemas() {
         return this.oracleSchemas == null ? Input.empty() : this.oracleSchemas;
@@ -67,7 +67,6 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
             this.oracleSchemas = Input.ofNullable(oracleSchemas);
             return this;
         }
-
         public OracleRdbmsArgs build() {
             return new OracleRdbmsArgs(oracleSchemas);
         }

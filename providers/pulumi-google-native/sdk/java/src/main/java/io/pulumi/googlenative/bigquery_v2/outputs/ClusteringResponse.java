@@ -53,7 +53,6 @@ public final class ClusteringResponse {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public ClusteringResponse build() {
             return new ClusteringResponse(fields);
         }

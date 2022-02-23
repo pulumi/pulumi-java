@@ -204,7 +204,6 @@ public final class NicIPSettingsResponse {
             this.subnetMask = subnetMask;
             return this;
         }
-
         public NicIPSettingsResponse build() {
             return new NicIPSettingsResponse(allocationMethod, dnsServers, gateway, ipAddress, ipAddressInfo, primaryWinsServer, secondaryWinsServer, subnetMask);
         }

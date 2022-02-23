@@ -266,7 +266,6 @@ public final class EdifactFramingSettingsResponse {
             this.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
             return this;
         }
-
         public EdifactFramingSettingsResponse build() {
             return new EdifactFramingSettingsResponse(characterEncoding, characterSet, componentSeparator, dataElementSeparator, decimalPointIndicator, protocolVersion, releaseIndicator, repetitionSeparator, segmentTerminator, segmentTerminatorSuffix, serviceCodeListDirectoryVersion);
         }

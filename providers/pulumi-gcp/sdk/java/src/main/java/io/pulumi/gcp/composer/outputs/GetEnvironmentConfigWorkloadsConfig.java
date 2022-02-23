@@ -74,7 +74,6 @@ public final class GetEnvironmentConfigWorkloadsConfig {
             this.workers = Objects.requireNonNull(workers);
             return this;
         }
-
         public GetEnvironmentConfigWorkloadsConfig build() {
             return new GetEnvironmentConfigWorkloadsConfig(schedulers, webServers, workers);
         }

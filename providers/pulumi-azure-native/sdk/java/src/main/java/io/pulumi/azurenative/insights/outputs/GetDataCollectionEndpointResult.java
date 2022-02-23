@@ -333,7 +333,6 @@ public final class GetDataCollectionEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataCollectionEndpointResult build() {
             return new GetDataCollectionEndpointResult(configurationAccess, description, etag, id, immutableId, kind, location, logsIngestion, name, networkAcls, provisioningState, systemData, tags, type);
         }

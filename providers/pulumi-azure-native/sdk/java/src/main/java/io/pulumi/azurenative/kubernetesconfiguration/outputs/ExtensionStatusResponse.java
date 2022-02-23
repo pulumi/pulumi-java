@@ -139,7 +139,6 @@ public final class ExtensionStatusResponse {
             this.time = time;
             return this;
         }
-
         public ExtensionStatusResponse build() {
             return new ExtensionStatusResponse(code, displayStatus, level, message, time);
         }

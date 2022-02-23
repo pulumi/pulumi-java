@@ -74,7 +74,6 @@ public final class GetReservationResult {
             this.throughputCapacity = Objects.requireNonNull(throughputCapacity);
             return this;
         }
-
         public GetReservationResult build() {
             return new GetReservationResult(name, throughputCapacity);
         }

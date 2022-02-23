@@ -181,7 +181,6 @@ public final class GetIscsiTargetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIscsiTargetResult build() {
             return new GetIscsiTargetResult(id, name, provisioningState, status, targetIqn, tpgs, type);
         }

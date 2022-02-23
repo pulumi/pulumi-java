@@ -74,7 +74,6 @@ public final class RecommendedActionErrorInfoResponse {
             this.isRetryable = Objects.requireNonNull(isRetryable);
             return this;
         }
-
         public RecommendedActionErrorInfoResponse build() {
             return new RecommendedActionErrorInfoResponse(errorCode, isRetryable);
         }

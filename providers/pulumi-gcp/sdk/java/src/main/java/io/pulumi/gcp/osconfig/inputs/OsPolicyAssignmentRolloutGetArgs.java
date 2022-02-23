@@ -19,7 +19,7 @@ public final class OsPolicyAssignmentRolloutGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="disruptionBudget", required=true)
-    private final Input<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget;
+        private final Input<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> disruptionBudget;
 
     public Input<OsPolicyAssignmentRolloutDisruptionBudgetGetArgs> getDisruptionBudget() {
         return this.disruptionBudget;
@@ -30,7 +30,7 @@ public final class OsPolicyAssignmentRolloutGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="minWaitDuration", required=true)
-    private final Input<String> minWaitDuration;
+        private final Input<String> minWaitDuration;
 
     public Input<String> getMinWaitDuration() {
         return this.minWaitDuration;
@@ -89,7 +89,6 @@ public final class OsPolicyAssignmentRolloutGetArgs extends io.pulumi.resources.
             this.minWaitDuration = Input.of(Objects.requireNonNull(minWaitDuration));
             return this;
         }
-
         public OsPolicyAssignmentRolloutGetArgs build() {
             return new OsPolicyAssignmentRolloutGetArgs(disruptionBudget, minWaitDuration);
         }

@@ -401,7 +401,6 @@ public final class GetAndroidMAMPolicyByNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAndroidMAMPolicyByNameResult build() {
             return new GetAndroidMAMPolicyByNameResult(accessRecheckOfflineTimeout, accessRecheckOnlineTimeout, appSharingFromLevel, appSharingToLevel, authentication, clipboardSharingLevel, dataBackup, description, deviceCompliance, fileEncryption, fileSharingSaveAs, friendlyName, groupStatus, id, lastModifiedTime, location, managedBrowser, name, numOfApps, offlineWipeTimeout, pin, pinNumRetry, screenCapture, tags, type);
         }

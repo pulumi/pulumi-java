@@ -74,7 +74,6 @@ public final class NodePoolNodeConfigKubeletConfig {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
         }
-
         public NodePoolNodeConfigKubeletConfig build() {
             return new NodePoolNodeConfigKubeletConfig(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
         }

@@ -23,7 +23,7 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishMibPerSec")
-    private final @Nullable Input<Integer> publishMibPerSec;
+      private final @Nullable Input<Integer> publishMibPerSec;
 
     public Input<Integer> getPublishMibPerSec() {
         return this.publishMibPerSec == null ? Input.empty() : this.publishMibPerSec;
@@ -34,7 +34,7 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscribeMibPerSec")
-    private final @Nullable Input<Integer> subscribeMibPerSec;
+      private final @Nullable Input<Integer> subscribeMibPerSec;
 
     public Input<Integer> getSubscribeMibPerSec() {
         return this.subscribeMibPerSec == null ? Input.empty() : this.subscribeMibPerSec;
@@ -93,7 +93,6 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
             this.subscribeMibPerSec = Input.ofNullable(subscribeMibPerSec);
             return this;
         }
-
         public CapacityArgs build() {
             return new CapacityArgs(publishMibPerSec, subscribeMibPerSec);
         }

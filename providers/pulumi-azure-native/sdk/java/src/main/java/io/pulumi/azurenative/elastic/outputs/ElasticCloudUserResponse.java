@@ -95,7 +95,6 @@ public final class ElasticCloudUserResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public ElasticCloudUserResponse build() {
             return new ElasticCloudUserResponse(elasticCloudSsoDefaultUrl, emailAddress, id);
         }

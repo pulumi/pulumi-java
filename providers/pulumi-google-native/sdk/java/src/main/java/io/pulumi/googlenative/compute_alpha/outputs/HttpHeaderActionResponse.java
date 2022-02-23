@@ -118,7 +118,6 @@ public final class HttpHeaderActionResponse {
             this.responseHeadersToRemove = Objects.requireNonNull(responseHeadersToRemove);
             return this;
         }
-
         public HttpHeaderActionResponse build() {
             return new HttpHeaderActionResponse(requestHeadersToAdd, requestHeadersToRemove, responseHeadersToAdd, responseHeadersToRemove);
         }

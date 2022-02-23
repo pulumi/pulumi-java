@@ -305,7 +305,6 @@ public final class GetNodeGroupResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetNodeGroupResult build() {
             return new GetNodeGroupResult(autoscalingPolicy, creationTimestamp, description, fingerprint, kind, locationHint, maintenancePolicy, maintenanceWindow, name, nodeTemplate, selfLink, size, status, zone);
         }

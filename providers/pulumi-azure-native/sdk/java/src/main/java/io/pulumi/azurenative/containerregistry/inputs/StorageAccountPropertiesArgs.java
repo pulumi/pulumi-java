@@ -22,7 +22,7 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -65,7 +65,6 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
-
         public StorageAccountPropertiesArgs build() {
             return new StorageAccountPropertiesArgs(id);
         }

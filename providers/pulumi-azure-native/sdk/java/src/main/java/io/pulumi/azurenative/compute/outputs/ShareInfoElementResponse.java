@@ -52,7 +52,6 @@ public final class ShareInfoElementResponse {
             this.vmUri = Objects.requireNonNull(vmUri);
             return this;
         }
-
         public ShareInfoElementResponse build() {
             return new ShareInfoElementResponse(vmUri);
         }

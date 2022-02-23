@@ -268,7 +268,6 @@ public final class VpnGatewayNatRuleResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VpnGatewayNatRuleResponse build() {
             return new VpnGatewayNatRuleResponse(egressVpnSiteLinkConnections, etag, externalMappings, id, ingressVpnSiteLinkConnections, internalMappings, ipConfigurationId, mode, name, provisioningState, type);
         }

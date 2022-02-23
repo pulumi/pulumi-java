@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs exten
      * 
      */
     @InputImport(name="simpleResponses", required=true)
-    private final Input<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses;
+      private final Input<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> getSimpleResponses() {
         return this.simpleResponses;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs exten
             this.simpleResponses = Input.of(Objects.requireNonNull(simpleResponses));
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs(simpleResponses);
         }

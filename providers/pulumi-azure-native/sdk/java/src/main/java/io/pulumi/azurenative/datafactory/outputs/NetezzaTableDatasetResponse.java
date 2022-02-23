@@ -252,7 +252,6 @@ public final class NetezzaTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NetezzaTableDatasetResponse build() {
             return new NetezzaTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

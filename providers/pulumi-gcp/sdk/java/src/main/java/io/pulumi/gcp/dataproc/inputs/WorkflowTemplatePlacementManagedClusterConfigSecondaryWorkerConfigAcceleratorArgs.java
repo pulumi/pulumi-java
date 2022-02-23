@@ -20,7 +20,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      * 
      */
     @InputImport(name="acceleratorCount")
-    private final @Nullable Input<Integer> acceleratorCount;
+        private final @Nullable Input<Integer> acceleratorCount;
 
     public Input<Integer> getAcceleratorCount() {
         return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
@@ -31,7 +31,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      * 
      */
     @InputImport(name="acceleratorType")
-    private final @Nullable Input<String> acceleratorType;
+        private final @Nullable Input<String> acceleratorType;
 
     public Input<String> getAcceleratorType() {
         return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
@@ -90,7 +90,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             this.acceleratorType = Input.ofNullable(acceleratorType);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorArgs(acceleratorCount, acceleratorType);
         }

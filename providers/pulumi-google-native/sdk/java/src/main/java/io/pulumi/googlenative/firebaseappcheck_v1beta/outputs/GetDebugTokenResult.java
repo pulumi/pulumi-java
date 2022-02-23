@@ -95,7 +95,6 @@ public final class GetDebugTokenResult {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public GetDebugTokenResult build() {
             return new GetDebugTokenResult(displayName, name, token);
         }

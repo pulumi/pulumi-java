@@ -21,7 +21,7 @@ public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="securityLevel", required=true)
-    private final String securityLevel;
+      private final String securityLevel;
 
     public String getSecurityLevel() {
         return this.securityLevel;
@@ -32,7 +32,7 @@ public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -81,7 +81,6 @@ public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public HttpsTriggerResponse build() {
             return new HttpsTriggerResponse(securityLevel, url);
         }

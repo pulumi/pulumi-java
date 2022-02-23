@@ -30,7 +30,6 @@ public final class ResiliencyPolicyTagMap {
         public Builder(ResiliencyPolicyTagMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ResiliencyPolicyTagMap build() {
             return new ResiliencyPolicyTagMap();
         }

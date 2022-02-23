@@ -24,7 +24,7 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -35,7 +35,7 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="categories")
-    private final @Nullable Input<List<String>> categories;
+      private final @Nullable Input<List<String>> categories;
 
     public Input<List<String>> getCategories() {
         return this.categories == null ? Input.empty() : this.categories;
@@ -46,7 +46,7 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -120,7 +120,6 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public StartActivityIntentArgs build() {
             return new StartActivityIntentArgs(action, categories, uri);
         }

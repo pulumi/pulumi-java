@@ -393,7 +393,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLevelResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLevelResponse(appliedChanges, cdcDeleteCounter, cdcInsertCounter, cdcUpdateCounter, databaseName, endedOn, fullLoadCompletedTables, fullLoadErroredTables, fullLoadLoadingTables, fullLoadQueuedTables, id, incomingChanges, initializationCompleted, latency, migrationState, resultType, startedOn);
         }

@@ -76,7 +76,6 @@ public final class VMResourcesResponse {
             this.id = id;
             return this;
         }
-
         public VMResourcesResponse build() {
             return new VMResourcesResponse(agentVersion, id);
         }

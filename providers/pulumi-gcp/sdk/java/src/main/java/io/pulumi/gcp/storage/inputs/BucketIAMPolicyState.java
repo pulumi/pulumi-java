@@ -19,7 +19,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+        private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -30,7 +30,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -42,7 +42,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+        private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -116,7 +116,6 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
             this.policyData = Input.ofNullable(policyData);
             return this;
         }
-
         public BucketIAMPolicyState build() {
             return new BucketIAMPolicyState(bucket, etag, policyData);
         }

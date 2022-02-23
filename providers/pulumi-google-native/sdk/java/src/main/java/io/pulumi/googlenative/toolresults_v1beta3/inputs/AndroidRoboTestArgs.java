@@ -24,7 +24,7 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appInitialActivity")
-    private final @Nullable Input<String> appInitialActivity;
+      private final @Nullable Input<String> appInitialActivity;
 
     public Input<String> getAppInitialActivity() {
         return this.appInitialActivity == null ? Input.empty() : this.appInitialActivity;
@@ -35,7 +35,7 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bootstrapPackageId")
-    private final @Nullable Input<String> bootstrapPackageId;
+      private final @Nullable Input<String> bootstrapPackageId;
 
     public Input<String> getBootstrapPackageId() {
         return this.bootstrapPackageId == null ? Input.empty() : this.bootstrapPackageId;
@@ -46,7 +46,7 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bootstrapRunnerClass")
-    private final @Nullable Input<String> bootstrapRunnerClass;
+      private final @Nullable Input<String> bootstrapRunnerClass;
 
     public Input<String> getBootstrapRunnerClass() {
         return this.bootstrapRunnerClass == null ? Input.empty() : this.bootstrapRunnerClass;
@@ -57,7 +57,7 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxDepth")
-    private final @Nullable Input<Integer> maxDepth;
+      private final @Nullable Input<Integer> maxDepth;
 
     public Input<Integer> getMaxDepth() {
         return this.maxDepth == null ? Input.empty() : this.maxDepth;
@@ -68,7 +68,7 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxSteps")
-    private final @Nullable Input<Integer> maxSteps;
+      private final @Nullable Input<Integer> maxSteps;
 
     public Input<Integer> getMaxSteps() {
         return this.maxSteps == null ? Input.empty() : this.maxSteps;
@@ -172,7 +172,6 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
             this.maxSteps = Input.ofNullable(maxSteps);
             return this;
         }
-
         public AndroidRoboTestArgs build() {
             return new AndroidRoboTestArgs(appInitialActivity, bootstrapPackageId, bootstrapRunnerClass, maxDepth, maxSteps);
         }

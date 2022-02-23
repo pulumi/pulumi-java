@@ -76,7 +76,6 @@ public final class EnvironmentVariableResponse {
             this.value = value;
             return this;
         }
-
         public EnvironmentVariableResponse build() {
             return new EnvironmentVariableResponse(name, value);
         }

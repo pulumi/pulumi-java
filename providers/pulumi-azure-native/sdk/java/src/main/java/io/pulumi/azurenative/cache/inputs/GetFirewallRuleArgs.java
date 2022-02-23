@@ -17,7 +17,7 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cacheName", required=true)
-    private final String cacheName;
+        private final String cacheName;
 
     public String getCacheName() {
         return this.cacheName;
@@ -28,7 +28,7 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleName", required=true)
-    private final String ruleName;
+        private final String ruleName;
 
     public String getRuleName() {
         return this.ruleName;
@@ -98,7 +98,6 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public GetFirewallRuleArgs build() {
             return new GetFirewallRuleArgs(cacheName, resourceGroupName, ruleName);
         }

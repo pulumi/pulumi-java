@@ -139,7 +139,6 @@ public final class MetadataResponse {
             this.reproducible = Objects.requireNonNull(reproducible);
             return this;
         }
-
         public MetadataResponse build() {
             return new MetadataResponse(buildFinishedOn, buildInvocationId, buildStartedOn, completeness, reproducible);
         }

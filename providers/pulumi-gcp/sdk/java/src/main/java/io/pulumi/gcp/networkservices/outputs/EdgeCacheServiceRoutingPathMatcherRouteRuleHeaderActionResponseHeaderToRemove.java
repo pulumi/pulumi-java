@@ -54,7 +54,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove(headerName);
         }

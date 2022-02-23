@@ -21,7 +21,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Input<Map<String,String>> annotations;
 
     public Input<Map<String,String>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -32,14 +32,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -50,28 +50,28 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privatePoolV1Config")
-    private final @Nullable Input<PrivatePoolV1ConfigArgs> privatePoolV1Config;
+      private final @Nullable Input<PrivatePoolV1ConfigArgs> privatePoolV1Config;
 
     public Input<PrivatePoolV1ConfigArgs> getPrivatePoolV1Config() {
         return this.privatePoolV1Config == null ? Input.empty() : this.privatePoolV1Config;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="validateOnly")
-    private final @Nullable Input<String> validateOnly;
+      private final @Nullable Input<String> validateOnly;
 
     public Input<String> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
     }
 
     @InputImport(name="workerPoolId", required=true)
-    private final Input<String> workerPoolId;
+      private final Input<String> workerPoolId;
 
     public Input<String> getWorkerPoolId() {
         return this.workerPoolId;
@@ -205,7 +205,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.workerPoolId = Input.of(Objects.requireNonNull(workerPoolId));
             return this;
         }
-
         public WorkerPoolArgs build() {
             return new WorkerPoolArgs(annotations, displayName, location, privatePoolV1Config, project, validateOnly, workerPoolId);
         }

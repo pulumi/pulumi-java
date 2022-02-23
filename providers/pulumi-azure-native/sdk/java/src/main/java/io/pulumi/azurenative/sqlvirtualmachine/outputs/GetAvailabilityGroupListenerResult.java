@@ -206,7 +206,6 @@ public final class GetAvailabilityGroupListenerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAvailabilityGroupListenerResult build() {
             return new GetAvailabilityGroupListenerResult(availabilityGroupName, createDefaultAvailabilityGroupIfNotExist, id, loadBalancerConfigurations, name, port, provisioningState, type);
         }

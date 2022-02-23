@@ -20,7 +20,7 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cloudServiceConfiguration")
-    private final @Nullable Input<CloudServiceConfigurationArgs> cloudServiceConfiguration;
+        private final @Nullable Input<CloudServiceConfigurationArgs> cloudServiceConfiguration;
 
     public Input<CloudServiceConfigurationArgs> getCloudServiceConfiguration() {
         return this.cloudServiceConfiguration == null ? Input.empty() : this.cloudServiceConfiguration;
@@ -31,7 +31,7 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="virtualMachineConfiguration")
-    private final @Nullable Input<VirtualMachineConfigurationArgs> virtualMachineConfiguration;
+        private final @Nullable Input<VirtualMachineConfigurationArgs> virtualMachineConfiguration;
 
     public Input<VirtualMachineConfigurationArgs> getVirtualMachineConfiguration() {
         return this.virtualMachineConfiguration == null ? Input.empty() : this.virtualMachineConfiguration;
@@ -90,7 +90,6 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
             this.virtualMachineConfiguration = Input.ofNullable(virtualMachineConfiguration);
             return this;
         }
-
         public DeploymentConfigurationArgs build() {
             return new DeploymentConfigurationArgs(cloudServiceConfiguration, virtualMachineConfiguration);
         }

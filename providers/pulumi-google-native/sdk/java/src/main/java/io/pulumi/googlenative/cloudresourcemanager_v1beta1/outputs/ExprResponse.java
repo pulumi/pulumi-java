@@ -116,7 +116,6 @@ public final class ExprResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ExprResponse build() {
             return new ExprResponse(description, expression, location, title);
         }

@@ -21,7 +21,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyArgs exten
      * 
      */
     @InputImport(name="egressFrom")
-    private final @Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom;
+        private final @Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom;
 
     public Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs> getEgressFrom() {
         return this.egressFrom == null ? Input.empty() : this.egressFrom;
@@ -34,7 +34,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyArgs exten
      * 
      */
     @InputImport(name="egressTo")
-    private final @Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs> egressTo;
+        private final @Nullable Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs> egressTo;
 
     public Input<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs> getEgressTo() {
         return this.egressTo == null ? Input.empty() : this.egressTo;
@@ -93,7 +93,6 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyArgs exten
             this.egressTo = Input.ofNullable(egressTo);
             return this;
         }
-
         public ServicePerimetersServicePerimeterStatusEgressPolicyArgs build() {
             return new ServicePerimetersServicePerimeterStatusEgressPolicyArgs(egressFrom, egressTo);
         }

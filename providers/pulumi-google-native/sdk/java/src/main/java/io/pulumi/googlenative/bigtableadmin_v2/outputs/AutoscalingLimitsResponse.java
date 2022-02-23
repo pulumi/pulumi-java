@@ -74,7 +74,6 @@ public final class AutoscalingLimitsResponse {
             this.minServeNodes = Objects.requireNonNull(minServeNodes);
             return this;
         }
-
         public AutoscalingLimitsResponse build() {
             return new AutoscalingLimitsResponse(maxServeNodes, minServeNodes);
         }

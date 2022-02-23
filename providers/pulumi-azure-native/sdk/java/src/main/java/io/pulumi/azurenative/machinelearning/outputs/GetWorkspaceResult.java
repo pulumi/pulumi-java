@@ -308,7 +308,6 @@ public final class GetWorkspaceResult {
             this.workspaceType = Objects.requireNonNull(workspaceType);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(creationTime, id, keyVaultIdentifierId, location, name, ownerEmail, studioEndpoint, tags, type, userStorageAccountId, workspaceId, workspaceState, workspaceType);
         }

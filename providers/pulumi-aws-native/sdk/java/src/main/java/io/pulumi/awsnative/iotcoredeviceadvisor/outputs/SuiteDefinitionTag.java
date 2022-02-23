@@ -74,7 +74,6 @@ public final class SuiteDefinitionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SuiteDefinitionTag build() {
             return new SuiteDefinitionTag(key, value);
         }

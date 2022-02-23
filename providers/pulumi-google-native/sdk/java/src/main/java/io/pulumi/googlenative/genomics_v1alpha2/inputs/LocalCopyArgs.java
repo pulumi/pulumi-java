@@ -22,7 +22,7 @@ public final class LocalCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disk", required=true)
-    private final Input<String> disk;
+      private final Input<String> disk;
 
     public Input<String> getDisk() {
         return this.disk;
@@ -33,7 +33,7 @@ public final class LocalCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -92,7 +92,6 @@ public final class LocalCopyArgs extends io.pulumi.resources.ResourceArgs {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }
-
         public LocalCopyArgs build() {
             return new LocalCopyArgs(disk, path);
         }

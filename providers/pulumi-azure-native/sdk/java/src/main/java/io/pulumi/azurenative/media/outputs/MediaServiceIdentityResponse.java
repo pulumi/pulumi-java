@@ -95,7 +95,6 @@ public final class MediaServiceIdentityResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MediaServiceIdentityResponse build() {
             return new MediaServiceIdentityResponse(principalId, tenantId, type);
         }

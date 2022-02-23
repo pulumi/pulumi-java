@@ -96,7 +96,6 @@ public final class ScheduleResponse {
             this.retentionCount = Objects.requireNonNull(retentionCount);
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(crontabSpec, prefix, retentionCount);
         }

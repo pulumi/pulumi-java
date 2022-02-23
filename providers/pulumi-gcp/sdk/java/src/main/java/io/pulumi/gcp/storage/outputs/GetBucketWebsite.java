@@ -58,7 +58,6 @@ public final class GetBucketWebsite {
             this.notFoundPage = Objects.requireNonNull(notFoundPage);
             return this;
         }
-
         public GetBucketWebsite build() {
             return new GetBucketWebsite(mainPageSuffix, notFoundPage);
         }

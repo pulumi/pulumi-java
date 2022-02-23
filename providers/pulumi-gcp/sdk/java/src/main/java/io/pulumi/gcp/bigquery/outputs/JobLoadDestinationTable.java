@@ -99,7 +99,6 @@ public final class JobLoadDestinationTable {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public JobLoadDestinationTable build() {
             return new JobLoadDestinationTable(datasetId, projectId, tableId);
         }

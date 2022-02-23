@@ -61,7 +61,6 @@ public final class SchedulingPolicyShareAttributes {
             this.weightFactor = weightFactor;
             return this;
         }
-
         public SchedulingPolicyShareAttributes build() {
             return new SchedulingPolicyShareAttributes(shareIdentifier, weightFactor);
         }

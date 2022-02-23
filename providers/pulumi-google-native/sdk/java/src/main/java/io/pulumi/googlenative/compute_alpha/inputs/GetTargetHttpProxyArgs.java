@@ -15,14 +15,14 @@ public final class GetTargetHttpProxyArgs extends io.pulumi.resources.InvokeArgs
     public static final GetTargetHttpProxyArgs Empty = new GetTargetHttpProxyArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="targetHttpProxy", required=true)
-    private final String targetHttpProxy;
+      private final String targetHttpProxy;
 
     public String getTargetHttpProxy() {
         return this.targetHttpProxy;
@@ -71,7 +71,6 @@ public final class GetTargetHttpProxyArgs extends io.pulumi.resources.InvokeArgs
             this.targetHttpProxy = Objects.requireNonNull(targetHttpProxy);
             return this;
         }
-
         public GetTargetHttpProxyArgs build() {
             return new GetTargetHttpProxyArgs(project, targetHttpProxy);
         }

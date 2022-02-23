@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs e
      * 
      */
     @InputImport(name="displayText")
-    private final @Nullable Input<String> displayText;
+      private final @Nullable Input<String> displayText;
 
     public Input<String> getDisplayText() {
         return this.displayText == null ? Input.empty() : this.displayText;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs e
      * 
      */
     @InputImport(name="ssml")
-    private final @Nullable Input<String> ssml;
+      private final @Nullable Input<String> ssml;
 
     public Input<String> getSsml() {
         return this.ssml == null ? Input.empty() : this.ssml;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs e
      * 
      */
     @InputImport(name="textToSpeech")
-    private final @Nullable Input<String> textToSpeech;
+      private final @Nullable Input<String> textToSpeech;
 
     public Input<String> getTextToSpeech() {
         return this.textToSpeech == null ? Input.empty() : this.textToSpeech;
@@ -119,7 +119,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs e
             this.textToSpeech = Input.ofNullable(textToSpeech);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs(displayText, ssml, textToSpeech);
         }

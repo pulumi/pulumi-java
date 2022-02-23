@@ -24,7 +24,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable Input<List<IpAddressArgs>> networkInterfaces;
+        private final @Nullable Input<List<IpAddressArgs>> networkInterfaces;
 
     public Input<List<IpAddressArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -67,7 +67,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }
-
         public NetworkProfileArgs build() {
             return new NetworkProfileArgs(networkInterfaces);
         }

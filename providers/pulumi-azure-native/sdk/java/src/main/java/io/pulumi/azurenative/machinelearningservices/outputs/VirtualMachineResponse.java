@@ -200,7 +200,6 @@ public final class VirtualMachineResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public VirtualMachineResponse build() {
             return new VirtualMachineResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
         }

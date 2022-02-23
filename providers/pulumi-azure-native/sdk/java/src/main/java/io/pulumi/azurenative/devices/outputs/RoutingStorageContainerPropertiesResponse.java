@@ -287,7 +287,6 @@ public final class RoutingStorageContainerPropertiesResponse {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public RoutingStorageContainerPropertiesResponse build() {
             return new RoutingStorageContainerPropertiesResponse(authenticationType, batchFrequencyInSeconds, connectionString, containerName, encoding, endpointUri, fileNameFormat, id, maxChunkSizeInBytes, name, resourceGroup, subscriptionId);
         }

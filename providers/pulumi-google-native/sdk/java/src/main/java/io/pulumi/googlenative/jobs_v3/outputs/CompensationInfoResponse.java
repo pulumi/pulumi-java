@@ -97,7 +97,6 @@ public final class CompensationInfoResponse {
             this.entries = Objects.requireNonNull(entries);
             return this;
         }
-
         public CompensationInfoResponse build() {
             return new CompensationInfoResponse(annualizedBaseCompensationRange, annualizedTotalCompensationRange, entries);
         }

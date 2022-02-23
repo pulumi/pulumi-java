@@ -160,7 +160,6 @@ public final class DetectorOutcome {
             this.tags = tags;
             return this;
         }
-
         public DetectorOutcome build() {
             return new DetectorOutcome(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
         }

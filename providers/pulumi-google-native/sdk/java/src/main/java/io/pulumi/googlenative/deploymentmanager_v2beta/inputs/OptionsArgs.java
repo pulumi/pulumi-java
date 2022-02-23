@@ -27,7 +27,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asyncOptions")
-    private final @Nullable Input<List<AsyncOptionsArgs>> asyncOptions;
+      private final @Nullable Input<List<AsyncOptionsArgs>> asyncOptions;
 
     public Input<List<AsyncOptionsArgs>> getAsyncOptions() {
         return this.asyncOptions == null ? Input.empty() : this.asyncOptions;
@@ -38,7 +38,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputMappings")
-    private final @Nullable Input<List<InputMappingArgs>> inputMappings;
+      private final @Nullable Input<List<InputMappingArgs>> inputMappings;
 
     public Input<List<InputMappingArgs>> getInputMappings() {
         return this.inputMappings == null ? Input.empty() : this.inputMappings;
@@ -49,7 +49,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationOptions")
-    private final @Nullable Input<ValidationOptionsArgs> validationOptions;
+      private final @Nullable Input<ValidationOptionsArgs> validationOptions;
 
     public Input<ValidationOptionsArgs> getValidationOptions() {
         return this.validationOptions == null ? Input.empty() : this.validationOptions;
@@ -60,7 +60,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualProperties")
-    private final @Nullable Input<String> virtualProperties;
+      private final @Nullable Input<String> virtualProperties;
 
     public Input<String> getVirtualProperties() {
         return this.virtualProperties == null ? Input.empty() : this.virtualProperties;
@@ -149,7 +149,6 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualProperties = Input.ofNullable(virtualProperties);
             return this;
         }
-
         public OptionsArgs build() {
             return new OptionsArgs(asyncOptions, inputMappings, validationOptions, virtualProperties);
         }

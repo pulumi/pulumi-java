@@ -74,7 +74,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse(resourceId, resourceType);
         }

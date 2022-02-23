@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseRespons
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseRespons
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse build() {
             return new GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse(value);
         }

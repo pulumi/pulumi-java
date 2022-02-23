@@ -24,7 +24,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -36,7 +36,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entryFulfillment")
-    private final @Nullable Input<CxPageEntryFulfillmentArgs> entryFulfillment;
+        private final @Nullable Input<CxPageEntryFulfillmentArgs> entryFulfillment;
 
     public Input<CxPageEntryFulfillmentArgs> getEntryFulfillment() {
         return this.entryFulfillment == null ? Input.empty() : this.entryFulfillment;
@@ -48,7 +48,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHandlers")
-    private final @Nullable Input<List<CxPageEventHandlerArgs>> eventHandlers;
+        private final @Nullable Input<List<CxPageEventHandlerArgs>> eventHandlers;
 
     public Input<List<CxPageEventHandlerArgs>> getEventHandlers() {
         return this.eventHandlers == null ? Input.empty() : this.eventHandlers;
@@ -60,7 +60,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="form")
-    private final @Nullable Input<CxPageFormArgs> form;
+        private final @Nullable Input<CxPageFormArgs> form;
 
     public Input<CxPageFormArgs> getForm() {
         return this.form == null ? Input.empty() : this.form;
@@ -82,7 +82,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-    private final @Nullable Input<String> languageCode;
+        private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
@@ -94,7 +94,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+        private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -108,7 +108,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitionRouteGroups")
-    private final @Nullable Input<List<String>> transitionRouteGroups;
+        private final @Nullable Input<List<String>> transitionRouteGroups;
 
     public Input<List<String>> getTransitionRouteGroups() {
         return this.transitionRouteGroups == null ? Input.empty() : this.transitionRouteGroups;
@@ -127,7 +127,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitionRoutes")
-    private final @Nullable Input<List<CxPageTransitionRouteArgs>> transitionRoutes;
+        private final @Nullable Input<List<CxPageTransitionRouteArgs>> transitionRoutes;
 
     public Input<List<CxPageTransitionRouteArgs>> getTransitionRoutes() {
         return this.transitionRoutes == null ? Input.empty() : this.transitionRoutes;
@@ -276,7 +276,6 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
             this.transitionRoutes = Input.ofNullable(transitionRoutes);
             return this;
         }
-
         public CxPageArgs build() {
             return new CxPageArgs(displayName, entryFulfillment, eventHandlers, form, languageCode, parent, transitionRouteGroups, transitionRoutes);
         }

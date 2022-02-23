@@ -18,7 +18,7 @@ public final class CloudConnectorsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="awsExternalId", required=true)
-    private final String awsExternalId;
+        private final String awsExternalId;
 
     public String getAwsExternalId() {
         return this.awsExternalId;
@@ -56,7 +56,6 @@ public final class CloudConnectorsResponse extends io.pulumi.resources.InvokeArg
             this.awsExternalId = Objects.requireNonNull(awsExternalId);
             return this;
         }
-
         public CloudConnectorsResponse build() {
             return new CloudConnectorsResponse(awsExternalId);
         }

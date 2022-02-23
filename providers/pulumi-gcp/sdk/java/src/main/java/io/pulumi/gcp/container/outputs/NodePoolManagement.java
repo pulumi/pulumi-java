@@ -76,7 +76,6 @@ public final class NodePoolManagement {
             this.autoUpgrade = autoUpgrade;
             return this;
         }
-
         public NodePoolManagement build() {
             return new NodePoolManagement(autoRepair, autoUpgrade);
         }

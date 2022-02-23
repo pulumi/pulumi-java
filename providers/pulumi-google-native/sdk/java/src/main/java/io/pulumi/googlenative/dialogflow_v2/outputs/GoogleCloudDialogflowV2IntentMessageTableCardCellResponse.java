@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageTableCardCellResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageTableCardCellResponse(text);
         }

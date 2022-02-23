@@ -24,7 +24,7 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<PriorityLevelConfigurationConditionArgs>> conditions;
+        private final @Nullable Input<List<PriorityLevelConfigurationConditionArgs>> conditions;
 
     public Input<List<PriorityLevelConfigurationConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -67,7 +67,6 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
-
         public PriorityLevelConfigurationStatusArgs build() {
             return new PriorityLevelConfigurationStatusArgs(conditions);
         }

@@ -23,7 +23,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * 
      */
     @InputImport(name="s3Configuration")
-    private final @Nullable Input<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> s3Configuration;
+        private final @Nullable Input<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> s3Configuration;
 
     public Input<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> getS3Configuration() {
         return this.s3Configuration == null ? Input.empty() : this.s3Configuration;
@@ -66,7 +66,6 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
             this.s3Configuration = Input.ofNullable(s3Configuration);
             return this;
         }
-
         public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs build() {
             return new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs(s3Configuration);
         }

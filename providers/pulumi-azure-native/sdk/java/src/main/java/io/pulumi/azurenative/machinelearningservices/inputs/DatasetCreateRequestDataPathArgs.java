@@ -19,7 +19,7 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="datastoreName")
-    private final @Nullable Input<String> datastoreName;
+        private final @Nullable Input<String> datastoreName;
 
     public Input<String> getDatastoreName() {
         return this.datastoreName == null ? Input.empty() : this.datastoreName;
@@ -30,7 +30,7 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="relativePath")
-    private final @Nullable Input<String> relativePath;
+        private final @Nullable Input<String> relativePath;
 
     public Input<String> getRelativePath() {
         return this.relativePath == null ? Input.empty() : this.relativePath;
@@ -89,7 +89,6 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
             this.relativePath = Input.ofNullable(relativePath);
             return this;
         }
-
         public DatasetCreateRequestDataPathArgs build() {
             return new DatasetCreateRequestDataPathArgs(datastoreName, relativePath);
         }

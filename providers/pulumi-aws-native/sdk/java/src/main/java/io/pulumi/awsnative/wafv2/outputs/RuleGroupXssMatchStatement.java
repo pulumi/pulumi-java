@@ -60,7 +60,6 @@ public final class RuleGroupXssMatchStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public RuleGroupXssMatchStatement build() {
             return new RuleGroupXssMatchStatement(fieldToMatch, textTransformations);
         }

@@ -222,7 +222,6 @@ public final class InMageRcmProtectedDiskDetailsResponse {
             this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
             return this;
         }
-
         public InMageRcmProtectedDiskDetailsResponse build() {
             return new InMageRcmProtectedDiskDetailsResponse(capacityInBytes, diskEncryptionSetId, diskId, diskName, diskType, isOSDisk, logStorageAccountId, seedManagedDiskId, targetManagedDiskId);
         }

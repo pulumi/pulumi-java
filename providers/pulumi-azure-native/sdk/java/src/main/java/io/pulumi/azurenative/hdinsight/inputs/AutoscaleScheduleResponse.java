@@ -25,7 +25,7 @@ public final class AutoscaleScheduleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="days")
-    private final @Nullable List<String> days;
+        private final @Nullable List<String> days;
 
     public List<String> getDays() {
         return this.days == null ? List.of() : this.days;
@@ -36,7 +36,7 @@ public final class AutoscaleScheduleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="timeAndCapacity")
-    private final @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity;
+        private final @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity;
 
     public Optional<AutoscaleTimeAndCapacityResponse> getTimeAndCapacity() {
         return this.timeAndCapacity == null ? Optional.empty() : Optional.ofNullable(this.timeAndCapacity);
@@ -85,7 +85,6 @@ public final class AutoscaleScheduleResponse extends io.pulumi.resources.InvokeA
             this.timeAndCapacity = timeAndCapacity;
             return this;
         }
-
         public AutoscaleScheduleResponse build() {
             return new AutoscaleScheduleResponse(days, timeAndCapacity);
         }

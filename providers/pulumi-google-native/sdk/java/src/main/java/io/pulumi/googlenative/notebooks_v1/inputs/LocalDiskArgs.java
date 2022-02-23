@@ -24,7 +24,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initializeParams")
-    private final @Nullable Input<LocalDiskInitializeParamsArgs> initializeParams;
+      private final @Nullable Input<LocalDiskInitializeParamsArgs> initializeParams;
 
     public Input<LocalDiskInitializeParamsArgs> getInitializeParams() {
         return this.initializeParams == null ? Input.empty() : this.initializeParams;
@@ -35,7 +35,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interface")
-    private final @Nullable Input<String> $interface;
+      private final @Nullable Input<String> $interface;
 
     public Input<String> get$interface() {
         return this.$interface == null ? Input.empty() : this.$interface;
@@ -46,7 +46,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -57,7 +57,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -68,7 +68,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -172,7 +172,6 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public LocalDiskArgs build() {
             return new LocalDiskArgs(initializeParams, $interface, mode, source, type);
         }

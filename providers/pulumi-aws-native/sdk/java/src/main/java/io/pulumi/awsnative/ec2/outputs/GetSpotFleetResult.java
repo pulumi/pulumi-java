@@ -61,7 +61,6 @@ public final class GetSpotFleetResult {
             this.spotFleetRequestConfigData = spotFleetRequestConfigData;
             return this;
         }
-
         public GetSpotFleetResult build() {
             return new GetSpotFleetResult(id, spotFleetRequestConfigData);
         }

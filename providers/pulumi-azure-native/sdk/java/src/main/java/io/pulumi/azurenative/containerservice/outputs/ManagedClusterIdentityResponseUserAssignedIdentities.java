@@ -74,7 +74,6 @@ public final class ManagedClusterIdentityResponseUserAssignedIdentities {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ManagedClusterIdentityResponseUserAssignedIdentities build() {
             return new ManagedClusterIdentityResponseUserAssignedIdentities(clientId, principalId);
         }

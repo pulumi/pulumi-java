@@ -16,7 +16,7 @@ public final class ClusterMasterAuthArgs extends io.pulumi.resources.ResourceArg
     public static final ClusterMasterAuthArgs Empty = new ClusterMasterAuthArgs();
 
     @InputImport(name="clientCertificate")
-    private final @Nullable Input<String> clientCertificate;
+        private final @Nullable Input<String> clientCertificate;
 
     public Input<String> getClientCertificate() {
         return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
@@ -27,21 +27,21 @@ public final class ClusterMasterAuthArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientCertificateConfig", required=true)
-    private final Input<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig;
+        private final Input<ClusterMasterAuthClientCertificateConfigArgs> clientCertificateConfig;
 
     public Input<ClusterMasterAuthClientCertificateConfigArgs> getClientCertificateConfig() {
         return this.clientCertificateConfig;
     }
 
     @InputImport(name="clientKey")
-    private final @Nullable Input<String> clientKey;
+        private final @Nullable Input<String> clientKey;
 
     public Input<String> getClientKey() {
         return this.clientKey == null ? Input.empty() : this.clientKey;
     }
 
     @InputImport(name="clusterCaCertificate")
-    private final @Nullable Input<String> clusterCaCertificate;
+        private final @Nullable Input<String> clusterCaCertificate;
 
     public Input<String> getClusterCaCertificate() {
         return this.clusterCaCertificate == null ? Input.empty() : this.clusterCaCertificate;
@@ -130,7 +130,6 @@ public final class ClusterMasterAuthArgs extends io.pulumi.resources.ResourceArg
             this.clusterCaCertificate = Input.ofNullable(clusterCaCertificate);
             return this;
         }
-
         public ClusterMasterAuthArgs build() {
             return new ClusterMasterAuthArgs(clientCertificate, clientCertificateConfig, clientKey, clusterCaCertificate);
         }

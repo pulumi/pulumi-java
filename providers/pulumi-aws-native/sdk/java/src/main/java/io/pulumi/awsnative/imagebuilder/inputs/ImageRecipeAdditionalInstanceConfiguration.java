@@ -24,7 +24,7 @@ public final class ImageRecipeAdditionalInstanceConfiguration extends io.pulumi.
      * 
      */
     @InputImport(name="systemsManagerAgent")
-    private final @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent;
+        private final @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent;
 
     public Optional<ImageRecipeSystemsManagerAgent> getSystemsManagerAgent() {
         return this.systemsManagerAgent == null ? Optional.empty() : Optional.ofNullable(this.systemsManagerAgent);
@@ -35,7 +35,7 @@ public final class ImageRecipeAdditionalInstanceConfiguration extends io.pulumi.
      * 
      */
     @InputImport(name="userDataOverride")
-    private final @Nullable String userDataOverride;
+        private final @Nullable String userDataOverride;
 
     public Optional<String> getUserDataOverride() {
         return this.userDataOverride == null ? Optional.empty() : Optional.ofNullable(this.userDataOverride);
@@ -84,7 +84,6 @@ public final class ImageRecipeAdditionalInstanceConfiguration extends io.pulumi.
             this.userDataOverride = userDataOverride;
             return this;
         }
-
         public ImageRecipeAdditionalInstanceConfiguration build() {
             return new ImageRecipeAdditionalInstanceConfiguration(systemsManagerAgent, userDataOverride);
         }

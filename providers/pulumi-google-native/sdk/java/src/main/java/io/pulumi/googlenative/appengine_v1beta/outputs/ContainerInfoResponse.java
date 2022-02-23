@@ -52,7 +52,6 @@ public final class ContainerInfoResponse {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public ContainerInfoResponse build() {
             return new ContainerInfoResponse(image);
         }

@@ -25,7 +25,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
      * 
      */
     @InputImport(name="allowAll")
-    private final @Nullable Input<Boolean> allowAll;
+      private final @Nullable Input<Boolean> allowAll;
 
     public Input<Boolean> getAllowAll() {
         return this.allowAll == null ? Input.empty() : this.allowAll;
@@ -36,7 +36,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<GoogleTypeExprArgs> condition;
+      private final @Nullable Input<GoogleTypeExprArgs> condition;
 
     public Input<GoogleTypeExprArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -47,7 +47,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
      * 
      */
     @InputImport(name="denyAll")
-    private final @Nullable Input<Boolean> denyAll;
+      private final @Nullable Input<Boolean> denyAll;
 
     public Input<Boolean> getDenyAll() {
         return this.denyAll == null ? Input.empty() : this.denyAll;
@@ -58,7 +58,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
      * 
      */
     @InputImport(name="enforce")
-    private final @Nullable Input<Boolean> enforce;
+      private final @Nullable Input<Boolean> enforce;
 
     public Input<Boolean> getEnforce() {
         return this.enforce == null ? Input.empty() : this.enforce;
@@ -69,7 +69,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
+      private final @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
 
     public Input<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -173,7 +173,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs build() {
             return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs(allowAll, condition, denyAll, enforce, values);
         }

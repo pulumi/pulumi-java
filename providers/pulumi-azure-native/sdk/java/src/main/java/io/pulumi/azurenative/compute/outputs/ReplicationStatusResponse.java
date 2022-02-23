@@ -76,7 +76,6 @@ public final class ReplicationStatusResponse {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }
-
         public ReplicationStatusResponse build() {
             return new ReplicationStatusResponse(aggregatedState, summary);
         }

@@ -117,7 +117,6 @@ public final class GetSessionResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetSessionResult build() {
             return new GetSessionResult(approximateLastUseTime, createTime, labels, name);
         }

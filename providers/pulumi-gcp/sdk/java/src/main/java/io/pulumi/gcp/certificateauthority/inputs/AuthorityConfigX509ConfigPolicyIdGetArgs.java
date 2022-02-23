@@ -19,7 +19,7 @@ public final class AuthorityConfigX509ConfigPolicyIdGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="objectIdPaths", required=true)
-    private final Input<List<Integer>> objectIdPaths;
+        private final Input<List<Integer>> objectIdPaths;
 
     public Input<List<Integer>> getObjectIdPaths() {
         return this.objectIdPaths;
@@ -62,7 +62,6 @@ public final class AuthorityConfigX509ConfigPolicyIdGetArgs extends io.pulumi.re
             this.objectIdPaths = Input.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-
         public AuthorityConfigX509ConfigPolicyIdGetArgs build() {
             return new AuthorityConfigX509ConfigPolicyIdGetArgs(objectIdPaths);
         }

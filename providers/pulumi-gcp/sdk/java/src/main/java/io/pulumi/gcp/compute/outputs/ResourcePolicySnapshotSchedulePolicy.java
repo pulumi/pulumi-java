@@ -103,7 +103,6 @@ public final class ResourcePolicySnapshotSchedulePolicy {
             this.snapshotProperties = snapshotProperties;
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicy build() {
             return new ResourcePolicySnapshotSchedulePolicy(retentionPolicy, schedule, snapshotProperties);
         }

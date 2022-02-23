@@ -24,7 +24,7 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="extendedSummary")
-    private final @Nullable Map<String,String> extendedSummary;
+        private final @Nullable Map<String,String> extendedSummary;
 
     public Map<String,String> getExtendedSummary() {
         return this.extendedSummary == null ? Map.of() : this.extendedSummary;
@@ -36,7 +36,7 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -47,7 +47,7 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="lastSummaryRefreshedTime")
-    private final @Nullable String lastSummaryRefreshedTime;
+        private final @Nullable String lastSummaryRefreshedTime;
 
     public Optional<String> getLastSummaryRefreshedTime() {
         return this.lastSummaryRefreshedTime == null ? Optional.empty() : Optional.ofNullable(this.lastSummaryRefreshedTime);
@@ -58,7 +58,7 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="refreshSummaryState")
-    private final @Nullable String refreshSummaryState;
+        private final @Nullable String refreshSummaryState;
 
     public Optional<String> getRefreshSummaryState() {
         return this.refreshSummaryState == null ? Optional.empty() : Optional.ofNullable(this.refreshSummaryState);
@@ -127,7 +127,6 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
             this.refreshSummaryState = refreshSummaryState;
             return this;
         }
-
         public DatabaseProjectSummaryResponse build() {
             return new DatabaseProjectSummaryResponse(extendedSummary, instanceType, lastSummaryRefreshedTime, refreshSummaryState);
         }

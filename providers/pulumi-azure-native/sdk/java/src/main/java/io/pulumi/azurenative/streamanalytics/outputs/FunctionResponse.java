@@ -119,7 +119,6 @@ public final class FunctionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FunctionResponse build() {
             return new FunctionResponse(id, name, properties, type);
         }

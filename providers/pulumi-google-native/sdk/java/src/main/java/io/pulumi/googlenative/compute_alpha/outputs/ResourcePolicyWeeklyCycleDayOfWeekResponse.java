@@ -95,7 +95,6 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ResourcePolicyWeeklyCycleDayOfWeekResponse build() {
             return new ResourcePolicyWeeklyCycleDayOfWeekResponse(day, duration, startTime);
         }

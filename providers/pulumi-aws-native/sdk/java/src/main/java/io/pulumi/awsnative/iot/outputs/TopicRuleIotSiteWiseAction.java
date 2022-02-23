@@ -60,7 +60,6 @@ public final class TopicRuleIotSiteWiseAction {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public TopicRuleIotSiteWiseAction build() {
             return new TopicRuleIotSiteWiseAction(putAssetPropertyValueEntries, roleArn);
         }

@@ -13,7 +13,7 @@ public final class GetTopicRuleArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTopicRuleArgs Empty = new GetTopicRuleArgs();
 
     @InputImport(name="ruleName", required=true)
-    private final String ruleName;
+        private final String ruleName;
 
     public String getRuleName() {
         return this.ruleName;
@@ -51,7 +51,6 @@ public final class GetTopicRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public GetTopicRuleArgs build() {
             return new GetTopicRuleArgs(ruleName);
         }

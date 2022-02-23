@@ -62,7 +62,6 @@ public final class DicomStoreNotificationConfig {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public DicomStoreNotificationConfig build() {
             return new DicomStoreNotificationConfig(pubsubTopic);
         }

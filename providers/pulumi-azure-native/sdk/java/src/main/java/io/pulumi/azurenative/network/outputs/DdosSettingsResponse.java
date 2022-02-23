@@ -99,7 +99,6 @@ public final class DdosSettingsResponse {
             this.protectionCoverage = protectionCoverage;
             return this;
         }
-
         public DdosSettingsResponse build() {
             return new DdosSettingsResponse(ddosCustomPolicy, protectedIP, protectionCoverage);
         }

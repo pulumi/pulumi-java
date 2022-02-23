@@ -74,7 +74,6 @@ public final class KeyGroupConfig {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public KeyGroupConfig build() {
             return new KeyGroupConfig(comment, items, name);
         }

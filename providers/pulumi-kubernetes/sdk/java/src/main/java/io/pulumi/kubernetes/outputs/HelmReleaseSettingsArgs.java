@@ -139,7 +139,6 @@ public final class HelmReleaseSettingsArgs {
             this.repositoryConfigPath = repositoryConfigPath;
             return this;
         }
-
         public HelmReleaseSettingsArgs build() {
             return new HelmReleaseSettingsArgs(driver, pluginsPath, registryConfigPath, repositoryCache, repositoryConfigPath);
         }

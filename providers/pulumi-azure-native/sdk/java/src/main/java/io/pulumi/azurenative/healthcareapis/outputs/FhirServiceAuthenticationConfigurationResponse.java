@@ -98,7 +98,6 @@ public final class FhirServiceAuthenticationConfigurationResponse {
             this.smartProxyEnabled = smartProxyEnabled;
             return this;
         }
-
         public FhirServiceAuthenticationConfigurationResponse build() {
             return new FhirServiceAuthenticationConfigurationResponse(audience, authority, smartProxyEnabled);
         }

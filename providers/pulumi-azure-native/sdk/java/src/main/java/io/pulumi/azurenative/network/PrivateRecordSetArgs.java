@@ -30,7 +30,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="aRecords")
-    private final @Nullable Input<List<ARecordArgs>> aRecords;
+        private final @Nullable Input<List<ARecordArgs>> aRecords;
 
     public Input<List<ARecordArgs>> getARecords() {
         return this.aRecords == null ? Input.empty() : this.aRecords;
@@ -41,7 +41,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="aaaaRecords")
-    private final @Nullable Input<List<AaaaRecordArgs>> aaaaRecords;
+        private final @Nullable Input<List<AaaaRecordArgs>> aaaaRecords;
 
     public Input<List<AaaaRecordArgs>> getAaaaRecords() {
         return this.aaaaRecords == null ? Input.empty() : this.aaaaRecords;
@@ -52,7 +52,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cnameRecord")
-    private final @Nullable Input<CnameRecordArgs> cnameRecord;
+        private final @Nullable Input<CnameRecordArgs> cnameRecord;
 
     public Input<CnameRecordArgs> getCnameRecord() {
         return this.cnameRecord == null ? Input.empty() : this.cnameRecord;
@@ -63,7 +63,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -74,7 +74,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mxRecords")
-    private final @Nullable Input<List<MxRecordArgs>> mxRecords;
+        private final @Nullable Input<List<MxRecordArgs>> mxRecords;
 
     public Input<List<MxRecordArgs>> getMxRecords() {
         return this.mxRecords == null ? Input.empty() : this.mxRecords;
@@ -85,7 +85,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="privateZoneName", required=true)
-    private final Input<String> privateZoneName;
+        private final Input<String> privateZoneName;
 
     public Input<String> getPrivateZoneName() {
         return this.privateZoneName;
@@ -96,7 +96,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ptrRecords")
-    private final @Nullable Input<List<PtrRecordArgs>> ptrRecords;
+        private final @Nullable Input<List<PtrRecordArgs>> ptrRecords;
 
     public Input<List<PtrRecordArgs>> getPtrRecords() {
         return this.ptrRecords == null ? Input.empty() : this.ptrRecords;
@@ -107,7 +107,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="recordType", required=true)
-    private final Input<String> recordType;
+        private final Input<String> recordType;
 
     public Input<String> getRecordType() {
         return this.recordType;
@@ -118,7 +118,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="relativeRecordSetName")
-    private final @Nullable Input<String> relativeRecordSetName;
+        private final @Nullable Input<String> relativeRecordSetName;
 
     public Input<String> getRelativeRecordSetName() {
         return this.relativeRecordSetName == null ? Input.empty() : this.relativeRecordSetName;
@@ -129,7 +129,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -140,7 +140,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="soaRecord")
-    private final @Nullable Input<SoaRecordArgs> soaRecord;
+        private final @Nullable Input<SoaRecordArgs> soaRecord;
 
     public Input<SoaRecordArgs> getSoaRecord() {
         return this.soaRecord == null ? Input.empty() : this.soaRecord;
@@ -151,7 +151,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="srvRecords")
-    private final @Nullable Input<List<SrvRecordArgs>> srvRecords;
+        private final @Nullable Input<List<SrvRecordArgs>> srvRecords;
 
     public Input<List<SrvRecordArgs>> getSrvRecords() {
         return this.srvRecords == null ? Input.empty() : this.srvRecords;
@@ -162,7 +162,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<Double> ttl;
+        private final @Nullable Input<Double> ttl;
 
     public Input<Double> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -173,7 +173,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="txtRecords")
-    private final @Nullable Input<List<TxtRecordArgs>> txtRecords;
+        private final @Nullable Input<List<TxtRecordArgs>> txtRecords;
 
     public Input<List<TxtRecordArgs>> getTxtRecords() {
         return this.txtRecords == null ? Input.empty() : this.txtRecords;
@@ -412,7 +412,6 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             this.txtRecords = Input.ofNullable(txtRecords);
             return this;
         }
-
         public PrivateRecordSetArgs build() {
             return new PrivateRecordSetArgs(aRecords, aaaaRecords, cnameRecord, metadata, mxRecords, privateZoneName, ptrRecords, recordType, relativeRecordSetName, resourceGroupName, soaRecord, srvRecords, ttl, txtRecords);
         }

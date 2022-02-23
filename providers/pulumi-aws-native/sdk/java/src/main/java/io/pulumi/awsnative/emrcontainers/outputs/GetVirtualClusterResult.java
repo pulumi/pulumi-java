@@ -91,7 +91,6 @@ public final class GetVirtualClusterResult {
             this.tags = tags;
             return this;
         }
-
         public GetVirtualClusterResult build() {
             return new GetVirtualClusterResult(arn, id, tags);
         }

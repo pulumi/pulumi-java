@@ -53,7 +53,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscre
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse(values);
         }

@@ -25,7 +25,7 @@ public final class ManagedClusterAddonProfileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<Map<String,String>> config;
+        private final @Nullable Input<Map<String,String>> config;
 
     public Input<Map<String,String>> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -36,7 +36,7 @@ public final class ManagedClusterAddonProfileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -95,7 +95,6 @@ public final class ManagedClusterAddonProfileArgs extends io.pulumi.resources.Re
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public ManagedClusterAddonProfileArgs build() {
             return new ManagedClusterAddonProfileArgs(config, enabled);
         }

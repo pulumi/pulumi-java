@@ -290,7 +290,6 @@ public final class GetJobDefinitionResult {
             this.userConfirmation = userConfirmation;
             return this;
         }
-
         public GetJobDefinitionResult build() {
             return new GetJobDefinitionResult(customerSecrets, dataServiceInput, dataSinkId, dataSourceId, id, lastModifiedTime, name, runLocation, schedules, state, type, userConfirmation);
         }

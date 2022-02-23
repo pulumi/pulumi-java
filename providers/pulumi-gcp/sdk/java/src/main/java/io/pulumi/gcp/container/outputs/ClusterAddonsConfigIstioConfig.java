@@ -79,7 +79,6 @@ public final class ClusterAddonsConfigIstioConfig {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public ClusterAddonsConfigIstioConfig build() {
             return new ClusterAddonsConfigIstioConfig(auth, disabled);
         }

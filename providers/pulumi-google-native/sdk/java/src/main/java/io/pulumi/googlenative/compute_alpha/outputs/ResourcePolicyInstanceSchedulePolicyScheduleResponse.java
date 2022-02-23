@@ -52,7 +52,6 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicyScheduleResponse build() {
             return new ResourcePolicyInstanceSchedulePolicyScheduleResponse(schedule);
         }

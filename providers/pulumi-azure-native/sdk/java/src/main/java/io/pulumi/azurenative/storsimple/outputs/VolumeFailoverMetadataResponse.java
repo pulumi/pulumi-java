@@ -182,7 +182,6 @@ public final class VolumeFailoverMetadataResponse {
             this.volumeType = volumeType;
             return this;
         }
-
         public VolumeFailoverMetadataResponse build() {
             return new VolumeFailoverMetadataResponse(backupCreatedDate, backupElementId, backupId, backupPolicyId, sizeInBytes, volumeId, volumeType);
         }

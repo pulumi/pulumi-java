@@ -24,7 +24,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-    private final Input<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases;
+        private final Input<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> selectedDatabases;
 
     public Input<List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs>> getSelectedDatabases() {
         return this.selectedDatabases;
@@ -35,7 +35,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
+        private final Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Input<PostgreSqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -46,7 +46,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final Input<PostgreSqlConnectionInfoArgs> targetConnectionInfo;
+        private final Input<PostgreSqlConnectionInfoArgs> targetConnectionInfo;
 
     public Input<PostgreSqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -120,7 +120,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs extend
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }

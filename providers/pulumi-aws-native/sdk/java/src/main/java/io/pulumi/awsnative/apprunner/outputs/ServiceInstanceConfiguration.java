@@ -97,7 +97,6 @@ public final class ServiceInstanceConfiguration {
             this.memory = memory;
             return this;
         }
-
         public ServiceInstanceConfiguration build() {
             return new ServiceInstanceConfiguration(cpu, instanceRoleArn, memory);
         }

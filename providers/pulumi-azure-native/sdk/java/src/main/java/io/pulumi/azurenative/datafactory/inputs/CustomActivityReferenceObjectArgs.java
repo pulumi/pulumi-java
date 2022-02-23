@@ -25,7 +25,7 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="datasets")
-    private final @Nullable Input<List<DatasetReferenceArgs>> datasets;
+        private final @Nullable Input<List<DatasetReferenceArgs>> datasets;
 
     public Input<List<DatasetReferenceArgs>> getDatasets() {
         return this.datasets == null ? Input.empty() : this.datasets;
@@ -36,7 +36,7 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="linkedServices")
-    private final @Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices;
+        private final @Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices;
 
     public Input<List<LinkedServiceReferenceArgs>> getLinkedServices() {
         return this.linkedServices == null ? Input.empty() : this.linkedServices;
@@ -95,7 +95,6 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
             this.linkedServices = Input.ofNullable(linkedServices);
             return this;
         }
-
         public CustomActivityReferenceObjectArgs build() {
             return new CustomActivityReferenceObjectArgs(datasets, linkedServices);
         }

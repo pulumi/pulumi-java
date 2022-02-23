@@ -356,7 +356,6 @@ public final class GetConnectedRegistryResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetConnectedRegistryResult build() {
             return new GetConnectedRegistryResult(activation, clientTokenIds, connectionState, id, lastActivityTime, logging, loginServer, mode, name, parent, provisioningState, statusDetails, systemData, type, version);
         }

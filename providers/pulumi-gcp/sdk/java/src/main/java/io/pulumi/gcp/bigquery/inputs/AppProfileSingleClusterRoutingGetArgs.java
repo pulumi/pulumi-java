@@ -21,7 +21,7 @@ public final class AppProfileSingleClusterRoutingGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="allowTransactionalWrites")
-    private final @Nullable Input<Boolean> allowTransactionalWrites;
+        private final @Nullable Input<Boolean> allowTransactionalWrites;
 
     public Input<Boolean> getAllowTransactionalWrites() {
         return this.allowTransactionalWrites == null ? Input.empty() : this.allowTransactionalWrites;
@@ -32,7 +32,7 @@ public final class AppProfileSingleClusterRoutingGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="clusterId", required=true)
-    private final Input<String> clusterId;
+        private final Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId;
@@ -91,7 +91,6 @@ public final class AppProfileSingleClusterRoutingGetArgs extends io.pulumi.resou
             this.clusterId = Input.of(Objects.requireNonNull(clusterId));
             return this;
         }
-
         public AppProfileSingleClusterRoutingGetArgs build() {
             return new AppProfileSingleClusterRoutingGetArgs(allowTransactionalWrites, clusterId);
         }

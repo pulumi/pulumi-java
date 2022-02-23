@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxFindingsPerInfoType")
-    private final @Nullable Input<List<GooglePrivacyDlpV2InfoTypeLimitArgs>> maxFindingsPerInfoType;
+      private final @Nullable Input<List<GooglePrivacyDlpV2InfoTypeLimitArgs>> maxFindingsPerInfoType;
 
     public Input<List<GooglePrivacyDlpV2InfoTypeLimitArgs>> getMaxFindingsPerInfoType() {
         return this.maxFindingsPerInfoType == null ? Input.empty() : this.maxFindingsPerInfoType;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxFindingsPerItem")
-    private final @Nullable Input<Integer> maxFindingsPerItem;
+      private final @Nullable Input<Integer> maxFindingsPerItem;
 
     public Input<Integer> getMaxFindingsPerItem() {
         return this.maxFindingsPerItem == null ? Input.empty() : this.maxFindingsPerItem;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxFindingsPerRequest")
-    private final @Nullable Input<Integer> maxFindingsPerRequest;
+      private final @Nullable Input<Integer> maxFindingsPerRequest;
 
     public Input<Integer> getMaxFindingsPerRequest() {
         return this.maxFindingsPerRequest == null ? Input.empty() : this.maxFindingsPerRequest;
@@ -121,7 +121,6 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends io.pulumi.resourc
             this.maxFindingsPerRequest = Input.ofNullable(maxFindingsPerRequest);
             return this;
         }
-
         public GooglePrivacyDlpV2FindingLimitsArgs build() {
             return new GooglePrivacyDlpV2FindingLimitsArgs(maxFindingsPerInfoType, maxFindingsPerItem, maxFindingsPerRequest);
         }

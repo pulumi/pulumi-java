@@ -22,7 +22,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+        private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -33,7 +33,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="placementPolicyName")
-    private final @Nullable Input<String> placementPolicyName;
+        private final @Nullable Input<String> placementPolicyName;
 
     public Input<String> getPlacementPolicyName() {
         return this.placementPolicyName == null ? Input.empty() : this.placementPolicyName;
@@ -44,7 +44,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+        private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -55,7 +55,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties;
+        private final @Nullable Input<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties;
 
     public Input<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -66,7 +66,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -170,7 +170,6 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public PlacementPolicyArgs build() {
             return new PlacementPolicyArgs(clusterName, placementPolicyName, privateCloudName, properties, resourceGroupName);
         }

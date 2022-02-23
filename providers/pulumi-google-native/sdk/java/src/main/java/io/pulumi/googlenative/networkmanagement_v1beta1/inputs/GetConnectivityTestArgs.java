@@ -15,14 +15,14 @@ public final class GetConnectivityTestArgs extends io.pulumi.resources.InvokeArg
     public static final GetConnectivityTestArgs Empty = new GetConnectivityTestArgs();
 
     @InputImport(name="connectivityTestId", required=true)
-    private final String connectivityTestId;
+      private final String connectivityTestId;
 
     public String getConnectivityTestId() {
         return this.connectivityTestId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetConnectivityTestArgs extends io.pulumi.resources.InvokeArg
             this.project = project;
             return this;
         }
-
         public GetConnectivityTestArgs build() {
             return new GetConnectivityTestArgs(connectivityTestId, project);
         }

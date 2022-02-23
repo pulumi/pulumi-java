@@ -74,7 +74,6 @@ public final class BucketAccessControlProjectTeamResponse {
             this.team = Objects.requireNonNull(team);
             return this;
         }
-
         public BucketAccessControlProjectTeamResponse build() {
             return new BucketAccessControlProjectTeamResponse(projectNumber, team);
         }

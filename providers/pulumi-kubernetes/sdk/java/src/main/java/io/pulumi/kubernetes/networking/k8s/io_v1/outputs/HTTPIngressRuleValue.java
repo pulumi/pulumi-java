@@ -53,7 +53,6 @@ public final class HTTPIngressRuleValue {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
-
         public HTTPIngressRuleValue build() {
             return new HTTPIngressRuleValue(paths);
         }

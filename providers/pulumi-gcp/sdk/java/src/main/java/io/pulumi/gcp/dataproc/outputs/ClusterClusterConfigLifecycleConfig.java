@@ -95,7 +95,6 @@ public final class ClusterClusterConfigLifecycleConfig {
             this.idleStartTime = idleStartTime;
             return this;
         }
-
         public ClusterClusterConfigLifecycleConfig build() {
             return new ClusterClusterConfigLifecycleConfig(autoDeleteTime, idleDeleteTtl, idleStartTime);
         }

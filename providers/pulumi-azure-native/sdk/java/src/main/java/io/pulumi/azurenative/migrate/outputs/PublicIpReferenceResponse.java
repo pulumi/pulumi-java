@@ -52,7 +52,6 @@ public final class PublicIpReferenceResponse {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public PublicIpReferenceResponse build() {
             return new PublicIpReferenceResponse(sourceArmResourceId);
         }

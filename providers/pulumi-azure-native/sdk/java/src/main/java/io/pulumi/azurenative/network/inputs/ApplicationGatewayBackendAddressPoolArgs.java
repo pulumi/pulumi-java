@@ -25,7 +25,7 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="backendAddresses")
-    private final @Nullable Input<List<ApplicationGatewayBackendAddressArgs>> backendAddresses;
+        private final @Nullable Input<List<ApplicationGatewayBackendAddressArgs>> backendAddresses;
 
     public Input<List<ApplicationGatewayBackendAddressArgs>> getBackendAddresses() {
         return this.backendAddresses == null ? Input.empty() : this.backendAddresses;
@@ -36,7 +36,7 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -47,7 +47,7 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -121,7 +121,6 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ApplicationGatewayBackendAddressPoolArgs build() {
             return new ApplicationGatewayBackendAddressPoolArgs(backendAddresses, id, name);
         }

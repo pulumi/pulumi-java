@@ -52,7 +52,6 @@ public final class LiveEventOutputTranscriptionTrackResponse {
             this.trackName = Objects.requireNonNull(trackName);
             return this;
         }
-
         public LiveEventOutputTranscriptionTrackResponse build() {
             return new LiveEventOutputTranscriptionTrackResponse(trackName);
         }

@@ -289,7 +289,6 @@ public final class VirtualMachineScaleSetExtensionResponse {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public VirtualMachineScaleSetExtensionResponse build() {
             return new VirtualMachineScaleSetExtensionResponse(autoUpgradeMinorVersion, enableAutomaticUpgrade, forceUpdateTag, id, name, protectedSettings, provisionAfterExtensions, provisioningState, publisher, settings, type, typeHandlerVersion);
         }

@@ -98,7 +98,6 @@ public final class LoadBalancerConfigurationResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public LoadBalancerConfigurationResponse build() {
             return new LoadBalancerConfigurationResponse(id, name, properties);
         }

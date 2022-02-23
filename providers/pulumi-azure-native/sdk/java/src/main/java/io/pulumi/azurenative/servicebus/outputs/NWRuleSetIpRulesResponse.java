@@ -76,7 +76,6 @@ public final class NWRuleSetIpRulesResponse {
             this.ipMask = ipMask;
             return this;
         }
-
         public NWRuleSetIpRulesResponse build() {
             return new NWRuleSetIpRulesResponse(action, ipMask);
         }

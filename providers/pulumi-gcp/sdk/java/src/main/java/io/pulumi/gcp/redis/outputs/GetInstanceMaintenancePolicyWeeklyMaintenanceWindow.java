@@ -73,7 +73,6 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindow {
             this.startTimes = Objects.requireNonNull(startTimes);
             return this;
         }
-
         public GetInstanceMaintenancePolicyWeeklyMaintenanceWindow build() {
             return new GetInstanceMaintenancePolicyWeeklyMaintenanceWindow(day, duration, startTimes);
         }

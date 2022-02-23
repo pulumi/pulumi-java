@@ -76,7 +76,6 @@ public final class AzureBackupParamsResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public AzureBackupParamsResponse build() {
             return new AzureBackupParamsResponse(backupType, objectType);
         }

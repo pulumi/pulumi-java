@@ -203,7 +203,6 @@ public final class NfsAccessRuleResponse {
             this.suid = suid;
             return this;
         }
-
         public NfsAccessRuleResponse build() {
             return new NfsAccessRuleResponse(access, anonymousGID, anonymousUID, filter, rootSquash, scope, submountAccess, suid);
         }

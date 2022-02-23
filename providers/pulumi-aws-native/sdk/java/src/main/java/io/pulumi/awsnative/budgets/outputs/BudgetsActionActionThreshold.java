@@ -59,7 +59,6 @@ public final class BudgetsActionActionThreshold {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BudgetsActionActionThreshold build() {
             return new BudgetsActionActionThreshold(type, value);
         }

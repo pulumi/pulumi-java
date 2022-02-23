@@ -118,7 +118,6 @@ public final class GetReplayResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetReplayResult build() {
             return new GetReplayResult(config, name, resultsSummary, state);
         }

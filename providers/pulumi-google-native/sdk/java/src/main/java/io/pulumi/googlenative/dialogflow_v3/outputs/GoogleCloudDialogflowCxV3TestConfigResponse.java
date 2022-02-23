@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3TestConfigResponse {
             this.trackingParameters = Objects.requireNonNull(trackingParameters);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3TestConfigResponse build() {
             return new GoogleCloudDialogflowCxV3TestConfigResponse(flow, trackingParameters);
         }

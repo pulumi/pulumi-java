@@ -22,7 +22,7 @@ public final class DataSourceTeradataParameters extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="database", required=true)
-    private final String database;
+        private final String database;
 
     public String getDatabase() {
         return this.database;
@@ -33,7 +33,7 @@ public final class DataSourceTeradataParameters extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+        private final String host;
 
     public String getHost() {
         return this.host;
@@ -44,7 +44,7 @@ public final class DataSourceTeradataParameters extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="port", required=true)
-    private final Double port;
+        private final Double port;
 
     public Double getPort() {
         return this.port;
@@ -103,7 +103,6 @@ public final class DataSourceTeradataParameters extends io.pulumi.resources.Invo
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceTeradataParameters build() {
             return new DataSourceTeradataParameters(database, host, port);
         }

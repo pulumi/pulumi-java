@@ -140,7 +140,6 @@ public final class BasicSliResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public BasicSliResponse build() {
             return new BasicSliResponse(availability, latency, location, method, version);
         }

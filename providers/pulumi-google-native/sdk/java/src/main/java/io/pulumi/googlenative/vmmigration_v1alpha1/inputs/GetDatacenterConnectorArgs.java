@@ -15,28 +15,28 @@ public final class GetDatacenterConnectorArgs extends io.pulumi.resources.Invoke
     public static final GetDatacenterConnectorArgs Empty = new GetDatacenterConnectorArgs();
 
     @InputImport(name="datacenterConnectorId", required=true)
-    private final String datacenterConnectorId;
+      private final String datacenterConnectorId;
 
     public String getDatacenterConnectorId() {
         return this.datacenterConnectorId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="sourceId", required=true)
-    private final String sourceId;
+      private final String sourceId;
 
     public String getSourceId() {
         return this.sourceId;
@@ -105,7 +105,6 @@ public final class GetDatacenterConnectorArgs extends io.pulumi.resources.Invoke
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public GetDatacenterConnectorArgs build() {
             return new GetDatacenterConnectorArgs(datacenterConnectorId, location, project, sourceId);
         }

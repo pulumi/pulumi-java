@@ -301,7 +301,6 @@ public final class GetDomainResult {
             this.vPCOptions = vPCOptions;
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(accessPolicies, advancedOptions, arn, clusterConfig, cognitoOptions, domainArn, domainEndpoint, domainEndpointOptions, domainEndpoints, eBSOptions, encryptionAtRestOptions, engineVersion, id, logPublishingOptions, nodeToNodeEncryptionOptions, serviceSoftwareOptions, snapshotOptions, tags, vPCOptions);
         }

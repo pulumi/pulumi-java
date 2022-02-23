@@ -98,7 +98,6 @@ public final class KpiGroupByMetadataResponse {
             this.fieldType = fieldType;
             return this;
         }
-
         public KpiGroupByMetadataResponse build() {
             return new KpiGroupByMetadataResponse(displayName, fieldName, fieldType);
         }

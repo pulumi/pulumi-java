@@ -118,7 +118,6 @@ public final class GetSupportPlanTypeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSupportPlanTypeResult build() {
             return new GetSupportPlanTypeResult(id, name, provisioningState, type);
         }

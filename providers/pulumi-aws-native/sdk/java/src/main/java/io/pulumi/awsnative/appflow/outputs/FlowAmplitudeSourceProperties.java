@@ -44,7 +44,6 @@ public final class FlowAmplitudeSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowAmplitudeSourceProperties build() {
             return new FlowAmplitudeSourceProperties(object);
         }

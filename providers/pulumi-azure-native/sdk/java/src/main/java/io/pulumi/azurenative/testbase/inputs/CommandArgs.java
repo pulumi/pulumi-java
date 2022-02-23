@@ -28,7 +28,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<Either<String,Action>> action;
+        private final Input<Either<String,Action>> action;
 
     public Input<Either<String,Action>> getAction() {
         return this.action;
@@ -39,7 +39,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alwaysRun")
-    private final @Nullable Input<Boolean> alwaysRun;
+        private final @Nullable Input<Boolean> alwaysRun;
 
     public Input<Boolean> getAlwaysRun() {
         return this.alwaysRun == null ? Input.empty() : this.alwaysRun;
@@ -50,7 +50,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applyUpdateBefore")
-    private final @Nullable Input<Boolean> applyUpdateBefore;
+        private final @Nullable Input<Boolean> applyUpdateBefore;
 
     public Input<Boolean> getApplyUpdateBefore() {
         return this.applyUpdateBefore == null ? Input.empty() : this.applyUpdateBefore;
@@ -61,7 +61,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content", required=true)
-    private final Input<String> content;
+        private final Input<String> content;
 
     public Input<String> getContent() {
         return this.content;
@@ -72,7 +72,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final Input<Either<String,ContentType>> contentType;
+        private final Input<Either<String,ContentType>> contentType;
 
     public Input<Either<String,ContentType>> getContentType() {
         return this.contentType;
@@ -83,7 +83,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRunTime")
-    private final @Nullable Input<Integer> maxRunTime;
+        private final @Nullable Input<Integer> maxRunTime;
 
     public Input<Integer> getMaxRunTime() {
         return this.maxRunTime == null ? Input.empty() : this.maxRunTime;
@@ -94,7 +94,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -105,7 +105,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restartAfter")
-    private final @Nullable Input<Boolean> restartAfter;
+        private final @Nullable Input<Boolean> restartAfter;
 
     public Input<Boolean> getRestartAfter() {
         return this.restartAfter == null ? Input.empty() : this.restartAfter;
@@ -116,7 +116,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runAsInteractive")
-    private final @Nullable Input<Boolean> runAsInteractive;
+        private final @Nullable Input<Boolean> runAsInteractive;
 
     public Input<Boolean> getRunAsInteractive() {
         return this.runAsInteractive == null ? Input.empty() : this.runAsInteractive;
@@ -127,7 +127,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runElevated")
-    private final @Nullable Input<Boolean> runElevated;
+        private final @Nullable Input<Boolean> runElevated;
 
     public Input<Boolean> getRunElevated() {
         return this.runElevated == null ? Input.empty() : this.runElevated;
@@ -306,7 +306,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
             this.runElevated = Input.ofNullable(runElevated);
             return this;
         }
-
         public CommandArgs build() {
             return new CommandArgs(action, alwaysRun, applyUpdateBefore, content, contentType, maxRunTime, name, restartAfter, runAsInteractive, runElevated);
         }

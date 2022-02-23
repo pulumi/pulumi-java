@@ -77,7 +77,6 @@ public final class RuntimeClassStrategyOptions {
             this.defaultRuntimeClassName = defaultRuntimeClassName;
             return this;
         }
-
         public RuntimeClassStrategyOptions build() {
             return new RuntimeClassStrategyOptions(allowedRuntimeClassNames, defaultRuntimeClassName);
         }

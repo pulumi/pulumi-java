@@ -73,7 +73,6 @@ public final class RegionDiskIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public RegionDiskIamMemberCondition build() {
             return new RegionDiskIamMemberCondition(description, expression, title);
         }

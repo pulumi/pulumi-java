@@ -89,7 +89,6 @@ public final class GetProjectResult {
             this.projects = Objects.requireNonNull(projects);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(filter, id, projects);
         }

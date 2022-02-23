@@ -28,7 +28,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="aadBasedSecurityPrincipals")
-    private final @Nullable Input<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
+        private final @Nullable Input<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
 
     public Input<List<AADBasedSecurityPrincipalArgs>> getAadBasedSecurityPrincipals() {
         return this.aadBasedSecurityPrincipals == null ? Input.empty() : this.aadBasedSecurityPrincipals;
@@ -39,7 +39,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="certBasedSecurityPrincipals")
-    private final @Nullable Input<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
+        private final @Nullable Input<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
 
     public Input<List<CertBasedSecurityPrincipalArgs>> getCertBasedSecurityPrincipals() {
         return this.certBasedSecurityPrincipals == null ? Input.empty() : this.certBasedSecurityPrincipals;
@@ -50,7 +50,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ledgerStorageAccount")
-    private final @Nullable Input<String> ledgerStorageAccount;
+        private final @Nullable Input<String> ledgerStorageAccount;
 
     public Input<String> getLedgerStorageAccount() {
         return this.ledgerStorageAccount == null ? Input.empty() : this.ledgerStorageAccount;
@@ -61,7 +61,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ledgerType")
-    private final @Nullable Input<Either<String,LedgerType>> ledgerType;
+        private final @Nullable Input<Either<String,LedgerType>> ledgerType;
 
     public Input<Either<String,LedgerType>> getLedgerType() {
         return this.ledgerType == null ? Input.empty() : this.ledgerType;
@@ -150,7 +150,6 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
             this.ledgerType = Input.ofNullable(ledgerType);
             return this;
         }
-
         public LedgerPropertiesArgs build() {
             return new LedgerPropertiesArgs(aadBasedSecurityPrincipals, certBasedSecurityPrincipals, ledgerStorageAccount, ledgerType);
         }

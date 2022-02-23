@@ -18,7 +18,7 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends io.pulumi.res
      * 
      */
     @InputImport(name="natIp", required=true)
-    private final String natIp;
+        private final String natIp;
 
     public String getNatIp() {
         return this.natIp;
@@ -29,7 +29,7 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends io.pulumi.res
      * 
      */
     @InputImport(name="networkTier", required=true)
-    private final String networkTier;
+        private final String networkTier;
 
     public String getNetworkTier() {
         return this.networkTier;
@@ -40,7 +40,7 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends io.pulumi.res
      * 
      */
     @InputImport(name="publicPtrDomainName", required=true)
-    private final String publicPtrDomainName;
+        private final String publicPtrDomainName;
 
     public String getPublicPtrDomainName() {
         return this.publicPtrDomainName;
@@ -99,7 +99,6 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends io.pulumi.res
             this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
             return this;
         }
-
         public GetInstanceNetworkInterfaceAccessConfig build() {
             return new GetInstanceNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
         }

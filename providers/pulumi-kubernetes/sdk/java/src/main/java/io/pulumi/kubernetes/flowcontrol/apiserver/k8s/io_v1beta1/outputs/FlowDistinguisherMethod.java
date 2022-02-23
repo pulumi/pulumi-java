@@ -52,7 +52,6 @@ public final class FlowDistinguisherMethod {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FlowDistinguisherMethod build() {
             return new FlowDistinguisherMethod(type);
         }

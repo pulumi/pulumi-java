@@ -441,7 +441,6 @@ public final class GetSqlVirtualMachineResult {
             this.wsfcDomainCredentials = wsfcDomainCredentials;
             return this;
         }
-
         public GetSqlVirtualMachineResult build() {
             return new GetSqlVirtualMachineResult(autoBackupSettings, autoPatchingSettings, id, identity, keyVaultCredentialSettings, location, name, provisioningState, serverConfigurationsManagementSettings, sqlImageOffer, sqlImageSku, sqlManagement, sqlServerLicenseType, sqlVirtualMachineGroupResourceId, storageConfigurationSettings, tags, type, virtualMachineResourceId, wsfcDomainCredentials);
         }

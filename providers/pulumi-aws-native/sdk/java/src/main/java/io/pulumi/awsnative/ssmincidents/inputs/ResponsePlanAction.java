@@ -19,7 +19,7 @@ public final class ResponsePlanAction extends io.pulumi.resources.InvokeArgs {
     public static final ResponsePlanAction Empty = new ResponsePlanAction();
 
     @InputImport(name="ssmAutomation")
-    private final @Nullable ResponsePlanSsmAutomation ssmAutomation;
+        private final @Nullable ResponsePlanSsmAutomation ssmAutomation;
 
     public Optional<ResponsePlanSsmAutomation> getSsmAutomation() {
         return this.ssmAutomation == null ? Optional.empty() : Optional.ofNullable(this.ssmAutomation);
@@ -57,7 +57,6 @@ public final class ResponsePlanAction extends io.pulumi.resources.InvokeArgs {
             this.ssmAutomation = ssmAutomation;
             return this;
         }
-
         public ResponsePlanAction build() {
             return new ResponsePlanAction(ssmAutomation);
         }

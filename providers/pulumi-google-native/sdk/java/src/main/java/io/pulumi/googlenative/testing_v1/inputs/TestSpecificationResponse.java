@@ -29,7 +29,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="androidInstrumentationTest", required=true)
-    private final AndroidInstrumentationTestResponse androidInstrumentationTest;
+      private final AndroidInstrumentationTestResponse androidInstrumentationTest;
 
     public AndroidInstrumentationTestResponse getAndroidInstrumentationTest() {
         return this.androidInstrumentationTest;
@@ -40,7 +40,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="androidRoboTest", required=true)
-    private final AndroidRoboTestResponse androidRoboTest;
+      private final AndroidRoboTestResponse androidRoboTest;
 
     public AndroidRoboTestResponse getAndroidRoboTest() {
         return this.androidRoboTest;
@@ -51,7 +51,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="androidTestLoop", required=true)
-    private final AndroidTestLoopResponse androidTestLoop;
+      private final AndroidTestLoopResponse androidTestLoop;
 
     public AndroidTestLoopResponse getAndroidTestLoop() {
         return this.androidTestLoop;
@@ -62,7 +62,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="disablePerformanceMetrics", required=true)
-    private final Boolean disablePerformanceMetrics;
+      private final Boolean disablePerformanceMetrics;
 
     public Boolean getDisablePerformanceMetrics() {
         return this.disablePerformanceMetrics;
@@ -73,7 +73,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="disableVideoRecording", required=true)
-    private final Boolean disableVideoRecording;
+      private final Boolean disableVideoRecording;
 
     public Boolean getDisableVideoRecording() {
         return this.disableVideoRecording;
@@ -84,7 +84,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="iosTestLoop", required=true)
-    private final IosTestLoopResponse iosTestLoop;
+      private final IosTestLoopResponse iosTestLoop;
 
     public IosTestLoopResponse getIosTestLoop() {
         return this.iosTestLoop;
@@ -95,7 +95,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="iosTestSetup", required=true)
-    private final IosTestSetupResponse iosTestSetup;
+      private final IosTestSetupResponse iosTestSetup;
 
     public IosTestSetupResponse getIosTestSetup() {
         return this.iosTestSetup;
@@ -106,7 +106,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="iosXcTest", required=true)
-    private final IosXcTestResponse iosXcTest;
+      private final IosXcTestResponse iosXcTest;
 
     public IosXcTestResponse getIosXcTest() {
         return this.iosXcTest;
@@ -117,7 +117,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="testSetup", required=true)
-    private final TestSetupResponse testSetup;
+      private final TestSetupResponse testSetup;
 
     public TestSetupResponse getTestSetup() {
         return this.testSetup;
@@ -128,7 +128,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="testTimeout", required=true)
-    private final String testTimeout;
+      private final String testTimeout;
 
     public String getTestTimeout() {
         return this.testTimeout;
@@ -257,7 +257,6 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
         }
-
         public TestSpecificationResponse build() {
             return new TestSpecificationResponse(androidInstrumentationTest, androidRoboTest, androidTestLoop, disablePerformanceMetrics, disableVideoRecording, iosTestLoop, iosTestSetup, iosXcTest, testSetup, testTimeout);
         }

@@ -19,7 +19,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cert")
-    private final @Nullable Input<String> cert;
+        private final @Nullable Input<String> cert;
 
     public Input<String> getCert() {
         return this.cert == null ? Input.empty() : this.cert;
@@ -30,7 +30,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certSerialNumber")
-    private final @Nullable Input<String> certSerialNumber;
+        private final @Nullable Input<String> certSerialNumber;
 
     public Input<String> getCertSerialNumber() {
         return this.certSerialNumber == null ? Input.empty() : this.certSerialNumber;
@@ -42,7 +42,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commonName")
-    private final @Nullable Input<String> commonName;
+        private final @Nullable Input<String> commonName;
 
     public Input<String> getCommonName() {
         return this.commonName == null ? Input.empty() : this.commonName;
@@ -54,7 +54,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -66,7 +66,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+        private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -78,7 +78,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+        private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -89,7 +89,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+        private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -101,7 +101,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -112,7 +112,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverCaCert")
-    private final @Nullable Input<String> serverCaCert;
+        private final @Nullable Input<String> serverCaCert;
 
     public Input<String> getServerCaCert() {
         return this.serverCaCert == null ? Input.empty() : this.serverCaCert;
@@ -123,7 +123,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sha1Fingerprint")
-    private final @Nullable Input<String> sha1Fingerprint;
+        private final @Nullable Input<String> sha1Fingerprint;
 
     public Input<String> getSha1Fingerprint() {
         return this.sha1Fingerprint == null ? Input.empty() : this.sha1Fingerprint;
@@ -302,7 +302,6 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
             this.sha1Fingerprint = Input.ofNullable(sha1Fingerprint);
             return this;
         }
-
         public SslCertState build() {
             return new SslCertState(cert, certSerialNumber, commonName, createTime, expirationTime, instance, privateKey, project, serverCaCert, sha1Fingerprint);
         }

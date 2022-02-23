@@ -17,7 +17,7 @@ public final class GetIotHubDataConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+        private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetIotHubDataConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="dataConnectionName", required=true)
-    private final String dataConnectionName;
+        private final String dataConnectionName;
 
     public String getDataConnectionName() {
         return this.dataConnectionName;
@@ -39,7 +39,7 @@ public final class GetIotHubDataConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -50,7 +50,7 @@ public final class GetIotHubDataConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetIotHubDataConnectionArgs extends io.pulumi.resources.Invok
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetIotHubDataConnectionArgs build() {
             return new GetIotHubDataConnectionArgs(clusterName, dataConnectionName, databaseName, resourceGroupName);
         }

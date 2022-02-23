@@ -117,7 +117,6 @@ public final class GetIngressRuleResult {
             this.sourceRange = Objects.requireNonNull(sourceRange);
             return this;
         }
-
         public GetIngressRuleResult build() {
             return new GetIngressRuleResult(action, description, priority, sourceRange);
         }

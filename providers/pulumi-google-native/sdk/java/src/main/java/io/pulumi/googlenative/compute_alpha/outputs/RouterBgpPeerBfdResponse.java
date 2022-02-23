@@ -180,7 +180,6 @@ public final class RouterBgpPeerBfdResponse {
             this.slowTimerInterval = Objects.requireNonNull(slowTimerInterval);
             return this;
         }
-
         public RouterBgpPeerBfdResponse build() {
             return new RouterBgpPeerBfdResponse(minReceiveInterval, minTransmitInterval, mode, multiplier, packetMode, sessionInitializationMode, slowTimerInterval);
         }

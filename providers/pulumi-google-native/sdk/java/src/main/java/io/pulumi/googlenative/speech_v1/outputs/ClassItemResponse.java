@@ -52,7 +52,6 @@ public final class ClassItemResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ClassItemResponse build() {
             return new ClassItemResponse(value);
         }

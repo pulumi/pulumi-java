@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends 
      * 
      */
     @InputImport(name="endUserSuggestionConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig;
 
     public Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> getEndUserSuggestionConfig() {
         return this.endUserSuggestionConfig == null ? Input.empty() : this.endUserSuggestionConfig;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends 
      * 
      */
     @InputImport(name="humanAgentSuggestionConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig;
 
     public Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> getHumanAgentSuggestionConfig() {
         return this.humanAgentSuggestionConfig == null ? Input.empty() : this.humanAgentSuggestionConfig;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends 
      * 
      */
     @InputImport(name="messageAnalysisConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig;
 
     public Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs> getMessageAnalysisConfig() {
         return this.messageAnalysisConfig == null ? Input.empty() : this.messageAnalysisConfig;
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends 
      * 
      */
     @InputImport(name="notificationConfig")
-    private final @Nullable Input<GoogleCloudDialogflowV2NotificationConfigArgs> notificationConfig;
+      private final @Nullable Input<GoogleCloudDialogflowV2NotificationConfigArgs> notificationConfig;
 
     public Input<GoogleCloudDialogflowV2NotificationConfigArgs> getNotificationConfig() {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
@@ -147,7 +147,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends 
             this.notificationConfig = Input.ofNullable(notificationConfig);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs(endUserSuggestionConfig, humanAgentSuggestionConfig, messageAnalysisConfig, notificationConfig);
         }

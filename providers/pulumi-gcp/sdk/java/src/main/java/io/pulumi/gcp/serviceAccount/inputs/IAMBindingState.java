@@ -22,7 +22,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<IAMBindingConditionGetArgs> condition;
+        private final @Nullable Input<IAMBindingConditionGetArgs> condition;
 
     public Input<IAMBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -33,14 +33,14 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -53,7 +53,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -64,7 +64,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountId")
-    private final @Nullable Input<String> serviceAccountId;
+        private final @Nullable Input<String> serviceAccountId;
 
     public Input<String> getServiceAccountId() {
         return this.serviceAccountId == null ? Input.empty() : this.serviceAccountId;
@@ -168,7 +168,6 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
             this.serviceAccountId = Input.ofNullable(serviceAccountId);
             return this;
         }
-
         public IAMBindingState build() {
             return new IAMBindingState(condition, etag, members, role, serviceAccountId);
         }

@@ -98,7 +98,6 @@ public final class ObjectTypeField {
             this.target = target;
             return this;
         }
-
         public ObjectTypeField build() {
             return new ObjectTypeField(contentType, source, target);
         }

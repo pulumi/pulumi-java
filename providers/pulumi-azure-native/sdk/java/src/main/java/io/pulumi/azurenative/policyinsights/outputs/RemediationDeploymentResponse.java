@@ -180,7 +180,6 @@ public final class RemediationDeploymentResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public RemediationDeploymentResponse build() {
             return new RemediationDeploymentResponse(createdOn, deploymentId, error, lastUpdatedOn, remediatedResourceId, resourceLocation, status);
         }

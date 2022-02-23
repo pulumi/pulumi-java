@@ -76,7 +76,6 @@ public final class PackageOccurrenceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PackageOccurrenceResponse build() {
             return new PackageOccurrenceResponse(location, name);
         }

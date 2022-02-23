@@ -23,7 +23,7 @@ public final class SiteLocation extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="address")
-    private final @Nullable String address;
+        private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
@@ -34,7 +34,7 @@ public final class SiteLocation extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="latitude")
-    private final @Nullable String latitude;
+        private final @Nullable String latitude;
 
     public Optional<String> getLatitude() {
         return this.latitude == null ? Optional.empty() : Optional.ofNullable(this.latitude);
@@ -45,7 +45,7 @@ public final class SiteLocation extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="longitude")
-    private final @Nullable String longitude;
+        private final @Nullable String longitude;
 
     public Optional<String> getLongitude() {
         return this.longitude == null ? Optional.empty() : Optional.ofNullable(this.longitude);
@@ -104,7 +104,6 @@ public final class SiteLocation extends io.pulumi.resources.InvokeArgs {
             this.longitude = longitude;
             return this;
         }
-
         public SiteLocation build() {
             return new SiteLocation(address, latitude, longitude);
         }

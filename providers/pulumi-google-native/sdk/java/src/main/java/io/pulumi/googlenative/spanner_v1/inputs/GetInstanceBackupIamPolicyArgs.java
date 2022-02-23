@@ -15,21 +15,21 @@ public final class GetInstanceBackupIamPolicyArgs extends io.pulumi.resources.In
     public static final GetInstanceBackupIamPolicyArgs Empty = new GetInstanceBackupIamPolicyArgs();
 
     @InputImport(name="backupId", required=true)
-    private final String backupId;
+      private final String backupId;
 
     public String getBackupId() {
         return this.backupId;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetInstanceBackupIamPolicyArgs extends io.pulumi.resources.In
             this.project = project;
             return this;
         }
-
         public GetInstanceBackupIamPolicyArgs build() {
             return new GetInstanceBackupIamPolicyArgs(backupId, instanceId, project);
         }

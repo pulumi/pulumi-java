@@ -23,7 +23,7 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverSideEncryptionConfiguration", required=true)
-    private final Input<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration;
+        private final Input<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration;
 
     public Input<List<BucketServerSideEncryptionRuleArgs>> getServerSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
@@ -66,7 +66,6 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
             this.serverSideEncryptionConfiguration = Input.of(Objects.requireNonNull(serverSideEncryptionConfiguration));
             return this;
         }
-
         public BucketEncryptionArgs build() {
             return new BucketEncryptionArgs(serverSideEncryptionConfiguration);
         }

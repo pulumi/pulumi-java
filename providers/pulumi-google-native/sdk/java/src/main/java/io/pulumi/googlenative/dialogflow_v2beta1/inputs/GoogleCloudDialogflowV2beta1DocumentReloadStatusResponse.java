@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse exte
      * 
      */
     @InputImport(name="status", required=true)
-    private final GoogleRpcStatusResponse status;
+      private final GoogleRpcStatusResponse status;
 
     public GoogleRpcStatusResponse getStatus() {
         return this.status;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse exte
      * 
      */
     @InputImport(name="time", required=true)
-    private final String time;
+      private final String time;
 
     public String getTime() {
         return this.time;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse exte
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse build() {
             return new GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse(status, time);
         }

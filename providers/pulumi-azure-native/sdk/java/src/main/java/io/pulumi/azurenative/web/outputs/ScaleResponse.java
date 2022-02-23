@@ -99,7 +99,6 @@ public final class ScaleResponse {
             this.rules = rules;
             return this;
         }
-
         public ScaleResponse build() {
             return new ScaleResponse(maxReplicas, minReplicas, rules);
         }

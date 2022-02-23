@@ -24,7 +24,7 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable Input<List<RoleArgs>> roles;
+        private final @Nullable Input<List<RoleArgs>> roles;
 
     public Input<List<RoleArgs>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;
@@ -67,7 +67,6 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.roles = Input.ofNullable(roles);
             return this;
         }
-
         public ComputeProfileArgs build() {
             return new ComputeProfileArgs(roles);
         }

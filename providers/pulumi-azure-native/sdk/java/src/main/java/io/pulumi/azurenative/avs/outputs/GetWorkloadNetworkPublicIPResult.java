@@ -182,7 +182,6 @@ public final class GetWorkloadNetworkPublicIPResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkPublicIPResult build() {
             return new GetWorkloadNetworkPublicIPResult(displayName, id, name, numberOfPublicIPs, provisioningState, publicIPBlock, type);
         }

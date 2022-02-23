@@ -26,7 +26,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="channels", required=true)
-    private final List<ContactProfileLinkChannelResponse> channels;
+        private final List<ContactProfileLinkChannelResponse> channels;
 
     public List<ContactProfileLinkChannelResponse> getChannels() {
         return this.channels;
@@ -37,7 +37,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="direction", required=true)
-    private final String direction;
+        private final String direction;
 
     public String getDirection() {
         return this.direction;
@@ -48,7 +48,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="eirpdBW")
-    private final @Nullable Double eirpdBW;
+        private final @Nullable Double eirpdBW;
 
     public Optional<Double> getEirpdBW() {
         return this.eirpdBW == null ? Optional.empty() : Optional.ofNullable(this.eirpdBW);
@@ -59,7 +59,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="gainOverTemperature")
-    private final @Nullable Double gainOverTemperature;
+        private final @Nullable Double gainOverTemperature;
 
     public Optional<Double> getGainOverTemperature() {
         return this.gainOverTemperature == null ? Optional.empty() : Optional.ofNullable(this.gainOverTemperature);
@@ -70,7 +70,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="polarization", required=true)
-    private final String polarization;
+        private final String polarization;
 
     public String getPolarization() {
         return this.polarization;
@@ -149,7 +149,6 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }
-
         public ContactProfileLinkResponse build() {
             return new ContactProfileLinkResponse(channels, direction, eirpdBW, gainOverTemperature, polarization);
         }

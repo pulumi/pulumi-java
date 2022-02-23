@@ -76,7 +76,6 @@ public final class PipelineRunSourcePropertiesResponse {
             this.type = type;
             return this;
         }
-
         public PipelineRunSourcePropertiesResponse build() {
             return new PipelineRunSourcePropertiesResponse(name, type);
         }

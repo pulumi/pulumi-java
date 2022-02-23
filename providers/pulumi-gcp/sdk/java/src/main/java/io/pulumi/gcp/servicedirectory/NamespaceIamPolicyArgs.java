@@ -19,7 +19,7 @@ public final class NamespaceIamPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class NamespaceIamPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -90,7 +90,6 @@ public final class NamespaceIamPolicyArgs extends io.pulumi.resources.ResourceAr
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public NamespaceIamPolicyArgs build() {
             return new NamespaceIamPolicyArgs(name, policyData);
         }

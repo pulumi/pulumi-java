@@ -60,7 +60,6 @@ public final class CertificateExtendedKeyUsage {
             this.extendedKeyUsageType = extendedKeyUsageType;
             return this;
         }
-
         public CertificateExtendedKeyUsage build() {
             return new CertificateExtendedKeyUsage(extendedKeyUsageObjectIdentifier, extendedKeyUsageType);
         }

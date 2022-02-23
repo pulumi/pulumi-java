@@ -15,28 +15,28 @@ public final class GetMetadataImportArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetMetadataImportArgs Empty = new GetMetadataImportArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="metadataImportId", required=true)
-    private final String metadataImportId;
+      private final String metadataImportId;
 
     public String getMetadataImportId() {
         return this.metadataImportId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="serviceId", required=true)
-    private final String serviceId;
+      private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
@@ -105,7 +105,6 @@ public final class GetMetadataImportArgs extends io.pulumi.resources.InvokeArgs 
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public GetMetadataImportArgs build() {
             return new GetMetadataImportArgs(location, metadataImportId, project, serviceId);
         }

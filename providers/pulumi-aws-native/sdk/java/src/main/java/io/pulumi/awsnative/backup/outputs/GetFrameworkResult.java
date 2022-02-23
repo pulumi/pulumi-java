@@ -201,7 +201,6 @@ public final class GetFrameworkResult {
             this.frameworkTags = frameworkTags;
             return this;
         }
-
         public GetFrameworkResult build() {
             return new GetFrameworkResult(creationTime, deploymentStatus, frameworkArn, frameworkControls, frameworkDescription, frameworkStatus, frameworkTags);
         }

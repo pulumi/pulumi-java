@@ -244,7 +244,6 @@ public final class HttpRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public HttpRuleResponse build() {
             return new HttpRuleResponse(additionalBindings, body, custom, delete, get, patch, post, put, responseBody, selector);
         }

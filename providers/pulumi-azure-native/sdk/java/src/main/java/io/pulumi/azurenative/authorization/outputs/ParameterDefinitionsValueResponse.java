@@ -121,7 +121,6 @@ public final class ParameterDefinitionsValueResponse {
             this.type = type;
             return this;
         }
-
         public ParameterDefinitionsValueResponse build() {
             return new ParameterDefinitionsValueResponse(allowedValues, defaultValue, metadata, type);
         }

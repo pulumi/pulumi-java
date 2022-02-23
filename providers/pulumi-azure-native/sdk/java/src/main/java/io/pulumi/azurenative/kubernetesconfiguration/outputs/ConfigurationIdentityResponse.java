@@ -97,7 +97,6 @@ public final class ConfigurationIdentityResponse {
             this.type = type;
             return this;
         }
-
         public ConfigurationIdentityResponse build() {
             return new ConfigurationIdentityResponse(principalId, tenantId, type);
         }

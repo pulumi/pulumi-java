@@ -23,7 +23,7 @@ public final class ConnectionStateResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -34,7 +34,7 @@ public final class ConnectionStateResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -83,7 +83,6 @@ public final class ConnectionStateResponse extends io.pulumi.resources.InvokeArg
             this.status = status;
             return this;
         }
-
         public ConnectionStateResponse build() {
             return new ConnectionStateResponse(description, status);
         }

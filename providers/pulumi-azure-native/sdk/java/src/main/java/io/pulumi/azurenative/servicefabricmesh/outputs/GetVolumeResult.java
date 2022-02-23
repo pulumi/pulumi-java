@@ -267,7 +267,6 @@ public final class GetVolumeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVolumeResult build() {
             return new GetVolumeResult(azureFileParameters, description, id, location, name, provider, provisioningState, status, statusDetails, tags, type);
         }

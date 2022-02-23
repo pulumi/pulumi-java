@@ -187,7 +187,6 @@ public final class GetPackagingConfigurationResult {
             this.tags = tags;
             return this;
         }
-
         public GetPackagingConfigurationResult build() {
             return new GetPackagingConfigurationResult(arn, cmafPackage, dashPackage, hlsPackage, mssPackage, packagingGroupId, tags);
         }

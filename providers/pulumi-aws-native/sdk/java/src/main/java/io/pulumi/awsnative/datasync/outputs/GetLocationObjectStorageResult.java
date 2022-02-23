@@ -185,7 +185,6 @@ public final class GetLocationObjectStorageResult {
             this.tags = tags;
             return this;
         }
-
         public GetLocationObjectStorageResult build() {
             return new GetLocationObjectStorageResult(accessKey, agentArns, locationArn, locationUri, serverPort, serverProtocol, tags);
         }

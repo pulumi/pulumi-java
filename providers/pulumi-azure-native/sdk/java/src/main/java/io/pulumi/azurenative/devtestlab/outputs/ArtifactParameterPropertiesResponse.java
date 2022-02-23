@@ -76,7 +76,6 @@ public final class ArtifactParameterPropertiesResponse {
             this.value = value;
             return this;
         }
-
         public ArtifactParameterPropertiesResponse build() {
             return new ArtifactParameterPropertiesResponse(name, value);
         }

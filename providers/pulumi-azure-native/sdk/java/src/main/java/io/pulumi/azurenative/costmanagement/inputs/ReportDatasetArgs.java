@@ -31,7 +31,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aggregation")
-    private final @Nullable Input<Map<String,ReportAggregationArgs>> aggregation;
+        private final @Nullable Input<Map<String,ReportAggregationArgs>> aggregation;
 
     public Input<Map<String,ReportAggregationArgs>> getAggregation() {
         return this.aggregation == null ? Input.empty() : this.aggregation;
@@ -42,7 +42,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<ReportDatasetConfigurationArgs> configuration;
+        private final @Nullable Input<ReportDatasetConfigurationArgs> configuration;
 
     public Input<ReportDatasetConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -53,7 +53,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<ReportFilterArgs> filter;
+        private final @Nullable Input<ReportFilterArgs> filter;
 
     public Input<ReportFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -64,7 +64,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="granularity")
-    private final @Nullable Input<Either<String,GranularityType>> granularity;
+        private final @Nullable Input<Either<String,GranularityType>> granularity;
 
     public Input<Either<String,GranularityType>> getGranularity() {
         return this.granularity == null ? Input.empty() : this.granularity;
@@ -75,7 +75,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grouping")
-    private final @Nullable Input<List<ReportGroupingArgs>> grouping;
+        private final @Nullable Input<List<ReportGroupingArgs>> grouping;
 
     public Input<List<ReportGroupingArgs>> getGrouping() {
         return this.grouping == null ? Input.empty() : this.grouping;
@@ -179,7 +179,6 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.grouping = Input.ofNullable(grouping);
             return this;
         }
-
         public ReportDatasetArgs build() {
             return new ReportDatasetArgs(aggregation, configuration, filter, granularity, grouping);
         }

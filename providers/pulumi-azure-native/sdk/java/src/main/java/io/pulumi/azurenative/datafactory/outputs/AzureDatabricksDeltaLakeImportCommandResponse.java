@@ -100,7 +100,6 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDatabricksDeltaLakeImportCommandResponse build() {
             return new AzureDatabricksDeltaLakeImportCommandResponse(dateFormat, timestampFormat, type);
         }

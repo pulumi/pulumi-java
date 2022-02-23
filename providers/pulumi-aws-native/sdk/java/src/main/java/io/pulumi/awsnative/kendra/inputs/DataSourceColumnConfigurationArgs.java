@@ -17,35 +17,35 @@ public final class DataSourceColumnConfigurationArgs extends io.pulumi.resources
     public static final DataSourceColumnConfigurationArgs Empty = new DataSourceColumnConfigurationArgs();
 
     @InputImport(name="changeDetectingColumns", required=true)
-    private final Input<List<String>> changeDetectingColumns;
+        private final Input<List<String>> changeDetectingColumns;
 
     public Input<List<String>> getChangeDetectingColumns() {
         return this.changeDetectingColumns;
     }
 
     @InputImport(name="documentDataColumnName", required=true)
-    private final Input<String> documentDataColumnName;
+        private final Input<String> documentDataColumnName;
 
     public Input<String> getDocumentDataColumnName() {
         return this.documentDataColumnName;
     }
 
     @InputImport(name="documentIdColumnName", required=true)
-    private final Input<String> documentIdColumnName;
+        private final Input<String> documentIdColumnName;
 
     public Input<String> getDocumentIdColumnName() {
         return this.documentIdColumnName;
     }
 
     @InputImport(name="documentTitleColumnName")
-    private final @Nullable Input<String> documentTitleColumnName;
+        private final @Nullable Input<String> documentTitleColumnName;
 
     public Input<String> getDocumentTitleColumnName() {
         return this.documentTitleColumnName == null ? Input.empty() : this.documentTitleColumnName;
     }
 
     @InputImport(name="fieldMappings")
-    private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+        private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
@@ -149,7 +149,6 @@ public final class DataSourceColumnConfigurationArgs extends io.pulumi.resources
             this.fieldMappings = Input.ofNullable(fieldMappings);
             return this;
         }
-
         public DataSourceColumnConfigurationArgs build() {
             return new DataSourceColumnConfigurationArgs(changeDetectingColumns, documentDataColumnName, documentIdColumnName, documentTitleColumnName, fieldMappings);
         }

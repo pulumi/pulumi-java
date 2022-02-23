@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse build() {
             return new GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse(version);
         }

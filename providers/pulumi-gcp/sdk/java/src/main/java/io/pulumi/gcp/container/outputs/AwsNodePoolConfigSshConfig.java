@@ -52,7 +52,6 @@ public final class AwsNodePoolConfigSshConfig {
             this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair);
             return this;
         }
-
         public AwsNodePoolConfigSshConfig build() {
             return new AwsNodePoolConfigSshConfig(ec2KeyPair);
         }

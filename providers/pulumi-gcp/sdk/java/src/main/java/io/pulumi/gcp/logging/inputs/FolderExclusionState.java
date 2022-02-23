@@ -20,7 +20,7 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -45,7 +45,7 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+        private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -57,7 +57,7 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="folder")
-    private final @Nullable Input<String> folder;
+        private final @Nullable Input<String> folder;
 
     public Input<String> getFolder() {
         return this.folder == null ? Input.empty() : this.folder;
@@ -68,7 +68,7 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -172,7 +172,6 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public FolderExclusionState build() {
             return new FolderExclusionState(description, disabled, filter, folder, name);
         }

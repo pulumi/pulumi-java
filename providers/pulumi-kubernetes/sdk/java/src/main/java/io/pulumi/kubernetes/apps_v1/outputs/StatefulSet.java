@@ -142,7 +142,6 @@ public final class StatefulSet {
             this.status = status;
             return this;
         }
-
         public StatefulSet build() {
             return new StatefulSet(apiVersion, kind, metadata, spec, status);
         }

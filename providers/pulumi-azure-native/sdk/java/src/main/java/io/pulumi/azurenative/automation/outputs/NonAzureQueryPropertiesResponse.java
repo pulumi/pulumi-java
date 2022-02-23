@@ -76,7 +76,6 @@ public final class NonAzureQueryPropertiesResponse {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public NonAzureQueryPropertiesResponse build() {
             return new NonAzureQueryPropertiesResponse(functionAlias, workspaceId);
         }

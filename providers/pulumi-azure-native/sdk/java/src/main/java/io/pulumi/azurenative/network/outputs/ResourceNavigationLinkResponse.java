@@ -181,7 +181,6 @@ public final class ResourceNavigationLinkResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceNavigationLinkResponse build() {
             return new ResourceNavigationLinkResponse(etag, id, link, linkedResourceType, name, provisioningState, type);
         }

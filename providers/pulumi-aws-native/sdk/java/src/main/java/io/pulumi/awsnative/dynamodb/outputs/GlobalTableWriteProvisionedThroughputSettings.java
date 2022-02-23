@@ -46,7 +46,6 @@ public final class GlobalTableWriteProvisionedThroughputSettings {
             this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
             return this;
         }
-
         public GlobalTableWriteProvisionedThroughputSettings build() {
             return new GlobalTableWriteProvisionedThroughputSettings(writeCapacityAutoScalingSettings);
         }

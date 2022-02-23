@@ -44,7 +44,6 @@ public final class DataPrivacyProperties {
             this.childDirected = Objects.requireNonNull(childDirected);
             return this;
         }
-
         public DataPrivacyProperties build() {
             return new DataPrivacyProperties(childDirected);
         }

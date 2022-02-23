@@ -76,7 +76,6 @@ public final class MetadataLabelMatcherResponse {
             this.metadataLabels = Objects.requireNonNull(metadataLabels);
             return this;
         }
-
         public MetadataLabelMatcherResponse build() {
             return new MetadataLabelMatcherResponse(metadataLabelMatchCriteria, metadataLabels);
         }

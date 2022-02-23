@@ -138,7 +138,6 @@ public final class GetEdgeModuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEdgeModuleResult build() {
             return new GetEdgeModuleResult(edgeModuleId, id, name, systemData, type);
         }

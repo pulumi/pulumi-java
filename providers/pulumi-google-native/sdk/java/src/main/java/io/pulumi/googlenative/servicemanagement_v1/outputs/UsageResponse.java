@@ -97,7 +97,6 @@ public final class UsageResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public UsageResponse build() {
             return new UsageResponse(producerNotificationChannel, requirements, rules);
         }

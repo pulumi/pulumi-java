@@ -17,7 +17,7 @@ public final class QuickConnectPhoneNumberQuickConnectConfig extends io.pulumi.r
     public static final QuickConnectPhoneNumberQuickConnectConfig Empty = new QuickConnectPhoneNumberQuickConnectConfig();
 
     @InputImport(name="phoneNumber", required=true)
-    private final String phoneNumber;
+        private final String phoneNumber;
 
     public String getPhoneNumber() {
         return this.phoneNumber;
@@ -55,7 +55,6 @@ public final class QuickConnectPhoneNumberQuickConnectConfig extends io.pulumi.r
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public QuickConnectPhoneNumberQuickConnectConfig build() {
             return new QuickConnectPhoneNumberQuickConnectConfig(phoneNumber);
         }

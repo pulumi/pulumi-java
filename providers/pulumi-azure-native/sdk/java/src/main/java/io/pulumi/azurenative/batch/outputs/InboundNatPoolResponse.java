@@ -154,7 +154,6 @@ public final class InboundNatPoolResponse {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public InboundNatPoolResponse build() {
             return new InboundNatPoolResponse(backendPort, frontendPortRangeEnd, frontendPortRangeStart, name, networkSecurityGroupRules, protocol);
         }

@@ -231,7 +231,6 @@ public final class HubspotObjectDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HubspotObjectDatasetResponse build() {
             return new HubspotObjectDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

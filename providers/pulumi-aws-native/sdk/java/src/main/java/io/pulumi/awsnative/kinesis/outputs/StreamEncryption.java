@@ -75,7 +75,6 @@ public final class StreamEncryption {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public StreamEncryption build() {
             return new StreamEncryption(encryptionType, keyId);
         }

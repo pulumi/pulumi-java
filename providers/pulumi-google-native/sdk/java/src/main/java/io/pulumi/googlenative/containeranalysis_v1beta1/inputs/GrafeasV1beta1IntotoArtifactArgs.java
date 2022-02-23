@@ -16,14 +16,14 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
     public static final GrafeasV1beta1IntotoArtifactArgs Empty = new GrafeasV1beta1IntotoArtifactArgs();
 
     @InputImport(name="hashes")
-    private final @Nullable Input<ArtifactHashesArgs> hashes;
+      private final @Nullable Input<ArtifactHashesArgs> hashes;
 
     public Input<ArtifactHashesArgs> getHashes() {
         return this.hashes == null ? Input.empty() : this.hashes;
     }
 
     @InputImport(name="resourceUri")
-    private final @Nullable Input<String> resourceUri;
+      private final @Nullable Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri == null ? Input.empty() : this.resourceUri;
@@ -82,7 +82,6 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }
-
         public GrafeasV1beta1IntotoArtifactArgs build() {
             return new GrafeasV1beta1IntotoArtifactArgs(hashes, resourceUri);
         }

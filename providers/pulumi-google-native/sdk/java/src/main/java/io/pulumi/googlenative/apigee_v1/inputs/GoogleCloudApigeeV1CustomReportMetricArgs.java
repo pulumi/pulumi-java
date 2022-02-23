@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="function")
-    private final @Nullable Input<String> function;
+      private final @Nullable Input<String> function;
 
     public Input<String> getFunction() {
         return this.function == null ? Input.empty() : this.function;
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,6 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public GoogleCloudApigeeV1CustomReportMetricArgs build() {
             return new GoogleCloudApigeeV1CustomReportMetricArgs(function, name);
         }

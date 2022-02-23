@@ -76,7 +76,6 @@ public final class StageAccessLogSetting {
             this.format = format;
             return this;
         }
-
         public StageAccessLogSetting build() {
             return new StageAccessLogSetting(destinationArn, format);
         }

@@ -77,7 +77,6 @@ public final class DetectorModelOnInput {
             this.transitionEvents = transitionEvents;
             return this;
         }
-
         public DetectorModelOnInput build() {
             return new DetectorModelOnInput(events, transitionEvents);
         }

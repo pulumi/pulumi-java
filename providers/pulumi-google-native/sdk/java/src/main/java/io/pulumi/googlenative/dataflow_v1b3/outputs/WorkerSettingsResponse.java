@@ -159,7 +159,6 @@ public final class WorkerSettingsResponse {
             this.workerId = Objects.requireNonNull(workerId);
             return this;
         }
-
         public WorkerSettingsResponse build() {
             return new WorkerSettingsResponse(baseUrl, reportingEnabled, servicePath, shuffleServicePath, tempStoragePrefix, workerId);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends io.
      * 
      */
     @InputImport(name="column", required=true)
-    private final String column;
+      private final String column;
 
     public String getColumn() {
         return this.column;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends io.
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -44,7 +44,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends io.
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -55,7 +55,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends io.
      * 
      */
     @InputImport(name="subcolumns", required=true)
-    private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns;
+      private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns;
 
     public List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> getSubcolumns() {
         return this.subcolumns;
@@ -66,7 +66,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends io.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -145,7 +145,6 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends io.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDatacatalogV1beta1ColumnSchemaResponse build() {
             return new GoogleCloudDatacatalogV1beta1ColumnSchemaResponse(column, description, mode, subcolumns, type);
         }

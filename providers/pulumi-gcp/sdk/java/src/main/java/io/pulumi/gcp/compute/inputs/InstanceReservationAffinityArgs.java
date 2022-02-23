@@ -21,7 +21,7 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="specificReservation")
-    private final @Nullable Input<InstanceReservationAffinitySpecificReservationArgs> specificReservation;
+        private final @Nullable Input<InstanceReservationAffinitySpecificReservationArgs> specificReservation;
 
     public Input<InstanceReservationAffinitySpecificReservationArgs> getSpecificReservation() {
         return this.specificReservation == null ? Input.empty() : this.specificReservation;
@@ -32,7 +32,7 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -91,7 +91,6 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public InstanceReservationAffinityArgs build() {
             return new InstanceReservationAffinityArgs(specificReservation, type);
         }

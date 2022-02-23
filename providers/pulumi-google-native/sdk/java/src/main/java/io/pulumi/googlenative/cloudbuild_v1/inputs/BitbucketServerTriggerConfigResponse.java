@@ -24,7 +24,7 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="bitbucketServerConfig", required=true)
-    private final BitbucketServerConfigResponse bitbucketServerConfig;
+      private final BitbucketServerConfigResponse bitbucketServerConfig;
 
     public BitbucketServerConfigResponse getBitbucketServerConfig() {
         return this.bitbucketServerConfig;
@@ -35,7 +35,7 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="bitbucketServerConfigResource", required=true)
-    private final String bitbucketServerConfigResource;
+      private final String bitbucketServerConfigResource;
 
     public String getBitbucketServerConfigResource() {
         return this.bitbucketServerConfigResource;
@@ -46,7 +46,7 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="projectKey", required=true)
-    private final String projectKey;
+      private final String projectKey;
 
     public String getProjectKey() {
         return this.projectKey;
@@ -57,7 +57,7 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="pullRequest", required=true)
-    private final PullRequestFilterResponse pullRequest;
+      private final PullRequestFilterResponse pullRequest;
 
     public PullRequestFilterResponse getPullRequest() {
         return this.pullRequest;
@@ -68,7 +68,7 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="push", required=true)
-    private final PushFilterResponse push;
+      private final PushFilterResponse push;
 
     public PushFilterResponse getPush() {
         return this.push;
@@ -79,7 +79,7 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="repoSlug", required=true)
-    private final String repoSlug;
+      private final String repoSlug;
 
     public String getRepoSlug() {
         return this.repoSlug;
@@ -168,7 +168,6 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
             this.repoSlug = Objects.requireNonNull(repoSlug);
             return this;
         }
-
         public BitbucketServerTriggerConfigResponse build() {
             return new BitbucketServerTriggerConfigResponse(bitbucketServerConfig, bitbucketServerConfigResource, projectKey, pullRequest, push, repoSlug);
         }

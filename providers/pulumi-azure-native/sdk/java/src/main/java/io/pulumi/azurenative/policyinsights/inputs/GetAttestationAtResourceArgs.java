@@ -17,7 +17,7 @@ public final class GetAttestationAtResourceArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="attestationName", required=true)
-    private final String attestationName;
+        private final String attestationName;
 
     public String getAttestationName() {
         return this.attestationName;
@@ -28,7 +28,7 @@ public final class GetAttestationAtResourceArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+        private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -77,7 +77,6 @@ public final class GetAttestationAtResourceArgs extends io.pulumi.resources.Invo
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public GetAttestationAtResourceArgs build() {
             return new GetAttestationAtResourceArgs(attestationName, resourceId);
         }

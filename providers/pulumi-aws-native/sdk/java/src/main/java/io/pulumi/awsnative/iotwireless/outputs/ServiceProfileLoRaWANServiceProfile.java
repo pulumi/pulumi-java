@@ -283,7 +283,6 @@ public final class ServiceProfileLoRaWANServiceProfile {
             this.ulRatePolicy = ulRatePolicy;
             return this;
         }
-
         public ServiceProfileLoRaWANServiceProfile build() {
             return new ServiceProfileLoRaWANServiceProfile(addGwMetadata, channelMask, devStatusReqFreq, dlBucketSize, dlRate, dlRatePolicy, drMax, drMin, hrAllowed, minGwDiversity, nwkGeoLoc, prAllowed, raAllowed, reportDevStatusBattery, reportDevStatusMargin, targetPer, ulBucketSize, ulRate, ulRatePolicy);
         }

@@ -24,7 +24,7 @@ public final class GetTdeCertificatesSqlTaskOutputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="base64EncodedCertificates", required=true)
-    private final Map<String,List<String>> base64EncodedCertificates;
+        private final Map<String,List<String>> base64EncodedCertificates;
 
     public Map<String,List<String>> getBase64EncodedCertificates() {
         return this.base64EncodedCertificates;
@@ -35,7 +35,7 @@ public final class GetTdeCertificatesSqlTaskOutputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="validationErrors", required=true)
-    private final List<ReportableExceptionResponse> validationErrors;
+        private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
@@ -84,7 +84,6 @@ public final class GetTdeCertificatesSqlTaskOutputResponse extends io.pulumi.res
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public GetTdeCertificatesSqlTaskOutputResponse build() {
             return new GetTdeCertificatesSqlTaskOutputResponse(base64EncodedCertificates, validationErrors);
         }

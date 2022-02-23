@@ -20,7 +20,7 @@ public final class TerminateNotificationProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Boolean enable;
+        private final @Nullable Boolean enable;
 
     public Optional<Boolean> getEnable() {
         return this.enable == null ? Optional.empty() : Optional.ofNullable(this.enable);
@@ -31,7 +31,7 @@ public final class TerminateNotificationProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="notBeforeTimeout")
-    private final @Nullable String notBeforeTimeout;
+        private final @Nullable String notBeforeTimeout;
 
     public Optional<String> getNotBeforeTimeout() {
         return this.notBeforeTimeout == null ? Optional.empty() : Optional.ofNullable(this.notBeforeTimeout);
@@ -80,7 +80,6 @@ public final class TerminateNotificationProfileResponse extends io.pulumi.resour
             this.notBeforeTimeout = notBeforeTimeout;
             return this;
         }
-
         public TerminateNotificationProfileResponse build() {
             return new TerminateNotificationProfileResponse(enable, notBeforeTimeout);
         }

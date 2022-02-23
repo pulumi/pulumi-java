@@ -23,7 +23,7 @@ public final class ContentKeyPolicyTokenClaimResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="claimType")
-    private final @Nullable String claimType;
+        private final @Nullable String claimType;
 
     public Optional<String> getClaimType() {
         return this.claimType == null ? Optional.empty() : Optional.ofNullable(this.claimType);
@@ -34,7 +34,7 @@ public final class ContentKeyPolicyTokenClaimResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="claimValue")
-    private final @Nullable String claimValue;
+        private final @Nullable String claimValue;
 
     public Optional<String> getClaimValue() {
         return this.claimValue == null ? Optional.empty() : Optional.ofNullable(this.claimValue);
@@ -83,7 +83,6 @@ public final class ContentKeyPolicyTokenClaimResponse extends io.pulumi.resource
             this.claimValue = claimValue;
             return this;
         }
-
         public ContentKeyPolicyTokenClaimResponse build() {
             return new ContentKeyPolicyTokenClaimResponse(claimType, claimValue);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
      * 
      */
     @InputImport(name="allowPlaybackInterruption", required=true)
-    private final Boolean allowPlaybackInterruption;
+      private final Boolean allowPlaybackInterruption;
 
     public Boolean getAllowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
      * 
      */
     @InputImport(name="ssml", required=true)
-    private final String ssml;
+      private final String ssml;
 
     public String getSsml() {
         return this.ssml;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -103,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse(allowPlaybackInterruption, ssml, text);
         }

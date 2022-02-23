@@ -812,7 +812,6 @@ public final class GetManagedClusterResult {
             this.windowsProfile = windowsProfile;
             return this;
         }
-
         public GetManagedClusterResult build() {
             return new GetManagedClusterResult(aadProfile, addonProfiles, agentPoolProfiles, apiServerAccessProfile, autoScalerProfile, autoUpgradeProfile, azurePortalFQDN, disableLocalAccounts, diskEncryptionSetID, dnsPrefix, enablePodSecurityPolicy, enableRBAC, extendedLocation, fqdn, fqdnSubdomain, httpProxyConfig, id, identity, identityProfile, kubernetesVersion, linuxProfile, location, maxAgentPools, name, networkProfile, nodeResourceGroup, podIdentityProfile, powerState, privateFQDN, privateLinkResources, provisioningState, servicePrincipalProfile, sku, tags, type, windowsProfile);
         }

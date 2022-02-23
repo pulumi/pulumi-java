@@ -22,7 +22,7 @@ public final class ExecActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="command", required=true)
-    private final List<String> command;
+      private final List<String> command;
 
     public List<String> getCommand() {
         return this.command;
@@ -60,7 +60,6 @@ public final class ExecActionResponse extends io.pulumi.resources.InvokeArgs {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
         public ExecActionResponse build() {
             return new ExecActionResponse(command);
         }

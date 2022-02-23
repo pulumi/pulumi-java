@@ -249,7 +249,6 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse {
             this.relativeExpirationDate = relativeExpirationDate;
             return this;
         }
-
         public ContentKeyPolicyPlayReadyLicenseResponse build() {
             return new ContentKeyPolicyPlayReadyLicenseResponse(allowTestDevices, beginDate, contentKeyLocation, contentType, expirationDate, gracePeriod, licenseType, playRight, relativeBeginDate, relativeExpirationDate);
         }

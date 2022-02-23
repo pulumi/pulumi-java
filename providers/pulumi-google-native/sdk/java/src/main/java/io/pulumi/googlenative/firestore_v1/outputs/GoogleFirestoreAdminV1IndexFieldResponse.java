@@ -95,7 +95,6 @@ public final class GoogleFirestoreAdminV1IndexFieldResponse {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public GoogleFirestoreAdminV1IndexFieldResponse build() {
             return new GoogleFirestoreAdminV1IndexFieldResponse(arrayConfig, fieldPath, order);
         }

@@ -123,7 +123,6 @@ public final class CxPageEntryFulfillment {
             this.webhook = webhook;
             return this;
         }
-
         public CxPageEntryFulfillment build() {
             return new CxPageEntryFulfillment(messages, returnPartialResponses, tag, webhook);
         }

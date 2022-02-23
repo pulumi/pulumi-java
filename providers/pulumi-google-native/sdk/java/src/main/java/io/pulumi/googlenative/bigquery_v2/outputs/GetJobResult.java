@@ -204,7 +204,6 @@ public final class GetJobResult {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(configuration, etag, jobReference, kind, selfLink, statistics, status, userEmail);
         }

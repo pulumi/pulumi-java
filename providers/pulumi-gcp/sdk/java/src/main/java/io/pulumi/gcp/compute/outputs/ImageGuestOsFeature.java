@@ -54,7 +54,6 @@ public final class ImageGuestOsFeature {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageGuestOsFeature build() {
             return new ImageGuestOsFeature(type);
         }

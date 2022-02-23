@@ -74,7 +74,6 @@ public final class GaugeViewResponse {
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
         }
-
         public GaugeViewResponse build() {
             return new GaugeViewResponse(lowerBound, upperBound);
         }

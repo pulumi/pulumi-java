@@ -290,7 +290,6 @@ public final class GetBackendResult {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetBackendResult build() {
             return new GetBackendResult(credentials, description, id, name, properties, protocol, proxy, resourceId, title, tls, type, url);
         }

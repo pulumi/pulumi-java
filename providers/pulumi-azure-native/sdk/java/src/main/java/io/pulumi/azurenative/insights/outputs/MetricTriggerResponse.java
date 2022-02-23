@@ -290,7 +290,6 @@ public final class MetricTriggerResponse {
             this.timeWindow = Objects.requireNonNull(timeWindow);
             return this;
         }
-
         public MetricTriggerResponse build() {
             return new MetricTriggerResponse(dimensions, dividePerInstance, metricName, metricNamespace, metricResourceLocation, metricResourceUri, operator, statistic, threshold, timeAggregation, timeGrain, timeWindow);
         }

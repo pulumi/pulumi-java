@@ -74,7 +74,6 @@ public final class ToolResultsHistoryResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public ToolResultsHistoryResponse build() {
             return new ToolResultsHistoryResponse(historyId, project);
         }

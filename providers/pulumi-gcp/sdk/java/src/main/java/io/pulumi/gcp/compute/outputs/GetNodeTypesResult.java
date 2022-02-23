@@ -101,7 +101,6 @@ public final class GetNodeTypesResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetNodeTypesResult build() {
             return new GetNodeTypesResult(id, names, project, zone);
         }

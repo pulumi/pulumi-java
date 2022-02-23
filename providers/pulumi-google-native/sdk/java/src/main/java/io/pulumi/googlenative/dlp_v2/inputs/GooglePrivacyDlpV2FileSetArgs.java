@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2FileSetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="regexFileSet")
-    private final @Nullable Input<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet;
+      private final @Nullable Input<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet;
 
     public Input<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> getRegexFileSet() {
         return this.regexFileSet == null ? Input.empty() : this.regexFileSet;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2FileSetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -94,7 +94,6 @@ public final class GooglePrivacyDlpV2FileSetArgs extends io.pulumi.resources.Res
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public GooglePrivacyDlpV2FileSetArgs build() {
             return new GooglePrivacyDlpV2FileSetArgs(regexFileSet, url);
         }

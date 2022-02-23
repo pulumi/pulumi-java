@@ -44,7 +44,6 @@ public final class RuleGroupFieldToMatchSingleHeaderProperties {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public RuleGroupFieldToMatchSingleHeaderProperties build() {
             return new RuleGroupFieldToMatchSingleHeaderProperties(name);
         }

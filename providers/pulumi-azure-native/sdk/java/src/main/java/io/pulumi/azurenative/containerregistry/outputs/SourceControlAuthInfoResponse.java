@@ -140,7 +140,6 @@ public final class SourceControlAuthInfoResponse {
             this.tokenType = tokenType;
             return this;
         }
-
         public SourceControlAuthInfoResponse build() {
             return new SourceControlAuthInfoResponse(expiresIn, refreshToken, scope, token, tokenType);
         }

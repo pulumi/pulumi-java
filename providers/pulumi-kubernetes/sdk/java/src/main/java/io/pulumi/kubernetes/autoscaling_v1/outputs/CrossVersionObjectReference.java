@@ -97,7 +97,6 @@ public final class CrossVersionObjectReference {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public CrossVersionObjectReference build() {
             return new CrossVersionObjectReference(apiVersion, kind, name);
         }

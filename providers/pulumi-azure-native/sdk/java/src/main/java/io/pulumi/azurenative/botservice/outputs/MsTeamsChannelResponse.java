@@ -142,7 +142,6 @@ public final class MsTeamsChannelResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public MsTeamsChannelResponse build() {
             return new MsTeamsChannelResponse(channelName, etag, location, properties, provisioningState);
         }

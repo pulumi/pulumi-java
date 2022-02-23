@@ -71,7 +71,6 @@ public final class WirelessDeviceOtaaV11 {
             this.nwkKey = Objects.requireNonNull(nwkKey);
             return this;
         }
-
         public WirelessDeviceOtaaV11 build() {
             return new WirelessDeviceOtaaV11(appKey, joinEui, nwkKey);
         }

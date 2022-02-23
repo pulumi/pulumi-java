@@ -293,7 +293,6 @@ public final class GetAutomationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutomationRuleResult build() {
             return new GetAutomationRuleResult(actions, createdBy, createdTimeUtc, displayName, etag, id, lastModifiedBy, lastModifiedTimeUtc, name, order, triggeringLogic, type);
         }

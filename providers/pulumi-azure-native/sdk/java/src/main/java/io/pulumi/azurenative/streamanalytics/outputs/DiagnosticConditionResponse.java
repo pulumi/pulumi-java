@@ -95,7 +95,6 @@ public final class DiagnosticConditionResponse {
             this.since = Objects.requireNonNull(since);
             return this;
         }
-
         public DiagnosticConditionResponse build() {
             return new DiagnosticConditionResponse(code, message, since);
         }

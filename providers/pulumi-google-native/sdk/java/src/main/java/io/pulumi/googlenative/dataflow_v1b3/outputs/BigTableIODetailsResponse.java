@@ -95,7 +95,6 @@ public final class BigTableIODetailsResponse {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public BigTableIODetailsResponse build() {
             return new BigTableIODetailsResponse(instanceId, project, tableId);
         }

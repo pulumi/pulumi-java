@@ -79,7 +79,6 @@ public final class EngineSplitTrafficSplit {
             this.shardBy = shardBy;
             return this;
         }
-
         public EngineSplitTrafficSplit build() {
             return new EngineSplitTrafficSplit(allocations, shardBy);
         }

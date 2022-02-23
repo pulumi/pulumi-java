@@ -20,7 +20,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="instanceRedistributionType")
-    private final @Nullable Input<String> instanceRedistributionType;
+        private final @Nullable Input<String> instanceRedistributionType;
 
     public Input<String> getInstanceRedistributionType() {
         return this.instanceRedistributionType == null ? Input.empty() : this.instanceRedistributionType;
@@ -31,7 +31,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxSurgeFixed")
-    private final @Nullable Input<Integer> maxSurgeFixed;
+        private final @Nullable Input<Integer> maxSurgeFixed;
 
     public Input<Integer> getMaxSurgeFixed() {
         return this.maxSurgeFixed == null ? Input.empty() : this.maxSurgeFixed;
@@ -42,7 +42,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxSurgePercent")
-    private final @Nullable Input<Integer> maxSurgePercent;
+        private final @Nullable Input<Integer> maxSurgePercent;
 
     public Input<Integer> getMaxSurgePercent() {
         return this.maxSurgePercent == null ? Input.empty() : this.maxSurgePercent;
@@ -53,7 +53,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxUnavailableFixed")
-    private final @Nullable Input<Integer> maxUnavailableFixed;
+        private final @Nullable Input<Integer> maxUnavailableFixed;
 
     public Input<Integer> getMaxUnavailableFixed() {
         return this.maxUnavailableFixed == null ? Input.empty() : this.maxUnavailableFixed;
@@ -64,7 +64,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxUnavailablePercent")
-    private final @Nullable Input<Integer> maxUnavailablePercent;
+        private final @Nullable Input<Integer> maxUnavailablePercent;
 
     public Input<Integer> getMaxUnavailablePercent() {
         return this.maxUnavailablePercent == null ? Input.empty() : this.maxUnavailablePercent;
@@ -75,7 +75,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="minReadySec")
-    private final @Nullable Input<Integer> minReadySec;
+        private final @Nullable Input<Integer> minReadySec;
 
     public Input<Integer> getMinReadySec() {
         return this.minReadySec == null ? Input.empty() : this.minReadySec;
@@ -86,7 +86,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="minimalAction", required=true)
-    private final Input<String> minimalAction;
+        private final Input<String> minimalAction;
 
     public Input<String> getMinimalAction() {
         return this.minimalAction;
@@ -98,7 +98,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="replacementMethod")
-    private final @Nullable Input<String> replacementMethod;
+        private final @Nullable Input<String> replacementMethod;
 
     public Input<String> getReplacementMethod() {
         return this.replacementMethod == null ? Input.empty() : this.replacementMethod;
@@ -109,7 +109,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -273,7 +273,6 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public RegionInstanceGroupManagerUpdatePolicyArgs build() {
             return new RegionInstanceGroupManagerUpdatePolicyArgs(instanceRedistributionType, maxSurgeFixed, maxSurgePercent, maxUnavailableFixed, maxUnavailablePercent, minReadySec, minimalAction, replacementMethod, type);
         }

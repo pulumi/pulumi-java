@@ -98,7 +98,6 @@ public final class CloudTieringFilesNotTieringResponse {
             this.totalFileCount = Objects.requireNonNull(totalFileCount);
             return this;
         }
-
         public CloudTieringFilesNotTieringResponse build() {
             return new CloudTieringFilesNotTieringResponse(errors, lastUpdatedTimestamp, totalFileCount);
         }

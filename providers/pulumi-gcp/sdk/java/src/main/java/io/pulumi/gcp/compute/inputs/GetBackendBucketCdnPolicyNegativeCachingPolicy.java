@@ -13,14 +13,14 @@ public final class GetBackendBucketCdnPolicyNegativeCachingPolicy extends io.pul
     public static final GetBackendBucketCdnPolicyNegativeCachingPolicy Empty = new GetBackendBucketCdnPolicyNegativeCachingPolicy();
 
     @InputImport(name="code", required=true)
-    private final Integer code;
+        private final Integer code;
 
     public Integer getCode() {
         return this.code;
     }
 
     @InputImport(name="ttl", required=true)
-    private final Integer ttl;
+        private final Integer ttl;
 
     public Integer getTtl() {
         return this.ttl;
@@ -69,7 +69,6 @@ public final class GetBackendBucketCdnPolicyNegativeCachingPolicy extends io.pul
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public GetBackendBucketCdnPolicyNegativeCachingPolicy build() {
             return new GetBackendBucketCdnPolicyNegativeCachingPolicy(code, ttl);
         }

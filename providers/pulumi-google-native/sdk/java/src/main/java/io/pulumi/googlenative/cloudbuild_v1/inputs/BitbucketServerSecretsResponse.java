@@ -21,7 +21,7 @@ public final class BitbucketServerSecretsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="adminAccessTokenVersionName", required=true)
-    private final String adminAccessTokenVersionName;
+      private final String adminAccessTokenVersionName;
 
     public String getAdminAccessTokenVersionName() {
         return this.adminAccessTokenVersionName;
@@ -32,7 +32,7 @@ public final class BitbucketServerSecretsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="readAccessTokenVersionName", required=true)
-    private final String readAccessTokenVersionName;
+      private final String readAccessTokenVersionName;
 
     public String getReadAccessTokenVersionName() {
         return this.readAccessTokenVersionName;
@@ -43,7 +43,7 @@ public final class BitbucketServerSecretsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="webhookSecretVersionName", required=true)
-    private final String webhookSecretVersionName;
+      private final String webhookSecretVersionName;
 
     public String getWebhookSecretVersionName() {
         return this.webhookSecretVersionName;
@@ -102,7 +102,6 @@ public final class BitbucketServerSecretsResponse extends io.pulumi.resources.In
             this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
             return this;
         }
-
         public BitbucketServerSecretsResponse build() {
             return new BitbucketServerSecretsResponse(adminAccessTokenVersionName, readAccessTokenVersionName, webhookSecretVersionName);
         }

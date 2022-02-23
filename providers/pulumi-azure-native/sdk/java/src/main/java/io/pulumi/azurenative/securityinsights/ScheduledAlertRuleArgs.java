@@ -26,7 +26,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="alertRuleTemplateName")
-    private final @Nullable Input<String> alertRuleTemplateName;
+        private final @Nullable Input<String> alertRuleTemplateName;
 
     public Input<String> getAlertRuleTemplateName() {
         return this.alertRuleTemplateName == null ? Input.empty() : this.alertRuleTemplateName;
@@ -37,7 +37,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -59,7 +59,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -71,7 +71,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -82,7 +82,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="query", required=true)
-    private final Input<String> query;
+        private final Input<String> query;
 
     public Input<String> getQuery() {
         return this.query;
@@ -93,7 +93,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="queryFrequency", required=true)
-    private final Input<String> queryFrequency;
+        private final Input<String> queryFrequency;
 
     public Input<String> getQueryFrequency() {
         return this.queryFrequency;
@@ -104,7 +104,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="queryPeriod", required=true)
-    private final Input<String> queryPeriod;
+        private final Input<String> queryPeriod;
 
     public Input<String> getQueryPeriod() {
         return this.queryPeriod;
@@ -115,7 +115,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -126,7 +126,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ruleId")
-    private final @Nullable Input<String> ruleId;
+        private final @Nullable Input<String> ruleId;
 
     public Input<String> getRuleId() {
         return this.ruleId == null ? Input.empty() : this.ruleId;
@@ -137,7 +137,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="severity", required=true)
-    private final Input<Either<String,AlertSeverity>> severity;
+        private final Input<Either<String,AlertSeverity>> severity;
 
     public Input<Either<String,AlertSeverity>> getSeverity() {
         return this.severity;
@@ -148,7 +148,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="suppressionDuration", required=true)
-    private final Input<String> suppressionDuration;
+        private final Input<String> suppressionDuration;
 
     public Input<String> getSuppressionDuration() {
         return this.suppressionDuration;
@@ -159,7 +159,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="suppressionEnabled", required=true)
-    private final Input<Boolean> suppressionEnabled;
+        private final Input<Boolean> suppressionEnabled;
 
     public Input<Boolean> getSuppressionEnabled() {
         return this.suppressionEnabled;
@@ -170,7 +170,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tactics")
-    private final @Nullable Input<List<Either<String,AttackTactic>>> tactics;
+        private final @Nullable Input<List<Either<String,AttackTactic>>> tactics;
 
     public Input<List<Either<String,AttackTactic>>> getTactics() {
         return this.tactics == null ? Input.empty() : this.tactics;
@@ -181,7 +181,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="triggerOperator", required=true)
-    private final Input<TriggerOperator> triggerOperator;
+        private final Input<TriggerOperator> triggerOperator;
 
     public Input<TriggerOperator> getTriggerOperator() {
         return this.triggerOperator;
@@ -192,7 +192,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="triggerThreshold", required=true)
-    private final Input<Integer> triggerThreshold;
+        private final Input<Integer> triggerThreshold;
 
     public Input<Integer> getTriggerThreshold() {
         return this.triggerThreshold;
@@ -203,7 +203,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -487,7 +487,6 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public ScheduledAlertRuleArgs build() {
             return new ScheduledAlertRuleArgs(alertRuleTemplateName, description, displayName, enabled, kind, query, queryFrequency, queryPeriod, resourceGroupName, ruleId, severity, suppressionDuration, suppressionEnabled, tactics, triggerOperator, triggerThreshold, workspaceName);
         }

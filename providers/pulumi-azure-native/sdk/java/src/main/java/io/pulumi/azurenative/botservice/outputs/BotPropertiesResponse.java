@@ -730,7 +730,6 @@ public final class BotPropertiesResponse {
             this.storageResourceId = storageResourceId;
             return this;
         }
-
         public BotPropertiesResponse build() {
             return new BotPropertiesResponse(allSettings, appPasswordHint, cmekEncryptionStatus, cmekKeyVaultUrl, configuredChannels, description, developerAppInsightKey, developerAppInsightsApiKey, developerAppInsightsApplicationId, disableLocalAuth, displayName, enabledChannels, endpoint, endpointVersion, iconUrl, isCmekEnabled, isDeveloperAppInsightsApiKeySet, isStreamingSupported, luisAppIds, luisKey, manifestUrl, migrationToken, msaAppId, msaAppMSIResourceId, msaAppTenantId, msaAppType, openWithHint, parameters, provisioningState, publicNetworkAccess, publishingCredentials, schemaTransformationVersion, storageResourceId);
         }

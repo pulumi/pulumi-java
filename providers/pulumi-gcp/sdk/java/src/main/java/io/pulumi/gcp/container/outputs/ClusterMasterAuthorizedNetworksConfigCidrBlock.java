@@ -78,7 +78,6 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlock {
             this.displayName = displayName;
             return this;
         }
-
         public ClusterMasterAuthorizedNetworksConfigCidrBlock build() {
             return new ClusterMasterAuthorizedNetworksConfigCidrBlock(cidrBlock, displayName);
         }

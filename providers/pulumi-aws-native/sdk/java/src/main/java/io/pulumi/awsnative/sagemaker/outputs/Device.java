@@ -97,7 +97,6 @@ public final class Device {
             this.iotThingName = iotThingName;
             return this;
         }
-
         public Device build() {
             return new Device(description, deviceName, iotThingName);
         }

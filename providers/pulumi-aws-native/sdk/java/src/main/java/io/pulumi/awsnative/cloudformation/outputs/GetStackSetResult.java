@@ -272,7 +272,6 @@ public final class GetStackSetResult {
             this.templateBody = templateBody;
             return this;
         }
-
         public GetStackSetResult build() {
             return new GetStackSetResult(administrationRoleARN, autoDeployment, capabilities, description, executionRoleName, managedExecution, parameters, stackInstancesGroup, stackSetId, tags, templateBody);
         }

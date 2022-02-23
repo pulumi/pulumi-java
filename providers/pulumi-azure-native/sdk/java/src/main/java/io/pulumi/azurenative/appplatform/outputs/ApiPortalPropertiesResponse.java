@@ -228,7 +228,6 @@ public final class ApiPortalPropertiesResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public ApiPortalPropertiesResponse build() {
             return new ApiPortalPropertiesResponse(gatewayIds, httpsOnly, instances, provisioningState, $public, resourceRequests, sourceUrls, ssoProperties, url);
         }

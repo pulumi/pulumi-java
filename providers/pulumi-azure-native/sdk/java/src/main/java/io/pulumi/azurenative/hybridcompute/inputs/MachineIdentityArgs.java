@@ -19,7 +19,7 @@ public final class MachineIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -62,7 +62,6 @@ public final class MachineIdentityArgs extends io.pulumi.resources.ResourceArgs 
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public MachineIdentityArgs build() {
             return new MachineIdentityArgs(type);
         }

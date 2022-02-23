@@ -396,7 +396,6 @@ public final class VMwareCbtMigrationDetailsResponse {
             this.vmwareMachineId = Objects.requireNonNull(vmwareMachineId);
             return this;
         }
-
         public VMwareCbtMigrationDetailsResponse build() {
             return new VMwareCbtMigrationDetailsResponse(dataMoverRunAsAccountId, instanceType, lastRecoveryPointReceived, licenseType, migrationRecoveryPointId, osType, protectedDisks, snapshotRunAsAccountId, targetAvailabilitySetId, targetBootDiagnosticsStorageAccountId, targetLocation, targetNetworkId, targetResourceGroupId, targetVmName, targetVmSize, vmNics, vmwareMachineId);
         }

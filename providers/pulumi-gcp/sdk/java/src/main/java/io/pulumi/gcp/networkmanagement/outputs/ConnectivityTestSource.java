@@ -183,7 +183,6 @@ public final class ConnectivityTestSource {
             this.projectId = projectId;
             return this;
         }
-
         public ConnectivityTestSource build() {
             return new ConnectivityTestSource(instance, ipAddress, network, networkType, port, projectId);
         }

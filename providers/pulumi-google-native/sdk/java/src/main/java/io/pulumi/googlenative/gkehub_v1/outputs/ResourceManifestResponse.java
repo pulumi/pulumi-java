@@ -75,7 +75,6 @@ public final class ResourceManifestResponse {
             this.manifest = Objects.requireNonNull(manifest);
             return this;
         }
-
         public ResourceManifestResponse build() {
             return new ResourceManifestResponse(clusterScoped, manifest);
         }

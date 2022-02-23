@@ -139,7 +139,6 @@ public final class BaseImageTriggerResponse {
             this.updateTriggerPayloadType = updateTriggerPayloadType;
             return this;
         }
-
         public BaseImageTriggerResponse build() {
             return new BaseImageTriggerResponse(baseImageTriggerType, name, status, updateTriggerEndpoint, updateTriggerPayloadType);
         }

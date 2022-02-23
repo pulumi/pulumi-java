@@ -54,7 +54,6 @@ public final class UserObjectReceiverValueResponse {
             this.userObjectIds = userObjectIds;
             return this;
         }
-
         public UserObjectReceiverValueResponse build() {
             return new UserObjectReceiverValueResponse(userObjectIds);
         }

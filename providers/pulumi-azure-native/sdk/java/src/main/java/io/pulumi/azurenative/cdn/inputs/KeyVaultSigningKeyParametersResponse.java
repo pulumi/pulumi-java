@@ -17,7 +17,7 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
     public static final KeyVaultSigningKeyParametersResponse Empty = new KeyVaultSigningKeyParametersResponse();
 
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -28,7 +28,7 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="secretName", required=true)
-    private final String secretName;
+        private final String secretName;
 
     public String getSecretName() {
         return this.secretName;
@@ -50,7 +50,7 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="secretVersion", required=true)
-    private final String secretVersion;
+        private final String secretVersion;
 
     public String getSecretVersion() {
         return this.secretVersion;
@@ -61,7 +61,7 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-    private final String subscriptionId;
+        private final String subscriptionId;
 
     public String getSubscriptionId() {
         return this.subscriptionId;
@@ -72,7 +72,7 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final String vaultName;
+        private final String vaultName;
 
     public String getVaultName() {
         return this.vaultName;
@@ -161,7 +161,6 @@ public final class KeyVaultSigningKeyParametersResponse extends io.pulumi.resour
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public KeyVaultSigningKeyParametersResponse build() {
             return new KeyVaultSigningKeyParametersResponse(odataType, resourceGroupName, secretName, secretVersion, subscriptionId, vaultName);
         }

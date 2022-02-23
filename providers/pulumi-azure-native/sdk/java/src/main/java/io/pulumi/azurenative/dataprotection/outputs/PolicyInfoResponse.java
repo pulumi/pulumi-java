@@ -82,7 +82,6 @@ public final class PolicyInfoResponse {
             this.policyVersion = Objects.requireNonNull(policyVersion);
             return this;
         }
-
         public PolicyInfoResponse build() {
             return new PolicyInfoResponse(policyId, policyParameters, policyVersion);
         }

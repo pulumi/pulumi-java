@@ -205,7 +205,6 @@ public final class GetMoveCollectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMoveCollectionResult build() {
             return new GetMoveCollectionResult(etag, id, identity, location, name, properties, tags, type);
         }

@@ -25,7 +25,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Input<Map<String,String>> attributes;
 
     public Input<Map<String,String>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -36,7 +36,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oidcToken")
-    private final @Nullable Input<OidcTokenArgs> oidcToken;
+      private final @Nullable Input<OidcTokenArgs> oidcToken;
 
     public Input<OidcTokenArgs> getOidcToken() {
         return this.oidcToken == null ? Input.empty() : this.oidcToken;
@@ -47,7 +47,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pushEndpoint")
-    private final @Nullable Input<String> pushEndpoint;
+      private final @Nullable Input<String> pushEndpoint;
 
     public Input<String> getPushEndpoint() {
         return this.pushEndpoint == null ? Input.empty() : this.pushEndpoint;
@@ -121,7 +121,6 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.pushEndpoint = Input.ofNullable(pushEndpoint);
             return this;
         }
-
         public PushConfigArgs build() {
             return new PushConfigArgs(attributes, oidcToken, pushEndpoint);
         }

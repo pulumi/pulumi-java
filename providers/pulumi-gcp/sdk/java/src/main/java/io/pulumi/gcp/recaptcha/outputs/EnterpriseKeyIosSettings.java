@@ -78,7 +78,6 @@ public final class EnterpriseKeyIosSettings {
             this.allowedBundleIds = allowedBundleIds;
             return this;
         }
-
         public EnterpriseKeyIosSettings build() {
             return new EnterpriseKeyIosSettings(allowAllBundleIds, allowedBundleIds);
         }

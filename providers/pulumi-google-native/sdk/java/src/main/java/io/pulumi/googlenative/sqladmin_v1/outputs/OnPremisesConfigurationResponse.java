@@ -222,7 +222,6 @@ public final class OnPremisesConfigurationResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public OnPremisesConfigurationResponse build() {
             return new OnPremisesConfigurationResponse(caCertificate, clientCertificate, clientKey, dumpFilePath, hostPort, kind, password, sourceInstance, username);
         }

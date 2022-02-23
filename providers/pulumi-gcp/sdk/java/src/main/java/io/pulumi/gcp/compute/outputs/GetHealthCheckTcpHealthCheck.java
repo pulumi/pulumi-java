@@ -111,7 +111,6 @@ public final class GetHealthCheckTcpHealthCheck {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public GetHealthCheckTcpHealthCheck build() {
             return new GetHealthCheckTcpHealthCheck(port, portName, portSpecification, proxyHeader, request, response);
         }

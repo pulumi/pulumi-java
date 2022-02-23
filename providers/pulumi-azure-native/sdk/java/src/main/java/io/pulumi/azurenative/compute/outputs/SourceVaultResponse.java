@@ -54,7 +54,6 @@ public final class SourceVaultResponse {
             this.id = id;
             return this;
         }
-
         public SourceVaultResponse build() {
             return new SourceVaultResponse(id);
         }

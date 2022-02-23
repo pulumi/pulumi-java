@@ -52,7 +52,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             this.nodeGroup = Objects.requireNonNull(nodeGroup);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity(nodeGroup);
         }

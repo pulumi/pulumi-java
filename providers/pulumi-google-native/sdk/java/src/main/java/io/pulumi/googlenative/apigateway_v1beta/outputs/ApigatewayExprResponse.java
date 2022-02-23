@@ -116,7 +116,6 @@ public final class ApigatewayExprResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ApigatewayExprResponse build() {
             return new ApigatewayExprResponse(description, expression, location, title);
         }

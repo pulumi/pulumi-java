@@ -33,7 +33,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @InputImport(name="bigqueryImportKeys", required=true)
-    private final Input<Map<String,String>> bigqueryImportKeys;
+      private final Input<Map<String,String>> bigqueryImportKeys;
 
     public Input<Map<String,String>> getBigqueryImportKeys() {
         return this.bigqueryImportKeys;
@@ -44,7 +44,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @InputImport(name="boundingPolyConfig")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig;
 
     public Input<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> getBoundingPolyConfig() {
         return this.boundingPolyConfig == null ? Input.empty() : this.boundingPolyConfig;
@@ -55,7 +55,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @InputImport(name="evaluationConfig", required=true)
-    private final Input<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig;
+      private final Input<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig;
 
     public Input<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> getEvaluationConfig() {
         return this.evaluationConfig;
@@ -66,7 +66,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @InputImport(name="evaluationJobAlertConfig")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig;
 
     public Input<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> getEvaluationJobAlertConfig() {
         return this.evaluationJobAlertConfig == null ? Input.empty() : this.evaluationJobAlertConfig;
@@ -77,7 +77,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @InputImport(name="exampleCount", required=true)
-    private final Input<Integer> exampleCount;
+      private final Input<Integer> exampleCount;
 
     public Input<Integer> getExampleCount() {
         return this.exampleCount;
@@ -88,7 +88,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @InputImport(name="exampleSamplePercentage", required=true)
-    private final Input<Double> exampleSamplePercentage;
+      private final Input<Double> exampleSamplePercentage;
 
     public Input<Double> getExampleSamplePercentage() {
         return this.exampleSamplePercentage;
@@ -99,7 +99,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @InputImport(name="humanAnnotationConfig")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig;
 
     public Input<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> getHumanAnnotationConfig() {
         return this.humanAnnotationConfig == null ? Input.empty() : this.humanAnnotationConfig;
@@ -110,7 +110,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @InputImport(name="imageClassificationConfig")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig;
 
     public Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> getImageClassificationConfig() {
         return this.imageClassificationConfig == null ? Input.empty() : this.imageClassificationConfig;
@@ -121,7 +121,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @InputImport(name="inputConfig")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig;
 
     public Input<GoogleCloudDatalabelingV1beta1InputConfigArgs> getInputConfig() {
         return this.inputConfig == null ? Input.empty() : this.inputConfig;
@@ -132,7 +132,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @InputImport(name="textClassificationConfig")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig;
 
     public Input<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> getTextClassificationConfig() {
         return this.textClassificationConfig == null ? Input.empty() : this.textClassificationConfig;
@@ -311,7 +311,6 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
             this.textClassificationConfig = Input.ofNullable(textClassificationConfig);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs(bigqueryImportKeys, boundingPolyConfig, evaluationConfig, evaluationJobAlertConfig, exampleCount, exampleSamplePercentage, humanAnnotationConfig, imageClassificationConfig, inputConfig, textClassificationConfig);
         }

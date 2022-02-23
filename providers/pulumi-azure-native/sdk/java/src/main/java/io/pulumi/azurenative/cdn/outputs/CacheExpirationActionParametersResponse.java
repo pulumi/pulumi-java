@@ -110,7 +110,6 @@ public final class CacheExpirationActionParametersResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public CacheExpirationActionParametersResponse build() {
             return new CacheExpirationActionParametersResponse(cacheBehavior, cacheDuration, cacheType, odataType);
         }

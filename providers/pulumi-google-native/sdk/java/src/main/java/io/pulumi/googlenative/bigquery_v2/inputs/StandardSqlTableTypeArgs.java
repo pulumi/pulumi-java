@@ -24,7 +24,7 @@ public final class StandardSqlTableTypeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable Input<List<StandardSqlFieldArgs>> columns;
+      private final @Nullable Input<List<StandardSqlFieldArgs>> columns;
 
     public Input<List<StandardSqlFieldArgs>> getColumns() {
         return this.columns == null ? Input.empty() : this.columns;
@@ -67,7 +67,6 @@ public final class StandardSqlTableTypeArgs extends io.pulumi.resources.Resource
             this.columns = Input.ofNullable(columns);
             return this;
         }
-
         public StandardSqlTableTypeArgs build() {
             return new StandardSqlTableTypeArgs(columns);
         }

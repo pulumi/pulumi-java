@@ -373,7 +373,6 @@ public final class SavedAttachedDiskResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SavedAttachedDiskResponse build() {
             return new SavedAttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, diskType, guestOsFeatures, index, $interface, kind, licenses, mode, source, storageBytes, storageBytesStatus, type);
         }

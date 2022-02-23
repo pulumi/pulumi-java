@@ -15,21 +15,21 @@ public final class GetPolicyBasedRouteIamPolicyArgs extends io.pulumi.resources.
     public static final GetPolicyBasedRouteIamPolicyArgs Empty = new GetPolicyBasedRouteIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="policyBasedRouteId", required=true)
-    private final String policyBasedRouteId;
+      private final String policyBasedRouteId;
 
     public String getPolicyBasedRouteId() {
         return this.policyBasedRouteId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetPolicyBasedRouteIamPolicyArgs extends io.pulumi.resources.
             this.project = project;
             return this;
         }
-
         public GetPolicyBasedRouteIamPolicyArgs build() {
             return new GetPolicyBasedRouteIamPolicyArgs(optionsRequestedPolicyVersion, policyBasedRouteId, project);
         }

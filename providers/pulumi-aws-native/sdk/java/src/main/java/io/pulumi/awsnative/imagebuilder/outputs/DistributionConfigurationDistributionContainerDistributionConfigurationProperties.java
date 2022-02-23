@@ -99,7 +99,6 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
             this.targetRepository = targetRepository;
             return this;
         }
-
         public DistributionConfigurationDistributionContainerDistributionConfigurationProperties build() {
             return new DistributionConfigurationDistributionContainerDistributionConfigurationProperties(containerTags, description, targetRepository);
         }

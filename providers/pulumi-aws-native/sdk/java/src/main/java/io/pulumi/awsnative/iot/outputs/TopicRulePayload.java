@@ -115,7 +115,6 @@ public final class TopicRulePayload {
             this.sql = Objects.requireNonNull(sql);
             return this;
         }
-
         public TopicRulePayload build() {
             return new TopicRulePayload(actions, awsIotSqlVersion, description, errorAction, ruleDisabled, sql);
         }

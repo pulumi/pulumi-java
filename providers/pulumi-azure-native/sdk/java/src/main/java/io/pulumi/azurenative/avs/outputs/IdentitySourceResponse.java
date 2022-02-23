@@ -244,7 +244,6 @@ public final class IdentitySourceResponse {
             this.username = username;
             return this;
         }
-
         public IdentitySourceResponse build() {
             return new IdentitySourceResponse(alias, baseGroupDN, baseUserDN, domain, name, password, primaryServer, secondaryServer, ssl, username);
         }

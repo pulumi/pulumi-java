@@ -33,7 +33,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -44,7 +44,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="delay")
-    private final @Nullable Input<Object> delay;
+        private final @Nullable Input<Object> delay;
 
     public Input<Object> getDelay() {
         return this.delay == null ? Input.empty() : this.delay;
@@ -55,7 +55,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<Object>> dependsOn;
+        private final @Nullable Input<List<Object>> dependsOn;
 
     public Input<List<Object>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -66,7 +66,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -77,7 +77,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+        private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -88,7 +88,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="frequency", required=true)
-    private final Input<Either<String,TumblingWindowFrequency>> frequency;
+        private final Input<Either<String,TumblingWindowFrequency>> frequency;
 
     public Input<Either<String,TumblingWindowFrequency>> getFrequency() {
         return this.frequency;
@@ -99,7 +99,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="interval", required=true)
-    private final Input<Integer> interval;
+        private final Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval;
@@ -110,7 +110,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxConcurrency", required=true)
-    private final Input<Integer> maxConcurrency;
+        private final Input<Integer> maxConcurrency;
 
     public Input<Integer> getMaxConcurrency() {
         return this.maxConcurrency;
@@ -121,7 +121,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="pipeline", required=true)
-    private final Input<TriggerPipelineReferenceArgs> pipeline;
+        private final Input<TriggerPipelineReferenceArgs> pipeline;
 
     public Input<TriggerPipelineReferenceArgs> getPipeline() {
         return this.pipeline;
@@ -132,7 +132,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<RetryPolicyArgs> retryPolicy;
+        private final @Nullable Input<RetryPolicyArgs> retryPolicy;
 
     public Input<RetryPolicyArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -143,7 +143,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+        private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -155,7 +155,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -364,7 +364,6 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public TumblingWindowTriggerArgs build() {
             return new TumblingWindowTriggerArgs(annotations, delay, dependsOn, description, endTime, frequency, interval, maxConcurrency, pipeline, retryPolicy, startTime, type);
         }

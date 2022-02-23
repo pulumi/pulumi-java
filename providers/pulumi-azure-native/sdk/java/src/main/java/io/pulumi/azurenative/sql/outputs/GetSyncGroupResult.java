@@ -353,7 +353,6 @@ public final class GetSyncGroupResult {
             this.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }
-
         public GetSyncGroupResult build() {
             return new GetSyncGroupResult(conflictLoggingRetentionInDays, conflictResolutionPolicy, enableConflictLogging, hubDatabaseUserName, id, interval, lastSyncTime, name, privateEndpointName, schema, sku, syncDatabaseId, syncState, type, usePrivateLinkConnection);
         }

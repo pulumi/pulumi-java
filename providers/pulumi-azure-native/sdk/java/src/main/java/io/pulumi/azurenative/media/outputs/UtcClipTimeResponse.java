@@ -76,7 +76,6 @@ public final class UtcClipTimeResponse {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public UtcClipTimeResponse build() {
             return new UtcClipTimeResponse(odataType, time);
         }

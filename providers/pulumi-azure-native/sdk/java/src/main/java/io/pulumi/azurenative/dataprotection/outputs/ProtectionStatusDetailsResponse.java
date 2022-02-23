@@ -77,7 +77,6 @@ public final class ProtectionStatusDetailsResponse {
             this.status = status;
             return this;
         }
-
         public ProtectionStatusDetailsResponse build() {
             return new ProtectionStatusDetailsResponse(errorDetails, status);
         }

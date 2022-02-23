@@ -58,7 +58,6 @@ public final class DatastoreColumn {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DatastoreColumn build() {
             return new DatastoreColumn(name, type);
         }

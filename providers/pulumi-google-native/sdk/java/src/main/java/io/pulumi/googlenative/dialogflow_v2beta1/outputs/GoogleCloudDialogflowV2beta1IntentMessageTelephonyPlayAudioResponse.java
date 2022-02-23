@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioRe
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse(audioUri);
         }

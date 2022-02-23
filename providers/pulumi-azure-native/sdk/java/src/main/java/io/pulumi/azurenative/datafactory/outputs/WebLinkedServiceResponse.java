@@ -170,7 +170,6 @@ public final class WebLinkedServiceResponse {
             this.typeProperties = Objects.requireNonNull(typeProperties);
             return this;
         }
-
         public WebLinkedServiceResponse build() {
             return new WebLinkedServiceResponse(annotations, connectVia, description, parameters, type, typeProperties);
         }

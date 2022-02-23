@@ -22,7 +22,7 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="privateConnection", required=true)
-    private final Input<String> privateConnection;
+      private final Input<String> privateConnection;
 
     public Input<String> getPrivateConnection() {
         return this.privateConnection;
@@ -65,7 +65,6 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
             this.privateConnection = Input.of(Objects.requireNonNull(privateConnection));
             return this;
         }
-
         public PrivateConnectivityArgs build() {
             return new PrivateConnectivityArgs(privateConnection);
         }

@@ -139,7 +139,6 @@ public final class UserIdentityResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public UserIdentityResponse build() {
             return new UserIdentityResponse(appId, objectId, principalId, principalName, tenantId);
         }

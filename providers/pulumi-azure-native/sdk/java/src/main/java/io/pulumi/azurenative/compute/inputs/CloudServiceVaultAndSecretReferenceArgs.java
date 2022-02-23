@@ -16,14 +16,14 @@ public final class CloudServiceVaultAndSecretReferenceArgs extends io.pulumi.res
     public static final CloudServiceVaultAndSecretReferenceArgs Empty = new CloudServiceVaultAndSecretReferenceArgs();
 
     @InputImport(name="secretUrl")
-    private final @Nullable Input<String> secretUrl;
+        private final @Nullable Input<String> secretUrl;
 
     public Input<String> getSecretUrl() {
         return this.secretUrl == null ? Input.empty() : this.secretUrl;
     }
 
     @InputImport(name="sourceVault")
-    private final @Nullable Input<SubResourceArgs> sourceVault;
+        private final @Nullable Input<SubResourceArgs> sourceVault;
 
     public Input<SubResourceArgs> getSourceVault() {
         return this.sourceVault == null ? Input.empty() : this.sourceVault;
@@ -82,7 +82,6 @@ public final class CloudServiceVaultAndSecretReferenceArgs extends io.pulumi.res
             this.sourceVault = Input.ofNullable(sourceVault);
             return this;
         }
-
         public CloudServiceVaultAndSecretReferenceArgs build() {
             return new CloudServiceVaultAndSecretReferenceArgs(secretUrl, sourceVault);
         }

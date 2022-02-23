@@ -21,7 +21,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobCollectionName")
-    private final @Nullable Input<String> jobCollectionName;
+        private final @Nullable Input<String> jobCollectionName;
 
     public Input<String> getJobCollectionName() {
         return this.jobCollectionName == null ? Input.empty() : this.jobCollectionName;
@@ -32,7 +32,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -43,7 +43,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<JobCollectionPropertiesArgs> properties;
+        private final @Nullable Input<JobCollectionPropertiesArgs> properties;
 
     public Input<JobCollectionPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -65,7 +65,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -195,7 +195,6 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public JobCollectionArgs build() {
             return new JobCollectionArgs(jobCollectionName, location, name, properties, resourceGroupName, tags);
         }

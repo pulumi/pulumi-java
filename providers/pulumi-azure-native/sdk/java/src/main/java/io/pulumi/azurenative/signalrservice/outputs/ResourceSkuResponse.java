@@ -156,7 +156,6 @@ public final class ResourceSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public ResourceSkuResponse build() {
             return new ResourceSkuResponse(capacity, family, name, size, tier);
         }

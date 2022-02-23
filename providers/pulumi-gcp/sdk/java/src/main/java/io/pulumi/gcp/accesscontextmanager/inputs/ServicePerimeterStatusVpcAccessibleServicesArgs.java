@@ -22,7 +22,7 @@ public final class ServicePerimeterStatusVpcAccessibleServicesArgs extends io.pu
      * 
      */
     @InputImport(name="allowedServices")
-    private final @Nullable Input<List<String>> allowedServices;
+        private final @Nullable Input<List<String>> allowedServices;
 
     public Input<List<String>> getAllowedServices() {
         return this.allowedServices == null ? Input.empty() : this.allowedServices;
@@ -34,7 +34,7 @@ public final class ServicePerimeterStatusVpcAccessibleServicesArgs extends io.pu
      * 
      */
     @InputImport(name="enableRestriction")
-    private final @Nullable Input<Boolean> enableRestriction;
+        private final @Nullable Input<Boolean> enableRestriction;
 
     public Input<Boolean> getEnableRestriction() {
         return this.enableRestriction == null ? Input.empty() : this.enableRestriction;
@@ -93,7 +93,6 @@ public final class ServicePerimeterStatusVpcAccessibleServicesArgs extends io.pu
             this.enableRestriction = Input.ofNullable(enableRestriction);
             return this;
         }
-
         public ServicePerimeterStatusVpcAccessibleServicesArgs build() {
             return new ServicePerimeterStatusVpcAccessibleServicesArgs(allowedServices, enableRestriction);
         }

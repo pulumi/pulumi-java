@@ -24,7 +24,7 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="day")
-    private final @Nullable Input<DayOfWeek> day;
+        private final @Nullable Input<DayOfWeek> day;
 
     public Input<DayOfWeek> getDay() {
         return this.day == null ? Input.empty() : this.day;
@@ -35,7 +35,7 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="occurrence")
-    private final @Nullable Input<Integer> occurrence;
+        private final @Nullable Input<Integer> occurrence;
 
     public Input<Integer> getOccurrence() {
         return this.occurrence == null ? Input.empty() : this.occurrence;
@@ -94,7 +94,6 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
             this.occurrence = Input.ofNullable(occurrence);
             return this;
         }
-
         public RecurrenceScheduleOccurrenceArgs build() {
             return new RecurrenceScheduleOccurrenceArgs(day, occurrence);
         }

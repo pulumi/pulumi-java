@@ -183,7 +183,6 @@ public final class AutoscalarAutoscalingPolicyScalingSchedule {
             this.timeZone = timeZone;
             return this;
         }
-
         public AutoscalarAutoscalingPolicyScalingSchedule build() {
             return new AutoscalarAutoscalingPolicyScalingSchedule(description, disabled, durationSec, minRequiredReplicas, name, schedule, timeZone);
         }

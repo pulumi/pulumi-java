@@ -275,7 +275,6 @@ public final class GetKeyValueResult {
             this.value = value;
             return this;
         }
-
         public GetKeyValueResult build() {
             return new GetKeyValueResult(contentType, eTag, id, key, label, lastModified, locked, name, tags, type, value);
         }

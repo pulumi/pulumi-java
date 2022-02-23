@@ -90,7 +90,6 @@ public final class SeccompProfile {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SeccompProfile build() {
             return new SeccompProfile(localhostProfile, type);
         }

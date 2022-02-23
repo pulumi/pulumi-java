@@ -19,42 +19,42 @@ public final class RuleGroupMatchAttributes extends io.pulumi.resources.InvokeAr
     public static final RuleGroupMatchAttributes Empty = new RuleGroupMatchAttributes();
 
     @InputImport(name="destinationPorts")
-    private final @Nullable List<RuleGroupPortRange> destinationPorts;
+        private final @Nullable List<RuleGroupPortRange> destinationPorts;
 
     public List<RuleGroupPortRange> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
 
     @InputImport(name="destinations")
-    private final @Nullable List<RuleGroupAddress> destinations;
+        private final @Nullable List<RuleGroupAddress> destinations;
 
     public List<RuleGroupAddress> getDestinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
 
     @InputImport(name="protocols")
-    private final @Nullable List<Integer> protocols;
+        private final @Nullable List<Integer> protocols;
 
     public List<Integer> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
 
     @InputImport(name="sourcePorts")
-    private final @Nullable List<RuleGroupPortRange> sourcePorts;
+        private final @Nullable List<RuleGroupPortRange> sourcePorts;
 
     public List<RuleGroupPortRange> getSourcePorts() {
         return this.sourcePorts == null ? List.of() : this.sourcePorts;
     }
 
     @InputImport(name="sources")
-    private final @Nullable List<RuleGroupAddress> sources;
+        private final @Nullable List<RuleGroupAddress> sources;
 
     public List<RuleGroupAddress> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }
 
     @InputImport(name="tCPFlags")
-    private final @Nullable List<RuleGroupTCPFlagField> tCPFlags;
+        private final @Nullable List<RuleGroupTCPFlagField> tCPFlags;
 
     public List<RuleGroupTCPFlagField> getTCPFlags() {
         return this.tCPFlags == null ? List.of() : this.tCPFlags;
@@ -143,7 +143,6 @@ public final class RuleGroupMatchAttributes extends io.pulumi.resources.InvokeAr
             this.tCPFlags = tCPFlags;
             return this;
         }
-
         public RuleGroupMatchAttributes build() {
             return new RuleGroupMatchAttributes(destinationPorts, destinations, protocols, sourcePorts, sources, tCPFlags);
         }

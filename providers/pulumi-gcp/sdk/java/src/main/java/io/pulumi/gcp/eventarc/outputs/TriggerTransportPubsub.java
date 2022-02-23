@@ -78,7 +78,6 @@ public final class TriggerTransportPubsub {
             this.topic = topic;
             return this;
         }
-
         public TriggerTransportPubsub build() {
             return new TriggerTransportPubsub(subscription, topic);
         }

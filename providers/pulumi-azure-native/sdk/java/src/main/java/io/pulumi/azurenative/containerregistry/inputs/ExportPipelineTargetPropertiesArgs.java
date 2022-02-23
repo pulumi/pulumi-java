@@ -23,7 +23,7 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="keyVaultUri", required=true)
-    private final Input<String> keyVaultUri;
+        private final Input<String> keyVaultUri;
 
     public Input<String> getKeyVaultUri() {
         return this.keyVaultUri;
@@ -34,7 +34,7 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -47,7 +47,7 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+        private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -121,7 +121,6 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public ExportPipelineTargetPropertiesArgs build() {
             return new ExportPipelineTargetPropertiesArgs(keyVaultUri, type, uri);
         }

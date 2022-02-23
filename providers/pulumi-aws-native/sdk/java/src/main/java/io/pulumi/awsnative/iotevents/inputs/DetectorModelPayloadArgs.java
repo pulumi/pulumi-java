@@ -24,7 +24,7 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="contentExpression", required=true)
-    private final Input<String> contentExpression;
+        private final Input<String> contentExpression;
 
     public Input<String> getContentExpression() {
         return this.contentExpression;
@@ -35,7 +35,7 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -94,7 +94,6 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DetectorModelPayloadArgs build() {
             return new DetectorModelPayloadArgs(contentExpression, type);
         }

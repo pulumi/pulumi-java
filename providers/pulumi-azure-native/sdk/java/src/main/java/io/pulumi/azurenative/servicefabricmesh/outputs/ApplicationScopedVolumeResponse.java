@@ -120,7 +120,6 @@ public final class ApplicationScopedVolumeResponse {
             this.readOnly = readOnly;
             return this;
         }
-
         public ApplicationScopedVolumeResponse build() {
             return new ApplicationScopedVolumeResponse(creationParameters, destinationPath, name, readOnly);
         }

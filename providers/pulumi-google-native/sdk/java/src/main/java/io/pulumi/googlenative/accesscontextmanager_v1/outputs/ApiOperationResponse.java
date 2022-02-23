@@ -76,7 +76,6 @@ public final class ApiOperationResponse {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public ApiOperationResponse build() {
             return new ApiOperationResponse(methodSelectors, serviceName);
         }

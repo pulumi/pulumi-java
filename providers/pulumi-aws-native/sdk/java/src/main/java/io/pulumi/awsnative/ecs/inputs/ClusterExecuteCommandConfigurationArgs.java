@@ -20,21 +20,21 @@ public final class ClusterExecuteCommandConfigurationArgs extends io.pulumi.reso
     public static final ClusterExecuteCommandConfigurationArgs Empty = new ClusterExecuteCommandConfigurationArgs();
 
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+        private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
     }
 
     @InputImport(name="logConfiguration")
-    private final @Nullable Input<ClusterExecuteCommandLogConfigurationArgs> logConfiguration;
+        private final @Nullable Input<ClusterExecuteCommandLogConfigurationArgs> logConfiguration;
 
     public Input<ClusterExecuteCommandLogConfigurationArgs> getLogConfiguration() {
         return this.logConfiguration == null ? Input.empty() : this.logConfiguration;
     }
 
     @InputImport(name="logging")
-    private final @Nullable Input<String> logging;
+        private final @Nullable Input<String> logging;
 
     public Input<String> getLogging() {
         return this.logging == null ? Input.empty() : this.logging;
@@ -108,7 +108,6 @@ public final class ClusterExecuteCommandConfigurationArgs extends io.pulumi.reso
             this.logging = Input.ofNullable(logging);
             return this;
         }
-
         public ClusterExecuteCommandConfigurationArgs build() {
             return new ClusterExecuteCommandConfigurationArgs(kmsKeyId, logConfiguration, logging);
         }

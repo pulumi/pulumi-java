@@ -54,7 +54,6 @@ public final class VirtualNetworkConfigResponse {
             this.subnetId = subnetId;
             return this;
         }
-
         public VirtualNetworkConfigResponse build() {
             return new VirtualNetworkConfigResponse(subnetId);
         }

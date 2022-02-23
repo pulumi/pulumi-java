@@ -75,7 +75,6 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnalysisResultResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnalysisResultResponse(callAnalysisMetadata, endTime);
         }

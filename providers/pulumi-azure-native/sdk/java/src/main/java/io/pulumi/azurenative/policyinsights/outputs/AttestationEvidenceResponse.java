@@ -76,7 +76,6 @@ public final class AttestationEvidenceResponse {
             this.sourceUri = sourceUri;
             return this;
         }
-
         public AttestationEvidenceResponse build() {
             return new AttestationEvidenceResponse(description, sourceUri);
         }

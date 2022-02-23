@@ -19,7 +19,7 @@ public final class PacketMirroringForwardingRuleInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -62,7 +62,6 @@ public final class PacketMirroringForwardingRuleInfoArgs extends io.pulumi.resou
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public PacketMirroringForwardingRuleInfoArgs build() {
             return new PacketMirroringForwardingRuleInfoArgs(url);
         }

@@ -116,7 +116,6 @@ public final class BuildSignatureResponse {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }
-
         public BuildSignatureResponse build() {
             return new BuildSignatureResponse(keyId, keyType, publicKey, signature);
         }

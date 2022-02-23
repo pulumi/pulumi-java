@@ -77,7 +77,6 @@ public final class OpenShiftManagedClusterIdentityProviderResponse {
             this.provider = provider;
             return this;
         }
-
         public OpenShiftManagedClusterIdentityProviderResponse build() {
             return new OpenShiftManagedClusterIdentityProviderResponse(name, provider);
         }

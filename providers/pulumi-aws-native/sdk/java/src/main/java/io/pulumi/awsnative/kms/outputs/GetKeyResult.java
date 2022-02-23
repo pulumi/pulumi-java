@@ -234,7 +234,6 @@ public final class GetKeyResult {
             this.tags = tags;
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(arn, description, enableKeyRotation, enabled, keyId, keyPolicy, keySpec, keyUsage, multiRegion, tags);
         }

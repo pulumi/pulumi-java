@@ -74,7 +74,6 @@ public final class RuleGroupRulesSourceList {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
-
         public RuleGroupRulesSourceList build() {
             return new RuleGroupRulesSourceList(generatedRulesType, targetTypes, targets);
         }

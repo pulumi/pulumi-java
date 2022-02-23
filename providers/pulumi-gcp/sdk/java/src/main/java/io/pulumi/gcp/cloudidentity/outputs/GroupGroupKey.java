@@ -96,7 +96,6 @@ public final class GroupGroupKey {
             this.namespace = namespace;
             return this;
         }
-
         public GroupGroupKey build() {
             return new GroupGroupKey(id, namespace);
         }

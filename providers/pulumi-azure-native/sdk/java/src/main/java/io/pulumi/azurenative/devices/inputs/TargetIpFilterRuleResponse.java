@@ -23,7 +23,7 @@ public final class TargetIpFilterRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+        private final String action;
 
     public String getAction() {
         return this.action;
@@ -34,7 +34,7 @@ public final class TargetIpFilterRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="filterName", required=true)
-    private final String filterName;
+        private final String filterName;
 
     public String getFilterName() {
         return this.filterName;
@@ -45,7 +45,7 @@ public final class TargetIpFilterRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ipMask", required=true)
-    private final String ipMask;
+        private final String ipMask;
 
     public String getIpMask() {
         return this.ipMask;
@@ -56,7 +56,7 @@ public final class TargetIpFilterRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="target")
-    private final @Nullable String target;
+        private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -125,7 +125,6 @@ public final class TargetIpFilterRuleResponse extends io.pulumi.resources.Invoke
             this.target = target;
             return this;
         }
-
         public TargetIpFilterRuleResponse build() {
             return new TargetIpFilterRuleResponse(action, filterName, ipMask, target);
         }

@@ -61,7 +61,6 @@ public final class JobDatabaseTableOutputOptions {
             this.tempDirectory = tempDirectory;
             return this;
         }
-
         public JobDatabaseTableOutputOptions build() {
             return new JobDatabaseTableOutputOptions(tableName, tempDirectory);
         }

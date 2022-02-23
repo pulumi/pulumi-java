@@ -54,7 +54,6 @@ public final class AccountAuditConfigurationAuditCheckConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public AccountAuditConfigurationAuditCheckConfiguration build() {
             return new AccountAuditConfigurationAuditCheckConfiguration(enabled);
         }

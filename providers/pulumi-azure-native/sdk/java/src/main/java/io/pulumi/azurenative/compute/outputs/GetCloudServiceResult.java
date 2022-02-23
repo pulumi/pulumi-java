@@ -161,7 +161,6 @@ public final class GetCloudServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCloudServiceResult build() {
             return new GetCloudServiceResult(id, location, name, properties, tags, type);
         }

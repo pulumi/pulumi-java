@@ -23,7 +23,7 @@ public final class SecurityPolicyCloudArmorConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableMl")
-    private final @Nullable Input<Boolean> enableMl;
+      private final @Nullable Input<Boolean> enableMl;
 
     public Input<Boolean> getEnableMl() {
         return this.enableMl == null ? Input.empty() : this.enableMl;
@@ -66,7 +66,6 @@ public final class SecurityPolicyCloudArmorConfigArgs extends io.pulumi.resource
             this.enableMl = Input.ofNullable(enableMl);
             return this;
         }
-
         public SecurityPolicyCloudArmorConfigArgs build() {
             return new SecurityPolicyCloudArmorConfigArgs(enableMl);
         }

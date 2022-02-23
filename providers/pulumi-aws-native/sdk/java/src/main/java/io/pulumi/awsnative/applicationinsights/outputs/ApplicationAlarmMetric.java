@@ -52,7 +52,6 @@ public final class ApplicationAlarmMetric {
             this.alarmMetricName = Objects.requireNonNull(alarmMetricName);
             return this;
         }
-
         public ApplicationAlarmMetric build() {
             return new ApplicationAlarmMetric(alarmMetricName);
         }

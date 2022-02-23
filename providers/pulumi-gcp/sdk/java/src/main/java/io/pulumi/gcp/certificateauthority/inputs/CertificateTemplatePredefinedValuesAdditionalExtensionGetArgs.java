@@ -21,7 +21,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
      * 
      */
     @InputImport(name="critical")
-    private final @Nullable Input<Boolean> critical;
+        private final @Nullable Input<Boolean> critical;
 
     public Input<Boolean> getCritical() {
         return this.critical == null ? Input.empty() : this.critical;
@@ -32,7 +32,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId;
+        private final Input<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId;
 
     public Input<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> getObjectId() {
         return this.objectId;
@@ -43,7 +43,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -117,7 +117,6 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs build() {
             return new CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs(critical, objectId, value);
         }

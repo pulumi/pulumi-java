@@ -24,7 +24,7 @@ public final class WebhookNotificationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+        private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -35,7 +35,7 @@ public final class WebhookNotificationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="serviceUri")
-    private final @Nullable String serviceUri;
+        private final @Nullable String serviceUri;
 
     public Optional<String> getServiceUri() {
         return this.serviceUri == null ? Optional.empty() : Optional.ofNullable(this.serviceUri);
@@ -84,7 +84,6 @@ public final class WebhookNotificationResponse extends io.pulumi.resources.Invok
             this.serviceUri = serviceUri;
             return this;
         }
-
         public WebhookNotificationResponse build() {
             return new WebhookNotificationResponse(properties, serviceUri);
         }

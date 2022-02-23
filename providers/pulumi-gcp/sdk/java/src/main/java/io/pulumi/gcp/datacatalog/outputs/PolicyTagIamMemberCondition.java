@@ -73,7 +73,6 @@ public final class PolicyTagIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public PolicyTagIamMemberCondition build() {
             return new PolicyTagIamMemberCondition(description, expression, title);
         }

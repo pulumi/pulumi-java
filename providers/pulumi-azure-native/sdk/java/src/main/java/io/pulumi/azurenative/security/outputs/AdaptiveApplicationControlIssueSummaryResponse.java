@@ -77,7 +77,6 @@ public final class AdaptiveApplicationControlIssueSummaryResponse {
             this.numberOfVms = numberOfVms;
             return this;
         }
-
         public AdaptiveApplicationControlIssueSummaryResponse build() {
             return new AdaptiveApplicationControlIssueSummaryResponse(issue, numberOfVms);
         }

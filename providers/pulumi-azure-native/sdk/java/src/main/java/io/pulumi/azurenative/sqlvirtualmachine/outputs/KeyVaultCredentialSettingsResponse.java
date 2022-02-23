@@ -119,7 +119,6 @@ public final class KeyVaultCredentialSettingsResponse {
             this.servicePrincipalName = servicePrincipalName;
             return this;
         }
-
         public KeyVaultCredentialSettingsResponse build() {
             return new KeyVaultCredentialSettingsResponse(azureKeyVaultUrl, credentialName, enable, servicePrincipalName);
         }

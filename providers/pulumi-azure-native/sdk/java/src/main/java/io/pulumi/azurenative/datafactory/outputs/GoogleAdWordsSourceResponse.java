@@ -205,7 +205,6 @@ public final class GoogleAdWordsSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleAdWordsSourceResponse build() {
             return new GoogleAdWordsSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

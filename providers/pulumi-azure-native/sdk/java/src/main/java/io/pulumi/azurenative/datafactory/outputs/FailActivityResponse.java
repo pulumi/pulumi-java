@@ -187,7 +187,6 @@ public final class FailActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public FailActivityResponse build() {
             return new FailActivityResponse(dependsOn, description, errorCode, message, name, type, userProperties);
         }

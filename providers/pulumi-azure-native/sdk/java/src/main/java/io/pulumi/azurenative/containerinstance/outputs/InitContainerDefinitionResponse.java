@@ -164,7 +164,6 @@ public final class InitContainerDefinitionResponse {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
         public InitContainerDefinitionResponse build() {
             return new InitContainerDefinitionResponse(command, environmentVariables, image, instanceView, name, volumeMounts);
         }

@@ -100,7 +100,6 @@ public final class FileServerLocationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FileServerLocationResponse build() {
             return new FileServerLocationResponse(fileName, folderPath, type);
         }

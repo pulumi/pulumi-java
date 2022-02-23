@@ -54,7 +54,6 @@ public final class ContainerGroupDiagnosticsResponse {
             this.logAnalytics = logAnalytics;
             return this;
         }
-
         public ContainerGroupDiagnosticsResponse build() {
             return new ContainerGroupDiagnosticsResponse(logAnalytics);
         }

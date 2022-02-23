@@ -21,7 +21,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="fileName", required=true)
-    private final String fileName;
+      private final String fileName;
 
     public String getFileName() {
         return this.fileName;
@@ -59,7 +59,6 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
-
         public SourceContextResponse build() {
             return new SourceContextResponse(fileName);
         }

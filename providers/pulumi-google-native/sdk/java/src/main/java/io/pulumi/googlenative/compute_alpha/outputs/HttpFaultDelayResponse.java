@@ -75,7 +75,6 @@ public final class HttpFaultDelayResponse {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public HttpFaultDelayResponse build() {
             return new HttpFaultDelayResponse(fixedDelay, percentage);
         }

@@ -203,7 +203,6 @@ public final class GetApplicationSecurityGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApplicationSecurityGroupResult build() {
             return new GetApplicationSecurityGroupResult(etag, id, location, name, provisioningState, resourceGuid, tags, type);
         }

@@ -218,7 +218,6 @@ public final class DetectorEventType {
             this.tags = tags;
             return this;
         }
-
         public DetectorEventType build() {
             return new DetectorEventType(arn, createdTime, description, entityTypes, eventVariables, inline, labels, lastUpdatedTime, name, tags);
         }

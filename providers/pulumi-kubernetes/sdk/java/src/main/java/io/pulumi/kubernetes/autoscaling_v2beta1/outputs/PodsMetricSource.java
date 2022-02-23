@@ -98,7 +98,6 @@ public final class PodsMetricSource {
             this.targetAverageValue = Objects.requireNonNull(targetAverageValue);
             return this;
         }
-
         public PodsMetricSource build() {
             return new PodsMetricSource(metricName, selector, targetAverageValue);
         }

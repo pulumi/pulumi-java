@@ -24,7 +24,7 @@ public final class CaaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="flags")
-    private final @Nullable Integer flags;
+        private final @Nullable Integer flags;
 
     public Optional<Integer> getFlags() {
         return this.flags == null ? Optional.empty() : Optional.ofNullable(this.flags);
@@ -35,7 +35,7 @@ public final class CaaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable String tag;
+        private final @Nullable String tag;
 
     public Optional<String> getTag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
@@ -46,7 +46,7 @@ public final class CaaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -105,7 +105,6 @@ public final class CaaRecordResponse extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public CaaRecordResponse build() {
             return new CaaRecordResponse(flags, tag, value);
         }

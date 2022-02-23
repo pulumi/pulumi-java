@@ -141,7 +141,6 @@ public final class DBProxyAuthFormat {
             this.userName = userName;
             return this;
         }
-
         public DBProxyAuthFormat build() {
             return new DBProxyAuthFormat(authScheme, description, iAMAuth, secretArn, userName);
         }

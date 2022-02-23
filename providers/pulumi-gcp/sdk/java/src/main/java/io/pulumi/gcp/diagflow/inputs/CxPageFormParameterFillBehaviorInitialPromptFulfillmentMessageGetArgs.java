@@ -19,7 +19,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs> text;
+        private final @Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs> text;
 
     public Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -62,7 +62,6 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageGetArgs build() {
             return new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageGetArgs(text);
         }

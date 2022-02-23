@@ -159,7 +159,6 @@ public final class AmlComputeNodeInformationResponse {
             this.runId = Objects.requireNonNull(runId);
             return this;
         }
-
         public AmlComputeNodeInformationResponse build() {
             return new AmlComputeNodeInformationResponse(nodeId, nodeState, port, privateIpAddress, publicIpAddress, runId);
         }

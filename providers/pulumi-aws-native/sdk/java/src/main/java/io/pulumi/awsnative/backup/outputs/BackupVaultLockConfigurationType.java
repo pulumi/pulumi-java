@@ -73,7 +73,6 @@ public final class BackupVaultLockConfigurationType {
             this.minRetentionDays = Objects.requireNonNull(minRetentionDays);
             return this;
         }
-
         public BackupVaultLockConfigurationType build() {
             return new BackupVaultLockConfigurationType(changeableForDays, maxRetentionDays, minRetentionDays);
         }

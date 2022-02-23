@@ -23,7 +23,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="attributions", required=true)
-    private final List<String> attributions;
+      private final List<String> attributions;
 
     public List<String> getAttributions() {
         return this.attributions;
@@ -34,7 +34,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="comment", required=true)
-    private final String comment;
+      private final String comment;
 
     public String getComment() {
         return this.comment;
@@ -45,7 +45,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="contributors", required=true)
-    private final List<String> contributors;
+      private final List<String> contributors;
 
     public List<String> getContributors() {
         return this.contributors;
@@ -56,7 +56,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="copyright", required=true)
-    private final String copyright;
+      private final String copyright;
 
     public String getCopyright() {
         return this.copyright;
@@ -67,7 +67,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="filesLicenseInfo", required=true)
-    private final List<String> filesLicenseInfo;
+      private final List<String> filesLicenseInfo;
 
     public List<String> getFilesLicenseInfo() {
         return this.filesLicenseInfo;
@@ -78,7 +78,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="licenseConcluded", required=true)
-    private final LicenseResponse licenseConcluded;
+      private final LicenseResponse licenseConcluded;
 
     public LicenseResponse getLicenseConcluded() {
         return this.licenseConcluded;
@@ -89,7 +89,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="notice", required=true)
-    private final String notice;
+      private final String notice;
 
     public String getNotice() {
         return this.notice;
@@ -188,7 +188,6 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
             this.notice = Objects.requireNonNull(notice);
             return this;
         }
-
         public FileOccurrenceResponse build() {
             return new FileOccurrenceResponse(attributions, comment, contributors, copyright, filesLicenseInfo, licenseConcluded, notice);
         }

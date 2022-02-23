@@ -74,7 +74,6 @@ public final class CustomHttpPatternResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public CustomHttpPatternResponse build() {
             return new CustomHttpPatternResponse(kind, path);
         }

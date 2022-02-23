@@ -23,7 +23,7 @@ public final class PropertyUpdatesInProgressResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetTier")
-    private final @Nullable String targetTier;
+        private final @Nullable String targetTier;
 
     public Optional<String> getTargetTier() {
         return this.targetTier == null ? Optional.empty() : Optional.ofNullable(this.targetTier);
@@ -61,7 +61,6 @@ public final class PropertyUpdatesInProgressResponse extends io.pulumi.resources
             this.targetTier = targetTier;
             return this;
         }
-
         public PropertyUpdatesInProgressResponse build() {
             return new PropertyUpdatesInProgressResponse(targetTier);
         }

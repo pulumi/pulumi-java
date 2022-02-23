@@ -20,7 +20,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="brandColor")
-    private final @Nullable String brandColor;
+        private final @Nullable String brandColor;
 
     public Optional<String> getBrandColor() {
         return this.brandColor == null ? Optional.empty() : Optional.ofNullable(this.brandColor);
@@ -31,7 +31,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -42,7 +42,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+        private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -53,7 +53,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iconUri")
-    private final @Nullable String iconUri;
+        private final @Nullable String iconUri;
 
     public Optional<String> getIconUri() {
         return this.iconUri == null ? Optional.empty() : Optional.ofNullable(this.iconUri);
@@ -64,7 +64,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -75,7 +75,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -86,7 +86,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="swagger")
-    private final @Nullable Object swagger;
+        private final @Nullable Object swagger;
 
     public Optional<Object> getSwagger() {
         return this.swagger == null ? Optional.empty() : Optional.ofNullable(this.swagger);
@@ -97,7 +97,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -206,7 +206,6 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
             this.type = type;
             return this;
         }
-
         public ApiReferenceResponse build() {
             return new ApiReferenceResponse(brandColor, description, displayName, iconUri, id, name, swagger, type);
         }

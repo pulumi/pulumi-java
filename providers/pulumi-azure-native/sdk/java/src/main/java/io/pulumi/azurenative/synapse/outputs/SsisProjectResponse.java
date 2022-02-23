@@ -208,7 +208,6 @@ public final class SsisProjectResponse {
             this.version = version;
             return this;
         }
-
         public SsisProjectResponse build() {
             return new SsisProjectResponse(description, environmentRefs, folderId, id, name, parameters, type, version);
         }

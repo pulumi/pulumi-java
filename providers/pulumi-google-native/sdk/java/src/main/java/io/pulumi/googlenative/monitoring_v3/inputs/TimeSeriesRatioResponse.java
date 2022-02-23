@@ -21,7 +21,7 @@ public final class TimeSeriesRatioResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="badServiceFilter", required=true)
-    private final String badServiceFilter;
+      private final String badServiceFilter;
 
     public String getBadServiceFilter() {
         return this.badServiceFilter;
@@ -32,7 +32,7 @@ public final class TimeSeriesRatioResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="goodServiceFilter", required=true)
-    private final String goodServiceFilter;
+      private final String goodServiceFilter;
 
     public String getGoodServiceFilter() {
         return this.goodServiceFilter;
@@ -43,7 +43,7 @@ public final class TimeSeriesRatioResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="totalServiceFilter", required=true)
-    private final String totalServiceFilter;
+      private final String totalServiceFilter;
 
     public String getTotalServiceFilter() {
         return this.totalServiceFilter;
@@ -102,7 +102,6 @@ public final class TimeSeriesRatioResponse extends io.pulumi.resources.InvokeArg
             this.totalServiceFilter = Objects.requireNonNull(totalServiceFilter);
             return this;
         }
-
         public TimeSeriesRatioResponse build() {
             return new TimeSeriesRatioResponse(badServiceFilter, goodServiceFilter, totalServiceFilter);
         }

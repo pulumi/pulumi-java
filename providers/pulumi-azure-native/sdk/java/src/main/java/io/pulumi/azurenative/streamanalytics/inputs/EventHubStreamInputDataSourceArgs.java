@@ -23,7 +23,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="consumerGroupName")
-    private final @Nullable Input<String> consumerGroupName;
+        private final @Nullable Input<String> consumerGroupName;
 
     public Input<String> getConsumerGroupName() {
         return this.consumerGroupName == null ? Input.empty() : this.consumerGroupName;
@@ -34,7 +34,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventHubName")
-    private final @Nullable Input<String> eventHubName;
+        private final @Nullable Input<String> eventHubName;
 
     public Input<String> getEventHubName() {
         return this.eventHubName == null ? Input.empty() : this.eventHubName;
@@ -45,7 +45,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="serviceBusNamespace")
-    private final @Nullable Input<String> serviceBusNamespace;
+        private final @Nullable Input<String> serviceBusNamespace;
 
     public Input<String> getServiceBusNamespace() {
         return this.serviceBusNamespace == null ? Input.empty() : this.serviceBusNamespace;
@@ -56,7 +56,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sharedAccessPolicyKey")
-    private final @Nullable Input<String> sharedAccessPolicyKey;
+        private final @Nullable Input<String> sharedAccessPolicyKey;
 
     public Input<String> getSharedAccessPolicyKey() {
         return this.sharedAccessPolicyKey == null ? Input.empty() : this.sharedAccessPolicyKey;
@@ -67,7 +67,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sharedAccessPolicyName")
-    private final @Nullable Input<String> sharedAccessPolicyName;
+        private final @Nullable Input<String> sharedAccessPolicyName;
 
     public Input<String> getSharedAccessPolicyName() {
         return this.sharedAccessPolicyName == null ? Input.empty() : this.sharedAccessPolicyName;
@@ -79,7 +79,7 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -198,7 +198,6 @@ public final class EventHubStreamInputDataSourceArgs extends io.pulumi.resources
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public EventHubStreamInputDataSourceArgs build() {
             return new EventHubStreamInputDataSourceArgs(consumerGroupName, eventHubName, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }

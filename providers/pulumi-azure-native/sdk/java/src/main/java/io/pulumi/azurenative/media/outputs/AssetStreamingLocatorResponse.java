@@ -200,7 +200,6 @@ public final class AssetStreamingLocatorResponse {
             this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
             return this;
         }
-
         public AssetStreamingLocatorResponse build() {
             return new AssetStreamingLocatorResponse(assetName, created, defaultContentKeyPolicyName, endTime, name, startTime, streamingLocatorId, streamingPolicyName);
         }

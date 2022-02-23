@@ -19,7 +19,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
@@ -30,7 +30,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nodeId", required=true)
-    private final String nodeId;
+      private final String nodeId;
 
     public String getNodeId() {
         return this.nodeId;
@@ -41,7 +41,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final MemcacheParametersResponse parameters;
+      private final MemcacheParametersResponse parameters;
 
     public MemcacheParametersResponse getParameters() {
         return this.parameters;
@@ -52,7 +52,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;
@@ -63,7 +63,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -74,7 +74,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -163,7 +163,6 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public NodeResponse build() {
             return new NodeResponse(host, nodeId, parameters, port, state, zone);
         }

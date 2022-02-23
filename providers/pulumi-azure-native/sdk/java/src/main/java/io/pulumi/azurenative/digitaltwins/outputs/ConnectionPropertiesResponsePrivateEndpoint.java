@@ -52,7 +52,6 @@ public final class ConnectionPropertiesResponsePrivateEndpoint {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public ConnectionPropertiesResponsePrivateEndpoint build() {
             return new ConnectionPropertiesResponsePrivateEndpoint(id);
         }

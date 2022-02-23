@@ -15,21 +15,21 @@ public final class GetNamespaceIamPolicyArgs extends io.pulumi.resources.InvokeA
     public static final GetNamespaceIamPolicyArgs Empty = new GetNamespaceIamPolicyArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="namespaceId", required=true)
-    private final String namespaceId;
+      private final String namespaceId;
 
     public String getNamespaceId() {
         return this.namespaceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetNamespaceIamPolicyArgs extends io.pulumi.resources.InvokeA
             this.project = project;
             return this;
         }
-
         public GetNamespaceIamPolicyArgs build() {
             return new GetNamespaceIamPolicyArgs(location, namespaceId, project);
         }

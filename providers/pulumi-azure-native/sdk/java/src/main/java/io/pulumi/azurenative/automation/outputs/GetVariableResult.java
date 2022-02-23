@@ -203,7 +203,6 @@ public final class GetVariableResult {
             this.value = value;
             return this;
         }
-
         public GetVariableResult build() {
             return new GetVariableResult(creationTime, description, id, isEncrypted, lastModifiedTime, name, type, value);
         }

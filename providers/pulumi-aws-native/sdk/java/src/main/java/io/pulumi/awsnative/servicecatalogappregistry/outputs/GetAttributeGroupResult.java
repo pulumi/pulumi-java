@@ -130,7 +130,6 @@ public final class GetAttributeGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetAttributeGroupResult build() {
             return new GetAttributeGroupResult(arn, attributes, description, id, name, tags);
         }

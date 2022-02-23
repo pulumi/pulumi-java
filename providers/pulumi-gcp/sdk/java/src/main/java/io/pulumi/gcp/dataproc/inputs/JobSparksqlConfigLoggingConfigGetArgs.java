@@ -15,7 +15,7 @@ public final class JobSparksqlConfigLoggingConfigGetArgs extends io.pulumi.resou
     public static final JobSparksqlConfigLoggingConfigGetArgs Empty = new JobSparksqlConfigLoggingConfigGetArgs();
 
     @InputImport(name="driverLogLevels", required=true)
-    private final Input<Map<String,String>> driverLogLevels;
+        private final Input<Map<String,String>> driverLogLevels;
 
     public Input<Map<String,String>> getDriverLogLevels() {
         return this.driverLogLevels;
@@ -58,7 +58,6 @@ public final class JobSparksqlConfigLoggingConfigGetArgs extends io.pulumi.resou
             this.driverLogLevels = Input.of(Objects.requireNonNull(driverLogLevels));
             return this;
         }
-
         public JobSparksqlConfigLoggingConfigGetArgs build() {
             return new JobSparksqlConfigLoggingConfigGetArgs(driverLogLevels);
         }

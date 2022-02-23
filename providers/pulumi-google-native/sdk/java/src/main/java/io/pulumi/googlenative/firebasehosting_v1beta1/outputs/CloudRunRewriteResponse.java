@@ -74,7 +74,6 @@ public final class CloudRunRewriteResponse {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public CloudRunRewriteResponse build() {
             return new CloudRunRewriteResponse(region, serviceId);
         }

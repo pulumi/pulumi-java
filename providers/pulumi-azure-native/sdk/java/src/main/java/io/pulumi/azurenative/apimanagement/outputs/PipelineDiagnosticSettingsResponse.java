@@ -76,7 +76,6 @@ public final class PipelineDiagnosticSettingsResponse {
             this.response = response;
             return this;
         }
-
         public PipelineDiagnosticSettingsResponse build() {
             return new PipelineDiagnosticSettingsResponse(request, response);
         }

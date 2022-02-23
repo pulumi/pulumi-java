@@ -138,7 +138,6 @@ public final class LocalDiskInitializeParamsResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public LocalDiskInitializeParamsResponse build() {
             return new LocalDiskInitializeParamsResponse(description, diskName, diskSizeGb, diskType, labels);
         }

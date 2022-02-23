@@ -27,7 +27,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<EncryptionImagesArgs> encryption;
+        private final @Nullable Input<EncryptionImagesArgs> encryption;
 
     public Input<EncryptionImagesArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -38,7 +38,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -49,7 +49,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regionalReplicaCount")
-    private final @Nullable Input<Integer> regionalReplicaCount;
+        private final @Nullable Input<Integer> regionalReplicaCount;
 
     public Input<Integer> getRegionalReplicaCount() {
         return this.regionalReplicaCount == null ? Input.empty() : this.regionalReplicaCount;
@@ -60,7 +60,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountType")
-    private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
+        private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
 
     public Input<Either<String,StorageAccountType>> getStorageAccountType() {
         return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
@@ -149,7 +149,6 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
             this.storageAccountType = Input.ofNullable(storageAccountType);
             return this;
         }
-
         public TargetRegionArgs build() {
             return new TargetRegionArgs(encryption, name, regionalReplicaCount, storageAccountType);
         }

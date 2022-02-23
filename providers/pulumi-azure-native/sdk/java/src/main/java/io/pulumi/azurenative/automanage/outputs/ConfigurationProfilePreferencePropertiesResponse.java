@@ -77,7 +77,6 @@ public final class ConfigurationProfilePreferencePropertiesResponse {
             this.vmBackup = vmBackup;
             return this;
         }
-
         public ConfigurationProfilePreferencePropertiesResponse build() {
             return new ConfigurationProfilePreferencePropertiesResponse(antiMalware, vmBackup);
         }

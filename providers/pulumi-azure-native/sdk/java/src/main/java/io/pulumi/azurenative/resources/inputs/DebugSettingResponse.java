@@ -23,7 +23,7 @@ public final class DebugSettingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="detailLevel")
-    private final @Nullable String detailLevel;
+        private final @Nullable String detailLevel;
 
     public Optional<String> getDetailLevel() {
         return this.detailLevel == null ? Optional.empty() : Optional.ofNullable(this.detailLevel);
@@ -61,7 +61,6 @@ public final class DebugSettingResponse extends io.pulumi.resources.InvokeArgs {
             this.detailLevel = detailLevel;
             return this;
         }
-
         public DebugSettingResponse build() {
             return new DebugSettingResponse(detailLevel);
         }

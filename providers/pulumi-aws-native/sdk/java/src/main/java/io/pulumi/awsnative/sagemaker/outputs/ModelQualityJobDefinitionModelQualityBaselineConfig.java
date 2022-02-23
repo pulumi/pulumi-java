@@ -61,7 +61,6 @@ public final class ModelQualityJobDefinitionModelQualityBaselineConfig {
             this.constraintsResource = constraintsResource;
             return this;
         }
-
         public ModelQualityJobDefinitionModelQualityBaselineConfig build() {
             return new ModelQualityJobDefinitionModelQualityBaselineConfig(baseliningJobName, constraintsResource);
         }

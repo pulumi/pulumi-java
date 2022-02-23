@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse extends io.
      * 
      */
     @InputImport(name="transformations", required=true)
-    private final List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations;
+      private final List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations;
 
     public List<GooglePrivacyDlpV2InfoTypeTransformationResponse> getTransformations() {
         return this.transformations;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse extends io.
             this.transformations = Objects.requireNonNull(transformations);
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeTransformationsResponse build() {
             return new GooglePrivacyDlpV2InfoTypeTransformationsResponse(transformations);
         }

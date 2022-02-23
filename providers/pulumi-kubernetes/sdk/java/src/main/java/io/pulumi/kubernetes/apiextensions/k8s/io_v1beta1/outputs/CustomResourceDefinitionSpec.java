@@ -252,7 +252,6 @@ public final class CustomResourceDefinitionSpec {
             this.versions = versions;
             return this;
         }
-
         public CustomResourceDefinitionSpec build() {
             return new CustomResourceDefinitionSpec(additionalPrinterColumns, conversion, group, names, preserveUnknownFields, scope, subresources, validation, version, versions);
         }

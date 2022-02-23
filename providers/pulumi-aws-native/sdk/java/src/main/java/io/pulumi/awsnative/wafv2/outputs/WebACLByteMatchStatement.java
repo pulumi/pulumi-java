@@ -103,7 +103,6 @@ public final class WebACLByteMatchStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public WebACLByteMatchStatement build() {
             return new WebACLByteMatchStatement(fieldToMatch, positionalConstraint, searchString, searchStringBase64, textTransformations);
         }

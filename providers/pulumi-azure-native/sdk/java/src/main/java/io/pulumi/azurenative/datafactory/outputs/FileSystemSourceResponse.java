@@ -184,7 +184,6 @@ public final class FileSystemSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FileSystemSourceResponse build() {
             return new FileSystemSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, recursive, sourceRetryCount, sourceRetryWait, type);
         }

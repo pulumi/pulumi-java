@@ -121,7 +121,6 @@ public final class ConnectionCloudSql {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ConnectionCloudSql build() {
             return new ConnectionCloudSql(credential, database, instanceId, type);
         }

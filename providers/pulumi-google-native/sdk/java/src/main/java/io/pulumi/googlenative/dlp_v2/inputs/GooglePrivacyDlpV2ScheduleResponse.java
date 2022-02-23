@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2ScheduleResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="recurrencePeriodDuration", required=true)
-    private final String recurrencePeriodDuration;
+      private final String recurrencePeriodDuration;
 
     public String getRecurrencePeriodDuration() {
         return this.recurrencePeriodDuration;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2ScheduleResponse extends io.pulumi.resource
             this.recurrencePeriodDuration = Objects.requireNonNull(recurrencePeriodDuration);
             return this;
         }
-
         public GooglePrivacyDlpV2ScheduleResponse build() {
             return new GooglePrivacyDlpV2ScheduleResponse(recurrencePeriodDuration);
         }

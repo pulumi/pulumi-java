@@ -119,7 +119,6 @@ public final class GetContactChannelResult {
             this.deferActivation = deferActivation;
             return this;
         }
-
         public GetContactChannelResult build() {
             return new GetContactChannelResult(arn, channelAddress, channelName, deferActivation);
         }

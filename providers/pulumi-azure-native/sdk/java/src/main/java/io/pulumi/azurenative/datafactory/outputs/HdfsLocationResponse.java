@@ -100,7 +100,6 @@ public final class HdfsLocationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HdfsLocationResponse build() {
             return new HdfsLocationResponse(fileName, folderPath, type);
         }

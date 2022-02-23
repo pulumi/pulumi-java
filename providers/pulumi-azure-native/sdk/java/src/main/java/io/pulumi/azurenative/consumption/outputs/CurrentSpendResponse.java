@@ -75,7 +75,6 @@ public final class CurrentSpendResponse {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public CurrentSpendResponse build() {
             return new CurrentSpendResponse(amount, unit);
         }

@@ -17,7 +17,7 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="relationalDatabaseName", required=true)
-    private final String relationalDatabaseName;
+        private final String relationalDatabaseName;
 
     public String getRelationalDatabaseName() {
         return this.relationalDatabaseName;
@@ -55,7 +55,6 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
             this.relationalDatabaseName = Objects.requireNonNull(relationalDatabaseName);
             return this;
         }
-
         public GetDatabaseArgs build() {
             return new GetDatabaseArgs(relationalDatabaseName);
         }

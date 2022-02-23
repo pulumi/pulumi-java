@@ -118,7 +118,6 @@ public final class GetIndexResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetIndexResult build() {
             return new GetIndexResult(fields, name, queryScope, state);
         }

@@ -19,7 +19,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     public static final EntitlementArgs Empty = new EntitlementArgs();
 
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -30,7 +30,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associationInfo")
-    private final @Nullable Input<GoogleCloudChannelV1AssociationInfoArgs> associationInfo;
+      private final @Nullable Input<GoogleCloudChannelV1AssociationInfoArgs> associationInfo;
 
     public Input<GoogleCloudChannelV1AssociationInfoArgs> getAssociationInfo() {
         return this.associationInfo == null ? Input.empty() : this.associationInfo;
@@ -41,14 +41,14 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commitmentSettings")
-    private final @Nullable Input<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings;
+      private final @Nullable Input<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings;
 
     public Input<GoogleCloudChannelV1CommitmentSettingsArgs> getCommitmentSettings() {
         return this.commitmentSettings == null ? Input.empty() : this.commitmentSettings;
     }
 
     @InputImport(name="customerId", required=true)
-    private final Input<String> customerId;
+      private final Input<String> customerId;
 
     public Input<String> getCustomerId() {
         return this.customerId;
@@ -59,7 +59,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offer", required=true)
-    private final Input<String> offer;
+      private final Input<String> offer;
 
     public Input<String> getOffer() {
         return this.offer;
@@ -70,7 +70,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<GoogleCloudChannelV1ParameterArgs>> parameters;
+      private final @Nullable Input<List<GoogleCloudChannelV1ParameterArgs>> parameters;
 
     public Input<List<GoogleCloudChannelV1ParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -81,7 +81,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purchaseOrderId")
-    private final @Nullable Input<String> purchaseOrderId;
+      private final @Nullable Input<String> purchaseOrderId;
 
     public Input<String> getPurchaseOrderId() {
         return this.purchaseOrderId == null ? Input.empty() : this.purchaseOrderId;
@@ -92,7 +92,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -241,7 +241,6 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
-
         public EntitlementArgs build() {
             return new EntitlementArgs(accountId, associationInfo, commitmentSettings, customerId, offer, parameters, purchaseOrderId, requestId);
         }

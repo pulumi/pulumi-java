@@ -98,7 +98,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDisk
             this.numLocalSsds = numLocalSsds;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig(bootDiskSizeGb, bootDiskType, numLocalSsds);
         }

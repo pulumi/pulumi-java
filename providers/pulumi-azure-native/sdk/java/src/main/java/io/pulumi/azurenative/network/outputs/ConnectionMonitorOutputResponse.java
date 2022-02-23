@@ -77,7 +77,6 @@ public final class ConnectionMonitorOutputResponse {
             this.workspaceSettings = workspaceSettings;
             return this;
         }
-
         public ConnectionMonitorOutputResponse build() {
             return new ConnectionMonitorOutputResponse(type, workspaceSettings);
         }

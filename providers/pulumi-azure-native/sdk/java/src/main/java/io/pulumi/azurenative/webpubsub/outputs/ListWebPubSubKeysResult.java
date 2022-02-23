@@ -118,7 +118,6 @@ public final class ListWebPubSubKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListWebPubSubKeysResult build() {
             return new ListWebPubSubKeysResult(primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

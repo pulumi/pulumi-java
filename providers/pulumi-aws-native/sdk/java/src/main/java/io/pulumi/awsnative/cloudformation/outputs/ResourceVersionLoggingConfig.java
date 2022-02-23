@@ -76,7 +76,6 @@ public final class ResourceVersionLoggingConfig {
             this.logRoleArn = logRoleArn;
             return this;
         }
-
         public ResourceVersionLoggingConfig build() {
             return new ResourceVersionLoggingConfig(logGroupName, logRoleArn);
         }

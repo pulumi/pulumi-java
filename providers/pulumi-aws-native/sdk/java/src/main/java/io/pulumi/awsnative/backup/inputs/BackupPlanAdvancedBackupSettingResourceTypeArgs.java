@@ -15,14 +15,14 @@ public final class BackupPlanAdvancedBackupSettingResourceTypeArgs extends io.pu
     public static final BackupPlanAdvancedBackupSettingResourceTypeArgs Empty = new BackupPlanAdvancedBackupSettingResourceTypeArgs();
 
     @InputImport(name="backupOptions", required=true)
-    private final Input<Object> backupOptions;
+        private final Input<Object> backupOptions;
 
     public Input<Object> getBackupOptions() {
         return this.backupOptions;
     }
 
     @InputImport(name="resourceType", required=true)
-    private final Input<String> resourceType;
+        private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -81,7 +81,6 @@ public final class BackupPlanAdvancedBackupSettingResourceTypeArgs extends io.pu
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public BackupPlanAdvancedBackupSettingResourceTypeArgs build() {
             return new BackupPlanAdvancedBackupSettingResourceTypeArgs(backupOptions, resourceType);
         }

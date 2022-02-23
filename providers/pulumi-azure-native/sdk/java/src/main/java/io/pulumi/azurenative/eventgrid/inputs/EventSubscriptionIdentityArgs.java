@@ -25,7 +25,7 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,EventSubscriptionIdentityType>> type;
+        private final @Nullable Input<Either<String,EventSubscriptionIdentityType>> type;
 
     public Input<Either<String,EventSubscriptionIdentityType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -36,7 +36,7 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="userAssignedIdentity")
-    private final @Nullable Input<String> userAssignedIdentity;
+        private final @Nullable Input<String> userAssignedIdentity;
 
     public Input<String> getUserAssignedIdentity() {
         return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;
@@ -95,7 +95,6 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
             this.userAssignedIdentity = Input.ofNullable(userAssignedIdentity);
             return this;
         }
-
         public EventSubscriptionIdentityArgs build() {
             return new EventSubscriptionIdentityArgs(type, userAssignedIdentity);
         }

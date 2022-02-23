@@ -23,7 +23,7 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filePattern")
-    private final @Nullable Input<String> filePattern;
+      private final @Nullable Input<String> filePattern;
 
     public Input<String> getFilePattern() {
         return this.filePattern == null ? Input.empty() : this.filePattern;
@@ -66,7 +66,6 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.filePattern = Input.ofNullable(filePattern);
             return this;
         }
-
         public FileIODetailsArgs build() {
             return new FileIODetailsArgs(filePattern);
         }

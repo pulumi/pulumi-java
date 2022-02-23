@@ -23,7 +23,7 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="document")
-    private final @Nullable Input<ApigatewayApiConfigFileArgs> document;
+      private final @Nullable Input<ApigatewayApiConfigFileArgs> document;
 
     public Input<ApigatewayApiConfigFileArgs> getDocument() {
         return this.document == null ? Input.empty() : this.document;
@@ -66,7 +66,6 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.reso
             this.document = Input.ofNullable(document);
             return this;
         }
-
         public ApigatewayApiConfigOpenApiDocumentArgs build() {
             return new ApigatewayApiConfigOpenApiDocumentArgs(document);
         }

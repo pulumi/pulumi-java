@@ -245,7 +245,6 @@ public final class ContainerServiceNetworkProfileResponse {
             this.serviceCidr = serviceCidr;
             return this;
         }
-
         public ContainerServiceNetworkProfileResponse build() {
             return new ContainerServiceNetworkProfileResponse(dnsServiceIP, dockerBridgeCidr, loadBalancerProfile, loadBalancerSku, networkMode, networkPlugin, networkPolicy, outboundType, podCidr, serviceCidr);
         }

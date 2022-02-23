@@ -58,7 +58,6 @@ public final class GrafeasV1beta1IntotoSignatureResponse {
             this.sig = Objects.requireNonNull(sig);
             return this;
         }
-
         public GrafeasV1beta1IntotoSignatureResponse build() {
             return new GrafeasV1beta1IntotoSignatureResponse(keyid, sig);
         }

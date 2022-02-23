@@ -120,7 +120,6 @@ public final class GoogleCloudMlV1__StudyConfigResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public GoogleCloudMlV1__StudyConfigResponse build() {
             return new GoogleCloudMlV1__StudyConfigResponse(algorithm, automatedStoppingConfig, metrics, parameters);
         }

@@ -19,7 +19,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     public static final GroupArgs Empty = new GroupArgs();
 
     @InputImport(name="configuration")
-    private final @Nullable Input<List<GroupConfigurationItemArgs>> configuration;
+        private final @Nullable Input<List<GroupConfigurationItemArgs>> configuration;
 
     public Input<List<GroupConfigurationItemArgs>> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -30,7 +30,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,28 +41,28 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="resourceQuery")
-    private final @Nullable Input<GroupResourceQueryArgs> resourceQuery;
+        private final @Nullable Input<GroupResourceQueryArgs> resourceQuery;
 
     public Input<GroupResourceQueryArgs> getResourceQuery() {
         return this.resourceQuery == null ? Input.empty() : this.resourceQuery;
     }
 
     @InputImport(name="resources")
-    private final @Nullable Input<List<String>> resources;
+        private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<GroupTagArgs>> tags;
+        private final @Nullable Input<List<GroupTagArgs>> tags;
 
     public Input<List<GroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -181,7 +181,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public GroupArgs build() {
             return new GroupArgs(configuration, description, name, resourceQuery, resources, tags);
         }

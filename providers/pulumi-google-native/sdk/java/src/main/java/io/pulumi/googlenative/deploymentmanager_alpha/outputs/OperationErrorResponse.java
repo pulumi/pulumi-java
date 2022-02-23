@@ -53,7 +53,6 @@ public final class OperationErrorResponse {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
         public OperationErrorResponse build() {
             return new OperationErrorResponse(errors);
         }

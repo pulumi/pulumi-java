@@ -20,7 +20,7 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameGetArgs extends io.
      * 
      */
     @InputImport(name="dnsNames")
-    private final @Nullable Input<List<String>> dnsNames;
+        private final @Nullable Input<List<String>> dnsNames;
 
     public Input<List<String>> getDnsNames() {
         return this.dnsNames == null ? Input.empty() : this.dnsNames;
@@ -31,7 +31,7 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameGetArgs extends io.
      * 
      */
     @InputImport(name="emailAddresses")
-    private final @Nullable Input<List<String>> emailAddresses;
+        private final @Nullable Input<List<String>> emailAddresses;
 
     public Input<List<String>> getEmailAddresses() {
         return this.emailAddresses == null ? Input.empty() : this.emailAddresses;
@@ -42,7 +42,7 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameGetArgs extends io.
      * 
      */
     @InputImport(name="ipAddresses")
-    private final @Nullable Input<List<String>> ipAddresses;
+        private final @Nullable Input<List<String>> ipAddresses;
 
     public Input<List<String>> getIpAddresses() {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
@@ -53,7 +53,7 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameGetArgs extends io.
      * 
      */
     @InputImport(name="uris")
-    private final @Nullable Input<List<String>> uris;
+        private final @Nullable Input<List<String>> uris;
 
     public Input<List<String>> getUris() {
         return this.uris == null ? Input.empty() : this.uris;
@@ -142,7 +142,6 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameGetArgs extends io.
             this.uris = Input.ofNullable(uris);
             return this;
         }
-
         public AuthorityConfigSubjectConfigSubjectAltNameGetArgs build() {
             return new AuthorityConfigSubjectConfigSubjectAltNameGetArgs(dnsNames, emailAddresses, ipAddresses, uris);
         }

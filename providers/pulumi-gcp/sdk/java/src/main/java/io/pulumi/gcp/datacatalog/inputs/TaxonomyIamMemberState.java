@@ -16,7 +16,7 @@ public final class TaxonomyIamMemberState extends io.pulumi.resources.ResourceAr
     public static final TaxonomyIamMemberState Empty = new TaxonomyIamMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<TaxonomyIamMemberConditionGetArgs> condition;
+        private final @Nullable Input<TaxonomyIamMemberConditionGetArgs> condition;
 
     public Input<TaxonomyIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class TaxonomyIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -46,14 +46,14 @@ public final class TaxonomyIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -66,7 +66,7 @@ public final class TaxonomyIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -77,7 +77,7 @@ public final class TaxonomyIamMemberState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="taxonomy")
-    private final @Nullable Input<String> taxonomy;
+        private final @Nullable Input<String> taxonomy;
 
     public Input<String> getTaxonomy() {
         return this.taxonomy == null ? Input.empty() : this.taxonomy;
@@ -211,7 +211,6 @@ public final class TaxonomyIamMemberState extends io.pulumi.resources.ResourceAr
             this.taxonomy = Input.ofNullable(taxonomy);
             return this;
         }
-
         public TaxonomyIamMemberState build() {
             return new TaxonomyIamMemberState(condition, etag, member, project, region, role, taxonomy);
         }

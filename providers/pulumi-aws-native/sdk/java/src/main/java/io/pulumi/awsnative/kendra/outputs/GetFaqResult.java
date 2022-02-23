@@ -83,7 +83,6 @@ public final class GetFaqResult {
             this.tags = tags;
             return this;
         }
-
         public GetFaqResult build() {
             return new GetFaqResult(arn, id, tags);
         }

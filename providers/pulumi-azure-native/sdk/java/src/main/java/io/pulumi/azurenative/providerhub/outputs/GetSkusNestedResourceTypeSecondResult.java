@@ -109,7 +109,6 @@ public final class GetSkusNestedResourceTypeSecondResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSkusNestedResourceTypeSecondResult build() {
             return new GetSkusNestedResourceTypeSecondResult(id, name, properties, type);
         }

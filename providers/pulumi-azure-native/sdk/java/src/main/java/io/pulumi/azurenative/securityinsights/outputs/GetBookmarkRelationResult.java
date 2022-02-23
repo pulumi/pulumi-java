@@ -202,7 +202,6 @@ public final class GetBookmarkRelationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBookmarkRelationResult build() {
             return new GetBookmarkRelationResult(etag, id, name, relatedResourceId, relatedResourceKind, relatedResourceName, relatedResourceType, type);
         }

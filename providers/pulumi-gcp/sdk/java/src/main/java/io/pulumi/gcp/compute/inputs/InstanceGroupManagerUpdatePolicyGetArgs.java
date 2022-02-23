@@ -20,7 +20,7 @@ public final class InstanceGroupManagerUpdatePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxSurgeFixed")
-    private final @Nullable Input<Integer> maxSurgeFixed;
+        private final @Nullable Input<Integer> maxSurgeFixed;
 
     public Input<Integer> getMaxSurgeFixed() {
         return this.maxSurgeFixed == null ? Input.empty() : this.maxSurgeFixed;
@@ -31,7 +31,7 @@ public final class InstanceGroupManagerUpdatePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxSurgePercent")
-    private final @Nullable Input<Integer> maxSurgePercent;
+        private final @Nullable Input<Integer> maxSurgePercent;
 
     public Input<Integer> getMaxSurgePercent() {
         return this.maxSurgePercent == null ? Input.empty() : this.maxSurgePercent;
@@ -42,7 +42,7 @@ public final class InstanceGroupManagerUpdatePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxUnavailableFixed")
-    private final @Nullable Input<Integer> maxUnavailableFixed;
+        private final @Nullable Input<Integer> maxUnavailableFixed;
 
     public Input<Integer> getMaxUnavailableFixed() {
         return this.maxUnavailableFixed == null ? Input.empty() : this.maxUnavailableFixed;
@@ -53,7 +53,7 @@ public final class InstanceGroupManagerUpdatePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxUnavailablePercent")
-    private final @Nullable Input<Integer> maxUnavailablePercent;
+        private final @Nullable Input<Integer> maxUnavailablePercent;
 
     public Input<Integer> getMaxUnavailablePercent() {
         return this.maxUnavailablePercent == null ? Input.empty() : this.maxUnavailablePercent;
@@ -64,7 +64,7 @@ public final class InstanceGroupManagerUpdatePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="minReadySec")
-    private final @Nullable Input<Integer> minReadySec;
+        private final @Nullable Input<Integer> minReadySec;
 
     public Input<Integer> getMinReadySec() {
         return this.minReadySec == null ? Input.empty() : this.minReadySec;
@@ -75,7 +75,7 @@ public final class InstanceGroupManagerUpdatePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="minimalAction", required=true)
-    private final Input<String> minimalAction;
+        private final Input<String> minimalAction;
 
     public Input<String> getMinimalAction() {
         return this.minimalAction;
@@ -87,7 +87,7 @@ public final class InstanceGroupManagerUpdatePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="replacementMethod")
-    private final @Nullable Input<String> replacementMethod;
+        private final @Nullable Input<String> replacementMethod;
 
     public Input<String> getReplacementMethod() {
         return this.replacementMethod == null ? Input.empty() : this.replacementMethod;
@@ -98,7 +98,7 @@ public final class InstanceGroupManagerUpdatePolicyGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -247,7 +247,6 @@ public final class InstanceGroupManagerUpdatePolicyGetArgs extends io.pulumi.res
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public InstanceGroupManagerUpdatePolicyGetArgs build() {
             return new InstanceGroupManagerUpdatePolicyGetArgs(maxSurgeFixed, maxSurgePercent, maxUnavailableFixed, maxUnavailablePercent, minReadySec, minimalAction, replacementMethod, type);
         }

@@ -46,7 +46,6 @@ public final class JobOutputFormatOptions {
             this.csv = csv;
             return this;
         }
-
         public JobOutputFormatOptions build() {
             return new JobOutputFormatOptions(csv);
         }

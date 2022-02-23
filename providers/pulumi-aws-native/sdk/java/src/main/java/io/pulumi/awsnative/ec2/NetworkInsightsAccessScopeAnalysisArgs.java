@@ -17,14 +17,14 @@ public final class NetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.reso
     public static final NetworkInsightsAccessScopeAnalysisArgs Empty = new NetworkInsightsAccessScopeAnalysisArgs();
 
     @InputImport(name="networkInsightsAccessScopeId", required=true)
-    private final Input<String> networkInsightsAccessScopeId;
+        private final Input<String> networkInsightsAccessScopeId;
 
     public Input<String> getNetworkInsightsAccessScopeId() {
         return this.networkInsightsAccessScopeId;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags;
+        private final @Nullable Input<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags;
 
     public Input<List<NetworkInsightsAccessScopeAnalysisTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -83,7 +83,6 @@ public final class NetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.reso
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public NetworkInsightsAccessScopeAnalysisArgs build() {
             return new NetworkInsightsAccessScopeAnalysisArgs(networkInsightsAccessScopeId, tags);
         }

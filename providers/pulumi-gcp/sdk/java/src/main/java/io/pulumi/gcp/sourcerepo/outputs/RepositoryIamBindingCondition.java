@@ -73,7 +73,6 @@ public final class RepositoryIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public RepositoryIamBindingCondition build() {
             return new RepositoryIamBindingCondition(description, expression, title);
         }

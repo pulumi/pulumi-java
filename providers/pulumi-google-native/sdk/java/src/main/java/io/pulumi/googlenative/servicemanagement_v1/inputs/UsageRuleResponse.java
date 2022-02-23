@@ -22,7 +22,7 @@ public final class UsageRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowUnregisteredCalls", required=true)
-    private final Boolean allowUnregisteredCalls;
+      private final Boolean allowUnregisteredCalls;
 
     public Boolean getAllowUnregisteredCalls() {
         return this.allowUnregisteredCalls;
@@ -33,7 +33,7 @@ public final class UsageRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="selector", required=true)
-    private final String selector;
+      private final String selector;
 
     public String getSelector() {
         return this.selector;
@@ -44,7 +44,7 @@ public final class UsageRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="skipServiceControl", required=true)
-    private final Boolean skipServiceControl;
+      private final Boolean skipServiceControl;
 
     public Boolean getSkipServiceControl() {
         return this.skipServiceControl;
@@ -103,7 +103,6 @@ public final class UsageRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.skipServiceControl = Objects.requireNonNull(skipServiceControl);
             return this;
         }
-
         public UsageRuleResponse build() {
             return new UsageRuleResponse(allowUnregisteredCalls, selector, skipServiceControl);
         }

@@ -23,7 +23,7 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<String> script;
+        private final @Nullable Input<String> script;
 
     public Input<String> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -35,7 +35,7 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -94,7 +94,6 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public JavaScriptFunctionBindingArgs build() {
             return new JavaScriptFunctionBindingArgs(script, type);
         }

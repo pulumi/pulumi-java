@@ -142,7 +142,6 @@ public final class GetGlobalAddressResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetGlobalAddressResult build() {
             return new GetGlobalAddressResult(address, id, name, project, selfLink, status);
         }

@@ -17,7 +17,7 @@ public final class GetWorkloadNetworkPublicIPArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final String privateCloudName;
+        private final String privateCloudName;
 
     public String getPrivateCloudName() {
         return this.privateCloudName;
@@ -28,7 +28,7 @@ public final class GetWorkloadNetworkPublicIPArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="publicIPId", required=true)
-    private final String publicIPId;
+        private final String publicIPId;
 
     public String getPublicIPId() {
         return this.publicIPId;
@@ -39,7 +39,7 @@ public final class GetWorkloadNetworkPublicIPArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetWorkloadNetworkPublicIPArgs extends io.pulumi.resources.In
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetWorkloadNetworkPublicIPArgs build() {
             return new GetWorkloadNetworkPublicIPArgs(privateCloudName, publicIPId, resourceGroupName);
         }

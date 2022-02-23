@@ -142,7 +142,6 @@ public final class JpgLayerResponse {
             this.width = width;
             return this;
         }
-
         public JpgLayerResponse build() {
             return new JpgLayerResponse(height, label, odataType, quality, width);
         }

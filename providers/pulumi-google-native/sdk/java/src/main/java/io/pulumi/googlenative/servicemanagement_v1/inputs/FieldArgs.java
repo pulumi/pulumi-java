@@ -29,7 +29,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cardinality")
-    private final @Nullable Input<FieldCardinality> cardinality;
+      private final @Nullable Input<FieldCardinality> cardinality;
 
     public Input<FieldCardinality> getCardinality() {
         return this.cardinality == null ? Input.empty() : this.cardinality;
@@ -40,7 +40,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<String> defaultValue;
+      private final @Nullable Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -51,7 +51,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jsonName")
-    private final @Nullable Input<String> jsonName;
+      private final @Nullable Input<String> jsonName;
 
     public Input<String> getJsonName() {
         return this.jsonName == null ? Input.empty() : this.jsonName;
@@ -62,7 +62,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<FieldKind> kind;
+      private final @Nullable Input<FieldKind> kind;
 
     public Input<FieldKind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -73,7 +73,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -84,7 +84,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="number")
-    private final @Nullable Input<Integer> number;
+      private final @Nullable Input<Integer> number;
 
     public Input<Integer> getNumber() {
         return this.number == null ? Input.empty() : this.number;
@@ -95,7 +95,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oneofIndex")
-    private final @Nullable Input<Integer> oneofIndex;
+      private final @Nullable Input<Integer> oneofIndex;
 
     public Input<Integer> getOneofIndex() {
         return this.oneofIndex == null ? Input.empty() : this.oneofIndex;
@@ -106,7 +106,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<List<OptionArgs>> options;
+      private final @Nullable Input<List<OptionArgs>> options;
 
     public Input<List<OptionArgs>> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -117,7 +117,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packed")
-    private final @Nullable Input<Boolean> packed;
+      private final @Nullable Input<Boolean> packed;
 
     public Input<Boolean> getPacked() {
         return this.packed == null ? Input.empty() : this.packed;
@@ -128,7 +128,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeUrl")
-    private final @Nullable Input<String> typeUrl;
+      private final @Nullable Input<String> typeUrl;
 
     public Input<String> getTypeUrl() {
         return this.typeUrl == null ? Input.empty() : this.typeUrl;
@@ -307,7 +307,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             this.typeUrl = Input.ofNullable(typeUrl);
             return this;
         }
-
         public FieldArgs build() {
             return new FieldArgs(cardinality, defaultValue, jsonName, kind, name, number, oneofIndex, options, packed, typeUrl);
         }

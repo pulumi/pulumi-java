@@ -28,7 +28,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="fullPathMatch")
-    private final @Nullable Input<String> fullPathMatch;
+        private final @Nullable Input<String> fullPathMatch;
 
     public Input<String> getFullPathMatch() {
         return this.fullPathMatch == null ? Input.empty() : this.fullPathMatch;
@@ -41,7 +41,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="headerMatches")
-    private final @Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches;
+        private final @Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches;
 
     public Input<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> getHeaderMatches() {
         return this.headerMatches == null ? Input.empty() : this.headerMatches;
@@ -53,7 +53,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="ignoreCase")
-    private final @Nullable Input<Boolean> ignoreCase;
+        private final @Nullable Input<Boolean> ignoreCase;
 
     public Input<Boolean> getIgnoreCase() {
         return this.ignoreCase == null ? Input.empty() : this.ignoreCase;
@@ -75,7 +75,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="metadataFilters")
-    private final @Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters;
+        private final @Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters;
 
     public Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> getMetadataFilters() {
         return this.metadataFilters == null ? Input.empty() : this.metadataFilters;
@@ -88,7 +88,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="prefixMatch")
-    private final @Nullable Input<String> prefixMatch;
+        private final @Nullable Input<String> prefixMatch;
 
     public Input<String> getPrefixMatch() {
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
@@ -101,7 +101,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="queryParameterMatches")
-    private final @Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches;
+        private final @Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches;
 
     public Input<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> getQueryParameterMatches() {
         return this.queryParameterMatches == null ? Input.empty() : this.queryParameterMatches;
@@ -115,7 +115,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="regexMatch")
-    private final @Nullable Input<String> regexMatch;
+        private final @Nullable Input<String> regexMatch;
 
     public Input<String> getRegexMatch() {
         return this.regexMatch == null ? Input.empty() : this.regexMatch;
@@ -249,7 +249,6 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends io.pulumi.res
             this.regexMatch = Input.ofNullable(regexMatch);
             return this;
         }
-
         public URLMapPathMatcherRouteRuleMatchRuleArgs build() {
             return new URLMapPathMatcherRouteRuleMatchRuleArgs(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
         }

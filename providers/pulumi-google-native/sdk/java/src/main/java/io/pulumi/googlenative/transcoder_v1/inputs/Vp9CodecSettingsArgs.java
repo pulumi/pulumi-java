@@ -25,7 +25,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bitrateBps", required=true)
-    private final Input<Integer> bitrateBps;
+      private final Input<Integer> bitrateBps;
 
     public Input<Integer> getBitrateBps() {
         return this.bitrateBps;
@@ -36,7 +36,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="crfLevel")
-    private final @Nullable Input<Integer> crfLevel;
+      private final @Nullable Input<Integer> crfLevel;
 
     public Input<Integer> getCrfLevel() {
         return this.crfLevel == null ? Input.empty() : this.crfLevel;
@@ -47,7 +47,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="frameRate", required=true)
-    private final Input<Double> frameRate;
+      private final Input<Double> frameRate;
 
     public Input<Double> getFrameRate() {
         return this.frameRate;
@@ -58,7 +58,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="gopDuration")
-    private final @Nullable Input<String> gopDuration;
+      private final @Nullable Input<String> gopDuration;
 
     public Input<String> getGopDuration() {
         return this.gopDuration == null ? Input.empty() : this.gopDuration;
@@ -69,7 +69,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="gopFrameCount")
-    private final @Nullable Input<Integer> gopFrameCount;
+      private final @Nullable Input<Integer> gopFrameCount;
 
     public Input<Integer> getGopFrameCount() {
         return this.gopFrameCount == null ? Input.empty() : this.gopFrameCount;
@@ -80,7 +80,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="heightPixels")
-    private final @Nullable Input<Integer> heightPixels;
+      private final @Nullable Input<Integer> heightPixels;
 
     public Input<Integer> getHeightPixels() {
         return this.heightPixels == null ? Input.empty() : this.heightPixels;
@@ -91,7 +91,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pixelFormat")
-    private final @Nullable Input<String> pixelFormat;
+      private final @Nullable Input<String> pixelFormat;
 
     public Input<String> getPixelFormat() {
         return this.pixelFormat == null ? Input.empty() : this.pixelFormat;
@@ -102,7 +102,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="profile")
-    private final @Nullable Input<String> profile;
+      private final @Nullable Input<String> profile;
 
     public Input<String> getProfile() {
         return this.profile == null ? Input.empty() : this.profile;
@@ -113,7 +113,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rateControlMode")
-    private final @Nullable Input<String> rateControlMode;
+      private final @Nullable Input<String> rateControlMode;
 
     public Input<String> getRateControlMode() {
         return this.rateControlMode == null ? Input.empty() : this.rateControlMode;
@@ -124,7 +124,7 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="widthPixels")
-    private final @Nullable Input<Integer> widthPixels;
+      private final @Nullable Input<Integer> widthPixels;
 
     public Input<Integer> getWidthPixels() {
         return this.widthPixels == null ? Input.empty() : this.widthPixels;
@@ -303,7 +303,6 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.widthPixels = Input.ofNullable(widthPixels);
             return this;
         }
-
         public Vp9CodecSettingsArgs build() {
             return new Vp9CodecSettingsArgs(bitrateBps, crfLevel, frameRate, gopDuration, gopFrameCount, heightPixels, pixelFormat, profile, rateControlMode, widthPixels);
         }

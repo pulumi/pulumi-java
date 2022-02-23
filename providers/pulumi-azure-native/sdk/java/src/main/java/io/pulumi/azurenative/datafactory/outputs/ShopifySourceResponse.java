@@ -205,7 +205,6 @@ public final class ShopifySourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ShopifySourceResponse build() {
             return new ShopifySourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

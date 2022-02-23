@@ -139,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ExperimentResultMetricResponse build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultMetricResponse(confidenceInterval, count, countType, ratio, type);
         }

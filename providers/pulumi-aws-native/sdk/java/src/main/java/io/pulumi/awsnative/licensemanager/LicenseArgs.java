@@ -25,21 +25,21 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="beneficiary")
-    private final @Nullable Input<String> beneficiary;
+        private final @Nullable Input<String> beneficiary;
 
     public Input<String> getBeneficiary() {
         return this.beneficiary == null ? Input.empty() : this.beneficiary;
     }
 
     @InputImport(name="consumptionConfiguration", required=true)
-    private final Input<LicenseConsumptionConfigurationArgs> consumptionConfiguration;
+        private final Input<LicenseConsumptionConfigurationArgs> consumptionConfiguration;
 
     public Input<LicenseConsumptionConfigurationArgs> getConsumptionConfiguration() {
         return this.consumptionConfiguration;
     }
 
     @InputImport(name="entitlements", required=true)
-    private final Input<List<LicenseEntitlementArgs>> entitlements;
+        private final Input<List<LicenseEntitlementArgs>> entitlements;
 
     public Input<List<LicenseEntitlementArgs>> getEntitlements() {
         return this.entitlements;
@@ -50,21 +50,21 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeRegion", required=true)
-    private final Input<String> homeRegion;
+        private final Input<String> homeRegion;
 
     public Input<String> getHomeRegion() {
         return this.homeRegion;
     }
 
     @InputImport(name="issuer", required=true)
-    private final Input<LicenseIssuerDataArgs> issuer;
+        private final Input<LicenseIssuerDataArgs> issuer;
 
     public Input<LicenseIssuerDataArgs> getIssuer() {
         return this.issuer;
     }
 
     @InputImport(name="licenseMetadata")
-    private final @Nullable Input<List<LicenseMetadataArgs>> licenseMetadata;
+        private final @Nullable Input<List<LicenseMetadataArgs>> licenseMetadata;
 
     public Input<List<LicenseMetadataArgs>> getLicenseMetadata() {
         return this.licenseMetadata == null ? Input.empty() : this.licenseMetadata;
@@ -75,7 +75,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseName")
-    private final @Nullable Input<String> licenseName;
+        private final @Nullable Input<String> licenseName;
 
     public Input<String> getLicenseName() {
         return this.licenseName == null ? Input.empty() : this.licenseName;
@@ -86,7 +86,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productName", required=true)
-    private final Input<String> productName;
+        private final Input<String> productName;
 
     public Input<String> getProductName() {
         return this.productName;
@@ -97,21 +97,21 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productSKU")
-    private final @Nullable Input<String> productSKU;
+        private final @Nullable Input<String> productSKU;
 
     public Input<String> getProductSKU() {
         return this.productSKU == null ? Input.empty() : this.productSKU;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+        private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
     }
 
     @InputImport(name="validity", required=true)
-    private final Input<LicenseValidityDateFormatArgs> validity;
+        private final Input<LicenseValidityDateFormatArgs> validity;
 
     public Input<LicenseValidityDateFormatArgs> getValidity() {
         return this.validity;
@@ -305,7 +305,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             this.validity = Input.of(Objects.requireNonNull(validity));
             return this;
         }
-
         public LicenseArgs build() {
             return new LicenseArgs(beneficiary, consumptionConfiguration, entitlements, homeRegion, issuer, licenseMetadata, licenseName, productName, productSKU, status, validity);
         }

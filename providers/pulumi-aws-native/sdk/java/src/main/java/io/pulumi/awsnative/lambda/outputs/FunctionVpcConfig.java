@@ -76,7 +76,6 @@ public final class FunctionVpcConfig {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public FunctionVpcConfig build() {
             return new FunctionVpcConfig(securityGroupIds, subnetIds);
         }

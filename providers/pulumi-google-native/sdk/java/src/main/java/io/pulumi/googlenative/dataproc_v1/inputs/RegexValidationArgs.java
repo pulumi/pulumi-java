@@ -23,7 +23,7 @@ public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="regexes", required=true)
-    private final Input<List<String>> regexes;
+      private final Input<List<String>> regexes;
 
     public Input<List<String>> getRegexes() {
         return this.regexes;
@@ -66,7 +66,6 @@ public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs 
             this.regexes = Input.of(Objects.requireNonNull(regexes));
             return this;
         }
-
         public RegexValidationArgs build() {
             return new RegexValidationArgs(regexes);
         }

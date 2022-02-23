@@ -120,7 +120,6 @@ public final class OptionsResponse {
             this.virtualProperties = Objects.requireNonNull(virtualProperties);
             return this;
         }
-
         public OptionsResponse build() {
             return new OptionsResponse(asyncOptions, inputMappings, validationOptions, virtualProperties);
         }

@@ -90,7 +90,6 @@ public final class DataSetOutputColumn {
             this.type = type;
             return this;
         }
-
         public DataSetOutputColumn build() {
             return new DataSetOutputColumn(description, name, type);
         }

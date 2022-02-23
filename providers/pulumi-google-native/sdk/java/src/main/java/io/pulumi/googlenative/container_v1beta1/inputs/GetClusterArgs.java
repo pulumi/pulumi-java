@@ -15,21 +15,21 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetClusterArgs Empty = new GetClusterArgs();
 
     @InputImport(name="clusterId", required=true)
-    private final String clusterId;
+      private final String clusterId;
 
     public String getClusterId() {
         return this.clusterId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetClusterArgs build() {
             return new GetClusterArgs(clusterId, location, project);
         }

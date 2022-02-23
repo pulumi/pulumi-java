@@ -67,7 +67,6 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
-
         public ResourcePolicyVmMaintenancePolicyResponse build() {
             return new ResourcePolicyVmMaintenancePolicyResponse(concurrencyControlGroup, maintenanceWindow);
         }

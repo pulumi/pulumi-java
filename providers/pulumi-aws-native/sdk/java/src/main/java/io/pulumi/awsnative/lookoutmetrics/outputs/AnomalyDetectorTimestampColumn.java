@@ -68,7 +68,6 @@ public final class AnomalyDetectorTimestampColumn {
             this.columnName = columnName;
             return this;
         }
-
         public AnomalyDetectorTimestampColumn build() {
             return new AnomalyDetectorTimestampColumn(columnFormat, columnName);
         }

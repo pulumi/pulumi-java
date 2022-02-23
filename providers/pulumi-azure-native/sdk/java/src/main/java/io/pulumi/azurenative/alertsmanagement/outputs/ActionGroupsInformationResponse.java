@@ -98,7 +98,6 @@ public final class ActionGroupsInformationResponse {
             this.groupIds = Objects.requireNonNull(groupIds);
             return this;
         }
-
         public ActionGroupsInformationResponse build() {
             return new ActionGroupsInformationResponse(customEmailSubject, customWebhookPayload, groupIds);
         }

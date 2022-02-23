@@ -60,7 +60,6 @@ public final class WirelessGatewayTag {
             this.value = value;
             return this;
         }
-
         public WirelessGatewayTag build() {
             return new WirelessGatewayTag(key, value);
         }

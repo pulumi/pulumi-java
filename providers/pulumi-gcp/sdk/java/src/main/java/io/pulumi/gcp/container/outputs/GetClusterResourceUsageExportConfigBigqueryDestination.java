@@ -44,7 +44,6 @@ public final class GetClusterResourceUsageExportConfigBigqueryDestination {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public GetClusterResourceUsageExportConfigBigqueryDestination build() {
             return new GetClusterResourceUsageExportConfigBigqueryDestination(datasetId);
         }

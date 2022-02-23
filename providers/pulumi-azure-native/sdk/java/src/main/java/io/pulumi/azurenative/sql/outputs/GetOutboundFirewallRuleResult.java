@@ -116,7 +116,6 @@ public final class GetOutboundFirewallRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOutboundFirewallRuleResult build() {
             return new GetOutboundFirewallRuleResult(id, name, provisioningState, type);
         }

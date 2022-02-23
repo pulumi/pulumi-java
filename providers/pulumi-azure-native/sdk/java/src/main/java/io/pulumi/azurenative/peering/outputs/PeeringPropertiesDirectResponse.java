@@ -122,7 +122,6 @@ public final class PeeringPropertiesDirectResponse {
             this.useForPeeringService = Objects.requireNonNull(useForPeeringService);
             return this;
         }
-
         public PeeringPropertiesDirectResponse build() {
             return new PeeringPropertiesDirectResponse(connections, directPeeringType, peerAsn, useForPeeringService);
         }

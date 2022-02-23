@@ -304,7 +304,6 @@ public final class GetObjectAnchorsAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetObjectAnchorsAccountResult build() {
             return new GetObjectAnchorsAccountResult(accountDomain, accountId, id, identity, kind, location, name, plan, sku, storageAccountName, systemData, tags, type);
         }

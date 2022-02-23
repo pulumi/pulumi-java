@@ -90,7 +90,6 @@ public final class GlobalTableGlobalSecondaryIndex {
             this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
         }
-
         public GlobalTableGlobalSecondaryIndex build() {
             return new GlobalTableGlobalSecondaryIndex(indexName, keySchema, projection, writeProvisionedThroughputSettings);
         }

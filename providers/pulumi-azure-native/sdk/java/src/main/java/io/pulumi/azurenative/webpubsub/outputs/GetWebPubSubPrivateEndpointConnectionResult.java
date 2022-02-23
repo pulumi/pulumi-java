@@ -184,7 +184,6 @@ public final class GetWebPubSubPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebPubSubPrivateEndpointConnectionResult build() {
             return new GetWebPubSubPrivateEndpointConnectionResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
         }

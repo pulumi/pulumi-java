@@ -54,7 +54,6 @@ public final class GetKeySigningKeyResult {
             this.status = status;
             return this;
         }
-
         public GetKeySigningKeyResult build() {
             return new GetKeySigningKeyResult(status);
         }

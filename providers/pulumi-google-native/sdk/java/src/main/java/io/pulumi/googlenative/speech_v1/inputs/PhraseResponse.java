@@ -22,7 +22,7 @@ public final class PhraseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="boost", required=true)
-    private final Double boost;
+      private final Double boost;
 
     public Double getBoost() {
         return this.boost;
@@ -33,7 +33,7 @@ public final class PhraseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -82,7 +82,6 @@ public final class PhraseResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PhraseResponse build() {
             return new PhraseResponse(boost, value);
         }

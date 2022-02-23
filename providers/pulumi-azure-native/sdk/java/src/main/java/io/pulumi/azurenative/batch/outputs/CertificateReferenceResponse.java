@@ -103,7 +103,6 @@ public final class CertificateReferenceResponse {
             this.visibility = visibility;
             return this;
         }
-
         public CertificateReferenceResponse build() {
             return new CertificateReferenceResponse(id, storeLocation, storeName, visibility);
         }

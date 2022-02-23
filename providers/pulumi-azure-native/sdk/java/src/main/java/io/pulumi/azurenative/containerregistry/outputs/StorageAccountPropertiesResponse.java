@@ -52,7 +52,6 @@ public final class StorageAccountPropertiesResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public StorageAccountPropertiesResponse build() {
             return new StorageAccountPropertiesResponse(id);
         }

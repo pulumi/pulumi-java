@@ -162,7 +162,6 @@ public final class KeyAttributesResponse {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public KeyAttributesResponse build() {
             return new KeyAttributesResponse(created, enabled, expires, notBefore, recoveryLevel, updated);
         }

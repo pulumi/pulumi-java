@@ -23,7 +23,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="end")
-    private final @Nullable Input<String> end;
+      private final @Nullable Input<String> end;
 
     public Input<String> getEnd() {
         return this.end == null ? Input.empty() : this.end;
@@ -34,7 +34,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<String> interval;
+      private final @Nullable Input<String> interval;
 
     public Input<String> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -45,7 +45,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="start")
-    private final @Nullable Input<String> start;
+      private final @Nullable Input<String> start;
 
     public Input<String> getStart() {
         return this.start == null ? Input.empty() : this.start;
@@ -119,7 +119,6 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
             this.start = Input.ofNullable(start);
             return this;
         }
-
         public RangePartitioningRangeArgs build() {
             return new RangePartitioningRangeArgs(end, interval, start);
         }

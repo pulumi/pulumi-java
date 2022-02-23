@@ -24,7 +24,7 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sourceRepository")
-    private final @Nullable Input<CodeRepositoryArgs> sourceRepository;
+        private final @Nullable Input<CodeRepositoryArgs> sourceRepository;
 
     public Input<CodeRepositoryArgs> getSourceRepository() {
         return this.sourceRepository == null ? Input.empty() : this.sourceRepository;
@@ -35,7 +35,7 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="template", required=true)
-    private final Input<PipelineTemplateArgs> template;
+        private final Input<PipelineTemplateArgs> template;
 
     public Input<PipelineTemplateArgs> getTemplate() {
         return this.template;
@@ -94,7 +94,6 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }
-
         public BootstrapConfigurationArgs build() {
             return new BootstrapConfigurationArgs(sourceRepository, template);
         }

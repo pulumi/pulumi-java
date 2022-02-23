@@ -16,7 +16,7 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
     public static final GatewayIamMemberState Empty = new GatewayIamMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<GatewayIamMemberConditionGetArgs> condition;
+        private final @Nullable Input<GatewayIamMemberConditionGetArgs> condition;
 
     public Input<GatewayIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,21 +27,21 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="gateway")
-    private final @Nullable Input<String> gateway;
+        private final @Nullable Input<String> gateway;
 
     public Input<String> getGateway() {
         return this.gateway == null ? Input.empty() : this.gateway;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -53,7 +53,7 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -67,7 +67,7 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -80,7 +80,7 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -214,7 +214,6 @@ public final class GatewayIamMemberState extends io.pulumi.resources.ResourceArg
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public GatewayIamMemberState build() {
             return new GatewayIamMemberState(condition, etag, gateway, member, project, region, role);
         }

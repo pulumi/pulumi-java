@@ -137,7 +137,6 @@ public final class CustomerEncryptionKeyResponse {
             this.sha256 = Objects.requireNonNull(sha256);
             return this;
         }
-
         public CustomerEncryptionKeyResponse build() {
             return new CustomerEncryptionKeyResponse(kmsKeyName, kmsKeyServiceAccount, rawKey, rsaEncryptedKey, sha256);
         }

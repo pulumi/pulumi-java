@@ -24,7 +24,7 @@ public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<List<String>> items;
+      private final @Nullable Input<List<String>> items;
 
     public Input<List<String>> getItems() {
         return this.items == null ? Input.empty() : this.items;
@@ -67,7 +67,6 @@ public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
             this.items = Input.ofNullable(items);
             return this;
         }
-
         public TagsArgs build() {
             return new TagsArgs(items);
         }

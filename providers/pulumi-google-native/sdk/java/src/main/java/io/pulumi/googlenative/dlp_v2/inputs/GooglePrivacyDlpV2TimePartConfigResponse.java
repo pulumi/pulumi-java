@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="partToExtract", required=true)
-    private final String partToExtract;
+      private final String partToExtract;
 
     public String getPartToExtract() {
         return this.partToExtract;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse extends io.pulumi.re
             this.partToExtract = Objects.requireNonNull(partToExtract);
             return this;
         }
-
         public GooglePrivacyDlpV2TimePartConfigResponse build() {
             return new GooglePrivacyDlpV2TimePartConfigResponse(partToExtract);
         }

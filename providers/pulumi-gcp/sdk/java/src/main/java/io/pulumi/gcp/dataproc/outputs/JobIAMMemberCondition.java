@@ -73,7 +73,6 @@ public final class JobIAMMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public JobIAMMemberCondition build() {
             return new JobIAMMemberCondition(description, expression, title);
         }

@@ -242,7 +242,6 @@ public final class GoogleCloudRunOpV2ConditionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudRunOpV2ConditionResponse build() {
             return new GoogleCloudRunOpV2ConditionResponse(domainMappingReason, executionReason, internalReason, lastTransitionTime, message, reason, revisionReason, severity, state, type);
         }

@@ -52,7 +52,6 @@ public final class PlacementPolicyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PlacementPolicyResponse build() {
             return new PlacementPolicyResponse(type);
         }

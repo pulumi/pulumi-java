@@ -23,7 +23,7 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs extends 
      * 
      */
     @InputImport(name="headerName")
-    private final @Nullable Input<String> headerName;
+      private final @Nullable Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName == null ? Input.empty() : this.headerName;
@@ -66,7 +66,6 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs extends 
             this.headerName = Input.ofNullable(headerName);
             return this;
         }
-
         public BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs build() {
             return new BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs(headerName);
         }

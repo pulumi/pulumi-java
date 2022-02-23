@@ -70,7 +70,6 @@ public final class WebACLJsonMatchPattern {
             this.includedPaths = includedPaths;
             return this;
         }
-
         public WebACLJsonMatchPattern build() {
             return new WebACLJsonMatchPattern(all, includedPaths);
         }

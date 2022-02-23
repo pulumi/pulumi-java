@@ -270,7 +270,6 @@ public final class GetImagePipelineResult {
             this.tags = tags;
             return this;
         }
-
         public GetImagePipelineResult build() {
             return new GetImagePipelineResult(arn, containerRecipeArn, description, distributionConfigurationArn, enhancedImageMetadataEnabled, imageRecipeArn, imageTestsConfiguration, infrastructureConfigurationArn, schedule, status, tags);
         }

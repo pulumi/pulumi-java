@@ -245,7 +245,6 @@ public final class GetADLSGen2FileSystemDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetADLSGen2FileSystemDataSetResult build() {
             return new GetADLSGen2FileSystemDataSetResult(dataSetId, fileSystem, id, kind, name, resourceGroup, storageAccountName, subscriptionId, systemData, type);
         }

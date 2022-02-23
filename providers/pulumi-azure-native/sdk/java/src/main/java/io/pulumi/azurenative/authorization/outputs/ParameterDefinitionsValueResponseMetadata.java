@@ -119,7 +119,6 @@ public final class ParameterDefinitionsValueResponseMetadata {
             this.strongType = strongType;
             return this;
         }
-
         public ParameterDefinitionsValueResponseMetadata build() {
             return new ParameterDefinitionsValueResponseMetadata(assignPermissions, description, displayName, strongType);
         }

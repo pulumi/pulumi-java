@@ -135,7 +135,6 @@ public final class EventHandlerTemplateResponse {
             this.userEventPattern = userEventPattern;
             return this;
         }
-
         public EventHandlerTemplateResponse build() {
             return new EventHandlerTemplateResponse(auth, systemEventPattern, urlTemplate, userEventPattern);
         }

@@ -89,7 +89,6 @@ public final class StudioComponentConfiguration {
             this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
             return this;
         }
-
         public StudioComponentConfiguration build() {
             return new StudioComponentConfiguration(activeDirectoryConfiguration, computeFarmConfiguration, licenseServiceConfiguration, sharedFileSystemConfiguration);
         }

@@ -97,7 +97,6 @@ public final class MpnsCredentialResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public MpnsCredentialResponse build() {
             return new MpnsCredentialResponse(certificateKey, mpnsCertificate, thumbprint);
         }

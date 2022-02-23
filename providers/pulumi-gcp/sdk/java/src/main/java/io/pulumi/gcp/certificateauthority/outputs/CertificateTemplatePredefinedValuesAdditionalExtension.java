@@ -99,7 +99,6 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtension {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CertificateTemplatePredefinedValuesAdditionalExtension build() {
             return new CertificateTemplatePredefinedValuesAdditionalExtension(critical, objectId, value);
         }

@@ -44,7 +44,6 @@ public final class FlowSAPODataSourceProperties {
             this.objectPath = Objects.requireNonNull(objectPath);
             return this;
         }
-
         public FlowSAPODataSourceProperties build() {
             return new FlowSAPODataSourceProperties(objectPath);
         }

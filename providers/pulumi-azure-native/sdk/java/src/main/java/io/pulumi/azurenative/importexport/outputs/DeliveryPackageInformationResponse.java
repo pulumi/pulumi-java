@@ -119,7 +119,6 @@ public final class DeliveryPackageInformationResponse {
             this.trackingNumber = Objects.requireNonNull(trackingNumber);
             return this;
         }
-
         public DeliveryPackageInformationResponse build() {
             return new DeliveryPackageInformationResponse(carrierName, driveCount, shipDate, trackingNumber);
         }

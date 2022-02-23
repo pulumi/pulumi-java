@@ -16,28 +16,28 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
     public static final ServiceRegistryArgs Empty = new ServiceRegistryArgs();
 
     @InputImport(name="containerName")
-    private final @Nullable Input<String> containerName;
+        private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
     @InputImport(name="containerPort")
-    private final @Nullable Input<Integer> containerPort;
+        private final @Nullable Input<Integer> containerPort;
 
     public Input<Integer> getContainerPort() {
         return this.containerPort == null ? Input.empty() : this.containerPort;
     }
 
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+        private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
     }
 
     @InputImport(name="registryArn")
-    private final @Nullable Input<String> registryArn;
+        private final @Nullable Input<String> registryArn;
 
     public Input<String> getRegistryArn() {
         return this.registryArn == null ? Input.empty() : this.registryArn;
@@ -126,7 +126,6 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
             this.registryArn = Input.ofNullable(registryArn);
             return this;
         }
-
         public ServiceRegistryArgs build() {
             return new ServiceRegistryArgs(containerName, containerPort, port, registryArn);
         }

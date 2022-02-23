@@ -21,7 +21,7 @@ public final class NetworkPolicyConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -59,7 +59,6 @@ public final class NetworkPolicyConfigResponse extends io.pulumi.resources.Invok
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public NetworkPolicyConfigResponse build() {
             return new NetworkPolicyConfigResponse(disabled);
         }

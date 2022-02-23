@@ -52,7 +52,6 @@ public final class AppSkuInfoResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AppSkuInfoResponse build() {
             return new AppSkuInfoResponse(name);
         }

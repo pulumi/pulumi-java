@@ -80,7 +80,6 @@ public final class FutureReservationTimeWindowResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public FutureReservationTimeWindowResponse build() {
             return new FutureReservationTimeWindowResponse(duration, endTime, startTime);
         }

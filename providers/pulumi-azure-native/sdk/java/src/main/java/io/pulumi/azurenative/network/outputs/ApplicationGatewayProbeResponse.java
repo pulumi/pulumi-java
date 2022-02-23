@@ -352,7 +352,6 @@ public final class ApplicationGatewayProbeResponse {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-
         public ApplicationGatewayProbeResponse build() {
             return new ApplicationGatewayProbeResponse(etag, host, id, interval, match, minServers, name, path, pickHostNameFromBackendHttpSettings, port, protocol, provisioningState, timeout, type, unhealthyThreshold);
         }

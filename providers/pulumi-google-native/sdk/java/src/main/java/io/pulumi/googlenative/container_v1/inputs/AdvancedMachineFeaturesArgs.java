@@ -23,7 +23,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="threadsPerCore")
-    private final @Nullable Input<String> threadsPerCore;
+      private final @Nullable Input<String> threadsPerCore;
 
     public Input<String> getThreadsPerCore() {
         return this.threadsPerCore == null ? Input.empty() : this.threadsPerCore;
@@ -66,7 +66,6 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             this.threadsPerCore = Input.ofNullable(threadsPerCore);
             return this;
         }
-
         public AdvancedMachineFeaturesArgs build() {
             return new AdvancedMachineFeaturesArgs(threadsPerCore);
         }

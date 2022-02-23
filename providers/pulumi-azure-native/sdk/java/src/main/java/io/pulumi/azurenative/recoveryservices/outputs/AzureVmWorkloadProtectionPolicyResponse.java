@@ -167,7 +167,6 @@ public final class AzureVmWorkloadProtectionPolicyResponse {
             this.workLoadType = workLoadType;
             return this;
         }
-
         public AzureVmWorkloadProtectionPolicyResponse build() {
             return new AzureVmWorkloadProtectionPolicyResponse(backupManagementType, makePolicyConsistent, protectedItemsCount, settings, subProtectionPolicy, workLoadType);
         }

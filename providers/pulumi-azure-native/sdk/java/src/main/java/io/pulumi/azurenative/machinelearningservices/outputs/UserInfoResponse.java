@@ -181,7 +181,6 @@ public final class UserInfoResponse {
             this.userTenantId = userTenantId;
             return this;
         }
-
         public UserInfoResponse build() {
             return new UserInfoResponse(userAltSecId, userIdp, userIss, userName, userObjectId, userPuId, userTenantId);
         }

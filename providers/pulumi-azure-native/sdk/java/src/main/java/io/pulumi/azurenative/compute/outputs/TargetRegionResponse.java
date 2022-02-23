@@ -120,7 +120,6 @@ public final class TargetRegionResponse {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public TargetRegionResponse build() {
             return new TargetRegionResponse(encryption, name, regionalReplicaCount, storageAccountType);
         }

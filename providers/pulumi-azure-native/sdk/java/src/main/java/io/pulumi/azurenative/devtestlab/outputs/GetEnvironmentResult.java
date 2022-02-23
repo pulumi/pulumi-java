@@ -267,7 +267,6 @@ public final class GetEnvironmentResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(armTemplateDisplayName, createdByUser, deploymentProperties, id, location, name, provisioningState, resourceGroupId, tags, type, uniqueIdentifier);
         }

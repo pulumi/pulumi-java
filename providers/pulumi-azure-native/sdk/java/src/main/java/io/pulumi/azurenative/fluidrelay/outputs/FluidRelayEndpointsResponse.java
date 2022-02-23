@@ -75,7 +75,6 @@ public final class FluidRelayEndpointsResponse {
             this.storageEndpoints = Objects.requireNonNull(storageEndpoints);
             return this;
         }
-
         public FluidRelayEndpointsResponse build() {
             return new FluidRelayEndpointsResponse(ordererEndpoints, storageEndpoints);
         }

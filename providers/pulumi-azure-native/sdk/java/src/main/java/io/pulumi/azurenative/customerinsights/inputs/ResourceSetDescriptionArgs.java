@@ -24,7 +24,7 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="elements")
-    private final @Nullable Input<List<String>> elements;
+        private final @Nullable Input<List<String>> elements;
 
     public Input<List<String>> getElements() {
         return this.elements == null ? Input.empty() : this.elements;
@@ -35,7 +35,7 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="exceptions")
-    private final @Nullable Input<List<String>> exceptions;
+        private final @Nullable Input<List<String>> exceptions;
 
     public Input<List<String>> getExceptions() {
         return this.exceptions == null ? Input.empty() : this.exceptions;
@@ -94,7 +94,6 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
             this.exceptions = Input.ofNullable(exceptions);
             return this;
         }
-
         public ResourceSetDescriptionArgs build() {
             return new ResourceSetDescriptionArgs(elements, exceptions);
         }

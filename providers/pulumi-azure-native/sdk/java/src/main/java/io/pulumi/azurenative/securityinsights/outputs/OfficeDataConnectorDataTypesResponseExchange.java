@@ -54,7 +54,6 @@ public final class OfficeDataConnectorDataTypesResponseExchange {
             this.state = state;
             return this;
         }
-
         public OfficeDataConnectorDataTypesResponseExchange build() {
             return new OfficeDataConnectorDataTypesResponseExchange(state);
         }

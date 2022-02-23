@@ -113,7 +113,6 @@ public final class NodeSelectorRequirement {
             this.values = values;
             return this;
         }
-
         public NodeSelectorRequirement build() {
             return new NodeSelectorRequirement(key, operator, values);
         }

@@ -21,7 +21,7 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cluster", required=true)
-    private final String cluster;
+      private final String cluster;
 
     public String getCluster() {
         return this.cluster;
@@ -59,7 +59,6 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public GkeClusterResponse build() {
             return new GkeClusterResponse(cluster);
         }

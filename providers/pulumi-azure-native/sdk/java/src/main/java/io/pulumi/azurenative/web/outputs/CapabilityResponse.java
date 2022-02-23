@@ -97,7 +97,6 @@ public final class CapabilityResponse {
             this.value = value;
             return this;
         }
-
         public CapabilityResponse build() {
             return new CapabilityResponse(name, reason, value);
         }

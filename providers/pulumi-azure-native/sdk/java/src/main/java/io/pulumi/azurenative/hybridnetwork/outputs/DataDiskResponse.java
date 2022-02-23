@@ -98,7 +98,6 @@ public final class DataDiskResponse {
             this.name = name;
             return this;
         }
-
         public DataDiskResponse build() {
             return new DataDiskResponse(createOption, diskSizeGB, name);
         }

@@ -52,7 +52,6 @@ public final class AwsClusterControlPlaneConfigEncryption {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }
-
         public AwsClusterControlPlaneConfigEncryption build() {
             return new AwsClusterControlPlaneConfigEncryption(kmsKeyArn);
         }

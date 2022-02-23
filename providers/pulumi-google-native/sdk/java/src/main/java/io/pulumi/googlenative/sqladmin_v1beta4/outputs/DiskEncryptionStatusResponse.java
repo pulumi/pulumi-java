@@ -74,7 +74,6 @@ public final class DiskEncryptionStatusResponse {
             this.kmsKeyVersionName = Objects.requireNonNull(kmsKeyVersionName);
             return this;
         }
-
         public DiskEncryptionStatusResponse build() {
             return new DiskEncryptionStatusResponse(kind, kmsKeyVersionName);
         }

@@ -24,7 +24,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -35,7 +35,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -46,7 +46,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -58,7 +58,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -69,7 +69,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+        private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -173,7 +173,6 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public MySqlConnectionInfoArgs build() {
             return new MySqlConnectionInfoArgs(password, port, serverName, type, userName);
         }

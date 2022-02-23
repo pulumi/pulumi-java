@@ -105,7 +105,6 @@ public final class ServiceTraffic {
             this.revisionName = revisionName;
             return this;
         }
-
         public ServiceTraffic build() {
             return new ServiceTraffic(latestRevision, percent, revisionName);
         }

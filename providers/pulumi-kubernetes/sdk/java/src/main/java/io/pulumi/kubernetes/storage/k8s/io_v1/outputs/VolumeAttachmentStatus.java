@@ -121,7 +121,6 @@ public final class VolumeAttachmentStatus {
             this.detachError = detachError;
             return this;
         }
-
         public VolumeAttachmentStatus build() {
             return new VolumeAttachmentStatus(attachError, attached, attachmentMetadata, detachError);
         }

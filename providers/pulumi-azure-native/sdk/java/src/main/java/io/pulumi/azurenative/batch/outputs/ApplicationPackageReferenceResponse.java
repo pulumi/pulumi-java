@@ -68,7 +68,6 @@ public final class ApplicationPackageReferenceResponse {
             this.version = version;
             return this;
         }
-
         public ApplicationPackageReferenceResponse build() {
             return new ApplicationPackageReferenceResponse(id, version);
         }

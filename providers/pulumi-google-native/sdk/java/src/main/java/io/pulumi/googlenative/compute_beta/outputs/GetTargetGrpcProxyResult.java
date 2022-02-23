@@ -222,7 +222,6 @@ public final class GetTargetGrpcProxyResult {
             this.validateForProxyless = Objects.requireNonNull(validateForProxyless);
             return this;
         }
-
         public GetTargetGrpcProxyResult build() {
             return new GetTargetGrpcProxyResult(creationTimestamp, description, fingerprint, kind, name, selfLink, selfLinkWithId, urlMap, validateForProxyless);
         }

@@ -19,7 +19,7 @@ public final class ResourceModelWithAllowedPropertySetIdentityArgs extends io.pu
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ResourceIdentityType> type;
+        private final @Nullable Input<ResourceIdentityType> type;
 
     public Input<ResourceIdentityType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -62,7 +62,6 @@ public final class ResourceModelWithAllowedPropertySetIdentityArgs extends io.pu
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ResourceModelWithAllowedPropertySetIdentityArgs build() {
             return new ResourceModelWithAllowedPropertySetIdentityArgs(type);
         }

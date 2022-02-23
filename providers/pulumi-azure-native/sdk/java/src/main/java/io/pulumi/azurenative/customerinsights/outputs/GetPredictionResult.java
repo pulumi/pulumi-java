@@ -460,7 +460,6 @@ public final class GetPredictionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPredictionResult build() {
             return new GetPredictionResult(autoAnalyze, description, displayName, grades, id, involvedInteractionTypes, involvedKpiTypes, involvedRelationships, mappings, name, negativeOutcomeExpression, positiveOutcomeExpression, predictionName, primaryProfileType, provisioningState, scopeExpression, scoreLabel, systemGeneratedEntities, tenantId, type);
         }

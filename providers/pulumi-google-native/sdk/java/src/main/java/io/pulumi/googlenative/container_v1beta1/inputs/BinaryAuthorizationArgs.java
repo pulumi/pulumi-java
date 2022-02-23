@@ -23,7 +23,7 @@ public final class BinaryAuthorizationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -66,7 +66,6 @@ public final class BinaryAuthorizationArgs extends io.pulumi.resources.ResourceA
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public BinaryAuthorizationArgs build() {
             return new BinaryAuthorizationArgs(enabled);
         }

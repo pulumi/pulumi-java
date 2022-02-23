@@ -140,7 +140,6 @@ public final class NotificationSettingsResponse {
             this.webhookUrl = webhookUrl;
             return this;
         }
-
         public NotificationSettingsResponse build() {
             return new NotificationSettingsResponse(emailRecipient, notificationLocale, status, timeInMinutes, webhookUrl);
         }

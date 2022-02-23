@@ -54,7 +54,6 @@ public final class PolicyStatusProperties {
             this.isPublic = isPublic;
             return this;
         }
-
         public PolicyStatusProperties build() {
             return new PolicyStatusProperties(isPublic);
         }

@@ -20,7 +20,7 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,14 +31,14 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputConfig", required=true)
-    private final Input<OutputConfigArgs> outputConfig;
+      private final Input<OutputConfigArgs> outputConfig;
 
     public Input<OutputConfigArgs> getOutputConfig() {
         return this.outputConfig;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -112,7 +112,6 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public TraceSinkArgs build() {
             return new TraceSinkArgs(name, outputConfig, project);
         }

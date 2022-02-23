@@ -22,7 +22,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipBlocks", required=true)
-    private final List<String> ipBlocks;
+      private final List<String> ipBlocks;
 
     public List<String> getIpBlocks() {
         return this.ipBlocks;
@@ -33,7 +33,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="principals", required=true)
-    private final List<String> principals;
+      private final List<String> principals;
 
     public List<String> getPrincipals() {
         return this.principals;
@@ -82,7 +82,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(ipBlocks, principals);
         }

@@ -99,7 +99,6 @@ public final class DataSourceConfigurationResponse {
             this.providers = providers;
             return this;
         }
-
         public DataSourceConfigurationResponse build() {
             return new DataSourceConfigurationResponse(eventLogs, perfCounters, providers);
         }

@@ -15,14 +15,14 @@ public final class GetRepoArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRepoArgs Empty = new GetRepoArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="repoId", required=true)
-    private final String repoId;
+      private final String repoId;
 
     public String getRepoId() {
         return this.repoId;
@@ -71,7 +71,6 @@ public final class GetRepoArgs extends io.pulumi.resources.InvokeArgs {
             this.repoId = Objects.requireNonNull(repoId);
             return this;
         }
-
         public GetRepoArgs build() {
             return new GetRepoArgs(project, repoId);
         }

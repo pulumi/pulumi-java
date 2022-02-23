@@ -222,7 +222,6 @@ public final class InstancePort {
             this.toPort = toPort;
             return this;
         }
-
         public InstancePort build() {
             return new InstancePort(accessDirection, accessFrom, accessType, cidrListAliases, cidrs, commonName, fromPort, ipv6Cidrs, protocol, toPort);
         }

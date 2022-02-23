@@ -76,7 +76,6 @@ public final class InstanceTag {
             this.value = value;
             return this;
         }
-
         public InstanceTag build() {
             return new InstanceTag(key, value);
         }

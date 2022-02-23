@@ -95,7 +95,6 @@ public final class ManagedRuleExclusionResponse {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
-
         public ManagedRuleExclusionResponse build() {
             return new ManagedRuleExclusionResponse(matchVariable, selector, selectorMatchOperator);
         }

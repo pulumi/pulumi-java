@@ -18,7 +18,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     public static final MembershipArgs Empty = new MembershipArgs();
 
     @InputImport(name="groupId", required=true)
-    private final Input<String> groupId;
+      private final Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId;
@@ -29,7 +29,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memberKey")
-    private final @Nullable Input<EntityKeyArgs> memberKey;
+      private final @Nullable Input<EntityKeyArgs> memberKey;
 
     public Input<EntityKeyArgs> getMemberKey() {
         return this.memberKey == null ? Input.empty() : this.memberKey;
@@ -40,7 +40,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preferredMemberKey", required=true)
-    private final Input<EntityKeyArgs> preferredMemberKey;
+      private final Input<EntityKeyArgs> preferredMemberKey;
 
     public Input<EntityKeyArgs> getPreferredMemberKey() {
         return this.preferredMemberKey;
@@ -51,7 +51,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable Input<List<MembershipRoleArgs>> roles;
+      private final @Nullable Input<List<MembershipRoleArgs>> roles;
 
     public Input<List<MembershipRoleArgs>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;
@@ -140,7 +140,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
             this.roles = Input.ofNullable(roles);
             return this;
         }
-
         public MembershipArgs build() {
             return new MembershipArgs(groupId, memberKey, preferredMemberKey, roles);
         }

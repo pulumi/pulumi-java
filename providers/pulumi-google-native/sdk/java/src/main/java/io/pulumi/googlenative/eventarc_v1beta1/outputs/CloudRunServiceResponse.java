@@ -95,7 +95,6 @@ public final class CloudRunServiceResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public CloudRunServiceResponse build() {
             return new CloudRunServiceResponse(path, region, service);
         }

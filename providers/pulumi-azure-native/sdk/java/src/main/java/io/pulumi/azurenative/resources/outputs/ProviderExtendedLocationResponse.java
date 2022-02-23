@@ -98,7 +98,6 @@ public final class ProviderExtendedLocationResponse {
             this.type = type;
             return this;
         }
-
         public ProviderExtendedLocationResponse build() {
             return new ProviderExtendedLocationResponse(extendedLocations, location, type);
         }

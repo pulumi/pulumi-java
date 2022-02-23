@@ -20,7 +20,7 @@ public final class MediaServiceIdentityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ManagedIdentityType>> type;
+        private final Input<Either<String,ManagedIdentityType>> type;
 
     public Input<Either<String,ManagedIdentityType>> getType() {
         return this.type;
@@ -63,7 +63,6 @@ public final class MediaServiceIdentityArgs extends io.pulumi.resources.Resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public MediaServiceIdentityArgs build() {
             return new MediaServiceIdentityArgs(type);
         }

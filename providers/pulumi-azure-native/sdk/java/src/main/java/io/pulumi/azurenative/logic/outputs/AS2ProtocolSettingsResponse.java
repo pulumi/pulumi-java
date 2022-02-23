@@ -185,7 +185,6 @@ public final class AS2ProtocolSettingsResponse {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
-
         public AS2ProtocolSettingsResponse build() {
             return new AS2ProtocolSettingsResponse(acknowledgementConnectionSettings, envelopeSettings, errorSettings, mdnSettings, messageConnectionSettings, securitySettings, validationSettings);
         }

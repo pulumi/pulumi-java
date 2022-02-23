@@ -18,7 +18,7 @@ public final class AzureClusterAuthorizationAdminUserGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+        private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -61,7 +61,6 @@ public final class AzureClusterAuthorizationAdminUserGetArgs extends io.pulumi.r
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public AzureClusterAuthorizationAdminUserGetArgs build() {
             return new AzureClusterAuthorizationAdminUserGetArgs(username);
         }

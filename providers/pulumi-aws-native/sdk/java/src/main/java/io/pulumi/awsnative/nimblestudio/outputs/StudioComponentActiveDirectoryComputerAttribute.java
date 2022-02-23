@@ -76,7 +76,6 @@ public final class StudioComponentActiveDirectoryComputerAttribute {
             this.value = value;
             return this;
         }
-
         public StudioComponentActiveDirectoryComputerAttribute build() {
             return new StudioComponentActiveDirectoryComputerAttribute(name, value);
         }

@@ -98,7 +98,6 @@ public final class EmailChannelPropertiesResponse {
             this.password = password;
             return this;
         }
-
         public EmailChannelPropertiesResponse build() {
             return new EmailChannelPropertiesResponse(emailAddress, isEnabled, password);
         }

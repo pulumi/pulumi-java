@@ -74,7 +74,6 @@ public final class DomainConfigurationServerCertificateSummary {
             this.serverCertificateStatusDetail = serverCertificateStatusDetail;
             return this;
         }
-
         public DomainConfigurationServerCertificateSummary build() {
             return new DomainConfigurationServerCertificateSummary(serverCertificateArn, serverCertificateStatus, serverCertificateStatusDetail);
         }

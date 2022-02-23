@@ -24,7 +24,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable List<String> dnsServers;
+        private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
@@ -62,7 +62,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse
             this.dnsServers = dnsServers;
             return this;
         }
-
         public VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse build() {
             return new VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse(dnsServers);
         }

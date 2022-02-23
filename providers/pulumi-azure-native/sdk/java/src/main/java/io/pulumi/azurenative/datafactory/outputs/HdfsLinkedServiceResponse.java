@@ -254,7 +254,6 @@ public final class HdfsLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public HdfsLinkedServiceResponse build() {
             return new HdfsLinkedServiceResponse(annotations, authenticationType, connectVia, description, encryptedCredential, parameters, password, type, url, userName);
         }

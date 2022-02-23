@@ -170,7 +170,6 @@ public final class CxPageFormParameter {
             this.required = required;
             return this;
         }
-
         public CxPageFormParameter build() {
             return new CxPageFormParameter(displayName, entityType, fillBehavior, isList, redact, required);
         }

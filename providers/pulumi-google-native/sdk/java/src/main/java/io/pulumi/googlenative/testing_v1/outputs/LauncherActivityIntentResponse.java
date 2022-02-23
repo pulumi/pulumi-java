@@ -30,7 +30,6 @@ public final class LauncherActivityIntentResponse {
         public Builder(LauncherActivityIntentResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public LauncherActivityIntentResponse build() {
             return new LauncherActivityIntentResponse();
         }

@@ -199,7 +199,6 @@ public final class CSIStorageCapacity {
             this.storageClassName = Objects.requireNonNull(storageClassName);
             return this;
         }
-
         public CSIStorageCapacity build() {
             return new CSIStorageCapacity(apiVersion, capacity, kind, maximumVolumeSize, metadata, nodeTopology, storageClassName);
         }

@@ -143,7 +143,6 @@ public final class VolumeResponse {
             this.secret = secret;
             return this;
         }
-
         public VolumeResponse build() {
             return new VolumeResponse(azureFile, emptyDir, gitRepo, name, secret);
         }

@@ -331,7 +331,6 @@ public final class GetEventHubDataConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEventHubDataConnectionResult build() {
             return new GetEventHubDataConnectionResult(compression, consumerGroup, dataFormat, eventHubResourceId, eventSystemProperties, id, kind, location, managedIdentityResourceId, mappingRuleName, name, provisioningState, tableName, type);
         }

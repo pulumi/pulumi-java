@@ -293,7 +293,6 @@ public final class CustomApiPropertiesDefinitionResponse {
             this.wsdlDefinition = wsdlDefinition;
             return this;
         }
-
         public CustomApiPropertiesDefinitionResponse build() {
             return new CustomApiPropertiesDefinitionResponse(apiDefinitions, apiType, backendService, brandColor, capabilities, connectionParameters, description, displayName, iconUri, runtimeUrls, swagger, wsdlDefinition);
         }

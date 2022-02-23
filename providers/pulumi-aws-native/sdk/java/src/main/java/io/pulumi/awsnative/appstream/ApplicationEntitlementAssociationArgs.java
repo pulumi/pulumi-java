@@ -14,21 +14,21 @@ public final class ApplicationEntitlementAssociationArgs extends io.pulumi.resou
     public static final ApplicationEntitlementAssociationArgs Empty = new ApplicationEntitlementAssociationArgs();
 
     @InputImport(name="applicationIdentifier", required=true)
-    private final Input<String> applicationIdentifier;
+        private final Input<String> applicationIdentifier;
 
     public Input<String> getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @InputImport(name="entitlementName", required=true)
-    private final Input<String> entitlementName;
+        private final Input<String> entitlementName;
 
     public Input<String> getEntitlementName() {
         return this.entitlementName;
     }
 
     @InputImport(name="stackName", required=true)
-    private final Input<String> stackName;
+        private final Input<String> stackName;
 
     public Input<String> getStackName() {
         return this.stackName;
@@ -102,7 +102,6 @@ public final class ApplicationEntitlementAssociationArgs extends io.pulumi.resou
             this.stackName = Input.of(Objects.requireNonNull(stackName));
             return this;
         }
-
         public ApplicationEntitlementAssociationArgs build() {
             return new ApplicationEntitlementAssociationArgs(applicationIdentifier, entitlementName, stackName);
         }

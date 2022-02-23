@@ -79,7 +79,6 @@ public final class DeadLetterWithResourceIdentityResponse {
             this.identity = identity;
             return this;
         }
-
         public DeadLetterWithResourceIdentityResponse build() {
             return new DeadLetterWithResourceIdentityResponse(deadLetterDestination, identity);
         }

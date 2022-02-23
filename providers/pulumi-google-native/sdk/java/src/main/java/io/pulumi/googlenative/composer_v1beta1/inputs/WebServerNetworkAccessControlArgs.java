@@ -24,7 +24,7 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="allowedIpRanges")
-    private final @Nullable Input<List<AllowedIpRangeArgs>> allowedIpRanges;
+      private final @Nullable Input<List<AllowedIpRangeArgs>> allowedIpRanges;
 
     public Input<List<AllowedIpRangeArgs>> getAllowedIpRanges() {
         return this.allowedIpRanges == null ? Input.empty() : this.allowedIpRanges;
@@ -67,7 +67,6 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
             this.allowedIpRanges = Input.ofNullable(allowedIpRanges);
             return this;
         }
-
         public WebServerNetworkAccessControlArgs build() {
             return new WebServerNetworkAccessControlArgs(allowedIpRanges);
         }

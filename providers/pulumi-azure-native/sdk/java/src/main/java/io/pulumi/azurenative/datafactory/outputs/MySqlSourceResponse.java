@@ -205,7 +205,6 @@ public final class MySqlSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MySqlSourceResponse build() {
             return new MySqlSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

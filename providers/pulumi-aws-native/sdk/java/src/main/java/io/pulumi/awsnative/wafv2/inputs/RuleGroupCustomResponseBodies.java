@@ -34,7 +34,6 @@ public final class RuleGroupCustomResponseBodies extends io.pulumi.resources.Inv
         public Builder(RuleGroupCustomResponseBodies defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RuleGroupCustomResponseBodies build() {
             return new RuleGroupCustomResponseBodies();
         }

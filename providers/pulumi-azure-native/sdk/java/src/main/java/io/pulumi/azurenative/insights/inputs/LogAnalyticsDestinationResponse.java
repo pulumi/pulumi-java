@@ -24,7 +24,7 @@ public final class LogAnalyticsDestinationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -35,7 +35,7 @@ public final class LogAnalyticsDestinationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="workspaceId", required=true)
-    private final String workspaceId;
+        private final String workspaceId;
 
     public String getWorkspaceId() {
         return this.workspaceId;
@@ -46,7 +46,7 @@ public final class LogAnalyticsDestinationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="workspaceResourceId")
-    private final @Nullable String workspaceResourceId;
+        private final @Nullable String workspaceResourceId;
 
     public Optional<String> getWorkspaceResourceId() {
         return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
@@ -105,7 +105,6 @@ public final class LogAnalyticsDestinationResponse extends io.pulumi.resources.I
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public LogAnalyticsDestinationResponse build() {
             return new LogAnalyticsDestinationResponse(name, workspaceId, workspaceResourceId);
         }

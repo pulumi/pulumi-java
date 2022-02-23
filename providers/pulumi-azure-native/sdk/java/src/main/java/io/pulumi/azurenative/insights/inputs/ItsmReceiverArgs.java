@@ -22,7 +22,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionId", required=true)
-    private final Input<String> connectionId;
+        private final Input<String> connectionId;
 
     public Input<String> getConnectionId() {
         return this.connectionId;
@@ -33,7 +33,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+        private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
@@ -55,7 +55,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ticketConfiguration", required=true)
-    private final Input<String> ticketConfiguration;
+        private final Input<String> ticketConfiguration;
 
     public Input<String> getTicketConfiguration() {
         return this.ticketConfiguration;
@@ -66,7 +66,7 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceId", required=true)
-    private final Input<String> workspaceId;
+        private final Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId;
@@ -170,7 +170,6 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceId = Input.of(Objects.requireNonNull(workspaceId));
             return this;
         }
-
         public ItsmReceiverArgs build() {
             return new ItsmReceiverArgs(connectionId, name, region, ticketConfiguration, workspaceId);
         }

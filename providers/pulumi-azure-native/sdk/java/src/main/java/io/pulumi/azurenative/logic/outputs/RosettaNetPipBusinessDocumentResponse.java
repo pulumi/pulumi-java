@@ -97,7 +97,6 @@ public final class RosettaNetPipBusinessDocumentResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public RosettaNetPipBusinessDocumentResponse build() {
             return new RosettaNetPipBusinessDocumentResponse(description, name, version);
         }

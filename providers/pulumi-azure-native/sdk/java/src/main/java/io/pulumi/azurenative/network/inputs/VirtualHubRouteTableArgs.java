@@ -24,7 +24,7 @@ public final class VirtualHubRouteTableArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="routes")
-    private final @Nullable Input<List<VirtualHubRouteArgs>> routes;
+        private final @Nullable Input<List<VirtualHubRouteArgs>> routes;
 
     public Input<List<VirtualHubRouteArgs>> getRoutes() {
         return this.routes == null ? Input.empty() : this.routes;
@@ -67,7 +67,6 @@ public final class VirtualHubRouteTableArgs extends io.pulumi.resources.Resource
             this.routes = Input.ofNullable(routes);
             return this;
         }
-
         public VirtualHubRouteTableArgs build() {
             return new VirtualHubRouteTableArgs(routes);
         }

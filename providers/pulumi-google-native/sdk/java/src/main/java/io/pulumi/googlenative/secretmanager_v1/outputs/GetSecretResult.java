@@ -226,7 +226,6 @@ public final class GetSecretResult {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public GetSecretResult build() {
             return new GetSecretResult(createTime, etag, expireTime, labels, name, replication, rotation, topics, ttl);
         }

@@ -161,7 +161,6 @@ public final class GetMembershipResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetMembershipResult build() {
             return new GetMembershipResult(createTime, name, preferredMemberKey, roles, type, updateTime);
         }

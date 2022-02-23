@@ -54,7 +54,6 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes {
             this.publicIPPrefixes = publicIPPrefixes;
             return this;
         }
-
         public ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes build() {
             return new ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes(publicIPPrefixes);
         }

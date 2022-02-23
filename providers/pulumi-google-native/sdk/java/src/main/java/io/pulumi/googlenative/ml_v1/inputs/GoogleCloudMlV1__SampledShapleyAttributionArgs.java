@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pul
      * 
      */
     @InputImport(name="numPaths")
-    private final @Nullable Input<Integer> numPaths;
+      private final @Nullable Input<Integer> numPaths;
 
     public Input<Integer> getNumPaths() {
         return this.numPaths == null ? Input.empty() : this.numPaths;
@@ -66,7 +66,6 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pul
             this.numPaths = Input.ofNullable(numPaths);
             return this;
         }
-
         public GoogleCloudMlV1__SampledShapleyAttributionArgs build() {
             return new GoogleCloudMlV1__SampledShapleyAttributionArgs(numPaths);
         }

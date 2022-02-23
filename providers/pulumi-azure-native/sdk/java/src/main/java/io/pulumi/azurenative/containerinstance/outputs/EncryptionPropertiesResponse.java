@@ -95,7 +95,6 @@ public final class EncryptionPropertiesResponse {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }
-
         public EncryptionPropertiesResponse build() {
             return new EncryptionPropertiesResponse(keyName, keyVersion, vaultBaseUrl);
         }

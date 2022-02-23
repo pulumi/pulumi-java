@@ -140,7 +140,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse(dial, openUrl, postbackData, shareLocation, text);
         }

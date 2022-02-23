@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionResponse extends io
      * 
      */
     @InputImport(name="numPaths", required=true)
-    private final Integer numPaths;
+      private final Integer numPaths;
 
     public Integer getNumPaths() {
         return this.numPaths;
@@ -59,7 +59,6 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionResponse extends io
             this.numPaths = Objects.requireNonNull(numPaths);
             return this;
         }
-
         public GoogleCloudMlV1__SampledShapleyAttributionResponse build() {
             return new GoogleCloudMlV1__SampledShapleyAttributionResponse(numPaths);
         }

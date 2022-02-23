@@ -105,7 +105,6 @@ public final class BucketAnalyticsConfiguration {
             this.tagFilters = tagFilters;
             return this;
         }
-
         public BucketAnalyticsConfiguration build() {
             return new BucketAnalyticsConfiguration(id, prefix, storageClassAnalysis, tagFilters);
         }

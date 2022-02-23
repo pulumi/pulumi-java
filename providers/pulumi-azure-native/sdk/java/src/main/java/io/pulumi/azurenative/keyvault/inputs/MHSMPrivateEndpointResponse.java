@@ -21,7 +21,7 @@ public final class MHSMPrivateEndpointResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -59,7 +59,6 @@ public final class MHSMPrivateEndpointResponse extends io.pulumi.resources.Invok
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public MHSMPrivateEndpointResponse build() {
             return new MHSMPrivateEndpointResponse(id);
         }

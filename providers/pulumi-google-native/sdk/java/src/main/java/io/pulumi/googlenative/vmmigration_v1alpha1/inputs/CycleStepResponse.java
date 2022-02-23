@@ -24,7 +24,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -35,7 +35,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="initializingReplication", required=true)
-    private final InitializingReplicationStepResponse initializingReplication;
+      private final InitializingReplicationStepResponse initializingReplication;
 
     public InitializingReplicationStepResponse getInitializingReplication() {
         return this.initializingReplication;
@@ -46,7 +46,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="postProcessing", required=true)
-    private final PostProcessingStepResponse postProcessing;
+      private final PostProcessingStepResponse postProcessing;
 
     public PostProcessingStepResponse getPostProcessing() {
         return this.postProcessing;
@@ -57,7 +57,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="replicating", required=true)
-    private final ReplicatingStepResponse replicating;
+      private final ReplicatingStepResponse replicating;
 
     public ReplicatingStepResponse getReplicating() {
         return this.replicating;
@@ -68,7 +68,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -147,7 +147,6 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public CycleStepResponse build() {
             return new CycleStepResponse(endTime, initializingReplication, postProcessing, replicating, startTime);
         }

@@ -20,7 +20,7 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+        private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -31,7 +31,7 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataCenterName")
-    private final @Nullable Input<String> dataCenterName;
+        private final @Nullable Input<String> dataCenterName;
 
     public Input<String> getDataCenterName() {
         return this.dataCenterName == null ? Input.empty() : this.dataCenterName;
@@ -42,7 +42,7 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<DataCenterResourcePropertiesArgs> properties;
+        private final @Nullable Input<DataCenterResourcePropertiesArgs> properties;
 
     public Input<DataCenterResourcePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public CassandraDataCenterArgs build() {
             return new CassandraDataCenterArgs(clusterName, dataCenterName, properties, resourceGroupName);
         }

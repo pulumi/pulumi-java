@@ -74,7 +74,6 @@ public final class LicenseResponse {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public LicenseResponse build() {
             return new LicenseResponse(comments, expression);
         }

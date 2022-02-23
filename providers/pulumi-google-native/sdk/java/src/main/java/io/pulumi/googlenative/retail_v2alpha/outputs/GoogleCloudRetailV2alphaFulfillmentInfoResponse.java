@@ -75,7 +75,6 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudRetailV2alphaFulfillmentInfoResponse build() {
             return new GoogleCloudRetailV2alphaFulfillmentInfoResponse(placeIds, type);
         }

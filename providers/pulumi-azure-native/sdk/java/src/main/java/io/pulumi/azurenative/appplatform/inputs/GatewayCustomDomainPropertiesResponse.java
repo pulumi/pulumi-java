@@ -23,7 +23,7 @@ public final class GatewayCustomDomainPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable String thumbprint;
+        private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
@@ -61,7 +61,6 @@ public final class GatewayCustomDomainPropertiesResponse extends io.pulumi.resou
             this.thumbprint = thumbprint;
             return this;
         }
-
         public GatewayCustomDomainPropertiesResponse build() {
             return new GatewayCustomDomainPropertiesResponse(thumbprint);
         }

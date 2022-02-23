@@ -23,7 +23,7 @@ public final class AzurePlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="skuDescription", required=true)
-    private final String skuDescription;
+        private final String skuDescription;
 
     public String getSkuDescription() {
         return this.skuDescription;
@@ -34,7 +34,7 @@ public final class AzurePlanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="skuId")
-    private final @Nullable String skuId;
+        private final @Nullable String skuId;
 
     public Optional<String> getSkuId() {
         return this.skuId == null ? Optional.empty() : Optional.ofNullable(this.skuId);
@@ -83,7 +83,6 @@ public final class AzurePlanResponse extends io.pulumi.resources.InvokeArgs {
             this.skuId = skuId;
             return this;
         }
-
         public AzurePlanResponse build() {
             return new AzurePlanResponse(skuDescription, skuId);
         }

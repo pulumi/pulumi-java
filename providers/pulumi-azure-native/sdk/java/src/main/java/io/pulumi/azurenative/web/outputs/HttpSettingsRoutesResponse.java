@@ -54,7 +54,6 @@ public final class HttpSettingsRoutesResponse {
             this.apiPrefix = apiPrefix;
             return this;
         }
-
         public HttpSettingsRoutesResponse build() {
             return new HttpSettingsRoutesResponse(apiPrefix);
         }

@@ -21,7 +21,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionName")
-    private final @Nullable Input<String> connectionName;
+        private final @Nullable Input<String> connectionName;
 
     public Input<String> getConnectionName() {
         return this.connectionName == null ? Input.empty() : this.connectionName;
@@ -32,7 +32,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostArn")
-    private final @Nullable Input<String> hostArn;
+        private final @Nullable Input<String> hostArn;
 
     public Input<String> getHostArn() {
         return this.hostArn == null ? Input.empty() : this.hostArn;
@@ -43,7 +43,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerType")
-    private final @Nullable Input<String> providerType;
+        private final @Nullable Input<String> providerType;
 
     public Input<String> getProviderType() {
         return this.providerType == null ? Input.empty() : this.providerType;
@@ -54,7 +54,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ConnectionTagArgs>> tags;
+        private final @Nullable Input<List<ConnectionTagArgs>> tags;
 
     public Input<List<ConnectionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -143,7 +143,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ConnectionArgs build() {
             return new ConnectionArgs(connectionName, hostArn, providerType, tags);
         }

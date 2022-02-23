@@ -245,7 +245,6 @@ public final class FirewallPolicyRuleMatcherResponse {
             this.srcSecureTags = Objects.requireNonNull(srcSecureTags);
             return this;
         }
-
         public FirewallPolicyRuleMatcherResponse build() {
             return new FirewallPolicyRuleMatcherResponse(destAddressGroups, destFqdns, destIpRanges, destRegionCodes, layer4Configs, srcAddressGroups, srcFqdns, srcIpRanges, srcRegionCodes, srcSecureTags);
         }

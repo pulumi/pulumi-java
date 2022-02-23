@@ -19,7 +19,7 @@ public final class CxEntityTypeExcludedPhraseGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -62,7 +62,6 @@ public final class CxEntityTypeExcludedPhraseGetArgs extends io.pulumi.resources
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public CxEntityTypeExcludedPhraseGetArgs build() {
             return new CxEntityTypeExcludedPhraseGetArgs(value);
         }

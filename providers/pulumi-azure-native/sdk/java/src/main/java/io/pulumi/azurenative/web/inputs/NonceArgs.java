@@ -24,7 +24,7 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nonceExpirationInterval")
-    private final @Nullable Input<String> nonceExpirationInterval;
+        private final @Nullable Input<String> nonceExpirationInterval;
 
     public Input<String> getNonceExpirationInterval() {
         return this.nonceExpirationInterval == null ? Input.empty() : this.nonceExpirationInterval;
@@ -35,7 +35,7 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validateNonce")
-    private final @Nullable Input<Boolean> validateNonce;
+        private final @Nullable Input<Boolean> validateNonce;
 
     public Input<Boolean> getValidateNonce() {
         return this.validateNonce == null ? Input.empty() : this.validateNonce;
@@ -94,7 +94,6 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
             this.validateNonce = Input.ofNullable(validateNonce);
             return this;
         }
-
         public NonceArgs build() {
             return new NonceArgs(nonceExpirationInterval, validateNonce);
         }

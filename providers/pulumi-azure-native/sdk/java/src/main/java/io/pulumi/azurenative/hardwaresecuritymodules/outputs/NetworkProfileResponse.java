@@ -78,7 +78,6 @@ public final class NetworkProfileResponse {
             this.subnet = subnet;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(networkInterfaces, subnet);
         }

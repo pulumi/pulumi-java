@@ -44,7 +44,6 @@ public final class GetClusterReleaseChannel {
             this.channel = Objects.requireNonNull(channel);
             return this;
         }
-
         public GetClusterReleaseChannel build() {
             return new GetClusterReleaseChannel(channel);
         }

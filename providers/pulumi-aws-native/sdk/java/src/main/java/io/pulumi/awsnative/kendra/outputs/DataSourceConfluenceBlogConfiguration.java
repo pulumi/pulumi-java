@@ -46,7 +46,6 @@ public final class DataSourceConfluenceBlogConfiguration {
             this.blogFieldMappings = blogFieldMappings;
             return this;
         }
-
         public DataSourceConfluenceBlogConfiguration build() {
             return new DataSourceConfluenceBlogConfiguration(blogFieldMappings);
         }

@@ -16,21 +16,21 @@ public final class DataSourceConfluenceSpaceToIndexFieldMappingArgs extends io.p
     public static final DataSourceConfluenceSpaceToIndexFieldMappingArgs Empty = new DataSourceConfluenceSpaceToIndexFieldMappingArgs();
 
     @InputImport(name="dataSourceFieldName", required=true)
-    private final Input<DataSourceConfluenceSpaceFieldName> dataSourceFieldName;
+        private final Input<DataSourceConfluenceSpaceFieldName> dataSourceFieldName;
 
     public Input<DataSourceConfluenceSpaceFieldName> getDataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @InputImport(name="dateFieldFormat")
-    private final @Nullable Input<String> dateFieldFormat;
+        private final @Nullable Input<String> dateFieldFormat;
 
     public Input<String> getDateFieldFormat() {
         return this.dateFieldFormat == null ? Input.empty() : this.dateFieldFormat;
     }
 
     @InputImport(name="indexFieldName", required=true)
-    private final Input<String> indexFieldName;
+        private final Input<String> indexFieldName;
 
     public Input<String> getIndexFieldName() {
         return this.indexFieldName;
@@ -104,7 +104,6 @@ public final class DataSourceConfluenceSpaceToIndexFieldMappingArgs extends io.p
             this.indexFieldName = Input.of(Objects.requireNonNull(indexFieldName));
             return this;
         }
-
         public DataSourceConfluenceSpaceToIndexFieldMappingArgs build() {
             return new DataSourceConfluenceSpaceToIndexFieldMappingArgs(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }

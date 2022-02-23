@@ -96,7 +96,6 @@ public final class AptSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AptSettingsResponse build() {
             return new AptSettingsResponse(excludes, exclusivePackages, type);
         }

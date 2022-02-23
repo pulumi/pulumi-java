@@ -164,7 +164,6 @@ public final class PatchDeploymentPatchConfigZypper {
             this.withUpdate = withUpdate;
             return this;
         }
-
         public PatchDeploymentPatchConfigZypper build() {
             return new PatchDeploymentPatchConfigZypper(categories, excludes, exclusivePatches, severities, withOptional, withUpdate);
         }

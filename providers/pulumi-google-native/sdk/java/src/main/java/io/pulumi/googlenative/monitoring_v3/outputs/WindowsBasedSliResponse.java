@@ -139,7 +139,6 @@ public final class WindowsBasedSliResponse {
             this.windowPeriod = Objects.requireNonNull(windowPeriod);
             return this;
         }
-
         public WindowsBasedSliResponse build() {
             return new WindowsBasedSliResponse(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);
         }

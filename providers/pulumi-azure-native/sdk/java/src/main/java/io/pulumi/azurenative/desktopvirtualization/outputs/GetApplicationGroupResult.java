@@ -415,7 +415,6 @@ public final class GetApplicationGroupResult {
             this.workspaceArmPath = Objects.requireNonNull(workspaceArmPath);
             return this;
         }
-
         public GetApplicationGroupResult build() {
             return new GetApplicationGroupResult(applicationGroupType, cloudPcResource, description, etag, friendlyName, hostPoolArmPath, id, identity, kind, location, managedBy, migrationRequest, name, objectId, plan, sku, tags, type, workspaceArmPath);
         }

@@ -75,7 +75,6 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse {
             this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse build() {
             return new GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse(spendBasis, thresholdPercent);
         }

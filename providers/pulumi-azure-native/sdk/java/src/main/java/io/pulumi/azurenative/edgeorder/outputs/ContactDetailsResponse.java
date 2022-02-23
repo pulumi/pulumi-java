@@ -140,7 +140,6 @@ public final class ContactDetailsResponse {
             this.phoneExtension = phoneExtension;
             return this;
         }
-
         public ContactDetailsResponse build() {
             return new ContactDetailsResponse(contactName, emailList, mobile, phone, phoneExtension);
         }

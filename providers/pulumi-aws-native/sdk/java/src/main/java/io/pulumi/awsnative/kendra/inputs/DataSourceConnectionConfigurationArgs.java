@@ -15,35 +15,35 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
     public static final DataSourceConnectionConfigurationArgs Empty = new DataSourceConnectionConfigurationArgs();
 
     @InputImport(name="databaseHost", required=true)
-    private final Input<String> databaseHost;
+        private final Input<String> databaseHost;
 
     public Input<String> getDatabaseHost() {
         return this.databaseHost;
     }
 
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+        private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="databasePort", required=true)
-    private final Input<Integer> databasePort;
+        private final Input<Integer> databasePort;
 
     public Input<Integer> getDatabasePort() {
         return this.databasePort;
     }
 
     @InputImport(name="secretArn", required=true)
-    private final Input<String> secretArn;
+        private final Input<String> secretArn;
 
     public Input<String> getSecretArn() {
         return this.secretArn;
     }
 
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+        private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;
@@ -147,7 +147,6 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }
-
         public DataSourceConnectionConfigurationArgs build() {
             return new DataSourceConnectionConfigurationArgs(databaseHost, databaseName, databasePort, secretArn, tableName);
         }

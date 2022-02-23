@@ -23,7 +23,7 @@ public final class DailyMaintenanceWindowArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -66,7 +66,6 @@ public final class DailyMaintenanceWindowArgs extends io.pulumi.resources.Resour
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public DailyMaintenanceWindowArgs build() {
             return new DailyMaintenanceWindowArgs(startTime);
         }

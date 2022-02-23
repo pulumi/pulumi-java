@@ -119,7 +119,6 @@ public final class DeploymentUpdateResponse {
             this.manifest = Objects.requireNonNull(manifest);
             return this;
         }
-
         public DeploymentUpdateResponse build() {
             return new DeploymentUpdateResponse(credential, description, labels, manifest);
         }

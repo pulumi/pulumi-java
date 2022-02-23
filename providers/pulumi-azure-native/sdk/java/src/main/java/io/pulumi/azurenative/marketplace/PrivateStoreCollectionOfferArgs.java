@@ -23,7 +23,7 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="collectionId", required=true)
-    private final Input<String> collectionId;
+        private final Input<String> collectionId;
 
     public Input<String> getCollectionId() {
         return this.collectionId;
@@ -34,7 +34,7 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="eTag")
-    private final @Nullable Input<String> eTag;
+        private final @Nullable Input<String> eTag;
 
     public Input<String> getETag() {
         return this.eTag == null ? Input.empty() : this.eTag;
@@ -45,7 +45,7 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="iconFileUris")
-    private final @Nullable Input<Map<String,String>> iconFileUris;
+        private final @Nullable Input<Map<String,String>> iconFileUris;
 
     public Input<Map<String,String>> getIconFileUris() {
         return this.iconFileUris == null ? Input.empty() : this.iconFileUris;
@@ -56,7 +56,7 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="offerId")
-    private final @Nullable Input<String> offerId;
+        private final @Nullable Input<String> offerId;
 
     public Input<String> getOfferId() {
         return this.offerId == null ? Input.empty() : this.offerId;
@@ -67,7 +67,7 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="plans")
-    private final @Nullable Input<List<PlanArgs>> plans;
+        private final @Nullable Input<List<PlanArgs>> plans;
 
     public Input<List<PlanArgs>> getPlans() {
         return this.plans == null ? Input.empty() : this.plans;
@@ -78,7 +78,7 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="privateStoreId", required=true)
-    private final Input<String> privateStoreId;
+        private final Input<String> privateStoreId;
 
     public Input<String> getPrivateStoreId() {
         return this.privateStoreId;
@@ -89,7 +89,7 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="specificPlanIdsLimitation")
-    private final @Nullable Input<List<String>> specificPlanIdsLimitation;
+        private final @Nullable Input<List<String>> specificPlanIdsLimitation;
 
     public Input<List<String>> getSpecificPlanIdsLimitation() {
         return this.specificPlanIdsLimitation == null ? Input.empty() : this.specificPlanIdsLimitation;
@@ -100,7 +100,7 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="updateSuppressedDueIdempotence")
-    private final @Nullable Input<Boolean> updateSuppressedDueIdempotence;
+        private final @Nullable Input<Boolean> updateSuppressedDueIdempotence;
 
     public Input<Boolean> getUpdateSuppressedDueIdempotence() {
         return this.updateSuppressedDueIdempotence == null ? Input.empty() : this.updateSuppressedDueIdempotence;
@@ -249,7 +249,6 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
             this.updateSuppressedDueIdempotence = Input.ofNullable(updateSuppressedDueIdempotence);
             return this;
         }
-
         public PrivateStoreCollectionOfferArgs build() {
             return new PrivateStoreCollectionOfferArgs(collectionId, eTag, iconFileUris, offerId, plans, privateStoreId, specificPlanIdsLimitation, updateSuppressedDueIdempotence);
         }

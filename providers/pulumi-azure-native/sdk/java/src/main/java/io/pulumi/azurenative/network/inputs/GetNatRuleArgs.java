@@ -17,7 +17,7 @@ public final class GetNatRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gatewayName", required=true)
-    private final String gatewayName;
+        private final String gatewayName;
 
     public String getGatewayName() {
         return this.gatewayName;
@@ -28,7 +28,7 @@ public final class GetNatRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="natRuleName", required=true)
-    private final String natRuleName;
+        private final String natRuleName;
 
     public String getNatRuleName() {
         return this.natRuleName;
@@ -39,7 +39,7 @@ public final class GetNatRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetNatRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetNatRuleArgs build() {
             return new GetNatRuleArgs(gatewayName, natRuleName, resourceGroupName);
         }

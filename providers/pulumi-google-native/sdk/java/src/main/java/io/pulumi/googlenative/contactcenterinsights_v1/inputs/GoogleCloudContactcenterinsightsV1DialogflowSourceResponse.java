@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
      * 
      */
     @InputImport(name="audioUri", required=true)
-    private final String audioUri;
+      private final String audioUri;
 
     public String getAudioUri() {
         return this.audioUri;
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
      * 
      */
     @InputImport(name="dialogflowConversation", required=true)
-    private final String dialogflowConversation;
+      private final String dialogflowConversation;
 
     public String getDialogflowConversation() {
         return this.dialogflowConversation;
@@ -81,7 +81,6 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
             this.dialogflowConversation = Objects.requireNonNull(dialogflowConversation);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse build() {
             return new GoogleCloudContactcenterinsightsV1DialogflowSourceResponse(audioUri, dialogflowConversation);
         }

@@ -24,7 +24,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionArgs extends io.p
      * 
      */
     @InputImport(name="requestHeadersToAdds")
-    private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds;
+        private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds;
 
     public Input<List<RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs>> getRequestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? Input.empty() : this.requestHeadersToAdds;
@@ -36,7 +36,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionArgs extends io.p
      * 
      */
     @InputImport(name="requestHeadersToRemoves")
-    private final @Nullable Input<List<String>> requestHeadersToRemoves;
+        private final @Nullable Input<List<String>> requestHeadersToRemoves;
 
     public Input<List<String>> getRequestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? Input.empty() : this.requestHeadersToRemoves;
@@ -48,7 +48,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionArgs extends io.p
      * 
      */
     @InputImport(name="responseHeadersToAdds")
-    private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds;
+        private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds;
 
     public Input<List<RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs>> getResponseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? Input.empty() : this.responseHeadersToAdds;
@@ -60,7 +60,7 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionArgs extends io.p
      * 
      */
     @InputImport(name="responseHeadersToRemoves")
-    private final @Nullable Input<List<String>> responseHeadersToRemoves;
+        private final @Nullable Input<List<String>> responseHeadersToRemoves;
 
     public Input<List<String>> getResponseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? Input.empty() : this.responseHeadersToRemoves;
@@ -149,7 +149,6 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionArgs extends io.p
             this.responseHeadersToRemoves = Input.ofNullable(responseHeadersToRemoves);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleHeaderActionArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleHeaderActionArgs(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

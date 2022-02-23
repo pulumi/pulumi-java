@@ -141,7 +141,6 @@ public final class IosTestResponse {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
         }
-
         public IosTestResponse build() {
             return new IosTestResponse(iosAppInfo, iosRoboTest, iosTestLoop, iosXcTest, testTimeout);
         }

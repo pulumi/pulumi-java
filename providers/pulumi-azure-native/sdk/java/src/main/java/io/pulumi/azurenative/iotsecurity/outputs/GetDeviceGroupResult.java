@@ -117,7 +117,6 @@ public final class GetDeviceGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeviceGroupResult build() {
             return new GetDeviceGroupResult(id, name, systemData, type);
         }

@@ -13,14 +13,14 @@ public final class EntitlementAttribute extends io.pulumi.resources.InvokeArgs {
     public static final EntitlementAttribute Empty = new EntitlementAttribute();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -69,7 +69,6 @@ public final class EntitlementAttribute extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EntitlementAttribute build() {
             return new EntitlementAttribute(name, value);
         }

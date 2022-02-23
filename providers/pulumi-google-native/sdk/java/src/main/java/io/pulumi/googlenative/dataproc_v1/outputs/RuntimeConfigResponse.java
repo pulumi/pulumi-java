@@ -96,7 +96,6 @@ public final class RuntimeConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public RuntimeConfigResponse build() {
             return new RuntimeConfigResponse(containerImage, properties, version);
         }

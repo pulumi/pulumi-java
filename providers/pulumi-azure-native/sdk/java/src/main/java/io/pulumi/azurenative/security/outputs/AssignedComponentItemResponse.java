@@ -54,7 +54,6 @@ public final class AssignedComponentItemResponse {
             this.key = key;
             return this;
         }
-
         public AssignedComponentItemResponse build() {
             return new AssignedComponentItemResponse(key);
         }

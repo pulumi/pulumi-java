@@ -30,7 +30,6 @@ public final class GetDNSSECResult {
         public Builder(GetDNSSECResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetDNSSECResult build() {
             return new GetDNSSECResult();
         }

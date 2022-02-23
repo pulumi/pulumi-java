@@ -60,7 +60,6 @@ public final class LocalGatewayRouteTableVPCAssociationTag {
             this.value = value;
             return this;
         }
-
         public LocalGatewayRouteTableVPCAssociationTag build() {
             return new LocalGatewayRouteTableVPCAssociationTag(key, value);
         }

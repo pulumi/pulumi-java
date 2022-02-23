@@ -319,7 +319,6 @@ public final class AzureBackupServerContainerResponse {
             this.upgradeAvailable = upgradeAvailable;
             return this;
         }
-
         public AzureBackupServerContainerResponse build() {
             return new AzureBackupServerContainerResponse(backupManagementType, canReRegister, containerId, containerType, dpmAgentVersion, dpmServers, extendedInfo, friendlyName, healthStatus, protectedItemCount, protectionStatus, registrationStatus, upgradeAvailable);
         }

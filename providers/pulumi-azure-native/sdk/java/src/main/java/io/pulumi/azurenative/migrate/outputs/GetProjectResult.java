@@ -183,7 +183,6 @@ public final class GetProjectResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(eTag, id, location, name, properties, tags, type);
         }

@@ -58,7 +58,6 @@ public final class LicenseMetadata {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public LicenseMetadata build() {
             return new LicenseMetadata(name, value);
         }

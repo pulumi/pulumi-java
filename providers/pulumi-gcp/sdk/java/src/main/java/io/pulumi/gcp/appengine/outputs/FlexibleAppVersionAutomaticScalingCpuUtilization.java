@@ -77,7 +77,6 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilization {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingCpuUtilization build() {
             return new FlexibleAppVersionAutomaticScalingCpuUtilization(aggregationWindowLength, targetUtilization);
         }

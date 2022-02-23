@@ -396,7 +396,6 @@ public final class Event {
             this.type = type;
             return this;
         }
-
         public Event build() {
             return new Event(action, apiVersion, deprecatedCount, deprecatedFirstTimestamp, deprecatedLastTimestamp, deprecatedSource, eventTime, kind, metadata, note, reason, regarding, related, reportingController, reportingInstance, series, type);
         }

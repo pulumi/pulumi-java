@@ -74,7 +74,6 @@ public final class TemplateDataSetReference {
             this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
             return this;
         }
-
         public TemplateDataSetReference build() {
             return new TemplateDataSetReference(dataSetArn, dataSetPlaceholder);
         }

@@ -24,7 +24,7 @@ public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowedBundleIds")
-    private final @Nullable Input<List<String>> allowedBundleIds;
+      private final @Nullable Input<List<String>> allowedBundleIds;
 
     public Input<List<String>> getAllowedBundleIds() {
         return this.allowedBundleIds == null ? Input.empty() : this.allowedBundleIds;
@@ -67,7 +67,6 @@ public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.Resource
             this.allowedBundleIds = Input.ofNullable(allowedBundleIds);
             return this;
         }
-
         public V2IosKeyRestrictionsArgs build() {
             return new V2IosKeyRestrictionsArgs(allowedBundleIds);
         }

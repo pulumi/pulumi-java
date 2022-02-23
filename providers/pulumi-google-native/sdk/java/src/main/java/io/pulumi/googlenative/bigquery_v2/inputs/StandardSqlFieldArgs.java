@@ -24,7 +24,7 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<StandardSqlDataTypeArgs> type;
+      private final @Nullable Input<StandardSqlDataTypeArgs> type;
 
     public Input<StandardSqlDataTypeArgs> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -94,7 +94,6 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public StandardSqlFieldArgs build() {
             return new StandardSqlFieldArgs(name, type);
         }

@@ -13,21 +13,21 @@ public final class GetArchiveDeploymentArgs extends io.pulumi.resources.InvokeAr
     public static final GetArchiveDeploymentArgs Empty = new GetArchiveDeploymentArgs();
 
     @InputImport(name="archiveDeploymentId", required=true)
-    private final String archiveDeploymentId;
+      private final String archiveDeploymentId;
 
     public String getArchiveDeploymentId() {
         return this.archiveDeploymentId;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -86,7 +86,6 @@ public final class GetArchiveDeploymentArgs extends io.pulumi.resources.InvokeAr
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetArchiveDeploymentArgs build() {
             return new GetArchiveDeploymentArgs(archiveDeploymentId, environmentId, organizationId);
         }

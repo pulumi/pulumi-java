@@ -99,7 +99,6 @@ public final class HDInsightResponseProperties {
             this.sshPort = sshPort;
             return this;
         }
-
         public HDInsightResponseProperties build() {
             return new HDInsightResponseProperties(address, administratorAccount, sshPort);
         }

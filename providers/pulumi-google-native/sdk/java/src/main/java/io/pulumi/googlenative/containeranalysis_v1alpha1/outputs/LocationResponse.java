@@ -96,7 +96,6 @@ public final class LocationResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public LocationResponse build() {
             return new LocationResponse(cpeUri, path, version);
         }

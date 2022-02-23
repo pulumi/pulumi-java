@@ -73,7 +73,6 @@ public final class AssociationS3OutputLocation {
             this.outputS3Region = outputS3Region;
             return this;
         }
-
         public AssociationS3OutputLocation build() {
             return new AssociationS3OutputLocation(outputS3BucketName, outputS3KeyPrefix, outputS3Region);
         }

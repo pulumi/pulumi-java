@@ -226,7 +226,6 @@ public final class GetDdosProtectionPlanResult {
             this.virtualNetworks = Objects.requireNonNull(virtualNetworks);
             return this;
         }
-
         public GetDdosProtectionPlanResult build() {
             return new GetDdosProtectionPlanResult(etag, id, location, name, provisioningState, resourceGuid, tags, type, virtualNetworks);
         }

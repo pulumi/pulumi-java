@@ -442,7 +442,6 @@ public final class GetPublicIPPrefixResult {
             this.zones = zones;
             return this;
         }
-
         public GetPublicIPPrefixResult build() {
             return new GetPublicIPPrefixResult(customIPPrefix, etag, extendedLocation, id, ipPrefix, ipTags, loadBalancerFrontendIpConfiguration, location, name, natGateway, prefixLength, provisioningState, publicIPAddressVersion, publicIPAddresses, resourceGuid, sku, tags, type, zones);
         }

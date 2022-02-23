@@ -116,7 +116,6 @@ public final class ListDatabaseAccountKeysResult {
             this.secondaryReadonlyMasterKey = Objects.requireNonNull(secondaryReadonlyMasterKey);
             return this;
         }
-
         public ListDatabaseAccountKeysResult build() {
             return new ListDatabaseAccountKeysResult(primaryMasterKey, primaryReadonlyMasterKey, secondaryMasterKey, secondaryReadonlyMasterKey);
         }

@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs extends
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -65,7 +65,6 @@ public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs extends
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
-
         public GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs build() {
             return new GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs(version);
         }

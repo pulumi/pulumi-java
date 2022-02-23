@@ -83,7 +83,6 @@ public final class AutoscalingPolicyBasicAlgorithm {
             this.yarnConfig = Objects.requireNonNull(yarnConfig);
             return this;
         }
-
         public AutoscalingPolicyBasicAlgorithm build() {
             return new AutoscalingPolicyBasicAlgorithm(cooldownPeriod, yarnConfig);
         }

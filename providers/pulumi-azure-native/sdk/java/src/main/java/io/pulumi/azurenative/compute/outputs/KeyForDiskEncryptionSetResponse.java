@@ -77,7 +77,6 @@ public final class KeyForDiskEncryptionSetResponse {
             this.sourceVault = sourceVault;
             return this;
         }
-
         public KeyForDiskEncryptionSetResponse build() {
             return new KeyForDiskEncryptionSetResponse(keyUrl, sourceVault);
         }

@@ -183,7 +183,6 @@ public final class GetStudioComponentResult {
             this.type = type;
             return this;
         }
-
         public GetStudioComponentResult build() {
             return new GetStudioComponentResult(configuration, description, ec2SecurityGroupIds, initializationScripts, name, scriptParameters, studioComponentId, type);
         }

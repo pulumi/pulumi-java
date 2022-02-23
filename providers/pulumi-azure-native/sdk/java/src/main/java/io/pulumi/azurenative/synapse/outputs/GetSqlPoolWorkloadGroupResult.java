@@ -225,7 +225,6 @@ public final class GetSqlPoolWorkloadGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlPoolWorkloadGroupResult build() {
             return new GetSqlPoolWorkloadGroupResult(id, importance, maxResourcePercent, maxResourcePercentPerRequest, minResourcePercent, minResourcePercentPerRequest, name, queryExecutionTimeout, type);
         }

@@ -473,7 +473,6 @@ public final class GetContainerGroupResult {
             this.volumes = volumes;
             return this;
         }
-
         public GetContainerGroupResult build() {
             return new GetContainerGroupResult(containers, diagnostics, dnsConfig, encryptionProperties, id, identity, imageRegistryCredentials, initContainers, instanceView, ipAddress, location, name, networkProfile, osType, provisioningState, restartPolicy, sku, tags, type, volumes);
         }

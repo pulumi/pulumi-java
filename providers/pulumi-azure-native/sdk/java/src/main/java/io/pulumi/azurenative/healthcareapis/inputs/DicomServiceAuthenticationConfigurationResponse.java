@@ -22,7 +22,7 @@ public final class DicomServiceAuthenticationConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="audiences", required=true)
-    private final List<String> audiences;
+        private final List<String> audiences;
 
     public List<String> getAudiences() {
         return this.audiences;
@@ -33,7 +33,7 @@ public final class DicomServiceAuthenticationConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="authority", required=true)
-    private final String authority;
+        private final String authority;
 
     public String getAuthority() {
         return this.authority;
@@ -82,7 +82,6 @@ public final class DicomServiceAuthenticationConfigurationResponse extends io.pu
             this.authority = Objects.requireNonNull(authority);
             return this;
         }
-
         public DicomServiceAuthenticationConfigurationResponse build() {
             return new DicomServiceAuthenticationConfigurationResponse(audiences, authority);
         }

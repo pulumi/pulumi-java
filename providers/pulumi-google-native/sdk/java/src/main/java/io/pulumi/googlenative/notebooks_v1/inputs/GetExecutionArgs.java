@@ -15,21 +15,21 @@ public final class GetExecutionArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetExecutionArgs Empty = new GetExecutionArgs();
 
     @InputImport(name="executionId", required=true)
-    private final String executionId;
+      private final String executionId;
 
     public String getExecutionId() {
         return this.executionId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetExecutionArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetExecutionArgs build() {
             return new GetExecutionArgs(executionId, location, project);
         }

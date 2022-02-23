@@ -59,7 +59,6 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule build() {
             return new GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule(hoursInCycle, startTime);
         }

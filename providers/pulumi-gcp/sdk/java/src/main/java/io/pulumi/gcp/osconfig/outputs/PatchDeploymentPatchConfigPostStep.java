@@ -81,7 +81,6 @@ public final class PatchDeploymentPatchConfigPostStep {
             this.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }
-
         public PatchDeploymentPatchConfigPostStep build() {
             return new PatchDeploymentPatchConfigPostStep(linuxExecStepConfig, windowsExecStepConfig);
         }

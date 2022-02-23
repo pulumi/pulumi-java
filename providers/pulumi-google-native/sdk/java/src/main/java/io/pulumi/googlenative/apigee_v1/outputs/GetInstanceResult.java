@@ -305,7 +305,6 @@ public final class GetInstanceResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(createdAt, description, diskEncryptionKeyName, displayName, host, ipRange, lastModifiedAt, location, name, peeringCidrRange, port, runtimeVersion, state);
         }

@@ -19,14 +19,14 @@ public final class CertificateValidityArgs extends io.pulumi.resources.ResourceA
     public static final CertificateValidityArgs Empty = new CertificateValidityArgs();
 
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<Double> value;
+        private final Input<Double> value;
 
     public Input<Double> getValue() {
         return this.value;
@@ -85,7 +85,6 @@ public final class CertificateValidityArgs extends io.pulumi.resources.ResourceA
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public CertificateValidityArgs build() {
             return new CertificateValidityArgs(type, value);
         }

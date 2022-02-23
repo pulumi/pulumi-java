@@ -44,7 +44,6 @@ public final class ListStorageAccountKeysResult {
             this.userStorageKey = Objects.requireNonNull(userStorageKey);
             return this;
         }
-
         public ListStorageAccountKeysResult build() {
             return new ListStorageAccountKeysResult(userStorageKey);
         }

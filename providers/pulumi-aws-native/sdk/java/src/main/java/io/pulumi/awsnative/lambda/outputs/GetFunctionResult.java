@@ -457,7 +457,6 @@ public final class GetFunctionResult {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public GetFunctionResult build() {
             return new GetFunctionResult(architectures, arn, codeSigningConfigArn, deadLetterConfig, description, environment, fileSystemConfigs, handler, imageConfig, kmsKeyArn, layers, memorySize, packageType, reservedConcurrentExecutions, role, runtime, tags, timeout, tracingConfig, vpcConfig);
         }

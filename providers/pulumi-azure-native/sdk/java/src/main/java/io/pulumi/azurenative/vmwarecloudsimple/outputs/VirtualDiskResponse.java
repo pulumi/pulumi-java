@@ -140,7 +140,6 @@ public final class VirtualDiskResponse {
             this.virtualDiskName = Objects.requireNonNull(virtualDiskName);
             return this;
         }
-
         public VirtualDiskResponse build() {
             return new VirtualDiskResponse(controllerId, independenceMode, totalSize, virtualDiskId, virtualDiskName);
         }

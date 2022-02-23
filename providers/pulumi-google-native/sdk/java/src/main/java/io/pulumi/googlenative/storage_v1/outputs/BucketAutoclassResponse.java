@@ -75,7 +75,6 @@ public final class BucketAutoclassResponse {
             this.toggleTime = Objects.requireNonNull(toggleTime);
             return this;
         }
-
         public BucketAutoclassResponse build() {
             return new BucketAutoclassResponse(enabled, toggleTime);
         }

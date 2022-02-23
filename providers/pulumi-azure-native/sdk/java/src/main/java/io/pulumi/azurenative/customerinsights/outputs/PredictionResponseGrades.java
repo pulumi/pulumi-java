@@ -98,7 +98,6 @@ public final class PredictionResponseGrades {
             this.minScoreThreshold = minScoreThreshold;
             return this;
         }
-
         public PredictionResponseGrades build() {
             return new PredictionResponseGrades(gradeName, maxScoreThreshold, minScoreThreshold);
         }

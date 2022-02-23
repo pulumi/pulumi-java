@@ -76,7 +76,6 @@ public final class ConnectionStateResponse {
             this.status = status;
             return this;
         }
-
         public ConnectionStateResponse build() {
             return new ConnectionStateResponse(description, status);
         }

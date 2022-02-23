@@ -22,7 +22,7 @@ public final class ModelQualityJobDefinitionStoppingConditionArgs extends io.pul
      * 
      */
     @InputImport(name="maxRuntimeInSeconds", required=true)
-    private final Input<Integer> maxRuntimeInSeconds;
+        private final Input<Integer> maxRuntimeInSeconds;
 
     public Input<Integer> getMaxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
@@ -65,7 +65,6 @@ public final class ModelQualityJobDefinitionStoppingConditionArgs extends io.pul
             this.maxRuntimeInSeconds = Input.of(Objects.requireNonNull(maxRuntimeInSeconds));
             return this;
         }
-
         public ModelQualityJobDefinitionStoppingConditionArgs build() {
             return new ModelQualityJobDefinitionStoppingConditionArgs(maxRuntimeInSeconds);
         }

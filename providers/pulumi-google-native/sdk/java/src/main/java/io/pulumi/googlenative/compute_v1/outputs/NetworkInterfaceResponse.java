@@ -330,7 +330,6 @@ public final class NetworkInterfaceResponse {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(accessConfigs, aliasIpRanges, fingerprint, ipv6AccessConfigs, ipv6AccessType, ipv6Address, kind, name, network, networkIP, nicType, queueCount, stackType, subnetwork);
         }

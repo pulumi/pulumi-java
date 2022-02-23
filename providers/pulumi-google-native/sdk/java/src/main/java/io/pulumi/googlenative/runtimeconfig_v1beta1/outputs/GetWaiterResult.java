@@ -182,7 +182,6 @@ public final class GetWaiterResult {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public GetWaiterResult build() {
             return new GetWaiterResult(createTime, done, error, failure, name, success, timeout);
         }

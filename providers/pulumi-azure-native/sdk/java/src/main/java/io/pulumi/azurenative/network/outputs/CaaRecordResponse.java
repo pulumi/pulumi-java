@@ -98,7 +98,6 @@ public final class CaaRecordResponse {
             this.value = value;
             return this;
         }
-
         public CaaRecordResponse build() {
             return new CaaRecordResponse(flags, tag, value);
         }

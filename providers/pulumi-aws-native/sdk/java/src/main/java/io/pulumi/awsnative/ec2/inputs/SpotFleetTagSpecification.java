@@ -17,14 +17,14 @@ public final class SpotFleetTagSpecification extends io.pulumi.resources.InvokeA
     public static final SpotFleetTagSpecification Empty = new SpotFleetTagSpecification();
 
     @InputImport(name="resourceType")
-    private final @Nullable SpotFleetTagSpecificationResourceType resourceType;
+        private final @Nullable SpotFleetTagSpecificationResourceType resourceType;
 
     public Optional<SpotFleetTagSpecificationResourceType> getPropResourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 
     @InputImport(name="tags")
-    private final @Nullable List<SpotFleetTag> tags;
+        private final @Nullable List<SpotFleetTag> tags;
 
     public List<SpotFleetTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
@@ -73,7 +73,6 @@ public final class SpotFleetTagSpecification extends io.pulumi.resources.InvokeA
             this.tags = tags;
             return this;
         }
-
         public SpotFleetTagSpecification build() {
             return new SpotFleetTagSpecification(resourceType, tags);
         }

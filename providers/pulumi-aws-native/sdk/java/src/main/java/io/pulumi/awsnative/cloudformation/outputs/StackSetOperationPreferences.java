@@ -115,7 +115,6 @@ public final class StackSetOperationPreferences {
             this.regionOrder = regionOrder;
             return this;
         }
-
         public StackSetOperationPreferences build() {
             return new StackSetOperationPreferences(failureToleranceCount, failureTolerancePercentage, maxConcurrentCount, maxConcurrentPercentage, regionConcurrencyType, regionOrder);
         }

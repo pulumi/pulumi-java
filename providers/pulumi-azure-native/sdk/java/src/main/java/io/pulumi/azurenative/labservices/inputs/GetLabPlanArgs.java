@@ -17,7 +17,7 @@ public final class GetLabPlanArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labPlanName", required=true)
-    private final String labPlanName;
+        private final String labPlanName;
 
     public String getLabPlanName() {
         return this.labPlanName;
@@ -28,7 +28,7 @@ public final class GetLabPlanArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetLabPlanArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetLabPlanArgs build() {
             return new GetLabPlanArgs(labPlanName, resourceGroupName);
         }

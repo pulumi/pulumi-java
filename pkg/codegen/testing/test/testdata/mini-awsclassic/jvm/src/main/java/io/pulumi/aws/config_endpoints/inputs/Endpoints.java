@@ -15,2257 +15,2112 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
     public static final Endpoints Empty = new Endpoints();
 
     @InputImport(name="accessanalyzer")
-    private final @Nullable String accessanalyzer;
+      private @Nullable String accessanalyzer;
 
     public Optional<String> getAccessanalyzer() {
         return this.accessanalyzer == null ? Optional.empty() : Optional.ofNullable(this.accessanalyzer);
     }
 
     @InputImport(name="account")
-    private final @Nullable String account;
+      private @Nullable String account;
 
     public Optional<String> getAccount() {
         return this.account == null ? Optional.empty() : Optional.ofNullable(this.account);
     }
 
     @InputImport(name="acm")
-    private final @Nullable String acm;
+      private @Nullable String acm;
 
     public Optional<String> getAcm() {
         return this.acm == null ? Optional.empty() : Optional.ofNullable(this.acm);
     }
 
     @InputImport(name="acmpca")
-    private final @Nullable String acmpca;
+      private @Nullable String acmpca;
 
     public Optional<String> getAcmpca() {
         return this.acmpca == null ? Optional.empty() : Optional.ofNullable(this.acmpca);
     }
 
     @InputImport(name="alexaforbusiness")
-    private final @Nullable String alexaforbusiness;
+      private @Nullable String alexaforbusiness;
 
     public Optional<String> getAlexaforbusiness() {
         return this.alexaforbusiness == null ? Optional.empty() : Optional.ofNullable(this.alexaforbusiness);
     }
 
     @InputImport(name="amp")
-    private final @Nullable String amp;
+      private @Nullable String amp;
 
     public Optional<String> getAmp() {
         return this.amp == null ? Optional.empty() : Optional.ofNullable(this.amp);
     }
 
     @InputImport(name="amplify")
-    private final @Nullable String amplify;
+      private @Nullable String amplify;
 
     public Optional<String> getAmplify() {
         return this.amplify == null ? Optional.empty() : Optional.ofNullable(this.amplify);
     }
 
     @InputImport(name="amplifybackend")
-    private final @Nullable String amplifybackend;
+      private @Nullable String amplifybackend;
 
     public Optional<String> getAmplifybackend() {
         return this.amplifybackend == null ? Optional.empty() : Optional.ofNullable(this.amplifybackend);
     }
 
     @InputImport(name="apigateway")
-    private final @Nullable String apigateway;
+      private @Nullable String apigateway;
 
     public Optional<String> getApigateway() {
         return this.apigateway == null ? Optional.empty() : Optional.ofNullable(this.apigateway);
     }
 
     @InputImport(name="apigatewayv2")
-    private final @Nullable String apigatewayv2;
+      private @Nullable String apigatewayv2;
 
     public Optional<String> getApigatewayv2() {
         return this.apigatewayv2 == null ? Optional.empty() : Optional.ofNullable(this.apigatewayv2);
     }
 
     @InputImport(name="appautoscaling")
-    private final @Nullable String appautoscaling;
+      private @Nullable String appautoscaling;
 
     public Optional<String> getAppautoscaling() {
         return this.appautoscaling == null ? Optional.empty() : Optional.ofNullable(this.appautoscaling);
     }
 
     @InputImport(name="appconfig")
-    private final @Nullable String appconfig;
+      private @Nullable String appconfig;
 
     public Optional<String> getAppconfig() {
         return this.appconfig == null ? Optional.empty() : Optional.ofNullable(this.appconfig);
     }
 
     @InputImport(name="appflow")
-    private final @Nullable String appflow;
+      private @Nullable String appflow;
 
     public Optional<String> getAppflow() {
         return this.appflow == null ? Optional.empty() : Optional.ofNullable(this.appflow);
     }
 
     @InputImport(name="appintegrations")
-    private final @Nullable String appintegrations;
+      private @Nullable String appintegrations;
 
     public Optional<String> getAppintegrations() {
         return this.appintegrations == null ? Optional.empty() : Optional.ofNullable(this.appintegrations);
     }
 
     @InputImport(name="appintegrationsservice")
-    private final @Nullable String appintegrationsservice;
+      private @Nullable String appintegrationsservice;
 
     public Optional<String> getAppintegrationsservice() {
         return this.appintegrationsservice == null ? Optional.empty() : Optional.ofNullable(this.appintegrationsservice);
     }
 
     @InputImport(name="applicationautoscaling")
-    private final @Nullable String applicationautoscaling;
+      private @Nullable String applicationautoscaling;
 
     public Optional<String> getApplicationautoscaling() {
         return this.applicationautoscaling == null ? Optional.empty() : Optional.ofNullable(this.applicationautoscaling);
     }
 
     @InputImport(name="applicationcostprofiler")
-    private final @Nullable String applicationcostprofiler;
+      private @Nullable String applicationcostprofiler;
 
     public Optional<String> getApplicationcostprofiler() {
         return this.applicationcostprofiler == null ? Optional.empty() : Optional.ofNullable(this.applicationcostprofiler);
     }
 
     @InputImport(name="applicationdiscovery")
-    private final @Nullable String applicationdiscovery;
+      private @Nullable String applicationdiscovery;
 
     public Optional<String> getApplicationdiscovery() {
         return this.applicationdiscovery == null ? Optional.empty() : Optional.ofNullable(this.applicationdiscovery);
     }
 
     @InputImport(name="applicationdiscoveryservice")
-    private final @Nullable String applicationdiscoveryservice;
+      private @Nullable String applicationdiscoveryservice;
 
     public Optional<String> getApplicationdiscoveryservice() {
         return this.applicationdiscoveryservice == null ? Optional.empty() : Optional.ofNullable(this.applicationdiscoveryservice);
     }
 
     @InputImport(name="applicationinsights")
-    private final @Nullable String applicationinsights;
+      private @Nullable String applicationinsights;
 
     public Optional<String> getApplicationinsights() {
         return this.applicationinsights == null ? Optional.empty() : Optional.ofNullable(this.applicationinsights);
     }
 
     @InputImport(name="appmesh")
-    private final @Nullable String appmesh;
+      private @Nullable String appmesh;
 
     public Optional<String> getAppmesh() {
         return this.appmesh == null ? Optional.empty() : Optional.ofNullable(this.appmesh);
     }
 
     @InputImport(name="appregistry")
-    private final @Nullable String appregistry;
+      private @Nullable String appregistry;
 
     public Optional<String> getAppregistry() {
         return this.appregistry == null ? Optional.empty() : Optional.ofNullable(this.appregistry);
     }
 
     @InputImport(name="apprunner")
-    private final @Nullable String apprunner;
+      private @Nullable String apprunner;
 
     public Optional<String> getApprunner() {
         return this.apprunner == null ? Optional.empty() : Optional.ofNullable(this.apprunner);
     }
 
     @InputImport(name="appstream")
-    private final @Nullable String appstream;
+      private @Nullable String appstream;
 
     public Optional<String> getAppstream() {
         return this.appstream == null ? Optional.empty() : Optional.ofNullable(this.appstream);
     }
 
     @InputImport(name="appsync")
-    private final @Nullable String appsync;
+      private @Nullable String appsync;
 
     public Optional<String> getAppsync() {
         return this.appsync == null ? Optional.empty() : Optional.ofNullable(this.appsync);
     }
 
     @InputImport(name="athena")
-    private final @Nullable String athena;
+      private @Nullable String athena;
 
     public Optional<String> getAthena() {
         return this.athena == null ? Optional.empty() : Optional.ofNullable(this.athena);
     }
 
     @InputImport(name="auditmanager")
-    private final @Nullable String auditmanager;
+      private @Nullable String auditmanager;
 
     public Optional<String> getAuditmanager() {
         return this.auditmanager == null ? Optional.empty() : Optional.ofNullable(this.auditmanager);
     }
 
     @InputImport(name="augmentedairuntime")
-    private final @Nullable String augmentedairuntime;
+      private @Nullable String augmentedairuntime;
 
     public Optional<String> getAugmentedairuntime() {
         return this.augmentedairuntime == null ? Optional.empty() : Optional.ofNullable(this.augmentedairuntime);
     }
 
     @InputImport(name="autoscaling")
-    private final @Nullable String autoscaling;
+      private @Nullable String autoscaling;
 
     public Optional<String> getAutoscaling() {
         return this.autoscaling == null ? Optional.empty() : Optional.ofNullable(this.autoscaling);
     }
 
     @InputImport(name="autoscalingplans")
-    private final @Nullable String autoscalingplans;
+      private @Nullable String autoscalingplans;
 
     public Optional<String> getAutoscalingplans() {
         return this.autoscalingplans == null ? Optional.empty() : Optional.ofNullable(this.autoscalingplans);
     }
 
     @InputImport(name="backup")
-    private final @Nullable String backup;
+      private @Nullable String backup;
 
     public Optional<String> getBackup() {
         return this.backup == null ? Optional.empty() : Optional.ofNullable(this.backup);
     }
 
     @InputImport(name="batch")
-    private final @Nullable String batch;
+      private @Nullable String batch;
 
     public Optional<String> getBatch() {
         return this.batch == null ? Optional.empty() : Optional.ofNullable(this.batch);
     }
 
     @InputImport(name="braket")
-    private final @Nullable String braket;
+      private @Nullable String braket;
 
     public Optional<String> getBraket() {
         return this.braket == null ? Optional.empty() : Optional.ofNullable(this.braket);
     }
 
     @InputImport(name="budgets")
-    private final @Nullable String budgets;
+      private @Nullable String budgets;
 
     public Optional<String> getBudgets() {
         return this.budgets == null ? Optional.empty() : Optional.ofNullable(this.budgets);
     }
 
     @InputImport(name="chime")
-    private final @Nullable String chime;
+      private @Nullable String chime;
 
     public Optional<String> getChime() {
         return this.chime == null ? Optional.empty() : Optional.ofNullable(this.chime);
     }
 
     @InputImport(name="cloud9")
-    private final @Nullable String cloud9;
+      private @Nullable String cloud9;
 
     public Optional<String> getCloud9() {
         return this.cloud9 == null ? Optional.empty() : Optional.ofNullable(this.cloud9);
     }
 
     @InputImport(name="cloudcontrol")
-    private final @Nullable String cloudcontrol;
+      private @Nullable String cloudcontrol;
 
     public Optional<String> getCloudcontrol() {
         return this.cloudcontrol == null ? Optional.empty() : Optional.ofNullable(this.cloudcontrol);
     }
 
     @InputImport(name="cloudcontrolapi")
-    private final @Nullable String cloudcontrolapi;
+      private @Nullable String cloudcontrolapi;
 
     public Optional<String> getCloudcontrolapi() {
         return this.cloudcontrolapi == null ? Optional.empty() : Optional.ofNullable(this.cloudcontrolapi);
     }
 
     @InputImport(name="clouddirectory")
-    private final @Nullable String clouddirectory;
+      private @Nullable String clouddirectory;
 
     public Optional<String> getClouddirectory() {
         return this.clouddirectory == null ? Optional.empty() : Optional.ofNullable(this.clouddirectory);
     }
 
     @InputImport(name="cloudformation")
-    private final @Nullable String cloudformation;
+      private @Nullable String cloudformation;
 
     public Optional<String> getCloudformation() {
         return this.cloudformation == null ? Optional.empty() : Optional.ofNullable(this.cloudformation);
     }
 
     @InputImport(name="cloudfront")
-    private final @Nullable String cloudfront;
+      private @Nullable String cloudfront;
 
     public Optional<String> getCloudfront() {
         return this.cloudfront == null ? Optional.empty() : Optional.ofNullable(this.cloudfront);
     }
 
     @InputImport(name="cloudhsm")
-    private final @Nullable String cloudhsm;
+      private @Nullable String cloudhsm;
 
     public Optional<String> getCloudhsm() {
         return this.cloudhsm == null ? Optional.empty() : Optional.ofNullable(this.cloudhsm);
     }
 
     @InputImport(name="cloudhsmv2")
-    private final @Nullable String cloudhsmv2;
+      private @Nullable String cloudhsmv2;
 
     public Optional<String> getCloudhsmv2() {
         return this.cloudhsmv2 == null ? Optional.empty() : Optional.ofNullable(this.cloudhsmv2);
     }
 
     @InputImport(name="cloudsearch")
-    private final @Nullable String cloudsearch;
+      private @Nullable String cloudsearch;
 
     public Optional<String> getCloudsearch() {
         return this.cloudsearch == null ? Optional.empty() : Optional.ofNullable(this.cloudsearch);
     }
 
     @InputImport(name="cloudsearchdomain")
-    private final @Nullable String cloudsearchdomain;
+      private @Nullable String cloudsearchdomain;
 
     public Optional<String> getCloudsearchdomain() {
         return this.cloudsearchdomain == null ? Optional.empty() : Optional.ofNullable(this.cloudsearchdomain);
     }
 
     @InputImport(name="cloudtrail")
-    private final @Nullable String cloudtrail;
+      private @Nullable String cloudtrail;
 
     public Optional<String> getCloudtrail() {
         return this.cloudtrail == null ? Optional.empty() : Optional.ofNullable(this.cloudtrail);
     }
 
     @InputImport(name="cloudwatch")
-    private final @Nullable String cloudwatch;
+      private @Nullable String cloudwatch;
 
     public Optional<String> getCloudwatch() {
         return this.cloudwatch == null ? Optional.empty() : Optional.ofNullable(this.cloudwatch);
     }
 
     @InputImport(name="cloudwatchevents")
-    private final @Nullable String cloudwatchevents;
+      private @Nullable String cloudwatchevents;
 
     public Optional<String> getCloudwatchevents() {
         return this.cloudwatchevents == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchevents);
     }
 
     @InputImport(name="cloudwatchlogs")
-    private final @Nullable String cloudwatchlogs;
+      private @Nullable String cloudwatchlogs;
 
     public Optional<String> getCloudwatchlogs() {
         return this.cloudwatchlogs == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchlogs);
     }
 
     @InputImport(name="codeartifact")
-    private final @Nullable String codeartifact;
+      private @Nullable String codeartifact;
 
     public Optional<String> getCodeartifact() {
         return this.codeartifact == null ? Optional.empty() : Optional.ofNullable(this.codeartifact);
     }
 
     @InputImport(name="codebuild")
-    private final @Nullable String codebuild;
+      private @Nullable String codebuild;
 
     public Optional<String> getCodebuild() {
         return this.codebuild == null ? Optional.empty() : Optional.ofNullable(this.codebuild);
     }
 
     @InputImport(name="codecommit")
-    private final @Nullable String codecommit;
+      private @Nullable String codecommit;
 
     public Optional<String> getCodecommit() {
         return this.codecommit == null ? Optional.empty() : Optional.ofNullable(this.codecommit);
     }
 
     @InputImport(name="codedeploy")
-    private final @Nullable String codedeploy;
+      private @Nullable String codedeploy;
 
     public Optional<String> getCodedeploy() {
         return this.codedeploy == null ? Optional.empty() : Optional.ofNullable(this.codedeploy);
     }
 
     @InputImport(name="codeguruprofiler")
-    private final @Nullable String codeguruprofiler;
+      private @Nullable String codeguruprofiler;
 
     public Optional<String> getCodeguruprofiler() {
         return this.codeguruprofiler == null ? Optional.empty() : Optional.ofNullable(this.codeguruprofiler);
     }
 
     @InputImport(name="codegurureviewer")
-    private final @Nullable String codegurureviewer;
+      private @Nullable String codegurureviewer;
 
     public Optional<String> getCodegurureviewer() {
         return this.codegurureviewer == null ? Optional.empty() : Optional.ofNullable(this.codegurureviewer);
     }
 
     @InputImport(name="codepipeline")
-    private final @Nullable String codepipeline;
+      private @Nullable String codepipeline;
 
     public Optional<String> getCodepipeline() {
         return this.codepipeline == null ? Optional.empty() : Optional.ofNullable(this.codepipeline);
     }
 
     @InputImport(name="codestar")
-    private final @Nullable String codestar;
+      private @Nullable String codestar;
 
     public Optional<String> getCodestar() {
         return this.codestar == null ? Optional.empty() : Optional.ofNullable(this.codestar);
     }
 
     @InputImport(name="codestarconnections")
-    private final @Nullable String codestarconnections;
+      private @Nullable String codestarconnections;
 
     public Optional<String> getCodestarconnections() {
         return this.codestarconnections == null ? Optional.empty() : Optional.ofNullable(this.codestarconnections);
     }
 
     @InputImport(name="codestarnotifications")
-    private final @Nullable String codestarnotifications;
+      private @Nullable String codestarnotifications;
 
     public Optional<String> getCodestarnotifications() {
         return this.codestarnotifications == null ? Optional.empty() : Optional.ofNullable(this.codestarnotifications);
     }
 
     @InputImport(name="cognitoidentity")
-    private final @Nullable String cognitoidentity;
+      private @Nullable String cognitoidentity;
 
     public Optional<String> getCognitoidentity() {
         return this.cognitoidentity == null ? Optional.empty() : Optional.ofNullable(this.cognitoidentity);
     }
 
     @InputImport(name="cognitoidentityprovider")
-    private final @Nullable String cognitoidentityprovider;
+      private @Nullable String cognitoidentityprovider;
 
     public Optional<String> getCognitoidentityprovider() {
         return this.cognitoidentityprovider == null ? Optional.empty() : Optional.ofNullable(this.cognitoidentityprovider);
     }
 
     @InputImport(name="cognitoidp")
-    private final @Nullable String cognitoidp;
+      private @Nullable String cognitoidp;
 
     public Optional<String> getCognitoidp() {
         return this.cognitoidp == null ? Optional.empty() : Optional.ofNullable(this.cognitoidp);
     }
 
     @InputImport(name="cognitosync")
-    private final @Nullable String cognitosync;
+      private @Nullable String cognitosync;
 
     public Optional<String> getCognitosync() {
         return this.cognitosync == null ? Optional.empty() : Optional.ofNullable(this.cognitosync);
     }
 
     @InputImport(name="comprehend")
-    private final @Nullable String comprehend;
+      private @Nullable String comprehend;
 
     public Optional<String> getComprehend() {
         return this.comprehend == null ? Optional.empty() : Optional.ofNullable(this.comprehend);
     }
 
     @InputImport(name="comprehendmedical")
-    private final @Nullable String comprehendmedical;
+      private @Nullable String comprehendmedical;
 
     public Optional<String> getComprehendmedical() {
         return this.comprehendmedical == null ? Optional.empty() : Optional.ofNullable(this.comprehendmedical);
     }
 
     @InputImport(name="config")
-    private final @Nullable String config;
+      private @Nullable String config;
 
     public Optional<String> getConfig() {
         return this.config == null ? Optional.empty() : Optional.ofNullable(this.config);
     }
 
     @InputImport(name="configservice")
-    private final @Nullable String configservice;
+      private @Nullable String configservice;
 
     public Optional<String> getConfigservice() {
         return this.configservice == null ? Optional.empty() : Optional.ofNullable(this.configservice);
     }
 
     @InputImport(name="connect")
-    private final @Nullable String connect;
+      private @Nullable String connect;
 
     public Optional<String> getConnect() {
         return this.connect == null ? Optional.empty() : Optional.ofNullable(this.connect);
     }
 
     @InputImport(name="connectcontactlens")
-    private final @Nullable String connectcontactlens;
+      private @Nullable String connectcontactlens;
 
     public Optional<String> getConnectcontactlens() {
         return this.connectcontactlens == null ? Optional.empty() : Optional.ofNullable(this.connectcontactlens);
     }
 
     @InputImport(name="connectparticipant")
-    private final @Nullable String connectparticipant;
+      private @Nullable String connectparticipant;
 
     public Optional<String> getConnectparticipant() {
         return this.connectparticipant == null ? Optional.empty() : Optional.ofNullable(this.connectparticipant);
     }
 
     @InputImport(name="costandusagereportservice")
-    private final @Nullable String costandusagereportservice;
+      private @Nullable String costandusagereportservice;
 
     public Optional<String> getCostandusagereportservice() {
         return this.costandusagereportservice == null ? Optional.empty() : Optional.ofNullable(this.costandusagereportservice);
     }
 
     @InputImport(name="costexplorer")
-    private final @Nullable String costexplorer;
+      private @Nullable String costexplorer;
 
     public Optional<String> getCostexplorer() {
         return this.costexplorer == null ? Optional.empty() : Optional.ofNullable(this.costexplorer);
     }
 
     @InputImport(name="cur")
-    private final @Nullable String cur;
+      private @Nullable String cur;
 
     public Optional<String> getCur() {
         return this.cur == null ? Optional.empty() : Optional.ofNullable(this.cur);
     }
 
     @InputImport(name="databasemigration")
-    private final @Nullable String databasemigration;
+      private @Nullable String databasemigration;
 
     public Optional<String> getDatabasemigration() {
         return this.databasemigration == null ? Optional.empty() : Optional.ofNullable(this.databasemigration);
     }
 
     @InputImport(name="databasemigrationservice")
-    private final @Nullable String databasemigrationservice;
+      private @Nullable String databasemigrationservice;
 
     public Optional<String> getDatabasemigrationservice() {
         return this.databasemigrationservice == null ? Optional.empty() : Optional.ofNullable(this.databasemigrationservice);
     }
 
     @InputImport(name="dataexchange")
-    private final @Nullable String dataexchange;
+      private @Nullable String dataexchange;
 
     public Optional<String> getDataexchange() {
         return this.dataexchange == null ? Optional.empty() : Optional.ofNullable(this.dataexchange);
     }
 
     @InputImport(name="datapipeline")
-    private final @Nullable String datapipeline;
+      private @Nullable String datapipeline;
 
     public Optional<String> getDatapipeline() {
         return this.datapipeline == null ? Optional.empty() : Optional.ofNullable(this.datapipeline);
     }
 
     @InputImport(name="datasync")
-    private final @Nullable String datasync;
+      private @Nullable String datasync;
 
     public Optional<String> getDatasync() {
         return this.datasync == null ? Optional.empty() : Optional.ofNullable(this.datasync);
     }
 
     @InputImport(name="dax")
-    private final @Nullable String dax;
+      private @Nullable String dax;
 
     public Optional<String> getDax() {
         return this.dax == null ? Optional.empty() : Optional.ofNullable(this.dax);
     }
 
     @InputImport(name="detective")
-    private final @Nullable String detective;
+      private @Nullable String detective;
 
     public Optional<String> getDetective() {
         return this.detective == null ? Optional.empty() : Optional.ofNullable(this.detective);
     }
 
     @InputImport(name="devicefarm")
-    private final @Nullable String devicefarm;
+      private @Nullable String devicefarm;
 
     public Optional<String> getDevicefarm() {
         return this.devicefarm == null ? Optional.empty() : Optional.ofNullable(this.devicefarm);
     }
 
     @InputImport(name="devopsguru")
-    private final @Nullable String devopsguru;
+      private @Nullable String devopsguru;
 
     public Optional<String> getDevopsguru() {
         return this.devopsguru == null ? Optional.empty() : Optional.ofNullable(this.devopsguru);
     }
 
     @InputImport(name="directconnect")
-    private final @Nullable String directconnect;
+      private @Nullable String directconnect;
 
     public Optional<String> getDirectconnect() {
         return this.directconnect == null ? Optional.empty() : Optional.ofNullable(this.directconnect);
     }
 
     @InputImport(name="dlm")
-    private final @Nullable String dlm;
+      private @Nullable String dlm;
 
     public Optional<String> getDlm() {
         return this.dlm == null ? Optional.empty() : Optional.ofNullable(this.dlm);
     }
 
     @InputImport(name="dms")
-    private final @Nullable String dms;
+      private @Nullable String dms;
 
     public Optional<String> getDms() {
         return this.dms == null ? Optional.empty() : Optional.ofNullable(this.dms);
     }
 
     @InputImport(name="docdb")
-    private final @Nullable String docdb;
+      private @Nullable String docdb;
 
     public Optional<String> getDocdb() {
         return this.docdb == null ? Optional.empty() : Optional.ofNullable(this.docdb);
     }
 
     @InputImport(name="ds")
-    private final @Nullable String ds;
+      private @Nullable String ds;
 
     public Optional<String> getDs() {
         return this.ds == null ? Optional.empty() : Optional.ofNullable(this.ds);
     }
 
     @InputImport(name="dynamodb")
-    private final @Nullable String dynamodb;
+      private @Nullable String dynamodb;
 
     public Optional<String> getDynamodb() {
         return this.dynamodb == null ? Optional.empty() : Optional.ofNullable(this.dynamodb);
     }
 
     @InputImport(name="dynamodbstreams")
-    private final @Nullable String dynamodbstreams;
+      private @Nullable String dynamodbstreams;
 
     public Optional<String> getDynamodbstreams() {
         return this.dynamodbstreams == null ? Optional.empty() : Optional.ofNullable(this.dynamodbstreams);
     }
 
     @InputImport(name="ec2")
-    private final @Nullable String ec2;
+      private @Nullable String ec2;
 
     public Optional<String> getEc2() {
         return this.ec2 == null ? Optional.empty() : Optional.ofNullable(this.ec2);
     }
 
     @InputImport(name="ec2instanceconnect")
-    private final @Nullable String ec2instanceconnect;
+      private @Nullable String ec2instanceconnect;
 
     public Optional<String> getEc2instanceconnect() {
         return this.ec2instanceconnect == null ? Optional.empty() : Optional.ofNullable(this.ec2instanceconnect);
     }
 
     @InputImport(name="ecr")
-    private final @Nullable String ecr;
+      private @Nullable String ecr;
 
     public Optional<String> getEcr() {
         return this.ecr == null ? Optional.empty() : Optional.ofNullable(this.ecr);
     }
 
     @InputImport(name="ecrpublic")
-    private final @Nullable String ecrpublic;
+      private @Nullable String ecrpublic;
 
     public Optional<String> getEcrpublic() {
         return this.ecrpublic == null ? Optional.empty() : Optional.ofNullable(this.ecrpublic);
     }
 
     @InputImport(name="ecs")
-    private final @Nullable String ecs;
+      private @Nullable String ecs;
 
     public Optional<String> getEcs() {
         return this.ecs == null ? Optional.empty() : Optional.ofNullable(this.ecs);
     }
 
     @InputImport(name="efs")
-    private final @Nullable String efs;
+      private @Nullable String efs;
 
     public Optional<String> getEfs() {
         return this.efs == null ? Optional.empty() : Optional.ofNullable(this.efs);
     }
 
     @InputImport(name="eks")
-    private final @Nullable String eks;
+      private @Nullable String eks;
 
     public Optional<String> getEks() {
         return this.eks == null ? Optional.empty() : Optional.ofNullable(this.eks);
     }
 
     @InputImport(name="elasticache")
-    private final @Nullable String elasticache;
+      private @Nullable String elasticache;
 
     public Optional<String> getElasticache() {
         return this.elasticache == null ? Optional.empty() : Optional.ofNullable(this.elasticache);
     }
 
     @InputImport(name="elasticbeanstalk")
-    private final @Nullable String elasticbeanstalk;
+      private @Nullable String elasticbeanstalk;
 
     public Optional<String> getElasticbeanstalk() {
         return this.elasticbeanstalk == null ? Optional.empty() : Optional.ofNullable(this.elasticbeanstalk);
     }
 
     @InputImport(name="elasticinference")
-    private final @Nullable String elasticinference;
+      private @Nullable String elasticinference;
 
     public Optional<String> getElasticinference() {
         return this.elasticinference == null ? Optional.empty() : Optional.ofNullable(this.elasticinference);
     }
 
     @InputImport(name="elasticsearch")
-    private final @Nullable String elasticsearch;
+      private @Nullable String elasticsearch;
 
     public Optional<String> getElasticsearch() {
         return this.elasticsearch == null ? Optional.empty() : Optional.ofNullable(this.elasticsearch);
     }
 
     @InputImport(name="elasticsearchservice")
-    private final @Nullable String elasticsearchservice;
+      private @Nullable String elasticsearchservice;
 
     public Optional<String> getElasticsearchservice() {
         return this.elasticsearchservice == null ? Optional.empty() : Optional.ofNullable(this.elasticsearchservice);
     }
 
     @InputImport(name="elastictranscoder")
-    private final @Nullable String elastictranscoder;
+      private @Nullable String elastictranscoder;
 
     public Optional<String> getElastictranscoder() {
         return this.elastictranscoder == null ? Optional.empty() : Optional.ofNullable(this.elastictranscoder);
     }
 
     @InputImport(name="elb")
-    private final @Nullable String elb;
+      private @Nullable String elb;
 
     public Optional<String> getElb() {
         return this.elb == null ? Optional.empty() : Optional.ofNullable(this.elb);
     }
 
     @InputImport(name="elbv2")
-    private final @Nullable String elbv2;
+      private @Nullable String elbv2;
 
     public Optional<String> getElbv2() {
         return this.elbv2 == null ? Optional.empty() : Optional.ofNullable(this.elbv2);
     }
 
     @InputImport(name="emr")
-    private final @Nullable String emr;
+      private @Nullable String emr;
 
     public Optional<String> getEmr() {
         return this.emr == null ? Optional.empty() : Optional.ofNullable(this.emr);
     }
 
     @InputImport(name="emrcontainers")
-    private final @Nullable String emrcontainers;
+      private @Nullable String emrcontainers;
 
     public Optional<String> getEmrcontainers() {
         return this.emrcontainers == null ? Optional.empty() : Optional.ofNullable(this.emrcontainers);
     }
 
     @InputImport(name="es")
-    private final @Nullable String es;
+      private @Nullable String es;
 
     public Optional<String> getEs() {
         return this.es == null ? Optional.empty() : Optional.ofNullable(this.es);
     }
 
     @InputImport(name="eventbridge")
-    private final @Nullable String eventbridge;
+      private @Nullable String eventbridge;
 
     public Optional<String> getEventbridge() {
         return this.eventbridge == null ? Optional.empty() : Optional.ofNullable(this.eventbridge);
     }
 
     @InputImport(name="events")
-    private final @Nullable String events;
+      private @Nullable String events;
 
     public Optional<String> getEvents() {
         return this.events == null ? Optional.empty() : Optional.ofNullable(this.events);
     }
 
     @InputImport(name="finspace")
-    private final @Nullable String finspace;
+      private @Nullable String finspace;
 
     public Optional<String> getFinspace() {
         return this.finspace == null ? Optional.empty() : Optional.ofNullable(this.finspace);
     }
 
     @InputImport(name="finspacedata")
-    private final @Nullable String finspacedata;
+      private @Nullable String finspacedata;
 
     public Optional<String> getFinspacedata() {
         return this.finspacedata == null ? Optional.empty() : Optional.ofNullable(this.finspacedata);
     }
 
     @InputImport(name="firehose")
-    private final @Nullable String firehose;
+      private @Nullable String firehose;
 
     public Optional<String> getFirehose() {
         return this.firehose == null ? Optional.empty() : Optional.ofNullable(this.firehose);
     }
 
     @InputImport(name="fis")
-    private final @Nullable String fis;
+      private @Nullable String fis;
 
     public Optional<String> getFis() {
         return this.fis == null ? Optional.empty() : Optional.ofNullable(this.fis);
     }
 
     @InputImport(name="fms")
-    private final @Nullable String fms;
+      private @Nullable String fms;
 
     public Optional<String> getFms() {
         return this.fms == null ? Optional.empty() : Optional.ofNullable(this.fms);
     }
 
     @InputImport(name="forecast")
-    private final @Nullable String forecast;
+      private @Nullable String forecast;
 
     public Optional<String> getForecast() {
         return this.forecast == null ? Optional.empty() : Optional.ofNullable(this.forecast);
     }
 
     @InputImport(name="forecastquery")
-    private final @Nullable String forecastquery;
+      private @Nullable String forecastquery;
 
     public Optional<String> getForecastquery() {
         return this.forecastquery == null ? Optional.empty() : Optional.ofNullable(this.forecastquery);
     }
 
     @InputImport(name="forecastqueryservice")
-    private final @Nullable String forecastqueryservice;
+      private @Nullable String forecastqueryservice;
 
     public Optional<String> getForecastqueryservice() {
         return this.forecastqueryservice == null ? Optional.empty() : Optional.ofNullable(this.forecastqueryservice);
     }
 
     @InputImport(name="forecastservice")
-    private final @Nullable String forecastservice;
+      private @Nullable String forecastservice;
 
     public Optional<String> getForecastservice() {
         return this.forecastservice == null ? Optional.empty() : Optional.ofNullable(this.forecastservice);
     }
 
     @InputImport(name="frauddetector")
-    private final @Nullable String frauddetector;
+      private @Nullable String frauddetector;
 
     public Optional<String> getFrauddetector() {
         return this.frauddetector == null ? Optional.empty() : Optional.ofNullable(this.frauddetector);
     }
 
     @InputImport(name="fsx")
-    private final @Nullable String fsx;
+      private @Nullable String fsx;
 
     public Optional<String> getFsx() {
         return this.fsx == null ? Optional.empty() : Optional.ofNullable(this.fsx);
     }
 
     @InputImport(name="gamelift")
-    private final @Nullable String gamelift;
+      private @Nullable String gamelift;
 
     public Optional<String> getGamelift() {
         return this.gamelift == null ? Optional.empty() : Optional.ofNullable(this.gamelift);
     }
 
     @InputImport(name="glacier")
-    private final @Nullable String glacier;
+      private @Nullable String glacier;
 
     public Optional<String> getGlacier() {
         return this.glacier == null ? Optional.empty() : Optional.ofNullable(this.glacier);
     }
 
     @InputImport(name="globalaccelerator")
-    private final @Nullable String globalaccelerator;
+      private @Nullable String globalaccelerator;
 
     public Optional<String> getGlobalaccelerator() {
         return this.globalaccelerator == null ? Optional.empty() : Optional.ofNullable(this.globalaccelerator);
     }
 
     @InputImport(name="glue")
-    private final @Nullable String glue;
+      private @Nullable String glue;
 
     public Optional<String> getGlue() {
         return this.glue == null ? Optional.empty() : Optional.ofNullable(this.glue);
     }
 
     @InputImport(name="gluedatabrew")
-    private final @Nullable String gluedatabrew;
+      private @Nullable String gluedatabrew;
 
     public Optional<String> getGluedatabrew() {
         return this.gluedatabrew == null ? Optional.empty() : Optional.ofNullable(this.gluedatabrew);
     }
 
     @InputImport(name="greengrass")
-    private final @Nullable String greengrass;
+      private @Nullable String greengrass;
 
     public Optional<String> getGreengrass() {
         return this.greengrass == null ? Optional.empty() : Optional.ofNullable(this.greengrass);
     }
 
     @InputImport(name="greengrassv2")
-    private final @Nullable String greengrassv2;
+      private @Nullable String greengrassv2;
 
     public Optional<String> getGreengrassv2() {
         return this.greengrassv2 == null ? Optional.empty() : Optional.ofNullable(this.greengrassv2);
     }
 
     @InputImport(name="groundstation")
-    private final @Nullable String groundstation;
+      private @Nullable String groundstation;
 
     public Optional<String> getGroundstation() {
         return this.groundstation == null ? Optional.empty() : Optional.ofNullable(this.groundstation);
     }
 
     @InputImport(name="guardduty")
-    private final @Nullable String guardduty;
+      private @Nullable String guardduty;
 
     public Optional<String> getGuardduty() {
         return this.guardduty == null ? Optional.empty() : Optional.ofNullable(this.guardduty);
     }
 
     @InputImport(name="health")
-    private final @Nullable String health;
+      private @Nullable String health;
 
     public Optional<String> getHealth() {
         return this.health == null ? Optional.empty() : Optional.ofNullable(this.health);
     }
 
     @InputImport(name="healthlake")
-    private final @Nullable String healthlake;
+      private @Nullable String healthlake;
 
     public Optional<String> getHealthlake() {
         return this.healthlake == null ? Optional.empty() : Optional.ofNullable(this.healthlake);
     }
 
     @InputImport(name="honeycode")
-    private final @Nullable String honeycode;
+      private @Nullable String honeycode;
 
     public Optional<String> getHoneycode() {
         return this.honeycode == null ? Optional.empty() : Optional.ofNullable(this.honeycode);
     }
 
     @InputImport(name="iam")
-    private final @Nullable String iam;
+      private @Nullable String iam;
 
     public Optional<String> getIam() {
         return this.iam == null ? Optional.empty() : Optional.ofNullable(this.iam);
     }
 
     @InputImport(name="identitystore")
-    private final @Nullable String identitystore;
+      private @Nullable String identitystore;
 
     public Optional<String> getIdentitystore() {
         return this.identitystore == null ? Optional.empty() : Optional.ofNullable(this.identitystore);
     }
 
     @InputImport(name="imagebuilder")
-    private final @Nullable String imagebuilder;
+      private @Nullable String imagebuilder;
 
     public Optional<String> getImagebuilder() {
         return this.imagebuilder == null ? Optional.empty() : Optional.ofNullable(this.imagebuilder);
     }
 
     @InputImport(name="inspector")
-    private final @Nullable String inspector;
+      private @Nullable String inspector;
 
     public Optional<String> getInspector() {
         return this.inspector == null ? Optional.empty() : Optional.ofNullable(this.inspector);
     }
 
     @InputImport(name="iot")
-    private final @Nullable String iot;
+      private @Nullable String iot;
 
     public Optional<String> getIot() {
         return this.iot == null ? Optional.empty() : Optional.ofNullable(this.iot);
     }
 
     @InputImport(name="iot1clickdevices")
-    private final @Nullable String iot1clickdevices;
+      private @Nullable String iot1clickdevices;
 
     public Optional<String> getIot1clickdevices() {
         return this.iot1clickdevices == null ? Optional.empty() : Optional.ofNullable(this.iot1clickdevices);
     }
 
     @InputImport(name="iot1clickdevicesservice")
-    private final @Nullable String iot1clickdevicesservice;
+      private @Nullable String iot1clickdevicesservice;
 
     public Optional<String> getIot1clickdevicesservice() {
         return this.iot1clickdevicesservice == null ? Optional.empty() : Optional.ofNullable(this.iot1clickdevicesservice);
     }
 
     @InputImport(name="iot1clickprojects")
-    private final @Nullable String iot1clickprojects;
+      private @Nullable String iot1clickprojects;
 
     public Optional<String> getIot1clickprojects() {
         return this.iot1clickprojects == null ? Optional.empty() : Optional.ofNullable(this.iot1clickprojects);
     }
 
     @InputImport(name="iotanalytics")
-    private final @Nullable String iotanalytics;
+      private @Nullable String iotanalytics;
 
     public Optional<String> getIotanalytics() {
         return this.iotanalytics == null ? Optional.empty() : Optional.ofNullable(this.iotanalytics);
     }
 
     @InputImport(name="iotdataplane")
-    private final @Nullable String iotdataplane;
+      private @Nullable String iotdataplane;
 
     public Optional<String> getIotdataplane() {
         return this.iotdataplane == null ? Optional.empty() : Optional.ofNullable(this.iotdataplane);
     }
 
     @InputImport(name="iotdeviceadvisor")
-    private final @Nullable String iotdeviceadvisor;
+      private @Nullable String iotdeviceadvisor;
 
     public Optional<String> getIotdeviceadvisor() {
         return this.iotdeviceadvisor == null ? Optional.empty() : Optional.ofNullable(this.iotdeviceadvisor);
     }
 
     @InputImport(name="iotevents")
-    private final @Nullable String iotevents;
+      private @Nullable String iotevents;
 
     public Optional<String> getIotevents() {
         return this.iotevents == null ? Optional.empty() : Optional.ofNullable(this.iotevents);
     }
 
     @InputImport(name="ioteventsdata")
-    private final @Nullable String ioteventsdata;
+      private @Nullable String ioteventsdata;
 
     public Optional<String> getIoteventsdata() {
         return this.ioteventsdata == null ? Optional.empty() : Optional.ofNullable(this.ioteventsdata);
     }
 
     @InputImport(name="iotfleethub")
-    private final @Nullable String iotfleethub;
+      private @Nullable String iotfleethub;
 
     public Optional<String> getIotfleethub() {
         return this.iotfleethub == null ? Optional.empty() : Optional.ofNullable(this.iotfleethub);
     }
 
     @InputImport(name="iotjobsdataplane")
-    private final @Nullable String iotjobsdataplane;
+      private @Nullable String iotjobsdataplane;
 
     public Optional<String> getIotjobsdataplane() {
         return this.iotjobsdataplane == null ? Optional.empty() : Optional.ofNullable(this.iotjobsdataplane);
     }
 
     @InputImport(name="iotsecuretunneling")
-    private final @Nullable String iotsecuretunneling;
+      private @Nullable String iotsecuretunneling;
 
     public Optional<String> getIotsecuretunneling() {
         return this.iotsecuretunneling == null ? Optional.empty() : Optional.ofNullable(this.iotsecuretunneling);
     }
 
     @InputImport(name="iotsitewise")
-    private final @Nullable String iotsitewise;
+      private @Nullable String iotsitewise;
 
     public Optional<String> getIotsitewise() {
         return this.iotsitewise == null ? Optional.empty() : Optional.ofNullable(this.iotsitewise);
     }
 
     @InputImport(name="iotthingsgraph")
-    private final @Nullable String iotthingsgraph;
+      private @Nullable String iotthingsgraph;
 
     public Optional<String> getIotthingsgraph() {
         return this.iotthingsgraph == null ? Optional.empty() : Optional.ofNullable(this.iotthingsgraph);
     }
 
     @InputImport(name="iotwireless")
-    private final @Nullable String iotwireless;
+      private @Nullable String iotwireless;
 
     public Optional<String> getIotwireless() {
         return this.iotwireless == null ? Optional.empty() : Optional.ofNullable(this.iotwireless);
     }
 
     @InputImport(name="kafka")
-    private final @Nullable String kafka;
+      private @Nullable String kafka;
 
     public Optional<String> getKafka() {
         return this.kafka == null ? Optional.empty() : Optional.ofNullable(this.kafka);
     }
 
     @InputImport(name="kafkaconnect")
-    private final @Nullable String kafkaconnect;
+      private @Nullable String kafkaconnect;
 
     public Optional<String> getKafkaconnect() {
         return this.kafkaconnect == null ? Optional.empty() : Optional.ofNullable(this.kafkaconnect);
     }
 
     @InputImport(name="kendra")
-    private final @Nullable String kendra;
+      private @Nullable String kendra;
 
     public Optional<String> getKendra() {
         return this.kendra == null ? Optional.empty() : Optional.ofNullable(this.kendra);
     }
 
     @InputImport(name="kinesis")
-    private final @Nullable String kinesis;
+      private @Nullable String kinesis;
 
     public Optional<String> getKinesis() {
         return this.kinesis == null ? Optional.empty() : Optional.ofNullable(this.kinesis);
     }
 
     @InputImport(name="kinesisanalytics")
-    private final @Nullable String kinesisanalytics;
+      private @Nullable String kinesisanalytics;
 
     public Optional<String> getKinesisanalytics() {
         return this.kinesisanalytics == null ? Optional.empty() : Optional.ofNullable(this.kinesisanalytics);
     }
 
     @InputImport(name="kinesisanalyticsv2")
-    private final @Nullable String kinesisanalyticsv2;
+      private @Nullable String kinesisanalyticsv2;
 
     public Optional<String> getKinesisanalyticsv2() {
         return this.kinesisanalyticsv2 == null ? Optional.empty() : Optional.ofNullable(this.kinesisanalyticsv2);
     }
 
     @InputImport(name="kinesisvideo")
-    private final @Nullable String kinesisvideo;
+      private @Nullable String kinesisvideo;
 
     public Optional<String> getKinesisvideo() {
         return this.kinesisvideo == null ? Optional.empty() : Optional.ofNullable(this.kinesisvideo);
     }
 
     @InputImport(name="kinesisvideoarchivedmedia")
-    private final @Nullable String kinesisvideoarchivedmedia;
+      private @Nullable String kinesisvideoarchivedmedia;
 
     public Optional<String> getKinesisvideoarchivedmedia() {
         return this.kinesisvideoarchivedmedia == null ? Optional.empty() : Optional.ofNullable(this.kinesisvideoarchivedmedia);
     }
 
     @InputImport(name="kinesisvideomedia")
-    private final @Nullable String kinesisvideomedia;
+      private @Nullable String kinesisvideomedia;
 
     public Optional<String> getKinesisvideomedia() {
         return this.kinesisvideomedia == null ? Optional.empty() : Optional.ofNullable(this.kinesisvideomedia);
     }
 
     @InputImport(name="kinesisvideosignalingchannels")
-    private final @Nullable String kinesisvideosignalingchannels;
+      private @Nullable String kinesisvideosignalingchannels;
 
     public Optional<String> getKinesisvideosignalingchannels() {
         return this.kinesisvideosignalingchannels == null ? Optional.empty() : Optional.ofNullable(this.kinesisvideosignalingchannels);
     }
 
     @InputImport(name="kms")
-    private final @Nullable String kms;
+      private @Nullable String kms;
 
     public Optional<String> getKms() {
         return this.kms == null ? Optional.empty() : Optional.ofNullable(this.kms);
     }
 
     @InputImport(name="lakeformation")
-    private final @Nullable String lakeformation;
+      private @Nullable String lakeformation;
 
     public Optional<String> getLakeformation() {
         return this.lakeformation == null ? Optional.empty() : Optional.ofNullable(this.lakeformation);
     }
 
     @InputImport(name="lambda")
-    private final @Nullable String lambda;
+      private @Nullable String lambda;
 
     public Optional<String> getLambda() {
         return this.lambda == null ? Optional.empty() : Optional.ofNullable(this.lambda);
     }
 
     @InputImport(name="lexmodelbuilding")
-    private final @Nullable String lexmodelbuilding;
+      private @Nullable String lexmodelbuilding;
 
     public Optional<String> getLexmodelbuilding() {
         return this.lexmodelbuilding == null ? Optional.empty() : Optional.ofNullable(this.lexmodelbuilding);
     }
 
     @InputImport(name="lexmodelbuildingservice")
-    private final @Nullable String lexmodelbuildingservice;
+      private @Nullable String lexmodelbuildingservice;
 
     public Optional<String> getLexmodelbuildingservice() {
         return this.lexmodelbuildingservice == null ? Optional.empty() : Optional.ofNullable(this.lexmodelbuildingservice);
     }
 
     @InputImport(name="lexmodels")
-    private final @Nullable String lexmodels;
+      private @Nullable String lexmodels;
 
     public Optional<String> getLexmodels() {
         return this.lexmodels == null ? Optional.empty() : Optional.ofNullable(this.lexmodels);
     }
 
     @InputImport(name="lexmodelsv2")
-    private final @Nullable String lexmodelsv2;
+      private @Nullable String lexmodelsv2;
 
     public Optional<String> getLexmodelsv2() {
         return this.lexmodelsv2 == null ? Optional.empty() : Optional.ofNullable(this.lexmodelsv2);
     }
 
     @InputImport(name="lexruntime")
-    private final @Nullable String lexruntime;
+      private @Nullable String lexruntime;
 
     public Optional<String> getLexruntime() {
         return this.lexruntime == null ? Optional.empty() : Optional.ofNullable(this.lexruntime);
     }
 
     @InputImport(name="lexruntimeservice")
-    private final @Nullable String lexruntimeservice;
+      private @Nullable String lexruntimeservice;
 
     public Optional<String> getLexruntimeservice() {
         return this.lexruntimeservice == null ? Optional.empty() : Optional.ofNullable(this.lexruntimeservice);
     }
 
     @InputImport(name="lexruntimev2")
-    private final @Nullable String lexruntimev2;
+      private @Nullable String lexruntimev2;
 
     public Optional<String> getLexruntimev2() {
         return this.lexruntimev2 == null ? Optional.empty() : Optional.ofNullable(this.lexruntimev2);
     }
 
     @InputImport(name="licensemanager")
-    private final @Nullable String licensemanager;
+      private @Nullable String licensemanager;
 
     public Optional<String> getLicensemanager() {
         return this.licensemanager == null ? Optional.empty() : Optional.ofNullable(this.licensemanager);
     }
 
     @InputImport(name="lightsail")
-    private final @Nullable String lightsail;
+      private @Nullable String lightsail;
 
     public Optional<String> getLightsail() {
         return this.lightsail == null ? Optional.empty() : Optional.ofNullable(this.lightsail);
     }
 
     @InputImport(name="location")
-    private final @Nullable String location;
+      private @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
     @InputImport(name="lookoutequipment")
-    private final @Nullable String lookoutequipment;
+      private @Nullable String lookoutequipment;
 
     public Optional<String> getLookoutequipment() {
         return this.lookoutequipment == null ? Optional.empty() : Optional.ofNullable(this.lookoutequipment);
     }
 
     @InputImport(name="lookoutforvision")
-    private final @Nullable String lookoutforvision;
+      private @Nullable String lookoutforvision;
 
     public Optional<String> getLookoutforvision() {
         return this.lookoutforvision == null ? Optional.empty() : Optional.ofNullable(this.lookoutforvision);
     }
 
     @InputImport(name="lookoutmetrics")
-    private final @Nullable String lookoutmetrics;
+      private @Nullable String lookoutmetrics;
 
     public Optional<String> getLookoutmetrics() {
         return this.lookoutmetrics == null ? Optional.empty() : Optional.ofNullable(this.lookoutmetrics);
     }
 
     @InputImport(name="machinelearning")
-    private final @Nullable String machinelearning;
+      private @Nullable String machinelearning;
 
     public Optional<String> getMachinelearning() {
         return this.machinelearning == null ? Optional.empty() : Optional.ofNullable(this.machinelearning);
     }
 
     @InputImport(name="macie")
-    private final @Nullable String macie;
+      private @Nullable String macie;
 
     public Optional<String> getMacie() {
         return this.macie == null ? Optional.empty() : Optional.ofNullable(this.macie);
     }
 
     @InputImport(name="macie2")
-    private final @Nullable String macie2;
+      private @Nullable String macie2;
 
     public Optional<String> getMacie2() {
         return this.macie2 == null ? Optional.empty() : Optional.ofNullable(this.macie2);
     }
 
     @InputImport(name="managedblockchain")
-    private final @Nullable String managedblockchain;
+      private @Nullable String managedblockchain;
 
     public Optional<String> getManagedblockchain() {
         return this.managedblockchain == null ? Optional.empty() : Optional.ofNullable(this.managedblockchain);
     }
 
     @InputImport(name="marketplacecatalog")
-    private final @Nullable String marketplacecatalog;
+      private @Nullable String marketplacecatalog;
 
     public Optional<String> getMarketplacecatalog() {
         return this.marketplacecatalog == null ? Optional.empty() : Optional.ofNullable(this.marketplacecatalog);
     }
 
     @InputImport(name="marketplacecommerceanalytics")
-    private final @Nullable String marketplacecommerceanalytics;
+      private @Nullable String marketplacecommerceanalytics;
 
     public Optional<String> getMarketplacecommerceanalytics() {
         return this.marketplacecommerceanalytics == null ? Optional.empty() : Optional.ofNullable(this.marketplacecommerceanalytics);
     }
 
     @InputImport(name="marketplaceentitlement")
-    private final @Nullable String marketplaceentitlement;
+      private @Nullable String marketplaceentitlement;
 
     public Optional<String> getMarketplaceentitlement() {
         return this.marketplaceentitlement == null ? Optional.empty() : Optional.ofNullable(this.marketplaceentitlement);
     }
 
     @InputImport(name="marketplaceentitlementservice")
-    private final @Nullable String marketplaceentitlementservice;
+      private @Nullable String marketplaceentitlementservice;
 
     public Optional<String> getMarketplaceentitlementservice() {
         return this.marketplaceentitlementservice == null ? Optional.empty() : Optional.ofNullable(this.marketplaceentitlementservice);
     }
 
     @InputImport(name="marketplacemetering")
-    private final @Nullable String marketplacemetering;
+      private @Nullable String marketplacemetering;
 
     public Optional<String> getMarketplacemetering() {
         return this.marketplacemetering == null ? Optional.empty() : Optional.ofNullable(this.marketplacemetering);
     }
 
     @InputImport(name="mediaconnect")
-    private final @Nullable String mediaconnect;
+      private @Nullable String mediaconnect;
 
     public Optional<String> getMediaconnect() {
         return this.mediaconnect == null ? Optional.empty() : Optional.ofNullable(this.mediaconnect);
     }
 
     @InputImport(name="mediaconvert")
-    private final @Nullable String mediaconvert;
+      private @Nullable String mediaconvert;
 
     public Optional<String> getMediaconvert() {
         return this.mediaconvert == null ? Optional.empty() : Optional.ofNullable(this.mediaconvert);
     }
 
     @InputImport(name="medialive")
-    private final @Nullable String medialive;
+      private @Nullable String medialive;
 
     public Optional<String> getMedialive() {
         return this.medialive == null ? Optional.empty() : Optional.ofNullable(this.medialive);
     }
 
     @InputImport(name="mediapackage")
-    private final @Nullable String mediapackage;
+      private @Nullable String mediapackage;
 
     public Optional<String> getMediapackage() {
         return this.mediapackage == null ? Optional.empty() : Optional.ofNullable(this.mediapackage);
     }
 
     @InputImport(name="mediapackagevod")
-    private final @Nullable String mediapackagevod;
+      private @Nullable String mediapackagevod;
 
     public Optional<String> getMediapackagevod() {
         return this.mediapackagevod == null ? Optional.empty() : Optional.ofNullable(this.mediapackagevod);
     }
 
     @InputImport(name="mediastore")
-    private final @Nullable String mediastore;
+      private @Nullable String mediastore;
 
     public Optional<String> getMediastore() {
         return this.mediastore == null ? Optional.empty() : Optional.ofNullable(this.mediastore);
     }
 
     @InputImport(name="mediastoredata")
-    private final @Nullable String mediastoredata;
+      private @Nullable String mediastoredata;
 
     public Optional<String> getMediastoredata() {
         return this.mediastoredata == null ? Optional.empty() : Optional.ofNullable(this.mediastoredata);
     }
 
     @InputImport(name="mediatailor")
-    private final @Nullable String mediatailor;
+      private @Nullable String mediatailor;
 
     public Optional<String> getMediatailor() {
         return this.mediatailor == null ? Optional.empty() : Optional.ofNullable(this.mediatailor);
     }
 
     @InputImport(name="memorydb")
-    private final @Nullable String memorydb;
+      private @Nullable String memorydb;
 
     public Optional<String> getMemorydb() {
         return this.memorydb == null ? Optional.empty() : Optional.ofNullable(this.memorydb);
     }
 
     @InputImport(name="mgn")
-    private final @Nullable String mgn;
+      private @Nullable String mgn;
 
     public Optional<String> getMgn() {
         return this.mgn == null ? Optional.empty() : Optional.ofNullable(this.mgn);
     }
 
     @InputImport(name="migrationhub")
-    private final @Nullable String migrationhub;
+      private @Nullable String migrationhub;
 
     public Optional<String> getMigrationhub() {
         return this.migrationhub == null ? Optional.empty() : Optional.ofNullable(this.migrationhub);
     }
 
     @InputImport(name="migrationhubconfig")
-    private final @Nullable String migrationhubconfig;
+      private @Nullable String migrationhubconfig;
 
     public Optional<String> getMigrationhubconfig() {
         return this.migrationhubconfig == null ? Optional.empty() : Optional.ofNullable(this.migrationhubconfig);
     }
 
     @InputImport(name="mobile")
-    private final @Nullable String mobile;
+      private @Nullable String mobile;
 
     public Optional<String> getMobile() {
         return this.mobile == null ? Optional.empty() : Optional.ofNullable(this.mobile);
     }
 
     @InputImport(name="mobileanalytics")
-    private final @Nullable String mobileanalytics;
+      private @Nullable String mobileanalytics;
 
     public Optional<String> getMobileanalytics() {
         return this.mobileanalytics == null ? Optional.empty() : Optional.ofNullable(this.mobileanalytics);
     }
 
     @InputImport(name="mq")
-    private final @Nullable String mq;
+      private @Nullable String mq;
 
     public Optional<String> getMq() {
         return this.mq == null ? Optional.empty() : Optional.ofNullable(this.mq);
     }
 
     @InputImport(name="mturk")
-    private final @Nullable String mturk;
+      private @Nullable String mturk;
 
     public Optional<String> getMturk() {
         return this.mturk == null ? Optional.empty() : Optional.ofNullable(this.mturk);
     }
 
     @InputImport(name="mwaa")
-    private final @Nullable String mwaa;
+      private @Nullable String mwaa;
 
     public Optional<String> getMwaa() {
         return this.mwaa == null ? Optional.empty() : Optional.ofNullable(this.mwaa);
     }
 
     @InputImport(name="neptune")
-    private final @Nullable String neptune;
+      private @Nullable String neptune;
 
     public Optional<String> getNeptune() {
         return this.neptune == null ? Optional.empty() : Optional.ofNullable(this.neptune);
     }
 
     @InputImport(name="networkfirewall")
-    private final @Nullable String networkfirewall;
+      private @Nullable String networkfirewall;
 
     public Optional<String> getNetworkfirewall() {
         return this.networkfirewall == null ? Optional.empty() : Optional.ofNullable(this.networkfirewall);
     }
 
     @InputImport(name="networkmanager")
-    private final @Nullable String networkmanager;
+      private @Nullable String networkmanager;
 
     public Optional<String> getNetworkmanager() {
         return this.networkmanager == null ? Optional.empty() : Optional.ofNullable(this.networkmanager);
     }
 
     @InputImport(name="nimblestudio")
-    private final @Nullable String nimblestudio;
+      private @Nullable String nimblestudio;
 
     public Optional<String> getNimblestudio() {
         return this.nimblestudio == null ? Optional.empty() : Optional.ofNullable(this.nimblestudio);
     }
 
     @InputImport(name="opsworks")
-    private final @Nullable String opsworks;
+      private @Nullable String opsworks;
 
     public Optional<String> getOpsworks() {
         return this.opsworks == null ? Optional.empty() : Optional.ofNullable(this.opsworks);
     }
 
     @InputImport(name="opsworkscm")
-    private final @Nullable String opsworkscm;
+      private @Nullable String opsworkscm;
 
     public Optional<String> getOpsworkscm() {
         return this.opsworkscm == null ? Optional.empty() : Optional.ofNullable(this.opsworkscm);
     }
 
     @InputImport(name="organizations")
-    private final @Nullable String organizations;
+      private @Nullable String organizations;
 
     public Optional<String> getOrganizations() {
         return this.organizations == null ? Optional.empty() : Optional.ofNullable(this.organizations);
     }
 
     @InputImport(name="outposts")
-    private final @Nullable String outposts;
+      private @Nullable String outposts;
 
     public Optional<String> getOutposts() {
         return this.outposts == null ? Optional.empty() : Optional.ofNullable(this.outposts);
     }
 
     @InputImport(name="personalize")
-    private final @Nullable String personalize;
+      private @Nullable String personalize;
 
     public Optional<String> getPersonalize() {
         return this.personalize == null ? Optional.empty() : Optional.ofNullable(this.personalize);
     }
 
     @InputImport(name="personalizeevents")
-    private final @Nullable String personalizeevents;
+      private @Nullable String personalizeevents;
 
     public Optional<String> getPersonalizeevents() {
         return this.personalizeevents == null ? Optional.empty() : Optional.ofNullable(this.personalizeevents);
     }
 
     @InputImport(name="personalizeruntime")
-    private final @Nullable String personalizeruntime;
+      private @Nullable String personalizeruntime;
 
     public Optional<String> getPersonalizeruntime() {
         return this.personalizeruntime == null ? Optional.empty() : Optional.ofNullable(this.personalizeruntime);
     }
 
     @InputImport(name="pi")
-    private final @Nullable String pi;
+      private @Nullable String pi;
 
     public Optional<String> getPi() {
         return this.pi == null ? Optional.empty() : Optional.ofNullable(this.pi);
     }
 
     @InputImport(name="pinpoint")
-    private final @Nullable String pinpoint;
+      private @Nullable String pinpoint;
 
     public Optional<String> getPinpoint() {
         return this.pinpoint == null ? Optional.empty() : Optional.ofNullable(this.pinpoint);
     }
 
     @InputImport(name="pinpointemail")
-    private final @Nullable String pinpointemail;
+      private @Nullable String pinpointemail;
 
     public Optional<String> getPinpointemail() {
         return this.pinpointemail == null ? Optional.empty() : Optional.ofNullable(this.pinpointemail);
     }
 
     @InputImport(name="pinpointsmsvoice")
-    private final @Nullable String pinpointsmsvoice;
+      private @Nullable String pinpointsmsvoice;
 
     public Optional<String> getPinpointsmsvoice() {
         return this.pinpointsmsvoice == null ? Optional.empty() : Optional.ofNullable(this.pinpointsmsvoice);
     }
 
     @InputImport(name="polly")
-    private final @Nullable String polly;
+      private @Nullable String polly;
 
     public Optional<String> getPolly() {
         return this.polly == null ? Optional.empty() : Optional.ofNullable(this.polly);
     }
 
     @InputImport(name="pricing")
-    private final @Nullable String pricing;
+      private @Nullable String pricing;
 
     public Optional<String> getPricing() {
         return this.pricing == null ? Optional.empty() : Optional.ofNullable(this.pricing);
     }
 
     @InputImport(name="prometheus")
-    private final @Nullable String prometheus;
+      private @Nullable String prometheus;
 
     public Optional<String> getPrometheus() {
         return this.prometheus == null ? Optional.empty() : Optional.ofNullable(this.prometheus);
     }
 
     @InputImport(name="prometheusservice")
-    private final @Nullable String prometheusservice;
+      private @Nullable String prometheusservice;
 
     public Optional<String> getPrometheusservice() {
         return this.prometheusservice == null ? Optional.empty() : Optional.ofNullable(this.prometheusservice);
     }
 
     @InputImport(name="proton")
-    private final @Nullable String proton;
+      private @Nullable String proton;
 
     public Optional<String> getProton() {
         return this.proton == null ? Optional.empty() : Optional.ofNullable(this.proton);
     }
 
     @InputImport(name="qldb")
-    private final @Nullable String qldb;
+      private @Nullable String qldb;
 
     public Optional<String> getQldb() {
         return this.qldb == null ? Optional.empty() : Optional.ofNullable(this.qldb);
     }
 
     @InputImport(name="qldbsession")
-    private final @Nullable String qldbsession;
+      private @Nullable String qldbsession;
 
     public Optional<String> getQldbsession() {
         return this.qldbsession == null ? Optional.empty() : Optional.ofNullable(this.qldbsession);
     }
 
     @InputImport(name="quicksight")
-    private final @Nullable String quicksight;
+      private @Nullable String quicksight;
 
     public Optional<String> getQuicksight() {
         return this.quicksight == null ? Optional.empty() : Optional.ofNullable(this.quicksight);
     }
 
     @InputImport(name="ram")
-    private final @Nullable String ram;
+      private @Nullable String ram;
 
     public Optional<String> getRam() {
         return this.ram == null ? Optional.empty() : Optional.ofNullable(this.ram);
     }
 
     @InputImport(name="rds")
-    private final @Nullable String rds;
+      private @Nullable String rds;
 
     public Optional<String> getRds() {
         return this.rds == null ? Optional.empty() : Optional.ofNullable(this.rds);
     }
 
     @InputImport(name="rdsdata")
-    private final @Nullable String rdsdata;
+      private @Nullable String rdsdata;
 
     public Optional<String> getRdsdata() {
         return this.rdsdata == null ? Optional.empty() : Optional.ofNullable(this.rdsdata);
     }
 
     @InputImport(name="rdsdataservice")
-    private final @Nullable String rdsdataservice;
+      private @Nullable String rdsdataservice;
 
     public Optional<String> getRdsdataservice() {
         return this.rdsdataservice == null ? Optional.empty() : Optional.ofNullable(this.rdsdataservice);
     }
 
     @InputImport(name="redshift")
-    private final @Nullable String redshift;
+      private @Nullable String redshift;
 
     public Optional<String> getRedshift() {
         return this.redshift == null ? Optional.empty() : Optional.ofNullable(this.redshift);
     }
 
     @InputImport(name="redshiftdata")
-    private final @Nullable String redshiftdata;
+      private @Nullable String redshiftdata;
 
     public Optional<String> getRedshiftdata() {
         return this.redshiftdata == null ? Optional.empty() : Optional.ofNullable(this.redshiftdata);
     }
 
     @InputImport(name="rekognition")
-    private final @Nullable String rekognition;
+      private @Nullable String rekognition;
 
     public Optional<String> getRekognition() {
         return this.rekognition == null ? Optional.empty() : Optional.ofNullable(this.rekognition);
     }
 
     @InputImport(name="resourcegroups")
-    private final @Nullable String resourcegroups;
+      private @Nullable String resourcegroups;
 
     public Optional<String> getResourcegroups() {
         return this.resourcegroups == null ? Optional.empty() : Optional.ofNullable(this.resourcegroups);
     }
 
     @InputImport(name="resourcegroupstagging")
-    private final @Nullable String resourcegroupstagging;
+      private @Nullable String resourcegroupstagging;
 
     public Optional<String> getResourcegroupstagging() {
         return this.resourcegroupstagging == null ? Optional.empty() : Optional.ofNullable(this.resourcegroupstagging);
     }
 
     @InputImport(name="resourcegroupstaggingapi")
-    private final @Nullable String resourcegroupstaggingapi;
+      private @Nullable String resourcegroupstaggingapi;
 
     public Optional<String> getResourcegroupstaggingapi() {
         return this.resourcegroupstaggingapi == null ? Optional.empty() : Optional.ofNullable(this.resourcegroupstaggingapi);
     }
 
     @InputImport(name="robomaker")
-    private final @Nullable String robomaker;
+      private @Nullable String robomaker;
 
     public Optional<String> getRobomaker() {
         return this.robomaker == null ? Optional.empty() : Optional.ofNullable(this.robomaker);
     }
 
     @InputImport(name="route53")
-    private final @Nullable String route53;
+      private @Nullable String route53;
 
     public Optional<String> getRoute53() {
         return this.route53 == null ? Optional.empty() : Optional.ofNullable(this.route53);
     }
 
     @InputImport(name="route53domains")
-    private final @Nullable String route53domains;
+      private @Nullable String route53domains;
 
     public Optional<String> getRoute53domains() {
         return this.route53domains == null ? Optional.empty() : Optional.ofNullable(this.route53domains);
     }
 
     @InputImport(name="route53recoverycontrolconfig")
-    private final @Nullable String route53recoverycontrolconfig;
+      private @Nullable String route53recoverycontrolconfig;
 
     public Optional<String> getRoute53recoverycontrolconfig() {
         return this.route53recoverycontrolconfig == null ? Optional.empty() : Optional.ofNullable(this.route53recoverycontrolconfig);
     }
 
     @InputImport(name="route53recoveryreadiness")
-    private final @Nullable String route53recoveryreadiness;
+      private @Nullable String route53recoveryreadiness;
 
     public Optional<String> getRoute53recoveryreadiness() {
         return this.route53recoveryreadiness == null ? Optional.empty() : Optional.ofNullable(this.route53recoveryreadiness);
     }
 
     @InputImport(name="route53resolver")
-    private final @Nullable String route53resolver;
+      private @Nullable String route53resolver;
 
     public Optional<String> getRoute53resolver() {
         return this.route53resolver == null ? Optional.empty() : Optional.ofNullable(this.route53resolver);
     }
 
     @InputImport(name="s3")
-    private final @Nullable String s3;
+      private @Nullable String s3;
 
     public Optional<String> getS3() {
         return this.s3 == null ? Optional.empty() : Optional.ofNullable(this.s3);
     }
 
     @InputImport(name="s3control")
-    private final @Nullable String s3control;
+      private @Nullable String s3control;
 
     public Optional<String> getS3control() {
         return this.s3control == null ? Optional.empty() : Optional.ofNullable(this.s3control);
     }
 
     @InputImport(name="s3outposts")
-    private final @Nullable String s3outposts;
+      private @Nullable String s3outposts;
 
     public Optional<String> getS3outposts() {
         return this.s3outposts == null ? Optional.empty() : Optional.ofNullable(this.s3outposts);
     }
 
     @InputImport(name="sagemaker")
-    private final @Nullable String sagemaker;
+      private @Nullable String sagemaker;
 
     public Optional<String> getSagemaker() {
         return this.sagemaker == null ? Optional.empty() : Optional.ofNullable(this.sagemaker);
     }
 
     @InputImport(name="sagemakeredgemanager")
-    private final @Nullable String sagemakeredgemanager;
+      private @Nullable String sagemakeredgemanager;
 
     public Optional<String> getSagemakeredgemanager() {
         return this.sagemakeredgemanager == null ? Optional.empty() : Optional.ofNullable(this.sagemakeredgemanager);
     }
 
     @InputImport(name="sagemakerfeaturestoreruntime")
-    private final @Nullable String sagemakerfeaturestoreruntime;
+      private @Nullable String sagemakerfeaturestoreruntime;
 
     public Optional<String> getSagemakerfeaturestoreruntime() {
         return this.sagemakerfeaturestoreruntime == null ? Optional.empty() : Optional.ofNullable(this.sagemakerfeaturestoreruntime);
     }
 
     @InputImport(name="sagemakerruntime")
-    private final @Nullable String sagemakerruntime;
+      private @Nullable String sagemakerruntime;
 
     public Optional<String> getSagemakerruntime() {
         return this.sagemakerruntime == null ? Optional.empty() : Optional.ofNullable(this.sagemakerruntime);
     }
 
     @InputImport(name="savingsplans")
-    private final @Nullable String savingsplans;
+      private @Nullable String savingsplans;
 
     public Optional<String> getSavingsplans() {
         return this.savingsplans == null ? Optional.empty() : Optional.ofNullable(this.savingsplans);
     }
 
-    public Endpoints(
-        @Nullable String accessanalyzer,
-        @Nullable String account,
-        @Nullable String acm,
-        @Nullable String acmpca,
-        @Nullable String alexaforbusiness,
-        @Nullable String amp,
-        @Nullable String amplify,
-        @Nullable String amplifybackend,
-        @Nullable String apigateway,
-        @Nullable String apigatewayv2,
-        @Nullable String appautoscaling,
-        @Nullable String appconfig,
-        @Nullable String appflow,
-        @Nullable String appintegrations,
-        @Nullable String appintegrationsservice,
-        @Nullable String applicationautoscaling,
-        @Nullable String applicationcostprofiler,
-        @Nullable String applicationdiscovery,
-        @Nullable String applicationdiscoveryservice,
-        @Nullable String applicationinsights,
-        @Nullable String appmesh,
-        @Nullable String appregistry,
-        @Nullable String apprunner,
-        @Nullable String appstream,
-        @Nullable String appsync,
-        @Nullable String athena,
-        @Nullable String auditmanager,
-        @Nullable String augmentedairuntime,
-        @Nullable String autoscaling,
-        @Nullable String autoscalingplans,
-        @Nullable String backup,
-        @Nullable String batch,
-        @Nullable String braket,
-        @Nullable String budgets,
-        @Nullable String chime,
-        @Nullable String cloud9,
-        @Nullable String cloudcontrol,
-        @Nullable String cloudcontrolapi,
-        @Nullable String clouddirectory,
-        @Nullable String cloudformation,
-        @Nullable String cloudfront,
-        @Nullable String cloudhsm,
-        @Nullable String cloudhsmv2,
-        @Nullable String cloudsearch,
-        @Nullable String cloudsearchdomain,
-        @Nullable String cloudtrail,
-        @Nullable String cloudwatch,
-        @Nullable String cloudwatchevents,
-        @Nullable String cloudwatchlogs,
-        @Nullable String codeartifact,
-        @Nullable String codebuild,
-        @Nullable String codecommit,
-        @Nullable String codedeploy,
-        @Nullable String codeguruprofiler,
-        @Nullable String codegurureviewer,
-        @Nullable String codepipeline,
-        @Nullable String codestar,
-        @Nullable String codestarconnections,
-        @Nullable String codestarnotifications,
-        @Nullable String cognitoidentity,
-        @Nullable String cognitoidentityprovider,
-        @Nullable String cognitoidp,
-        @Nullable String cognitosync,
-        @Nullable String comprehend,
-        @Nullable String comprehendmedical,
-        @Nullable String config,
-        @Nullable String configservice,
-        @Nullable String connect,
-        @Nullable String connectcontactlens,
-        @Nullable String connectparticipant,
-        @Nullable String costandusagereportservice,
-        @Nullable String costexplorer,
-        @Nullable String cur,
-        @Nullable String databasemigration,
-        @Nullable String databasemigrationservice,
-        @Nullable String dataexchange,
-        @Nullable String datapipeline,
-        @Nullable String datasync,
-        @Nullable String dax,
-        @Nullable String detective,
-        @Nullable String devicefarm,
-        @Nullable String devopsguru,
-        @Nullable String directconnect,
-        @Nullable String dlm,
-        @Nullable String dms,
-        @Nullable String docdb,
-        @Nullable String ds,
-        @Nullable String dynamodb,
-        @Nullable String dynamodbstreams,
-        @Nullable String ec2,
-        @Nullable String ec2instanceconnect,
-        @Nullable String ecr,
-        @Nullable String ecrpublic,
-        @Nullable String ecs,
-        @Nullable String efs,
-        @Nullable String eks,
-        @Nullable String elasticache,
-        @Nullable String elasticbeanstalk,
-        @Nullable String elasticinference,
-        @Nullable String elasticsearch,
-        @Nullable String elasticsearchservice,
-        @Nullable String elastictranscoder,
-        @Nullable String elb,
-        @Nullable String elbv2,
-        @Nullable String emr,
-        @Nullable String emrcontainers,
-        @Nullable String es,
-        @Nullable String eventbridge,
-        @Nullable String events,
-        @Nullable String finspace,
-        @Nullable String finspacedata,
-        @Nullable String firehose,
-        @Nullable String fis,
-        @Nullable String fms,
-        @Nullable String forecast,
-        @Nullable String forecastquery,
-        @Nullable String forecastqueryservice,
-        @Nullable String forecastservice,
-        @Nullable String frauddetector,
-        @Nullable String fsx,
-        @Nullable String gamelift,
-        @Nullable String glacier,
-        @Nullable String globalaccelerator,
-        @Nullable String glue,
-        @Nullable String gluedatabrew,
-        @Nullable String greengrass,
-        @Nullable String greengrassv2,
-        @Nullable String groundstation,
-        @Nullable String guardduty,
-        @Nullable String health,
-        @Nullable String healthlake,
-        @Nullable String honeycode,
-        @Nullable String iam,
-        @Nullable String identitystore,
-        @Nullable String imagebuilder,
-        @Nullable String inspector,
-        @Nullable String iot,
-        @Nullable String iot1clickdevices,
-        @Nullable String iot1clickdevicesservice,
-        @Nullable String iot1clickprojects,
-        @Nullable String iotanalytics,
-        @Nullable String iotdataplane,
-        @Nullable String iotdeviceadvisor,
-        @Nullable String iotevents,
-        @Nullable String ioteventsdata,
-        @Nullable String iotfleethub,
-        @Nullable String iotjobsdataplane,
-        @Nullable String iotsecuretunneling,
-        @Nullable String iotsitewise,
-        @Nullable String iotthingsgraph,
-        @Nullable String iotwireless,
-        @Nullable String kafka,
-        @Nullable String kafkaconnect,
-        @Nullable String kendra,
-        @Nullable String kinesis,
-        @Nullable String kinesisanalytics,
-        @Nullable String kinesisanalyticsv2,
-        @Nullable String kinesisvideo,
-        @Nullable String kinesisvideoarchivedmedia,
-        @Nullable String kinesisvideomedia,
-        @Nullable String kinesisvideosignalingchannels,
-        @Nullable String kms,
-        @Nullable String lakeformation,
-        @Nullable String lambda,
-        @Nullable String lexmodelbuilding,
-        @Nullable String lexmodelbuildingservice,
-        @Nullable String lexmodels,
-        @Nullable String lexmodelsv2,
-        @Nullable String lexruntime,
-        @Nullable String lexruntimeservice,
-        @Nullable String lexruntimev2,
-        @Nullable String licensemanager,
-        @Nullable String lightsail,
-        @Nullable String location,
-        @Nullable String lookoutequipment,
-        @Nullable String lookoutforvision,
-        @Nullable String lookoutmetrics,
-        @Nullable String machinelearning,
-        @Nullable String macie,
-        @Nullable String macie2,
-        @Nullable String managedblockchain,
-        @Nullable String marketplacecatalog,
-        @Nullable String marketplacecommerceanalytics,
-        @Nullable String marketplaceentitlement,
-        @Nullable String marketplaceentitlementservice,
-        @Nullable String marketplacemetering,
-        @Nullable String mediaconnect,
-        @Nullable String mediaconvert,
-        @Nullable String medialive,
-        @Nullable String mediapackage,
-        @Nullable String mediapackagevod,
-        @Nullable String mediastore,
-        @Nullable String mediastoredata,
-        @Nullable String mediatailor,
-        @Nullable String memorydb,
-        @Nullable String mgn,
-        @Nullable String migrationhub,
-        @Nullable String migrationhubconfig,
-        @Nullable String mobile,
-        @Nullable String mobileanalytics,
-        @Nullable String mq,
-        @Nullable String mturk,
-        @Nullable String mwaa,
-        @Nullable String neptune,
-        @Nullable String networkfirewall,
-        @Nullable String networkmanager,
-        @Nullable String nimblestudio,
-        @Nullable String opsworks,
-        @Nullable String opsworkscm,
-        @Nullable String organizations,
-        @Nullable String outposts,
-        @Nullable String personalize,
-        @Nullable String personalizeevents,
-        @Nullable String personalizeruntime,
-        @Nullable String pi,
-        @Nullable String pinpoint,
-        @Nullable String pinpointemail,
-        @Nullable String pinpointsmsvoice,
-        @Nullable String polly,
-        @Nullable String pricing,
-        @Nullable String prometheus,
-        @Nullable String prometheusservice,
-        @Nullable String proton,
-        @Nullable String qldb,
-        @Nullable String qldbsession,
-        @Nullable String quicksight,
-        @Nullable String ram,
-        @Nullable String rds,
-        @Nullable String rdsdata,
-        @Nullable String rdsdataservice,
-        @Nullable String redshift,
-        @Nullable String redshiftdata,
-        @Nullable String rekognition,
-        @Nullable String resourcegroups,
-        @Nullable String resourcegroupstagging,
-        @Nullable String resourcegroupstaggingapi,
-        @Nullable String robomaker,
-        @Nullable String route53,
-        @Nullable String route53domains,
-        @Nullable String route53recoverycontrolconfig,
-        @Nullable String route53recoveryreadiness,
-        @Nullable String route53resolver,
-        @Nullable String s3,
-        @Nullable String s3control,
-        @Nullable String s3outposts,
-        @Nullable String sagemaker,
-        @Nullable String sagemakeredgemanager,
-        @Nullable String sagemakerfeaturestoreruntime,
-        @Nullable String sagemakerruntime,
-        @Nullable String savingsplans) {
-        this.accessanalyzer = accessanalyzer;
-        this.account = account;
-        this.acm = acm;
-        this.acmpca = acmpca;
-        this.alexaforbusiness = alexaforbusiness;
-        this.amp = amp;
-        this.amplify = amplify;
-        this.amplifybackend = amplifybackend;
-        this.apigateway = apigateway;
-        this.apigatewayv2 = apigatewayv2;
-        this.appautoscaling = appautoscaling;
-        this.appconfig = appconfig;
-        this.appflow = appflow;
-        this.appintegrations = appintegrations;
-        this.appintegrationsservice = appintegrationsservice;
-        this.applicationautoscaling = applicationautoscaling;
-        this.applicationcostprofiler = applicationcostprofiler;
-        this.applicationdiscovery = applicationdiscovery;
-        this.applicationdiscoveryservice = applicationdiscoveryservice;
-        this.applicationinsights = applicationinsights;
-        this.appmesh = appmesh;
-        this.appregistry = appregistry;
-        this.apprunner = apprunner;
-        this.appstream = appstream;
-        this.appsync = appsync;
-        this.athena = athena;
-        this.auditmanager = auditmanager;
-        this.augmentedairuntime = augmentedairuntime;
-        this.autoscaling = autoscaling;
-        this.autoscalingplans = autoscalingplans;
-        this.backup = backup;
-        this.batch = batch;
-        this.braket = braket;
-        this.budgets = budgets;
-        this.chime = chime;
-        this.cloud9 = cloud9;
-        this.cloudcontrol = cloudcontrol;
-        this.cloudcontrolapi = cloudcontrolapi;
-        this.clouddirectory = clouddirectory;
-        this.cloudformation = cloudformation;
-        this.cloudfront = cloudfront;
-        this.cloudhsm = cloudhsm;
-        this.cloudhsmv2 = cloudhsmv2;
-        this.cloudsearch = cloudsearch;
-        this.cloudsearchdomain = cloudsearchdomain;
-        this.cloudtrail = cloudtrail;
-        this.cloudwatch = cloudwatch;
-        this.cloudwatchevents = cloudwatchevents;
-        this.cloudwatchlogs = cloudwatchlogs;
-        this.codeartifact = codeartifact;
-        this.codebuild = codebuild;
-        this.codecommit = codecommit;
-        this.codedeploy = codedeploy;
-        this.codeguruprofiler = codeguruprofiler;
-        this.codegurureviewer = codegurureviewer;
-        this.codepipeline = codepipeline;
-        this.codestar = codestar;
-        this.codestarconnections = codestarconnections;
-        this.codestarnotifications = codestarnotifications;
-        this.cognitoidentity = cognitoidentity;
-        this.cognitoidentityprovider = cognitoidentityprovider;
-        this.cognitoidp = cognitoidp;
-        this.cognitosync = cognitosync;
-        this.comprehend = comprehend;
-        this.comprehendmedical = comprehendmedical;
-        this.config = config;
-        this.configservice = configservice;
-        this.connect = connect;
-        this.connectcontactlens = connectcontactlens;
-        this.connectparticipant = connectparticipant;
-        this.costandusagereportservice = costandusagereportservice;
-        this.costexplorer = costexplorer;
-        this.cur = cur;
-        this.databasemigration = databasemigration;
-        this.databasemigrationservice = databasemigrationservice;
-        this.dataexchange = dataexchange;
-        this.datapipeline = datapipeline;
-        this.datasync = datasync;
-        this.dax = dax;
-        this.detective = detective;
-        this.devicefarm = devicefarm;
-        this.devopsguru = devopsguru;
-        this.directconnect = directconnect;
-        this.dlm = dlm;
-        this.dms = dms;
-        this.docdb = docdb;
-        this.ds = ds;
-        this.dynamodb = dynamodb;
-        this.dynamodbstreams = dynamodbstreams;
-        this.ec2 = ec2;
-        this.ec2instanceconnect = ec2instanceconnect;
-        this.ecr = ecr;
-        this.ecrpublic = ecrpublic;
-        this.ecs = ecs;
-        this.efs = efs;
-        this.eks = eks;
-        this.elasticache = elasticache;
-        this.elasticbeanstalk = elasticbeanstalk;
-        this.elasticinference = elasticinference;
-        this.elasticsearch = elasticsearch;
-        this.elasticsearchservice = elasticsearchservice;
-        this.elastictranscoder = elastictranscoder;
-        this.elb = elb;
-        this.elbv2 = elbv2;
-        this.emr = emr;
-        this.emrcontainers = emrcontainers;
-        this.es = es;
-        this.eventbridge = eventbridge;
-        this.events = events;
-        this.finspace = finspace;
-        this.finspacedata = finspacedata;
-        this.firehose = firehose;
-        this.fis = fis;
-        this.fms = fms;
-        this.forecast = forecast;
-        this.forecastquery = forecastquery;
-        this.forecastqueryservice = forecastqueryservice;
-        this.forecastservice = forecastservice;
-        this.frauddetector = frauddetector;
-        this.fsx = fsx;
-        this.gamelift = gamelift;
-        this.glacier = glacier;
-        this.globalaccelerator = globalaccelerator;
-        this.glue = glue;
-        this.gluedatabrew = gluedatabrew;
-        this.greengrass = greengrass;
-        this.greengrassv2 = greengrassv2;
-        this.groundstation = groundstation;
-        this.guardduty = guardduty;
-        this.health = health;
-        this.healthlake = healthlake;
-        this.honeycode = honeycode;
-        this.iam = iam;
-        this.identitystore = identitystore;
-        this.imagebuilder = imagebuilder;
-        this.inspector = inspector;
-        this.iot = iot;
-        this.iot1clickdevices = iot1clickdevices;
-        this.iot1clickdevicesservice = iot1clickdevicesservice;
-        this.iot1clickprojects = iot1clickprojects;
-        this.iotanalytics = iotanalytics;
-        this.iotdataplane = iotdataplane;
-        this.iotdeviceadvisor = iotdeviceadvisor;
-        this.iotevents = iotevents;
-        this.ioteventsdata = ioteventsdata;
-        this.iotfleethub = iotfleethub;
-        this.iotjobsdataplane = iotjobsdataplane;
-        this.iotsecuretunneling = iotsecuretunneling;
-        this.iotsitewise = iotsitewise;
-        this.iotthingsgraph = iotthingsgraph;
-        this.iotwireless = iotwireless;
-        this.kafka = kafka;
-        this.kafkaconnect = kafkaconnect;
-        this.kendra = kendra;
-        this.kinesis = kinesis;
-        this.kinesisanalytics = kinesisanalytics;
-        this.kinesisanalyticsv2 = kinesisanalyticsv2;
-        this.kinesisvideo = kinesisvideo;
-        this.kinesisvideoarchivedmedia = kinesisvideoarchivedmedia;
-        this.kinesisvideomedia = kinesisvideomedia;
-        this.kinesisvideosignalingchannels = kinesisvideosignalingchannels;
-        this.kms = kms;
-        this.lakeformation = lakeformation;
-        this.lambda = lambda;
-        this.lexmodelbuilding = lexmodelbuilding;
-        this.lexmodelbuildingservice = lexmodelbuildingservice;
-        this.lexmodels = lexmodels;
-        this.lexmodelsv2 = lexmodelsv2;
-        this.lexruntime = lexruntime;
-        this.lexruntimeservice = lexruntimeservice;
-        this.lexruntimev2 = lexruntimev2;
-        this.licensemanager = licensemanager;
-        this.lightsail = lightsail;
-        this.location = location;
-        this.lookoutequipment = lookoutequipment;
-        this.lookoutforvision = lookoutforvision;
-        this.lookoutmetrics = lookoutmetrics;
-        this.machinelearning = machinelearning;
-        this.macie = macie;
-        this.macie2 = macie2;
-        this.managedblockchain = managedblockchain;
-        this.marketplacecatalog = marketplacecatalog;
-        this.marketplacecommerceanalytics = marketplacecommerceanalytics;
-        this.marketplaceentitlement = marketplaceentitlement;
-        this.marketplaceentitlementservice = marketplaceentitlementservice;
-        this.marketplacemetering = marketplacemetering;
-        this.mediaconnect = mediaconnect;
-        this.mediaconvert = mediaconvert;
-        this.medialive = medialive;
-        this.mediapackage = mediapackage;
-        this.mediapackagevod = mediapackagevod;
-        this.mediastore = mediastore;
-        this.mediastoredata = mediastoredata;
-        this.mediatailor = mediatailor;
-        this.memorydb = memorydb;
-        this.mgn = mgn;
-        this.migrationhub = migrationhub;
-        this.migrationhubconfig = migrationhubconfig;
-        this.mobile = mobile;
-        this.mobileanalytics = mobileanalytics;
-        this.mq = mq;
-        this.mturk = mturk;
-        this.mwaa = mwaa;
-        this.neptune = neptune;
-        this.networkfirewall = networkfirewall;
-        this.networkmanager = networkmanager;
-        this.nimblestudio = nimblestudio;
-        this.opsworks = opsworks;
-        this.opsworkscm = opsworkscm;
-        this.organizations = organizations;
-        this.outposts = outposts;
-        this.personalize = personalize;
-        this.personalizeevents = personalizeevents;
-        this.personalizeruntime = personalizeruntime;
-        this.pi = pi;
-        this.pinpoint = pinpoint;
-        this.pinpointemail = pinpointemail;
-        this.pinpointsmsvoice = pinpointsmsvoice;
-        this.polly = polly;
-        this.pricing = pricing;
-        this.prometheus = prometheus;
-        this.prometheusservice = prometheusservice;
-        this.proton = proton;
-        this.qldb = qldb;
-        this.qldbsession = qldbsession;
-        this.quicksight = quicksight;
-        this.ram = ram;
-        this.rds = rds;
-        this.rdsdata = rdsdata;
-        this.rdsdataservice = rdsdataservice;
-        this.redshift = redshift;
-        this.redshiftdata = redshiftdata;
-        this.rekognition = rekognition;
-        this.resourcegroups = resourcegroups;
-        this.resourcegroupstagging = resourcegroupstagging;
-        this.resourcegroupstaggingapi = resourcegroupstaggingapi;
-        this.robomaker = robomaker;
-        this.route53 = route53;
-        this.route53domains = route53domains;
-        this.route53recoverycontrolconfig = route53recoverycontrolconfig;
-        this.route53recoveryreadiness = route53recoveryreadiness;
-        this.route53resolver = route53resolver;
-        this.s3 = s3;
-        this.s3control = s3control;
-        this.s3outposts = s3outposts;
-        this.sagemaker = sagemaker;
-        this.sagemakeredgemanager = sagemakeredgemanager;
-        this.sagemakerfeaturestoreruntime = sagemakerfeaturestoreruntime;
-        this.sagemakerruntime = sagemakerruntime;
-        this.savingsplans = savingsplans;
+    @InputImport(name="schemas")
+      private @Nullable String schemas;
+
+    public Optional<String> getSchemas() {
+        return this.schemas == null ? Optional.empty() : Optional.ofNullable(this.schemas);
     }
+
+    @InputImport(name="sdb")
+      private @Nullable String sdb;
+
+    public Optional<String> getSdb() {
+        return this.sdb == null ? Optional.empty() : Optional.ofNullable(this.sdb);
+    }
+
+    @InputImport(name="secretsmanager")
+      private @Nullable String secretsmanager;
+
+    public Optional<String> getSecretsmanager() {
+        return this.secretsmanager == null ? Optional.empty() : Optional.ofNullable(this.secretsmanager);
+    }
+
+    @InputImport(name="securityhub")
+      private @Nullable String securityhub;
+
+    public Optional<String> getSecurityhub() {
+        return this.securityhub == null ? Optional.empty() : Optional.ofNullable(this.securityhub);
+    }
+
+    @InputImport(name="serverlessapplicationrepository")
+      private @Nullable String serverlessapplicationrepository;
+
+    public Optional<String> getServerlessapplicationrepository() {
+        return this.serverlessapplicationrepository == null ? Optional.empty() : Optional.ofNullable(this.serverlessapplicationrepository);
+    }
+
+    @InputImport(name="serverlessapprepo")
+      private @Nullable String serverlessapprepo;
+
+    public Optional<String> getServerlessapprepo() {
+        return this.serverlessapprepo == null ? Optional.empty() : Optional.ofNullable(this.serverlessapprepo);
+    }
+
+    @InputImport(name="serverlessrepo")
+      private @Nullable String serverlessrepo;
+
+    public Optional<String> getServerlessrepo() {
+        return this.serverlessrepo == null ? Optional.empty() : Optional.ofNullable(this.serverlessrepo);
+    }
+
+    @InputImport(name="servicecatalog")
+      private @Nullable String servicecatalog;
+
+    public Optional<String> getServicecatalog() {
+        return this.servicecatalog == null ? Optional.empty() : Optional.ofNullable(this.servicecatalog);
+    }
+
+    @InputImport(name="servicediscovery")
+      private @Nullable String servicediscovery;
+
+    public Optional<String> getServicediscovery() {
+        return this.servicediscovery == null ? Optional.empty() : Optional.ofNullable(this.servicediscovery);
+    }
+
+    @InputImport(name="servicequotas")
+      private @Nullable String servicequotas;
+
+    public Optional<String> getServicequotas() {
+        return this.servicequotas == null ? Optional.empty() : Optional.ofNullable(this.servicequotas);
+    }
+
+    @InputImport(name="ses")
+      private @Nullable String ses;
+
+    public Optional<String> getSes() {
+        return this.ses == null ? Optional.empty() : Optional.ofNullable(this.ses);
+    }
+
+    @InputImport(name="sesv2")
+      private @Nullable String sesv2;
+
+    public Optional<String> getSesv2() {
+        return this.sesv2 == null ? Optional.empty() : Optional.ofNullable(this.sesv2);
+    }
+
+    @InputImport(name="sfn")
+      private @Nullable String sfn;
+
+    public Optional<String> getSfn() {
+        return this.sfn == null ? Optional.empty() : Optional.ofNullable(this.sfn);
+    }
+
+    @InputImport(name="shield")
+      private @Nullable String shield;
+
+    public Optional<String> getShield() {
+        return this.shield == null ? Optional.empty() : Optional.ofNullable(this.shield);
+    }
+
+    @InputImport(name="signer")
+      private @Nullable String signer;
+
+    public Optional<String> getSigner() {
+        return this.signer == null ? Optional.empty() : Optional.ofNullable(this.signer);
+    }
+
+    @InputImport(name="simpledb")
+      private @Nullable String simpledb;
+
+    public Optional<String> getSimpledb() {
+        return this.simpledb == null ? Optional.empty() : Optional.ofNullable(this.simpledb);
+    }
+
+    @InputImport(name="sms")
+      private @Nullable String sms;
+
+    public Optional<String> getSms() {
+        return this.sms == null ? Optional.empty() : Optional.ofNullable(this.sms);
+    }
+
+    @InputImport(name="snowball")
+      private @Nullable String snowball;
+
+    public Optional<String> getSnowball() {
+        return this.snowball == null ? Optional.empty() : Optional.ofNullable(this.snowball);
+    }
+
+    @InputImport(name="sns")
+      private @Nullable String sns;
+
+    public Optional<String> getSns() {
+        return this.sns == null ? Optional.empty() : Optional.ofNullable(this.sns);
+    }
+
+    @InputImport(name="sqs")
+      private @Nullable String sqs;
+
+    public Optional<String> getSqs() {
+        return this.sqs == null ? Optional.empty() : Optional.ofNullable(this.sqs);
+    }
+
+    @InputImport(name="ssm")
+      private @Nullable String ssm;
+
+    public Optional<String> getSsm() {
+        return this.ssm == null ? Optional.empty() : Optional.ofNullable(this.ssm);
+    }
+
+    @InputImport(name="ssmcontacts")
+      private @Nullable String ssmcontacts;
+
+    public Optional<String> getSsmcontacts() {
+        return this.ssmcontacts == null ? Optional.empty() : Optional.ofNullable(this.ssmcontacts);
+    }
+
+    @InputImport(name="ssmincidents")
+      private @Nullable String ssmincidents;
+
+    public Optional<String> getSsmincidents() {
+        return this.ssmincidents == null ? Optional.empty() : Optional.ofNullable(this.ssmincidents);
+    }
+
+    @InputImport(name="sso")
+      private @Nullable String sso;
+
+    public Optional<String> getSso() {
+        return this.sso == null ? Optional.empty() : Optional.ofNullable(this.sso);
+    }
+
+    @InputImport(name="ssoadmin")
+      private @Nullable String ssoadmin;
+
+    public Optional<String> getSsoadmin() {
+        return this.ssoadmin == null ? Optional.empty() : Optional.ofNullable(this.ssoadmin);
+    }
+
+    @InputImport(name="ssooidc")
+      private @Nullable String ssooidc;
+
+    public Optional<String> getSsooidc() {
+        return this.ssooidc == null ? Optional.empty() : Optional.ofNullable(this.ssooidc);
+    }
+
+    @InputImport(name="stepfunctions")
+      private @Nullable String stepfunctions;
+
+    public Optional<String> getStepfunctions() {
+        return this.stepfunctions == null ? Optional.empty() : Optional.ofNullable(this.stepfunctions);
+    }
+
+    @InputImport(name="storagegateway")
+      private @Nullable String storagegateway;
+
+    public Optional<String> getStoragegateway() {
+        return this.storagegateway == null ? Optional.empty() : Optional.ofNullable(this.storagegateway);
+    }
+
+    @InputImport(name="sts")
+      private @Nullable String sts;
+
+    public Optional<String> getSts() {
+        return this.sts == null ? Optional.empty() : Optional.ofNullable(this.sts);
+    }
+
+    @InputImport(name="support")
+      private @Nullable String support;
+
+    public Optional<String> getSupport() {
+        return this.support == null ? Optional.empty() : Optional.ofNullable(this.support);
+    }
+
+    @InputImport(name="swf")
+      private @Nullable String swf;
+
+    public Optional<String> getSwf() {
+        return this.swf == null ? Optional.empty() : Optional.ofNullable(this.swf);
+    }
+
+    @InputImport(name="synthetics")
+      private @Nullable String synthetics;
+
+    public Optional<String> getSynthetics() {
+        return this.synthetics == null ? Optional.empty() : Optional.ofNullable(this.synthetics);
+    }
+
+    @InputImport(name="textract")
+      private @Nullable String textract;
+
+    public Optional<String> getTextract() {
+        return this.textract == null ? Optional.empty() : Optional.ofNullable(this.textract);
+    }
+
+    @InputImport(name="timestreamquery")
+      private @Nullable String timestreamquery;
+
+    public Optional<String> getTimestreamquery() {
+        return this.timestreamquery == null ? Optional.empty() : Optional.ofNullable(this.timestreamquery);
+    }
+
+    @InputImport(name="timestreamwrite")
+      private @Nullable String timestreamwrite;
+
+    public Optional<String> getTimestreamwrite() {
+        return this.timestreamwrite == null ? Optional.empty() : Optional.ofNullable(this.timestreamwrite);
+    }
+
+    @InputImport(name="transcribe")
+      private @Nullable String transcribe;
+
+    public Optional<String> getTranscribe() {
+        return this.transcribe == null ? Optional.empty() : Optional.ofNullable(this.transcribe);
+    }
+
+    @InputImport(name="transcribeservice")
+      private @Nullable String transcribeservice;
+
+    public Optional<String> getTranscribeservice() {
+        return this.transcribeservice == null ? Optional.empty() : Optional.ofNullable(this.transcribeservice);
+    }
+
+    @InputImport(name="transcribestreaming")
+      private @Nullable String transcribestreaming;
+
+    public Optional<String> getTranscribestreaming() {
+        return this.transcribestreaming == null ? Optional.empty() : Optional.ofNullable(this.transcribestreaming);
+    }
+
+    @InputImport(name="transcribestreamingservice")
+      private @Nullable String transcribestreamingservice;
+
+    public Optional<String> getTranscribestreamingservice() {
+        return this.transcribestreamingservice == null ? Optional.empty() : Optional.ofNullable(this.transcribestreamingservice);
+    }
+
+    @InputImport(name="transfer")
+      private @Nullable String transfer;
+
+    public Optional<String> getTransfer() {
+        return this.transfer == null ? Optional.empty() : Optional.ofNullable(this.transfer);
+    }
+
+    @InputImport(name="translate")
+      private @Nullable String translate;
+
+    public Optional<String> getTranslate() {
+        return this.translate == null ? Optional.empty() : Optional.ofNullable(this.translate);
+    }
+
+    @InputImport(name="waf")
+      private @Nullable String waf;
+
+    public Optional<String> getWaf() {
+        return this.waf == null ? Optional.empty() : Optional.ofNullable(this.waf);
+    }
+
+    @InputImport(name="wafregional")
+      private @Nullable String wafregional;
+
+    public Optional<String> getWafregional() {
+        return this.wafregional == null ? Optional.empty() : Optional.ofNullable(this.wafregional);
+    }
+
+    @InputImport(name="wafv2")
+      private @Nullable String wafv2;
+
+    public Optional<String> getWafv2() {
+        return this.wafv2 == null ? Optional.empty() : Optional.ofNullable(this.wafv2);
+    }
+
+    @InputImport(name="wellarchitected")
+      private @Nullable String wellarchitected;
+
+    public Optional<String> getWellarchitected() {
+        return this.wellarchitected == null ? Optional.empty() : Optional.ofNullable(this.wellarchitected);
+    }
+
+    @InputImport(name="workdocs")
+      private @Nullable String workdocs;
+
+    public Optional<String> getWorkdocs() {
+        return this.workdocs == null ? Optional.empty() : Optional.ofNullable(this.workdocs);
+    }
+
+    @InputImport(name="worklink")
+      private @Nullable String worklink;
+
+    public Optional<String> getWorklink() {
+        return this.worklink == null ? Optional.empty() : Optional.ofNullable(this.worklink);
+    }
+
+    @InputImport(name="workmail")
+      private @Nullable String workmail;
+
+    public Optional<String> getWorkmail() {
+        return this.workmail == null ? Optional.empty() : Optional.ofNullable(this.workmail);
+    }
+
+    @InputImport(name="workmailmessageflow")
+      private @Nullable String workmailmessageflow;
+
+    public Optional<String> getWorkmailmessageflow() {
+        return this.workmailmessageflow == null ? Optional.empty() : Optional.ofNullable(this.workmailmessageflow);
+    }
+
+    @InputImport(name="workspaces")
+      private @Nullable String workspaces;
+
+    public Optional<String> getWorkspaces() {
+        return this.workspaces == null ? Optional.empty() : Optional.ofNullable(this.workspaces);
+    }
+
+    @InputImport(name="xray")
+      private @Nullable String xray;
+
+    public Optional<String> getXray() {
+        return this.xray == null ? Optional.empty() : Optional.ofNullable(this.xray);
+    }
+
 
     private Endpoints() {
         this.accessanalyzer = null;
@@ -2518,6 +2373,57 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
         this.sagemakerfeaturestoreruntime = null;
         this.sagemakerruntime = null;
         this.savingsplans = null;
+        this.schemas = null;
+        this.sdb = null;
+        this.secretsmanager = null;
+        this.securityhub = null;
+        this.serverlessapplicationrepository = null;
+        this.serverlessapprepo = null;
+        this.serverlessrepo = null;
+        this.servicecatalog = null;
+        this.servicediscovery = null;
+        this.servicequotas = null;
+        this.ses = null;
+        this.sesv2 = null;
+        this.sfn = null;
+        this.shield = null;
+        this.signer = null;
+        this.simpledb = null;
+        this.sms = null;
+        this.snowball = null;
+        this.sns = null;
+        this.sqs = null;
+        this.ssm = null;
+        this.ssmcontacts = null;
+        this.ssmincidents = null;
+        this.sso = null;
+        this.ssoadmin = null;
+        this.ssooidc = null;
+        this.stepfunctions = null;
+        this.storagegateway = null;
+        this.sts = null;
+        this.support = null;
+        this.swf = null;
+        this.synthetics = null;
+        this.textract = null;
+        this.timestreamquery = null;
+        this.timestreamwrite = null;
+        this.transcribe = null;
+        this.transcribeservice = null;
+        this.transcribestreaming = null;
+        this.transcribestreamingservice = null;
+        this.transfer = null;
+        this.translate = null;
+        this.waf = null;
+        this.wafregional = null;
+        this.wafv2 = null;
+        this.wellarchitected = null;
+        this.workdocs = null;
+        this.worklink = null;
+        this.workmail = null;
+        this.workmailmessageflow = null;
+        this.workspaces = null;
+        this.xray = null;
     }
 
     public static Builder builder() {
@@ -2779,6 +2685,57 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
         private @Nullable String sagemakerfeaturestoreruntime;
         private @Nullable String sagemakerruntime;
         private @Nullable String savingsplans;
+        private @Nullable String schemas;
+        private @Nullable String sdb;
+        private @Nullable String secretsmanager;
+        private @Nullable String securityhub;
+        private @Nullable String serverlessapplicationrepository;
+        private @Nullable String serverlessapprepo;
+        private @Nullable String serverlessrepo;
+        private @Nullable String servicecatalog;
+        private @Nullable String servicediscovery;
+        private @Nullable String servicequotas;
+        private @Nullable String ses;
+        private @Nullable String sesv2;
+        private @Nullable String sfn;
+        private @Nullable String shield;
+        private @Nullable String signer;
+        private @Nullable String simpledb;
+        private @Nullable String sms;
+        private @Nullable String snowball;
+        private @Nullable String sns;
+        private @Nullable String sqs;
+        private @Nullable String ssm;
+        private @Nullable String ssmcontacts;
+        private @Nullable String ssmincidents;
+        private @Nullable String sso;
+        private @Nullable String ssoadmin;
+        private @Nullable String ssooidc;
+        private @Nullable String stepfunctions;
+        private @Nullable String storagegateway;
+        private @Nullable String sts;
+        private @Nullable String support;
+        private @Nullable String swf;
+        private @Nullable String synthetics;
+        private @Nullable String textract;
+        private @Nullable String timestreamquery;
+        private @Nullable String timestreamwrite;
+        private @Nullable String transcribe;
+        private @Nullable String transcribeservice;
+        private @Nullable String transcribestreaming;
+        private @Nullable String transcribestreamingservice;
+        private @Nullable String transfer;
+        private @Nullable String translate;
+        private @Nullable String waf;
+        private @Nullable String wafregional;
+        private @Nullable String wafv2;
+        private @Nullable String wellarchitected;
+        private @Nullable String workdocs;
+        private @Nullable String worklink;
+        private @Nullable String workmail;
+        private @Nullable String workmailmessageflow;
+        private @Nullable String workspaces;
+        private @Nullable String xray;
 
         public Builder() {
     	      // Empty
@@ -3036,6 +2993,57 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
     	      this.sagemakerfeaturestoreruntime = defaults.sagemakerfeaturestoreruntime;
     	      this.sagemakerruntime = defaults.sagemakerruntime;
     	      this.savingsplans = defaults.savingsplans;
+    	      this.schemas = defaults.schemas;
+    	      this.sdb = defaults.sdb;
+    	      this.secretsmanager = defaults.secretsmanager;
+    	      this.securityhub = defaults.securityhub;
+    	      this.serverlessapplicationrepository = defaults.serverlessapplicationrepository;
+    	      this.serverlessapprepo = defaults.serverlessapprepo;
+    	      this.serverlessrepo = defaults.serverlessrepo;
+    	      this.servicecatalog = defaults.servicecatalog;
+    	      this.servicediscovery = defaults.servicediscovery;
+    	      this.servicequotas = defaults.servicequotas;
+    	      this.ses = defaults.ses;
+    	      this.sesv2 = defaults.sesv2;
+    	      this.sfn = defaults.sfn;
+    	      this.shield = defaults.shield;
+    	      this.signer = defaults.signer;
+    	      this.simpledb = defaults.simpledb;
+    	      this.sms = defaults.sms;
+    	      this.snowball = defaults.snowball;
+    	      this.sns = defaults.sns;
+    	      this.sqs = defaults.sqs;
+    	      this.ssm = defaults.ssm;
+    	      this.ssmcontacts = defaults.ssmcontacts;
+    	      this.ssmincidents = defaults.ssmincidents;
+    	      this.sso = defaults.sso;
+    	      this.ssoadmin = defaults.ssoadmin;
+    	      this.ssooidc = defaults.ssooidc;
+    	      this.stepfunctions = defaults.stepfunctions;
+    	      this.storagegateway = defaults.storagegateway;
+    	      this.sts = defaults.sts;
+    	      this.support = defaults.support;
+    	      this.swf = defaults.swf;
+    	      this.synthetics = defaults.synthetics;
+    	      this.textract = defaults.textract;
+    	      this.timestreamquery = defaults.timestreamquery;
+    	      this.timestreamwrite = defaults.timestreamwrite;
+    	      this.transcribe = defaults.transcribe;
+    	      this.transcribeservice = defaults.transcribeservice;
+    	      this.transcribestreaming = defaults.transcribestreaming;
+    	      this.transcribestreamingservice = defaults.transcribestreamingservice;
+    	      this.transfer = defaults.transfer;
+    	      this.translate = defaults.translate;
+    	      this.waf = defaults.waf;
+    	      this.wafregional = defaults.wafregional;
+    	      this.wafv2 = defaults.wafv2;
+    	      this.wellarchitected = defaults.wellarchitected;
+    	      this.workdocs = defaults.workdocs;
+    	      this.worklink = defaults.worklink;
+    	      this.workmail = defaults.workmail;
+    	      this.workmailmessageflow = defaults.workmailmessageflow;
+    	      this.workspaces = defaults.workspaces;
+    	      this.xray = defaults.xray;
         }
 
         public Builder setAccessanalyzer(@Nullable String accessanalyzer) {
@@ -4288,8 +4296,565 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        public Builder setSchemas(@Nullable String schemas) {
+            this.schemas = schemas;
+            return this;
+        }
+
+        public Builder setSdb(@Nullable String sdb) {
+            this.sdb = sdb;
+            return this;
+        }
+
+        public Builder setSecretsmanager(@Nullable String secretsmanager) {
+            this.secretsmanager = secretsmanager;
+            return this;
+        }
+
+        public Builder setSecurityhub(@Nullable String securityhub) {
+            this.securityhub = securityhub;
+            return this;
+        }
+
+        public Builder setServerlessapplicationrepository(@Nullable String serverlessapplicationrepository) {
+            this.serverlessapplicationrepository = serverlessapplicationrepository;
+            return this;
+        }
+
+        public Builder setServerlessapprepo(@Nullable String serverlessapprepo) {
+            this.serverlessapprepo = serverlessapprepo;
+            return this;
+        }
+
+        public Builder setServerlessrepo(@Nullable String serverlessrepo) {
+            this.serverlessrepo = serverlessrepo;
+            return this;
+        }
+
+        public Builder setServicecatalog(@Nullable String servicecatalog) {
+            this.servicecatalog = servicecatalog;
+            return this;
+        }
+
+        public Builder setServicediscovery(@Nullable String servicediscovery) {
+            this.servicediscovery = servicediscovery;
+            return this;
+        }
+
+        public Builder setServicequotas(@Nullable String servicequotas) {
+            this.servicequotas = servicequotas;
+            return this;
+        }
+
+        public Builder setSes(@Nullable String ses) {
+            this.ses = ses;
+            return this;
+        }
+
+        public Builder setSesv2(@Nullable String sesv2) {
+            this.sesv2 = sesv2;
+            return this;
+        }
+
+        public Builder setSfn(@Nullable String sfn) {
+            this.sfn = sfn;
+            return this;
+        }
+
+        public Builder setShield(@Nullable String shield) {
+            this.shield = shield;
+            return this;
+        }
+
+        public Builder setSigner(@Nullable String signer) {
+            this.signer = signer;
+            return this;
+        }
+
+        public Builder setSimpledb(@Nullable String simpledb) {
+            this.simpledb = simpledb;
+            return this;
+        }
+
+        public Builder setSms(@Nullable String sms) {
+            this.sms = sms;
+            return this;
+        }
+
+        public Builder setSnowball(@Nullable String snowball) {
+            this.snowball = snowball;
+            return this;
+        }
+
+        public Builder setSns(@Nullable String sns) {
+            this.sns = sns;
+            return this;
+        }
+
+        public Builder setSqs(@Nullable String sqs) {
+            this.sqs = sqs;
+            return this;
+        }
+
+        public Builder setSsm(@Nullable String ssm) {
+            this.ssm = ssm;
+            return this;
+        }
+
+        public Builder setSsmcontacts(@Nullable String ssmcontacts) {
+            this.ssmcontacts = ssmcontacts;
+            return this;
+        }
+
+        public Builder setSsmincidents(@Nullable String ssmincidents) {
+            this.ssmincidents = ssmincidents;
+            return this;
+        }
+
+        public Builder setSso(@Nullable String sso) {
+            this.sso = sso;
+            return this;
+        }
+
+        public Builder setSsoadmin(@Nullable String ssoadmin) {
+            this.ssoadmin = ssoadmin;
+            return this;
+        }
+
+        public Builder setSsooidc(@Nullable String ssooidc) {
+            this.ssooidc = ssooidc;
+            return this;
+        }
+
+        public Builder setStepfunctions(@Nullable String stepfunctions) {
+            this.stepfunctions = stepfunctions;
+            return this;
+        }
+
+        public Builder setStoragegateway(@Nullable String storagegateway) {
+            this.storagegateway = storagegateway;
+            return this;
+        }
+
+        public Builder setSts(@Nullable String sts) {
+            this.sts = sts;
+            return this;
+        }
+
+        public Builder setSupport(@Nullable String support) {
+            this.support = support;
+            return this;
+        }
+
+        public Builder setSwf(@Nullable String swf) {
+            this.swf = swf;
+            return this;
+        }
+
+        public Builder setSynthetics(@Nullable String synthetics) {
+            this.synthetics = synthetics;
+            return this;
+        }
+
+        public Builder setTextract(@Nullable String textract) {
+            this.textract = textract;
+            return this;
+        }
+
+        public Builder setTimestreamquery(@Nullable String timestreamquery) {
+            this.timestreamquery = timestreamquery;
+            return this;
+        }
+
+        public Builder setTimestreamwrite(@Nullable String timestreamwrite) {
+            this.timestreamwrite = timestreamwrite;
+            return this;
+        }
+
+        public Builder setTranscribe(@Nullable String transcribe) {
+            this.transcribe = transcribe;
+            return this;
+        }
+
+        public Builder setTranscribeservice(@Nullable String transcribeservice) {
+            this.transcribeservice = transcribeservice;
+            return this;
+        }
+
+        public Builder setTranscribestreaming(@Nullable String transcribestreaming) {
+            this.transcribestreaming = transcribestreaming;
+            return this;
+        }
+
+        public Builder setTranscribestreamingservice(@Nullable String transcribestreamingservice) {
+            this.transcribestreamingservice = transcribestreamingservice;
+            return this;
+        }
+
+        public Builder setTransfer(@Nullable String transfer) {
+            this.transfer = transfer;
+            return this;
+        }
+
+        public Builder setTranslate(@Nullable String translate) {
+            this.translate = translate;
+            return this;
+        }
+
+        public Builder setWaf(@Nullable String waf) {
+            this.waf = waf;
+            return this;
+        }
+
+        public Builder setWafregional(@Nullable String wafregional) {
+            this.wafregional = wafregional;
+            return this;
+        }
+
+        public Builder setWafv2(@Nullable String wafv2) {
+            this.wafv2 = wafv2;
+            return this;
+        }
+
+        public Builder setWellarchitected(@Nullable String wellarchitected) {
+            this.wellarchitected = wellarchitected;
+            return this;
+        }
+
+        public Builder setWorkdocs(@Nullable String workdocs) {
+            this.workdocs = workdocs;
+            return this;
+        }
+
+        public Builder setWorklink(@Nullable String worklink) {
+            this.worklink = worklink;
+            return this;
+        }
+
+        public Builder setWorkmail(@Nullable String workmail) {
+            this.workmail = workmail;
+            return this;
+        }
+
+        public Builder setWorkmailmessageflow(@Nullable String workmailmessageflow) {
+            this.workmailmessageflow = workmailmessageflow;
+            return this;
+        }
+
+        public Builder setWorkspaces(@Nullable String workspaces) {
+            this.workspaces = workspaces;
+            return this;
+        }
+
+        public Builder setXray(@Nullable String xray) {
+            this.xray = xray;
+            return this;
+        }
         public Endpoints build() {
-            return new Endpoints(accessanalyzer, account, acm, acmpca, alexaforbusiness, amp, amplify, amplifybackend, apigateway, apigatewayv2, appautoscaling, appconfig, appflow, appintegrations, appintegrationsservice, applicationautoscaling, applicationcostprofiler, applicationdiscovery, applicationdiscoveryservice, applicationinsights, appmesh, appregistry, apprunner, appstream, appsync, athena, auditmanager, augmentedairuntime, autoscaling, autoscalingplans, backup, batch, braket, budgets, chime, cloud9, cloudcontrol, cloudcontrolapi, clouddirectory, cloudformation, cloudfront, cloudhsm, cloudhsmv2, cloudsearch, cloudsearchdomain, cloudtrail, cloudwatch, cloudwatchevents, cloudwatchlogs, codeartifact, codebuild, codecommit, codedeploy, codeguruprofiler, codegurureviewer, codepipeline, codestar, codestarconnections, codestarnotifications, cognitoidentity, cognitoidentityprovider, cognitoidp, cognitosync, comprehend, comprehendmedical, config, configservice, connect, connectcontactlens, connectparticipant, costandusagereportservice, costexplorer, cur, databasemigration, databasemigrationservice, dataexchange, datapipeline, datasync, dax, detective, devicefarm, devopsguru, directconnect, dlm, dms, docdb, ds, dynamodb, dynamodbstreams, ec2, ec2instanceconnect, ecr, ecrpublic, ecs, efs, eks, elasticache, elasticbeanstalk, elasticinference, elasticsearch, elasticsearchservice, elastictranscoder, elb, elbv2, emr, emrcontainers, es, eventbridge, events, finspace, finspacedata, firehose, fis, fms, forecast, forecastquery, forecastqueryservice, forecastservice, frauddetector, fsx, gamelift, glacier, globalaccelerator, glue, gluedatabrew, greengrass, greengrassv2, groundstation, guardduty, health, healthlake, honeycode, iam, identitystore, imagebuilder, inspector, iot, iot1clickdevices, iot1clickdevicesservice, iot1clickprojects, iotanalytics, iotdataplane, iotdeviceadvisor, iotevents, ioteventsdata, iotfleethub, iotjobsdataplane, iotsecuretunneling, iotsitewise, iotthingsgraph, iotwireless, kafka, kafkaconnect, kendra, kinesis, kinesisanalytics, kinesisanalyticsv2, kinesisvideo, kinesisvideoarchivedmedia, kinesisvideomedia, kinesisvideosignalingchannels, kms, lakeformation, lambda, lexmodelbuilding, lexmodelbuildingservice, lexmodels, lexmodelsv2, lexruntime, lexruntimeservice, lexruntimev2, licensemanager, lightsail, location, lookoutequipment, lookoutforvision, lookoutmetrics, machinelearning, macie, macie2, managedblockchain, marketplacecatalog, marketplacecommerceanalytics, marketplaceentitlement, marketplaceentitlementservice, marketplacemetering, mediaconnect, mediaconvert, medialive, mediapackage, mediapackagevod, mediastore, mediastoredata, mediatailor, memorydb, mgn, migrationhub, migrationhubconfig, mobile, mobileanalytics, mq, mturk, mwaa, neptune, networkfirewall, networkmanager, nimblestudio, opsworks, opsworkscm, organizations, outposts, personalize, personalizeevents, personalizeruntime, pi, pinpoint, pinpointemail, pinpointsmsvoice, polly, pricing, prometheus, prometheusservice, proton, qldb, qldbsession, quicksight, ram, rds, rdsdata, rdsdataservice, redshift, redshiftdata, rekognition, resourcegroups, resourcegroupstagging, resourcegroupstaggingapi, robomaker, route53, route53domains, route53recoverycontrolconfig, route53recoveryreadiness, route53resolver, s3, s3control, s3outposts, sagemaker, sagemakeredgemanager, sagemakerfeaturestoreruntime, sagemakerruntime, savingsplans);
+            final var built = new Endpoints();
+
+            built.accessanalyzer = accessanalyzer;
+            built.account = account;
+            built.acm = acm;
+            built.acmpca = acmpca;
+            built.alexaforbusiness = alexaforbusiness;
+            built.amp = amp;
+            built.amplify = amplify;
+            built.amplifybackend = amplifybackend;
+            built.apigateway = apigateway;
+            built.apigatewayv2 = apigatewayv2;
+            built.appautoscaling = appautoscaling;
+            built.appconfig = appconfig;
+            built.appflow = appflow;
+            built.appintegrations = appintegrations;
+            built.appintegrationsservice = appintegrationsservice;
+            built.applicationautoscaling = applicationautoscaling;
+            built.applicationcostprofiler = applicationcostprofiler;
+            built.applicationdiscovery = applicationdiscovery;
+            built.applicationdiscoveryservice = applicationdiscoveryservice;
+            built.applicationinsights = applicationinsights;
+            built.appmesh = appmesh;
+            built.appregistry = appregistry;
+            built.apprunner = apprunner;
+            built.appstream = appstream;
+            built.appsync = appsync;
+            built.athena = athena;
+            built.auditmanager = auditmanager;
+            built.augmentedairuntime = augmentedairuntime;
+            built.autoscaling = autoscaling;
+            built.autoscalingplans = autoscalingplans;
+            built.backup = backup;
+            built.batch = batch;
+            built.braket = braket;
+            built.budgets = budgets;
+            built.chime = chime;
+            built.cloud9 = cloud9;
+            built.cloudcontrol = cloudcontrol;
+            built.cloudcontrolapi = cloudcontrolapi;
+            built.clouddirectory = clouddirectory;
+            built.cloudformation = cloudformation;
+            built.cloudfront = cloudfront;
+            built.cloudhsm = cloudhsm;
+            built.cloudhsmv2 = cloudhsmv2;
+            built.cloudsearch = cloudsearch;
+            built.cloudsearchdomain = cloudsearchdomain;
+            built.cloudtrail = cloudtrail;
+            built.cloudwatch = cloudwatch;
+            built.cloudwatchevents = cloudwatchevents;
+            built.cloudwatchlogs = cloudwatchlogs;
+            built.codeartifact = codeartifact;
+            built.codebuild = codebuild;
+            built.codecommit = codecommit;
+            built.codedeploy = codedeploy;
+            built.codeguruprofiler = codeguruprofiler;
+            built.codegurureviewer = codegurureviewer;
+            built.codepipeline = codepipeline;
+            built.codestar = codestar;
+            built.codestarconnections = codestarconnections;
+            built.codestarnotifications = codestarnotifications;
+            built.cognitoidentity = cognitoidentity;
+            built.cognitoidentityprovider = cognitoidentityprovider;
+            built.cognitoidp = cognitoidp;
+            built.cognitosync = cognitosync;
+            built.comprehend = comprehend;
+            built.comprehendmedical = comprehendmedical;
+            built.config = config;
+            built.configservice = configservice;
+            built.connect = connect;
+            built.connectcontactlens = connectcontactlens;
+            built.connectparticipant = connectparticipant;
+            built.costandusagereportservice = costandusagereportservice;
+            built.costexplorer = costexplorer;
+            built.cur = cur;
+            built.databasemigration = databasemigration;
+            built.databasemigrationservice = databasemigrationservice;
+            built.dataexchange = dataexchange;
+            built.datapipeline = datapipeline;
+            built.datasync = datasync;
+            built.dax = dax;
+            built.detective = detective;
+            built.devicefarm = devicefarm;
+            built.devopsguru = devopsguru;
+            built.directconnect = directconnect;
+            built.dlm = dlm;
+            built.dms = dms;
+            built.docdb = docdb;
+            built.ds = ds;
+            built.dynamodb = dynamodb;
+            built.dynamodbstreams = dynamodbstreams;
+            built.ec2 = ec2;
+            built.ec2instanceconnect = ec2instanceconnect;
+            built.ecr = ecr;
+            built.ecrpublic = ecrpublic;
+            built.ecs = ecs;
+            built.efs = efs;
+            built.eks = eks;
+            built.elasticache = elasticache;
+            built.elasticbeanstalk = elasticbeanstalk;
+            built.elasticinference = elasticinference;
+            built.elasticsearch = elasticsearch;
+            built.elasticsearchservice = elasticsearchservice;
+            built.elastictranscoder = elastictranscoder;
+            built.elb = elb;
+            built.elbv2 = elbv2;
+            built.emr = emr;
+            built.emrcontainers = emrcontainers;
+            built.es = es;
+            built.eventbridge = eventbridge;
+            built.events = events;
+            built.finspace = finspace;
+            built.finspacedata = finspacedata;
+            built.firehose = firehose;
+            built.fis = fis;
+            built.fms = fms;
+            built.forecast = forecast;
+            built.forecastquery = forecastquery;
+            built.forecastqueryservice = forecastqueryservice;
+            built.forecastservice = forecastservice;
+            built.frauddetector = frauddetector;
+            built.fsx = fsx;
+            built.gamelift = gamelift;
+            built.glacier = glacier;
+            built.globalaccelerator = globalaccelerator;
+            built.glue = glue;
+            built.gluedatabrew = gluedatabrew;
+            built.greengrass = greengrass;
+            built.greengrassv2 = greengrassv2;
+            built.groundstation = groundstation;
+            built.guardduty = guardduty;
+            built.health = health;
+            built.healthlake = healthlake;
+            built.honeycode = honeycode;
+            built.iam = iam;
+            built.identitystore = identitystore;
+            built.imagebuilder = imagebuilder;
+            built.inspector = inspector;
+            built.iot = iot;
+            built.iot1clickdevices = iot1clickdevices;
+            built.iot1clickdevicesservice = iot1clickdevicesservice;
+            built.iot1clickprojects = iot1clickprojects;
+            built.iotanalytics = iotanalytics;
+            built.iotdataplane = iotdataplane;
+            built.iotdeviceadvisor = iotdeviceadvisor;
+            built.iotevents = iotevents;
+            built.ioteventsdata = ioteventsdata;
+            built.iotfleethub = iotfleethub;
+            built.iotjobsdataplane = iotjobsdataplane;
+            built.iotsecuretunneling = iotsecuretunneling;
+            built.iotsitewise = iotsitewise;
+            built.iotthingsgraph = iotthingsgraph;
+            built.iotwireless = iotwireless;
+            built.kafka = kafka;
+            built.kafkaconnect = kafkaconnect;
+            built.kendra = kendra;
+            built.kinesis = kinesis;
+            built.kinesisanalytics = kinesisanalytics;
+            built.kinesisanalyticsv2 = kinesisanalyticsv2;
+            built.kinesisvideo = kinesisvideo;
+            built.kinesisvideoarchivedmedia = kinesisvideoarchivedmedia;
+            built.kinesisvideomedia = kinesisvideomedia;
+            built.kinesisvideosignalingchannels = kinesisvideosignalingchannels;
+            built.kms = kms;
+            built.lakeformation = lakeformation;
+            built.lambda = lambda;
+            built.lexmodelbuilding = lexmodelbuilding;
+            built.lexmodelbuildingservice = lexmodelbuildingservice;
+            built.lexmodels = lexmodels;
+            built.lexmodelsv2 = lexmodelsv2;
+            built.lexruntime = lexruntime;
+            built.lexruntimeservice = lexruntimeservice;
+            built.lexruntimev2 = lexruntimev2;
+            built.licensemanager = licensemanager;
+            built.lightsail = lightsail;
+            built.location = location;
+            built.lookoutequipment = lookoutequipment;
+            built.lookoutforvision = lookoutforvision;
+            built.lookoutmetrics = lookoutmetrics;
+            built.machinelearning = machinelearning;
+            built.macie = macie;
+            built.macie2 = macie2;
+            built.managedblockchain = managedblockchain;
+            built.marketplacecatalog = marketplacecatalog;
+            built.marketplacecommerceanalytics = marketplacecommerceanalytics;
+            built.marketplaceentitlement = marketplaceentitlement;
+            built.marketplaceentitlementservice = marketplaceentitlementservice;
+            built.marketplacemetering = marketplacemetering;
+            built.mediaconnect = mediaconnect;
+            built.mediaconvert = mediaconvert;
+            built.medialive = medialive;
+            built.mediapackage = mediapackage;
+            built.mediapackagevod = mediapackagevod;
+            built.mediastore = mediastore;
+            built.mediastoredata = mediastoredata;
+            built.mediatailor = mediatailor;
+            built.memorydb = memorydb;
+            built.mgn = mgn;
+            built.migrationhub = migrationhub;
+            built.migrationhubconfig = migrationhubconfig;
+            built.mobile = mobile;
+            built.mobileanalytics = mobileanalytics;
+            built.mq = mq;
+            built.mturk = mturk;
+            built.mwaa = mwaa;
+            built.neptune = neptune;
+            built.networkfirewall = networkfirewall;
+            built.networkmanager = networkmanager;
+            built.nimblestudio = nimblestudio;
+            built.opsworks = opsworks;
+            built.opsworkscm = opsworkscm;
+            built.organizations = organizations;
+            built.outposts = outposts;
+            built.personalize = personalize;
+            built.personalizeevents = personalizeevents;
+            built.personalizeruntime = personalizeruntime;
+            built.pi = pi;
+            built.pinpoint = pinpoint;
+            built.pinpointemail = pinpointemail;
+            built.pinpointsmsvoice = pinpointsmsvoice;
+            built.polly = polly;
+            built.pricing = pricing;
+            built.prometheus = prometheus;
+            built.prometheusservice = prometheusservice;
+            built.proton = proton;
+            built.qldb = qldb;
+            built.qldbsession = qldbsession;
+            built.quicksight = quicksight;
+            built.ram = ram;
+            built.rds = rds;
+            built.rdsdata = rdsdata;
+            built.rdsdataservice = rdsdataservice;
+            built.redshift = redshift;
+            built.redshiftdata = redshiftdata;
+            built.rekognition = rekognition;
+            built.resourcegroups = resourcegroups;
+            built.resourcegroupstagging = resourcegroupstagging;
+            built.resourcegroupstaggingapi = resourcegroupstaggingapi;
+            built.robomaker = robomaker;
+            built.route53 = route53;
+            built.route53domains = route53domains;
+            built.route53recoverycontrolconfig = route53recoverycontrolconfig;
+            built.route53recoveryreadiness = route53recoveryreadiness;
+            built.route53resolver = route53resolver;
+            built.s3 = s3;
+            built.s3control = s3control;
+            built.s3outposts = s3outposts;
+            built.sagemaker = sagemaker;
+            built.sagemakeredgemanager = sagemakeredgemanager;
+            built.sagemakerfeaturestoreruntime = sagemakerfeaturestoreruntime;
+            built.sagemakerruntime = sagemakerruntime;
+            built.savingsplans = savingsplans;
+            built.schemas = schemas;
+            built.sdb = sdb;
+            built.secretsmanager = secretsmanager;
+            built.securityhub = securityhub;
+            built.serverlessapplicationrepository = serverlessapplicationrepository;
+            built.serverlessapprepo = serverlessapprepo;
+            built.serverlessrepo = serverlessrepo;
+            built.servicecatalog = servicecatalog;
+            built.servicediscovery = servicediscovery;
+            built.servicequotas = servicequotas;
+            built.ses = ses;
+            built.sesv2 = sesv2;
+            built.sfn = sfn;
+            built.shield = shield;
+            built.signer = signer;
+            built.simpledb = simpledb;
+            built.sms = sms;
+            built.snowball = snowball;
+            built.sns = sns;
+            built.sqs = sqs;
+            built.ssm = ssm;
+            built.ssmcontacts = ssmcontacts;
+            built.ssmincidents = ssmincidents;
+            built.sso = sso;
+            built.ssoadmin = ssoadmin;
+            built.ssooidc = ssooidc;
+            built.stepfunctions = stepfunctions;
+            built.storagegateway = storagegateway;
+            built.sts = sts;
+            built.support = support;
+            built.swf = swf;
+            built.synthetics = synthetics;
+            built.textract = textract;
+            built.timestreamquery = timestreamquery;
+            built.timestreamwrite = timestreamwrite;
+            built.transcribe = transcribe;
+            built.transcribeservice = transcribeservice;
+            built.transcribestreaming = transcribestreaming;
+            built.transcribestreamingservice = transcribestreamingservice;
+            built.transfer = transfer;
+            built.translate = translate;
+            built.waf = waf;
+            built.wafregional = wafregional;
+            built.wafv2 = wafv2;
+            built.wellarchitected = wellarchitected;
+            built.workdocs = workdocs;
+            built.worklink = worklink;
+            built.workmail = workmail;
+            built.workmailmessageflow = workmailmessageflow;
+            built.workspaces = workspaces;
+            built.xray = xray;
+            return built;
         }
     }
 }

@@ -96,7 +96,6 @@ public final class SchedulingNodeAffinityResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public SchedulingNodeAffinityResponse build() {
             return new SchedulingNodeAffinityResponse(key, operator, values);
         }

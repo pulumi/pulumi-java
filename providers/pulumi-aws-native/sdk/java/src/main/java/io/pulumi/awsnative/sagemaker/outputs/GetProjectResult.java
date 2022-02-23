@@ -125,7 +125,6 @@ public final class GetProjectResult {
             this.serviceCatalogProvisionedProductDetails = serviceCatalogProvisionedProductDetails;
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(creationTime, projectArn, projectId, projectStatus, serviceCatalogProvisionedProductDetails);
         }

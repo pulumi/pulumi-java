@@ -160,7 +160,6 @@ public final class DescriptionResponse {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
         }
-
         public DescriptionResponse build() {
             return new DescriptionResponse(attributes, descriptionType, keywords, links, longDescription, shortDescription);
         }

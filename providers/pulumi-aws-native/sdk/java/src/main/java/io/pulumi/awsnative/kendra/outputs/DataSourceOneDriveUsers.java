@@ -62,7 +62,6 @@ public final class DataSourceOneDriveUsers {
             this.oneDriveUserS3Path = oneDriveUserS3Path;
             return this;
         }
-
         public DataSourceOneDriveUsers build() {
             return new DataSourceOneDriveUsers(oneDriveUserList, oneDriveUserS3Path);
         }

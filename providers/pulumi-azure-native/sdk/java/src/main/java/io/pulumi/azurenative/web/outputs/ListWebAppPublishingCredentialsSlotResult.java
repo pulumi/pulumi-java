@@ -223,7 +223,6 @@ public final class ListWebAppPublishingCredentialsSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppPublishingCredentialsSlotResult build() {
             return new ListWebAppPublishingCredentialsSlotResult(id, kind, name, publishingPassword, publishingPasswordHash, publishingPasswordHashSalt, publishingUserName, scmUri, type);
         }

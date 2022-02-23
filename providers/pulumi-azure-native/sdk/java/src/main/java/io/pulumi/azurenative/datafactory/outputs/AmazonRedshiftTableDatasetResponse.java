@@ -252,7 +252,6 @@ public final class AmazonRedshiftTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AmazonRedshiftTableDatasetResponse build() {
             return new AmazonRedshiftTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

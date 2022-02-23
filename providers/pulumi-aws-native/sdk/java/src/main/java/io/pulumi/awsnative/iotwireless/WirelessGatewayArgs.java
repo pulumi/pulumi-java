@@ -22,7 +22,7 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="lastUplinkReceivedAt")
-    private final @Nullable Input<String> lastUplinkReceivedAt;
+        private final @Nullable Input<String> lastUplinkReceivedAt;
 
     public Input<String> getLastUplinkReceivedAt() {
         return this.lastUplinkReceivedAt == null ? Input.empty() : this.lastUplinkReceivedAt;
@@ -44,7 +44,7 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="loRaWAN", required=true)
-    private final Input<WirelessGatewayLoRaWANGatewayArgs> loRaWAN;
+        private final Input<WirelessGatewayLoRaWANGatewayArgs> loRaWAN;
 
     public Input<WirelessGatewayLoRaWANGatewayArgs> getLoRaWAN() {
         return this.loRaWAN;
@@ -55,7 +55,7 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<WirelessGatewayTagArgs>> tags;
+        private final @Nullable Input<List<WirelessGatewayTagArgs>> tags;
 
     public Input<List<WirelessGatewayTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="thingArn")
-    private final @Nullable Input<String> thingArn;
+        private final @Nullable Input<String> thingArn;
 
     public Input<String> getThingArn() {
         return this.thingArn == null ? Input.empty() : this.thingArn;
@@ -196,7 +196,6 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
             this.thingArn = Input.ofNullable(thingArn);
             return this;
         }
-
         public WirelessGatewayArgs build() {
             return new WirelessGatewayArgs(description, lastUplinkReceivedAt, loRaWAN, name, tags, thingArn);
         }

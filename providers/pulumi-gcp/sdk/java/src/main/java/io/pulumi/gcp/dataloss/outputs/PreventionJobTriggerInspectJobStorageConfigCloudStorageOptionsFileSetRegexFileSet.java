@@ -105,7 +105,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             this.includeRegexes = includeRegexes;
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet build() {
             return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet(bucketName, excludeRegexes, includeRegexes);
         }

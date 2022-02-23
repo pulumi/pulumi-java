@@ -99,7 +99,6 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
             this.sizeDisk = Objects.requireNonNull(sizeDisk);
             return this;
         }
-
         public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse build() {
             return new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse(description, kind, sizeDisk);
         }

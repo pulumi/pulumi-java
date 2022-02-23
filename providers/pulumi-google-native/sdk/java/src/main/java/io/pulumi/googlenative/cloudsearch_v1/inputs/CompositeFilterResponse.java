@@ -19,7 +19,7 @@ public final class CompositeFilterResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="logicOperator", required=true)
-    private final String logicOperator;
+      private final String logicOperator;
 
     public String getLogicOperator() {
         return this.logicOperator;
@@ -30,7 +30,7 @@ public final class CompositeFilterResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="subFilters", required=true)
-    private final List<FilterResponse> subFilters;
+      private final List<FilterResponse> subFilters;
 
     public List<FilterResponse> getSubFilters() {
         return this.subFilters;
@@ -79,7 +79,6 @@ public final class CompositeFilterResponse extends io.pulumi.resources.InvokeArg
             this.subFilters = Objects.requireNonNull(subFilters);
             return this;
         }
-
         public CompositeFilterResponse build() {
             return new CompositeFilterResponse(logicOperator, subFilters);
         }

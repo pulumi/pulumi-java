@@ -54,7 +54,6 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersRe
             this.contentLinkDefinition = contentLinkDefinition;
             return this;
         }
-
         public IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse build() {
             return new IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse(contentLinkDefinition);
         }

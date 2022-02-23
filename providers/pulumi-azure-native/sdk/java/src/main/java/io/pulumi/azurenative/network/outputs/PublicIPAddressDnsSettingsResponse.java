@@ -97,7 +97,6 @@ public final class PublicIPAddressDnsSettingsResponse {
             this.reverseFqdn = reverseFqdn;
             return this;
         }
-
         public PublicIPAddressDnsSettingsResponse build() {
             return new PublicIPAddressDnsSettingsResponse(domainNameLabel, fqdn, reverseFqdn);
         }

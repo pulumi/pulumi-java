@@ -101,7 +101,6 @@ public final class SkuLocationInfoResponse {
             this.zones = zones;
             return this;
         }
-
         public SkuLocationInfoResponse build() {
             return new SkuLocationInfoResponse(extendedLocations, location, type, zoneDetails, zones);
         }

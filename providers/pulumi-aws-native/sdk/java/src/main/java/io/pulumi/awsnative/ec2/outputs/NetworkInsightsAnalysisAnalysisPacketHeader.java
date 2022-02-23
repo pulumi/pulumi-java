@@ -101,7 +101,6 @@ public final class NetworkInsightsAnalysisAnalysisPacketHeader {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisPacketHeader build() {
             return new NetworkInsightsAnalysisAnalysisPacketHeader(destinationAddresses, destinationPortRanges, protocol, sourceAddresses, sourcePortRanges);
         }

@@ -150,7 +150,6 @@ public final class ContainerPort {
             this.protocol = protocol;
             return this;
         }
-
         public ContainerPort build() {
             return new ContainerPort(containerPort, hostIP, hostPort, name, protocol);
         }

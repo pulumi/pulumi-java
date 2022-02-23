@@ -78,7 +78,6 @@ public final class TagSettingsPropertiesResponse {
             this.tags = tags;
             return this;
         }
-
         public TagSettingsPropertiesResponse build() {
             return new TagSettingsPropertiesResponse(filterOperator, tags);
         }

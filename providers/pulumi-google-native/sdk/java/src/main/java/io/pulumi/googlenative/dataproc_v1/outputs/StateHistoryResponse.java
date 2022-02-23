@@ -95,7 +95,6 @@ public final class StateHistoryResponse {
             this.stateStartTime = Objects.requireNonNull(stateStartTime);
             return this;
         }
-
         public StateHistoryResponse build() {
             return new StateHistoryResponse(state, stateMessage, stateStartTime);
         }

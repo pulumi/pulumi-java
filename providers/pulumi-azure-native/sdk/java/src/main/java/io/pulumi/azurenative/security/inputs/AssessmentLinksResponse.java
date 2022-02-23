@@ -21,7 +21,7 @@ public final class AssessmentLinksResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="azurePortalUri", required=true)
-    private final String azurePortalUri;
+        private final String azurePortalUri;
 
     public String getAzurePortalUri() {
         return this.azurePortalUri;
@@ -59,7 +59,6 @@ public final class AssessmentLinksResponse extends io.pulumi.resources.InvokeArg
             this.azurePortalUri = Objects.requireNonNull(azurePortalUri);
             return this;
         }
-
         public AssessmentLinksResponse build() {
             return new AssessmentLinksResponse(azurePortalUri);
         }

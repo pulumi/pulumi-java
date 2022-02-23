@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoArgs extends io.pulumi
      * 
      */
     @InputImport(name="placeIds")
-    private final @Nullable Input<List<String>> placeIds;
+      private final @Nullable Input<List<String>> placeIds;
 
     public Input<List<String>> getPlaceIds() {
         return this.placeIds == null ? Input.empty() : this.placeIds;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoArgs extends io.pulumi
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -94,7 +94,6 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoArgs extends io.pulumi
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public GoogleCloudRetailV2alphaFulfillmentInfoArgs build() {
             return new GoogleCloudRetailV2alphaFulfillmentInfoArgs(placeIds, type);
         }

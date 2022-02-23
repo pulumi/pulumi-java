@@ -118,7 +118,6 @@ public final class PrincipalResponse {
             this.type = type;
             return this;
         }
-
         public PrincipalResponse build() {
             return new PrincipalResponse(displayName, email, id, type);
         }

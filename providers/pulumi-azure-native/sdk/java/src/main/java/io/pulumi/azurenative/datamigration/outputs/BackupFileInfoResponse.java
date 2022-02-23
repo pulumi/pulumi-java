@@ -98,7 +98,6 @@ public final class BackupFileInfoResponse {
             this.status = status;
             return this;
         }
-
         public BackupFileInfoResponse build() {
             return new BackupFileInfoResponse(familySequenceNumber, fileLocation, status);
         }

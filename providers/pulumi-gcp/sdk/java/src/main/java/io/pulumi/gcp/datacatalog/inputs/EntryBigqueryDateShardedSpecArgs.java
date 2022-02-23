@@ -16,21 +16,21 @@ public final class EntryBigqueryDateShardedSpecArgs extends io.pulumi.resources.
     public static final EntryBigqueryDateShardedSpecArgs Empty = new EntryBigqueryDateShardedSpecArgs();
 
     @InputImport(name="dataset")
-    private final @Nullable Input<String> dataset;
+        private final @Nullable Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
     }
 
     @InputImport(name="shardCount")
-    private final @Nullable Input<Integer> shardCount;
+        private final @Nullable Input<Integer> shardCount;
 
     public Input<Integer> getShardCount() {
         return this.shardCount == null ? Input.empty() : this.shardCount;
     }
 
     @InputImport(name="tablePrefix")
-    private final @Nullable Input<String> tablePrefix;
+        private final @Nullable Input<String> tablePrefix;
 
     public Input<String> getTablePrefix() {
         return this.tablePrefix == null ? Input.empty() : this.tablePrefix;
@@ -104,7 +104,6 @@ public final class EntryBigqueryDateShardedSpecArgs extends io.pulumi.resources.
             this.tablePrefix = Input.ofNullable(tablePrefix);
             return this;
         }
-
         public EntryBigqueryDateShardedSpecArgs build() {
             return new EntryBigqueryDateShardedSpecArgs(dataset, shardCount, tablePrefix);
         }

@@ -268,7 +268,6 @@ public final class GetQueueResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetQueueResult build() {
             return new GetQueueResult(appEngineHttpQueue, name, purgeTime, rateLimits, retryConfig, stackdriverLoggingConfig, state, stats, taskTtl, tombstoneTtl, type);
         }

@@ -487,7 +487,6 @@ public final class GetNoteResult {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
         }
-
         public GetNoteResult build() {
             return new GetNoteResult(attestationAuthority, baseImage, build, createTime, deployable, discovery, expirationTime, intoto, kind, longDescription, name, $package, relatedNoteNames, relatedUrl, sbom, shortDescription, spdxFile, spdxPackage, spdxRelationship, updateTime, vulnerability);
         }

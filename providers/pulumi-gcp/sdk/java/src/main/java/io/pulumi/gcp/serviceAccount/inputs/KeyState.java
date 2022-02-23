@@ -21,7 +21,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-    private final @Nullable Input<Map<String,Object>> keepers;
+        private final @Nullable Input<Map<String,Object>> keepers;
 
     public Input<Map<String,Object>> getKeepers() {
         return this.keepers == null ? Input.empty() : this.keepers;
@@ -35,7 +35,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyAlgorithm")
-    private final @Nullable Input<String> keyAlgorithm;
+        private final @Nullable Input<String> keyAlgorithm;
 
     public Input<String> getKeyAlgorithm() {
         return this.keyAlgorithm == null ? Input.empty() : this.keyAlgorithm;
@@ -46,7 +46,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+        private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -69,7 +69,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKeyType")
-    private final @Nullable Input<String> privateKeyType;
+        private final @Nullable Input<String> privateKeyType;
 
     public Input<String> getPrivateKeyType() {
         return this.privateKeyType == null ? Input.empty() : this.privateKeyType;
@@ -80,7 +80,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<String> publicKey;
+        private final @Nullable Input<String> publicKey;
 
     public Input<String> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;
@@ -91,7 +91,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeyData")
-    private final @Nullable Input<String> publicKeyData;
+        private final @Nullable Input<String> publicKeyData;
 
     public Input<String> getPublicKeyData() {
         return this.publicKeyData == null ? Input.empty() : this.publicKeyData;
@@ -102,7 +102,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeyType")
-    private final @Nullable Input<String> publicKeyType;
+        private final @Nullable Input<String> publicKeyType;
 
     public Input<String> getPublicKeyType() {
         return this.publicKeyType == null ? Input.empty() : this.publicKeyType;
@@ -115,7 +115,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountId")
-    private final @Nullable Input<String> serviceAccountId;
+        private final @Nullable Input<String> serviceAccountId;
 
     public Input<String> getServiceAccountId() {
         return this.serviceAccountId == null ? Input.empty() : this.serviceAccountId;
@@ -126,7 +126,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validAfter")
-    private final @Nullable Input<String> validAfter;
+        private final @Nullable Input<String> validAfter;
 
     public Input<String> getValidAfter() {
         return this.validAfter == null ? Input.empty() : this.validAfter;
@@ -138,7 +138,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validBefore")
-    private final @Nullable Input<String> validBefore;
+        private final @Nullable Input<String> validBefore;
 
     public Input<String> getValidBefore() {
         return this.validBefore == null ? Input.empty() : this.validBefore;
@@ -332,7 +332,6 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
             this.validBefore = Input.ofNullable(validBefore);
             return this;
         }
-
         public KeyState build() {
             return new KeyState(keepers, keyAlgorithm, name, privateKey, privateKeyType, publicKey, publicKeyData, publicKeyType, serviceAccountId, validAfter, validBefore);
         }

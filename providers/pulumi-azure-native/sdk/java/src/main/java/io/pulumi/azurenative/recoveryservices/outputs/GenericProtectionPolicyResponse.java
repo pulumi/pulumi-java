@@ -144,7 +144,6 @@ public final class GenericProtectionPolicyResponse {
             this.timeZone = timeZone;
             return this;
         }
-
         public GenericProtectionPolicyResponse build() {
             return new GenericProtectionPolicyResponse(backupManagementType, fabricName, protectedItemsCount, subProtectionPolicy, timeZone);
         }

@@ -95,7 +95,6 @@ public final class CreatedByResponse {
             this.puid = Objects.requireNonNull(puid);
             return this;
         }
-
         public CreatedByResponse build() {
             return new CreatedByResponse(applicationId, oid, puid);
         }

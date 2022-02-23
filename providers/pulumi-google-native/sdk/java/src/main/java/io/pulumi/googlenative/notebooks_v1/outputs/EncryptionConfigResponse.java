@@ -52,7 +52,6 @@ public final class EncryptionConfigResponse {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
-
         public EncryptionConfigResponse build() {
             return new EncryptionConfigResponse(kmsKey);
         }

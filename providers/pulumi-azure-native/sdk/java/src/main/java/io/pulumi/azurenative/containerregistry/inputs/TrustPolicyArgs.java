@@ -26,7 +26,7 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,PolicyStatus>> status;
+        private final @Nullable Input<Either<String,PolicyStatus>> status;
 
     public Input<Either<String,PolicyStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -37,7 +37,7 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,TrustPolicyType>> type;
+        private final @Nullable Input<Either<String,TrustPolicyType>> type;
 
     public Input<Either<String,TrustPolicyType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -96,7 +96,6 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public TrustPolicyArgs build() {
             return new TrustPolicyArgs(status, type);
         }

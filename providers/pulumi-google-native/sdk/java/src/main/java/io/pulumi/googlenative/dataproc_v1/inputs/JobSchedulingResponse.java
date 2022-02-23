@@ -21,7 +21,7 @@ public final class JobSchedulingResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="maxFailuresPerHour", required=true)
-    private final Integer maxFailuresPerHour;
+      private final Integer maxFailuresPerHour;
 
     public Integer getMaxFailuresPerHour() {
         return this.maxFailuresPerHour;
@@ -32,7 +32,7 @@ public final class JobSchedulingResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="maxFailuresTotal", required=true)
-    private final Integer maxFailuresTotal;
+      private final Integer maxFailuresTotal;
 
     public Integer getMaxFailuresTotal() {
         return this.maxFailuresTotal;
@@ -81,7 +81,6 @@ public final class JobSchedulingResponse extends io.pulumi.resources.InvokeArgs 
             this.maxFailuresTotal = Objects.requireNonNull(maxFailuresTotal);
             return this;
         }
-
         public JobSchedulingResponse build() {
             return new JobSchedulingResponse(maxFailuresPerHour, maxFailuresTotal);
         }

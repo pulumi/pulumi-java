@@ -116,7 +116,6 @@ public final class IosDeviceResponse {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }
-
         public IosDeviceResponse build() {
             return new IosDeviceResponse(iosModelId, iosVersionId, locale, orientation);
         }

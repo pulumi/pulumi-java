@@ -23,7 +23,7 @@ public final class PipelineJobErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="code")
-    private final @Nullable String code;
+        private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -34,7 +34,7 @@ public final class PipelineJobErrorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+        private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -83,7 +83,6 @@ public final class PipelineJobErrorResponse extends io.pulumi.resources.InvokeAr
             this.message = message;
             return this;
         }
-
         public PipelineJobErrorResponse build() {
             return new PipelineJobErrorResponse(code, message);
         }

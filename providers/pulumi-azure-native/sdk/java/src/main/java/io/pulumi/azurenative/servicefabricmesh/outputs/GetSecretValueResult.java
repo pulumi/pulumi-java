@@ -182,7 +182,6 @@ public final class GetSecretValueResult {
             this.value = value;
             return this;
         }
-
         public GetSecretValueResult build() {
             return new GetSecretValueResult(id, location, name, provisioningState, tags, type, value);
         }

@@ -140,7 +140,6 @@ public final class MabContainerExtendedInfoResponse {
             this.policyName = policyName;
             return this;
         }
-
         public MabContainerExtendedInfoResponse build() {
             return new MabContainerExtendedInfoResponse(backupItemType, backupItems, lastBackupStatus, lastRefreshedAt, policyName);
         }

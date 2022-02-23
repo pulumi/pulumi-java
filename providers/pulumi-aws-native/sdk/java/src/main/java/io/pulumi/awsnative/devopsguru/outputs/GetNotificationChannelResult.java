@@ -54,7 +54,6 @@ public final class GetNotificationChannelResult {
             this.id = id;
             return this;
         }
-
         public GetNotificationChannelResult build() {
             return new GetNotificationChannelResult(id);
         }

@@ -19,7 +19,7 @@ public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<TagsArgs> properties;
+        private final Input<TagsArgs> properties;
 
     public Input<TagsArgs> getProperties() {
         return this.properties;
@@ -30,7 +30,7 @@ public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -89,7 +89,6 @@ public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public TagAtScopeArgs build() {
             return new TagAtScopeArgs(properties, scope);
         }

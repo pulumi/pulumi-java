@@ -267,7 +267,6 @@ public final class GetPeeringServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPeeringServiceResult build() {
             return new GetPeeringServiceResult(id, location, name, peeringServiceLocation, peeringServiceProvider, providerBackupPeeringLocation, providerPrimaryPeeringLocation, provisioningState, sku, tags, type);
         }

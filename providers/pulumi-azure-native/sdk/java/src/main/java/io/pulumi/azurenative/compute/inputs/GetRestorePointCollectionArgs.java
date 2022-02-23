@@ -19,7 +19,7 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="restorePointCollectionName", required=true)
-    private final String restorePointCollectionName;
+        private final String restorePointCollectionName;
 
     public String getRestorePointCollectionName() {
         return this.restorePointCollectionName;
@@ -100,7 +100,6 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
             this.restorePointCollectionName = Objects.requireNonNull(restorePointCollectionName);
             return this;
         }
-
         public GetRestorePointCollectionArgs build() {
             return new GetRestorePointCollectionArgs(expand, resourceGroupName, restorePointCollectionName);
         }

@@ -109,7 +109,6 @@ public final class RouterNatSubnetwork {
             this.sourceIpRangesToNats = Objects.requireNonNull(sourceIpRangesToNats);
             return this;
         }
-
         public RouterNatSubnetwork build() {
             return new RouterNatSubnetwork(name, secondaryIpRangeNames, sourceIpRangesToNats);
         }

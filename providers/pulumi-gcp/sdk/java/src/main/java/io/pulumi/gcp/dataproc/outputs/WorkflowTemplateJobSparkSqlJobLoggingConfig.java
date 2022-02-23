@@ -54,7 +54,6 @@ public final class WorkflowTemplateJobSparkSqlJobLoggingConfig {
             this.driverLogLevels = driverLogLevels;
             return this;
         }
-
         public WorkflowTemplateJobSparkSqlJobLoggingConfig build() {
             return new WorkflowTemplateJobSparkSqlJobLoggingConfig(driverLogLevels);
         }

@@ -225,7 +225,6 @@ public final class PrivateLinkServiceConnectionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public PrivateLinkServiceConnectionResponse build() {
             return new PrivateLinkServiceConnectionResponse(etag, groupIds, id, name, privateLinkServiceConnectionState, privateLinkServiceId, provisioningState, requestMessage, type);
         }

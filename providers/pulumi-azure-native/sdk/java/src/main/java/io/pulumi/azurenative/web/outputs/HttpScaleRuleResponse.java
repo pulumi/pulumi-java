@@ -78,7 +78,6 @@ public final class HttpScaleRuleResponse {
             this.metadata = metadata;
             return this;
         }
-
         public HttpScaleRuleResponse build() {
             return new HttpScaleRuleResponse(auth, metadata);
         }

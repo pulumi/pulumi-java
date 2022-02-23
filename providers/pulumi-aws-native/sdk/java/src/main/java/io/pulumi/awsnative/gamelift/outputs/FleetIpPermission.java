@@ -118,7 +118,6 @@ public final class FleetIpPermission {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
-
         public FleetIpPermission build() {
             return new FleetIpPermission(fromPort, ipRange, protocol, toPort);
         }

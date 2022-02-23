@@ -99,7 +99,6 @@ public final class OfficeDataConnectorDataTypesResponse {
             this.teams = teams;
             return this;
         }
-
         public OfficeDataConnectorDataTypesResponse build() {
             return new OfficeDataConnectorDataTypesResponse(exchange, sharePoint, teams);
         }

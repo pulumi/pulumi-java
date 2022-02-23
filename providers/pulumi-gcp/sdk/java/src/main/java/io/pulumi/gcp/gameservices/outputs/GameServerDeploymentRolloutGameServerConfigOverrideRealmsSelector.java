@@ -54,7 +54,6 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
             this.realms = realms;
             return this;
         }
-
         public GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector build() {
             return new GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(realms);
         }

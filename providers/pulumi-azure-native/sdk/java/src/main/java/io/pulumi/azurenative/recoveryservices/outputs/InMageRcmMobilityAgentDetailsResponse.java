@@ -222,7 +222,6 @@ public final class InMageRcmMobilityAgentDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public InMageRcmMobilityAgentDetailsResponse build() {
             return new InMageRcmMobilityAgentDetailsResponse(agentVersionExpiryDate, driverVersion, driverVersionExpiryDate, isUpgradeable, lastHeartbeatUtc, latestUpgradableVersionWithoutReboot, latestVersion, reasonsBlockingUpgrade, version);
         }

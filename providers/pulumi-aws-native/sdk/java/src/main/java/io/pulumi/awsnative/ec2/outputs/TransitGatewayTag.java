@@ -58,7 +58,6 @@ public final class TransitGatewayTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TransitGatewayTag build() {
             return new TransitGatewayTag(key, value);
         }

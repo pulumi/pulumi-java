@@ -23,7 +23,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="adminUserName", required=true)
-    private final Input<String> adminUserName;
+        private final Input<String> adminUserName;
 
     public Input<String> getAdminUserName() {
         return this.adminUserName;
@@ -34,7 +34,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="adminUserPassword")
-    private final @Nullable Input<String> adminUserPassword;
+        private final @Nullable Input<String> adminUserPassword;
 
     public Input<String> getAdminUserPassword() {
         return this.adminUserPassword == null ? Input.empty() : this.adminUserPassword;
@@ -45,7 +45,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="adminUserSshPublicKey")
-    private final @Nullable Input<String> adminUserSshPublicKey;
+        private final @Nullable Input<String> adminUserSshPublicKey;
 
     public Input<String> getAdminUserSshPublicKey() {
         return this.adminUserSshPublicKey == null ? Input.empty() : this.adminUserSshPublicKey;
@@ -119,7 +119,6 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
             this.adminUserSshPublicKey = Input.ofNullable(adminUserSshPublicKey);
             return this;
         }
-
         public UserAccountCredentialsArgs build() {
             return new UserAccountCredentialsArgs(adminUserName, adminUserPassword, adminUserSshPublicKey);
         }

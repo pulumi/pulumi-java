@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * 
      */
     @InputImport(name="footer")
-    private final @Nullable Input<String> footer;
+      private final @Nullable Input<String> footer;
 
     public Input<String> getFooter() {
         return this.footer == null ? Input.empty() : this.footer;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
     public Input<GoogleCloudDialogflowV2IntentMessageImageArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * 
      */
     @InputImport(name="openUriAction", required=true)
-    private final Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs> openUriAction;
+      private final Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs> openUriAction;
 
     public Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs> getOpenUriAction() {
         return this.openUriAction;
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -173,7 +173,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs(description, footer, image, openUriAction, title);
         }

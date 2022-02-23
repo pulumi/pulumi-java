@@ -244,7 +244,6 @@ public final class EdifactValidationSettingsResponse {
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
         }
-
         public EdifactValidationSettingsResponse build() {
             return new EdifactValidationSettingsResponse(allowLeadingAndTrailingSpacesAndZeroes, checkDuplicateGroupControlNumber, checkDuplicateInterchangeControlNumber, checkDuplicateTransactionSetControlNumber, interchangeControlNumberValidityDays, trailingSeparatorPolicy, trimLeadingAndTrailingSpacesAndZeroes, validateCharacterSet, validateEDITypes, validateXSDTypes);
         }

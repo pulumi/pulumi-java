@@ -119,7 +119,6 @@ public final class GetFunctionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFunctionResult build() {
             return new GetFunctionResult(id, name, properties, type);
         }

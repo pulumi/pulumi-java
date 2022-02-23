@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="bigqueryRoutineSpec", required=true)
-    private final GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec;
+      private final GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec;
 
     public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse getBigqueryRoutineSpec() {
         return this.bigqueryRoutineSpec;
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="definitionBody", required=true)
-    private final String definitionBody;
+      private final String definitionBody;
 
     public String getDefinitionBody() {
         return this.definitionBody;
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="language", required=true)
-    private final String language;
+      private final String language;
 
     public String getLanguage() {
         return this.language;
@@ -57,7 +57,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="returnType", required=true)
-    private final String returnType;
+      private final String returnType;
 
     public String getReturnType() {
         return this.returnType;
@@ -68,7 +68,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="routineArguments", required=true)
-    private final List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments;
+      private final List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments;
 
     public List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> getRoutineArguments() {
         return this.routineArguments;
@@ -79,7 +79,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
      * 
      */
     @InputImport(name="routineType", required=true)
-    private final String routineType;
+      private final String routineType;
 
     public String getRoutineType() {
         return this.routineType;
@@ -168,7 +168,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse extends io.pulumi
             this.routineType = Objects.requireNonNull(routineType);
             return this;
         }
-
         public GoogleCloudDatacatalogV1RoutineSpecResponse build() {
             return new GoogleCloudDatacatalogV1RoutineSpecResponse(bigqueryRoutineSpec, definitionBody, language, returnType, routineArguments, routineType);
         }

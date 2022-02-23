@@ -75,7 +75,6 @@ public final class FleetMetricAggregationType {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public FleetMetricAggregationType build() {
             return new FleetMetricAggregationType(name, values);
         }

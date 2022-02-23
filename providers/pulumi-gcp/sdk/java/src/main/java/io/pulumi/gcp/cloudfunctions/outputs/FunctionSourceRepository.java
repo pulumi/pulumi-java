@@ -68,7 +68,6 @@ public final class FunctionSourceRepository {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public FunctionSourceRepository build() {
             return new FunctionSourceRepository(deployedUrl, url);
         }

@@ -77,7 +77,6 @@ public final class PropertiesResponseEncryption {
             this.state = state;
             return this;
         }
-
         public PropertiesResponseEncryption build() {
             return new PropertiesResponseEncryption(keyVault, state);
         }

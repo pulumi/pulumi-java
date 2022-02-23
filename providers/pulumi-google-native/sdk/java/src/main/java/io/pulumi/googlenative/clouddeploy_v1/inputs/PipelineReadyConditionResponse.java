@@ -22,7 +22,7 @@ public final class PipelineReadyConditionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="status", required=true)
-    private final Boolean status;
+      private final Boolean status;
 
     public Boolean getStatus() {
         return this.status;
@@ -33,7 +33,7 @@ public final class PipelineReadyConditionResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -82,7 +82,6 @@ public final class PipelineReadyConditionResponse extends io.pulumi.resources.In
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public PipelineReadyConditionResponse build() {
             return new PipelineReadyConditionResponse(status, updateTime);
         }

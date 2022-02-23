@@ -54,7 +54,6 @@ public final class SshProfileResponse {
             this.publicKeys = publicKeys;
             return this;
         }
-
         public SshProfileResponse build() {
             return new SshProfileResponse(publicKeys);
         }

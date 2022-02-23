@@ -17,35 +17,35 @@ public final class TopicRulePutAssetPropertyValueEntryArgs extends io.pulumi.res
     public static final TopicRulePutAssetPropertyValueEntryArgs Empty = new TopicRulePutAssetPropertyValueEntryArgs();
 
     @InputImport(name="assetId")
-    private final @Nullable Input<String> assetId;
+        private final @Nullable Input<String> assetId;
 
     public Input<String> getAssetId() {
         return this.assetId == null ? Input.empty() : this.assetId;
     }
 
     @InputImport(name="entryId")
-    private final @Nullable Input<String> entryId;
+        private final @Nullable Input<String> entryId;
 
     public Input<String> getEntryId() {
         return this.entryId == null ? Input.empty() : this.entryId;
     }
 
     @InputImport(name="propertyAlias")
-    private final @Nullable Input<String> propertyAlias;
+        private final @Nullable Input<String> propertyAlias;
 
     public Input<String> getPropertyAlias() {
         return this.propertyAlias == null ? Input.empty() : this.propertyAlias;
     }
 
     @InputImport(name="propertyId")
-    private final @Nullable Input<String> propertyId;
+        private final @Nullable Input<String> propertyId;
 
     public Input<String> getPropertyId() {
         return this.propertyId == null ? Input.empty() : this.propertyId;
     }
 
     @InputImport(name="propertyValues", required=true)
-    private final Input<List<TopicRuleAssetPropertyValueArgs>> propertyValues;
+        private final Input<List<TopicRuleAssetPropertyValueArgs>> propertyValues;
 
     public Input<List<TopicRuleAssetPropertyValueArgs>> getPropertyValues() {
         return this.propertyValues;
@@ -149,7 +149,6 @@ public final class TopicRulePutAssetPropertyValueEntryArgs extends io.pulumi.res
             this.propertyValues = Input.of(Objects.requireNonNull(propertyValues));
             return this;
         }
-
         public TopicRulePutAssetPropertyValueEntryArgs build() {
             return new TopicRulePutAssetPropertyValueEntryArgs(assetId, entryId, propertyAlias, propertyId, propertyValues);
         }

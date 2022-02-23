@@ -27,7 +27,7 @@ public final class NetworkFunctionUserConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
+        private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
@@ -38,7 +38,7 @@ public final class NetworkFunctionUserConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="osProfile")
-    private final @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile;
+        private final @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile;
 
     public Optional<NetworkFunctionUserConfigurationResponseOsProfile> getOsProfile() {
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
@@ -49,7 +49,7 @@ public final class NetworkFunctionUserConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="roleName")
-    private final @Nullable String roleName;
+        private final @Nullable String roleName;
 
     public Optional<String> getRoleName() {
         return this.roleName == null ? Optional.empty() : Optional.ofNullable(this.roleName);
@@ -60,7 +60,7 @@ public final class NetworkFunctionUserConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="userDataParameters")
-    private final @Nullable Object userDataParameters;
+        private final @Nullable Object userDataParameters;
 
     public Optional<Object> getUserDataParameters() {
         return this.userDataParameters == null ? Optional.empty() : Optional.ofNullable(this.userDataParameters);
@@ -129,7 +129,6 @@ public final class NetworkFunctionUserConfigurationResponse extends io.pulumi.re
             this.userDataParameters = userDataParameters;
             return this;
         }
-
         public NetworkFunctionUserConfigurationResponse build() {
             return new NetworkFunctionUserConfigurationResponse(networkInterfaces, osProfile, roleName, userDataParameters);
         }

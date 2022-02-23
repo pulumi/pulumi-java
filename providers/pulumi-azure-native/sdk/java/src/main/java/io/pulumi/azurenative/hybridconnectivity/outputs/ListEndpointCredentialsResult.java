@@ -140,7 +140,6 @@ public final class ListEndpointCredentialsResult {
             this.namespaceNameSuffix = Objects.requireNonNull(namespaceNameSuffix);
             return this;
         }
-
         public ListEndpointCredentialsResult build() {
             return new ListEndpointCredentialsResult(accessKey, expiresOn, hybridConnectionName, namespaceName, namespaceNameSuffix);
         }

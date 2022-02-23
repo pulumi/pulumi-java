@@ -98,7 +98,6 @@ public final class StorageProfileResponse {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(diskSizeInGB, fileShareName, storageAccountResourceId);
         }

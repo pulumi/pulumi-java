@@ -183,7 +183,6 @@ public final class ResourceGroupDefinitionResponse {
             this.tags = tags;
             return this;
         }
-
         public ResourceGroupDefinitionResponse build() {
             return new ResourceGroupDefinitionResponse(dependsOn, description, displayName, location, name, strongType, tags);
         }

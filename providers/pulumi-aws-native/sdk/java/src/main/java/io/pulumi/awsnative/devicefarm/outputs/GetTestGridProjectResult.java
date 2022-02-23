@@ -88,7 +88,6 @@ public final class GetTestGridProjectResult {
             this.tags = tags;
             return this;
         }
-
         public GetTestGridProjectResult build() {
             return new GetTestGridProjectResult(arn, description, name, tags);
         }

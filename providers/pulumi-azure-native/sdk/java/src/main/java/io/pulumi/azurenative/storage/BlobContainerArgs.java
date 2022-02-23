@@ -22,7 +22,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable Input<String> containerName;
+        private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -44,7 +44,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultEncryptionScope")
-    private final @Nullable Input<String> defaultEncryptionScope;
+        private final @Nullable Input<String> defaultEncryptionScope;
 
     public Input<String> getDefaultEncryptionScope() {
         return this.defaultEncryptionScope == null ? Input.empty() : this.defaultEncryptionScope;
@@ -55,7 +55,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="denyEncryptionScopeOverride")
-    private final @Nullable Input<Boolean> denyEncryptionScopeOverride;
+        private final @Nullable Input<Boolean> denyEncryptionScopeOverride;
 
     public Input<Boolean> getDenyEncryptionScopeOverride() {
         return this.denyEncryptionScopeOverride == null ? Input.empty() : this.denyEncryptionScopeOverride;
@@ -66,7 +66,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -77,7 +77,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicAccess")
-    private final @Nullable Input<PublicAccess> publicAccess;
+        private final @Nullable Input<PublicAccess> publicAccess;
 
     public Input<PublicAccess> getPublicAccess() {
         return this.publicAccess == null ? Input.empty() : this.publicAccess;
@@ -88,7 +88,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -222,7 +222,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public BlobContainerArgs build() {
             return new BlobContainerArgs(accountName, containerName, defaultEncryptionScope, denyEncryptionScopeOverride, metadata, publicAccess, resourceGroupName);
         }

@@ -75,7 +75,6 @@ public final class ManagedInstancePecPropertyResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public ManagedInstancePecPropertyResponse build() {
             return new ManagedInstancePecPropertyResponse(id, properties);
         }

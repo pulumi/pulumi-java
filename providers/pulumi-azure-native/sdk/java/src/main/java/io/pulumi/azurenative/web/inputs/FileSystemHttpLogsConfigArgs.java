@@ -24,7 +24,7 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -37,7 +37,7 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retentionInDays")
-    private final @Nullable Input<Integer> retentionInDays;
+        private final @Nullable Input<Integer> retentionInDays;
 
     public Input<Integer> getRetentionInDays() {
         return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
@@ -50,7 +50,7 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retentionInMb")
-    private final @Nullable Input<Integer> retentionInMb;
+        private final @Nullable Input<Integer> retentionInMb;
 
     public Input<Integer> getRetentionInMb() {
         return this.retentionInMb == null ? Input.empty() : this.retentionInMb;
@@ -124,7 +124,6 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
             this.retentionInMb = Input.ofNullable(retentionInMb);
             return this;
         }
-
         public FileSystemHttpLogsConfigArgs build() {
             return new FileSystemHttpLogsConfigArgs(enabled, retentionInDays, retentionInMb);
         }

@@ -141,7 +141,6 @@ public final class MonthlyScheduleResponse {
             this.usedBytes = usedBytes;
             return this;
         }
-
         public MonthlyScheduleResponse build() {
             return new MonthlyScheduleResponse(daysOfMonth, hour, minute, snapshotsToKeep, usedBytes);
         }

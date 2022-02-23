@@ -17,7 +17,7 @@ public final class GetCassandraClusterArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+        private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetCassandraClusterArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetCassandraClusterArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetCassandraClusterArgs build() {
             return new GetCassandraClusterArgs(clusterName, resourceGroupName);
         }

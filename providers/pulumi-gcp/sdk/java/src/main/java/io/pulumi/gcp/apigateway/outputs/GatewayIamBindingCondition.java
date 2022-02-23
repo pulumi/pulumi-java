@@ -73,7 +73,6 @@ public final class GatewayIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GatewayIamBindingCondition build() {
             return new GatewayIamBindingCondition(description, expression, title);
         }

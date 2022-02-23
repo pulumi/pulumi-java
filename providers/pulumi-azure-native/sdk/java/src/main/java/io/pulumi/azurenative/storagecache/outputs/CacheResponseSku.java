@@ -54,7 +54,6 @@ public final class CacheResponseSku {
             this.name = name;
             return this;
         }
-
         public CacheResponseSku build() {
             return new CacheResponseSku(name);
         }

@@ -33,7 +33,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+        private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -52,7 +52,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="commands")
-    private final @Nullable Input<List<String>> commands;
+        private final @Nullable Input<List<String>> commands;
 
     public Input<List<String>> getCommands() {
         return this.commands == null ? Input.empty() : this.commands;
@@ -74,7 +74,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @InputImport(name="envFroms")
-    private final @Nullable Input<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms;
+        private final @Nullable Input<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
     public Input<List<ServiceTemplateSpecContainerEnvFromArgs>> getEnvFroms() {
@@ -87,7 +87,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="envs")
-    private final @Nullable Input<List<ServiceTemplateSpecContainerEnvArgs>> envs;
+        private final @Nullable Input<List<ServiceTemplateSpecContainerEnvArgs>> envs;
 
     public Input<List<ServiceTemplateSpecContainerEnvArgs>> getEnvs() {
         return this.envs == null ? Input.empty() : this.envs;
@@ -100,7 +100,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="image", required=true)
-    private final Input<String> image;
+        private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
@@ -114,7 +114,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<ServiceTemplateSpecContainerPortArgs>> ports;
+        private final @Nullable Input<List<ServiceTemplateSpecContainerPortArgs>> ports;
 
     public Input<List<ServiceTemplateSpecContainerPortArgs>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -128,7 +128,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<ServiceTemplateSpecContainerResourcesArgs> resources;
+        private final @Nullable Input<ServiceTemplateSpecContainerResourcesArgs> resources;
 
     public Input<ServiceTemplateSpecContainerResourcesArgs> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -141,7 +141,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="volumeMounts")
-    private final @Nullable Input<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts;
+        private final @Nullable Input<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts;
 
     public Input<List<ServiceTemplateSpecContainerVolumeMountArgs>> getVolumeMounts() {
         return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
@@ -160,7 +160,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @InputImport(name="workingDir")
-    private final @Nullable Input<String> workingDir;
+        private final @Nullable Input<String> workingDir;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
     public Input<String> getWorkingDir() {
@@ -325,7 +325,6 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
             this.workingDir = Input.ofNullable(workingDir);
             return this;
         }
-
         public ServiceTemplateSpecContainerArgs build() {
             return new ServiceTemplateSpecContainerArgs(args, commands, envFroms, envs, image, ports, resources, volumeMounts, workingDir);
         }

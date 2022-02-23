@@ -25,7 +25,7 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="datastoreId")
-    private final @Nullable String datastoreId;
+        private final @Nullable String datastoreId;
 
     public Optional<String> getDatastoreId() {
         return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
@@ -36,7 +36,7 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -47,7 +47,7 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isAnonymous")
-    private final @Nullable Boolean isAnonymous;
+        private final @Nullable Boolean isAnonymous;
 
     public Optional<Boolean> getIsAnonymous() {
         return this.isAnonymous == null ? Optional.empty() : Optional.ofNullable(this.isAnonymous);
@@ -58,7 +58,7 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+        private final String path;
 
     public String getPath() {
         return this.path;
@@ -69,7 +69,7 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+        private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -80,7 +80,7 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -169,7 +169,6 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
             this.tags = tags;
             return this;
         }
-
         public CodeVersionResponse build() {
             return new CodeVersionResponse(datastoreId, description, isAnonymous, path, properties, tags);
         }

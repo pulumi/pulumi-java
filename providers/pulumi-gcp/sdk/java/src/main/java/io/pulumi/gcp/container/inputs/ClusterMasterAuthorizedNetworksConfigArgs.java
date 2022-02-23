@@ -21,7 +21,7 @@ public final class ClusterMasterAuthorizedNetworksConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="cidrBlocks")
-    private final @Nullable Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
+        private final @Nullable Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
 
     public Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> getCidrBlocks() {
         return this.cidrBlocks == null ? Input.empty() : this.cidrBlocks;
@@ -64,7 +64,6 @@ public final class ClusterMasterAuthorizedNetworksConfigArgs extends io.pulumi.r
             this.cidrBlocks = Input.ofNullable(cidrBlocks);
             return this;
         }
-
         public ClusterMasterAuthorizedNetworksConfigArgs build() {
             return new ClusterMasterAuthorizedNetworksConfigArgs(cidrBlocks);
         }

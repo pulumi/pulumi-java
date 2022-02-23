@@ -76,7 +76,6 @@ public final class AzPowerShellSetupResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public AzPowerShellSetupResponse build() {
             return new AzPowerShellSetupResponse(type, version);
         }

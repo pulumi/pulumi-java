@@ -97,7 +97,6 @@ public final class FeatureMembershipConfigmanagementHierarchyController {
             this.enabled = enabled;
             return this;
         }
-
         public FeatureMembershipConfigmanagementHierarchyController build() {
             return new FeatureMembershipConfigmanagementHierarchyController(enableHierarchicalResourceQuota, enablePodTreeLabels, enabled);
         }

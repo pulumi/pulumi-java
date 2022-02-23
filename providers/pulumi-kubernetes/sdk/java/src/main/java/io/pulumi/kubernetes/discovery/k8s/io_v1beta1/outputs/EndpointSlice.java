@@ -164,7 +164,6 @@ public final class EndpointSlice {
             this.ports = ports;
             return this;
         }
-
         public EndpointSlice build() {
             return new EndpointSlice(addressType, apiVersion, endpoints, kind, metadata, ports);
         }

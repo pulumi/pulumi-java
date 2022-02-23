@@ -19,7 +19,7 @@ public final class CxIntentTrainingPhrasePartArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parameterId")
-    private final @Nullable Input<String> parameterId;
+        private final @Nullable Input<String> parameterId;
 
     public Input<String> getParameterId() {
         return this.parameterId == null ? Input.empty() : this.parameterId;
@@ -30,7 +30,7 @@ public final class CxIntentTrainingPhrasePartArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="text", required=true)
-    private final Input<String> text;
+        private final Input<String> text;
 
     public Input<String> getText() {
         return this.text;
@@ -89,7 +89,6 @@ public final class CxIntentTrainingPhrasePartArgs extends io.pulumi.resources.Re
             this.text = Input.of(Objects.requireNonNull(text));
             return this;
         }
-
         public CxIntentTrainingPhrasePartArgs build() {
             return new CxIntentTrainingPhrasePartArgs(parameterId, text);
         }

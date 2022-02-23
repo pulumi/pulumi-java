@@ -74,7 +74,6 @@ public final class HashResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public HashResponse build() {
             return new HashResponse(type, value);
         }

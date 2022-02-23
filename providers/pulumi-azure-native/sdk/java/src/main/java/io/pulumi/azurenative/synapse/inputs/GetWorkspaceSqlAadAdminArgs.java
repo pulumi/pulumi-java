@@ -17,7 +17,7 @@ public final class GetWorkspaceSqlAadAdminArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetWorkspaceSqlAadAdminArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -77,7 +77,6 @@ public final class GetWorkspaceSqlAadAdminArgs extends io.pulumi.resources.Invok
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetWorkspaceSqlAadAdminArgs build() {
             return new GetWorkspaceSqlAadAdminArgs(resourceGroupName, workspaceName);
         }

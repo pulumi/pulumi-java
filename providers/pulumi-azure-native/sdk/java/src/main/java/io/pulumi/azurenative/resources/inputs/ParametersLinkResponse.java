@@ -23,7 +23,7 @@ public final class ParametersLinkResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="contentVersion")
-    private final @Nullable String contentVersion;
+        private final @Nullable String contentVersion;
 
     public Optional<String> getContentVersion() {
         return this.contentVersion == null ? Optional.empty() : Optional.ofNullable(this.contentVersion);
@@ -34,7 +34,7 @@ public final class ParametersLinkResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+        private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -83,7 +83,6 @@ public final class ParametersLinkResponse extends io.pulumi.resources.InvokeArgs
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ParametersLinkResponse build() {
             return new ParametersLinkResponse(contentVersion, uri);
         }

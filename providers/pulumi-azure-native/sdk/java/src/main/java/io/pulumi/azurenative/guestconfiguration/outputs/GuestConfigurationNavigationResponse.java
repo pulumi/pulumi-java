@@ -247,7 +247,6 @@ public final class GuestConfigurationNavigationResponse {
             this.version = version;
             return this;
         }
-
         public GuestConfigurationNavigationResponse build() {
             return new GuestConfigurationNavigationResponse(assignmentType, configurationParameter, configurationProtectedParameter, configurationSetting, contentHash, contentType, contentUri, kind, name, version);
         }

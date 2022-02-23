@@ -75,7 +75,6 @@ public final class CostAllocationProportionResponse {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public CostAllocationProportionResponse build() {
             return new CostAllocationProportionResponse(name, percentage);
         }

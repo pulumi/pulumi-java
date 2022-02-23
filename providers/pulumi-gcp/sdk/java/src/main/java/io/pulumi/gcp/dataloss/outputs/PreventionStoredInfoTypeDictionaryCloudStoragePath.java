@@ -52,7 +52,6 @@ public final class PreventionStoredInfoTypeDictionaryCloudStoragePath {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public PreventionStoredInfoTypeDictionaryCloudStoragePath build() {
             return new PreventionStoredInfoTypeDictionaryCloudStoragePath(path);
         }

@@ -182,7 +182,6 @@ public final class ContainerStateTerminated {
             this.startedAt = startedAt;
             return this;
         }
-
         public ContainerStateTerminated build() {
             return new ContainerStateTerminated(containerID, exitCode, finishedAt, message, reason, signal, startedAt);
         }

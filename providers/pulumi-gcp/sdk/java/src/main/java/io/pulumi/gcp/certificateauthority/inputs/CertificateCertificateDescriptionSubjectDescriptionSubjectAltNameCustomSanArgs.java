@@ -23,14 +23,14 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="critical")
-    private final @Nullable Input<Boolean> critical;
+        private final @Nullable Input<Boolean> critical;
 
     public Input<Boolean> getCritical() {
         return this.critical == null ? Input.empty() : this.critical;
     }
 
     @InputImport(name="obectIds")
-    private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> obectIds;
+        private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> obectIds;
 
     public Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> getObectIds() {
         return this.obectIds == null ? Input.empty() : this.obectIds;
@@ -41,7 +41,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -115,7 +115,6 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs(critical, obectIds, value);
         }

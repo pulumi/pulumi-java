@@ -22,7 +22,7 @@ public final class SerialPipelineResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="stages", required=true)
-    private final List<StageResponse> stages;
+      private final List<StageResponse> stages;
 
     public List<StageResponse> getStages() {
         return this.stages;
@@ -60,7 +60,6 @@ public final class SerialPipelineResponse extends io.pulumi.resources.InvokeArgs
             this.stages = Objects.requireNonNull(stages);
             return this;
         }
-
         public SerialPipelineResponse build() {
             return new SerialPipelineResponse(stages);
         }

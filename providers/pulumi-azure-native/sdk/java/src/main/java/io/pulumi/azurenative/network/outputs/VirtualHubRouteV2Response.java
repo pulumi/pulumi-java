@@ -119,7 +119,6 @@ public final class VirtualHubRouteV2Response {
             this.nextHops = nextHops;
             return this;
         }
-
         public VirtualHubRouteV2Response build() {
             return new VirtualHubRouteV2Response(destinationType, destinations, nextHopType, nextHops);
         }

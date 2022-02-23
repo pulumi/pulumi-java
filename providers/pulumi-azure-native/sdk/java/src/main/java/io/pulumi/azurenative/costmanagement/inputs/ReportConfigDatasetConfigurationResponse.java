@@ -24,7 +24,7 @@ public final class ReportConfigDatasetConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable List<String> columns;
+        private final @Nullable List<String> columns;
 
     public List<String> getColumns() {
         return this.columns == null ? List.of() : this.columns;
@@ -62,7 +62,6 @@ public final class ReportConfigDatasetConfigurationResponse extends io.pulumi.re
             this.columns = columns;
             return this;
         }
-
         public ReportConfigDatasetConfigurationResponse build() {
             return new ReportConfigDatasetConfigurationResponse(columns);
         }

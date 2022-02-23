@@ -61,7 +61,6 @@ public final class DeliveryStreamEncryptionConfiguration {
             this.noEncryptionConfig = noEncryptionConfig;
             return this;
         }
-
         public DeliveryStreamEncryptionConfiguration build() {
             return new DeliveryStreamEncryptionConfiguration(kMSEncryptionConfig, noEncryptionConfig);
         }

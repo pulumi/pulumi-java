@@ -21,7 +21,7 @@ public final class ScoringConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="disableFreshness", required=true)
-    private final Boolean disableFreshness;
+      private final Boolean disableFreshness;
 
     public Boolean getDisableFreshness() {
         return this.disableFreshness;
@@ -32,7 +32,7 @@ public final class ScoringConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="disablePersonalization", required=true)
-    private final Boolean disablePersonalization;
+      private final Boolean disablePersonalization;
 
     public Boolean getDisablePersonalization() {
         return this.disablePersonalization;
@@ -81,7 +81,6 @@ public final class ScoringConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.disablePersonalization = Objects.requireNonNull(disablePersonalization);
             return this;
         }
-
         public ScoringConfigResponse build() {
             return new ScoringConfigResponse(disableFreshness, disablePersonalization);
         }

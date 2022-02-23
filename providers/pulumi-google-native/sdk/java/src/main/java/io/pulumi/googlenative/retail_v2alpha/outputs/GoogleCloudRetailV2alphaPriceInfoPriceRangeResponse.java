@@ -74,7 +74,6 @@ public final class GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse {
             this.price = Objects.requireNonNull(price);
             return this;
         }
-
         public GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse build() {
             return new GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse(originalPrice, price);
         }

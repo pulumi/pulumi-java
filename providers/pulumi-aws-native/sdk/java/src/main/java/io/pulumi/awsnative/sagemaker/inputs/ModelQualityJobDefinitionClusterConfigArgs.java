@@ -24,7 +24,7 @@ public final class ModelQualityJobDefinitionClusterConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="instanceCount", required=true)
-    private final Input<Integer> instanceCount;
+        private final Input<Integer> instanceCount;
 
     public Input<Integer> getInstanceCount() {
         return this.instanceCount;
@@ -35,7 +35,7 @@ public final class ModelQualityJobDefinitionClusterConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+        private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -46,7 +46,7 @@ public final class ModelQualityJobDefinitionClusterConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="volumeKmsKeyId")
-    private final @Nullable Input<String> volumeKmsKeyId;
+        private final @Nullable Input<String> volumeKmsKeyId;
 
     public Input<String> getVolumeKmsKeyId() {
         return this.volumeKmsKeyId == null ? Input.empty() : this.volumeKmsKeyId;
@@ -57,7 +57,7 @@ public final class ModelQualityJobDefinitionClusterConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="volumeSizeInGB", required=true)
-    private final Input<Integer> volumeSizeInGB;
+        private final Input<Integer> volumeSizeInGB;
 
     public Input<Integer> getVolumeSizeInGB() {
         return this.volumeSizeInGB;
@@ -146,7 +146,6 @@ public final class ModelQualityJobDefinitionClusterConfigArgs extends io.pulumi.
             this.volumeSizeInGB = Input.of(Objects.requireNonNull(volumeSizeInGB));
             return this;
         }
-
         public ModelQualityJobDefinitionClusterConfigArgs build() {
             return new ModelQualityJobDefinitionClusterConfigArgs(instanceCount, instanceType, volumeKmsKeyId, volumeSizeInGB);
         }

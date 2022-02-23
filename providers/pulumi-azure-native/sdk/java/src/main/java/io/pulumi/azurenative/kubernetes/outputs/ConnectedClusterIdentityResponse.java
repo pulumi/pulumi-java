@@ -95,7 +95,6 @@ public final class ConnectedClusterIdentityResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ConnectedClusterIdentityResponse build() {
             return new ConnectedClusterIdentityResponse(principalId, tenantId, type);
         }

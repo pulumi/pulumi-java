@@ -24,7 +24,7 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="allocatedIpRange", required=true)
-    private final String allocatedIpRange;
+      private final String allocatedIpRange;
 
     public String getAllocatedIpRange() {
         return this.allocatedIpRange;
@@ -35,7 +35,7 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="authorizedNetworks", required=true)
-    private final List<AclEntryResponse> authorizedNetworks;
+      private final List<AclEntryResponse> authorizedNetworks;
 
     public List<AclEntryResponse> getAuthorizedNetworks() {
         return this.authorizedNetworks;
@@ -46,7 +46,7 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ipv4Enabled", required=true)
-    private final Boolean ipv4Enabled;
+      private final Boolean ipv4Enabled;
 
     public Boolean getIpv4Enabled() {
         return this.ipv4Enabled;
@@ -57,7 +57,7 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="privateNetwork", required=true)
-    private final String privateNetwork;
+      private final String privateNetwork;
 
     public String getPrivateNetwork() {
         return this.privateNetwork;
@@ -68,7 +68,7 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="requireSsl", required=true)
-    private final Boolean requireSsl;
+      private final Boolean requireSsl;
 
     public Boolean getRequireSsl() {
         return this.requireSsl;
@@ -147,7 +147,6 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
         }
-
         public IpConfigurationResponse build() {
             return new IpConfigurationResponse(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
         }

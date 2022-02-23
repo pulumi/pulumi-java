@@ -99,7 +99,6 @@ public final class StreamingPolicyContentKeyResponse {
             this.tracks = tracks;
             return this;
         }
-
         public StreamingPolicyContentKeyResponse build() {
             return new StreamingPolicyContentKeyResponse(label, policyName, tracks);
         }

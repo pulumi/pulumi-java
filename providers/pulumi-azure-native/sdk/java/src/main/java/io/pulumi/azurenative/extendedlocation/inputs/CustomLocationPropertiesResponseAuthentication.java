@@ -23,7 +23,7 @@ public final class CustomLocationPropertiesResponseAuthentication extends io.pul
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -61,7 +61,6 @@ public final class CustomLocationPropertiesResponseAuthentication extends io.pul
             this.type = type;
             return this;
         }
-
         public CustomLocationPropertiesResponseAuthentication build() {
             return new CustomLocationPropertiesResponseAuthentication(type);
         }

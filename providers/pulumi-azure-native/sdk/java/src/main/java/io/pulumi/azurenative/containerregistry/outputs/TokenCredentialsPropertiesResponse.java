@@ -61,7 +61,6 @@ public final class TokenCredentialsPropertiesResponse {
             this.passwords = passwords;
             return this;
         }
-
         public TokenCredentialsPropertiesResponse build() {
             return new TokenCredentialsPropertiesResponse(certificates, passwords);
         }

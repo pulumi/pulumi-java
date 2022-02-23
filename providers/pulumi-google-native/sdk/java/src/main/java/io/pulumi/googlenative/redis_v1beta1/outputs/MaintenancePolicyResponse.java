@@ -118,7 +118,6 @@ public final class MaintenancePolicyResponse {
             this.weeklyMaintenanceWindow = Objects.requireNonNull(weeklyMaintenanceWindow);
             return this;
         }
-
         public MaintenancePolicyResponse build() {
             return new MaintenancePolicyResponse(createTime, description, updateTime, weeklyMaintenanceWindow);
         }

@@ -61,7 +61,6 @@ public final class FlowPrefixConfig {
             this.prefixType = prefixType;
             return this;
         }
-
         public FlowPrefixConfig build() {
             return new FlowPrefixConfig(prefixFormat, prefixType);
         }

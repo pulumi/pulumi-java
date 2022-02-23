@@ -81,7 +81,6 @@ public final class SecurityScanConfigSchedule {
             this.scheduleTime = scheduleTime;
             return this;
         }
-
         public SecurityScanConfigSchedule build() {
             return new SecurityScanConfigSchedule(intervalDurationDays, scheduleTime);
         }

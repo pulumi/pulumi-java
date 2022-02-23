@@ -98,7 +98,6 @@ public final class GetRegistryGroupIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRegistryGroupIamPolicyResult build() {
             return new GetRegistryGroupIamPolicyResult(bindings, etag, version);
         }

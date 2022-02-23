@@ -223,7 +223,6 @@ public final class ShippingInformationResponse {
             this.streetAddress2 = streetAddress2;
             return this;
         }
-
         public ShippingInformationResponse build() {
             return new ShippingInformationResponse(additionalInformation, city, countryOrRegion, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
         }

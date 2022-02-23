@@ -140,7 +140,6 @@ public final class GetReplicationPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationPolicyResult build() {
             return new GetReplicationPolicyResult(id, location, name, properties, type);
         }

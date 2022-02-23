@@ -59,7 +59,6 @@ public final class GetBackendServiceSecuritySetting {
             this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
             return this;
         }
-
         public GetBackendServiceSecuritySetting build() {
             return new GetBackendServiceSecuritySetting(clientTlsPolicy, subjectAltNames);
         }

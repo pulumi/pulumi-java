@@ -229,7 +229,6 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse {
             this.requestedSourceTable = Objects.requireNonNull(requestedSourceTable);
             return this;
         }
-
         public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse build() {
             return new GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse(categoricalStatsResult, deltaPresenceEstimationResult, kAnonymityResult, kMapEstimationResult, lDiversityResult, numericalStatsResult, requestedOptions, requestedPrivacyMetric, requestedSourceTable);
         }

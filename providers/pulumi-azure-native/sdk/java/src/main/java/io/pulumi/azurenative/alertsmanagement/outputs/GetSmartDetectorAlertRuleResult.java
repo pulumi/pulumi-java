@@ -312,7 +312,6 @@ public final class GetSmartDetectorAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSmartDetectorAlertRuleResult build() {
             return new GetSmartDetectorAlertRuleResult(actionGroups, description, detector, frequency, id, location, name, scope, severity, state, tags, throttling, type);
         }

@@ -76,7 +76,6 @@ public final class StateMachineLoggingConfiguration {
             this.level = level;
             return this;
         }
-
         public StateMachineLoggingConfiguration build() {
             return new StateMachineLoggingConfiguration(destinations, includeExecutionData, level);
         }

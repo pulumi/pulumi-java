@@ -127,7 +127,6 @@ public final class PackagingConfigurationDashManifest {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public PackagingConfigurationDashManifest build() {
             return new PackagingConfigurationDashManifest(manifestLayout, manifestName, minBufferTimeSeconds, profile, streamSelection);
         }

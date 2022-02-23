@@ -139,7 +139,6 @@ public final class SlsaMetadataResponse {
             this.reproducible = Objects.requireNonNull(reproducible);
             return this;
         }
-
         public SlsaMetadataResponse build() {
             return new SlsaMetadataResponse(buildFinishedOn, buildInvocationId, buildStartedOn, completeness, reproducible);
         }

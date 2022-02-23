@@ -23,7 +23,7 @@ public final class ScanRunResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -34,7 +34,7 @@ public final class ScanRunResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="executionState", required=true)
-    private final String executionState;
+      private final String executionState;
 
     public String getExecutionState() {
         return this.executionState;
@@ -45,7 +45,7 @@ public final class ScanRunResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hasVulnerabilities", required=true)
-    private final Boolean hasVulnerabilities;
+      private final Boolean hasVulnerabilities;
 
     public Boolean getHasVulnerabilities() {
         return this.hasVulnerabilities;
@@ -56,7 +56,7 @@ public final class ScanRunResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -67,7 +67,7 @@ public final class ScanRunResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="progressPercent", required=true)
-    private final Integer progressPercent;
+      private final Integer progressPercent;
 
     public Integer getProgressPercent() {
         return this.progressPercent;
@@ -78,7 +78,7 @@ public final class ScanRunResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resultState", required=true)
-    private final String resultState;
+      private final String resultState;
 
     public String getResultState() {
         return this.resultState;
@@ -89,7 +89,7 @@ public final class ScanRunResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -100,7 +100,7 @@ public final class ScanRunResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="urlsCrawledCount", required=true)
-    private final String urlsCrawledCount;
+      private final String urlsCrawledCount;
 
     public String getUrlsCrawledCount() {
         return this.urlsCrawledCount;
@@ -111,7 +111,7 @@ public final class ScanRunResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="urlsTestedCount", required=true)
-    private final String urlsTestedCount;
+      private final String urlsTestedCount;
 
     public String getUrlsTestedCount() {
         return this.urlsTestedCount;
@@ -230,7 +230,6 @@ public final class ScanRunResponse extends io.pulumi.resources.InvokeArgs {
             this.urlsTestedCount = Objects.requireNonNull(urlsTestedCount);
             return this;
         }
-
         public ScanRunResponse build() {
             return new ScanRunResponse(endTime, executionState, hasVulnerabilities, name, progressPercent, resultState, startTime, urlsCrawledCount, urlsTestedCount);
         }

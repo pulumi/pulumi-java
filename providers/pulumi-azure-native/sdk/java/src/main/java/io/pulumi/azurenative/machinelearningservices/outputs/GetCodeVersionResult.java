@@ -139,7 +139,6 @@ public final class GetCodeVersionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCodeVersionResult build() {
             return new GetCodeVersionResult(id, name, properties, systemData, type);
         }

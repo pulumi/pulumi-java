@@ -141,7 +141,6 @@ public final class JobRecurrenceScheduleResponse {
             this.weekDays = weekDays;
             return this;
         }
-
         public JobRecurrenceScheduleResponse build() {
             return new JobRecurrenceScheduleResponse(hours, minutes, monthDays, monthlyOccurrences, weekDays);
         }

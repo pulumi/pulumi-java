@@ -151,7 +151,6 @@ public final class CertificateKeyUsage {
             this.nonRepudiation = nonRepudiation;
             return this;
         }
-
         public CertificateKeyUsage build() {
             return new CertificateKeyUsage(cRLSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyCertSign, keyEncipherment, nonRepudiation);
         }

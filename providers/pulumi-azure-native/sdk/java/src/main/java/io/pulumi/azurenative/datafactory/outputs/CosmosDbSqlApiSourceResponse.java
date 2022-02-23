@@ -247,7 +247,6 @@ public final class CosmosDbSqlApiSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CosmosDbSqlApiSourceResponse build() {
             return new CosmosDbSqlApiSourceResponse(additionalColumns, detectDatetime, disableMetricsCollection, maxConcurrentConnections, pageSize, preferredRegions, query, sourceRetryCount, sourceRetryWait, type);
         }

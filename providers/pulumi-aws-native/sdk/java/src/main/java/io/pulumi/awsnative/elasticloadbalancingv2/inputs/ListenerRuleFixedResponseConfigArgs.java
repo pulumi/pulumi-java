@@ -15,21 +15,21 @@ public final class ListenerRuleFixedResponseConfigArgs extends io.pulumi.resourc
     public static final ListenerRuleFixedResponseConfigArgs Empty = new ListenerRuleFixedResponseConfigArgs();
 
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+        private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
     @InputImport(name="messageBody")
-    private final @Nullable Input<String> messageBody;
+        private final @Nullable Input<String> messageBody;
 
     public Input<String> getMessageBody() {
         return this.messageBody == null ? Input.empty() : this.messageBody;
     }
 
     @InputImport(name="statusCode", required=true)
-    private final Input<String> statusCode;
+        private final Input<String> statusCode;
 
     public Input<String> getStatusCode() {
         return this.statusCode;
@@ -103,7 +103,6 @@ public final class ListenerRuleFixedResponseConfigArgs extends io.pulumi.resourc
             this.statusCode = Input.of(Objects.requireNonNull(statusCode));
             return this;
         }
-
         public ListenerRuleFixedResponseConfigArgs build() {
             return new ListenerRuleFixedResponseConfigArgs(contentType, messageBody, statusCode);
         }

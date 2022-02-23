@@ -61,7 +61,6 @@ public final class BackupPlanCopyActionResourceType {
             this.lifecycle = lifecycle;
             return this;
         }
-
         public BackupPlanCopyActionResourceType build() {
             return new BackupPlanCopyActionResourceType(destinationBackupVaultArn, lifecycle);
         }

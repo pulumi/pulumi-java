@@ -215,7 +215,6 @@ public final class TagField {
             this.timestampValue = timestampValue;
             return this;
         }
-
         public TagField build() {
             return new TagField(boolValue, displayName, doubleValue, enumValue, fieldName, order, stringValue, timestampValue);
         }

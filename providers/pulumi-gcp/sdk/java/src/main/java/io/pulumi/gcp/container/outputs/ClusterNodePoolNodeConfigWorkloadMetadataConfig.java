@@ -60,7 +60,6 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfig {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public ClusterNodePoolNodeConfigWorkloadMetadataConfig build() {
             return new ClusterNodePoolNodeConfigWorkloadMetadataConfig(mode);
         }

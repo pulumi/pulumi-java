@@ -46,7 +46,6 @@ public final class DeliveryStreamElasticsearchRetryOptions {
             this.durationInSeconds = durationInSeconds;
             return this;
         }
-
         public DeliveryStreamElasticsearchRetryOptions build() {
             return new DeliveryStreamElasticsearchRetryOptions(durationInSeconds);
         }

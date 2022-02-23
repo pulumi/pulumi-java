@@ -24,7 +24,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hiveMetastoreConfig")
-    private final @Nullable Input<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig;
+        private final @Nullable Input<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig;
 
     public Input<MetastoreServiceHiveMetastoreConfigArgs> getHiveMetastoreConfig() {
         return this.hiveMetastoreConfig == null ? Input.empty() : this.hiveMetastoreConfig;
@@ -35,7 +35,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -47,7 +47,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -60,7 +60,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maintenanceWindow")
-    private final @Nullable Input<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow;
+        private final @Nullable Input<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow;
 
     public Input<MetastoreServiceMaintenanceWindowArgs> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -72,7 +72,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+        private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -83,7 +83,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+        private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -95,7 +95,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -108,7 +108,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceId", required=true)
-    private final Input<String> serviceId;
+        private final Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId;
@@ -120,7 +120,7 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<String> tier;
+        private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -284,7 +284,6 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public MetastoreServiceArgs build() {
             return new MetastoreServiceArgs(hiveMetastoreConfig, labels, location, maintenanceWindow, network, port, project, serviceId, tier);
         }

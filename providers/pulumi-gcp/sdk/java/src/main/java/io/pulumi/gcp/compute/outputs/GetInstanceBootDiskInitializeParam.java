@@ -119,7 +119,6 @@ public final class GetInstanceBootDiskInitializeParam {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceBootDiskInitializeParam build() {
             return new GetInstanceBootDiskInitializeParam(image, labels, size, type);
         }

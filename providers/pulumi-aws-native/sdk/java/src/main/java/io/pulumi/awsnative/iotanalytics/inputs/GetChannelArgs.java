@@ -13,7 +13,7 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetChannelArgs Empty = new GetChannelArgs();
 
     @InputImport(name="channelName", required=true)
-    private final String channelName;
+        private final String channelName;
 
     public String getChannelName() {
         return this.channelName;
@@ -51,7 +51,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public GetChannelArgs build() {
             return new GetChannelArgs(channelName);
         }

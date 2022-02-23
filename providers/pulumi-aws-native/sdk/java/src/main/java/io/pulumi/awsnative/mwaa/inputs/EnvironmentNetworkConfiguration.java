@@ -24,7 +24,7 @@ public final class EnvironmentNetworkConfiguration extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable List<String> securityGroupIds;
+        private final @Nullable List<String> securityGroupIds;
 
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
@@ -35,7 +35,7 @@ public final class EnvironmentNetworkConfiguration extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable List<String> subnetIds;
+        private final @Nullable List<String> subnetIds;
 
     public List<String> getSubnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
@@ -84,7 +84,6 @@ public final class EnvironmentNetworkConfiguration extends io.pulumi.resources.I
             this.subnetIds = subnetIds;
             return this;
         }
-
         public EnvironmentNetworkConfiguration build() {
             return new EnvironmentNetworkConfiguration(securityGroupIds, subnetIds);
         }

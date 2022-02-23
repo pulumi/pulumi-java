@@ -119,7 +119,6 @@ public final class GetTemplateResult {
             this.templateType = Objects.requireNonNull(templateType);
             return this;
         }
-
         public GetTemplateResult build() {
             return new GetTemplateResult(metadata, runtimeMetadata, status, templateType);
         }

@@ -394,7 +394,6 @@ public final class GetWebAppFunctionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppFunctionResult build() {
             return new GetWebAppFunctionResult(config, configHref, files, functionAppId, href, id, invokeUrlTemplate, isDisabled, kind, language, name, scriptHref, scriptRootPathHref, secretsFileHref, testData, testDataHref, type);
         }

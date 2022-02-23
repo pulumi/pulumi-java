@@ -330,7 +330,6 @@ public final class GetFirewallPolicyResult {
             this.vpcNetworkScope = Objects.requireNonNull(vpcNetworkScope);
             return this;
         }
-
         public GetFirewallPolicyResult build() {
             return new GetFirewallPolicyResult(associations, creationTimestamp, description, fingerprint, kind, name, parent, region, ruleTupleCount, rules, selfLink, selfLinkWithId, shortName, vpcNetworkScope);
         }

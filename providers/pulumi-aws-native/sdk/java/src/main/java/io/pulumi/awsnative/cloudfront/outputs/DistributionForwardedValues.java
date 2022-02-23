@@ -89,7 +89,6 @@ public final class DistributionForwardedValues {
             this.queryStringCacheKeys = queryStringCacheKeys;
             return this;
         }
-
         public DistributionForwardedValues build() {
             return new DistributionForwardedValues(cookies, headers, queryString, queryStringCacheKeys);
         }

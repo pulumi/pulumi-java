@@ -23,7 +23,7 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="runtimeStack")
-    private final @Nullable Input<String> runtimeStack;
+        private final @Nullable Input<String> runtimeStack;
 
     public Input<String> getRuntimeStack() {
         return this.runtimeStack == null ? Input.empty() : this.runtimeStack;
@@ -34,7 +34,7 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="runtimeVersion")
-    private final @Nullable Input<String> runtimeVersion;
+        private final @Nullable Input<String> runtimeVersion;
 
     public Input<String> getRuntimeVersion() {
         return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
@@ -93,7 +93,6 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
             this.runtimeVersion = Input.ofNullable(runtimeVersion);
             return this;
         }
-
         public GitHubActionCodeConfigurationArgs build() {
             return new GitHubActionCodeConfigurationArgs(runtimeStack, runtimeVersion);
         }

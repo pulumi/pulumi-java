@@ -17,21 +17,21 @@ public final class NetworkInsightsAccessScopeArgs extends io.pulumi.resources.Re
     public static final NetworkInsightsAccessScopeArgs Empty = new NetworkInsightsAccessScopeArgs();
 
     @InputImport(name="excludePaths")
-    private final @Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths;
+        private final @Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths;
 
     public Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> getExcludePaths() {
         return this.excludePaths == null ? Input.empty() : this.excludePaths;
     }
 
     @InputImport(name="matchPaths")
-    private final @Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths;
+        private final @Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths;
 
     public Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> getMatchPaths() {
         return this.matchPaths == null ? Input.empty() : this.matchPaths;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<NetworkInsightsAccessScopeTagArgs>> tags;
+        private final @Nullable Input<List<NetworkInsightsAccessScopeTagArgs>> tags;
 
     public Input<List<NetworkInsightsAccessScopeTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -105,7 +105,6 @@ public final class NetworkInsightsAccessScopeArgs extends io.pulumi.resources.Re
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public NetworkInsightsAccessScopeArgs build() {
             return new NetworkInsightsAccessScopeArgs(excludePaths, matchPaths, tags);
         }

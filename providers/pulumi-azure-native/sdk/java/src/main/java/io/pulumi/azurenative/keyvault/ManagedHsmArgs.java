@@ -22,7 +22,7 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -33,7 +33,7 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<ManagedHsmPropertiesArgs> properties;
+        private final @Nullable Input<ManagedHsmPropertiesArgs> properties;
 
     public Input<ManagedHsmPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -55,7 +55,7 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<ManagedHsmSkuArgs> sku;
+        private final @Nullable Input<ManagedHsmSkuArgs> sku;
 
     public Input<ManagedHsmSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -77,7 +77,7 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,6 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ManagedHsmArgs build() {
             return new ManagedHsmArgs(location, name, properties, resourceGroupName, sku, tags);
         }

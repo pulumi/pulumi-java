@@ -668,7 +668,6 @@ public final class GetSubnetworkResult {
             this.vlans = Objects.requireNonNull(vlans);
             return this;
         }
-
         public GetSubnetworkResult build() {
             return new GetSubnetworkResult(aggregationInterval, allowSubnetCidrRoutesOverlap, creationTimestamp, description, enableFlowLogs, enableL2, externalIpv6Prefix, fingerprint, flowSampling, gatewayAddress, ipCidrRange, ipv6AccessType, ipv6CidrRange, kind, logConfig, metadata, name, network, privateIpGoogleAccess, privateIpv6GoogleAccess, purpose, region, reservedInternalRange, role, secondaryIpRanges, selfLink, selfLinkWithId, stackType, state, vlans);
         }

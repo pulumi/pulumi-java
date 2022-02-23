@@ -52,7 +52,6 @@ public final class AutoscalingTargetsResponse {
             this.cpuUtilizationPercent = Objects.requireNonNull(cpuUtilizationPercent);
             return this;
         }
-
         public AutoscalingTargetsResponse build() {
             return new AutoscalingTargetsResponse(cpuUtilizationPercent);
         }

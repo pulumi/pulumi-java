@@ -77,7 +77,6 @@ public final class SubResourceWithColocationStatusResponse {
             this.id = id;
             return this;
         }
-
         public SubResourceWithColocationStatusResponse build() {
             return new SubResourceWithColocationStatusResponse(colocationStatus, id);
         }

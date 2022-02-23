@@ -204,7 +204,6 @@ public final class GetClientTlsPolicyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetClientTlsPolicyResult build() {
             return new GetClientTlsPolicyResult(clientCertificate, createTime, description, labels, name, serverValidationCa, sni, updateTime);
         }

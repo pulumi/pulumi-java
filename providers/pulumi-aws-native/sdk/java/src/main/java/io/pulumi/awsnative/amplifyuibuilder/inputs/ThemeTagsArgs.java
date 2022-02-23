@@ -30,7 +30,6 @@ public final class ThemeTagsArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(ThemeTagsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ThemeTagsArgs build() {
             return new ThemeTagsArgs();
         }

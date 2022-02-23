@@ -161,7 +161,6 @@ public final class ErrorEntityResponse {
             this.parameters = parameters;
             return this;
         }
-
         public ErrorEntityResponse build() {
             return new ErrorEntityResponse(code, extendedCode, innerErrors, message, messageTemplate, parameters);
         }

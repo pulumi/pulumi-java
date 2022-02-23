@@ -24,7 +24,7 @@ public final class Hl7SchemaConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="messageSchemaConfigs", required=true)
-    private final Map<String,String> messageSchemaConfigs;
+      private final Map<String,String> messageSchemaConfigs;
 
     public Map<String,String> getMessageSchemaConfigs() {
         return this.messageSchemaConfigs;
@@ -35,7 +35,7 @@ public final class Hl7SchemaConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="version", required=true)
-    private final List<VersionSourceResponse> version;
+      private final List<VersionSourceResponse> version;
 
     public List<VersionSourceResponse> getVersion() {
         return this.version;
@@ -84,7 +84,6 @@ public final class Hl7SchemaConfigResponse extends io.pulumi.resources.InvokeArg
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Hl7SchemaConfigResponse build() {
             return new Hl7SchemaConfigResponse(messageSchemaConfigs, version);
         }

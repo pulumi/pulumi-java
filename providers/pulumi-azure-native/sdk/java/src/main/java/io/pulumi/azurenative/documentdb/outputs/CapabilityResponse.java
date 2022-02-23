@@ -54,7 +54,6 @@ public final class CapabilityResponse {
             this.name = name;
             return this;
         }
-
         public CapabilityResponse build() {
             return new CapabilityResponse(name);
         }

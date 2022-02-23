@@ -141,7 +141,6 @@ public final class DashboardPartsResponsePosition {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public DashboardPartsResponsePosition build() {
             return new DashboardPartsResponsePosition(colSpan, metadata, rowSpan, x, y);
         }

@@ -18,14 +18,14 @@ public final class RuleGroupCustomHTTPHeaderArgs extends io.pulumi.resources.Res
     public static final RuleGroupCustomHTTPHeaderArgs Empty = new RuleGroupCustomHTTPHeaderArgs();
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -84,7 +84,6 @@ public final class RuleGroupCustomHTTPHeaderArgs extends io.pulumi.resources.Res
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public RuleGroupCustomHTTPHeaderArgs build() {
             return new RuleGroupCustomHTTPHeaderArgs(name, value);
         }

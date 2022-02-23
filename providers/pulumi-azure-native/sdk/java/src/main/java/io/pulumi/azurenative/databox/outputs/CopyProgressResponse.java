@@ -351,7 +351,6 @@ public final class CopyProgressResponse {
             this.transferType = Objects.requireNonNull(transferType);
             return this;
         }
-
         public CopyProgressResponse build() {
             return new CopyProgressResponse(accountId, bytesProcessed, dataAccountType, directoriesErroredOut, filesErroredOut, filesProcessed, invalidDirectoriesProcessed, invalidFileBytesUploaded, invalidFilesProcessed, isEnumerationInProgress, renamedContainerCount, storageAccountName, totalBytesToProcess, totalFilesToProcess, transferType);
         }

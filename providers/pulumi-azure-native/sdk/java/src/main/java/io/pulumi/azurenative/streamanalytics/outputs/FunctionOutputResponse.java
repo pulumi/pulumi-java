@@ -54,7 +54,6 @@ public final class FunctionOutputResponse {
             this.dataType = dataType;
             return this;
         }
-
         public FunctionOutputResponse build() {
             return new FunctionOutputResponse(dataType);
         }

@@ -376,7 +376,6 @@ public final class AzureSqlSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public AzureSqlSinkResponse build() {
             return new AzureSqlSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, sqlWriterStoredProcedureName, sqlWriterTableType, sqlWriterUseTableLock, storedProcedureParameters, storedProcedureTableTypeParameterName, tableOption, type, upsertSettings, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

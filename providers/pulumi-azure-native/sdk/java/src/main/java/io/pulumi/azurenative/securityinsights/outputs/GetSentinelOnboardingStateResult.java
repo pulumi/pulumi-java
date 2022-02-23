@@ -162,7 +162,6 @@ public final class GetSentinelOnboardingStateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSentinelOnboardingStateResult build() {
             return new GetSentinelOnboardingStateResult(customerManagedKey, etag, id, name, systemData, type);
         }

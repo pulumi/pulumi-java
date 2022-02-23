@@ -458,7 +458,6 @@ public final class GetSubscriptionResult {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public GetSubscriptionResult build() {
             return new GetSubscriptionResult(accessedAt, autoDeleteOnIdle, countDetails, createdAt, deadLetteringOnFilterEvaluationExceptions, deadLetteringOnMessageExpiration, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, forwardDeadLetteredMessagesTo, forwardTo, id, lockDuration, maxDeliveryCount, messageCount, name, requiresSession, status, type, updatedAt);
         }

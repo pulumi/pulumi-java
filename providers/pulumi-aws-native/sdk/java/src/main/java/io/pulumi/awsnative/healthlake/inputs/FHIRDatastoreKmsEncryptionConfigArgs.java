@@ -24,7 +24,7 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="cmkType", required=true)
-    private final Input<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType;
+        private final Input<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType;
 
     public Input<FHIRDatastoreKmsEncryptionConfigCmkType> getCmkType() {
         return this.cmkType;
@@ -35,7 +35,7 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+        private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -94,7 +94,6 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends io.pulumi.resour
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
-
         public FHIRDatastoreKmsEncryptionConfigArgs build() {
             return new FHIRDatastoreKmsEncryptionConfigArgs(cmkType, kmsKeyId);
         }

@@ -95,7 +95,6 @@ public final class KeyResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public KeyResponse build() {
             return new KeyResponse(keyName, permissions, value);
         }

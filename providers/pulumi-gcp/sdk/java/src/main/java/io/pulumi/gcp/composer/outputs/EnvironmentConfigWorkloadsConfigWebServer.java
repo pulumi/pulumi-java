@@ -73,7 +73,6 @@ public final class EnvironmentConfigWorkloadsConfigWebServer {
             this.storageGb = storageGb;
             return this;
         }
-
         public EnvironmentConfigWorkloadsConfigWebServer build() {
             return new EnvironmentConfigWorkloadsConfigWebServer(cpu, memoryGb, storageGb);
         }

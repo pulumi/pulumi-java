@@ -99,7 +99,6 @@ public final class StudioComponentActiveDirectoryConfiguration {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
-
         public StudioComponentActiveDirectoryConfiguration build() {
             return new StudioComponentActiveDirectoryConfiguration(computerAttributes, directoryId, organizationalUnitDistinguishedName);
         }

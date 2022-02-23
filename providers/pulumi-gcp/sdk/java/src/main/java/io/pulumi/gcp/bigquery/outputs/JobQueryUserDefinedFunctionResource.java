@@ -78,7 +78,6 @@ public final class JobQueryUserDefinedFunctionResource {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public JobQueryUserDefinedFunctionResource build() {
             return new JobQueryUserDefinedFunctionResource(inlineCode, resourceUri);
         }

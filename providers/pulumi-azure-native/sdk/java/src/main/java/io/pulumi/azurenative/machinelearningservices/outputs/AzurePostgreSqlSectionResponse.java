@@ -434,7 +434,6 @@ public final class AzurePostgreSqlSectionResponse {
             this.userPassword = userPassword;
             return this;
         }
-
         public AzurePostgreSqlSectionResponse build() {
             return new AzurePostgreSqlSectionResponse(authorityUrl, certificate, clientId, clientSecret, credentialType, databaseName, enableSsl, endpoint, isCertAuth, portNumber, resourceGroup, resourceUri, serverName, serviceDataAccessAuthIdentity, subscriptionId, tenantId, thumbprint, userId, userPassword);
         }

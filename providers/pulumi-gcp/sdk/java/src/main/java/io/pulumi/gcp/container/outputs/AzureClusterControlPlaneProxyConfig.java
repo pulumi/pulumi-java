@@ -74,7 +74,6 @@ public final class AzureClusterControlPlaneProxyConfig {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public AzureClusterControlPlaneProxyConfig build() {
             return new AzureClusterControlPlaneProxyConfig(resourceGroupId, secretId);
         }

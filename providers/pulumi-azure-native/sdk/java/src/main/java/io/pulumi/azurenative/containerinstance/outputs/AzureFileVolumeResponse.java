@@ -119,7 +119,6 @@ public final class AzureFileVolumeResponse {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
-
         public AzureFileVolumeResponse build() {
             return new AzureFileVolumeResponse(readOnly, shareName, storageAccountKey, storageAccountName);
         }

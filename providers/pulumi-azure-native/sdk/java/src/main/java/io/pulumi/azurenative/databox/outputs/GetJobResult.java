@@ -486,7 +486,6 @@ public final class GetJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(cancellationReason, deliveryInfo, deliveryType, details, error, id, identity, isCancellable, isCancellableWithoutFee, isDeletable, isPrepareToShipEnabled, isShippingAddressEditable, location, name, sku, startTime, status, systemData, tags, transferType, type);
         }

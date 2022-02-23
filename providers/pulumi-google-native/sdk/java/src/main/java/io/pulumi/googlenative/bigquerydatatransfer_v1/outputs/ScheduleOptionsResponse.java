@@ -96,7 +96,6 @@ public final class ScheduleOptionsResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ScheduleOptionsResponse build() {
             return new ScheduleOptionsResponse(disableAutoScheduling, endTime, startTime);
         }

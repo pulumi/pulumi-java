@@ -21,7 +21,7 @@ public final class ScanRunWarningTraceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -59,7 +59,6 @@ public final class ScanRunWarningTraceResponse extends io.pulumi.resources.Invok
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public ScanRunWarningTraceResponse build() {
             return new ScanRunWarningTraceResponse(code);
         }

@@ -24,7 +24,7 @@ public final class DnsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fqdn", required=true)
-    private final String fqdn;
+        private final String fqdn;
 
     public String getFqdn() {
         return this.fqdn;
@@ -35,7 +35,7 @@ public final class DnsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="relativeName")
-    private final @Nullable String relativeName;
+        private final @Nullable String relativeName;
 
     public Optional<String> getRelativeName() {
         return this.relativeName == null ? Optional.empty() : Optional.ofNullable(this.relativeName);
@@ -46,7 +46,7 @@ public final class DnsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Double ttl;
+        private final @Nullable Double ttl;
 
     public Optional<Double> getTtl() {
         return this.ttl == null ? Optional.empty() : Optional.ofNullable(this.ttl);
@@ -105,7 +105,6 @@ public final class DnsConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.ttl = ttl;
             return this;
         }
-
         public DnsConfigResponse build() {
             return new DnsConfigResponse(fqdn, relativeName, ttl);
         }

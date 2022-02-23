@@ -76,7 +76,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
             this.executionTimeout = executionTimeout;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigInitializationAction build() {
             return new WorkflowTemplatePlacementManagedClusterConfigInitializationAction(executableFile, executionTimeout);
         }

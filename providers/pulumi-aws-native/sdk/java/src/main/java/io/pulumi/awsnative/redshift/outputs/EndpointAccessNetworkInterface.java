@@ -118,7 +118,6 @@ public final class EndpointAccessNetworkInterface {
             this.subnetId = subnetId;
             return this;
         }
-
         public EndpointAccessNetworkInterface build() {
             return new EndpointAccessNetworkInterface(availabilityZone, networkInterfaceId, privateIpAddress, subnetId);
         }

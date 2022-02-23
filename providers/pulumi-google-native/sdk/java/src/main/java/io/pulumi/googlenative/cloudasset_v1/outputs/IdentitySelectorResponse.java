@@ -52,7 +52,6 @@ public final class IdentitySelectorResponse {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public IdentitySelectorResponse build() {
             return new IdentitySelectorResponse(identity);
         }

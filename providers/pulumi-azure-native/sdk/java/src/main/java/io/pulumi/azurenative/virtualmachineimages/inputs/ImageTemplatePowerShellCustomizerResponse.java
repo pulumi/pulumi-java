@@ -26,7 +26,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="inline")
-    private final @Nullable List<String> inline;
+        private final @Nullable List<String> inline;
 
     public List<String> getInline() {
         return this.inline == null ? List.of() : this.inline;
@@ -37,7 +37,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -48,7 +48,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="runAsSystem")
-    private final @Nullable Boolean runAsSystem;
+        private final @Nullable Boolean runAsSystem;
 
     public Optional<Boolean> getRunAsSystem() {
         return this.runAsSystem == null ? Optional.empty() : Optional.ofNullable(this.runAsSystem);
@@ -59,7 +59,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="runElevated")
-    private final @Nullable Boolean runElevated;
+        private final @Nullable Boolean runElevated;
 
     public Optional<Boolean> getRunElevated() {
         return this.runElevated == null ? Optional.empty() : Optional.ofNullable(this.runElevated);
@@ -70,7 +70,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="scriptUri")
-    private final @Nullable String scriptUri;
+        private final @Nullable String scriptUri;
 
     public Optional<String> getScriptUri() {
         return this.scriptUri == null ? Optional.empty() : Optional.ofNullable(this.scriptUri);
@@ -81,7 +81,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="sha256Checksum")
-    private final @Nullable String sha256Checksum;
+        private final @Nullable String sha256Checksum;
 
     public Optional<String> getSha256Checksum() {
         return this.sha256Checksum == null ? Optional.empty() : Optional.ofNullable(this.sha256Checksum);
@@ -93,7 +93,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -104,7 +104,7 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="validExitCodes")
-    private final @Nullable List<Integer> validExitCodes;
+        private final @Nullable List<Integer> validExitCodes;
 
     public List<Integer> getValidExitCodes() {
         return this.validExitCodes == null ? List.of() : this.validExitCodes;
@@ -213,7 +213,6 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
             this.validExitCodes = validExitCodes;
             return this;
         }
-
         public ImageTemplatePowerShellCustomizerResponse build() {
             return new ImageTemplatePowerShellCustomizerResponse(inline, name, runAsSystem, runElevated, scriptUri, sha256Checksum, type, validExitCodes);
         }

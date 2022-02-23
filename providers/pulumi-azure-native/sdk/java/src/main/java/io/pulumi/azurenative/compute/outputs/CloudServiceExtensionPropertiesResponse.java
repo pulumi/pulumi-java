@@ -247,7 +247,6 @@ public final class CloudServiceExtensionPropertiesResponse {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-
         public CloudServiceExtensionPropertiesResponse build() {
             return new CloudServiceExtensionPropertiesResponse(autoUpgradeMinorVersion, forceUpdateTag, protectedSettings, protectedSettingsFromKeyVault, provisioningState, publisher, rolesAppliedTo, settings, type, typeHandlerVersion);
         }

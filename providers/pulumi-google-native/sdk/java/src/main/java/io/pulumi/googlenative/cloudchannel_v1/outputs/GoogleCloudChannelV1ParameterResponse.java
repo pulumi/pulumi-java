@@ -97,7 +97,6 @@ public final class GoogleCloudChannelV1ParameterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudChannelV1ParameterResponse build() {
             return new GoogleCloudChannelV1ParameterResponse(editable, name, value);
         }

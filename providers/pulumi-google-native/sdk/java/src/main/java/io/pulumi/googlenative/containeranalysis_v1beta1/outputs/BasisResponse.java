@@ -75,7 +75,6 @@ public final class BasisResponse {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
         }
-
         public BasisResponse build() {
             return new BasisResponse(fingerprint, resourceUrl);
         }

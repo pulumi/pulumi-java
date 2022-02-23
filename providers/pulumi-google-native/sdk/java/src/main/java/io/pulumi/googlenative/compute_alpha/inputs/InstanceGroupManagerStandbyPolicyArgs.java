@@ -15,7 +15,7 @@ public final class InstanceGroupManagerStandbyPolicyArgs extends io.pulumi.resou
     public static final InstanceGroupManagerStandbyPolicyArgs Empty = new InstanceGroupManagerStandbyPolicyArgs();
 
     @InputImport(name="initialDelaySec")
-    private final @Nullable Input<Integer> initialDelaySec;
+      private final @Nullable Input<Integer> initialDelaySec;
 
     public Input<Integer> getInitialDelaySec() {
         return this.initialDelaySec == null ? Input.empty() : this.initialDelaySec;
@@ -58,7 +58,6 @@ public final class InstanceGroupManagerStandbyPolicyArgs extends io.pulumi.resou
             this.initialDelaySec = Input.ofNullable(initialDelaySec);
             return this;
         }
-
         public InstanceGroupManagerStandbyPolicyArgs build() {
             return new InstanceGroupManagerStandbyPolicyArgs(initialDelaySec);
         }

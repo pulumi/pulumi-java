@@ -205,7 +205,6 @@ public final class AzureBlobFSSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureBlobFSSourceResponse build() {
             return new AzureBlobFSSourceResponse(disableMetricsCollection, maxConcurrentConnections, recursive, skipHeaderLineCount, sourceRetryCount, sourceRetryWait, treatEmptyAsNull, type);
         }

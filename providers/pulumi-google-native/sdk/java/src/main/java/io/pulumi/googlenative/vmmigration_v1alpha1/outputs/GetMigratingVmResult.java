@@ -398,7 +398,6 @@ public final class GetMigratingVmResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetMigratingVmResult build() {
             return new GetMigratingVmResult(computeEngineTargetDefaults, createTime, currentSyncInfo, description, displayName, error, group, labels, lastSync, name, policy, recentCloneJobs, recentCutoverJobs, sourceVmId, state, stateTime, updateTime);
         }

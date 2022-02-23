@@ -60,7 +60,6 @@ public final class GetNotificationChannelResult {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
-
         public GetNotificationChannelResult build() {
             return new GetNotificationChannelResult(snsRoleName, snsTopicArn);
         }

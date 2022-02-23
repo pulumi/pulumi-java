@@ -75,7 +75,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
             this.deniedValues = Objects.requireNonNull(deniedValues);
             return this;
         }
-
         public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse build() {
             return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse(allowedValues, deniedValues);
         }

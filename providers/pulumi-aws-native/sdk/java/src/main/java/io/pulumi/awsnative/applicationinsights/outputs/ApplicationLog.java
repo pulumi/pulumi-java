@@ -140,7 +140,6 @@ public final class ApplicationLog {
             this.patternSet = patternSet;
             return this;
         }
-
         public ApplicationLog build() {
             return new ApplicationLog(encoding, logGroupName, logPath, logType, patternSet);
         }

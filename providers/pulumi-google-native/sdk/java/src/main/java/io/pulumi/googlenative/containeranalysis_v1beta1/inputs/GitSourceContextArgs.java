@@ -23,7 +23,7 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="revisionId")
-    private final @Nullable Input<String> revisionId;
+      private final @Nullable Input<String> revisionId;
 
     public Input<String> getRevisionId() {
         return this.revisionId == null ? Input.empty() : this.revisionId;
@@ -34,7 +34,7 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -93,7 +93,6 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public GitSourceContextArgs build() {
             return new GitSourceContextArgs(revisionId, url);
         }

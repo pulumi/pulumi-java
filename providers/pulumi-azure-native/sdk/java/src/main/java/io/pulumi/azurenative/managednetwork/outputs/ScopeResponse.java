@@ -118,7 +118,6 @@ public final class ScopeResponse {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-
         public ScopeResponse build() {
             return new ScopeResponse(managementGroups, subnets, subscriptions, virtualNetworks);
         }

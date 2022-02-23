@@ -24,7 +24,7 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributeDefinitionId")
-    private final @Nullable Input<String> attributeDefinitionId;
+      private final @Nullable Input<String> attributeDefinitionId;
 
     public Input<String> getAttributeDefinitionId() {
         return this.attributeDefinitionId == null ? Input.empty() : this.attributeDefinitionId;
@@ -35,7 +35,7 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values", required=true)
-    private final Input<List<String>> values;
+      private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;
@@ -94,7 +94,6 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public AttributeArgs build() {
             return new AttributeArgs(attributeDefinitionId, values);
         }

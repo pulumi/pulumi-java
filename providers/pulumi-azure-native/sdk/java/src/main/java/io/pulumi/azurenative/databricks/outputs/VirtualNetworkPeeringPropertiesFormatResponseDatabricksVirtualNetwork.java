@@ -54,7 +54,6 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtua
             this.id = id;
             return this;
         }
-
         public VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork build() {
             return new VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork(id);
         }

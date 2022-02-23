@@ -52,7 +52,6 @@ public final class JwtResponse {
             this.compactJwt = Objects.requireNonNull(compactJwt);
             return this;
         }
-
         public JwtResponse build() {
             return new JwtResponse(compactJwt);
         }

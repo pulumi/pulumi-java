@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionArgs extends io.p
      * 
      */
     @InputImport(name="queryTerms")
-    private final @Nullable Input<List<String>> queryTerms;
+      private final @Nullable Input<List<String>> queryTerms;
 
     public Input<List<String>> getQueryTerms() {
         return this.queryTerms == null ? Input.empty() : this.queryTerms;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionArgs extends io.p
      * 
      */
     @InputImport(name="replacementTerm")
-    private final @Nullable Input<String> replacementTerm;
+      private final @Nullable Input<String> replacementTerm;
 
     public Input<String> getReplacementTerm() {
         return this.replacementTerm == null ? Input.empty() : this.replacementTerm;
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionArgs extends io.p
      * 
      */
     @InputImport(name="term")
-    private final @Nullable Input<String> term;
+      private final @Nullable Input<String> term;
 
     public Input<String> getTerm() {
         return this.term == null ? Input.empty() : this.term;
@@ -120,7 +120,6 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionArgs extends io.p
             this.term = Input.ofNullable(term);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleReplacementActionArgs build() {
             return new GoogleCloudRetailV2betaRuleReplacementActionArgs(queryTerms, replacementTerm, term);
         }

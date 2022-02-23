@@ -96,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResp
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse(allowPlaybackInterruption, audio, uri);
         }

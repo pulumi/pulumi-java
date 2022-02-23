@@ -18,7 +18,7 @@ public final class FlowSalesforceDestinationPropertiesArgs extends io.pulumi.res
     public static final FlowSalesforceDestinationPropertiesArgs Empty = new FlowSalesforceDestinationPropertiesArgs();
 
     @InputImport(name="errorHandlingConfig")
-    private final @Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig;
+        private final @Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig;
 
     public Input<FlowErrorHandlingConfigArgs> getErrorHandlingConfig() {
         return this.errorHandlingConfig == null ? Input.empty() : this.errorHandlingConfig;
@@ -29,21 +29,21 @@ public final class FlowSalesforceDestinationPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="idFieldNames")
-    private final @Nullable Input<List<String>> idFieldNames;
+        private final @Nullable Input<List<String>> idFieldNames;
 
     public Input<List<String>> getIdFieldNames() {
         return this.idFieldNames == null ? Input.empty() : this.idFieldNames;
     }
 
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+        private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
     }
 
     @InputImport(name="writeOperationType")
-    private final @Nullable Input<FlowWriteOperationType> writeOperationType;
+        private final @Nullable Input<FlowWriteOperationType> writeOperationType;
 
     public Input<FlowWriteOperationType> getWriteOperationType() {
         return this.writeOperationType == null ? Input.empty() : this.writeOperationType;
@@ -132,7 +132,6 @@ public final class FlowSalesforceDestinationPropertiesArgs extends io.pulumi.res
             this.writeOperationType = Input.ofNullable(writeOperationType);
             return this;
         }
-
         public FlowSalesforceDestinationPropertiesArgs build() {
             return new FlowSalesforceDestinationPropertiesArgs(errorHandlingConfig, idFieldNames, object, writeOperationType);
         }

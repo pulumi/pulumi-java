@@ -203,7 +203,6 @@ public final class CorsPolicyResponse {
             this.maxAge = Objects.requireNonNull(maxAge);
             return this;
         }
-
         public CorsPolicyResponse build() {
             return new CorsPolicyResponse(allowCredentials, allowHeaders, allowMethods, allowOriginRegexes, allowOrigins, disabled, exposeHeaders, maxAge);
         }

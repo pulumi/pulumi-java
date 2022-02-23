@@ -23,7 +23,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudFunction", required=true)
-    private final String cloudFunction;
+      private final String cloudFunction;
 
     public String getCloudFunction() {
         return this.cloudFunction;
@@ -34,7 +34,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudRun", required=true)
-    private final CloudRunResponse cloudRun;
+      private final CloudRunResponse cloudRun;
 
     public CloudRunResponse getCloudRun() {
         return this.cloudRun;
@@ -45,7 +45,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gke", required=true)
-    private final GKEResponse gke;
+      private final GKEResponse gke;
 
     public GKEResponse getGke() {
         return this.gke;
@@ -104,7 +104,6 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
             this.gke = Objects.requireNonNull(gke);
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(cloudFunction, cloudRun, gke);
         }

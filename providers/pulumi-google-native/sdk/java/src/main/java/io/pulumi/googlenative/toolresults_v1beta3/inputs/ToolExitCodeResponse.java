@@ -21,7 +21,7 @@ public final class ToolExitCodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="number", required=true)
-    private final Integer number;
+      private final Integer number;
 
     public Integer getNumber() {
         return this.number;
@@ -59,7 +59,6 @@ public final class ToolExitCodeResponse extends io.pulumi.resources.InvokeArgs {
             this.number = Objects.requireNonNull(number);
             return this;
         }
-
         public ToolExitCodeResponse build() {
             return new ToolExitCodeResponse(number);
         }

@@ -201,7 +201,6 @@ public final class PodDisruptionBudgetStatus {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public PodDisruptionBudgetStatus build() {
             return new PodDisruptionBudgetStatus(conditions, currentHealthy, desiredHealthy, disruptedPods, disruptionsAllowed, expectedPods, observedGeneration);
         }

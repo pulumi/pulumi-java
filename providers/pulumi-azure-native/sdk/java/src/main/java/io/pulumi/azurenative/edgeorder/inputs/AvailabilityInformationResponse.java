@@ -21,7 +21,7 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="availabilityStage", required=true)
-    private final String availabilityStage;
+        private final String availabilityStage;
 
     public String getAvailabilityStage() {
         return this.availabilityStage;
@@ -32,7 +32,7 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="disabledReason", required=true)
-    private final String disabledReason;
+        private final String disabledReason;
 
     public String getDisabledReason() {
         return this.disabledReason;
@@ -43,7 +43,7 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="disabledReasonMessage", required=true)
-    private final String disabledReasonMessage;
+        private final String disabledReasonMessage;
 
     public String getDisabledReasonMessage() {
         return this.disabledReasonMessage;
@@ -102,7 +102,6 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
             this.disabledReasonMessage = Objects.requireNonNull(disabledReasonMessage);
             return this;
         }
-
         public AvailabilityInformationResponse build() {
             return new AvailabilityInformationResponse(availabilityStage, disabledReason, disabledReasonMessage);
         }

@@ -74,7 +74,6 @@ public final class UserAssignedResourceIdentityResponse {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public UserAssignedResourceIdentityResponse build() {
             return new UserAssignedResourceIdentityResponse(principalId, tenantId);
         }

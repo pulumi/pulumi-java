@@ -374,7 +374,6 @@ public final class GetEndpointResult {
             this.weight = weight;
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(customHeaders, endpointLocation, endpointMonitorStatus, endpointStatus, geoMapping, id, minChildEndpoints, minChildEndpointsIPv4, minChildEndpointsIPv6, name, priority, subnets, target, targetResourceId, type, weight);
         }

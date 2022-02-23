@@ -100,7 +100,6 @@ public final class ResourceQuotaSpec {
             this.scopes = scopes;
             return this;
         }
-
         public ResourceQuotaSpec build() {
             return new ResourceQuotaSpec(hard, scopeSelector, scopes);
         }

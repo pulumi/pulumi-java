@@ -44,7 +44,6 @@ public final class FirewallPolicyDimension {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public FirewallPolicyDimension build() {
             return new FirewallPolicyDimension(value);
         }

@@ -29,7 +29,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="endOfLifeDate")
-    private final @Nullable Input<String> endOfLifeDate;
+        private final @Nullable Input<String> endOfLifeDate;
 
     public Input<String> getEndOfLifeDate() {
         return this.endOfLifeDate == null ? Input.empty() : this.endOfLifeDate;
@@ -40,7 +40,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="excludeFromLatest")
-    private final @Nullable Input<Boolean> excludeFromLatest;
+        private final @Nullable Input<Boolean> excludeFromLatest;
 
     public Input<Boolean> getExcludeFromLatest() {
         return this.excludeFromLatest == null ? Input.empty() : this.excludeFromLatest;
@@ -51,7 +51,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="replicaCount")
-    private final @Nullable Input<Integer> replicaCount;
+        private final @Nullable Input<Integer> replicaCount;
 
     public Input<Integer> getReplicaCount() {
         return this.replicaCount == null ? Input.empty() : this.replicaCount;
@@ -62,7 +62,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="storageAccountType")
-    private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
+        private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
 
     public Input<Either<String,StorageAccountType>> getStorageAccountType() {
         return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
@@ -73,7 +73,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="targetRegions")
-    private final @Nullable Input<List<TargetRegionArgs>> targetRegions;
+        private final @Nullable Input<List<TargetRegionArgs>> targetRegions;
 
     public Input<List<TargetRegionArgs>> getTargetRegions() {
         return this.targetRegions == null ? Input.empty() : this.targetRegions;
@@ -177,7 +177,6 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
             this.targetRegions = Input.ofNullable(targetRegions);
             return this;
         }
-
         public GalleryImageVersionPublishingProfileArgs build() {
             return new GalleryImageVersionPublishingProfileArgs(endOfLifeDate, excludeFromLatest, replicaCount, storageAccountType, targetRegions);
         }

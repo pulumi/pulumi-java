@@ -74,7 +74,6 @@ public final class JobStatusResponse {
             this.jobProgress = Objects.requireNonNull(jobProgress);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(jobName, jobProgress);
         }

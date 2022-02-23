@@ -361,7 +361,6 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageResponse(basicCard, browseCarouselCard, card, carouselSelect, image, linkOutSuggestion, listSelect, mediaContent, payload, platform, quickReplies, simpleResponses, suggestions, tableCard, text);
         }

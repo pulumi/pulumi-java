@@ -76,7 +76,6 @@ public final class ListQueryKeyBySearchServiceResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListQueryKeyBySearchServiceResult build() {
             return new ListQueryKeyBySearchServiceResult(nextLink, value);
         }

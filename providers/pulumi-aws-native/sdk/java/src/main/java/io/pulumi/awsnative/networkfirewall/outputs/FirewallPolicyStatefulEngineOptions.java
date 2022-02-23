@@ -46,7 +46,6 @@ public final class FirewallPolicyStatefulEngineOptions {
             this.ruleOrder = ruleOrder;
             return this;
         }
-
         public FirewallPolicyStatefulEngineOptions build() {
             return new FirewallPolicyStatefulEngineOptions(ruleOrder);
         }

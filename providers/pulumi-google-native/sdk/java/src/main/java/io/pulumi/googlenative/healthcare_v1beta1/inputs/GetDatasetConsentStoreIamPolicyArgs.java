@@ -15,35 +15,35 @@ public final class GetDatasetConsentStoreIamPolicyArgs extends io.pulumi.resourc
     public static final GetDatasetConsentStoreIamPolicyArgs Empty = new GetDatasetConsentStoreIamPolicyArgs();
 
     @InputImport(name="consentStoreId", required=true)
-    private final String consentStoreId;
+      private final String consentStoreId;
 
     public String getConsentStoreId() {
         return this.consentStoreId;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -122,7 +122,6 @@ public final class GetDatasetConsentStoreIamPolicyArgs extends io.pulumi.resourc
             this.project = project;
             return this;
         }
-
         public GetDatasetConsentStoreIamPolicyArgs build() {
             return new GetDatasetConsentStoreIamPolicyArgs(consentStoreId, datasetId, location, optionsRequestedPolicyVersion, project);
         }

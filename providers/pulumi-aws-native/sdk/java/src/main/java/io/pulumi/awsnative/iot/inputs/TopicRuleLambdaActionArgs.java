@@ -15,7 +15,7 @@ public final class TopicRuleLambdaActionArgs extends io.pulumi.resources.Resourc
     public static final TopicRuleLambdaActionArgs Empty = new TopicRuleLambdaActionArgs();
 
     @InputImport(name="functionArn")
-    private final @Nullable Input<String> functionArn;
+        private final @Nullable Input<String> functionArn;
 
     public Input<String> getFunctionArn() {
         return this.functionArn == null ? Input.empty() : this.functionArn;
@@ -58,7 +58,6 @@ public final class TopicRuleLambdaActionArgs extends io.pulumi.resources.Resourc
             this.functionArn = Input.ofNullable(functionArn);
             return this;
         }
-
         public TopicRuleLambdaActionArgs build() {
             return new TopicRuleLambdaActionArgs(functionArn);
         }

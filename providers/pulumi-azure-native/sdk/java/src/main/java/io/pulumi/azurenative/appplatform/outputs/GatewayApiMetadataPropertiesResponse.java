@@ -139,7 +139,6 @@ public final class GatewayApiMetadataPropertiesResponse {
             this.version = version;
             return this;
         }
-
         public GatewayApiMetadataPropertiesResponse build() {
             return new GatewayApiMetadataPropertiesResponse(description, documentation, serverUrl, title, version);
         }

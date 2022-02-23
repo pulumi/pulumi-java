@@ -287,7 +287,6 @@ public final class GetBlobContainerDataSetMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBlobContainerDataSetMappingResult build() {
             return new GetBlobContainerDataSetMappingResult(containerName, dataSetId, dataSetMappingStatus, id, kind, name, provisioningState, resourceGroup, storageAccountName, subscriptionId, systemData, type);
         }

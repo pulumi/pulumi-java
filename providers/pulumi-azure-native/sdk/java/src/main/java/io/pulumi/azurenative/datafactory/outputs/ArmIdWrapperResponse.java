@@ -44,7 +44,6 @@ public final class ArmIdWrapperResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public ArmIdWrapperResponse build() {
             return new ArmIdWrapperResponse(id);
         }

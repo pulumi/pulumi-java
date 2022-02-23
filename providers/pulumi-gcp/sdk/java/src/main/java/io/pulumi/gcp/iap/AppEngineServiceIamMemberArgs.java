@@ -20,7 +20,7 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+        private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -32,14 +32,14 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<AppEngineServiceIamMemberConditionArgs> condition;
+        private final @Nullable Input<AppEngineServiceIamMemberConditionArgs> condition;
 
     public Input<AppEngineServiceIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -51,7 +51,7 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -64,7 +64,7 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -75,7 +75,7 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+        private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -194,7 +194,6 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
-
         public AppEngineServiceIamMemberArgs build() {
             return new AppEngineServiceIamMemberArgs(appId, condition, member, project, role, service);
         }

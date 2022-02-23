@@ -120,7 +120,6 @@ public final class Object {
             this.stillOthers = stillOthers;
             return this;
         }
-
         public Object build() {
             return new Object(bar, configs, foo, others, stillOthers);
         }

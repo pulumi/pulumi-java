@@ -24,7 +24,7 @@ public final class ApplicationGatewayProbeHealthResponseMatch extends io.pulumi.
      * 
      */
     @InputImport(name="body")
-    private final @Nullable String body;
+        private final @Nullable String body;
 
     public Optional<String> getBody() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
@@ -35,7 +35,7 @@ public final class ApplicationGatewayProbeHealthResponseMatch extends io.pulumi.
      * 
      */
     @InputImport(name="statusCodes")
-    private final @Nullable List<String> statusCodes;
+        private final @Nullable List<String> statusCodes;
 
     public List<String> getStatusCodes() {
         return this.statusCodes == null ? List.of() : this.statusCodes;
@@ -84,7 +84,6 @@ public final class ApplicationGatewayProbeHealthResponseMatch extends io.pulumi.
             this.statusCodes = statusCodes;
             return this;
         }
-
         public ApplicationGatewayProbeHealthResponseMatch build() {
             return new ApplicationGatewayProbeHealthResponseMatch(body, statusCodes);
         }

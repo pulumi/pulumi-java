@@ -442,7 +442,6 @@ public final class FilterCriteria {
             this.vulnerablePackages = vulnerablePackages;
             return this;
         }
-
         public FilterCriteria build() {
             return new FilterCriteria(awsAccountId, componentId, componentType, ec2InstanceImageId, ec2InstanceSubnetId, ec2InstanceVpcId, ecrImageArchitecture, ecrImageHash, ecrImagePushedAt, ecrImageRegistry, ecrImageRepositoryName, ecrImageTags, findingArn, findingStatus, findingType, firstObservedAt, inspectorScore, lastObservedAt, networkProtocol, portRange, relatedVulnerabilities, resourceId, resourceTags, resourceType, severity, title, updatedAt, vendorSeverity, vulnerabilityId, vulnerabilitySource, vulnerablePackages);
         }

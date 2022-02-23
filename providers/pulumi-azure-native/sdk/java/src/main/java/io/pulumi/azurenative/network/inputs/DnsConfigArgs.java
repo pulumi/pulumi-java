@@ -24,7 +24,7 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relativeName")
-    private final @Nullable Input<String> relativeName;
+        private final @Nullable Input<String> relativeName;
 
     public Input<String> getRelativeName() {
         return this.relativeName == null ? Input.empty() : this.relativeName;
@@ -35,7 +35,7 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<Double> ttl;
+        private final @Nullable Input<Double> ttl;
 
     public Input<Double> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -94,7 +94,6 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
-
         public DnsConfigArgs build() {
             return new DnsConfigArgs(relativeName, ttl);
         }

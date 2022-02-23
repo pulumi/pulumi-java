@@ -13,14 +13,14 @@ public final class NetworkPerformanceConfigResponse extends io.pulumi.resources.
     public static final NetworkPerformanceConfigResponse Empty = new NetworkPerformanceConfigResponse();
 
     @InputImport(name="externalIpEgressBandwidthTier", required=true)
-    private final String externalIpEgressBandwidthTier;
+      private final String externalIpEgressBandwidthTier;
 
     public String getExternalIpEgressBandwidthTier() {
         return this.externalIpEgressBandwidthTier;
     }
 
     @InputImport(name="totalEgressBandwidthTier", required=true)
-    private final String totalEgressBandwidthTier;
+      private final String totalEgressBandwidthTier;
 
     public String getTotalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
@@ -69,7 +69,6 @@ public final class NetworkPerformanceConfigResponse extends io.pulumi.resources.
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
         }
-
         public NetworkPerformanceConfigResponse build() {
             return new NetworkPerformanceConfigResponse(externalIpEgressBandwidthTier, totalEgressBandwidthTier);
         }

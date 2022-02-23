@@ -62,7 +62,6 @@ public final class DataSourceConfluenceAttachmentConfiguration {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
-
         public DataSourceConfluenceAttachmentConfiguration build() {
             return new DataSourceConfluenceAttachmentConfiguration(attachmentFieldMappings, crawlAttachments);
         }

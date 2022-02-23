@@ -54,7 +54,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType(name);
         }

@@ -100,7 +100,6 @@ public final class IngressBackend {
             this.servicePort = Objects.requireNonNull(servicePort);
             return this;
         }
-
         public IngressBackend build() {
             return new IngressBackend(resource, serviceName, servicePort);
         }

@@ -268,7 +268,6 @@ public final class SingleQueryResultResponse {
             this.sourcePorts = sourcePorts;
             return this;
         }
-
         public SingleQueryResultResponse build() {
             return new SingleQueryResultResponse(description, destinationPorts, direction, group, inheritedFromParentPolicy, lastUpdated, mode, protocol, severity, signatureId, sourcePorts);
         }

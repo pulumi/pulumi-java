@@ -99,7 +99,6 @@ public final class MoveResourcePropertiesResponseMoveStatus {
             this.moveState = Objects.requireNonNull(moveState);
             return this;
         }
-
         public MoveResourcePropertiesResponseMoveStatus build() {
             return new MoveResourcePropertiesResponseMoveStatus(errors, jobStatus, moveState);
         }

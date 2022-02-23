@@ -119,7 +119,6 @@ public final class ManualScaleSettingsResponse {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }
-
         public ManualScaleSettingsResponse build() {
             return new ManualScaleSettingsResponse(instanceCount, maxInstances, minInstances, scaleType);
         }

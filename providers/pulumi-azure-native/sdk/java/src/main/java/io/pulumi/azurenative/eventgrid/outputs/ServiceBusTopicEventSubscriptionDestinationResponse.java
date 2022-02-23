@@ -78,7 +78,6 @@ public final class ServiceBusTopicEventSubscriptionDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public ServiceBusTopicEventSubscriptionDestinationResponse build() {
             return new ServiceBusTopicEventSubscriptionDestinationResponse(endpointType, resourceId);
         }

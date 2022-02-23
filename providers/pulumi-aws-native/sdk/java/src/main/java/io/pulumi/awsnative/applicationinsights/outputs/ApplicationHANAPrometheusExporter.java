@@ -146,7 +146,6 @@ public final class ApplicationHANAPrometheusExporter {
             this.prometheusPort = prometheusPort;
             return this;
         }
-
         public ApplicationHANAPrometheusExporter build() {
             return new ApplicationHANAPrometheusExporter(agreeToInstallHANADBClient, hANAPort, hANASID, hANASecretName, prometheusPort);
         }

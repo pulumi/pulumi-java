@@ -23,7 +23,7 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -38,7 +38,7 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<MetricMetricDescriptorLabelGetArgs>> labels;
+        private final @Nullable Input<List<MetricMetricDescriptorLabelGetArgs>> labels;
 
     public Input<List<MetricMetricDescriptorLabelGetArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -52,7 +52,7 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metricKind", required=true)
-    private final Input<String> metricKind;
+        private final Input<String> metricKind;
 
     public Input<String> getMetricKind() {
         return this.metricKind;
@@ -65,7 +65,7 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<String> unit;
+        private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;
@@ -78,7 +78,7 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="valueType", required=true)
-    private final Input<String> valueType;
+        private final Input<String> valueType;
 
     public Input<String> getValueType() {
         return this.valueType;
@@ -182,7 +182,6 @@ public final class MetricMetricDescriptorGetArgs extends io.pulumi.resources.Res
             this.valueType = Input.of(Objects.requireNonNull(valueType));
             return this;
         }
-
         public MetricMetricDescriptorGetArgs build() {
             return new MetricMetricDescriptorGetArgs(displayName, labels, metricKind, unit, valueType);
         }

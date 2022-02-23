@@ -74,7 +74,6 @@ public final class DataQualityJobDefinitionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DataQualityJobDefinitionTag build() {
             return new DataQualityJobDefinitionTag(key, value);
         }

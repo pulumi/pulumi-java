@@ -289,7 +289,6 @@ public final class GetPacketMirroringResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetPacketMirroringResult build() {
             return new GetPacketMirroringResult(collectorIlb, creationTimestamp, description, enable, filter, kind, mirroredResources, name, network, priority, region, selfLink);
         }

@@ -21,7 +21,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
@@ -32,7 +32,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="instanceName", required=true)
-    private final String instanceName;
+      private final String instanceName;
 
     public String getInstanceName() {
         return this.instanceName;
@@ -43,7 +43,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final String publicKey;
+      private final String publicKey;
 
     public String getPublicKey() {
         return this.publicKey;
@@ -102,7 +102,6 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public InstanceReferenceResponse build() {
             return new InstanceReferenceResponse(instanceId, instanceName, publicKey);
         }

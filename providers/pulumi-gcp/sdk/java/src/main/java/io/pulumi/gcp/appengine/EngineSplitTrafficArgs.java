@@ -21,7 +21,7 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="migrateTraffic")
-    private final @Nullable Input<Boolean> migrateTraffic;
+        private final @Nullable Input<Boolean> migrateTraffic;
 
     public Input<Boolean> getMigrateTraffic() {
         return this.migrateTraffic == null ? Input.empty() : this.migrateTraffic;
@@ -33,7 +33,7 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -44,7 +44,7 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+        private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -56,7 +56,7 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="split", required=true)
-    private final Input<EngineSplitTrafficSplitArgs> split;
+        private final Input<EngineSplitTrafficSplitArgs> split;
 
     public Input<EngineSplitTrafficSplitArgs> getSplit() {
         return this.split;
@@ -145,7 +145,6 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
             this.split = Input.of(Objects.requireNonNull(split));
             return this;
         }
-
         public EngineSplitTrafficArgs build() {
             return new EngineSplitTrafficArgs(migrateTraffic, project, service, split);
         }

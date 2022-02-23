@@ -415,7 +415,6 @@ public final class GetRatePlanResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetRatePlanResult build() {
             return new GetRatePlanResult(apiproduct, billingPeriod, consumptionPricingRates, consumptionPricingType, createdAt, currencyCode, description, displayName, endTime, fixedFeeFrequency, fixedRecurringFee, lastModifiedAt, name, revenueShareRates, revenueShareType, setupFee, startTime, state);
         }

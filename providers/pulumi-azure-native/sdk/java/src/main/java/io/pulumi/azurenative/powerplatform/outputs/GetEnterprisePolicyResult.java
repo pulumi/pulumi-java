@@ -271,7 +271,6 @@ public final class GetEnterprisePolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEnterprisePolicyResult build() {
             return new GetEnterprisePolicyResult(encryption, id, identity, kind, location, lockbox, name, networkInjection, systemData, tags, type);
         }

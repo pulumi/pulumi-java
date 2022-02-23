@@ -15,21 +15,21 @@ public final class GetRegionNetworkEndpointGroupArgs extends io.pulumi.resources
     public static final GetRegionNetworkEndpointGroupArgs Empty = new GetRegionNetworkEndpointGroupArgs();
 
     @InputImport(name="networkEndpointGroup", required=true)
-    private final String networkEndpointGroup;
+      private final String networkEndpointGroup;
 
     public String getNetworkEndpointGroup() {
         return this.networkEndpointGroup;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -88,7 +88,6 @@ public final class GetRegionNetworkEndpointGroupArgs extends io.pulumi.resources
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetRegionNetworkEndpointGroupArgs build() {
             return new GetRegionNetworkEndpointGroupArgs(networkEndpointGroup, project, region);
         }

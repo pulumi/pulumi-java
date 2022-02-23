@@ -164,7 +164,6 @@ public final class YearlyRetentionScheduleResponse {
             this.retentionTimes = retentionTimes;
             return this;
         }
-
         public YearlyRetentionScheduleResponse build() {
             return new YearlyRetentionScheduleResponse(monthsOfYear, retentionDuration, retentionScheduleDaily, retentionScheduleFormatType, retentionScheduleWeekly, retentionTimes);
         }

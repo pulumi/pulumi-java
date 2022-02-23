@@ -288,7 +288,6 @@ public final class GetExperimentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExperimentResult build() {
             return new GetExperimentResult(description, enabledState, endpointA, endpointB, id, location, name, resourceState, scriptFileUri, status, tags, type);
         }

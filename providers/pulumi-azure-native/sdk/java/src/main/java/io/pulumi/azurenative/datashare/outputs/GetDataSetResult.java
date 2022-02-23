@@ -138,7 +138,6 @@ public final class GetDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataSetResult build() {
             return new GetDataSetResult(id, kind, name, systemData, type);
         }

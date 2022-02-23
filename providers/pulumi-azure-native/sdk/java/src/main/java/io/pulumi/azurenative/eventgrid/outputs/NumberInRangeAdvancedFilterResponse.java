@@ -101,7 +101,6 @@ public final class NumberInRangeAdvancedFilterResponse {
             this.values = values;
             return this;
         }
-
         public NumberInRangeAdvancedFilterResponse build() {
             return new NumberInRangeAdvancedFilterResponse(key, operatorType, values);
         }

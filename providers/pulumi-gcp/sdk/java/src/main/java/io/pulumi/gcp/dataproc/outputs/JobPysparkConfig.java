@@ -197,7 +197,6 @@ public final class JobPysparkConfig {
             this.pythonFileUris = pythonFileUris;
             return this;
         }
-
         public JobPysparkConfig build() {
             return new JobPysparkConfig(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainPythonFileUri, properties, pythonFileUris);
         }

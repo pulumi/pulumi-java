@@ -116,7 +116,6 @@ public final class InstanceReferenceResponse {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public InstanceReferenceResponse build() {
             return new InstanceReferenceResponse(instanceId, instanceName, publicEciesKey, publicKey);
         }

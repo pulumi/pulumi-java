@@ -25,7 +25,7 @@ public final class FleetResourceCreationLimitPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="newGameSessionsPerCreator")
-    private final @Nullable Input<Integer> newGameSessionsPerCreator;
+        private final @Nullable Input<Integer> newGameSessionsPerCreator;
 
     public Input<Integer> getNewGameSessionsPerCreator() {
         return this.newGameSessionsPerCreator == null ? Input.empty() : this.newGameSessionsPerCreator;
@@ -36,7 +36,7 @@ public final class FleetResourceCreationLimitPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="policyPeriodInMinutes")
-    private final @Nullable Input<Integer> policyPeriodInMinutes;
+        private final @Nullable Input<Integer> policyPeriodInMinutes;
 
     public Input<Integer> getPolicyPeriodInMinutes() {
         return this.policyPeriodInMinutes == null ? Input.empty() : this.policyPeriodInMinutes;
@@ -95,7 +95,6 @@ public final class FleetResourceCreationLimitPolicyArgs extends io.pulumi.resour
             this.policyPeriodInMinutes = Input.ofNullable(policyPeriodInMinutes);
             return this;
         }
-
         public FleetResourceCreationLimitPolicyArgs build() {
             return new FleetResourceCreationLimitPolicyArgs(newGameSessionsPerCreator, policyPeriodInMinutes);
         }

@@ -311,7 +311,6 @@ public final class AutomaticScalingResponse {
             this.standardSchedulerSettings = Objects.requireNonNull(standardSchedulerSettings);
             return this;
         }
-
         public AutomaticScalingResponse build() {
             return new AutomaticScalingResponse(coolDownPeriod, cpuUtilization, diskUtilization, maxConcurrentRequests, maxIdleInstances, maxPendingLatency, maxTotalInstances, minIdleInstances, minPendingLatency, minTotalInstances, networkUtilization, requestUtilization, standardSchedulerSettings);
         }

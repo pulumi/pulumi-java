@@ -75,7 +75,6 @@ public final class MonitoringConfigResponse {
             this.managedPrometheusConfig = Objects.requireNonNull(managedPrometheusConfig);
             return this;
         }
-
         public MonitoringConfigResponse build() {
             return new MonitoringConfigResponse(componentConfig, managedPrometheusConfig);
         }

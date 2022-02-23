@@ -409,7 +409,6 @@ public final class GetDatasetResult {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(access, creationTime, datasetReference, defaultCollation, defaultEncryptionConfiguration, defaultPartitionExpirationMs, defaultTableExpirationMs, description, etag, friendlyName, isCaseInsensitive, kind, labels, lastModifiedTime, location, satisfiesPZS, selfLink, tags);
         }

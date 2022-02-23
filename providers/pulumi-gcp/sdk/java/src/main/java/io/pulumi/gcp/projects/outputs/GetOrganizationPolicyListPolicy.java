@@ -88,7 +88,6 @@ public final class GetOrganizationPolicyListPolicy {
             this.suggestedValue = Objects.requireNonNull(suggestedValue);
             return this;
         }
-
         public GetOrganizationPolicyListPolicy build() {
             return new GetOrganizationPolicyListPolicy(allows, denies, inheritFromParent, suggestedValue);
         }

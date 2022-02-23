@@ -116,7 +116,6 @@ public final class GetServerDnsAliasResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerDnsAliasResult build() {
             return new GetServerDnsAliasResult(azureDnsRecord, id, name, type);
         }

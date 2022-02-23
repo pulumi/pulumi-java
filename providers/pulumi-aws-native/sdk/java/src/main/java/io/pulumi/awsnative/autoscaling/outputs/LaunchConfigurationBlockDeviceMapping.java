@@ -120,7 +120,6 @@ public final class LaunchConfigurationBlockDeviceMapping {
             this.virtualName = virtualName;
             return this;
         }
-
         public LaunchConfigurationBlockDeviceMapping build() {
             return new LaunchConfigurationBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }

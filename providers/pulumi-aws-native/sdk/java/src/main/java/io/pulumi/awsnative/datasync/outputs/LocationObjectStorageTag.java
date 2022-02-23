@@ -74,7 +74,6 @@ public final class LocationObjectStorageTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public LocationObjectStorageTag build() {
             return new LocationObjectStorageTag(key, value);
         }

@@ -74,7 +74,6 @@ public final class WorkspaceTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WorkspaceTag build() {
             return new WorkspaceTag(key, value);
         }

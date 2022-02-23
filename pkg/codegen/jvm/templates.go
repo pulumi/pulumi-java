@@ -284,13 +284,22 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ $.Indent }}        return this;
 {{ $.Indent }}    }
 {{ end }}
-{{ .Indent }}    public {{ .ResultType }} build() {
-{{ .Indent }}        return new {{ .ResultType }}(
+{{- if .IsJumbo -}}
+{{ $.Indent }}    public {{ .ResultType }} build() {
+{{ $.Indent }}        final var built = new {{ .ResultType }}();
+{{ range $i, $field := .Fields }}
+{{ $.Indent }}        built.{{ $field.FieldName }} = {{ $field.FieldName }};
+{{- end }}
+{{ $.Indent }}        return built;
+{{- else -}}
+{{ $.Indent }}    public {{ .ResultType }} build() {
+{{ $.Indent }}        return new {{ .ResultType }}(
 {{- $last := (len .Fields | sub 1) -}}
 {{- range $i, $field := .Fields -}}
 {{ $field.FieldName }}{{ if not (eq $i $last) }}, {{ end }}
 {{- end -}}
 );
+{{- end }}
 {{ .Indent }}    }
 {{ .Indent }}}`
 
@@ -300,6 +309,7 @@ type builderTemplateContext struct {
 	Indent     string
 	Name       string
 	IsFinal    bool
+	IsJumbo    bool
 	Fields     []builderFieldTemplateContext
 	Setters    []builderSetterTemplateContext
 	ResultType string

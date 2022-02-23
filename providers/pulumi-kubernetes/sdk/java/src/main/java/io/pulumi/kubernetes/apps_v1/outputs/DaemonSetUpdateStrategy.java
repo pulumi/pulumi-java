@@ -85,7 +85,6 @@ public final class DaemonSetUpdateStrategy {
             this.type = type;
             return this;
         }
-
         public DaemonSetUpdateStrategy build() {
             return new DaemonSetUpdateStrategy(rollingUpdate, type);
         }

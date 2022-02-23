@@ -75,7 +75,6 @@ public final class GameServerClusterConnectionInfoResponse {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public GameServerClusterConnectionInfoResponse build() {
             return new GameServerClusterConnectionInfoResponse(gkeClusterReference, namespace);
         }

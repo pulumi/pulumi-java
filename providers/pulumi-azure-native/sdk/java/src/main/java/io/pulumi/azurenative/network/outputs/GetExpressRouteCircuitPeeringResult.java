@@ -548,7 +548,6 @@ public final class GetExpressRouteCircuitPeeringResult {
             this.vlanId = vlanId;
             return this;
         }
-
         public GetExpressRouteCircuitPeeringResult build() {
             return new GetExpressRouteCircuitPeeringResult(azureASN, connections, etag, expressRouteConnection, gatewayManagerEtag, id, ipv6PeeringConfig, lastModifiedBy, microsoftPeeringConfig, name, peerASN, peeredConnections, peeringType, primaryAzurePort, primaryPeerAddressPrefix, provisioningState, routeFilter, secondaryAzurePort, secondaryPeerAddressPrefix, sharedKey, state, stats, type, vlanId);
         }

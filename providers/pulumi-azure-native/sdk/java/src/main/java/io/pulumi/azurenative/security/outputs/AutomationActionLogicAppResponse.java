@@ -99,7 +99,6 @@ public final class AutomationActionLogicAppResponse {
             this.uri = uri;
             return this;
         }
-
         public AutomationActionLogicAppResponse build() {
             return new AutomationActionLogicAppResponse(actionType, logicAppResourceId, uri);
         }

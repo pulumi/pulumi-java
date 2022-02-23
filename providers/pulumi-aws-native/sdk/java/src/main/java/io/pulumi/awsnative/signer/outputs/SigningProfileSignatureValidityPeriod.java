@@ -61,7 +61,6 @@ public final class SigningProfileSignatureValidityPeriod {
             this.value = value;
             return this;
         }
-
         public SigningProfileSignatureValidityPeriod build() {
             return new SigningProfileSignatureValidityPeriod(type, value);
         }

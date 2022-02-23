@@ -23,7 +23,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAllocation")
-    private final @Nullable Input<String> ipAllocation;
+      private final @Nullable Input<String> ipAllocation;
 
     public Input<String> getIpAllocation() {
         return this.ipAllocation == null ? Input.empty() : this.ipAllocation;
@@ -34,7 +34,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -93,7 +93,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.network = Input.ofNullable(network);
             return this;
         }
-
         public NetworkConfigArgs build() {
             return new NetworkConfigArgs(ipAllocation, network);
         }

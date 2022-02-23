@@ -76,7 +76,6 @@ public final class LinuxPatchSettingsResponse {
             this.patchMode = patchMode;
             return this;
         }
-
         public LinuxPatchSettingsResponse build() {
             return new LinuxPatchSettingsResponse(assessmentMode, patchMode);
         }

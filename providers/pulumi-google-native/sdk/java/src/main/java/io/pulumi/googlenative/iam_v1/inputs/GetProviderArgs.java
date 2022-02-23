@@ -15,28 +15,28 @@ public final class GetProviderArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetProviderArgs Empty = new GetProviderArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="providerId", required=true)
-    private final String providerId;
+      private final String providerId;
 
     public String getProviderId() {
         return this.providerId;
     }
 
     @InputImport(name="workloadIdentityPoolId", required=true)
-    private final String workloadIdentityPoolId;
+      private final String workloadIdentityPoolId;
 
     public String getWorkloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
@@ -105,7 +105,6 @@ public final class GetProviderArgs extends io.pulumi.resources.InvokeArgs {
             this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
             return this;
         }
-
         public GetProviderArgs build() {
             return new GetProviderArgs(location, project, providerId, workloadIdentityPoolId);
         }

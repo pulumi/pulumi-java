@@ -22,7 +22,7 @@ public final class BucketCustomPlacementConfigResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dataLocations", required=true)
-    private final List<String> dataLocations;
+      private final List<String> dataLocations;
 
     public List<String> getDataLocations() {
         return this.dataLocations;
@@ -60,7 +60,6 @@ public final class BucketCustomPlacementConfigResponse extends io.pulumi.resourc
             this.dataLocations = Objects.requireNonNull(dataLocations);
             return this;
         }
-
         public BucketCustomPlacementConfigResponse build() {
             return new BucketCustomPlacementConfigResponse(dataLocations);
         }

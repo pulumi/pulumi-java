@@ -23,7 +23,7 @@ public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<CacheIdentityType> type;
+        private final @Nullable Input<CacheIdentityType> type;
 
     public Input<CacheIdentityType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public CacheIdentityArgs build() {
             return new CacheIdentityArgs(type);
         }

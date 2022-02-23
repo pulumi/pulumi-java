@@ -240,7 +240,6 @@ public final class EnvironmentConfig {
             this.workloadsConfig = workloadsConfig;
             return this;
         }
-
         public EnvironmentConfig build() {
             return new EnvironmentConfig(airflowUri, dagGcsPrefix, databaseConfig, encryptionConfig, environmentSize, gkeCluster, maintenanceWindow, masterAuthorizedNetworksConfig, nodeConfig, nodeCount, privateEnvironmentConfig, softwareConfig, webServerConfig, webServerNetworkAccessControl, workloadsConfig);
         }

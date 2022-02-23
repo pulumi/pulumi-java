@@ -166,7 +166,6 @@ public final class DefenderForContainersAwsOfferingResponse {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
-
         public DefenderForContainersAwsOfferingResponse build() {
             return new DefenderForContainersAwsOfferingResponse(cloudWatchToKinesis, description, kinesisToS3, kubernetesScubaReader, kubernetesService, offeringType);
         }

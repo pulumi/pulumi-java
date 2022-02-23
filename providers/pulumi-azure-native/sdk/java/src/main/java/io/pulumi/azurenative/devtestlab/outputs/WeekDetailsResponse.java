@@ -77,7 +77,6 @@ public final class WeekDetailsResponse {
             this.weekdays = weekdays;
             return this;
         }
-
         public WeekDetailsResponse build() {
             return new WeekDetailsResponse(time, weekdays);
         }

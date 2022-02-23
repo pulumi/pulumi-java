@@ -98,7 +98,6 @@ public final class HttpConfigResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public HttpConfigResponse build() {
             return new HttpConfigResponse(hosts, name, port);
         }

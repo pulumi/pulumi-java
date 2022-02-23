@@ -221,7 +221,6 @@ public final class GalleryApplicationVersionPublishingProfileResponse {
             this.targetRegions = targetRegions;
             return this;
         }
-
         public GalleryApplicationVersionPublishingProfileResponse build() {
             return new GalleryApplicationVersionPublishingProfileResponse(enableHealthCheck, endOfLifeDate, excludeFromLatest, manageActions, publishedDate, replicaCount, source, storageAccountType, targetRegions);
         }

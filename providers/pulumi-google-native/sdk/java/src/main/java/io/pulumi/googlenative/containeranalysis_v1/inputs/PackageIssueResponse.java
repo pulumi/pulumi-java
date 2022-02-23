@@ -23,7 +23,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="affectedCpeUri", required=true)
-    private final String affectedCpeUri;
+      private final String affectedCpeUri;
 
     public String getAffectedCpeUri() {
         return this.affectedCpeUri;
@@ -34,7 +34,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="affectedPackage", required=true)
-    private final String affectedPackage;
+      private final String affectedPackage;
 
     public String getAffectedPackage() {
         return this.affectedPackage;
@@ -45,7 +45,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="affectedVersion", required=true)
-    private final VersionResponse affectedVersion;
+      private final VersionResponse affectedVersion;
 
     public VersionResponse getAffectedVersion() {
         return this.affectedVersion;
@@ -56,7 +56,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="effectiveSeverity", required=true)
-    private final String effectiveSeverity;
+      private final String effectiveSeverity;
 
     public String getEffectiveSeverity() {
         return this.effectiveSeverity;
@@ -67,7 +67,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fixAvailable", required=true)
-    private final Boolean fixAvailable;
+      private final Boolean fixAvailable;
 
     public Boolean getFixAvailable() {
         return this.fixAvailable;
@@ -78,7 +78,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fixedCpeUri", required=true)
-    private final String fixedCpeUri;
+      private final String fixedCpeUri;
 
     public String getFixedCpeUri() {
         return this.fixedCpeUri;
@@ -89,7 +89,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fixedPackage", required=true)
-    private final String fixedPackage;
+      private final String fixedPackage;
 
     public String getFixedPackage() {
         return this.fixedPackage;
@@ -100,7 +100,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fixedVersion", required=true)
-    private final VersionResponse fixedVersion;
+      private final VersionResponse fixedVersion;
 
     public VersionResponse getFixedVersion() {
         return this.fixedVersion;
@@ -111,7 +111,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="packageType", required=true)
-    private final String packageType;
+      private final String packageType;
 
     public String getPackageType() {
         return this.packageType;
@@ -230,7 +230,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
-
         public PackageIssueResponse build() {
             return new PackageIssueResponse(affectedCpeUri, affectedPackage, affectedVersion, effectiveSeverity, fixAvailable, fixedCpeUri, fixedPackage, fixedVersion, packageType);
         }

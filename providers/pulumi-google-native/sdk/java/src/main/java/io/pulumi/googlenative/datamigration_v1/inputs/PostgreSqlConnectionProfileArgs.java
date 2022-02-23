@@ -25,7 +25,7 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cloudSqlId")
-    private final @Nullable Input<String> cloudSqlId;
+      private final @Nullable Input<String> cloudSqlId;
 
     public Input<String> getCloudSqlId() {
         return this.cloudSqlId == null ? Input.empty() : this.cloudSqlId;
@@ -36,7 +36,7 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="host", required=true)
-    private final Input<String> host;
+      private final Input<String> host;
 
     public Input<String> getHost() {
         return this.host;
@@ -47,7 +47,7 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -58,7 +58,7 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+      private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -69,7 +69,7 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ssl")
-    private final @Nullable Input<SslConfigArgs> ssl;
+      private final @Nullable Input<SslConfigArgs> ssl;
 
     public Input<SslConfigArgs> getSsl() {
         return this.ssl == null ? Input.empty() : this.ssl;
@@ -80,7 +80,7 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -199,7 +199,6 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public PostgreSqlConnectionProfileArgs build() {
             return new PostgreSqlConnectionProfileArgs(cloudSqlId, host, password, port, ssl, username);
         }

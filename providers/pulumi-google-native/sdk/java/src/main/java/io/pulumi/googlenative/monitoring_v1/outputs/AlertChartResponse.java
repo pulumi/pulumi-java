@@ -52,7 +52,6 @@ public final class AlertChartResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AlertChartResponse build() {
             return new AlertChartResponse(name);
         }

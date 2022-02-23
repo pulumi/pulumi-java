@@ -53,7 +53,6 @@ public final class LanguageCodesSetResponse {
             this.languageCodes = Objects.requireNonNull(languageCodes);
             return this;
         }
-
         public LanguageCodesSetResponse build() {
             return new LanguageCodesSetResponse(languageCodes);
         }

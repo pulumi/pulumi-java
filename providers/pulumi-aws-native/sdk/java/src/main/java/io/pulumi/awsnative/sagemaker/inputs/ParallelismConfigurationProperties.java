@@ -17,7 +17,7 @@ public final class ParallelismConfigurationProperties extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxParallelExecutionSteps", required=true)
-    private final Integer maxParallelExecutionSteps;
+        private final Integer maxParallelExecutionSteps;
 
     public Integer getMaxParallelExecutionSteps() {
         return this.maxParallelExecutionSteps;
@@ -55,7 +55,6 @@ public final class ParallelismConfigurationProperties extends io.pulumi.resource
             this.maxParallelExecutionSteps = Objects.requireNonNull(maxParallelExecutionSteps);
             return this;
         }
-
         public ParallelismConfigurationProperties build() {
             return new ParallelismConfigurationProperties(maxParallelExecutionSteps);
         }

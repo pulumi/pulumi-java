@@ -373,7 +373,6 @@ public final class LoadBalancingRuleResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public LoadBalancingRuleResponse build() {
             return new LoadBalancingRuleResponse(backendAddressPool, backendPort, disableOutboundSnat, enableFloatingIP, enableTcpReset, etag, frontendIPConfiguration, frontendPort, id, idleTimeoutInMinutes, loadDistribution, name, probe, protocol, provisioningState, type);
         }

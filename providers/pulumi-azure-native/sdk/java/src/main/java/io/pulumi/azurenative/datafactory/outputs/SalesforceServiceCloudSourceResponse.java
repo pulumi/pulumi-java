@@ -205,7 +205,6 @@ public final class SalesforceServiceCloudSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SalesforceServiceCloudSourceResponse build() {
             return new SalesforceServiceCloudSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, readBehavior, sourceRetryCount, sourceRetryWait, type);
         }

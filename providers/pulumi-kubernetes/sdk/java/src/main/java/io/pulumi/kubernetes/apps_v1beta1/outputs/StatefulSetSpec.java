@@ -208,7 +208,6 @@ public final class StatefulSetSpec {
             this.volumeClaimTemplates = volumeClaimTemplates;
             return this;
         }
-
         public StatefulSetSpec build() {
             return new StatefulSetSpec(podManagementPolicy, replicas, revisionHistoryLimit, selector, serviceName, template, updateStrategy, volumeClaimTemplates);
         }

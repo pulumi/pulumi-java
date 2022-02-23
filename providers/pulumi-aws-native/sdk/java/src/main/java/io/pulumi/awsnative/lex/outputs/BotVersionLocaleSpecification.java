@@ -59,7 +59,6 @@ public final class BotVersionLocaleSpecification {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }
-
         public BotVersionLocaleSpecification build() {
             return new BotVersionLocaleSpecification(botVersionLocaleDetails, localeId);
         }

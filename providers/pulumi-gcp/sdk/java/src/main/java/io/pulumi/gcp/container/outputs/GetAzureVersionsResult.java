@@ -124,7 +124,6 @@ public final class GetAzureVersionsResult {
             this.validVersions = Objects.requireNonNull(validVersions);
             return this;
         }
-
         public GetAzureVersionsResult build() {
             return new GetAzureVersionsResult(id, location, project, supportedRegions, validVersions);
         }

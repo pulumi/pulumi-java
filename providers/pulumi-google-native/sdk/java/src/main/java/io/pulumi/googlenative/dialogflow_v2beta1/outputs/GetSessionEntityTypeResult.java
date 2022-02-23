@@ -97,7 +97,6 @@ public final class GetSessionEntityTypeResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetSessionEntityTypeResult build() {
             return new GetSessionEntityTypeResult(entities, entityOverrideMode, name);
         }

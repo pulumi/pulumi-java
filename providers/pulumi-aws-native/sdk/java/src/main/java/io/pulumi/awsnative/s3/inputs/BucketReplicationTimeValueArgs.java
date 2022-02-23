@@ -14,7 +14,7 @@ public final class BucketReplicationTimeValueArgs extends io.pulumi.resources.Re
     public static final BucketReplicationTimeValueArgs Empty = new BucketReplicationTimeValueArgs();
 
     @InputImport(name="minutes", required=true)
-    private final Input<Integer> minutes;
+        private final Input<Integer> minutes;
 
     public Input<Integer> getMinutes() {
         return this.minutes;
@@ -57,7 +57,6 @@ public final class BucketReplicationTimeValueArgs extends io.pulumi.resources.Re
             this.minutes = Input.of(Objects.requireNonNull(minutes));
             return this;
         }
-
         public BucketReplicationTimeValueArgs build() {
             return new BucketReplicationTimeValueArgs(minutes);
         }

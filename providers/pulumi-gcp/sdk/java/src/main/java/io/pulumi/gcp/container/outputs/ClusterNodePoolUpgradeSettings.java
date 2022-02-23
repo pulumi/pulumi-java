@@ -58,7 +58,6 @@ public final class ClusterNodePoolUpgradeSettings {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
-
         public ClusterNodePoolUpgradeSettings build() {
             return new ClusterNodePoolUpgradeSettings(maxSurge, maxUnavailable);
         }

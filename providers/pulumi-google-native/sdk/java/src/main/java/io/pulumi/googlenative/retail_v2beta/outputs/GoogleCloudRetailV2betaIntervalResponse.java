@@ -116,7 +116,6 @@ public final class GoogleCloudRetailV2betaIntervalResponse {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
-
         public GoogleCloudRetailV2betaIntervalResponse build() {
             return new GoogleCloudRetailV2betaIntervalResponse(exclusiveMaximum, exclusiveMinimum, maximum, minimum);
         }

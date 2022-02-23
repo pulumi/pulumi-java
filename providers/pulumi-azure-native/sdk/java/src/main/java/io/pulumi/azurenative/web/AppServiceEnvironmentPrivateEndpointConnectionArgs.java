@@ -20,7 +20,7 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -31,14 +31,14 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="privateEndpointConnectionName")
-    private final @Nullable Input<String> privateEndpointConnectionName;
+        private final @Nullable Input<String> privateEndpointConnectionName;
 
     public Input<String> getPrivateEndpointConnectionName() {
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
@@ -49,7 +49,7 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
+        private final @Nullable Input<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -60,7 +60,7 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -164,7 +164,6 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public AppServiceEnvironmentPrivateEndpointConnectionArgs build() {
             return new AppServiceEnvironmentPrivateEndpointConnectionArgs(kind, name, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName);
         }

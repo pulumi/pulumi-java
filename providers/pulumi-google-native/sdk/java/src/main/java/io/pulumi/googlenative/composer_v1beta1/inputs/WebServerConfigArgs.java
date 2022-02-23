@@ -23,7 +23,7 @@ public final class WebServerConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -66,7 +66,6 @@ public final class WebServerConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
-
         public WebServerConfigArgs build() {
             return new WebServerConfigArgs(machineType);
         }

@@ -60,7 +60,6 @@ public final class ResourceTypeExtensionOptionsResponseResourceCreationBegin {
             this.response = response;
             return this;
         }
-
         public ResourceTypeExtensionOptionsResponseResourceCreationBegin build() {
             return new ResourceTypeExtensionOptionsResponseResourceCreationBegin(request, response);
         }

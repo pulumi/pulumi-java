@@ -60,7 +60,6 @@ public final class AlertPolicyCreationRecord {
             this.mutatedBy = mutatedBy;
             return this;
         }
-
         public AlertPolicyCreationRecord build() {
             return new AlertPolicyCreationRecord(mutateTime, mutatedBy);
         }

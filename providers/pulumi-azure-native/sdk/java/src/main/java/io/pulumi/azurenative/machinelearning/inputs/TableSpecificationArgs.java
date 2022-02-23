@@ -25,7 +25,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<String> format;
+        private final @Nullable Input<String> format;
 
     public Input<String> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -47,7 +47,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,ColumnSpecificationArgs>> properties;
+        private final @Nullable Input<Map<String,ColumnSpecificationArgs>> properties;
 
     public Input<Map<String,ColumnSpecificationArgs>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -58,7 +58,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+        private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -69,7 +69,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -173,7 +173,6 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public TableSpecificationArgs build() {
             return new TableSpecificationArgs(description, format, properties, title, type);
         }

@@ -29,7 +29,7 @@ public final class NodeTemplateServerBindingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -72,7 +72,6 @@ public final class NodeTemplateServerBindingGetArgs extends io.pulumi.resources.
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public NodeTemplateServerBindingGetArgs build() {
             return new NodeTemplateServerBindingGetArgs(type);
         }

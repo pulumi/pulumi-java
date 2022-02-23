@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="identifyingFields")
-    private final @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
+      private final @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
 
     public Input<List<GooglePrivacyDlpV2FieldIdArgs>> getIdentifyingFields() {
         return this.identifyingFields == null ? Input.empty() : this.identifyingFields;
@@ -67,7 +67,6 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends io.pulumi.resource
             this.identifyingFields = Input.ofNullable(identifyingFields);
             return this;
         }
-
         public GooglePrivacyDlpV2TableOptionsArgs build() {
             return new GooglePrivacyDlpV2TableOptionsArgs(identifyingFields);
         }

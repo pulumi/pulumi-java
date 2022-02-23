@@ -73,7 +73,6 @@ public final class FeatureStateState {
             this.updateTime = updateTime;
             return this;
         }
-
         public FeatureStateState build() {
             return new FeatureStateState(code, description, updateTime);
         }

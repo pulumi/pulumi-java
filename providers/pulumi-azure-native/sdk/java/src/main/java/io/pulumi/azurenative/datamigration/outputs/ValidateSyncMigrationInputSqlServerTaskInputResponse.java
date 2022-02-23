@@ -97,7 +97,6 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ValidateSyncMigrationInputSqlServerTaskInputResponse build() {
             return new ValidateSyncMigrationInputSqlServerTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }

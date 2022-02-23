@@ -76,7 +76,6 @@ public final class AnalysisIntegerParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public AnalysisIntegerParameter build() {
             return new AnalysisIntegerParameter(name, values);
         }

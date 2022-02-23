@@ -14,7 +14,7 @@ public final class DistributionOriginGroupMemberArgs extends io.pulumi.resources
     public static final DistributionOriginGroupMemberArgs Empty = new DistributionOriginGroupMemberArgs();
 
     @InputImport(name="originId", required=true)
-    private final Input<String> originId;
+        private final Input<String> originId;
 
     public Input<String> getOriginId() {
         return this.originId;
@@ -57,7 +57,6 @@ public final class DistributionOriginGroupMemberArgs extends io.pulumi.resources
             this.originId = Input.of(Objects.requireNonNull(originId));
             return this;
         }
-
         public DistributionOriginGroupMemberArgs build() {
             return new DistributionOriginGroupMemberArgs(originId);
         }

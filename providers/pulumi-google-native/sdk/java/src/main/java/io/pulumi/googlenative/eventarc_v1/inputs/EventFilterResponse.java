@@ -21,7 +21,7 @@ public final class EventFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attribute", required=true)
-    private final String attribute;
+      private final String attribute;
 
     public String getAttribute() {
         return this.attribute;
@@ -32,7 +32,7 @@ public final class EventFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class EventFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EventFilterResponse build() {
             return new EventFilterResponse(attribute, value);
         }

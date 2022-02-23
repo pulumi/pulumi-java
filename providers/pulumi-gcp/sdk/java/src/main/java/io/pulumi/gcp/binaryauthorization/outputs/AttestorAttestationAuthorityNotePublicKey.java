@@ -155,7 +155,6 @@ public final class AttestorAttestationAuthorityNotePublicKey {
             this.pkixPublicKey = pkixPublicKey;
             return this;
         }
-
         public AttestorAttestationAuthorityNotePublicKey build() {
             return new AttestorAttestationAuthorityNotePublicKey(asciiArmoredPgpPublicKey, comment, id, pkixPublicKey);
         }

@@ -180,7 +180,6 @@ public final class GetManagedInstanceKeyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedInstanceKeyResult build() {
             return new GetManagedInstanceKeyResult(autoRotationEnabled, creationDate, id, kind, name, thumbprint, type);
         }

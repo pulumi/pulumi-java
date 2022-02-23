@@ -54,7 +54,6 @@ public final class ResourceCollectionCloudFormationCollectionFilter {
             this.stackNames = stackNames;
             return this;
         }
-
         public ResourceCollectionCloudFormationCollectionFilter build() {
             return new ResourceCollectionCloudFormationCollectionFilter(stackNames);
         }

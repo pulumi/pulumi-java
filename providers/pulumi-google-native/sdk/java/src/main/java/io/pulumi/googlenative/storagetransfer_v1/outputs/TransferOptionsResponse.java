@@ -117,7 +117,6 @@ public final class TransferOptionsResponse {
             this.overwriteObjectsAlreadyExistingInSink = Objects.requireNonNull(overwriteObjectsAlreadyExistingInSink);
             return this;
         }
-
         public TransferOptionsResponse build() {
             return new TransferOptionsResponse(deleteObjectsFromSourceAfterTransfer, deleteObjectsUniqueInSink, metadataOptions, overwriteObjectsAlreadyExistingInSink);
         }

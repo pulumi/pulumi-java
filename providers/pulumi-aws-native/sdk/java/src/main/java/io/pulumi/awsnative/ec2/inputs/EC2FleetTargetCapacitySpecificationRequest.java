@@ -17,35 +17,35 @@ public final class EC2FleetTargetCapacitySpecificationRequest extends io.pulumi.
     public static final EC2FleetTargetCapacitySpecificationRequest Empty = new EC2FleetTargetCapacitySpecificationRequest();
 
     @InputImport(name="defaultTargetCapacityType")
-    private final @Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType;
+        private final @Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType;
 
     public Optional<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> getDefaultTargetCapacityType() {
         return this.defaultTargetCapacityType == null ? Optional.empty() : Optional.ofNullable(this.defaultTargetCapacityType);
     }
 
     @InputImport(name="onDemandTargetCapacity")
-    private final @Nullable Integer onDemandTargetCapacity;
+        private final @Nullable Integer onDemandTargetCapacity;
 
     public Optional<Integer> getOnDemandTargetCapacity() {
         return this.onDemandTargetCapacity == null ? Optional.empty() : Optional.ofNullable(this.onDemandTargetCapacity);
     }
 
     @InputImport(name="spotTargetCapacity")
-    private final @Nullable Integer spotTargetCapacity;
+        private final @Nullable Integer spotTargetCapacity;
 
     public Optional<Integer> getSpotTargetCapacity() {
         return this.spotTargetCapacity == null ? Optional.empty() : Optional.ofNullable(this.spotTargetCapacity);
     }
 
     @InputImport(name="targetCapacityUnitType")
-    private final @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType;
+        private final @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType;
 
     public Optional<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> getTargetCapacityUnitType() {
         return this.targetCapacityUnitType == null ? Optional.empty() : Optional.ofNullable(this.targetCapacityUnitType);
     }
 
     @InputImport(name="totalTargetCapacity", required=true)
-    private final Integer totalTargetCapacity;
+        private final Integer totalTargetCapacity;
 
     public Integer getTotalTargetCapacity() {
         return this.totalTargetCapacity;
@@ -124,7 +124,6 @@ public final class EC2FleetTargetCapacitySpecificationRequest extends io.pulumi.
             this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
             return this;
         }
-
         public EC2FleetTargetCapacitySpecificationRequest build() {
             return new EC2FleetTargetCapacitySpecificationRequest(defaultTargetCapacityType, onDemandTargetCapacity, spotTargetCapacity, targetCapacityUnitType, totalTargetCapacity);
         }

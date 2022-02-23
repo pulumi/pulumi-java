@@ -23,7 +23,7 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="product")
-    private final @Nullable Input<String> product;
+        private final @Nullable Input<String> product;
 
     public Input<String> getProduct() {
         return this.product == null ? Input.empty() : this.product;
@@ -45,7 +45,7 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="promotionCode")
-    private final @Nullable Input<String> promotionCode;
+        private final @Nullable Input<String> promotionCode;
 
     public Input<String> getPromotionCode() {
         return this.promotionCode == null ? Input.empty() : this.promotionCode;
@@ -56,7 +56,7 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="publisher")
-    private final @Nullable Input<String> publisher;
+        private final @Nullable Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher == null ? Input.empty() : this.publisher;
@@ -67,7 +67,7 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -171,7 +171,6 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ExtensionResourcePlanArgs build() {
             return new ExtensionResourcePlanArgs(name, product, promotionCode, publisher, version);
         }

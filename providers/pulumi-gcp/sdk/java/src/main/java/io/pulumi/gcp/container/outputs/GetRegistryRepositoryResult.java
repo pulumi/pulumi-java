@@ -94,7 +94,6 @@ public final class GetRegistryRepositoryResult {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
-
         public GetRegistryRepositoryResult build() {
             return new GetRegistryRepositoryResult(id, project, region, repositoryUrl);
         }

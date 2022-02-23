@@ -21,7 +21,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<IdentityArgs> identity;
+        private final @Nullable Input<IdentityArgs> identity;
 
     public Input<IdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -32,7 +32,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkName")
-    private final @Nullable Input<String> linkName;
+        private final @Nullable Input<String> linkName;
 
     public Input<String> getLinkName() {
         return this.linkName == null ? Input.empty() : this.linkName;
@@ -43,7 +43,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -54,7 +54,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<LinkedServicePropsArgs> properties;
+        private final @Nullable Input<LinkedServicePropsArgs> properties;
 
     public Input<LinkedServicePropsArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -76,7 +76,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -221,7 +221,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public LinkedServiceArgs build() {
             return new LinkedServiceArgs(identity, linkName, location, name, properties, resourceGroupName, workspaceName);
         }

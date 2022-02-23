@@ -118,7 +118,6 @@ public final class Subject {
             this.namespace = namespace;
             return this;
         }
-
         public Subject build() {
             return new Subject(apiVersion, kind, name, namespace);
         }

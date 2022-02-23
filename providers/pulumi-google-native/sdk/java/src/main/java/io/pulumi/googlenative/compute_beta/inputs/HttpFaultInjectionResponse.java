@@ -22,7 +22,7 @@ public final class HttpFaultInjectionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="abort", required=true)
-    private final HttpFaultAbortResponse abort;
+      private final HttpFaultAbortResponse abort;
 
     public HttpFaultAbortResponse getAbort() {
         return this.abort;
@@ -33,7 +33,7 @@ public final class HttpFaultInjectionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="delay", required=true)
-    private final HttpFaultDelayResponse delay;
+      private final HttpFaultDelayResponse delay;
 
     public HttpFaultDelayResponse getDelay() {
         return this.delay;
@@ -82,7 +82,6 @@ public final class HttpFaultInjectionResponse extends io.pulumi.resources.Invoke
             this.delay = Objects.requireNonNull(delay);
             return this;
         }
-
         public HttpFaultInjectionResponse build() {
             return new HttpFaultInjectionResponse(abort, delay);
         }

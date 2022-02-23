@@ -71,7 +71,6 @@ public final class GetEnvironmentConfigMaintenanceWindow {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetEnvironmentConfigMaintenanceWindow build() {
             return new GetEnvironmentConfigMaintenanceWindow(endTime, recurrence, startTime);
         }

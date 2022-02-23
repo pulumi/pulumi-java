@@ -89,7 +89,6 @@ public final class GetGroupsResult {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public GetGroupsResult build() {
             return new GetGroupsResult(groups, id, parent);
         }

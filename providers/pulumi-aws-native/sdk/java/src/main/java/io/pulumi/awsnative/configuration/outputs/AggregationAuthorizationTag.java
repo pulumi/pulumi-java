@@ -74,7 +74,6 @@ public final class AggregationAuthorizationTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AggregationAuthorizationTag build() {
             return new AggregationAuthorizationTag(key, value);
         }

@@ -25,7 +25,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<Map<String,TableSpecificationArgs>> properties;
+        private final Input<Map<String,TableSpecificationArgs>> properties;
 
     public Input<Map<String,TableSpecificationArgs>> getProperties() {
         return this.properties;
@@ -47,7 +47,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+        private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -58,7 +58,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -147,7 +147,6 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ServiceInputOutputSpecificationArgs build() {
             return new ServiceInputOutputSpecificationArgs(description, properties, title, type);
         }

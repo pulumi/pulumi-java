@@ -74,7 +74,6 @@ public final class GetExposureControlFeatureValueResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetExposureControlFeatureValueResult build() {
             return new GetExposureControlFeatureValueResult(featureName, value);
         }

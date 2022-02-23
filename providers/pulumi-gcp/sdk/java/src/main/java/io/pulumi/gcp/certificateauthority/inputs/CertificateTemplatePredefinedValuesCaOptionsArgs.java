@@ -20,7 +20,7 @@ public final class CertificateTemplatePredefinedValuesCaOptionsArgs extends io.p
      * 
      */
     @InputImport(name="isCa")
-    private final @Nullable Input<Boolean> isCa;
+        private final @Nullable Input<Boolean> isCa;
 
     public Input<Boolean> getIsCa() {
         return this.isCa == null ? Input.empty() : this.isCa;
@@ -31,7 +31,7 @@ public final class CertificateTemplatePredefinedValuesCaOptionsArgs extends io.p
      * 
      */
     @InputImport(name="maxIssuerPathLength")
-    private final @Nullable Input<Integer> maxIssuerPathLength;
+        private final @Nullable Input<Integer> maxIssuerPathLength;
 
     public Input<Integer> getMaxIssuerPathLength() {
         return this.maxIssuerPathLength == null ? Input.empty() : this.maxIssuerPathLength;
@@ -90,7 +90,6 @@ public final class CertificateTemplatePredefinedValuesCaOptionsArgs extends io.p
             this.maxIssuerPathLength = Input.ofNullable(maxIssuerPathLength);
             return this;
         }
-
         public CertificateTemplatePredefinedValuesCaOptionsArgs build() {
             return new CertificateTemplatePredefinedValuesCaOptionsArgs(isCa, maxIssuerPathLength);
         }

@@ -161,7 +161,6 @@ public final class GetSshPublicKeyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSshPublicKeyResult build() {
             return new GetSshPublicKeyResult(id, location, name, publicKey, tags, type);
         }

@@ -246,7 +246,6 @@ public final class FieldResponse {
             this.typeUrl = Objects.requireNonNull(typeUrl);
             return this;
         }
-
         public FieldResponse build() {
             return new FieldResponse(cardinality, defaultValue, jsonName, kind, name, number, oneofIndex, options, packed, typeUrl);
         }

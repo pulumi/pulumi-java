@@ -13,14 +13,14 @@ public final class GetDatabaseInstanceClone extends io.pulumi.resources.InvokeAr
     public static final GetDatabaseInstanceClone Empty = new GetDatabaseInstanceClone();
 
     @InputImport(name="pointInTime", required=true)
-    private final String pointInTime;
+        private final String pointInTime;
 
     public String getPointInTime() {
         return this.pointInTime;
     }
 
     @InputImport(name="sourceInstanceName", required=true)
-    private final String sourceInstanceName;
+        private final String sourceInstanceName;
 
     public String getSourceInstanceName() {
         return this.sourceInstanceName;
@@ -69,7 +69,6 @@ public final class GetDatabaseInstanceClone extends io.pulumi.resources.InvokeAr
             this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
             return this;
         }
-
         public GetDatabaseInstanceClone build() {
             return new GetDatabaseInstanceClone(pointInTime, sourceInstanceName);
         }

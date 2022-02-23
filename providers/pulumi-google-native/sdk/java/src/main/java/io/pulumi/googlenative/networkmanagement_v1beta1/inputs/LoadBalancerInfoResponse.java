@@ -23,7 +23,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="backendType", required=true)
-    private final String backendType;
+      private final String backendType;
 
     public String getBackendType() {
         return this.backendType;
@@ -34,7 +34,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="backendUri", required=true)
-    private final String backendUri;
+      private final String backendUri;
 
     public String getBackendUri() {
         return this.backendUri;
@@ -45,7 +45,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="backends", required=true)
-    private final List<LoadBalancerBackendResponse> backends;
+      private final List<LoadBalancerBackendResponse> backends;
 
     public List<LoadBalancerBackendResponse> getBackends() {
         return this.backends;
@@ -56,7 +56,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="healthCheckUri", required=true)
-    private final String healthCheckUri;
+      private final String healthCheckUri;
 
     public String getHealthCheckUri() {
         return this.healthCheckUri;
@@ -67,7 +67,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="loadBalancerType", required=true)
-    private final String loadBalancerType;
+      private final String loadBalancerType;
 
     public String getLoadBalancerType() {
         return this.loadBalancerType;
@@ -146,7 +146,6 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
-
         public LoadBalancerInfoResponse build() {
             return new LoadBalancerInfoResponse(backendType, backendUri, backends, healthCheckUri, loadBalancerType);
         }

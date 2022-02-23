@@ -123,7 +123,6 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillment {
             this.webhook = webhook;
             return this;
         }
-
         public CxPageFormParameterFillBehaviorInitialPromptFulfillment build() {
             return new CxPageFormParameterFillBehaviorInitialPromptFulfillment(messages, returnPartialResponses, tag, webhook);
         }

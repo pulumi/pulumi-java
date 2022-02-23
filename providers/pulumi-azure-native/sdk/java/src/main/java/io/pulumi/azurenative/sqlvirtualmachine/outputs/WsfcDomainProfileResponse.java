@@ -181,7 +181,6 @@ public final class WsfcDomainProfileResponse {
             this.storageAccountUrl = storageAccountUrl;
             return this;
         }
-
         public WsfcDomainProfileResponse build() {
             return new WsfcDomainProfileResponse(clusterBootstrapAccount, clusterOperatorAccount, domainFqdn, fileShareWitnessPath, ouPath, sqlServiceAccount, storageAccountUrl);
         }

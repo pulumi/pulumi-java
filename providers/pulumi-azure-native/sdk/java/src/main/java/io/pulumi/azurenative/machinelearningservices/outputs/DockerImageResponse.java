@@ -102,7 +102,6 @@ public final class DockerImageResponse {
             this.platform = platform;
             return this;
         }
-
         public DockerImageResponse build() {
             return new DockerImageResponse(dockerImageUri, dockerSpecificationType, platform);
         }

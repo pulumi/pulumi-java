@@ -23,7 +23,7 @@ public final class ProviderIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="auditConfigs")
-    private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
 
     public Input<List<AuditConfigArgs>> getAuditConfigs() {
         return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
@@ -34,7 +34,7 @@ public final class ProviderIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -45,28 +45,28 @@ public final class ProviderIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="providerId", required=true)
-    private final Input<String> providerId;
+      private final Input<String> providerId;
 
     public Input<String> getProviderId() {
         return this.providerId;
@@ -77,7 +77,7 @@ public final class ProviderIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="updateMask")
-    private final @Nullable Input<String> updateMask;
+      private final @Nullable Input<String> updateMask;
 
     public Input<String> getUpdateMask() {
         return this.updateMask == null ? Input.empty() : this.updateMask;
@@ -88,7 +88,7 @@ public final class ProviderIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -237,7 +237,6 @@ public final class ProviderIamPolicyArgs extends io.pulumi.resources.ResourceArg
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ProviderIamPolicyArgs build() {
             return new ProviderIamPolicyArgs(auditConfigs, bindings, etag, location, project, providerId, updateMask, version);
         }

@@ -76,7 +76,6 @@ public final class GetUptimeCheckIPsResult {
             this.uptimeCheckIps = Objects.requireNonNull(uptimeCheckIps);
             return this;
         }
-
         public GetUptimeCheckIPsResult build() {
             return new GetUptimeCheckIPsResult(id, uptimeCheckIps);
         }

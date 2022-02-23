@@ -25,7 +25,7 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="conflictResolutionPath")
-    private final @Nullable Input<String> conflictResolutionPath;
+        private final @Nullable Input<String> conflictResolutionPath;
 
     public Input<String> getConflictResolutionPath() {
         return this.conflictResolutionPath == null ? Input.empty() : this.conflictResolutionPath;
@@ -36,7 +36,7 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="conflictResolutionProcedure")
-    private final @Nullable Input<String> conflictResolutionProcedure;
+        private final @Nullable Input<String> conflictResolutionProcedure;
 
     public Input<String> getConflictResolutionProcedure() {
         return this.conflictResolutionProcedure == null ? Input.empty() : this.conflictResolutionProcedure;
@@ -47,7 +47,7 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,ConflictResolutionMode>> mode;
+        private final @Nullable Input<Either<String,ConflictResolutionMode>> mode;
 
     public Input<Either<String,ConflictResolutionMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -121,7 +121,6 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
             this.mode = Input.ofNullable(mode);
             return this;
         }
-
         public ConflictResolutionPolicyArgs build() {
             return new ConflictResolutionPolicyArgs(conflictResolutionPath, conflictResolutionProcedure, mode);
         }

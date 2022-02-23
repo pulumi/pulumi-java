@@ -137,7 +137,6 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public PublicAdvertisedPrefixPublicDelegatedPrefixResponse build() {
             return new PublicAdvertisedPrefixPublicDelegatedPrefixResponse(ipRange, name, project, region, status);
         }

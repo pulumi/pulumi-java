@@ -221,7 +221,6 @@ public final class GetSslCertResult {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public GetSslCertResult build() {
             return new GetSslCertResult(cert, certSerialNumber, commonName, createTime, expirationTime, instance, kind, selfLink, sha1Fingerprint);
         }

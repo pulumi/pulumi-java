@@ -119,7 +119,6 @@ public final class MetricAbsenceResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public MetricAbsenceResponse build() {
             return new MetricAbsenceResponse(aggregations, duration, filter, trigger);
         }

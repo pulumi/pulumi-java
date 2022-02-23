@@ -205,7 +205,6 @@ public final class GetSnapshotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSnapshotResult build() {
             return new GetSnapshotResult(creationData, id, location, name, snapshotType, systemData, tags, type);
         }

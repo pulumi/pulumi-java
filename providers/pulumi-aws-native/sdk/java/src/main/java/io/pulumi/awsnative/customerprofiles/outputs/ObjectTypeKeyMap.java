@@ -62,7 +62,6 @@ public final class ObjectTypeKeyMap {
             this.objectTypeKeyList = objectTypeKeyList;
             return this;
         }
-
         public ObjectTypeKeyMap build() {
             return new ObjectTypeKeyMap(name, objectTypeKeyList);
         }

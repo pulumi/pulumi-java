@@ -21,7 +21,7 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serializedPayload", required=true)
-    private final Input<String> serializedPayload;
+        private final Input<String> serializedPayload;
 
     public Input<String> getSerializedPayload() {
         return this.serializedPayload;
@@ -37,7 +37,7 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="signatures", required=true)
-    private final Input<List<OccurenceAttestationSignatureGetArgs>> signatures;
+        private final Input<List<OccurenceAttestationSignatureGetArgs>> signatures;
 
     public Input<List<OccurenceAttestationSignatureGetArgs>> getSignatures() {
         return this.signatures;
@@ -96,7 +96,6 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
             this.signatures = Input.of(Objects.requireNonNull(signatures));
             return this;
         }
-
         public OccurenceAttestationGetArgs build() {
             return new OccurenceAttestationGetArgs(serializedPayload, signatures);
         }

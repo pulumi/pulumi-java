@@ -77,7 +77,6 @@ public final class AssignmentInfoResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public AssignmentInfoResponse build() {
             return new AssignmentInfoResponse(configuration, name);
         }

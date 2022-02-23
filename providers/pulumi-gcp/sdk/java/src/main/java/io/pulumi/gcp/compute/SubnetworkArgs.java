@@ -25,7 +25,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -39,7 +39,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipCidrRange", required=true)
-    private final Input<String> ipCidrRange;
+        private final Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange;
@@ -53,7 +53,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6AccessType")
-    private final @Nullable Input<String> ipv6AccessType;
+        private final @Nullable Input<String> ipv6AccessType;
 
     public Input<String> getIpv6AccessType() {
         return this.ipv6AccessType == null ? Input.empty() : this.ipv6AccessType;
@@ -67,7 +67,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-    private final @Nullable Input<SubnetworkLogConfigArgs> logConfig;
+        private final @Nullable Input<SubnetworkLogConfigArgs> logConfig;
 
     public Input<SubnetworkLogConfigArgs> getLogConfig() {
         return this.logConfig == null ? Input.empty() : this.logConfig;
@@ -84,7 +84,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -96,7 +96,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network", required=true)
-    private final Input<String> network;
+        private final Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network;
@@ -108,7 +108,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpGoogleAccess")
-    private final @Nullable Input<Boolean> privateIpGoogleAccess;
+        private final @Nullable Input<Boolean> privateIpGoogleAccess;
 
     public Input<Boolean> getPrivateIpGoogleAccess() {
         return this.privateIpGoogleAccess == null ? Input.empty() : this.privateIpGoogleAccess;
@@ -119,7 +119,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpv6GoogleAccess")
-    private final @Nullable Input<String> privateIpv6GoogleAccess;
+        private final @Nullable Input<String> privateIpv6GoogleAccess;
 
     public Input<String> getPrivateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
@@ -131,7 +131,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -145,7 +145,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purpose")
-    private final @Nullable Input<String> purpose;
+        private final @Nullable Input<String> purpose;
 
     public Input<String> getPurpose() {
         return this.purpose == null ? Input.empty() : this.purpose;
@@ -156,7 +156,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -172,7 +172,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -187,7 +187,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryIpRanges")
-    private final @Nullable Input<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
+        private final @Nullable Input<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
 
     public Input<List<SubnetworkSecondaryIpRangeArgs>> getSecondaryIpRanges() {
         return this.secondaryIpRanges == null ? Input.empty() : this.secondaryIpRanges;
@@ -200,7 +200,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackType")
-    private final @Nullable Input<String> stackType;
+        private final @Nullable Input<String> stackType;
 
     public Input<String> getStackType() {
         return this.stackType == null ? Input.empty() : this.stackType;
@@ -439,7 +439,6 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.stackType = Input.ofNullable(stackType);
             return this;
         }
-
         public SubnetworkArgs build() {
             return new SubnetworkArgs(description, ipCidrRange, ipv6AccessType, logConfig, name, network, privateIpGoogleAccess, privateIpv6GoogleAccess, project, purpose, region, role, secondaryIpRanges, stackType);
         }

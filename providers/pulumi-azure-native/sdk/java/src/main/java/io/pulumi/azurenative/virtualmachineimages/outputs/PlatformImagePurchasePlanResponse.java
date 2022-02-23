@@ -95,7 +95,6 @@ public final class PlatformImagePurchasePlanResponse {
             this.planPublisher = Objects.requireNonNull(planPublisher);
             return this;
         }
-
         public PlatformImagePurchasePlanResponse build() {
             return new PlatformImagePurchasePlanResponse(planName, planProduct, planPublisher);
         }

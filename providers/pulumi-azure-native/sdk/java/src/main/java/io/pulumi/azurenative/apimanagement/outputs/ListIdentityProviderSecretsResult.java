@@ -54,7 +54,6 @@ public final class ListIdentityProviderSecretsResult {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public ListIdentityProviderSecretsResult build() {
             return new ListIdentityProviderSecretsResult(clientSecret);
         }

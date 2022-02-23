@@ -16,14 +16,14 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends io.pulum
     public static final InAppTemplateOverrideButtonConfigurationArgs Empty = new InAppTemplateOverrideButtonConfigurationArgs();
 
     @InputImport(name="buttonAction")
-    private final @Nullable Input<InAppTemplateButtonAction> buttonAction;
+        private final @Nullable Input<InAppTemplateButtonAction> buttonAction;
 
     public Input<InAppTemplateButtonAction> getButtonAction() {
         return this.buttonAction == null ? Input.empty() : this.buttonAction;
     }
 
     @InputImport(name="link")
-    private final @Nullable Input<String> link;
+        private final @Nullable Input<String> link;
 
     public Input<String> getLink() {
         return this.link == null ? Input.empty() : this.link;
@@ -82,7 +82,6 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends io.pulum
             this.link = Input.ofNullable(link);
             return this;
         }
-
         public InAppTemplateOverrideButtonConfigurationArgs build() {
             return new InAppTemplateOverrideButtonConfigurationArgs(buttonAction, link);
         }

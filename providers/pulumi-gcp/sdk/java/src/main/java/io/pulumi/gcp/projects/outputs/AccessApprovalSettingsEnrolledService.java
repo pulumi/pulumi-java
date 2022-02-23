@@ -100,7 +100,6 @@ public final class AccessApprovalSettingsEnrolledService {
             this.enrollmentLevel = enrollmentLevel;
             return this;
         }
-
         public AccessApprovalSettingsEnrolledService build() {
             return new AccessApprovalSettingsEnrolledService(cloudProduct, enrollmentLevel);
         }

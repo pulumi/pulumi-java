@@ -23,7 +23,7 @@ public final class PersonalComputeInstanceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="assignedUser")
-    private final @Nullable AssignedUserResponse assignedUser;
+        private final @Nullable AssignedUserResponse assignedUser;
 
     public Optional<AssignedUserResponse> getAssignedUser() {
         return this.assignedUser == null ? Optional.empty() : Optional.ofNullable(this.assignedUser);
@@ -61,7 +61,6 @@ public final class PersonalComputeInstanceSettingsResponse extends io.pulumi.res
             this.assignedUser = assignedUser;
             return this;
         }
-
         public PersonalComputeInstanceSettingsResponse build() {
             return new PersonalComputeInstanceSettingsResponse(assignedUser);
         }

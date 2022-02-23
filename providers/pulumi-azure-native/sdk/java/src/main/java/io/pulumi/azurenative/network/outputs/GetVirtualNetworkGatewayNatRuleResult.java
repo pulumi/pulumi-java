@@ -225,7 +225,6 @@ public final class GetVirtualNetworkGatewayNatRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualNetworkGatewayNatRuleResult build() {
             return new GetVirtualNetworkGatewayNatRuleResult(etag, externalMappings, id, internalMappings, ipConfigurationId, mode, name, provisioningState, type);
         }

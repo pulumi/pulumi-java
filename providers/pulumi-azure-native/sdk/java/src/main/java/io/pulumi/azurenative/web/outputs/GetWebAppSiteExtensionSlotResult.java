@@ -533,7 +533,6 @@ public final class GetWebAppSiteExtensionSlotResult {
             this.version = version;
             return this;
         }
-
         public GetWebAppSiteExtensionSlotResult build() {
             return new GetWebAppSiteExtensionSlotResult(authors, comment, description, downloadCount, extensionId, extensionType, extensionUrl, feedUrl, iconUrl, id, installedDateTime, installerCommandLineParams, kind, licenseUrl, localIsLatestVersion, localPath, name, projectUrl, provisioningState, publishedDateTime, summary, title, type, version);
         }

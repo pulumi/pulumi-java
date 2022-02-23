@@ -54,7 +54,6 @@ public final class ListAccountChannelTypesResult {
             this.value = value;
             return this;
         }
-
         public ListAccountChannelTypesResult build() {
             return new ListAccountChannelTypesResult(value);
         }

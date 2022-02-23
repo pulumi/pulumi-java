@@ -100,7 +100,6 @@ public final class NetworkRuleSetPropertiesResponse {
             this.ipRules = Objects.requireNonNull(ipRules);
             return this;
         }
-
         public NetworkRuleSetPropertiesResponse build() {
             return new NetworkRuleSetPropertiesResponse(applyToBuiltInEventHubEndpoint, defaultAction, ipRules);
         }

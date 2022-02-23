@@ -498,7 +498,6 @@ public final class OperationResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public OperationResponse build() {
             return new OperationResponse(clientOperationId, description, endTime, error, httpErrorMessage, httpErrorStatusCode, insertTime, kind, name, operationGroupId, operationType, progress, region, selfLink, startTime, status, statusMessage, targetId, targetLink, user, warnings, zone);
         }

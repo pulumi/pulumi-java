@@ -101,7 +101,6 @@ public final class NumberNotInRangeAdvancedFilterResponse {
             this.values = values;
             return this;
         }
-
         public NumberNotInRangeAdvancedFilterResponse build() {
             return new NumberNotInRangeAdvancedFilterResponse(key, operatorType, values);
         }

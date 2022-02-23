@@ -25,7 +25,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<Integer> code;
+        private final @Nullable Input<Integer> code;
 
     public Input<Integer> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -36,7 +36,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+        private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -47,7 +47,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="recommendations")
-    private final @Nullable Input<List<String>> recommendations;
+        private final @Nullable Input<List<String>> recommendations;
 
     public Input<List<String>> getRecommendations() {
         return this.recommendations == null ? Input.empty() : this.recommendations;
@@ -58,7 +58,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+        private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -147,7 +147,6 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public MABContainerHealthDetailsArgs build() {
             return new MABContainerHealthDetailsArgs(code, message, recommendations, title);
         }

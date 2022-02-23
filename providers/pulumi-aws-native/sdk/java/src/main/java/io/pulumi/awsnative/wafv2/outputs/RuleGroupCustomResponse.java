@@ -92,7 +92,6 @@ public final class RuleGroupCustomResponse {
             this.responseHeaders = responseHeaders;
             return this;
         }
-
         public RuleGroupCustomResponse build() {
             return new RuleGroupCustomResponse(customResponseBodyKey, responseCode, responseHeaders);
         }

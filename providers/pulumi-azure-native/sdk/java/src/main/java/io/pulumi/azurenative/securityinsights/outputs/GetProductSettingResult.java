@@ -161,7 +161,6 @@ public final class GetProductSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProductSettingResult build() {
             return new GetProductSettingResult(etag, id, kind, name, systemData, type);
         }

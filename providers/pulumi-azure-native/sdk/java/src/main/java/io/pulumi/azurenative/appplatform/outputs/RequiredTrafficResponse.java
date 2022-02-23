@@ -139,7 +139,6 @@ public final class RequiredTrafficResponse {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public RequiredTrafficResponse build() {
             return new RequiredTrafficResponse(direction, fqdns, ips, port, protocol);
         }

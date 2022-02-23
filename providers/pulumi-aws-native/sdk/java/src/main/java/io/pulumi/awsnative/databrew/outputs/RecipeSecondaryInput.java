@@ -61,7 +61,6 @@ public final class RecipeSecondaryInput {
             this.s3InputDefinition = s3InputDefinition;
             return this;
         }
-
         public RecipeSecondaryInput build() {
             return new RecipeSecondaryInput(dataCatalogInputDefinition, s3InputDefinition);
         }

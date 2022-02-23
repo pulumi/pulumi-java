@@ -22,7 +22,7 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+        private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -33,7 +33,7 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainNameServers")
-    private final @Nullable Input<List<String>> domainNameServers;
+        private final @Nullable Input<List<String>> domainNameServers;
 
     public Input<List<String>> getDomainNameServers() {
         return this.domainNameServers == null ? Input.empty() : this.domainNameServers;
@@ -44,7 +44,7 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netbiosNameServers")
-    private final @Nullable Input<List<String>> netbiosNameServers;
+        private final @Nullable Input<List<String>> netbiosNameServers;
 
     public Input<List<String>> getNetbiosNameServers() {
         return this.netbiosNameServers == null ? Input.empty() : this.netbiosNameServers;
@@ -55,7 +55,7 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="netbiosNodeType")
-    private final @Nullable Input<Integer> netbiosNodeType;
+        private final @Nullable Input<Integer> netbiosNodeType;
 
     public Input<Integer> getNetbiosNodeType() {
         return this.netbiosNodeType == null ? Input.empty() : this.netbiosNodeType;
@@ -66,7 +66,7 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ntpServers")
-    private final @Nullable Input<List<String>> ntpServers;
+        private final @Nullable Input<List<String>> ntpServers;
 
     public Input<List<String>> getNtpServers() {
         return this.ntpServers == null ? Input.empty() : this.ntpServers;
@@ -77,7 +77,7 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DHCPOptionsTagArgs>> tags;
+        private final @Nullable Input<List<DHCPOptionsTagArgs>> tags;
 
     public Input<List<DHCPOptionsTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,6 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DHCPOptionsArgs build() {
             return new DHCPOptionsArgs(domainName, domainNameServers, netbiosNameServers, netbiosNodeType, ntpServers, tags);
         }

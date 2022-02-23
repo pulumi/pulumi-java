@@ -267,7 +267,6 @@ public final class GetConnectivityTestResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConnectivityTestResult build() {
             return new GetConnectivityTestResult(createTime, description, destination, displayName, labels, name, protocol, reachabilityDetails, relatedProjects, source, updateTime);
         }

@@ -21,7 +21,7 @@ public final class RecommendedActionImplementationInfoResponse extends io.pulumi
      * 
      */
     @InputImport(name="method", required=true)
-    private final String method;
+        private final String method;
 
     public String getMethod() {
         return this.method;
@@ -32,7 +32,7 @@ public final class RecommendedActionImplementationInfoResponse extends io.pulumi
      * 
      */
     @InputImport(name="script", required=true)
-    private final String script;
+        private final String script;
 
     public String getScript() {
         return this.script;
@@ -81,7 +81,6 @@ public final class RecommendedActionImplementationInfoResponse extends io.pulumi
             this.script = Objects.requireNonNull(script);
             return this;
         }
-
         public RecommendedActionImplementationInfoResponse build() {
             return new RecommendedActionImplementationInfoResponse(method, script);
         }

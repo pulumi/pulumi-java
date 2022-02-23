@@ -52,7 +52,6 @@ public final class ReservationConfigResponse {
             this.throughputReservation = Objects.requireNonNull(throughputReservation);
             return this;
         }
-
         public ReservationConfigResponse build() {
             return new ReservationConfigResponse(throughputReservation);
         }

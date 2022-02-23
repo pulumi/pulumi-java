@@ -76,7 +76,6 @@ public final class EndpointAccessVpcSecurityGroup {
             this.vpcSecurityGroupId = vpcSecurityGroupId;
             return this;
         }
-
         public EndpointAccessVpcSecurityGroup build() {
             return new EndpointAccessVpcSecurityGroup(status, vpcSecurityGroupId);
         }

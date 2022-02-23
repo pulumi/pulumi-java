@@ -117,7 +117,6 @@ public final class GetAttestorResult {
             this.userOwnedGrafeasNote = Objects.requireNonNull(userOwnedGrafeasNote);
             return this;
         }
-
         public GetAttestorResult build() {
             return new GetAttestorResult(description, name, updateTime, userOwnedGrafeasNote);
         }

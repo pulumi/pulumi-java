@@ -75,7 +75,6 @@ public final class SegmentSettingsResponse {
             this.segmentDuration = Objects.requireNonNull(segmentDuration);
             return this;
         }
-
         public SegmentSettingsResponse build() {
             return new SegmentSettingsResponse(individualSegments, segmentDuration);
         }

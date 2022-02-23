@@ -54,7 +54,6 @@ public final class ServerAdministratorsResponse {
             this.members = members;
             return this;
         }
-
         public ServerAdministratorsResponse build() {
             return new ServerAdministratorsResponse(members);
         }

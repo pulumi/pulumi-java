@@ -158,7 +158,6 @@ public final class InternalCheckerResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public InternalCheckerResponse build() {
             return new InternalCheckerResponse(displayName, gcpZone, name, network, peerProjectId, state);
         }

@@ -23,7 +23,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
      * 
      */
     @InputImport(name="enableAutoPopulationOfTimespanConfig")
-    private final @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig;
+        private final @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig;
 
     public Input<Boolean> getEnableAutoPopulationOfTimespanConfig() {
         return this.enableAutoPopulationOfTimespanConfig == null ? Input.empty() : this.enableAutoPopulationOfTimespanConfig;
@@ -34,7 +34,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+        private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -45,7 +45,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+        private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -57,7 +57,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
      * 
      */
     @InputImport(name="timestampField", required=true)
-    private final Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField;
+        private final Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField;
 
     public Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> getTimestampField() {
         return this.timestampField;
@@ -146,7 +146,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
             this.timestampField = Input.of(Objects.requireNonNull(timestampField));
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs(enableAutoPopulationOfTimespanConfig, endTime, startTime, timestampField);
         }

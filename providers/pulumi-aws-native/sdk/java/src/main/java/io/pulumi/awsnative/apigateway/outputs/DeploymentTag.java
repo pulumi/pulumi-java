@@ -74,7 +74,6 @@ public final class DeploymentTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public DeploymentTag build() {
             return new DeploymentTag(key, value);
         }

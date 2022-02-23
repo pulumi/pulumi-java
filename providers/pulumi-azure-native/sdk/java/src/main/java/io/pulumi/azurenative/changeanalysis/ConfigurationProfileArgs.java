@@ -21,7 +21,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ResourceIdentityArgs> identity;
+        private final @Nullable Input<ResourceIdentityArgs> identity;
 
     public Input<ResourceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -32,7 +32,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -43,7 +43,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="profileName")
-    private final @Nullable Input<String> profileName;
+        private final @Nullable Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName == null ? Input.empty() : this.profileName;
@@ -54,7 +54,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<ConfigurationProfileResourcePropertiesArgs> properties;
+        private final @Nullable Input<ConfigurationProfileResourcePropertiesArgs> properties;
 
     public Input<ConfigurationProfileResourcePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -143,7 +143,6 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public ConfigurationProfileArgs build() {
             return new ConfigurationProfileArgs(identity, location, profileName, properties);
         }

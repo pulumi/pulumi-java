@@ -109,7 +109,6 @@ public final class NetworkInterfaceSubInterfaceResponse {
             this.vlan = Objects.requireNonNull(vlan);
             return this;
         }
-
         public NetworkInterfaceSubInterfaceResponse build() {
             return new NetworkInterfaceSubInterfaceResponse(ipAddress, ipAllocationMode, subnetwork, vlan);
         }

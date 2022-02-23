@@ -77,7 +77,6 @@ public final class Webhook {
             this.throttle = throttle;
             return this;
         }
-
         public Webhook build() {
             return new Webhook(clientConfig, throttle);
         }

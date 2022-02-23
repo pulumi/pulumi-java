@@ -26,7 +26,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="additionalOrderDetails", required=true)
-    private final Map<String,String> additionalOrderDetails;
+        private final Map<String,String> additionalOrderDetails;
 
     public Map<String,String> getAdditionalOrderDetails() {
         return this.additionalOrderDetails;
@@ -37,7 +37,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="comments")
-    private final @Nullable String comments;
+        private final @Nullable String comments;
 
     public Optional<String> getComments() {
         return this.comments == null ? Optional.empty() : Optional.ofNullable(this.comments);
@@ -48,7 +48,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -59,7 +59,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="trackingInformation", required=true)
-    private final TrackingInfoResponse trackingInformation;
+        private final TrackingInfoResponse trackingInformation;
 
     public TrackingInfoResponse getTrackingInformation() {
         return this.trackingInformation;
@@ -70,7 +70,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="updateDateTime", required=true)
-    private final String updateDateTime;
+        private final String updateDateTime;
 
     public String getUpdateDateTime() {
         return this.updateDateTime;
@@ -149,7 +149,6 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
             this.updateDateTime = Objects.requireNonNull(updateDateTime);
             return this;
         }
-
         public OrderStatusResponse build() {
             return new OrderStatusResponse(additionalOrderDetails, comments, status, trackingInformation, updateDateTime);
         }

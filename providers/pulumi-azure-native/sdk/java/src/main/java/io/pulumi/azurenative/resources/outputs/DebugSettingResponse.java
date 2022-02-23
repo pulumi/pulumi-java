@@ -54,7 +54,6 @@ public final class DebugSettingResponse {
             this.detailLevel = detailLevel;
             return this;
         }
-
         public DebugSettingResponse build() {
             return new DebugSettingResponse(detailLevel);
         }

@@ -98,7 +98,6 @@ public final class FirewallPolicyRuleMatch {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
-
         public FirewallPolicyRuleMatch build() {
             return new FirewallPolicyRuleMatch(destIpRanges, layer4Configs, srcIpRanges);
         }

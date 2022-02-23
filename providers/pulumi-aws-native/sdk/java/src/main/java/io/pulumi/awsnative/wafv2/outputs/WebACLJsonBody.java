@@ -75,7 +75,6 @@ public final class WebACLJsonBody {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }
-
         public WebACLJsonBody build() {
             return new WebACLJsonBody(invalidFallbackBehavior, matchPattern, matchScope);
         }

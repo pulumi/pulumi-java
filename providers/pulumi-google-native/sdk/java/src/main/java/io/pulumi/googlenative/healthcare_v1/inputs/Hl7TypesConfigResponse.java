@@ -23,7 +23,7 @@ public final class Hl7TypesConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final List<TypeResponse> type;
+      private final List<TypeResponse> type;
 
     public List<TypeResponse> getType() {
         return this.type;
@@ -34,7 +34,7 @@ public final class Hl7TypesConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="version", required=true)
-    private final List<VersionSourceResponse> version;
+      private final List<VersionSourceResponse> version;
 
     public List<VersionSourceResponse> getVersion() {
         return this.version;
@@ -83,7 +83,6 @@ public final class Hl7TypesConfigResponse extends io.pulumi.resources.InvokeArgs
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Hl7TypesConfigResponse build() {
             return new Hl7TypesConfigResponse(type, version);
         }

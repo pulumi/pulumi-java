@@ -34,7 +34,6 @@ public final class CustomArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(CustomArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public CustomArgs build() {
             return new CustomArgs();
         }

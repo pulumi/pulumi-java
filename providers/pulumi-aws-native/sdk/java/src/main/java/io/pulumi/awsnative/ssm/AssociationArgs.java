@@ -23,7 +23,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     public static final AssociationArgs Empty = new AssociationArgs();
 
     @InputImport(name="applyOnlyAtCronInterval")
-    private final @Nullable Input<Boolean> applyOnlyAtCronInterval;
+        private final @Nullable Input<Boolean> applyOnlyAtCronInterval;
 
     public Input<Boolean> getApplyOnlyAtCronInterval() {
         return this.applyOnlyAtCronInterval == null ? Input.empty() : this.applyOnlyAtCronInterval;
@@ -34,28 +34,28 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associationName")
-    private final @Nullable Input<String> associationName;
+        private final @Nullable Input<String> associationName;
 
     public Input<String> getAssociationName() {
         return this.associationName == null ? Input.empty() : this.associationName;
     }
 
     @InputImport(name="automationTargetParameterName")
-    private final @Nullable Input<String> automationTargetParameterName;
+        private final @Nullable Input<String> automationTargetParameterName;
 
     public Input<String> getAutomationTargetParameterName() {
         return this.automationTargetParameterName == null ? Input.empty() : this.automationTargetParameterName;
     }
 
     @InputImport(name="calendarNames")
-    private final @Nullable Input<List<String>> calendarNames;
+        private final @Nullable Input<List<String>> calendarNames;
 
     public Input<List<String>> getCalendarNames() {
         return this.calendarNames == null ? Input.empty() : this.calendarNames;
     }
 
     @InputImport(name="complianceSeverity")
-    private final @Nullable Input<AssociationComplianceSeverity> complianceSeverity;
+        private final @Nullable Input<AssociationComplianceSeverity> complianceSeverity;
 
     public Input<AssociationComplianceSeverity> getComplianceSeverity() {
         return this.complianceSeverity == null ? Input.empty() : this.complianceSeverity;
@@ -66,7 +66,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentVersion")
-    private final @Nullable Input<String> documentVersion;
+        private final @Nullable Input<String> documentVersion;
 
     public Input<String> getDocumentVersion() {
         return this.documentVersion == null ? Input.empty() : this.documentVersion;
@@ -77,21 +77,21 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+        private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
     }
 
     @InputImport(name="maxConcurrency")
-    private final @Nullable Input<String> maxConcurrency;
+        private final @Nullable Input<String> maxConcurrency;
 
     public Input<String> getMaxConcurrency() {
         return this.maxConcurrency == null ? Input.empty() : this.maxConcurrency;
     }
 
     @InputImport(name="maxErrors")
-    private final @Nullable Input<String> maxErrors;
+        private final @Nullable Input<String> maxErrors;
 
     public Input<String> getMaxErrors() {
         return this.maxErrors == null ? Input.empty() : this.maxErrors;
@@ -102,14 +102,14 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="outputLocation")
-    private final @Nullable Input<AssociationInstanceAssociationOutputLocationArgs> outputLocation;
+        private final @Nullable Input<AssociationInstanceAssociationOutputLocationArgs> outputLocation;
 
     public Input<AssociationInstanceAssociationOutputLocationArgs> getOutputLocation() {
         return this.outputLocation == null ? Input.empty() : this.outputLocation;
@@ -120,7 +120,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Object> parameters;
+        private final @Nullable Input<Object> parameters;
 
     public Input<Object> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -131,14 +131,14 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleExpression")
-    private final @Nullable Input<String> scheduleExpression;
+        private final @Nullable Input<String> scheduleExpression;
 
     public Input<String> getScheduleExpression() {
         return this.scheduleExpression == null ? Input.empty() : this.scheduleExpression;
     }
 
     @InputImport(name="syncCompliance")
-    private final @Nullable Input<AssociationSyncCompliance> syncCompliance;
+        private final @Nullable Input<AssociationSyncCompliance> syncCompliance;
 
     public Input<AssociationSyncCompliance> getSyncCompliance() {
         return this.syncCompliance == null ? Input.empty() : this.syncCompliance;
@@ -149,14 +149,14 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targets")
-    private final @Nullable Input<List<AssociationTargetArgs>> targets;
+        private final @Nullable Input<List<AssociationTargetArgs>> targets;
 
     public Input<List<AssociationTargetArgs>> getTargets() {
         return this.targets == null ? Input.empty() : this.targets;
     }
 
     @InputImport(name="waitForSuccessTimeoutSeconds")
-    private final @Nullable Input<Integer> waitForSuccessTimeoutSeconds;
+        private final @Nullable Input<Integer> waitForSuccessTimeoutSeconds;
 
     public Input<Integer> getWaitForSuccessTimeoutSeconds() {
         return this.waitForSuccessTimeoutSeconds == null ? Input.empty() : this.waitForSuccessTimeoutSeconds;
@@ -425,7 +425,6 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             this.waitForSuccessTimeoutSeconds = Input.ofNullable(waitForSuccessTimeoutSeconds);
             return this;
         }
-
         public AssociationArgs build() {
             return new AssociationArgs(applyOnlyAtCronInterval, associationName, automationTargetParameterName, calendarNames, complianceSeverity, documentVersion, instanceId, maxConcurrency, maxErrors, name, outputLocation, parameters, scheduleExpression, syncCompliance, targets, waitForSuccessTimeoutSeconds);
         }

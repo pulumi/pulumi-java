@@ -77,7 +77,6 @@ public final class CustomDomainResponse {
             this.useSubDomainName = useSubDomainName;
             return this;
         }
-
         public CustomDomainResponse build() {
             return new CustomDomainResponse(name, useSubDomainName);
         }

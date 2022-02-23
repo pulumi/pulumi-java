@@ -53,7 +53,6 @@ public final class NetworkProfileResponseOutboundIPs {
             this.publicIPs = Objects.requireNonNull(publicIPs);
             return this;
         }
-
         public NetworkProfileResponseOutboundIPs build() {
             return new NetworkProfileResponseOutboundIPs(publicIPs);
         }

@@ -87,7 +87,6 @@ public final class GlobalTableCapacityAutoScalingSettings {
             this.targetTrackingScalingPolicyConfiguration = Objects.requireNonNull(targetTrackingScalingPolicyConfiguration);
             return this;
         }
-
         public GlobalTableCapacityAutoScalingSettings build() {
             return new GlobalTableCapacityAutoScalingSettings(maxCapacity, minCapacity, seedCapacity, targetTrackingScalingPolicyConfiguration);
         }

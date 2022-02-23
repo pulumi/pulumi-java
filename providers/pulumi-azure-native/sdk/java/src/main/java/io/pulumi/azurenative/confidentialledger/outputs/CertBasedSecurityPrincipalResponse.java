@@ -76,7 +76,6 @@ public final class CertBasedSecurityPrincipalResponse {
             this.ledgerRoleName = ledgerRoleName;
             return this;
         }
-
         public CertBasedSecurityPrincipalResponse build() {
             return new CertBasedSecurityPrincipalResponse(cert, ledgerRoleName);
         }

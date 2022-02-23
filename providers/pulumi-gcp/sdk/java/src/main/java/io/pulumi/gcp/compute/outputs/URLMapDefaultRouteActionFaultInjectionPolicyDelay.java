@@ -81,7 +81,6 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelay {
             this.percentage = percentage;
             return this;
         }
-
         public URLMapDefaultRouteActionFaultInjectionPolicyDelay build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicyDelay(fixedDelay, percentage);
         }

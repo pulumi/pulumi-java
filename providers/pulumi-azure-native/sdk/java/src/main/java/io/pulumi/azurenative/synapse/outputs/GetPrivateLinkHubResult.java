@@ -184,7 +184,6 @@ public final class GetPrivateLinkHubResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateLinkHubResult build() {
             return new GetPrivateLinkHubResult(id, location, name, privateEndpointConnections, provisioningState, tags, type);
         }

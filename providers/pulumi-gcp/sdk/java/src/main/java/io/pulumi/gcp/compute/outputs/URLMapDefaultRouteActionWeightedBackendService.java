@@ -117,7 +117,6 @@ public final class URLMapDefaultRouteActionWeightedBackendService {
             this.weight = weight;
             return this;
         }
-
         public URLMapDefaultRouteActionWeightedBackendService build() {
             return new URLMapDefaultRouteActionWeightedBackendService(backendService, headerAction, weight);
         }

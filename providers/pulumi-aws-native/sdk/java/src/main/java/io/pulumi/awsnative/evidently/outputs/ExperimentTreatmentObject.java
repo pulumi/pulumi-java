@@ -86,7 +86,6 @@ public final class ExperimentTreatmentObject {
             this.variation = Objects.requireNonNull(variation);
             return this;
         }
-
         public ExperimentTreatmentObject build() {
             return new ExperimentTreatmentObject(description, feature, treatmentName, variation);
         }

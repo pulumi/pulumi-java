@@ -17,7 +17,7 @@ public final class GetObjectReplicationPolicyArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetObjectReplicationPolicyArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="objectReplicationPolicyId", required=true)
-    private final String objectReplicationPolicyId;
+        private final String objectReplicationPolicyId;
 
     public String getObjectReplicationPolicyId() {
         return this.objectReplicationPolicyId;
@@ -39,7 +39,7 @@ public final class GetObjectReplicationPolicyArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetObjectReplicationPolicyArgs extends io.pulumi.resources.In
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetObjectReplicationPolicyArgs build() {
             return new GetObjectReplicationPolicyArgs(accountName, objectReplicationPolicyId, resourceGroupName);
         }

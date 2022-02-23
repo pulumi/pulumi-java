@@ -21,7 +21,7 @@ public final class SdsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="grpcServiceConfig", required=true)
-    private final GrpcServiceConfigResponse grpcServiceConfig;
+      private final GrpcServiceConfigResponse grpcServiceConfig;
 
     public GrpcServiceConfigResponse getGrpcServiceConfig() {
         return this.grpcServiceConfig;
@@ -59,7 +59,6 @@ public final class SdsConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.grpcServiceConfig = Objects.requireNonNull(grpcServiceConfig);
             return this;
         }
-
         public SdsConfigResponse build() {
             return new SdsConfigResponse(grpcServiceConfig);
         }

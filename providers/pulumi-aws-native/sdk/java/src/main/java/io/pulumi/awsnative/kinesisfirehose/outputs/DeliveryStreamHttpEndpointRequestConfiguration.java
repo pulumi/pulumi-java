@@ -62,7 +62,6 @@ public final class DeliveryStreamHttpEndpointRequestConfiguration {
             this.contentEncoding = contentEncoding;
             return this;
         }
-
         public DeliveryStreamHttpEndpointRequestConfiguration build() {
             return new DeliveryStreamHttpEndpointRequestConfiguration(commonAttributes, contentEncoding);
         }

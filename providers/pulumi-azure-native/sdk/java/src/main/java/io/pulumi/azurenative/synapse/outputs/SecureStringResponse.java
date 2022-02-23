@@ -76,7 +76,6 @@ public final class SecureStringResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SecureStringResponse build() {
             return new SecureStringResponse(type, value);
         }

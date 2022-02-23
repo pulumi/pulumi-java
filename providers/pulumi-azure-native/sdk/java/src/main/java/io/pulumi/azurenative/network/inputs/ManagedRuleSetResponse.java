@@ -25,7 +25,7 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ruleGroupOverrides")
-    private final @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides;
+        private final @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides;
 
     public List<ManagedRuleGroupOverrideResponse> getRuleGroupOverrides() {
         return this.ruleGroupOverrides == null ? List.of() : this.ruleGroupOverrides;
@@ -36,7 +36,7 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ruleSetType", required=true)
-    private final String ruleSetType;
+        private final String ruleSetType;
 
     public String getRuleSetType() {
         return this.ruleSetType;
@@ -47,7 +47,7 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="ruleSetVersion", required=true)
-    private final String ruleSetVersion;
+        private final String ruleSetVersion;
 
     public String getRuleSetVersion() {
         return this.ruleSetVersion;
@@ -106,7 +106,6 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
-
         public ManagedRuleSetResponse build() {
             return new ManagedRuleSetResponse(ruleGroupOverrides, ruleSetType, ruleSetVersion);
         }

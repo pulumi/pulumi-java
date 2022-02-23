@@ -34,7 +34,6 @@ public final class ExperimentTemplateActionMap extends io.pulumi.resources.Invok
         public Builder(ExperimentTemplateActionMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ExperimentTemplateActionMap build() {
             return new ExperimentTemplateActionMap();
         }

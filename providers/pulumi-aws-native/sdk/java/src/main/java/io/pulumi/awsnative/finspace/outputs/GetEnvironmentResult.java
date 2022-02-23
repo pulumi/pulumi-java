@@ -260,7 +260,6 @@ public final class GetEnvironmentResult {
             this.status = status;
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(awsAccountId, dedicatedServiceAccountId, description, environmentArn, environmentId, environmentUrl, federationMode, federationParameters, name, sageMakerStudioDomainUrl, status);
         }

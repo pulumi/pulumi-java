@@ -21,7 +21,7 @@ public final class InstanceTemplateServiceAccountGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+        private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -34,7 +34,7 @@ public final class InstanceTemplateServiceAccountGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="scopes", required=true)
-    private final Input<List<String>> scopes;
+        private final Input<List<String>> scopes;
 
     public Input<List<String>> getScopes() {
         return this.scopes;
@@ -93,7 +93,6 @@ public final class InstanceTemplateServiceAccountGetArgs extends io.pulumi.resou
             this.scopes = Input.of(Objects.requireNonNull(scopes));
             return this;
         }
-
         public InstanceTemplateServiceAccountGetArgs build() {
             return new InstanceTemplateServiceAccountGetArgs(email, scopes);
         }

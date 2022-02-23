@@ -233,7 +233,6 @@ public final class OrcSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public OrcSinkResponse build() {
             return new OrcSinkResponse(disableMetricsCollection, formatSettings, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, storeSettings, type, writeBatchSize, writeBatchTimeout);
         }

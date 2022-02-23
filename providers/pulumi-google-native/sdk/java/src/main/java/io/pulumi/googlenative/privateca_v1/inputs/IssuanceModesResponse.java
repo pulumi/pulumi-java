@@ -21,7 +21,7 @@ public final class IssuanceModesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="allowConfigBasedIssuance", required=true)
-    private final Boolean allowConfigBasedIssuance;
+      private final Boolean allowConfigBasedIssuance;
 
     public Boolean getAllowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
@@ -32,7 +32,7 @@ public final class IssuanceModesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="allowCsrBasedIssuance", required=true)
-    private final Boolean allowCsrBasedIssuance;
+      private final Boolean allowCsrBasedIssuance;
 
     public Boolean getAllowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
@@ -81,7 +81,6 @@ public final class IssuanceModesResponse extends io.pulumi.resources.InvokeArgs 
             this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
             return this;
         }
-
         public IssuanceModesResponse build() {
             return new IssuanceModesResponse(allowConfigBasedIssuance, allowCsrBasedIssuance);
         }

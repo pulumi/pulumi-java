@@ -29,7 +29,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="azureApp", required=true)
-    private final Input<AzureActiveDirectoryAppArgs> azureApp;
+        private final Input<AzureActiveDirectoryAppArgs> azureApp;
 
     public Input<AzureActiveDirectoryAppArgs> getAzureApp() {
         return this.azureApp;
@@ -40,7 +40,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="backupFileShare")
-    private final @Nullable Input<FileShareArgs> backupFileShare;
+        private final @Nullable Input<FileShareArgs> backupFileShare;
 
     public Input<FileShareArgs> getBackupFileShare() {
         return this.backupFileShare == null ? Input.empty() : this.backupFileShare;
@@ -51,7 +51,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-    private final Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
+        private final Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
 
     public Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> getSelectedDatabases() {
         return this.selectedDatabases;
@@ -62,7 +62,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
+        private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Input<SqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -73,7 +73,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="storageResourceId", required=true)
-    private final Input<String> storageResourceId;
+        private final Input<String> storageResourceId;
 
     public Input<String> getStorageResourceId() {
         return this.storageResourceId;
@@ -84,7 +84,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final Input<MiSqlConnectionInfoArgs> targetConnectionInfo;
+        private final Input<MiSqlConnectionInfoArgs> targetConnectionInfo;
 
     public Input<MiSqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -203,7 +203,6 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
-
         public MigrateSqlServerSqlMISyncTaskInputArgs build() {
             return new MigrateSqlServerSqlMISyncTaskInputArgs(azureApp, backupFileShare, selectedDatabases, sourceConnectionInfo, storageResourceId, targetConnectionInfo);
         }

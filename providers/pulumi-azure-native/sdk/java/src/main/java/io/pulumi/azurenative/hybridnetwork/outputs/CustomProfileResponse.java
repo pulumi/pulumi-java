@@ -54,7 +54,6 @@ public final class CustomProfileResponse {
             this.metadataConfigurationPath = metadataConfigurationPath;
             return this;
         }
-
         public CustomProfileResponse build() {
             return new CustomProfileResponse(metadataConfigurationPath);
         }

@@ -211,7 +211,6 @@ public final class TrialComponentResponse {
             this.timeout = timeout;
             return this;
         }
-
         public TrialComponentResponse build() {
             return new TrialComponentResponse(codeId, command, distribution, environmentId, environmentVariables, inputDataBindings, outputDataBindings, timeout);
         }

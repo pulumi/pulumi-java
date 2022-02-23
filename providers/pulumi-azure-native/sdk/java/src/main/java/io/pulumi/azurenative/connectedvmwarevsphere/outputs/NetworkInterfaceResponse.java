@@ -270,7 +270,6 @@ public final class NetworkInterfaceResponse {
             this.powerOnBoot = powerOnBoot;
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(deviceKey, ipAddresses, ipSettings, label, macAddress, name, networkId, networkMoName, networkMoRefId, nicType, powerOnBoot);
         }

@@ -250,7 +250,6 @@ public final class GetTemplateArtifactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTemplateArtifactResult build() {
             return new GetTemplateArtifactResult(dependsOn, description, displayName, id, kind, name, parameters, resourceGroup, template, type);
         }

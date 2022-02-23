@@ -28,7 +28,7 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bandwidthInMbps")
-    private final @Nullable Input<Integer> bandwidthInMbps;
+        private final @Nullable Input<Integer> bandwidthInMbps;
 
     public Input<Integer> getBandwidthInMbps() {
         return this.bandwidthInMbps == null ? Input.empty() : this.bandwidthInMbps;
@@ -39,7 +39,7 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bgpSession")
-    private final @Nullable Input<BgpSessionArgs> bgpSession;
+        private final @Nullable Input<BgpSessionArgs> bgpSession;
 
     public Input<BgpSessionArgs> getBgpSession() {
         return this.bgpSession == null ? Input.empty() : this.bgpSession;
@@ -50,7 +50,7 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectionIdentifier")
-    private final @Nullable Input<String> connectionIdentifier;
+        private final @Nullable Input<String> connectionIdentifier;
 
     public Input<String> getConnectionIdentifier() {
         return this.connectionIdentifier == null ? Input.empty() : this.connectionIdentifier;
@@ -61,7 +61,7 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="peeringDBFacilityId")
-    private final @Nullable Input<Integer> peeringDBFacilityId;
+        private final @Nullable Input<Integer> peeringDBFacilityId;
 
     public Input<Integer> getPeeringDBFacilityId() {
         return this.peeringDBFacilityId == null ? Input.empty() : this.peeringDBFacilityId;
@@ -72,7 +72,7 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sessionAddressProvider")
-    private final @Nullable Input<Either<String,SessionAddressProvider>> sessionAddressProvider;
+        private final @Nullable Input<Either<String,SessionAddressProvider>> sessionAddressProvider;
 
     public Input<Either<String,SessionAddressProvider>> getSessionAddressProvider() {
         return this.sessionAddressProvider == null ? Input.empty() : this.sessionAddressProvider;
@@ -83,7 +83,7 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="useForPeeringService")
-    private final @Nullable Input<Boolean> useForPeeringService;
+        private final @Nullable Input<Boolean> useForPeeringService;
 
     public Input<Boolean> getUseForPeeringService() {
         return this.useForPeeringService == null ? Input.empty() : this.useForPeeringService;
@@ -202,7 +202,6 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
             this.useForPeeringService = Input.ofNullable(useForPeeringService);
             return this;
         }
-
         public DirectConnectionArgs build() {
             return new DirectConnectionArgs(bandwidthInMbps, bgpSession, connectionIdentifier, peeringDBFacilityId, sessionAddressProvider, useForPeeringService);
         }

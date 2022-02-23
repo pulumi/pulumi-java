@@ -19,7 +19,7 @@ public final class RegionSslPolicyWarningsItemResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -30,7 +30,7 @@ public final class RegionSslPolicyWarningsItemResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="data", required=true)
-    private final List<RegionSslPolicyWarningsItemDataItemResponse> data;
+      private final List<RegionSslPolicyWarningsItemDataItemResponse> data;
 
     public List<RegionSslPolicyWarningsItemDataItemResponse> getData() {
         return this.data;
@@ -41,7 +41,7 @@ public final class RegionSslPolicyWarningsItemResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -100,7 +100,6 @@ public final class RegionSslPolicyWarningsItemResponse extends io.pulumi.resourc
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public RegionSslPolicyWarningsItemResponse build() {
             return new RegionSslPolicyWarningsItemResponse(code, data, message);
         }

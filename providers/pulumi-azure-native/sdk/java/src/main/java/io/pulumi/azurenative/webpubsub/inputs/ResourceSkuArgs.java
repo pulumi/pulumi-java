@@ -30,7 +30,7 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Integer> capacity;
+        private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -43,7 +43,7 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -56,7 +56,7 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<Either<String,WebPubSubSkuTier>> tier;
+        private final @Nullable Input<Either<String,WebPubSubSkuTier>> tier;
 
     public Input<Either<String,WebPubSubSkuTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -130,7 +130,6 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public ResourceSkuArgs build() {
             return new ResourceSkuArgs(capacity, name, tier);
         }

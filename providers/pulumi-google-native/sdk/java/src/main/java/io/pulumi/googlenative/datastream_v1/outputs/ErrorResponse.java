@@ -138,7 +138,6 @@ public final class ErrorResponse {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public ErrorResponse build() {
             return new ErrorResponse(details, errorTime, errorUuid, message, reason);
         }

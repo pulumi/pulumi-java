@@ -95,7 +95,6 @@ public final class ApplicationArtifactResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ApplicationArtifactResponse build() {
             return new ApplicationArtifactResponse(name, type, uri);
         }

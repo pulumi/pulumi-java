@@ -52,7 +52,6 @@ public final class NetworkPolicyConfigResponse {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public NetworkPolicyConfigResponse build() {
             return new NetworkPolicyConfigResponse(disabled);
         }

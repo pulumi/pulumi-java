@@ -226,7 +226,6 @@ public final class GetHubVirtualNetworkConnectionResult {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
-
         public GetHubVirtualNetworkConnectionResult build() {
             return new GetHubVirtualNetworkConnectionResult(allowHubToRemoteVnetTransit, allowRemoteVnetToUseHubVnetGateways, enableInternetSecurity, etag, id, name, provisioningState, remoteVirtualNetwork, routingConfiguration);
         }

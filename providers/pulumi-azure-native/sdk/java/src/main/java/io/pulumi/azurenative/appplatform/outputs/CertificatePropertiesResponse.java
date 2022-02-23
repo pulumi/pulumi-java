@@ -245,7 +245,6 @@ public final class CertificatePropertiesResponse {
             this.vaultUri = Objects.requireNonNull(vaultUri);
             return this;
         }
-
         public CertificatePropertiesResponse build() {
             return new CertificatePropertiesResponse(activateDate, certVersion, dnsNames, expirationDate, issuedDate, issuer, keyVaultCertName, subjectName, thumbprint, vaultUri);
         }

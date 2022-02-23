@@ -77,7 +77,6 @@ public final class PublicIPAddressConfigurationResponse {
             this.provision = provision;
             return this;
         }
-
         public PublicIPAddressConfigurationResponse build() {
             return new PublicIPAddressConfigurationResponse(ipAddressIds, provision);
         }

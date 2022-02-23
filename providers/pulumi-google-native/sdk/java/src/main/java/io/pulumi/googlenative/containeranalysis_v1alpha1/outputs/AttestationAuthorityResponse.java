@@ -44,7 +44,6 @@ public final class AttestationAuthorityResponse {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
-
         public AttestationAuthorityResponse build() {
             return new AttestationAuthorityResponse(hint);
         }

@@ -22,7 +22,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -33,7 +33,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final String metricName;
+      private final String metricName;
 
     public String getMetricName() {
         return this.metricName;
@@ -44,7 +44,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="singleInstanceAssignment", required=true)
-    private final Double singleInstanceAssignment;
+      private final Double singleInstanceAssignment;
 
     public Double getSingleInstanceAssignment() {
         return this.singleInstanceAssignment;
@@ -55,7 +55,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetType", required=true)
-    private final String targetType;
+      private final String targetType;
 
     public String getTargetType() {
         return this.targetType;
@@ -66,7 +66,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetUtilization", required=true)
-    private final Double targetUtilization;
+      private final Double targetUtilization;
 
     public Double getTargetUtilization() {
         return this.targetUtilization;
@@ -145,7 +145,6 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }
-
         public CustomMetricResponse build() {
             return new CustomMetricResponse(filter, metricName, singleInstanceAssignment, targetType, targetUtilization);
         }

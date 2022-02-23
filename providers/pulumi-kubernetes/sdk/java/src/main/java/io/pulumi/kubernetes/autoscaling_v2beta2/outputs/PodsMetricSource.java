@@ -75,7 +75,6 @@ public final class PodsMetricSource {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public PodsMetricSource build() {
             return new PodsMetricSource(metric, target);
         }

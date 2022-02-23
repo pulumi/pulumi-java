@@ -58,7 +58,6 @@ public final class NetworkInterfaceTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public NetworkInterfaceTag build() {
             return new NetworkInterfaceTag(key, value);
         }

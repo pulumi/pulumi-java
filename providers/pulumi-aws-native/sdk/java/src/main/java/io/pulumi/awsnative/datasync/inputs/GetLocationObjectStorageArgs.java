@@ -17,7 +17,7 @@ public final class GetLocationObjectStorageArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="locationArn", required=true)
-    private final String locationArn;
+        private final String locationArn;
 
     public String getLocationArn() {
         return this.locationArn;
@@ -55,7 +55,6 @@ public final class GetLocationObjectStorageArgs extends io.pulumi.resources.Invo
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
         }
-
         public GetLocationObjectStorageArgs build() {
             return new GetLocationObjectStorageArgs(locationArn);
         }

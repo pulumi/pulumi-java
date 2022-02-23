@@ -185,7 +185,6 @@ public final class VirtualMachineScaleSetOSProfileResponse {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
-
         public VirtualMachineScaleSetOSProfileResponse build() {
             return new VirtualMachineScaleSetOSProfileResponse(adminPassword, adminUsername, computerNamePrefix, customData, linuxConfiguration, secrets, windowsConfiguration);
         }

@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse {
             this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary);
             return this;
         }
-
         public GooglePrivacyDlpV2StoredInfoTypeStatsResponse build() {
             return new GooglePrivacyDlpV2StoredInfoTypeStatsResponse(largeCustomDictionary);
         }

@@ -19,28 +19,28 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
     public static final AssistantAssociationArgs Empty = new AssistantAssociationArgs();
 
     @InputImport(name="assistantId", required=true)
-    private final Input<String> assistantId;
+        private final Input<String> assistantId;
 
     public Input<String> getAssistantId() {
         return this.assistantId;
     }
 
     @InputImport(name="association", required=true)
-    private final Input<AssistantAssociationAssociationDataArgs> association;
+        private final Input<AssistantAssociationAssociationDataArgs> association;
 
     public Input<AssistantAssociationAssociationDataArgs> getAssociation() {
         return this.association;
     }
 
     @InputImport(name="associationType", required=true)
-    private final Input<AssistantAssociationAssociationType> associationType;
+        private final Input<AssistantAssociationAssociationType> associationType;
 
     public Input<AssistantAssociationAssociationType> getAssociationType() {
         return this.associationType;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<AssistantAssociationTagArgs>> tags;
+        private final @Nullable Input<List<AssistantAssociationTagArgs>> tags;
 
     public Input<List<AssistantAssociationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -129,7 +129,6 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AssistantAssociationArgs build() {
             return new AssistantAssociationArgs(assistantId, association, associationType, tags);
         }

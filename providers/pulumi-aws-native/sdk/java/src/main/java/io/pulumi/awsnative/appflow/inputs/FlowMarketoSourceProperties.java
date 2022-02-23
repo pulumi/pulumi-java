@@ -13,7 +13,7 @@ public final class FlowMarketoSourceProperties extends io.pulumi.resources.Invok
     public static final FlowMarketoSourceProperties Empty = new FlowMarketoSourceProperties();
 
     @InputImport(name="object", required=true)
-    private final String object;
+        private final String object;
 
     public String getObject() {
         return this.object;
@@ -51,7 +51,6 @@ public final class FlowMarketoSourceProperties extends io.pulumi.resources.Invok
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowMarketoSourceProperties build() {
             return new FlowMarketoSourceProperties(object);
         }

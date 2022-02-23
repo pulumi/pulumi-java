@@ -76,7 +76,6 @@ public final class MlStatisticsResponse {
             this.maxIterations = Objects.requireNonNull(maxIterations);
             return this;
         }
-
         public MlStatisticsResponse build() {
             return new MlStatisticsResponse(iterationResults, maxIterations);
         }

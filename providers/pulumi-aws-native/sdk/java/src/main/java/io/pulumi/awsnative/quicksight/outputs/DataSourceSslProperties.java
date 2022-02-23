@@ -54,7 +54,6 @@ public final class DataSourceSslProperties {
             this.disableSsl = disableSsl;
             return this;
         }
-
         public DataSourceSslProperties build() {
             return new DataSourceSslProperties(disableSsl);
         }

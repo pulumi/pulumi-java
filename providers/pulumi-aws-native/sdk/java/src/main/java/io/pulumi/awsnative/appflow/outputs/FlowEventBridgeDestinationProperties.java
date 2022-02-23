@@ -61,7 +61,6 @@ public final class FlowEventBridgeDestinationProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowEventBridgeDestinationProperties build() {
             return new FlowEventBridgeDestinationProperties(errorHandlingConfig, object);
         }

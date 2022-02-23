@@ -77,7 +77,6 @@ public final class WorkflowTemplateParameterValidation {
             this.values = values;
             return this;
         }
-
         public WorkflowTemplateParameterValidation build() {
             return new WorkflowTemplateParameterValidation(regex, values);
         }

@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends io.pulum
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends io.pulum
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -93,7 +93,6 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends io.pulum
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public GoogleCloudDatacatalogV1SystemTimestampsArgs build() {
             return new GoogleCloudDatacatalogV1SystemTimestampsArgs(createTime, updateTime);
         }

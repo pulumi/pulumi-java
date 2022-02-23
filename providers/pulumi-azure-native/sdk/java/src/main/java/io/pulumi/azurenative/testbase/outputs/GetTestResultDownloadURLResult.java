@@ -74,7 +74,6 @@ public final class GetTestResultDownloadURLResult {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public GetTestResultDownloadURLResult build() {
             return new GetTestResultDownloadURLResult(downloadUrl, expirationTime);
         }

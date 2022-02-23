@@ -24,7 +24,7 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sdkSupportStatus")
-    private final @Nullable Input<SdkVersionSdkSupportStatus> sdkSupportStatus;
+      private final @Nullable Input<SdkVersionSdkSupportStatus> sdkSupportStatus;
 
     public Input<SdkVersionSdkSupportStatus> getSdkSupportStatus() {
         return this.sdkSupportStatus == null ? Input.empty() : this.sdkSupportStatus;
@@ -35,7 +35,7 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -46,7 +46,7 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionDisplayName")
-    private final @Nullable Input<String> versionDisplayName;
+      private final @Nullable Input<String> versionDisplayName;
 
     public Input<String> getVersionDisplayName() {
         return this.versionDisplayName == null ? Input.empty() : this.versionDisplayName;
@@ -120,7 +120,6 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.versionDisplayName = Input.ofNullable(versionDisplayName);
             return this;
         }
-
         public SdkVersionArgs build() {
             return new SdkVersionArgs(sdkSupportStatus, version, versionDisplayName);
         }

@@ -290,7 +290,6 @@ public final class GetRouterResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetRouterResult build() {
             return new GetRouterResult(bgp, bgpPeers, creationTimestamp, description, encryptedInterconnectRouter, interfaces, kind, name, nats, network, region, selfLink);
         }

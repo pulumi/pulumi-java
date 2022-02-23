@@ -151,7 +151,6 @@ public final class ClusterClusterConfigSoftwareConfig {
             this.properties = properties;
             return this;
         }
-
         public ClusterClusterConfigSoftwareConfig build() {
             return new ClusterClusterConfigSoftwareConfig(imageVersion, optionalComponents, overrideProperties, properties);
         }

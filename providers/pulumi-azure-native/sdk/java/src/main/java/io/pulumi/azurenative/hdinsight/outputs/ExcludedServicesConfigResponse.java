@@ -76,7 +76,6 @@ public final class ExcludedServicesConfigResponse {
             this.excludedServicesList = excludedServicesList;
             return this;
         }
-
         public ExcludedServicesConfigResponse build() {
             return new ExcludedServicesConfigResponse(excludedServicesConfigId, excludedServicesList);
         }

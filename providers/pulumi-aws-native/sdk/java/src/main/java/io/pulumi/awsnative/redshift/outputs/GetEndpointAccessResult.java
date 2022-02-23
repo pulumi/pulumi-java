@@ -185,7 +185,6 @@ public final class GetEndpointAccessResult {
             this.vpcSecurityGroups = vpcSecurityGroups;
             return this;
         }
-
         public GetEndpointAccessResult build() {
             return new GetEndpointAccessResult(address, endpointCreateTime, endpointStatus, port, vpcEndpoint, vpcSecurityGroupIds, vpcSecurityGroups);
         }

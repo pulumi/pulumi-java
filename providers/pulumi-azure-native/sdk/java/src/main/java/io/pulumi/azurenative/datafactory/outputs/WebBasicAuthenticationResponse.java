@@ -122,7 +122,6 @@ public final class WebBasicAuthenticationResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public WebBasicAuthenticationResponse build() {
             return new WebBasicAuthenticationResponse(authenticationType, password, url, username);
         }

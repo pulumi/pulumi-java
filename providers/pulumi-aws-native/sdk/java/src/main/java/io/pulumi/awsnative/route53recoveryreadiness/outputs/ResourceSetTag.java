@@ -59,7 +59,6 @@ public final class ResourceSetTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ResourceSetTag build() {
             return new ResourceSetTag(key, value);
         }

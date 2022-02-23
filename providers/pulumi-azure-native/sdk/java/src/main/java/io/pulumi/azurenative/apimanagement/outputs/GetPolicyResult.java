@@ -139,7 +139,6 @@ public final class GetPolicyResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(format, id, name, type, value);
         }

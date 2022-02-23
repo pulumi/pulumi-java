@@ -244,7 +244,6 @@ public final class GetBackupResult {
             this.versionTime = Objects.requireNonNull(versionTime);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(createTime, database, databaseDialect, encryptionInfo, expireTime, name, referencingDatabases, sizeBytes, state, versionTime);
         }

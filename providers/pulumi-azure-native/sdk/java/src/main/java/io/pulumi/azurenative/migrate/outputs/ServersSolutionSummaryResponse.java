@@ -163,7 +163,6 @@ public final class ServersSolutionSummaryResponse {
             this.testMigratedCount = testMigratedCount;
             return this;
         }
-
         public ServersSolutionSummaryResponse build() {
             return new ServersSolutionSummaryResponse(assessedCount, discoveredCount, instanceType, migratedCount, replicatingCount, testMigratedCount);
         }

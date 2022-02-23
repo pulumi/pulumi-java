@@ -141,7 +141,6 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public TrafficAnalyticsConfigurationPropertiesResponse build() {
             return new TrafficAnalyticsConfigurationPropertiesResponse(enabled, trafficAnalyticsInterval, workspaceId, workspaceRegion, workspaceResourceId);
         }

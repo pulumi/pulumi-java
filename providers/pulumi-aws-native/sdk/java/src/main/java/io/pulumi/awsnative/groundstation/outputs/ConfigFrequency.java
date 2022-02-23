@@ -61,7 +61,6 @@ public final class ConfigFrequency {
             this.value = value;
             return this;
         }
-
         public ConfigFrequency build() {
             return new ConfigFrequency(units, value);
         }

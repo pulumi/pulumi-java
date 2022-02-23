@@ -19,7 +19,7 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="arrayValues", required=true)
-    private final List<QueryParameterValueResponse> arrayValues;
+      private final List<QueryParameterValueResponse> arrayValues;
 
     public List<QueryParameterValueResponse> getArrayValues() {
         return this.arrayValues;
@@ -30,7 +30,7 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="structValues", required=true)
-    private final Map<String,String> structValues;
+      private final Map<String,String> structValues;
 
     public Map<String,String> getStructValues() {
         return this.structValues;
@@ -41,7 +41,7 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -100,7 +100,6 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public QueryParameterValueResponse build() {
             return new QueryParameterValueResponse(arrayValues, structValues, value);
         }

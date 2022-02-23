@@ -378,7 +378,6 @@ public final class OrderItemDetailsResponse {
             this.reverseShippingDetails = Objects.requireNonNull(reverseShippingDetails);
             return this;
         }
-
         public OrderItemDetailsResponse build() {
             return new OrderItemDetailsResponse(cancellationReason, cancellationStatus, currentStage, deletionStatus, error, forwardShippingDetails, managementRpDetails, managementRpDetailsList, notificationEmailList, orderItemStageHistory, orderItemType, preferences, productDetails, returnReason, returnStatus, reverseShippingDetails);
         }

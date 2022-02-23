@@ -75,7 +75,6 @@ public final class HttpFaultAbortResponse {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public HttpFaultAbortResponse build() {
             return new HttpFaultAbortResponse(httpStatus, percentage);
         }

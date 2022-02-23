@@ -209,7 +209,6 @@ public final class ListWebAppSitePushSettingsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppSitePushSettingsResult build() {
             return new ListWebAppSitePushSettingsResult(dynamicTagsJson, id, isPushEnabled, kind, name, tagWhitelistJson, tagsRequiringAuth, type);
         }

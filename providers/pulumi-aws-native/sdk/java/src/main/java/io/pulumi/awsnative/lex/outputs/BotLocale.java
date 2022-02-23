@@ -133,7 +133,6 @@ public final class BotLocale {
             this.voiceSettings = voiceSettings;
             return this;
         }
-
         public BotLocale build() {
             return new BotLocale(description, intents, localeId, nluConfidenceThreshold, slotTypes, voiceSettings);
         }

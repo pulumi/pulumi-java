@@ -23,7 +23,7 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeUrl")
-    private final @Nullable Input<String> typeUrl;
+      private final @Nullable Input<String> typeUrl;
 
     public Input<String> getTypeUrl() {
         return this.typeUrl == null ? Input.empty() : this.typeUrl;
@@ -34,7 +34,7 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -93,7 +93,6 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public AnyArgs build() {
             return new AnyArgs(typeUrl, value);
         }

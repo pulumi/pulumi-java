@@ -44,7 +44,6 @@ public final class GetEnvironmentConfigWebServerConfig {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public GetEnvironmentConfigWebServerConfig build() {
             return new GetEnvironmentConfigWebServerConfig(machineType);
         }

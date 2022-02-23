@@ -21,7 +21,7 @@ public final class ActivationPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -59,7 +59,6 @@ public final class ActivationPropertiesResponse extends io.pulumi.resources.Invo
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ActivationPropertiesResponse build() {
             return new ActivationPropertiesResponse(status);
         }

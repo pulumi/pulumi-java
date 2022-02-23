@@ -24,7 +24,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail")
-    private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
@@ -35,7 +35,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<PubsubConfigState> state;
+      private final @Nullable Input<PubsubConfigState> state;
 
     public Input<PubsubConfigState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -46,7 +46,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -120,7 +120,6 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.topic = Input.ofNullable(topic);
             return this;
         }
-
         public PubsubConfigArgs build() {
             return new PubsubConfigArgs(serviceAccountEmail, state, topic);
         }

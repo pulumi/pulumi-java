@@ -53,7 +53,6 @@ public final class SensitiveTextAnnotationResponse {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public SensitiveTextAnnotationResponse build() {
             return new SensitiveTextAnnotationResponse(details);
         }

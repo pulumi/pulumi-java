@@ -75,7 +75,6 @@ public final class PartitionConfigResponse {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public PartitionConfigResponse build() {
             return new PartitionConfigResponse(capacity, count);
         }

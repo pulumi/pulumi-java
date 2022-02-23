@@ -160,7 +160,6 @@ public final class CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage {
             this.timeStamping = timeStamping;
             return this;
         }
-
         public CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage build() {
             return new CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);
         }

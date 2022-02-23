@@ -24,7 +24,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalData")
-    private final @Nullable Input<AssignmentPropertiesAdditionalDataArgs> additionalData;
+        private final @Nullable Input<AssignmentPropertiesAdditionalDataArgs> additionalData;
 
     public Input<AssignmentPropertiesAdditionalDataArgs> getAdditionalData() {
         return this.additionalData == null ? Input.empty() : this.additionalData;
@@ -35,7 +35,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignedComponent")
-    private final @Nullable Input<AssignedComponentItemArgs> assignedComponent;
+        private final @Nullable Input<AssignedComponentItemArgs> assignedComponent;
 
     public Input<AssignedComponentItemArgs> getAssignedComponent() {
         return this.assignedComponent == null ? Input.empty() : this.assignedComponent;
@@ -46,7 +46,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignedStandard")
-    private final @Nullable Input<AssignedStandardItemArgs> assignedStandard;
+        private final @Nullable Input<AssignedStandardItemArgs> assignedStandard;
 
     public Input<AssignedStandardItemArgs> getAssignedStandard() {
         return this.assignedStandard == null ? Input.empty() : this.assignedStandard;
@@ -57,7 +57,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignmentId")
-    private final @Nullable Input<String> assignmentId;
+        private final @Nullable Input<String> assignmentId;
 
     public Input<String> getAssignmentId() {
         return this.assignmentId == null ? Input.empty() : this.assignmentId;
@@ -68,7 +68,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -79,7 +79,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -90,7 +90,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="effect")
-    private final @Nullable Input<String> effect;
+        private final @Nullable Input<String> effect;
 
     public Input<String> getEffect() {
         return this.effect == null ? Input.empty() : this.effect;
@@ -101,7 +101,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiresOn")
-    private final @Nullable Input<String> expiresOn;
+        private final @Nullable Input<String> expiresOn;
 
     public Input<String> getExpiresOn() {
         return this.expiresOn == null ? Input.empty() : this.expiresOn;
@@ -112,7 +112,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -123,7 +123,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -134,7 +134,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+        private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -145,7 +145,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -156,7 +156,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+        private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -167,7 +167,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -406,7 +406,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AssignmentArgs build() {
             return new AssignmentArgs(additionalData, assignedComponent, assignedStandard, assignmentId, description, displayName, effect, expiresOn, kind, location, metadata, resourceGroupName, scope, tags);
         }

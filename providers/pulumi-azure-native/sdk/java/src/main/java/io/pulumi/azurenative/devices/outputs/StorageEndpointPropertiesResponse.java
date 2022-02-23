@@ -118,7 +118,6 @@ public final class StorageEndpointPropertiesResponse {
             this.sasTtlAsIso8601 = sasTtlAsIso8601;
             return this;
         }
-
         public StorageEndpointPropertiesResponse build() {
             return new StorageEndpointPropertiesResponse(authenticationType, connectionString, containerName, sasTtlAsIso8601);
         }

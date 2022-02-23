@@ -13,7 +13,7 @@ public final class ImportValueArgs extends io.pulumi.resources.InvokeArgs {
     public static final ImportValueArgs Empty = new ImportValueArgs();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -51,7 +51,6 @@ public final class ImportValueArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ImportValueArgs build() {
             return new ImportValueArgs(name);
         }

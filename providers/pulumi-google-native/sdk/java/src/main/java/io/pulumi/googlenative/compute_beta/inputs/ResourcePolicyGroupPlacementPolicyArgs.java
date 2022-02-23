@@ -24,7 +24,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="availabilityDomainCount")
-    private final @Nullable Input<Integer> availabilityDomainCount;
+      private final @Nullable Input<Integer> availabilityDomainCount;
 
     public Input<Integer> getAvailabilityDomainCount() {
         return this.availabilityDomainCount == null ? Input.empty() : this.availabilityDomainCount;
@@ -35,7 +35,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="collocation")
-    private final @Nullable Input<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
+      private final @Nullable Input<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
 
     public Input<ResourcePolicyGroupPlacementPolicyCollocation> getCollocation() {
         return this.collocation == null ? Input.empty() : this.collocation;
@@ -46,7 +46,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="vmCount")
-    private final @Nullable Input<Integer> vmCount;
+      private final @Nullable Input<Integer> vmCount;
 
     public Input<Integer> getVmCount() {
         return this.vmCount == null ? Input.empty() : this.vmCount;
@@ -120,7 +120,6 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
             this.vmCount = Input.ofNullable(vmCount);
             return this;
         }
-
         public ResourcePolicyGroupPlacementPolicyArgs build() {
             return new ResourcePolicyGroupPlacementPolicyArgs(availabilityDomainCount, collocation, vmCount);
         }

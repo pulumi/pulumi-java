@@ -23,7 +23,7 @@ public final class InitialReplicationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="initialReplicationProgressPercentage")
-    private final @Nullable String initialReplicationProgressPercentage;
+        private final @Nullable String initialReplicationProgressPercentage;
 
     public Optional<String> getInitialReplicationProgressPercentage() {
         return this.initialReplicationProgressPercentage == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationProgressPercentage);
@@ -34,7 +34,7 @@ public final class InitialReplicationDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="initialReplicationType")
-    private final @Nullable String initialReplicationType;
+        private final @Nullable String initialReplicationType;
 
     public Optional<String> getInitialReplicationType() {
         return this.initialReplicationType == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationType);
@@ -83,7 +83,6 @@ public final class InitialReplicationDetailsResponse extends io.pulumi.resources
             this.initialReplicationType = initialReplicationType;
             return this;
         }
-
         public InitialReplicationDetailsResponse build() {
             return new InitialReplicationDetailsResponse(initialReplicationProgressPercentage, initialReplicationType);
         }

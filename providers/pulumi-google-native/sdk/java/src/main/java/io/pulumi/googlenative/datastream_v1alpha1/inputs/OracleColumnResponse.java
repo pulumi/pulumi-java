@@ -23,7 +23,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="columnName", required=true)
-    private final String columnName;
+      private final String columnName;
 
     public String getColumnName() {
         return this.columnName;
@@ -34,7 +34,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataType", required=true)
-    private final String dataType;
+      private final String dataType;
 
     public String getDataType() {
         return this.dataType;
@@ -45,7 +45,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encoding", required=true)
-    private final String encoding;
+      private final String encoding;
 
     public String getEncoding() {
         return this.encoding;
@@ -56,7 +56,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="length", required=true)
-    private final Integer length;
+      private final Integer length;
 
     public Integer getLength() {
         return this.length;
@@ -67,7 +67,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nullable", required=true)
-    private final Boolean nullable;
+      private final Boolean nullable;
 
     public Boolean getNullable() {
         return this.nullable;
@@ -78,7 +78,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ordinalPosition", required=true)
-    private final Integer ordinalPosition;
+      private final Integer ordinalPosition;
 
     public Integer getOrdinalPosition() {
         return this.ordinalPosition;
@@ -89,7 +89,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="precision", required=true)
-    private final Integer precision;
+      private final Integer precision;
 
     public Integer getPrecision() {
         return this.precision;
@@ -100,7 +100,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="primaryKey", required=true)
-    private final Boolean primaryKey;
+      private final Boolean primaryKey;
 
     public Boolean getPrimaryKey() {
         return this.primaryKey;
@@ -111,7 +111,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scale", required=true)
-    private final Integer scale;
+      private final Integer scale;
 
     public Integer getScale() {
         return this.scale;
@@ -230,7 +230,6 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
             this.scale = Objects.requireNonNull(scale);
             return this;
         }
-
         public OracleColumnResponse build() {
             return new OracleColumnResponse(columnName, dataType, encoding, length, nullable, ordinalPosition, precision, primaryKey, scale);
         }

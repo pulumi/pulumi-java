@@ -52,7 +52,6 @@ public final class AppEngineResponse {
             this.moduleId = Objects.requireNonNull(moduleId);
             return this;
         }
-
         public AppEngineResponse build() {
             return new AppEngineResponse(moduleId);
         }

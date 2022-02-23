@@ -96,7 +96,6 @@ public final class RobotApplicationSourceConfig {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }
-
         public RobotApplicationSourceConfig build() {
             return new RobotApplicationSourceConfig(architecture, s3Bucket, s3Key);
         }

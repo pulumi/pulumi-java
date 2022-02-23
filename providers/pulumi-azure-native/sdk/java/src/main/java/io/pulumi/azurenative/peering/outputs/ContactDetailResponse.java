@@ -97,7 +97,6 @@ public final class ContactDetailResponse {
             this.role = role;
             return this;
         }
-
         public ContactDetailResponse build() {
             return new ContactDetailResponse(email, phone, role);
         }

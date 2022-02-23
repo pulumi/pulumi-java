@@ -140,7 +140,6 @@ public final class HelmReleasePropertiesDefinitionResponse {
             this.upgradeFailureCount = upgradeFailureCount;
             return this;
         }
-
         public HelmReleasePropertiesDefinitionResponse build() {
             return new HelmReleasePropertiesDefinitionResponse(failureCount, helmChartRef, installFailureCount, lastRevisionApplied, upgradeFailureCount);
         }

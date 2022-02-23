@@ -435,7 +435,6 @@ public final class ActiveDirectoryResponse {
             this.username = username;
             return this;
         }
-
         public ActiveDirectoryResponse build() {
             return new ActiveDirectoryResponse(activeDirectoryId, adName, aesEncryption, allowLocalNfsUsersWithLdap, backupOperators, dns, domain, kdcIP, ldapOverTLS, ldapSigning, organizationalUnit, password, securityOperators, serverRootCACertificate, site, smbServerName, status, statusDetails, username);
         }

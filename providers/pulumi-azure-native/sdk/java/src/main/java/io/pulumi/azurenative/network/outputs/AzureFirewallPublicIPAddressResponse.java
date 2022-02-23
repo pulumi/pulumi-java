@@ -54,7 +54,6 @@ public final class AzureFirewallPublicIPAddressResponse {
             this.address = address;
             return this;
         }
-
         public AzureFirewallPublicIPAddressResponse build() {
             return new AzureFirewallPublicIPAddressResponse(address);
         }

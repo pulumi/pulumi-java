@@ -89,7 +89,6 @@ public final class WebACLRuleAction {
             this.count = count;
             return this;
         }
-
         public WebACLRuleAction build() {
             return new WebACLRuleAction(allow, block, captcha, count);
         }

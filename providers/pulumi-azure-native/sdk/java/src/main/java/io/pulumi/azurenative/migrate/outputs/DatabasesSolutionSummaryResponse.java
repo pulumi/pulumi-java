@@ -121,7 +121,6 @@ public final class DatabasesSolutionSummaryResponse {
             this.migrationReadyCount = migrationReadyCount;
             return this;
         }
-
         public DatabasesSolutionSummaryResponse build() {
             return new DatabasesSolutionSummaryResponse(databaseInstancesAssessedCount, databasesAssessedCount, instanceType, migrationReadyCount);
         }

@@ -119,7 +119,6 @@ public final class AwsClusterControlPlaneMainVolume {
             this.volumeType = volumeType;
             return this;
         }
-
         public AwsClusterControlPlaneMainVolume build() {
             return new AwsClusterControlPlaneMainVolume(iops, kmsKeyArn, sizeGib, volumeType);
         }

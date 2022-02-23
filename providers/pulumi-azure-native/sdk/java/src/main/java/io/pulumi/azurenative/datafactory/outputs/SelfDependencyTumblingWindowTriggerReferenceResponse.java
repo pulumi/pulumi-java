@@ -99,7 +99,6 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SelfDependencyTumblingWindowTriggerReferenceResponse build() {
             return new SelfDependencyTumblingWindowTriggerReferenceResponse(offset, size, type);
         }

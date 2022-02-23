@@ -196,7 +196,6 @@ public final class DataSourceSharePointConfiguration {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public DataSourceSharePointConfiguration build() {
             return new DataSourceSharePointConfiguration(crawlAttachments, disableLocalGroups, documentTitleFieldName, exclusionPatterns, fieldMappings, inclusionPatterns, secretArn, sharePointVersion, sslCertificateS3Path, urls, useChangeLog, vpcConfiguration);
         }

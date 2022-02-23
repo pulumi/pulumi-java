@@ -23,7 +23,7 @@ public final class SapHanaPartitionSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="partitionColumnName")
-    private final @Nullable Input<Object> partitionColumnName;
+        private final @Nullable Input<Object> partitionColumnName;
 
     public Input<Object> getPartitionColumnName() {
         return this.partitionColumnName == null ? Input.empty() : this.partitionColumnName;
@@ -66,7 +66,6 @@ public final class SapHanaPartitionSettingsArgs extends io.pulumi.resources.Reso
             this.partitionColumnName = Input.ofNullable(partitionColumnName);
             return this;
         }
-
         public SapHanaPartitionSettingsArgs build() {
             return new SapHanaPartitionSettingsArgs(partitionColumnName);
         }

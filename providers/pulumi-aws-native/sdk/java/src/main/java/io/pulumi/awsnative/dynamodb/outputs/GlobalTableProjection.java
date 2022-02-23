@@ -61,7 +61,6 @@ public final class GlobalTableProjection {
             this.projectionType = projectionType;
             return this;
         }
-
         public GlobalTableProjection build() {
             return new GlobalTableProjection(nonKeyAttributes, projectionType);
         }

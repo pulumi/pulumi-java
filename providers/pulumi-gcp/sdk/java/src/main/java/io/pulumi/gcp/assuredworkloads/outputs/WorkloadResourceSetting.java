@@ -76,7 +76,6 @@ public final class WorkloadResourceSetting {
             this.resourceType = resourceType;
             return this;
         }
-
         public WorkloadResourceSetting build() {
             return new WorkloadResourceSetting(resourceId, resourceType);
         }

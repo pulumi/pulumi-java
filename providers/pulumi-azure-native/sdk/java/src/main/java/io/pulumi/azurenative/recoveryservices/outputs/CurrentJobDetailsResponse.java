@@ -97,7 +97,6 @@ public final class CurrentJobDetailsResponse {
             this.startTime = startTime;
             return this;
         }
-
         public CurrentJobDetailsResponse build() {
             return new CurrentJobDetailsResponse(jobId, jobName, startTime);
         }

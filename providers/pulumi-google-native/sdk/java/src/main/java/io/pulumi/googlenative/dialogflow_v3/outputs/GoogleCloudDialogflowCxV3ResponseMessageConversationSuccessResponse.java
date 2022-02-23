@@ -53,7 +53,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessRe
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessResponse(metadata);
         }

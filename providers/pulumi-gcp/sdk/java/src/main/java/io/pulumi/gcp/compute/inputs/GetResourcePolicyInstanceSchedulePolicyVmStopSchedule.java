@@ -13,7 +13,7 @@ public final class GetResourcePolicyInstanceSchedulePolicyVmStopSchedule extends
     public static final GetResourcePolicyInstanceSchedulePolicyVmStopSchedule Empty = new GetResourcePolicyInstanceSchedulePolicyVmStopSchedule();
 
     @InputImport(name="schedule", required=true)
-    private final String schedule;
+        private final String schedule;
 
     public String getSchedule() {
         return this.schedule;
@@ -51,7 +51,6 @@ public final class GetResourcePolicyInstanceSchedulePolicyVmStopSchedule extends
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public GetResourcePolicyInstanceSchedulePolicyVmStopSchedule build() {
             return new GetResourcePolicyInstanceSchedulePolicyVmStopSchedule(schedule);
         }

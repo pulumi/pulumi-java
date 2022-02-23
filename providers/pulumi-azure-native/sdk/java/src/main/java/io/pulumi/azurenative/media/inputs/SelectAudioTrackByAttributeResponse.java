@@ -23,7 +23,7 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="attribute", required=true)
-    private final String attribute;
+        private final String attribute;
 
     public String getAttribute() {
         return this.attribute;
@@ -34,7 +34,7 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="channelMapping")
-    private final @Nullable String channelMapping;
+        private final @Nullable String channelMapping;
 
     public Optional<String> getChannelMapping() {
         return this.channelMapping == null ? Optional.empty() : Optional.ofNullable(this.channelMapping);
@@ -45,7 +45,7 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+        private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -56,7 +56,7 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="filterValue")
-    private final @Nullable String filterValue;
+        private final @Nullable String filterValue;
 
     public Optional<String> getFilterValue() {
         return this.filterValue == null ? Optional.empty() : Optional.ofNullable(this.filterValue);
@@ -68,7 +68,7 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -147,7 +147,6 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public SelectAudioTrackByAttributeResponse build() {
             return new SelectAudioTrackByAttributeResponse(attribute, channelMapping, filter, filterValue, odataType);
         }

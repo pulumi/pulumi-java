@@ -17,21 +17,21 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
     public static final StoredQueryArgs Empty = new StoredQueryArgs();
 
     @InputImport(name="queryDescription")
-    private final @Nullable Input<String> queryDescription;
+        private final @Nullable Input<String> queryDescription;
 
     public Input<String> getQueryDescription() {
         return this.queryDescription == null ? Input.empty() : this.queryDescription;
     }
 
     @InputImport(name="queryExpression", required=true)
-    private final Input<String> queryExpression;
+        private final Input<String> queryExpression;
 
     public Input<String> getQueryExpression() {
         return this.queryExpression;
     }
 
     @InputImport(name="queryName", required=true)
-    private final Input<String> queryName;
+        private final Input<String> queryName;
 
     public Input<String> getQueryName() {
         return this.queryName;
@@ -42,7 +42,7 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<StoredQueryTagArgs>> tags;
+        private final @Nullable Input<List<StoredQueryTagArgs>> tags;
 
     public Input<List<StoredQueryTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -131,7 +131,6 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public StoredQueryArgs build() {
             return new StoredQueryArgs(queryDescription, queryExpression, queryName, tags);
         }

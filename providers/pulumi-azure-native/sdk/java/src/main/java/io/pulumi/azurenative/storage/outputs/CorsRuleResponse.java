@@ -139,7 +139,6 @@ public final class CorsRuleResponse {
             this.maxAgeInSeconds = Objects.requireNonNull(maxAgeInSeconds);
             return this;
         }
-
         public CorsRuleResponse build() {
             return new CorsRuleResponse(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAgeInSeconds);
         }

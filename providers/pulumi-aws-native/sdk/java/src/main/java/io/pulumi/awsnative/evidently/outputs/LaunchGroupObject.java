@@ -86,7 +86,6 @@ public final class LaunchGroupObject {
             this.variation = Objects.requireNonNull(variation);
             return this;
         }
-
         public LaunchGroupObject build() {
             return new LaunchGroupObject(description, feature, groupName, variation);
         }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
      * 
      */
     @InputImport(name="buttons", required=true)
-    private final List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons;
+      private final List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> getButtons() {
         return this.buttons;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
      * 
      */
     @InputImport(name="imageUri", required=true)
-    private final String imageUri;
+      private final String imageUri;
 
     public String getImageUri() {
         return this.imageUri;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
      * 
      */
     @InputImport(name="subtitle", required=true)
-    private final String subtitle;
+      private final String subtitle;
 
     public String getSubtitle() {
         return this.subtitle;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -125,7 +125,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse extends
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageCardResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCardResponse(buttons, imageUri, subtitle, title);
         }

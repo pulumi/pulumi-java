@@ -76,7 +76,6 @@ public final class TerminalSettingsResponse {
             this.fontStyle = fontStyle;
             return this;
         }
-
         public TerminalSettingsResponse build() {
             return new TerminalSettingsResponse(fontSize, fontStyle);
         }

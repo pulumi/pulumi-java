@@ -24,7 +24,7 @@ public final class LocationHDFSQopConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dataTransferProtection")
-    private final @Nullable Input<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection;
+        private final @Nullable Input<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection;
 
     public Input<LocationHDFSQopConfigurationDataTransferProtection> getDataTransferProtection() {
         return this.dataTransferProtection == null ? Input.empty() : this.dataTransferProtection;
@@ -35,7 +35,7 @@ public final class LocationHDFSQopConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rpcProtection")
-    private final @Nullable Input<LocationHDFSQopConfigurationRpcProtection> rpcProtection;
+        private final @Nullable Input<LocationHDFSQopConfigurationRpcProtection> rpcProtection;
 
     public Input<LocationHDFSQopConfigurationRpcProtection> getRpcProtection() {
         return this.rpcProtection == null ? Input.empty() : this.rpcProtection;
@@ -94,7 +94,6 @@ public final class LocationHDFSQopConfigurationArgs extends io.pulumi.resources.
             this.rpcProtection = Input.ofNullable(rpcProtection);
             return this;
         }
-
         public LocationHDFSQopConfigurationArgs build() {
             return new LocationHDFSQopConfigurationArgs(dataTransferProtection, rpcProtection);
         }

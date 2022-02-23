@@ -75,7 +75,6 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
             this.setupStatus = Objects.requireNonNull(setupStatus);
             return this;
         }
-
         public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(setupErrors, setupStatus);
         }

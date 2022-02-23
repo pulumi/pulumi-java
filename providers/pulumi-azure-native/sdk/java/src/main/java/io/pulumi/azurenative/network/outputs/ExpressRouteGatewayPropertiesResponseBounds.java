@@ -76,7 +76,6 @@ public final class ExpressRouteGatewayPropertiesResponseBounds {
             this.min = min;
             return this;
         }
-
         public ExpressRouteGatewayPropertiesResponseBounds build() {
             return new ExpressRouteGatewayPropertiesResponseBounds(max, min);
         }

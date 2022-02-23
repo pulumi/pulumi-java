@@ -77,7 +77,6 @@ public final class WorkbookManagedIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public WorkbookManagedIdentityResponse build() {
             return new WorkbookManagedIdentityResponse(type, userAssignedIdentities);
         }

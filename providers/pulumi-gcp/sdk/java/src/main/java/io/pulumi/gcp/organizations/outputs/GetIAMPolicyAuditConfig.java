@@ -76,7 +76,6 @@ public final class GetIAMPolicyAuditConfig {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GetIAMPolicyAuditConfig build() {
             return new GetIAMPolicyAuditConfig(auditLogConfigs, service);
         }

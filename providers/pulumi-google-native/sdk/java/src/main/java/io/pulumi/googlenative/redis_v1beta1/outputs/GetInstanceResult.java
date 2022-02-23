@@ -692,7 +692,6 @@ public final class GetInstanceResult {
             this.transitEncryptionMode = Objects.requireNonNull(transitEncryptionMode);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(alternativeLocationId, authEnabled, authorizedNetwork, connectMode, createTime, currentLocationId, displayName, host, labels, location, maintenancePolicy, maintenanceSchedule, memorySizeGb, name, nodes, persistenceConfig, persistenceIamIdentity, port, readEndpoint, readEndpointPort, readReplicasMode, redisConfigs, redisVersion, replicaCount, reservedIpRange, secondaryIpRange, serverCaCerts, state, statusMessage, tier, transitEncryptionMode);
         }

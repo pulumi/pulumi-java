@@ -74,7 +74,6 @@ public final class HoursOfOperationTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public HoursOfOperationTag build() {
             return new HoursOfOperationTag(key, value);
         }

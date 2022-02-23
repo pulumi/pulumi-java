@@ -54,7 +54,6 @@ public final class ExpressRouteCircuitPeeringIdResponse {
             this.id = id;
             return this;
         }
-
         public ExpressRouteCircuitPeeringIdResponse build() {
             return new ExpressRouteCircuitPeeringIdResponse(id);
         }

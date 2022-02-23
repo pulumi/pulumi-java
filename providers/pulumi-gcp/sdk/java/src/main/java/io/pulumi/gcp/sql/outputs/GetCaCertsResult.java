@@ -123,7 +123,6 @@ public final class GetCaCertsResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetCaCertsResult build() {
             return new GetCaCertsResult(activeVersion, certs, id, instance, project);
         }

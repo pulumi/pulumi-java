@@ -17,7 +17,7 @@ public final class GetAdminRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="configurationName", required=true)
-    private final String configurationName;
+        private final String configurationName;
 
     public String getConfigurationName() {
         return this.configurationName;
@@ -28,7 +28,7 @@ public final class GetAdminRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-    private final String networkManagerName;
+        private final String networkManagerName;
 
     public String getNetworkManagerName() {
         return this.networkManagerName;
@@ -39,7 +39,7 @@ public final class GetAdminRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetAdminRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleCollectionName", required=true)
-    private final String ruleCollectionName;
+        private final String ruleCollectionName;
 
     public String getRuleCollectionName() {
         return this.ruleCollectionName;
@@ -61,7 +61,7 @@ public final class GetAdminRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleName", required=true)
-    private final String ruleName;
+        private final String ruleName;
 
     public String getRuleName() {
         return this.ruleName;
@@ -140,7 +140,6 @@ public final class GetAdminRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public GetAdminRuleArgs build() {
             return new GetAdminRuleArgs(configurationName, networkManagerName, resourceGroupName, ruleCollectionName, ruleName);
         }

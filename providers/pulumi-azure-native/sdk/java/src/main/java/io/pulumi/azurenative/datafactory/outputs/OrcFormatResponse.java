@@ -100,7 +100,6 @@ public final class OrcFormatResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OrcFormatResponse build() {
             return new OrcFormatResponse(deserializer, serializer, type);
         }

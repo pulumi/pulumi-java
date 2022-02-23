@@ -96,7 +96,6 @@ public final class ShardResponse {
             this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
             return this;
         }
-
         public ShardResponse build() {
             return new ShardResponse(numShards, shardIndex, testTargetsForShard);
         }

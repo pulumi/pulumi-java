@@ -313,7 +313,6 @@ public final class TransferSpecResponse {
             this.transferOptions = Objects.requireNonNull(transferOptions);
             return this;
         }
-
         public TransferSpecResponse build() {
             return new TransferSpecResponse(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, gcsIntermediateDataLocation, httpDataSource, objectConditions, posixDataSink, posixDataSource, sinkAgentPoolName, sourceAgentPoolName, transferManifest, transferOptions);
         }

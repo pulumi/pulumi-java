@@ -19,7 +19,7 @@ public final class LiteTopicReservationConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="throughputReservation")
-    private final @Nullable Input<String> throughputReservation;
+        private final @Nullable Input<String> throughputReservation;
 
     public Input<String> getThroughputReservation() {
         return this.throughputReservation == null ? Input.empty() : this.throughputReservation;
@@ -62,7 +62,6 @@ public final class LiteTopicReservationConfigArgs extends io.pulumi.resources.Re
             this.throughputReservation = Input.ofNullable(throughputReservation);
             return this;
         }
-
         public LiteTopicReservationConfigArgs build() {
             return new LiteTopicReservationConfigArgs(throughputReservation);
         }

@@ -203,7 +203,6 @@ public final class GoogleCloudApigeeV1CredentialResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GoogleCloudApigeeV1CredentialResponse build() {
             return new GoogleCloudApigeeV1CredentialResponse(apiProducts, attributes, consumerKey, consumerSecret, expiresAt, issuedAt, scopes, status);
         }

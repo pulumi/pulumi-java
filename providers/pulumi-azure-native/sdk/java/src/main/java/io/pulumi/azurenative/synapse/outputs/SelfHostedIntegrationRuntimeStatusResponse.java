@@ -459,7 +459,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse {
             this.versionStatus = Objects.requireNonNull(versionStatus);
             return this;
         }
-
         public SelfHostedIntegrationRuntimeStatusResponse build() {
             return new SelfHostedIntegrationRuntimeStatusResponse(autoUpdate, autoUpdateETA, capabilities, createTime, dataFactoryName, internalChannelEncryption, latestVersion, links, localTimeZoneOffset, nodeCommunicationChannelEncryptionMode, nodes, pushedVersion, scheduledUpdateDate, serviceUrls, state, taskQueueId, type, updateDelayOffset, version, versionStatus);
         }

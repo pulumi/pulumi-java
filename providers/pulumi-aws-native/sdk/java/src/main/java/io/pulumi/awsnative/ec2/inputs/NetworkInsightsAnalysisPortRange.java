@@ -15,14 +15,14 @@ public final class NetworkInsightsAnalysisPortRange extends io.pulumi.resources.
     public static final NetworkInsightsAnalysisPortRange Empty = new NetworkInsightsAnalysisPortRange();
 
     @InputImport(name="from")
-    private final @Nullable Integer from;
+        private final @Nullable Integer from;
 
     public Optional<Integer> getFrom() {
         return this.from == null ? Optional.empty() : Optional.ofNullable(this.from);
     }
 
     @InputImport(name="to")
-    private final @Nullable Integer to;
+        private final @Nullable Integer to;
 
     public Optional<Integer> getTo() {
         return this.to == null ? Optional.empty() : Optional.ofNullable(this.to);
@@ -71,7 +71,6 @@ public final class NetworkInsightsAnalysisPortRange extends io.pulumi.resources.
             this.to = to;
             return this;
         }
-
         public NetworkInsightsAnalysisPortRange build() {
             return new NetworkInsightsAnalysisPortRange(from, to);
         }

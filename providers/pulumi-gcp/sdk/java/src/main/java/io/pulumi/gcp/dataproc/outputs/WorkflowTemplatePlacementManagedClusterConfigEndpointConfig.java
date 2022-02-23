@@ -80,7 +80,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
             this.httpPorts = httpPorts;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigEndpointConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigEndpointConfig(enableHttpPortAccess, httpPorts);
         }

@@ -16,21 +16,21 @@ public final class CanaryVPCConfig extends io.pulumi.resources.InvokeArgs {
     public static final CanaryVPCConfig Empty = new CanaryVPCConfig();
 
     @InputImport(name="securityGroupIds", required=true)
-    private final List<String> securityGroupIds;
+        private final List<String> securityGroupIds;
 
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
     @InputImport(name="subnetIds", required=true)
-    private final List<String> subnetIds;
+        private final List<String> subnetIds;
 
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
 
     @InputImport(name="vpcId")
-    private final @Nullable String vpcId;
+        private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {
         return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
@@ -89,7 +89,6 @@ public final class CanaryVPCConfig extends io.pulumi.resources.InvokeArgs {
             this.vpcId = vpcId;
             return this;
         }
-
         public CanaryVPCConfig build() {
             return new CanaryVPCConfig(securityGroupIds, subnetIds, vpcId);
         }

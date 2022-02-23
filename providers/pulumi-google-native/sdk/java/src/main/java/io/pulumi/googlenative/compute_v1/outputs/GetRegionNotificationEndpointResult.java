@@ -180,7 +180,6 @@ public final class GetRegionNotificationEndpointResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetRegionNotificationEndpointResult build() {
             return new GetRegionNotificationEndpointResult(creationTimestamp, description, grpcSettings, kind, name, region, selfLink);
         }

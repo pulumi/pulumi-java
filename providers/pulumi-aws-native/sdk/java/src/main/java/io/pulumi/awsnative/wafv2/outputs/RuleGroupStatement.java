@@ -215,7 +215,6 @@ public final class RuleGroupStatement {
             this.xssMatchStatement = xssMatchStatement;
             return this;
         }
-
         public RuleGroupStatement build() {
             return new RuleGroupStatement(andStatement, byteMatchStatement, geoMatchStatement, iPSetReferenceStatement, labelMatchStatement, notStatement, orStatement, rateBasedStatement, regexMatchStatement, regexPatternSetReferenceStatement, sizeConstraintStatement, sqliMatchStatement, xssMatchStatement);
         }

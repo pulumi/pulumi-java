@@ -75,7 +75,6 @@ public final class NotificationPreferenceResponse {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
-
         public NotificationPreferenceResponse build() {
             return new NotificationPreferenceResponse(sendNotification, stageName);
         }

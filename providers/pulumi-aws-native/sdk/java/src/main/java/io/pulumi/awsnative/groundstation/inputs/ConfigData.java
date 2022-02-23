@@ -21,49 +21,49 @@ public final class ConfigData extends io.pulumi.resources.InvokeArgs {
     public static final ConfigData Empty = new ConfigData();
 
     @InputImport(name="antennaDownlinkConfig")
-    private final @Nullable ConfigAntennaDownlinkConfig antennaDownlinkConfig;
+        private final @Nullable ConfigAntennaDownlinkConfig antennaDownlinkConfig;
 
     public Optional<ConfigAntennaDownlinkConfig> getAntennaDownlinkConfig() {
         return this.antennaDownlinkConfig == null ? Optional.empty() : Optional.ofNullable(this.antennaDownlinkConfig);
     }
 
     @InputImport(name="antennaDownlinkDemodDecodeConfig")
-    private final @Nullable ConfigAntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig;
+        private final @Nullable ConfigAntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig;
 
     public Optional<ConfigAntennaDownlinkDemodDecodeConfig> getAntennaDownlinkDemodDecodeConfig() {
         return this.antennaDownlinkDemodDecodeConfig == null ? Optional.empty() : Optional.ofNullable(this.antennaDownlinkDemodDecodeConfig);
     }
 
     @InputImport(name="antennaUplinkConfig")
-    private final @Nullable ConfigAntennaUplinkConfig antennaUplinkConfig;
+        private final @Nullable ConfigAntennaUplinkConfig antennaUplinkConfig;
 
     public Optional<ConfigAntennaUplinkConfig> getAntennaUplinkConfig() {
         return this.antennaUplinkConfig == null ? Optional.empty() : Optional.ofNullable(this.antennaUplinkConfig);
     }
 
     @InputImport(name="dataflowEndpointConfig")
-    private final @Nullable ConfigDataflowEndpointConfig dataflowEndpointConfig;
+        private final @Nullable ConfigDataflowEndpointConfig dataflowEndpointConfig;
 
     public Optional<ConfigDataflowEndpointConfig> getDataflowEndpointConfig() {
         return this.dataflowEndpointConfig == null ? Optional.empty() : Optional.ofNullable(this.dataflowEndpointConfig);
     }
 
     @InputImport(name="s3RecordingConfig")
-    private final @Nullable ConfigS3RecordingConfig s3RecordingConfig;
+        private final @Nullable ConfigS3RecordingConfig s3RecordingConfig;
 
     public Optional<ConfigS3RecordingConfig> getS3RecordingConfig() {
         return this.s3RecordingConfig == null ? Optional.empty() : Optional.ofNullable(this.s3RecordingConfig);
     }
 
     @InputImport(name="trackingConfig")
-    private final @Nullable ConfigTrackingConfig trackingConfig;
+        private final @Nullable ConfigTrackingConfig trackingConfig;
 
     public Optional<ConfigTrackingConfig> getTrackingConfig() {
         return this.trackingConfig == null ? Optional.empty() : Optional.ofNullable(this.trackingConfig);
     }
 
     @InputImport(name="uplinkEchoConfig")
-    private final @Nullable ConfigUplinkEchoConfig uplinkEchoConfig;
+        private final @Nullable ConfigUplinkEchoConfig uplinkEchoConfig;
 
     public Optional<ConfigUplinkEchoConfig> getUplinkEchoConfig() {
         return this.uplinkEchoConfig == null ? Optional.empty() : Optional.ofNullable(this.uplinkEchoConfig);
@@ -162,7 +162,6 @@ public final class ConfigData extends io.pulumi.resources.InvokeArgs {
             this.uplinkEchoConfig = uplinkEchoConfig;
             return this;
         }
-
         public ConfigData build() {
             return new ConfigData(antennaDownlinkConfig, antennaDownlinkDemodDecodeConfig, antennaUplinkConfig, dataflowEndpointConfig, s3RecordingConfig, trackingConfig, uplinkEchoConfig);
         }

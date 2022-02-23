@@ -74,7 +74,6 @@ public final class NamespacedGkeDeploymentTargetResponse {
             this.targetGkeCluster = Objects.requireNonNull(targetGkeCluster);
             return this;
         }
-
         public NamespacedGkeDeploymentTargetResponse build() {
             return new NamespacedGkeDeploymentTargetResponse(clusterNamespace, targetGkeCluster);
         }

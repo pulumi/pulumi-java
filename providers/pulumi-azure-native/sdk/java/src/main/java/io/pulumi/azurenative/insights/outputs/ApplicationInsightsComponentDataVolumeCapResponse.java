@@ -162,7 +162,6 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse {
             this.warningThreshold = warningThreshold;
             return this;
         }
-
         public ApplicationInsightsComponentDataVolumeCapResponse build() {
             return new ApplicationInsightsComponentDataVolumeCapResponse(cap, maxHistoryCap, resetTime, stopSendNotificationWhenHitCap, stopSendNotificationWhenHitThreshold, warningThreshold);
         }

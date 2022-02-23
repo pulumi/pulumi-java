@@ -161,7 +161,6 @@ public final class GetApplicationResult {
             this.vpcLinkId = vpcLinkId;
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(apiGatewayId, applicationIdentifier, arn, nlbArn, nlbName, proxyUrl, stageName, tags, vpcLinkId);
         }

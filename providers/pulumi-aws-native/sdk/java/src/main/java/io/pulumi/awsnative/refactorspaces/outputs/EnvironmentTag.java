@@ -74,7 +74,6 @@ public final class EnvironmentTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EnvironmentTag build() {
             return new EnvironmentTag(key, value);
         }

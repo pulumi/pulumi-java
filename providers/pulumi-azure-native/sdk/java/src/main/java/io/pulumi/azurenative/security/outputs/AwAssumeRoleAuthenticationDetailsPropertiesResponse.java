@@ -161,7 +161,6 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse {
             this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
             return this;
         }
-
         public AwAssumeRoleAuthenticationDetailsPropertiesResponse build() {
             return new AwAssumeRoleAuthenticationDetailsPropertiesResponse(accountId, authenticationProvisioningState, authenticationType, awsAssumeRoleArn, awsExternalId, grantedPermissions);
         }

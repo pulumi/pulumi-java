@@ -61,7 +61,6 @@ public final class GroupTagFilter {
             this.values = values;
             return this;
         }
-
         public GroupTagFilter build() {
             return new GroupTagFilter(key, values);
         }

@@ -54,7 +54,6 @@ public final class OsProfileResponse {
             this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
             return this;
         }
-
         public OsProfileResponse build() {
             return new OsProfileResponse(linuxOperatingSystemProfile);
         }

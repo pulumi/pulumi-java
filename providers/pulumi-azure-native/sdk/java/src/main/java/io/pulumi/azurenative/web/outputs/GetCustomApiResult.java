@@ -183,7 +183,6 @@ public final class GetCustomApiResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCustomApiResult build() {
             return new GetCustomApiResult(etag, id, location, name, properties, tags, type);
         }

@@ -251,7 +251,6 @@ public final class ContainerResponse {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
         public ContainerResponse build() {
             return new ContainerResponse(command, environmentVariables, image, instanceView, livenessProbe, name, ports, readinessProbe, resources, volumeMounts);
         }

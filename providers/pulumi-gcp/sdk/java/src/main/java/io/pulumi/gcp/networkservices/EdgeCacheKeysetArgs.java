@@ -22,7 +22,7 @@ public final class EdgeCacheKeysetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class EdgeCacheKeysetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -46,7 +46,7 @@ public final class EdgeCacheKeysetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class EdgeCacheKeysetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -73,7 +73,7 @@ public final class EdgeCacheKeysetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicKeys", required=true)
-    private final Input<List<EdgeCacheKeysetPublicKeyArgs>> publicKeys;
+        private final Input<List<EdgeCacheKeysetPublicKeyArgs>> publicKeys;
 
     public Input<List<EdgeCacheKeysetPublicKeyArgs>> getPublicKeys() {
         return this.publicKeys;
@@ -177,7 +177,6 @@ public final class EdgeCacheKeysetArgs extends io.pulumi.resources.ResourceArgs 
             this.publicKeys = Input.of(Objects.requireNonNull(publicKeys));
             return this;
         }
-
         public EdgeCacheKeysetArgs build() {
             return new EdgeCacheKeysetArgs(description, labels, name, project, publicKeys);
         }

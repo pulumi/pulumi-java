@@ -24,7 +24,7 @@ public final class ConnectionMonitorDestinationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="address")
-    private final @Nullable String address;
+        private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
@@ -35,7 +35,7 @@ public final class ConnectionMonitorDestinationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Integer port;
+        private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -46,7 +46,7 @@ public final class ConnectionMonitorDestinationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -105,7 +105,6 @@ public final class ConnectionMonitorDestinationResponse extends io.pulumi.resour
             this.resourceId = resourceId;
             return this;
         }
-
         public ConnectionMonitorDestinationResponse build() {
             return new ConnectionMonitorDestinationResponse(address, port, resourceId);
         }

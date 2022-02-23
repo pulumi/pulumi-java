@@ -76,7 +76,6 @@ public final class WeeklyRetentionFormatResponse {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
-
         public WeeklyRetentionFormatResponse build() {
             return new WeeklyRetentionFormatResponse(daysOfTheWeek, weeksOfTheMonth);
         }

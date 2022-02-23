@@ -74,7 +74,6 @@ public final class TopicRuleIotAnalyticsAction {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public TopicRuleIotAnalyticsAction build() {
             return new TopicRuleIotAnalyticsAction(batchMode, channelName, roleArn);
         }

@@ -16,14 +16,14 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
     public static final MaterialArgs Empty = new MaterialArgs();
 
     @InputImport(name="digest")
-    private final @Nullable Input<Map<String,String>> digest;
+      private final @Nullable Input<Map<String,String>> digest;
 
     public Input<Map<String,String>> getDigest() {
         return this.digest == null ? Input.empty() : this.digest;
     }
 
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -82,7 +82,6 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public MaterialArgs build() {
             return new MaterialArgs(digest, uri);
         }

@@ -23,7 +23,7 @@ public final class GoogleIamV1__AuditConfigResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="auditLogConfigs", required=true)
-    private final List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs;
+      private final List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs;
 
     public List<GoogleIamV1__AuditLogConfigResponse> getAuditLogConfigs() {
         return this.auditLogConfigs;
@@ -34,7 +34,7 @@ public final class GoogleIamV1__AuditConfigResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -83,7 +83,6 @@ public final class GoogleIamV1__AuditConfigResponse extends io.pulumi.resources.
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GoogleIamV1__AuditConfigResponse build() {
             return new GoogleIamV1__AuditConfigResponse(auditLogConfigs, service);
         }

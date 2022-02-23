@@ -76,7 +76,6 @@ public final class StorageSettingResponse {
             this.type = type;
             return this;
         }
-
         public StorageSettingResponse build() {
             return new StorageSettingResponse(datastoreType, type);
         }

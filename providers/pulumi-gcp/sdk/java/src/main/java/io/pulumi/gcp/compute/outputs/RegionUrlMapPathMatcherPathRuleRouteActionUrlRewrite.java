@@ -84,7 +84,6 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite(hostRewrite, pathPrefixRewrite);
         }

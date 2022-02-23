@@ -20,7 +20,7 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatorName")
-    private final @Nullable Input<String> operatorName;
+      private final @Nullable Input<String> operatorName;
 
     public Input<String> getOperatorName() {
         return this.operatorName == null ? Input.empty() : this.operatorName;
@@ -31,7 +31,7 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<ValueArgs> value;
+      private final @Nullable Input<ValueArgs> value;
 
     public Input<ValueArgs> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -90,7 +90,6 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ValueFilterArgs build() {
             return new ValueFilterArgs(operatorName, value);
         }

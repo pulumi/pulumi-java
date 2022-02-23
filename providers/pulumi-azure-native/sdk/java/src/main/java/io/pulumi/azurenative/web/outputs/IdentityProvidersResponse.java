@@ -235,7 +235,6 @@ public final class IdentityProvidersResponse {
             this.twitter = twitter;
             return this;
         }
-
         public IdentityProvidersResponse build() {
             return new IdentityProvidersResponse(apple, azureActiveDirectory, azureStaticWebApps, customOpenIdConnectProviders, facebook, gitHub, google, legacyMicrosoftAccount, twitter);
         }

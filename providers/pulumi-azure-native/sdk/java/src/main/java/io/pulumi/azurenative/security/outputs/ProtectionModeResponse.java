@@ -118,7 +118,6 @@ public final class ProtectionModeResponse {
             this.script = script;
             return this;
         }
-
         public ProtectionModeResponse build() {
             return new ProtectionModeResponse(exe, executable, msi, script);
         }

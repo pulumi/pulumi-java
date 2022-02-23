@@ -15,21 +15,21 @@ public final class GetRegionAutoscalingPolicyIamPolicyArgs extends io.pulumi.res
     public static final GetRegionAutoscalingPolicyIamPolicyArgs Empty = new GetRegionAutoscalingPolicyIamPolicyArgs();
 
     @InputImport(name="autoscalingPolicyId", required=true)
-    private final String autoscalingPolicyId;
+      private final String autoscalingPolicyId;
 
     public String getAutoscalingPolicyId() {
         return this.autoscalingPolicyId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="regionId", required=true)
-    private final String regionId;
+      private final String regionId;
 
     public String getRegionId() {
         return this.regionId;
@@ -88,7 +88,6 @@ public final class GetRegionAutoscalingPolicyIamPolicyArgs extends io.pulumi.res
             this.regionId = Objects.requireNonNull(regionId);
             return this;
         }
-
         public GetRegionAutoscalingPolicyIamPolicyArgs build() {
             return new GetRegionAutoscalingPolicyIamPolicyArgs(autoscalingPolicyId, project, regionId);
         }

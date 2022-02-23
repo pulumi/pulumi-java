@@ -161,7 +161,6 @@ public final class GetWebServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebServiceResult build() {
             return new GetWebServiceResult(id, location, name, properties, tags, type);
         }

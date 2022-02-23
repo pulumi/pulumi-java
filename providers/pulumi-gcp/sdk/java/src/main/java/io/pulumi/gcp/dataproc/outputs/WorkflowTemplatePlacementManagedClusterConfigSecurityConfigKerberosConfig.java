@@ -351,7 +351,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
             this.truststorePassword = truststorePassword;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig(crossRealmTrustAdminServer, crossRealmTrustKdc, crossRealmTrustRealm, crossRealmTrustSharedPassword, enableKerberos, kdcDbKey, keyPassword, keystore, keystorePassword, kmsKey, realm, rootPrincipalPassword, tgtLifetimeHours, truststore, truststorePassword);
         }

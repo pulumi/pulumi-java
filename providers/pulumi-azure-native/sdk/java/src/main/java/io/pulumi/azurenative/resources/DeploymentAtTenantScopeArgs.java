@@ -21,7 +21,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="deploymentName")
-    private final @Nullable Input<String> deploymentName;
+        private final @Nullable Input<String> deploymentName;
 
     public Input<String> getDeploymentName() {
         return this.deploymentName == null ? Input.empty() : this.deploymentName;
@@ -32,7 +32,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -43,7 +43,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<DeploymentPropertiesArgs> properties;
+        private final Input<DeploymentPropertiesArgs> properties;
 
     public Input<DeploymentPropertiesArgs> getProperties() {
         return this.properties;
@@ -54,7 +54,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -143,7 +143,6 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DeploymentAtTenantScopeArgs build() {
             return new DeploymentAtTenantScopeArgs(deploymentName, location, properties, tags);
         }

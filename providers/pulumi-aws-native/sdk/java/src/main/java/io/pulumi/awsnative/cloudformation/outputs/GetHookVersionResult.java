@@ -153,7 +153,6 @@ public final class GetHookVersionResult {
             this.visibility = visibility;
             return this;
         }
-
         public GetHookVersionResult build() {
             return new GetHookVersionResult(arn, isDefaultVersion, typeArn, versionId, visibility);
         }

@@ -75,7 +75,6 @@ public final class ArtifactResponse {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
         public ArtifactResponse build() {
             return new ArtifactResponse(checksum, names);
         }

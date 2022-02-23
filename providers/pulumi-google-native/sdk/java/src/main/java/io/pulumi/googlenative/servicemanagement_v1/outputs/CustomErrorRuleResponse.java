@@ -75,7 +75,6 @@ public final class CustomErrorRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public CustomErrorRuleResponse build() {
             return new CustomErrorRuleResponse(isErrorType, selector);
         }

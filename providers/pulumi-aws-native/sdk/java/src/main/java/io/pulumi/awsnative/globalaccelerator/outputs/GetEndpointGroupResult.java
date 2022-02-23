@@ -213,7 +213,6 @@ public final class GetEndpointGroupResult {
             this.trafficDialPercentage = trafficDialPercentage;
             return this;
         }
-
         public GetEndpointGroupResult build() {
             return new GetEndpointGroupResult(endpointConfigurations, endpointGroupArn, healthCheckIntervalSeconds, healthCheckPath, healthCheckPort, healthCheckProtocol, portOverrides, thresholdCount, trafficDialPercentage);
         }

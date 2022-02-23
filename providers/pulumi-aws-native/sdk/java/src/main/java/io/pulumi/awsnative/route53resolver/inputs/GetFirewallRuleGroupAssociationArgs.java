@@ -17,7 +17,7 @@ public final class GetFirewallRuleGroupAssociationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -55,7 +55,6 @@ public final class GetFirewallRuleGroupAssociationArgs extends io.pulumi.resourc
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GetFirewallRuleGroupAssociationArgs build() {
             return new GetFirewallRuleGroupAssociationArgs(id);
         }

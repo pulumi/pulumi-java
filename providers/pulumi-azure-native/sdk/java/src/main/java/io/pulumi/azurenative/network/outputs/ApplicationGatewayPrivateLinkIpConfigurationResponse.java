@@ -225,7 +225,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayPrivateLinkIpConfigurationResponse build() {
             return new ApplicationGatewayPrivateLinkIpConfigurationResponse(etag, id, name, primary, privateIPAddress, privateIPAllocationMethod, provisioningState, subnet, type);
         }

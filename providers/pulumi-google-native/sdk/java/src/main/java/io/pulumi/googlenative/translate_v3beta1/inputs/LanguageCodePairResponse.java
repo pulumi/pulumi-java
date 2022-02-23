@@ -21,7 +21,7 @@ public final class LanguageCodePairResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sourceLanguageCode", required=true)
-    private final String sourceLanguageCode;
+      private final String sourceLanguageCode;
 
     public String getSourceLanguageCode() {
         return this.sourceLanguageCode;
@@ -32,7 +32,7 @@ public final class LanguageCodePairResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="targetLanguageCode", required=true)
-    private final String targetLanguageCode;
+      private final String targetLanguageCode;
 
     public String getTargetLanguageCode() {
         return this.targetLanguageCode;
@@ -81,7 +81,6 @@ public final class LanguageCodePairResponse extends io.pulumi.resources.InvokeAr
             this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
             return this;
         }
-
         public LanguageCodePairResponse build() {
             return new LanguageCodePairResponse(sourceLanguageCode, targetLanguageCode);
         }

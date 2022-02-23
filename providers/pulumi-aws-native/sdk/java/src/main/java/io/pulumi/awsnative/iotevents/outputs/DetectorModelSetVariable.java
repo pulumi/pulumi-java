@@ -74,7 +74,6 @@ public final class DetectorModelSetVariable {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
-
         public DetectorModelSetVariable build() {
             return new DetectorModelSetVariable(value, variableName);
         }

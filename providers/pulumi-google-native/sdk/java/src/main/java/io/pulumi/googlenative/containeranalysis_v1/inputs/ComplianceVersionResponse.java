@@ -21,7 +21,7 @@ public final class ComplianceVersionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="cpeUri", required=true)
-    private final String cpeUri;
+      private final String cpeUri;
 
     public String getCpeUri() {
         return this.cpeUri;
@@ -32,7 +32,7 @@ public final class ComplianceVersionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -81,7 +81,6 @@ public final class ComplianceVersionResponse extends io.pulumi.resources.InvokeA
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ComplianceVersionResponse build() {
             return new ComplianceVersionResponse(cpeUri, version);
         }

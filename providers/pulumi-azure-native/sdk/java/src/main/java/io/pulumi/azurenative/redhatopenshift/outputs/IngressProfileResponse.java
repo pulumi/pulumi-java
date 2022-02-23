@@ -97,7 +97,6 @@ public final class IngressProfileResponse {
             this.visibility = visibility;
             return this;
         }
-
         public IngressProfileResponse build() {
             return new IngressProfileResponse(ip, name, visibility);
         }

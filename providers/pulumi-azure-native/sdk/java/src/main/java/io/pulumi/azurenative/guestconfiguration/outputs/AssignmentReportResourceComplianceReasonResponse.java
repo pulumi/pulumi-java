@@ -74,7 +74,6 @@ public final class AssignmentReportResourceComplianceReasonResponse {
             this.phrase = Objects.requireNonNull(phrase);
             return this;
         }
-
         public AssignmentReportResourceComplianceReasonResponse build() {
             return new AssignmentReportResourceComplianceReasonResponse(code, phrase);
         }

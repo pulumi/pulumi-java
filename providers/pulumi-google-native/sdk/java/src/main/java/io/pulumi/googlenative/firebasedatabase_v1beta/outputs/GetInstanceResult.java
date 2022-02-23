@@ -137,7 +137,6 @@ public final class GetInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(databaseUrl, name, project, state, type);
         }

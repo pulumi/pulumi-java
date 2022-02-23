@@ -138,7 +138,6 @@ public final class AndroidRoboTestResponse {
             this.maxSteps = Objects.requireNonNull(maxSteps);
             return this;
         }
-
         public AndroidRoboTestResponse build() {
             return new AndroidRoboTestResponse(appInitialActivity, bootstrapPackageId, bootstrapRunnerClass, maxDepth, maxSteps);
         }

@@ -95,7 +95,6 @@ public final class RoleRef {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public RoleRef build() {
             return new RoleRef(apiGroup, kind, name);
         }

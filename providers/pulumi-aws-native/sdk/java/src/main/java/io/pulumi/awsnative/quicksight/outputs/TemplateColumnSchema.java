@@ -97,7 +97,6 @@ public final class TemplateColumnSchema {
             this.name = name;
             return this;
         }
-
         public TemplateColumnSchema build() {
             return new TemplateColumnSchema(dataType, geographicRole, name);
         }

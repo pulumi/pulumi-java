@@ -160,7 +160,6 @@ public final class VersionResponse {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public VersionResponse build() {
             return new VersionResponse(epoch, fullName, inclusive, kind, name, revision);
         }

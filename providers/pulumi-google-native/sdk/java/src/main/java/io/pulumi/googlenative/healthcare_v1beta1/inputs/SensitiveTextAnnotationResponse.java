@@ -22,7 +22,7 @@ public final class SensitiveTextAnnotationResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="details", required=true)
-    private final Map<String,String> details;
+      private final Map<String,String> details;
 
     public Map<String,String> getDetails() {
         return this.details;
@@ -60,7 +60,6 @@ public final class SensitiveTextAnnotationResponse extends io.pulumi.resources.I
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public SensitiveTextAnnotationResponse build() {
             return new SensitiveTextAnnotationResponse(details);
         }

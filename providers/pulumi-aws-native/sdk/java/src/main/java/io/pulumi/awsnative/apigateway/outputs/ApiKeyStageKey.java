@@ -76,7 +76,6 @@ public final class ApiKeyStageKey {
             this.stageName = stageName;
             return this;
         }
-
         public ApiKeyStageKey build() {
             return new ApiKeyStageKey(restApiId, stageName);
         }

@@ -374,7 +374,6 @@ public final class GetTransferConfigResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetTransferConfigResult build() {
             return new GetTransferConfigResult(dataRefreshWindowDays, dataSourceId, datasetRegion, destinationDatasetId, disabled, displayName, emailPreferences, name, nextRunTime, notificationPubsubTopic, ownerInfo, params, schedule, scheduleOptions, state, updateTime);
         }

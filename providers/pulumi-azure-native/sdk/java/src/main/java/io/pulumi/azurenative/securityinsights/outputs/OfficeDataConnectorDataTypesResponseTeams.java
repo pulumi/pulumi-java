@@ -54,7 +54,6 @@ public final class OfficeDataConnectorDataTypesResponseTeams {
             this.state = state;
             return this;
         }
-
         public OfficeDataConnectorDataTypesResponseTeams build() {
             return new OfficeDataConnectorDataTypesResponseTeams(state);
         }

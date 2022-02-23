@@ -51,7 +51,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="authenticationCertificates")
-    private final @Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates;
+        private final @Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates;
 
     public List<ApplicationGatewayAuthenticationCertificateResponse> getAuthenticationCertificates() {
         return this.authenticationCertificates == null ? List.of() : this.authenticationCertificates;
@@ -62,7 +62,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="autoscaleConfiguration")
-    private final @Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration;
+        private final @Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration;
 
     public Optional<ApplicationGatewayAutoscaleConfigurationResponse> getAutoscaleConfiguration() {
         return this.autoscaleConfiguration == null ? Optional.empty() : Optional.ofNullable(this.autoscaleConfiguration);
@@ -73,7 +73,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="backendAddressPools")
-    private final @Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools;
+        private final @Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools;
 
     public List<ApplicationGatewayBackendAddressPoolResponse> getBackendAddressPools() {
         return this.backendAddressPools == null ? List.of() : this.backendAddressPools;
@@ -84,7 +84,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="backendHttpSettingsCollection")
-    private final @Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection;
+        private final @Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection;
 
     public List<ApplicationGatewayBackendHttpSettingsResponse> getBackendHttpSettingsCollection() {
         return this.backendHttpSettingsCollection == null ? List.of() : this.backendHttpSettingsCollection;
@@ -95,7 +95,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="customErrorConfigurations")
-    private final @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
+        private final @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
 
     public List<ApplicationGatewayCustomErrorResponse> getCustomErrorConfigurations() {
         return this.customErrorConfigurations == null ? List.of() : this.customErrorConfigurations;
@@ -106,7 +106,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enableFips")
-    private final @Nullable Boolean enableFips;
+        private final @Nullable Boolean enableFips;
 
     public Optional<Boolean> getEnableFips() {
         return this.enableFips == null ? Optional.empty() : Optional.ofNullable(this.enableFips);
@@ -117,7 +117,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enableHttp2")
-    private final @Nullable Boolean enableHttp2;
+        private final @Nullable Boolean enableHttp2;
 
     public Optional<Boolean> getEnableHttp2() {
         return this.enableHttp2 == null ? Optional.empty() : Optional.ofNullable(this.enableHttp2);
@@ -128,7 +128,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -139,7 +139,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="firewallPolicy")
-    private final @Nullable SubResourceResponse firewallPolicy;
+        private final @Nullable SubResourceResponse firewallPolicy;
 
     public Optional<SubResourceResponse> getFirewallPolicy() {
         return this.firewallPolicy == null ? Optional.empty() : Optional.ofNullable(this.firewallPolicy);
@@ -150,7 +150,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="forceFirewallPolicyAssociation")
-    private final @Nullable Boolean forceFirewallPolicyAssociation;
+        private final @Nullable Boolean forceFirewallPolicyAssociation;
 
     public Optional<Boolean> getForceFirewallPolicyAssociation() {
         return this.forceFirewallPolicyAssociation == null ? Optional.empty() : Optional.ofNullable(this.forceFirewallPolicyAssociation);
@@ -161,7 +161,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="frontendIPConfigurations")
-    private final @Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations;
+        private final @Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations;
 
     public List<ApplicationGatewayFrontendIPConfigurationResponse> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations == null ? List.of() : this.frontendIPConfigurations;
@@ -172,7 +172,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="frontendPorts")
-    private final @Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts;
+        private final @Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts;
 
     public List<ApplicationGatewayFrontendPortResponse> getFrontendPorts() {
         return this.frontendPorts == null ? List.of() : this.frontendPorts;
@@ -183,7 +183,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="gatewayIPConfigurations")
-    private final @Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations;
+        private final @Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations;
 
     public List<ApplicationGatewayIPConfigurationResponse> getGatewayIPConfigurations() {
         return this.gatewayIPConfigurations == null ? List.of() : this.gatewayIPConfigurations;
@@ -194,7 +194,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="httpListeners")
-    private final @Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners;
+        private final @Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners;
 
     public List<ApplicationGatewayHttpListenerResponse> getHttpListeners() {
         return this.httpListeners == null ? List.of() : this.httpListeners;
@@ -205,7 +205,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -216,7 +216,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable ManagedServiceIdentityResponse identity;
+        private final @Nullable ManagedServiceIdentityResponse identity;
 
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
@@ -227,7 +227,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -238,7 +238,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -249,7 +249,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="operationalState", required=true)
-    private final String operationalState;
+        private final String operationalState;
 
     public String getOperationalState() {
         return this.operationalState;
@@ -260,7 +260,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="privateEndpointConnections", required=true)
-    private final List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections;
+        private final List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections;
 
     public List<ApplicationGatewayPrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
@@ -271,7 +271,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="privateLinkConfigurations")
-    private final @Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations;
+        private final @Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations;
 
     public List<ApplicationGatewayPrivateLinkConfigurationResponse> getPrivateLinkConfigurations() {
         return this.privateLinkConfigurations == null ? List.of() : this.privateLinkConfigurations;
@@ -282,7 +282,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="probes")
-    private final @Nullable List<ApplicationGatewayProbeResponse> probes;
+        private final @Nullable List<ApplicationGatewayProbeResponse> probes;
 
     public List<ApplicationGatewayProbeResponse> getProbes() {
         return this.probes == null ? List.of() : this.probes;
@@ -293,7 +293,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -304,7 +304,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="redirectConfigurations")
-    private final @Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations;
+        private final @Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations;
 
     public List<ApplicationGatewayRedirectConfigurationResponse> getRedirectConfigurations() {
         return this.redirectConfigurations == null ? List.of() : this.redirectConfigurations;
@@ -315,7 +315,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="requestRoutingRules")
-    private final @Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules;
+        private final @Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules;
 
     public List<ApplicationGatewayRequestRoutingRuleResponse> getRequestRoutingRules() {
         return this.requestRoutingRules == null ? List.of() : this.requestRoutingRules;
@@ -326,7 +326,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGuid", required=true)
-    private final String resourceGuid;
+        private final String resourceGuid;
 
     public String getResourceGuid() {
         return this.resourceGuid;
@@ -337,7 +337,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="rewriteRuleSets")
-    private final @Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets;
+        private final @Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets;
 
     public List<ApplicationGatewayRewriteRuleSetResponse> getRewriteRuleSets() {
         return this.rewriteRuleSets == null ? List.of() : this.rewriteRuleSets;
@@ -348,7 +348,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable ApplicationGatewaySkuResponse sku;
+        private final @Nullable ApplicationGatewaySkuResponse sku;
 
     public Optional<ApplicationGatewaySkuResponse> getSku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
@@ -359,7 +359,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sslCertificates")
-    private final @Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates;
+        private final @Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates;
 
     public List<ApplicationGatewaySslCertificateResponse> getSslCertificates() {
         return this.sslCertificates == null ? List.of() : this.sslCertificates;
@@ -370,7 +370,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sslPolicy")
-    private final @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
+        private final @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
 
     public Optional<ApplicationGatewaySslPolicyResponse> getSslPolicy() {
         return this.sslPolicy == null ? Optional.empty() : Optional.ofNullable(this.sslPolicy);
@@ -381,7 +381,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sslProfiles")
-    private final @Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles;
+        private final @Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles;
 
     public List<ApplicationGatewaySslProfileResponse> getSslProfiles() {
         return this.sslProfiles == null ? List.of() : this.sslProfiles;
@@ -392,7 +392,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -403,7 +403,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="trustedClientCertificates")
-    private final @Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates;
+        private final @Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates;
 
     public List<ApplicationGatewayTrustedClientCertificateResponse> getTrustedClientCertificates() {
         return this.trustedClientCertificates == null ? List.of() : this.trustedClientCertificates;
@@ -414,7 +414,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="trustedRootCertificates")
-    private final @Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates;
+        private final @Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates;
 
     public List<ApplicationGatewayTrustedRootCertificateResponse> getTrustedRootCertificates() {
         return this.trustedRootCertificates == null ? List.of() : this.trustedRootCertificates;
@@ -425,7 +425,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -436,7 +436,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="urlPathMaps")
-    private final @Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps;
+        private final @Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps;
 
     public List<ApplicationGatewayUrlPathMapResponse> getUrlPathMaps() {
         return this.urlPathMaps == null ? List.of() : this.urlPathMaps;
@@ -447,7 +447,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="webApplicationFirewallConfiguration")
-    private final @Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration;
+        private final @Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration;
 
     public Optional<ApplicationGatewayWebApplicationFirewallConfigurationResponse> getWebApplicationFirewallConfiguration() {
         return this.webApplicationFirewallConfiguration == null ? Optional.empty() : Optional.ofNullable(this.webApplicationFirewallConfiguration);
@@ -458,7 +458,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable List<String> zones;
+        private final @Nullable List<String> zones;
 
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
@@ -867,7 +867,6 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
             this.zones = zones;
             return this;
         }
-
         public ApplicationGatewayResponse build() {
             return new ApplicationGatewayResponse(authenticationCertificates, autoscaleConfiguration, backendAddressPools, backendHttpSettingsCollection, customErrorConfigurations, enableFips, enableHttp2, etag, firewallPolicy, forceFirewallPolicyAssociation, frontendIPConfigurations, frontendPorts, gatewayIPConfigurations, httpListeners, id, identity, location, name, operationalState, privateEndpointConnections, privateLinkConfigurations, probes, provisioningState, redirectConfigurations, requestRoutingRules, resourceGuid, rewriteRuleSets, sku, sslCertificates, sslPolicy, sslProfiles, tags, trustedClientCertificates, trustedRootCertificates, type, urlPathMaps, webApplicationFirewallConfiguration, zones);
         }

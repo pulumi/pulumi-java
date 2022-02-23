@@ -186,7 +186,6 @@ public final class FileTaskStepResponse {
             this.valuesFilePath = valuesFilePath;
             return this;
         }
-
         public FileTaskStepResponse build() {
             return new FileTaskStepResponse(baseImageDependencies, contextAccessToken, contextPath, taskFilePath, type, values, valuesFilePath);
         }

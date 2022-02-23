@@ -77,7 +77,6 @@ public final class PrivateEndpointPropertiesResponse {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
-
         public PrivateEndpointPropertiesResponse build() {
             return new PrivateEndpointPropertiesResponse(createdDate, manualPrivateLinkServiceConnections);
         }

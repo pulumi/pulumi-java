@@ -205,7 +205,6 @@ public final class CosmosDbMongoDbApiSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public CosmosDbMongoDbApiSinkResponse build() {
             return new CosmosDbMongoDbApiSinkResponse(disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

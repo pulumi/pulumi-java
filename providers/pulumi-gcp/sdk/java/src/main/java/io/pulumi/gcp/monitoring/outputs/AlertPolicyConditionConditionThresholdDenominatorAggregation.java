@@ -261,7 +261,6 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregation 
             this.perSeriesAligner = perSeriesAligner;
             return this;
         }
-
         public AlertPolicyConditionConditionThresholdDenominatorAggregation build() {
             return new AlertPolicyConditionConditionThresholdDenominatorAggregation(alignmentPeriod, crossSeriesReducer, groupByFields, perSeriesAligner);
         }

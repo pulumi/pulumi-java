@@ -20,7 +20,7 @@ public final class JobCopyDestinationEncryptionConfigurationGetArgs extends io.p
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final Input<String> kmsKeyName;
+        private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;
@@ -32,7 +32,7 @@ public final class JobCopyDestinationEncryptionConfigurationGetArgs extends io.p
      * 
      */
     @InputImport(name="kmsKeyVersion")
-    private final @Nullable Input<String> kmsKeyVersion;
+        private final @Nullable Input<String> kmsKeyVersion;
 
     public Input<String> getKmsKeyVersion() {
         return this.kmsKeyVersion == null ? Input.empty() : this.kmsKeyVersion;
@@ -91,7 +91,6 @@ public final class JobCopyDestinationEncryptionConfigurationGetArgs extends io.p
             this.kmsKeyVersion = Input.ofNullable(kmsKeyVersion);
             return this;
         }
-
         public JobCopyDestinationEncryptionConfigurationGetArgs build() {
             return new JobCopyDestinationEncryptionConfigurationGetArgs(kmsKeyName, kmsKeyVersion);
         }

@@ -58,7 +58,6 @@ public final class DatasetIotEventsDestinationConfiguration {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public DatasetIotEventsDestinationConfiguration build() {
             return new DatasetIotEventsDestinationConfiguration(inputName, roleArn);
         }

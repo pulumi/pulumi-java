@@ -139,7 +139,6 @@ public final class GetDetectorModelResult {
             this.tags = tags;
             return this;
         }
-
         public GetDetectorModelResult build() {
             return new GetDetectorModelResult(detectorModelDefinition, detectorModelDescription, evaluationMethod, roleArn, tags);
         }

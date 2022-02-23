@@ -76,7 +76,6 @@ public final class VpnServerConfigRadiusServerRootCertificateResponse {
             this.publicCertData = publicCertData;
             return this;
         }
-
         public VpnServerConfigRadiusServerRootCertificateResponse build() {
             return new VpnServerConfigRadiusServerRootCertificateResponse(name, publicCertData);
         }

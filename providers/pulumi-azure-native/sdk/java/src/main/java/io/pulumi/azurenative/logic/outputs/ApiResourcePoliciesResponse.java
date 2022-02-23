@@ -76,7 +76,6 @@ public final class ApiResourcePoliciesResponse {
             this.contentLink = contentLink;
             return this;
         }
-
         public ApiResourcePoliciesResponse build() {
             return new ApiResourcePoliciesResponse(content, contentLink);
         }

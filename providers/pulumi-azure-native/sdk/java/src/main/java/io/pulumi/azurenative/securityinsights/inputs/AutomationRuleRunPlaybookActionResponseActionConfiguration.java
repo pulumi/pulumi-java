@@ -23,7 +23,7 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration ex
      * 
      */
     @InputImport(name="logicAppResourceId")
-    private final @Nullable String logicAppResourceId;
+        private final @Nullable String logicAppResourceId;
 
     public Optional<String> getLogicAppResourceId() {
         return this.logicAppResourceId == null ? Optional.empty() : Optional.ofNullable(this.logicAppResourceId);
@@ -34,7 +34,7 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration ex
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -83,7 +83,6 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration ex
             this.tenantId = tenantId;
             return this;
         }
-
         public AutomationRuleRunPlaybookActionResponseActionConfiguration build() {
             return new AutomationRuleRunPlaybookActionResponseActionConfiguration(logicAppResourceId, tenantId);
         }

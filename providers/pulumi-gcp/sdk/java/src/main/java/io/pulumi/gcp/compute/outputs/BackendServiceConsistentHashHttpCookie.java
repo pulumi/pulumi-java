@@ -100,7 +100,6 @@ public final class BackendServiceConsistentHashHttpCookie {
             this.ttl = ttl;
             return this;
         }
-
         public BackendServiceConsistentHashHttpCookie build() {
             return new BackendServiceConsistentHashHttpCookie(name, path, ttl);
         }

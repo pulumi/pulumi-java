@@ -245,7 +245,6 @@ public final class GetPortalResult {
             this.roleArn = roleArn;
             return this;
         }
-
         public GetPortalResult build() {
             return new GetPortalResult(alarms, notificationSenderEmail, portalArn, portalClientId, portalContactEmail, portalDescription, portalId, portalName, portalStartUrl, roleArn);
         }

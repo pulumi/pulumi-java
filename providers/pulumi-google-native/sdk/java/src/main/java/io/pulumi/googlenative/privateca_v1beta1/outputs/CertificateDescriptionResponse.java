@@ -206,7 +206,6 @@ public final class CertificateDescriptionResponse {
             this.subjectKeyId = Objects.requireNonNull(subjectKeyId);
             return this;
         }
-
         public CertificateDescriptionResponse build() {
             return new CertificateDescriptionResponse(aiaIssuingCertificateUrls, authorityKeyId, certFingerprint, configValues, crlDistributionPoints, publicKey, subjectDescription, subjectKeyId);
         }

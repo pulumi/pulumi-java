@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse extends i
      * 
      */
     @InputImport(name="importedLibraries", required=true)
-    private final List<String> importedLibraries;
+      private final List<String> importedLibraries;
 
     public List<String> getImportedLibraries() {
         return this.importedLibraries;
@@ -60,7 +60,6 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse extends i
             this.importedLibraries = Objects.requireNonNull(importedLibraries);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse build() {
             return new GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse(importedLibraries);
         }

@@ -95,7 +95,6 @@ public final class TestCaseReferenceResponse {
             this.testSuiteName = Objects.requireNonNull(testSuiteName);
             return this;
         }
-
         public TestCaseReferenceResponse build() {
             return new TestCaseReferenceResponse(className, name, testSuiteName);
         }

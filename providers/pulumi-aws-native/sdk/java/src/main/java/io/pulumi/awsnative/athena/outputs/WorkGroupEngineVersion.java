@@ -60,7 +60,6 @@ public final class WorkGroupEngineVersion {
             this.selectedEngineVersion = selectedEngineVersion;
             return this;
         }
-
         public WorkGroupEngineVersion build() {
             return new WorkGroupEngineVersion(effectiveEngineVersion, selectedEngineVersion);
         }

@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumberResponse {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public GoogleCloudDialogflowV2ConversationPhoneNumberResponse build() {
             return new GoogleCloudDialogflowV2ConversationPhoneNumberResponse(phoneNumber);
         }

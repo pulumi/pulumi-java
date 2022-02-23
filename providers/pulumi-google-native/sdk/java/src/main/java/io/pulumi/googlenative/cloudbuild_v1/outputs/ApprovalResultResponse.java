@@ -137,7 +137,6 @@ public final class ApprovalResultResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public ApprovalResultResponse build() {
             return new ApprovalResultResponse(approvalTime, approverAccount, comment, decision, url);
         }

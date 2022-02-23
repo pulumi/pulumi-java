@@ -25,7 +25,7 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileName")
-    private final @Nullable Input<String> fileName;
+      private final @Nullable Input<String> fileName;
 
     public Input<String> getFileName() {
         return this.fileName == null ? Input.empty() : this.fileName;
@@ -36,7 +36,7 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="muxStreams", required=true)
-    private final Input<List<String>> muxStreams;
+      private final Input<List<String>> muxStreams;
 
     public Input<List<String>> getMuxStreams() {
         return this.muxStreams;
@@ -47,7 +47,7 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<ManifestType> type;
+      private final Input<ManifestType> type;
 
     public Input<ManifestType> getType() {
         return this.type;
@@ -121,7 +121,6 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ManifestArgs build() {
             return new ManifestArgs(fileName, muxStreams, type);
         }

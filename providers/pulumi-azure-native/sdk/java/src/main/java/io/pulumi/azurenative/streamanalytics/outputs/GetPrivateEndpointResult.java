@@ -138,7 +138,6 @@ public final class GetPrivateEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointResult build() {
             return new GetPrivateEndpointResult(etag, id, name, properties, type);
         }

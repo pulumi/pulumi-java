@@ -24,7 +24,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hosts", required=true)
-    private final List<String> hosts;
+      private final List<String> hosts;
 
     public List<String> getHosts() {
         return this.hosts;
@@ -35,7 +35,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpHeaderMatch", required=true)
-    private final HttpHeaderMatchResponse httpHeaderMatch;
+      private final HttpHeaderMatchResponse httpHeaderMatch;
 
     public HttpHeaderMatchResponse getHttpHeaderMatch() {
         return this.httpHeaderMatch;
@@ -46,7 +46,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="methods", required=true)
-    private final List<String> methods;
+      private final List<String> methods;
 
     public List<String> getMethods() {
         return this.methods;
@@ -57,7 +57,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ports", required=true)
-    private final List<Integer> ports;
+      private final List<Integer> ports;
 
     public List<Integer> getPorts() {
         return this.ports;
@@ -126,7 +126,6 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(hosts, httpHeaderMatch, methods, ports);
         }

@@ -52,7 +52,6 @@ public final class ResourceIdResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceIdResponse build() {
             return new ResourceIdResponse(type);
         }

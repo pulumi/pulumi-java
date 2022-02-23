@@ -73,7 +73,6 @@ public final class DatabaseIAMBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public DatabaseIAMBindingCondition build() {
             return new DatabaseIAMBindingCondition(description, expression, title);
         }

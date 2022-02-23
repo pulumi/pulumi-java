@@ -61,7 +61,6 @@ public final class ComponentVersionLambdaEventSource {
             this.type = type;
             return this;
         }
-
         public ComponentVersionLambdaEventSource build() {
             return new ComponentVersionLambdaEventSource(topic, type);
         }

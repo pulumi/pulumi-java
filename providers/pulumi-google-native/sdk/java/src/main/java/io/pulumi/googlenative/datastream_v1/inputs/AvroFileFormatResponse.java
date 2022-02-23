@@ -34,7 +34,6 @@ public final class AvroFileFormatResponse extends io.pulumi.resources.InvokeArgs
         public Builder(AvroFileFormatResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AvroFileFormatResponse build() {
             return new AvroFileFormatResponse();
         }

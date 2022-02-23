@@ -160,7 +160,6 @@ public final class RcmProxyDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public RcmProxyDetailsResponse build() {
             return new RcmProxyDetailsResponse(health, healthErrors, id, lastHeartbeatUtc, name, version);
         }

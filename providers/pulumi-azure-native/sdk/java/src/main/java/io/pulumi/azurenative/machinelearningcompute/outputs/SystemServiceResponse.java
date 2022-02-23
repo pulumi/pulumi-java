@@ -95,7 +95,6 @@ public final class SystemServiceResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SystemServiceResponse build() {
             return new SystemServiceResponse(publicIpAddress, systemServiceType, version);
         }

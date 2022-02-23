@@ -184,7 +184,6 @@ public final class AzureQueueSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public AzureQueueSinkResponse build() {
             return new AzureQueueSinkResponse(disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

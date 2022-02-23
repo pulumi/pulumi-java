@@ -23,7 +23,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -45,7 +45,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="shouldFeatureDisplayInPortal")
-    private final @Nullable Input<Boolean> shouldFeatureDisplayInPortal;
+        private final @Nullable Input<Boolean> shouldFeatureDisplayInPortal;
 
     public Input<Boolean> getShouldFeatureDisplayInPortal() {
         return this.shouldFeatureDisplayInPortal == null ? Input.empty() : this.shouldFeatureDisplayInPortal;
@@ -56,7 +56,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,SubscriptionFeatureRegistrationState>> state;
+        private final @Nullable Input<Either<String,SubscriptionFeatureRegistrationState>> state;
 
     public Input<Either<String,SubscriptionFeatureRegistrationState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -145,7 +145,6 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public SubscriptionFeatureRegistrationPropertiesArgs build() {
             return new SubscriptionFeatureRegistrationPropertiesArgs(description, metadata, shouldFeatureDisplayInPortal, state);
         }

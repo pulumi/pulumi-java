@@ -61,7 +61,6 @@ public final class JobStatisticsConfiguration {
             this.overrides = overrides;
             return this;
         }
-
         public JobStatisticsConfiguration build() {
             return new JobStatisticsConfiguration(includedStatistics, overrides);
         }

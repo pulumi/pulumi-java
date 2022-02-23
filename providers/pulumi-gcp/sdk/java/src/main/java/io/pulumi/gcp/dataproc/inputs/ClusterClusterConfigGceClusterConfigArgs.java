@@ -27,7 +27,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="internalIpOnly")
-    private final @Nullable Input<Boolean> internalIpOnly;
+        private final @Nullable Input<Boolean> internalIpOnly;
 
     public Input<Boolean> getInternalIpOnly() {
         return this.internalIpOnly == null ? Input.empty() : this.internalIpOnly;
@@ -39,7 +39,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -52,7 +52,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+        private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -64,7 +64,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+        private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -79,7 +79,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="serviceAccountScopes")
-    private final @Nullable Input<List<String>> serviceAccountScopes;
+        private final @Nullable Input<List<String>> serviceAccountScopes;
 
     public Input<List<String>> getServiceAccountScopes() {
         return this.serviceAccountScopes == null ? Input.empty() : this.serviceAccountScopes;
@@ -90,7 +90,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-    private final @Nullable Input<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
+        private final @Nullable Input<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Input<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
@@ -102,7 +102,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+        private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -114,7 +114,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+        private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -131,7 +131,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -295,7 +295,6 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public ClusterClusterConfigGceClusterConfigArgs build() {
             return new ClusterClusterConfigGceClusterConfigArgs(internalIpOnly, metadata, network, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetwork, tags, zone);
         }

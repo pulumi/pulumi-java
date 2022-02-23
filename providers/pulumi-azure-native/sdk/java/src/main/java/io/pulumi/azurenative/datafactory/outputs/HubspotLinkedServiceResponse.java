@@ -317,7 +317,6 @@ public final class HubspotLinkedServiceResponse {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
-
         public HubspotLinkedServiceResponse build() {
             return new HubspotLinkedServiceResponse(accessToken, annotations, clientId, clientSecret, connectVia, description, encryptedCredential, parameters, refreshToken, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

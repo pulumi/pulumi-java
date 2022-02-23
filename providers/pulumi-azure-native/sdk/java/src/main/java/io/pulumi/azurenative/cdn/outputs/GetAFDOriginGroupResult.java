@@ -262,7 +262,6 @@ public final class GetAFDOriginGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAFDOriginGroupResult build() {
             return new GetAFDOriginGroupResult(deploymentStatus, healthProbeSettings, id, loadBalancingSettings, name, provisioningState, responseBasedAfdOriginErrorDetectionSettings, sessionAffinityState, systemData, trafficRestorationTimeToHealedOrNewEndpointsInMinutes, type);
         }

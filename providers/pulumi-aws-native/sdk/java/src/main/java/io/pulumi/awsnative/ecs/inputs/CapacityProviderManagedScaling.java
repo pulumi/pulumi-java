@@ -20,35 +20,35 @@ public final class CapacityProviderManagedScaling extends io.pulumi.resources.In
     public static final CapacityProviderManagedScaling Empty = new CapacityProviderManagedScaling();
 
     @InputImport(name="instanceWarmupPeriod")
-    private final @Nullable Integer instanceWarmupPeriod;
+        private final @Nullable Integer instanceWarmupPeriod;
 
     public Optional<Integer> getInstanceWarmupPeriod() {
         return this.instanceWarmupPeriod == null ? Optional.empty() : Optional.ofNullable(this.instanceWarmupPeriod);
     }
 
     @InputImport(name="maximumScalingStepSize")
-    private final @Nullable Integer maximumScalingStepSize;
+        private final @Nullable Integer maximumScalingStepSize;
 
     public Optional<Integer> getMaximumScalingStepSize() {
         return this.maximumScalingStepSize == null ? Optional.empty() : Optional.ofNullable(this.maximumScalingStepSize);
     }
 
     @InputImport(name="minimumScalingStepSize")
-    private final @Nullable Integer minimumScalingStepSize;
+        private final @Nullable Integer minimumScalingStepSize;
 
     public Optional<Integer> getMinimumScalingStepSize() {
         return this.minimumScalingStepSize == null ? Optional.empty() : Optional.ofNullable(this.minimumScalingStepSize);
     }
 
     @InputImport(name="status")
-    private final @Nullable CapacityProviderManagedScalingStatus status;
+        private final @Nullable CapacityProviderManagedScalingStatus status;
 
     public Optional<CapacityProviderManagedScalingStatus> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
     @InputImport(name="targetCapacity")
-    private final @Nullable Integer targetCapacity;
+        private final @Nullable Integer targetCapacity;
 
     public Optional<Integer> getTargetCapacity() {
         return this.targetCapacity == null ? Optional.empty() : Optional.ofNullable(this.targetCapacity);
@@ -127,7 +127,6 @@ public final class CapacityProviderManagedScaling extends io.pulumi.resources.In
             this.targetCapacity = targetCapacity;
             return this;
         }
-
         public CapacityProviderManagedScaling build() {
             return new CapacityProviderManagedScaling(instanceWarmupPeriod, maximumScalingStepSize, minimumScalingStepSize, status, targetCapacity);
         }

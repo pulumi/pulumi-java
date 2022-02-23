@@ -76,7 +76,6 @@ public final class SecurityContactPropertiesResponseAlertNotifications {
             this.state = state;
             return this;
         }
-
         public SecurityContactPropertiesResponseAlertNotifications build() {
             return new SecurityContactPropertiesResponseAlertNotifications(minimalSeverity, state);
         }

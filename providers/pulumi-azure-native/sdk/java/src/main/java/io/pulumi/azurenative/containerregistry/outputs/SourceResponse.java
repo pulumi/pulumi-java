@@ -76,7 +76,6 @@ public final class SourceResponse {
             this.instanceID = instanceID;
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(addr, instanceID);
         }

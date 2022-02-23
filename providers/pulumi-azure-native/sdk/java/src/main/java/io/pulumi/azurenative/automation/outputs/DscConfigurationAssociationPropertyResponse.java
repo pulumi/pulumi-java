@@ -54,7 +54,6 @@ public final class DscConfigurationAssociationPropertyResponse {
             this.name = name;
             return this;
         }
-
         public DscConfigurationAssociationPropertyResponse build() {
             return new DscConfigurationAssociationPropertyResponse(name);
         }

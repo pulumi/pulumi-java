@@ -75,7 +75,6 @@ public final class NetworkEndpointResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public NetworkEndpointResponse build() {
             return new NetworkEndpointResponse(ipAddress, port);
         }

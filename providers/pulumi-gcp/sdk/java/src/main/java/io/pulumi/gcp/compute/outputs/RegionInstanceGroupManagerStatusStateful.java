@@ -78,7 +78,6 @@ public final class RegionInstanceGroupManagerStatusStateful {
             this.perInstanceConfigs = perInstanceConfigs;
             return this;
         }
-
         public RegionInstanceGroupManagerStatusStateful build() {
             return new RegionInstanceGroupManagerStatusStateful(hasStatefulConfig, perInstanceConfigs);
         }

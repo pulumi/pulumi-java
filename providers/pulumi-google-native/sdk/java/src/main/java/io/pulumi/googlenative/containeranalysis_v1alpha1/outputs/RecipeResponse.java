@@ -139,7 +139,6 @@ public final class RecipeResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RecipeResponse build() {
             return new RecipeResponse(arguments, definedInMaterial, entryPoint, environment, type);
         }

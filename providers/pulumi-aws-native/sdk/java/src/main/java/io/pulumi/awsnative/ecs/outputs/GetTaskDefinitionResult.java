@@ -70,7 +70,6 @@ public final class GetTaskDefinitionResult {
             this.taskDefinitionArn = taskDefinitionArn;
             return this;
         }
-
         public GetTaskDefinitionResult build() {
             return new GetTaskDefinitionResult(tags, taskDefinitionArn);
         }

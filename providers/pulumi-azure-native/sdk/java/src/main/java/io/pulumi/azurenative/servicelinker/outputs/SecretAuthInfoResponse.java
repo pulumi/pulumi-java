@@ -99,7 +99,6 @@ public final class SecretAuthInfoResponse {
             this.secret = secret;
             return this;
         }
-
         public SecretAuthInfoResponse build() {
             return new SecretAuthInfoResponse(authType, name, secret);
         }

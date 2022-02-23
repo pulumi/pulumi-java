@@ -44,7 +44,6 @@ public final class ResponseHeadersPolicyContentTypeOptions {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public ResponseHeadersPolicyContentTypeOptions build() {
             return new ResponseHeadersPolicyContentTypeOptions(override);
         }

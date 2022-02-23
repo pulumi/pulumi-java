@@ -25,7 +25,7 @@ public final class TargetPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="azureQueries")
-    private final @Nullable List<AzureQueryPropertiesResponse> azureQueries;
+        private final @Nullable List<AzureQueryPropertiesResponse> azureQueries;
 
     public List<AzureQueryPropertiesResponse> getAzureQueries() {
         return this.azureQueries == null ? List.of() : this.azureQueries;
@@ -36,7 +36,7 @@ public final class TargetPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="nonAzureQueries")
-    private final @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries;
+        private final @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries;
 
     public List<NonAzureQueryPropertiesResponse> getNonAzureQueries() {
         return this.nonAzureQueries == null ? List.of() : this.nonAzureQueries;
@@ -85,7 +85,6 @@ public final class TargetPropertiesResponse extends io.pulumi.resources.InvokeAr
             this.nonAzureQueries = nonAzureQueries;
             return this;
         }
-
         public TargetPropertiesResponse build() {
             return new TargetPropertiesResponse(azureQueries, nonAzureQueries);
         }

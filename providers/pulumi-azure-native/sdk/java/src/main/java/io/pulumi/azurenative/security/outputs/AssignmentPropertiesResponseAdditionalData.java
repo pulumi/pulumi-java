@@ -54,7 +54,6 @@ public final class AssignmentPropertiesResponseAdditionalData {
             this.exemptionCategory = exemptionCategory;
             return this;
         }
-
         public AssignmentPropertiesResponseAdditionalData build() {
             return new AssignmentPropertiesResponseAdditionalData(exemptionCategory);
         }

@@ -19,7 +19,7 @@ public final class DatabaseEncryptionConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final Input<String> kmsKeyName;
+        private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;
@@ -62,7 +62,6 @@ public final class DatabaseEncryptionConfigGetArgs extends io.pulumi.resources.R
             this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
-
         public DatabaseEncryptionConfigGetArgs build() {
             return new DatabaseEncryptionConfigGetArgs(kmsKeyName);
         }

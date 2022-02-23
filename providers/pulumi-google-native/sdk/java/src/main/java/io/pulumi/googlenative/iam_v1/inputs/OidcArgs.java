@@ -24,7 +24,7 @@ public final class OidcArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedAudiences")
-    private final @Nullable Input<List<String>> allowedAudiences;
+      private final @Nullable Input<List<String>> allowedAudiences;
 
     public Input<List<String>> getAllowedAudiences() {
         return this.allowedAudiences == null ? Input.empty() : this.allowedAudiences;
@@ -35,7 +35,7 @@ public final class OidcArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuerUri", required=true)
-    private final Input<String> issuerUri;
+      private final Input<String> issuerUri;
 
     public Input<String> getIssuerUri() {
         return this.issuerUri;
@@ -94,7 +94,6 @@ public final class OidcArgs extends io.pulumi.resources.ResourceArgs {
             this.issuerUri = Input.of(Objects.requireNonNull(issuerUri));
             return this;
         }
-
         public OidcArgs build() {
             return new OidcArgs(allowedAudiences, issuerUri);
         }

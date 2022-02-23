@@ -352,7 +352,6 @@ public final class GetRosettaNetProcessConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRosettaNetProcessConfigurationResult build() {
             return new GetRosettaNetProcessConfigurationResult(activitySettings, changedTime, createdTime, description, id, initiatorRoleSettings, location, metadata, name, processCode, processName, processVersion, responderRoleSettings, tags, type);
         }

@@ -23,7 +23,7 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="failureAction")
-    private final @Nullable String failureAction;
+        private final @Nullable String failureAction;
 
     public Optional<String> getFailureAction() {
         return this.failureAction == null ? Optional.empty() : Optional.ofNullable(this.failureAction);
@@ -34,7 +34,7 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="healthCheckRetryTimeout")
-    private final @Nullable String healthCheckRetryTimeout;
+        private final @Nullable String healthCheckRetryTimeout;
 
     public Optional<String> getHealthCheckRetryTimeout() {
         return this.healthCheckRetryTimeout == null ? Optional.empty() : Optional.ofNullable(this.healthCheckRetryTimeout);
@@ -45,7 +45,7 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="healthCheckStableDuration")
-    private final @Nullable String healthCheckStableDuration;
+        private final @Nullable String healthCheckStableDuration;
 
     public Optional<String> getHealthCheckStableDuration() {
         return this.healthCheckStableDuration == null ? Optional.empty() : Optional.ofNullable(this.healthCheckStableDuration);
@@ -56,7 +56,7 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="healthCheckWaitDuration")
-    private final @Nullable String healthCheckWaitDuration;
+        private final @Nullable String healthCheckWaitDuration;
 
     public Optional<String> getHealthCheckWaitDuration() {
         return this.healthCheckWaitDuration == null ? Optional.empty() : Optional.ofNullable(this.healthCheckWaitDuration);
@@ -67,7 +67,7 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="upgradeDomainTimeout")
-    private final @Nullable String upgradeDomainTimeout;
+        private final @Nullable String upgradeDomainTimeout;
 
     public Optional<String> getUpgradeDomainTimeout() {
         return this.upgradeDomainTimeout == null ? Optional.empty() : Optional.ofNullable(this.upgradeDomainTimeout);
@@ -78,7 +78,7 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="upgradeTimeout")
-    private final @Nullable String upgradeTimeout;
+        private final @Nullable String upgradeTimeout;
 
     public Optional<String> getUpgradeTimeout() {
         return this.upgradeTimeout == null ? Optional.empty() : Optional.ofNullable(this.upgradeTimeout);
@@ -167,7 +167,6 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends io.pulumi.r
             this.upgradeTimeout = upgradeTimeout;
             return this;
         }
-
         public ArmRollingUpgradeMonitoringPolicyResponse build() {
             return new ArmRollingUpgradeMonitoringPolicyResponse(failureAction, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, upgradeDomainTimeout, upgradeTimeout);
         }

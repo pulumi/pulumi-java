@@ -54,7 +54,6 @@ public final class FrontendEndpointLinkResponse {
             this.id = id;
             return this;
         }
-
         public FrontendEndpointLinkResponse build() {
             return new FrontendEndpointLinkResponse(id);
         }

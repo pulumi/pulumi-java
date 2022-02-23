@@ -137,7 +137,6 @@ public final class ExperimentMetricGoalObject {
             this.valueKey = Objects.requireNonNull(valueKey);
             return this;
         }
-
         public ExperimentMetricGoalObject build() {
             return new ExperimentMetricGoalObject(desiredChange, entityIdKey, eventPattern, metricName, unitLabel, valueKey);
         }

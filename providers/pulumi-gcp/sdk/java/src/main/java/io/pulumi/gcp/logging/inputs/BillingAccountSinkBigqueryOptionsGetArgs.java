@@ -21,7 +21,7 @@ public final class BillingAccountSinkBigqueryOptionsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="usePartitionedTables", required=true)
-    private final Input<Boolean> usePartitionedTables;
+        private final Input<Boolean> usePartitionedTables;
 
     public Input<Boolean> getUsePartitionedTables() {
         return this.usePartitionedTables;
@@ -64,7 +64,6 @@ public final class BillingAccountSinkBigqueryOptionsGetArgs extends io.pulumi.re
             this.usePartitionedTables = Input.of(Objects.requireNonNull(usePartitionedTables));
             return this;
         }
-
         public BillingAccountSinkBigqueryOptionsGetArgs build() {
             return new BillingAccountSinkBigqueryOptionsGetArgs(usePartitionedTables);
         }

@@ -120,7 +120,6 @@ public final class ResourceIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ResourceIdentityResponse build() {
             return new ResourceIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

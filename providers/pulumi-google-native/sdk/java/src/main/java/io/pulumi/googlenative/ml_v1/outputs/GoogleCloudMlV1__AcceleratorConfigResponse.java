@@ -74,7 +74,6 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudMlV1__AcceleratorConfigResponse build() {
             return new GoogleCloudMlV1__AcceleratorConfigResponse(count, type);
         }

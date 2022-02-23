@@ -58,7 +58,6 @@ public final class GetBackendServiceConsistentHashHttpCookyTtl {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public GetBackendServiceConsistentHashHttpCookyTtl build() {
             return new GetBackendServiceConsistentHashHttpCookyTtl(nanos, seconds);
         }

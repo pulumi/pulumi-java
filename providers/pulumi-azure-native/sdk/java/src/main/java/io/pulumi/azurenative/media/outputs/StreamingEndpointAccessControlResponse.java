@@ -77,7 +77,6 @@ public final class StreamingEndpointAccessControlResponse {
             this.ip = ip;
             return this;
         }
-
         public StreamingEndpointAccessControlResponse build() {
             return new StreamingEndpointAccessControlResponse(akamai, ip);
         }

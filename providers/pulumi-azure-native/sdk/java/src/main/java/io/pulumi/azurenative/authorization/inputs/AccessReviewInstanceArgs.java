@@ -23,7 +23,7 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endDateTime")
-    private final @Nullable Input<String> endDateTime;
+        private final @Nullable Input<String> endDateTime;
 
     public Input<String> getEndDateTime() {
         return this.endDateTime == null ? Input.empty() : this.endDateTime;
@@ -34,7 +34,7 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="startDateTime")
-    private final @Nullable Input<String> startDateTime;
+        private final @Nullable Input<String> startDateTime;
 
     public Input<String> getStartDateTime() {
         return this.startDateTime == null ? Input.empty() : this.startDateTime;
@@ -93,7 +93,6 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
             this.startDateTime = Input.ofNullable(startDateTime);
             return this;
         }
-
         public AccessReviewInstanceArgs build() {
             return new AccessReviewInstanceArgs(endDateTime, startDateTime);
         }

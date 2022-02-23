@@ -120,7 +120,6 @@ public final class CSIDriver {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public CSIDriver build() {
             return new CSIDriver(apiVersion, kind, metadata, spec);
         }

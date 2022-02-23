@@ -160,7 +160,6 @@ public final class DeploymentCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DeploymentCondition build() {
             return new DeploymentCondition(lastTransitionTime, lastUpdateTime, message, reason, status, type);
         }

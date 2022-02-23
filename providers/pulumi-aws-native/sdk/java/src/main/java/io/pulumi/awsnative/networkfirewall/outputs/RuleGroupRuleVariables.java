@@ -60,7 +60,6 @@ public final class RuleGroupRuleVariables {
             this.portSets = portSets;
             return this;
         }
-
         public RuleGroupRuleVariables build() {
             return new RuleGroupRuleVariables(iPSets, portSets);
         }

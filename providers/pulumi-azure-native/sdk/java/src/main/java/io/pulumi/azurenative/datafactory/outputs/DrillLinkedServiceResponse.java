@@ -210,7 +210,6 @@ public final class DrillLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DrillLinkedServiceResponse build() {
             return new DrillLinkedServiceResponse(annotations, connectVia, connectionString, description, encryptedCredential, parameters, pwd, type);
         }

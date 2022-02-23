@@ -15,7 +15,7 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends io.pulumi
     public static final FlowLookoutMetricsDestinationPropertiesArgs Empty = new FlowLookoutMetricsDestinationPropertiesArgs();
 
     @InputImport(name="object")
-    private final @Nullable Input<String> object;
+        private final @Nullable Input<String> object;
 
     public Input<String> getObject() {
         return this.object == null ? Input.empty() : this.object;
@@ -58,7 +58,6 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends io.pulumi
             this.object = Input.ofNullable(object);
             return this;
         }
-
         public FlowLookoutMetricsDestinationPropertiesArgs build() {
             return new FlowLookoutMetricsDestinationPropertiesArgs(object);
         }

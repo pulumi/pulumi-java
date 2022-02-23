@@ -75,7 +75,6 @@ public final class StageResponse {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public StageResponse build() {
             return new StageResponse(profiles, targetId);
         }

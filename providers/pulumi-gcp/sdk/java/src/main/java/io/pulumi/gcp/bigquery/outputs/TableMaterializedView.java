@@ -103,7 +103,6 @@ public final class TableMaterializedView {
             this.refreshIntervalMs = refreshIntervalMs;
             return this;
         }
-
         public TableMaterializedView build() {
             return new TableMaterializedView(enableRefresh, query, refreshIntervalMs);
         }

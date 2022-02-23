@@ -25,7 +25,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Input<Object> disableMetricsCollection;
+        private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -36,7 +36,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distcpSettings")
-    private final @Nullable Input<DistcpSettingsArgs> distcpSettings;
+        private final @Nullable Input<DistcpSettingsArgs> distcpSettings;
 
     public Input<DistcpSettingsArgs> getDistcpSettings() {
         return this.distcpSettings == null ? Input.empty() : this.distcpSettings;
@@ -47,7 +47,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Input<Object> maxConcurrentConnections;
+        private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -58,7 +58,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recursive")
-    private final @Nullable Input<Object> recursive;
+        private final @Nullable Input<Object> recursive;
 
     public Input<Object> getRecursive() {
         return this.recursive == null ? Input.empty() : this.recursive;
@@ -69,7 +69,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRetryCount")
-    private final @Nullable Input<Object> sourceRetryCount;
+        private final @Nullable Input<Object> sourceRetryCount;
 
     public Input<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
@@ -80,7 +80,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRetryWait")
-    private final @Nullable Input<Object> sourceRetryWait;
+        private final @Nullable Input<Object> sourceRetryWait;
 
     public Input<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
@@ -92,7 +92,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -226,7 +226,6 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public HdfsSourceArgs build() {
             return new HdfsSourceArgs(disableMetricsCollection, distcpSettings, maxConcurrentConnections, recursive, sourceRetryCount, sourceRetryWait, type);
         }

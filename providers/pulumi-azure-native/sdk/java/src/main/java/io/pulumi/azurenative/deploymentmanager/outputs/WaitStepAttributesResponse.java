@@ -52,7 +52,6 @@ public final class WaitStepAttributesResponse {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public WaitStepAttributesResponse build() {
             return new WaitStepAttributesResponse(duration);
         }

@@ -31,7 +31,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestation")
-    private final @Nullable Input<AttestationNoteArgs> attestation;
+      private final @Nullable Input<AttestationNoteArgs> attestation;
 
     public Input<AttestationNoteArgs> getAttestation() {
         return this.attestation == null ? Input.empty() : this.attestation;
@@ -42,7 +42,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="build")
-    private final @Nullable Input<BuildNoteArgs> build;
+      private final @Nullable Input<BuildNoteArgs> build;
 
     public Input<BuildNoteArgs> getBuild() {
         return this.build == null ? Input.empty() : this.build;
@@ -53,7 +53,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compliance")
-    private final @Nullable Input<ComplianceNoteArgs> compliance;
+      private final @Nullable Input<ComplianceNoteArgs> compliance;
 
     public Input<ComplianceNoteArgs> getCompliance() {
         return this.compliance == null ? Input.empty() : this.compliance;
@@ -64,7 +64,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deployment")
-    private final @Nullable Input<DeploymentNoteArgs> deployment;
+      private final @Nullable Input<DeploymentNoteArgs> deployment;
 
     public Input<DeploymentNoteArgs> getDeployment() {
         return this.deployment == null ? Input.empty() : this.deployment;
@@ -75,7 +75,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="discovery")
-    private final @Nullable Input<DiscoveryNoteArgs> discovery;
+      private final @Nullable Input<DiscoveryNoteArgs> discovery;
 
     public Input<DiscoveryNoteArgs> getDiscovery() {
         return this.discovery == null ? Input.empty() : this.discovery;
@@ -86,7 +86,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dsseAttestation")
-    private final @Nullable Input<DSSEAttestationNoteArgs> dsseAttestation;
+      private final @Nullable Input<DSSEAttestationNoteArgs> dsseAttestation;
 
     public Input<DSSEAttestationNoteArgs> getDsseAttestation() {
         return this.dsseAttestation == null ? Input.empty() : this.dsseAttestation;
@@ -97,7 +97,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+      private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -108,7 +108,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<ImageNoteArgs> image;
+      private final @Nullable Input<ImageNoteArgs> image;
 
     public Input<ImageNoteArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -119,14 +119,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="longDescription")
-    private final @Nullable Input<String> longDescription;
+      private final @Nullable Input<String> longDescription;
 
     public Input<String> getLongDescription() {
         return this.longDescription == null ? Input.empty() : this.longDescription;
     }
 
     @InputImport(name="noteId", required=true)
-    private final Input<String> noteId;
+      private final Input<String> noteId;
 
     public Input<String> getNoteId() {
         return this.noteId;
@@ -137,14 +137,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="package")
-    private final @Nullable Input<PackageNoteArgs> $package;
+      private final @Nullable Input<PackageNoteArgs> $package;
 
     public Input<PackageNoteArgs> get$package() {
         return this.$package == null ? Input.empty() : this.$package;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -155,7 +155,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedNoteNames")
-    private final @Nullable Input<List<String>> relatedNoteNames;
+      private final @Nullable Input<List<String>> relatedNoteNames;
 
     public Input<List<String>> getRelatedNoteNames() {
         return this.relatedNoteNames == null ? Input.empty() : this.relatedNoteNames;
@@ -166,7 +166,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relatedUrl")
-    private final @Nullable Input<List<RelatedUrlArgs>> relatedUrl;
+      private final @Nullable Input<List<RelatedUrlArgs>> relatedUrl;
 
     public Input<List<RelatedUrlArgs>> getRelatedUrl() {
         return this.relatedUrl == null ? Input.empty() : this.relatedUrl;
@@ -177,7 +177,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortDescription")
-    private final @Nullable Input<String> shortDescription;
+      private final @Nullable Input<String> shortDescription;
 
     public Input<String> getShortDescription() {
         return this.shortDescription == null ? Input.empty() : this.shortDescription;
@@ -188,7 +188,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgrade")
-    private final @Nullable Input<UpgradeNoteArgs> upgrade;
+      private final @Nullable Input<UpgradeNoteArgs> upgrade;
 
     public Input<UpgradeNoteArgs> getUpgrade() {
         return this.upgrade == null ? Input.empty() : this.upgrade;
@@ -199,7 +199,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vulnerability")
-    private final @Nullable Input<VulnerabilityNoteArgs> vulnerability;
+      private final @Nullable Input<VulnerabilityNoteArgs> vulnerability;
 
     public Input<VulnerabilityNoteArgs> getVulnerability() {
         return this.vulnerability == null ? Input.empty() : this.vulnerability;
@@ -483,7 +483,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             this.vulnerability = Input.ofNullable(vulnerability);
             return this;
         }
-
         public NoteArgs build() {
             return new NoteArgs(attestation, build, compliance, deployment, discovery, dsseAttestation, expirationTime, image, longDescription, noteId, $package, project, relatedNoteNames, relatedUrl, shortDescription, upgrade, vulnerability);
         }

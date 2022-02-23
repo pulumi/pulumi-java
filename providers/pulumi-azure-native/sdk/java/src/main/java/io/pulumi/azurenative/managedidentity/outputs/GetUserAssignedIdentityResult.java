@@ -202,7 +202,6 @@ public final class GetUserAssignedIdentityResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetUserAssignedIdentityResult build() {
             return new GetUserAssignedIdentityResult(clientId, id, location, name, principalId, tags, tenantId, type);
         }

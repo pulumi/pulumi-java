@@ -75,7 +75,6 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudMlV1_Measurement_MetricResponse build() {
             return new GoogleCloudMlV1_Measurement_MetricResponse(metric, value);
         }

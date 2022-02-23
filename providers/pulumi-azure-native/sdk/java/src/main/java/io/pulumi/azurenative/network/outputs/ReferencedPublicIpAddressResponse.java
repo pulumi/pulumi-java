@@ -54,7 +54,6 @@ public final class ReferencedPublicIpAddressResponse {
             this.id = id;
             return this;
         }
-
         public ReferencedPublicIpAddressResponse build() {
             return new ReferencedPublicIpAddressResponse(id);
         }

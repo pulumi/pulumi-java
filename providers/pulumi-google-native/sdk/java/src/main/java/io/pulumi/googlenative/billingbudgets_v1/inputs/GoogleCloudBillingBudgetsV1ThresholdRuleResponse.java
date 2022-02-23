@@ -22,7 +22,7 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse extends io.p
      * 
      */
     @InputImport(name="spendBasis", required=true)
-    private final String spendBasis;
+      private final String spendBasis;
 
     public String getSpendBasis() {
         return this.spendBasis;
@@ -33,7 +33,7 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse extends io.p
      * 
      */
     @InputImport(name="thresholdPercent", required=true)
-    private final Double thresholdPercent;
+      private final Double thresholdPercent;
 
     public Double getThresholdPercent() {
         return this.thresholdPercent;
@@ -82,7 +82,6 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse extends io.p
             this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1ThresholdRuleResponse build() {
             return new GoogleCloudBillingBudgetsV1ThresholdRuleResponse(spendBasis, thresholdPercent);
         }

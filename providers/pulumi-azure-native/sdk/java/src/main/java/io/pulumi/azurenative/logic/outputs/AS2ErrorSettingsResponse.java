@@ -74,7 +74,6 @@ public final class AS2ErrorSettingsResponse {
             this.suspendDuplicateMessage = Objects.requireNonNull(suspendDuplicateMessage);
             return this;
         }
-
         public AS2ErrorSettingsResponse build() {
             return new AS2ErrorSettingsResponse(resendIfMDNNotReceived, suspendDuplicateMessage);
         }

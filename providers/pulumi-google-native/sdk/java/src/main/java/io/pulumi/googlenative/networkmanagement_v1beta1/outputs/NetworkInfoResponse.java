@@ -95,7 +95,6 @@ public final class NetworkInfoResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public NetworkInfoResponse build() {
             return new NetworkInfoResponse(displayName, matchedIpRange, uri);
         }

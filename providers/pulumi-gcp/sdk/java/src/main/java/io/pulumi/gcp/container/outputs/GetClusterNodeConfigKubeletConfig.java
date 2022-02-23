@@ -72,7 +72,6 @@ public final class GetClusterNodeConfigKubeletConfig {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
         }
-
         public GetClusterNodeConfigKubeletConfig build() {
             return new GetClusterNodeConfigKubeletConfig(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
         }

@@ -21,7 +21,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="gcpZone", required=true)
-    private final String gcpZone;
+      private final String gcpZone;
 
     public String getGcpZone() {
         return this.gcpZone;
@@ -43,7 +43,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -54,7 +54,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -65,7 +65,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="peerProjectId", required=true)
-    private final String peerProjectId;
+      private final String peerProjectId;
 
     public String getPeerProjectId() {
         return this.peerProjectId;
@@ -76,7 +76,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -165,7 +165,6 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public InternalCheckerResponse build() {
             return new InternalCheckerResponse(displayName, gcpZone, name, network, peerProjectId, state);
         }

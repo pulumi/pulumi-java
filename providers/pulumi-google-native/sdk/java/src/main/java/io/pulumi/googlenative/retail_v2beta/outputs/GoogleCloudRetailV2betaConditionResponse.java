@@ -76,7 +76,6 @@ public final class GoogleCloudRetailV2betaConditionResponse {
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }
-
         public GoogleCloudRetailV2betaConditionResponse build() {
             return new GoogleCloudRetailV2betaConditionResponse(activeTimeRange, queryTerms);
         }

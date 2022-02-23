@@ -96,7 +96,6 @@ public final class DataSourceAuroraPostgreSqlParameters {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceAuroraPostgreSqlParameters build() {
             return new DataSourceAuroraPostgreSqlParameters(database, host, port);
         }

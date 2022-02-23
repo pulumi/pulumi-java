@@ -77,7 +77,6 @@ public final class ComputeBindingResponse {
             this.nodeCount = nodeCount;
             return this;
         }
-
         public ComputeBindingResponse build() {
             return new ComputeBindingResponse(computeId, nodeCount);
         }

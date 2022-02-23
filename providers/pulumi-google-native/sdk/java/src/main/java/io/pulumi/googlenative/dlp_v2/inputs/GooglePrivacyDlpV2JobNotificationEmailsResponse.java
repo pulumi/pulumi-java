@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2JobNotificationEmailsResponse extends io.pu
         public Builder(GooglePrivacyDlpV2JobNotificationEmailsResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2JobNotificationEmailsResponse build() {
             return new GooglePrivacyDlpV2JobNotificationEmailsResponse();
         }

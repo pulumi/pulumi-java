@@ -227,7 +227,6 @@ public final class GetBatchDeploymentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBatchDeploymentResult build() {
             return new GetBatchDeploymentResult(id, identity, kind, location, name, properties, systemData, tags, type);
         }

@@ -61,7 +61,6 @@ public final class DeliveryStreamDeserializer {
             this.openXJsonSerDe = openXJsonSerDe;
             return this;
         }
-
         public DeliveryStreamDeserializer build() {
             return new DeliveryStreamDeserializer(hiveJsonSerDe, openXJsonSerDe);
         }

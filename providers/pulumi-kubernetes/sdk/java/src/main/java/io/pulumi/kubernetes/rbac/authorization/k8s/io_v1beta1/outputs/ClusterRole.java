@@ -143,7 +143,6 @@ public final class ClusterRole {
             this.rules = rules;
             return this;
         }
-
         public ClusterRole build() {
             return new ClusterRole(aggregationRule, apiVersion, kind, metadata, rules);
         }

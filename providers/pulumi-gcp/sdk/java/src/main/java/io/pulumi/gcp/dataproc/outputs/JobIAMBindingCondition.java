@@ -73,7 +73,6 @@ public final class JobIAMBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public JobIAMBindingCondition build() {
             return new JobIAMBindingCondition(description, expression, title);
         }

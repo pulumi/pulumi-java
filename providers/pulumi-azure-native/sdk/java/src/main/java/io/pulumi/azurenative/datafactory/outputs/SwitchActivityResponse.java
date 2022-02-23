@@ -247,7 +247,6 @@ public final class SwitchActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public SwitchActivityResponse build() {
             return new SwitchActivityResponse(cases, defaultActivities, dependsOn, description, name, on, type, userProperties);
         }

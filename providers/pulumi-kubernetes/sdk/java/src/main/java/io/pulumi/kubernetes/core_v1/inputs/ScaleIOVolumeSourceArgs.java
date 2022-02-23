@@ -25,7 +25,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+        private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -36,7 +36,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gateway", required=true)
-    private final Input<String> gateway;
+        private final Input<String> gateway;
 
     public Input<String> getGateway() {
         return this.gateway;
@@ -47,7 +47,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="protectionDomain")
-    private final @Nullable Input<String> protectionDomain;
+        private final @Nullable Input<String> protectionDomain;
 
     public Input<String> getProtectionDomain() {
         return this.protectionDomain == null ? Input.empty() : this.protectionDomain;
@@ -58,7 +58,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -69,7 +69,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="secretRef", required=true)
-    private final Input<LocalObjectReferenceArgs> secretRef;
+        private final Input<LocalObjectReferenceArgs> secretRef;
 
     public Input<LocalObjectReferenceArgs> getSecretRef() {
         return this.secretRef;
@@ -80,7 +80,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sslEnabled")
-    private final @Nullable Input<Boolean> sslEnabled;
+        private final @Nullable Input<Boolean> sslEnabled;
 
     public Input<Boolean> getSslEnabled() {
         return this.sslEnabled == null ? Input.empty() : this.sslEnabled;
@@ -91,7 +91,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="storageMode")
-    private final @Nullable Input<String> storageMode;
+        private final @Nullable Input<String> storageMode;
 
     public Input<String> getStorageMode() {
         return this.storageMode == null ? Input.empty() : this.storageMode;
@@ -102,7 +102,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="storagePool")
-    private final @Nullable Input<String> storagePool;
+        private final @Nullable Input<String> storagePool;
 
     public Input<String> getStoragePool() {
         return this.storagePool == null ? Input.empty() : this.storagePool;
@@ -113,7 +113,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="system", required=true)
-    private final Input<String> system;
+        private final Input<String> system;
 
     public Input<String> getSystem() {
         return this.system;
@@ -124,7 +124,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="volumeName")
-    private final @Nullable Input<String> volumeName;
+        private final @Nullable Input<String> volumeName;
 
     public Input<String> getVolumeName() {
         return this.volumeName == null ? Input.empty() : this.volumeName;
@@ -303,7 +303,6 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
             this.volumeName = Input.ofNullable(volumeName);
             return this;
         }
-
         public ScaleIOVolumeSourceArgs build() {
             return new ScaleIOVolumeSourceArgs(fsType, gateway, protectionDomain, readOnly, secretRef, sslEnabled, storageMode, storagePool, system, volumeName);
         }

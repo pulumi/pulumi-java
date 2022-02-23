@@ -60,7 +60,6 @@ public final class GetAssistantResult {
             this.assistantId = assistantId;
             return this;
         }
-
         public GetAssistantResult build() {
             return new GetAssistantResult(assistantArn, assistantId);
         }

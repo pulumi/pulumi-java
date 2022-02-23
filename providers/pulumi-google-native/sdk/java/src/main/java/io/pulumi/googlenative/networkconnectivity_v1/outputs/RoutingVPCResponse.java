@@ -75,7 +75,6 @@ public final class RoutingVPCResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public RoutingVPCResponse build() {
             return new RoutingVPCResponse(requiredForNewSiteToSiteDataTransferSpokes, uri);
         }

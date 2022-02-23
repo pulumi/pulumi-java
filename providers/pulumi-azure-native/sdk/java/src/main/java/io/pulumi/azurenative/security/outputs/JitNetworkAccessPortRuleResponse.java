@@ -125,7 +125,6 @@ public final class JitNetworkAccessPortRuleResponse {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public JitNetworkAccessPortRuleResponse build() {
             return new JitNetworkAccessPortRuleResponse(allowedSourceAddressPrefix, allowedSourceAddressPrefixes, maxRequestAccessDuration, number, protocol);
         }

@@ -30,7 +30,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse();
         }

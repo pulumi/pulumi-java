@@ -77,7 +77,6 @@ public final class RecordingConfigurationThumbnailConfiguration {
             this.targetIntervalSeconds = targetIntervalSeconds;
             return this;
         }
-
         public RecordingConfigurationThumbnailConfiguration build() {
             return new RecordingConfigurationThumbnailConfiguration(recordingMode, targetIntervalSeconds);
         }

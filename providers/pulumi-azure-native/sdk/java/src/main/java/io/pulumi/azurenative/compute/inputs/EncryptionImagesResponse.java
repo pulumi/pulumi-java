@@ -25,7 +25,7 @@ public final class EncryptionImagesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dataDiskImages")
-    private final @Nullable List<DataDiskImageEncryptionResponse> dataDiskImages;
+        private final @Nullable List<DataDiskImageEncryptionResponse> dataDiskImages;
 
     public List<DataDiskImageEncryptionResponse> getDataDiskImages() {
         return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
@@ -36,7 +36,7 @@ public final class EncryptionImagesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="osDiskImage")
-    private final @Nullable OSDiskImageEncryptionResponse osDiskImage;
+        private final @Nullable OSDiskImageEncryptionResponse osDiskImage;
 
     public Optional<OSDiskImageEncryptionResponse> getOsDiskImage() {
         return this.osDiskImage == null ? Optional.empty() : Optional.ofNullable(this.osDiskImage);
@@ -85,7 +85,6 @@ public final class EncryptionImagesResponse extends io.pulumi.resources.InvokeAr
             this.osDiskImage = osDiskImage;
             return this;
         }
-
         public EncryptionImagesResponse build() {
             return new EncryptionImagesResponse(dataDiskImages, osDiskImage);
         }

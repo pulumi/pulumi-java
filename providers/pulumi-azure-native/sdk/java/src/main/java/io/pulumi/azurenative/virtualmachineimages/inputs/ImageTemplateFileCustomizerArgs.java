@@ -23,7 +23,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<String> destination;
+        private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -34,7 +34,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sha256Checksum")
-    private final @Nullable Input<String> sha256Checksum;
+        private final @Nullable Input<String> sha256Checksum;
 
     public Input<String> getSha256Checksum() {
         return this.sha256Checksum == null ? Input.empty() : this.sha256Checksum;
@@ -56,7 +56,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sourceUri")
-    private final @Nullable Input<String> sourceUri;
+        private final @Nullable Input<String> sourceUri;
 
     public Input<String> getSourceUri() {
         return this.sourceUri == null ? Input.empty() : this.sourceUri;
@@ -68,7 +68,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -172,7 +172,6 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ImageTemplateFileCustomizerArgs build() {
             return new ImageTemplateFileCustomizerArgs(destination, name, sha256Checksum, sourceUri, type);
         }

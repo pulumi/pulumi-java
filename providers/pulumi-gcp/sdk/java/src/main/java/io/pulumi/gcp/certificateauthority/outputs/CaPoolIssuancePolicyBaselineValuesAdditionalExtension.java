@@ -101,7 +101,6 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtension {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesAdditionalExtension build() {
             return new CaPoolIssuancePolicyBaselineValuesAdditionalExtension(critical, objectId, value);
         }

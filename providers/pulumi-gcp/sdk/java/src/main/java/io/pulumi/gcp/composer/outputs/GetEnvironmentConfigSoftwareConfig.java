@@ -112,7 +112,6 @@ public final class GetEnvironmentConfigSoftwareConfig {
             this.schedulerCount = Objects.requireNonNull(schedulerCount);
             return this;
         }
-
         public GetEnvironmentConfigSoftwareConfig build() {
             return new GetEnvironmentConfigSoftwareConfig(airflowConfigOverrides, envVariables, imageVersion, pypiPackages, pythonVersion, schedulerCount);
         }

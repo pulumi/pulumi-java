@@ -204,7 +204,6 @@ public final class GetWorkloadNetworkVMGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkVMGroupResult build() {
             return new GetWorkloadNetworkVMGroupResult(displayName, id, members, name, provisioningState, revision, status, type);
         }

@@ -24,7 +24,7 @@ public final class ServerlessUpstreamSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="templates")
-    private final @Nullable List<UpstreamTemplateResponse> templates;
+        private final @Nullable List<UpstreamTemplateResponse> templates;
 
     public List<UpstreamTemplateResponse> getTemplates() {
         return this.templates == null ? List.of() : this.templates;
@@ -62,7 +62,6 @@ public final class ServerlessUpstreamSettingsResponse extends io.pulumi.resource
             this.templates = templates;
             return this;
         }
-
         public ServerlessUpstreamSettingsResponse build() {
             return new ServerlessUpstreamSettingsResponse(templates);
         }

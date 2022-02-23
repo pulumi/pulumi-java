@@ -458,7 +458,6 @@ public final class GetGlobalNetworkEndpointGroupResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetGlobalNetworkEndpointGroupResult build() {
             return new GetGlobalNetworkEndpointGroupResult(annotations, appEngine, cloudFunction, cloudRun, creationTimestamp, defaultPort, description, kind, name, network, networkEndpointType, pscTargetService, region, selfLink, selfLinkWithId, serverlessDeployment, size, subnetwork, type, zone);
         }

@@ -140,7 +140,6 @@ public final class ListStaticSiteFunctionAppSettingsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListStaticSiteFunctionAppSettingsResult build() {
             return new ListStaticSiteFunctionAppSettingsResult(id, kind, name, properties, type);
         }

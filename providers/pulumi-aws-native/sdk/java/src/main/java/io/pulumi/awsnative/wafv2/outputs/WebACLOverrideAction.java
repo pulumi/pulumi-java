@@ -76,7 +76,6 @@ public final class WebACLOverrideAction {
             this.none = none;
             return this;
         }
-
         public WebACLOverrideAction build() {
             return new WebACLOverrideAction(count, none);
         }

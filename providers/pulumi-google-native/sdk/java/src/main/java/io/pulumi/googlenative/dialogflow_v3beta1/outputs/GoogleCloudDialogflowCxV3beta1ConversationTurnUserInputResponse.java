@@ -119,7 +119,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
             this.isWebhookEnabled = Objects.requireNonNull(isWebhookEnabled);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse(enableSentimentAnalysis, injectedParameters, input, isWebhookEnabled);
         }

@@ -97,7 +97,6 @@ public final class MsixPackageDependenciesResponse {
             this.publisher = publisher;
             return this;
         }
-
         public MsixPackageDependenciesResponse build() {
             return new MsixPackageDependenciesResponse(dependencyName, minVersion, publisher);
         }

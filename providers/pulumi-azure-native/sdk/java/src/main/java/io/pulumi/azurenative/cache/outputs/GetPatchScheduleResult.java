@@ -118,7 +118,6 @@ public final class GetPatchScheduleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPatchScheduleResult build() {
             return new GetPatchScheduleResult(id, name, scheduleEntries, type);
         }

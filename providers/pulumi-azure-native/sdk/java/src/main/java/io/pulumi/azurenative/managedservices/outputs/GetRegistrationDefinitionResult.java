@@ -141,7 +141,6 @@ public final class GetRegistrationDefinitionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegistrationDefinitionResult build() {
             return new GetRegistrationDefinitionResult(id, name, plan, properties, type);
         }

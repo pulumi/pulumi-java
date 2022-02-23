@@ -99,7 +99,6 @@ public final class WeeklyRetentionScheduleResponse {
             this.retentionTimes = retentionTimes;
             return this;
         }
-
         public WeeklyRetentionScheduleResponse build() {
             return new WeeklyRetentionScheduleResponse(daysOfTheWeek, retentionDuration, retentionTimes);
         }

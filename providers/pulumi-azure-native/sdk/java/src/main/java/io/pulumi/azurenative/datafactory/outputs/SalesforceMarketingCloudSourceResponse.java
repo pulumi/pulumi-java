@@ -205,7 +205,6 @@ public final class SalesforceMarketingCloudSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SalesforceMarketingCloudSourceResponse build() {
             return new SalesforceMarketingCloudSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

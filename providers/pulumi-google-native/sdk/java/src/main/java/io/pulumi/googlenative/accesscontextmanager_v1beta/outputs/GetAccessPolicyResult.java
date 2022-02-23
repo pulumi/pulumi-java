@@ -95,7 +95,6 @@ public final class GetAccessPolicyResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetAccessPolicyResult build() {
             return new GetAccessPolicyResult(name, parent, title);
         }

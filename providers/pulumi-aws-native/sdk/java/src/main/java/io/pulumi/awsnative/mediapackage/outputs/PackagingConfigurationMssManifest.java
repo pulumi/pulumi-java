@@ -61,7 +61,6 @@ public final class PackagingConfigurationMssManifest {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public PackagingConfigurationMssManifest build() {
             return new PackagingConfigurationMssManifest(manifestName, streamSelection);
         }

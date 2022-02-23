@@ -95,7 +95,6 @@ public final class RoutineReferenceResponse {
             this.routineId = Objects.requireNonNull(routineId);
             return this;
         }
-
         public RoutineReferenceResponse build() {
             return new RoutineReferenceResponse(datasetId, project, routineId);
         }

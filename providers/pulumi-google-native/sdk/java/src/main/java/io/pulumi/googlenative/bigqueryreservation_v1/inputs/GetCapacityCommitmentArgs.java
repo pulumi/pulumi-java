@@ -15,21 +15,21 @@ public final class GetCapacityCommitmentArgs extends io.pulumi.resources.InvokeA
     public static final GetCapacityCommitmentArgs Empty = new GetCapacityCommitmentArgs();
 
     @InputImport(name="capacityCommitmentId", required=true)
-    private final String capacityCommitmentId;
+      private final String capacityCommitmentId;
 
     public String getCapacityCommitmentId() {
         return this.capacityCommitmentId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetCapacityCommitmentArgs extends io.pulumi.resources.InvokeA
             this.project = project;
             return this;
         }
-
         public GetCapacityCommitmentArgs build() {
             return new GetCapacityCommitmentArgs(capacityCommitmentId, location, project);
         }

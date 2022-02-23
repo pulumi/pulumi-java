@@ -15,35 +15,35 @@ public final class ProfilePermissionArgs extends io.pulumi.resources.ResourceArg
     public static final ProfilePermissionArgs Empty = new ProfilePermissionArgs();
 
     @InputImport(name="action", required=true)
-    private final Input<String> action;
+        private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
     }
 
     @InputImport(name="principal", required=true)
-    private final Input<String> principal;
+        private final Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal;
     }
 
     @InputImport(name="profileName", required=true)
-    private final Input<String> profileName;
+        private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
     }
 
     @InputImport(name="profileVersion")
-    private final @Nullable Input<String> profileVersion;
+        private final @Nullable Input<String> profileVersion;
 
     public Input<String> getProfileVersion() {
         return this.profileVersion == null ? Input.empty() : this.profileVersion;
     }
 
     @InputImport(name="statementId", required=true)
-    private final Input<String> statementId;
+        private final Input<String> statementId;
 
     public Input<String> getStatementId() {
         return this.statementId;
@@ -147,7 +147,6 @@ public final class ProfilePermissionArgs extends io.pulumi.resources.ResourceArg
             this.statementId = Input.of(Objects.requireNonNull(statementId));
             return this;
         }
-
         public ProfilePermissionArgs build() {
             return new ProfilePermissionArgs(action, principal, profileName, profileVersion, statementId);
         }

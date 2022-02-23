@@ -58,7 +58,6 @@ public final class GetKMSCryptoKeyVersionTemplate {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
         }
-
         public GetKMSCryptoKeyVersionTemplate build() {
             return new GetKMSCryptoKeyVersionTemplate(algorithm, protectionLevel);
         }

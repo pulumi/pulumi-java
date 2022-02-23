@@ -53,7 +53,6 @@ public final class ExecActionResponse {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
         public ExecActionResponse build() {
             return new ExecActionResponse(command);
         }

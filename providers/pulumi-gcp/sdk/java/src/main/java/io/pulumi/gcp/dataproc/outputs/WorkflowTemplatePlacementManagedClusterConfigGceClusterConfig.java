@@ -270,7 +270,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             this.zone = zone;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig(internalIpOnly, metadata, network, nodeGroupAffinity, privateIpv6GoogleAccess, reservationAffinity, serviceAccount, serviceAccountScopes, subnetwork, tags, zone);
         }

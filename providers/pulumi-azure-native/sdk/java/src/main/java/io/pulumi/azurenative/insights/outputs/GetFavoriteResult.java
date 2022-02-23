@@ -267,7 +267,6 @@ public final class GetFavoriteResult {
             this.version = version;
             return this;
         }
-
         public GetFavoriteResult build() {
             return new GetFavoriteResult(category, config, favoriteId, favoriteType, isGeneratedFromTemplate, name, sourceType, tags, timeModified, userId, version);
         }

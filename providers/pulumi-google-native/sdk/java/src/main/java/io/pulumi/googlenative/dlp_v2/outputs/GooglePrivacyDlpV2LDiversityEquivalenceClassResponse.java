@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse {
             this.topSensitiveValues = Objects.requireNonNull(topSensitiveValues);
             return this;
         }
-
         public GooglePrivacyDlpV2LDiversityEquivalenceClassResponse build() {
             return new GooglePrivacyDlpV2LDiversityEquivalenceClassResponse(equivalenceClassSize, numDistinctSensitiveValues, quasiIdsValues, topSensitiveValues);
         }

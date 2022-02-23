@@ -54,7 +54,6 @@ public final class GetResourceResult {
             this.resourceId = resourceId;
             return this;
         }
-
         public GetResourceResult build() {
             return new GetResourceResult(resourceId);
         }

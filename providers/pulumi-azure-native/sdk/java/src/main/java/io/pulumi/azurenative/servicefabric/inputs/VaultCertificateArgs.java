@@ -22,7 +22,7 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="certificateStore", required=true)
-    private final Input<String> certificateStore;
+        private final Input<String> certificateStore;
 
     public Input<String> getCertificateStore() {
         return this.certificateStore;
@@ -33,7 +33,7 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="certificateUrl", required=true)
-    private final Input<String> certificateUrl;
+        private final Input<String> certificateUrl;
 
     public Input<String> getCertificateUrl() {
         return this.certificateUrl;
@@ -92,7 +92,6 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
             this.certificateUrl = Input.of(Objects.requireNonNull(certificateUrl));
             return this;
         }
-
         public VaultCertificateArgs build() {
             return new VaultCertificateArgs(certificateStore, certificateUrl);
         }

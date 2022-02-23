@@ -163,7 +163,6 @@ public final class ImageTemplatePlatformImageSourceResponse {
             this.version = version;
             return this;
         }
-
         public ImageTemplatePlatformImageSourceResponse build() {
             return new ImageTemplatePlatformImageSourceResponse(offer, planInfo, publisher, sku, type, version);
         }

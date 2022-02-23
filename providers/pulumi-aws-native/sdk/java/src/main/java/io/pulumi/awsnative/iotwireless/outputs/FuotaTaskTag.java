@@ -60,7 +60,6 @@ public final class FuotaTaskTag {
             this.value = value;
             return this;
         }
-
         public FuotaTaskTag build() {
             return new FuotaTaskTag(key, value);
         }

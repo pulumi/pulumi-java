@@ -24,7 +24,7 @@ public final class DurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+      private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -35,7 +35,7 @@ public final class DurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="seconds")
-    private final @Nullable Input<String> seconds;
+      private final @Nullable Input<String> seconds;
 
     public Input<String> getSeconds() {
         return this.seconds == null ? Input.empty() : this.seconds;
@@ -94,7 +94,6 @@ public final class DurationArgs extends io.pulumi.resources.ResourceArgs {
             this.seconds = Input.ofNullable(seconds);
             return this;
         }
-
         public DurationArgs build() {
             return new DurationArgs(nanos, seconds);
         }

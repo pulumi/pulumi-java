@@ -19,7 +19,7 @@ public final class CacheKeyQueryStringActionParametersResponse extends io.pulumi
     public static final CacheKeyQueryStringActionParametersResponse Empty = new CacheKeyQueryStringActionParametersResponse();
 
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -30,7 +30,7 @@ public final class CacheKeyQueryStringActionParametersResponse extends io.pulumi
      * 
      */
     @InputImport(name="queryParameters")
-    private final @Nullable String queryParameters;
+        private final @Nullable String queryParameters;
 
     public Optional<String> getQueryParameters() {
         return this.queryParameters == null ? Optional.empty() : Optional.ofNullable(this.queryParameters);
@@ -41,7 +41,7 @@ public final class CacheKeyQueryStringActionParametersResponse extends io.pulumi
      * 
      */
     @InputImport(name="queryStringBehavior", required=true)
-    private final String queryStringBehavior;
+        private final String queryStringBehavior;
 
     public String getQueryStringBehavior() {
         return this.queryStringBehavior;
@@ -100,7 +100,6 @@ public final class CacheKeyQueryStringActionParametersResponse extends io.pulumi
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
-
         public CacheKeyQueryStringActionParametersResponse build() {
             return new CacheKeyQueryStringActionParametersResponse(odataType, queryParameters, queryStringBehavior);
         }

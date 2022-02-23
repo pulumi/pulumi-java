@@ -74,7 +74,6 @@ public final class RotationResponse {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
         }
-
         public RotationResponse build() {
             return new RotationResponse(nextRotationTime, rotationPeriod);
         }

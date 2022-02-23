@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }
-
         public GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse(estimatedProbability, quasiIdsValues);
         }

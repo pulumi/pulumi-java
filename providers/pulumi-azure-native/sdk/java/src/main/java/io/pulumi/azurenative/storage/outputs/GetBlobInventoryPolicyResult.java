@@ -160,7 +160,6 @@ public final class GetBlobInventoryPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBlobInventoryPolicyResult build() {
             return new GetBlobInventoryPolicyResult(id, lastModifiedTime, name, policy, systemData, type);
         }

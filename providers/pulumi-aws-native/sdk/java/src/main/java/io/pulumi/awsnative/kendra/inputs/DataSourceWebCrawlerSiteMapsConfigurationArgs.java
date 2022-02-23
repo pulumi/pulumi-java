@@ -15,7 +15,7 @@ public final class DataSourceWebCrawlerSiteMapsConfigurationArgs extends io.pulu
     public static final DataSourceWebCrawlerSiteMapsConfigurationArgs Empty = new DataSourceWebCrawlerSiteMapsConfigurationArgs();
 
     @InputImport(name="siteMaps", required=true)
-    private final Input<List<String>> siteMaps;
+        private final Input<List<String>> siteMaps;
 
     public Input<List<String>> getSiteMaps() {
         return this.siteMaps;
@@ -58,7 +58,6 @@ public final class DataSourceWebCrawlerSiteMapsConfigurationArgs extends io.pulu
             this.siteMaps = Input.of(Objects.requireNonNull(siteMaps));
             return this;
         }
-
         public DataSourceWebCrawlerSiteMapsConfigurationArgs build() {
             return new DataSourceWebCrawlerSiteMapsConfigurationArgs(siteMaps);
         }

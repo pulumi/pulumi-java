@@ -243,7 +243,6 @@ public final class OriginEndpointHlsManifest {
             this.url = url;
             return this;
         }
-
         public OriginEndpointHlsManifest build() {
             return new OriginEndpointHlsManifest(adMarkers, adTriggers, adsOnDeliveryRestrictions, id, includeIframeOnlyStream, manifestName, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, url);
         }

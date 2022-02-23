@@ -26,7 +26,7 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="selectors", required=true)
-    private final Input<List<SelectorArgs>> selectors;
+        private final Input<List<SelectorArgs>> selectors;
 
     public Input<List<SelectorArgs>> getSelectors() {
         return this.selectors;
@@ -37,7 +37,7 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="startOnCreation")
-    private final @Nullable Input<Boolean> startOnCreation;
+        private final @Nullable Input<Boolean> startOnCreation;
 
     public Input<Boolean> getStartOnCreation() {
         return this.startOnCreation == null ? Input.empty() : this.startOnCreation;
@@ -48,7 +48,7 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="steps", required=true)
-    private final Input<List<StepArgs>> steps;
+        private final Input<List<StepArgs>> steps;
 
     public Input<List<StepArgs>> getSteps() {
         return this.steps;
@@ -122,7 +122,6 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
             this.steps = Input.of(Objects.requireNonNull(steps));
             return this;
         }
-
         public ExperimentPropertiesArgs build() {
             return new ExperimentPropertiesArgs(selectors, startOnCreation, steps);
         }

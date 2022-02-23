@@ -136,7 +136,6 @@ public final class PolicyClusterAdmissionRule {
             this.requireAttestationsBies = requireAttestationsBies;
             return this;
         }
-
         public PolicyClusterAdmissionRule build() {
             return new PolicyClusterAdmissionRule(cluster, enforcementMode, evaluationMode, requireAttestationsBies);
         }

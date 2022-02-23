@@ -129,7 +129,6 @@ public final class GetAccountAccessTokenResult {
             this.targetServiceAccount = Objects.requireNonNull(targetServiceAccount);
             return this;
         }
-
         public GetAccountAccessTokenResult build() {
             return new GetAccountAccessTokenResult(accessToken, delegates, id, lifetime, scopes, targetServiceAccount);
         }

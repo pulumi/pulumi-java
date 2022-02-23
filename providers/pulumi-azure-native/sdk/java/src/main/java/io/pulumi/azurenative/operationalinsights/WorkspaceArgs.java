@@ -28,7 +28,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-    private final @Nullable Input<String> eTag;
+        private final @Nullable Input<String> eTag;
 
     public Input<String> getETag() {
         return this.eTag == null ? Input.empty() : this.eTag;
@@ -39,7 +39,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="features")
-    private final @Nullable Input<WorkspaceFeaturesArgs> features;
+        private final @Nullable Input<WorkspaceFeaturesArgs> features;
 
     public Input<WorkspaceFeaturesArgs> getFeatures() {
         return this.features == null ? Input.empty() : this.features;
@@ -50,7 +50,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceCmkForQuery")
-    private final @Nullable Input<Boolean> forceCmkForQuery;
+        private final @Nullable Input<Boolean> forceCmkForQuery;
 
     public Input<Boolean> getForceCmkForQuery() {
         return this.forceCmkForQuery == null ? Input.empty() : this.forceCmkForQuery;
@@ -61,7 +61,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -72,7 +72,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,WorkspaceEntityStatus>> provisioningState;
+        private final @Nullable Input<Either<String,WorkspaceEntityStatus>> provisioningState;
 
     public Input<Either<String,WorkspaceEntityStatus>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -83,7 +83,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccessForIngestion")
-    private final @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
+        private final @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
 
     public Input<Either<String,PublicNetworkAccessType>> getPublicNetworkAccessForIngestion() {
         return this.publicNetworkAccessForIngestion == null ? Input.empty() : this.publicNetworkAccessForIngestion;
@@ -94,7 +94,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccessForQuery")
-    private final @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
+        private final @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
 
     public Input<Either<String,PublicNetworkAccessType>> getPublicNetworkAccessForQuery() {
         return this.publicNetworkAccessForQuery == null ? Input.empty() : this.publicNetworkAccessForQuery;
@@ -105,7 +105,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -116,7 +116,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionInDays")
-    private final @Nullable Input<Integer> retentionInDays;
+        private final @Nullable Input<Integer> retentionInDays;
 
     public Input<Integer> getRetentionInDays() {
         return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
@@ -127,7 +127,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<WorkspaceSkuArgs> sku;
+        private final @Nullable Input<WorkspaceSkuArgs> sku;
 
     public Input<WorkspaceSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -138,7 +138,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -149,7 +149,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceCapping")
-    private final @Nullable Input<WorkspaceCappingArgs> workspaceCapping;
+        private final @Nullable Input<WorkspaceCappingArgs> workspaceCapping;
 
     public Input<WorkspaceCappingArgs> getWorkspaceCapping() {
         return this.workspaceCapping == null ? Input.empty() : this.workspaceCapping;
@@ -160,7 +160,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName")
-    private final @Nullable Input<String> workspaceName;
+        private final @Nullable Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName == null ? Input.empty() : this.workspaceName;
@@ -384,7 +384,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.ofNullable(workspaceName);
             return this;
         }
-
         public WorkspaceArgs build() {
             return new WorkspaceArgs(eTag, features, forceCmkForQuery, location, provisioningState, publicNetworkAccessForIngestion, publicNetworkAccessForQuery, resourceGroupName, retentionInDays, sku, tags, workspaceCapping, workspaceName);
         }

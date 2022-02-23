@@ -75,7 +75,6 @@ public final class ClusterMetricsResponse {
             this.yarnMetrics = Objects.requireNonNull(yarnMetrics);
             return this;
         }
-
         public ClusterMetricsResponse build() {
             return new ClusterMetricsResponse(hdfsMetrics, yarnMetrics);
         }

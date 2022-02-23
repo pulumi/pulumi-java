@@ -90,7 +90,6 @@ public final class ModelBiasJobDefinitionNetworkConfig {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public ModelBiasJobDefinitionNetworkConfig build() {
             return new ModelBiasJobDefinitionNetworkConfig(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }

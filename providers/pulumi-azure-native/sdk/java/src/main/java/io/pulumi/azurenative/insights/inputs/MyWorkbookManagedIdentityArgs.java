@@ -23,7 +23,7 @@ public final class MyWorkbookManagedIdentityArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class MyWorkbookManagedIdentityArgs extends io.pulumi.resources.Res
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public MyWorkbookManagedIdentityArgs build() {
             return new MyWorkbookManagedIdentityArgs(type);
         }

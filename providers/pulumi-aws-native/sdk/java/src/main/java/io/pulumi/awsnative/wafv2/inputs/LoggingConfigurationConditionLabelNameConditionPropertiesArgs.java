@@ -22,7 +22,7 @@ public final class LoggingConfigurationConditionLabelNameConditionPropertiesArgs
      * 
      */
     @InputImport(name="labelName", required=true)
-    private final Input<String> labelName;
+        private final Input<String> labelName;
 
     public Input<String> getLabelName() {
         return this.labelName;
@@ -65,7 +65,6 @@ public final class LoggingConfigurationConditionLabelNameConditionPropertiesArgs
             this.labelName = Input.of(Objects.requireNonNull(labelName));
             return this;
         }
-
         public LoggingConfigurationConditionLabelNameConditionPropertiesArgs build() {
             return new LoggingConfigurationConditionLabelNameConditionPropertiesArgs(labelName);
         }

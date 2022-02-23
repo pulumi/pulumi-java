@@ -233,7 +233,6 @@ public final class SapEccLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public SapEccLinkedServiceResponse build() {
             return new SapEccLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, parameters, password, type, url, username);
         }

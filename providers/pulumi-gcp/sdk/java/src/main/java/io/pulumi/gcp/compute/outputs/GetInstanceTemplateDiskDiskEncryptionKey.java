@@ -52,7 +52,6 @@ public final class GetInstanceTemplateDiskDiskEncryptionKey {
             this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
             return this;
         }
-
         public GetInstanceTemplateDiskDiskEncryptionKey build() {
             return new GetInstanceTemplateDiskDiskEncryptionKey(kmsKeySelfLink);
         }

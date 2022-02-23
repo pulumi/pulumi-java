@@ -25,7 +25,7 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="dayOfWeek")
-    private final @Nullable String dayOfWeek;
+        private final @Nullable String dayOfWeek;
 
     public Optional<String> getDayOfWeek() {
         return this.dayOfWeek == null ? Optional.empty() : Optional.ofNullable(this.dayOfWeek);
@@ -36,7 +36,7 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Boolean enable;
+        private final @Nullable Boolean enable;
 
     public Optional<Boolean> getEnable() {
         return this.enable == null ? Optional.empty() : Optional.ofNullable(this.enable);
@@ -47,7 +47,7 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="maintenanceWindowDuration")
-    private final @Nullable Integer maintenanceWindowDuration;
+        private final @Nullable Integer maintenanceWindowDuration;
 
     public Optional<Integer> getMaintenanceWindowDuration() {
         return this.maintenanceWindowDuration == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowDuration);
@@ -58,7 +58,7 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="maintenanceWindowStartingHour")
-    private final @Nullable Integer maintenanceWindowStartingHour;
+        private final @Nullable Integer maintenanceWindowStartingHour;
 
     public Optional<Integer> getMaintenanceWindowStartingHour() {
         return this.maintenanceWindowStartingHour == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowStartingHour);
@@ -127,7 +127,6 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
             this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;
         }
-
         public AutoPatchingSettingsResponse build() {
             return new AutoPatchingSettingsResponse(dayOfWeek, enable, maintenanceWindowDuration, maintenanceWindowStartingHour);
         }

@@ -17,7 +17,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-    private final String endpointName;
+        private final String endpointName;
 
     public String getEndpointName() {
         return this.endpointName;
@@ -28,7 +28,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final String resourceUri;
+        private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;
@@ -77,7 +77,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public GetEndpointArgs build() {
             return new GetEndpointArgs(endpointName, resourceUri);
         }

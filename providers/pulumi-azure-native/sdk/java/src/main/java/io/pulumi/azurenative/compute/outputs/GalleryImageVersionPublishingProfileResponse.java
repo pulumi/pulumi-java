@@ -164,7 +164,6 @@ public final class GalleryImageVersionPublishingProfileResponse {
             this.targetRegions = targetRegions;
             return this;
         }
-
         public GalleryImageVersionPublishingProfileResponse build() {
             return new GalleryImageVersionPublishingProfileResponse(endOfLifeDate, excludeFromLatest, publishedDate, replicaCount, storageAccountType, targetRegions);
         }

@@ -25,7 +25,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -47,7 +47,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<LabelDescriptorArgs>> labels;
+      private final @Nullable Input<List<LabelDescriptorArgs>> labels;
 
     public Input<List<LabelDescriptorArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -58,7 +58,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="launchStage")
-    private final @Nullable Input<MetricDescriptorLaunchStage> launchStage;
+      private final @Nullable Input<MetricDescriptorLaunchStage> launchStage;
 
     public Input<MetricDescriptorLaunchStage> getLaunchStage() {
         return this.launchStage == null ? Input.empty() : this.launchStage;
@@ -69,7 +69,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<MetricDescriptorMetadataArgs> metadata;
+      private final @Nullable Input<MetricDescriptorMetadataArgs> metadata;
 
     public Input<MetricDescriptorMetadataArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -80,7 +80,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricKind")
-    private final @Nullable Input<MetricDescriptorMetricKind> metricKind;
+      private final @Nullable Input<MetricDescriptorMetricKind> metricKind;
 
     public Input<MetricDescriptorMetricKind> getMetricKind() {
         return this.metricKind == null ? Input.empty() : this.metricKind;
@@ -91,7 +91,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="monitoredResourceTypes")
-    private final @Nullable Input<List<String>> monitoredResourceTypes;
+      private final @Nullable Input<List<String>> monitoredResourceTypes;
 
     public Input<List<String>> getMonitoredResourceTypes() {
         return this.monitoredResourceTypes == null ? Input.empty() : this.monitoredResourceTypes;
@@ -102,14 +102,14 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -120,7 +120,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -131,7 +131,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<String> unit;
+      private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;
@@ -142,7 +142,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="valueType")
-    private final @Nullable Input<MetricDescriptorValueType> valueType;
+      private final @Nullable Input<MetricDescriptorValueType> valueType;
 
     public Input<MetricDescriptorValueType> getValueType() {
         return this.valueType == null ? Input.empty() : this.valueType;
@@ -351,7 +351,6 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
             this.valueType = Input.ofNullable(valueType);
             return this;
         }
-
         public MetricDescriptorArgs build() {
             return new MetricDescriptorArgs(description, displayName, labels, launchStage, metadata, metricKind, monitoredResourceTypes, name, project, type, unit, valueType);
         }

@@ -53,7 +53,6 @@ public final class LoggingConfigResponse {
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
         }
-
         public LoggingConfigResponse build() {
             return new LoggingConfigResponse(driverLogLevels);
         }

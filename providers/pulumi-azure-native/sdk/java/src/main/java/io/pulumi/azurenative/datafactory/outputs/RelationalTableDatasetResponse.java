@@ -231,7 +231,6 @@ public final class RelationalTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RelationalTableDatasetResponse build() {
             return new RelationalTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, tableName, type);
         }

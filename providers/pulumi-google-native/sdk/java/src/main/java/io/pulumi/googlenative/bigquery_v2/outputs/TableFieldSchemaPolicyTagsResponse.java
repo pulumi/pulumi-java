@@ -53,7 +53,6 @@ public final class TableFieldSchemaPolicyTagsResponse {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
         public TableFieldSchemaPolicyTagsResponse build() {
             return new TableFieldSchemaPolicyTagsResponse(names);
         }

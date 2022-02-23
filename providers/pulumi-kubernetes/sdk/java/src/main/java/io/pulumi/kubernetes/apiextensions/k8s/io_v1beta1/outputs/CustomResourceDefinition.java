@@ -134,7 +134,6 @@ public final class CustomResourceDefinition {
             this.status = status;
             return this;
         }
-
         public CustomResourceDefinition build() {
             return new CustomResourceDefinition(apiVersion, kind, metadata, spec, status);
         }

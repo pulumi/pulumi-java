@@ -397,7 +397,6 @@ public final class GetAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssignmentResult build() {
             return new GetAssignmentResult(additionalData, assignedComponent, assignedStandard, description, displayName, effect, etag, expiresOn, id, kind, location, metadata, name, scope, systemData, tags, type);
         }

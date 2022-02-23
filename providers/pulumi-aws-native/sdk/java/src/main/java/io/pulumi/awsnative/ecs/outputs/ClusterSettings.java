@@ -60,7 +60,6 @@ public final class ClusterSettings {
             this.value = value;
             return this;
         }
-
         public ClusterSettings build() {
             return new ClusterSettings(name, value);
         }

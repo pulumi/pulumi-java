@@ -413,7 +413,6 @@ public final class AzureSqlDatabaseSectionResponse {
             this.userPassword = userPassword;
             return this;
         }
-
         public AzureSqlDatabaseSectionResponse build() {
             return new AzureSqlDatabaseSectionResponse(authorityUrl, certificate, clientId, clientSecret, credentialType, databaseName, endpoint, isCertAuth, portNumber, resourceGroup, resourceUri, serverName, serviceDataAccessAuthIdentity, subscriptionId, tenantId, thumbprint, userId, userPassword);
         }

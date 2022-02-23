@@ -197,7 +197,6 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAppServiceEnvironmentPrivateEndpointConnectionResult build() {
             return new GetAppServiceEnvironmentPrivateEndpointConnectionResult(id, ipAddresses, kind, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

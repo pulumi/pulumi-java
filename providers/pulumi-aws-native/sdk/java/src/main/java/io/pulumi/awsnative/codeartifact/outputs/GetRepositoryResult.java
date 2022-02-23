@@ -184,7 +184,6 @@ public final class GetRepositoryResult {
             this.upstreams = upstreams;
             return this;
         }
-
         public GetRepositoryResult build() {
             return new GetRepositoryResult(arn, description, externalConnections, name, permissionsPolicyDocument, tags, upstreams);
         }

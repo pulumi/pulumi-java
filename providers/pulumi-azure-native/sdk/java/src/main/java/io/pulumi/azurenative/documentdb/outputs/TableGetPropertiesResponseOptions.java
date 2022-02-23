@@ -77,7 +77,6 @@ public final class TableGetPropertiesResponseOptions {
             this.throughput = throughput;
             return this;
         }
-
         public TableGetPropertiesResponseOptions build() {
             return new TableGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }

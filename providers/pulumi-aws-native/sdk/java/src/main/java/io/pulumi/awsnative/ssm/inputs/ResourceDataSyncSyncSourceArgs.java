@@ -18,28 +18,28 @@ public final class ResourceDataSyncSyncSourceArgs extends io.pulumi.resources.Re
     public static final ResourceDataSyncSyncSourceArgs Empty = new ResourceDataSyncSyncSourceArgs();
 
     @InputImport(name="awsOrganizationsSource")
-    private final @Nullable Input<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource;
+        private final @Nullable Input<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource;
 
     public Input<ResourceDataSyncAwsOrganizationsSourceArgs> getAwsOrganizationsSource() {
         return this.awsOrganizationsSource == null ? Input.empty() : this.awsOrganizationsSource;
     }
 
     @InputImport(name="includeFutureRegions")
-    private final @Nullable Input<Boolean> includeFutureRegions;
+        private final @Nullable Input<Boolean> includeFutureRegions;
 
     public Input<Boolean> getIncludeFutureRegions() {
         return this.includeFutureRegions == null ? Input.empty() : this.includeFutureRegions;
     }
 
     @InputImport(name="sourceRegions", required=true)
-    private final Input<List<String>> sourceRegions;
+        private final Input<List<String>> sourceRegions;
 
     public Input<List<String>> getSourceRegions() {
         return this.sourceRegions;
     }
 
     @InputImport(name="sourceType", required=true)
-    private final Input<String> sourceType;
+        private final Input<String> sourceType;
 
     public Input<String> getSourceType() {
         return this.sourceType;
@@ -128,7 +128,6 @@ public final class ResourceDataSyncSyncSourceArgs extends io.pulumi.resources.Re
             this.sourceType = Input.of(Objects.requireNonNull(sourceType));
             return this;
         }
-
         public ResourceDataSyncSyncSourceArgs build() {
             return new ResourceDataSyncSyncSourceArgs(awsOrganizationsSource, includeFutureRegions, sourceRegions, sourceType);
         }

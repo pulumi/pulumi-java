@@ -74,7 +74,6 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GoogleCloudApigeeV1ApiProductRefResponse build() {
             return new GoogleCloudApigeeV1ApiProductRefResponse(apiproduct, status);
         }

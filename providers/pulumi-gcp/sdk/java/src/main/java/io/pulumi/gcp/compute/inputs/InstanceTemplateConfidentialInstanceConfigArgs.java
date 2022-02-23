@@ -18,7 +18,7 @@ public final class InstanceTemplateConfidentialInstanceConfigArgs extends io.pul
      * 
      */
     @InputImport(name="enableConfidentialCompute", required=true)
-    private final Input<Boolean> enableConfidentialCompute;
+        private final Input<Boolean> enableConfidentialCompute;
 
     public Input<Boolean> getEnableConfidentialCompute() {
         return this.enableConfidentialCompute;
@@ -61,7 +61,6 @@ public final class InstanceTemplateConfidentialInstanceConfigArgs extends io.pul
             this.enableConfidentialCompute = Input.of(Objects.requireNonNull(enableConfidentialCompute));
             return this;
         }
-
         public InstanceTemplateConfidentialInstanceConfigArgs build() {
             return new InstanceTemplateConfidentialInstanceConfigArgs(enableConfidentialCompute);
         }

@@ -74,7 +74,6 @@ public final class AlertSNSConfiguration {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }
-
         public AlertSNSConfiguration build() {
             return new AlertSNSConfiguration(roleArn, snsTopicArn);
         }

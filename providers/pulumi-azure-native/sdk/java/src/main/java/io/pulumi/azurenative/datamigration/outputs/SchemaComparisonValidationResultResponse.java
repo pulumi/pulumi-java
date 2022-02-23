@@ -121,7 +121,6 @@ public final class SchemaComparisonValidationResultResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public SchemaComparisonValidationResultResponse build() {
             return new SchemaComparisonValidationResultResponse(schemaDifferences, sourceDatabaseObjectCount, targetDatabaseObjectCount, validationErrors);
         }

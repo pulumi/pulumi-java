@@ -25,7 +25,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customRules")
-    private final @Nullable Input<CustomRuleListArgs> customRules;
+        private final @Nullable Input<CustomRuleListArgs> customRules;
 
     public Input<CustomRuleListArgs> getCustomRules() {
         return this.customRules == null ? Input.empty() : this.customRules;
@@ -36,7 +36,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -47,7 +47,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedRules")
-    private final @Nullable Input<ManagedRuleSetListArgs> managedRules;
+        private final @Nullable Input<ManagedRuleSetListArgs> managedRules;
 
     public Input<ManagedRuleSetListArgs> getManagedRules() {
         return this.managedRules == null ? Input.empty() : this.managedRules;
@@ -58,7 +58,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable Input<String> policyName;
+        private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
@@ -69,7 +69,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policySettings")
-    private final @Nullable Input<PolicySettingsArgs> policySettings;
+        private final @Nullable Input<PolicySettingsArgs> policySettings;
 
     public Input<PolicySettingsArgs> getPolicySettings() {
         return this.policySettings == null ? Input.empty() : this.policySettings;
@@ -80,7 +80,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimitRules")
-    private final @Nullable Input<RateLimitRuleListArgs> rateLimitRules;
+        private final @Nullable Input<RateLimitRuleListArgs> rateLimitRules;
 
     public Input<RateLimitRuleListArgs> getRateLimitRules() {
         return this.rateLimitRules == null ? Input.empty() : this.rateLimitRules;
@@ -91,7 +91,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -102,7 +102,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<SkuArgs> sku;
+        private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -113,7 +113,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -277,7 +277,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PolicyArgs build() {
             return new PolicyArgs(customRules, location, managedRules, policyName, policySettings, rateLimitRules, resourceGroupName, sku, tags);
         }

@@ -74,7 +74,6 @@ public final class CustomFieldResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CustomFieldResponse build() {
             return new CustomFieldResponse(name, value);
         }

@@ -52,7 +52,6 @@ public final class InterconnectAttachmentPrivateInfoResponse {
             this.tag8021q = Objects.requireNonNull(tag8021q);
             return this;
         }
-
         public InterconnectAttachmentPrivateInfoResponse build() {
             return new InterconnectAttachmentPrivateInfoResponse(tag8021q);
         }

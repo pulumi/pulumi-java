@@ -261,7 +261,6 @@ public final class AlertPolicyConditionConditionAbsentAggregation {
             this.perSeriesAligner = perSeriesAligner;
             return this;
         }
-
         public AlertPolicyConditionConditionAbsentAggregation build() {
             return new AlertPolicyConditionConditionAbsentAggregation(alignmentPeriod, crossSeriesReducer, groupByFields, perSeriesAligner);
         }

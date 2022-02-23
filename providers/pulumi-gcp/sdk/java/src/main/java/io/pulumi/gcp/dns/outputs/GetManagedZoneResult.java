@@ -172,7 +172,6 @@ public final class GetManagedZoneResult {
             this.visibility = Objects.requireNonNull(visibility);
             return this;
         }
-
         public GetManagedZoneResult build() {
             return new GetManagedZoneResult(description, dnsName, id, name, nameServers, project, visibility);
         }

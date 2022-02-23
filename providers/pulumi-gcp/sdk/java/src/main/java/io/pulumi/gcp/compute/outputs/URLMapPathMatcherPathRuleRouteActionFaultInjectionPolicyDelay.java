@@ -79,7 +79,6 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay build() {
             return new URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay(fixedDelay, percentage);
         }

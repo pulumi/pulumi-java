@@ -19,7 +19,7 @@ public final class DataStoreIndexPropertyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="direction", required=true)
-    private final Input<String> direction;
+        private final Input<String> direction;
 
     public Input<String> getDirection() {
         return this.direction;
@@ -30,7 +30,7 @@ public final class DataStoreIndexPropertyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -89,7 +89,6 @@ public final class DataStoreIndexPropertyArgs extends io.pulumi.resources.Resour
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public DataStoreIndexPropertyArgs build() {
             return new DataStoreIndexPropertyArgs(direction, name);
         }

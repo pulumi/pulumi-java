@@ -22,7 +22,7 @@ public final class UrlSigningKeyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final String keyId;
+        private final String keyId;
 
     public String getKeyId() {
         return this.keyId;
@@ -33,7 +33,7 @@ public final class UrlSigningKeyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="keySourceParameters", required=true)
-    private final KeyVaultSigningKeyParametersResponse keySourceParameters;
+        private final KeyVaultSigningKeyParametersResponse keySourceParameters;
 
     public KeyVaultSigningKeyParametersResponse getKeySourceParameters() {
         return this.keySourceParameters;
@@ -82,7 +82,6 @@ public final class UrlSigningKeyResponse extends io.pulumi.resources.InvokeArgs 
             this.keySourceParameters = Objects.requireNonNull(keySourceParameters);
             return this;
         }
-
         public UrlSigningKeyResponse build() {
             return new UrlSigningKeyResponse(keyId, keySourceParameters);
         }

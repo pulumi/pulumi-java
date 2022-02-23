@@ -162,7 +162,6 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse {
             this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
             return this;
         }
-
         public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse build() {
             return new GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse(commonAlphabet, context, cryptoKey, customAlphabet, radix, surrogateInfoType);
         }

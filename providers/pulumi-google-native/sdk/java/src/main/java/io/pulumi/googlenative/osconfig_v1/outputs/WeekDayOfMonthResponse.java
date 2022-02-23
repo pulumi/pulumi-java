@@ -96,7 +96,6 @@ public final class WeekDayOfMonthResponse {
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
         }
-
         public WeekDayOfMonthResponse build() {
             return new WeekDayOfMonthResponse(dayOfWeek, dayOffset, weekOrdinal);
         }

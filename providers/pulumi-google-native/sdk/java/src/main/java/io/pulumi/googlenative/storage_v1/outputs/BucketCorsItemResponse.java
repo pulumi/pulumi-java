@@ -118,7 +118,6 @@ public final class BucketCorsItemResponse {
             this.responseHeader = Objects.requireNonNull(responseHeader);
             return this;
         }
-
         public BucketCorsItemResponse build() {
             return new BucketCorsItemResponse(maxAgeSeconds, method, origin, responseHeader);
         }

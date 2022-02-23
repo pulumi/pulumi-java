@@ -100,7 +100,6 @@ public final class HttpMessageDiagnosticResponse {
             this.headers = headers;
             return this;
         }
-
         public HttpMessageDiagnosticResponse build() {
             return new HttpMessageDiagnosticResponse(body, dataMasking, headers);
         }

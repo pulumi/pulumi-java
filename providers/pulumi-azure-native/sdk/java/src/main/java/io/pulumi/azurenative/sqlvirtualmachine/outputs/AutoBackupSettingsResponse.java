@@ -246,7 +246,6 @@ public final class AutoBackupSettingsResponse {
             this.storageAccountUrl = storageAccountUrl;
             return this;
         }
-
         public AutoBackupSettingsResponse build() {
             return new AutoBackupSettingsResponse(backupScheduleType, backupSystemDbs, enable, enableEncryption, fullBackupFrequency, fullBackupStartTime, fullBackupWindowHours, logBackupFrequency, retentionPeriod, storageAccountUrl);
         }

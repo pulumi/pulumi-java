@@ -21,7 +21,7 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="data", required=true)
-    private final Input<String> data;
+        private final Input<String> data;
 
     public Input<String> getData() {
         return this.data;
@@ -32,7 +32,7 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<RuleGroupsNamespaceTagArgs>> tags;
+        private final @Nullable Input<List<RuleGroupsNamespaceTagArgs>> tags;
 
     public Input<List<RuleGroupsNamespaceTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -54,7 +54,7 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="workspace", required=true)
-    private final Input<String> workspace;
+        private final Input<String> workspace;
 
     public Input<String> getWorkspace() {
         return this.workspace;
@@ -143,7 +143,6 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
             this.workspace = Input.of(Objects.requireNonNull(workspace));
             return this;
         }
-
         public RuleGroupsNamespaceArgs build() {
             return new RuleGroupsNamespaceArgs(data, name, tags, workspace);
         }

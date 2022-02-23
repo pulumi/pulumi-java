@@ -140,7 +140,6 @@ public final class GetCaPoolResult {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public GetCaPoolResult build() {
             return new GetCaPoolResult(issuancePolicy, labels, name, publishingOptions, tier);
         }

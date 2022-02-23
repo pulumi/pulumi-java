@@ -216,7 +216,6 @@ public final class AccountAuditConfigurationAuditCheckConfigurations {
             this.unauthenticatedCognitoRoleOverlyPermissiveCheck = unauthenticatedCognitoRoleOverlyPermissiveCheck;
             return this;
         }
-
         public AccountAuditConfigurationAuditCheckConfigurations build() {
             return new AccountAuditConfigurationAuditCheckConfigurations(authenticatedCognitoRoleOverlyPermissiveCheck, caCertificateExpiringCheck, caCertificateKeyQualityCheck, conflictingClientIdsCheck, deviceCertificateExpiringCheck, deviceCertificateKeyQualityCheck, deviceCertificateSharedCheck, iotPolicyOverlyPermissiveCheck, iotRoleAliasAllowsAccessToUnusedServicesCheck, iotRoleAliasOverlyPermissiveCheck, loggingDisabledCheck, revokedCaCertificateStillActiveCheck, revokedDeviceCertificateStillActiveCheck, unauthenticatedCognitoRoleOverlyPermissiveCheck);
         }

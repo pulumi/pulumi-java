@@ -77,7 +77,6 @@ public final class EncryptionDetailsResponse {
             this.doubleEncryptionEnabled = Objects.requireNonNull(doubleEncryptionEnabled);
             return this;
         }
-
         public EncryptionDetailsResponse build() {
             return new EncryptionDetailsResponse(cmk, doubleEncryptionEnabled);
         }

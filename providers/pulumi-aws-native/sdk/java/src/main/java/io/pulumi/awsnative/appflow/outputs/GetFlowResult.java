@@ -187,7 +187,6 @@ public final class GetFlowResult {
             this.triggerConfig = triggerConfig;
             return this;
         }
-
         public GetFlowResult build() {
             return new GetFlowResult(description, destinationFlowConfigList, flowArn, sourceFlowConfig, tags, tasks, triggerConfig);
         }

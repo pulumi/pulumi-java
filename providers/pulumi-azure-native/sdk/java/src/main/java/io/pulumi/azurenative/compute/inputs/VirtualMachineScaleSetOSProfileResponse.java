@@ -27,7 +27,7 @@ public final class VirtualMachineScaleSetOSProfileResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="adminPassword")
-    private final @Nullable String adminPassword;
+        private final @Nullable String adminPassword;
 
     public Optional<String> getAdminPassword() {
         return this.adminPassword == null ? Optional.empty() : Optional.ofNullable(this.adminPassword);
@@ -38,7 +38,7 @@ public final class VirtualMachineScaleSetOSProfileResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="adminUsername")
-    private final @Nullable String adminUsername;
+        private final @Nullable String adminUsername;
 
     public Optional<String> getAdminUsername() {
         return this.adminUsername == null ? Optional.empty() : Optional.ofNullable(this.adminUsername);
@@ -49,7 +49,7 @@ public final class VirtualMachineScaleSetOSProfileResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="computerNamePrefix")
-    private final @Nullable String computerNamePrefix;
+        private final @Nullable String computerNamePrefix;
 
     public Optional<String> getComputerNamePrefix() {
         return this.computerNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.computerNamePrefix);
@@ -60,7 +60,7 @@ public final class VirtualMachineScaleSetOSProfileResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="customData")
-    private final @Nullable String customData;
+        private final @Nullable String customData;
 
     public Optional<String> getCustomData() {
         return this.customData == null ? Optional.empty() : Optional.ofNullable(this.customData);
@@ -71,7 +71,7 @@ public final class VirtualMachineScaleSetOSProfileResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="linuxConfiguration")
-    private final @Nullable LinuxConfigurationResponse linuxConfiguration;
+        private final @Nullable LinuxConfigurationResponse linuxConfiguration;
 
     public Optional<LinuxConfigurationResponse> getLinuxConfiguration() {
         return this.linuxConfiguration == null ? Optional.empty() : Optional.ofNullable(this.linuxConfiguration);
@@ -82,7 +82,7 @@ public final class VirtualMachineScaleSetOSProfileResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable List<VaultSecretGroupResponse> secrets;
+        private final @Nullable List<VaultSecretGroupResponse> secrets;
 
     public List<VaultSecretGroupResponse> getSecrets() {
         return this.secrets == null ? List.of() : this.secrets;
@@ -93,7 +93,7 @@ public final class VirtualMachineScaleSetOSProfileResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="windowsConfiguration")
-    private final @Nullable WindowsConfigurationResponse windowsConfiguration;
+        private final @Nullable WindowsConfigurationResponse windowsConfiguration;
 
     public Optional<WindowsConfigurationResponse> getWindowsConfiguration() {
         return this.windowsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.windowsConfiguration);
@@ -192,7 +192,6 @@ public final class VirtualMachineScaleSetOSProfileResponse extends io.pulumi.res
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
-
         public VirtualMachineScaleSetOSProfileResponse build() {
             return new VirtualMachineScaleSetOSProfileResponse(adminPassword, adminUsername, computerNamePrefix, customData, linuxConfiguration, secrets, windowsConfiguration);
         }

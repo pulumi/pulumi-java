@@ -24,14 +24,14 @@ public final class DetectorModelIotTopicPublishArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="mqttTopic", required=true)
-    private final Input<String> mqttTopic;
+        private final Input<String> mqttTopic;
 
     public Input<String> getMqttTopic() {
         return this.mqttTopic;
     }
 
     @InputImport(name="payload")
-    private final @Nullable Input<DetectorModelPayloadArgs> payload;
+        private final @Nullable Input<DetectorModelPayloadArgs> payload;
 
     public Input<DetectorModelPayloadArgs> getPayload() {
         return this.payload == null ? Input.empty() : this.payload;
@@ -90,7 +90,6 @@ public final class DetectorModelIotTopicPublishArgs extends io.pulumi.resources.
             this.payload = Input.ofNullable(payload);
             return this;
         }
-
         public DetectorModelIotTopicPublishArgs build() {
             return new DetectorModelIotTopicPublishArgs(mqttTopic, payload);
         }

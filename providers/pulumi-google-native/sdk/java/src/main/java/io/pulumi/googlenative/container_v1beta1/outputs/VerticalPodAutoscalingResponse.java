@@ -52,7 +52,6 @@ public final class VerticalPodAutoscalingResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public VerticalPodAutoscalingResponse build() {
             return new VerticalPodAutoscalingResponse(enabled);
         }

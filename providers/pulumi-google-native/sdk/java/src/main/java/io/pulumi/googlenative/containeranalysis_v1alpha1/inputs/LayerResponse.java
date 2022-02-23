@@ -21,7 +21,7 @@ public final class LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="arguments", required=true)
-    private final String arguments;
+      private final String arguments;
 
     public String getArguments() {
         return this.arguments;
@@ -32,7 +32,7 @@ public final class LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="directive", required=true)
-    private final String directive;
+      private final String directive;
 
     public String getDirective() {
         return this.directive;
@@ -81,7 +81,6 @@ public final class LayerResponse extends io.pulumi.resources.InvokeArgs {
             this.directive = Objects.requireNonNull(directive);
             return this;
         }
-
         public LayerResponse build() {
             return new LayerResponse(arguments, directive);
         }

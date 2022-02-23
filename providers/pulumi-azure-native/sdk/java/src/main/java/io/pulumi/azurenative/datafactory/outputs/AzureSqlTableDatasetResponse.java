@@ -252,7 +252,6 @@ public final class AzureSqlTableDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureSqlTableDatasetResponse build() {
             return new AzureSqlTableDatasetResponse(annotations, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
         }

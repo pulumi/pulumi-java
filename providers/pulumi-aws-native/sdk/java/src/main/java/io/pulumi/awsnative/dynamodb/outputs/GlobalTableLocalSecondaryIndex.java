@@ -74,7 +74,6 @@ public final class GlobalTableLocalSecondaryIndex {
             this.projection = Objects.requireNonNull(projection);
             return this;
         }
-
         public GlobalTableLocalSecondaryIndex build() {
             return new GlobalTableLocalSecondaryIndex(indexName, keySchema, projection);
         }

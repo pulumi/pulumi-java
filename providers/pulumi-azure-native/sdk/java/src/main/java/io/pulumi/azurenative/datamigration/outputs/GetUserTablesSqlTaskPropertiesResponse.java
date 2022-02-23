@@ -169,7 +169,6 @@ public final class GetUserTablesSqlTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public GetUserTablesSqlTaskPropertiesResponse build() {
             return new GetUserTablesSqlTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

@@ -163,7 +163,6 @@ public final class GetDBProxyEndpointResult {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public GetDBProxyEndpointResult build() {
             return new GetDBProxyEndpointResult(dBProxyEndpointArn, endpoint, isDefault, tags, vpcId, vpcSecurityGroupIds);
         }

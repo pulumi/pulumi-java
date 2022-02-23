@@ -119,7 +119,6 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView {
             this.restartCount = Objects.requireNonNull(restartCount);
             return this;
         }
-
         public InitContainerPropertiesDefinitionResponseInstanceView build() {
             return new InitContainerPropertiesDefinitionResponseInstanceView(currentState, events, previousState, restartCount);
         }

@@ -76,7 +76,6 @@ public final class ApplicationLogPatternSet {
             this.patternSetName = Objects.requireNonNull(patternSetName);
             return this;
         }
-
         public ApplicationLogPatternSet build() {
             return new ApplicationLogPatternSet(logPatterns, patternSetName);
         }

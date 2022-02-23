@@ -19,7 +19,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -30,21 +30,21 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -55,7 +55,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeBytes")
-    private final @Nullable Input<String> sizeBytes;
+      private final @Nullable Input<String> sizeBytes;
 
     public Input<String> getSizeBytes() {
         return this.sizeBytes == null ? Input.empty() : this.sizeBytes;
@@ -66,14 +66,14 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageVolume")
-    private final @Nullable Input<String> storageVolume;
+      private final @Nullable Input<String> storageVolume;
 
     public Input<String> getStorageVolume() {
         return this.storageVolume == null ? Input.empty() : this.storageVolume;
     }
 
     @InputImport(name="volumeId", required=true)
-    private final Input<String> volumeId;
+      private final Input<String> volumeId;
 
     public Input<String> getVolumeId() {
         return this.volumeId;
@@ -207,7 +207,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             this.volumeId = Input.of(Objects.requireNonNull(volumeId));
             return this;
         }
-
         public SnapshotArgs build() {
             return new SnapshotArgs(description, id, location, project, sizeBytes, storageVolume, volumeId);
         }

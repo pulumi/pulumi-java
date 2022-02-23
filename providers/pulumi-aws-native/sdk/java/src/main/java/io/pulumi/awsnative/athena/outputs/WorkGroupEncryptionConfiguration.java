@@ -61,7 +61,6 @@ public final class WorkGroupEncryptionConfiguration {
             this.kmsKey = kmsKey;
             return this;
         }
-
         public WorkGroupEncryptionConfiguration build() {
             return new WorkGroupEncryptionConfiguration(encryptionOption, kmsKey);
         }

@@ -288,7 +288,6 @@ public final class DriveStatusResponse {
             this.verboseLogUri = verboseLogUri;
             return this;
         }
-
         public DriveStatusResponse build() {
             return new DriveStatusResponse(bitLockerKey, bytesSucceeded, copyStatus, driveHeaderHash, driveId, errorLogUri, manifestFile, manifestHash, manifestUri, percentComplete, state, verboseLogUri);
         }

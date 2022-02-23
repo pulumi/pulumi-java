@@ -98,7 +98,6 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfig {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public MetastoreServiceHiveMetastoreConfigKerberosConfig build() {
             return new MetastoreServiceHiveMetastoreConfigKerberosConfig(keytab, krb5ConfigGcsUri, principal);
         }

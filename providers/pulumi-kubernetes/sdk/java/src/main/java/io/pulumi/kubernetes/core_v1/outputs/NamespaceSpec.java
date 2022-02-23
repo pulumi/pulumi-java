@@ -54,7 +54,6 @@ public final class NamespaceSpec {
             this.finalizers = finalizers;
             return this;
         }
-
         public NamespaceSpec build() {
             return new NamespaceSpec(finalizers);
         }

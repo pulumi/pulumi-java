@@ -46,7 +46,6 @@ public final class ResponsePlanChatChannel {
             this.chatbotSns = chatbotSns;
             return this;
         }
-
         public ResponsePlanChatChannel build() {
             return new ResponsePlanChatChannel(chatbotSns);
         }

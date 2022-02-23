@@ -162,7 +162,6 @@ public final class GetWorkspaceResult {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(alertManagerDefinition, alias, arn, prometheusEndpoint, tags, workspaceId);
         }

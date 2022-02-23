@@ -32,7 +32,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allocationPolicy")
-    private final @Nullable Input<Either<String,AllocationPolicy>> allocationPolicy;
+        private final @Nullable Input<Either<String,AllocationPolicy>> allocationPolicy;
 
     public Input<Either<String,AllocationPolicy>> getAllocationPolicy() {
         return this.allocationPolicy == null ? Input.empty() : this.allocationPolicy;
@@ -43,7 +43,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="authorizationPolicies")
-    private final @Nullable Input<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies;
+        private final @Nullable Input<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies;
 
     public Input<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> getAuthorizationPolicies() {
         return this.authorizationPolicies == null ? Input.empty() : this.authorizationPolicies;
@@ -54,7 +54,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="iotHubs")
-    private final @Nullable Input<List<IotHubDefinitionDescriptionArgs>> iotHubs;
+        private final @Nullable Input<List<IotHubDefinitionDescriptionArgs>> iotHubs;
 
     public Input<List<IotHubDefinitionDescriptionArgs>> getIotHubs() {
         return this.iotHubs == null ? Input.empty() : this.iotHubs;
@@ -65,7 +65,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipFilterRules")
-    private final @Nullable Input<List<TargetIpFilterRuleArgs>> ipFilterRules;
+        private final @Nullable Input<List<TargetIpFilterRuleArgs>> ipFilterRules;
 
     public Input<List<TargetIpFilterRuleArgs>> getIpFilterRules() {
         return this.ipFilterRules == null ? Input.empty() : this.ipFilterRules;
@@ -76,7 +76,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="privateEndpointConnections")
-    private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+        private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Input<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
@@ -87,7 +87,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<String> provisioningState;
+        private final @Nullable Input<String> provisioningState;
 
     public Input<String> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -98,7 +98,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -109,7 +109,7 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,State>> state;
+        private final @Nullable Input<Either<String,State>> state;
 
     public Input<Either<String,State>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -258,7 +258,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public IotDpsPropertiesDescriptionArgs build() {
             return new IotDpsPropertiesDescriptionArgs(allocationPolicy, authorizationPolicies, iotHubs, ipFilterRules, privateEndpointConnections, provisioningState, publicNetworkAccess, state);
         }

@@ -127,7 +127,6 @@ public final class CertificateConfigX509ConfigCaOptions {
             this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
             return this;
         }
-
         public CertificateConfigX509ConfigCaOptions build() {
             return new CertificateConfigX509ConfigCaOptions(isCa, maxIssuerPathLength, nonCa, zeroMaxIssuerPathLength);
         }

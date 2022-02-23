@@ -23,7 +23,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * 
      */
     @InputImport(name="databases", required=true)
-    private final List<String> databases;
+        private final List<String> databases;
 
     public List<String> getDatabases() {
         return this.databases;
@@ -34,7 +34,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -45,7 +45,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * 
      */
     @InputImport(name="targetServerBrandVersion", required=true)
-    private final String targetServerBrandVersion;
+        private final String targetServerBrandVersion;
 
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -56,7 +56,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * 
      */
     @InputImport(name="targetServerVersion", required=true)
-    private final String targetServerVersion;
+        private final String targetServerVersion;
 
     public String getTargetServerVersion() {
         return this.targetServerVersion;
@@ -67,7 +67,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * 
      */
     @InputImport(name="validationErrors", required=true)
-    private final List<ReportableExceptionResponse> validationErrors;
+        private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
@@ -146,7 +146,6 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse build() {
             return new ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse(databases, id, targetServerBrandVersion, targetServerVersion, validationErrors);
         }

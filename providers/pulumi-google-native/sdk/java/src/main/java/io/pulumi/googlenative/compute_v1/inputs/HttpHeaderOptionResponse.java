@@ -22,7 +22,7 @@ public final class HttpHeaderOptionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final String headerName;
+      private final String headerName;
 
     public String getHeaderName() {
         return this.headerName;
@@ -33,7 +33,7 @@ public final class HttpHeaderOptionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="headerValue", required=true)
-    private final String headerValue;
+      private final String headerValue;
 
     public String getHeaderValue() {
         return this.headerValue;
@@ -44,7 +44,7 @@ public final class HttpHeaderOptionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="replace", required=true)
-    private final Boolean replace;
+      private final Boolean replace;
 
     public Boolean getReplace() {
         return this.replace;
@@ -103,7 +103,6 @@ public final class HttpHeaderOptionResponse extends io.pulumi.resources.InvokeAr
             this.replace = Objects.requireNonNull(replace);
             return this;
         }
-
         public HttpHeaderOptionResponse build() {
             return new HttpHeaderOptionResponse(headerName, headerValue, replace);
         }

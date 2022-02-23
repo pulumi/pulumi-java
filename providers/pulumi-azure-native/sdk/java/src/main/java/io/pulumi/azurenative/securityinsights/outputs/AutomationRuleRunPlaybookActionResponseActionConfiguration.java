@@ -76,7 +76,6 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration {
             this.tenantId = tenantId;
             return this;
         }
-
         public AutomationRuleRunPlaybookActionResponseActionConfiguration build() {
             return new AutomationRuleRunPlaybookActionResponseActionConfiguration(logicAppResourceId, tenantId);
         }

@@ -44,7 +44,6 @@ public final class GetUrlSuffixResult {
             this.urlSuffix = Objects.requireNonNull(urlSuffix);
             return this;
         }
-
         public GetUrlSuffixResult build() {
             return new GetUrlSuffixResult(urlSuffix);
         }

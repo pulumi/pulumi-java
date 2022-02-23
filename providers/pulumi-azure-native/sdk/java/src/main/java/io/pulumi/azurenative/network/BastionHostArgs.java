@@ -22,7 +22,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bastionHostName")
-    private final @Nullable Input<String> bastionHostName;
+        private final @Nullable Input<String> bastionHostName;
 
     public Input<String> getBastionHostName() {
         return this.bastionHostName == null ? Input.empty() : this.bastionHostName;
@@ -33,7 +33,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName")
-    private final @Nullable Input<String> dnsName;
+        private final @Nullable Input<String> dnsName;
 
     public Input<String> getDnsName() {
         return this.dnsName == null ? Input.empty() : this.dnsName;
@@ -44,7 +44,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -55,7 +55,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipConfigurations")
-    private final @Nullable Input<List<BastionHostIPConfigurationArgs>> ipConfigurations;
+        private final @Nullable Input<List<BastionHostIPConfigurationArgs>> ipConfigurations;
 
     public Input<List<BastionHostIPConfigurationArgs>> getIpConfigurations() {
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
@@ -66,7 +66,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -77,7 +77,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -222,7 +222,6 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public BastionHostArgs build() {
             return new BastionHostArgs(bastionHostName, dnsName, id, ipConfigurations, location, resourceGroupName, tags);
         }

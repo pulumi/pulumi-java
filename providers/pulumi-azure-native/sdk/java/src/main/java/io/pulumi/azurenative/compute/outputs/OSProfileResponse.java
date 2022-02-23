@@ -228,7 +228,6 @@ public final class OSProfileResponse {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
-
         public OSProfileResponse build() {
             return new OSProfileResponse(adminPassword, adminUsername, allowExtensionOperations, computerName, customData, linuxConfiguration, requireGuestProvisionSignal, secrets, windowsConfiguration);
         }

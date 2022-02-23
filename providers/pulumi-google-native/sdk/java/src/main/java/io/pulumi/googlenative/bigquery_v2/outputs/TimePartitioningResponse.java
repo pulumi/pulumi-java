@@ -109,7 +109,6 @@ public final class TimePartitioningResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TimePartitioningResponse build() {
             return new TimePartitioningResponse(expirationMs, field, requirePartitionFilter, type);
         }

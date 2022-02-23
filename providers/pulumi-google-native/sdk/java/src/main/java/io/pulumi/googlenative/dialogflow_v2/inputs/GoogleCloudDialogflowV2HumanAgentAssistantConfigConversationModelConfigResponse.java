@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
      * 
      */
     @InputImport(name="model", required=true)
-    private final String model;
+      private final String model;
 
     public String getModel() {
         return this.model;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
             this.model = Objects.requireNonNull(model);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse(model);
         }

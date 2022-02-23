@@ -97,7 +97,6 @@ public final class VolumeProviderParametersAzureFileResponse {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public VolumeProviderParametersAzureFileResponse build() {
             return new VolumeProviderParametersAzureFileResponse(accountKey, accountName, shareName);
         }

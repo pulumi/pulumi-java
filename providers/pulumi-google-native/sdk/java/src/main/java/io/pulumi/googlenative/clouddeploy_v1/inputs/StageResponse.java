@@ -22,7 +22,7 @@ public final class StageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="profiles", required=true)
-    private final List<String> profiles;
+      private final List<String> profiles;
 
     public List<String> getProfiles() {
         return this.profiles;
@@ -33,7 +33,7 @@ public final class StageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetId", required=true)
-    private final String targetId;
+      private final String targetId;
 
     public String getTargetId() {
         return this.targetId;
@@ -82,7 +82,6 @@ public final class StageResponse extends io.pulumi.resources.InvokeArgs {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public StageResponse build() {
             return new StageResponse(profiles, targetId);
         }

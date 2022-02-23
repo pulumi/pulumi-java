@@ -109,7 +109,6 @@ public final class MetricBucketOptions {
             this.linearBuckets = linearBuckets;
             return this;
         }
-
         public MetricBucketOptions build() {
             return new MetricBucketOptions(explicitBuckets, exponentialBuckets, linearBuckets);
         }

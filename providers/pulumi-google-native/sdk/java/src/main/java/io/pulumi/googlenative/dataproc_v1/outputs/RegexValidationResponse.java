@@ -53,7 +53,6 @@ public final class RegexValidationResponse {
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
-
         public RegexValidationResponse build() {
             return new RegexValidationResponse(regexes);
         }

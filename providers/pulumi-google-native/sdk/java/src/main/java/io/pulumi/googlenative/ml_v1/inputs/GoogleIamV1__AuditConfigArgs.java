@@ -25,7 +25,7 @@ public final class GoogleIamV1__AuditConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="auditLogConfigs")
-    private final @Nullable Input<List<GoogleIamV1__AuditLogConfigArgs>> auditLogConfigs;
+      private final @Nullable Input<List<GoogleIamV1__AuditLogConfigArgs>> auditLogConfigs;
 
     public Input<List<GoogleIamV1__AuditLogConfigArgs>> getAuditLogConfigs() {
         return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
@@ -36,7 +36,7 @@ public final class GoogleIamV1__AuditConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -95,7 +95,6 @@ public final class GoogleIamV1__AuditConfigArgs extends io.pulumi.resources.Reso
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public GoogleIamV1__AuditConfigArgs build() {
             return new GoogleIamV1__AuditConfigArgs(auditLogConfigs, service);
         }

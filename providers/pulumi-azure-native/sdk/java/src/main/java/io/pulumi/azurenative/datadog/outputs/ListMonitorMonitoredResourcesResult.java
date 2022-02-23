@@ -78,7 +78,6 @@ public final class ListMonitorMonitoredResourcesResult {
             this.value = value;
             return this;
         }
-
         public ListMonitorMonitoredResourcesResult build() {
             return new ListMonitorMonitoredResourcesResult(nextLink, value);
         }

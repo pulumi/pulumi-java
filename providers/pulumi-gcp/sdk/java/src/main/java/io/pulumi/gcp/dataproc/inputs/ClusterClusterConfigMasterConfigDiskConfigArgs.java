@@ -23,7 +23,7 @@ public final class ClusterClusterConfigMasterConfigDiskConfigArgs extends io.pul
      * 
      */
     @InputImport(name="bootDiskSizeGb")
-    private final @Nullable Input<Integer> bootDiskSizeGb;
+        private final @Nullable Input<Integer> bootDiskSizeGb;
 
     public Input<Integer> getBootDiskSizeGb() {
         return this.bootDiskSizeGb == null ? Input.empty() : this.bootDiskSizeGb;
@@ -35,7 +35,7 @@ public final class ClusterClusterConfigMasterConfigDiskConfigArgs extends io.pul
      * 
      */
     @InputImport(name="bootDiskType")
-    private final @Nullable Input<String> bootDiskType;
+        private final @Nullable Input<String> bootDiskType;
 
     public Input<String> getBootDiskType() {
         return this.bootDiskType == null ? Input.empty() : this.bootDiskType;
@@ -47,7 +47,7 @@ public final class ClusterClusterConfigMasterConfigDiskConfigArgs extends io.pul
      * 
      */
     @InputImport(name="numLocalSsds")
-    private final @Nullable Input<Integer> numLocalSsds;
+        private final @Nullable Input<Integer> numLocalSsds;
 
     public Input<Integer> getNumLocalSsds() {
         return this.numLocalSsds == null ? Input.empty() : this.numLocalSsds;
@@ -121,7 +121,6 @@ public final class ClusterClusterConfigMasterConfigDiskConfigArgs extends io.pul
             this.numLocalSsds = Input.ofNullable(numLocalSsds);
             return this;
         }
-
         public ClusterClusterConfigMasterConfigDiskConfigArgs build() {
             return new ClusterClusterConfigMasterConfigDiskConfigArgs(bootDiskSizeGb, bootDiskType, numLocalSsds);
         }

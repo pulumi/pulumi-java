@@ -289,7 +289,6 @@ public final class RestSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public RestSinkResponse build() {
             return new RestSinkResponse(additionalHeaders, disableMetricsCollection, httpCompressionType, httpRequestTimeout, maxConcurrentConnections, requestInterval, requestMethod, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

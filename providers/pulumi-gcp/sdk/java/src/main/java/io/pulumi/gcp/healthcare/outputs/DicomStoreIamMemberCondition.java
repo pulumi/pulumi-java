@@ -73,7 +73,6 @@ public final class DicomStoreIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public DicomStoreIamMemberCondition build() {
             return new DicomStoreIamMemberCondition(description, expression, title);
         }

@@ -186,7 +186,6 @@ public final class GetSecurityProfileResult {
             this.targetArns = targetArns;
             return this;
         }
-
         public GetSecurityProfileResult build() {
             return new GetSecurityProfileResult(additionalMetricsToRetainV2, alertTargets, behaviors, securityProfileArn, securityProfileDescription, tags, targetArns);
         }

@@ -243,7 +243,6 @@ public final class GetProjectResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(createTime, deleteTime, displayName, etag, labels, name, parent, projectId, state, updateTime);
         }

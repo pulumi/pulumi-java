@@ -290,7 +290,6 @@ public final class GuestConfigurationAssignmentPropertiesResponse {
             this.vmssVMList = vmssVMList;
             return this;
         }
-
         public GuestConfigurationAssignmentPropertiesResponse build() {
             return new GuestConfigurationAssignmentPropertiesResponse(assignmentHash, complianceStatus, context, guestConfiguration, lastComplianceStatusChecked, latestAssignmentReport, latestReportId, parameterHash, provisioningState, resourceType, targetResourceId, vmssVMList);
         }

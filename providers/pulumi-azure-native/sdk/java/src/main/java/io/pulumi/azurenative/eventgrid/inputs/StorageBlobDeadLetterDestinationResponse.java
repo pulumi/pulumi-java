@@ -23,7 +23,7 @@ public final class StorageBlobDeadLetterDestinationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="blobContainerName")
-    private final @Nullable String blobContainerName;
+        private final @Nullable String blobContainerName;
 
     public Optional<String> getBlobContainerName() {
         return this.blobContainerName == null ? Optional.empty() : Optional.ofNullable(this.blobContainerName);
@@ -35,7 +35,7 @@ public final class StorageBlobDeadLetterDestinationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="endpointType", required=true)
-    private final String endpointType;
+        private final String endpointType;
 
     public String getEndpointType() {
         return this.endpointType;
@@ -46,7 +46,7 @@ public final class StorageBlobDeadLetterDestinationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -105,7 +105,6 @@ public final class StorageBlobDeadLetterDestinationResponse extends io.pulumi.re
             this.resourceId = resourceId;
             return this;
         }
-
         public StorageBlobDeadLetterDestinationResponse build() {
             return new StorageBlobDeadLetterDestinationResponse(blobContainerName, endpointType, resourceId);
         }

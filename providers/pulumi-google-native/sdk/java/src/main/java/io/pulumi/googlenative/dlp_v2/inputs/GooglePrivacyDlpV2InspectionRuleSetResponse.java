@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends io.pulumi
      * 
      */
     @InputImport(name="infoTypes", required=true)
-    private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
+      private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
     public List<GooglePrivacyDlpV2InfoTypeResponse> getInfoTypes() {
         return this.infoTypes;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends io.pulumi
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<GooglePrivacyDlpV2InspectionRuleResponse> rules;
+      private final List<GooglePrivacyDlpV2InspectionRuleResponse> rules;
 
     public List<GooglePrivacyDlpV2InspectionRuleResponse> getRules() {
         return this.rules;
@@ -83,7 +83,6 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends io.pulumi
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectionRuleSetResponse build() {
             return new GooglePrivacyDlpV2InspectionRuleSetResponse(infoTypes, rules);
         }

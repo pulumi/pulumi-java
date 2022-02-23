@@ -23,7 +23,7 @@ public final class InstanceGroupAutoscalingPolicyConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="maxInstances", required=true)
-    private final Input<Integer> maxInstances;
+      private final Input<Integer> maxInstances;
 
     public Input<Integer> getMaxInstances() {
         return this.maxInstances;
@@ -34,7 +34,7 @@ public final class InstanceGroupAutoscalingPolicyConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="minInstances")
-    private final @Nullable Input<Integer> minInstances;
+      private final @Nullable Input<Integer> minInstances;
 
     public Input<Integer> getMinInstances() {
         return this.minInstances == null ? Input.empty() : this.minInstances;
@@ -45,7 +45,7 @@ public final class InstanceGroupAutoscalingPolicyConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+      private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -119,7 +119,6 @@ public final class InstanceGroupAutoscalingPolicyConfigArgs extends io.pulumi.re
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public InstanceGroupAutoscalingPolicyConfigArgs build() {
             return new InstanceGroupAutoscalingPolicyConfigArgs(maxInstances, minInstances, weight);
         }

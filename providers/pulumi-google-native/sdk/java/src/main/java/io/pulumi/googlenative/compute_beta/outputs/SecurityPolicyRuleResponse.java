@@ -354,7 +354,6 @@ public final class SecurityPolicyRuleResponse {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }
-
         public SecurityPolicyRuleResponse build() {
             return new SecurityPolicyRuleResponse(action, description, direction, enableLogging, headerAction, kind, match, preview, priority, rateLimitOptions, redirectOptions, ruleNumber, ruleTupleCount, targetResources, targetServiceAccounts);
         }

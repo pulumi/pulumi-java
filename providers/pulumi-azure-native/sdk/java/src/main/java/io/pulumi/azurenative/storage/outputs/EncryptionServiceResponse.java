@@ -98,7 +98,6 @@ public final class EncryptionServiceResponse {
             this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime);
             return this;
         }
-
         public EncryptionServiceResponse build() {
             return new EncryptionServiceResponse(enabled, keyType, lastEnabledTime);
         }

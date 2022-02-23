@@ -224,7 +224,6 @@ public final class RegionHealthCheckHttp2HealthCheck {
             this.response = response;
             return this;
         }
-
         public RegionHealthCheckHttp2HealthCheck build() {
             return new RegionHealthCheckHttp2HealthCheck(host, port, portName, portSpecification, proxyHeader, requestPath, response);
         }

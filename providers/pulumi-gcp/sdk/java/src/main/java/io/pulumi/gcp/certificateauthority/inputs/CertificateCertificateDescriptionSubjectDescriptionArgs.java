@@ -18,7 +18,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
     public static final CertificateCertificateDescriptionSubjectDescriptionArgs Empty = new CertificateCertificateDescriptionSubjectDescriptionArgs();
 
     @InputImport(name="hexSerialNumber")
-    private final @Nullable Input<String> hexSerialNumber;
+        private final @Nullable Input<String> hexSerialNumber;
 
     public Input<String> getHexSerialNumber() {
         return this.hexSerialNumber == null ? Input.empty() : this.hexSerialNumber;
@@ -31,21 +31,21 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
      * 
      */
     @InputImport(name="lifetime")
-    private final @Nullable Input<String> lifetime;
+        private final @Nullable Input<String> lifetime;
 
     public Input<String> getLifetime() {
         return this.lifetime == null ? Input.empty() : this.lifetime;
     }
 
     @InputImport(name="notAfterTime")
-    private final @Nullable Input<String> notAfterTime;
+        private final @Nullable Input<String> notAfterTime;
 
     public Input<String> getNotAfterTime() {
         return this.notAfterTime == null ? Input.empty() : this.notAfterTime;
     }
 
     @InputImport(name="notBeforeTime")
-    private final @Nullable Input<String> notBeforeTime;
+        private final @Nullable Input<String> notBeforeTime;
 
     public Input<String> getNotBeforeTime() {
         return this.notBeforeTime == null ? Input.empty() : this.notBeforeTime;
@@ -57,7 +57,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
      * 
      */
     @InputImport(name="subjectAltNames")
-    private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames;
+        private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames;
 
     public Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> getSubjectAltNames() {
         return this.subjectAltNames == null ? Input.empty() : this.subjectAltNames;
@@ -69,7 +69,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
      * 
      */
     @InputImport(name="subjects")
-    private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects;
+        private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects;
 
     public Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> getSubjects() {
         return this.subjects == null ? Input.empty() : this.subjects;
@@ -188,7 +188,6 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
             this.subjects = Input.ofNullable(subjects);
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectDescriptionArgs build() {
             return new CertificateCertificateDescriptionSubjectDescriptionArgs(hexSerialNumber, lifetime, notAfterTime, notBeforeTime, subjectAltNames, subjects);
         }

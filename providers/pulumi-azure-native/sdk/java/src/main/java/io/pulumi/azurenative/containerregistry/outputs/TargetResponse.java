@@ -224,7 +224,6 @@ public final class TargetResponse {
             this.version = version;
             return this;
         }
-
         public TargetResponse build() {
             return new TargetResponse(digest, length, mediaType, name, repository, size, tag, url, version);
         }

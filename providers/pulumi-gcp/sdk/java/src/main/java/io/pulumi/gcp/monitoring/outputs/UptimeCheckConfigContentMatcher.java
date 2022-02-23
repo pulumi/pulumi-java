@@ -80,7 +80,6 @@ public final class UptimeCheckConfigContentMatcher {
             this.matcher = matcher;
             return this;
         }
-
         public UptimeCheckConfigContentMatcher build() {
             return new UptimeCheckConfigContentMatcher(content, matcher);
         }

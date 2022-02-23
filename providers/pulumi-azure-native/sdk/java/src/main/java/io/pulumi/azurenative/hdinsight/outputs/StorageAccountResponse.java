@@ -224,7 +224,6 @@ public final class StorageAccountResponse {
             this.saskey = saskey;
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(container, fileSystem, fileshare, isDefault, key, msiResourceId, name, resourceId, saskey);
         }

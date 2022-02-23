@@ -17,21 +17,21 @@ public final class OfflineStoreConfigPropertiesArgs extends io.pulumi.resources.
     public static final OfflineStoreConfigPropertiesArgs Empty = new OfflineStoreConfigPropertiesArgs();
 
     @InputImport(name="dataCatalogConfig")
-    private final @Nullable Input<FeatureGroupDataCatalogConfigArgs> dataCatalogConfig;
+        private final @Nullable Input<FeatureGroupDataCatalogConfigArgs> dataCatalogConfig;
 
     public Input<FeatureGroupDataCatalogConfigArgs> getDataCatalogConfig() {
         return this.dataCatalogConfig == null ? Input.empty() : this.dataCatalogConfig;
     }
 
     @InputImport(name="disableGlueTableCreation")
-    private final @Nullable Input<Boolean> disableGlueTableCreation;
+        private final @Nullable Input<Boolean> disableGlueTableCreation;
 
     public Input<Boolean> getDisableGlueTableCreation() {
         return this.disableGlueTableCreation == null ? Input.empty() : this.disableGlueTableCreation;
     }
 
     @InputImport(name="s3StorageConfig", required=true)
-    private final Input<FeatureGroupS3StorageConfigArgs> s3StorageConfig;
+        private final Input<FeatureGroupS3StorageConfigArgs> s3StorageConfig;
 
     public Input<FeatureGroupS3StorageConfigArgs> getS3StorageConfig() {
         return this.s3StorageConfig;
@@ -105,7 +105,6 @@ public final class OfflineStoreConfigPropertiesArgs extends io.pulumi.resources.
             this.s3StorageConfig = Input.of(Objects.requireNonNull(s3StorageConfig));
             return this;
         }
-
         public OfflineStoreConfigPropertiesArgs build() {
             return new OfflineStoreConfigPropertiesArgs(dataCatalogConfig, disableGlueTableCreation, s3StorageConfig);
         }

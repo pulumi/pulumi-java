@@ -24,7 +24,7 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="controller")
-    private final @Nullable Input<String> controller;
+        private final @Nullable Input<String> controller;
 
     public Input<String> getController() {
         return this.controller == null ? Input.empty() : this.controller;
@@ -35,7 +35,7 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<IngressClassParametersReferenceArgs> parameters;
+        private final @Nullable Input<IngressClassParametersReferenceArgs> parameters;
 
     public Input<IngressClassParametersReferenceArgs> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -94,7 +94,6 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public IngressClassSpecArgs build() {
             return new IngressClassSpecArgs(controller, parameters);
         }

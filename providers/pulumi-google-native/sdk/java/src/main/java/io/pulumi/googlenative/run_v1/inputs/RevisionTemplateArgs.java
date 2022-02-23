@@ -24,7 +24,7 @@ public final class RevisionTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -35,7 +35,7 @@ public final class RevisionTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<RevisionSpecArgs> spec;
+      private final @Nullable Input<RevisionSpecArgs> spec;
 
     public Input<RevisionSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -94,7 +94,6 @@ public final class RevisionTemplateArgs extends io.pulumi.resources.ResourceArgs
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public RevisionTemplateArgs build() {
             return new RevisionTemplateArgs(metadata, spec);
         }

@@ -307,7 +307,6 @@ public final class GetBillingRoleAssignmentByBillingAccountResult {
             this.userEmailAddress = userEmailAddress;
             return this;
         }
-
         public GetBillingRoleAssignmentByBillingAccountResult build() {
             return new GetBillingRoleAssignmentByBillingAccountResult(createdByPrincipalId, createdByPrincipalTenantId, createdByUserEmailAddress, createdOn, id, name, principalId, principalTenantId, roleDefinitionId, scope, type, userAuthenticationType, userEmailAddress);
         }

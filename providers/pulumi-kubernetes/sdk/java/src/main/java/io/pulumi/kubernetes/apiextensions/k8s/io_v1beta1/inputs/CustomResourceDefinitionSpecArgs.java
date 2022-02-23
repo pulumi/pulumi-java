@@ -31,7 +31,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="additionalPrinterColumns")
-    private final @Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
+        private final @Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
 
     public Input<List<CustomResourceColumnDefinitionArgs>> getAdditionalPrinterColumns() {
         return this.additionalPrinterColumns == null ? Input.empty() : this.additionalPrinterColumns;
@@ -42,7 +42,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="conversion")
-    private final @Nullable Input<CustomResourceConversionArgs> conversion;
+        private final @Nullable Input<CustomResourceConversionArgs> conversion;
 
     public Input<CustomResourceConversionArgs> getConversion() {
         return this.conversion == null ? Input.empty() : this.conversion;
@@ -53,7 +53,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="group", required=true)
-    private final Input<String> group;
+        private final Input<String> group;
 
     public Input<String> getGroup() {
         return this.group;
@@ -64,7 +64,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="names", required=true)
-    private final Input<CustomResourceDefinitionNamesArgs> names;
+        private final Input<CustomResourceDefinitionNamesArgs> names;
 
     public Input<CustomResourceDefinitionNamesArgs> getNames() {
         return this.names;
@@ -75,7 +75,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="preserveUnknownFields")
-    private final @Nullable Input<Boolean> preserveUnknownFields;
+        private final @Nullable Input<Boolean> preserveUnknownFields;
 
     public Input<Boolean> getPreserveUnknownFields() {
         return this.preserveUnknownFields == null ? Input.empty() : this.preserveUnknownFields;
@@ -86,7 +86,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -97,7 +97,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subresources")
-    private final @Nullable Input<CustomResourceSubresourcesArgs> subresources;
+        private final @Nullable Input<CustomResourceSubresourcesArgs> subresources;
 
     public Input<CustomResourceSubresourcesArgs> getSubresources() {
         return this.subresources == null ? Input.empty() : this.subresources;
@@ -108,7 +108,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="validation")
-    private final @Nullable Input<CustomResourceValidationArgs> validation;
+        private final @Nullable Input<CustomResourceValidationArgs> validation;
 
     public Input<CustomResourceValidationArgs> getValidation() {
         return this.validation == null ? Input.empty() : this.validation;
@@ -119,7 +119,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -130,7 +130,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="versions")
-    private final @Nullable Input<List<CustomResourceDefinitionVersionArgs>> versions;
+        private final @Nullable Input<List<CustomResourceDefinitionVersionArgs>> versions;
 
     public Input<List<CustomResourceDefinitionVersionArgs>> getVersions() {
         return this.versions == null ? Input.empty() : this.versions;
@@ -309,7 +309,6 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
             this.versions = Input.ofNullable(versions);
             return this;
         }
-
         public CustomResourceDefinitionSpecArgs build() {
             return new CustomResourceDefinitionSpecArgs(additionalPrinterColumns, conversion, group, names, preserveUnknownFields, scope, subresources, validation, version, versions);
         }

@@ -117,7 +117,6 @@ public final class GetIotDpsResourcePrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIotDpsResourcePrivateEndpointConnectionResult build() {
             return new GetIotDpsResourcePrivateEndpointConnectionResult(id, name, properties, type);
         }

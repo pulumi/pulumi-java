@@ -268,7 +268,6 @@ public final class GetNetworkResult {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
         }
-
         public GetNetworkResult build() {
             return new GetNetworkResult(autoCreateSubnetworks, creationTimestamp, description, gatewayIPv4, kind, mtu, name, peerings, routingConfig, selfLink, subnetworks);
         }

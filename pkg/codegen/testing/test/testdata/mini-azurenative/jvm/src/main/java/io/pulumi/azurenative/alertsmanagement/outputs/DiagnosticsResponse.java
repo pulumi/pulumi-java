@@ -30,7 +30,6 @@ public final class DiagnosticsResponse {
         public Builder(DiagnosticsResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DiagnosticsResponse build() {
             return new DiagnosticsResponse();
         }

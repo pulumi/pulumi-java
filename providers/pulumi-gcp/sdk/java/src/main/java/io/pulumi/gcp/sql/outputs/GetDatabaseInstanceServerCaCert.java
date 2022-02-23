@@ -97,7 +97,6 @@ public final class GetDatabaseInstanceServerCaCert {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public GetDatabaseInstanceServerCaCert build() {
             return new GetDatabaseInstanceServerCaCert(cert, commonName, createTime, expirationTime, sha1Fingerprint);
         }

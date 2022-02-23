@@ -77,7 +77,6 @@ public final class DeleteRetentionPolicyResponse {
             this.enabled = enabled;
             return this;
         }
-
         public DeleteRetentionPolicyResponse build() {
             return new DeleteRetentionPolicyResponse(days, enabled);
         }

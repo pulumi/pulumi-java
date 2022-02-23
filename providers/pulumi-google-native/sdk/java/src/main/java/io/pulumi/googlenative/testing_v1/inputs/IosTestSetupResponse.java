@@ -24,7 +24,7 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="additionalIpas", required=true)
-    private final List<FileReferenceResponse> additionalIpas;
+      private final List<FileReferenceResponse> additionalIpas;
 
     public List<FileReferenceResponse> getAdditionalIpas() {
         return this.additionalIpas;
@@ -35,7 +35,7 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkProfile", required=true)
-    private final String networkProfile;
+      private final String networkProfile;
 
     public String getNetworkProfile() {
         return this.networkProfile;
@@ -46,7 +46,7 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pullDirectories", required=true)
-    private final List<IosDeviceFileResponse> pullDirectories;
+      private final List<IosDeviceFileResponse> pullDirectories;
 
     public List<IosDeviceFileResponse> getPullDirectories() {
         return this.pullDirectories;
@@ -57,7 +57,7 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pushFiles", required=true)
-    private final List<IosDeviceFileResponse> pushFiles;
+      private final List<IosDeviceFileResponse> pushFiles;
 
     public List<IosDeviceFileResponse> getPushFiles() {
         return this.pushFiles;
@@ -126,7 +126,6 @@ public final class IosTestSetupResponse extends io.pulumi.resources.InvokeArgs {
             this.pushFiles = Objects.requireNonNull(pushFiles);
             return this;
         }
-
         public IosTestSetupResponse build() {
             return new IosTestSetupResponse(additionalIpas, networkProfile, pullDirectories, pushFiles);
         }

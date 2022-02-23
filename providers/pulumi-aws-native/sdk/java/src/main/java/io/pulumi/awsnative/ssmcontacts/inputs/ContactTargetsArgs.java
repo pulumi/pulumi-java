@@ -20,14 +20,14 @@ public final class ContactTargetsArgs extends io.pulumi.resources.ResourceArgs {
     public static final ContactTargetsArgs Empty = new ContactTargetsArgs();
 
     @InputImport(name="channelTargetInfo")
-    private final @Nullable Input<ContactChannelTargetInfoArgs> channelTargetInfo;
+        private final @Nullable Input<ContactChannelTargetInfoArgs> channelTargetInfo;
 
     public Input<ContactChannelTargetInfoArgs> getChannelTargetInfo() {
         return this.channelTargetInfo == null ? Input.empty() : this.channelTargetInfo;
     }
 
     @InputImport(name="contactTargetInfo")
-    private final @Nullable Input<ContactTargetInfoArgs> contactTargetInfo;
+        private final @Nullable Input<ContactTargetInfoArgs> contactTargetInfo;
 
     public Input<ContactTargetInfoArgs> getContactTargetInfo() {
         return this.contactTargetInfo == null ? Input.empty() : this.contactTargetInfo;
@@ -86,7 +86,6 @@ public final class ContactTargetsArgs extends io.pulumi.resources.ResourceArgs {
             this.contactTargetInfo = Input.ofNullable(contactTargetInfo);
             return this;
         }
-
         public ContactTargetsArgs build() {
             return new ContactTargetsArgs(channelTargetInfo, contactTargetInfo);
         }

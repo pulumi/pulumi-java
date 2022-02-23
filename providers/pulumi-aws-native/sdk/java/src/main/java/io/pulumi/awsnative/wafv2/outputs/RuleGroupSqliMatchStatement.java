@@ -60,7 +60,6 @@ public final class RuleGroupSqliMatchStatement {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public RuleGroupSqliMatchStatement build() {
             return new RuleGroupSqliMatchStatement(fieldToMatch, textTransformations);
         }

@@ -62,7 +62,6 @@ public final class ListenerForwardConfig {
             this.targetGroups = targetGroups;
             return this;
         }
-
         public ListenerForwardConfig build() {
             return new ListenerForwardConfig(targetGroupStickinessConfig, targetGroups);
         }

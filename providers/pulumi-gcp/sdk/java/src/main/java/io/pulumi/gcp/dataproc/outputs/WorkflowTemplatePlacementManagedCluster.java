@@ -98,7 +98,6 @@ public final class WorkflowTemplatePlacementManagedCluster {
             this.labels = labels;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedCluster build() {
             return new WorkflowTemplatePlacementManagedCluster(clusterName, config, labels);
         }

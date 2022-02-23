@@ -132,7 +132,6 @@ public final class GetProjectProject {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public GetProjectProject build() {
             return new GetProjectProject(createTime, labels, lifecycleState, name, number, parent, projectId);
         }

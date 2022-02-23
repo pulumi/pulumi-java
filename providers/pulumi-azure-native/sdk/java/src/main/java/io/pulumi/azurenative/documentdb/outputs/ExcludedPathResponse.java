@@ -54,7 +54,6 @@ public final class ExcludedPathResponse {
             this.path = path;
             return this;
         }
-
         public ExcludedPathResponse build() {
             return new ExcludedPathResponse(path);
         }

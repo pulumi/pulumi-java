@@ -17,7 +17,7 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="repositoryName", required=true)
-    private final String repositoryName;
+        private final String repositoryName;
 
     public String getRepositoryName() {
         return this.repositoryName;
@@ -55,7 +55,6 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
-
         public GetRepositoryArgs build() {
             return new GetRepositoryArgs(repositoryName);
         }

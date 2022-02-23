@@ -73,7 +73,6 @@ public final class FunctionIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public FunctionIamBindingCondition build() {
             return new FunctionIamBindingCondition(description, expression, title);
         }

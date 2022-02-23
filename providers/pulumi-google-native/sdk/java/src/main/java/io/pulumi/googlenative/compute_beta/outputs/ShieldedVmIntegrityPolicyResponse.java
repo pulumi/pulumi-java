@@ -52,7 +52,6 @@ public final class ShieldedVmIntegrityPolicyResponse {
             this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy);
             return this;
         }
-
         public ShieldedVmIntegrityPolicyResponse build() {
             return new ShieldedVmIntegrityPolicyResponse(updateAutoLearnPolicy);
         }

@@ -58,7 +58,6 @@ public final class UserProfileTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public UserProfileTag build() {
             return new UserProfileTag(key, value);
         }

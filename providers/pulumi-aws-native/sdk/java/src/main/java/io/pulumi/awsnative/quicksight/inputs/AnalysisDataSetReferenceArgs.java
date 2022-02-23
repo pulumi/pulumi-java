@@ -22,7 +22,7 @@ public final class AnalysisDataSetReferenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataSetArn", required=true)
-    private final Input<String> dataSetArn;
+        private final Input<String> dataSetArn;
 
     public Input<String> getDataSetArn() {
         return this.dataSetArn;
@@ -33,7 +33,7 @@ public final class AnalysisDataSetReferenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataSetPlaceholder", required=true)
-    private final Input<String> dataSetPlaceholder;
+        private final Input<String> dataSetPlaceholder;
 
     public Input<String> getDataSetPlaceholder() {
         return this.dataSetPlaceholder;
@@ -92,7 +92,6 @@ public final class AnalysisDataSetReferenceArgs extends io.pulumi.resources.Reso
             this.dataSetPlaceholder = Input.of(Objects.requireNonNull(dataSetPlaceholder));
             return this;
         }
-
         public AnalysisDataSetReferenceArgs build() {
             return new AnalysisDataSetReferenceArgs(dataSetArn, dataSetPlaceholder);
         }

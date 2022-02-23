@@ -19,7 +19,7 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="domainOwnershipIdentifierName")
-    private final @Nullable Input<String> domainOwnershipIdentifierName;
+        private final @Nullable Input<String> domainOwnershipIdentifierName;
 
     public Input<String> getDomainOwnershipIdentifierName() {
         return this.domainOwnershipIdentifierName == null ? Input.empty() : this.domainOwnershipIdentifierName;
@@ -30,7 +30,7 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -41,7 +41,7 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -52,7 +52,7 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -167,7 +167,6 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public WebAppDomainOwnershipIdentifierArgs build() {
             return new WebAppDomainOwnershipIdentifierArgs(domainOwnershipIdentifierName, kind, name, resourceGroupName, value);
         }

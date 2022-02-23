@@ -227,7 +227,6 @@ public final class AppMonitorConfiguration {
             this.telemetries = telemetries;
             return this;
         }
-
         public AppMonitorConfiguration build() {
             return new AppMonitorConfiguration(allowCookies, enableXRay, excludedPages, favoritePages, guestRoleArn, identityPoolId, includedPages, sessionSampleRate, telemetries);
         }

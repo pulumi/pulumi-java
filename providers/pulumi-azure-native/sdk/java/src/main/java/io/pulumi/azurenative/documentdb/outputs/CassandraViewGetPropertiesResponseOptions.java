@@ -77,7 +77,6 @@ public final class CassandraViewGetPropertiesResponseOptions {
             this.throughput = throughput;
             return this;
         }
-
         public CassandraViewGetPropertiesResponseOptions build() {
             return new CassandraViewGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }

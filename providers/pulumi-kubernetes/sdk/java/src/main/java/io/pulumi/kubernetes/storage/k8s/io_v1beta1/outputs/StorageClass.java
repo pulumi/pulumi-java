@@ -249,7 +249,6 @@ public final class StorageClass {
             this.volumeBindingMode = volumeBindingMode;
             return this;
         }
-
         public StorageClass build() {
             return new StorageClass(allowVolumeExpansion, allowedTopologies, apiVersion, kind, metadata, mountOptions, parameters, provisioner, reclaimPolicy, volumeBindingMode);
         }

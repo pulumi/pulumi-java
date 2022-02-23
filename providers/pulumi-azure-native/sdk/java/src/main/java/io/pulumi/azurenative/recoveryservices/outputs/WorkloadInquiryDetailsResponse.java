@@ -99,7 +99,6 @@ public final class WorkloadInquiryDetailsResponse {
             this.type = type;
             return this;
         }
-
         public WorkloadInquiryDetailsResponse build() {
             return new WorkloadInquiryDetailsResponse(inquiryValidation, itemCount, type);
         }

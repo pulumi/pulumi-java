@@ -23,7 +23,7 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="allowCustomSans", required=true)
-    private final Boolean allowCustomSans;
+      private final Boolean allowCustomSans;
 
     public Boolean getAllowCustomSans() {
         return this.allowCustomSans;
@@ -34,7 +34,7 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="allowGlobbingDnsWildcards", required=true)
-    private final Boolean allowGlobbingDnsWildcards;
+      private final Boolean allowGlobbingDnsWildcards;
 
     public Boolean getAllowGlobbingDnsWildcards() {
         return this.allowGlobbingDnsWildcards;
@@ -45,7 +45,7 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="allowedDnsNames", required=true)
-    private final List<String> allowedDnsNames;
+      private final List<String> allowedDnsNames;
 
     public List<String> getAllowedDnsNames() {
         return this.allowedDnsNames;
@@ -56,7 +56,7 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="allowedEmailAddresses", required=true)
-    private final List<String> allowedEmailAddresses;
+      private final List<String> allowedEmailAddresses;
 
     public List<String> getAllowedEmailAddresses() {
         return this.allowedEmailAddresses;
@@ -67,7 +67,7 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="allowedIps", required=true)
-    private final List<String> allowedIps;
+      private final List<String> allowedIps;
 
     public List<String> getAllowedIps() {
         return this.allowedIps;
@@ -78,7 +78,7 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="allowedUris", required=true)
-    private final List<String> allowedUris;
+      private final List<String> allowedUris;
 
     public List<String> getAllowedUris() {
         return this.allowedUris;
@@ -167,7 +167,6 @@ public final class AllowedSubjectAltNamesResponse extends io.pulumi.resources.In
             this.allowedUris = Objects.requireNonNull(allowedUris);
             return this;
         }
-
         public AllowedSubjectAltNamesResponse build() {
             return new AllowedSubjectAltNamesResponse(allowCustomSans, allowGlobbingDnsWildcards, allowedDnsNames, allowedEmailAddresses, allowedIps, allowedUris);
         }

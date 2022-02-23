@@ -21,7 +21,7 @@ public final class ServiceAccessPolicyEntryResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final String objectId;
+        private final String objectId;
 
     public String getObjectId() {
         return this.objectId;
@@ -59,7 +59,6 @@ public final class ServiceAccessPolicyEntryResponse extends io.pulumi.resources.
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public ServiceAccessPolicyEntryResponse build() {
             return new ServiceAccessPolicyEntryResponse(objectId);
         }

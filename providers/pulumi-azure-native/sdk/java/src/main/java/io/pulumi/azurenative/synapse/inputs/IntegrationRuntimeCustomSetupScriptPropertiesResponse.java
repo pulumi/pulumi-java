@@ -24,7 +24,7 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
      * 
      */
     @InputImport(name="blobContainerUri")
-    private final @Nullable String blobContainerUri;
+        private final @Nullable String blobContainerUri;
 
     public Optional<String> getBlobContainerUri() {
         return this.blobContainerUri == null ? Optional.empty() : Optional.ofNullable(this.blobContainerUri);
@@ -35,7 +35,7 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
      * 
      */
     @InputImport(name="sasToken")
-    private final @Nullable SecureStringResponse sasToken;
+        private final @Nullable SecureStringResponse sasToken;
 
     public Optional<SecureStringResponse> getSasToken() {
         return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
@@ -84,7 +84,6 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
             this.sasToken = sasToken;
             return this;
         }
-
         public IntegrationRuntimeCustomSetupScriptPropertiesResponse build() {
             return new IntegrationRuntimeCustomSetupScriptPropertiesResponse(blobContainerUri, sasToken);
         }

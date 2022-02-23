@@ -21,7 +21,7 @@ public final class SearchParameterResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="canonicalUrl", required=true)
-    private final String canonicalUrl;
+      private final String canonicalUrl;
 
     public String getCanonicalUrl() {
         return this.canonicalUrl;
@@ -32,7 +32,7 @@ public final class SearchParameterResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="parameter", required=true)
-    private final String parameter;
+      private final String parameter;
 
     public String getParameter() {
         return this.parameter;
@@ -81,7 +81,6 @@ public final class SearchParameterResponse extends io.pulumi.resources.InvokeArg
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }
-
         public SearchParameterResponse build() {
             return new SearchParameterResponse(canonicalUrl, parameter);
         }

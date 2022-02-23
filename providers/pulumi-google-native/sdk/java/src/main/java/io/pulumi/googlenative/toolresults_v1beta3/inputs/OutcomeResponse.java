@@ -25,7 +25,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="failureDetail", required=true)
-    private final FailureDetailResponse failureDetail;
+      private final FailureDetailResponse failureDetail;
 
     public FailureDetailResponse getFailureDetail() {
         return this.failureDetail;
@@ -36,7 +36,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inconclusiveDetail", required=true)
-    private final InconclusiveDetailResponse inconclusiveDetail;
+      private final InconclusiveDetailResponse inconclusiveDetail;
 
     public InconclusiveDetailResponse getInconclusiveDetail() {
         return this.inconclusiveDetail;
@@ -47,7 +47,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="skippedDetail", required=true)
-    private final SkippedDetailResponse skippedDetail;
+      private final SkippedDetailResponse skippedDetail;
 
     public SkippedDetailResponse getSkippedDetail() {
         return this.skippedDetail;
@@ -58,7 +58,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="successDetail", required=true)
-    private final SuccessDetailResponse successDetail;
+      private final SuccessDetailResponse successDetail;
 
     public SuccessDetailResponse getSuccessDetail() {
         return this.successDetail;
@@ -69,7 +69,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="summary", required=true)
-    private final String summary;
+      private final String summary;
 
     public String getSummary() {
         return this.summary;
@@ -148,7 +148,6 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }
-
         public OutcomeResponse build() {
             return new OutcomeResponse(failureDetail, inconclusiveDetail, skippedDetail, successDetail, summary);
         }

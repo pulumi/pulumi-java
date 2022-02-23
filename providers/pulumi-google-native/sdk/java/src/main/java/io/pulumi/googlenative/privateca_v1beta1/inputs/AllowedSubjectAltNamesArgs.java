@@ -25,7 +25,7 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowCustomSans")
-    private final @Nullable Input<Boolean> allowCustomSans;
+      private final @Nullable Input<Boolean> allowCustomSans;
 
     public Input<Boolean> getAllowCustomSans() {
         return this.allowCustomSans == null ? Input.empty() : this.allowCustomSans;
@@ -36,7 +36,7 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowGlobbingDnsWildcards")
-    private final @Nullable Input<Boolean> allowGlobbingDnsWildcards;
+      private final @Nullable Input<Boolean> allowGlobbingDnsWildcards;
 
     public Input<Boolean> getAllowGlobbingDnsWildcards() {
         return this.allowGlobbingDnsWildcards == null ? Input.empty() : this.allowGlobbingDnsWildcards;
@@ -47,7 +47,7 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowedDnsNames")
-    private final @Nullable Input<List<String>> allowedDnsNames;
+      private final @Nullable Input<List<String>> allowedDnsNames;
 
     public Input<List<String>> getAllowedDnsNames() {
         return this.allowedDnsNames == null ? Input.empty() : this.allowedDnsNames;
@@ -58,7 +58,7 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowedEmailAddresses")
-    private final @Nullable Input<List<String>> allowedEmailAddresses;
+      private final @Nullable Input<List<String>> allowedEmailAddresses;
 
     public Input<List<String>> getAllowedEmailAddresses() {
         return this.allowedEmailAddresses == null ? Input.empty() : this.allowedEmailAddresses;
@@ -69,7 +69,7 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowedIps")
-    private final @Nullable Input<List<String>> allowedIps;
+      private final @Nullable Input<List<String>> allowedIps;
 
     public Input<List<String>> getAllowedIps() {
         return this.allowedIps == null ? Input.empty() : this.allowedIps;
@@ -80,7 +80,7 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowedUris")
-    private final @Nullable Input<List<String>> allowedUris;
+      private final @Nullable Input<List<String>> allowedUris;
 
     public Input<List<String>> getAllowedUris() {
         return this.allowedUris == null ? Input.empty() : this.allowedUris;
@@ -199,7 +199,6 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
             this.allowedUris = Input.ofNullable(allowedUris);
             return this;
         }
-
         public AllowedSubjectAltNamesArgs build() {
             return new AllowedSubjectAltNamesArgs(allowCustomSans, allowGlobbingDnsWildcards, allowedDnsNames, allowedEmailAddresses, allowedIps, allowedUris);
         }

@@ -74,7 +74,6 @@ public final class PrivateEndpointResponse {
             this.subnetArmId = Objects.requireNonNull(subnetArmId);
             return this;
         }
-
         public PrivateEndpointResponse build() {
             return new PrivateEndpointResponse(id, subnetArmId);
         }

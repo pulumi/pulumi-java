@@ -74,7 +74,6 @@ public final class LoadBalancerConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public LoadBalancerConfigResponse build() {
             return new LoadBalancerConfigResponse(type, version);
         }

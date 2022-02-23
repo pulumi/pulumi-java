@@ -19,7 +19,7 @@ public final class LogzOrganizationPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="companyName")
-    private final @Nullable String companyName;
+        private final @Nullable String companyName;
 
     public Optional<String> getCompanyName() {
         return this.companyName == null ? Optional.empty() : Optional.ofNullable(this.companyName);
@@ -30,7 +30,7 @@ public final class LogzOrganizationPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="enterpriseAppId")
-    private final @Nullable String enterpriseAppId;
+        private final @Nullable String enterpriseAppId;
 
     public Optional<String> getEnterpriseAppId() {
         return this.enterpriseAppId == null ? Optional.empty() : Optional.ofNullable(this.enterpriseAppId);
@@ -41,7 +41,7 @@ public final class LogzOrganizationPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -52,7 +52,7 @@ public final class LogzOrganizationPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="singleSignOnUrl")
-    private final @Nullable String singleSignOnUrl;
+        private final @Nullable String singleSignOnUrl;
 
     public Optional<String> getSingleSignOnUrl() {
         return this.singleSignOnUrl == null ? Optional.empty() : Optional.ofNullable(this.singleSignOnUrl);
@@ -121,7 +121,6 @@ public final class LogzOrganizationPropertiesResponse extends io.pulumi.resource
             this.singleSignOnUrl = singleSignOnUrl;
             return this;
         }
-
         public LogzOrganizationPropertiesResponse build() {
             return new LogzOrganizationPropertiesResponse(companyName, enterpriseAppId, id, singleSignOnUrl);
         }

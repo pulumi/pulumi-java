@@ -27,7 +27,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="amiDistributionConfiguration")
-    private final @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration;
+        private final @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration;
 
     public Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> getAmiDistributionConfiguration() {
         return this.amiDistributionConfiguration == null ? Input.empty() : this.amiDistributionConfiguration;
@@ -38,7 +38,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="containerDistributionConfiguration")
-    private final @Nullable Input<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration;
+        private final @Nullable Input<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration;
 
     public Input<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> getContainerDistributionConfiguration() {
         return this.containerDistributionConfiguration == null ? Input.empty() : this.containerDistributionConfiguration;
@@ -49,7 +49,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="launchTemplateConfigurations")
-    private final @Nullable Input<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations;
+        private final @Nullable Input<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations;
 
     public Input<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> getLaunchTemplateConfigurations() {
         return this.launchTemplateConfigurations == null ? Input.empty() : this.launchTemplateConfigurations;
@@ -60,7 +60,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="licenseConfigurationArns")
-    private final @Nullable Input<List<String>> licenseConfigurationArns;
+        private final @Nullable Input<List<String>> licenseConfigurationArns;
 
     public Input<List<String>> getLicenseConfigurationArns() {
         return this.licenseConfigurationArns == null ? Input.empty() : this.licenseConfigurationArns;
@@ -71,7 +71,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+        private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
@@ -175,7 +175,6 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
-
         public DistributionConfigurationDistributionArgs build() {
             return new DistributionConfigurationDistributionArgs(amiDistributionConfiguration, containerDistributionConfiguration, launchTemplateConfigurations, licenseConfigurationArns, region);
         }

@@ -53,7 +53,6 @@ public final class MemcacheParametersResponse {
             this.params = Objects.requireNonNull(params);
             return this;
         }
-
         public MemcacheParametersResponse build() {
             return new MemcacheParametersResponse(params);
         }

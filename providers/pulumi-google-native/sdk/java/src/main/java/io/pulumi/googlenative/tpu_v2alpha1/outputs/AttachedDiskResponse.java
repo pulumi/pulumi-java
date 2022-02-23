@@ -74,7 +74,6 @@ public final class AttachedDiskResponse {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
-
         public AttachedDiskResponse build() {
             return new AttachedDiskResponse(mode, sourceDisk);
         }

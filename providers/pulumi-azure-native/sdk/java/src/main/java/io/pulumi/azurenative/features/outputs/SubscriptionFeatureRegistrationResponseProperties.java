@@ -331,7 +331,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public SubscriptionFeatureRegistrationResponseProperties build() {
             return new SubscriptionFeatureRegistrationResponseProperties(approvalType, authorizationProfile, description, displayName, documentationLink, featureName, metadata, providerNamespace, registrationDate, releaseDate, shouldFeatureDisplayInPortal, state, subscriptionId, tenantId);
         }

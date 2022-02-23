@@ -22,7 +22,7 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -33,7 +33,7 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="types")
-    private final @Nullable Input<List<Either<String,SpatialType>>> types;
+        private final @Nullable Input<List<Either<String,SpatialType>>> types;
 
     public Input<List<Either<String,SpatialType>>> getTypes() {
         return this.types == null ? Input.empty() : this.types;
@@ -92,7 +92,6 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.types = Input.ofNullable(types);
             return this;
         }
-
         public SpatialSpecArgs build() {
             return new SpatialSpecArgs(path, types);
         }

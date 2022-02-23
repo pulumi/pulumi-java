@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> parameters;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1FormParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -67,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormArgs extends io.pulumi.reso
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1FormArgs build() {
             return new GoogleCloudDialogflowCxV3beta1FormArgs(parameters);
         }

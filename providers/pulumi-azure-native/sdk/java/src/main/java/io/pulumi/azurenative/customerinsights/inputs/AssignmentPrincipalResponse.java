@@ -24,7 +24,7 @@ public final class AssignmentPrincipalResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -35,7 +35,7 @@ public final class AssignmentPrincipalResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="principalMetadata")
-    private final @Nullable Map<String,String> principalMetadata;
+        private final @Nullable Map<String,String> principalMetadata;
 
     public Map<String,String> getPrincipalMetadata() {
         return this.principalMetadata == null ? Map.of() : this.principalMetadata;
@@ -46,7 +46,7 @@ public final class AssignmentPrincipalResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="principalType", required=true)
-    private final String principalType;
+        private final String principalType;
 
     public String getPrincipalType() {
         return this.principalType;
@@ -105,7 +105,6 @@ public final class AssignmentPrincipalResponse extends io.pulumi.resources.Invok
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
-
         public AssignmentPrincipalResponse build() {
             return new AssignmentPrincipalResponse(principalId, principalMetadata, principalType);
         }

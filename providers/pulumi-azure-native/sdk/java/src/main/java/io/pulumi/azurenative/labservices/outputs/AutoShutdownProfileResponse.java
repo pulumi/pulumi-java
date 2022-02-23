@@ -160,7 +160,6 @@ public final class AutoShutdownProfileResponse {
             this.shutdownWhenNotConnected = shutdownWhenNotConnected;
             return this;
         }
-
         public AutoShutdownProfileResponse build() {
             return new AutoShutdownProfileResponse(disconnectDelay, idleDelay, noConnectDelay, shutdownOnDisconnect, shutdownOnIdle, shutdownWhenNotConnected);
         }

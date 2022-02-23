@@ -46,7 +46,6 @@ public final class AssetModelMetricWindow {
             this.tumbling = tumbling;
             return this;
         }
-
         public AssetModelMetricWindow build() {
             return new AssetModelMetricWindow(tumbling);
         }

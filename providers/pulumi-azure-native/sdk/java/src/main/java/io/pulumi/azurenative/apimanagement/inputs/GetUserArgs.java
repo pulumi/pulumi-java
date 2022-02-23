@@ -17,7 +17,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -39,7 +39,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userId", required=true)
-    private final String userId;
+        private final String userId;
 
     public String getUserId() {
         return this.userId;
@@ -98,7 +98,6 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetUserArgs build() {
             return new GetUserArgs(resourceGroupName, serviceName, userId);
         }

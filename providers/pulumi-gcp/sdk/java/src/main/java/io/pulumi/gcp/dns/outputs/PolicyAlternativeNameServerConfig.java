@@ -59,7 +59,6 @@ public final class PolicyAlternativeNameServerConfig {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
-
         public PolicyAlternativeNameServerConfig build() {
             return new PolicyAlternativeNameServerConfig(targetNameServers);
         }

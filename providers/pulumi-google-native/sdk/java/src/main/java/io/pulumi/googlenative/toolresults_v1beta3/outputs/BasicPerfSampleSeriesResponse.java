@@ -71,7 +71,6 @@ public final class BasicPerfSampleSeriesResponse {
             this.sampleSeriesLabel = Objects.requireNonNull(sampleSeriesLabel);
             return this;
         }
-
         public BasicPerfSampleSeriesResponse build() {
             return new BasicPerfSampleSeriesResponse(perfMetricType, perfUnit, sampleSeriesLabel);
         }

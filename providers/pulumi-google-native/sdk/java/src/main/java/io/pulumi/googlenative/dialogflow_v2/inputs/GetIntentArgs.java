@@ -15,35 +15,35 @@ public final class GetIntentArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetIntentArgs Empty = new GetIntentArgs();
 
     @InputImport(name="intentId", required=true)
-    private final String intentId;
+      private final String intentId;
 
     public String getIntentId() {
         return this.intentId;
     }
 
     @InputImport(name="intentView")
-    private final @Nullable String intentView;
+      private final @Nullable String intentView;
 
     public Optional<String> getIntentView() {
         return this.intentView == null ? Optional.empty() : Optional.ofNullable(this.intentView);
     }
 
     @InputImport(name="languageCode")
-    private final @Nullable String languageCode;
+      private final @Nullable String languageCode;
 
     public Optional<String> getLanguageCode() {
         return this.languageCode == null ? Optional.empty() : Optional.ofNullable(this.languageCode);
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -122,7 +122,6 @@ public final class GetIntentArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetIntentArgs build() {
             return new GetIntentArgs(intentId, intentView, languageCode, location, project);
         }

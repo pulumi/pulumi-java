@@ -23,7 +23,7 @@ public final class MetadataItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Object name;
+        private final @Nullable Object name;
 
     public Optional<Object> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class MetadataItemResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Object value;
+        private final @Nullable Object value;
 
     public Optional<Object> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -83,7 +83,6 @@ public final class MetadataItemResponse extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public MetadataItemResponse build() {
             return new MetadataItemResponse(name, value);
         }

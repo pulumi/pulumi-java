@@ -76,7 +76,6 @@ public final class ServiceAuthenticationConfiguration {
             this.connectionArn = connectionArn;
             return this;
         }
-
         public ServiceAuthenticationConfiguration build() {
             return new ServiceAuthenticationConfiguration(accessRoleArn, connectionArn);
         }

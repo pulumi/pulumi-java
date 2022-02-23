@@ -96,7 +96,6 @@ public final class NodeKubeletConfigResponse {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
         }
-
         public NodeKubeletConfigResponse build() {
             return new NodeKubeletConfigResponse(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
         }

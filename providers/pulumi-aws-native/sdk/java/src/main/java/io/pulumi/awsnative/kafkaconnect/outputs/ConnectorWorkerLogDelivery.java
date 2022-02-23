@@ -75,7 +75,6 @@ public final class ConnectorWorkerLogDelivery {
             this.s3 = s3;
             return this;
         }
-
         public ConnectorWorkerLogDelivery build() {
             return new ConnectorWorkerLogDelivery(cloudWatchLogs, firehose, s3);
         }

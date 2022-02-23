@@ -23,7 +23,7 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -34,7 +34,7 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -93,7 +93,6 @@ public final class CustomHttpPatternArgs extends io.pulumi.resources.ResourceArg
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public CustomHttpPatternArgs build() {
             return new CustomHttpPatternArgs(kind, path);
         }

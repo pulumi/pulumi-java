@@ -79,7 +79,6 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork build() {
             return new GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork(expirationTime, name, value);
         }

@@ -74,7 +74,6 @@ public final class IssuanceModesResponse {
             this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
             return this;
         }
-
         public IssuanceModesResponse build() {
             return new IssuanceModesResponse(allowConfigBasedIssuance, allowCsrBasedIssuance);
         }

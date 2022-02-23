@@ -202,7 +202,6 @@ public final class GetApiTagDescriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApiTagDescriptionResult build() {
             return new GetApiTagDescriptionResult(description, displayName, externalDocsDescription, externalDocsUrl, id, name, tagId, type);
         }

@@ -24,7 +24,7 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="artifactId", required=true)
-    private final Input<String> artifactId;
+      private final Input<String> artifactId;
 
     public Input<String> getArtifactId() {
         return this.artifactId;
@@ -35,7 +35,7 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<String> destination;
+      private final Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination;
@@ -46,7 +46,7 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="overwrite")
-    private final @Nullable Input<Boolean> overwrite;
+      private final @Nullable Input<Boolean> overwrite;
 
     public Input<Boolean> getOverwrite() {
         return this.overwrite == null ? Input.empty() : this.overwrite;
@@ -57,7 +57,7 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<String> permissions;
+      private final @Nullable Input<String> permissions;
 
     public Input<String> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -146,7 +146,6 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
-
         public SoftwareRecipeStepCopyFileArgs build() {
             return new SoftwareRecipeStepCopyFileArgs(artifactId, destination, overwrite, permissions);
         }

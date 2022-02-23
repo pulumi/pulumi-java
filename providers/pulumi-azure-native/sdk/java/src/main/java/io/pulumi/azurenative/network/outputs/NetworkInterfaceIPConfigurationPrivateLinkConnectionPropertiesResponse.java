@@ -96,7 +96,6 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
             this.requiredMemberName = Objects.requireNonNull(requiredMemberName);
             return this;
         }
-
         public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse build() {
             return new NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse(fqdns, groupId, requiredMemberName);
         }

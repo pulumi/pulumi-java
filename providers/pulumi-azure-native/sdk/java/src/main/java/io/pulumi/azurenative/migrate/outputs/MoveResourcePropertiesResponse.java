@@ -285,7 +285,6 @@ public final class MoveResourcePropertiesResponse {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public MoveResourcePropertiesResponse build() {
             return new MoveResourcePropertiesResponse(dependsOn, dependsOnOverrides, errors, existingTargetId, isResolveRequired, moveStatus, provisioningState, resourceSettings, sourceId, sourceResourceSettings, targetId);
         }

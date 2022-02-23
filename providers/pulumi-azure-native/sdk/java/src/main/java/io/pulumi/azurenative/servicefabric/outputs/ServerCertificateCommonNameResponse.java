@@ -74,7 +74,6 @@ public final class ServerCertificateCommonNameResponse {
             this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
             return this;
         }
-
         public ServerCertificateCommonNameResponse build() {
             return new ServerCertificateCommonNameResponse(certificateCommonName, certificateIssuerThumbprint);
         }

@@ -249,7 +249,6 @@ public final class OriginEndpointHlsPackage {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }
-
         public OriginEndpointHlsPackage build() {
             return new OriginEndpointHlsPackage(adMarkers, adTriggers, adsOnDeliveryRestrictions, encryption, includeIframeOnlyStream, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, segmentDurationSeconds, streamSelection, useAudioRenditionGroup);
         }

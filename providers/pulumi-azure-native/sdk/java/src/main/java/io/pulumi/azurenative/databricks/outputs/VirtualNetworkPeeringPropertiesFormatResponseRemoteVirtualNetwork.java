@@ -54,7 +54,6 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNet
             this.id = id;
             return this;
         }
-
         public VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork build() {
             return new VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork(id);
         }

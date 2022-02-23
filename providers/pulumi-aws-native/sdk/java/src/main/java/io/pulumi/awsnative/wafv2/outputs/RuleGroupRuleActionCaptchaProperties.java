@@ -46,7 +46,6 @@ public final class RuleGroupRuleActionCaptchaProperties {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public RuleGroupRuleActionCaptchaProperties build() {
             return new RuleGroupRuleActionCaptchaProperties(customRequestHandling);
         }

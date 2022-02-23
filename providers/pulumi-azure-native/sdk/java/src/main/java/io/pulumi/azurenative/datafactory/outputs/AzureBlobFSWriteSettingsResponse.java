@@ -142,7 +142,6 @@ public final class AzureBlobFSWriteSettingsResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureBlobFSWriteSettingsResponse build() {
             return new AzureBlobFSWriteSettingsResponse(blockSizeInMB, copyBehavior, disableMetricsCollection, maxConcurrentConnections, type);
         }

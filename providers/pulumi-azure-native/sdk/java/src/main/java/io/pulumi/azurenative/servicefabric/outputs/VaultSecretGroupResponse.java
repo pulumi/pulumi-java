@@ -76,7 +76,6 @@ public final class VaultSecretGroupResponse {
             this.vaultCertificates = Objects.requireNonNull(vaultCertificates);
             return this;
         }
-
         public VaultSecretGroupResponse build() {
             return new VaultSecretGroupResponse(sourceVault, vaultCertificates);
         }

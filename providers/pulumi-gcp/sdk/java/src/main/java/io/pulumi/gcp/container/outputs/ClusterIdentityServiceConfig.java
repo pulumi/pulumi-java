@@ -56,7 +56,6 @@ public final class ClusterIdentityServiceConfig {
             this.enabled = enabled;
             return this;
         }
-
         public ClusterIdentityServiceConfig build() {
             return new ClusterIdentityServiceConfig(enabled);
         }

@@ -98,7 +98,6 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
-
         public AzureVmWorkloadProtectedItemExtendedInfoResponse build() {
             return new AzureVmWorkloadProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyState, recoveryPointCount);
         }

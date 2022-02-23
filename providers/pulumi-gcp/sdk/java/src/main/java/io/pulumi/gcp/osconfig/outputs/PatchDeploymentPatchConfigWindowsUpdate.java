@@ -101,7 +101,6 @@ public final class PatchDeploymentPatchConfigWindowsUpdate {
             this.exclusivePatches = exclusivePatches;
             return this;
         }
-
         public PatchDeploymentPatchConfigWindowsUpdate build() {
             return new PatchDeploymentPatchConfigWindowsUpdate(classifications, excludes, exclusivePatches);
         }

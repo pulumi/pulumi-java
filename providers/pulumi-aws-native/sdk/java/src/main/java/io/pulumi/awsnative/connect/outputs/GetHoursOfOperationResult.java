@@ -184,7 +184,6 @@ public final class GetHoursOfOperationResult {
             this.timeZone = timeZone;
             return this;
         }
-
         public GetHoursOfOperationResult build() {
             return new GetHoursOfOperationResult(config, description, hoursOfOperationArn, instanceArn, name, tags, timeZone);
         }

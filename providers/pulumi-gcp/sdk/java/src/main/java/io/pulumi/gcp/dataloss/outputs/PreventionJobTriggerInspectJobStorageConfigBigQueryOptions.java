@@ -54,7 +54,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
             this.tableReference = Objects.requireNonNull(tableReference);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigBigQueryOptions build() {
             return new PreventionJobTriggerInspectJobStorageConfigBigQueryOptions(tableReference);
         }

@@ -56,7 +56,6 @@ public final class FulfillmentFeature {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FulfillmentFeature build() {
             return new FulfillmentFeature(type);
         }

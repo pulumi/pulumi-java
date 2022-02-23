@@ -58,7 +58,6 @@ public final class AssistantTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AssistantTag build() {
             return new AssistantTag(key, value);
         }

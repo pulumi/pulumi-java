@@ -245,7 +245,6 @@ public final class GetConsentResult {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetConsentResult build() {
             return new GetConsentResult(consentArtifact, expireTime, metadata, name, policies, revisionCreateTime, revisionId, state, ttl, userId);
         }

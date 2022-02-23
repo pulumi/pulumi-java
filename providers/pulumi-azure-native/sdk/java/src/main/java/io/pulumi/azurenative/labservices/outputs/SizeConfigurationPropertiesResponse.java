@@ -54,7 +54,6 @@ public final class SizeConfigurationPropertiesResponse {
             this.environmentSizes = environmentSizes;
             return this;
         }
-
         public SizeConfigurationPropertiesResponse build() {
             return new SizeConfigurationPropertiesResponse(environmentSizes);
         }

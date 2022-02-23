@@ -75,7 +75,6 @@ public final class DeviceCredentialResponse {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public DeviceCredentialResponse build() {
             return new DeviceCredentialResponse(expirationTime, publicKey);
         }

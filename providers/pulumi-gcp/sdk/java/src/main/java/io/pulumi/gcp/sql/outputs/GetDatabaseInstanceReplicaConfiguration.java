@@ -177,7 +177,6 @@ public final class GetDatabaseInstanceReplicaConfiguration {
             this.verifyServerCertificate = Objects.requireNonNull(verifyServerCertificate);
             return this;
         }
-
         public GetDatabaseInstanceReplicaConfiguration build() {
             return new GetDatabaseInstanceReplicaConfiguration(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, failoverTarget, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);
         }

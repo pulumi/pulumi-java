@@ -58,7 +58,6 @@ public final class ServiceNetworkSettingsNetworkSettings {
             this.ingressTrafficAllowed = ingressTrafficAllowed;
             return this;
         }
-
         public ServiceNetworkSettingsNetworkSettings build() {
             return new ServiceNetworkSettingsNetworkSettings(ingressTrafficAllowed);
         }

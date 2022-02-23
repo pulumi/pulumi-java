@@ -20,7 +20,7 @@ public final class PatchDeploymentRecurringScheduleTimeOfDayGetArgs extends io.p
      * 
      */
     @InputImport(name="hours")
-    private final @Nullable Input<Integer> hours;
+        private final @Nullable Input<Integer> hours;
 
     public Input<Integer> getHours() {
         return this.hours == null ? Input.empty() : this.hours;
@@ -31,7 +31,7 @@ public final class PatchDeploymentRecurringScheduleTimeOfDayGetArgs extends io.p
      * 
      */
     @InputImport(name="minutes")
-    private final @Nullable Input<Integer> minutes;
+        private final @Nullable Input<Integer> minutes;
 
     public Input<Integer> getMinutes() {
         return this.minutes == null ? Input.empty() : this.minutes;
@@ -42,7 +42,7 @@ public final class PatchDeploymentRecurringScheduleTimeOfDayGetArgs extends io.p
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+        private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -53,7 +53,7 @@ public final class PatchDeploymentRecurringScheduleTimeOfDayGetArgs extends io.p
      * 
      */
     @InputImport(name="seconds")
-    private final @Nullable Input<Integer> seconds;
+        private final @Nullable Input<Integer> seconds;
 
     public Input<Integer> getSeconds() {
         return this.seconds == null ? Input.empty() : this.seconds;
@@ -142,7 +142,6 @@ public final class PatchDeploymentRecurringScheduleTimeOfDayGetArgs extends io.p
             this.seconds = Input.ofNullable(seconds);
             return this;
         }
-
         public PatchDeploymentRecurringScheduleTimeOfDayGetArgs build() {
             return new PatchDeploymentRecurringScheduleTimeOfDayGetArgs(hours, minutes, nanos, seconds);
         }

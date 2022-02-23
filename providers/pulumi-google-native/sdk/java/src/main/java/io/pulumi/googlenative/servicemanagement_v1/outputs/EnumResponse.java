@@ -141,7 +141,6 @@ public final class EnumResponse {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }
-
         public EnumResponse build() {
             return new EnumResponse(enumvalue, name, options, sourceContext, syntax);
         }

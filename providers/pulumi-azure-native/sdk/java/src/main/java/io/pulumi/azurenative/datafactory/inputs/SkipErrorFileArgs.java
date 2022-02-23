@@ -23,7 +23,7 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataInconsistency")
-    private final @Nullable Input<Object> dataInconsistency;
+        private final @Nullable Input<Object> dataInconsistency;
 
     public Input<Object> getDataInconsistency() {
         return this.dataInconsistency == null ? Input.empty() : this.dataInconsistency;
@@ -34,7 +34,7 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileMissing")
-    private final @Nullable Input<Object> fileMissing;
+        private final @Nullable Input<Object> fileMissing;
 
     public Input<Object> getFileMissing() {
         return this.fileMissing == null ? Input.empty() : this.fileMissing;
@@ -93,7 +93,6 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
             this.fileMissing = Input.ofNullable(fileMissing);
             return this;
         }
-
         public SkipErrorFileArgs build() {
             return new SkipErrorFileArgs(dataInconsistency, fileMissing);
         }

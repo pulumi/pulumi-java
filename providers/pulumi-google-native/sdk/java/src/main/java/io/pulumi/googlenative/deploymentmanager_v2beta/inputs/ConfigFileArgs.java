@@ -19,7 +19,7 @@ public final class ConfigFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -62,7 +62,6 @@ public final class ConfigFileArgs extends io.pulumi.resources.ResourceArgs {
             this.content = Input.ofNullable(content);
             return this;
         }
-
         public ConfigFileArgs build() {
             return new ConfigFileArgs(content);
         }

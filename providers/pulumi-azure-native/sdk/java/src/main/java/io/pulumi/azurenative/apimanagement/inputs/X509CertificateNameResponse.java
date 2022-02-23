@@ -23,7 +23,7 @@ public final class X509CertificateNameResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="issuerCertificateThumbprint")
-    private final @Nullable String issuerCertificateThumbprint;
+        private final @Nullable String issuerCertificateThumbprint;
 
     public Optional<String> getIssuerCertificateThumbprint() {
         return this.issuerCertificateThumbprint == null ? Optional.empty() : Optional.ofNullable(this.issuerCertificateThumbprint);
@@ -34,7 +34,7 @@ public final class X509CertificateNameResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -83,7 +83,6 @@ public final class X509CertificateNameResponse extends io.pulumi.resources.Invok
             this.name = name;
             return this;
         }
-
         public X509CertificateNameResponse build() {
             return new X509CertificateNameResponse(issuerCertificateThumbprint, name);
         }

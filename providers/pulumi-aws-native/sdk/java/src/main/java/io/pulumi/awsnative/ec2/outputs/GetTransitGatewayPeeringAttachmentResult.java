@@ -142,7 +142,6 @@ public final class GetTransitGatewayPeeringAttachmentResult {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-
         public GetTransitGatewayPeeringAttachmentResult build() {
             return new GetTransitGatewayPeeringAttachmentResult(creationTime, state, status, tags, transitGatewayAttachmentId);
         }

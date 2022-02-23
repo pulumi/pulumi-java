@@ -183,7 +183,6 @@ public final class InstanceDisk {
             this.sizeInGb = sizeInGb;
             return this;
         }
-
         public InstanceDisk build() {
             return new InstanceDisk(attachedTo, attachmentState, diskName, iOPS, isSystemDisk, path, sizeInGb);
         }

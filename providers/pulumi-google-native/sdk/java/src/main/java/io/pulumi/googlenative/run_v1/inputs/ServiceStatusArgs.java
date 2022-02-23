@@ -28,7 +28,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<AddressableArgs> address;
+      private final @Nullable Input<AddressableArgs> address;
 
     public Input<AddressableArgs> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -39,7 +39,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions;
+      private final @Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions;
 
     public Input<List<GoogleCloudRunV1ConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -50,7 +50,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestCreatedRevisionName")
-    private final @Nullable Input<String> latestCreatedRevisionName;
+      private final @Nullable Input<String> latestCreatedRevisionName;
 
     public Input<String> getLatestCreatedRevisionName() {
         return this.latestCreatedRevisionName == null ? Input.empty() : this.latestCreatedRevisionName;
@@ -61,7 +61,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestReadyRevisionName")
-    private final @Nullable Input<String> latestReadyRevisionName;
+      private final @Nullable Input<String> latestReadyRevisionName;
 
     public Input<String> getLatestReadyRevisionName() {
         return this.latestReadyRevisionName == null ? Input.empty() : this.latestReadyRevisionName;
@@ -72,7 +72,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="observedGeneration")
-    private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
@@ -83,7 +83,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="traffic")
-    private final @Nullable Input<List<TrafficTargetArgs>> traffic;
+      private final @Nullable Input<List<TrafficTargetArgs>> traffic;
 
     public Input<List<TrafficTargetArgs>> getTraffic() {
         return this.traffic == null ? Input.empty() : this.traffic;
@@ -94,7 +94,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -228,7 +228,6 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public ServiceStatusArgs build() {
             return new ServiceStatusArgs(address, conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, traffic, url);
         }

@@ -15,21 +15,21 @@ public final class GetCustomClassArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCustomClassArgs Empty = new GetCustomClassArgs();
 
     @InputImport(name="customClassId", required=true)
-    private final String customClassId;
+      private final String customClassId;
 
     public String getCustomClassId() {
         return this.customClassId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetCustomClassArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetCustomClassArgs build() {
             return new GetCustomClassArgs(customClassId, location, project);
         }

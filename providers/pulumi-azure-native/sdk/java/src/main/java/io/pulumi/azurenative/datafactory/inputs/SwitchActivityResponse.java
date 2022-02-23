@@ -66,7 +66,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="cases")
-    private final @Nullable List<SwitchCaseResponse> cases;
+        private final @Nullable List<SwitchCaseResponse> cases;
 
     public List<SwitchCaseResponse> getCases() {
         return this.cases == null ? List.of() : this.cases;
@@ -77,7 +77,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="defaultActivities")
-    private final @Nullable List<Object> defaultActivities;
+        private final @Nullable List<Object> defaultActivities;
 
     public List<Object> getDefaultActivities() {
         return this.defaultActivities == null ? List.of() : this.defaultActivities;
@@ -88,7 +88,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+        private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -99,7 +99,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -110,7 +110,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -121,7 +121,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="on", required=true)
-    private final ExpressionResponse on;
+        private final ExpressionResponse on;
 
     public ExpressionResponse getOn() {
         return this.on;
@@ -133,7 +133,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -144,7 +144,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+        private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -253,7 +253,6 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
             this.userProperties = userProperties;
             return this;
         }
-
         public SwitchActivityResponse build() {
             return new SwitchActivityResponse(cases, defaultActivities, dependsOn, description, name, on, type, userProperties);
         }

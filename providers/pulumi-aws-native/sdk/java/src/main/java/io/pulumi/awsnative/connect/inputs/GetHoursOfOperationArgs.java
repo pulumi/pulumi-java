@@ -17,7 +17,7 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="hoursOfOperationArn", required=true)
-    private final String hoursOfOperationArn;
+        private final String hoursOfOperationArn;
 
     public String getHoursOfOperationArn() {
         return this.hoursOfOperationArn;
@@ -55,7 +55,6 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
             this.hoursOfOperationArn = Objects.requireNonNull(hoursOfOperationArn);
             return this;
         }
-
         public GetHoursOfOperationArgs build() {
             return new GetHoursOfOperationArgs(hoursOfOperationArn);
         }

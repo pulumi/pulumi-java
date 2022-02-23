@@ -149,7 +149,6 @@ public final class RouterPeerBfd {
             this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode);
             return this;
         }
-
         public RouterPeerBfd build() {
             return new RouterPeerBfd(minReceiveInterval, minTransmitInterval, multiplier, sessionInitializationMode);
         }

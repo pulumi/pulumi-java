@@ -139,7 +139,6 @@ public final class PollingOptionsResponse {
             this.targetLink = Objects.requireNonNull(targetLink);
             return this;
         }
-
         public PollingOptionsResponse build() {
             return new PollingOptionsResponse(diagnostics, failCondition, finishCondition, pollingLink, targetLink);
         }
