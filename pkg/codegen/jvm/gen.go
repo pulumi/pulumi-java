@@ -1638,6 +1638,30 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fmt.Fprintf(w, "        this(name, args, null);\n")
 	fmt.Fprintf(w, "    }\n")
 
+	// Name+Args builder constructor
+
+	// define builder mutator
+	fmt.Fprintf(w, "    public interface BuilderApplicator {\n")
+	fmt.Fprintf(w, "        public void apply(%s.Builder a);\n", argsType)
+	fmt.Fprintf(w, "    }\n")
+
+	// define args builder
+	fmt.Fprintf(w, "    private static %s buildArgs(BuilderApplicator args) {\n", argsFQN)
+	fmt.Fprintf(w, "        final var builder = %s.builder();\n", argsFQN)
+	fmt.Fprintf(w, "        args.apply(builder);\n")
+	fmt.Fprintf(w, "        return builder.build();\n")
+	fmt.Fprintf(w, "    }\n")
+
+	// define constructor
+	fmt.Fprintf(w, "    /**\n")
+	fmt.Fprintf(w, "     *\n")
+	fmt.Fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
+	fmt.Fprintf(w, "     * @param args The arguments to use to populate this resource's properties.\n")
+	fmt.Fprintf(w, "     */\n")
+	fmt.Fprintf(w, "    public %s(String name, BuilderApplicator args) {\n", className)
+	fmt.Fprintf(w, "        this(name, buildArgs(args), null);\n")
+	fmt.Fprintf(w, "    }\n")
+
 	// Constructor
 	isComponent := ""
 	if r.IsComponent {
