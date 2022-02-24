@@ -33,7 +33,7 @@ public final class MyStack extends Stack {
     private final Output<List<String>> shuffled;
 
     public MyStack() {
-        var randomPassword = new RandomPassword("my-password", ($) -> {
+        var randomPassword = new RandomPassword("my-password", $ -> {
                 $.setLength(16)
                 .setSpecial(true)
                 .setOverrideSpecial("_@");
