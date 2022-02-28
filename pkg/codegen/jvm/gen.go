@@ -693,7 +693,7 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 
 	fprintf(w, "\n")
 	if err := builderTemplate.Execute(w, builderTemplateContext{
-		Indent:     strings.Repeat("    ", 1),
+		Indent:     "    ",
 		Name:       "Builder",
 		IsFinal:    true,
 		IsJumbo:    true,
@@ -896,7 +896,7 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 
 	fprintf(w, "\n")
 	if err := builderTemplate.Execute(w, builderTemplateContext{
-		Indent:     strings.Repeat("    ", 1),
+		Indent:     "    ",
 		Name:       "Builder",
 		IsFinal:    true,
 		Fields:     builderFields,
@@ -1053,7 +1053,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 
 		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent+"    ")
 		if err := getterTemplate.Execute(w, getterTemplateContext{
-			Indent:          strings.Repeat("    ", 1),
+			Indent:          "    ",
 			GetterType:      getterType.ToCode(ctx.imports),
 			GetterName:      getterName,
 			ReturnStatement: returnStatement,
@@ -1105,7 +1105,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 
 	fprintf(w, "\n")
 	if err := builderTemplate.Execute(w, builderTemplateContext{
-		Indent:     strings.Repeat("    ", 1),
+		Indent:     "    ",
 		Name:       "Builder",
 		IsFinal:    true,
 		IsJumbo:    true,
@@ -1125,7 +1125,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 
 func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 	w := ctx.writer
-	indent := strings.Repeat("    ", 0)
+	indent := ""
 
 	props := pt.properties
 
@@ -1291,7 +1291,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 
 		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent+"    ")
 		if err := getterTemplate.Execute(w, getterTemplateContext{
-			Indent:          strings.Repeat("    ", 1),
+			Indent:          "    ",
 			GetterType:      getterType.ToCode(ctx.imports),
 			GetterName:      getterName,
 			ReturnStatement: returnStatement,
@@ -1343,7 +1343,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 
 	fprintf(w, "\n")
 	if err := builderTemplate.Execute(w, builderTemplateContext{
-		Indent:     strings.Repeat("    ", 1),
+		Indent:     "    ",
 		Name:       "Builder",
 		IsFinal:    true,
 		Fields:     builderFields,
@@ -2098,7 +2098,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 		}
 
 		if err := getterTemplate.Execute(w, getterTemplateContext{
-			Indent:          strings.Repeat("    ", 1),
+			Indent:          "    ",
 			GetterType:      propertyType.ToCode(ctx.imports),
 			GetterName:      propertyName.String(),
 			ReturnStatement: returnStatement,
