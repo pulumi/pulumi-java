@@ -66,6 +66,6 @@ func formatBlockComment(comment string, indent string) string {
 func fprintf(w io.Writer, format string, args ...interface{}) {
 	_, err := fmt.Fprintf(w, format, args...)
 	if err != nil {
-		panic("error processing format string [format=" + format + "]")
+		panic("error writing format string [format=" + format + "]")
 	}
 }
