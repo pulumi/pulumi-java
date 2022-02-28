@@ -4,6 +4,7 @@ package jvm
 
 import (
 	"fmt"
+	"io"
 	"strings"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
@@ -60,4 +61,11 @@ func formatBlockComment(comment string, indent string) string {
 	comment = codegen.FilterExamples(comment, "java")
 	comment = strings.Join(strings.Split(comment, "\n"), "\n"+prefix)
 	return prefix + comment
+}
+
+func fprintf(w io.Writer, format string, args ...interface{}) {
+	_, err := fmt.Fprintf(w, format, args...)
+	if err != nil {
+		panic("error writing format string [format=" + format + "]")
+	}
 }
